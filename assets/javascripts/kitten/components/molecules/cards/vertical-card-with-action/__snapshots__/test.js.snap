@@ -2,7 +2,7 @@
 
 exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb dluWKp"
+  className="sc-bxivhb imlasA"
 >
   <div
     className="k-u-margin-bottom-triple"
@@ -17,7 +17,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <h1
-      className="sc-bdVaJa fGjNMN k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+      className="sc-bdVaJa hyuQbI k-Title k-u-align-center k-Title--senary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -32,7 +32,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     className="k-u-margin-top-triple k-u-align-center"
   >
     <button
-      className="sc-htpNat rTiZB k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
+      className="sc-htpNat iWnQDe k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
       href={null}
       onClick={null}
       style={
@@ -50,7 +50,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb dluWKp"
+  className="sc-bxivhb imlasA"
 >
   <div
     className="k-u-margin-bottom-triple"
@@ -65,7 +65,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
   >
     <h1
-      className="sc-bdVaJa fGjNMN k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
+      className="sc-bdVaJa hyuQbI k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -84,7 +84,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     className="k-u-margin-top-triple k-u-align-center"
   >
     <button
-      className="sc-htpNat rTiZB k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
+      className="sc-htpNat iWnQDe k-Button k-VerticalCardWithAction__button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-min-width"
       href={null}
       onClick={null}
       style={

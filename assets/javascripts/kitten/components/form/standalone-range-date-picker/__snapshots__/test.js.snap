@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX kdbczd"
+  className="sc-ifAKCX oAoTk"
 >
   <div
     className="DayPicker Selectable"
@@ -34,7 +34,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         >
           <svg
             className=""
-            fill="#222"
+            fill="var(--color-grey-900, #222)"
             height="8"
             style={
               Object {
@@ -64,7 +64,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         >
           <svg
             className=""
-            fill="#222"
+            fill="var(--color-grey-900, #222)"
             height="8"
             style={
               Object {

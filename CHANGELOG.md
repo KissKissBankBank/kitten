@@ -5,9 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Design: Use new `--border-radius-*` variables.
-- Feature: Tokens: Update use of border tokens.
-- Feature: `LendopolisLoadingAnimation`: Add component.
-- Feature: `Colors`: New `--color-yellow-700` value.
+
+## [6.4.0] - 2021-11-23
+
+Features:
+
+- Tokens: Start using Design Tokens for colors config (with fallback).
+- Tokens: Update use of border tokens with states.
+- Tokens: Update `--color-yellow-700` value.
+- `LendopolisLoadingAnimation`: Add component.
 
 ## [6.3.0] - 2021-11-22
 
@@ -44,7 +50,7 @@ Fixes:
 Features:
 
 - Tooling: Use `Dart Sass` instead of `LibSass`.
-- Token: Add Design Token feature through CSS vars.
+- Tokens: Add Design Tokens feature through CSS vars.
 - Design: use browser default styles for focus outlines.
 - `DragAndDropList`: Add component.
 

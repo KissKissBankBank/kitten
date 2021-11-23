@@ -17,6 +17,10 @@ var hexToRgba = function hexToRgba(hex) {
     hex = '#OOO';
   }
 
+  if (hex.startsWith('var')) {
+    return hex;
+  }
+
   var hexColorRegexp = hex.length <= 4 ? /\w/g : /\w\w/g;
 
   var _hex$match$map = hex.match(hexColorRegexp).map(function (hexColor) {

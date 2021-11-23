@@ -121,7 +121,7 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -249,12 +249,12 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": "0.25rem",
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -382,12 +382,12 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": "0.3125rem",
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.9375rem",
       "--k-ArrowContainer-borderWidth": "0.1875rem",
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -515,12 +515,12 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "calc(50% - 0.625rem)",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -648,7 +648,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
@@ -781,12 +781,12 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
     Object {
       "--k-ArrowContainer-arrowDistance": "calc(30% - 0.625rem)",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -914,12 +914,12 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.875rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -1047,12 +1047,12 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -1180,12 +1180,12 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -1313,12 +1313,12 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "1.25rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "1.25rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -1446,12 +1446,12 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }
@@ -1579,12 +1579,12 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
     Object {
       "--k-ArrowContainer-arrowDistance": "1.25rem",
       "--k-ArrowContainer-arrowSize": "0.625rem",
-      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
       "--k-ArrowContainer-borderDistance": 0,
       "--k-ArrowContainer-borderRadius": 0,
       "--k-ArrowContainer-borderSize": "0.625rem",
       "--k-ArrowContainer-borderWidth": 0,
-      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-color": "var(--color-grey-200, #f6f6f6)",
       "--k-ArrowContainer-padding": "1.25rem",
     }
   }

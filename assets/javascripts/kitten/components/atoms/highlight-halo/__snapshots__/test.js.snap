@@ -80,8 +80,8 @@ exports[`<HighlightHalo /> simple HighlightHalo  matches with snapshot 1`] = `
   left: 0;
   top: 0;
   opacity: 0;
-  border-radius: var(--border-radius-xl);
-  background-color: #19b4fa;
+  border-radius: 50%;
+  background-color: var(--color-primary-500,#19b4fa);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);

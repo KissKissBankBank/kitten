@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cYEoPg k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-htpNat hRfJEF k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
 >
   
   <input
@@ -38,7 +38,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cYEoPg k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-htpNat hRfJEF k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
 >
   
   <input
@@ -74,7 +74,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 <div
-  className="sc-htpNat cYEoPg k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_right"
+  className="sc-htpNat hRfJEF k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_right"
 >
   
   <input
@@ -110,7 +110,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat cYEoPg k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-htpNat hRfJEF k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
 >
   
   <input

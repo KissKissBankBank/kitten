@@ -22,7 +22,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -33,8 +33,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -129,22 +129,22 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c1::after {
@@ -165,17 +165,17 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom::after,
 .c1.k-CheckableButton--left[aria-checked]::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom.k-Button--copper::after,
 .c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
 }
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -223,24 +223,24 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-CheckableButton--left.k-Button--copper::after {
-  border-color: #ff0046;
-  background-color: #fff;
+  border-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-CheckableButton--left:disabled::after {
-  border-color: #fff;
-  background-color: #d8d8d8;
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c1.k-Button--micro,
@@ -265,63 +265,63 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-700,#05a8e6);
 }
 
 .c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #eee;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-grey-300,#eee);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: #19b4fa;
-  color: #222;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-Button--orion[aria-checked]:focus {
-  border-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -413,7 +413,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -423,9 +423,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: var(--border-width) solid var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -520,22 +520,22 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c1::after {
@@ -556,17 +556,17 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom::after,
 .c1.k-CheckableButton--left[aria-checked]::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom.k-Button--copper::after,
 .c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
 }
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -614,24 +614,24 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-CheckableButton--left.k-Button--copper::after {
-  border-color: #ff0046;
-  background-color: #fff;
+  border-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-CheckableButton--left:disabled::after {
-  border-color: #fff;
-  background-color: #d8d8d8;
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c1.k-Button--micro,
@@ -656,63 +656,63 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-700,#05a8e6);
 }
 
 .c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #eee;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-grey-300,#eee);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: #19b4fa;
-  color: #222;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-Button--orion[aria-checked]:focus {
-  border-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -804,7 +804,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -814,9 +814,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: var(--border-width) solid var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -911,22 +911,22 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c1::after {
@@ -947,17 +947,17 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c1.k-CheckableButton--bottom::after,
 .c1.k-CheckableButton--left[aria-checked]::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom.k-Button--copper::after,
 .c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
 }
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -1005,24 +1005,24 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-CheckableButton--left.k-Button--copper::after {
-  border-color: #ff0046;
-  background-color: #fff;
+  border-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-CheckableButton--left:disabled::after {
-  border-color: #fff;
-  background-color: #d8d8d8;
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c1.k-Button--micro,
@@ -1047,63 +1047,63 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-700,#05a8e6);
 }
 
 .c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #eee;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-grey-300,#eee);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: #19b4fa;
-  color: #222;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-Button--orion[aria-checked]:focus {
-  border-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -1195,7 +1195,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1205,9 +1205,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #ffb2c7;
-  background-color: #fff;
-  color: #ff0046;
+  border: var(--border-width) solid var(--color-danger-300,#ffb2c7);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-danger-500,#ff0046);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1303,21 +1303,21 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0:hover,
 .c0:focus {
   border-color: currentColor;
-  background-color: #fff;
-  color: #ff0046;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-danger-500,#ff0046);
 }
 
 .c0:active {
   border-color: currentColor;
-  background-color: #fff;
-  color: #ff0046;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-danger-500,#ff0046);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c1::after {
@@ -1338,17 +1338,17 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom::after,
 .c1.k-CheckableButton--left[aria-checked]::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom.k-Button--copper::after,
 .c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
 }
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -1396,24 +1396,24 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-CheckableButton--left.k-Button--copper::after {
-  border-color: #ff0046;
-  background-color: #fff;
+  border-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-CheckableButton--left:disabled::after {
-  border-color: #fff;
-  background-color: #d8d8d8;
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c1.k-Button--micro,
@@ -1438,63 +1438,63 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-700,#05a8e6);
 }
 
 .c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #eee;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-grey-300,#eee);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: #19b4fa;
-  color: #222;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-Button--orion[aria-checked]:focus {
-  border-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -1586,7 +1586,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1596,9 +1596,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: var(--border-width) solid var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1693,22 +1693,22 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c1::after {
@@ -1729,17 +1729,17 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom::after,
 .c1.k-CheckableButton--left[aria-checked]::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom.k-Button--copper::after,
 .c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
 }
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -1787,24 +1787,24 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   margin: 0 0.9375rem;
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   -webkit-transition: border-color 0.2s ease,background 0.2s ease;
   transition: border-color 0.2s ease,background 0.2s ease;
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-CheckableButton--left.k-Button--copper::after {
-  border-color: #ff0046;
-  background-color: #fff;
+  border-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-CheckableButton--left:disabled::after {
-  border-color: #fff;
-  background-color: #d8d8d8;
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-400,#d8d8d8);
 }
 
 .c1.k-Button--micro,
@@ -1829,63 +1829,63 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-700,#05a8e6);
 }
 
 .c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: #bae8fd;
+  border-color: var(--color-primary-300,#bae8fd);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: #eee;
-  background-color: #fff;
-  color: #222;
+  border-color: var(--color-grey-300,#eee);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: #19b4fa;
-  color: #222;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-grey-900,#222);
 }
 
 .c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
 .c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: #05a8e6;
-  background-color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c1.k-Button--orion[aria-checked]:focus {
-  border-color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {

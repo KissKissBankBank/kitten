@@ -22,7 +22,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -33,8 +33,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -129,22 +129,22 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -236,7 +236,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -247,8 +247,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -343,22 +343,22 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -448,7 +448,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -459,8 +459,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -555,22 +555,22 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -660,7 +660,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -671,8 +671,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -767,22 +767,22 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -872,7 +872,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -882,9 +882,9 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) dashed #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: var(--border-width) dashed var(--color-primary-300,#bae8fd);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -979,22 +979,22 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1084,7 +1084,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1095,8 +1095,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1191,22 +1191,22 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1296,7 +1296,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1307,8 +1307,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1403,22 +1403,22 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1510,7 +1510,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1521,8 +1521,8 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1617,22 +1617,22 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1722,7 +1722,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1733,8 +1733,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1829,22 +1829,22 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -1934,7 +1934,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1945,8 +1945,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2041,22 +2041,22 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2146,7 +2146,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2157,8 +2157,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2253,22 +2253,22 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2358,7 +2358,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2369,8 +2369,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2465,22 +2465,22 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2570,7 +2570,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2581,8 +2581,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2677,22 +2677,22 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2782,7 +2782,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2793,8 +2793,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -2889,22 +2889,22 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -2994,7 +2994,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3005,8 +3005,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3101,22 +3101,22 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -3211,7 +3211,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3222,8 +3222,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3318,22 +3318,22 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -3423,7 +3423,7 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3434,8 +3434,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3530,22 +3530,22 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {
@@ -3635,7 +3635,7 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3646,8 +3646,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-400);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -3742,22 +3742,22 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
   border: var(--border-disabled);
-  background-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 @media (min-width:40rem) {

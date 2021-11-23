@@ -30,7 +30,7 @@ Array [
     className="k-u-margin-top-single"
   >
     <div
-      className="sc-gqjmRU jNEIHo k-Form-Autocomplete k-Form-Autocomplete--orion"
+      className="sc-gqjmRU bfFChk k-Form-Autocomplete k-Form-Autocomplete--orion"
     >
       <input
         aria-activedescendant=""
@@ -81,7 +81,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH dSVNHA k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -105,7 +105,7 @@ Array [
             type="button"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height={10}
               viewBox="0 0 6 10"
               width={6}
@@ -180,7 +180,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH dSVNHA k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -204,7 +204,7 @@ Array [
             type="button"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height={10}
               viewBox="0 0 6 10"
               width={6}
@@ -265,7 +265,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH dSVNHA k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -289,7 +289,7 @@ Array [
             type="button"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height={10}
               viewBox="0 0 6 10"
               width={6}
@@ -312,7 +312,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <div
-      className="sc-EHOje kXOoqv k-Form-TextInputWithLimit"
+      className="sc-EHOje gblScq k-Form-TextInputWithLimit"
     >
       <input
         className="sc-bxivhb gBSWZW k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -361,7 +361,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH dSVNHA k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -385,7 +385,7 @@ Array [
             type="button"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height={10}
               viewBox="0 0 6 10"
               width={6}
@@ -456,7 +456,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH dSVNHA k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -480,7 +480,7 @@ Array [
             type="button"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height={10}
               viewBox="0 0 6 10"
               width={6}
@@ -503,7 +503,7 @@ Array [
     className="k-u-margin-top-single"
   >
     <div
-      className="sc-iwsKbI bFBdXd k-Form-PasswordInput"
+      className="sc-iwsKbI dAJmRt k-Form-PasswordInput"
     >
       <input
         className="sc-bxivhb gBSWZW k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
@@ -584,7 +584,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-bwzfXH jmwuBi k-Toggletip k-Toggletip--info"
+          className="sc-bwzfXH dSVNHA k-Toggletip k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -608,7 +608,7 @@ Array [
             type="button"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height={10}
               viewBox="0 0 6 10"
               width={6}
@@ -631,7 +631,7 @@ Array [
     className="k-u-margin-top-single"
   >
     <div
-      className="sc-iwsKbI bFBdXd k-Form-PasswordInput"
+      className="sc-iwsKbI dAJmRt k-Form-PasswordInput"
     >
       <input
         className="sc-bxivhb gBSWZW k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular"
