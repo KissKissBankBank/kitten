@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Tokens: Update use of border tokens.
+- Feature: `LendopolisLoadingAnimation`: Add component.
 
 ## [6.3.0] - 2021-11-22
 
