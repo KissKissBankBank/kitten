@@ -4,10 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Start using Design Tokens for colors config (with fallback).
-- Feature: Tokens: Update use of border tokens.
-- Feature: `LendopolisLoadingAnimation`: Add component.
-- Feature: `Colors`: New `--color-yellow-700` value.
+## [6.4.0] - 2021-11-23
+
+Features:
+
+- Tokens: Start using Design Tokens for colors config (with fallback).
+- Tokens: Update use of border tokens with states.
+- Tokens: Update `--color-yellow-700` value.
+- `LendopolisLoadingAnimation`: Add component.
 
 ## [6.3.0] - 2021-11-22
 
