@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Start using Design Tokens for colors config (with fallback).
+- <!-- empty comment for commit -->
 
 ## [6.3.0] - 2021-11-22
 
