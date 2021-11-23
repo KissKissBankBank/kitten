@@ -41,7 +41,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdVaJa gxbmmQ k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          className="sc-bdVaJa bocwwG k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -103,7 +103,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdVaJa gxbmmQ k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          className="sc-bdVaJa bocwwG k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -165,7 +165,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdVaJa gxbmmQ k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          className="sc-bdVaJa bocwwG k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -227,7 +227,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdVaJa gxbmmQ k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
+          className="sc-bdVaJa bocwwG k-Button k-DragAndDropList__item__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
