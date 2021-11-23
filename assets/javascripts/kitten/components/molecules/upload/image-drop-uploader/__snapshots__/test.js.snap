@@ -2,7 +2,7 @@
 
 exports[`<ImageDropUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bwzfXH hSPWFi k-ImageDropUploader"
+  className="sc-bwzfXH jPdhpW k-ImageDropUploader"
 >
   <input
     accept="image/jpeg, image/png, image/gif, image/webp"
@@ -50,7 +50,7 @@ exports[`<ImageDropUploader /> should match snapshot 1`] = `
 
 exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
 <div
-  className="sc-bwzfXH hSPWFi k-ImageDropUploader k-ImageDropUploader--error"
+  className="sc-bwzfXH jPdhpW k-ImageDropUploader k-ImageDropUploader--error"
 >
   <div
     className="k-ImageDropUploader__manager"
@@ -100,7 +100,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </div>
     <button
       aria-label="Cancel"
-      className="sc-bdVaJa gxbmmQ k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
+      className="sc-bdVaJa ezJkDn k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
       disabled={false}
       onClick={[Function]}
       style={
@@ -112,7 +112,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
       type="button"
     >
       <svg
-        fill="#222"
+        fill="var(--color-grey-900, #222)"
         height="8"
         viewBox="0 0 8 8"
         width="8"
@@ -138,7 +138,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
 
 exports[`<ImageDropUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH hSPWFi k-ImageDropUploader"
+  className="sc-bwzfXH jPdhpW k-ImageDropUploader"
 >
   <input
     accept="image/jpeg, image/png, image/gif, image/webp"
@@ -188,7 +188,7 @@ exports[`<ImageDropUploader /> should match snapshot with props 1`] = `
 
 exports[`<ImageDropUploader /> should match snapshot with props 2`] = `
 <div
-  className="sc-bwzfXH hSPWFi k-ImageDropUploader k-ImageDropUploader--disabled"
+  className="sc-bwzfXH jPdhpW k-ImageDropUploader k-ImageDropUploader--disabled"
 >
   <input
     accept="image/jpeg, image/png, image/gif, image/webp"

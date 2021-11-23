@@ -28,7 +28,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -43,35 +43,35 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
   border: var(--border-hover);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
   border: var(--border-disabled);
-  background-color: #eee;
-  color: #949494;
+  background-color: var(--color-grey-300,#eee);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
-  background-color: #e8f7fe;
+  background-color: var(--color-primary-100,#e8f7fe);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled {
@@ -84,22 +84,22 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--icon {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--icon:hover,
 .c0.k-Buttons__tagButton--icon:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--icon:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--tiny {
@@ -125,63 +125,63 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--helium,
 .c0.k-Buttons__tagButton--hydrogen {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:hover,
 .c0.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--helium:focus,
 .c0.k-Buttons__tagButton--hydrogen:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--helium:active,
 .c0.k-Buttons__tagButton--hydrogen:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:disabled,
 .c0.k-Buttons__tagButton--hydrogen:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon {
-  color: #222;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-grey-900,#222);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:hover,
 .c0.k-Buttons__tagButton--carbon:focus {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:active {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--selected {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  background-color: #19b4fa;
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -248,7 +248,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -263,35 +263,35 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
   border: var(--border-hover);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
   border: var(--border-disabled);
-  background-color: #eee;
-  color: #949494;
+  background-color: var(--color-grey-300,#eee);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
-  background-color: #e8f7fe;
+  background-color: var(--color-primary-100,#e8f7fe);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled {
@@ -304,22 +304,22 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--icon {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--icon:hover,
 .c0.k-Buttons__tagButton--icon:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--icon:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--tiny {
@@ -345,63 +345,63 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--helium,
 .c0.k-Buttons__tagButton--hydrogen {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:hover,
 .c0.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--helium:focus,
 .c0.k-Buttons__tagButton--hydrogen:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--helium:active,
 .c0.k-Buttons__tagButton--hydrogen:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:disabled,
 .c0.k-Buttons__tagButton--hydrogen:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon {
-  color: #222;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-grey-900,#222);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:hover,
 .c0.k-Buttons__tagButton--carbon:focus {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:active {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--selected {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  background-color: #19b4fa;
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -468,7 +468,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -483,35 +483,35 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
   border: var(--border-hover);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
   border: var(--border-disabled);
-  background-color: #eee;
-  color: #949494;
+  background-color: var(--color-grey-300,#eee);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
-  background-color: #e8f7fe;
+  background-color: var(--color-primary-100,#e8f7fe);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled {
@@ -524,22 +524,22 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--icon {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--icon:hover,
 .c0.k-Buttons__tagButton--icon:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--icon:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--tiny {
@@ -565,63 +565,63 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--helium,
 .c0.k-Buttons__tagButton--hydrogen {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:hover,
 .c0.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--helium:focus,
 .c0.k-Buttons__tagButton--hydrogen:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--helium:active,
 .c0.k-Buttons__tagButton--hydrogen:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:disabled,
 .c0.k-Buttons__tagButton--hydrogen:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon {
-  color: #222;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-grey-900,#222);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:hover,
 .c0.k-Buttons__tagButton--carbon:focus {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:active {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--selected {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  background-color: #19b4fa;
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -688,7 +688,7 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -703,35 +703,35 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
   border: var(--border-hover);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
   border: var(--border-disabled);
-  background-color: #eee;
-  color: #949494;
+  background-color: var(--color-grey-300,#eee);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
-  background-color: #e8f7fe;
+  background-color: var(--color-primary-100,#e8f7fe);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled {
@@ -744,22 +744,22 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--icon {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--icon:hover,
 .c0.k-Buttons__tagButton--icon:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--icon:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--tiny {
@@ -785,63 +785,63 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--helium,
 .c0.k-Buttons__tagButton--hydrogen {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:hover,
 .c0.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--helium:focus,
 .c0.k-Buttons__tagButton--hydrogen:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--helium:active,
 .c0.k-Buttons__tagButton--hydrogen:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:disabled,
 .c0.k-Buttons__tagButton--hydrogen:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon {
-  color: #222;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-grey-900,#222);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:hover,
 .c0.k-Buttons__tagButton--carbon:focus {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:active {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--selected {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  background-color: #19b4fa;
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -908,7 +908,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -923,35 +923,35 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
   border: var(--border-hover);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
   border: var(--border-disabled);
-  background-color: #eee;
-  color: #949494;
+  background-color: var(--color-grey-300,#eee);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
-  background-color: #e8f7fe;
+  background-color: var(--color-primary-100,#e8f7fe);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled {
@@ -964,22 +964,22 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--icon {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--icon:hover,
 .c0.k-Buttons__tagButton--icon:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--icon:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--tiny {
@@ -1005,63 +1005,63 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--helium,
 .c0.k-Buttons__tagButton--hydrogen {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:hover,
 .c0.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--helium:focus,
 .c0.k-Buttons__tagButton--hydrogen:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--helium:active,
 .c0.k-Buttons__tagButton--hydrogen:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:disabled,
 .c0.k-Buttons__tagButton--hydrogen:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon {
-  color: #222;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-grey-900,#222);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:hover,
 .c0.k-Buttons__tagButton--carbon:focus {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:active {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--selected {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  background-color: #19b4fa;
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1145,7 +1145,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1160,35 +1160,35 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:focus {
   border: var(--border-hover);
-  background-color: #fff;
-  color: #222;
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:active {
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen:disabled {
   cursor: not-allowed;
   border: var(--border-disabled);
-  background-color: #eee;
-  color: #949494;
+  background-color: var(--color-grey-300,#eee);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
-  background-color: #e8f7fe;
+  background-color: var(--color-primary-100,#e8f7fe);
   border: var(--border-active);
-  color: #222;
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled {
@@ -1201,22 +1201,22 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 .c0.k-Buttons__tagButton--icon {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--icon:hover,
 .c0.k-Buttons__tagButton--icon:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--icon:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--tiny {
@@ -1242,63 +1242,63 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 
 .c0.k-Buttons__tagButton--helium,
 .c0.k-Buttons__tagButton--hydrogen {
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-color: var(--color-grey-400);
-  background-color: #fff;
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:hover,
 .c0.k-Buttons__tagButton--hydrogen:hover,
 .c0.k-Buttons__tagButton--helium:focus,
 .c0.k-Buttons__tagButton--hydrogen:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
 }
 
 .c0.k-Buttons__tagButton--helium:active,
 .c0.k-Buttons__tagButton--hydrogen:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary-700,#05a8e6);
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--helium:disabled,
 .c0.k-Buttons__tagButton--hydrogen:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon {
-  color: #222;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-grey-900,#222);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:hover,
 .c0.k-Buttons__tagButton--carbon:focus {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:active {
-  color: #19b4fa;
-  border-color: #fff;
-  background-color: #fff;
+  color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--carbon:disabled {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: #fff;
+  background-color: var(--color-grey-400,#d8d8d8);
+  border-color: var(--color-grey-400,#d8d8d8);
+  color: var(--color-grey-000,#fff);
 }
 
 .c0.k-Buttons__tagButton--selected {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   border: var(--border-active);
-  background-color: #19b4fa;
+  background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

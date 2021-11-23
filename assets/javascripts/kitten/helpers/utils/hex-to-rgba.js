@@ -4,6 +4,10 @@ export const hexToRgba = (hex, alpha = 1) => {
     hex = '#OOO'
   }
 
+  if (hex.startsWith('var')) {
+    return hex
+  }
+
   const hexColorRegexp = hex.length <= 4 ? /\w/g : /\w\w/g
   const [r, g, b] = hex
     .match(hexColorRegexp)

@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Start using Design Tokens for colors config (with fallback).
 - Feature: Tokens: Update use of border tokens.
 - Feature: `LendopolisLoadingAnimation`: Add component.
 - Feature: `Colors`: New `--color-yellow-700` value.
@@ -43,7 +44,7 @@ Fixes:
 Features:
 
 - Tooling: Use `Dart Sass` instead of `LibSass`.
-- Token: Add Design Token feature through CSS vars.
+- Tokens: Add Design Tokens feature through CSS vars.
 - Design: use browser default styles for focus outlines.
 - `DragAndDropList`: Add component.
 

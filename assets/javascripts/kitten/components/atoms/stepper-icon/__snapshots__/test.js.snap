@@ -2,10 +2,10 @@
 
 exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kZFnrY k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa gpZvCr k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--background-color": "#19b4fa",
+      "--background-color": "var(--color-primary-500, #19b4fa)",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -20,10 +20,10 @@ exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kZFnrY k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa gpZvCr k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--background-color": "#19b4fa",
+      "--background-color": "var(--color-primary-500, #19b4fa)",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -35,7 +35,7 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
   >
     <svg
       className=""
-      fill="#222"
+      fill="var(--color-grey-900, #222)"
       height="5.64"
       style={
         Object {
@@ -57,10 +57,10 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kZFnrY k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa gpZvCr k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--background-color": "#19b4fa",
+      "--background-color": "var(--color-primary-500, #19b4fa)",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -88,10 +88,10 @@ exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kZFnrY k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa gpZvCr k-IconBadge k-IconBadge--tiny k-IconBadge--empty k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--background-color": "#19b4fa",
+      "--background-color": "var(--color-primary-500, #19b4fa)",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -106,10 +106,10 @@ exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kZFnrY k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa gpZvCr k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--background-color": "#19b4fa",
+      "--background-color": "var(--color-primary-500, #19b4fa)",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,
@@ -121,7 +121,7 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
   >
     <svg
       className=""
-      fill="#222"
+      fill="var(--color-grey-900, #222)"
       height="5.64"
       style={
         Object {
@@ -143,10 +143,10 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa kZFnrY k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa gpZvCr k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--valid k-IconBadge--hasBorderStyles"
   style={
     Object {
-      "--background-color": "#19b4fa",
+      "--background-color": "var(--color-primary-500, #19b4fa)",
       "--border-color": null,
       "--border-style": null,
       "--border-width": null,

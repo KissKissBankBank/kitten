@@ -2,7 +2,7 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jQHgxo k-VerticalProgress__wrapper"
+  className="sc-htpNat hvIQfj k-VerticalProgress__wrapper"
 >
   <nav
     className="k-VerticalProgress"
@@ -15,14 +15,14 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa ljjlPS k-VerticalProgress__status k-VerticalProgress__status--actions"
+          className="sc-bdVaJa cXNQnH k-VerticalProgress__status k-VerticalProgress__status--actions"
         >
           <span
             className="k-VerticalProgress__icon"
           >
             <svg
               className=""
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height="10"
               style={
                 Object {
@@ -53,7 +53,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa ljjlPS k-VerticalProgress__status k-VerticalProgress__status--waiting"
+          className="sc-bdVaJa cXNQnH k-VerticalProgress__status k-VerticalProgress__status--waiting"
         >
           <span
             className="k-VerticalProgress__icon"
@@ -66,7 +66,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             >
               <path
                 d="M6.5002-.0003v3.107l-2.263 2.643 2.263 2.644v3.106h-6.5v-3.106l2.263-2.644-2.263-2.643v-3.107h6.5zm-3.25 6.904l-1.75 2.044v1.052l.422-.001.974-.974a.5011.5011 0 01.638-.058l.069.058.974.974.423.001v-1.051l-1.75-2.045zm1.75-5.404h-3.5v1.052l.676.789c.01-.001.02-.001.031-.001h2.053l.061.004.679-.793v-1.051z"
-                fill="#fff"
+                fill="var(--color-grey-000, #fff)"
               />
             </svg>
           </span>
@@ -84,13 +84,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa ljjlPS k-VerticalProgress__status k-VerticalProgress__status--publish"
+          className="sc-bdVaJa cXNQnH k-VerticalProgress__status k-VerticalProgress__status--publish"
         >
           <span
             className="k-VerticalProgress__icon"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height="8"
               viewBox="0 0 11 8"
               width="10"
@@ -115,14 +115,14 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa ljjlPS k-VerticalProgress__status k-VerticalProgress__status--valid"
+          className="sc-bdVaJa cXNQnH k-VerticalProgress__status k-VerticalProgress__status--valid"
         >
           <span
             className="k-VerticalProgress__icon"
           >
             <svg
               className=""
-              fill="#fff"
+              fill="var(--color-grey-000, #fff)"
               height="10"
               style={
                 Object {
@@ -153,7 +153,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa ljjlPS k-VerticalProgress__status k-VerticalProgress__status--disabled"
+          className="sc-bdVaJa cXNQnH k-VerticalProgress__status k-VerticalProgress__status--disabled"
         >
           <span
             className="k-VerticalProgress__icon"

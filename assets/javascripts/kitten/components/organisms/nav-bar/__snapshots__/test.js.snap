@@ -195,7 +195,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   width: auto;
   margin: 0;
   padding: 0 1.25rem;
-  background: #f3fbff;
+  background: var(--color-primary-100,#f3fbff);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,7 +258,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-bottom: 0.25rem solid transparent;
   -webkit-transition: color 0.2s,border-color 0.2s;
   transition: color 0.2s,border-color 0.2s;
@@ -266,15 +266,15 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:hover {
-  color: #19b4fa;
+  color: var(--color-primary-500,#19b4fa);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
   border-width: 0.25rem;
 }
 
@@ -377,7 +377,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   width: auto;
   margin: 0;
   padding: 0 1.25rem;
-  background: #f3fbff;
+  background: var(--color-primary-100,#f3fbff);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -440,7 +440,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  color: #222;
+  color: var(--color-grey-900,#222);
   border-bottom: 0.25rem solid transparent;
   -webkit-transition: color 0.2s,border-color 0.2s;
   transition: color 0.2s,border-color 0.2s;
@@ -448,15 +448,15 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:hover {
-  color: #19b4fa;
+  color: var(--color-primary-500,#19b4fa);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: #19b4fa;
-  color: #19b4fa;
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
   border-width: 0.25rem;
 }
 

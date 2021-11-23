@@ -22,8 +22,8 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   border-radius: 3.125rem;
   box-sizing: border-box;
   margin-right: 1.25rem;
-  background-color: #fff;
-  border: 2px solid #eee;
+  background-color: var(--color-grey-000,#fff);
+  border: 2px solid var(--color-grey-300,#eee);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
@@ -60,7 +60,7 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   flex: 1;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  color: #222;
+  color: var(--color-grey-900,#222);
   line-height: 1.6;
   font-size: 0.875rem;
 }

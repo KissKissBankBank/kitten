@@ -2,7 +2,7 @@
 
 exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 {
-  color: #b8b8b8;
+  color: var(--color-grey-500,#b8b8b8);
 }
 
 .c0 .k-DashboardMenu__expandable__title,
@@ -11,7 +11,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__item:visited,
 .c0 .k-DashboardMenu__expandable__title:link,
 .c0 .k-DashboardMenu__item:link {
-  color: #b8b8b8;
+  color: var(--color-grey-500,#b8b8b8);
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -23,7 +23,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__item:focus,
 .c0 .k-DashboardMenu__expandable__title:hover,
 .c0 .k-DashboardMenu__item:hover {
-  background-color: #2d2d2d !important;
+  background-color: var(--color-grey-800,#2d2d2d) !important;
 }
 
 .c0 .k-DashboardMenu__expandable__title:focus,
@@ -43,7 +43,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 a.k-DashboardMenu__selectorButton:visited,
 .c0 summary.k-DashboardMenu__selectorSummary:link,
 .c0 a.k-DashboardMenu__selectorButton:link {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -55,7 +55,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 a.k-DashboardMenu__selectorButton[aria-current='page'],
 .c0 summary.k-DashboardMenu__selectorSummary:hover,
 .c0 a.k-DashboardMenu__selectorButton:hover {
-  background-color: #2d2d2d !important;
+  background-color: var(--color-grey-800,#2d2d2d) !important;
 }
 
 .c0 summary.k-DashboardMenu__selectorSummary:focus,
@@ -116,7 +116,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable {
   border-radius: 0.375rem;
-  background-color: #2d2d2d;
+  background-color: var(--color-grey-800,#2d2d2d);
 }
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list {
@@ -179,15 +179,15 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  background-color: #222;
+  background-color: var(--color-grey-900,#222);
   cursor: pointer;
 }
 
 .c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
-  color: #fff;
-  background-color: #2d2d2d;
+  color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-800,#2d2d2d);
 }
 
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
@@ -206,18 +206,18 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current='page'] {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-DashboardMenu__selectorSummary .k-DashboardMenu__selectorButton__arrow {
-  color: #b8b8b8;
+  color: var(--color-grey-500,#b8b8b8);
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 
 .c0 .k-DashboardMenu__selectorSummary:hover .k-DashboardMenu__selectorButton__arrow,
 .c0 .k-DashboardMenu__selectorSummary:focus .k-DashboardMenu__selectorButton__arrow {
-  color: #fff;
+  color: var(--color-grey-000,#fff);
 }
 
 .c0 .k-DashboardMenu__iconWrapper {
@@ -303,7 +303,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   bottom: -0.3125rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  border: 0.125rem solid #636363;
+  border: 0.125rem solid var(--color-grey-700,#636363);
   border-bottom: 0;
   opacity: 0;
 }
@@ -368,14 +368,14 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   padding: 0 0.1875rem 0.1875rem;
   overflow-y: scroll;
   box-sizing: border-box;
-  background: #222;
+  background: var(--color-grey-900,#222);
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
   pointer-events: none;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  border: 0.125rem solid #636363;
+  border: 0.125rem solid var(--color-grey-700,#636363);
   border-top: 0;
 }
 
@@ -468,7 +468,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
             >
               <svg
                 className=""
-                fill="#222"
+                fill="var(--color-grey-900, #222)"
                 height="5.64"
                 style={
                   Object {
