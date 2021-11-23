@@ -159,7 +159,7 @@ export const StyledDropdown = styled.div`
     .k-Form-DropdownCombobox__arrowButton,
     .k-Form-DropdownSelect__button__arrowBox,
     .k-Form-Dropdown__list {
-      border: ${COLORS.error3};
+      border-color: ${COLORS.error3};
     }
   }
   &.k-Form-Dropdown--valid {

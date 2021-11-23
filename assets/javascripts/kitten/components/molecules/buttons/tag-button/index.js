@@ -64,7 +64,7 @@ const StyledTagButton = styled.button`
 
       &.k-Buttons__tagButton--selected {
         background-color: ${COLORS.primary5};
-        border-color: var(--border-active);
+        border: var(--border-active);
         color: ${COLORS.font1};
       }
     }
@@ -171,7 +171,7 @@ const StyledTagButton = styled.button`
   }
   &.k-Buttons__tagButton--selected {
     color: ${COLORS.background1};
-    border: ${COLORS.primary1};
+    border: var(--border-active);
     background-color: ${COLORS.primary1};
   }
 `
