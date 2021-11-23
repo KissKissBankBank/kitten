@@ -142,7 +142,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -365,7 +365,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -604,7 +604,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -843,7 +843,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1066,7 +1066,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1289,7 +1289,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1512,7 +1512,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1735,7 +1735,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1958,7 +1958,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -2181,7 +2181,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }

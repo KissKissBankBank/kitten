@@ -825,7 +825,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1580,7 +1580,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -2337,7 +2337,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3:disabled,
 .c3.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }

@@ -142,7 +142,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -368,7 +368,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -610,7 +610,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -852,7 +852,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1078,7 +1078,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1304,7 +1304,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1530,7 +1530,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }
@@ -1756,7 +1756,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: #d8d8d8;
+  border: var(--border-disabled);
   background-color: #d8d8d8;
   color: #fff;
 }

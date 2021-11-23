@@ -13,16 +13,20 @@ const StyledWrapper = styled.div`
   align-items: center;
   font-size: ${stepToRem(-1)};
   box-sizing: border-box;
-  border-width: var(--border-width);
-  border-style: solid;
   border-radius: 0;
   width: 100%;
-  border-color: var(--color-grey-400);
+  border: var(--border);
+  transition: border 0.2s ease;
   padding: var(--tagInput-padding-vertical, ${pxToRem(10)})
     var(--tagInput-padding-horizontal, ${pxToRem(10)});
 
   :focus-within {
-    outline-style: auto;
+    outline: var(--outline-input);
+    outline-offset: var(--outline-offset-input);
+  }
+
+  :hover {
+    border: var(--border-hover);
   }
 
   .k-Form-TagList__list {

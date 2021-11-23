@@ -36,7 +36,7 @@ export const StyledDropdown = styled.div`
     gap: ${pxToRem(10)};
     padding: 0 ${pxToRem(10)};
 
-    border: var(--DropdownSelect-border) solid var(--color-grey-400);
+    border: var(--border);
 
     font-size: ${stepToRem(-1)};
     text-align: left;
@@ -68,7 +68,7 @@ export const StyledDropdown = styled.div`
     );
   }
   .k-Form-DropdownCombobox__input:focus {
-    outline-offset: ${pxToRem(-2)};
+    outline-offset: var(--outline-offset-input);
   }
 
 
@@ -174,6 +174,11 @@ export const StyledDropdown = styled.div`
 
   &.k-Form-Dropdown--disabled {
     cursor: not-allowed;
+
+    .k-Form-DropdownCombobox,
+    .k-Form-DropdownSelect__button {
+      border: var(--border-disabled);
+    }
   }
 
   /* VARIANT: ANDROMEDA */
@@ -412,13 +417,21 @@ export const StyledDropdown = styled.div`
       }
     }
 
+    &:hover {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button,
+      .k-Form-Dropdown__list {
+        border-color: var(--color-grey-500);
+      }
+    }
+
     &:focus-within {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownCombobox__arrowButton,
       .k-Form-DropdownSelect__button,
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list {
-        border-color: var(--color-grey-400);
+        border-color: var(--color-grey-600);
       }
     }
 
@@ -506,6 +519,14 @@ export const StyledDropdown = styled.div`
       }
       &[disabled] {
         color: ${COLORS.font3};
+      }
+    }
+
+    &:hover {
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button,
+      .k-Form-Dropdown__list {
+        border-color: var(--color-grey-600);
       }
     }
 

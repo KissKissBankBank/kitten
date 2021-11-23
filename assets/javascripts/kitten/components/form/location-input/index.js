@@ -36,13 +36,18 @@ const StyledLocationInput = styled.div`
       color: ${COLORS.font2};
     }
 
+    &:hover {
+      border: var(--border-hover);
+    }
+
     &:focus {
       color: ${COLORS.font1};
-      border-color: var(--color-grey-500);
+      outline: var(--outline-input);
+      outline-offset: var(--outline-offset-input);
     }
 
     &:disabled {
-      border-color: ${COLORS.line1};
+      border: var(--border-disabled);
       background-color: ${COLORS.line1};
       color: ${COLORS.font2};
 
@@ -63,7 +68,7 @@ const StyledLocationInput = styled.div`
   .k-LocationInput__autocomplete {
     box-sizing: border-box;
     background-color: ${COLORS.background1};
-    border: var(--border);
+    border: var(--border-active);
     border-top: 0;
     position: absolute;
     z-index: 1000;

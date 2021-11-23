@@ -46,20 +46,20 @@ const StyledButtonGroup = styled.div`
     .k-ButtonGroup__button {
       border-radius: var(--border-radius-s);
       color: ${COLORS.font1};
-      border-color: var(--color-grey-400);
+      border: var(--border);
       background-color: ${COLORS.background1};
 
       &:hover,
       &:focus,
       &:active {
         color: ${COLORS.font1};
-        border-color: ${COLORS.primary2};
+        border: var(--border-hover);
         background-color: ${COLORS.background1};
       }
 
       &.k-ButtonGroup__button--isActive {
         color: ${COLORS.font1};
-        border-color: ${COLORS.primary1};
+        border: var(--border-active);
         background-color: ${COLORS.primary5};
       }
 
