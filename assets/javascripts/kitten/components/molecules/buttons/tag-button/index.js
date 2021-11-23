@@ -9,11 +9,6 @@ import classNames from 'classnames'
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
   min-width: ${pxToRem(60)};
-  /* IE11 */
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    height: ${pxToRem(40)};
-    width: ${pxToRem(60)};
-  }
 
   padding: 0 ${pxToRem(20)};
   font-size: ${stepToRem(-2)};
@@ -101,30 +96,18 @@ const StyledTagButton = styled.button`
     min-width: ${pxToRem(60)};
     padding: 0 ${pxToRem(20)};
     font-size: ${stepToRem(-2)};
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      height: ${pxToRem(40)};
-      width: ${pxToRem(60)};
-    }
   }
   &.k-Buttons__tagButton--big {
     min-height: ${pxToRem(50)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
     font-size: ${stepToRem(-1)};
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      height: ${pxToRem(50)};
-      width: ${pxToRem(80)};
-    }
   }
   &.k-Buttons__tagButton--huge {
     min-height: ${pxToRem(60)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
     font-size: ${stepToRem(-1)};
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      height: ${pxToRem(60)};
-      width: ${pxToRem(80)};
-    }
   }
   &.k-Buttons__tagButton--helium,
   &.k-Buttons__tagButton--hydrogen {

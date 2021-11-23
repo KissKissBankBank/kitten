@@ -52,10 +52,6 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   outline-offset: var(--outline-offset-input);
 }
 
-.c0 .k-Form-Autocomplete__input::-ms-clear {
-  display: none;
-}
-
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
   border: var(--border-danger);
   color: var(--color-danger-300,#ffb2c7);
@@ -242,10 +238,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   border-color: var(--color-grey-500);
   outline: var(--outline-input);
   outline-offset: var(--outline-offset-input);
-}
-
-.c0 .k-Form-Autocomplete__input::-ms-clear {
-  display: none;
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
@@ -486,10 +478,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   border-color: var(--color-grey-500);
   outline: var(--outline-input);
   outline-offset: var(--outline-offset-input);
-}
-
-.c0 .k-Form-Autocomplete__input::-ms-clear {
-  display: none;
 }
 
 .c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {

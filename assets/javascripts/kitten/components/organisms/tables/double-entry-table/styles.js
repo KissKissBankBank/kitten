@@ -34,11 +34,6 @@ export const Styles = styled.div`
     /* Opera doesn't support this in the shorthand */
     background-attachment: local, local, scroll, scroll;
 
-    @media screen and (min-width: 0\0) {
-      /* IE */
-      background: ${COLORS.background1};
-    }
-
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       background-position: ${({ firstColWidth }) => pxToRem(firstColWidth)},
         100%;
@@ -50,11 +45,6 @@ export const Styles = styled.div`
     border-spacing: 0;
     table-layout: fixed;
     border-collapse: separate;
-
-    @media screen and (min-width: 0\0) {
-      /* IE */
-      border-collapse: collapse;
-    }
   }
 
   .DoubleEntryTable__Column {
@@ -67,11 +57,6 @@ export const Styles = styled.div`
     text-align: left;
     width: ${pxToRem(120)} !important;
     vertical-align: middle;
-
-    @media screen and (min-width: 0\0) {
-      /* IE */
-      border: ${pxToRem(1)} solid ${COLORS.line2};
-    }
 
     &.DoubleEntryTable__Column--Col {
       ${TYPOGRAPHY.fontStyles.light}
@@ -99,11 +84,6 @@ export const Styles = styled.div`
       background: rgba(0,0,0,.016);
       border-left-width: 0;
       width: ${pxToRem(135)};
-
-      @media screen and (min-width: 0\0) {
-        /* IE */
-        background: ${COLORS.background2};
-      }
 
       &:first-child {
         background: ${COLORS.background2};

@@ -332,13 +332,8 @@ export const StyledCarouselContainer = styled.div`
         pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
     }
 
-    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
-    min-height: 1;
-
     overflow-x: scroll;
     scroll-behavior: smooth;
-    /* hide scrollbar on IE and Edge */
-    -ms-over-flow-style: none;
     /* mandatory to combine scroll with this property on iOS */
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -360,34 +355,6 @@ export const StyledCarouselContainer = styled.div`
           pointer-events: none;
         }
       }
-    }
-
-    /* IE11 support */
-    display: -ms-grid;
-    -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING_THIN / 2)}) [
-      ${({ numberOfPages }) => numberOfPages - 1}] 100%;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING / 2)}) [
-        ${({ numberOfPages }) => numberOfPages - 1}] 100%;
-    }
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      -ms-grid-columns: (
-          100% ${({ baseItemMarginBetween }) => pxToRem(baseItemMarginBetween)}
-        )
-        [ ${({ numberOfPages }) => numberOfPages - 1}] 100%;
-    }
-
-    .k-Carousel__inner__pageContainer {
-      ${({ numberOfPages }) =>
-        [...Array(numberOfPages).keys()].map(
-          item => css`
-            &:nth-child(${item + 1}) {
-              -ms-grid-column: ${item * 2 + 1};
-            }
-          `,
-        )}
-      -ms-grid-column-span: 1;
     }
   }
 
@@ -433,48 +400,6 @@ export const StyledCarouselContainer = styled.div`
     .k-Carousel__page__item {
       overflow: hidden;
       padding: ${pxToRem(OUTLINE_PLUS_OFFSET)};
-    }
-
-    /* IE11 support */
-    display: -ms-grid;
-    -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
-      numberOfItemsPerPage > 1
-        ? css`
-    (1fr ${pxToRem(CONTAINER_PADDING_THIN / 2)})[${
-            numberOfItemsPerPage - 1
-          }] 1fr;
-    `
-        : '1fr'};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
-        numberOfItemsPerPage > 1
-          ? css`
-      (1fr ${pxToRem(CONTAINER_PADDING / 2)})[${numberOfItemsPerPage - 1}] 1fr;
-      `
-          : '1fr'};
-    }
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
-        numberOfItemsPerPage > 1
-          ? css`
-      (1fr ${({ baseItemMarginBetween }) => pxToRem(baseItemMarginBetween)})[${
-              numberOfItemsPerPage - 1
-            }] 1fr;
-      `
-          : '1fr'};
-    }
-
-    .k-Carousel__page__item {
-      ${({ numberOfItemsPerPage }) =>
-        [...Array(numberOfItemsPerPage).keys()].map(
-          item => css`
-            &:nth-child(${item + 1}) {
-              -ms-grid-column: ${item * 2 + 1};
-            }
-          `,
-        )}
-      -ms-grid-column-span: 1;
     }
   }
 `

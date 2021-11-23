@@ -184,34 +184,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   background-color: var(--color-primary-500,#19b4fa);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--tiny {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--big {
-    height: 3.125rem;
-    width: 5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--huge {
-    height: 3.75rem;
-    width: 5rem;
-  }
-}
-
 <button
   className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium k-Buttons__tagButton--orion k-Buttons__tagButton--regular"
   type="button"
@@ -402,34 +374,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
   border: var(--border-active);
   background-color: var(--color-primary-500,#19b4fa);
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--tiny {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--big {
-    height: 3.125rem;
-    width: 5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--huge {
-    height: 3.75rem;
-    width: 5rem;
-  }
 }
 
 <button
@@ -624,34 +568,6 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   background-color: var(--color-primary-500,#19b4fa);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--tiny {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--big {
-    height: 3.125rem;
-    width: 5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--huge {
-    height: 3.75rem;
-    width: 5rem;
-  }
-}
-
 <button
   className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--huge"
   type="button"
@@ -844,34 +760,6 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   background-color: var(--color-primary-500,#19b4fa);
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--tiny {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--big {
-    height: 3.125rem;
-    width: 5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--huge {
-    height: 3.75rem;
-    width: 5rem;
-  }
-}
-
 <button
   className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular"
   type="button"
@@ -1062,34 +950,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
   border: var(--border-active);
   background-color: var(--color-primary-500,#19b4fa);
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--tiny {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--big {
-    height: 3.125rem;
-    width: 5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--huge {
-    height: 3.75rem;
-    width: 5rem;
-  }
 }
 
 <button
@@ -1299,34 +1159,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
   border: var(--border-active);
   background-color: var(--color-primary-500,#19b4fa);
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0 {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--tiny {
-    height: 2.5rem;
-    width: 3.75rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--big {
-    height: 3.125rem;
-    width: 5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons__tagButton--huge {
-    height: 3.75rem;
-    width: 5rem;
-  }
 }
 
 <button

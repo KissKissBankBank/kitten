@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const StyledContributionCard = styled.article`
@@ -11,12 +10,6 @@ export const StyledContributionCard = styled.article`
   display: block;
   overflow: hidden;
   box-sizing: border-box;
-
-  /* IE11 defaults */
-  border-width: ${pxToRem(1)};
-  border-style: solid;
-  border-color: ${COLORS.line2};
-  border-radius: ${pxToRem(8)};
 
   border-width: var(--border-width);
   border-style: var(--contributionCard--border-style);
