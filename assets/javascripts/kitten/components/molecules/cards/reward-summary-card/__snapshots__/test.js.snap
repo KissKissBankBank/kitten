@@ -56,7 +56,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       Stickers Free Boobs Club
     </span>
     <span
-      className="sc-htpNat lfrpFC k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
+      className="sc-htpNat dXGURM k-Tag k-RewardSummaryCard__titleTag k-u-margin-top-single k-u-margin-top-single k-Tag--info"
     >
       <svg
         fill="#222"
