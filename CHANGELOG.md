@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Tokens: Update use of border tokens.
 - Feature: `LendopolisLoadingAnimation`: Add component.
+- Feature: `Colors`: New `--color-yellow-700` value.
 
 ## [6.3.0] - 2021-11-22
 
