@@ -151,7 +151,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -395,7 +395,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -655,7 +655,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -915,7 +915,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -1159,7 +1159,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -1403,7 +1403,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -1647,7 +1647,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }
@@ -1891,7 +1891,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border-color: var(--color-grey-400,#d8d8d8);
+  border: var(--border-disabled);
   background-color: var(--color-grey-400,#d8d8d8);
   color: var(--color-grey-000,#fff);
 }

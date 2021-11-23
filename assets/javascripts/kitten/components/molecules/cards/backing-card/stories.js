@@ -52,7 +52,7 @@ export default {
 
 export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
   return (
-    <BackingCard {...args}>
+    <BackingCard {...args} as="button" className="k-u-reset-button">
       {hasImage && (
         <BackingCard.Image>
           <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />

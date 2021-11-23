@@ -100,17 +100,19 @@ export const StyledRewardSummaryCard = styled.div`
 
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
-  &:hover {
-    background-color: ${COLORS.background2};
-  }
-  &:active {
-    background-color: ${COLORS.background3};
-  }
-
   border-width: var(--rewardSummaryCard--border-width);
   border-style: solid;
   border-color: var(--color-grey-400);
   border-radius: var(--rewardSummaryCard--border-radius);
+
+  &:hover {
+    background-color: ${COLORS.background2};
+    border-color: var(--color-grey-500);
+  }
+  &:active {
+    background-color: ${COLORS.background3};
+    border-color: var(--color-grey-600);
+  }
 
   @media (min-width: ${ScreenConfig.S.min}px) {
     min-height: ${pxToRem(100)};

@@ -223,15 +223,22 @@ const StyledDropdownSelectWithInput = styled.div`
     background-color: ${COLORS.line1};
   }
 
-  &:focus-within {
+  &:hover {
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
       border-color: var(--color-grey-500);
     }
+  }
+
+  &:focus-within {
+    .k-Form-DropdownSelectWithInput__container,
+    .k-Form-DropdownSelectWithInput__list {
+      border-color: var(--color-grey-600);
+    }
 
     .k-Form-DropdownSelectWithInput__button:focus,
     .k-Form-DropdownSelectWithInput__input:focus {
-      outline-offset: ${pxToRem(-2)};
+      outline-offset: var(--outline-offset-input);
     }
   }
 

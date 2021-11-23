@@ -186,7 +186,7 @@ export const StyledBackingCard = styled.article`
   &.k-BackingCard--hasHover:hover,
   button&:hover,
   a&:hover {
-    --backingCard--border-color: ${COLORS.line2};
+    --backingCard--border-color: var(--color-grey-500);
 
     cursor: pointer;
 
@@ -204,5 +204,10 @@ export const StyledBackingCard = styled.article`
     .k-BackingCard__description__moreButton {
       color: ${COLORS.primary2};
     }
+  }
+
+  button&:active,
+  a&:active {
+    --backingCard--border-color: var(--color-grey-600);
   }
 `
