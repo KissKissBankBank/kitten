@@ -3,7 +3,7 @@
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bdVaJa iVJKVr"
+    className="sc-bdVaJa lpcvuM"
     id=""
     style={Object {}}
   >
@@ -72,7 +72,7 @@ Array [
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa cvDNJU"
+  className="sc-bdVaJa khzUTm"
   id=""
   style={Object {}}
 >
@@ -91,7 +91,7 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 
 exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa cvDNJU"
+  className="sc-bdVaJa khzUTm"
   id="simpleCarousel"
   style={Object {}}
 >

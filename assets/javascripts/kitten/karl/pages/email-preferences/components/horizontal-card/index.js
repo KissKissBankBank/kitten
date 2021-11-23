@@ -35,6 +35,9 @@ const HorizontalCard = styled.div`
 const Image = styled.div`
   grid-area: hc-image;
 `
+const TextContainer = styled.div`
+  grid-area: hc-text;
+`
 
 const Action = styled.div`
   grid-area: hc-action;
@@ -49,9 +52,9 @@ const TextContent = styled.div`
 `
 
 const Text = props => (
-  <div>
+  <TextContainer>
     <TextContent {...props} />
-  </div>
+  </TextContainer>
 )
 
 HorizontalCard.Image = Image
