@@ -1,5 +1,5 @@
 name: Test React components
-on: [pull_request, workflow_dispatch]
+on: [pull_request]
 
 jobs:
   build-and-test:
