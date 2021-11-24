@@ -6,7 +6,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH KMlEy k-Label k-Form-RadioButtonSet__label k-Label--normal"
+    className="sc-bwzfXH clxZLi k-Label k-Form-RadioButtonSet__label k-Label--normal"
     onClick={[Function]}
   >
     Label
@@ -15,7 +15,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
     className="k-Form-RadioButtonSet__radioContainer"
   >
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -37,7 +37,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -58,7 +58,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -88,7 +88,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
   disabled={false}
 >
   <legend
-    className="sc-bwzfXH KMlEy k-Label k-Form-RadioButtonSet__label customClass k-Label--normal"
+    className="sc-bwzfXH clxZLi k-Label k-Form-RadioButtonSet__label customClass k-Label--normal"
     data-test={true}
     onClick={[Function]}
   >
@@ -98,7 +98,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
     className="k-Form-RadioButtonSet__radioContainer"
   >
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -120,7 +120,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       </label>
     </div>
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -141,7 +141,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       </label>
     </div>
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -179,7 +179,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
     className="k-Form-RadioButtonSet__radioContainer"
   >
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -201,7 +201,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -222,7 +222,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdVaJa iCUVUV k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+      className="sc-bdVaJa fGuDcC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
     >
       <input
         className="k-Form-RadioButton__input"

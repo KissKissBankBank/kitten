@@ -115,7 +115,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable {
-  border-radius: 0.375rem;
+  border-radius: var(--border-radius-s);
   background-color: var(--color-grey-800,#2d2d2d);
 }
 
@@ -160,7 +160,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   align-items: center;
   gap: 0.9375rem;
   padding: 0 0.9375rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-xs);
 }
 
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__title,
@@ -301,8 +301,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   left: -0.3125rem;
   right: -0.3125rem;
   bottom: -0.3125rem;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: var(--border-radius-m);
+  border-top-right-radius: var(--border-radius-m);
   border: 0.125rem solid var(--color-grey-700,#636363);
   border-bottom: 0;
   opacity: 0;
@@ -331,7 +331,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   cursor: pointer;
   padding: 0 0.9375rem;
   height: 4.375rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-xs);
 }
 
 .c0 .k-DashboardMenu__selectorSummary::-webkit-details-marker {
@@ -373,8 +373,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   -ms-transform-origin: top left;
   transform-origin: top left;
   pointer-events: none;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: var(--border-radius-m);
+  border-bottom-right-radius: var(--border-radius-m);
   border: 0.125rem solid var(--color-grey-700,#636363);
   border-top: 0;
 }

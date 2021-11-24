@@ -39,8 +39,8 @@ const StyledTextInputWithButton = styled.div`
         border-bottom-right-radius: 0;
       }
       .k-Form-TextInputWithButton__button {
-        border-top-right-radius: var(--text-input-size);
-        border-bottom-right-radius: var(--text-input-size);
+        border-top-right-radius: var(--border-radius-s);
+        border-bottom-right-radius: var(--border-radius-s);
       }
     }
   }
@@ -76,22 +76,12 @@ const StyledTextInputWithButton = styled.div`
     }
 
     .k-Form-TextInput--orion + .k-Form-TextInputWithButton__button {
-      --text-input-button-radius: ${pxToRem(4)};
-    }
-
-    .k-Form-TextInput--big + .k-Form-TextInputWithButton__button,
-    .k-Form-TextInput--huge + .k-Form-TextInputWithButton__button,
-    .k-Form-TextInput--giant + .k-Form-TextInputWithButton__button {
-      --text-input-button-radius: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --text-input-button-radius: ${pxToRem(8)};
-      }
+      --text-input-button-radius: var(--border-radius-s);
     }
 
     &.k-Form-TextInputWithButton--roudedButton
       .k-Form-TextInputWithButton__button {
-      --text-input-button-radius: var(--text-input-size);
+      --text-input-button-radius: var(--border-radius-xxl);
     }
   }
 

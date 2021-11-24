@@ -9,7 +9,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 const StyledButtonImage = styled.button`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
-  border-radius: 50%;
+  border-radius: var(--border-radius-xxl);
 
   box-sizing: border-box;
   display: flex;

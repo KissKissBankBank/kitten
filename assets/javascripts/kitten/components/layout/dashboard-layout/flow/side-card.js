@@ -15,7 +15,7 @@ const StyledSideCard = styled.div`
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     padding: ${pxToRem(30)};
-    border-radius: ${pxToRem(8)};
+    border-radius: var(--border-radius-m);
     margin-bottom: ${pxToRem(15)};
   }
 

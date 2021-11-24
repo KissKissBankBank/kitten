@@ -15,7 +15,7 @@ const StyledTag = styled.span`
   line-height: ${pxToRem(30)};
   ${TYPOGRAPHY.fontStyles.light}
   font-size: ${stepToRem(-1)};
-  border-radius: var(--border-radius-s);
+  border-radius: var(--border-radius-xs);
 
   &.k-Tag--info {
     background-color: ${COLORS.primary5};

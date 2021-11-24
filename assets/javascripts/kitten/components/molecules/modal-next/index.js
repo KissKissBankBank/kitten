@@ -347,10 +347,10 @@ const GlobalStyle = createGlobalStyle`
     padding-right: 0;
 
     &:not(.k-ModalNext__content--fullSize) {
-      border-radius: ${pxToRem(12)};
+      border-radius: var(--border-radius-l);
 
       .k-ModalNext__closeButton .k-Button {
-        border-top-right-radius: ${pxToRem(12)};
+        border-top-right-radius: var(--border-radius-l);
       }
     }
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
@@ -368,8 +368,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .k-ModalNext__header {
-      border-top-left-radius: ${pxToRem(12)};
-      border-top-right-radius: ${pxToRem(12)};
+      border-top-left-radius: var(--border-radius-l);
+      border-top-right-radius: var(--border-radius-l);
 
       .k-Button {
         @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {

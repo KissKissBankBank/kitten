@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   &:not(.k-VerticalProgress__wrapper--withoutBorder) {
     border: var(--border);
     padding: ${pxToRem(15)};
-    border-radius: ${pxToRem(8)};
+    border-radius: var(--border-radius-l);
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: ${pxToRem(30)};

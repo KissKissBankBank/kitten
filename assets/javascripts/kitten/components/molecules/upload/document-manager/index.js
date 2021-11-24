@@ -152,7 +152,7 @@ const StyledIconContainer = styled.div`
   box-sizing: border-box;
   width: ${pxToRem(60)};
   height: ${pxToRem(60)};
-  border-radius: 50%;
+  border-radius: var(--border-radius-xxl);
   background-color: #caf4fe;
 
   padding-top: ${pxToRem(15)};
@@ -172,7 +172,7 @@ const StyledIconContainer = styled.div`
     border: var(--border-width) solid ${COLORS.background1};
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
-    border-radius: 50%;
+    border-radius: var(--border-radius-xxl);
   }
 `
 

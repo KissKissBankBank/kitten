@@ -133,7 +133,7 @@ const StyledDashboardMenu = styled.nav`
   }
 
   .k-DashboardMenu__expandable {
-    border-radius: ${pxToRem(6)};
+    border-radius: var(--border-radius-s);
     background-color: ${COLORS.line3};
 
     .k-DashboardMenu__expandable__list {
@@ -165,7 +165,7 @@ const StyledDashboardMenu = styled.nav`
     align-items: center;
     gap: ${pxToRem(15)};
     padding: 0 ${pxToRem(15)};
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-xs);
   }
 
   .k-DashboardMenu__list
@@ -292,8 +292,8 @@ const StyledDashboardMenu = styled.nav`
       left: ${pxToRem(-5)};
       right: ${pxToRem(-5)};
       bottom: ${pxToRem(-5)};
-      border-top-left-radius: ${pxToRem(8)};
-      border-top-right-radius: ${pxToRem(8)};
+      border-top-left-radius: var(--border-radius-m);
+      border-top-right-radius: var(--border-radius-m);
       border: ${pxToRem(2)} solid ${COLORS.grey1};
       border-bottom: 0;
       opacity: 0;
@@ -320,7 +320,7 @@ const StyledDashboardMenu = styled.nav`
 
     padding: 0 ${pxToRem(15)};
     height: ${pxToRem(70)};
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-xs);
 
     ::-webkit-details-marker {
       display: none;
@@ -354,8 +354,8 @@ const StyledDashboardMenu = styled.nav`
     transform-origin: top left;
     pointer-events: none;
 
-    border-bottom-left-radius: ${pxToRem(8)};
-    border-bottom-right-radius: ${pxToRem(8)};
+    border-bottom-left-radius: var(--border-radius-m);
+    border-bottom-right-radius: var(--border-radius-m);
     border: ${pxToRem(2)} solid ${COLORS.grey1};
     border-top: 0;
 

@@ -16,7 +16,7 @@ const StyledLoader = styled.div`
   .k-Loader__circle {
     width: ${pxToRem(BULLET_SIZE)};
     height: ${pxToRem(BULLET_SIZE)};
-    border-radius: ${pxToRem(BULLET_SIZE)};
+    border-radius: var(--border-radius-xxl);
 
     animation: k-Loader-animation-scale 1.75s 0s infinite
       cubic-bezier(0.2, 0.68, 0.18, 1.08);

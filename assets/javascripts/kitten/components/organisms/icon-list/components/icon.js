@@ -15,7 +15,7 @@ export const Icon = styled.span`
 
   width: ${ICON_SIZE};
   height: ${ICON_SIZE};
-  border-radius: ${ICON_SIZE};
+  border-radius: var(--border-radius-xxl);
   box-sizing: border-box;
 
   margin-right: ${pxToRem(20)};

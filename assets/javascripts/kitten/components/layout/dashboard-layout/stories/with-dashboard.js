@@ -17,11 +17,10 @@ const CardHolder = styled.div`
 
   > div {
     border: var(--border);
-    border-radius: ${pxToRem(6)};
+    border-radius: var(--border-radius-s);
     padding: ${pxToRem(20)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      border-radius: ${pxToRem(8)};
       padding: ${pxToRem(30)};
     }
   }

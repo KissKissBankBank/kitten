@@ -22,7 +22,7 @@ const AlertWrapper = styled.div`
 
   ${TYPOGRAPHY.fontStyles.light};
   margin: ${pxToRem(10)};
-  border-radius: ${pxToRem(8)};
+  border-radius: var(--border-radius-m);
   overflow: hidden;
   background-color: ${COLORS.primary5};
   color: ${COLORS.font1};
@@ -70,7 +70,7 @@ const AlertWrapper = styled.div`
       border-color: ${COLORS.primary4};
       min-width: ${pxToRem(24)};
       min-height: ${pxToRem(24)};
-      border-radius: ${pxToRem(24)};
+      border-radius: var(--border-radius-xxl);
     }
   }
 
@@ -85,8 +85,8 @@ const AlertWrapper = styled.div`
     margin: ${pxToRem(-18)} calc(var(--alert-gap) * -1);
     padding: ${pxToRem(18)} var(--alert-gap);
 
-    border-top-right-radius: ${pxToRem(8)};
-    border-bottom-right-radius: ${pxToRem(8)};
+    border-top-right-radius: var(--border-radius-m);
+    border-bottom-right-radius: var(--border-radius-m);
     outline-offset: ${pxToRem(-2)};
 
     svg,

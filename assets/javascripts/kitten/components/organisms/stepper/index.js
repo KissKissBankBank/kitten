@@ -64,7 +64,6 @@ const StepperText = styled(Text)`
   align-items: center;
   white-space: nowrap;
   transition: color 0.2s ease;
-  border-radius: ${pxToRem(6)};
 `
 
 export const StepperItem = ({ children, state, ...props }) => {

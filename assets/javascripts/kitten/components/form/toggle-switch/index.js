@@ -11,7 +11,7 @@ const SwitchWrapper = styled.div`
   --toggleSwitch-width: ${pxToRem(60)};
   --toggleSwitch-height: ${pxToRem(30)};
   --toggleSwitch-border: var(--border-width);
-  --toggleSwitch-borderRadius: ${pxToRem(18)};
+  --toggleSwitch-borderRadius: var(--border-radius-xl);
   --toggleSwitch-duration: 0.15s;
 
   display: inline-flex;
@@ -65,7 +65,7 @@ const SwitchWrapper = styled.div`
       height: var(--toggleSwitch-height);
       background-color: ${COLORS.background1};
       border: var(--toggleSwitch-border) solid ${COLORS.line2};
-      border-radius: var(--toggleSwitch-height);
+      border-radius: var(--border-radius-xxl);
       transition: left var(--toggleSwitch-duration) ease,
         color var(--toggleSwitch-duration) ease, border-color var(--toggleSwitch-duration) ease,
         background-color var(--toggleSwitch-duration) ease;

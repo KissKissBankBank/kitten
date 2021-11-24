@@ -10,7 +10,7 @@ import { CheckedCircleIcon } from '../../../../components/graphics/icons/checked
 import { CrossCircleIcon } from '../../../../components/graphics/icons/cross-circle-icon'
 
 const StyledDocumentsStatusBox = styled.div`
-  border-radius: ${pxToRem(8)};
+  border-radius: var(--border-radius-m);
   padding: ${pxToRem(20)} ${pxToRem(30)};
   width: 100%;
   position: relative;

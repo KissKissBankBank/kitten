@@ -88,7 +88,7 @@ const StyledAccordeon = styled.div`
       ${TYPOGRAPHY.fontStyles.light}
       padding: ${pxToRem(20)};
       min-height: ${pxToRem(30)};
-      border-radius: ${pxToRem(3)};
+      border-radius: var(--border-radius-xs);
 
       .k-Accordeon__header__arrow {
         display: none;
@@ -97,8 +97,8 @@ const StyledAccordeon = styled.div`
 
     .k-Accordeon__content {
       background-color: ${COLORS.background3};
-      border-bottom-left-radius: ${pxToRem(3)};
-      border-bottom-right-radius: ${pxToRem(3)};
+      border-bottom-left-radius: var(--border-radius-xs);
+      border-bottom-right-radius: var(--border-radius-xs);
       padding: ${pxToRem(0.1)} ${pxToRem(30)};
     }
 
@@ -110,7 +110,7 @@ const StyledAccordeon = styled.div`
 
   &.k-Accordeon--orion {
     .k-Accordeon__item {
-      border-radius: ${pxToRem(6)};
+      border-radius: var(--border-radius-m);
     }
 
     .k-Accordeon__header {
@@ -120,11 +120,10 @@ const StyledAccordeon = styled.div`
       ${TYPOGRAPHY.fontStyles.regular}
 
       min-height: ${pxToRem(50)};
-      border-radius: ${pxToRem(6)};
+      border-radius: var(--border-radius-m);
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         min-height: ${pxToRem(70)};
-        border-radius: ${pxToRem(8)};
       }
 
       &[aria-expanded='true'] {
@@ -143,14 +142,9 @@ const StyledAccordeon = styled.div`
 
     .k-Accordeon__content {
       background-color: ${COLORS.background1};
-      border-bottom-left-radius: ${pxToRem(6)};
-      border-bottom-right-radius: ${pxToRem(6)};
+      border-bottom-left-radius: var(--border-radius-m);
+      border-bottom-right-radius: var(--border-radius-m);
       padding: ${pxToRem(0.1)} ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        border-bottom-left-radius: ${pxToRem(8)};
-        border-bottom-right-radius: ${pxToRem(8)};
-      }
 
       .k-Accordeon__content_marger {
         padding-bottom: ${pxToRem(30)};

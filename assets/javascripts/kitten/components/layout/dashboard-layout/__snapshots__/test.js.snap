@@ -14,7 +14,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 .c1 .k-Loader__circle {
   width: 0.3125rem;
   height: 0.3125rem;
-  border-radius: 0.3125rem;
+  border-radius: var(--border-radius-xxl);
   -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   -webkit-animation-fill-mode: both;
@@ -150,7 +150,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 @media (min-width:67.5rem) {
   .c2 {
     padding: 1.875rem;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-m);
     margin-bottom: 0.9375rem;
   }
 }
@@ -362,7 +362,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 .c1 .k-Loader__circle {
   width: 0.3125rem;
   height: 0.3125rem;
-  border-radius: 0.3125rem;
+  border-radius: var(--border-radius-xxl);
   -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   -webkit-animation-fill-mode: both;
@@ -498,7 +498,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 @media (min-width:67.5rem) {
   .c2 {
     padding: 1.875rem;
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-m);
     margin-bottom: 0.9375rem;
   }
 }
@@ -856,7 +856,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   height: 2.5rem;
   padding: 0 0.9375rem;
   background-color: var(--color-grey-800,#2d2d2d);
-  border-radius: 0.375rem;
+  border-radius: var(--border-radius-s);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1101,7 +1101,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout__toaster {
     background-color: var(--color-grey-900,#222);
     color: var(--color-grey-000,#fff);
-    border-radius: 0.375rem;
+    border-radius: var(--border-radius-s);
     padding: 1.25rem;
   }
 }
@@ -1493,7 +1493,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   height: 2.5rem;
   padding: 0 0.9375rem;
   background-color: var(--color-grey-800,#2d2d2d);
-  border-radius: 0.375rem;
+  border-radius: var(--border-radius-s);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1738,7 +1738,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout__toaster {
     background-color: var(--color-grey-900,#222);
     color: var(--color-grey-000,#fff);
-    border-radius: 0.375rem;
+    border-radius: var(--border-radius-s);
     padding: 1.25rem;
   }
 }
