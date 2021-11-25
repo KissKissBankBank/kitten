@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: IE11: Remove all IE11 css.
+- Fix: `LendoLoadingAnimation`: Fix console errors.
 
 ## [6.4.0] - 2021-11-23
 
