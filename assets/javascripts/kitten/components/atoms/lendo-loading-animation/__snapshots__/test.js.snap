@@ -20,7 +20,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
     />
   </clipPath>
   <g
-    clip-path="url(#clipPath)"
+    clipPath="url(#clipPath)"
   >
     <path
       d="M0 0h28v28H0z"
@@ -31,7 +31,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       fill="#caf4fe"
     />
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_1"
     >
       <path
@@ -43,7 +43,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_2"
     >
       <path
@@ -55,7 +55,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_3"
     >
       <path
@@ -67,7 +67,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_7"
     >
       <path
@@ -79,7 +79,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_6"
     >
       <path
@@ -91,7 +91,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_5"
     >
       <path
@@ -103,7 +103,7 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_4"
     >
       <path
@@ -141,7 +141,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
     />
   </clipPath>
   <g
-    clip-path="url(#clipPath)"
+    clipPath="url(#clipPath)"
   >
     <path
       d="M0 0h28v28H0z"
@@ -152,7 +152,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       fill="#caf4fe"
     />
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_1"
     >
       <path
@@ -164,7 +164,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_2"
     >
       <path
@@ -176,7 +176,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_3"
     >
       <path
@@ -188,7 +188,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_7"
     >
       <path
@@ -200,7 +200,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_6"
     >
       <path
@@ -212,7 +212,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_5"
     >
       <path
@@ -224,7 +224,7 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
       />
     </g>
     <g
-      class="animated_col"
+      className="animated_col"
       id="col_4"
     >
       <path
