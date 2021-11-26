@@ -151,7 +151,7 @@ export const Default = () => (
             id="Input"
             placeholder="Praesent commodo cursus magna, vel scelerisque."
             buttonContent={<>
-              <LongArrowIcon direction="up" />
+              <LargeArrowIconNext direction="up" />
               <span className="k-u-a11y-visuallyHidden">
                 Send comment
               </span>
