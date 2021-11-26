@@ -166,7 +166,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c0 .k-ButtonGroup__button:not(:last-child) {
-  margin-right: -0.125rem;
+  margin-right: -0.0625rem;
 }
 
 .c0 .k-ButtonGroup__button:first-child {
@@ -480,7 +480,7 @@ exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
 }
 
 .c0 .k-ButtonGroup__button:not(:last-child) {
-  margin-right: -0.125rem;
+  margin-right: -0.0625rem;
 }
 
 .c0 .k-ButtonGroup__button:first-child {

@@ -17,7 +17,7 @@ const StyledButtonGroup = styled.div`
     width: auto;
 
     &:not(:last-child) {
-      margin-right: ${pxToRem(-2)};
+      margin-right: ${pxToRem(-1)};
     }
 
     &:first-child {
