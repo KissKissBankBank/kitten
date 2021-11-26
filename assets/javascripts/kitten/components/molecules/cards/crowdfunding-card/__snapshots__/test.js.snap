@@ -797,21 +797,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   width: 100%;
 }
 
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c2.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c2.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -1233,15 +1224,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 @media (min-width:40rem) {
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
-  }
-}
-
-@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__image__ownerContainer {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -1572,21 +1554,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   width: 100%;
 }
 
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c2.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c2.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c2.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -2081,15 +2054,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   }
 }
 
-@media (min-width:40rem) {
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c2.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
-  }
-}
-
 <div
   className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
   href={null}
@@ -2349,21 +2313,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   width: 100%;
 }
 
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c3.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c3.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c3.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-xl);
 }
 
 .c3 svg:not(.k-ColorSvg),
@@ -2781,15 +2736,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
   .c3[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c3.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c3.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c3.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c3.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 

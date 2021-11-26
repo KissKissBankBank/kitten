@@ -25,6 +25,7 @@ const StyledDropdownSelectWithInput = styled.div`
     padding: 0 ${pxToRem(10)} 0 0;
     margin: 0;
     border: var(--border);
+    border-radius: var(--border-radius-s);
     background-color: ${COLORS.background1};
     font-size: ${stepToRem(-1)};
   }
@@ -68,6 +69,7 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__content--selectedItem {
     background: ${COLORS.primary5};
     padding: 0 ${pxToRem(10)};
+    border-radius: var(--border-radius-xs);
   }
 
   .k-Form-DropdownSelectWithInput__placeholder {
@@ -156,13 +158,8 @@ const StyledDropdownSelectWithInput = styled.div`
     background-color: ${COLORS.background1};
     list-style: none;
     box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: ${pxToRem(6)};
-    border-bottom-right-radius: ${pxToRem(6)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      border-bottom-left-radius: ${pxToRem(8)};
-      border-bottom-right-radius: ${pxToRem(8)};
-    }
+    border-bottom-left-radius: var(--border-radius-s);
+    border-bottom-right-radius: var(--border-radius-s);
 
     &:not(:empty) {
       border: var(--border);
@@ -285,7 +282,7 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--tiny {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(40)};
-      border-radius: ${pxToRem(4)};
+      
     }
     .k-Form-DropdownSelectWithInput__button__arrowBox {
       left: ${pxToRem(15 + 2)};
@@ -294,7 +291,6 @@ const StyledDropdownSelectWithInput = styled.div`
       margin: 0 ${pxToRem(5)} 0 ${pxToRem(40)};
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      border-radius: ${pxToRem(2)};
       height: ${pxToRem(28)};
     }
 
@@ -308,7 +304,6 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--normal {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(50)};
-      border-radius: ${pxToRem(4)};
     }
     .k-Form-DropdownSelectWithInput__button__arrowBox {
       left: ${pxToRem(15 + 2)};
@@ -317,7 +312,6 @@ const StyledDropdownSelectWithInput = styled.div`
       margin: 0 ${pxToRem(5)} 0 ${pxToRem(40)};
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      border-radius: ${pxToRem(2)};
       height: ${pxToRem(36)};
     }
 
@@ -333,7 +327,6 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--giant {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(60)};
-      border-radius: ${pxToRem(6)};
       padding: 0 ${pxToRem(10 + 10)} 0 0;
     }
 
@@ -344,7 +337,6 @@ const StyledDropdownSelectWithInput = styled.div`
       margin: 0 ${pxToRem(10)} 0 ${pxToRem(40)};
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      border-radius: ${pxToRem(4)};
       height: ${pxToRem(40)};
     }
 
@@ -359,9 +351,6 @@ const StyledDropdownSelectWithInput = styled.div`
     &.k-Form-DropdownSelectWithInput--big,
     &.k-Form-DropdownSelectWithInput--huge,
     &.k-Form-DropdownSelectWithInput--giant {
-      .k-Form-DropdownSelectWithInput__container {
-        border-radius: ${pxToRem(8)};
-      }
       .k-Form-DropdownSelectWithInput__input {
         font-size: ${stepToRem(0)};
       }

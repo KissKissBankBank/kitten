@@ -16,7 +16,7 @@ const StyledTagButton = styled.button`
   align-items: center;
   justify-content: center;
   position: relative;
-  border-radius: ${pxToRem(4)};
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -30,8 +30,6 @@ const StyledTagButton = styled.button`
   cursor: pointer;
 
   &.k-Buttons__tagButton--orion {
-    border-radius: ${pxToRem(8)};
-
     &.k-Buttons__tagButton--hydrogen {
       background-color: ${COLORS.background1};
       border: var(--border);

@@ -75,23 +75,11 @@ const StyledInput = styled.input`
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
-    border-radius: ${pxToRem(4)};
-
-    &.k-Form-TextInput--big,
-    &.k-Form-TextInput--huge,
-    &.k-Form-TextInput--giant {
-      border-radius: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --input-padding-horizontal: ${pxToRem(30)};
-        border-radius: ${pxToRem(8)};
-        font-size: ${stepToRem(0)};
-      }
-    }
+    border-radius: var(--border-radius-s);
   }
 
   &.k-Form-TextInput--rounded {
-    border-radius: var(--input-height);
+    border-radius: var(--border-radius-xl);
   }
 
   // TEXT
