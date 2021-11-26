@@ -2,7 +2,7 @@
 
 exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bwzfXH isjHHl k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH burCJi k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -64,7 +64,7 @@ exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot disabled 1`] = `
 <div
-  className="sc-bwzfXH isjHHl k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
+  className="sc-bwzfXH burCJi k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -126,7 +126,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
 <div
-  className="sc-bwzfXH isjHHl k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
+  className="sc-bwzfXH burCJi k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -161,7 +161,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
       className="k-DocumentsDropUploader__fileList"
     >
       <li
-        className="sc-bdVaJa caCgYa k-Tag k-DocumentsDropUploader__file k-Tag--info"
+        className="sc-bdVaJa bjZpNB k-Tag k-DocumentsDropUploader__file k-Tag--info"
       >
         <span
           className="k-DocumentsDropUploader__file__text"
@@ -192,7 +192,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
 exports[`<DocumentsDropUploader /> should match snapshot with error 1`] = `
 Array [
   <div
-    className="sc-bwzfXH isjHHl k-DocumentsDropUploader k-DocumentsDropUploader--error"
+    className="sc-bwzfXH burCJi k-DocumentsDropUploader k-DocumentsDropUploader--error"
     onDragEnter={[Function]}
     onDragLeave={[Function]}
     onDragOver={[Function]}
@@ -227,7 +227,7 @@ Array [
         className="k-DocumentsDropUploader__fileList"
       >
         <li
-          className="sc-bdVaJa caCgYa k-Tag k-DocumentsDropUploader__file k-Tag--info"
+          className="sc-bdVaJa bjZpNB k-Tag k-DocumentsDropUploader__file k-Tag--info"
         >
           <span
             className="k-DocumentsDropUploader__file__text"
@@ -296,7 +296,7 @@ Array [
 
 exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
 <div
-  className="sc-bwzfXH isjHHl k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH burCJi k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}
@@ -331,7 +331,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
       className="k-DocumentsDropUploader__fileList"
     >
       <li
-        className="sc-bdVaJa caCgYa k-Tag k-DocumentsDropUploader__file k-Tag--info"
+        className="sc-bdVaJa bjZpNB k-Tag k-DocumentsDropUploader__file k-Tag--info"
       >
         <span
           className="k-DocumentsDropUploader__file__text"
@@ -391,7 +391,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
 
 exports[`<DocumentsDropUploader /> should match snapshot without props 1`] = `
 <div
-  className="sc-bwzfXH isjHHl k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  className="sc-bwzfXH burCJi k-DocumentsDropUploader k-DocumentsDropUploader--ready"
   onDragEnter={[Function]}
   onDragLeave={[Function]}
   onDragOver={[Function]}

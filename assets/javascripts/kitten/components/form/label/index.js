@@ -39,7 +39,7 @@ const StyledLabel = styled.label`
     background-color: var(--dot-background-color);
     vertical-align: middle;
     display: inline-block;
-    border-radius: 50%;
+    border-radius: var(--border-radius-rounded);
   }
 `
 

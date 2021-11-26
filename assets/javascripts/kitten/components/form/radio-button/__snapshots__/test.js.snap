@@ -43,7 +43,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   background-repeat: no-repeat;
   background-color: var(--color-grey-000,#fff);
   border: var(--border);
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   -webkit-transition: border 0.2s,background 0.2s;
   transition: border 0.2s,background 0.2s;
 }

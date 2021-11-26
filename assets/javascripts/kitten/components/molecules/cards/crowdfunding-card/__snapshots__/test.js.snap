@@ -4,7 +4,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c1 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -82,7 +82,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
 .c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
-  border-radius: 0.1875rem;
+  border-radius: var(--border-radius-xs);
 }
 
 .c0 {
@@ -410,7 +410,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   display: flex;
   position: absolute;
   background: var(--color-grey-900,#222);
-  border-radius: 1.5625rem;
+  border-radius: var(--border-radius-xl);
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
   top: 0;
@@ -638,7 +638,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c1 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -802,7 +802,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 .c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -1157,7 +1157,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   display: flex;
   position: absolute;
   background: var(--color-grey-900,#222);
-  border-radius: 1.5625rem;
+  border-radius: var(--border-radius-xl);
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
   top: 0;
@@ -1395,7 +1395,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c1 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1559,7 +1559,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -1914,7 +1914,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   display: flex;
   position: absolute;
   background: var(--color-grey-900,#222);
-  border-radius: 1.5625rem;
+  border-radius: var(--border-radius-xl);
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
   top: 0;
@@ -2150,7 +2150,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c2 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2318,7 +2318,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 .c3.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c3 svg:not(.k-ColorSvg),
@@ -2673,7 +2673,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   display: flex;
   position: absolute;
   background: var(--color-grey-900,#222);
-  border-radius: 1.5625rem;
+  border-radius: var(--border-radius-xl);
   margin: 0.625rem 0.625rem 0 0;
   right: 0;
   top: 0;

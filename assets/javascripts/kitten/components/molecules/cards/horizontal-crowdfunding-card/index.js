@@ -51,7 +51,7 @@ const StyledCard = styled.a`
       height: ${pxToRem(60)};
       object-fit: cover;
       object-position: center;
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-xs);
     }
   }
   .k-HorizontalCrowdfundingCard__title {

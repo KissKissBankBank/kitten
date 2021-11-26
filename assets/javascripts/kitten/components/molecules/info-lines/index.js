@@ -8,7 +8,7 @@ import COLORS from '../../../constants/colors-config'
 
 const StyledInfoLines = styled.dl`
   &.k-InfoLines--withBorderRadius {
-    border-radius: ${pxToRem(8)};
+    border-radius: var(--border-radius-m);
   }
 
   &.k-InfoLines--withLeftRightBorder {

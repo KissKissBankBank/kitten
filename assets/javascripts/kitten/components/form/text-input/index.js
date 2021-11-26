@@ -79,7 +79,7 @@ const StyledInput = styled.input`
   }
 
   &.k-Form-TextInput--rounded {
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--border-radius-rounded);
   }
 
   // TEXT
@@ -217,7 +217,7 @@ const StyledTextareaContainer = styled.div`
   }
 
   &.k-Form-TextInput--rounded {
-    border-radius: var(--input-height);
+    border-radius: var(--border-radius-rounded);
   }
 
   &.k-Form-TextInput--darkBackground {

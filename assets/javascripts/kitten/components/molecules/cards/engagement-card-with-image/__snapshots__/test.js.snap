@@ -2,12 +2,12 @@
 
 exports[`<EngagementCardWithImage /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hfPHfB"
+  className="sc-bdVaJa iCkDfz"
   href="#"
   title="Hello word"
 >
   <div
-    className="sc-bwzfXH eiHzkV"
+    className="sc-bwzfXH chwYRj"
   >
     <img
       alt=""

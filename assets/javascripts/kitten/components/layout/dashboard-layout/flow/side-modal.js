@@ -53,7 +53,7 @@ const Wrapper = styled.div`
     width: ${pxToRem(50)};
     height: ${pxToRem(50)};
     background-color: ${COLORS.primary5};
-    border-radius: 100%;
+    border-radius: var(--border-radius-rounded);
     box-shadow: ${pxToRem(0)} ${pxToRem(2)} ${pxToRem(5)} ${pxToRem(5)}
       rgba(0, 0, 0, 0.15);
     pointer-events: all;
@@ -72,14 +72,13 @@ const Wrapper = styled.div`
     pointer-events: all;
     background-color: ${COLORS.primary5};
     padding: ${pxToRem(30)};
-    border-radius: ${pxToRem(6)};
+    border-radius: var(--border-radius-s);
     overflow-y: scroll;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       max-width: ${pxToRem(350)};
-      border-radius: ${pxToRem(8)};
     }
 
     &[hidden] {

@@ -50,7 +50,7 @@ const StyledTimeline = styled.div`
     width: ${pxToRem(circleSize)};
     border: var(--border);
     background-color: ${COLORS.background1};
-    border-radius: 50%;
+    border-radius: var(--border-radius-rounded);
     display: flex;
     justify-content: center;
     align-items: center;

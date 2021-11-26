@@ -117,7 +117,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -344,7 +344,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),

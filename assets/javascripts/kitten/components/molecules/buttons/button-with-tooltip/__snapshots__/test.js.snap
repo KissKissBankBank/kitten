@@ -226,7 +226,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c1.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1 svg:not(.k-ColorSvg),

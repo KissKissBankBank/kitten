@@ -296,7 +296,7 @@ export const StyledDashboard = styled.div`
     .k-DashboardLayout__toaster {
       background-color: ${COLORS.font1};
       color: ${COLORS.background1};
-      border-radius: ${pxToRem(6)};
+      border-radius: var(--border-radius-s);
       padding: ${pxToRem(20)};
     }
   }
@@ -389,7 +389,7 @@ export const StyledDashboard = styled.div`
     height: ${pxToRem(40)};
     padding: 0 ${pxToRem(15)};
     background-color: ${COLORS.line3};
-    border-radius: ${pxToRem(6)};
+    border-radius: var(--border-radius-s);
     display: flex;
     align-items: center;
     color: ${COLORS.background1};

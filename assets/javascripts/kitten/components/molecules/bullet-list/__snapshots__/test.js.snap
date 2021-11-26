@@ -21,7 +21,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
   margin-left: -1rem;
   margin-right: 0.625rem;
   box-sizing: border-box;
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   width: 0.375rem;
   height: 0.375rem;
   display: inline-block;

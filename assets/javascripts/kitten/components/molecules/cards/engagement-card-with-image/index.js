@@ -11,14 +11,14 @@ const StyledContainer = styled.div`
   text-decoration: none;
 
   :focus-visible {
-    border-top-left-radius: ${pxToRem(15)};
-    border-top-right-radius: ${pxToRem(15)};
+    border-top-left-radius: var(--border-radius-xl);
+    border-top-right-radius: var(--border-radius-xl);
     outline: auto;
   }
 `
 
 const StyledCard = styled.div`
-  border-radius: ${pxToRem(15)};
+  border-radius: var(--border-radius-xl);
   overflow: hidden;
 `
 

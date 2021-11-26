@@ -163,7 +163,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
 }
 
 <div
@@ -351,7 +351,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
 }
 
 <div
@@ -407,7 +407,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 .c1 .k-Loader__circle {
   width: 0.3125rem;
   height: 0.3125rem;
-  border-radius: 0.3125rem;
+  border-radius: var(--border-radius-rounded);
   -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
   -webkit-animation-fill-mode: both;
@@ -591,7 +591,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
 }
 
 <div
