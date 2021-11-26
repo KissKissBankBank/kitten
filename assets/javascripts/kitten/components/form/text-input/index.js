@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
-import PropTypes, { bool } from 'prop-types'
+import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -273,7 +273,7 @@ export class TextInput extends PureComponent {
     digits: PropTypes.number,
     variant: PropTypes.oneOf(['orion', 'andromeda']),
     rounded: PropTypes.bool,
-    darkBackground: bool,
+    darkBackground: PropTypes.bool,
   }
 
   static defaultProps = {
