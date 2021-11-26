@@ -72,9 +72,9 @@ WithLongContent.args = {
 }
 WithLongContent.argTypes = Default.argTypes
 
-export const BigWithCustomIcon = args => <AlertBox {...args} />
+export const WithCustomIcon = args => <AlertBox {...args} />
 
-BigWithCustomIcon.args = {
+WithCustomIcon.args = {
   ...Default.args,
   size: 'big',
   iconPosition: 'center',
@@ -82,4 +82,4 @@ BigWithCustomIcon.args = {
     'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.',
   icon: <ThumbUpIconNext width={16} height={16} color="currentColor" />,
 }
-BigWithCustomIcon.argTypes = Default.argTypes
+WithCustomIcon.argTypes = Default.argTypes
