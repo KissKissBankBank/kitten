@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `likeButtonProps` replaced by `headerActions={<Comment.LikeButton/>}`
     - `avatarBadge`
 - Feature: `HeartIconNext`: Add component.
+- Fix: Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
 
 ## [6.4.0] - 2021-11-23
 
