@@ -6,7 +6,6 @@ import TextareaAutosize from 'react-textarea-autosize'
 
 import { Button } from '../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 
@@ -60,7 +59,6 @@ const InputWrapper = styled.div`
     bottom: ${pxToRem(5)};
     margin: 0 !important;
   }
-
 `
 
 export const ModalFooterInput = ({
@@ -78,14 +76,16 @@ export const ModalFooterInput = ({
   ...props
 }) => {
   const [value, setValue] = useState(defaultValue)
-  const [isButtonDisabled, setButtonDisabled] = useState(disabled || defaultValue.length < 1)
+  const [isButtonDisabled, setButtonDisabled] = useState(
+    disabled || defaultValue.length < 1,
+  )
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setValue(e.target.value)
     onChange(e)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     onSubmit(e)
   }
 
@@ -105,11 +105,13 @@ export const ModalFooterInput = ({
         className="k-ModalFooterInput__input"
       />
       <Button
+        type="button"
         modifier="beryllium"
         fit="icon"
         size="tiny"
         disabled={isButtonDisabled}
         className="k-ModalFooterInput__button"
+        onClick={handleSubmit}
       >
         {buttonContent}
       </Button>

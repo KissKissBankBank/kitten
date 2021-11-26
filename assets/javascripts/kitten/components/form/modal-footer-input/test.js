@@ -7,20 +7,15 @@ describe('<ModalFooterInput />', () => {
 
   describe('with empty snapshot', () => {
     beforeEach(() => {
-      component = renderer.create(
-        <ModalFooterInput
-          id="Id"
-          aria-label="Input Label"
-        />,
-        {
-          createNodeMock: (element) => {
+      component = renderer
+        .create(<ModalFooterInput id="Id" aria-label="Input Label" />, {
+          createNodeMock: element => {
             if (element.type === 'textarea') {
-              return document.createElement('textarea');
+              return document.createElement('textarea')
             }
           },
-        }
-
-      ).toJSON()
+        })
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
