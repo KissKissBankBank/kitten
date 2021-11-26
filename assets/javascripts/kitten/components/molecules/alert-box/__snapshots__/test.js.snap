@@ -6,7 +6,7 @@ exports[`<AlertBox /> should matches with default snapshot 1`] = `
   role="status"
 >
   <span
-    className="sc-bdVaJa ixiuVq k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
+    className="sc-bdVaJa dUZTJG k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
     style={
       Object {
         "--iconBadge-background-color": null,
