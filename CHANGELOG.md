@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: IE11: Remove all IE11 css.
 - Fix: `LendoLoadingAnimation`: Fix console errors.
+- Feature: Tokens: Add `transitions` related tokens.
 
 ## [6.4.0] - 2021-11-23
 
