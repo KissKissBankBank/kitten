@@ -1,147 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
+exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="sc-gzVnrw kCbSGM"
+  className="sc-bwzfXH qriYw k-CommentForm"
 >
   <div
-    className="sc-htpNat jOCivv"
+    className="k-CommentForm__image"
   >
-    <div
-      className="sc-bxivhb cdaogt"
-    >
-      <div
-        className="sc-EHOje qrHlx"
-      >
-        <svg
-          className="k-ColorSvg"
-          height="25"
-          viewBox="0 0 20 20"
-          width="25"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="10"
-            cy="10"
-            fill="#19b4fa"
-            r="10"
-          />
-          <path
-            d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-            fill="#fff"
-          />
-        </svg>
-      </div>
-      <span
-        className="sc-bwzfXH eETbbK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
-      >
-        <img
-          alt="Image alt"
-          className="k-ButtonImage__img"
-          src="#image"
-        />
-      </span>
-    </div>
+    <img
+      alt="Image alt"
+      src="#image"
+    />
   </div>
   <div
-    className="sc-htoDjs dnHiPG"
+    className="k-CommentForm__form"
   >
-    <div
-      className="sc-dnqmqq igAaxS"
-    >
-      <textarea
-        aria-describedby=""
-        aria-invalid="false"
-        aria-label=""
-        aria-required="true"
-        className="sc-iwsKbI bURgQd"
-        defaultValue=""
-        disabled={false}
-        id={null}
-        onChange={[Function]}
-        placeholder="Leave a comment on the project"
-        rows="1"
-      />
-      <div
-        className="sc-gZMcBi iAzyAA"
-      >
-        <span
-          className="sc-gqjmRU gCluel"
-        />
-      </div>
-    </div>
-    <div
-      className="sc-bdVaJa bNTSMG"
-    >
-      <span
-        className="k-u-color-error k-u-size-micro k-u-weight-regular"
-        id=""
-      >
-        Cum sociis natoque penatibus et magnis
-      </span>
-    </div>
+    <textarea
+      aria-describedby="custom-textarea-id-description"
+      aria-label="Leave a comment"
+      className="k-CommentForm__textarea"
+      defaultValue=""
+      disabled={false}
+      id="custom-textarea-id"
+      onChange={[Function]}
+      placeholder="Leave a comment on the project"
+    />
+    <span
+      className="k-CommentForm__arrow"
+    />
   </div>
 </div>
 `;
 
-exports[`<CommentForm /> should match its empty snapshot 1`] = `
+exports[`<CommentForm /> should match its error snapshot 1`] = `
 <div
-  className="sc-gzVnrw kCbSGM"
+  className="sc-bwzfXH qriYw k-CommentForm"
 >
   <div
-    className="sc-htpNat jOCivv"
+    className="k-CommentForm__image"
   >
-    <div
-      className="sc-bxivhb cdaogt"
-    >
-      <span
-        className="sc-bwzfXH eETbbK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
-      >
-        <img
-          alt="Image alt"
-          className="k-ButtonImage__img"
-          src="#image"
-        />
-      </span>
-    </div>
+    <img
+      alt="Image alt"
+      src="#image"
+    />
   </div>
   <div
-    className="sc-htoDjs dnHiPG"
+    className="k-CommentForm__form"
   >
-    <div
-      className="sc-dnqmqq igAaxS"
+    <textarea
+      aria-describedby="custom-textarea-id-description"
+      aria-label="Leave a comment"
+      className="k-CommentForm__textarea"
+      defaultValue=""
+      disabled={false}
+      id="custom-textarea-id"
+      onChange={[Function]}
+      placeholder="Leave a comment on the project"
+    />
+    <span
+      className="k-CommentForm__arrow"
+    />
+    <span
+      className="k-u-color-error k-u-size-micro k-u-weight-regular k-CommentForm__error"
+      id="custom-textarea-id-description"
     >
-      <textarea
-        aria-describedby=""
-        aria-invalid="false"
-        aria-label=""
-        aria-required="true"
-        className="sc-iwsKbI bURgQd"
-        defaultValue=""
-        disabled={false}
-        id="custom-textarea-id"
-        onChange={[Function]}
-        placeholder="Leave a comment on the project"
-        rows="1"
-      />
-      <div
-        className="sc-gZMcBi iAzyAA"
-      >
-        <span
-          className="sc-gqjmRU gCluel"
-        />
-      </div>
-    </div>
-    <div
-      className="sc-bdVaJa bNTSMG"
-    >
-      <span
-        className="k-u-color-error k-u-size-micro k-u-weight-regular"
-        id=""
-      >
-        Cum sociis natoque penatibus et magnis
-      </span>
-    </div>
+      Cum sociis natoque penatibus et magnis
+    </span>
   </div>
 </div>
 `;

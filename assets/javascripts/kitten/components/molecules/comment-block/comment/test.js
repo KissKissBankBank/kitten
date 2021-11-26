@@ -1,27 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Comment } from './index'
-import { CheckedCircleIcon } from '../../../..'
-
-const createMockMediaMatcher = matches => () => ({
-  matches,
-  addListener: () => {},
-  removeListener: () => {},
-})
 
 describe('<Comment />', () => {
-  let originalMatchMedia
-
-  beforeEach(() => {
-    originalMatchMedia = window.matchMedia
-  })
-
-  afterEach(() => {
-    window.matchMedia = originalMatchMedia
-  })
-
   it('should match its empty snapshot', () => {
-    window.matchMedia = createMockMediaMatcher(false)
 
     const tree = renderer
       .create(
@@ -47,7 +29,6 @@ describe('<Comment />', () => {
   })
 
   it('should match a snapshot with a complex bottom notes', () => {
-    window.matchMedia = createMockMediaMatcher(false)
     const BottomNotes = () => (
       <div>
         <a href="#" style={{ color: '#000' }}>
@@ -79,16 +60,6 @@ describe('<Comment />', () => {
   })
 
   it('should match a snapshot with a complex avatar badge', () => {
-    window.matchMedia = createMockMediaMatcher(false)
-    const AvatarBadge = () => (
-      <CheckedCircleIcon
-        width="25"
-        height="25"
-        circleColor="#19b4fa"
-        checkedColor="#fff"
-      />
-    )
-
     const tree = renderer
       .create(
         <Comment

@@ -1,254 +1,264 @@
-import React, { PureComponent } from 'react'
+import React, { useState, useEffect } from 'react'
+import classNames from 'classnames'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../../components/layout/marger'
-import { CommentAvatar } from '../../../../components/molecules/comment-block/comment-avatar'
+import deprecated from 'prop-types-extra/lib/deprecated'
+import TextareaAutosize from 'react-textarea-autosize'
+
 import { Button } from '../../../../components/molecules/buttons/button'
 import { Text } from '../../../../components/atoms/typography/text'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
-const StyledGrid = styled.div`
+const CommentFormWrapper = styled.div`
+  --commentForm-arrow-size: ${pxToRem(7)};
+
   display: flex;
-`
+  gap: ${pxToRem(10)};
 
-const StyledGridCol = styled.div`
-  flex: 1;
-  margin-left: ${pxToRem(20)};
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    margin-left: ${pxToRem(35)};
-  }
-`
-const StyledInput = styled.div`
-  margin-bottom: ${pxToRem(0.5)};
-  display: flex;
-  position: relative;
-`
+  .k-CommentForm__image {
+    width: ${pxToRem(30)};
+    flex: 0 0 ${pxToRem(30)};
+    padding-top: ${pxToRem(10)};
 
-const StyledTextarea = styled.textarea`
-  color: ${COLORS.font2};
-  ${TYPOGRAPHY.fontStyles.light};
-  width: 100%;
-  overflow-y: hidden;
-  resize: none;
-  box-sizing: border-box;
-  border-width: var(--border-width);
-  border-style: solid;
-  border-color: var(--color-grey-400);
-  color: ${COLORS.font1};
-  padding: ${pxToRem(30)};
-  font-size: ${stepToRem(-1)};
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    font-size: ${stepToRem(0)};
-  }
-
-  &:focus {
-    border-color: ${COLORS.line2};
-    color: ${COLORS.font1};
-  }
-
-  ::placeholder {
-    color: ${COLORS.font2};
-  }
-
-  ${({ isDisabled }) =>
-    isDisabled &&
-    css`
-      border-color: ${COLORS.line1};
-      color: ${COLORS.font2};
-      background-color: ${COLORS.line1};
-    `}
-
-  ${({ error }) =>
-    error &&
-    css`
-      border-color: ${COLORS.error3};
-      color: ${COLORS.error3};
-    `}
-`
-
-const StyledArrow = styled.div`
-  position: absolute;
-  top: ${pxToRem(20)};
-  display: block;
-  width: 0;
-  height: 0;
-  border-width: ${pxToRem(10)};
-  border-style: solid;
-  border-color: transparent;
-  border-right-color: var(--color-grey-400);
-  left: -${pxToRem(20)};
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    top: ${pxToRem(35)};
-  }
-
-  ${StyledTextarea}:focus + & {
-    border-right-color: var(--color-grey-500);
-  }
-
-  ${({ error }) =>
-    error &&
-    css`
-      border-right-color: ${COLORS.error3};
-    `}
-`
-
-const StyledArrowBefore = styled.span`
-  position: absolute;
-  width: 0;
-  height: 0;
-  margin-top: -${pxToRem(10)};
-  border-width: ${pxToRem(10)};
-  border-style: solid;
-  border-color: transparent;
-  border-right-color: ${COLORS.background1};
-  left: -${pxToRem(8)};
-`
-
-export class CommentForm extends PureComponent {
-  static propTypes = {
-    avatarImgProps: PropTypes.object.isRequired,
-    isDisabled: PropTypes.bool,
-    placeholder: PropTypes.string.isRequired,
-    commentButton: PropTypes.string,
-    error: PropTypes.bool,
-    errorMessage: PropTypes.string,
-    onSubmit: PropTypes.func,
-    defaultValue: PropTypes.string,
-    commentLabel: PropTypes.string,
-    ariaId: PropTypes.string,
-    avatarBadge: PropTypes.node,
-    textareaId: PropTypes.string,
-  }
-
-  static defaultProps = {
-    onSubmit: () => {},
-    error: false,
-    errorMessage: '',
-    isDisabled: false,
-    commentButton: '',
-    defaultValue: '',
-    ariaId: '',
-    commentLabel: '',
-    avatarBadge: '',
-    textareaId: null,
-  }
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      value: this.props.defaultValue,
-      height: 'auto',
+    img {
+      width: ${pxToRem(30)};
+      height: ${pxToRem(30)};
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: ${pxToRem(30)};
     }
   }
 
-  handleChange = e => {
-    const element = e.target
+  .k-CommentForm__form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(10)};
+    margin-left: var(--commentForm-arrow-size);
+    position: relative;
+  }
+  .k-CommentForm__textarea {
+    ${TYPOGRAPHY.fontStyles.light}
+    background-color: var(--color-grey-000);
+    font-size: ${pxToRem(14)};
+    color: ${COLORS.font1};
+    padding: ${pxToRem(15)};
+    border-radius: ${pxToRem(6)};
+    border: var(--border);
+    resize: vertical;
+    line-height: ${pxToRem(20)};
+    min-height: ${pxToRem(50 - 30)};
+    max-height: ${pxToRem(20 * 5)};
 
-    this.setState(
-      {
-        value: element.value,
-        height: 'auto',
-      },
-      () => {
-        this.setState({
-          height: element.scrollHeight,
-        })
-      },
-    )
+    ::placeholder {
+      color: var(--color-grey-600);
+    }
+
+    :hover {
+      border-color: var(--color-grey-500);
+
+      & + .k-CommentForm__arrow {
+        border-right-color: var(--color-grey-500);
+      }
+    }
+    :active {
+      border-color: var(--color-grey-600);
+
+      & + .k-CommentForm__arrow {
+        border-right-color: var(--color-grey-600);
+      }
+    }
+    :focus {
+      outline: var(--outline-input);
+      outline-offset: var(--outline-offset-input);
+
+      & + .k-CommentForm__arrow {
+        border-right-color: var(--color-grey-900);
+
+        &::before {
+          left: ${pxToRem(2)};
+        }
+      }
+    }
+    :disabled {
+      cursor: not-allowed;
+      color: var(--color-grey-900);
+      border-color: var(--color-grey-500);
+      background-color: var(--color-grey-300);
+
+      ::placeholder {
+        color: var(--color-grey-600);
+      }
+
+      & + .k-CommentForm__arrow {
+        border-right-color: var(--color-grey-500);
+
+        &::before {
+          border-right-color: var(--color-grey-300);
+        }
+      }
+    }
   }
 
-  handleSubmit = () => {
-    this.props.onSubmit(this.state.value)
+  .k-CommentForm__arrow {
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    left: calc(-1 * var(--commentForm-arrow-size));
+    top: calc(${pxToRem(50 / 2)} - var(--commentForm-arrow-size));
+    border: var(--commentForm-arrow-size) solid transparent;
+    border-left: 0;
+    border-right-color: var(--color-grey-400);
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: ${pxToRem(1)};
+      right: 0;
+      top: calc(-1 * var(--commentForm-arrow-size));
+      width: 0;
+      height: 0;
+      border: var(--commentForm-arrow-size) solid transparent;
+      border-left: 0;
+      border-right-color: var(--color-grey-000);
+      z-index: 2;
+    }
   }
 
-  render() {
-    const { avatarImgProps, avatarBadge } = this.props
+  .k-CommentForm__submit {
+    display: inline-block;
+    min-height: 0;
+    max-height: 0;
+    padding: 0  ${pxToRem(20)};
+    height: var(--Button-dimension);
+    align-self: flex-end;
+    overflow: hidden;
+    transition: max-height var(--transition), padding var(--transition);
+  }
+  .k-CommentForm__submit--is-visible {
+    max-height: ${pxToRem(40)};
+    padding: ${pxToRem(7)} ${pxToRem(20)};
+  }
+  .k-CommentForm__error {
+    margin-top: ${pxToRem(-5)};
+  }
+`
 
-    return (
-      <StyledGrid>
-        <CommentAvatar
-          avatarBadge={avatarBadge}
-          avatarImgProps={avatarImgProps}
+export const CommentForm = ({
+  avatarImgProps,
+  placeholder,
+  onSubmit,
+  error,
+  errorMessage,
+  disabled,
+  buttonText,
+  defaultValue,
+  commentLabel,
+  id,
+  className,
+  onChange,
+  ...props
+}) => {
+  const [value, setValue] = useState(defaultValue)
+  const [isButtonVisible, setButtonVisibility] = useState(!!defaultValue)
+
+  const handleChange = event => {
+    setValue(event.target.value)
+    onChange(event.target.value)
+  }
+
+  const handleSubmit = () => {
+    onSubmit(value)
+  }
+
+  useEffect(() => {
+    setButtonVisibility(value.length > 0 || !!defaultValue)
+  }, [value])
+
+  return (
+    <CommentFormWrapper className={classNames('k-CommentForm', className)}>
+      <div className="k-CommentForm__image">
+        <img alt="" {...avatarImgProps} />
+      </div>
+      <div className="k-CommentForm__form">
+        <TextareaAutosize
+          className="k-CommentForm__textarea"
+          id={id}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          placeholder={placeholder}
+          onChange={handleChange}
+          minRows={1}
+          maxRows={5}
+          aria-describedby={`${id}-description`}
+          aria-label={props['aria-label'] || commentLabel}
         />
-        {this.renderInput()}
-      </StyledGrid>
-    )
-  }
+        <span className="k-CommentForm__arrow"/>
+        {error && (
+          <Text
+            id={`${id}-description`}
+            color="error"
+            size="micro"
+            weight="regular"
+            className="k-CommentForm__error"
+          >
+            {errorMessage}
+          </Text>
+        )}
+        {(value.length > 0 || !!defaultValue) && (
+          <Button
+            type="button"
+            modifier="beryllium"
+            size="tiny"
+            fit="content"
+            disabled={disabled}
+            className={classNames(
+              'k-CommentForm__submit',
+              {'k-CommentForm__submit--is-visible': isButtonVisible},
+            )}
+            onClick={handleSubmit}
+          >
+            {buttonText}
+          </Button>
+        )}
+      </div>
+    </CommentFormWrapper>
+  )
+}
 
-  renderInput() {
-    const {
-      isDisabled,
-      placeholder,
-      defaultValue,
-      commentLabel,
-      ariaId,
-      textareaId,
-    } = this.props
+CommentForm.propTypes = {
+  avatarImgProps: PropTypes.object.isRequired,
+  'aria-label': PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  onSubmit: PropTypes.func,
+  placeholder: PropTypes.string,
+  error: PropTypes.bool,
+  errorMessage: PropTypes.string,
+  defaultValue: PropTypes.string,
+  id: PropTypes.string,
+  disabled: PropTypes.bool,
+  buttonText: PropTypes.string,
+  commentButton: deprecated(PropTypes.string, 'Please use buttonText instead.'),
+  avatarBadge: deprecated(PropTypes.node, 'Not a feature anymore'),
+  isDisabled: deprecated(PropTypes.bool,'Please use disabled instead'),
+  commentLabel: deprecated(PropTypes.string, 'Please use aria-label instead'),
+  ariaId: deprecated(PropTypes.string, 'Please use id prop instead.'),
+  textareaId: deprecated(PropTypes.string, 'Please use id prop instead.'),
+}
 
-    return (
-      <StyledGridCol>
-        <StyledInput>
-          <StyledTextarea
-            id={textareaId}
-            aria-label={commentLabel}
-            aria-describedby={ariaId}
-            aria-invalid="false"
-            aria-required="true"
-            defaultValue={defaultValue}
-            key="comment-form"
-            disabled={isDisabled}
-            placeholder={placeholder}
-            onChange={this.handleChange}
-            rows="1"
-          />
-
-          <StyledArrow>
-            <StyledArrowBefore />
-          </StyledArrow>
-        </StyledInput>
-
-        {this.renderError()}
-        {this.renderButton()}
-      </StyledGridCol>
-    )
-  }
-
-  renderButton() {
-    if (!this.state.value) return
-
-    const { commentButton } = this.props
-
-    return (
-      <Marger top="2">
-        <Button
-          type="button"
-          modifier="helium"
-          onClick={this.handleSubmit}
-          className="k-u-margin-right-single"
-        >
-          {commentButton}
-        </Button>
-      </Marger>
-    )
-  }
-
-  renderError() {
-    const { error, errorMessage, ariaId } = this.props
-
-    if (!error) return
-
-    return (
-      <Marger top=".5">
-        <Text id={ariaId} color="error" size="micro" weight="regular">
-          {errorMessage}
-        </Text>
-      </Marger>
-    )
-  }
+CommentForm.defaultProps = {
+  onChange: () => {},
+  onSubmit: () => {},
+  placeholder: '',
+  error: false,
+  errorMessage: '',
+  defaultValue: '',
+  id: 'CommentForm',
+  disabled: false,
+  buttonText: 'Send',
 }

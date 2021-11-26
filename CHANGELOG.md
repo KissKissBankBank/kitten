@@ -14,6 +14,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `text` replaced by `children`
     - `likeButtonProps` replaced by `headerActions={<Comment.LikeButton/>}`
     - `avatarBadge`
+- Feature: `CommentForm`:
+  - Modernize component code
+  - Change design
+  - Deprecate the following props:
+    - `commentButton` replaced by `buttonText`
+    - `isDisabled` replaced by `deleted`
+    - `commentLabel` replaced by `aria-label`
+    - `ariaId` replaced by `id`
+    - `textareaId` replaced by `id`
+    - `avatarBadge`
 - Feature: `HeartIconNext`: Add component.
 - Fix: Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
 
