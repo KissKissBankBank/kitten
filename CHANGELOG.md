@@ -26,6 +26,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `avatarBadge`
 - Feature: `ModalFooterInput`: Add component.
 - Feature: `HeartIconNext`: Add component.
+- Feature: `LargeArrowIconNext`: Add component.
 - Fix: Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
 
 ## [6.4.0] - 2021-11-23

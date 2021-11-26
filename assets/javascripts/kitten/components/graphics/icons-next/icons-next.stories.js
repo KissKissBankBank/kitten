@@ -21,6 +21,7 @@ import {
   WhatsappIconNext,
   WindowEditIconNext,
   HeartIconNext,
+  LargeArrowIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -140,6 +141,20 @@ export const AllIcons = ({ colorInput }) => {
         </IconContainer>
         <IconContainer>
           <HeartIconNext color={colorInput} />
+        </IconContainer>
+      </Group>
+      <Group title="Arrows">
+        <IconContainer suffix='direction="up"'>
+          <LargeArrowIconNext color={colorInput} direction="up" />
+        </IconContainer>
+        <IconContainer suffix='direction="down"'>
+          <LargeArrowIconNext color={colorInput} direction="down" />
+        </IconContainer>
+        <IconContainer suffix='direction="left"'>
+          <LargeArrowIconNext color={colorInput} direction="left" />
+        </IconContainer>
+        <IconContainer suffix='direction="right"'>
+          <LargeArrowIconNext color={colorInput} direction="right" />
         </IconContainer>
       </Group>
       <Group title="Social">
