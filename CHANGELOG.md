@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: IE11: Remove all IE11 css.
 - Fix: `LendoLoadingAnimation`: Fix console errors.
 - Feature: `Button`: Use new `disabled` style.
+- Feature: `AlertBox`: Add new component.
 - Feature: `IconBadge`: Add the following props:
   - `status`, defaults to `info`
   - `hasBorder`, defaults to `false`
