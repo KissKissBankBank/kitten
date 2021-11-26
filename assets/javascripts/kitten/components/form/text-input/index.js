@@ -162,9 +162,10 @@ const StyledInput = styled.input`
   &.k-Form-TextInput--darkBackground {
     background-color: ${COLORS.grey1};
     border-color: ${COLORS.grey1};
+    color: ${COLORS.background1};
 
     ::placeholder {
-      color: ${COLORS.background1};
+      color: ${COLORS.line2};
     }
   }
 `
@@ -234,9 +235,10 @@ const StyledTextareaContainer = styled.div`
   &.k-Form-TextInput--darkBackground {
     background-color: ${COLORS.grey1};
     border-color: ${COLORS.grey1};
-    
+    color: ${COLORS.background1};
+
     ::placeholder {
-      color: ${COLORS.background1};
+      color: ${COLORS.line2};
     }
   }
 
