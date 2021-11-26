@@ -89,7 +89,7 @@ const DragAndDropListStyles = createGlobalStyle`
         padding: 0;
         width: ${pxToRem(40)};
         box-sizing: border-box;
-        border-radius: var(--border-radius-xl);
+        border-radius: var(--border-radius-rounded);
         cursor: grab;
       }
 

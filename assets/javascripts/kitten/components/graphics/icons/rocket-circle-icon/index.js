@@ -14,7 +14,7 @@ const StyledRocketCircle = styled.div`
   align-items: center;
   width: ${({ circleWidthMobile }) => pxToRem(circleWidthMobile)};
   height: ${({ circleWidthMobile }) => pxToRem(circleWidthMobile)};
-  border-radius: var(border-radius-xl);
+  border-radius: var(border-radius-rounded);
   background-color: ${({ bgColor }) => bgColor};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
