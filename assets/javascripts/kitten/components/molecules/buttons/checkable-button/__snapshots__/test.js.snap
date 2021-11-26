@@ -151,9 +151,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -558,9 +558,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -965,9 +965,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -1372,9 +1372,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -1779,9 +1779,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {

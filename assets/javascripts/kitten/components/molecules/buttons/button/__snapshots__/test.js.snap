@@ -151,9 +151,9 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -383,9 +383,9 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -613,9 +613,9 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -843,9 +843,9 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1073,9 +1073,9 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1303,9 +1303,9 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1533,9 +1533,9 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1765,9 +1765,9 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1995,9 +1995,9 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -2225,9 +2225,9 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -2455,9 +2455,9 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -2685,9 +2685,9 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -2915,9 +2915,9 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -3145,9 +3145,9 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -3375,9 +3375,9 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -3610,9 +3610,9 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -3840,9 +3840,9 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -4070,9 +4070,9 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
