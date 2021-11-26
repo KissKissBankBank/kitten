@@ -23,6 +23,7 @@ Default.args = {
   placeholder: 'Les props sont transmises',
   digits: null,
   name: 'text-input',
+  darkBackground: false,
 }
 
 Default.argTypes = {
@@ -72,5 +73,9 @@ Default.argTypes = {
   name: {
     name: 'name',
     control: 'text',
+  },
+  darkBackground: {
+    name: 'darkBackground',
+    control: 'boolean',
   },
 }
