@@ -106,4 +106,14 @@ describe('<TextInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `darkBackground` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput darkBackground />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
