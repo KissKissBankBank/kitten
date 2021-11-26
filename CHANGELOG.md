@@ -7,6 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: IE11: Remove all IE11 css.
 - Fix: `LendoLoadingAnimation`: Fix console errors.
 - Feature: Tokens: Add `transitions` related tokens.
+- Feature: `Comment`:
+  - Change design
+  - Deprecate the following props:
+    - `bottomNotes` replaced by `footer`
+    - `text` replaced by `children`
+    - `likeButtonProps` replaced by `headerActions={<Comment.LikeButton/>}`
+    - `avatarBadge`
+- Feature: `HeartIconNext`: Add component.
 
 ## [6.4.0] - 2021-11-23
 

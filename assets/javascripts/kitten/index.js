@@ -215,6 +215,7 @@ export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-n
 export { UsersIconNext } from './components/graphics/icons-next/users-icon-next'
 export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next'
 export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'
+export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next'
 
 // Graphics/Illustrations
 export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration'

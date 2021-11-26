@@ -20,6 +20,7 @@ import {
   UsersIconNext,
   WhatsappIconNext,
   WindowEditIconNext,
+  HeartIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -136,6 +137,9 @@ export const AllIcons = ({ colorInput }) => {
         </IconContainer>
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <HeartIconNext color={colorInput} />
         </IconContainer>
       </Group>
       <Group title="Social">

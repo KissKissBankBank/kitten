@@ -31,13 +31,15 @@ describe('<Comment />', () => {
             alt: 'Image alt',
           }}
           commentDate="Custom date"
-          text="Custom text"
           ownerName="Custom name"
-          likeButtonProps={{
-            children: '4',
-            hasLiked: true,
-          }}
-        />,
+          headerActions={(
+            <Comment.LikeButton hasLiked accessibilityLabel="Retirer des favoris">
+              4
+            </Comment.LikeButton>
+          )}
+        >
+          Custom text
+        </Comment>,
       )
       .toJSON()
 
@@ -65,10 +67,11 @@ describe('<Comment />', () => {
             alt: 'Image alt',
           }}
           commentDate="Custom date"
-          text="Custom text"
           ownerName="Custom name"
-          bottomNotes={<BottomNotes />}
-        />,
+          footer={<BottomNotes />}
+        >
+          Custom text
+        </Comment>,
       )
       .toJSON()
 
@@ -94,10 +97,10 @@ describe('<Comment />', () => {
             alt: 'Image alt',
           }}
           commentDate="Custom date"
-          text="Custom text"
           ownerName="Custom name"
-          avatarBadge={<AvatarBadge />}
-        />,
+        >
+          Custom text
+        </Comment>,
       )
       .toJSON()
 

@@ -1,13 +1,79 @@
 import React, { useState } from 'react'
 import { Comment } from './index'
-import { CheckedCircleIcon } from '../../../..'
+import { CheckedCircleIcon, Text } from 'kitten'
 import { action } from '@storybook/addon-actions'
 
-export const Default = ({ showAvatarBadge, showBottomNotes, ...args }) => {
+export default {
+  title: 'Molecules/CommentBlock/Comment',
+  component: Comment,
+  decorators: [story => <div className="story-Container story-Grid story-Grid--large">{story()}</div>],
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="Comment"
+        />
+      ),
+    },
+  },
+  args: {
+    children:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+    avatarImgProps: {
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+      alt: '',
+    },
+    commentDate: '2 min',
+    ownerName: 'Dominique Hipsaume',
+    ownerUrl: '#helloworld',
+    showFooter: true,
+  },
+  argTypes: {
+    children: {
+      name: 'text',
+      control: 'text',
+    },
+    avatarImgProps: {
+      name: 'avatarImgProps',
+      control: 'object',
+    },
+    commentDate: {
+      name: 'commentDate',
+      control: 'text',
+    },
+    ownerName: {
+      name: 'ownerName',
+      control: 'text',
+    },
+    ownerUrl: {
+      name: 'ownerName',
+      control: 'text',
+    },
+    showFooter: {
+      name: 'showFooter (story prop)',
+      control: 'boolean',
+    },
+    footer: {
+      name: 'footer',
+      control: { type: null },
+    },
+    likeButton: {
+      name: 'likeButton',
+      control: { type: null },
+    },
+    headerActions: {
+      name: 'headerActions',
+      control: { type: null },
+    },
+  }
+}
+
+export const Default = ({ showFooter, ...args }) => {
   const [hasLiked, setHasLiked] = useState(false)
 
-  const handleClick = () => {
-    action('likeButton onClick')
+  const handleClick = (e) => {
+    action('likeButton onClick')(e)
     setHasLiked(!hasLiked)
     document.activeElement.blur()
   }
@@ -15,93 +81,25 @@ export const Default = ({ showAvatarBadge, showBottomNotes, ...args }) => {
   return (
     <Comment
       {...args}
-      likeButtonProps={{
-        hasLiked,
-        children: hasLiked ? '101' : '100',
-        onClick: handleClick,
-      }}
-      avatarBadge={
-        showAvatarBadge && (
-          <span aria-label="Owner" role="aside">
-            <CheckedCircleIcon
-              width="25"
-              height="25"
-              circleColor="#19b4fa"
-              checkedColor="#fff"
-              aria-hidden="true"
-            />
-          </span>
-        )
+      headerActions={
+        <Comment.LikeButton
+          hasLiked={hasLiked}
+          children={hasLiked ? '101' : '100'}
+          onClick={handleClick}
+        />
       }
-      bottomNotes={
-        showBottomNotes && (
-          <div>
-            <span>Bottom note #1</span>
-            <span>Bottom note #2</span>
-            <span>Bottom note #3</span>
-          </div>
+      footer={
+        showFooter && (
+          <>
+            <Text as="button" weight="regular" size="micro" className="k-u-reset-button k-u-link k-u-link-font1" onClick={action('comment')}>
+              Reply
+            </Text>
+            <Text as="button" weight="regular" size="micro" className="k-u-reset-button k-u-link k-u-link-font1" onClick={action('delete')}>
+              Delete
+            </Text>
+          </>
         )
       }
     />
   )
-}
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]
-
-Default.args = {
-  text:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
-  avatarImgProps: {
-    src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    alt: '',
-  },
-  commentDate: '2 min',
-  ownerName: 'Lorem ipsum',
-  showBottomNotes: false,
-  showAvatarBadge: false,
-}
-
-Default.argTypes = {
-  text: {
-    name: 'text',
-    control: 'text',
-  },
-  avatarImgProps: {
-    name: 'avatarImgProps',
-    control: 'object',
-  },
-  commentDate: {
-    name: 'commentDate',
-    control: 'text',
-  },
-  ownerName: {
-    name: 'ownerName',
-    control: 'text',
-  },
-  showBottomNotes: {
-    name: 'showBottomNotes (story prop)',
-    control: 'boolean',
-  },
-  showAvatarBadge: {
-    name: 'showAvatarBadge (story prop)',
-    control: 'boolean',
-  },
-  bottomNotes: {
-    name: 'bottomNotes',
-    control: { type: null },
-  },
-  avatarBadge: {
-    name: 'avatarBadge',
-    control: { type: null },
-  },
-  likeButtonProps: {
-    name: 'likeButtonProps',
-    control: { type: null },
-  },
 }
