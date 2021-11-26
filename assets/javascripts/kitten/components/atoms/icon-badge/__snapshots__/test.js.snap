@@ -2,13 +2,13 @@
 
 exports[`<IconBadge /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa gpZvCr k-IconBadge k-IconBadge--big k-IconBadge--valid k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa ixiuVq k-IconBadge k-IconBadge--big k-IconBadge--success"
   style={
     Object {
-      "--background-color": "var(--color-primary-500, #19b4fa)",
-      "--border-color": null,
-      "--border-style": null,
-      "--border-width": null,
+      "--iconBadge-background-color": null,
+      "--iconBadge-border-color": null,
+      "--iconBadge-border-style": null,
+      "--iconBadge-border-width": null,
     }
   }
 >
@@ -22,13 +22,13 @@ exports[`<IconBadge /> by default matches with snapshot 1`] = `
 
 exports[`<IconBadge /> with border style matches with snapshot 1`] = `
 <span
-  className="sc-bdVaJa gpZvCr k-IconBadge k-IconBadge--tiny k-IconBadge--hasBorderStyles"
+  className="sc-bdVaJa ixiuVq k-IconBadge k-IconBadge--tiny k-IconBadge--info"
   style={
     Object {
-      "--background-color": "var(--color-primary-500, #19b4fa)",
-      "--border-color": "#e8f7fe",
-      "--border-style": "solid",
-      "--border-width": "0.125rem",
+      "--iconBadge-background-color": null,
+      "--iconBadge-border-color": "#e8f7fe",
+      "--iconBadge-border-style": "solid",
+      "--iconBadge-border-width": "0.125rem",
     }
   }
 >

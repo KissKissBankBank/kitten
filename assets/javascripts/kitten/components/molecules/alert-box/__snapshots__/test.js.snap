@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AlertBox /> should matches with default snapshot 1`] = `
+<div
+  className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
+  role="status"
+>
+  <span
+    className="sc-bdVaJa ixiuVq k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <span
+      className="k-IconBadge__content"
+    >
+      <svg
+        fill="var(--color-grey-900)"
+        height="14"
+        viewBox="0 0 4 14"
+        width="4"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="2"
+          cy="1.25"
+          r="1.25"
+          transform="rotate(-180 2 1.25)"
+        />
+        <rect
+          height="9"
+          rx="1.25"
+          transform="rotate(-180 3.25 13.5)"
+          width="2.5"
+          x="3.25"
+          y="13.5"
+        />
+      </svg>
+    </span>
+  </span>
+  <div
+    className="k-AlertBox__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
