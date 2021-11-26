@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import PropTypes, { bool } from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -157,6 +157,16 @@ const StyledInput = styled.input`
   @media (max-width: ${ScreenConfig.XS.max}px) {
     font-size: ${stepToRem(0)};
   }
+
+  // DARK BACKGROUND
+  &.k-Form-TextInput--darkBackground {
+    background-color: ${COLORS.grey1};
+    border-color: ${COLORS.grey1};
+
+    ::placeholder {
+      color: ${COLORS.background1};
+    }
+  }
 `
 
 const StyledTextareaContainer = styled.div`
@@ -221,6 +231,15 @@ const StyledTextareaContainer = styled.div`
     border-radius: var(--input-height);
   }
 
+  &.k-Form-TextInput--darkBackground {
+    background-color: ${COLORS.grey1};
+    border-color: ${COLORS.grey1};
+    
+    ::placeholder {
+      color: ${COLORS.background1};
+    }
+  }
+
   .k-Form-TextInput__textareaGradient {
     position: absolute;
     left: ${pxToRem(10)};
@@ -254,6 +273,7 @@ export class TextInput extends PureComponent {
     digits: PropTypes.number,
     variant: PropTypes.oneOf(['orion', 'andromeda']),
     rounded: PropTypes.bool,
+    darkBackground: bool,
   }
 
   static defaultProps = {
@@ -267,6 +287,8 @@ export class TextInput extends PureComponent {
     digits: null,
     variant: 'orion',
     rounded: false,
+    darkBackground: false,
+
   }
 
   render() {
@@ -283,6 +305,7 @@ export class TextInput extends PureComponent {
       className,
       style,
       rounded,
+      darkBackground,
       ...others
     } = this.props
 
@@ -312,6 +335,7 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--disabled': disabled,
                 'k-Form-TextInput--alignCenter': center,
                 'k-Form-TextInput--rounded': rounded,
+                'k-Form-TextInput--darkBackground': darkBackground,
               },
             )}
             style={
@@ -340,6 +364,7 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput--disabled': disabled,
               'k-Form-TextInput--alignCenter': center,
               'k-Form-TextInput--rounded': rounded,
+              'k-Form-TextInput--darkBackground': darkBackground,
             },
           )}
           style={

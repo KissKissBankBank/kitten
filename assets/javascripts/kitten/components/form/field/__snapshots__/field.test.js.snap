@@ -128,7 +128,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb ctqJsg k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-bxivhb fwvYAZ k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -227,7 +227,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb ctqJsg k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular"
+      className="sc-bxivhb fwvYAZ k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -315,7 +315,7 @@ Array [
       className="sc-EHOje gblScq k-Form-TextInputWithLimit"
     >
       <input
-        className="sc-bxivhb ctqJsg k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb fwvYAZ k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular"
         defaultValue=""
         disabled={false}
         id="input"
@@ -411,7 +411,7 @@ Array [
       className="sc-bZQynM gIBGKy k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
     >
       <input
-        className="sc-bxivhb ctqJsg k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb fwvYAZ k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -506,7 +506,7 @@ Array [
       className="sc-iwsKbI dAJmRt k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb ctqJsg k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-bxivhb fwvYAZ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -634,7 +634,7 @@ Array [
       className="sc-iwsKbI dAJmRt k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb ctqJsg k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb fwvYAZ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
