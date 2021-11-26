@@ -288,7 +288,6 @@ export class TextInput extends PureComponent {
     variant: 'orion',
     rounded: false,
     darkBackground: false,
-
   }
 
   render() {
