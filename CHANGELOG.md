@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: IE11: Remove all IE11 css.
 - Fix: `LendoLoadingAnimation`: Fix console errors.
 - Feature: `Button`: Use new `disabled` style.
+- Feature: `StatusIconNext`: Add component with the following subcomponents:
+  - `StatusIconNext.Info`
+  - `StatusIconNext.Success`
+  - `StatusIconNext.Danger`
+  - `StatusIconNext.Warning`
+  - `StatusIconNext.Disabled`
 
 ## [6.4.0] - 2021-11-23
 
