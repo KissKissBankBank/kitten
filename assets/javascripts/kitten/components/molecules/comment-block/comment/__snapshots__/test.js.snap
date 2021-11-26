@@ -2,7 +2,7 @@
 
 exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-bZQynM JPxAB k-Comment"
+  className="sc-bdVaJa iDLobO k-Comment"
 >
   <div
     className="k-Comment__header"
@@ -61,7 +61,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 
 exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 <div
-  className="sc-bZQynM JPxAB k-Comment"
+  className="sc-bdVaJa iDLobO k-Comment"
 >
   <div
     className="k-Comment__header"
@@ -146,7 +146,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 
 exports[`<Comment /> should match its empty snapshot 1`] = `
 <div
-  className="sc-bZQynM JPxAB k-Comment"
+  className="sc-bdVaJa iDLobO k-Comment"
 >
   <div
     className="k-Comment__header"

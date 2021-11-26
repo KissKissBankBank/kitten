@@ -2,7 +2,7 @@
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="sc-bwzfXH qriYw k-CommentForm"
+  className="sc-bwzfXH dJvLOs k-CommentForm"
 >
   <div
     className="k-CommentForm__image"
@@ -34,7 +34,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
 
 exports[`<CommentForm /> should match its error snapshot 1`] = `
 <div
-  className="sc-bwzfXH qriYw k-CommentForm"
+  className="sc-bwzfXH dJvLOs k-CommentForm"
 >
   <div
     className="k-CommentForm__image"
