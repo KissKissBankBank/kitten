@@ -9,7 +9,6 @@ import {
   Marger,
   Text,
   stepToRem,
-  CheckedCircleIcon,
   mq,
   pxToRem,
 } from 'kitten'

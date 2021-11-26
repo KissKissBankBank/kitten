@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import { Comment } from './index'
-import { CheckedCircleIcon, Text } from 'kitten'
+import { Text } from 'kitten'
 import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Molecules/CommentBlock/Comment',
   component: Comment,
-  decorators: [story => <div className="story-Container story-Grid story-Grid--large">{story()}</div>],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
-      page: () => (
-        <DocsPage
-          filepath={__filename}
-          importString="Comment"
-        />
-      ),
+      page: () => <DocsPage filepath={__filename} importString="Comment" />,
     },
   },
   args: {
@@ -66,13 +67,13 @@ export default {
       name: 'headerActions',
       control: { type: null },
     },
-  }
+  },
 }
 
 export const Default = ({ showFooter, ...args }) => {
   const [hasLiked, setHasLiked] = useState(false)
 
-  const handleClick = (e) => {
+  const handleClick = e => {
     action('likeButton onClick')(e)
     setHasLiked(!hasLiked)
     document.activeElement.blur()
@@ -91,10 +92,22 @@ export const Default = ({ showFooter, ...args }) => {
       footer={
         showFooter && (
           <>
-            <Text as="button" weight="regular" size="micro" className="k-u-reset-button k-u-link k-u-link-font1" onClick={action('comment')}>
+            <Text
+              as="button"
+              weight="regular"
+              size="micro"
+              className="k-u-reset-button k-u-link k-u-link-font1"
+              onClick={action('comment')}
+            >
               Reply
             </Text>
-            <Text as="button" weight="regular" size="micro" className="k-u-reset-button k-u-link k-u-link-font1" onClick={action('delete')}>
+            <Text
+              as="button"
+              weight="regular"
+              size="micro"
+              className="k-u-reset-button k-u-link k-u-link-font1"
+              onClick={action('delete')}
+            >
               Delete
             </Text>
           </>

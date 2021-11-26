@@ -6,15 +6,16 @@ import { DocsPage } from 'storybook/docs-page'
 export default {
   title: 'Molecules/CommentBlock/CommentForm',
   component: CommentForm,
-  decorators: [story => <div className="story-Container story-Grid story-Grid--large">{story()}</div>],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
-      page: () => (
-        <DocsPage
-          filepath={__filename}
-          importString="CommentForm"
-        />
-      ),
+      page: () => <DocsPage filepath={__filename} importString="CommentForm" />,
     },
   },
   args: {
@@ -63,11 +64,8 @@ export default {
       name: 'id',
       control: 'text',
     },
-    'aria-label': { control: 'text' }
-  }
+    'aria-label': { control: 'text' },
+  },
 }
 
-
-export const Default = (args) => (
-  <CommentForm {...args} />
-)
+export const Default = args => <CommentForm {...args} />

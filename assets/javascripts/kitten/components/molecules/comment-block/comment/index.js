@@ -1,17 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
-import { Marger } from '../../../../components/layout/marger'
-import { CommentAvatar } from '../../../../components/molecules/comment-block/comment-avatar'
 import { Text } from '../../../../components/atoms/typography/text'
 import { mq } from '../../../../constants/screen-config'
-import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import domElementHelper from '../../../../helpers/dom/element-helper'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { HeartIconNext } from '../../../../components/graphics/icons-next/heart-icon-next'
 
 const CommentWrapper = styled.div`
@@ -33,7 +29,7 @@ const CommentWrapper = styled.div`
   }
 
   &::before {
-    content: "";
+    content: '';
     width: 0;
     height: 0;
     position: absolute;
@@ -84,7 +80,6 @@ const CommentWrapper = styled.div`
     align-items: center;
 
     [aria-pressed] {
-
     }
 
     svg {
@@ -93,7 +88,6 @@ const CommentWrapper = styled.div`
     }
 
     :hover {
-
     }
   }
 `
@@ -116,28 +110,30 @@ export const Comment = ({
     <CommentWrapper
       id={id}
       className={classNames('k-Comment', className, {
-        'k-Comment--is-secondary': isSecondary
+        'k-Comment--is-secondary': isSecondary,
       })}
       {...props}
     >
       <div className="k-Comment__header">
         <div className="k-Comment__header__meta">
           <a href={ownerUrl}>
-            <img alt="" {...avatarImgProps} className="k-Comment__header__image" />
+            <img
+              alt=""
+              {...avatarImgProps}
+              className="k-Comment__header__image"
+            />
           </a>
           <a href={ownerUrl} className="k-u-link k-u-link-font1">
             {ownerName}
           </a>
           <Text cssColor="var(--color-grey-600)" size="micro" aria-hidden>
-          •
+            •
           </Text>
           <Text cssColor="var(--color-grey-600)" size="micro" weight="light">
             {commentDate}
           </Text>
         </div>
-        <div className="k-Comment__header__actions">
-          {headerActions}
-        </div>
+        <div className="k-Comment__header__actions">{headerActions}</div>
       </div>
 
       <div className="k-Comment__content">
@@ -150,16 +146,18 @@ export const Comment = ({
         {children}
       </div>
 
-      {footer && (
-        <div className="k-Comment__footer">
-          {footer}
-        </div>
-      )}
+      {footer && <div className="k-Comment__footer">{footer}</div>}
     </CommentWrapper>
   )
 }
 
-Comment.LikeButton = ({ children, accessibilityLabel, hasLiked, className, ...props }) => (
+Comment.LikeButton = ({
+  children,
+  accessibilityLabel,
+  hasLiked,
+  className,
+  ...props
+}) => (
   <button
     role="button"
     aria-pressed={!!hasLiked}
@@ -192,7 +190,10 @@ Comment.propTypes = {
   footer: PropTypes.node,
   bottomNotes: deprecated(PropTypes.node, 'Please use footer prop instead'),
   text: deprecated(PropTypes.node, 'Please use children prop instead'),
-  likeButtonProps: deprecated(PropTypes.object, 'Please use headerActions={<Comment.LikeButton />} instead'),
+  likeButtonProps: deprecated(
+    PropTypes.object,
+    'Please use headerActions={<Comment.LikeButton />} instead',
+  ),
 }
 
 Comment.defaultProps = {

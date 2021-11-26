@@ -4,7 +4,6 @@ import { Comment } from './index'
 
 describe('<Comment />', () => {
   it('should match its empty snapshot', () => {
-
     const tree = renderer
       .create(
         <Comment
@@ -14,11 +13,14 @@ describe('<Comment />', () => {
           }}
           commentDate="Custom date"
           ownerName="Custom name"
-          headerActions={(
-            <Comment.LikeButton hasLiked accessibilityLabel="Retirer des favoris">
+          headerActions={
+            <Comment.LikeButton
+              hasLiked
+              accessibilityLabel="Retirer des favoris"
+            >
               4
             </Comment.LikeButton>
-          )}
+          }
         >
           Custom text
         </Comment>,

@@ -116,7 +116,7 @@ const CommentFormWrapper = styled.div`
     z-index: 1;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       left: ${pxToRem(1)};
       right: 0;
@@ -134,7 +134,7 @@ const CommentFormWrapper = styled.div`
     display: inline-block;
     min-height: 0;
     max-height: 0;
-    padding: 0  ${pxToRem(20)};
+    padding: 0 ${pxToRem(20)};
     height: var(--Button-dimension);
     align-self: flex-end;
     overflow: hidden;
@@ -198,7 +198,7 @@ export const CommentForm = ({
           aria-describedby={`${id}-description`}
           aria-label={props['aria-label'] || commentLabel}
         />
-        <span className="k-CommentForm__arrow"/>
+        <span className="k-CommentForm__arrow" />
         {error && (
           <Text
             id={`${id}-description`}
@@ -217,10 +217,9 @@ export const CommentForm = ({
             size="tiny"
             fit="content"
             disabled={disabled}
-            className={classNames(
-              'k-CommentForm__submit',
-              {'k-CommentForm__submit--is-visible': isButtonVisible},
-            )}
+            className={classNames('k-CommentForm__submit', {
+              'k-CommentForm__submit--is-visible': isButtonVisible,
+            })}
             onClick={handleSubmit}
           >
             {buttonText}
@@ -245,7 +244,7 @@ CommentForm.propTypes = {
   buttonText: PropTypes.string,
   commentButton: deprecated(PropTypes.string, 'Please use buttonText instead.'),
   avatarBadge: deprecated(PropTypes.node, 'Not a feature anymore'),
-  isDisabled: deprecated(PropTypes.bool,'Please use disabled instead'),
+  isDisabled: deprecated(PropTypes.bool, 'Please use disabled instead'),
   commentLabel: deprecated(PropTypes.string, 'Please use aria-label instead'),
   ariaId: deprecated(PropTypes.string, 'Please use id prop instead.'),
   textareaId: deprecated(PropTypes.string, 'Please use id prop instead.'),

@@ -4,7 +4,6 @@ import { CommentForm } from './index'
 
 describe('<CommentForm />', () => {
   it('should match its empty snapshot', () => {
-
     const tree = renderer
       .create(
         <CommentForm
@@ -18,12 +17,12 @@ describe('<CommentForm />', () => {
           buttonText="Comment"
         />,
         {
-          createNodeMock: (element) => {
+          createNodeMock: element => {
             if (element.type === 'textarea') {
-              return document.createElement('textarea');
+              return document.createElement('textarea')
             }
           },
-        }
+        },
       )
       .toJSON()
 
@@ -31,7 +30,6 @@ describe('<CommentForm />', () => {
   })
 
   it('should match its error snapshot', () => {
-
     const tree = renderer
       .create(
         <CommentForm
@@ -47,12 +45,12 @@ describe('<CommentForm />', () => {
           error
         />,
         {
-          createNodeMock: (element) => {
+          createNodeMock: element => {
             if (element.type === 'textarea') {
-              return document.createElement('textarea');
+              return document.createElement('textarea')
             }
           },
-        }
+        },
       )
       .toJSON()
 
