@@ -524,7 +524,7 @@ export const StyledHeader = styled.header`
       max-height: calc(100vh - (100% + ${pxToRem(20)}));
 
       box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
-      border-radius: ${pxToRem(8)};
+      border-radius: var(--border-radius-m);
     }
 
     &.k-HeaderNav__floatingDropdown--isExpanded {

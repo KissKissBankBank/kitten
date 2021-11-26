@@ -9,7 +9,7 @@ export const FLUID = css`
 `
 
 export const ROUNDED = css`
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
 `
 
 export const DEFAULT = css`

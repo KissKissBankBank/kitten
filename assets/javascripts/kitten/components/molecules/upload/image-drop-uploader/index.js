@@ -39,7 +39,7 @@ const StyledImageDropUploader = styled.div`
     display: flex;
     width: 100%;
     padding: ${pxToRem(15)};
-    border-radius: ${pxToRem(8)};
+    border-radius: var(--border-radius-m);
     border: var(--border-width) dashed var(--color-grey-400);
 
     flex-direction: column;
@@ -110,7 +110,7 @@ const StyledImageDropUploader = styled.div`
   }
 
   .k-ImageDropUploader__manager {
-    border-radius: ${pxToRem(8)};
+    border-radius: var(--border-radius-m);
     padding: ${pxToRem(15)} ${pxToRem(45)} ${pxToRem(15)} ${pxToRem(15)};
     width: 100%;
     position: relative;
@@ -144,9 +144,9 @@ const StyledImageDropUploader = styled.div`
   }
   .k-ImageDropUploader__manager__cancelButton {
     position: absolute;
-    top: ${pxToRem(-2)};
-    right: ${pxToRem(-2)};
-    border-top-right-radius: ${pxToRem(8)};
+    top: ${pxToRem(-1)};
+    right: ${pxToRem(-1)};
+    border-top-right-radius: var(--border-radius-m);
   }
 
   .k-ImageDropUploader__imageCropper {

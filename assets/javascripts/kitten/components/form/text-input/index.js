@@ -75,23 +75,11 @@ const StyledInput = styled.input`
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
-    border-radius: ${pxToRem(4)};
-
-    &.k-Form-TextInput--big,
-    &.k-Form-TextInput--huge,
-    &.k-Form-TextInput--giant {
-      border-radius: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --input-padding-horizontal: ${pxToRem(30)};
-        border-radius: ${pxToRem(8)};
-        font-size: ${stepToRem(0)};
-      }
-    }
+    border-radius: var(--border-radius-s);
   }
 
   &.k-Form-TextInput--rounded {
-    border-radius: var(--input-height);
+    border-radius: var(--border-radius-rounded);
   }
 
   // TEXT
@@ -157,6 +145,17 @@ const StyledInput = styled.input`
   @media (max-width: ${ScreenConfig.XS.max}px) {
     font-size: ${stepToRem(0)};
   }
+
+  // DARK BACKGROUND
+  &.k-Form-TextInput--darkBackground {
+    background-color: ${COLORS.grey1};
+    border-color: ${COLORS.grey1};
+    color: ${COLORS.background1};
+
+    ::placeholder {
+      color: ${COLORS.line2};
+    }
+  }
 `
 
 const StyledTextareaContainer = styled.div`
@@ -218,7 +217,17 @@ const StyledTextareaContainer = styled.div`
   }
 
   &.k-Form-TextInput--rounded {
-    border-radius: var(--input-height);
+    border-radius: var(--border-radius-rounded);
+  }
+
+  &.k-Form-TextInput--darkBackground {
+    background-color: ${COLORS.grey1};
+    border-color: ${COLORS.grey1};
+    color: ${COLORS.background1};
+
+    ::placeholder {
+      color: ${COLORS.line2};
+    }
   }
 
   .k-Form-TextInput__textareaGradient {
@@ -254,6 +263,7 @@ export class TextInput extends PureComponent {
     digits: PropTypes.number,
     variant: PropTypes.oneOf(['orion', 'andromeda']),
     rounded: PropTypes.bool,
+    darkBackground: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -267,6 +277,7 @@ export class TextInput extends PureComponent {
     digits: null,
     variant: 'orion',
     rounded: false,
+    darkBackground: false,
   }
 
   render() {
@@ -283,6 +294,7 @@ export class TextInput extends PureComponent {
       className,
       style,
       rounded,
+      darkBackground,
       ...others
     } = this.props
 
@@ -312,6 +324,7 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--disabled': disabled,
                 'k-Form-TextInput--alignCenter': center,
                 'k-Form-TextInput--rounded': rounded,
+                'k-Form-TextInput--darkBackground': darkBackground,
               },
             )}
             style={
@@ -340,6 +353,7 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput--disabled': disabled,
               'k-Form-TextInput--alignCenter': center,
               'k-Form-TextInput--rounded': rounded,
+              'k-Form-TextInput--darkBackground': darkBackground,
             },
           )}
           style={

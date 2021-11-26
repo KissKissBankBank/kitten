@@ -98,7 +98,7 @@ const Wrapper = styled.button`
     }
 
     .k-Button.k-Button--orion {
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-s);
     }
   }
 `

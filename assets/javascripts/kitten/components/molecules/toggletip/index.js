@@ -44,7 +44,7 @@ const StyledWrapper = styled.span`
     background-color: var(--toggletipAction-color);
     width: var(--toggletipAction-size);
     height: var(--toggletipAction-size);
-    border-radius: 50%;
+    border-radius: var(--border-radius-rounded);
   }
 
   .k-Toggletip__bubble {
@@ -63,10 +63,10 @@ const StyledWrapper = styled.span`
       width: 0;
       height: 0;
       border: ${pxToRem(10)} solid transparent;
+      border-radius: var(--border-radius-s);
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      border-radius: ${pxToRem(6)};
       position: absolute;
       top: calc(var(--toggletipAction-size) + ${pxToRem(20)});
       left: calc(
@@ -85,7 +85,6 @@ const StyledWrapper = styled.span`
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      border-radius: ${pxToRem(8)};
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

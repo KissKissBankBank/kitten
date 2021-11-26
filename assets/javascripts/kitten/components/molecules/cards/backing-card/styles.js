@@ -21,7 +21,7 @@ export const StyledBackingCard = styled.article`
 
   &.k-BackingCard--hasBorder {
     --backingCard--border-width: var(--border-width);
-    --backingCard--border-radius: ${pxToRem(8)};
+    --backingCard--border-radius: var(--border-radius-m);
   }
 
   /* STRUCTURE */

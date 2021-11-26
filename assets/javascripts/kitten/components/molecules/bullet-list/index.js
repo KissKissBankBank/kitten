@@ -23,7 +23,7 @@ const StyledBulletList = styled.ul`
       margin-left: -${pxToRem(16)};
       margin-right: ${pxToRem(10)};
       box-sizing: border-box;
-      border-radius: 50%;
+      border-radius: var(--border-radius-rounded);
       width: ${pxToRem(6)};
       height: ${pxToRem(6)};
       display: inline-block;

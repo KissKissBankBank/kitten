@@ -221,21 +221,12 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c1.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c1.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c1.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -359,15 +350,6 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 
   .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c1.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 

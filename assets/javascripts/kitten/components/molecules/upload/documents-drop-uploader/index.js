@@ -11,7 +11,7 @@ import { Text } from '../../../../components/atoms/typography/text'
 import { Tag } from '../../../../components/atoms/tag'
 
 const StyledDocumentsDropUploader = styled.div`
-  border-radius: ${pxToRem(8)};
+  border-radius: var(--border-radius-m);
   padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(15)};
   width: 100%;
   position: relative;
@@ -65,7 +65,7 @@ const StyledDocumentsDropUploader = styled.div`
     cursor: pointer;
     border: var(--border-width) solid transparent;
     transition: border-color 0.2s ease;
-    border-radius: ${pxToRem(8)};
+    border-radius: var(--border-radius-m);
   }
 
   &.k-DocumentsDropUploader--ready:hover:not(.k-DocumentsDropUploader--disabled) {

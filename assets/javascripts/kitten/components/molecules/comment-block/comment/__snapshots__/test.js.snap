@@ -33,7 +33,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </svg>
       </div>
       <span
-        className="sc-bwzfXH eETbbK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
+        className="sc-bwzfXH bYGDhL k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX kDCOkI"
       >
         <img
           alt="Image alt"
@@ -92,7 +92,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="sc-bxivhb cdaogt"
     >
       <span
-        className="sc-bwzfXH eETbbK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
+        className="sc-bwzfXH bYGDhL k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX kDCOkI"
       >
         <img
           alt="Image alt"
@@ -180,7 +180,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       className="sc-bxivhb cdaogt"
     >
       <span
-        className="sc-bwzfXH eETbbK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
+        className="sc-bwzfXH bYGDhL k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX kDCOkI"
       >
         <img
           alt="Image alt"

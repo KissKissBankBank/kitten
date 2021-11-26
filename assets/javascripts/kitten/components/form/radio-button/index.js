@@ -40,7 +40,7 @@ const StyledRadioButton = styled.div`
     background-repeat: no-repeat;
     background-color: ${COLORS.background1};
     border: var(--border);
-    border-radius: 50%;
+    border-radius: var(--border-radius-rounded);
 
     transition: border 0.2s, background 0.2s;
   }
@@ -171,7 +171,7 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__label {
       box-sizing: border-box;
       min-height: ${pxToRem(70)};
-      border-radius: ${pxToRem(6)};
+      border-radius: var(--border-radius-s);
       border: var(--border);
       padding: ${pxToRem(26 - 4)} ${pxToRem(15)};
     }

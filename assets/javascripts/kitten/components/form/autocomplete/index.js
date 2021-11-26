@@ -160,7 +160,7 @@ const Wrapper = styled.div`
   /* VARIANTS */
 
   &.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-s);
   }
 `
 

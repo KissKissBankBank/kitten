@@ -32,7 +32,7 @@ const AnchorLink = styled(Text)`
     css`
       color: ${COLORS.background1};
       background-color: ${COLORS.primary1};
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-xs);
     `}
 `
 

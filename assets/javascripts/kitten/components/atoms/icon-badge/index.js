@@ -13,7 +13,7 @@ const StyledBadge = styled.span`
   padding: 0;
   min-width: ${pxToRem(30)};
   min-height: ${pxToRem(30)};
-  border-radius: ${pxToRem(30)};
+  border-radius: var(--border-radius-rounded);
   background-color: var(--iconBadge-background-color, var(--color-primary-500));
   border-color: var(--color-primary-300);
 
@@ -46,7 +46,6 @@ const StyledBadge = styled.span`
   &.k-IconBadge--tiny {
     min-width: ${pxToRem(20)};
     min-height: ${pxToRem(20)};
-    border-radius: ${pxToRem(20)};
 
     .k-IconBadge__content {
       font-size: ${stepToRem(-1)};
@@ -61,7 +60,6 @@ const StyledBadge = styled.span`
   &.k-IconBadge--big {
     min-width: ${pxToRem(40)};
     min-height: ${pxToRem(40)};
-    border-radius: ${pxToRem(40)};
 
     .k-IconBadge__content {
       font-size: ${stepToRem(-1)};
@@ -71,7 +69,6 @@ const StyledBadge = styled.span`
   &.k-IconBadge--huge {
     min-width: ${pxToRem(50)};
     min-height: ${pxToRem(50)};
-    border-radius: ${pxToRem(50)};
 
     .k-IconBadge__content {
       font-size: ${stepToRem(-1)};
