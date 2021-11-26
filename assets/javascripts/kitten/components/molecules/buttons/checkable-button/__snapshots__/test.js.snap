@@ -154,11 +154,11 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: var(--border-radius-rounded);
-  width: var(--CheckableButton);
-  height: var(--CheckableButton);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton) var(--CheckableButton);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -179,7 +179,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -243,19 +243,19 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -543,11 +543,11 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: var(--border-radius-rounded);
-  width: var(--CheckableButton);
-  height: var(--CheckableButton);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton) var(--CheckableButton);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -568,7 +568,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -632,19 +632,19 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -932,11 +932,11 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   content: '';
   box-sizing: border-box;
   border-radius: var(--border-radius-rounded);
-  width: var(--CheckableButton);
-  height: var(--CheckableButton);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton) var(--CheckableButton);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -957,7 +957,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1021,19 +1021,19 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -1321,11 +1321,11 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: var(--border-radius-rounded);
-  width: var(--CheckableButton);
-  height: var(--CheckableButton);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton) var(--CheckableButton);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -1346,7 +1346,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1410,19 +1410,19 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -1710,11 +1710,11 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   content: '';
   box-sizing: border-box;
   border-radius: var(--border-radius-rounded);
-  width: var(--CheckableButton);
-  height: var(--CheckableButton);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton) var(--CheckableButton);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -1735,7 +1735,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1799,19 +1799,19 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
