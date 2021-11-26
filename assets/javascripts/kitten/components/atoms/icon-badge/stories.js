@@ -19,17 +19,9 @@ export default {
     ),
   ],
   argTypes: {
-    disabled: {
-      name: 'disabled',
-      control: 'boolean',
-    },
     backgroundColor: {
       name: 'backgroundColor',
       control: 'color',
-    },
-    valid: {
-      name: 'valid',
-      control: 'boolean',
     },
     empty: {
       name: 'empty',
@@ -44,25 +36,34 @@ export default {
       control: 'select',
       options: ['tiny', 'normal', 'big', 'huge'],
     },
+    status: {
+      name: 'status',
+      control: 'select',
+      options: ['info', 'success', 'danger', 'warning', 'disabled'],
+    },
+    hasBorder: {
+      name: 'hasBorder',
+      control: 'boolean',
+    },
   },
 }
 
 const args = {
-  disabled: false,
-  valid: false,
   empty: false,
   size: 'normal',
-  backgroundColor: COLORS.primary1,
+  backgroundColor: null,
   children: <StarIcon color={COLORS.background1} />,
+  status: 'info',
+  hasBorder: false,
 }
 
 export const Default = args => <IconBadge {...args} />
 
 Default.args = args
 
-export const WithBorder = args => <IconBadge {...args} />
+export const WithBorderStyles = args => <IconBadge {...args} />
 
-WithBorder.args = {
+WithBorderStyles.args = {
   ...args,
   size: 'tiny',
   border: {
