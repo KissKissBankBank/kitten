@@ -64,7 +64,7 @@ const StyledHorizontalTimeline = styled.dl`
     content: '';
     width: ${pxToRem(14)};
     height: ${pxToRem(14)};
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     border: ${pxToRem(4)} solid ${COLORS.primary1};
     display: block;
     grid-row: 2;
@@ -126,7 +126,7 @@ const StyledHorizontalTimeline = styled.dl`
     background-color: ${COLORS.primary4};
     height: ${pxToRem(4)};
     width: ${pxToRem(4)};
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     align-self: center;
     box-shadow: 0 0 0 ${pxToRem(3)} white;
   }

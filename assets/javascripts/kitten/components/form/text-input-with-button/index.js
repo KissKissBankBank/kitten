@@ -81,7 +81,7 @@ const StyledTextInputWithButton = styled.div`
 
     &.k-Form-TextInputWithButton--roudedButton
       .k-Form-TextInputWithButton__button {
-      --text-input-button-radius: var(--border-radius-xxl);
+      --text-input-button-radius: var(--border-radius-rounded);
     }
   }
 

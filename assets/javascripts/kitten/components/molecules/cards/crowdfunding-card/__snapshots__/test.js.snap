@@ -4,7 +4,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c1 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -638,7 +638,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c1 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -802,7 +802,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 .c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -1395,7 +1395,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c1 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1559,7 +1559,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -2150,7 +2150,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c2 {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2318,7 +2318,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 .c3.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c3 svg:not(.k-ColorSvg),

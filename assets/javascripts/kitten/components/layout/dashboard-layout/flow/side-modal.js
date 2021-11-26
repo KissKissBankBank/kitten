@@ -53,7 +53,7 @@ const Wrapper = styled.div`
     width: ${pxToRem(50)};
     height: ${pxToRem(50)};
     background-color: ${COLORS.primary5};
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     box-shadow: ${pxToRem(0)} ${pxToRem(2)} ${pxToRem(5)} ${pxToRem(5)}
       rgba(0, 0, 0, 0.15);
     pointer-events: all;

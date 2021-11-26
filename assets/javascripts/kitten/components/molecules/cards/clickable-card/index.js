@@ -58,7 +58,7 @@ const StyledClickableCard = styled.button`
   }
 
   .k-ClickableCard__image--circle {
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
   }
 
   .k-ClickableCard__content {

@@ -25,7 +25,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   justify-content: center;
   width: 1.875rem;
   height: 1.875rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   margin-right: 0.6875rem;
   background-color: var(--color-grey-000,#fff);
@@ -69,7 +69,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   padding: 0.1875rem;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
@@ -98,7 +98,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-width: 0.125rem;
   width: 0.75rem;
   height: 0.75rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   margin-left: 0.4375rem;
   margin-right: 0.9375rem;
 }
@@ -343,7 +343,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
     width: 1.875rem;
     height: 1.875rem;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     margin-right: 0.9375rem;
   }
 }
@@ -352,7 +352,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
     width: 1rem;
     height: 1rem;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     margin-right: 1.25rem;
     border-width: 0.1875rem;
   }
@@ -656,7 +656,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   justify-content: center;
   width: 1.875rem;
   height: 1.875rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   margin-right: 0.6875rem;
   background-color: var(--color-grey-000,#fff);
@@ -700,7 +700,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   padding: 0.1875rem;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
@@ -729,7 +729,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-width: 0.125rem;
   width: 0.75rem;
   height: 0.75rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   margin-left: 0.4375rem;
   margin-right: 0.9375rem;
 }
@@ -945,7 +945,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
     width: 1.875rem;
     height: 1.875rem;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     margin-right: 0.9375rem;
   }
 }
@@ -954,7 +954,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
     width: 1rem;
     height: 1rem;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     margin-right: 1.25rem;
     border-width: 0.1875rem;
   }

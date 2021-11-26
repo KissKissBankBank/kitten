@@ -44,7 +44,7 @@ const StyledWrapper = styled.span`
     background-color: var(--toggletipAction-color);
     width: var(--toggletipAction-size);
     height: var(--toggletipAction-size);
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
   }
 
   .k-Toggletip__bubble {

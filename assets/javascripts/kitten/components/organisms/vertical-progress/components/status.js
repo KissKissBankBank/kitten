@@ -75,7 +75,7 @@ const StyledWrapper = styled.div`
 
     width: ${pxToRem(STATUS_SIZE)};
     height: ${pxToRem(STATUS_SIZE)};
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     border: var(--border-width) solid ${COLORS.background1};
     box-sizing: border-box;
     margin-right: ${pxToRem(20)};

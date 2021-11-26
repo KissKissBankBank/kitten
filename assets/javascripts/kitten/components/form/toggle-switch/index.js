@@ -65,7 +65,7 @@ const SwitchWrapper = styled.div`
       height: var(--toggleSwitch-height);
       background-color: ${COLORS.background1};
       border: var(--toggleSwitch-border) solid ${COLORS.line2};
-      border-radius: var(--border-radius-xxl);
+      border-radius: var(--border-radius-rounded);
       transition: left var(--toggleSwitch-duration) ease,
         color var(--toggleSwitch-duration) ease, border-color var(--toggleSwitch-duration) ease,
         background-color var(--toggleSwitch-duration) ease;

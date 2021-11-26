@@ -21,7 +21,7 @@ const StyledCheckableButton = styled(Button)`
     flex-shrink: 0;
     content: '';
     box-sizing: border-box;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
 
     width: var(--CheckableButton);
     height: var(--CheckableButton);

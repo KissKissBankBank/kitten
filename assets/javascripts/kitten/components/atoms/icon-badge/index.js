@@ -15,7 +15,7 @@ const StyledBadge = styled.span`
   padding: 0;
   min-width: ${pxToRem(30)};
   min-height: ${pxToRem(30)};
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   background-color: var(--background-color, ${COLORS.primary1});
 
   &.k-IconBadge--empty {

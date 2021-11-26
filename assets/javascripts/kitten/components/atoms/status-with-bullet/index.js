@@ -14,7 +14,7 @@ const StyledStatus = styled.span`
 
   .k-StatusWithBullet__bullet {
     background-color: currentColor;
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     margin-top: ${pxToRem(2)};
     flex: 0 0 auto;
   }

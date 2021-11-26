@@ -16,7 +16,7 @@ const StyledPillNumberInput = styled.div`
   width: ${pxToRem(85)};
   padding: 0 ${pxToRem(10)};
   border: var(--border);
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   transition: border-color 0.2s ease;
 
   &:hover {

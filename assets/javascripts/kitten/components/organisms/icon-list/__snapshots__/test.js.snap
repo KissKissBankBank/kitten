@@ -19,7 +19,7 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   justify-content: center;
   width: 3.125rem;
   height: 3.125rem;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   margin-right: 1.25rem;
   background-color: var(--color-grey-000,#fff);

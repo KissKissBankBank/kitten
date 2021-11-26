@@ -70,7 +70,7 @@ const AlertWrapper = styled.div`
       border-color: ${COLORS.primary4};
       min-width: ${pxToRem(24)};
       min-height: ${pxToRem(24)};
-      border-radius: var(--border-radius-xxl);
+      border-radius: var(--border-radius-rounded);
     }
   }
 

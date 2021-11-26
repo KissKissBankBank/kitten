@@ -287,7 +287,7 @@ export const StyledCarouselContainer = styled.div`
       height: ${pxToRem(8)};
       margin-left: ${pxToRem(4)};
       margin-right: ${pxToRem(4)};
-      border-radius: var(--border-radius-xxl);
+      border-radius: var(--border-radius-rounded);
       background-color: ${COLORS.font1};
 
       &.k-Carousel__pageControl__pageDot--isVisible {

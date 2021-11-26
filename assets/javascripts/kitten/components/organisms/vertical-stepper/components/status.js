@@ -102,7 +102,7 @@ const StyledContainerStatus = styled.div`
 
     width: ${pxToRem(STATUS_SIZE)};
     height: ${pxToRem(STATUS_SIZE)};
-    border-radius: var(--border-radius-xxl);
+    border-radius: var(--border-radius-rounded);
     box-sizing: border-box;
     margin-right: ${pxToRem(11)};
 
@@ -143,12 +143,12 @@ const StyledContainerStatus = styled.div`
 
       width: ${pxToRem(MOBILE_STATUS_SIZE)};
       height: ${pxToRem(MOBILE_STATUS_SIZE)};
-      border-radius: var(--border-radius-xxl);
+      border-radius: var(--border-radius-rounded);
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         width: ${pxToRem(STATUS_SIZE)};
         height: ${pxToRem(STATUS_SIZE)};
-        border-radius: var(--border-radius-xxl);
+        border-radius: var(--border-radius-rounded);
         margin-right: ${pxToRem(15)};
       }
 
@@ -175,14 +175,14 @@ const StyledContainerStatus = styled.div`
 
         width: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
         height: ${pxToRem(MOBILE_INACTIVE_STATUS_SIZE)};
-        border-radius: var(--border-radius-xxl);
+        border-radius: var(--border-radius-rounded);
         margin-left: ${pxToRem(7)};
         margin-right: ${pxToRem(15)};
 
         @media (min-width: ${ScreenConfig.S.min}px) {
           width: ${pxToRem(INACTIVE_STATUS_SIZE)};
           height: ${pxToRem(INACTIVE_STATUS_SIZE)};
-          border-radius: var(--border-radius-xxl);
+          border-radius: var(--border-radius-rounded);
           margin-right: ${pxToRem(20)};
           border-width: ${pxToRem(3)};
         }

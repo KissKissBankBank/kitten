@@ -117,7 +117,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -153,7 +153,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   width: var(--CheckableButton);
   height: var(--CheckableButton);
   background-repeat: no-repeat;
@@ -506,7 +506,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -542,7 +542,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   width: var(--CheckableButton);
   height: var(--CheckableButton);
   background-repeat: no-repeat;
@@ -895,7 +895,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -931,7 +931,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   width: var(--CheckableButton);
   height: var(--CheckableButton);
   background-repeat: no-repeat;
@@ -1284,7 +1284,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1320,7 +1320,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   width: var(--CheckableButton);
   height: var(--CheckableButton);
   background-repeat: no-repeat;
@@ -1673,7 +1673,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-xxl);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1709,7 +1709,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: var(--border-radius-xxl);
+  border-radius: var(--border-radius-rounded);
   width: var(--CheckableButton);
   height: var(--CheckableButton);
   background-repeat: no-repeat;
