@@ -24,6 +24,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `ariaId` replaced by `id`
     - `textareaId` replaced by `id`
     - `avatarBadge`
+- Feature: `ModalFooterInput`: Add component.
 - Feature: `HeartIconNext`: Add component.
 - Fix: Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
 
