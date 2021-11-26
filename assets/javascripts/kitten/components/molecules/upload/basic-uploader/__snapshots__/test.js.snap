@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-htpNat bbBuOY k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat CulRh k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -44,7 +44,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-htpNat bbBuOY k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat CulRh k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -86,7 +86,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-htpNat bbBuOY k-BasicUploader k-BasicUploader--valid"
+  className="sc-htpNat CulRh k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
