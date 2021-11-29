@@ -71,7 +71,6 @@ export const StyledDropdown = styled.div`
     outline-offset: var(--outline-offset-input);
   }
 
-
   .k-Form-DropdownCombobox__arrowButton,
   .k-Form-DropdownSelect__button__arrowBox {
     height: 100%;

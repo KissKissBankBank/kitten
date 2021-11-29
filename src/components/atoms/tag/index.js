@@ -28,7 +28,7 @@ var _typography = require("../../../helpers/utils/typography");
 var StyledTag = _styledComponents.default.span.withConfig({
   displayName: "tag__StyledTag",
   componentId: "sc-1dt82ne-0"
-})(["height:", ";box-sizing:border-box;display:inline-block;padding:0 ", ";white-space:nowrap;line-height:", ";", " font-size:", ";border-radius:", ";&.k-Tag--info{background-color:", ";}&.k-Tag--warning{background-color:", ";}&.k-Tag--success{background-color:", ";}&.k-Tag--error{background-color:", ";}&.k-Tag--disabled{background-color:", ";}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(4), _colorsConfig.default.primary5, _colorsConfig.default.orange1, _colorsConfig.default.valid1, _colorsConfig.default.error2, _colorsConfig.default.line1);
+})(["height:", ";box-sizing:border-box;display:inline-block;padding:0 ", ";white-space:nowrap;line-height:", ";", " font-size:", ";border-radius:var(--border-radius-xs);&.k-Tag--info{background-color:", ";}&.k-Tag--warning{background-color:", ";}&.k-Tag--success{background-color:", ";}&.k-Tag--error{background-color:", ";}&.k-Tag--disabled{background-color:", ";}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.primary5, _colorsConfig.default.orange1, _colorsConfig.default.valid1, _colorsConfig.default.error2, _colorsConfig.default.line1);
 
 var Tag = function Tag(_ref) {
   var type = _ref.type,

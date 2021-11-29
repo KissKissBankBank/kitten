@@ -1085,6 +1085,12 @@ Object.defineProperty(exports, "StatsIconNext", {
     return _statsIconNext.StatsIconNext;
   }
 });
+Object.defineProperty(exports, "StatusIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _statusIconNext.StatusIconNext;
+  }
+});
 Object.defineProperty(exports, "TagIconNext", {
   enumerable: true,
   get: function get() {
@@ -2593,6 +2599,8 @@ var _plusIconNext = require("./components/graphics/icons-next/plus-icon-next");
 var _speechBubbleIconNext = require("./components/graphics/icons-next/speech-bubble-icon-next");
 
 var _statsIconNext = require("./components/graphics/icons-next/stats-icon-next");
+
+var _statusIconNext = require("./components/graphics/icons-next/status-icon-next");
 
 var _tagIconNext = require("./components/graphics/icons-next/tag-icon-next");
 

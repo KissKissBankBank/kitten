@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import TYPOGRAPHY from '../../../../../constants/typography-config'
-import COLORS from '../../../../../constants/colors-config'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 import { ArrowIcon } from '../../../../graphics/icons/arrow-icon'
 

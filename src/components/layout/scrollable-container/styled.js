@@ -26,7 +26,7 @@ exports.StyledContainer = StyledContainer;
 
 var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   (0, _objectDestructuringEmpty2.default)(_ref);
-  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
+  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
     var displayLeftGradient = _ref2.displayLeftGradient,
         shadowColor = _ref2.shadowColor;
     return displayLeftGradient && (0, _styledComponents.css)(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",transparent );}"], (0, _typography.pxToRem)(gradientWidth), shadowColor);

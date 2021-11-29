@@ -21,14 +21,12 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _typography = require("../../../helpers/utils/typography");
 
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-1nhhmea-0"
-})(["box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:", ";background-color:var(--background-color,", ");&.k-IconBadge--empty{border:var(--border);background-color:", ";}&.k-IconBadge--valid{background-color:", ";}&.k-IconBadge--disabled{background-color:", ";}&.k-IconBadge--tiny{min-width:", ";min-height:", ";border-radius:", ";.k-IconBadge__content{font-size:", ";&,& svg{max-width:", ";}}}&.k-IconBadge--big{min-width:", ";min-height:", ";border-radius:", ";.k-IconBadge__content{font-size:", ";}}&.k-IconBadge--huge{min-width:", ";min-height:", ";border-radius:", ";.k-IconBadge__content{font-size:", ";}}.k-IconBadge__content{flex-basis:", ";color:", ";text-align:center;font-weight:bold;font-size:", ";line-height:0;}svg{fill:", ";}&.k-IconBadge--hasBorderStyles{border-width:var(--border-width,0);border-color:var(--border-color);border-style:var(--border-style);}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.valid, _colorsConfig.default.line2, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(11), _colorsConfig.default.background1, (0, _typography.stepToRem)(-2), _colorsConfig.default.background1);
+})(["box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:var(--border-radius-rounded);background-color:var(--iconBadge-background-color,var(--color-primary-500));border-color:var(--color-primary-300);&.k-IconBadge--empty{border-color:var(--color-grey-300);background-color:var(--color-grey-000);}&.k-IconBadge--success,&.k-IconBadge--valid{background-color:var(--color-success-500);border-color:var(--color-success-300);}&.k-IconBadge--disabled{background-color:var(--color-grey-600);border-color:var(--color-grey-300);}&.k-IconBadge--danger{background-color:var(--color-danger-500);border-color:var(--color-danger-300);}&.k-IconBadge--warning{background-color:var(--color-warning-500);border-color:var(--color-warning-300);}&.k-IconBadge--tiny{min-width:", ";min-height:", ";.k-IconBadge__content{font-size:", ";&,& svg{max-width:", ";}}}&.k-IconBadge--big{min-width:", ";min-height:", ";.k-IconBadge__content{font-size:", ";}}&.k-IconBadge--huge{min-width:", ";min-height:", ";.k-IconBadge__content{font-size:", ";}}.k-IconBadge__content{flex-basis:", ";color:var(--color-grey-000);text-align:center;font-weight:bold;font-size:", ";line-height:0;}svg{fill:var(--color-grey-000);}&.k-IconBadge--hasBorder{border-width:", ";border-style:solid;}&.k-IconBadge--hasBorderStyles{border-width:var(--iconBadge-border-width,0);border-color:var(--iconBadge-border-color);border-style:var(--iconBadge-border-style);}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(11), (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(2));
 
 var IconBadge = function IconBadge(_ref) {
   var _border$style, _border$color;
@@ -43,20 +41,26 @@ var IconBadge = function IconBadge(_ref) {
       size = _ref.size,
       border = _ref.border,
       backgroundColor = _ref.backgroundColor,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size", "border", "backgroundColor"]);
+      status = _ref.status,
+      hasBorder = _ref.hasBorder,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size", "border", "backgroundColor", "status", "hasBorder"]);
   return /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--".concat(size), {
-      'k-IconBadge--disabled': disabled,
-      'k-IconBadge--valid': valid,
+    className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--".concat(size), "k-IconBadge--".concat(status), {
+      'k-IconBadge--disabled': disabled && status === 'info',
+      // if default prop
+      'k-IconBadge--valid': valid && status === 'info',
+      // if default prop
       'k-IconBadge--empty': empty,
       'k-IconBadge--big': big,
-      'k-IconBadge--huge': huge
-    }, 'k-IconBadge--hasBorderStyles'),
+      'k-IconBadge--huge': huge,
+      'k-IconBadge--hasBorderStyles': border.length > 0,
+      'k-IconBadge--hasBorder': hasBorder
+    }),
     style: {
-      '--background-color': backgroundColor,
-      '--border-width': 'width' in border ? (0, _typography.pxToRem)(border.width) : null,
-      '--border-style': (_border$style = border === null || border === void 0 ? void 0 : border.style) !== null && _border$style !== void 0 ? _border$style : null,
-      '--border-color': (_border$color = border === null || border === void 0 ? void 0 : border.color) !== null && _border$color !== void 0 ? _border$color : null
+      '--iconBadge-background-color': backgroundColor !== null && backgroundColor !== void 0 ? backgroundColor : null,
+      '--iconBadge-border-width': 'width' in border ? (0, _typography.pxToRem)(border.width) : null,
+      '--iconBadge-border-style': (_border$style = border === null || border === void 0 ? void 0 : border.style) !== null && _border$style !== void 0 ? _border$style : null,
+      '--iconBadge-border-color': (_border$color = border === null || border === void 0 ? void 0 : border.color) !== null && _border$color !== void 0 ? _border$color : null
     }
   }, others), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-IconBadge__content"
@@ -65,24 +69,26 @@ var IconBadge = function IconBadge(_ref) {
 
 exports.IconBadge = IconBadge;
 IconBadge.defaultProps = {
-  disabled: false,
-  valid: false,
   empty: false,
   size: 'normal',
   border: {},
-  backgroundColor: _colorsConfig.default.primary1
+  backgroundColor: null,
+  status: 'info',
+  hasBorder: false
 };
 IconBadge.propTypes = {
-  disabled: _propTypes.default.bool,
-  valid: _propTypes.default.bool,
+  disabled: (0, _deprecated.default)(_propTypes.default.bool, 'Use status="disabled" instead'),
+  valid: (0, _deprecated.default)(_propTypes.default.bool, 'Use status="success" instead'),
   empty: _propTypes.default.bool,
   big: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
   huge: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
   size: _propTypes.default.oneOf(['tiny', 'normal', 'big', 'huge']),
-  backgroundColor: _propTypes.default.node,
+  backgroundColor: _propTypes.default.string,
   border: _propTypes.default.shape({
     width: _propTypes.default.number,
     color: _propTypes.default.node,
     style: _propTypes.default.string
-  })
+  }),
+  status: _propTypes.default.oneOf(['info', 'success', 'danger', 'warning', 'disabled']),
+  hasBorder: _propTypes.default.bool
 };

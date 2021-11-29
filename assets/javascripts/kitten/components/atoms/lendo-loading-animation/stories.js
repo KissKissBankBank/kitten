@@ -24,8 +24,8 @@ export default {
     height: '45px',
   },
   argTypes: {
-    width: {control: 'text'},
-    height: {control: 'text'},
+    width: { control: 'text' },
+    height: { control: 'text' },
   },
 }
 

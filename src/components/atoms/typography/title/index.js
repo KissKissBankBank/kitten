@@ -28,7 +28,7 @@ var _titleModifierStyles = require("../common/title-modifier-styles");
 var StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "g1nppx-0"
-})(["--Title-css-color:", ";", ";color:", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles.bold, _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
+})(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles.bold, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
 
 var Title = function Title(_ref) {
   var modifier = _ref.modifier,

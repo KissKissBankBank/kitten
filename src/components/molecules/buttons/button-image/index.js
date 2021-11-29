@@ -19,8 +19,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
 var _typography = require("../../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../../constants/screen-config");
@@ -28,7 +26,7 @@ var _screenConfig = require("../../../../constants/screen-config");
 var StyledButtonImage = _styledComponents.default.button.withConfig({
   displayName: "button-image__StyledButtonImage",
   componentId: "sc-78jbm8-0"
-})(["width:", ";height:", ";border-radius:50%;box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--tiny{width:", ";height:", ";}&.k-ButtonImage--big{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:var(--border);}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
+})(["width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--tiny{width:", ";height:", ";}&.k-ButtonImage--big{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:var(--border);}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
 
 var ButtonImage = function ButtonImage(_ref) {
   var tag = _ref.tag,

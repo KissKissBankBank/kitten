@@ -98,13 +98,15 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
   }, []);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCrowdfundingCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
-    imageContainerRatio: imageContainerRatio,
     onClick: removeCurrentFocus,
     className: (0, _classnames.default)('k-CrowdfundingCard', 'k-Card k-Card--light k-Card--withoutBoxShadowOnHover', className, {
       'k-CrowdfundingCard--titlesMinHeight': titlesMinHeight,
       'k-CrowdfundingCard--isLoading': loading,
       'k-CrowdfundingCard--isStretched': stretch
     }),
+    style: {
+      '--Image-container-ratio': imageContainerRatio
+    },
     href: href,
     forceVersion: forceVersion
   }), /*#__PURE__*/_react.default.createElement(_image.default, {

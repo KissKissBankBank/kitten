@@ -125,7 +125,7 @@ const StyledInput = styled.input`
     color: ${COLORS.font1};
     border-color: ${COLORS.font2};
     outline: var(--outline-input);
-    outline-offset: var(--outline-offset-input)
+    outline-offset: var(--outline-offset-input);
   }
 
   // DIGITS

@@ -147,7 +147,8 @@ const StyledDocumentsDropUploader = styled.div`
     padding: 0 ${pxToRem(10)};
     margin-right: ${pxToRem(-10)};
 
-    :focus, :focus-visible {
+    :focus,
+    :focus-visible {
       outline-offset: ${pxToRem(-2)};
     }
   }
