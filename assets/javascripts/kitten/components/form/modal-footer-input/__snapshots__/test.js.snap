@@ -2,7 +2,7 @@
 
 exports[`<ModalFooterInput /> with empty snapshot matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH bBztQ k-ModalFooterInput"
+  className="sc-bwzfXH bYiWyM k-ModalFooterInput"
 >
   <textarea
     aria-label="Input Label"
