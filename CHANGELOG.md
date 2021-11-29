@@ -8,7 +8,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `TextInput`: Add `darkBackground` prop.
 - Feature: IE11: Remove all IE11 css.
 - Fix: `LendoLoadingAnimation`: Fix console errors.
+- Fix: `LendoLoadingAnimation`: Fix style bug.
 - Feature: `Button`: Use new `disabled` style.
+- Feature: `AlertBox`: Add new component.
+- Feature: `IconBadge`: Add the following props:
+  - `status`, defaults to `info`
+  - `hasBorder`, defaults to `false`
+- Feature: `IconBadge`: Deprecate the following props:
+  - `disabled`, replaced by `status="disabled"`
+  - `valid`, replaced by `status="success"`
+- Feature: `StatusIconNext`: Add component with the following subcomponents:
+  - `StatusIconNext.Info`
+  - `StatusIconNext.Success`
+  - `StatusIconNext.Danger`
+  - `StatusIconNext.Warning`
+  - `StatusIconNext.Disabled`
+
 
 ## [6.4.0] - 2021-11-23
 
@@ -17,7 +32,7 @@ Features:
 - Tokens: Start using Design Tokens for colors config (with fallback).
 - Tokens: Update use of border tokens with states.
 - Tokens: Update `--color-yellow-700` value.
-- `LendopolisLoadingAnimation`: Add component.
+- `LendoLoadingAnimation`: Add component.
 
 ## [6.3.0] - 2021-11-22
 
