@@ -12,19 +12,28 @@ import { HeartIconNext } from '../../../../components/graphics/icons-next/heart-
 
 const CommentWrapper = styled.div`
   --comment-arrow-size: ${pxToRem(7)};
+  --comment-background-color: var(--color-grey-200);
+
   display: flex;
   gap: ${pxToRem(10)};
   padding: ${pxToRem(15)};
   border-radius: ${pxToRem(6)};
   flex-direction: column;
-  background-color: var(--color-grey-200);
   position: relative;
+  background-color: var(--comment-background-color);
+  transition: background-color var(--transition);
 
-  &.k-Comment--is-secondary {
+  &.k-Comment--isSecondary {
     margin-left: ${pxToRem(20)};
 
     @media ${mq.tabletAndDesktop} {
       margin-left: ${pxToRem(50)};
+    }
+  }
+  &.k-Comment--isHighlighted {
+    --comment-background-color: var(--color-grey-300);
+    .k-Comment__header__meta {
+      color: var(--color-grey-700);
     }
   }
 
@@ -37,7 +46,8 @@ const CommentWrapper = styled.div`
     top: calc(50% - var(--comment-arrow-size));
     border: var(--comment-arrow-size) solid transparent;
     border-left: 0;
-    border-right-color: var(--color-grey-200);
+    border-right-color: var(--comment-background-color);
+    transition: border-right-color var(--transition);
   }
 
   .k-Comment__header {
@@ -51,6 +61,7 @@ const CommentWrapper = styled.div`
     display: flex;
     gap: ${pxToRem(5)};
     align-items: center;
+    color: var(--color-grey-600);
   }
   .k-Comment__header__image {
     display: block;
@@ -99,25 +110,31 @@ const CommentWrapper = styled.div`
   }
 `
 
-export const Comment = ({
-  text,
-  ownerName,
-  ownerUrl,
-  avatarImgProps,
-  commentDate,
-  footer,
-  headerActions,
-  id,
-  children,
-  className,
-  isSecondary,
-  ...props
-}) => {
-  return (
+export const Comment = React.forwardRef(
+  (
+    {
+      text,
+      ownerName,
+      ownerUrl,
+      avatarImgProps,
+      commentDate,
+      footer,
+      headerActions,
+      id,
+      children,
+      className,
+      isSecondary,
+      isHighlighted,
+      ...props
+    },
+    ref,
+  ) => (
     <CommentWrapper
+      ref={ref || null}
       id={id}
       className={classNames('k-Comment', className, {
-        'k-Comment--is-secondary': isSecondary,
+        'k-Comment--isSecondary': isSecondary,
+        'k-Comment--isHighlighted': isHighlighted,
       })}
       {...props}
     >
@@ -133,10 +150,10 @@ export const Comment = ({
           <a href={ownerUrl} className="k-u-link k-u-link-font1 k-u-ellipsis">
             {ownerName}
           </a>
-          <Text cssColor="var(--color-grey-600)" size="micro" aria-hidden>
+          <Text size="micro" aria-hidden>
             •
           </Text>
-          <Text cssColor="var(--color-grey-600)" size="micro" weight="light">
+          <Text size="micro" weight="light">
             {commentDate}
           </Text>
         </div>
@@ -156,7 +173,7 @@ export const Comment = ({
       {footer && <div className="k-Comment__footer">{footer}</div>}
     </CommentWrapper>
   )
-}
+)
 
 Comment.LikeButton = ({
   children,
@@ -200,6 +217,8 @@ Comment.propTypes = {
     PropTypes.object,
     'Please use headerActions={<Comment.LikeButton />} instead',
   ),
+  isSecondary: PropTypes.bool,
+  isHighlighted: PropTypes.bool,
 }
 
 Comment.defaultProps = {
@@ -209,6 +228,8 @@ Comment.defaultProps = {
   headerActions: null,
   avatarImgProps: {},
   commentDate: '',
+  isSecondary: false,
+  isHighlighted: false,
 }
 
 Comment.LikeButton.defaultProps = {

@@ -23,7 +23,7 @@ export default {
       src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
       alt: '',
     },
-    placeholder: 'Leave a comment on the project',
+    placeholder: 'Leave a comment',
     buttonText: 'Comment',
     error: false,
     errorMessage: 'Cum sociis natoque penatibus et magnis',

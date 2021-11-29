@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import {
   Button,
@@ -35,15 +35,17 @@ const StyledFlex = styled.div`
 `
 
 const ProxyComment = ({ isAdmin = false, onReply = () => {}, ...args }) => {
+  const commentRef = useRef(null)
   const [hasLiked, setHasLiked] = useState(false)
 
   const handleReplyClick = (event) => {
-    onReply({event, args})
+    onReply({event, args, commentRef})
   }
 
   return (
     <Comment
       {...args}
+      ref={commentRef}
       headerActions={
         <Comment.LikeButton
           hasLiked={hasLiked}
@@ -164,27 +166,47 @@ export const Default = () => (
 )
 
 export const AsAdmin = () => {
-  const [isReplyingTo, setReplyTo] = useState(null)
+  const [replyText, setReplyTextTo] = useState(null)
+  const inputRef = useRef(null)
 
-  const handleReply = ({event, args}) => {
+  const handleReply = ({event, args, commentRef}) => {
+    console.log(commentRef)
+
     const {isSecondary, ownerName, children} = args
-    const inputElement = document.getElementById('Input')
+    const inputElement = inputRef.current
+    const parentCommentEl = commentRef.current
 
-    setReplyTo({ ownerName, isEdit: isSecondary })
+    // Retire le highlight du commentaire précédemment répondu
+    document.querySelector('.k-Comment--isHighlighted')?.classList.toggle('k-Comment--isHighlighted')
+
+    // Définit les données du texte d'annonce de réponse
+    setReplyTextTo({ ownerName, isEdit: isSecondary })
+
+    // Focus sur l'input
     inputElement.focus()
-    event.target.closest('.k-Comment').scrollIntoView({ behavior: 'smooth', block: 'center' })
 
+    // Scroll sur le commentaire
+    parentCommentEl.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    // Toggle la class de higlight sur le commentaire
+    // (pourrait être fait avec la prop `isHighlighted`)
+    parentCommentEl.classList.toggle('k-Comment--isHighlighted')
+
+    // Remplit l'input au cas où le commentaire est modifiable
+    // ici on se base sur la prop `isSecondary` mais c'est pas la meilleure
+    // manière de cibler
     if (isSecondary) {
       inputElement.value = children
     }
   }
 
   const handleCancel = () => {
-    const inputElement = document.getElementById('Input')
+    inputRef.current.value = ''
 
-    setReplyTo(null)
+    // Annule le texte d'annonce de réponse
+    setReplyTextTo(null)
 
-    inputElement.value = ''
+    // Retire le highlight du commentaire précédemment répondu
+    document.querySelector('.k-Comment--isHighlighted')?.classList.toggle('k-Comment--isHighlighted')
   }
 
   return (
@@ -210,17 +232,18 @@ export const AsAdmin = () => {
             fullSize
           >
             <div style={{width: '100%'}}>
-              {!!isReplyingTo && (
+              {!!replyText && (
                 <FlexWrapper
+                  id="reply-announce"
                   padding={[pxToRem(5), pxToRem(10)]}
                   gap={pxToRem(5)}
                   direction="row"
                   className="k-u-flex-alignItems-baseline"
                 >
                   <Text size="tiny">
-                    {isReplyingTo.isEdit
+                    {replyText.isEdit
                       ? <>Modification de votre réponse</>
-                      : <>En réponse à <span className="k-u-weight-regular">{isReplyingTo.ownerName}</span></>
+                      : <>En réponse à <span className="k-u-weight-regular">{replyText.ownerName}</span></>
                     }
                   </Text>
                   <span aria-hidden>·</span>
@@ -237,8 +260,11 @@ export const AsAdmin = () => {
                 </FlexWrapper>
               )}
               <ModalFooterInput
+                ref={inputRef}
                 id="Input"
-                placeholder="Praesent commodo cursus magna, vel scelerisque."
+                aria-describedby="reply-announce"
+                aria-label="Laisser un commentaire"
+                placeholder="Laisser un commentaire"
                 buttonContent={<>
                   <LargeArrowIconNext direction="up" />
                   <span className="k-u-a11y-visuallyHidden">

@@ -29,6 +29,8 @@ export default {
     ownerName: 'Dominique Hipsaume',
     ownerUrl: '#helloworld',
     showFooter: true,
+    isSecondary: false,
+    isHighlighted: false,
   },
   argTypes: {
     children: {
@@ -67,6 +69,8 @@ export default {
       name: 'headerActions',
       control: { type: null },
     },
+    isSecondary: { control: 'boolean' },
+    isHighlighted: { control: 'boolean' },
   },
 }
 

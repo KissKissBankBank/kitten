@@ -27,7 +27,7 @@ const InputWrapper = styled.div`
     box-sizing: border-box;
 
     margin: 0;
-    padding: ${pxToRem(7)} ${pxToRem(50)} ${pxToRem(6)} ${pxToRem(10)};
+    padding: ${pxToRem(15)} ${pxToRem(50)} ${pxToRem(15)} ${pxToRem(10)};
     min-height: ${pxToRem(50)};
 
     border: none;
@@ -65,20 +65,22 @@ const InputWrapper = styled.div`
   }
 `
 
-export const ModalFooterInput = ({
-  id,
-  defaultValue,
-  className,
-  placeholder,
-  disabled,
 
-  buttonContent,
-
-  onChange,
-  onSubmit,
-
-  ...props
-}) => {
+export const ModalFooterInput = React.forwardRef(
+  (
+    {
+      id,
+      defaultValue,
+      className,
+      placeholder,
+      disabled,
+      buttonContent,
+      onChange,
+      onSubmit,
+      ...props
+    },
+    ref,
+  ) => {
   const [value, setValue] = useState(defaultValue)
   const [isButtonDisabled, setButtonDisabled] = useState(
     disabled || defaultValue.length < 1,
@@ -100,6 +102,7 @@ export const ModalFooterInput = ({
   return (
     <InputWrapper className={classNames('k-ModalFooterInput', className)}>
       <TextareaAutosize
+        ref={ref || null}
         id={id}
         placeholder={placeholder}
         onChange={handleChange}
@@ -121,7 +124,7 @@ export const ModalFooterInput = ({
       </Button>
     </InputWrapper>
   )
-}
+})
 
 ModalFooterInput.propTypes = {
   id: PropTypes.string.isRequired,
@@ -138,9 +141,7 @@ ModalFooterInput.defaultProps = {
   defaultValue: '',
   placeholder: '',
   disabled: false,
-
   buttonContent: 'Send',
-
   onChange: () => {},
   onSubmit: () => {},
 }

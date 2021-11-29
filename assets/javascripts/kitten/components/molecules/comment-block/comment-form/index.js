@@ -149,21 +149,25 @@ const CommentFormWrapper = styled.div`
   }
 `
 
-export const CommentForm = ({
-  avatarImgProps,
-  placeholder,
-  onSubmit,
-  error,
-  errorMessage,
-  disabled,
-  buttonText,
-  defaultValue,
-  commentLabel,
-  id,
-  className,
-  onChange,
-  ...props
-}) => {
+export const CommentForm = React.forwardRef(
+  (
+    {
+      avatarImgProps,
+      placeholder,
+      onSubmit,
+      error,
+      errorMessage,
+      disabled,
+      buttonText,
+      defaultValue,
+      commentLabel,
+      id,
+      className,
+      onChange,
+      ...props
+    },
+    ref,
+  ) => {
   const [value, setValue] = useState(defaultValue)
   const [isButtonVisible, setButtonVisibility] = useState(!!defaultValue)
 
@@ -187,6 +191,7 @@ export const CommentForm = ({
       </div>
       <div className="k-CommentForm__form">
         <TextareaAutosize
+          ref={ref || null}
           className="k-CommentForm__textarea"
           id={id}
           defaultValue={defaultValue}
@@ -228,7 +233,7 @@ export const CommentForm = ({
       </div>
     </CommentFormWrapper>
   )
-}
+})
 
 CommentForm.propTypes = {
   avatarImgProps: PropTypes.object.isRequired,
