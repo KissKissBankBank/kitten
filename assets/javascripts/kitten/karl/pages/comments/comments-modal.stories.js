@@ -209,42 +209,44 @@ export const AsAdmin = () => {
             sticky
             fullSize
           >
-            {!!isReplyingTo && (
-              <FlexWrapper
-                padding={[pxToRem(5), pxToRem(10)]}
-                gap={pxToRem(5)}
-                direction="row"
-                className="k-u-flex-alignItems-baseline"
-              >
-                <Text size="tiny">
-                  {isReplyingTo.isEdit
-                    ? <>Modification de votre réponse</>
-                    : <>En réponse à <span className="k-u-weight-regular">{isReplyingTo.ownerName}</span></>
-                  }
-                </Text>
-                <span aria-hidden>·</span>
-                <Text
-                  onClick={handleCancel}
-                  type="button"
-                  tag="button"
-                  size="micro"
-                  className="k-u-reset-button k-u-link k-u-link-grey1"
-                  weight="regular"
+            <div style={{width: '100%'}}>
+              {!!isReplyingTo && (
+                <FlexWrapper
+                  padding={[pxToRem(5), pxToRem(10)]}
+                  gap={pxToRem(5)}
+                  direction="row"
+                  className="k-u-flex-alignItems-baseline"
                 >
-                  Annuler
-                </Text>
-              </FlexWrapper>
-            )}
-            <ModalFooterInput
-              id="Input"
-              placeholder="Praesent commodo cursus magna, vel scelerisque."
-              buttonContent={<>
-                <LargeArrowIconNext direction="up" />
-                <span className="k-u-a11y-visuallyHidden">
-                  Send comment
-                </span>
-              </>}
-            />
+                  <Text size="tiny">
+                    {isReplyingTo.isEdit
+                      ? <>Modification de votre réponse</>
+                      : <>En réponse à <span className="k-u-weight-regular">{isReplyingTo.ownerName}</span></>
+                    }
+                  </Text>
+                  <span aria-hidden>·</span>
+                  <Text
+                    onClick={handleCancel}
+                    type="button"
+                    tag="button"
+                    size="micro"
+                    className="k-u-reset-button k-u-link k-u-link-grey1"
+                    weight="regular"
+                  >
+                    Annuler
+                  </Text>
+                </FlexWrapper>
+              )}
+              <ModalFooterInput
+                id="Input"
+                placeholder="Praesent commodo cursus magna, vel scelerisque."
+                buttonContent={<>
+                  <LargeArrowIconNext direction="up" />
+                  <span className="k-u-a11y-visuallyHidden">
+                    Send comment
+                  </span>
+                </>}
+              />
+            </div>
           </Modal.Actions>
         </>}
       </Modal>

@@ -12,21 +12,25 @@ import { mq } from '../../../constants/screen-config'
 const InputWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
+  border-top: var(--border);
+  transition: border var(--transition);
+
+  :hover {
+    border-top: var(--border-hover);
+  }
 
   .k-ModalFooterInput__input {
     position: relative;
-    bottom: ${pxToRem(-1)};
     display: flex;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
 
+    margin: 0;
     padding: ${pxToRem(7)} ${pxToRem(50)} ${pxToRem(6)} ${pxToRem(10)};
-    min-height: ${pxToRem(50 + 1)};
+    min-height: ${pxToRem(50)};
 
     border: none;
-    border-top: var(--border);
 
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${pxToRem(14)};
@@ -34,23 +38,22 @@ const InputWrapper = styled.div`
 
     appearance: none;
     resize: none;
-    transition: border var(--transition), font-size var(--transition);
+    transition: font-size var(--transition);
 
     @media ${mq.tabletAndDesktop} {
       padding: ${pxToRem(15)};
       padding-right: ${pxToRem(60)};
     }
 
-    :hover {
-      border-top: var(--border-hover);
-    }
-    :active {
-      border-top: var(--border-active);
-    }
     :focus {
       font-size: ${pxToRem(16)};
       outline: var(--outline-input);
       outline-offset: var(--outline-offset-input);
+    }
+
+    &::placeholder, &:focus::placeholder {
+      font-size: ${pxToRem(14)};
+      color: var(--color-grey-600);
     }
   }
   .k-ModalFooterInput__button {
