@@ -297,7 +297,7 @@ const mobileStyles = css`
     display: flex;
     position: absolute;
     background: ${COLORS.font1};
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--border-radius-rounded);
     margin: ${pxToRem(10)} ${pxToRem(10)} 0 0;
     right: 0;
     top: 0;

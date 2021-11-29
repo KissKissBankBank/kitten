@@ -11,7 +11,7 @@ const SwitchWrapper = styled.div`
   --toggleSwitch-width: ${pxToRem(60)};
   --toggleSwitch-height: ${pxToRem(30)};
   --toggleSwitch-border: var(--border-width);
-  --toggleSwitch-borderRadius: var(--border-radius-xl);
+  --toggleSwitch-borderRadius: var(--border-radius-rounded);
   --toggleSwitch-duration: 0.15s;
 
   display: inline-flex;

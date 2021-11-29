@@ -65,7 +65,7 @@ const StyledRangeSlider = styled.div`
       border: ${pxToRem(2)} solid ${COLORS.background1};
       border-top: 0;
       border-bottom: 0;
-      border-radius: var(--border-radius-xl);
+      border-radius: var(--border-radius-rounded);
     }
 
     &::-webkit-slider-runnable-track {
@@ -88,7 +88,7 @@ const StyledRangeSlider = styled.div`
       border: ${pxToRem(2)} solid ${COLORS.background1};
       border-top: 0;
       border-bottom: 0;
-      border-radius: var(--border-radius-xl);
+      border-radius: var(--border-radius-rounded);
     }
 
     &:active::-moz-range-thumb {
