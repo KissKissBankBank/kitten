@@ -10,17 +10,18 @@ exports[`<LendoLoadingAnimation /> With custom props should match with snapshot 
   width="56"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <clipPath
-    id="clipPath"
+  <mask
+    id="mask"
   >
     <circle
       cx="14"
       cy="14"
+      fill="#FFF"
       r="13"
     />
-  </clipPath>
+  </mask>
   <g
-    clipPath="url(#clipPath)"
+    mask="url(#mask)"
   >
     <path
       d="M0 0h28v28H0z"
@@ -131,17 +132,18 @@ exports[`<LendoLoadingAnimation /> With default props should match with snapshot
   width="56"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <clipPath
-    id="clipPath"
+  <mask
+    id="mask"
   >
     <circle
       cx="14"
       cy="14"
+      fill="#FFF"
       r="13"
     />
-  </clipPath>
+  </mask>
   <g
-    clipPath="url(#clipPath)"
+    mask="url(#mask)"
   >
     <path
       d="M0 0h28v28H0z"

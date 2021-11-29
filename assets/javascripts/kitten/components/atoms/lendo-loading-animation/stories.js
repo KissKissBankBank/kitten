@@ -20,14 +20,8 @@ export default {
     ),
   ],
   args: {
-    svgProps: {},
   },
   argTypes: {
-    svgProps: {
-      name: 'svgProps',
-      description: 'Additional props for the SVG element.',
-      control: 'object',
-    },
   },
 }
 
