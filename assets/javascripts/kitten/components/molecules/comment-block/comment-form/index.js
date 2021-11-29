@@ -43,7 +43,7 @@ const CommentFormWrapper = styled.div`
   .k-CommentForm__textarea {
     ${TYPOGRAPHY.fontStyles.light}
     background-color: var(--color-grey-000);
-    font-size: ${pxToRem(14)};
+    font-size: ${pxToRem(16)};
     color: ${COLORS.font1};
     padding: ${pxToRem(15)};
     border-radius: ${pxToRem(6)};

@@ -78,16 +78,23 @@ const CommentWrapper = styled.div`
     display: flex;
     gap: ${pxToRem(5)};
     align-items: center;
+    color: var(--color-grey-900);
+    transition: color var(--transition);
 
-    [aria-pressed] {
+    &[aria-pressed] {
+      svg {
+        color: var(--color-red-500);
+      }
     }
 
     svg {
       max-width: ${pxToRem(14)};
       max-height: ${pxToRem(14)};
+      transition: inherit;
     }
 
     :hover {
+      color: var(--color-primary-700);
     }
   }
 `
@@ -123,7 +130,7 @@ export const Comment = ({
               className="k-Comment__header__image"
             />
           </a>
-          <a href={ownerUrl} className="k-u-link k-u-link-font1">
+          <a href={ownerUrl} className="k-u-link k-u-link-font1 k-u-ellipsis">
             {ownerName}
           </a>
           <Text cssColor="var(--color-grey-600)" size="micro" aria-hidden>
@@ -160,12 +167,11 @@ Comment.LikeButton = ({
 }) => (
   <button
     role="button"
-    aria-pressed={!!hasLiked}
+    aria-pressed={!!hasLiked || null}
     className={classNames(
       'k-Comment-LikeButton',
       'k-u-reset-button',
       'k-u-link',
-      'k-u-link-font1',
       className,
     )}
     {...props}

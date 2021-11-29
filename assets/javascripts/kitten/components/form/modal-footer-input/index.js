@@ -23,7 +23,7 @@ const InputWrapper = styled.div`
     box-sizing: border-box;
 
     padding: ${pxToRem(7)} ${pxToRem(50)} ${pxToRem(6)} ${pxToRem(10)};
-    min-height: ${pxToRem(50)};
+    min-height: ${pxToRem(50 + 1)};
 
     border: none;
     border-top: var(--border);
@@ -34,7 +34,7 @@ const InputWrapper = styled.div`
 
     appearance: none;
     resize: none;
-    transition: border var(--transition);
+    transition: border var(--transition), font-size var(--transition);
 
     @media ${mq.tabletAndDesktop} {
       padding: ${pxToRem(15)};
@@ -48,6 +48,7 @@ const InputWrapper = styled.div`
       border-top: var(--border-active);
     }
     :focus {
+      font-size: ${pxToRem(16)};
       outline: var(--outline-input);
       outline-offset: var(--outline-offset-input);
     }
