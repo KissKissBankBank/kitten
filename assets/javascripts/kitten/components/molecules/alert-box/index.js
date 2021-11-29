@@ -146,7 +146,7 @@ export const AlertBox = ({
   })()
 
   const role = (() => {
-    switch(status) {
+    switch (status) {
       case 'danger':
         return 'alert'
       case 'warning':

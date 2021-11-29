@@ -1,5 +1,189 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<AlertBox /> should matches with custom fit snapshot 1`] = `
+<div
+  className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--content k-AlertBox--icon-start k-AlertBox--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bdVaJa dUZTJG k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <span
+      className="k-IconBadge__content"
+    >
+      <svg
+        fill="var(--color-grey-900)"
+        height="14"
+        viewBox="0 0 4 14"
+        width="4"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="2"
+          cy="1.25"
+          r="1.25"
+          transform="rotate(-180 2 1.25)"
+        />
+        <rect
+          height="9"
+          rx="1.25"
+          transform="rotate(-180 3.25 13.5)"
+          width="2.5"
+          x="3.25"
+          y="13.5"
+        />
+      </svg>
+    </span>
+  </span>
+  <div
+    className="k-AlertBox__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<AlertBox /> should matches with custom icon snapshot 1`] = `
+<div
+  className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bdVaJa dUZTJG k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <span
+      className="k-IconBadge__content"
+    >
+      <svg
+        fill="none"
+        height="18"
+        viewBox="0 0 17 18"
+        width="17"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+          fill="var(--color-grey-900, #222)"
+        />
+      </svg>
+    </span>
+  </span>
+  <div
+    className="k-AlertBox__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<AlertBox /> should matches with custom iconPosition snapshot 1`] = `
+<div
+  className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-center k-AlertBox--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bdVaJa dUZTJG k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <span
+      className="k-IconBadge__content"
+    >
+      <svg
+        fill="var(--color-grey-900)"
+        height="14"
+        viewBox="0 0 4 14"
+        width="4"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="2"
+          cy="1.25"
+          r="1.25"
+          transform="rotate(-180 2 1.25)"
+        />
+        <rect
+          height="9"
+          rx="1.25"
+          transform="rotate(-180 3.25 13.5)"
+          width="2.5"
+          x="3.25"
+          y="13.5"
+        />
+      </svg>
+    </span>
+  </span>
+  <div
+    className="k-AlertBox__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<AlertBox /> should matches with custom status snapshot 1`] = `
+<div
+  className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--danger k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
+  role="alert"
+>
+  <span
+    className="sc-bdVaJa dUZTJG k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--danger"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <span
+      className="k-IconBadge__content"
+    >
+      <svg
+        fill="var(--color-grey-900)"
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.005 3.23 2.529.755A1.25 1.25 0 1 0 .762 2.523l2.475 2.475L.762 7.472A1.25 1.25 0 0 0 2.53 9.24l2.475-2.475L7.479 9.24a1.25 1.25 0 0 0 1.768-1.768L6.772 4.998l2.475-2.475A1.25 1.25 0 0 0 7.48.755L5.005 3.23Z"
+          fill="#fff"
+        />
+      </svg>
+    </span>
+  </span>
+  <div
+    className="k-AlertBox__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
 exports[`<AlertBox /> should matches with default snapshot 1`] = `
 <div
   className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
@@ -43,6 +227,19 @@ exports[`<AlertBox /> should matches with default snapshot 1`] = `
       </svg>
     </span>
   </span>
+  <div
+    className="k-AlertBox__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<AlertBox /> should matches with no icon snapshot 1`] = `
+<div
+  className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-start"
+  role={null}
+>
   <div
     className="k-AlertBox__text"
   >
