@@ -25,7 +25,7 @@ const StyledPasswordInput = styled.div`
     cursor: pointer;
     align-items: center;
 
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-s);
 
     &[aria-pressed='true'] {
       svg {

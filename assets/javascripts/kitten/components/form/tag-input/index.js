@@ -73,7 +73,7 @@ const StyledWrapper = styled.div`
     display: flex;
     color: ${COLORS.text1};
     background-color: ${COLORS.primary5};
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-xs);
     height: var(--tagInput-tag-height, ${pxToRem(30)});
     align-items: center;
     transition: color 0.2s ease, background-color 0.2s ease;
@@ -173,22 +173,7 @@ const StyledWrapper = styled.div`
   // VARIANTS
 
   &.k-Form-TagList--orion {
-    &.k-Form-TagList--tiny,
-    &.k-Form-TagList--regular {
-      border-radius: ${pxToRem(4)};
-    }
-
-    &.k-Form-TagList--big,
-    &.k-Form-TagList--huge,
-    &.k-Form-TagList--giant {
-      border-radius: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --tagInput-padding-horizontal: ${pxToRem(30)};
-        border-radius: ${pxToRem(8)};
-        font-size: ${stepToRem(0)};
-      }
-    }
+    border-radius: var(--border-radius-s);
   }
 `
 

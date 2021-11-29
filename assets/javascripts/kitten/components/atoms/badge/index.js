@@ -18,7 +18,7 @@ const StyledBadge = styled.span`
   line-height: 1;
   min-height: ${pxToRem(18 + 2)};
   min-width: ${pxToRem(18 + 2)};
-  border-radius: ${pxToRem(10)};
+  border-radius: var(--border-radius-rounded);
   color: ${COLORS.background1};
 
   ${TYPOGRAPHY.fontStyles.regular};

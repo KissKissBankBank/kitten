@@ -21,14 +21,14 @@ const StyledCheckableButton = styled(Button)`
     flex-shrink: 0;
     content: '';
     box-sizing: border-box;
-    border-radius: 50%;
+    border-radius: var(--border-radius-rounded);
 
-    width: var(--CheckableButton-radius);
-    height: var(--CheckableButton-radius);
+    width: var(--CheckableButton-dimension);
+    height: var(--CheckableButton-dimension);
 
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+    background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
   }
 
   &.k-CheckableButton--bottom,
@@ -48,7 +48,7 @@ const StyledCheckableButton = styled(Button)`
     &::after {
       position: absolute;
       bottom: -${pxToRem(20 / 2 + 1)};
-      bottom: calc((var(--CheckableButton-radius) / 2 + ${pxToRem(1)}) * -1);
+      bottom: calc((var(--CheckableButton-dimension) / 2 + ${pxToRem(1)}) * -1);
       opacity: 0;
       transform-origin: 50% 50%;
       transition: opacity 0.2s ease,
@@ -94,19 +94,19 @@ const StyledCheckableButton = styled(Button)`
 
   &.k-Button--micro,
   &.k-Button--tiny {
-    --CheckableButton-radius: ${pxToRem(15)};
+    --CheckableButton-dimension: ${pxToRem(15)};
     --CheckableButton-checkMargin: ${pxToRem(10)};
   }
 
   &.k-Button--regular {
-    --CheckableButton-radius: ${pxToRem(20)};
+    --CheckableButton-dimension: ${pxToRem(20)};
     --CheckableButton-checkMargin: ${pxToRem(15)};
   }
 
   &.k-Button--big,
   &.k-Button--huge,
   &.k-Button--giant {
-    --CheckableButton-radius: ${pxToRem(24)};
+    --CheckableButton-dimension: ${pxToRem(24)};
     --CheckableButton-checkMargin: ${pxToRem(20)};
   }
 

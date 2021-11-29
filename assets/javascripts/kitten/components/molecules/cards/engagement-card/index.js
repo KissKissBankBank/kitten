@@ -10,7 +10,7 @@ const StyledCard = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  border-radius: ${pxToRem(15)};
+  border-radius: var(--border-radius-xl);
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;

@@ -19,7 +19,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -36,10 +36,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0.k-Buttons__tagButton--orion {
-  border-radius: 0.5rem;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
@@ -211,7 +207,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -228,10 +224,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0.k-Buttons__tagButton--orion {
-  border-radius: 0.5rem;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
@@ -403,7 +395,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -420,10 +412,6 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0.k-Buttons__tagButton--orion {
-  border-radius: 0.5rem;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
@@ -595,7 +583,7 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -612,10 +600,6 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0.k-Buttons__tagButton--orion {
-  border-radius: 0.5rem;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
@@ -787,7 +771,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -804,10 +788,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0.k-Buttons__tagButton--orion {
-  border-radius: 0.5rem;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {
@@ -996,7 +976,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-s);
   border-width: var(--border-width);
   border-style: solid;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1013,10 +993,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   -moz-appareance: none;
   appareance: none;
   cursor: pointer;
-}
-
-.c0.k-Buttons__tagButton--orion {
-  border-radius: 0.5rem;
 }
 
 .c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen {

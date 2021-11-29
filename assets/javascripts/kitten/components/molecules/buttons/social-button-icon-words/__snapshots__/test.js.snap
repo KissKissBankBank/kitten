@@ -112,21 +112,12 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -151,9 +142,9 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -205,15 +196,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -356,21 +338,12 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -395,9 +368,9 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -449,15 +422,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -607,21 +571,12 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -655,9 +610,9 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -709,15 +664,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -867,21 +813,12 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -915,9 +852,9 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -969,15 +906,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1120,21 +1048,12 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1159,9 +1078,9 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1213,15 +1132,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1364,21 +1274,12 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1403,9 +1304,9 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1457,15 +1358,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1608,21 +1500,12 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1647,9 +1530,9 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1701,15 +1584,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1852,21 +1726,12 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1891,9 +1756,9 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 @media (min-width:40rem) {
@@ -1945,15 +1810,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 

@@ -195,26 +195,11 @@ const StyledButton = styled.button`
   /* BORDER RADIUS */
 
   &.k-Button--orion:not(.k-Button--rounded) {
-    &.k-Button--nano,
-    &.k-Button--micro,
-    &.k-Button--tiny {
-      --Button-border-radius: ${pxToRem(4)};
-    }
-
-    &.k-Button--regular,
-    &.k-Button--big,
-    &.k-Button--huge,
-    &.k-Button--giant {
-      --Button-border-radius: ${pxToRem(6)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        --Button-border-radius: ${pxToRem(8)};
-      }
-    }
+    --Button-border-radius: var(--border-radius-s);
   }
 
   &.k-Button--rounded {
-    --Button-border-radius: var(--Button-dimension);
+    --Button-border-radius: var(--border-radius-rounded);
   }
 
   /* MODIFIERS */

@@ -112,21 +112,12 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -151,9 +142,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -162,12 +153,12 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: 50%;
-  width: var(--CheckableButton-radius);
-  height: var(--CheckableButton-radius);
+  border-radius: var(--border-radius-rounded);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -188,7 +179,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -252,19 +243,19 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -380,15 +371,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -519,21 +501,12 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -558,9 +531,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -569,12 +542,12 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: 50%;
-  width: var(--CheckableButton-radius);
-  height: var(--CheckableButton-radius);
+  border-radius: var(--border-radius-rounded);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -595,7 +568,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -659,19 +632,19 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -787,15 +760,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -926,21 +890,12 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -965,9 +920,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -976,12 +931,12 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: 50%;
-  width: var(--CheckableButton-radius);
-  height: var(--CheckableButton-radius);
+  border-radius: var(--border-radius-rounded);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -1002,7 +957,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1066,19 +1021,19 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -1194,15 +1149,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1333,21 +1279,12 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1372,9 +1309,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -1383,12 +1320,12 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: 50%;
-  width: var(--CheckableButton-radius);
-  height: var(--CheckableButton-radius);
+  border-radius: var(--border-radius-rounded);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -1409,7 +1346,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1473,19 +1410,19 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -1601,15 +1538,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 
@@ -1740,21 +1668,12 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--nano,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--micro,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--tiny {
-  --Button-border-radius: 0.25rem;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-.c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-  --Button-border-radius: 0.375rem;
+.c0.k-Button--orion:not(.k-Button--rounded) {
+  --Button-border-radius: var(--border-radius-s);
 }
 
 .c0.k-Button--rounded {
-  --Button-border-radius: var(--Button-dimension);
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1779,9 +1698,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-disabled);
-  background-color: var(--color-grey-400,#d8d8d8);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
+  background-color: var(--color-grey-200,#f6f6f6);
+  color: var(--color-grey-600,#949494);
 }
 
 .c1::after {
@@ -1790,12 +1709,12 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   flex-shrink: 0;
   content: '';
   box-sizing: border-box;
-  border-radius: 50%;
-  width: var(--CheckableButton-radius);
-  height: var(--CheckableButton-radius);
+  border-radius: var(--border-radius-rounded);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: var(--CheckableButton-radius) var(--CheckableButton-radius);
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
 }
 
 .c1.k-CheckableButton--bottom::after,
@@ -1816,7 +1735,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-CheckableButton--bottom::after {
   position: absolute;
   bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton-radius) / 2 + 0.0625rem) * -1);
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
@@ -1880,19 +1799,19 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
-  --CheckableButton-radius: 0.9375rem;
+  --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
-  --CheckableButton-radius: 1.25rem;
+  --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
-  --CheckableButton-radius: 1.5rem;
+  --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
 }
 
@@ -2008,15 +1927,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
     width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--regular,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--big,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--huge,
-  .c0.k-Button--orion:not(.k-Button--rounded).k-Button--giant {
-    --Button-border-radius: 0.5rem;
   }
 }
 

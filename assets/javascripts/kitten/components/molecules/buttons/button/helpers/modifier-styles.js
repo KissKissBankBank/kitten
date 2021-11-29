@@ -255,9 +255,9 @@ export const modifierStyles = modifier => {
 
     &:disabled,
     &.k-Button--disabled {
-      border: var(--border-disabled);
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
+      border: var(--border-width) solid ${COLORS.background3};
+      background-color: ${COLORS.background3};
+      color: ${COLORS.font3};
     }
   `
 }

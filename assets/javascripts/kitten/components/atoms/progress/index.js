@@ -39,7 +39,7 @@ const StyledProgress = styled.div`
   &.k-Meters-Progress--orion .k-Meters-Progress__ramp {
     &,
     &::after {
-      border-radius: ${pxToRem(3)};
+      border-radius: var(--border-radius-xs);
     }
   }
 `

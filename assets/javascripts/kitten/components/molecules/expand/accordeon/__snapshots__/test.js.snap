@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -129,7 +129,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
+  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -256,7 +256,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iUUASg k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa fJvDPv k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
   data-test={true}
 >
   <div
@@ -406,7 +406,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iUUASg",
+            "lastClassName": "fJvDPv",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -420,15 +420,9 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "1.25rem",
               ";min-height:",
               "1.875rem",
-              ";border-radius:",
-              "0.1875rem",
-              ";.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
+              ";border-radius:var(--border-radius-xs);.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
               "var(--color-grey-200, #f6f6f6)",
-              ";border-bottom-left-radius:",
-              "0.1875rem",
-              ";border-bottom-right-radius:",
-              "0.1875rem",
-              ";padding:",
+              ";border-bottom-left-radius:var(--border-radius-xs);border-bottom-right-radius:var(--border-radius-xs);padding:",
               "0.00625rem",
               " ",
               "1.875rem",
@@ -436,9 +430,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "1.875rem",
               ";padding-bottom:",
               "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:",
-              "0.375rem",
-              ";}.k-Accordeon__header{position:relative;padding:",
+              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__header{position:relative;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -451,35 +443,21 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "font-weight: 500;",
               " min-height:",
               "3.125rem",
-              ";border-radius:",
-              "0.375rem",
-              ";@media (min-width:",
+              ";border-radius:var(--border-radius-m);@media (min-width:",
               "640",
               "px){min-height:",
               "4.375rem",
-              ";border-radius:",
-              "0.5rem",
               ";}&[aria-expanded='true']{border-bottom-color:",
               "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
               ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
               "var(--color-grey-000, #fff)",
-              ";border-bottom-left-radius:",
-              "0.375rem",
-              ";border-bottom-right-radius:",
-              "0.375rem",
-              ";padding:",
+              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);padding:",
               "0.00625rem",
               " ",
               "1.875rem",
-              ";@media (min-width:",
-              "640",
-              "px){border-bottom-left-radius:",
-              "0.5rem",
-              ";border-bottom-right-radius:",
-              "0.5rem",
-              ";}.k-Accordeon__content_marger{padding-bottom:",
+              ";.k-Accordeon__content_marger{padding-bottom:",
               "1.875rem",
               ";}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
             ],
@@ -496,7 +474,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion"
+            class="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion"
           >
             <div
               class="k-Accordeon__item"
@@ -605,7 +583,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       }
     >
       <div
-        className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion"
+        className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion"
       >
         <Item
           id="accordeon-0"
@@ -791,7 +769,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -877,7 +855,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iUUASg",
+            "lastClassName": "fJvDPv",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -891,15 +869,9 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "1.25rem",
               ";min-height:",
               "1.875rem",
-              ";border-radius:",
-              "0.1875rem",
-              ";.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
+              ";border-radius:var(--border-radius-xs);.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
               "var(--color-grey-200, #f6f6f6)",
-              ";border-bottom-left-radius:",
-              "0.1875rem",
-              ";border-bottom-right-radius:",
-              "0.1875rem",
-              ";padding:",
+              ";border-bottom-left-radius:var(--border-radius-xs);border-bottom-right-radius:var(--border-radius-xs);padding:",
               "0.00625rem",
               " ",
               "1.875rem",
@@ -907,9 +879,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "1.875rem",
               ";padding-bottom:",
               "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:",
-              "0.375rem",
-              ";}.k-Accordeon__header{position:relative;padding:",
+              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__header{position:relative;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -922,35 +892,21 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "font-weight: 500;",
               " min-height:",
               "3.125rem",
-              ";border-radius:",
-              "0.375rem",
-              ";@media (min-width:",
+              ";border-radius:var(--border-radius-m);@media (min-width:",
               "640",
               "px){min-height:",
               "4.375rem",
-              ";border-radius:",
-              "0.5rem",
               ";}&[aria-expanded='true']{border-bottom-color:",
               "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
               ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
               "var(--color-grey-000, #fff)",
-              ";border-bottom-left-radius:",
-              "0.375rem",
-              ";border-bottom-right-radius:",
-              "0.375rem",
-              ";padding:",
+              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);padding:",
               "0.00625rem",
               " ",
               "1.875rem",
-              ";@media (min-width:",
-              "640",
-              "px){border-bottom-left-radius:",
-              "0.5rem",
-              ";border-bottom-right-radius:",
-              "0.5rem",
-              ";}.k-Accordeon__content_marger{padding-bottom:",
+              ";.k-Accordeon__content_marger{padding-bottom:",
               "1.875rem",
               ";}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
             ],
@@ -967,7 +923,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+            class="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1075,7 +1031,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       }
     >
       <div
-        className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+        className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1280,7 +1236,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iUUASg",
+            "lastClassName": "fJvDPv",
             "rules": Array [
               ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
@@ -1294,15 +1250,9 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "1.25rem",
               ";min-height:",
               "1.875rem",
-              ";border-radius:",
-              "0.1875rem",
-              ";.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
+              ";border-radius:var(--border-radius-xs);.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
               "var(--color-grey-200, #f6f6f6)",
-              ";border-bottom-left-radius:",
-              "0.1875rem",
-              ";border-bottom-right-radius:",
-              "0.1875rem",
-              ";padding:",
+              ";border-bottom-left-radius:var(--border-radius-xs);border-bottom-right-radius:var(--border-radius-xs);padding:",
               "0.00625rem",
               " ",
               "1.875rem",
@@ -1310,9 +1260,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "1.875rem",
               ";padding-bottom:",
               "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:",
-              "0.375rem",
-              ";}.k-Accordeon__header{position:relative;padding:",
+              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__header{position:relative;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -1325,35 +1273,21 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "font-weight: 500;",
               " min-height:",
               "3.125rem",
-              ";border-radius:",
-              "0.375rem",
-              ";@media (min-width:",
+              ";border-radius:var(--border-radius-m);@media (min-width:",
               "640",
               "px){min-height:",
               "4.375rem",
-              ";border-radius:",
-              "0.5rem",
               ";}&[aria-expanded='true']{border-bottom-color:",
               "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
               ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
               "var(--color-grey-000, #fff)",
-              ";border-bottom-left-radius:",
-              "0.375rem",
-              ";border-bottom-right-radius:",
-              "0.375rem",
-              ";padding:",
+              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);padding:",
               "0.00625rem",
               " ",
               "1.875rem",
-              ";@media (min-width:",
-              "640",
-              "px){border-bottom-left-radius:",
-              "0.5rem",
-              ";border-bottom-right-radius:",
-              "0.5rem",
-              ";}.k-Accordeon__content_marger{padding-bottom:",
+              ";.k-Accordeon__content_marger{padding-bottom:",
               "1.875rem",
               ";}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
             ],
@@ -1370,7 +1304,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+            class="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1479,7 +1413,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       }
     >
       <div
-        className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+        className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1665,7 +1599,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa iUUASg k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"

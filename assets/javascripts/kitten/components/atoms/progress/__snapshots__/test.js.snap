@@ -31,7 +31,7 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
 
 .c0.k-Meters-Progress--orion .k-Meters-Progress__ramp,
 .c0.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
-  border-radius: 0.1875rem;
+  border-radius: var(--border-radius-xs);
 }
 
 <div
@@ -83,7 +83,7 @@ exports[`<Progress /> simple Progress  matches with snapshot 1`] = `
 
 .c0.k-Meters-Progress--orion .k-Meters-Progress__ramp,
 .c0.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
-  border-radius: 0.1875rem;
+  border-radius: var(--border-radius-xs);
 }
 
 <div

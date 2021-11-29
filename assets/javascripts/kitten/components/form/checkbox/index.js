@@ -94,7 +94,7 @@ const StyledCheckbox = styled.div`
   }
 
   &.k-Form-Checkbox--orion .k-Form-Checkbox__input {
-    border-radius: ${pxToRem(4)};
+    border-radius: var(--border-radius-s);
   }
 
   .k-Form-Checkbox__link,

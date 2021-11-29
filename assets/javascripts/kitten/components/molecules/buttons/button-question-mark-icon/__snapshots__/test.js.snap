@@ -2,7 +2,7 @@
 
 exports[`ButtonQuestionMarkIcon /> default snapshot 1`] = `
 <button
-  className="sc-bdVaJa kYCLyN k-Button k-Button--nano k-Button--helium k-Button--orion k-Button--fit-icon k-Button--rounded"
+  className="sc-bdVaJa dLjusb k-Button k-Button--nano k-Button--helium k-Button--orion k-Button--fit-icon k-Button--rounded"
   style={
     Object {
       "--Button-border-radius": null,

@@ -21,7 +21,7 @@ const buttonImgHuge = pxToRem(80)
 const buttonImgBig = pxToRem(50)
 
 const StyledButtonImage = styled(ButtonImage)`
-  border-radius: 50%;
+  border-radius: var(--border-radius-rounded);
   height: ${buttonImgBig};
   width: ${buttonImgBig};
 

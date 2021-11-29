@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Design: Use new `--border-radius-*` variables.
+- Feature: `TextInput`: Add `darkBackground` prop.
 - Feature: IE11: Remove all IE11 css.
 - Fix: `LendoLoadingAnimation`: Fix console errors.
 - Feature: Tokens: Add `transitions` related tokens.
@@ -31,6 +33,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Utilities: Add `k-u-ellipsis` CSS utility class.
 - Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
 - Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
+- Feature: `Button`: Use new `disabled` style.
 
 ## [6.4.0] - 2021-11-23
 
