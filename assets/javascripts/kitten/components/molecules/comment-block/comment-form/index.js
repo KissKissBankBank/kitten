@@ -168,72 +168,73 @@ export const CommentForm = React.forwardRef(
     },
     ref,
   ) => {
-  const [value, setValue] = useState(defaultValue)
-  const [isButtonVisible, setButtonVisibility] = useState(!!defaultValue)
+    const [value, setValue] = useState(defaultValue)
+    const [isButtonVisible, setButtonVisibility] = useState(!!defaultValue)
 
-  const handleChange = event => {
-    setValue(event.target.value)
-    onChange(event.target.value)
-  }
+    const handleChange = event => {
+      setValue(event.target.value)
+      onChange(event.target.value)
+    }
 
-  const handleSubmit = () => {
-    onSubmit(value)
-  }
+    const handleSubmit = () => {
+      onSubmit(value)
+    }
 
-  useEffect(() => {
-    setButtonVisibility(value.length > 0 || !!defaultValue)
-  }, [value])
+    useEffect(() => {
+      setButtonVisibility(value.length > 0 || !!defaultValue)
+    }, [value])
 
-  return (
-    <CommentFormWrapper className={classNames('k-CommentForm', className)}>
-      <div className="k-CommentForm__image">
-        <img alt="" {...avatarImgProps} />
-      </div>
-      <div className="k-CommentForm__form">
-        <TextareaAutosize
-          ref={ref || null}
-          className="k-CommentForm__textarea"
-          id={id}
-          defaultValue={defaultValue}
-          disabled={disabled}
-          placeholder={placeholder}
-          onChange={handleChange}
-          minRows={1}
-          maxRows={5}
-          aria-describedby={`${id}-description`}
-          aria-label={props['aria-label'] || commentLabel}
-        />
-        <span className="k-CommentForm__arrow" />
-        {error && (
-          <Text
-            id={`${id}-description`}
-            color="error"
-            size="micro"
-            weight="regular"
-            className="k-CommentForm__error"
-          >
-            {errorMessage}
-          </Text>
-        )}
-        {(value.length > 0 || !!defaultValue) && (
-          <Button
-            type="button"
-            modifier="beryllium"
-            size="tiny"
-            fit="content"
+    return (
+      <CommentFormWrapper className={classNames('k-CommentForm', className)}>
+        <div className="k-CommentForm__image">
+          <img alt="" {...avatarImgProps} />
+        </div>
+        <div className="k-CommentForm__form">
+          <TextareaAutosize
+            ref={ref || null}
+            className="k-CommentForm__textarea"
+            id={id}
+            defaultValue={defaultValue}
             disabled={disabled}
-            className={classNames('k-CommentForm__submit', {
-              'k-CommentForm__submit--is-visible': isButtonVisible,
-            })}
-            onClick={handleSubmit}
-          >
-            {buttonText}
-          </Button>
-        )}
-      </div>
-    </CommentFormWrapper>
-  )
-})
+            placeholder={placeholder}
+            onChange={handleChange}
+            minRows={1}
+            maxRows={5}
+            aria-describedby={`${id}-description`}
+            aria-label={props['aria-label'] || commentLabel}
+          />
+          <span className="k-CommentForm__arrow" />
+          {error && (
+            <Text
+              id={`${id}-description`}
+              color="error"
+              size="micro"
+              weight="regular"
+              className="k-CommentForm__error"
+            >
+              {errorMessage}
+            </Text>
+          )}
+          {(value.length > 0 || !!defaultValue) && (
+            <Button
+              type="button"
+              modifier="beryllium"
+              size="tiny"
+              fit="content"
+              disabled={disabled}
+              className={classNames('k-CommentForm__submit', {
+                'k-CommentForm__submit--is-visible': isButtonVisible,
+              })}
+              onClick={handleSubmit}
+            >
+              {buttonText}
+            </Button>
+          )}
+        </div>
+      </CommentFormWrapper>
+    )
+  },
+)
 
 CommentForm.propTypes = {
   avatarImgProps: PropTypes.object.isRequired,

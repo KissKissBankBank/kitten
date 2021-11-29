@@ -6,9 +6,7 @@ import {
   CommentForm,
   Grid,
   GridCol,
-  Marger,
   Text,
-  stepToRem,
   mq,
   pxToRem,
 } from 'kitten'
@@ -39,16 +37,28 @@ const ProxyComment = ({ isAdmin = false, ...args }) => {
           hasLiked={hasLiked}
           children={hasLiked ? '101' : '100'}
           onClick={() => setHasLiked(!hasLiked)}
-          accessibilityLabel={hasLiked ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+          accessibilityLabel={
+            hasLiked ? 'Retirer des favoris' : 'Ajouter aux favoris'
+          }
         />
       }
       footer={
         isAdmin && (
           <>
-            <Text as="button" weight="regular" size="micro" className="k-u-reset-button k-u-link k-u-link-font1">
+            <Text
+              as="button"
+              weight="regular"
+              size="micro"
+              className="k-u-reset-button k-u-link k-u-link-font1"
+            >
               Reply
             </Text>
-            <Text as="button" weight="regular" size="micro" className="k-u-reset-button k-u-link k-u-link-font1">
+            <Text
+              as="button"
+              weight="regular"
+              size="micro"
+              className="k-u-reset-button k-u-link k-u-link-font1"
+            >
               Delete
             </Text>
           </>
@@ -83,7 +93,12 @@ export const Default = () => (
               ownerName="Axel-Blablabla"
               commentDate="10 heures"
             >
-              Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+              Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Curabitur blandit tempus porttitor. Fusce dapibus, tellus
+              ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+              massa justo sit amet risus. Cras mattis consectetur purus sit amet
+              fermentum. Vivamus sagittis lacus vel augue laoreet rutrum
+              faucibus dolor auctor.
             </ProxyComment>
             <ProxyComment
               avatarImgProps={{
@@ -116,7 +131,11 @@ export const Default = () => (
             ownerName="Mimi123"
             commentDate="3 mois"
           >
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+            consectetur. Curabitur blandit tempus porttitor. Etiam porta sem
+            malesuada magna mollis euismod. Etiam porta sem malesuada magna
+            mollis euismod.
           </ProxyComment>
         </StyledFlex>
       </GridCol>
@@ -149,7 +168,12 @@ export const AsAdmin = () => (
             commentDate="10 heures"
             isAdmin
           >
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+            Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+            Curabitur blandit tempus porttitor. Fusce dapibus, tellus ac cursus
+            commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+            sit amet risus. Cras mattis consectetur purus sit amet fermentum.
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor.
           </ProxyComment>
           <CommentForm
             avatarImgProps={{
@@ -190,7 +214,11 @@ export const AsAdmin = () => (
             commentDate="3 mois"
             isAdmin
           >
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod. Etiam porta sem malesuada magna mollis euismod.
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+            consectetur. Curabitur blandit tempus porttitor. Etiam porta sem
+            malesuada magna mollis euismod. Etiam porta sem malesuada magna
+            mollis euismod.
           </ProxyComment>
           <CommentForm
             avatarImgProps={{

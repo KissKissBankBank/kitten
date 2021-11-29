@@ -51,7 +51,8 @@ const InputWrapper = styled.div`
       outline-offset: var(--outline-offset-input);
     }
 
-    &::placeholder, &:focus::placeholder {
+    &::placeholder,
+    &:focus::placeholder {
       font-size: ${pxToRem(14)};
       color: var(--color-grey-600);
     }
@@ -64,7 +65,6 @@ const InputWrapper = styled.div`
     margin: 0 !important;
   }
 `
-
 
 export const ModalFooterInput = React.forwardRef(
   (
@@ -81,50 +81,51 @@ export const ModalFooterInput = React.forwardRef(
     },
     ref,
   ) => {
-  const [value, setValue] = useState(defaultValue)
-  const [isButtonDisabled, setButtonDisabled] = useState(
-    disabled || defaultValue.length < 1,
-  )
+    const [value, setValue] = useState(defaultValue)
+    const [isButtonDisabled, setButtonDisabled] = useState(
+      disabled || defaultValue.length < 1,
+    )
 
-  const handleChange = e => {
-    setValue(e.target.value)
-    onChange(e)
-  }
+    const handleChange = e => {
+      setValue(e.target.value)
+      onChange(e)
+    }
 
-  const handleSubmit = e => {
-    onSubmit(e)
-  }
+    const handleSubmit = e => {
+      onSubmit(e)
+    }
 
-  useEffect(() => {
-    setButtonDisabled(value.length < 1)
-  }, [value])
+    useEffect(() => {
+      setButtonDisabled(value.length < 1)
+    }, [value])
 
-  return (
-    <InputWrapper className={classNames('k-ModalFooterInput', className)}>
-      <TextareaAutosize
-        ref={ref || null}
-        id={id}
-        placeholder={placeholder}
-        onChange={handleChange}
-        minRows={1}
-        maxRows={5}
-        aria-label={props['aria-label']}
-        className="k-ModalFooterInput__input"
-      />
-      <Button
-        type="button"
-        modifier="beryllium"
-        fit="icon"
-        size="tiny"
-        disabled={isButtonDisabled}
-        className="k-ModalFooterInput__button"
-        onClick={handleSubmit}
-      >
-        {buttonContent}
-      </Button>
-    </InputWrapper>
-  )
-})
+    return (
+      <InputWrapper className={classNames('k-ModalFooterInput', className)}>
+        <TextareaAutosize
+          ref={ref || null}
+          id={id}
+          placeholder={placeholder}
+          onChange={handleChange}
+          minRows={1}
+          maxRows={5}
+          aria-label={props['aria-label']}
+          className="k-ModalFooterInput__input"
+        />
+        <Button
+          type="button"
+          modifier="beryllium"
+          fit="icon"
+          size="tiny"
+          disabled={isButtonDisabled}
+          className="k-ModalFooterInput__button"
+          onClick={handleSubmit}
+        >
+          {buttonContent}
+        </Button>
+      </InputWrapper>
+    )
+  },
+)
 
 ModalFooterInput.propTypes = {
   id: PropTypes.string.isRequired,

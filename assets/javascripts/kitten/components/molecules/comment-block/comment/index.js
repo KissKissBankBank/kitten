@@ -172,7 +172,7 @@ export const Comment = React.forwardRef(
 
       {footer && <div className="k-Comment__footer">{footer}</div>}
     </CommentWrapper>
-  )
+  ),
 )
 
 Comment.LikeButton = ({
