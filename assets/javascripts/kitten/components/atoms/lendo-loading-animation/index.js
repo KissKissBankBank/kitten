@@ -62,10 +62,10 @@ export const LendoLoadingAnimation = (props) => (
     {...props}
     className={classNames('k-LendoLoadingAnimation', props.className)}
   >
-    <clipPath id="clipPath">
-      <circle cx="14" cy="14" r="13" />
-    </clipPath>
-    <g clipPath="url(#clipPath)">
+    <mask id="mask">
+      <circle cx="14" cy="14" r="13" fill="#FFF" />
+    </mask>
+    <g mask="url(#mask)">
       <path fill="#fff" d="M0 0h28v28H0z" />
       <path
         d="M16 19.4 18.5 0l-9 .1L12 19.5 0 1v27h28V1L16 19.4Z"
