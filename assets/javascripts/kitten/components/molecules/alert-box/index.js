@@ -145,9 +145,21 @@ export const AlertBox = ({
     return <StatusIconNext status={status} />
   })()
 
+  const role = (() => {
+    switch(status) {
+      case 'danger':
+        return 'alert'
+      case 'warning':
+      case 'success':
+        return 'status'
+      default:
+        return null
+    }
+  })()
+
   return (
     <AlertBoxWrapper
-      role={status === 'danger' ? 'alert' : 'status'}
+      role={role}
       className={classNames(
         'k-AlertBox',
         className,

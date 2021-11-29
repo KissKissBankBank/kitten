@@ -3,7 +3,7 @@
 exports[`<AlertBox /> should matches with default snapshot 1`] = `
 <div
   className="sc-bwzfXH iEjPdl k-AlertBox k-AlertBox--info k-AlertBox--normal k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
-  role="status"
+  role={null}
 >
   <span
     className="sc-bdVaJa dUZTJG k-IconBadge k-AlertBox__icon k-IconBadge--tiny k-IconBadge--info"
