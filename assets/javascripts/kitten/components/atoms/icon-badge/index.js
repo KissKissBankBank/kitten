@@ -3,8 +3,6 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import deprecated from 'prop-types-extra/lib/deprecated'
-
-import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 const StyledBadge = styled.span`
@@ -16,19 +14,33 @@ const StyledBadge = styled.span`
   min-width: ${pxToRem(30)};
   min-height: ${pxToRem(30)};
   border-radius: var(--border-radius-rounded);
-  background-color: var(--background-color, ${COLORS.primary1});
+  background-color: var(--iconBadge-background-color, var(--color-primary-500));
+  border-color: var(--color-primary-300);
 
   &.k-IconBadge--empty {
-    border: var(--border);
-    background-color: ${COLORS.background1};
+    border-color: var(--color-grey-300);
+    background-color: var(--color-grey-000);
   }
 
+  &.k-IconBadge--success,
   &.k-IconBadge--valid {
-    background-color: ${COLORS.valid};
+    background-color: var(--color-success-500);
+    border-color: var(--color-success-300);
   }
 
   &.k-IconBadge--disabled {
-    background-color: ${COLORS.line2};
+    background-color: var(--color-grey-600);
+    border-color: var(--color-grey-300);
+  }
+
+  &.k-IconBadge--danger {
+    background-color: var(--color-danger-500);
+    border-color: var(--color-danger-300);
+  }
+
+  &.k-IconBadge--warning {
+    background-color: var(--color-warning-500);
+    border-color: var(--color-warning-300);
   }
 
   &.k-IconBadge--tiny {
@@ -65,7 +77,7 @@ const StyledBadge = styled.span`
 
   .k-IconBadge__content {
     flex-basis: ${pxToRem(11)};
-    color: ${COLORS.background1};
+    color: var(--color-grey-000);
     text-align: center;
     font-weight: bold;
     font-size: ${stepToRem(-2)};
@@ -73,13 +85,18 @@ const StyledBadge = styled.span`
   }
 
   svg {
-    fill: ${COLORS.background1};
+    fill: var(--color-grey-000);
+  }
+
+  &.k-IconBadge--hasBorder {
+    border-width: ${pxToRem(2)};
+    border-style: solid;
   }
 
   &.k-IconBadge--hasBorderStyles {
-    border-width: var(--border-width, 0);
-    border-color: var(--border-color);
-    border-style: var(--border-style);
+    border-width: var(--iconBadge-border-width, 0);
+    border-color: var(--iconBadge-border-color);
+    border-style: var(--iconBadge-border-style);
   }
 `
 
@@ -94,6 +111,8 @@ export const IconBadge = ({
   size,
   border,
   backgroundColor,
+  status,
+  hasBorder,
   ...others
 }) => (
   <StyledBadge
@@ -101,20 +120,23 @@ export const IconBadge = ({
       'k-IconBadge',
       className,
       `k-IconBadge--${size}`,
+      `k-IconBadge--${status}`,
       {
-        'k-IconBadge--disabled': disabled,
-        'k-IconBadge--valid': valid,
+        'k-IconBadge--disabled': disabled && status === 'info', // if default prop
+        'k-IconBadge--valid': valid && status === 'info', // if default prop
         'k-IconBadge--empty': empty,
         'k-IconBadge--big': big,
         'k-IconBadge--huge': huge,
+        'k-IconBadge--hasBorderStyles': border.length > 0,
+        'k-IconBadge--hasBorder': hasBorder,
       },
-      'k-IconBadge--hasBorderStyles',
     )}
     style={{
-      '--background-color': backgroundColor,
-      '--border-width': 'width' in border ? pxToRem(border.width) : null,
-      '--border-style': border?.style ?? null,
-      '--border-color': border?.color ?? null,
+      '--iconBadge-background-color': backgroundColor ?? null,
+      '--iconBadge-border-width':
+        'width' in border ? pxToRem(border.width) : null,
+      '--iconBadge-border-style': border?.style ?? null,
+      '--iconBadge-border-color': border?.color ?? null,
     }}
     {...others}
   >
@@ -123,25 +145,27 @@ export const IconBadge = ({
 )
 
 IconBadge.defaultProps = {
-  disabled: false,
-  valid: false,
   empty: false,
   size: 'normal',
   border: {},
-  backgroundColor: COLORS.primary1,
+  backgroundColor: null,
+  status: 'info',
+  hasBorder: false,
 }
 
 IconBadge.propTypes = {
-  disabled: PropTypes.bool,
-  valid: PropTypes.bool,
+  disabled: deprecated(PropTypes.bool, 'Use status="disabled" instead'),
+  valid: deprecated(PropTypes.bool, 'Use status="success" instead'),
   empty: PropTypes.bool,
   big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
-  backgroundColor: PropTypes.node,
+  backgroundColor: PropTypes.string,
   border: PropTypes.shape({
     width: PropTypes.number,
     color: PropTypes.node,
     style: PropTypes.string,
   }),
+  status: PropTypes.oneOf(['info', 'success', 'danger', 'warning', 'disabled']),
+  hasBorder: PropTypes.bool,
 }

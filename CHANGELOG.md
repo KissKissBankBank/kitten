@@ -34,6 +34,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
 - Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
 - Feature: `Button`: Use new `disabled` style.
+- Feature: `AlertBox`: Add new component.
+- Feature: `IconBadge`: Add the following props:
+  - `status`, defaults to `info`
+  - `hasBorder`, defaults to `false`
+- Feature: `IconBadge`: Deprecate the following props:
+  - `disabled`, replaced by `status="disabled"`
+  - `valid`, replaced by `status="success"`
+- Feature: `StatusIconNext`: Add component with the following subcomponents:
+  - `StatusIconNext.Info`
+  - `StatusIconNext.Success`
+  - `StatusIconNext.Danger`
+  - `StatusIconNext.Warning`
+  - `StatusIconNext.Disabled`
 
 ## [6.4.0] - 2021-11-23
 

@@ -22,6 +22,7 @@ import {
   WindowEditIconNext,
   HeartIconNext,
   LargeArrowIconNext,
+  StatusIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -155,6 +156,23 @@ export const AllIcons = ({ colorInput }) => {
         </IconContainer>
         <IconContainer suffix='direction="right"'>
           <LargeArrowIconNext color={colorInput} direction="right" />
+        </IconContainer>
+      </Group>
+      <Group title="Status icons">
+        <IconContainer suffix="status=info">
+          <StatusIconNext status="info" color={colorInput} />
+        </IconContainer>
+        <IconContainer suffix="status=warning">
+          <StatusIconNext status="warning" color={colorInput} />
+        </IconContainer>
+        <IconContainer suffix="status=disabled">
+          <StatusIconNext status="disabled" color={colorInput} />
+        </IconContainer>
+        <IconContainer suffix="status=success">
+          <StatusIconNext status="success" color={colorInput} />
+        </IconContainer>
+        <IconContainer suffix="status=danger">
+          <StatusIconNext status="danger" color={colorInput} />
         </IconContainer>
       </Group>
       <Group title="Social">
