@@ -51,4 +51,14 @@
       color: map-get($k-colors, 'primary-1') !important;
     }
   }
+
+  .k-u-link-grey1 {
+    color: map-get($k-colors, 'grey-1') !important;
+    transition: color var(--transition) !important;
+
+    &:hover,
+    &:focus {
+      color: map-get($k-colors, 'primary-1') !important;
+    }
+  }
 }

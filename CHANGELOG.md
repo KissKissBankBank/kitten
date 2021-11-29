@@ -29,6 +29,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `LargeArrowIconNext`: Add component.
 - Fix: Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
 - Feature: Utilities: Add `k-u-ellipsis` CSS utility class.
+- Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
+- Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
 
 ## [6.4.0] - 2021-11-23
 
