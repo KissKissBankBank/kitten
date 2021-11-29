@@ -28,7 +28,8 @@ const StyledCheckableButton = styled(Button)`
 
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
+    background-size: var(--CheckableButton-dimension)
+      var(--CheckableButton-dimension);
   }
 
   &.k-CheckableButton--bottom,

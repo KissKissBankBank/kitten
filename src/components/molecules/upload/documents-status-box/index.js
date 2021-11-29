@@ -30,7 +30,7 @@ var _crossCircleIcon = require("../../../../components/graphics/icons/cross-circ
 var StyledDocumentsStatusBox = _styledComponents.default.div.withConfig({
   displayName: "documents-status-box__StyledDocumentsStatusBox",
   componentId: "sc-16s5m4g-0"
-})(["border-radius:", ";padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, _colorsConfig.default.valid1, _colorsConfig.default.error2);
+})(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, _colorsConfig.default.valid1, _colorsConfig.default.error2);
 
 var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
   var className = _ref.className,

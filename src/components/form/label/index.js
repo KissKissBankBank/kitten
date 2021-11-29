@@ -32,7 +32,7 @@ var _screenConfig = require("../../../constants/screen-config");
 var StyledLabel = _styledComponents.default.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "l6ih7y-0"
-})(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:50%;}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10));
+})(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10));
 
 var Label = function Label(_ref) {
   var _dot$backgroundColor;

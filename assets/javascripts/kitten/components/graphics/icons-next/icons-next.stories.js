@@ -36,7 +36,9 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <Title tag="h2" modifier="septenary">{title}</Title>
+      <Title tag="h2" modifier="septenary">
+        {title}
+      </Title>
       <div className={className}>{children}</div>
     </>
   )

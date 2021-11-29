@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

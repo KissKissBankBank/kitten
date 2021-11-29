@@ -36,9 +36,9 @@ const StyledDropdownMenu = styled.details`
     :focus-visible {
       outline-offset: ${pxToRem(-2)};
 
-      &, & .k-DropdownMenu__button__inside {
+      &,
+      & .k-DropdownMenu__button__inside {
         outline: auto;
-
       }
     }
   }

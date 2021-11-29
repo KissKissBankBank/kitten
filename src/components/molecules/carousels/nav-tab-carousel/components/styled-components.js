@@ -13,8 +13,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typographyConfig = _interopRequireDefault(require("../../../../../constants/typography-config"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../../constants/colors-config"));
-
 var _typography = require("../../../../../helpers/utils/typography");
 
 var _arrowIcon = require("../../../../graphics/icons/arrow-icon");

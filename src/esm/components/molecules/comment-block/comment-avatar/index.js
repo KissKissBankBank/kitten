@@ -28,7 +28,7 @@ var buttonImgBig = pxToRem(50);
 var StyledButtonImage = styled(ButtonImage).withConfig({
   displayName: "comment-avatar__StyledButtonImage",
   componentId: "sc-54iqa-2"
-})(["border-radius:50%;height:", ";width:", ";@media (min-width:", "px){height:", ";width:", ";}"], buttonImgBig, buttonImgBig, ScreenConfig.S.min, buttonImgHuge, buttonImgHuge);
+})(["border-radius:var(--border-radius-rounded);height:", ";width:", ";@media (min-width:", "px){height:", ";width:", ";}"], buttonImgBig, buttonImgBig, ScreenConfig.S.min, buttonImgHuge, buttonImgHuge);
 var StyledAvatarBadge = styled.div.withConfig({
   displayName: "comment-avatar__StyledAvatarBadge",
   componentId: "sc-54iqa-3"

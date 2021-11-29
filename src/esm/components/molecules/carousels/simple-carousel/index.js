@@ -20,7 +20,7 @@ import { VisuallyHidden } from '../../../../components/accessibility/visually-hi
 var StyledContainer = styled.div.withConfig({
   displayName: "simple-carousel__StyledContainer",
   componentId: "sc-1bgum05-0"
-})(["", " display:-ms-grid;display:grid;grid-gap:0;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}"], function (_ref) {
+})(["", " display:grid;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}"], function (_ref) {
   var addBottomMargin = _ref.addBottomMargin;
   return addBottomMargin && css(["margin-bottom:", ";"], pxToRem(40));
 });

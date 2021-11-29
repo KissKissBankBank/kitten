@@ -33,13 +33,13 @@ var valueMax = 100;
 var StyledProgress = _styledComponents.default.div.withConfig({
   displayName: "progress__StyledProgress",
   componentId: "sc-8timnv-0"
-})(["max-width:100%;.k-Meters-Progress__ramp{position:relative;height:", ";background:", ";&::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;max-width:", ";transition:max-width 1s cubic-bezier(0,0.5,0.3,1);background:", ";}}&.k-Meters-Progress--disabled,&.is-disabled{.k-Meters-Progress__ramp::after{background:", ";}}&.k-Meters-Progress--orion .k-Meters-Progress__ramp{&,&::after{border-radius:", ";}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref) {
+})(["max-width:100%;.k-Meters-Progress__ramp{position:relative;height:", ";background:", ";&::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;max-width:", ";transition:max-width 1s cubic-bezier(0,0.5,0.3,1);background:", ";}}&.k-Meters-Progress--disabled,&.is-disabled{.k-Meters-Progress__ramp::after{background:", ";}}&.k-Meters-Progress--orion .k-Meters-Progress__ramp{&,&::after{border-radius:var(--border-radius-xs);}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref) {
   var progressValue = _ref.progressValue;
   return progressValue;
 }, function (_ref2) {
   var sliderColor = _ref2.sliderColor;
   return sliderColor;
-}, _colorsConfig.default.line2, (0, _typography.pxToRem)(3));
+}, _colorsConfig.default.line2);
 
 var Progress = function Progress(_ref3) {
   var color = _ref3.color,

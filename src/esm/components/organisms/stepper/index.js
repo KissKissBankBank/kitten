@@ -30,7 +30,7 @@ var ItemWrapper = styled.li.withConfig({
 var StepperText = styled(Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "kuopc1-3"
-})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";"], pxToRem(6));
+})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:var(--border-radius-s);"]);
 export var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,
       state = _ref.state,

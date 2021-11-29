@@ -7,12 +7,10 @@ import { Button } from '../../../../components/molecules/buttons/button';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import COLORS from '../../../../constants/colors-config';
 import classNames from 'classnames';
-var borderRadius = pxToRem(4);
-var borderSize = pxToRem(2);
 var StyledButtonGroup = styled.div.withConfig({
   displayName: "button-group__StyledButtonGroup",
   componentId: "gkwk7e-0"
-})(["display:flex;justify-content:center;.k-ButtonGroup__button{position:relative;z-index:0;min-width:auto;width:auto;&:not(:last-child){margin-right:-", ";}&:first-child{border-top-left-radius:", ";border-bottom-left-radius:", ";}&:last-child{border-top-right-radius:", ";border-bottom-right-radius:", ";}&.k-ButtonGroup__button--isActive{border-radius:", ";z-index:1;}&:active,&:hover,&:focus{border-radius:", ";z-index:2;}}&.k-ButtonGroup--orion{.k-ButtonGroup__button{border-radius:", ";color:", ";border:var(--border);background-color:", ";&:hover,&:focus,&:active{color:", ";border:var(--border-hover);background-color:", ";}&.k-ButtonGroup__button--isActive{color:", ";border:var(--border-active);background-color:", ";}&:first-child{border-top-right-radius:0;border-bottom-right-radius:0;}&:last-child{border-top-left-radius:0;border-bottom-left-radius:0;}}}"], borderSize, borderRadius, borderRadius, borderRadius, borderRadius, borderRadius, borderRadius, pxToRem(4), COLORS.font1, COLORS.background1, COLORS.font1, COLORS.background1, COLORS.font1, COLORS.primary5);
+})(["display:flex;justify-content:center;.k-ButtonGroup__button{position:relative;z-index:0;min-width:auto;width:auto;&:not(:last-child){margin-right:", ";}&:first-child{border-top-left-radius:var(--border-radius-s);border-bottom-left-radius:var(--border-radius-s);}&:last-child{border-top-right-radius:var(--border-radius-s);border-bottom-right-radius:var(--border-radius-s);}&.k-ButtonGroup__button--isActive{border-radius:var(--border-radius-s);z-index:1;}&:active,&:hover,&:focus{border-radius:var(--border-radius-s);z-index:2;}}&.k-ButtonGroup--orion{.k-ButtonGroup__button{border-radius:var(--border-radius-s);color:", ";border:var(--border);background-color:", ";&:hover,&:focus,&:active{color:", ";border:var(--border-hover);background-color:", ";}&.k-ButtonGroup__button--isActive{color:", ";border:var(--border-active);background-color:", ";}&:first-child{border-top-right-radius:0;border-bottom-right-radius:0;}&:last-child{border-top-left-radius:0;border-bottom-left-radius:0;}}}"], pxToRem(-1), COLORS.font1, COLORS.background1, COLORS.font1, COLORS.background1, COLORS.font1, COLORS.primary5);
 export var ButtonGroup = function ButtonGroup(_ref) {
   var className = _ref.className,
       variant = _ref.variant,

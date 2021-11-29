@@ -26,14 +26,15 @@ export var StepperIcon = function StepperIcon(_ref) {
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/React.createElement(IconBadge, _extends({
-      size: "tiny"
+      size: "tiny",
+      status: "info"
     }, props), /*#__PURE__*/React.createElement(ArrowIcon, null));
   }
 
   if (state === 'validated' || state === 'valid') {
     return /*#__PURE__*/React.createElement(IconBadge, _extends({
       size: "tiny",
-      valid: true
+      status: "success"
     }, props), /*#__PURE__*/React.createElement(CheckedIcon, null));
   }
 

@@ -32,7 +32,7 @@ var StyledDocumentDisplay = styled.div.withConfig({
 var StyledIconContainer = styled.div.withConfig({
   displayName: "document-manager__StyledIconContainer",
   componentId: "sc-1nvgqfh-3"
-})(["position:relative;box-sizing:border-box;width:", ";height:", ";border-radius:50%;background-color:#caf4fe;padding-top:", ";padding-left:", ";&.k-DocumentManager__iconContainer--error{background-color:", ";}&.k-DocumentManager__iconContainer--valid{background-color:", ";}.k-DocumentManager__iconContainer__statusIcon{position:absolute;right:", ";top:", ";border:var(--border-width) solid ", ";width:", ";height:", ";border-radius:50%;}"], pxToRem(60), pxToRem(60), pxToRem(15), pxToRem(19), COLORS.error3, COLORS.tertiary2, pxToRem(-12), pxToRem(-4), COLORS.background1, pxToRem(20), pxToRem(20));
+})(["position:relative;box-sizing:border-box;width:", ";height:", ";border-radius:var(--border-radius-rounded);background-color:#caf4fe;padding-top:", ";padding-left:", ";&.k-DocumentManager__iconContainer--error{background-color:", ";}&.k-DocumentManager__iconContainer--valid{background-color:", ";}.k-DocumentManager__iconContainer__statusIcon{position:absolute;right:", ";top:", ";border:var(--border-width) solid ", ";width:", ";height:", ";border-radius:var(--border-radius-rounded);}"], pxToRem(60), pxToRem(60), pxToRem(15), pxToRem(19), COLORS.error3, COLORS.tertiary2, pxToRem(-12), pxToRem(-4), COLORS.background1, pxToRem(20), pxToRem(20));
 var statusesWithIcons = ['error', 'valid', 'wait'];
 
 var IconContainer = function IconContainer(_ref) {

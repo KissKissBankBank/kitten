@@ -10,7 +10,7 @@ export var StyledContainer = styled(Container).withConfig({
 export var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   _objectDestructuringEmpty(_ref);
 
-  return css(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
+  return css(["display:flex;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
     var displayLeftGradient = _ref2.displayLeftGradient,
         shadowColor = _ref2.shadowColor;
     return displayLeftGradient && css(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",transparent );}"], pxToRem(gradientWidth), shadowColor);

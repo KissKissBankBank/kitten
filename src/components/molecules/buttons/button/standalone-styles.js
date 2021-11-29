@@ -13,7 +13,7 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var FLUID = (0, _styledComponents.css)(["--Button-min-width:initial;min-width:initial;width:100%;"]);
 exports.FLUID = FLUID;
-var ROUNDED = (0, _styledComponents.css)(["border-radius:50%;"]);
+var ROUNDED = (0, _styledComponents.css)(["border-radius:var(--border-radius-rounded);"]);
 exports.ROUNDED = ROUNDED;
 var DEFAULT = (0, _styledComponents.css)(["--Button-min-width:", ";min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";"], (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-1));
 exports.DEFAULT = DEFAULT;

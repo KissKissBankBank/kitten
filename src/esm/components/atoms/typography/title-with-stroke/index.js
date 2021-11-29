@@ -11,7 +11,7 @@ import { strokeModifierStyles } from '../../../atoms/horizontal-stroke/common/st
 var StyledTitleWithStroke = styled.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "ie3pvx-0"
-})(["--TitleWithStroke-css-color:", ";color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], COLORS.font1, COLORS.font1, TYPOGRAPHY.fontStyles.bold, titleModifierStyles('.k-TitleWithStroke__title'), strokeModifierStyles('.k-TitleWithStroke__stroke'));
+})(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles.bold, titleModifierStyles('.k-TitleWithStroke__title'), strokeModifierStyles('.k-TitleWithStroke__stroke'));
 export var TitleWithStroke = function TitleWithStroke(_ref) {
   var modifier = _ref.modifier,
       tag = _ref.tag,

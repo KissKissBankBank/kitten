@@ -1,6 +1,6 @@
 import React from 'react'
 import { ContributionCard } from './index'
-import { Container, RocketIllustration, COLORS } from '../../../..'
+import { Container, RocketIllustration } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

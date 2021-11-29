@@ -10,7 +10,7 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 var StyledCard = styled.div.withConfig({
   displayName: "engagement-card__StyledCard",
   componentId: "sc-184n7il-0"
-})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";:focus-visible{outline:auto;}@media (min-width:", "){padding:", ";}"], pxToRem(15), function (_ref) {
+})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:var(--border-radius-xl);position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";:focus-visible{outline:auto;}@media (min-width:", "){padding:", ";}"], function (_ref) {
   var backgroundColor = _ref.backgroundColor;
   return backgroundColor;
 }, pxToRem(5), COLORS.background1, pxToRem(ScreenConfig.S.min), pxToRem(10));

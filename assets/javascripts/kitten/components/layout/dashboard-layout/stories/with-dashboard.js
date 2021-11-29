@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ScreenConfig, pxToRem, COLORS, Title, Button, GlobeIcon } from 'kitten'
+import { ScreenConfig, pxToRem, Title, Button, GlobeIcon } from 'kitten'
 
 const CardHolder = styled.div`
   display: grid;

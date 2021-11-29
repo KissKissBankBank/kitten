@@ -4,10 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Design: Use new `--border-radius-*` variables.
-- Feature: `TextInput`: Add `darkBackground` prop.
-- Feature: IE11: Remove all IE11 css.
-- Fix: `LendoLoadingAnimation`: Fix console errors.
 - Feature: Tokens: Add `transitions` related tokens.
 - Feature: `Comment`:
   - Change design
@@ -33,21 +29,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Utilities: Add `k-u-ellipsis` CSS utility class.
 - Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
 - Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
-- Fix: `LendoLoadingAnimation`: Fix style bug.
-- Feature: `Button`: Use new `disabled` style.
-- Feature: `AlertBox`: Add new component.
-- Feature: `IconBadge`: Add the following props:
+
+## [6.5.0] - 2021-11-29
+
+Features:
+
+- Design: Use new `--border-radius-*` variables.
+- IE11: Remove all IE11 css.
+- `TextInput`: Add `darkBackground` prop.
+- `Button`: Use new `disabled` style.
+- `AlertBox`: Add new component.
+- `IconBadge`: Add the following props:
   - `status`, defaults to `info`
   - `hasBorder`, defaults to `false`
-- Feature: `IconBadge`: Deprecate the following props:
+- `IconBadge`: Deprecate the following props:
   - `disabled`, replaced by `status="disabled"`
   - `valid`, replaced by `status="success"`
-- Feature: `StatusIconNext`: Add component with the following subcomponents:
+- `StatusIconNext`: Add component with the following subcomponents:
   - `StatusIconNext.Info`
   - `StatusIconNext.Success`
   - `StatusIconNext.Danger`
   - `StatusIconNext.Warning`
   - `StatusIconNext.Disabled`
+
+Fixes:
+
+- `LendoLoadingAnimation`: Fix console errors.
+- `LendoLoadingAnimation`: Fix style bug.
 
 
 ## [6.4.0] - 2021-11-23
@@ -529,7 +537,7 @@ Breaking Changes:
   - `display/hidden`
   - `display/inline-block`
   - `flex/display-flex`
-- Feature: `Utilities`: Add `display` utility to replace `k-u-block`, etc.
+- `Utilities`: Add `display` utility to replace `k-u-block`, etc.
 
 Features:
 

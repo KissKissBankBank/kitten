@@ -52,7 +52,7 @@ var buttonImgBig = (0, _typography.pxToRem)(50);
 var StyledButtonImage = (0, _styledComponents.default)(_buttonImage.ButtonImage).withConfig({
   displayName: "comment-avatar__StyledButtonImage",
   componentId: "sc-54iqa-2"
-})(["border-radius:50%;height:", ";width:", ";@media (min-width:", "px){height:", ";width:", ";}"], buttonImgBig, buttonImgBig, _screenConfig.ScreenConfig.S.min, buttonImgHuge, buttonImgHuge);
+})(["border-radius:var(--border-radius-rounded);height:", ";width:", ";@media (min-width:", "px){height:", ";width:", ";}"], buttonImgBig, buttonImgBig, _screenConfig.ScreenConfig.S.min, buttonImgHuge, buttonImgHuge);
 
 var StyledAvatarBadge = _styledComponents.default.div.withConfig({
   displayName: "comment-avatar__StyledAvatarBadge",
