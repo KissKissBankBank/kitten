@@ -20,8 +20,12 @@ export default {
     ),
   ],
   args: {
+    width: '45px',
+    height: '45px',
   },
   argTypes: {
+    width: {control: 'text'},
+    height: {control: 'text'},
   },
 }
 
