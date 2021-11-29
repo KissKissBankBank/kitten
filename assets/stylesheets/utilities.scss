@@ -37,6 +37,7 @@ $k-typography: (
 @include k-utilities-aliasing;
 @include k-utilities-color;
 @include k-utilities-decoration;
+@include k-utilities-ellipsis;
 @include k-utilities-font-feature-settings;
 @include k-utilities-inactive;
 @include k-utilities-line-height;
