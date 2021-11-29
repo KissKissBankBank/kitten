@@ -31,7 +31,7 @@ var endingAnimationKeyframes = function endingAnimationKeyframes() {
 var StyledHighlightHalo = styled.div.withConfig({
   displayName: "highlight-halo__StyledHighlightHalo",
   componentId: "sc-1ix31ok-0"
-})(["position:relative;height:", ";width:", ";transform:translate(-50%,-50%);> div{position:absolute;left:0;top:0;opacity:0;border-radius:50%;background-color:", ";transform:scale(0);", ";}> div:nth-of-type(1){top:33.33%;left:33.33%;width:33.33%;height:33.33%;", "}> div:nth-of-type(2){top:16.66%;left:16.66%;width:66.66%;height:66.66%;", "}> div:nth-of-type(3){width:100%;height:100%;", "}"], function (_ref) {
+})(["position:relative;height:", ";width:", ";transform:translate(-50%,-50%);> div{position:absolute;left:0;top:0;opacity:0;border-radius:var(--border-radius-rounded);background-color:", ";transform:scale(0);", ";}> div:nth-of-type(1){top:33.33%;left:33.33%;width:33.33%;height:33.33%;", "}> div:nth-of-type(2){top:16.66%;left:16.66%;width:66.66%;height:66.66%;", "}> div:nth-of-type(3){width:100%;height:100%;", "}"], function (_ref) {
   var haloSize = _ref.haloSize;
   return pxToRem(haloSize);
 }, function (_ref2) {

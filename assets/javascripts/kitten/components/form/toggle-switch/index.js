@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -67,7 +67,8 @@ const SwitchWrapper = styled.div`
       border: var(--toggleSwitch-border) solid ${COLORS.line2};
       border-radius: var(--border-radius-rounded);
       transition: left var(--toggleSwitch-duration) ease,
-        color var(--toggleSwitch-duration) ease, border-color var(--toggleSwitch-duration) ease,
+        color var(--toggleSwitch-duration) ease,
+        border-color var(--toggleSwitch-duration) ease,
         background-color var(--toggleSwitch-duration) ease;
     }
 
@@ -76,7 +77,10 @@ const SwitchWrapper = styled.div`
       border-color: currentColor;
 
       .k-ToggleSwitch__circle {
-        left: calc(var(--toggleSwitch-width) - var(--toggleSwitch-height) - var(--toggleSwitch-border));
+        left: calc(
+          var(--toggleSwitch-width) - var(--toggleSwitch-height) -
+            var(--toggleSwitch-border)
+        );
         border-color: currentColor;
       }
     }
@@ -168,7 +172,7 @@ export const ToggleSwitch = ({
         '--toggleSwitch-checkedColor': checkedColor,
         '--toggleSwitch-defaultColor': defaultColor,
         '--toggleSwitch-disabledColor': disabledColor,
-        ...style
+        ...style,
       }}
       {...others}
     >

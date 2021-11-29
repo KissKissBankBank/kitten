@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ExpandBoard } from './index'
-import { pxToRem } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../../constants/screen-config';
 export var FLUID = css(["--Button-min-width:initial;min-width:initial;width:100%;"]);
-export var ROUNDED = css(["border-radius:50%;"]);
+export var ROUNDED = css(["border-radius:var(--border-radius-rounded);"]);
 export var DEFAULT = css(["--Button-min-width:", ";min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";"], pxToRem(200), pxToRem(200), pxToRem(50), pxToRem(10), pxToRem(30), stepToRem(-1));
 export var NANO = css(["--Button-min-width:", ";min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";"], pxToRem(100), pxToRem(100), pxToRem(20), pxToRem(6), stepToRem(-2));
 export var MICRO = css(["--Button-min-width:", ";min-width:", ";min-height:", ";padding:", " ", ";font-size:", ";"], pxToRem(130), pxToRem(130), pxToRem(30), pxToRem(5), pxToRem(10), stepToRem(-2));

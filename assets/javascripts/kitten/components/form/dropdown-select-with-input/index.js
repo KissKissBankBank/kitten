@@ -282,7 +282,6 @@ const StyledDropdownSelectWithInput = styled.div`
   &.k-Form-DropdownSelectWithInput--tiny {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(40)};
-      
     }
     .k-Form-DropdownSelectWithInput__button__arrowBox {
       left: ${pxToRem(15 + 2)};

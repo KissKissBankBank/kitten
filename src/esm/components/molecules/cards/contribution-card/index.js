@@ -5,7 +5,6 @@ import React, { useState, cloneElement } from 'react';
 import { CloseButton } from '../../../../components/molecules/buttons/close-button';
 import { StyledContributionCard } from './styles';
 import classNames from 'classnames';
-import COLORS from '../../../../constants/colors-config';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { Image, Title, Description, PillNumber, Amount, Input, Action } from './components';

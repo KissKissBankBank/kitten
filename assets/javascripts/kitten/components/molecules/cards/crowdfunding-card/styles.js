@@ -365,9 +365,9 @@ const tabletStyles = css`
 
 const desktopStyles = css``
 
-export const StyledCrowdfundingCard = styled(
-  ({ forceVersion, ...props }) => <div {...props} />,
-)`
+export const StyledCrowdfundingCard = styled(({ forceVersion, ...props }) => (
+  <div {...props} />
+))`
   ${({ forceVersion }) => {
     return (() => {
       switch (forceVersion) {

@@ -11,7 +11,7 @@ import COLORS from '../../../../constants/colors-config';
 var StyledSideCard = styled.div.withConfig({
   displayName: "side-card__StyledSideCard",
   componentId: "s3armu-0"
-})(["background-color:", ";width:100%;box-sizing:border-box;@media (min-width:", "){padding:", ";border-radius:", ";margin-bottom:", ";}.k-DashboardLayout__flow__sideCard__title{margin-bottom:", ";}.k-DashboardLayout__flow__sideCard__list{list-style:disc;margin-left:", ";padding:0;li{margin-bottom:", ";line-height:", ";font-size:", ";@media (min-width:", "){font-size:", ";}}}"], COLORS.primary5, pxToRem(ScreenConfig.L.min), pxToRem(30), pxToRem(8), pxToRem(15), pxToRem(20), pxToRem(15), pxToRem(10), pxToRem(22), stepToRem(-2), pxToRem(ScreenConfig.S.min), stepToRem(-1));
+})(["background-color:", ";width:100%;box-sizing:border-box;@media (min-width:", "){padding:", ";border-radius:var(--border-radius-m);margin-bottom:", ";}.k-DashboardLayout__flow__sideCard__title{margin-bottom:", ";}.k-DashboardLayout__flow__sideCard__list{list-style:disc;margin-left:", ";padding:0;li{margin-bottom:", ";line-height:", ";font-size:", ";@media (min-width:", "){font-size:", ";}}}"], COLORS.primary5, pxToRem(ScreenConfig.L.min), pxToRem(30), pxToRem(15), pxToRem(20), pxToRem(15), pxToRem(10), pxToRem(22), stepToRem(-2), pxToRem(ScreenConfig.S.min), stepToRem(-1));
 
 var Title = function Title(_ref) {
   var className = _ref.className,

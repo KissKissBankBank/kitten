@@ -8,7 +8,7 @@ describe('<DragAndDropList />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      ReactDOM.createPortal = jest.fn((element, node) => {
+      ReactDOM.createPortal = jest.fn(element => {
         return element
       })
 
@@ -26,7 +26,7 @@ describe('<DragAndDropList />', () => {
 
   describe('with children', () => {
     beforeEach(() => {
-      ReactDOM.createPortal = jest.fn((element, node) => {
+      ReactDOM.createPortal = jest.fn(element => {
         return element
       })
 

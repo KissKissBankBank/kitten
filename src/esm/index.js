@@ -182,6 +182,7 @@ export { MessengerIconNext } from './components/graphics/icons-next/messenger-ic
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next';
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next';
 export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next';
+export { StatusIconNext } from './components/graphics/icons-next/status-icon-next';
 export { TagIconNext } from './components/graphics/icons-next/tag-icon-next';
 export { ThumbUpIconNext } from './components/graphics/icons-next/thumb-up-icon-next';
 export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-next';

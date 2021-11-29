@@ -6,11 +6,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
-import COLORS from '../../../constants/colors-config';
 var StyledInfoLines = styled.dl.withConfig({
   displayName: "info-lines__StyledInfoLines",
   componentId: "sc-18qenjp-0"
-})(["&.k-InfoLines--withBorderRadius{border-radius:", ";}&.k-InfoLines--withLeftRightBorder{border-left:", " solid var(--InfoLines-borderColor);border-right:", " solid var(--InfoLines-borderColor);.k-InfoLines__line{padding:", " ", ";}}&:not(.k-InfoLines--withoutTopBottomBorder){border-top:", " solid var(--InfoLines-borderColor);border-bottom:", " solid var(--InfoLines-borderColor);}.k-InfoLines__line{box-sizing:border-box;display:flex;padding:", " 0;min-height:", ";gap:", " ", ";align-items:center;flex-direction:row;justify-content:space-between;&:not(:first-child){border-top:", " solid var(--InfoLines-borderColor);}}.k-InfoLines__key,.k-InfoLines__value{margin:0;}&:not(.k-InfoLines--withoutResponsive){@media (max-width:", "px){.k-InfoLines__line{align-items:flex-start;flex-direction:column;}.k-InfoLines__key{flex:0;}}}"], pxToRem(8), pxToRem(1), pxToRem(1), pxToRem(10), pxToRem(15), pxToRem(1), pxToRem(1), pxToRem(10), pxToRem(60), pxToRem(5), pxToRem(15), pxToRem(1), ScreenConfig.S.max);
+})(["&.k-InfoLines--withBorderRadius{border-radius:var(--border-radius-m);}&.k-InfoLines--withLeftRightBorder{border-left:", " solid var(--InfoLines-borderColor);border-right:", " solid var(--InfoLines-borderColor);.k-InfoLines__line{padding:", " ", ";}}&:not(.k-InfoLines--withoutTopBottomBorder){border-top:", " solid var(--InfoLines-borderColor);border-bottom:", " solid var(--InfoLines-borderColor);}.k-InfoLines__line{box-sizing:border-box;display:flex;padding:", " 0;min-height:", ";gap:", " ", ";align-items:center;flex-direction:row;justify-content:space-between;&:not(:first-child){border-top:", " solid var(--InfoLines-borderColor);}}.k-InfoLines__key,.k-InfoLines__value{margin:0;}&:not(.k-InfoLines--withoutResponsive){@media (max-width:", "px){.k-InfoLines__line{align-items:flex-start;flex-direction:column;}.k-InfoLines__key{flex:0;}}}"], pxToRem(1), pxToRem(1), pxToRem(10), pxToRem(15), pxToRem(1), pxToRem(1), pxToRem(10), pxToRem(60), pxToRem(5), pxToRem(15), pxToRem(1), ScreenConfig.S.max);
 export var InfoLines = function InfoLines(_ref) {
   var className = _ref.className,
       style = _ref.style,

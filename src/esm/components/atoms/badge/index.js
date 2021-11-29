@@ -10,7 +10,7 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 var StyledBadge = styled.span.withConfig({
   displayName: "badge__StyledBadge",
   componentId: "d8v7s7-0"
-})(["--Badge-background-color:", ";display:inline-flex;justify-content:center;align-items:center;box-sizing:border-box;padding:", " ", ";line-height:1;min-height:", ";min-width:", ";border-radius:", ";color:", ";", ";font-size:", ";line-height:1.2;border:var(--border-width) solid white;background-color:var(--Badge-background-color);&.k-Badge--spaced{margin:0 ", ";}&.k-Badge--no-border{min-height:", ";min-width:", ";border:0;}&.k-Badge--hasIcon{position:relative;left:", ";top:", ";}"], COLORS.primary1, pxToRem(2), pxToRem(5), pxToRem(18 + 2), pxToRem(18 + 2), pxToRem(10), COLORS.background1, TYPOGRAPHY.fontStyles.regular, stepToRem(-4), pxToRem(5), pxToRem(18), pxToRem(18), pxToRem(-8), pxToRem(-8));
+})(["--Badge-background-color:", ";display:inline-flex;justify-content:center;align-items:center;box-sizing:border-box;padding:", " ", ";line-height:1;min-height:", ";min-width:", ";border-radius:var(--border-radius-rounded);color:", ";", ";font-size:", ";line-height:1.2;border:var(--border-width) solid white;background-color:var(--Badge-background-color);&.k-Badge--spaced{margin:0 ", ";}&.k-Badge--no-border{min-height:", ";min-width:", ";border:0;}&.k-Badge--hasIcon{position:relative;left:", ";top:", ";}"], COLORS.primary1, pxToRem(2), pxToRem(5), pxToRem(18 + 2), pxToRem(18 + 2), COLORS.background1, TYPOGRAPHY.fontStyles.regular, stepToRem(-4), pxToRem(5), pxToRem(18), pxToRem(18), pxToRem(-8), pxToRem(-8));
 export var Badge = function Badge(_ref) {
   var className = _ref.className,
       spaced = _ref.spaced,

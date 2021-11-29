@@ -120,15 +120,16 @@ const ModalEditProject = () => {
                           lineHeight="normal"
                           className="k-u-margin-none"
                         >
-                          Avoir une page de don permanent vous permet de récolter des 
-                          fonds sur la durée grâce au système de&nbsp;:
+                          Avoir une page de don permanent vous permet de
+                          récolter des fonds sur la durée grâce au système
+                          de&nbsp;:
                         </Text>
                         <div className="k-ModalEditProject--blockText">
                           <CheckedIcon
                             color={COLORS.primary1}
                             width="12"
                             height="12"
-                            aria-hidden  
+                            aria-hidden
                           />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
@@ -145,20 +146,16 @@ const ModalEditProject = () => {
                             </Text>
                           </div>
                         </div>
-                        
+
                         <div className="k-ModalEditProject--blockText">
                           <CheckedIcon
                             color={COLORS.primary1}
                             width="12"
                             height="12"
-                            aria-hidden  
+                            aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text
-                              weight="bold"
-                              size="tiny"
-                              color="font1"
-                            >
+                            <Text weight="bold" size="tiny" color="font1">
                               Abonnement contre contrepartie
                               <Text
                                 tag="p"
@@ -174,18 +171,18 @@ const ModalEditProject = () => {
                         </div>
                       </div>
                     </Paragraph>
-                      <Button
-                        as="span"
-                        modifier="helium"
-                        fit="content"
-                        size="tiny"
-                        className="k-ModalEditProject--button"
-                      >
-                        Créer
+                    <Button
+                      as="span"
+                      modifier="helium"
+                      fit="content"
+                      size="tiny"
+                      className="k-ModalEditProject--button"
+                    >
+                      Créer
                     </Button>
                   </button>
                 </GridCol>
-                
+
                 <GridCol col-s="6">
                   <button
                     type="button"
@@ -227,7 +224,7 @@ const ModalEditProject = () => {
                             color={COLORS.primary1}
                             width="12"
                             height="12"
-                            aria-hidden  
+                            aria-hidden
                           />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
@@ -244,13 +241,13 @@ const ModalEditProject = () => {
                             </Text>
                           </div>
                         </div>
-                        
+
                         <div className="k-ModalEditProject--blockText">
                           <CheckedIcon
                             color={COLORS.primary1}
                             width="12"
                             height="12"
-                            aria-hidden  
+                            aria-hidden
                           />
                           <div className="k-u-margin-left-single">
                             <Text weight="bold" size="tiny" color="font1">
@@ -262,7 +259,7 @@ const ModalEditProject = () => {
                                 size="micro"
                                 className="k-u-margin-none"
                               >
-                              (ex&nbsp;: un livre)
+                                (ex&nbsp;: un livre)
                               </Text>
                             </Text>
                           </div>
@@ -285,7 +282,7 @@ const ModalEditProject = () => {
                                 size="micro"
                                 className="k-u-margin-none"
                               >
-                              (ex&nbsp;: un magazine par trimestre)
+                                (ex&nbsp;: un magazine par trimestre)
                               </Text>
                             </Text>
                           </div>

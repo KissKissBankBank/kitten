@@ -32,7 +32,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var StyledRocketCircle = _styledComponents.default.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
   componentId: "hjcjwz-0"
-})(["display:flex;justify-content:center;align-items:center;width:", ";height:", ";border-radius:100%;background-color:", ";@media (min-width:", "){width:", ";height:", ";}.k-RocketCircleIcon__rocketIcon{padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}"], function (_ref) {
+})(["display:flex;justify-content:center;align-items:center;width:", ";height:", ";border-radius:var(border-radius-rounded);background-color:", ";@media (min-width:", "){width:", ";height:", ";}.k-RocketCircleIcon__rocketIcon{padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}"], function (_ref) {
   var circleWidthMobile = _ref.circleWidthMobile;
   return (0, _typography.pxToRem)(circleWidthMobile);
 }, function (_ref2) {

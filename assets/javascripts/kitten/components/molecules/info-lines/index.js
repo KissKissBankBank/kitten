@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
 
 const StyledInfoLines = styled.dl`
   &.k-InfoLines--withBorderRadius {

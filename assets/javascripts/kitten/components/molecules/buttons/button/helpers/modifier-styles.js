@@ -1,6 +1,5 @@
 import { css } from 'styled-components'
 import COLORS from '../../../../../constants/colors-config'
-import { pxToRem } from '../../../../../helpers/utils/typography'
 
 export const modifierStyles = modifier => {
   let borderColor

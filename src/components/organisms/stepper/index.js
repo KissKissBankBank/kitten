@@ -57,7 +57,7 @@ var ItemWrapper = _styledComponents.default.li.withConfig({
 var StepperText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "kuopc1-3"
-})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:", ";"], (0, _typography.pxToRem)(6));
+})(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:var(--border-radius-s);"]);
 
 var StepperItem = function StepperItem(_ref) {
   var children = _ref.children,

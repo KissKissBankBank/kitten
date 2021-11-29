@@ -9,11 +9,11 @@ import { ScreenConfig } from '../../../../constants/screen-config';
 var StyledContainer = styled.div.withConfig({
   displayName: "engagement-card-with-image__StyledContainer",
   componentId: "sc-1617mnj-0"
-})(["display:flex;flex-direction:column;text-decoration:none;:focus-visible{border-top-left-radius:", ";border-top-right-radius:", ";outline:auto;}"], pxToRem(15), pxToRem(15));
+})(["display:flex;flex-direction:column;text-decoration:none;:focus-visible{border-top-left-radius:var(--border-radius-xl);border-top-right-radius:var(--border-radius-xl);outline:auto;}"]);
 var StyledCard = styled.div.withConfig({
   displayName: "engagement-card-with-image__StyledCard",
   componentId: "sc-1617mnj-1"
-})(["border-radius:", ";overflow:hidden;"], pxToRem(15));
+})(["border-radius:var(--border-radius-xl);overflow:hidden;"]);
 var StyledImage = styled.img.withConfig({
   displayName: "engagement-card-with-image__StyledImage",
   componentId: "sc-1617mnj-2"

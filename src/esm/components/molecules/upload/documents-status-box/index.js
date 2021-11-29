@@ -11,7 +11,7 @@ import { CrossCircleIcon } from '../../../../components/graphics/icons/cross-cir
 var StyledDocumentsStatusBox = styled.div.withConfig({
   displayName: "documents-status-box__StyledDocumentsStatusBox",
   componentId: "sc-16s5m4g-0"
-})(["border-radius:", ";padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], pxToRem(8), pxToRem(20), pxToRem(30), pxToRem(30), COLORS.line1, COLORS.valid1, COLORS.error2);
+})(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], pxToRem(20), pxToRem(30), pxToRem(30), COLORS.line1, COLORS.valid1, COLORS.error2);
 export var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
   var className = _ref.className,
       _ref$fileList = _ref.fileList,

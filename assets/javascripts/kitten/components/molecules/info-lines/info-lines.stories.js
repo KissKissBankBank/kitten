@@ -1,7 +1,7 @@
 import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { InfoLines } from './index'
-import { COLORS, TextInput, Text } from '../../..'
+import { TextInput, Text } from 'kitten'
 
 export default {
   title: 'Molecules/InfoLines',
