@@ -84,7 +84,7 @@ export const ModalFooterInput = React.forwardRef(
     const [value, setValue] = useState(defaultValue)
 
     const handleChange = e => {
-      setValue(e.target.value)
+      setValue(e.target.value.trim())
       onChange(e)
     }
 

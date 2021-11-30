@@ -169,20 +169,15 @@ export const CommentForm = React.forwardRef(
     ref,
   ) => {
     const [value, setValue] = useState(defaultValue)
-    const [isButtonVisible, setButtonVisibility] = useState(!!defaultValue)
 
     const handleChange = event => {
-      setValue(event.target.value)
+      setValue(event.target.value.trim())
       onChange(event.target.value)
     }
 
     const handleSubmit = () => {
       onSubmit(value)
     }
-
-    useEffect(() => {
-      setButtonVisibility(value.length > 0 || !!defaultValue)
-    }, [value])
 
     return (
       <CommentFormWrapper className={classNames('k-CommentForm', className)}>
@@ -223,7 +218,7 @@ export const CommentForm = React.forwardRef(
               fit="content"
               disabled={disabled}
               className={classNames('k-CommentForm__submit', {
-                'k-CommentForm__submit--is-visible': isButtonVisible,
+                'k-CommentForm__submit--is-visible': value.length > 0,
               })}
               onClick={handleSubmit}
             >
