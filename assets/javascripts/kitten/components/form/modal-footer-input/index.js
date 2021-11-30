@@ -88,6 +88,14 @@ export const ModalFooterInput = React.forwardRef(
       onChange(e)
     }
 
+    const handleKeyDown = event => {
+      if (value === '') return
+      if (event.key !== 'Enter') return
+      if (!event.metaKey && !event.ctrlKey) return
+
+      onSubmit(value)
+    }
+
     const handleSubmit = e => {
       onSubmit(e)
     }
@@ -99,6 +107,7 @@ export const ModalFooterInput = React.forwardRef(
           id={id}
           placeholder={placeholder}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
           minRows={1}
           maxRows={5}
           aria-label={props['aria-label']}

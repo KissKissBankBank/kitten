@@ -175,6 +175,14 @@ export const CommentForm = React.forwardRef(
       onChange(event.target.value)
     }
 
+    const handleKeyDown = event => {
+      if (value === '') return
+      if (event.key !== 'Enter') return
+      if (!event.metaKey && !event.ctrlKey) return
+
+      onSubmit(value)
+    }
+
     const handleSubmit = () => {
       onSubmit(value)
     }
@@ -193,6 +201,7 @@ export const CommentForm = React.forwardRef(
             disabled={disabled}
             placeholder={placeholder}
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
             minRows={1}
             maxRows={5}
             aria-describedby={`${id}-description`}
