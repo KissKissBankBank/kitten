@@ -4,14 +4,6 @@ exports[`<ModalFooterInput /> with empty snapshot matches with snapshot 1`] = `
 <div
   className="sc-bwzfXH fGwAqZ k-ModalFooterInput"
 >
-  <textarea
-    aria-label="Input Label"
-    className="k-ModalFooterInput__input"
-    id="Id"
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder=""
-  />
   <button
     className="sc-bdVaJa fTFoDM k-Button k-ModalFooterInput__button k-Button--tiny k-Button--beryllium k-Button--orion k-Button--fit-icon k-Button--disabled"
     disabled={true}
