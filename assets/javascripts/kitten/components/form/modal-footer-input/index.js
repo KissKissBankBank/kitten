@@ -82,9 +82,6 @@ export const ModalFooterInput = React.forwardRef(
     ref,
   ) => {
     const [value, setValue] = useState(defaultValue)
-    const [isButtonDisabled, setButtonDisabled] = useState(
-      disabled || defaultValue.length < 1,
-    )
 
     const handleChange = e => {
       setValue(e.target.value)
@@ -94,10 +91,6 @@ export const ModalFooterInput = React.forwardRef(
     const handleSubmit = e => {
       onSubmit(e)
     }
-
-    useEffect(() => {
-      setButtonDisabled(value.length < 1)
-    }, [value])
 
     return (
       <InputWrapper className={classNames('k-ModalFooterInput', className)}>
@@ -116,7 +109,7 @@ export const ModalFooterInput = React.forwardRef(
           modifier="beryllium"
           fit="icon"
           size="tiny"
-          disabled={isButtonDisabled}
+          disabled={disabled || value.length < 1}
           className="k-ModalFooterInput__button"
           onClick={handleSubmit}
         >
