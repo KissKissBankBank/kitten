@@ -31,7 +31,8 @@ const CommentWrapper = styled.div`
     }
   }
   &.k-Comment--isHighlighted {
-    --comment-background-color: var(--color-grey-300);
+    --comment-background-color: var(--color-grey-400);
+
     .k-Comment__header__meta {
       color: var(--color-grey-700);
     }
