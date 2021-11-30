@@ -1271,6 +1271,12 @@ Object.defineProperty(exports, "Alert", {
     return _alert.Alert;
   }
 });
+Object.defineProperty(exports, "AlertBox", {
+  enumerable: true,
+  get: function get() {
+    return _alertBox.AlertBox;
+  }
+});
 Object.defineProperty(exports, "BulletList", {
   enumerable: true,
   get: function get() {
@@ -2657,6 +2663,8 @@ var _scrollableContainer = require("./components/layout/scrollable-container");
 var _stickyContainer = require("./components/layout/sticky-container");
 
 var _alert = require("./components/molecules/alert");
+
+var _alertBox = require("./components/molecules/alert-box");
 
 var _bulletList = require("./components/molecules/bullet-list");
 
