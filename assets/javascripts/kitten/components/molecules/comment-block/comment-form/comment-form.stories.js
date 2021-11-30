@@ -28,6 +28,7 @@ export default {
     error: false,
     errorMessage: 'Cum sociis natoque penatibus et magnis',
     onSubmit: action('onSubmit'),
+    onChange: action('onChange'),
     disabled: false,
     'aria-label': 'This is the aria label',
   },
@@ -69,3 +70,7 @@ export default {
 }
 
 export const Default = args => <CommentForm {...args} />
+
+export const WithDefaultValue = args => (
+  <CommentForm {...args} defaultValue="Hello, world" />
+)

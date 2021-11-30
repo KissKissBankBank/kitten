@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import TextareaAutosize from 'react-textarea-autosize'
 
 import { Button } from '../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -82,6 +81,13 @@ export const ModalFooterInput = React.forwardRef(
     ref,
   ) => {
     const [value, setValue] = useState(defaultValue)
+    const [Textarea, setTextarea] = useState(null)
+
+    useEffect(() => {
+      const TextareaAutosize = require('react-textarea-autosize').default
+
+      setTextarea(TextareaAutosize)
+    }, [])
 
     const handleChange = e => {
       setValue(e.target.value.trim())
@@ -102,17 +108,20 @@ export const ModalFooterInput = React.forwardRef(
 
     return (
       <InputWrapper className={classNames('k-ModalFooterInput', className)}>
-        <TextareaAutosize
-          ref={ref || null}
-          id={id}
-          placeholder={placeholder}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-          minRows={1}
-          maxRows={5}
-          aria-label={props['aria-label']}
-          className="k-ModalFooterInput__input"
-        />
+        {!!Textarea && (
+          <Textarea
+            ref={ref || null}
+            id={id}
+            placeholder={placeholder}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            minRows={1}
+            maxRows={5}
+            aria-label={props['aria-label']}
+            className="k-ModalFooterInput__input"
+            defaultValue={defaultValue}
+          />
+        )}
         <Button
           type="button"
           modifier="beryllium"

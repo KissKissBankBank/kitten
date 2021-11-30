@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import TextareaAutosize from 'react-textarea-autosize'
 
 import { Button } from '../../../../components/molecules/buttons/button'
 import { Text } from '../../../../components/atoms/typography/text'
@@ -169,6 +168,13 @@ export const CommentForm = React.forwardRef(
     ref,
   ) => {
     const [value, setValue] = useState(defaultValue)
+    const [Textarea, setTextarea] = useState(null)
+
+    useEffect(() => {
+      const TextareaAutosize = require('react-textarea-autosize').default
+
+      setTextarea(TextareaAutosize)
+    }, [])
 
     const handleChange = event => {
       setValue(event.target.value.trim())
@@ -193,20 +199,22 @@ export const CommentForm = React.forwardRef(
           <img alt="" {...avatarImgProps} />
         </div>
         <div className="k-CommentForm__form">
-          <TextareaAutosize
-            ref={ref || null}
-            className="k-CommentForm__textarea"
-            id={id}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            placeholder={placeholder}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-            minRows={1}
-            maxRows={5}
-            aria-describedby={`${id}-description`}
-            aria-label={props['aria-label'] || commentLabel}
-          />
+          {!!Textarea && (
+            <Textarea
+              ref={ref || null}
+              className="k-CommentForm__textarea"
+              id={id}
+              defaultValue={defaultValue}
+              disabled={disabled}
+              placeholder={placeholder}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+              minRows={1}
+              maxRows={5}
+              aria-describedby={`${id}-description`}
+              aria-label={props['aria-label'] || commentLabel}
+            />
+          )}
           <span className="k-CommentForm__arrow" />
           {error && (
             <Text

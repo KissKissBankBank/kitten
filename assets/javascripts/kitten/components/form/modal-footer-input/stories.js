@@ -44,3 +44,12 @@ export const Default = args => (
     onSubmit={action('onSubmit')}
   />
 )
+
+export const WithDefaultValue = args => (
+  <ModalFooterInput
+    {...args}
+    defaultValue="Hello, world"
+    onChange={action('onChange')}
+    onSubmit={action('onSubmit')}
+  />
+)
