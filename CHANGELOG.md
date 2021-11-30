@@ -30,6 +30,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
 - Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
 
+## [6.5.1] - 2021-11-30
+
+Fix:
+
+- `AlertBox`: Fix ESM export.
+
 ## [6.5.0] - 2021-11-29
 
 Features:

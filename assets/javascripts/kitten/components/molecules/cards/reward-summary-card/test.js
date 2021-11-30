@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { RewardSummaryCard } from './index'
-import { DropdownMenu, EllipsisIcon } from '../../../..'
+import { DropdownMenu, EllipsisIcon } from 'kitten'
 
 describe('<RewardSummaryCard />', () => {
   let component

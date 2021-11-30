@@ -256,6 +256,7 @@ export { StickyContainer } from './components/layout/sticky-container'
 // ---------
 
 export { Alert } from './components/molecules/alert'
+export { AlertBox } from './components/molecules/alert-box'
 export { BulletList } from './components/molecules/bullet-list'
 export { CheckList } from './components/molecules/check-list'
 export { CommentAvatar } from './components/molecules/comment-block/comment-avatar'
