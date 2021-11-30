@@ -9,6 +9,7 @@ exports[`<ModalFooterInput /> with empty snapshot matches with snapshot 1`] = `
     className="k-ModalFooterInput__input"
     id="Id"
     onChange={[Function]}
+    onKeyDown={[Function]}
     placeholder=""
   />
   <button
