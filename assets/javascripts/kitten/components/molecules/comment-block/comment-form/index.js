@@ -6,6 +6,7 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 
 import { Button } from '../../../../components/molecules/buttons/button'
 import { Text } from '../../../../components/atoms/typography/text'
+import { TextareaAutoResize } from '../../../../components/form/textarea-auto-resize'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -168,13 +169,6 @@ export const CommentForm = React.forwardRef(
     ref,
   ) => {
     const [value, setValue] = useState(defaultValue)
-    const [Textarea, setTextarea] = useState(null)
-
-    useEffect(() => {
-      const TextareaAutosize = require('react-textarea-autosize').default
-
-      setTextarea(TextareaAutosize)
-    }, [])
 
     const handleChange = event => {
       setValue(event.target.value.trim())
@@ -199,22 +193,21 @@ export const CommentForm = React.forwardRef(
           <img alt="" {...avatarImgProps} />
         </div>
         <div className="k-CommentForm__form">
-          {!!Textarea && (
-            <Textarea
-              ref={ref || null}
-              className="k-CommentForm__textarea"
-              id={id}
-              defaultValue={defaultValue}
-              disabled={disabled}
-              placeholder={placeholder}
-              onChange={handleChange}
-              onKeyDown={handleKeyDown}
-              minRows={1}
-              maxRows={5}
-              aria-describedby={`${id}-description`}
-              aria-label={props['aria-label'] || commentLabel}
-            />
-          )}
+          <TextareaAutoResize
+            ref={ref || null}
+            className="k-CommentForm__textarea"
+            id={id}
+            defaultValue={defaultValue}
+            disabled={disabled}
+            placeholder={placeholder}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            minRows={1}
+            maxRows={5}
+            lineHeight={20}
+            aria-describedby={`${id}-description`}
+            aria-label={props['aria-label'] || commentLabel}
+          />
           <span className="k-CommentForm__arrow" />
           {error && (
             <Text

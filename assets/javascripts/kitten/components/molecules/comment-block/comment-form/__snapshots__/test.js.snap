@@ -15,6 +15,23 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
   <div
     className="k-CommentForm__form"
   >
+    <textarea
+      aria-describedby="custom-textarea-id-description"
+      aria-label="Leave a comment"
+      className="k-CommentForm__textarea"
+      defaultValue=""
+      disabled={false}
+      id="custom-textarea-id"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Leave a comment on the project"
+      rows={1}
+      style={
+        Object {
+          "lineHeight": "1.25rem",
+        }
+      }
+    />
     <span
       className="k-CommentForm__arrow"
     />
@@ -47,6 +64,12 @@ exports[`<CommentForm /> should match its error snapshot 1`] = `
       onChange={[Function]}
       onKeyDown={[Function]}
       placeholder="Leave a comment on the project"
+      rows={1}
+      style={
+        Object {
+          "lineHeight": "1.25rem",
+        }
+      }
     />
     <span
       className="k-CommentForm__arrow"

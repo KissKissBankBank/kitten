@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextareaAutoResize /> with default props matches with snapshot 1`] = `
+<textarea
+  onChange={[Function]}
+  rows={1}
+  style={
+    Object {
+      "lineHeight": "1.125rem",
+    }
+  }
+/>
+`;

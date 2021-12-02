@@ -7,6 +7,7 @@ import { Button } from '../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
+import { TextareaAutoResize } from '../../../components/form/textarea-auto-resize'
 
 const InputWrapper = styled.div`
   position: relative;
@@ -81,17 +82,10 @@ export const ModalFooterInput = React.forwardRef(
     ref,
   ) => {
     const [value, setValue] = useState(defaultValue)
-    const [Textarea, setTextarea] = useState(null)
 
-    useEffect(() => {
-      const TextareaAutosize = require('react-textarea-autosize').default
-
-      setTextarea(TextareaAutosize)
-    }, [])
-
-    const handleChange = e => {
+    const handleChange = (e) => {
       setValue(e.target.value.trim())
-      onChange(e)
+      onChange(e.target.value.trim())
     }
 
     const handleKeyDown = event => {
@@ -102,26 +96,24 @@ export const ModalFooterInput = React.forwardRef(
       onSubmit(value)
     }
 
-    const handleSubmit = e => {
-      onSubmit(e)
+    const handleSubmit = () => {
+      onSubmit(value)
     }
 
     return (
       <InputWrapper className={classNames('k-ModalFooterInput', className)}>
-        {!!Textarea && (
-          <Textarea
-            ref={ref || null}
-            id={id}
-            placeholder={placeholder}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-            minRows={1}
-            maxRows={5}
-            aria-label={props['aria-label']}
-            className="k-ModalFooterInput__input"
-            defaultValue={defaultValue}
-          />
-        )}
+        <TextareaAutoResize
+          ref={ref || null}
+          id={id}
+          placeholder={placeholder}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          minRows={1}
+          maxRows={5}
+          aria-label={props['aria-label']}
+          className="k-ModalFooterInput__input"
+          defaultValue={defaultValue}
+        />
         <Button
           type="button"
           modifier="beryllium"
