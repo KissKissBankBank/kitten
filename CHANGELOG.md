@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TagInput`: Fix focus styles.
+
 ## [6.5.1] - 2021-11-30
 
 Fix:
