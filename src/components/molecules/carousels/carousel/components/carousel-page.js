@@ -2,12 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CarouselPage = void 0;
-
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -42,7 +38,7 @@ var CarouselPage = function CarouselPage(_ref) {
       'k-Carousel__page--isActivePage': isActivePage,
       'k-Carousel__page--hasBeenViewed': hasPageBeenViewed
     })
-  }, (0, _toConsumableArray2.default)(Array(numberOfItemsPerPage).keys()).map(function (index) {
+  }, [].concat(Array(numberOfItemsPerPage).keys()).map(function (index) {
     // If there's not enough items in the last page of the Carousel
     if (index >= pageItems.length) {
       return /*#__PURE__*/_react.default.createElement("div", {
@@ -54,7 +50,7 @@ var CarouselPage = function CarouselPage(_ref) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: index,
       className: "k-Carousel__page__item"
-    }, _react.default.cloneElement(pageItems[index], itemProps));
+    }, /*#__PURE__*/_react.default.cloneElement(pageItems[index], itemProps));
   }));
 };
 

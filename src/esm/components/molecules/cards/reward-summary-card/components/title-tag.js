@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["text", "icon", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -10,7 +11,7 @@ export var TitleTag = function TitleTag(_ref) {
   var text = _ref.text,
       icon = _ref.icon,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["text", "icon", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var iconDisplay = function () {
     switch (icon) {

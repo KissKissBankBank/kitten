@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "children", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -12,7 +13,7 @@ export var DocumentIconEmpty = function DocumentIconEmpty(_ref) {
   var className = _ref.className,
       children = _ref.children,
       title = _ref.title,
-      props = _objectWithoutProperties(_ref, ["className", "children", "title"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledDocumentIcon, _extends({
     width: "25",

@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["title", "titleProps", "children"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -10,13 +11,13 @@ import TYPOGRAPHY from '../../../../constants/typography-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 var StyledInformationBox = styled.div.withConfig({
   displayName: "information-box__StyledInformationBox",
-  componentId: "cr7cpl-0"
+  componentId: "sc-cr7cpl-0"
 })(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border);}"], TYPOGRAPHY.fontStyles.light, pxToRem(10), pxToRem(20), pxToRem(20), pxToRem(20), COLORS.font1, COLORS.background1);
 export var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["title", "titleProps", "children"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledInformationBox, _extends({}, other, {
     className: classNames('k-InformationBox', other.className)

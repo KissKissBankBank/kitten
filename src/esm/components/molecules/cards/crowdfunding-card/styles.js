@@ -1,4 +1,5 @@
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["forceVersion"];
 import styled, { keyframes, css } from 'styled-components';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../../constants/screen-config';
@@ -10,12 +11,12 @@ var tabletStyles = css([".k-CrowdfundingCard__image__ownerContainer{display:inli
 var desktopStyles = css([""]);
 export var StyledCrowdfundingCard = styled(function (_ref) {
   var forceVersion = _ref.forceVersion,
-      props = _objectWithoutProperties(_ref, ["forceVersion"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("div", props);
 }).withConfig({
   displayName: "styles__StyledCrowdfundingCard",
-  componentId: "c4nhs9-0"
+  componentId: "sc-c4nhs9-0"
 })(["", ""], function (_ref2) {
   var forceVersion = _ref2.forceVersion;
   return function () {

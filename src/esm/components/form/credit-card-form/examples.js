@@ -1,6 +1,8 @@
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _extends from "@babel/runtime/helpers/extends";
+var _excluded = ["children"],
+    _excluded2 = ["children"],
+    _excluded3 = ["children"];
 import React, { useState } from 'react';
 import { CreditCardForm } from './index';
 import { Field } from '../field';
@@ -14,9 +16,8 @@ export var CustomExample = function CustomExample() {
 
 var Number = function Number() {
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      error = _useState2[0],
-      setError = _useState2[1];
+      error = _useState[0],
+      setError = _useState[1];
 
   var handleBlur = function handleBlur(e) {
     setError(isEmpty(e.target.value));
@@ -31,7 +32,7 @@ var Number = function Number() {
     },
     labelComponent: function labelComponent(_ref) {
       var children = _ref.children,
-          props = _objectWithoutProperties(_ref, ["children"]);
+          props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
       return /*#__PURE__*/React.createElement(Field.Label, {
         labelProps: props,
@@ -52,10 +53,9 @@ var Number = function Number() {
 };
 
 var Expiry = function Expiry() {
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      error = _useState4[0],
-      setError = _useState4[1];
+  var _useState2 = useState(false),
+      error = _useState2[0],
+      setError = _useState2[1];
 
   var handleBlur = function handleBlur(e) {
     setError(isEmpty(e.target.value));
@@ -70,7 +70,7 @@ var Expiry = function Expiry() {
     },
     labelComponent: function labelComponent(_ref2) {
       var children = _ref2.children,
-          props = _objectWithoutProperties(_ref2, ["children"]);
+          props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
       return /*#__PURE__*/React.createElement(Field.Label, {
         labelProps: props,
@@ -93,10 +93,9 @@ var Expiry = function Expiry() {
 };
 
 var Cvc = function Cvc() {
-  var _useState5 = useState(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      error = _useState6[0],
-      setError = _useState6[1];
+  var _useState3 = useState(false),
+      error = _useState3[0],
+      setError = _useState3[1];
 
   var handleBlur = function handleBlur(e) {
     setError(isEmpty(e.target.value));
@@ -111,7 +110,7 @@ var Cvc = function Cvc() {
     },
     labelComponent: function labelComponent(_ref3) {
       var children = _ref3.children,
-          props = _objectWithoutProperties(_ref3, ["children"]);
+          props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
       return /*#__PURE__*/React.createElement(Field.Label, {
         labelProps: props,

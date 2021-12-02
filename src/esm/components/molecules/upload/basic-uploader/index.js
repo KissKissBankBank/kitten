@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -50,35 +50,31 @@ export var BasicUploader = function BasicUploader(_ref) {
       status = _ref$status === void 0 ? 'ready' : _ref$status,
       _ref$statusText = _ref.statusText,
       statusText = _ref$statusText === void 0 ? '' : _ref$statusText,
-      props = _objectWithoutProperties(_ref, ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(status),
-      _useState2 = _slicedToArray(_useState, 2),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
+      internalStatus = _useState[0],
+      setInternalStatus = _useState[1];
 
   useEffect(function () {
     setInternalStatus(status);
   }, [status]);
 
-  var _useState3 = useState(disabled),
-      _useState4 = _slicedToArray(_useState3, 2),
-      internalDisabled = _useState4[0],
-      setInternalDisabled = _useState4[1];
+  var _useState2 = useState(disabled),
+      internalDisabled = _useState2[0],
+      setInternalDisabled = _useState2[1];
 
   useEffect(function () {
     setInternalDisabled(disabled);
   }, [disabled]);
 
-  var _useState5 = useState(''),
-      _useState6 = _slicedToArray(_useState5, 2),
-      internalFileName = _useState6[0],
-      setInternalFileName = _useState6[1];
+  var _useState3 = useState(''),
+      internalFileName = _useState3[0],
+      setInternalFileName = _useState3[1];
 
-  var _useState7 = useState(canCancel),
-      _useState8 = _slicedToArray(_useState7, 2),
-      internalCanCancel = _useState8[0],
-      setInternalCanCancel = _useState8[1];
+  var _useState4 = useState(canCancel),
+      internalCanCancel = _useState4[0],
+      setInternalCanCancel = _useState4[1];
 
   useEffect(function () {
     setInternalCanCancel(canCancel);
@@ -93,7 +89,7 @@ export var BasicUploader = function BasicUploader(_ref) {
     var files = event.currentTarget.files;
     if (files.length < 1) return;
     var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? "".concat(tempFileName, " + ").concat(files.length - 1) : tempFileName;
+    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalCanCancel(true);
     setInternalFileName(tempText);
@@ -110,7 +106,7 @@ export var BasicUploader = function BasicUploader(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledBasicUploader, _extends({}, props, {
-    className: classNames('k-BasicUploader', props.className, "k-BasicUploader--".concat(internalStatus))
+    className: classNames('k-BasicUploader', props.className, "k-BasicUploader--" + internalStatus)
   }), /*#__PURE__*/React.createElement("input", _extends({}, fileInputProps, {
     type: "file",
     id: id,

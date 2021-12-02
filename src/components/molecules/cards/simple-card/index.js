@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.SimpleCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31,6 +29,8 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var _excluded = ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"];
+
 var ContainerStyle = _styledComponents.default.a.withConfig({
   displayName: "simple-card__ContainerStyle",
   componentId: "sc-1u8ubrr-0"
@@ -50,7 +50,7 @@ var SimpleCard = function SimpleCard(_ref) {
       imageContainerBackground = _ref.imageContainerBackground,
       className = _ref.className,
       playerButtonSize = _ref.playerButtonSize,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(ContainerStyle, (0, _extends2.default)({
     as: href ? 'a' : 'div'
   }, others, {

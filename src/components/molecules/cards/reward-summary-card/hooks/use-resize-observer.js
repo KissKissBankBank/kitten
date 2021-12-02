@@ -1,13 +1,7 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.useResizeObserver = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
 
@@ -20,9 +14,8 @@ var useResizeObserver = function useResizeObserver() {
   }
 
   var _useState = (0, _react.useState)('large'),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      size = _useState2[0],
-      setSize = _useState2[1];
+      size = _useState[0],
+      setSize = _useState[1];
 
   var resizeObserver = (0, _react.useRef)(null);
   var onResize = (0, _react.useCallback)(function (entries) {
@@ -42,7 +35,7 @@ var useResizeObserver = function useResizeObserver() {
   }, []);
   var ref = (0, _react.useCallback)(function (node) {
     if (node !== null) {
-      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
+      if (resizeObserver != null && resizeObserver.current) {
         resizeObserver.current.disconnect();
       }
 
@@ -52,7 +45,7 @@ var useResizeObserver = function useResizeObserver() {
   }, [onResize]);
   (0, _react.useEffect)(function () {
     return function () {
-      if (resizeObserver !== null && resizeObserver !== void 0 && resizeObserver.current) {
+      if (resizeObserver != null && resizeObserver.current) {
         resizeObserver.current.disconnect();
       }
     };

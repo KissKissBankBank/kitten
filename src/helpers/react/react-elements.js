@@ -2,10 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getReactElementsWithoutTypeArray = exports.getReactElementsByTypeArray = exports.getReactElementsWithoutType = exports.getReactElementsByType = void 0;
+exports.__esModule = true;
+exports.getReactElementsWithoutTypeArray = exports.getReactElementsWithoutType = exports.getReactElementsByTypeArray = exports.getReactElementsByType = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 

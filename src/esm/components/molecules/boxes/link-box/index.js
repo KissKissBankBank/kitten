@@ -1,5 +1,8 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "href", "isExternal", "variant", "backgroundColor", "textColor", "style"],
+    _excluded2 = ["children", "className"],
+    _excluded3 = ["children", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyledLinkBox } from './styles';
@@ -14,7 +17,7 @@ export var LinkBox = function LinkBox(_ref) {
       backgroundColor = _ref.backgroundColor,
       textColor = _ref.textColor,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["className", "href", "isExternal", "variant", "backgroundColor", "textColor", "style"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var target = isExternal ? {
     target: '_blank',
@@ -24,7 +27,7 @@ export var LinkBox = function LinkBox(_ref) {
     href: href,
     className: className
   }), /*#__PURE__*/React.createElement("span", {
-    className: classNames('k-LinkBox__link', className, "k-LinkBox__link--".concat(variant)),
+    className: classNames('k-LinkBox__link', className, "k-LinkBox__link--" + variant),
     style: _extends({}, style, {
       '--LinkBox-background-color': backgroundColor,
       '--LinkBox-text-color': textColor
@@ -40,7 +43,7 @@ export var LinkBox = function LinkBox(_ref) {
 LinkBox.Icon = function (_ref2) {
   var children = _ref2.children,
       className = _ref2.className,
-      props = _objectWithoutProperties(_ref2, ["children", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement("div", _extends({}, props, {
     className: classNames('k-LinkBox__icon', className)
@@ -50,7 +53,7 @@ LinkBox.Icon = function (_ref2) {
 LinkBox.Text = function (_ref3) {
   var children = _ref3.children,
       className = _ref3.className,
-      props = _objectWithoutProperties(_ref3, ["children", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("div", _extends({}, props, {
     className: classNames('k-LinkBox__textContainer', className)

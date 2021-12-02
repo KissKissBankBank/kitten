@@ -2,20 +2,20 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Text = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"];
 
 var Text = function Text(_ref) {
   var className = _ref.className,
@@ -31,7 +31,7 @@ var Text = function Text(_ref) {
       transform = _ref.transform,
       weight = _ref.weight,
       style = _ref.style,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var Tag = as || tag;
   var textClassName = (0, _classnames.default)({
     // Color.

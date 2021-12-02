@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useEffect, useState } from 'react';
 import domElementHelper from '../dom/element-helper';
 
@@ -9,9 +8,8 @@ var getWidth = function getWidth() {
 
 export var useWindowWidth = function useWindowWidth() {
   var _useState = useState(getWidth()),
-      _useState2 = _slicedToArray(_useState, 2),
-      width = _useState2[0],
-      setWidth = _useState2[1];
+      width = _useState[0],
+      setWidth = _useState[1];
 
   useEffect(function () {
     var timeoutId = null;

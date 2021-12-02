@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.AlertBox = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,6 +27,8 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["className", "children", "icon", "status", "displayIcon", "iconPosition", "size", "fit"];
+
 var AlertBoxWrapper = _styledComponents.default.div.withConfig({
   displayName: "alert-box__AlertBoxWrapper",
   componentId: "sc-5bsgtr-0"
@@ -43,7 +43,7 @@ var AlertBox = function AlertBox(_ref) {
       iconPosition = _ref.iconPosition,
       size = _ref.size,
       fit = _ref.fit,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "icon", "status", "displayIcon", "iconPosition", "size", "fit"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var internalIcon = function () {
     if (icon) return icon;
@@ -68,7 +68,7 @@ var AlertBox = function AlertBox(_ref) {
 
   return /*#__PURE__*/_react.default.createElement(AlertBoxWrapper, (0, _extends2.default)({
     role: role,
-    className: (0, _classnames.default)('k-AlertBox', className, "k-AlertBox--".concat(status), "k-AlertBox--".concat(size), "k-AlertBox--".concat(fit), "k-AlertBox--icon-".concat(iconPosition), {
+    className: (0, _classnames.default)('k-AlertBox', className, "k-AlertBox--" + status, "k-AlertBox--" + size, "k-AlertBox--" + fit, "k-AlertBox--icon-" + iconPosition, {
       'k-AlertBox--hasIcon': displayIcon
     })
   }, others), displayIcon && /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, {

@@ -2,22 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DragAndDropList = exports.BUTTON_SHIFT = void 0;
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _extends3 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -41,11 +31,16 @@ var _button = require("../../../components/molecules/buttons/button");
 
 var _menuIcon = require("../../../components/graphics/icons/menu-icon");
 
-var _templateObject;
+var _excluded = ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yContainerLabelElement", "a11yInstructions", "gap", "style", "showHandle"],
+    _excluded2 = ["id"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var BUTTON_SHIFT = (0, _typography.pxToRem)(15 + 40);
 exports.BUTTON_SHIFT = BUTTON_SHIFT;
-var DragAndDropListStyles = (0, _styledComponents.createGlobalStyle)(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n  .k-DragAndDropList {\n    display: flex;\n    flex-direction: column;\n    gap: var(--dragAndDropList-gap, ", ");\n    list-style: none;\n    padding: 0;\n    margin: 0;\n  }\n\n  .k-DragAndDropList__itemWrapper {\n    list-style: none;\n    display: block;\n    transform: translate3d(var(--translate-x, 0), var(--translate-y, 0), 0);\n    transform-origin: 0 0;\n    position: relative;\n    z-index: 1;\n\n    &:focus-within {\n      z-index: 2;\n    }\n  }\n\n  .k-DragAndDropList__item {\n    display: flex;\n    gap: ", ";\n    align-items: center;\n\n    &.k-DragAndDropList__item--isDragging:not(.k-DragAndDropList__item--dragOverlay) {\n      opacity: 0.4;\n\n      .k-DragAndDropList__item__button {\n        opacity: 0;\n      }\n    }\n\n    &.k-DragAndDropList__item--dragOverlay {\n      cursor: move;\n      z-index: 150;\n\n      .k-DragAndDropList__item__button {\n        cursor: move;\n      }\n    }\n\n    .k-DragAndDropList__item__child {\n      flex: 1 0 calc(100% - var(--dragAndDropList-button-shift, 0));\n      width: calc(100% - var(--dragAndDropList-button-shift, 0));\n      flex-grow: 1;\n    }\n\n    &.k-DragAndDropList__item--hasButton {\n      .k-DragAndDropList__item__button {\n        flex: 0 0 ", ";\n        padding: 0;\n        width: ", ";\n        box-sizing: border-box;\n        border-radius: var(--border-radius-rounded);\n        cursor: grab;\n      }\n\n      &.gu-mirror .k-DragAndDropList__item__button {\n        cursor: grabbing;\n      }\n\n      .k-DragAndDropList__item__child {\n        --dragAndDropList-button-shift: ", ";\n      }\n    }\n  }\n"])), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), BUTTON_SHIFT);
+var DragAndDropListStyles = (0, _styledComponents.createGlobalStyle)([".k-DragAndDropList{display:flex;flex-direction:column;gap:var(--dragAndDropList-gap,", ");list-style:none;padding:0;margin:0;}.k-DragAndDropList__itemWrapper{list-style:none;display:block;transform:translate3d(var(--translate-x,0),var(--translate-y,0),0);transform-origin:0 0;position:relative;z-index:1;&:focus-within{z-index:2;}}.k-DragAndDropList__item{display:flex;gap:", ";align-items:center;&.k-DragAndDropList__item--isDragging:not(.k-DragAndDropList__item--dragOverlay){opacity:0.4;.k-DragAndDropList__item__button{opacity:0;}}&.k-DragAndDropList__item--dragOverlay{cursor:move;z-index:150;.k-DragAndDropList__item__button{cursor:move;}}.k-DragAndDropList__item__child{flex:1 0 calc(100% - var(--dragAndDropList-button-shift,0));width:calc(100% - var(--dragAndDropList-button-shift,0));flex-grow:1;}&.k-DragAndDropList__item--hasButton{.k-DragAndDropList__item__button{flex:0 0 ", ";padding:0;width:", ";box-sizing:border-box;border-radius:var(--border-radius-rounded);cursor:grab;}&.gu-mirror .k-DragAndDropList__item__button{cursor:grabbing;}.k-DragAndDropList__item__child{--dragAndDropList-button-shift:", ";}}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), BUTTON_SHIFT);
 
 var DragAndDropList = function DragAndDropList(_ref) {
   var children = _ref.children,
@@ -58,25 +53,24 @@ var DragAndDropList = function DragAndDropList(_ref) {
       gap = _ref.gap,
       style = _ref.style,
       showHandle = _ref.showHandle,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yContainerLabelElement", "a11yInstructions", "gap", "style", "showHandle"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(_react.default.Children.toArray(children).map(function (child) {
     return child.props.id;
   })),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      items = _useState2[0],
-      setItems = _useState2[1];
+      items = _useState[0],
+      setItems = _useState[1];
 
-  var _useState3 = (0, _react.useState)(_react.default.Children.toArray(children).reduce(function (acc, current) {
-    return (0, _extends3.default)({}, acc, (0, _defineProperty2.default)({}, current.props.id, current));
+  var _useState2 = (0, _react.useState)(_react.default.Children.toArray(children).reduce(function (acc, current) {
+    var _extends2;
+
+    return (0, _extends3.default)({}, acc, (_extends2 = {}, _extends2[current.props.id] = current, _extends2));
   }, {})),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 1),
-      childrenDict = _useState4[0];
+      childrenDict = _useState2[0];
 
-  var _useState5 = (0, _react.useState)(null),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      activeId = _useState6[0],
-      setActiveId = _useState6[1];
+  var _useState3 = (0, _react.useState)(null),
+      activeId = _useState3[0],
+      setActiveId = _useState3[1];
 
   var sensors = (0, _core.useSensors)((0, _core.useSensor)(_core.MouseSensor, {
     activationConstraint: {
@@ -163,18 +157,18 @@ var DragAndDropList = function DragAndDropList(_ref) {
       id: id,
       showHandle: showHandle,
       a11yButtonLabel: a11yButtonLabel
-    }, _react.default.cloneElement(childrenDict[id]));
-  }))), (0, _reactDom.createPortal)( /*#__PURE__*/_react.default.createElement(_core.DragOverlay, null, activeId ? /*#__PURE__*/_react.default.createElement(Item, {
+    }, /*#__PURE__*/_react.default.cloneElement(childrenDict[id]));
+  }))), /*#__PURE__*/(0, _reactDom.createPortal)( /*#__PURE__*/_react.default.createElement(_core.DragOverlay, null, activeId ? /*#__PURE__*/_react.default.createElement(Item, {
     showHandle: showHandle,
     dragOverlay: true
-  }, _react.default.cloneElement(childrenDict[activeId])) : null), document.body)), /*#__PURE__*/_react.default.createElement(DragAndDropListStyles, null));
+  }, /*#__PURE__*/_react.default.cloneElement(childrenDict[activeId])) : null), document.body)), /*#__PURE__*/_react.default.createElement(DragAndDropListStyles, null));
 };
 
 exports.DragAndDropList = DragAndDropList;
 
 var SortableItem = function SortableItem(_ref4) {
   var id = _ref4.id,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["id"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded2);
 
   var _useSortable = (0, _sortable.useSortable)({
     id: id
@@ -193,8 +187,8 @@ var SortableItem = function SortableItem(_ref4) {
     className: (0, _classnames.default)('k-DragAndDropList__itemWrapper'),
     style: {
       transition: transition,
-      '--translate-x': transform ? "".concat(Math.round(transform.x), "px") : undefined,
-      '--translate-y': transform ? "".concat(Math.round(transform.y), "px") : undefined
+      '--translate-x': transform ? Math.round(transform.x) + "px" : undefined,
+      '--translate-y': transform ? Math.round(transform.y) + "px" : undefined
     }
   }, /*#__PURE__*/_react.default.createElement(Item, (0, _extends3.default)({
     listeners: listeners,
@@ -241,13 +235,13 @@ DragAndDropList.defaultProps = {
   a11yButtonLabel: 'Reorder',
   a11yAnnouncement: {
     onDragStart: function onDragStart(name, position, length) {
-      return "".concat(name, " grabbed from position ").concat(position, " of ").concat(length);
+      return name + " grabbed from position " + position + " of " + length;
     },
     onDragOver: function onDragOver(name, position, length) {
-      return "".concat(name, " was moved to position ").concat(position, " of ").concat(length);
+      return name + " was moved to position " + position + " of " + length;
     },
     onDragEnd: function onDragEnd(name, position, length) {
-      return "".concat(name, " was dropped at position ").concat(position, " of ").concat(length);
+      return name + " was dropped at position " + position + " of " + length;
     },
     cancel: 'Reranking cancelled.'
   },

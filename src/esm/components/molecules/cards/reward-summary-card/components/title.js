@@ -1,11 +1,12 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className"];
 import React from 'react';
 import { Text } from '../../../../../components/atoms/typography/text';
 import classNames from 'classnames';
 export var Title = function Title(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Text, _extends({
     color: "font1",

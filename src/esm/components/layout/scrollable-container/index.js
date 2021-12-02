@@ -1,5 +1,5 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["shadowColor", "children"];
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StyledContainer, StyledScrollableContainer } from './styled';
@@ -9,17 +9,15 @@ export var ScrollableContainer = function ScrollableContainer(_ref) {
   var _ref$shadowColor = _ref.shadowColor,
       shadowColor = _ref$shadowColor === void 0 ? COLORS.background1 : _ref$shadowColor,
       children = _ref.children,
-      other = _objectWithoutProperties(_ref, ["shadowColor", "children"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(true),
-      _useState2 = _slicedToArray(_useState, 2),
-      leftGradientState = _useState2[0],
-      setLeftGradientState = _useState2[1];
+      leftGradientState = _useState[0],
+      setLeftGradientState = _useState[1];
 
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      rightGradientState = _useState4[0],
-      setRightGradientState = _useState4[1];
+  var _useState2 = useState(false),
+      rightGradientState = _useState2[0],
+      setRightGradientState = _useState2[1];
 
   var refScrollableContainer = useRef(null);
   useEffect(function () {

@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "id", "index", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Header } from './header';
@@ -11,7 +12,7 @@ export var Item = function Item(_ref) {
       id = _ref.id,
       index = _ref.index,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "id", "index", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var header = getReactElementsByType({
     children: children,
@@ -23,10 +24,10 @@ export var Item = function Item(_ref) {
   });
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-Accordeon__item', className)
-  }, props), header[0] && React.cloneElement(header[0], {
+  }, props), header[0] && /*#__PURE__*/React.cloneElement(header[0], {
     id: id,
     index: index
-  }), content[0] && React.cloneElement(content[0], {
+  }), content[0] && /*#__PURE__*/React.cloneElement(content[0], {
     id: id,
     index: index
   }));

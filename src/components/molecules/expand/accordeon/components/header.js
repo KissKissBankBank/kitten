@@ -1,17 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Header = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -21,12 +17,18 @@ var _arrowIcon = require("../../../../../components/graphics/icons/arrow-icon");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["id", "children", "index", "className"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var Header = function Header(_ref) {
   var id = _ref.id,
       children = _ref.children,
       index = _ref.index,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["id", "children", "index", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_context.Context),
       updateSelectedItem = _useContext.updateSelectedItem,
@@ -42,8 +44,8 @@ var Header = function Header(_ref) {
     role: "button",
     "aria-expanded": selectedItem === index,
     "aria-disabled": closeOnClick ? null : selectedItem === index,
-    id: "".concat(componentId, "-").concat(id, "_header"),
-    "aria-controls": "".concat(componentId, "-").concat(id, "_content")
+    id: componentId + "-" + id + "_header",
+    "aria-controls": componentId + "-" + id + "_content"
   }, props), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-Accordeon__header__content"
   }, children), /*#__PURE__*/_react.default.createElement("span", {

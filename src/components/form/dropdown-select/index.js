@@ -1,17 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DropdownSelect = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -37,9 +33,15 @@ var _styles = require("./styles");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+var _excluded = ["combobox"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var DropdownSelect = function DropdownSelect(_ref) {
   var combobox = _ref.combobox,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["combobox"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   if (combobox) return /*#__PURE__*/_react.default.createElement(_combobox.DropdownCombobox, props);
   var labelText = props.labelText,
       options = props.options,
@@ -123,7 +125,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
   };
 
   var _useSelect = (0, _downshift.useSelect)((0, _extends2.default)({
-    id: "".concat(id, "_element"),
+    id: id + "_element",
     toggleButtonId: id,
     items: flattenedOptions,
     getA11ySelectionMessage: getA11ySelectionMessage,
@@ -147,7 +149,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--".concat(variant), "k-Form-Dropdown--".concat(modifier), "k-Form-Dropdown--".concat(direction), "k-Form-Dropdown--".concat(size), "k-Form-Dropdown--arrowPosition-".concat(arrowPosition), className, {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--" + variant, "k-Form-Dropdown--" + modifier, "k-Form-Dropdown--" + direction, "k-Form-Dropdown--" + size, "k-Form-Dropdown--arrowPosition-" + arrowPosition, className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -157,7 +159,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
       '--menu-z-index': menuZIndex
     }
   }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
-    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className, {
+    className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', labelProps == null ? void 0 : labelProps.className, {
       'k-Form-Dropdown__label--isHidden': hideLabel
     })
   }, getLabelProps()), labelText), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
@@ -188,10 +190,10 @@ var DropdownSelect = function DropdownSelect(_ref) {
     className: "k-Form-Dropdown__list"
   }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
-      className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_".concat(item.level || 1), {
+      className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
       }),
-      key: "".concat(item.value).concat(index),
+      key: "" + item.value + index,
       disabled: item.disabled
     }, getItemProps({
       item: item,
@@ -214,7 +216,7 @@ DropdownSelect.defaultProps = {
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
-    return "".concat(item, " is now selected.");
+    return item + " is now selected.";
   },
   onChange: function onChange() {},
   onBlur: function onBlur() {},

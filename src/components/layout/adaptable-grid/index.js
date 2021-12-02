@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.AdaptableGridCol = exports.AdaptableGrid = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -27,7 +21,13 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var GridProperties = (0, _react.createContext)({});
+var _excluded = ["children", "col", "offset", "as", "className"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var GridProperties = /*#__PURE__*/(0, _react.createContext)({});
 
 var AdaptableGrid = function AdaptableGrid(_ref) {
   var children = _ref.children,
@@ -59,12 +59,11 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
       offset = _ref2.offset,
       as = _ref2.as,
       className = _ref2.className,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "col", "offset", "as", "className"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   var _useState = (0, _react.useState)(null),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      styles = _useState2[0],
-      setStyles = _useState2[1];
+      styles = _useState[0],
+      setStyles = _useState[1];
 
   var _useContext = (0, _react.useContext)(GridProperties),
       colAlign = _useContext.colAlign,
@@ -76,8 +75,8 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
     var props = (0, _extends2.default)({}, other);
     var stylesByMediaQuery = Object.keys(_screenConfig.ScreenConfig).map(function (size) {
       var mediaQuery = size.toLowerCase();
-      var col = props["col-".concat(mediaQuery)];
-      var offset = props["offset-".concat(mediaQuery)];
+      var col = props["col-" + mediaQuery];
+      var offset = props["offset-" + mediaQuery];
 
       if (!col && !offset) {
         return false;

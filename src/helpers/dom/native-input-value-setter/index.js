@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.nativeInputValueSetter = void 0;
 
 var _elementHelper = _interopRequireDefault(require("../element-helper"));

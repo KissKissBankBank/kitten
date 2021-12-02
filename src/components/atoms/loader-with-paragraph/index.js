@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.LoaderWithParagraph = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,6 +23,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"];
+
 var StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
   componentId: "sc-1a44voe-0"
@@ -36,9 +36,9 @@ var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
       loaderProps = _ref.loaderProps,
       paragraphProps = _ref.paragraphProps,
       children = _ref.children,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledLoaderWithParagraph, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--".concat(loaderPosition))
+    className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--" + loaderPosition)
   }, others), /*#__PURE__*/_react.default.createElement(_loader.Loader, (0, _extends2.default)({
     "aria-hidden": true
   }, loaderProps, {

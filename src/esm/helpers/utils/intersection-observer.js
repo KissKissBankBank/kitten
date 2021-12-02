@@ -1,10 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
+import _extends from "@babel/runtime/helpers/extends";
 import { domElementHelper } from '../dom/element-helper';
 export var IntersectionObserverClass = function IntersectionObserverClass(options) {
   var _this = this;
-
-  _classCallCheck(this, IntersectionObserverClass);
 
   this.observedComponents = new Map();
 
@@ -19,8 +16,10 @@ export var IntersectionObserverClass = function IntersectionObserverClass(option
     });
   };
 
-  this.observe = function (elt) {
-    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+  this.observe = function (elt, callback) {
+    if (callback === void 0) {
+      callback = function callback() {};
+    }
 
     if (_this.observer === null) {
       callback();

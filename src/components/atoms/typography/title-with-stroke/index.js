@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TitleWithStroke = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,9 +25,11 @@ var _titleModifierStyles = require("../common/title-modifier-styles");
 
 var _strokeModifierStyles = require("../../../atoms/horizontal-stroke/common/stroke-modifier-styles");
 
+var _excluded = ["modifier", "tag", "align", "italic", "className", "children", "cssColor"];
+
 var StyledTitleWithStroke = _styledComponents.default.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
-  componentId: "ie3pvx-0"
+  componentId: "sc-ie3pvx-0"
 })(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles.bold, (0, _titleModifierStyles.titleModifierStyles)('.k-TitleWithStroke__title'), (0, _strokeModifierStyles.strokeModifierStyles)('.k-TitleWithStroke__stroke'));
 
 var TitleWithStroke = function TitleWithStroke(_ref) {
@@ -40,19 +40,19 @@ var TitleWithStroke = function TitleWithStroke(_ref) {
       className = _ref.className,
       children = _ref.children,
       cssColor = _ref.cssColor,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["modifier", "tag", "align", "italic", "className", "children", "cssColor"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var TitleComponent = tag;
   return /*#__PURE__*/_react.default.createElement(StyledTitleWithStroke, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-TitleWithStroke', className, "k-TitleWithStroke--".concat(modifier), "k-TitleWithStroke--align-".concat(align), {
+    className: (0, _classnames.default)('k-TitleWithStroke', className, "k-TitleWithStroke--" + modifier, "k-TitleWithStroke--align-" + align, {
       'k-TitleWithStroke--italic': italic
     }),
     style: {
       '--TitleWithStroke-css-color': cssColor
     }
   }, other), /*#__PURE__*/_react.default.createElement(TitleComponent, {
-    className: (0, _classnames.default)('k-TitleWithStroke__title', "k-TitleWithStroke__title--".concat(modifier))
+    className: (0, _classnames.default)('k-TitleWithStroke__title', "k-TitleWithStroke__title--" + modifier)
   }, children), /*#__PURE__*/_react.default.createElement("span", {
-    className: (0, _classnames.default)('k-TitleWithStroke__stroke', "k-TitleWithStroke__stroke--".concat(modifier))
+    className: (0, _classnames.default)('k-TitleWithStroke__stroke', "k-TitleWithStroke__stroke--" + modifier)
   }));
 };
 

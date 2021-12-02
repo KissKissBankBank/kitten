@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition", "value"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -14,7 +14,7 @@ import { createEvent } from '../../../helpers/dom/create-event';
 import { ScreenConfig } from '../../../constants/screen-config';
 var StyledRangeSlider = styled.div.withConfig({
   displayName: "range-slider__StyledRangeSlider",
-  componentId: "raabhu-0"
+  componentId: "sc-raabhu-0"
 })(["--range-thumb-position:calc( ", " + var(--range-input-ratio) * (100% - (2 * ", ")) );position:relative;&::before,&::after{content:'';position:absolute;height:", ";left:0;top:", ";width:100%;background:", ";z-index:1;pointer-events:none;}&::after{width:var(--range-thumb-position);background:", ";}input[type='range']{position:relative;appearance:none;width:100%;height:", ";margin:0;padding:0;z-index:2;background:transparent;display:block;&::-moz-range-track{width:100%;height:", ";cursor:pointer;background:transparent;}&::-moz-range-thumb{height:", ";width:", ";box-sizing:border-box;background-color:", ";background-image:url(\"data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M0 0 h 2 V 10 h -2 z M4 0 h 2 V 10 h -2 z M8 0 h 2 V 10 h -2 z' /%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:50% 50%;cursor:pointer;-moz-appearance:none;appearance:none;border:", " solid ", ";border-top:0;border-bottom:0;border-radius:var(--border-radius-rounded);}&::-webkit-slider-runnable-track{width:100%;height:", ";cursor:pointer;background:transparent;}&::-webkit-slider-thumb{height:", ";width:", ";box-sizing:border-box;background-color:", ";background-image:url(\"data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M0 0 h 2 V 10 h -2 z M4 0 h 2 V 10 h -2 z M8 0 h 2 V 10 h -2 z' /%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:50% 50%;cursor:pointer;-webkit-appearance:none;appearance:none;border:", " solid ", ";border-top:0;border-bottom:0;border-radius:var(--border-radius-rounded);}&:active::-moz-range-thumb{background-color:", ";}&:active::-webkit-slider-thumb{background-color:", ";}&:disabled::-moz-range-track{cursor:not-allowed;}&:disabled::-webkit-slider-runnable-track{cursor:not-allowed;}&:disabled::-moz-range-thumb{background-color:", ";cursor:not-allowed;}&:disabled::-webkit-slider-thumb{background-color:", ";cursor:not-allowed;}}.k-RangeSlider__rangeThumbText{position:absolute;", " font-size:", ";line-height:", ";color:", ";left:calc(var(--range-thumb-position) - ", ");width:", ";text-align:center;}&.k-RangeSlider--rangeThumbText-top{padding-top:", ";&::before,&::after{top:unset;bottom:", ";}.k-RangeSlider__rangeThumbText{top:0;}}&.k-RangeSlider--rangeThumbText-bottom{padding-bottom:", ";.k-RangeSlider__rangeThumbText{bottom:0;}}&.k-RangeSlider--disabled{&::after{background:", ";}.k-RangeSlider__rangeThumbText{color:", ";}}@media (min-width:", "){--range-thumb-position:calc( ", " + var(--range-input-ratio) * (100% - (2 * ", ")) );&::before,&::after{top:", ";}input[type='range']{height:", ";&::-moz-range-track{height:", ";}&::-moz-range-thumb{height:", ";width:", ";}&::-webkit-slider-runnable-track{height:", ";}&::-webkit-slider-thumb{height:", ";width:", ";}}&.k-RangeSlider--rangeThumbText-top{padding-top:", ";&::before,&::after{top:unset;bottom:", ";}.k-RangeSlider__rangeThumbText{top:0;}}&.k-RangeSlider--rangeThumbText-bottom{padding-bottom:", ";.k-RangeSlider__rangeThumbText{bottom:0;}}}"], pxToRem(20), pxToRem(20), pxToRem(4), pxToRem(13), COLORS.line1, COLORS.primary1, pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(40 + 2 * 2), COLORS.primary1, pxToRem(2), COLORS.background1, pxToRem(30), pxToRem(30), pxToRem(40 + 2 * 2), COLORS.primary1, pxToRem(2), COLORS.background1, COLORS.primary2, COLORS.primary2, COLORS.line2, COLORS.line2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(18), COLORS.font1, pxToRem(50), pxToRem(100), pxToRem(20 + 13), pxToRem(13), pxToRem(20 + 13), COLORS.line2, COLORS.font2, pxToRem(ScreenConfig.S.min), pxToRem(25), pxToRem(25), pxToRem(18), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(50 + 2 * 2), pxToRem(40), pxToRem(40), pxToRem(50 + 2 * 2), pxToRem(10 + 18), pxToRem(18), pxToRem(10 + 18));
 export var RangeSlider = function RangeSlider(_ref) {
   var disabled = _ref.disabled,
@@ -24,12 +24,11 @@ export var RangeSlider = function RangeSlider(_ref) {
       rangeThumbText = _ref.rangeThumbText,
       rangeThumbPosition = _ref.rangeThumbPosition,
       value = _ref.value,
-      props = _objectWithoutProperties(_ref, ["disabled", "onChange", "initialValue", "wrapperProps", "rangeThumbText", "rangeThumbPosition", "value"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      inputRatio = _useState2[0],
-      setInputRatio = _useState2[1];
+      inputRatio = _useState[0],
+      setInputRatio = _useState[1];
 
   var inputEl = useRef(null);
   var changeEvent = createEvent('change');
@@ -44,8 +43,8 @@ export var RangeSlider = function RangeSlider(_ref) {
   }, []);
   useEffect(function () {
     if (isControlled) return;
-    (inputEl === null || inputEl === void 0 ? void 0 : inputEl.current) && nativeInputValueSetter && nativeInputValueSetter.call(inputEl.current, initialValue);
-    (inputEl === null || inputEl === void 0 ? void 0 : inputEl.current) && inputEl.current.dispatchEvent(changeEvent);
+    (inputEl == null ? void 0 : inputEl.current) && nativeInputValueSetter && nativeInputValueSetter.call(inputEl.current, initialValue);
+    (inputEl == null ? void 0 : inputEl.current) && inputEl.current.dispatchEvent(changeEvent);
   }, [initialValue, inputEl]);
 
   var getRatioFrom = function getRatioFrom(value) {

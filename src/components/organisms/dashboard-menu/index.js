@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DashboardMenu = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,17 +33,30 @@ var _flexWrapper = require("../../../components/layout/flex-wrapper");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["className"],
+    _excluded2 = ["className", "subList", "hideable"],
+    _excluded3 = ["className", "icon", "endIcon", "isActive", "children", "size"],
+    _excluded4 = ["className", "children", "icon", "title", "size"],
+    _excluded5 = ["className", "children"],
+    _excluded6 = ["data", "className"],
+    _excluded7 = ["children", "icon", "isActive"],
+    _excluded8 = ["icon", "children", "isActive"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var zoomInAndOpacity = (0, _styledComponents.keyframes)(["0%{transform:scaleY(.80);opacity:0;}to{transform:scaleY(1);opacity:1;}"]);
 var opacity = (0, _styledComponents.keyframes)(["0%{opacity:0;}to{opacity:1;}"]);
 
 var StyledDashboardMenu = _styledComponents.default.nav.withConfig({
   displayName: "dashboard-menu__StyledDashboardMenu",
-  componentId: "xypcm1-0"
+  componentId: "sc-xypcm1-0"
 })(["color:", ";.k-DashboardMenu__expandable__title,.k-DashboardMenu__item{&,&:visited,&:link{color:", ";font-size:", ";text-decoration:none;transition:color 0.2s ease,background-color 0.2s ease;}&:focus,&:hover{background-color:", " !important;}&:focus{z-index:1;position:relative;}&:focus-visible{outline:auto;}}summary.k-DashboardMenu__selectorSummary,a.k-DashboardMenu__selectorButton{&,&:visited,&:link{color:", ";font-size:", ";text-decoration:none;transition:color 0.2s ease,background-color 0.2s ease;}&[aria-current='page'],&:hover{background-color:", " !important;}&:focus{z-index:1;position:relative;}&:focus-visible{outline:auto;}}.k-DashboardMenu__list,.k-DashboardMenu__expandable__list{margin:0;padding:0;list-style:none;transition:opacity 0.2s ease;}.k-DashboardMenu__list--subList{margin-left:", ";@media ", "{margin-left:", ";margin-right:", ";}}.k-DashboardMenu__expandable summary{list-style:none;&:focus-visible{outline:auto;}&::-webkit-details-marker{display:none;}}.k-DashboardMenu__selectorButton__text,.k-DashboardMenu__item .k-DashboardMenu__item__text,.k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text{flex:1 0 0;line-height:1.4;&,*{white-space:nowrap;overflow-x:hidden;text-overflow:ellipsis;}}.k-DashboardMenu__expandable{border-radius:var(--border-radius-s);background-color:", ";.k-DashboardMenu__expandable__list{padding:0 ", " ", " ", ";display:flex;flex-direction:column;gap:", ";}&.k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__list{padding:0 ", " ", " ", ";}}.k-DashboardMenu__list{display:flex;flex-direction:column;gap:", ";}.k-DashboardMenu__list > li > .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,.k-DashboardMenu__list > li > .k-DashboardMenu__item,.k-DashboardMenu__selectorButton{display:flex;height:", ";align-items:center;gap:", ";padding:0 ", ";border-radius:var(--border-radius-xs);}.k-DashboardMenu__list > li > .k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__title,.k-DashboardMenu__list > li > .k-DashboardMenu__item--small{height:", ";}.k-DashboardMenu__selectorButton{height:", ";flex:0 0 ", ";}.k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,.k-DashboardMenu__list > li > .k-DashboardMenu__item{", " background-color:", ";cursor:pointer;}.k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,.k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,.k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page']{color:", ";background-color:", ";}.k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item{", " line-height:", ";max-width:100%;display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;&:hover,&:focus,&[aria-current='page']{", " color:", ";}}.k-DashboardMenu__selectorSummary{.k-DashboardMenu__selectorButton__arrow{color:", ";transition:color 0.2s ease;}&:hover,&:focus{.k-DashboardMenu__selectorButton__arrow{color:", ";}}}.k-DashboardMenu__iconWrapper{display:inline-flex;align-items:center;justify-content:center;flex:0 0 ", ";width:", ";height:", ";svg{max-width:", ";max-height:", ";&[fill],d[fill]{transition:fill 0.2s ease-in-out;}}}.k-DashboardMenu__expandable__title__arrow{flex:0 0 auto;padding:", ";svg{display:block;fill:currentColor;transition:transform 0.2s ease-in-out;}}.k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title__arrow svg{transform:rotate(360deg) !important;}.k-DashboardMenu__separator{margin-top:", ";margin-bottom:", ";hr{border:0;border-top:", " solid rgba(151,151,151,0.2);margin-bottom:", ";}}.k-DashboardMenu__selectorWrapper{position:relative;margin:", " 0 ", ";&[open] .k-DashboardMenu__selectorList{animation:0.16s ease-out ", ";}&::before{display:block;content:'';position:absolute;top:", ";left:", ";right:", ";bottom:", ";border-top-left-radius:var(--border-radius-m);border-top-right-radius:var(--border-radius-m);border:", " solid ", ";border-bottom:0;opacity:0;}&[open]::before{animation:0.16s ease-out ", ";opacity:1;}&[open] + .k-DashboardMenu__list--hideable{opacity:0.5;pointer-events:none;}}.k-DashboardMenu__selectorSummary{position:relative;z-index:1;list-style:none;touch-callout:none;user-select:none;cursor:pointer;padding:0 ", ";height:", ";border-radius:var(--border-radius-xs);::-webkit-details-marker{display:none;}.k-DashboardMenu__selectorSummary__flex{height:100%;align-items:center;}}.k-DashboardMenu__selectorList{position:absolute;z-index:5;display:flex;align-items:stretch;flex-direction:column;gap:", ";top:", ";left:", ";right:", ";max-height:", ";padding:0 ", " ", ";overflow-y:scroll;box-sizing:border-box;background:", ";transform-origin:top left;pointer-events:none;border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);border:", " solid ", ";border-top:0;.k-DashboardMenu__selectorButton{pointer-events:auto;}}"], _colorsConfig.default.font2, _colorsConfig.default.font2, (0, _typography.stepToRem)(-1), _colorsConfig.default.line3, _colorsConfig.default.background1, (0, _typography.stepToRem)(-1), _colorsConfig.default.line3, (0, _typography.pxToRem)(25), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(35), (0, _typography.pxToRem)(40), _colorsConfig.default.line3, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.font1, _colorsConfig.default.background1, _colorsConfig.default.line3, _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(18), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.background1, _colorsConfig.default.font2, _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5), zoomInAndOpacity, (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(2), _colorsConfig.default.grey1, opacity, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(70 + 2), (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(-5), (0, _typography.pxToRem)(4 * 70 + 3 * 2 + 2 + 3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), _colorsConfig.default.font1, (0, _typography.pxToRem)(2), _colorsConfig.default.grey1);
 
 var DashboardMenu = function DashboardMenu(_ref) {
   var className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledDashboardMenu, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardMenu', className)
   }, props));
@@ -61,7 +68,7 @@ var List = function List(_ref2) {
   var className = _ref2.className,
       subList = _ref2.subList,
       hideable = _ref2.hideable,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "subList", "hideable"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardMenu__list', className, {
       'k-DashboardMenu__list--subList': !!subList,
@@ -78,11 +85,11 @@ var Item = function Item(_ref3) {
       children = _ref3.children,
       _ref3$size = _ref3.size,
       size = _ref3$size === void 0 ? 'default' : _ref3$size,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["className", "icon", "endIcon", "isActive", "children", "size"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "k-DashboardMenu__itemWrapper"
   }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-DashboardMenu__item', className, "k-DashboardMenu__item--".concat(size)),
+    className: (0, _classnames.default)('k-DashboardMenu__item', className, "k-DashboardMenu__item--" + size),
     "aria-current": isActive ? 'page' : null
   }, props), !!icon && /*#__PURE__*/_react.default.createElement("span", {
     className: "k-DashboardMenu__iconWrapper"
@@ -100,26 +107,25 @@ var Expandable = function Expandable(_ref4) {
       title = _ref4.title,
       _ref4$size = _ref4.size,
       size = _ref4$size === void 0 ? 'default' : _ref4$size,
-      props = (0, _objectWithoutProperties2.default)(_ref4, ["className", "children", "icon", "title", "size"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded4);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      hasActiveInside = _useState2[0],
-      setActiveInside = _useState2[1];
+      hasActiveInside = _useState[0],
+      setActiveInside = _useState[1];
 
   (0, _react.useEffect)(function () {
     setActiveInside(false);
     var hasActiveChild = (0, _find2.default)(function (child) {
       var _child$props;
 
-      return child === null || child === void 0 ? void 0 : (_child$props = child.props) === null || _child$props === void 0 ? void 0 : _child$props.isActive;
+      return child == null ? void 0 : (_child$props = child.props) == null ? void 0 : _child$props.isActive;
     })(children);
     setActiveInside(hasActiveChild);
   });
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "k-DashboardMenu__expandableWrapper"
   }, /*#__PURE__*/_react.default.createElement("details", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-DashboardMenu__expandable', className, "k-DashboardMenu__expandable--".concat(size), {
+    className: (0, _classnames.default)('k-DashboardMenu__expandable', className, "k-DashboardMenu__expandable--" + size, {
       'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside
     }),
     open: hasActiveInside ? hasActiveInside : null
@@ -141,7 +147,7 @@ var Expandable = function Expandable(_ref4) {
 var Separator = function Separator(_ref5) {
   var className = _ref5.className,
       children = _ref5.children,
-      props = (0, _objectWithoutProperties2.default)(_ref5, ["className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref5, _excluded5);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardMenu__separator', className)
   }, props), /*#__PURE__*/_react.default.createElement("hr", null), children);
@@ -150,7 +156,7 @@ var Separator = function Separator(_ref5) {
 var Selector = function Selector(_ref6) {
   var data = _ref6.data,
       className = _ref6.className,
-      props = (0, _objectWithoutProperties2.default)(_ref6, ["data", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
   var detailsElement = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
     if (!!detailsElement.current) {
@@ -176,13 +182,13 @@ var Selector = function Selector(_ref6) {
   };
 
   var handleEsc = function handleEsc(event) {
-    if (event.key === 'Escape' && detailsElement !== null && detailsElement !== void 0 && detailsElement.current) {
+    if (event.key === 'Escape' && detailsElement != null && detailsElement.current) {
       detailsElement.current.open = false;
     }
   };
 
   var handleClickOutside = function handleClickOutside(event) {
-    if (detailsElement !== null && detailsElement !== void 0 && detailsElement.current && !detailsElement.current.contains(event.target)) {
+    if (detailsElement != null && detailsElement.current && !detailsElement.current.contains(event.target)) {
       detailsElement.current.open = false;
     }
   };
@@ -192,7 +198,7 @@ var Selector = function Selector(_ref6) {
         children = _data$.children,
         icon = _data$.icon,
         isActive = _data$.isActive,
-        dataProps = (0, _objectWithoutProperties2.default)(_data$, ["children", "icon", "isActive"]);
+        dataProps = (0, _objectWithoutPropertiesLoose2.default)(_data$, _excluded7);
     return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, dataProps, {
       className: (0, _classnames.default)('k-DashboardMenu__selectorButton', 'k-u-margin-top-single', 'k-u-margin-bottom-noneHalf', dataProps.className, className)
     }), !!icon && /*#__PURE__*/_react.default.createElement("span", {
@@ -232,7 +238,7 @@ var Selector = function Selector(_ref6) {
     var icon = _ref7.icon,
         children = _ref7.children,
         isActive = _ref7.isActive,
-        itemProps = (0, _objectWithoutProperties2.default)(_ref7, ["icon", "children", "isActive"]);
+        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded8);
     if (isActive) return;
     return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
       key: children + index

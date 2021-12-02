@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className"];
 import React, { useState, cloneElement, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Item } from './components/item';
@@ -29,7 +29,7 @@ export var Accordeon = function Accordeon(_ref) {
       id = _ref.id,
       onChange = _ref.onChange,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var items = getReactElementsByType({
     children: children,
@@ -37,14 +37,12 @@ export var Accordeon = function Accordeon(_ref) {
   });
 
   var _useState = useState(selectedItem),
-      _useState2 = _slicedToArray(_useState, 2),
-      internalSelectedItem = _useState2[0],
-      setSelectedItem = _useState2[1];
+      internalSelectedItem = _useState[0],
+      setSelectedItem = _useState[1];
 
-  var _useState3 = useState(0),
-      _useState4 = _slicedToArray(_useState3, 2),
-      accordeonWidth = _useState4[0],
-      setAccordeonWidth = _useState4[1];
+  var _useState2 = useState(0),
+      accordeonWidth = _useState2[0],
+      setAccordeonWidth = _useState2[1];
 
   var debouncedAccordeonWidth = useDebounce(accordeonWidth, 200);
   var accordeonElement = useRef(null);
@@ -58,7 +56,7 @@ export var Accordeon = function Accordeon(_ref) {
     });
   }) : fakeResizeObserver;
   useEffect(function () {
-    accordeonSizeObserver.observe((accordeonElement === null || accordeonElement === void 0 ? void 0 : accordeonElement.current) || null);
+    accordeonSizeObserver.observe((accordeonElement == null ? void 0 : accordeonElement.current) || null);
     return function () {
       return accordeonSizeObserver.disconnect();
     };
@@ -69,7 +67,7 @@ export var Accordeon = function Accordeon(_ref) {
 
     var newItem = closeOnClick && newSelectedItem === internalSelectedItem ? null : newSelectedItem;
     setSelectedItem(newItem);
-    onChange(((_items$newItem = items[newItem]) === null || _items$newItem === void 0 ? void 0 : (_items$newItem$props = _items$newItem.props) === null || _items$newItem$props === void 0 ? void 0 : _items$newItem$props.id) || "".concat(id, "-").concat(newItem));
+    onChange(((_items$newItem = items[newItem]) == null ? void 0 : (_items$newItem$props = _items$newItem.props) == null ? void 0 : _items$newItem$props.id) || id + "-" + newItem);
   };
 
   var context = {
@@ -80,15 +78,15 @@ export var Accordeon = function Accordeon(_ref) {
     accordeonWidth: debouncedAccordeonWidth
   };
   return /*#__PURE__*/React.createElement(StyledAccordeon, _extends({
-    className: classNames('k-Accordeon', className, "k-Accordeon--".concat(variant), {
+    className: classNames('k-Accordeon', className, "k-Accordeon--" + variant, {
       'k-Accordeon--isAnimated': isAnimated
     }),
     ref: accordeonElement
   }, props), /*#__PURE__*/React.createElement(Context.Provider, {
     value: context
   }, items.map(function (item, index) {
-    var elementId = item.props.id || "".concat(id, "-").concat(index);
-    return cloneElement(item, {
+    var elementId = item.props.id || id + "-" + index;
+    return /*#__PURE__*/cloneElement(item, {
       key: elementId,
       id: elementId,
       index: index

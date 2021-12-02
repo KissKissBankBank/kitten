@@ -2,20 +2,20 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ResponsiveIframeContainer = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _excluded = ["ratio", "style", "className"];
 
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "responsive-iframe-container__StyledWrapper",
@@ -26,11 +26,11 @@ var ResponsiveIframeContainer = function ResponsiveIframeContainer(_ref) {
   var ratio = _ref.ratio,
       style = _ref.style,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["ratio", "style", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledWrapper, (0, _extends2.default)({
     className: (0, _classnames.default)('k-ResponsiveIframeContainer', className),
     style: (0, _extends2.default)({}, style, {
-      '--ResponsiveImageContainer-ratio': "".concat(ratio, "%")
+      '--ResponsiveImageContainer-ratio': ratio + "%"
     })
   }, props));
 };

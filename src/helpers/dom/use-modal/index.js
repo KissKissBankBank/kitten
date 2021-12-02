@@ -1,13 +1,7 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.useModal = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
 
@@ -21,9 +15,8 @@ var useModal = function useModal(_ref) {
       modalOpenText = _ref.modalOpenText;
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      show = _useState2[0],
-      setShow = _useState2[1];
+      show = _useState[0],
+      setShow = _useState[1];
 
   var modalRef = (0, _useFocusTrap.useFocusTrap)({
     shouldTrapFocus: show
@@ -38,14 +31,14 @@ var useModal = function useModal(_ref) {
 
   (0, _react.useEffect)(function () {
     if (show || previousShowValue) {
-      document.getElementById("".concat(id, "__button")).focus();
+      document.getElementById(id + "__button").focus();
     } // Prevent scrolling when Modal is open
     // https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/
 
 
     if (show) {
       document.addEventListener('keydown', keyDownHandler);
-      document.body.style.top = "-".concat(window.scrollY, "px");
+      document.body.style.top = "-" + window.scrollY + "px";
       document.body.style.position = 'fixed';
     } else {
       document.removeEventListener('keydown', keyDownHandler);
@@ -58,16 +51,16 @@ var useModal = function useModal(_ref) {
   return {
     show: show,
     buttonProps: {
-      id: "".concat(id, "__button"),
+      id: id + "__button",
       'aria-label': show ? modalCloseText : modalOpenText,
-      'aria-controls': "".concat(id, "__modal"),
+      'aria-controls': id + "__modal",
       'aria-expanded': show ? 'true' : null,
       onClick: function onClick() {
         return setShow(!show);
       }
     },
     modalProps: {
-      id: "".concat(id, "__modal"),
+      id: id + "__modal",
       hidden: show ? null : 'hidden'
     },
     wrapperProps: {

@@ -1,17 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Paragraph = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,11 +21,17 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _modifierStyles = require("./helpers/modifier-styles");
 
+var _excluded = ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var modifierList = ['primary', 'secondary', 'tertiary', 'quaternary'];
 
 var StyledParagraph = _styledComponents.default.p.withConfig({
   displayName: "paragraph__StyledParagraph",
-  componentId: "iosi48-0"
+  componentId: "sc-iosi48-0"
 })(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], _typographyConfig.default.fontStyles.light, function () {
   return modifierList.map(function (modifier) {
     return (0, _styledComponents.css)(["&.k-Paragraph--", "{", "}"], modifier, function () {
@@ -45,11 +47,11 @@ var Paragraph = function Paragraph(_ref) {
       normalLineHeight = _ref.normalLineHeight,
       italic = _ref.italic,
       className = _ref.className,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledParagraph, (0, _extends2.default)({
     as: tag,
     modifier: modifier,
-    className: (0, _classnames.default)('k-Paragraph', className, "k-Paragraph--".concat(modifier), {
+    className: (0, _classnames.default)('k-Paragraph', className, "k-Paragraph--" + modifier, {
       'k-Paragraph--noMargin': noMargin,
       'k-Paragraph--normalLineHeight': normalLineHeight,
       'k-Paragraph--italic': italic

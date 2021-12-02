@@ -1,23 +1,23 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.GifVideo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _excluded = ["poster", "children"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledVideo = _styledComponents.default.video.withConfig({
   displayName: "gif-video__StyledVideo",
@@ -27,23 +27,20 @@ var StyledVideo = _styledComponents.default.video.withConfig({
 var GifVideo = function GifVideo(_ref) {
   var poster = _ref.poster,
       children = _ref.children,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["poster", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var videoElement = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      shouldLoadPoster = _useState2[0],
-      setPosterLoading = _useState2[1];
+      shouldLoadPoster = _useState[0],
+      setPosterLoading = _useState[1];
+
+  var _useState2 = (0, _react.useState)(0),
+      sourcesLength = _useState2[0],
+      setSourcesLength = _useState2[1];
 
   var _useState3 = (0, _react.useState)(0),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      sourcesLength = _useState4[0],
-      setSourcesLength = _useState4[1];
-
-  var _useState5 = (0, _react.useState)(0),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      sourcesErrors = _useState6[0],
-      setSourcesErrors = _useState6[1];
+      sourcesErrors = _useState3[0],
+      setSourcesErrors = _useState3[1];
 
   var handleSourceError = function handleSourceError() {
     setSourcesErrors(function (sourcesErrorsValue) {

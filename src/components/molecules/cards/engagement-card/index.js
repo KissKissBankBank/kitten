@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.EngagementCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +22,8 @@ var _typography = require("../../../../helpers/utils/typography");
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _screenConfig = require("../../../../constants/screen-config");
+
+var _excluded = ["icon", "backgroundColor", "href", "children", "as"];
 
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledCard",
@@ -49,7 +49,7 @@ var EngagementCard = function EngagementCard(_ref2) {
       href = _ref2.href,
       children = _ref2.children,
       as = _ref2.as,
-      others = (0, _objectWithoutProperties2.default)(_ref2, ["icon", "backgroundColor", "href", "children", "as"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     href: href,

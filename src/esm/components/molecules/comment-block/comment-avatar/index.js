@@ -1,13 +1,4 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -34,45 +25,38 @@ var StyledAvatarBadge = styled.div.withConfig({
   componentId: "sc-54iqa-3"
 })(["position:absolute;right:0;top:0;"]);
 export var CommentAvatar = /*#__PURE__*/function (_PureComponent) {
-  _inherits(CommentAvatar, _PureComponent);
-
-  var _super = _createSuper(CommentAvatar);
+  _inheritsLoose(CommentAvatar, _PureComponent);
 
   function CommentAvatar() {
-    _classCallCheck(this, CommentAvatar);
-
-    return _super.apply(this, arguments);
+    return _PureComponent.apply(this, arguments) || this;
   }
 
-  _createClass(CommentAvatar, [{
-    key: "render",
-    value: function render() {
-      var avatarImgProps = this.props.avatarImgProps;
-      return /*#__PURE__*/React.createElement(StyledAvatar, null, /*#__PURE__*/React.createElement(StyledPosition, null, this.renderBadge(), /*#__PURE__*/React.createElement(StyledButtonImage, {
-        tag: "span",
-        withoutPointerEvents: true,
-        img: avatarImgProps
-      })), this.renderDate());
-    }
-  }, {
-    key: "renderBadge",
-    value: function renderBadge() {
-      var avatarBadge = this.props.avatarBadge;
-      if (!avatarBadge) return;
-      return /*#__PURE__*/React.createElement(StyledAvatarBadge, null, avatarBadge);
-    }
-  }, {
-    key: "renderDate",
-    value: function renderDate() {
-      var commentDate = this.props.commentDate;
-      if (!commentDate) return;
-      return /*#__PURE__*/React.createElement(Text, {
-        size: "micro",
-        weight: "light",
-        color: "font1"
-      }, commentDate);
-    }
-  }]);
+  var _proto = CommentAvatar.prototype;
+
+  _proto.render = function render() {
+    var avatarImgProps = this.props.avatarImgProps;
+    return /*#__PURE__*/React.createElement(StyledAvatar, null, /*#__PURE__*/React.createElement(StyledPosition, null, this.renderBadge(), /*#__PURE__*/React.createElement(StyledButtonImage, {
+      tag: "span",
+      withoutPointerEvents: true,
+      img: avatarImgProps
+    })), this.renderDate());
+  };
+
+  _proto.renderBadge = function renderBadge() {
+    var avatarBadge = this.props.avatarBadge;
+    if (!avatarBadge) return;
+    return /*#__PURE__*/React.createElement(StyledAvatarBadge, null, avatarBadge);
+  };
+
+  _proto.renderDate = function renderDate() {
+    var commentDate = this.props.commentDate;
+    if (!commentDate) return;
+    return /*#__PURE__*/React.createElement(Text, {
+      size: "micro",
+      weight: "light",
+      color: "font1"
+    }, commentDate);
+  };
 
   return CommentAvatar;
 }(PureComponent);

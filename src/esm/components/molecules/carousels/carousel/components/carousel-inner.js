@@ -1,5 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import React, { useEffect, useRef } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import { domElementHelper } from '../../../../../helpers/dom/element-helper';
@@ -42,7 +40,7 @@ var getElementPadding = function getElementPadding(element) {
 };
 
 var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numberOfPages, itemMarginBetween, containerPadding) {
-  return _toConsumableArray(Array(numberOfPages).keys()).map(function (page) {
+  return [].concat(Array(numberOfPages).keys()).map(function (page) {
     return page * (targetClientWidth + itemMarginBetween - containerPadding);
   });
 };
@@ -64,9 +62,7 @@ export var CarouselInner = function CarouselInner(_ref) {
   var resizeObserver;
 
   var onResizeObserve = function onResizeObserve(_ref2) {
-    var _ref3 = _slicedToArray(_ref2, 1),
-        entry = _ref3[0];
-
+    var entry = _ref2[0];
     var innerWidth = entry.contentRect.width;
     onResizeInner(innerWidth);
   };
@@ -149,7 +145,7 @@ export var CarouselInner = function CarouselInner(_ref) {
     },
     onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"
-  }, _toConsumableArray(Array(numberOfPages).keys()).map(function (index) {
+  }, [].concat(Array(numberOfPages).keys()).map(function (index) {
     var isActivePage = currentPageIndex === index;
     var hasPageBeenViewed = viewedPages.has(index);
     return /*#__PURE__*/React.createElement("div", {

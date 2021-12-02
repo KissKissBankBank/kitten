@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Hero = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31,11 +29,13 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["backgroundColor", "color", "backgroundImage"],
+    _excluded2 = ["direction", "tiny", "imageSrc", "contentBackgroundColor", "contentColor", "children"];
 var StyledHero = (0, _styledComponents.default)(function (_ref) {
   var backgroundColor = _ref.backgroundColor,
       color = _ref.color,
       backgroundImage = _ref.backgroundImage,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColor", "color", "backgroundImage"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_container.Container, props);
 }).withConfig({
   displayName: "hero__StyledHero",
@@ -61,9 +61,9 @@ var Hero = function Hero(_ref6) {
       contentBackgroundColor = _ref6.contentBackgroundColor,
       contentColor = _ref6.contentColor,
       children = _ref6.children,
-      props = (0, _objectWithoutProperties2.default)(_ref6, ["direction", "tiny", "imageSrc", "contentBackgroundColor", "contentColor", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded2);
   return /*#__PURE__*/_react.default.createElement(StyledHero, (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-Hero', props.className, "k-Hero--direction-".concat(direction), {
+    className: (0, _classnames.default)('k-Hero', props.className, "k-Hero--direction-" + direction, {
       'k-Hero--tiny': tiny
     }),
     backgroundColor: contentBackgroundColor,

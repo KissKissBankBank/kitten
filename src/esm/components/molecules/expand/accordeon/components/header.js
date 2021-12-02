@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["id", "children", "index", "className"];
 import React, { useContext } from 'react';
 import { Context } from './context';
 import { ArrowIcon } from '../../../../../components/graphics/icons/arrow-icon';
@@ -9,7 +10,7 @@ export var Header = function Header(_ref) {
       children = _ref.children,
       index = _ref.index,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["id", "children", "index", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useContext = useContext(Context),
       updateSelectedItem = _useContext.updateSelectedItem,
@@ -25,8 +26,8 @@ export var Header = function Header(_ref) {
     role: "button",
     "aria-expanded": selectedItem === index,
     "aria-disabled": closeOnClick ? null : selectedItem === index,
-    id: "".concat(componentId, "-").concat(id, "_header"),
-    "aria-controls": "".concat(componentId, "-").concat(id, "_content")
+    id: componentId + "-" + id + "_header",
+    "aria-controls": componentId + "-" + id + "_content"
   }, props), /*#__PURE__*/React.createElement("span", {
     className: "k-Accordeon__header__content"
   }, children), /*#__PURE__*/React.createElement("span", {

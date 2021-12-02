@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.LockIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -19,6 +17,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color", "title", "width", "height"];
 var DEFAULT_WIDTH = 14;
 var DEFAULT_HEIGHT = 18;
 
@@ -27,7 +26,7 @@ var LockIcon = function LockIcon(_ref) {
       title = _ref.title,
       width = _ref.width,
       height = _ref.height,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title", "width", "height"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

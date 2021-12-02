@@ -1,15 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+var _excluded = ["children", "valid", "success", "error", "waiting", "disabled", "bridge", "variant"];
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -24,20 +16,16 @@ import { LockIcon } from '../../../../components/graphics/icons/lock-icon';
 import { ScreenConfig } from '../../../../constants/screen-config';
 import classNames from 'classnames';
 export var Status = /*#__PURE__*/function (_Component) {
-  _inherits(Status, _Component);
-
-  var _super = _createSuper(Status);
+  _inheritsLoose(Status, _Component);
 
   function Status() {
     var _this;
-
-    _classCallCheck(this, Status);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
 
     _this.iconByStatus = function () {
       var _this$props = _this.props,
@@ -86,34 +74,33 @@ export var Status = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Status, [{
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          children = _this$props2.children,
-          valid = _this$props2.valid,
-          success = _this$props2.success,
-          error = _this$props2.error,
-          waiting = _this$props2.waiting,
-          disabled = _this$props2.disabled,
-          bridge = _this$props2.bridge,
-          variant = _this$props2.variant,
-          other = _objectWithoutProperties(_this$props2, ["children", "valid", "success", "error", "waiting", "disabled", "bridge", "variant"]);
+  var _proto = Status.prototype;
 
-      return /*#__PURE__*/React.createElement(StyledContainerStatus, {
-        className: classNames('k-Steppers--VerticalStepper__statusContainer', "k-Steppers--VerticalStepper__statusContainer--".concat(variant))
-      }, /*#__PURE__*/React.createElement("span", _extends({}, other, {
-        className: classNames('k-Steppers--VerticalStepper__status', "k-Steppers--VerticalStepper__status--".concat(variant), {
-          'k-Steppers--VerticalStepper__status--valid': valid,
-          'k-Steppers--VerticalStepper__status--success': success,
-          'k-Steppers--VerticalStepper__status--error': error,
-          'k-Steppers--VerticalStepper__status--waiting': waiting,
-          'k-Steppers--VerticalStepper__status--disabled': disabled,
-          'k-Steppers--VerticalStepper__status--bridge': bridge
-        })
-      }), this.iconByStatus() || children));
-    }
-  }]);
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        children = _this$props2.children,
+        valid = _this$props2.valid,
+        success = _this$props2.success,
+        error = _this$props2.error,
+        waiting = _this$props2.waiting,
+        disabled = _this$props2.disabled,
+        bridge = _this$props2.bridge,
+        variant = _this$props2.variant,
+        other = _objectWithoutPropertiesLoose(_this$props2, _excluded);
+
+    return /*#__PURE__*/React.createElement(StyledContainerStatus, {
+      className: classNames('k-Steppers--VerticalStepper__statusContainer', "k-Steppers--VerticalStepper__statusContainer--" + variant)
+    }, /*#__PURE__*/React.createElement("span", _extends({}, other, {
+      className: classNames('k-Steppers--VerticalStepper__status', "k-Steppers--VerticalStepper__status--" + variant, {
+        'k-Steppers--VerticalStepper__status--valid': valid,
+        'k-Steppers--VerticalStepper__status--success': success,
+        'k-Steppers--VerticalStepper__status--error': error,
+        'k-Steppers--VerticalStepper__status--waiting': waiting,
+        'k-Steppers--VerticalStepper__status--disabled': disabled,
+        'k-Steppers--VerticalStepper__status--bridge': bridge
+      })
+    }), this.iconByStatus() || children));
+  };
 
   return Status;
 }(Component);
@@ -123,7 +110,7 @@ var INACTIVE_STATUS_SIZE = 16;
 var MOBILE_INACTIVE_STATUS_SIZE = 12;
 var StyledContainerStatus = styled.div.withConfig({
   displayName: "status__StyledContainerStatus",
-  componentId: "trpumn-0"
+  componentId: "sc-trpumn-0"
 })(["&.k-Steppers--VerticalStepper__statusContainer--orion{border-width:", ";border-style:solid;border-color:", ";@media (min-width:", "px){border-width:", ";}}.k-Steppers--VerticalStepper__status{flex-shrink:0;display:flex;align-items:center;justify-content:center;width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;margin-right:", ";background-color:", ";border:var(--border);", ";font-size:", ";&.k-Steppers--VerticalStepper__status--success{background-color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--valid{background-color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--error{color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--waiting{color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--disabled{color:", ";border-color:", ";background-color:", ";}&.k-Steppers--VerticalStepper__status--orion{box-sizing:border-box;width:100%;border:", " solid ", ";z-index:1;padding:", ";width:", ";height:", ";border-radius:var(--border-radius-rounded);@media (min-width:", "px){width:", ";height:", ";border-radius:var(--border-radius-rounded);margin-right:", ";}&.k-Steppers--VerticalStepper__status--success{background-color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--valid{background-color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--waiting{background-color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--error{color:", ";border-color:", ";}&.k-Steppers--VerticalStepper__status--disabled{background-color:", ";border-color:", ";border-width:", ";width:", ";height:", ";border-radius:var(--border-radius-rounded);margin-left:", ";margin-right:", ";@media (min-width:", "px){width:", ";height:", ";border-radius:var(--border-radius-rounded);margin-right:", ";border-width:", ";}}&.k-Steppers--VerticalStepper__status--bridge{height:", ";position:relative;border:0;&::before{width:", ";content:'';position:absolute;height:100%;border-left:", " dotted ", ";margin-left:", ";}}}}"], pxToRem(4), COLORS.background1, ScreenConfig.S.min, pxToRem(5), pxToRem(STATUS_SIZE), pxToRem(STATUS_SIZE), pxToRem(11), COLORS.background1, TYPOGRAPHY.fontStyles.regular, pxToRem(14), COLORS.valid, COLORS.valid, COLORS.primary1, COLORS.primary1, COLORS.error, COLORS.error3, COLORS.primary1, COLORS.primary4, COLORS.background1, COLORS.line2, COLORS.line2, pxToRem(3), COLORS.background1, pxToRem(3), pxToRem(MOBILE_STATUS_SIZE), pxToRem(MOBILE_STATUS_SIZE), ScreenConfig.S.min, pxToRem(STATUS_SIZE), pxToRem(STATUS_SIZE), pxToRem(15), COLORS.primary1, COLORS.primary1, COLORS.background1, COLORS.primary1, COLORS.background1, COLORS.line1, COLORS.error, COLORS.error, COLORS.background1, COLORS.line1, pxToRem(2), pxToRem(MOBILE_INACTIVE_STATUS_SIZE), pxToRem(MOBILE_INACTIVE_STATUS_SIZE), pxToRem(7), pxToRem(15), ScreenConfig.S.min, pxToRem(INACTIVE_STATUS_SIZE), pxToRem(INACTIVE_STATUS_SIZE), pxToRem(20), pxToRem(3), pxToRem(21), pxToRem(2), pxToRem(3), COLORS.line1, pxToRem(3));
 Status.propTypes = {
   valid: PropTypes.bool,

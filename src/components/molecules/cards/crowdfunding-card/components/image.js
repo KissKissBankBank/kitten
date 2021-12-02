@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.default = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,12 +23,14 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _gifVideo = require("../../../../../components/atoms/video/gif-video");
 
+var _excluded = ["backgroundColor", "alt"];
+
 var Image = function Image(_ref) {
   var imageContainerBackground = _ref.imageContainerBackground,
       _ref$imageProps = _ref.imageProps,
       backgroundColor = _ref$imageProps.backgroundColor,
       alt = _ref$imageProps.alt,
-      otherImageProps = (0, _objectWithoutProperties2.default)(_ref$imageProps, ["backgroundColor", "alt"]),
+      otherImageProps = (0, _objectWithoutPropertiesLoose2.default)(_ref$imageProps, _excluded),
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       avatarProps = _ref.avatarProps,
@@ -59,7 +59,7 @@ var Image = function Image(_ref) {
     }, videoProps.style) : videoProps.style
   }), videoSources.map(function (sourceProps) {
     return /*#__PURE__*/_react.default.createElement("source", (0, _extends2.default)({
-      key: "video_source_".concat(sourceProps.src)
+      key: "video_source_" + sourceProps.src
     }, sourceProps));
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-CrowdfundingCard__image__ownerContainer"

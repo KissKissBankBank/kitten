@@ -1,5 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _extends from "@babel/runtime/helpers/extends";
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -15,7 +14,7 @@ import { LightbulbIllustration as Lightbulb } from '../../../../components/graph
 import { DASHBOARD_HIDE_CONTENT_EVENT, DASHBOARD_SHOW_CONTENT_EVENT } from '../../../../helpers/dom/events';
 var Wrapper = styled.div.withConfig({
   displayName: "side-modal__Wrapper",
-  componentId: "qfidgo-0"
+  componentId: "sc-qfidgo-0"
 })(["position:fixed;top:0;left:0;right:0;bottom:0;padding-top:", ";padding-left:", ";padding-right:", ";padding-bottom:", ";z-index:var(--DashboardLayout-modal-zIndex,1000);display:flex;flex-direction:column-reverse;align-items:flex-end;pointer-events:none;&.k-DashboardLayout__flow--hideButtonAndModal{display:none;}@media (min-width:", "){padding:", " ", " ", ";}@media (min-width:", "){display:none;}.k-DashboardLayout__flow__mobileAsideButton{display:flex;align-items:center;justify-content:center;cursor:pointer;flex:0 0 ", ";width:", ";height:", ";background-color:", ";border-radius:var(--border-radius-rounded);box-shadow:", " ", " ", " ", " rgba(0,0,0,0.15);pointer-events:all;border:none;transition:background-color 0.2s ease-in-out;@media (min-width:", "){flex:0 0 ", ";width:", ";height:", ";}}.k-DashboardLayout__flow__mobileAsideContent{margin-bottom:", ";pointer-events:all;background-color:", ";padding:", ";border-radius:var(--border-radius-s);overflow-y:scroll;opacity:1;transition:opacity 0.2s ease-in-out;@media (min-width:", "){max-width:", ";}&[hidden]{opacity:0;display:none;}& > *{max-height:calc(100vh - ", ");@media (min-width:", "){max-height:calc(100vh - ", ");}}}.k-DashboardLayout__flow__mobileAsideBackground{position:absolute;z-index:-1;top:0;left:0;width:100%;height:100%;background:", ";opacity:0;transition:opacity 0.2s ease-in-out;pointer-events:inherit;}&.k-DashboardLayout__flow__mobileAside--open{pointer-events:all;.k-DashboardLayout__flow__mobileAsideBackground{opacity:0.8;}.k-DashboardLayout__flow__mobileAsideButton{background-color:", ";}}.k-DashboardLayout__flow__mobileAsideButton__text{clip:rect(0 0 0 0);clip-path:inset(100%);height:", ";overflow:hidden;position:absolute;white-space:nowrap;width:", ";}"], pxToRem(20), pxToRem(20), pxToRem(20), pxToRem(105), pxToRem(ScreenConfig.S.min), pxToRem(40), pxToRem(40), pxToRem(135), pxToRem(ScreenConfig.L.min), pxToRem(50), pxToRem(50), pxToRem(50), COLORS.primary5, pxToRem(0), pxToRem(2), pxToRem(5), pxToRem(5), pxToRem(ScreenConfig.S.min), pxToRem(70), pxToRem(70), pxToRem(70), pxToRem(20), COLORS.primary5, pxToRem(30), pxToRem(ScreenConfig.S.min), pxToRem(350), pxToRem(20 + 105 + 50 + 20 + 2 * 30), pxToRem(ScreenConfig.S.min), pxToRem(40 + 135 + 50 + 20 + 2 * 30), COLORS.font1, COLORS.primary1, pxToRem(1), pxToRem(1));
 
 var MobileAsideComponent = function MobileAsideComponent(_ref) {
@@ -24,9 +23,8 @@ var MobileAsideComponent = function MobileAsideComponent(_ref) {
       closeLabel = _ref.closeLabel;
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      shouldHideButton = _useState2[0],
-      setButtonAsHidden = _useState2[1];
+      shouldHideButton = _useState[0],
+      setButtonAsHidden = _useState[1];
 
   useEffect(function () {
     if (!domElementHelper.canUseDom()) return;
@@ -84,7 +82,7 @@ var MobileAsideComponent = function MobileAsideComponent(_ref) {
 
 export var MobileAside = function MobileAside(props) {
   var bodyElement = domElementHelper.canUseDom() && document.querySelector('#root');
-  return bodyElement ? ReactDOM.createPortal( /*#__PURE__*/React.createElement(MobileAsideComponent, props), bodyElement) : null;
+  return bodyElement ? /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement(MobileAsideComponent, props), bodyElement) : null;
 };
 MobileAsideComponent.propTypes = {
   openLabel: PropTypes.node.isRequired,

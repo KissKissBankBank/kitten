@@ -1,27 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Carousel = exports.checkPageLoop = exports.checkPage = exports.getNumberOfPagesForColumnsAndDataLength = exports.getNumberOfItemsPerPageForWidth = void 0;
+exports.__esModule = true;
+exports.getNumberOfPagesForColumnsAndDataLength = exports.getNumberOfItemsPerPageForWidth = exports.checkPageLoop = exports.checkPage = exports.Carousel = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -49,9 +35,9 @@ var _grid = require("../../../../components/layout/grid");
 
 var _styles = require("./styles");
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var getDataLength = function getDataLength(_ref) {
   var data = _ref.data,
@@ -104,20 +90,16 @@ var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToVi
 };
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(CarouselBase, _Component);
-
-  var _super = _createSuper(CarouselBase);
+  (0, _inheritsLoose2.default)(CarouselBase, _Component);
 
   function CarouselBase() {
     var _this;
-
-    (0, _classCallCheck2.default)(this, CarouselBase);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
     _this.state = {
       currentPageIndex: 0,
       numberOfItemsPerPage: _this.props.itemsPerPage > 0 ? _this.props.itemsPerPage : 3,
@@ -214,7 +196,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       var items = children; // legacy mode
 
       if (!!data && !!renderItem) {
-        items = (0, _toConsumableArray2.default)(data).map(function (item, index) {
+        items = [].concat(data).map(function (item, index) {
           return /*#__PURE__*/_react.default.createElement(_react.Fragment, {
             key: item
           }, renderItem({
@@ -267,7 +249,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
             className: (0, _classnames.default)('k-Carousel__pageControl__pageDot', {
               'k-Carousel__pageControl__pageDot--isVisible': currentPageIndex === index
             }),
-            key: "pageDotIndex_".concat(index)
+            key: "pageDotIndex_" + index
           });
         }), /*#__PURE__*/_react.default.createElement("div", {
           onClick: _this.goPrevPage,
@@ -319,56 +301,55 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  (0, _createClass2.default)(CarouselBase, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.viewedPages.add(0);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props4 = this.props,
-          data = _this$props4.data,
-          renderItem = _this$props4.renderItem,
-          withoutLeftOffset = _this$props4.withoutLeftOffset,
-          baseItemMarginBetween = _this$props4.baseItemMarginBetween,
-          children = _this$props4.children,
-          className = _this$props4.className,
-          paginationPosition = _this$props4.paginationPosition,
-          showOtherPages = _this$props4.showOtherPages,
-          itemMinWidth = _this$props4.itemMinWidth;
-      if (getDataLength({
-        data: data,
-        children: children
-      }) === 0) return null;
-      var commonProps = {
-        baseItemMarginBetween: baseItemMarginBetween,
-        itemMinWidth: itemMinWidth,
-        numberOfItemsPerPage: this.state.numberOfItemsPerPage,
-        numberOfPages: this.state.numberOfPages
-      }; // legacy mode
+  var _proto = CarouselBase.prototype;
 
-      if (!!data && !!renderItem) {
-        return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
-          className: (0, _classnames.default)('k-Carousel', className, 'k-LegacyCarousel')
-        }), /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-          col: "12",
-          "col-l": withoutLeftOffset ? '11' : '10',
-          "offset-l": withoutLeftOffset ? '0' : '1'
-        }, this.renderCarouselInner()), /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-          col: "12",
-          "col-l": "1"
-        }, this.renderPagination())));
-      }
+  _proto.componentDidMount = function componentDidMount() {
+    this.viewedPages.add(0);
+  };
 
+  _proto.render = function render() {
+    var _this$props4 = this.props,
+        data = _this$props4.data,
+        renderItem = _this$props4.renderItem,
+        withoutLeftOffset = _this$props4.withoutLeftOffset,
+        baseItemMarginBetween = _this$props4.baseItemMarginBetween,
+        children = _this$props4.children,
+        className = _this$props4.className,
+        paginationPosition = _this$props4.paginationPosition,
+        showOtherPages = _this$props4.showOtherPages,
+        itemMinWidth = _this$props4.itemMinWidth;
+    if (getDataLength({
+      data: data,
+      children: children
+    }) === 0) return null;
+    var commonProps = {
+      baseItemMarginBetween: baseItemMarginBetween,
+      itemMinWidth: itemMinWidth,
+      numberOfItemsPerPage: this.state.numberOfItemsPerPage,
+      numberOfPages: this.state.numberOfPages
+    }; // legacy mode
+
+    if (!!data && !!renderItem) {
       return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
-        paginationPosition: paginationPosition,
-        className: (0, _classnames.default)('k-Carousel', className, {
-          'k-Carousel--showOtherPages': showOtherPages
-        })
-      }), this.renderCarouselInner(), this.renderPagination());
+        className: (0, _classnames.default)('k-Carousel', className, 'k-LegacyCarousel')
+      }), /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+        col: "12",
+        "col-l": withoutLeftOffset ? '11' : '10',
+        "offset-l": withoutLeftOffset ? '0' : '1'
+      }, this.renderCarouselInner()), /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+        col: "12",
+        "col-l": "1"
+      }, this.renderPagination())));
     }
-  }]);
+
+    return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
+      paginationPosition: paginationPosition,
+      className: (0, _classnames.default)('k-Carousel', className, {
+        'k-Carousel--showOtherPages': showOtherPages
+      })
+    }), this.renderCarouselInner(), this.renderPagination());
+  };
+
   return CarouselBase;
 }(_react.Component);
 
@@ -386,7 +367,7 @@ CarouselBase.defaultProps = {
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
   pageClickText: function pageClickText(page) {
-    return "Page ".concat(page);
+    return "Page " + page;
   },
   firstButtonText: 'First items',
   lastButtonText: 'Last items',

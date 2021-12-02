@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-export var Context = createContext({
+export var Context = /*#__PURE__*/createContext({
   isInputEmpty: true,
   setEmptyInput: function setEmptyInput() {}
 });

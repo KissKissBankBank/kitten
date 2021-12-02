@@ -1,9 +1,7 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ICON_GIANT = exports.ICON_HUGE = exports.ICON_BIG = exports.ICON_TINY = exports.ICON_MICRO = exports.ICON_NANO = exports.ICON = exports.GIANT = exports.HUGE = exports.BIG = exports.TINY = exports.MICRO = exports.NANO = exports.DEFAULT = exports.ROUNDED = exports.FLUID = void 0;
+exports.__esModule = true;
+exports.TINY = exports.ROUNDED = exports.NANO = exports.MICRO = exports.ICON_TINY = exports.ICON_NANO = exports.ICON_MICRO = exports.ICON_HUGE = exports.ICON_GIANT = exports.ICON_BIG = exports.ICON = exports.HUGE = exports.GIANT = exports.FLUID = exports.DEFAULT = exports.BIG = void 0;
 
 var _styledComponents = require("styled-components");
 

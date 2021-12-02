@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Badge = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,9 +23,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
+var _excluded = ["className", "spaced", "Icon", "a11yText", "color", "withBorder", "style"];
+
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "badge__StyledBadge",
-  componentId: "d8v7s7-0"
+  componentId: "sc-d8v7s7-0"
 })(["--Badge-background-color:", ";display:inline-flex;justify-content:center;align-items:center;box-sizing:border-box;padding:", " ", ";line-height:1;min-height:", ";min-width:", ";border-radius:var(--border-radius-rounded);color:", ";", ";font-size:", ";line-height:1.2;border:var(--border-width) solid white;background-color:var(--Badge-background-color);&.k-Badge--spaced{margin:0 ", ";}&.k-Badge--no-border{min-height:", ";min-width:", ";border:0;}&.k-Badge--hasIcon{position:relative;left:", ";top:", ";}"], _colorsConfig.default.primary1, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(18 + 2), (0, _typography.pxToRem)(18 + 2), _colorsConfig.default.background1, _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-4), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(-8), (0, _typography.pxToRem)(-8));
 
 var Badge = function Badge(_ref) {
@@ -38,7 +38,7 @@ var Badge = function Badge(_ref) {
       color = _ref.color,
       withBorder = _ref.withBorder,
       style = _ref.style,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "spaced", "Icon", "a11yText", "color", "withBorder", "style"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, Icon ? /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Badge__wrapper k-u-flex k-u-flex-alignItems-center"
   }, /*#__PURE__*/_react.default.createElement(Icon, null), /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({

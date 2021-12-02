@@ -1,12 +1,13 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
 export var CrossIconNext = function CrossIconNext(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      props = _objectWithoutProperties(_ref, ["color", "title"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
     viewBox: "0 0 17 18",

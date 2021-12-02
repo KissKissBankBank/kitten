@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useState, useEffect } from 'react';
 import domElementHelper from '../../dom/element-helper'; // https://usehooks.com/useMedia/
 
@@ -19,9 +18,8 @@ export var useMedia = function useMedia(_ref) {
   };
 
   var _useState = useState(getValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setValue = _useState2[1];
+      value = _useState[0],
+      setValue = _useState[1];
 
   useEffect(function () {
     var handler = function handler() {

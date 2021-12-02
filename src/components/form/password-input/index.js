@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.PasswordInput = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -29,6 +23,12 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["name", "iconLabel", "hiddenIconLabel"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledPasswordInput = _styledComponents.default.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
   componentId: "sc-1futz46-0"
@@ -38,12 +38,11 @@ var PasswordInput = function PasswordInput(_ref) {
   var name = _ref.name,
       iconLabel = _ref.iconLabel,
       hiddenIconLabel = _ref.hiddenIconLabel,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["name", "iconLabel", "hiddenIconLabel"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(true),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isHidden = _useState2[0],
-      setIsHidden = _useState2[1];
+      isHidden = _useState[0],
+      setIsHidden = _useState[1];
 
   var handleClick = function handleClick() {
     setIsHidden(!isHidden);

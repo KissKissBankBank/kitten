@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.HeaderMenu = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,6 +21,8 @@ var _badge = require("./components/badge");
 
 var _styles = require("./styles");
 
+var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "position", "style"];
+
 var HeaderMenu = function HeaderMenu(_ref) {
   var backgroundColors = _ref.backgroundColors,
       borderSide = _ref.borderSide,
@@ -32,9 +32,9 @@ var HeaderMenu = function HeaderMenu(_ref) {
       className = _ref.className,
       position = _ref.position,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "position", "style"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledList, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-HeaderMenu', className, "k-HeaderMenu--".concat(position), {
+    className: (0, _classnames.default)('k-HeaderMenu', className, "k-HeaderMenu--" + position, {
       'k-HeaderMenu--hasBorders': !noBorder,
       'k-HeaderMenu--hasBorderOnSide': !!borderSide,
       'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
@@ -43,7 +43,7 @@ var HeaderMenu = function HeaderMenu(_ref) {
       'k-HeaderMenu--hasBigItems': largeItem
     }),
     style: (0, _extends2.default)({}, style, {
-      '--headerMenu-background-colors-hover': backgroundColors === null || backgroundColors === void 0 ? void 0 : backgroundColors.hover
+      '--headerMenu-background-colors-hover': backgroundColors == null ? void 0 : backgroundColors.hover
     })
   }, props));
 };

@@ -2,18 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.FlexWrapper = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,9 +19,11 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["gap", "padding", "direction", "className", "style"];
+
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "flex-wrapper__StyledWrapper",
-  componentId: "z0vdh1-0"
+  componentId: "sc-z0vdh1-0"
 })(["display:flex;gap:var(--flexWrapper-gap);padding:var(--flexWrapper-padding);flex-direction:var(--flexWrapper-direction);"]);
 
 var getCSSRule = function getCSSRule(value) {
@@ -53,19 +49,17 @@ var FlexWrapper = function FlexWrapper(_ref) {
       direction = _ref$direction === void 0 ? 'column' : _ref$direction,
       className = _ref.className,
       style = _ref.style,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["gap", "padding", "direction", "className", "style"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var gapRule = gap ? getRuleFromProp(gap) : null;
   var paddingRule = padding ? getRuleFromProp(padding) : null;
   var namedPaddingRule = {};
 
-  if (padding && (0, _typeof2.default)(padding) === 'object' && !Array.isArray(padding)) {
+  if (padding && typeof padding === 'object' && !Array.isArray(padding)) {
     paddingRule = null;
     Object.entries(padding).forEach(function (_ref2) {
-      var _ref3 = (0, _slicedToArray2.default)(_ref2, 2),
-          key = _ref3[0],
-          value = _ref3[1];
-
-      var cssRule = "padding".concat(key[0].toUpperCase() + key.substring(1));
+      var key = _ref2[0],
+          value = _ref2[1];
+      var cssRule = "padding" + (key[0].toUpperCase() + key.substring(1));
       namedPaddingRule[cssRule] = getCSSRule(value);
     });
   }

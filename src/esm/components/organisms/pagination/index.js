@@ -1,4 +1,3 @@
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -12,7 +11,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 import classNames from 'classnames';
 var StyledNav = styled.nav.withConfig({
   displayName: "pagination__StyledNav",
-  componentId: "vswhat-0"
+  componentId: "sc-vswhat-0"
 })([".Pagination__List{padding:0;display:inline-flex;}li{list-style:none;}.Pagination__ListItem{margin-right:0;@media (min-width:", "px){margin:", " ", ";}}.Pagination__ListItem__Points{text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}}.Pagination__ListItem__Points{text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}}.Pagination__ListItem__Arrow--direction-left{margin-right:", ";@media (min-width:", "px){margin-right:", ";}}.Pagination__ListItem__Arrow--direction-right{margin-left:", ";@media (min-width:", "px){margin-left:", ";}}.Pagination__Link{display:flex;justify-content:center;align-items:center;box-sizing:border-box;cursor:pointer;width:", ";height:", ";border-radius:0;border-width:0;border-style:solid;color:", ";border-color:var(--color-grey-400);background-color:", ";transition:background-color 0.2s ease,border-color 0.2s ease,color 0.2s ease;@media (min-width:", "px){width:", ";height:", ";border-width:var(--border-width);}&:hover,&:focus{color:", ";border-color:", ";background-color:", ";text-decoration:none;}&:active{color:", ";border-color:", ";background-color:", ";text-decoration:none;}&[aria-current='page']{cursor:auto;color:", ";border-color:", ";background-color:", ";&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}&[aria-disabled='true']{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}}.Pagination__ArrowIcon{align-self:center;margin:0;padding:0;pointer-events:none;color:inherit;fill:currentColor;}&.Pagination--noMargin .Pagination__List{margin:0;}&.Pagination--isAligned-left .Pagination__List{display:flex;justify-content:flex-start;}&.Pagination--isAligned-center .Pagination__List{display:flex;justify-content:center;}&.Pagination--isAligned-right .Pagination__List{display:flex;justify-content:flex-end;}"], ScreenConfig.S.min, pxToRem(0), pxToRem(8), pxToRem(40), ScreenConfig.S.min, pxToRem(0), pxToRem(8), pxToRem(50), pxToRem(40), ScreenConfig.S.min, pxToRem(0), pxToRem(8), pxToRem(50), pxToRem(30), ScreenConfig.S.min, pxToRem(22), pxToRem(30), ScreenConfig.S.min, pxToRem(22), pxToRem(40), pxToRem(40), COLORS.font1, COLORS.background1, ScreenConfig.S.min, pxToRem(50), pxToRem(50), COLORS.primary1, COLORS.primary1, COLORS.background1, COLORS.background1, COLORS.primary1, COLORS.primary1, COLORS.background1, COLORS.primary1, COLORS.primary1, COLORS.background1, COLORS.primary1, COLORS.primary1, COLORS.background1, COLORS.line2, COLORS.line2, COLORS.background1, COLORS.line2, COLORS.line2); // Returns an array with the given bounds
 
 var range = function range(start, end) {
@@ -31,19 +30,19 @@ export function pages(min, max, currentPage, availableSlots) {
 
 
   if (currentPage - min + 1 < availableSlots - 2) {
-    return [].concat(_toConsumableArray(range(min, min - 1 + availableSlots - 2)), [null, max]);
+    return [].concat(range(min, min - 1 + availableSlots - 2), [null, max]);
   } // 1, …, 40, 41, 42
 
 
   if (max - currentPage < availableSlots - 2) {
-    return [min, null].concat(_toConsumableArray(range(max + 1 - (availableSlots - 2), max)));
+    return [min, null].concat(range(max + 1 - (availableSlots - 2), max));
   } // 1, …, 21, …, 42
 
 
   var sides = Math.floor((availableSlots - 4) / 2);
-  return [min, null].concat(_toConsumableArray(range(currentPage - sides, currentPage + sides)), [null, max]);
+  return [min, null].concat(range(currentPage - sides, currentPage + sides), [null, max]);
 }
-var PaginationBase = forwardRef(function (_ref2, _ref) {
+var PaginationBase = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
   var prevButtonLabel = _ref2.prevButtonLabel,
       nextButtonLabel = _ref2.nextButtonLabel,
       goToPageLabel = _ref2.goToPageLabel,
@@ -78,12 +77,12 @@ var PaginationBase = forwardRef(function (_ref2, _ref) {
     var ariaLabel = isActive ? currentPageLabel(number) : goToPageLabel(number);
     return /*#__PURE__*/React.createElement("li", {
       className: "Pagination__ListItem",
-      key: "page-".concat(number)
+      key: "page-" + number
     }, /*#__PURE__*/React.createElement(Text, {
       className: "Pagination__Link",
       tag: tag,
       href: href,
-      key: "link-".concat(number),
+      key: "link-" + number,
       weight: "regular",
       decoration: "none",
       size: "tiny",
@@ -96,7 +95,7 @@ var PaginationBase = forwardRef(function (_ref2, _ref) {
 
   var renderSpacer = function renderSpacer(index) {
     return /*#__PURE__*/React.createElement("li", {
-      key: "spacer-".concat(index),
+      key: "spacer-" + index,
       className: "Pagination__ListItem__Points",
       "aria-hidden": "true"
     }, '…');
@@ -107,12 +106,12 @@ var PaginationBase = forwardRef(function (_ref2, _ref) {
     var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
     var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
     return /*#__PURE__*/React.createElement("li", {
-      className: classNames('Pagination__ListItem__Arrow', "Pagination__ListItem__Arrow--direction-".concat(direction))
+      className: classNames('Pagination__ListItem__Arrow', "Pagination__ListItem__Arrow--direction-" + direction)
     }, /*#__PURE__*/React.createElement(Text, {
       className: "Pagination__Link",
       tag: "a",
       href: goToPageHref(number),
-      key: "link-".concat(direction),
+      key: "link-" + direction,
       "aria-label": buttonLabel,
       "aria-disabled": isDisabled,
       title: buttonLabel,
@@ -129,7 +128,7 @@ var PaginationBase = forwardRef(function (_ref2, _ref) {
   return /*#__PURE__*/React.createElement(StyledNav, {
     role: "navigation",
     "aria-label": ariaLabelProp,
-    className: classNames('Pagination', className, "Pagination--isAligned-".concat(align), {
+    className: classNames('Pagination', className, "Pagination--isAligned-" + align, {
       'Pagination--noMargin': !margin
     })
   }, /*#__PURE__*/React.createElement("ul", {
@@ -153,14 +152,14 @@ PaginationBase.defaultProps = {
   prevButtonLabel: 'Previous page',
   nextButtonLabel: 'Next page',
   goToPageLabel: function goToPageLabel(n) {
-    return "Go to page ".concat(n);
+    return "Go to page " + n;
   },
   goToPageHref: function goToPageHref(n) {
-    return "#".concat(n);
+    return "#" + n;
   },
   onPageClick: function onPageClick() {},
   currentPageLabel: function currentPageLabel(n) {
-    return "Page ".concat(n, ", this is the current page");
+    return "Page " + n + ", this is the current page";
   },
   currentPage: 1,
   totalPages: 1,

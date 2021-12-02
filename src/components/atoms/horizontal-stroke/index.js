@@ -1,17 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.HorizontalStroke = exports.StyledHorizontalStroke = exports.HUGE = exports.BIG = exports.DEFAULT = exports.TINY = exports.MICRO = void 0;
+exports.__esModule = true;
+exports.TINY = exports.StyledHorizontalStroke = exports.MICRO = exports.HorizontalStroke = exports.HUGE = exports.DEFAULT = exports.BIG = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,6 +23,12 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _strokeModifierStyles = require("./common/stroke-modifier-styles");
 
+var _excluded = ["className", "style", "size", "modifier", "customSize", "color"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var MICRO = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2));
 exports.MICRO = MICRO;
 var TINY = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2));
@@ -40,7 +42,7 @@ exports.HUGE = HUGE;
 
 var StyledHorizontalStroke = _styledComponents.default.div.withConfig({
   displayName: "horizontal-stroke__StyledHorizontalStroke",
-  componentId: "eemjm6-0"
+  componentId: "sc-eemjm6-0"
 })(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
   var color = _ref.color;
   return color || _colorsConfig.default.font1;
@@ -55,11 +57,11 @@ var HorizontalStroke = function HorizontalStroke(_ref2) {
       modifier = _ref2.modifier,
       customSize = _ref2.customSize,
       color = _ref2.color,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "style", "size", "modifier", "customSize", "color"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   var modifierClassName = function modifierClassName() {
-    if (!modifier) return "k-HorizontalStroke--size--".concat(size);
-    return "k-HorizontalStroke--modifier--".concat(modifier);
+    if (!modifier) return "k-HorizontalStroke--size--" + size;
+    return "k-HorizontalStroke--modifier--" + modifier;
   };
 
   var customStyles = function customStyles() {

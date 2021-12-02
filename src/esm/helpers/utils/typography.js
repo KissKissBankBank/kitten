@@ -2,7 +2,7 @@ import TYPOGRAPHY from '../../constants/typography-config';
 export var pxToRem = function pxToRem(sizeInPx) {
   if (sizeInPx === 0) return 0;
   var sizeInRem = sizeInPx / TYPOGRAPHY.root;
-  return "".concat(parseFloat(sizeInRem), "rem");
+  return parseFloat(sizeInRem) + "rem";
 };
 var fontSizeScale = {
   '-4': 10,

@@ -1,11 +1,11 @@
-import _objectDestructuringEmpty from "@babel/runtime/helpers/esm/objectDestructuringEmpty";
+import _objectDestructuringEmpty from "@babel/runtime/helpers/objectDestructuringEmpty";
 import styled, { css } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { Container } from '../../../components/layout/container';
 var gradientWidth = 20;
 export var StyledContainer = styled(Container).withConfig({
   displayName: "styled__StyledContainer",
-  componentId: "ecvjg4-0"
+  componentId: "sc-ecvjg4-0"
 })(["position:relative;padding-left:0;padding-right:0;width:100%;"]);
 export var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   _objectDestructuringEmpty(_ref);
@@ -22,7 +22,7 @@ export var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
 };
 export var StyledScrollableContainer = styled.div.withConfig({
   displayName: "styled__StyledScrollableContainer",
-  componentId: "ecvjg4-1"
+  componentId: "sc-ecvjg4-1"
 })(["", ""], function (props) {
   return scrollableContainerStyle(props);
 });

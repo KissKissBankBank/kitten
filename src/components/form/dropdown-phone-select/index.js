@@ -2,22 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DropdownPhoneSelect = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _toArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toArray"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,7 +29,13 @@ var _fr = _interopRequireDefault(require("./data/lang/fr"));
 
 var _flagIcon = require("../../../components/graphics/icons/flag-icon");
 
+var _excluded = ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"];
+
 var _this = void 0;
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var removeCountryCodeFromFormat = function removeCountryCodeFromFormat(format) {
   return format.replace(/\+[.]+\s/gi, '');
@@ -58,7 +54,7 @@ var processCountries = function processCountries(_ref) {
       labelInList: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, localizedName, /*#__PURE__*/_react.default.createElement("span", {
         className: "k-u-color-font2 k-u-margin-left-noneHalf"
       }, prefix, country.countryCode)),
-      labelSelected: "".concat(prefix).concat(country.countryCode),
+      labelSelected: "" + prefix + country.countryCode,
       icon: /*#__PURE__*/_react.default.createElement(_flagIcon.FlagIcon, {
         country: country.iso2,
         countryName: localizedName,
@@ -78,7 +74,7 @@ var formatNumber = function formatNumber(text, country) {
     return '';
   }
 
-  if ((text === null || text === void 0 ? void 0 : text.length) < 2 || pattern == '') {
+  if ((text == null ? void 0 : text.length) < 2 || pattern == '') {
     return text;
   }
 
@@ -94,7 +90,7 @@ var formatNumber = function formatNumber(text, country) {
       };
     }
 
-    var _acc$remainingText = (0, _toArray2.default)(acc.remainingText),
+    var _acc$remainingText = acc.remainingText,
         head = _acc$remainingText[0],
         tail = _acc$remainingText.slice(1);
 
@@ -118,24 +114,24 @@ var getOptions = function getOptions(_ref2) {
   var options = [];
 
   if (preferredCountries) {
-    options.push.apply(options, (0, _toConsumableArray2.default)(processCountries({
+    options.push.apply(options, processCountries({
       countries: preferredCountries,
       prefix: prefix,
       locale: locale,
       flagsUrl: flagsUrl
-    })));
+    }));
     options.push({
       separator: true,
       disabled: true
     });
   }
 
-  onlyCountries && options.push.apply(options, (0, _toConsumableArray2.default)(processCountries({
+  onlyCountries && options.push.apply(options, processCountries({
     countries: onlyCountries,
     prefix: prefix,
     locale: locale,
     flagsUrl: flagsUrl
-  })));
+  }));
   return options;
 };
 
@@ -192,38 +188,32 @@ var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       flagsUrl = _ref3.flagsUrl,
       assumeCountry = _ref3.assumeCountry,
       inputProps = _ref3.inputProps,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded);
 
   // Consts
   var _useState = (0, _react.useState)(null),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      getCountry = _useState2[0],
-      setCountry = _useState2[1];
+      getCountry = _useState[0],
+      setCountry = _useState[1];
 
-  var _useState3 = (0, _react.useState)(''),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      getFormattedNumber = _useState4[0],
-      setFormattedNumber = _useState4[1];
+  var _useState2 = (0, _react.useState)(''),
+      getFormattedNumber = _useState2[0],
+      setFormattedNumber = _useState2[1];
 
-  var _useState5 = (0, _react.useState)(0),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      getCaretPosition = _useState6[0],
-      setCaretPosition = _useState6[1];
+  var _useState3 = (0, _react.useState)(0),
+      getCaretPosition = _useState3[0],
+      setCaretPosition = _useState3[1];
 
-  var _useState7 = (0, _react.useState)(placeholder),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      getInputPlaceholder = _useState8[0],
-      setInputPlaceholder = _useState8[1];
+  var _useState4 = (0, _react.useState)(placeholder),
+      getInputPlaceholder = _useState4[0],
+      setInputPlaceholder = _useState4[1];
 
-  var _useState9 = (0, _react.useState)(null),
-      _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
-      getDefaultSelectedValue = _useState10[0],
-      setDefaultSelectedValue = _useState10[1];
+  var _useState5 = (0, _react.useState)(null),
+      getDefaultSelectedValue = _useState5[0],
+      setDefaultSelectedValue = _useState5[1];
 
-  var _useState11 = (0, _react.useState)(''),
-      _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
-      getInputNumber = _useState12[0],
-      setInputNumber = _useState12[1];
+  var _useState6 = (0, _react.useState)(''),
+      getInputNumber = _useState6[0],
+      setInputNumber = _useState6[1];
 
   var getPreviousFormattedNumber = (0, _usePreviousHook.usePrevious)(getFormattedNumber);
   var phoneProps = (0, _extends2.default)({}, DropdownPhoneSelect.defaultProps.phoneProps, props.phoneProps);
@@ -267,7 +257,7 @@ var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
     setCaretPosition(caretPosition);
     setFormattedNumber(innerFormattedNumber);
     if (!onChange) return;
-    var numberToExport = "".concat(phoneProps.prefix).concat(countryCode, " ").concat(innerFormattedNumber);
+    var numberToExport = "" + phoneProps.prefix + countryCode + " " + innerFormattedNumber;
     onChange(numberToExport.replace(/[^0-9]+/g, ''), currentCountry, event, numberToExport);
   };
 
@@ -335,7 +325,7 @@ var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
   (0, _react.useEffect)(function () {
     // Adjust caret position depending on the edit
     if (!getFormattedNumber || !getPreviousFormattedNumber) return;
-    var inputElement = document.getElementById("".concat(id, "_element-input"));
+    var inputElement = document.getElementById(id + "_element-input");
     var diff = getFormattedNumber.length - getPreviousFormattedNumber.length;
 
     if (diff < 0 || getCaretPosition < getFormattedNumber.length - 1) {
