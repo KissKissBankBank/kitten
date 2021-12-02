@@ -9,7 +9,7 @@ describe('<IconBadge />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <IconBadge children="Custom children" status="success" size="big" />,
+          <IconBadge children={<svg />} status="success" size="big" />,
         )
         .toJSON()
     })
@@ -24,7 +24,7 @@ describe('<IconBadge />', () => {
       component = renderer
         .create(
           <IconBadge
-            children="Custom children"
+            children={<svg />}
             size="tiny"
             border={{
               width: 2,

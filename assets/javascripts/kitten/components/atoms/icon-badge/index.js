@@ -47,44 +47,24 @@ const StyledBadge = styled.span`
     min-width: ${pxToRem(20)};
     min-height: ${pxToRem(20)};
 
-    .k-IconBadge__content {
-      font-size: ${stepToRem(-1)};
-
-      &,
-      & svg {
-        max-width: ${pxToRem(14)};
-      }
+    &,
+    & svg {
+      max-width: ${pxToRem(14)};
     }
   }
 
   &.k-IconBadge--big {
     min-width: ${pxToRem(40)};
     min-height: ${pxToRem(40)};
-
-    .k-IconBadge__content {
-      font-size: ${stepToRem(-1)};
-    }
   }
 
   &.k-IconBadge--huge {
     min-width: ${pxToRem(50)};
     min-height: ${pxToRem(50)};
-
-    .k-IconBadge__content {
-      font-size: ${stepToRem(-1)};
-    }
-  }
-
-  .k-IconBadge__content {
-    flex-basis: ${pxToRem(11)};
-    color: var(--color-grey-000);
-    text-align: center;
-    font-weight: bold;
-    font-size: ${stepToRem(-2)};
-    line-height: 0;
   }
 
   svg {
+    flex: 0 0 auto;
     fill: var(--color-grey-000);
   }
 
@@ -140,7 +120,7 @@ export const IconBadge = ({
     }}
     {...others}
   >
-    <span className="k-IconBadge__content">{children}</span>
+    {children}
   </StyledBadge>
 )
 
