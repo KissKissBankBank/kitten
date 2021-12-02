@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `IconBadge`: Remove text capacity.
 - Feature: Tokens: Add `transitions` related tokens.
 - Feature: `Comment`:
   - Change design
