@@ -20,12 +20,12 @@ const StyledWrapper = styled.div`
   padding: var(--tagInput-padding-vertical, ${pxToRem(10)})
     var(--tagInput-padding-horizontal, ${pxToRem(10)});
 
-  :focus-within {
+  &:focus-within {
     outline: var(--outline-input);
     outline-offset: var(--outline-offset-input);
   }
 
-  :hover {
+  &:hover {
     border: var(--border-hover);
   }
 
@@ -58,14 +58,20 @@ const StyledWrapper = styled.div`
     height: 100%;
     min-width: ${pxToRem(20)};
     display: block;
-    line-height: 1;
     padding: ${pxToRem(7)} 0 ${pxToRem(6)};
+    box-sizing: border-box;
+
+    line-height: 1;
     ${TYPOGRAPHY.fontStyles.light};
     cursor: text;
 
     &:empty::before {
       color: ${COLORS.font2};
       content: ' ';
+    }
+
+    &:focus {
+      outline-offset: ${pxToRem(2)};
     }
   }
 
@@ -201,7 +207,11 @@ export const TagInput = ({
   }
 
   const removeLastValueFromList = () => {
-    setLastRemoved(itemsList[itemsList.length - 1])
+    const lastItem = itemsList[itemsList.length - 1]
+
+    if (lastItem.disabled) { return }
+
+    setLastRemoved(lastItem)
     setItemList(currentList => currentList.slice(0, -1))
   }
 

@@ -30,6 +30,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
 - Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
 - Feature: `TextareaAutoResize`: Add component.
+- Fix: `TagInput`: Fix focus styles.
 
 ## [6.5.1] - 2021-11-30
 
