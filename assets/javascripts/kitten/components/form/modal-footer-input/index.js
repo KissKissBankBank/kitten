@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
@@ -83,7 +83,7 @@ export const ModalFooterInput = React.forwardRef(
   ) => {
     const [value, setValue] = useState(defaultValue)
 
-    const handleChange = (e) => {
+    const handleChange = e => {
       setValue(e.target.value.trim())
       onChange(e.target.value.trim())
     }

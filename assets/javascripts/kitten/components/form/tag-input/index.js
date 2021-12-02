@@ -209,7 +209,9 @@ export const TagInput = ({
   const removeLastValueFromList = () => {
     const lastItem = itemsList[itemsList.length - 1]
 
-    if (lastItem.disabled) { return }
+    if (lastItem.disabled) {
+      return
+    }
 
     setLastRemoved(lastItem)
     setItemList(currentList => currentList.slice(0, -1))

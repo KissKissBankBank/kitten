@@ -1,120 +1,123 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import React, { useEffect, useRef, useState } from 'react';
-import styled, { css } from 'styled-components';
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Marger } from '../../../../components/layout/marger';
-import { CommentAvatar } from '../../../../components/molecules/comment-block/comment-avatar';
+import classNames from 'classnames';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import { Text } from '../../../../components/atoms/typography/text';
-import { ScreenConfig } from '../../../../constants/screen-config';
-import COLORS from '../../../../constants/colors-config';
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
-import { LikeButton } from './components/like-button';
-import domElementHelper from '../../../../helpers/dom/element-helper';
-var desktopPadding = pxToRem(30);
-var tabletAndMobilePadding = pxToRem(20);
-var StyledContentText = styled(Text).withConfig({
-  displayName: "comment__StyledContentText",
+import { mq } from '../../../../constants/screen-config';
+import TYPOGRAPHY from '../../../../constants/typography-config';
+import { pxToRem } from '../../../../helpers/utils/typography';
+import { HeartIconNext } from '../../../../components/graphics/icons-next/heart-icon-next';
+var CommentWrapper = styled.div.withConfig({
+  displayName: "comment__CommentWrapper",
   componentId: "sc-189ycjb-0"
-})(["font-size:", ";@media (min-width:", "px){font-size:", ";}"], stepToRem(-1), ScreenConfig.S.min, stepToRem(0));
-var StyledCommentArrow = styled.span.withConfig({
-  displayName: "comment__StyledCommentArrow",
-  componentId: "sc-189ycjb-1"
-})(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:", ";@media (min-width:", "px){top:", ";}"], pxToRem(20), pxToRem(10), COLORS.background3, pxToRem(-20), ScreenConfig.S.min, pxToRem(35));
-var StyledGrid = styled.div.withConfig({
-  displayName: "comment__StyledGrid",
-  componentId: "sc-189ycjb-2"
-})(["display:flex;"]);
-var StyledCommentContainer = styled.span.withConfig({
-  displayName: "comment__StyledCommentContainer",
-  componentId: "sc-189ycjb-3"
-})(["position:relative;margin-left:", ";flex:1;@media (min-width:", "px){margin-left:", ";}"], pxToRem(20), ScreenConfig.S.min, pxToRem(35));
-var StyledCommentContent = styled.div.withConfig({
-  displayName: "comment__StyledCommentContent",
-  componentId: "sc-189ycjb-4"
-})(["border-width:", ";background-color:", ";border-color:", ";color:", ";font-size:", ";padding:", ";@media (min-width:", "px){padding-top:", ";padding-right:", ";padding-left:", ";}"], pxToRem(2), COLORS.background3, COLORS.background3, COLORS.font1, stepToRem(0), tabletAndMobilePadding, ScreenConfig.M.min, desktopPadding, desktopPadding, desktopPadding);
-var StyledMargerText = styled.div.withConfig({
-  displayName: "comment__StyledMargerText",
-  componentId: "sc-189ycjb-5"
-})(["", " ", ""], function (_ref) {
-  var hasLikeButton = _ref.hasLikeButton;
-  return hasLikeButton && css(["margin-bottom:", ";@media (min-width:", "px){margin-bottom:", ";}"], pxToRem(15), ScreenConfig.M.min, pxToRem(20));
-}, function (_ref2) {
-  var ownerName = _ref2.ownerName;
-  return ownerName && css(["margin-top:", ";"], pxToRem(10));
-});
-var StyledBottomNotes = styled(Text).withConfig({
-  displayName: "comment__StyledBottomNotes",
-  componentId: "sc-189ycjb-6"
-})(["padding-left:", ";margin-top:0;"], pxToRem(30));
-var StyledLikeButtonBox = styled.div.withConfig({
-  displayName: "comment__StyledLikeButtonBox",
-  componentId: "sc-189ycjb-7"
-})(["position:absolute;right:0;margin-top:", ";margin-right:", ";@media (min-width:", "px){margin-right:", ";}"], pxToRem(-20), pxToRem(20), ScreenConfig.M.min, pxToRem(30));
-export var Comment = function Comment(_ref3) {
-  var text = _ref3.text,
-      ownerName = _ref3.ownerName,
-      avatarImgProps = _ref3.avatarImgProps,
-      commentDate = _ref3.commentDate,
-      bottomNotes = _ref3.bottomNotes,
-      likeButtonProps = _ref3.likeButtonProps,
-      avatarBadge = _ref3.avatarBadge,
-      id = _ref3.id;
-  var likeButtonElement = useRef(null);
+})(["--comment-arrow-size:", ";--comment-background-color:var(--color-grey-200);display:flex;gap:", ";padding:", ";border-radius:", ";flex-direction:column;position:relative;background-color:var(--comment-background-color);transition:background-color var(--transition);&.k-Comment--isSecondary{margin-left:", ";@media ", "{margin-left:", ";}}&.k-Comment--isHighlighted{--comment-background-color:var(--color-grey-400);.k-Comment__header__meta{color:var(--color-grey-700);}}&::before{content:'';width:0;height:0;position:absolute;left:calc(-1 * var(--comment-arrow-size));top:calc(50% - var(--comment-arrow-size));border:var(--comment-arrow-size) solid transparent;border-left:0;border-right-color:var(--comment-background-color);transition:border-right-color var(--transition);}.k-Comment__header{display:flex;gap:", ";align-items:center;justify-content:space-between;font-size:", ";}.k-Comment__header__meta{display:flex;gap:", ";align-items:center;color:var(--color-grey-600);}.k-Comment__header__image{display:block;width:", ";height:", ";overflow:hidden;object-fit:cover;object-position:center center;border-radius:", ";}.k-Comment__header__actions{display:flex;gap:", ";}.k-Comment__content{", " font-size:", ";}.k-Comment__footer{display:flex;gap:", ";}.k-Comment-LikeButton{display:flex;gap:", ";align-items:center;color:var(--color-grey-900);transition:color var(--transition);:disabled{cursor:not-allowed;opacity:0.5;}&[aria-pressed]{svg{color:var(--color-red-500);}}svg{max-width:", ";max-height:", ";transition:inherit;}:not(:disabled):hover{color:var(--color-primary-700);}}"], pxToRem(7), pxToRem(10), pxToRem(15), pxToRem(6), pxToRem(20), mq.tabletAndDesktop, pxToRem(50), pxToRem(10), pxToRem(12), pxToRem(5), pxToRem(20), pxToRem(20), pxToRem(20), pxToRem(10), TYPOGRAPHY.fontStyles.light, pxToRem(14), pxToRem(10), pxToRem(5), pxToRem(14), pxToRem(14));
+export var Comment = React.forwardRef(function (_ref, ref) {
+  var text = _ref.text,
+      ownerName = _ref.ownerName,
+      ownerUrl = _ref.ownerUrl,
+      avatarImgProps = _ref.avatarImgProps,
+      commentDate = _ref.commentDate,
+      footer = _ref.footer,
+      headerActions = _ref.headerActions,
+      id = _ref.id,
+      children = _ref.children,
+      className = _ref.className,
+      isSecondary = _ref.isSecondary,
+      isHighlighted = _ref.isHighlighted,
+      props = _objectWithoutProperties(_ref, ["text", "ownerName", "ownerUrl", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"]);
 
-  var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      likeButtonWidth = _useState2[0],
-      setLikeButtonWidth = _useState2[1];
-
-  useEffect(function () {
-    var marginLeftAndRight = 40;
-    var elementWidth = domElementHelper.getComputedWidth(likeButtonElement.current);
-    setLikeButtonWidth(elementWidth + marginLeftAndRight);
-  }, []);
-  return /*#__PURE__*/React.createElement(StyledGrid, {
-    id: id
-  }, /*#__PURE__*/React.createElement(CommentAvatar, {
-    avatarImgProps: avatarImgProps,
-    commentDate: commentDate,
-    avatarBadge: avatarBadge
-  }), /*#__PURE__*/React.createElement(StyledCommentContainer, null, /*#__PURE__*/React.createElement(StyledCommentContent, null, ownerName && /*#__PURE__*/React.createElement(Marger, {
-    bottom: "1"
-  }, /*#__PURE__*/React.createElement(Text, {
-    color: "font1",
-    size: "tiny",
-    weight: "regular"
-  }, ownerName)), /*#__PURE__*/React.createElement(StyledMargerText, {
-    hasLikeButton: !!likeButtonProps.children,
-    ownerName: ownerName
-  }, /*#__PURE__*/React.createElement(StyledContentText, {
-    color: "font1",
-    weight: "light"
-  }, text)), /*#__PURE__*/React.createElement(StyledCommentArrow, null)), likeButtonProps.children && /*#__PURE__*/React.createElement(StyledLikeButtonBox, {
-    ref: likeButtonElement
-  }, /*#__PURE__*/React.createElement(LikeButton, likeButtonProps)), bottomNotes && /*#__PURE__*/React.createElement(Marger, {
-    top: ".5",
-    style: {
-      marginRight: likeButtonWidth
-    }
-  }, /*#__PURE__*/React.createElement(StyledBottomNotes, {
-    tag: "div",
-    color: "font1",
+  return /*#__PURE__*/React.createElement(CommentWrapper, _extends({
+    ref: ref || null,
+    id: id,
+    className: classNames('k-Comment', className, {
+      'k-Comment--isSecondary': isSecondary,
+      'k-Comment--isHighlighted': isHighlighted
+    })
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "k-Comment__header"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "k-Comment__header__meta"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: ownerUrl
+  }, /*#__PURE__*/React.createElement("img", _extends({
+    alt: ""
+  }, avatarImgProps, {
+    className: "k-Comment__header__image"
+  }))), /*#__PURE__*/React.createElement("a", {
+    href: ownerUrl,
+    className: "k-u-link k-u-link-font1 k-u-ellipsis"
+  }, ownerName), /*#__PURE__*/React.createElement(Text, {
     size: "micro",
-    weight: "bold"
-  }, bottomNotes))));
+    "aria-hidden": true
+  }, "\u2022"), /*#__PURE__*/React.createElement(Text, {
+    size: "micro",
+    weight: "light"
+  }, commentDate)), /*#__PURE__*/React.createElement("div", {
+    className: "k-Comment__header__actions"
+  }, headerActions)), /*#__PURE__*/React.createElement("div", {
+    className: "k-Comment__content"
+  }, !!text && /*#__PURE__*/React.createElement(Text, {
+    color: "font1",
+    weight: "light",
+    size: "tiny"
+  }, text), children), footer && /*#__PURE__*/React.createElement("div", {
+    className: "k-Comment__footer"
+  }, footer));
+});
+
+Comment.LikeButton = function (_ref2) {
+  var children = _ref2.children,
+      accessibilityLabel = _ref2.accessibilityLabel,
+      hasLiked = _ref2.hasLiked,
+      className = _ref2.className,
+      disabled = _ref2.disabled,
+      props = _objectWithoutProperties(_ref2, ["children", "accessibilityLabel", "hasLiked", "className", "disabled"]);
+
+  return /*#__PURE__*/React.createElement("button", _extends({
+    role: "button",
+    "aria-pressed": !!hasLiked || null,
+    className: classNames('k-Comment-LikeButton', 'k-u-reset-button', 'k-u-link', className),
+    disabled: disabled
+  }, props), /*#__PURE__*/React.createElement("span", {
+    className: "k-u-a11y-visuallyHidden"
+  }, accessibilityLabel), children, /*#__PURE__*/React.createElement(HeartIconNext, {
+    "aria-hidden": "true",
+    focusable: "false",
+    color: "currentColor",
+    bgColor: hasLiked ? 'currentColor' : 'transparent'
+  }));
 };
+
 Comment.propTypes = {
-  text: PropTypes.node.isRequired,
   ownerName: PropTypes.string,
-  avatarImgProps: PropTypes.object.isRequired,
-  commentDate: PropTypes.string.isRequired,
-  bottomNotes: PropTypes.node,
-  likeButtonProps: PropTypes.object,
-  avatarBadge: PropTypes.node
+  ownerUrl: PropTypes.string,
+  avatarImgProps: PropTypes.object,
+  commentDate: PropTypes.string,
+  headerActions: PropTypes.node,
+  footer: PropTypes.node,
+  bottomNotes: deprecated(PropTypes.node, 'Please use footer prop instead'),
+  text: deprecated(PropTypes.node, 'Please use children prop instead'),
+  likeButtonProps: deprecated(PropTypes.object, 'Please use headerActions={<Comment.LikeButton />} instead'),
+  isSecondary: PropTypes.bool,
+  isHighlighted: PropTypes.bool
 };
 Comment.defaultProps = {
-  bottomNotes: '',
+  footer: null,
   ownerName: '',
-  likeButtonProps: {},
-  avatarBadge: ''
+  ownerUrl: '',
+  headerActions: null,
+  avatarImgProps: {},
+  commentDate: '',
+  isSecondary: false,
+  isHighlighted: false
+};
+Comment.LikeButton.defaultProps = {
+  hasLiked: false
+};
+Comment.LikeButton.propTypes = {
+  accessibilityLabel: PropTypes.string.isRequired,
+  hasLiked: PropTypes.bool
 };

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
-import classNames from 'classnames'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -16,15 +15,19 @@ export const TextareaAutoResize = ({
   const [innerRows, setInnerRows] = useState(rows)
   const [innerValue, setInnerValue] = useState(value)
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const elementStyles = getComputedStyle(event.target)
-    const verticalPadding = parseInt(elementStyles.paddingTop) + parseInt(elementStyles.paddingBottom)
+    const verticalPadding =
+      parseInt(elementStyles.paddingTop) + parseInt(elementStyles.paddingBottom)
 
     const previousRows = event.target.rows
     event.target.rows = minRows
 
     // `~~` ? http://rocha.la/JavaScript-bitwise-operators-in-practice
-    const currentRows = ~~((event.target.scrollHeight - verticalPadding) / lineHeight)
+    const currentRows = ~~(
+      (event.target.scrollHeight - verticalPadding) /
+      lineHeight
+    )
 
     if (currentRows === previousRows) {
       event.target.rows = currentRows
