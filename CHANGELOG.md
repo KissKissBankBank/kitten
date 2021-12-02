@@ -4,16 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `IconBadge`: Remove text capacity.
-- Feature: Tokens: Add `transitions` related tokens.
-- Feature: `Comment`:
+## [6.6.0] - 2021-12-02
+
+Features
+
+- Tokens: Add `transitions` related tokens.
+- Utilities: Add `k-u-ellipsis` CSS utility class.
+- Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
+- Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
+- `HeartIconNext`: Add component.
+- `ModalFooterInput`: Add component.
+- `LargeArrowIconNext`: Add component.
+- `TextareaAutoResize`: Add component.
+- `Comment`:
   - Change design
   - Deprecate the following props:
     - `bottomNotes` replaced by `footer`
     - `text` replaced by `children`
     - `likeButtonProps` replaced by `headerActions={<Comment.LikeButton/>}`
     - `avatarBadge`
-- Feature: `CommentForm`:
+- `CommentForm`:
   - Modernize component code
   - Change design
   - Deprecate the following props:
@@ -23,15 +33,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `ariaId` replaced by `id`
     - `textareaId` replaced by `id`
     - `avatarBadge`
-- Feature: `ModalFooterInput`: Add component.
-- Feature: `HeartIconNext`: Add component.
-- Feature: `LargeArrowIconNext`: Add component.
-- Fix: Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
-- Feature: Utilities: Add `k-u-ellipsis` CSS utility class.
-- Feature: Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
-- Feature: Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
-- Feature: `TextareaAutoResize`: Add component.
-- Fix: `TagInput`: Fix focus styles.
+- `IconBadge`: Remove text capacity.
+
+Fixes
+
+- Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
+- `TagInput`: Fix focus styles.
 
 ## [6.5.1] - 2021-11-30
 

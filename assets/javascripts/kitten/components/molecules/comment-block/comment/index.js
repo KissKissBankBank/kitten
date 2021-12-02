@@ -95,7 +95,7 @@ const CommentWrapper = styled.div`
 
     :disabled {
       cursor: not-allowed;
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &[aria-pressed] {

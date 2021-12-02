@@ -1,189 +1,126 @@
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
-
-var _templateObject, _templateObject2, _templateObject3;
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { PureComponent } from 'react';
+import _extends from "@babel/runtime/helpers/esm/extends";
+import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Marger } from '../../../../components/layout/marger';
-import { CommentAvatar } from '../../../../components/molecules/comment-block/comment-avatar';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import { Button } from '../../../../components/molecules/buttons/button';
 import { Text } from '../../../../components/atoms/typography/text';
-import { ScreenConfig } from '../../../../constants/screen-config';
+import { TextareaAutoResize } from '../../../../components/form/textarea-auto-resize';
 import COLORS from '../../../../constants/colors-config';
 import TYPOGRAPHY from '../../../../constants/typography-config';
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
-var StyledGrid = styled.div.withConfig({
-  displayName: "comment-form__StyledGrid",
+import { pxToRem } from '../../../../helpers/utils/typography';
+var CommentFormWrapper = styled.div.withConfig({
+  displayName: "comment-form__CommentFormWrapper",
   componentId: "sc-1hg07ex-0"
-})(["display:flex;"]);
-var StyledGridCol = styled.div.withConfig({
-  displayName: "comment-form__StyledGridCol",
-  componentId: "sc-1hg07ex-1"
-})(["flex:1;margin-left:", ";@media (min-width:", "px){margin-left:", ";}"], pxToRem(20), ScreenConfig.S.min, pxToRem(35));
-var StyledInput = styled.div.withConfig({
-  displayName: "comment-form__StyledInput",
-  componentId: "sc-1hg07ex-2"
-})(["margin-bottom:", ";display:flex;position:relative;"], pxToRem(0.5));
-var StyledTextarea = styled.textarea.withConfig({
-  displayName: "comment-form__StyledTextarea",
-  componentId: "sc-1hg07ex-3"
-})(["color:", ";", ";width:100%;overflow-y:hidden;resize:none;box-sizing:border-box;border-width:var(--border-width);border-style:solid;border-color:var(--color-grey-400);color:", ";padding:", ";font-size:", ";@media (min-width:", "px){font-size:", ";}&:focus{border-color:", ";color:", ";}::placeholder{color:", ";}", " ", ""], COLORS.font2, TYPOGRAPHY.fontStyles.light, COLORS.font1, pxToRem(30), stepToRem(-1), ScreenConfig.S.min, stepToRem(0), COLORS.line2, COLORS.font1, COLORS.font2, function (_ref) {
-  var isDisabled = _ref.isDisabled;
-  return isDisabled && css(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n      background-color: ", ";\n    "])), COLORS.line1, COLORS.font2, COLORS.line1);
-}, function (_ref2) {
-  var error = _ref2.error;
-  return error && css(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n      border-color: ", ";\n      color: ", ";\n    "])), COLORS.error3, COLORS.error3);
+})(["--commentForm-arrow-size:", ";display:flex;gap:", ";.k-CommentForm__image{width:", ";flex:0 0 ", ";padding-top:", ";img{width:", ";height:", ";overflow:hidden;object-fit:cover;object-position:center center;border-radius:", ";}}.k-CommentForm__form{flex-grow:1;display:flex;flex-direction:column;gap:", ";margin-left:var(--commentForm-arrow-size);position:relative;}.k-CommentForm__textarea{", " background-color:var(--color-grey-000);font-size:", ";color:", ";padding:", ";border-radius:", ";border:var(--border);resize:vertical;line-height:", ";min-height:", ";max-height:", ";::placeholder{color:var(--color-grey-600);}:hover{border-color:var(--color-grey-500);& + .k-CommentForm__arrow{border-right-color:var(--color-grey-500);}}:active{border-color:var(--color-grey-600);& + .k-CommentForm__arrow{border-right-color:var(--color-grey-600);}}:focus{outline:var(--outline-input);outline-offset:var(--outline-offset-input);& + .k-CommentForm__arrow{border-right-color:var(--color-grey-900);&::before{left:", ";}}}:disabled{cursor:not-allowed;color:var(--color-grey-900);border-color:var(--color-grey-500);background-color:var(--color-grey-300);::placeholder{color:var(--color-grey-600);}& + .k-CommentForm__arrow{border-right-color:var(--color-grey-500);&::before{border-right-color:var(--color-grey-300);}}}}.k-CommentForm__arrow{width:0;height:0;position:absolute;left:calc(-1 * var(--commentForm-arrow-size));top:calc(", " - var(--commentForm-arrow-size));border:var(--commentForm-arrow-size) solid transparent;border-left:0;border-right-color:var(--color-grey-400);z-index:1;&::before{content:'';position:absolute;left:", ";right:0;top:calc(-1 * var(--commentForm-arrow-size));width:0;height:0;border:var(--commentForm-arrow-size) solid transparent;border-left:0;border-right-color:var(--color-grey-000);z-index:2;}}.k-CommentForm__submit{display:inline-block;min-height:0;max-height:0;padding:0 ", ";height:var(--Button-dimension);align-self:flex-end;overflow:hidden;transition:max-height var(--transition),padding var(--transition);}.k-CommentForm__submit--is-visible{max-height:", ";padding:", " ", ";}.k-CommentForm__error{margin-top:", ";}"], pxToRem(7), pxToRem(10), pxToRem(30), pxToRem(30), pxToRem(10), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(10), TYPOGRAPHY.fontStyles.light, pxToRem(16), COLORS.font1, pxToRem(15), pxToRem(6), pxToRem(20), pxToRem(50 - 30), pxToRem(20 * 5), pxToRem(2), pxToRem(50 / 2), pxToRem(1), pxToRem(20), pxToRem(40), pxToRem(7), pxToRem(20), pxToRem(-5));
+export var CommentForm = React.forwardRef(function (_ref, ref) {
+  var avatarImgProps = _ref.avatarImgProps,
+      placeholder = _ref.placeholder,
+      onSubmit = _ref.onSubmit,
+      error = _ref.error,
+      errorMessage = _ref.errorMessage,
+      disabled = _ref.disabled,
+      buttonText = _ref.buttonText,
+      defaultValue = _ref.defaultValue,
+      commentLabel = _ref.commentLabel,
+      id = _ref.id,
+      className = _ref.className,
+      onChange = _ref.onChange,
+      props = _objectWithoutProperties(_ref, ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "defaultValue", "commentLabel", "id", "className", "onChange"]);
+
+  var _useState = useState(defaultValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setValue = _useState2[1];
+
+  var handleChange = function handleChange(event) {
+    setValue(event.target.value.trim());
+    onChange(event.target.value);
+  };
+
+  var handleKeyDown = function handleKeyDown(event) {
+    if (value === '') return;
+    if (event.key !== 'Enter') return;
+    if (!event.metaKey && !event.ctrlKey) return;
+    onSubmit(value);
+  };
+
+  var handleSubmit = function handleSubmit() {
+    onSubmit(value);
+  };
+
+  return /*#__PURE__*/React.createElement(CommentFormWrapper, {
+    className: classNames('k-CommentForm', className)
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "k-CommentForm__image"
+  }, /*#__PURE__*/React.createElement("img", _extends({
+    alt: ""
+  }, avatarImgProps))), /*#__PURE__*/React.createElement("div", {
+    className: "k-CommentForm__form"
+  }, /*#__PURE__*/React.createElement(TextareaAutoResize, {
+    ref: ref || null,
+    className: "k-CommentForm__textarea",
+    id: id,
+    defaultValue: defaultValue,
+    disabled: disabled,
+    placeholder: placeholder,
+    onChange: handleChange,
+    onKeyDown: handleKeyDown,
+    minRows: 1,
+    maxRows: 5,
+    lineHeight: 20,
+    "aria-describedby": "".concat(id, "-description"),
+    "aria-label": props['aria-label'] || commentLabel
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "k-CommentForm__arrow"
+  }), error && /*#__PURE__*/React.createElement(Text, {
+    id: "".concat(id, "-description"),
+    color: "error",
+    size: "micro",
+    weight: "regular",
+    className: "k-CommentForm__error"
+  }, errorMessage), (value.length > 0 || !!defaultValue) && /*#__PURE__*/React.createElement(Button, {
+    type: "button",
+    modifier: "beryllium",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    className: classNames('k-CommentForm__submit', {
+      'k-CommentForm__submit--is-visible': value.length > 0
+    }),
+    onClick: handleSubmit
+  }, buttonText)));
 });
-var StyledArrow = styled.div.withConfig({
-  displayName: "comment-form__StyledArrow",
-  componentId: "sc-1hg07ex-4"
-})(["position:absolute;top:", ";display:block;width:0;height:0;border-width:", ";border-style:solid;border-color:transparent;border-right-color:var(--color-grey-400);left:-", ";@media (min-width:", "px){top:", ";}", ":focus + &{border-right-color:var(--color-grey-500);}", ""], pxToRem(20), pxToRem(10), pxToRem(20), ScreenConfig.S.min, pxToRem(35), StyledTextarea, function (_ref3) {
-  var error = _ref3.error;
-  return error && css(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n      border-right-color: ", ";\n    "])), COLORS.error3);
-});
-var StyledArrowBefore = styled.span.withConfig({
-  displayName: "comment-form__StyledArrowBefore",
-  componentId: "sc-1hg07ex-5"
-})(["position:absolute;width:0;height:0;margin-top:-", ";border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";"], pxToRem(10), pxToRem(10), COLORS.background1, pxToRem(8));
-export var CommentForm = /*#__PURE__*/function (_PureComponent) {
-  _inherits(CommentForm, _PureComponent);
-
-  var _super = _createSuper(CommentForm);
-
-  function CommentForm(props) {
-    var _this;
-
-    _classCallCheck(this, CommentForm);
-
-    _this = _super.call(this, props);
-
-    _this.handleChange = function (e) {
-      var element = e.target;
-
-      _this.setState({
-        value: element.value,
-        height: 'auto'
-      }, function () {
-        _this.setState({
-          height: element.scrollHeight
-        });
-      });
-    };
-
-    _this.handleSubmit = function () {
-      _this.props.onSubmit(_this.state.value);
-    };
-
-    _this.state = {
-      value: _this.props.defaultValue,
-      height: 'auto'
-    };
-    return _this;
-  }
-
-  _createClass(CommentForm, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          avatarImgProps = _this$props.avatarImgProps,
-          avatarBadge = _this$props.avatarBadge;
-      return /*#__PURE__*/React.createElement(StyledGrid, null, /*#__PURE__*/React.createElement(CommentAvatar, {
-        avatarBadge: avatarBadge,
-        avatarImgProps: avatarImgProps
-      }), this.renderInput());
-    }
-  }, {
-    key: "renderInput",
-    value: function renderInput() {
-      var _this$props2 = this.props,
-          isDisabled = _this$props2.isDisabled,
-          placeholder = _this$props2.placeholder,
-          defaultValue = _this$props2.defaultValue,
-          commentLabel = _this$props2.commentLabel,
-          ariaId = _this$props2.ariaId,
-          textareaId = _this$props2.textareaId;
-      return /*#__PURE__*/React.createElement(StyledGridCol, null, /*#__PURE__*/React.createElement(StyledInput, null, /*#__PURE__*/React.createElement(StyledTextarea, {
-        id: textareaId,
-        "aria-label": commentLabel,
-        "aria-describedby": ariaId,
-        "aria-invalid": "false",
-        "aria-required": "true",
-        defaultValue: defaultValue,
-        key: "comment-form",
-        disabled: isDisabled,
-        placeholder: placeholder,
-        onChange: this.handleChange,
-        rows: "1"
-      }), /*#__PURE__*/React.createElement(StyledArrow, null, /*#__PURE__*/React.createElement(StyledArrowBefore, null))), this.renderError(), this.renderButton());
-    }
-  }, {
-    key: "renderButton",
-    value: function renderButton() {
-      if (!this.state.value) return;
-      var commentButton = this.props.commentButton;
-      return /*#__PURE__*/React.createElement(Marger, {
-        top: "2"
-      }, /*#__PURE__*/React.createElement(Button, {
-        type: "button",
-        modifier: "helium",
-        onClick: this.handleSubmit,
-        className: "k-u-margin-right-single"
-      }, commentButton));
-    }
-  }, {
-    key: "renderError",
-    value: function renderError() {
-      var _this$props3 = this.props,
-          error = _this$props3.error,
-          errorMessage = _this$props3.errorMessage,
-          ariaId = _this$props3.ariaId;
-      if (!error) return;
-      return /*#__PURE__*/React.createElement(Marger, {
-        top: ".5"
-      }, /*#__PURE__*/React.createElement(Text, {
-        id: ariaId,
-        color: "error",
-        size: "micro",
-        weight: "regular"
-      }, errorMessage));
-    }
-  }]);
-
-  return CommentForm;
-}(PureComponent);
 CommentForm.propTypes = {
   avatarImgProps: PropTypes.object.isRequired,
-  isDisabled: PropTypes.bool,
-  placeholder: PropTypes.string.isRequired,
-  commentButton: PropTypes.string,
+  'aria-label': PropTypes.string.isRequired,
+  onChange: PropTypes.func,
+  onSubmit: PropTypes.func,
+  placeholder: PropTypes.string,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
-  onSubmit: PropTypes.func,
   defaultValue: PropTypes.string,
-  commentLabel: PropTypes.string,
-  ariaId: PropTypes.string,
-  avatarBadge: PropTypes.node,
-  textareaId: PropTypes.string
+  id: PropTypes.string,
+  disabled: PropTypes.bool,
+  buttonText: PropTypes.string,
+  commentButton: deprecated(PropTypes.string, 'Please use buttonText instead.'),
+  avatarBadge: deprecated(PropTypes.node, 'Not a feature anymore'),
+  isDisabled: deprecated(PropTypes.bool, 'Please use disabled instead'),
+  commentLabel: deprecated(PropTypes.string, 'Please use aria-label instead'),
+  ariaId: deprecated(PropTypes.string, 'Please use id prop instead.'),
+  textareaId: deprecated(PropTypes.string, 'Please use id prop instead.')
 };
 CommentForm.defaultProps = {
+  onChange: function onChange() {},
   onSubmit: function onSubmit() {},
+  placeholder: '',
   error: false,
   errorMessage: '',
-  isDisabled: false,
-  commentButton: '',
   defaultValue: '',
-  ariaId: '',
-  commentLabel: '',
-  avatarBadge: '',
-  textareaId: null
+  id: 'CommentForm',
+  disabled: false,
+  buttonText: 'Send'
 };

@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledBadge = styled.span`
   box-sizing: border-box;

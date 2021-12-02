@@ -51,6 +51,7 @@ export { Field } from './components/form/field';
 export { FormActions } from './components/form/form-actions';
 export { Label } from './components/form/label';
 export { LocationInput } from './components/form/location-input';
+export { ModalFooterInput } from './components/form/modal-footer-input';
 export { PasswordInput } from './components/form/password-input';
 export { PillNumberInput } from './components/form/pill-number-input';
 export { RadioButton } from './components/form/radio-button';
@@ -58,6 +59,7 @@ export { RadioButtonSet } from './components/form/radio-button-set';
 export { RangeSlider } from './components/form/range-slider';
 export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker';
 export { TagInput } from './components/form/tag-input';
+export { TextareaAutoResize } from './components/form/textarea-auto-resize';
 export { TextInput } from './components/form/text-input';
 export { TextInputWithButton } from './components/form/text-input-with-button';
 export { TextInputWithIcon } from './components/form/text-input-with-icon';
@@ -188,7 +190,9 @@ export { ThumbUpIconNext } from './components/graphics/icons-next/thumb-up-icon-
 export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-next';
 export { UsersIconNext } from './components/graphics/icons-next/users-icon-next';
 export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next';
-export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'; // Graphics/Illustrations
+export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next';
+export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next';
+export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next'; // Graphics/Illustrations
 
 export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration';
 export { LinkBoxIllustration } from './components/graphics/illustrations/link-box-illustration';

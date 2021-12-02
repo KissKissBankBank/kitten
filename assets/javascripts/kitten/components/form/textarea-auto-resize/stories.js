@@ -21,8 +21,7 @@ export default {
     onChange: action('onChange'),
     lineHeight: 18,
   },
-  argTypes: {
-  },
+  argTypes: {},
   parameters: {
     docs: {
       page: () => (

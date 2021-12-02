@@ -317,6 +317,12 @@ Object.defineProperty(exports, "LocationInput", {
     return _locationInput.LocationInput;
   }
 });
+Object.defineProperty(exports, "ModalFooterInput", {
+  enumerable: true,
+  get: function get() {
+    return _modalFooterInput.ModalFooterInput;
+  }
+});
 Object.defineProperty(exports, "PasswordInput", {
   enumerable: true,
   get: function get() {
@@ -357,6 +363,12 @@ Object.defineProperty(exports, "TagInput", {
   enumerable: true,
   get: function get() {
     return _tagInput.TagInput;
+  }
+});
+Object.defineProperty(exports, "TextareaAutoResize", {
+  enumerable: true,
+  get: function get() {
+    return _textareaAutoResize.TextareaAutoResize;
   }
 });
 Object.defineProperty(exports, "TextInput", {
@@ -1125,6 +1137,18 @@ Object.defineProperty(exports, "WindowEditIconNext", {
   enumerable: true,
   get: function get() {
     return _windowEditIconNext.WindowEditIconNext;
+  }
+});
+Object.defineProperty(exports, "HeartIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _heartIconNext.HeartIconNext;
+  }
+});
+Object.defineProperty(exports, "LargeArrowIconNext", {
+  enumerable: true,
+  get: function get() {
+    return _largeArrowIconNext.LargeArrowIconNext;
   }
 });
 Object.defineProperty(exports, "LightbulbIllustration", {
@@ -2354,6 +2378,8 @@ var _label = require("./components/form/label");
 
 var _locationInput = require("./components/form/location-input");
 
+var _modalFooterInput = require("./components/form/modal-footer-input");
+
 var _passwordInput = require("./components/form/password-input");
 
 var _pillNumberInput = require("./components/form/pill-number-input");
@@ -2367,6 +2393,8 @@ var _rangeSlider = require("./components/form/range-slider");
 var _standaloneRangeDatePicker = require("./components/form/standalone-range-date-picker");
 
 var _tagInput = require("./components/form/tag-input");
+
+var _textareaAutoResize = require("./components/form/textarea-auto-resize");
 
 var _textInput = require("./components/form/text-input");
 
@@ -2619,6 +2647,10 @@ var _usersIconNext = require("./components/graphics/icons-next/users-icon-next")
 var _whatsappIconNext = require("./components/graphics/icons-next/whatsapp-icon-next");
 
 var _windowEditIconNext = require("./components/graphics/icons-next/window-edit-icon-next");
+
+var _heartIconNext = require("./components/graphics/icons-next/heart-icon-next");
+
+var _largeArrowIconNext = require("./components/graphics/icons-next/large-arrow-icon-next");
 
 var _lightbulbIllustration = require("./components/graphics/illustrations/lightbulb-illustration");
 
