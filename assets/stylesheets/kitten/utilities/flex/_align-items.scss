@@ -39,6 +39,7 @@
     center: center,
     start: flex-start,
     end: flex-end,
+    baseline: baseline,
   );
 
   @each $variant_name, $attribute in $k-variants {

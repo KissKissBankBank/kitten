@@ -12,8 +12,6 @@
 ///   <a class="k-u-link-background1" href="…" />
 
 @mixin k-utilities-link {
-  $transition-speed: 0.3s;
-
   .k-u-link {
     font-family: map-get(k-map-fetch($k-fonts, 'regular'), 'family') !important;
     font-weight: map-get(k-map-fetch($k-fonts, 'regular'), 'weight') !important;
@@ -26,7 +24,7 @@
 
   .k-u-link-font1 {
     color: map-get($k-colors, 'font-1') !important;
-    transition: color $transition-speed !important;
+    transition: color var(--transition) !important;
 
     &:hover,
     &:focus {
@@ -36,7 +34,7 @@
 
   .k-u-link-primary1 {
     color: map-get($k-colors, 'primary-1') !important;
-    transition: color $transition-speed !important;
+    transition: color var(--transition) !important;
 
     &:hover,
     &:focus {
@@ -46,7 +44,17 @@
 
   .k-u-link-background1 {
     color: map-get($k-colors, 'background-1') !important;
-    transition: color $transition-speed !important;
+    transition: color var(--transition) !important;
+
+    &:hover,
+    &:focus {
+      color: map-get($k-colors, 'primary-1') !important;
+    }
+  }
+
+  .k-u-link-grey1 {
+    color: map-get($k-colors, 'grey-1') !important;
+    transition: color var(--transition) !important;
 
     &:hover,
     &:focus {
