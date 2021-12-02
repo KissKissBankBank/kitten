@@ -31,6 +31,7 @@ export default {
     showFooter: true,
     isSecondary: false,
     isHighlighted: false,
+    disabledButton: false,
   },
   argTypes: {
     children: {
@@ -57,6 +58,10 @@ export default {
       name: 'showFooter (story prop)',
       control: 'boolean',
     },
+    disabledButton: {
+      name: 'disabledButton (story prop)',
+      control: 'boolean',
+    },
     footer: {
       name: 'footer',
       control: { type: null },
@@ -74,7 +79,7 @@ export default {
   },
 }
 
-export const Default = ({ showFooter, ...args }) => {
+export const Default = ({ showFooter, disabledButton, ...args }) => {
   const [hasLiked, setHasLiked] = useState(false)
 
   const handleClick = e => {
@@ -91,6 +96,7 @@ export const Default = ({ showFooter, ...args }) => {
           hasLiked={hasLiked}
           children={hasLiked ? '101' : '100'}
           onClick={handleClick}
+          disabled={disabledButton}
         />
       }
       footer={

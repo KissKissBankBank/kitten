@@ -93,6 +93,11 @@ const CommentWrapper = styled.div`
     color: var(--color-grey-900);
     transition: color var(--transition);
 
+    :disabled {
+      cursor: not-allowed;
+      opacity: .5;
+    }
+
     &[aria-pressed] {
       svg {
         color: var(--color-red-500);
@@ -105,7 +110,7 @@ const CommentWrapper = styled.div`
       transition: inherit;
     }
 
-    :hover {
+    :not(:disabled):hover {
       color: var(--color-primary-700);
     }
   }
@@ -181,6 +186,7 @@ Comment.LikeButton = ({
   accessibilityLabel,
   hasLiked,
   className,
+  disabled,
   ...props
 }) => (
   <button
@@ -192,6 +198,7 @@ Comment.LikeButton = ({
       'k-u-link',
       className,
     )}
+    disabled={disabled}
     {...props}
   >
     <span className="k-u-a11y-visuallyHidden">{accessibilityLabel}</span>
