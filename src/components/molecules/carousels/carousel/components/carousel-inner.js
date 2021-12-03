@@ -56,7 +56,7 @@ var getElementPadding = function getElementPadding(element) {
 };
 
 var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numberOfPages, itemMarginBetween, containerPadding) {
-  return [].concat(Array(numberOfPages).keys()).map(function (page) {
+  return Array(numberOfPages).fill(0).map(function (el, page) {
     return page * (targetClientWidth + itemMarginBetween - containerPadding);
   });
 };
@@ -161,7 +161,7 @@ var CarouselInner = function CarouselInner(_ref) {
     },
     onKeyDown: handleKeyDown,
     className: "k-Carousel__inner"
-  }, [].concat(Array(numberOfPages).keys()).map(function (index) {
+  }, Array(numberOfPages).fill(0).map(function (el, index) {
     var isActivePage = currentPageIndex === index;
     var hasPageBeenViewed = viewedPages.has(index);
     return /*#__PURE__*/_react.default.createElement("div", {

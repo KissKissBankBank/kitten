@@ -29,7 +29,7 @@ export var CarouselPage = function CarouselPage(_ref) {
       'k-Carousel__page--isActivePage': isActivePage,
       'k-Carousel__page--hasBeenViewed': hasPageBeenViewed
     })
-  }, [].concat(Array(numberOfItemsPerPage).keys()).map(function (index) {
+  }, Array(numberOfItemsPerPage).fill(0).map(function (el, index) {
     // If there's not enough items in the last page of the Carousel
     if (index >= pageItems.length) {
       return /*#__PURE__*/React.createElement("div", {

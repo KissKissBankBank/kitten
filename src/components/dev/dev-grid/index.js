@@ -79,7 +79,7 @@ var DevGrid = function DevGrid(_ref) {
     className: "k-DevGrid__container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DevGrid__row"
-  }, [].concat(Array(_gridConfig.NUM_COLUMNS).keys()).map(function (item) {
+  }, Array(_gridConfig.NUM_COLUMNS).fill(0).map(function (el, item) {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "k-DevGrid__col",
       key: "DevGrid_" + (item + 1)

@@ -12,11 +12,11 @@ import { GUTTER, NUM_COLUMNS } from '../../../constants/grid-config';
 var StyledGrid = styled.div.withConfig({
   displayName: "grid__StyledGrid",
   componentId: "sc-lrwuxf-0"
-})(["box-sizing:border-box;display:flex;flex-wrap:wrap;margin-right:", ";margin-left:", ";.k-Grid__col{box-sizing:border-box;flex:0 0 auto;padding-right:", ";padding-left:", ";}", " ", ""], pxToRem(-GUTTER / 2), pxToRem(-GUTTER / 2), pxToRem(GUTTER / 2), pxToRem(GUTTER / 2), [].concat(Array(NUM_COLUMNS + 1).keys()).map(function (column) {
+})(["box-sizing:border-box;display:flex;flex-wrap:wrap;margin-right:", ";margin-left:", ";.k-Grid__col{box-sizing:border-box;flex:0 0 auto;padding-right:", ";padding-left:", ";}", " ", ""], pxToRem(-GUTTER / 2), pxToRem(-GUTTER / 2), pxToRem(GUTTER / 2), pxToRem(GUTTER / 2), Array(NUM_COLUMNS + 1).fill(0).map(function (el, column) {
   return css([".k-Grid__col--", "{flex-basis:calc((100% / ", ") * ", ");max-width:calc((100% / ", ") * ", ");}.k-Grid__col--offset-", "{margin-left:calc((100% / ", ") * ", ");}"], column, NUM_COLUMNS, column, NUM_COLUMNS, column, column, NUM_COLUMNS, column);
 }), function () {
   return ORDERED_SCREEN_SIZES.map(function (media) {
-    return media !== ORDERED_SCREEN_SIZES[0] && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig[media].min), [].concat(Array(NUM_COLUMNS + 1).keys()).map(function (column) {
+    return media !== ORDERED_SCREEN_SIZES[0] && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig[media].min), Array(NUM_COLUMNS + 1).fill(0).map(function (el, column) {
       return css([".k-Grid__col--", "{flex-basis:calc((100% / ", ") * ", ");max-width:calc((100% / ", ") * ", ");}.k-Grid__col--offset-", "{margin-left:calc((100% / ", ") * ", ");}"], column + '-' + media.toLowerCase(), NUM_COLUMNS, column, NUM_COLUMNS, column, column + '-' + media.toLowerCase(), NUM_COLUMNS, column);
     }));
   });

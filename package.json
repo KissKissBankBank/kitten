@@ -3,10 +3,8 @@
   "version": "6.9.1",
   "license": "MIT",
   "description": "Front-end components library",
-  "exports": {
-    "require": "src",
-    "import": "src/esm"
-  },
+  "main": "src",
+  "module": "src/esm",
   "sideEffects": false,
   "repository": {
     "type": "git",

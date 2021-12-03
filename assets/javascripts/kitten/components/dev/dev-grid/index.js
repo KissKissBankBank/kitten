@@ -146,11 +146,13 @@ export const DevGrid = ({ visible, storageKey, zIndex }) => {
       <div className="k-DevGrid">
         <div className="k-DevGrid__container">
           <div className="k-DevGrid__row">
-            {[...Array(NUM_COLUMNS).keys()].map(item => (
-              <div className="k-DevGrid__col" key={`DevGrid_${item + 1}`}>
-                <div className="k-DevGrid__inner" />
-              </div>
-            ))}
+            {Array(NUM_COLUMNS)
+              .fill(0)
+              .map((el, item) => (
+                <div className="k-DevGrid__col" key={`DevGrid_${item + 1}`}>
+                  <div className="k-DevGrid__inner" />
+                </div>
+              ))}
           </div>
         </div>
       </div>

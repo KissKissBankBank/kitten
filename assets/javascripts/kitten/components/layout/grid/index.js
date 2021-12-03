@@ -22,17 +22,19 @@ const StyledGrid = styled.div`
     padding-left: ${pxToRem(GUTTER / 2)};
   }
 
-  ${[...Array(NUM_COLUMNS + 1).keys()].map(
-    column => css`
-      .k-Grid__col--${column} {
-        flex-basis: calc((100% / ${NUM_COLUMNS}) * ${column});
-        max-width: calc((100% / ${NUM_COLUMNS}) * ${column});
-      }
-      .k-Grid__col--offset-${column} {
-        margin-left: calc((100% / ${NUM_COLUMNS}) * ${column});
-      }
-    `,
-  )}
+  ${Array(NUM_COLUMNS + 1)
+    .fill(0)
+    .map(
+      (el, column) => css`
+        .k-Grid__col--${column} {
+          flex-basis: calc((100% / ${NUM_COLUMNS}) * ${column});
+          max-width: calc((100% / ${NUM_COLUMNS}) * ${column});
+        }
+        .k-Grid__col--offset-${column} {
+          margin-left: calc((100% / ${NUM_COLUMNS}) * ${column});
+        }
+      `,
+    )}
 
   ${() =>
     ORDERED_SCREEN_SIZES.map(
@@ -40,17 +42,19 @@ const StyledGrid = styled.div`
         media !== ORDERED_SCREEN_SIZES[0] &&
         css`
           @media (min-width: ${pxToRem(ScreenConfig[media].min)}) {
-            ${[...Array(NUM_COLUMNS + 1).keys()].map(
-              column => css`
-                .k-Grid__col--${column + '-' + media.toLowerCase()} {
-                  flex-basis: calc((100% / ${NUM_COLUMNS}) * ${column});
-                  max-width: calc((100% / ${NUM_COLUMNS}) * ${column});
-                }
-                .k-Grid__col--offset-${column + '-' + media.toLowerCase()} {
-                  margin-left: calc((100% / ${NUM_COLUMNS}) * ${column});
-                }
-              `,
-            )}
+            ${Array(NUM_COLUMNS + 1)
+              .fill(0)
+              .map(
+                (el, column) => css`
+                  .k-Grid__col--${column + '-' + media.toLowerCase()} {
+                    flex-basis: calc((100% / ${NUM_COLUMNS}) * ${column});
+                    max-width: calc((100% / ${NUM_COLUMNS}) * ${column});
+                  }
+                  .k-Grid__col--offset-${column + '-' + media.toLowerCase()} {
+                    margin-left: calc((100% / ${NUM_COLUMNS}) * ${column});
+                  }
+                `,
+              )}
           }
         `,
     )}
