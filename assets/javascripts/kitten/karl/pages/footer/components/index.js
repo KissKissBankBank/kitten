@@ -1,3 +1,3 @@
 export { Baseline } from './baseline'
 export { ListItems } from './list-items'
-import { SocialButton } from './social-button'
+export { SocialButton } from './social-button'

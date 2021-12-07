@@ -4,33 +4,17 @@ import {
   HorizontalStroke,
 } from 'kitten'
 
+const ListItem = (props) => (
+  <li>
+    <a className="k-Footer__linkList--item" {...props} />
+  </li>
+)
+
 export const ListItems = () => {
   return (
     <div className="k-Footer__listWrapper">
     {/* 1 */}
-      <div className="k-u-margin-left-double@m-up">
-        <Text
-          size="big"
-          weight="bold"
-          cssColor="var(--color-grey-000)"
-        >
-          Financer un projet
-        </Text>
-        <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
-          <ul className="k-Footer__linkList">
-            <li>
-              <a 
-                className="k-Footer__linkList--item"
-                href="#"
-              >
-                Réussir sa collecte
-              </a>
-            </li>
-          </ul>
-      </div>
-
-      {/* 2 */}
-      <div className="k-u-margin-left-double@m-up">
+      <div>
         <Text
           size="big"
           weight="bold"
@@ -40,52 +24,132 @@ export const ListItems = () => {
         </Text>
         <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
         <ul className="k-Footer__linkList">
+          <ListItem>
+            Réussir sa collecte
+          </ListItem>
+          <ListItem>
+            Nos fonctionnalités
+          </ListItem>
+          <ListItem>
+            Le financement participatif
+          </ListItem>
           <li>
-            <a href="#" className="k-Footer__linkList--item">
-              Réussir sa collecte
-            </a>
+            <ul className="k-Footer__linkList k-Footer__linkSecondList">
+              <ListItem>
+                Don contre don
+              </ListItem>
+              <ListItem>
+                Précommande
+              </ListItem>
+              <ListItem>
+                Don libre
+              </ListItem>
+            </ul>
           </li>
+          <ListItem>
+            Le kit com
+          </ListItem>
+          <ListItem>
+            Le blog
+          </ListItem>
+          <ListItem>
+            Le studio
+          </ListItem>
+          <ListItem>
+            Vos questions fréquentes
+          </ListItem>
+        </ul>
+      </div>
+
+      {/* 2 */}
+      <div>
+        <Text
+          size="big"
+          weight="bold"
+          cssColor="var(--color-grey-000)"
+        >
+          Partenariats
+        </Text>
+        <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
+        <ul className="k-Footer__linkList">
+          <ListItem>
+            Devenons partenaires
+          </ListItem>
+          <ListItem>
+            Bons plans partenaires
+          </ListItem>
+          <ListItem>
+            Acteurs publics
+          </ListItem>
+          <ListItem>
+            Mentorat de projets
+          </ListItem>
+          <ListItem>
+            Maison de Crowdfunding
+          </ListItem>
+          <ListItem>
+            La Banque Postale
+          </ListItem>
         </ul>
       </div>
 
       {/* 3 */}
-      <div className="k-u-margin-left-double@m-up">
+      <div>
         <Text
           size="big"
           weight="bold"
           cssColor="var(--color-grey-000)"
         >
-          Financer un projet
+          À propos
         </Text>
         <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
         <ul className="k-Footer__linkList">
-          <li>
-            <a href="#" className="k-Footer__linkList--item">
-              Réussir sa collecte
-            </a>
-          </li>
+          <ListItem>
+            Nos valeurs
+          </ListItem>
+          <ListItem>
+            Nos statistiques
+          </ListItem>
+          <ListItem>
+            Notre présence sur le territoire
+          </ListItem>
+          <ListItem>
+            Nos collectes record
+          </ListItem>
+          <ListItem>
+            L'équipe
+          </ListItem>
+          <ListItem>
+            Recrutements 
+          </ListItem>
+          <ListItem>
+            Presse
+          </ListItem>
         </ul>
       </div>
 
       {/* 4 */}
-      <div className="k-u-margin-left-double@m-up">
+      <div>
         <Text
           size="big"
           weight="bold"
           cssColor="var(--color-grey-000)"
         >
-          Financer un projet
+          Nos engagements
         </Text>
         <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
         <ul className="k-Footer__linkList">
-          <li>
-            <a href="#" className="k-Footer__linkList--item">
-              Réussir sa collecte
-            </a>
-          </li>
+          <ListItem>
+            Santé et Handicap
+          </ListItem>
+          <ListItem>
+            Autoproduction culturelle
+          </ListItem>
+          <ListItem>
+            Bio
+          </ListItem>
         </ul>
       </div>
-
     </div>
   )
 }

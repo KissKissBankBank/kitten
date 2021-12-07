@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Baseline,
   ListItems,
+  SocialButton,
 } from './components'
 import { HorizontalStroke } from 'kitten'
 import { StyledFooter } from './styles'
@@ -12,7 +13,10 @@ const Footer = () => {
     <StyledFooter>
       <div className="k-Footer__gridWrapper">
         <Baseline />
-        <ListItems />
+        <div className="k-u-margin-left-double@s-up">
+          <SocialButton />
+          <ListItems />
+        </div>
       </div>
       <HorizontalStroke
           className={classNames(

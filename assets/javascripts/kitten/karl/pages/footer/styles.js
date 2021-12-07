@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { pxToRem, mq, TYPOGRAPHY } from 'kitten'
 
 export const StyledFooter = styled.footer`
-  padding: ${pxToRem(30)};
+  padding: ${pxToRem(20)};
   background-color: var(--color-grey-900);
   max-width: 100%;
   display: block;
@@ -16,16 +16,19 @@ export const StyledFooter = styled.footer`
 
     @media ${mq.mobileAndTablet} {
       grid-template-columns: 1fr;
+      justify-content: center;
     }
   }
   .k-Footer__listWrapper {
     display: grid;
+    gap: ${pxToRem(20)};
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
 
     @media ${mq.mobile} {
       display: block;
       text-align: center;
+      gap: 0;
     }
   }
 
@@ -33,13 +36,29 @@ export const StyledFooter = styled.footer`
     text-align: center;
   }
 
+  /* SOCIALBUTTON */
+  
+  .k-Footer__socialButton {
+    display: flex;
+    gap: ${pxToRem(18)};
+    margin-bottom: ${pxToRem(50)};
+
+    @media ${mq.mobile} {
+      gap: ${pxToRem(15)};
+      justify-content: center;
+
+    }
+  }
 
   /* LISTITEM */
 
-  .k-Footer__linkList {
-    list-style-type: none;
-    padding-inline-start: 0;
+  .k-Footer__linkList  {
     margin-block-start: ${pxToRem(10)};
+    list-style-type: none;
+
+    :not(.k-Footer__linkSecondList) {
+      padding-inline-start: 0;
+    }
   }
 
   .k-Footer__stroke {
@@ -59,7 +78,7 @@ export const StyledFooter = styled.footer`
     line-height: 1.2;
     text-decoration: none;
     font-family: ${TYPOGRAPHY.fontStyles.regular.fontFamily};
-    font-weight: ${TYPOGRAPHY.fontStyles.regular.fontWeight};
+    font-weight: ${TYPOGRAPHY.fontStyles.light.fontWeight};
 
     &:active {
       color: var(--color-primary-900);
