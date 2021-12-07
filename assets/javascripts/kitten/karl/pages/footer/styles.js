@@ -89,4 +89,29 @@ export const StyledFooter = styled.footer`
     }
     transition: color 0.2s;
   }
+
+  /* ECOSYSTEMS */
+
+  .k-Footer__ecosystem {
+    @media ${mq.desktop} {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+    
+
+  .k-Footer__ecosystem--title {
+    font-size: ${pxToRem(14)};
+
+    @media ${mq.tabletAndTablet} {
+      font-size: ${pxToRem(12)};
+      text-align: center;
+    }
+  }
+
+  // .k-Footer__ecosystem--logos {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 `
