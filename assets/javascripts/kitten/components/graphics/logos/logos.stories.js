@@ -8,6 +8,7 @@ import { MaisonDeCrowdfundingLogo } from './mdc'
 import { MicrodonLogo } from './microdonlogo'
 import { LendopolisLogo } from './lendopolis-logo'
 import { KkbbCoLogo } from './kkbb-co'
+import { YouMatterLogo } from './youmatter'
 
 const Container = styled.div`
   padding: ${pxToRem(40)};
@@ -93,6 +94,10 @@ export const AllLogos = () => {
 
       <Group title="MicroDon">
         <LogoContainer children={<MicrodonLogo />} />
+      </Group>
+
+      <Group title="YouMatter">
+        <LogoContainer children={<YouMatterLogo color="#fff" />} />
       </Group>
     </Container>
   )

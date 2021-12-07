@@ -236,6 +236,7 @@ export { GoodeedLogo } from './components/graphics/logos/goodeedlogo'
 export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
+export { YouMatterLogo } from './components/graphics/logos/youmatter'
 
 // Layout
 // ------
