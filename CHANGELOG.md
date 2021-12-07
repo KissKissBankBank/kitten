@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Logo: Add `YouMatter` logo.
+- Feature: Logo: Add `YouMatterLogo` logo.
 
 ## [6.6.0] - 2021-12-02
 
