@@ -97,7 +97,7 @@ export const AllLogos = () => {
       </Group>
 
       <Group title="YouMatter">
-        <LogoContainer children={<YouMatterLogo color="#fff" />} />
+        <LogoContainer children={<YouMatterLogo />} />
       </Group>
     </Container>
   )
