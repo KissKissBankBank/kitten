@@ -40,8 +40,9 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       design = _ref.design,
       label = _ref.label,
       children = _ref.children,
+      size = _ref.size,
       labelProps = _ref.labelProps,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "labelProps"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"]);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButtonSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
     disabled: disabled
@@ -60,6 +61,7 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       variant: variant,
       design: design,
       error: error,
+      size: size,
       name: name,
       key: id
     }, itemProps, {
@@ -78,6 +80,7 @@ RadioButtonSet.propTypes = {
     id: _propTypes.default.string.isRequired,
     defaultChecked: _propTypes.default.bool
   })),
+  size: _propTypes.default.oneOf(['small', 'regular', 'big']),
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   design: _propTypes.default.oneOf(['disc', 'check']),
   disabled: _propTypes.default.bool,
@@ -97,5 +100,6 @@ RadioButtonSet.defaultProps = {
   variant: 'orion',
   design: 'disc',
   disabled: false,
-  labelProps: {}
+  labelProps: {},
+  size: 'regular'
 };
