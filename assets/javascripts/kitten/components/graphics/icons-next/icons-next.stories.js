@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import {
+  AirplaneIconNext,
+  BubbleIconNext,
   CrossIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
@@ -100,6 +102,12 @@ export const AllIcons = ({ colorInput }) => {
   return (
     <Container>
       <Group>
+        <IconContainer>
+          <AirplaneIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <BubbleIconNext color={colorInput} />
+        </IconContainer>
         <IconContainer>
           <CrossIconNext color={colorInput} />
         </IconContainer>

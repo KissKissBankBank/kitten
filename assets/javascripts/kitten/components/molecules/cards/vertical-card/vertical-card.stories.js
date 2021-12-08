@@ -1,5 +1,6 @@
 import React from 'react'
 import { VerticalCard } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Molecules/Cards/VerticalCard',

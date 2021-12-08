@@ -91,7 +91,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       className="k-RewardSummaryCard__options k-u-hidden@xs-down"
     >
       <details
-        className="sc-rBLzX kELfzz k-DropdownMenu k-DropdownMenu--left"
+        className="sc-CtfFt jIQLvb k-DropdownMenu k-DropdownMenu--left"
         onKeyDown={[Function]}
         onToggle={[Function]}
         open={false}
