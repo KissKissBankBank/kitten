@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: 
   - `RadioButton`: Add `small` to the size prop.
   - `RadioButtonSet`: Add `small` to the size prop.
+- Feature: `ContentCard`: Add component.
+- Feature: `TextButton`: Add component.
+- Feature: `AirplaneIconNext`: Add component.
+- Feature: `BubbleIconNext`: Add component.
 
 ## [6.6.0] - 2021-12-02
 
