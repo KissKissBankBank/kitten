@@ -170,6 +170,8 @@ export { PeopleIcon } from './components/graphics/icons/people-icon';
 export { StatsIcon } from './components/graphics/icons/stats-icon';
 export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon'; // Graphics/IconsNext
 
+export { AirplaneIconNext } from './components/graphics/icons-next/airplane-icon-next';
+export { BubbleIconNext } from './components/graphics/icons-next/bubble-icon-next';
 export { CheckedShieldIconNext } from './components/graphics/icons-next/checked-shield-icon-next';
 export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-next';
 export { CogIconNext } from './components/graphics/icons-next/cog-icon-next';
@@ -257,11 +259,13 @@ export { CloseButton } from './components/molecules/buttons/close-button';
 export { FacebookButtonIconWords, TwitterButtonIconWords, LinkedinButtonIconWords, InstagramButtonIconWords } from './components/molecules/buttons/social-button-icon-words';
 export { FacebookButtonIcon, TwitterButtonIcon, LinkedinButtonIcon, InstagramButtonIcon, YoutubeButtonIcon } from './components/molecules/buttons/social-button-icon';
 export { TagButton } from './components/molecules/buttons/tag-button';
+export { TextButton } from './components/molecules/buttons/text-button';
 export { modifierStyles as buttonModifierStyles } from './components/molecules/buttons/button/helpers/modifier-styles'; // Molecules/Cards
 
 export { BackerCard } from './components/molecules/cards/backer-card';
 export { BackingCard } from './components/molecules/cards/backing-card';
 export { ClickableCard } from './components/molecules/cards/clickable-card';
+export { ContentCard } from './components/molecules/cards/content-card';
 export { ContributionCard } from './components/molecules/cards/contribution-card';
 export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card';
 export { EngagementCard } from './components/molecules/cards/engagement-card';

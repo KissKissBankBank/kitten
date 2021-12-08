@@ -21,8 +21,9 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       design = _ref.design,
       label = _ref.label,
       children = _ref.children,
+      size = _ref.size,
       labelProps = _ref.labelProps,
-      props = _objectWithoutProperties(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "labelProps"]);
+      props = _objectWithoutProperties(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"]);
 
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
     className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
@@ -43,6 +44,7 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       variant: variant,
       design: design,
       error: error,
+      size: size,
       name: name,
       key: id
     }, itemProps, {
@@ -59,6 +61,7 @@ RadioButtonSet.propTypes = {
     id: PropTypes.string.isRequired,
     defaultChecked: PropTypes.bool
   })),
+  size: PropTypes.oneOf(['small', 'regular', 'big']),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
@@ -78,5 +81,6 @@ RadioButtonSet.defaultProps = {
   variant: 'orion',
   design: 'disc',
   disabled: false,
-  labelProps: {}
+  labelProps: {},
+  size: 'regular'
 };
