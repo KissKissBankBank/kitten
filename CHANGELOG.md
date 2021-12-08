@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `RadioButton`: Add `small` to the size prop.
+- Feature: 
+  - `RadioButton`: Add `small` to the size prop.
+  - `RadioButtonSet`: Add `small` to the size prop.
 
 ## [6.6.0] - 2021-12-02
 
