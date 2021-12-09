@@ -26,6 +26,8 @@ export const RewardSummaryCard = ({
   size,
   ...props
 }) => {
+  console.warn('RewardSummaryCard is deprecated. Please use `SummaryCard` instead.')
+
   const imageChild = getReactElementsByType({
     children,
     type: RewardSummaryCard.Image,
