@@ -230,6 +230,7 @@ export { LoudspeakerIllustration } from './components/graphics/illustrations/lou
 export { MixIllustration } from './components/graphics/illustrations/mix-illustration'
 export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
 export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'
+export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'

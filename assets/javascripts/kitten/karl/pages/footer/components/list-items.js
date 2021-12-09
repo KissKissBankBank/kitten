@@ -4,7 +4,7 @@ import {
   HorizontalStroke,
 } from 'kitten'
 
-const ListItem = (props) => (
+const ListItem = props => (
   <li>
     <a className="k-Footer__linkList--item" {...props} />
   </li>
@@ -22,7 +22,11 @@ export const ListItems = () => {
         >
           Financer un projet
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
+        <HorizontalStroke
+          className="k-Footer__stroke"
+          color="var(--color-grey-000)"
+          customSize={{ width: 5, height: 2 }}
+        />
         <ul className="k-Footer__linkList">
           <ListItem>
             Réussir sa collecte
@@ -70,7 +74,11 @@ export const ListItems = () => {
         >
           Partenariats
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
+        <HorizontalStroke
+          className="k-Footer__stroke"
+          color="var(--color-grey-000)"
+          customSize={{ width: 5, height: 2 }}
+        />
         <ul className="k-Footer__linkList">
           <ListItem>
             Devenons partenaires

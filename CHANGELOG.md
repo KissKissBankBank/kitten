@@ -4,15 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Logo: Add `YouMatterLogo` logo.
-- Feature: Logo: New `MaisonDeCrowdfundingLogoOnDark` logo.
 Features: 
   - `RadioButton`: Add `small` to the size prop.
   - `RadioButtonSet`: Add `small` to the size prop.
   - `ContentCard`: Add component.
   - `TextButton`: Add component.
   - `AirplaneIconNext`: Add component.
-  - `BubbleIconNext`: Add component.
+  - `BubbleIconNext`: Add component. 
+  - Logo: New `MaisonDeCrowdfundingLogoOnDark` logo.
+  - Logo: New `KkbbFlashIllustration` logo.
 
 ## [6.6.0] - 2021-12-02
 

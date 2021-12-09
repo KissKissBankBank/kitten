@@ -7,10 +7,15 @@ import {
   YoutubeIcon,
   Button,
 } from 'kitten'
+import classNames from 'classnames'
 
-
-export const SocialButton = () => (
-  <div className="k-Footer__socialButton">
+export const SocialButton = ({ className, ...props }) => (
+  <div className={classNames(
+    'k-Footer__socialButton',
+    className,
+  )}
+    { ...props }
+  >
     <Button fit="icon" modifier="beryllium" rounded>
       <FacebookIconNext />
     </Button>

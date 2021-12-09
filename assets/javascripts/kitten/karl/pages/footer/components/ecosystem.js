@@ -16,23 +16,30 @@ export const Ecosystem = () => {
         transform="uppercase"
         className="k-Footer__ecosystem--title"
       >
-        Notre écosystème engagé
+        Notre écosystème <br />engagé
       </Text>
-      {/* <div className="k-Footer__ecosystem--logos"> */}
-      <LendopolisLogo
-        primaryColor="var(--color-grey-000)"
-        secondaryColor="var(--color-grey-000)"
-        width="190"
-      />
-      <GoodeedLogo width="150" color="var(--color-grey-000)" />
-      <MicrodonLogo width="164" color="var(--color-grey-000)" />
-      <LendopolisLogo
-        primaryColor="var(--color-grey-000)"
-        secondaryColor="var(--color-grey-000)"
-        width="190"
-      />
-      <MaisonDeCrowdfundingLogoOnDark />
-      {/* </div> */}
+      <div className="k-Footer__ecosystem--logos">
+        <LendopolisLogo
+          primaryColor="var(--color-grey-000)"
+          secondaryColor="var(--color-grey-000)"
+          width="190"
+        />
+        <GoodeedLogo
+          width= "147"
+          color="var(--color-grey-000)" 
+        />
+        <MicrodonLogo
+          color1="var(--color-grey-000)"
+          color2="var(--color-grey-000)"
+          width="164"
+        />
+        <LendopolisLogo
+          primaryColor="var(--color-grey-000)"
+          secondaryColor="var(--color-grey-000)"
+          width="190"
+        />
+        <MaisonDeCrowdfundingLogoOnDark width="175" />
+      </div>
     </div>
   )
 }
