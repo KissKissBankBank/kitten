@@ -53,7 +53,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['regular', 'big'],
+      options: ['small', 'regular', 'big'],
       control: 'inline-radio',
     },
     variant: {

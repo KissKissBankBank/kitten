@@ -171,9 +171,9 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__label {
       box-sizing: border-box;
       min-height: ${pxToRem(70)};
-      border-radius: var(--border-radius-s);
+      border-radius: var(--border-radius-xs);
       border: var(--border);
-      padding: ${pxToRem(26 - 4)} ${pxToRem(15)};
+      padding: ${pxToRem(26 - 2)} ${pxToRem(15)};
     }
 
     .k-Form-RadioButton__label::before {
@@ -237,10 +237,20 @@ const StyledRadioButton = styled.div`
       font-size: ${stepToRem(-1)};
     }
 
+    &.k-Form-RadioButton--small {
+      width: 100%;
+      display: flex;
+ 
+      .k-Form-RadioButton__label {
+        padding: ${pxToRem(12 - 2)} ${pxToRem(15)};
+        min-height: 0;
+      }
+    }
+
     &.k-Form-RadioButton--big {
       .k-Form-RadioButton__label {
         min-height: ${pxToRem(60)};
-        padding: ${pxToRem(20 - 4)} ${pxToRem(15)};
+        padding: ${pxToRem(20 - 2)} ${pxToRem(15)};
       }
     }
 
@@ -268,7 +278,7 @@ const StyledRadioButton = styled.div`
       &.k-Form-RadioButton--big {
         .k-Form-RadioButton__label {
           min-height: ${pxToRem(80)};
-          padding: ${pxToRem(30 - 4)} ${pxToRem(15)};
+          padding: ${pxToRem(30 - 2)} ${pxToRem(15)};
         }
 
         .k-Form-RadioButton__label::before {
@@ -369,7 +379,7 @@ RadioButton.propTypes = {
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
-  size: PropTypes.oneOf(['regular', 'big']),
+  size: PropTypes.oneOf(['small', 'regular', 'big']),
 }
 
 RadioButton.defaultProps = {
