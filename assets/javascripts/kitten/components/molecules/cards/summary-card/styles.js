@@ -334,16 +334,24 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
   /* SUBCOMPONENTS */
 
   .k-SummaryCard__titleTag {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    width: fit-content;
+    max-width: 100%;
     gap: ${pxToRem(10)};
 
     color: ${COLORS.primary1};
     ${TYPOGRAPHY.fontStyles.regular}
 
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     svg,
     path {
       color: inherit;
+      flex: 0 0 auto;
 
       &[fill] {
         fill: currentColor;

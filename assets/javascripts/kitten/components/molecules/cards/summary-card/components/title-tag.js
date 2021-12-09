@@ -26,7 +26,7 @@ export const TitleTag = ({ text, icon, className, ...props }) => {
       {...props}
     >
       {iconDisplay}
-      {text}
+      <span>{text}</span>
     </Tag>
   )
 }
