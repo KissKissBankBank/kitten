@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DeskLayout`: Add layout component.
+- Feature: `DeskMenu`: Add organism component.
+
 ## [6.6.0] - 2021-12-02
 
 Features

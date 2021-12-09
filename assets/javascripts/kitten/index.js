@@ -246,6 +246,7 @@ export {
 } from './components/layout/adaptable-grid'
 export { Container } from './components/layout/container'
 export { DashboardLayout } from './components/layout/dashboard-layout'
+export { DeskLayout } from './components/layout/desk-layout'
 export { FlexWrapper } from './components/layout/flex-wrapper'
 export { Grid, GridCol } from './components/layout/grid'
 export { Marger } from './components/layout/marger'
@@ -351,6 +352,7 @@ export { DocumentsStatusBox } from './components/molecules/upload/documents-stat
 
 export { CounterBlock } from './components/organisms/counter-block'
 export { DashboardMenu } from './components/organisms/dashboard-menu'
+export { DeskMenu } from './components/organisms/desk-menu'
 export { HeaderMenu } from './components/organisms/header-menu'
 export { default as HeaderNav } from './components/organisms/header-nav'
 export { Hero } from './components/organisms/hero'
