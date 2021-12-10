@@ -5,6 +5,10 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { mq } from '../../../../constants/screen-config'
 
+/* ****************************************
+   Type-specific common styles
+   ****************************************/
+
 const contributorSubscriptionStyles = css`
   @media ${mq.tabletAndDesktop} {
     .k-SummaryCard-Wrapper__gridWrapper {
@@ -188,6 +192,10 @@ const typeStyle = {
   contributorSubscription: contributorSubscriptionStyles,
 }
 
+/* ****************************************
+   Common styles
+   ****************************************/
+
 const commonStyles = css`
   @media ${mq.tabletAndDesktop} {
     display: flex;
@@ -214,6 +222,10 @@ const commonStyles = css`
     }
   }
 `
+
+/* ****************************************
+   Card styles
+   ****************************************/
 
 export const StyledSummaryCard = styled(({ type, ...props }) => (
   <div {...props} />
@@ -388,6 +400,10 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
 
   ${({ type }) => typeStyle[type]}
 `
+
+/* ****************************************
+   Title styles
+   ****************************************/
 
 export const StyledSummaryTitles = styled(({ type, ...props }) => (
   <div {...props} />
