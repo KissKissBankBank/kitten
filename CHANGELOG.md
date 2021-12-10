@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderMenu`: Fix external item paddings.
 - Fix: `HeaderNav`: Fix border bottom on active nav link.
 - Fix: `TextInput`: Fix `textarea` gradient styles.
 - Feature: Logo: Add `YouMatterLogo` logo.
