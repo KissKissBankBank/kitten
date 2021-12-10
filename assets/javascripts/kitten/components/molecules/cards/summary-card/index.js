@@ -43,6 +43,9 @@ export const SummaryCard = ({
         'k-SummaryCard',
         className,
         `k-SummaryCard-Wrapper--${size}`,
+        {
+          'k-SummaryCard--hasAction': Object.keys(actionProps).length > 0,
+        },
       )}
       type={type}
       {...props}

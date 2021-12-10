@@ -244,13 +244,15 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
   border: var(--border);
   border-radius: var(--border-radius-m);
 
-  &:hover {
-    background-color: ${COLORS.background2};
-    border-color: var(--color-grey-500);
-  }
-  &:active {
-    background-color: ${COLORS.background3};
-    border-color: var(--color-grey-600);
+  &.k-SummaryCard--hasAction {
+    &:hover {
+      background-color: ${COLORS.background2};
+      border-color: var(--color-grey-500);
+    }
+    &:active {
+      background-color: ${COLORS.background3};
+      border-color: var(--color-grey-600);
+    }
   }
 
   @media ${mq.tabletAndDesktop} {
