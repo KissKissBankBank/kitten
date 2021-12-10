@@ -1,7 +1,7 @@
 import React from 'react'
 import { SearchIcon } from '../../../components/graphics/icons/search-icon'
 import { TextInputWithButton } from './index'
-import { Default as TextInputStory } from '../text-input/text-input.stories.js'
+import { Default as TextInputStory } from '../text-input/stories.js'
 import { buttonModifiers } from '../../../components/molecules/buttons/button'
 
 export const Default = args => <TextInputWithButton {...args} />
