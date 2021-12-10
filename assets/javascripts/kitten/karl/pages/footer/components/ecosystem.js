@@ -10,21 +10,12 @@ import {
 
 export const Ecosystem = () => {
   return (
-    <div className="k-Footer__ecosystem">
+    <div>
       <Text
         tag="p"
         cssColor="var(--color-grey-000)"
         transform="uppercase"
-        className="k-Footer__ecosystem--title k-u-hidden@m-down"
-      >
-        Notre écosystème <br />engagé
-      </Text>
-
-      <Text
-        tag="p"
-        cssColor="var(--color-grey-000)"
-        transform="uppercase"
-        className="k-Footer__ecosystem--title k-u-hidden@l-up"
+        className="k-Footer__ecosystem--title"
       >
         Notre écosystème engagé
       </Text>
@@ -33,19 +24,22 @@ export const Ecosystem = () => {
         <LendopolisLogo
           primaryColor="var(--color-grey-000)"
           secondaryColor="var(--color-grey-000)"
-          width="190"
+          width="160"
         />
         <GoodeedLogo
-          width= "147"
+          width= "127"
           color="var(--color-grey-000)" 
         />
         <MicrodonLogo
           color1="var(--color-grey-000)"
           color2="var(--color-grey-000)"
-          width="164"
+          width="144"
         />
-        <YouMatterLogo color="var(--color-grey-000)" width="190" />
-        <MaisonDeCrowdfundingLogoOnDark width="175" />
+        <YouMatterLogo
+          color="var(--color-grey-000)"
+          width="160"
+        />
+        <MaisonDeCrowdfundingLogoOnDark width="155" />
       </div>
     </div>
   )

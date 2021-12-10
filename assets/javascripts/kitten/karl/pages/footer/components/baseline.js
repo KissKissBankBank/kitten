@@ -18,8 +18,7 @@ export const Baseline = props => {
           cssColor="var(--color-grey-000)"
           {...props}
         >
-          Nous accompagnons les créateurs depuis 2010 parce que c’est trop cool de
-          soutenir les générations de demain !
+          Nous aidons les créateurs et les entrepreneurs à financer et faire vivre leurs projets.
         </Title>
         <SocialButton className="k-u-hidden@l-up k-u-margin-top-double@m-down" />
       </div>

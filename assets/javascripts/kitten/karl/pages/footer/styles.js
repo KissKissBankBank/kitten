@@ -2,12 +2,15 @@ import styled from 'styled-components'
 import { pxToRem, mq, TYPOGRAPHY } from 'kitten'
 
 export const StyledFooter = styled.footer`
-  padding: ${pxToRem(20)};
+  padding: ${pxToRem(80)} ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(20)};
   background-color: var(--color-grey-900);
   max-width: 100%;
-  display: block;
   overflow: hidden;
   box-sizing: border-box;
+
+  @media ${mq.mobileAndTablet} {
+    padding-top: ${pxToRem(20)};
+  }
 
   .k-Footer__gridWrapper {
     display: grid;
@@ -33,12 +36,10 @@ export const StyledFooter = styled.footer`
     display: grid;
     gap: ${pxToRem(20)};
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
 
     @media ${mq.mobile} {
-      display: block;
+      grid-template-columns: 1fr;
       text-align: center;
-      gap: 0;
     }
   }
 
@@ -58,17 +59,17 @@ export const StyledFooter = styled.footer`
 
   .k-Footer__baselineText {
     width: 70%;
-    text-align: center;
+    text-align: left;
     margin-top: ${pxToRem(40)};
 
     @media ${mq.tablet} {
       width: 50%;
-      text-align: left;
       margin-top: 0;
     }
     @media ${mq.mobile} {
       width: 100%;
       margin-top: ${pxToRem(20)};
+      text-align: center;
     }
   }
 
@@ -88,10 +89,15 @@ export const StyledFooter = styled.footer`
     }
   }
 
-  /* LISTITEM */
+  /* LISTITEMS */
 
   .k-Footer__linkList  {
     list-style-type: none;
+    padding-inline-start: ${pxToRem(20)} ;
+    
+    @media ${mq.mobile} {
+      padding-inline-start: 0;
+    }
 
     :not(.k-Footer__linkSecondList) {
       padding-inline-start: 0;
@@ -130,22 +136,16 @@ export const StyledFooter = styled.footer`
   }
 
   /* ECOSYSTEMS */
-
-  .k-Footer__ecosystem {
-    @media ${mq.desktop} {
-      display: flex;
-      align-items: center;
-      gap: ${pxToRem(50)};
-    }
-  }
     
   .k-Footer__ecosystem--title {
     font-size: ${pxToRem(14)};
-    text-align: left;
+    text-align: center;
 
     @media ${mq.mobileAndTablet} {
       font-size: ${pxToRem(12)};
-      text-align: center;
+    }
+    @media ${mq.mobile} {
+      margin-bottom: ${pxToRem(30)};
     }
   }
   .k-Footer__ecosystem--logos {
@@ -198,11 +198,11 @@ export const StyledFooter = styled.footer`
     
     @media ${mq.mobileAndTablet} {
       flex-direction: column;
+      gap: ${pxToRem(20)};
     }
   }
 
   .k-Footer__legal--list {
-    
     list-style-type: none;
     margin-block-start: 0;
     margin-block-end: 0;
