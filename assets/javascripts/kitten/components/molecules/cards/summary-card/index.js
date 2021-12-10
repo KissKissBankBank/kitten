@@ -47,10 +47,12 @@ export const SummaryCard = ({
       type={type}
       {...props}
     >
-      <ActionElement
-        className={classNames('k-SummaryCard__action', actionClassName)}
-        {...action}
-      />
+      {Object.keys(actionProps).length > 0 && (
+        <ActionElement
+          className={classNames('k-SummaryCard__action', actionClassName)}
+          {...action}
+        />
+      )}
 
       <div
         className={classNames(
