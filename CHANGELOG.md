@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextInput`: Fix `textarea` gradient styles.
+- Feature: Logo: Add `YouMatterLogo` logo.
 
 ## [6.7.0] - 2021-12-08
 
