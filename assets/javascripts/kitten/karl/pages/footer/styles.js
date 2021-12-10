@@ -96,16 +96,17 @@ export const StyledFooter = styled.footer`
     :not(.k-Footer__linkSecondList) {
       padding-inline-start: 0;
       margin-block-start: ${pxToRem(10)};
+      margin-block-end: 0;
 
       @media ${mq.mobile} {
         gap: ${pxToRem(30)};
-
       }
     }
   }
 
   .k-Footer__linkList--item {
     display: inline-block;
+    cursor: pointer;
     margin-bottom: ${pxToRem(5)};
     color: var(--color-grey-000);
     font-size: ${pxToRem(14)};
@@ -113,6 +114,10 @@ export const StyledFooter = styled.footer`
     text-decoration: none;
     font-family: ${TYPOGRAPHY.fontStyles.regular.fontFamily};
     font-weight: ${TYPOGRAPHY.fontStyles.light.fontWeight};
+
+    @media ${mq.mobile} {
+      font-size: ${pxToRem(12)};
+    }
 
     &:active {
       color: var(--color-primary-900);
@@ -169,9 +174,17 @@ export const StyledFooter = styled.footer`
       gap: ${pxToRem(30)};
     }
 
-    div {
+    .k-Footer__partners--block {
       display: flex;
+      align-items: center;
       gap: ${pxToRem(20)};
+    }
+
+    .k-Footer__partners--text {
+      font-size: ${pxToRem(14)};
+      @media ${mq.mobile} {
+        font-size: ${pxToRem(12)};
+      }
     }
   }
 
@@ -189,13 +202,18 @@ export const StyledFooter = styled.footer`
   }
 
   .k-Footer__legal--list {
-    margin: ${pxToRem(30)} 0;
+    
     list-style-type: none;
-    margin-block-start: ${pxToRem(30)};
+    margin-block-start: 0;
+    margin-block-end: 0;
     padding-inline-start: 0;
     display: flex;
     justify-content: center;
     gap: ${pxToRem(24)};
+
+    @media ${mq.tablet} {
+      margin: ${pxToRem(30)} 0;
+    }
 
     @media ${mq.mobile} {
       flex-direction: column;

@@ -4,7 +4,8 @@ import {
   LendopolisLogo,
   GoodeedLogo,
   MicrodonLogo,
-  MaisonDeCrowdfundingLogoOnDark
+  MaisonDeCrowdfundingLogoOnDark,
+  YouMatterLogo,
 } from 'kitten'
 
 export const Ecosystem = () => {
@@ -14,10 +15,20 @@ export const Ecosystem = () => {
         tag="p"
         cssColor="var(--color-grey-000)"
         transform="uppercase"
-        className="k-Footer__ecosystem--title"
+        className="k-Footer__ecosystem--title k-u-hidden@m-down"
       >
         Notre écosystème <br />engagé
       </Text>
+
+      <Text
+        tag="p"
+        cssColor="var(--color-grey-000)"
+        transform="uppercase"
+        className="k-Footer__ecosystem--title k-u-hidden@l-up"
+      >
+        Notre écosystème engagé
+      </Text>
+
       <div className="k-Footer__ecosystem--logos">
         <LendopolisLogo
           primaryColor="var(--color-grey-000)"
@@ -33,11 +44,7 @@ export const Ecosystem = () => {
           color2="var(--color-grey-000)"
           width="164"
         />
-        <LendopolisLogo
-          primaryColor="var(--color-grey-000)"
-          secondaryColor="var(--color-grey-000)"
-          width="190"
-        />
+        <YouMatterLogo color="var(--color-grey-000)" width="190" />
         <MaisonDeCrowdfundingLogoOnDark width="175" />
       </div>
     </div>

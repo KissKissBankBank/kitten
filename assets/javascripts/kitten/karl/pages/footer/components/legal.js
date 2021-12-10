@@ -9,6 +9,11 @@ export const Legal = () => {
         size="tiny"
         modifier="boron"
         className="k-Footer__legal--select"
+        placeholder="Français"
+        options={[
+          { value: 'français', label: 'Français' },
+          { value: 'english', label: 'English' },
+        ]}
       />
       <ul className="k-Footer__legal--list">
         <li>
