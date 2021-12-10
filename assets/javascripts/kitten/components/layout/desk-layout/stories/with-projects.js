@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CrowdfundingCard, Title } from 'kitten'
+import { CrowdfundingCard, Title, mq } from 'kitten'
 
 const Grid = styled.div`
   width: 100%;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+
+  @media ${mq.mobile} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const data = [

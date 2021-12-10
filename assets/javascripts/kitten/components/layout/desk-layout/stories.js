@@ -45,7 +45,7 @@ const Menu = props => {
         </Text>
         <Text
           className="k-u-block k-u-ellipsis"
-          cssColor="var(--color-grey-500)"
+          cssColor="var(--color-grey-700)"
           size="nano"
         >
           lorem.ipsum@kisskissbankbank.com
