@@ -105,6 +105,7 @@ const contributorContributionStyles = css`
 `
 
 const ownerSubscriptionStyles = css`
+  /* TODO : styles */
   @media ${mq.tabletAndDesktop} {
     .k-SummaryCard-Wrapper__gridWrapper {
       grid-template-columns:
