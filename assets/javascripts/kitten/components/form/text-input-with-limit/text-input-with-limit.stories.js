@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextInputWithLimit } from './index'
-import { Default as TextInputStory } from '../text-input/text-input.stories.js'
+import { Default as TextInputStory } from '../text-input/stories.js'
 
 export const Default = args => <TextInputWithLimit {...args} />
 

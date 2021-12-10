@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextInputWithUnit } from './index'
-import { Default as TextInputStory } from '../text-input/text-input.stories.js'
+import { Default as TextInputStory } from '../text-input/stories.js'
 
 export const Default = args => <TextInputWithUnit {...args} />
 

@@ -56,7 +56,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 4.375rem;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -163,6 +163,18 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 
 .c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
 }
 
 .c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
@@ -444,7 +456,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 4.375rem;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -551,6 +563,18 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
 
 .c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
 }
 
 .c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
@@ -747,7 +771,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 4.375rem;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -854,6 +878,18 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 
 .c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
 }
 
 .c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
@@ -1013,7 +1049,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 4.375rem;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1120,6 +1156,18 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 
 .c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
 }
 
 .c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
@@ -1257,7 +1305,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 4.375rem;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1364,6 +1412,18 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
 
 .c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
 }
 
 .c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
@@ -1501,7 +1561,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 4.375rem;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1608,6 +1668,18 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 
 .c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
 }
 
 .c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
