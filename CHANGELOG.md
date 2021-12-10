@@ -8,17 +8,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `DeskMenu`: Add organism component.
 - Feature: `StickyContainer`: Add `onChange` event prop.
 - Feature: `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
+- Fix: `HeaderMenu`: Fix external item paddings.
+- Fix: `HeaderNav`: Fix border bottom on active nav link.
+- Fix: `TextInput`: Fix `textarea` gradient styles.
+- Feature: Logo: Add `YouMatterLogo` logo.
 
 ## [6.7.0] - 2021-12-08
 
 Features:
 
-  - `RadioButton`: Add `small` to the size prop.
-  - `RadioButtonSet`: Add `small` to the size prop.
-  - `ContentCard`: Add component.
-  - `TextButton`: Add component.
-  - `AirplaneIconNext`: Add component.
-  - `BubbleIconNext`: Add component.
+- `RadioButton`: Add `small` to the size prop.
+- `RadioButtonSet`: Add `small` to the size prop.
+- `ContentCard`: Add component.
+- `TextButton`: Add component.
+- `AirplaneIconNext`: Add component.
+- `BubbleIconNext`: Add component.
 
 ## [6.6.0] - 2021-12-02
 

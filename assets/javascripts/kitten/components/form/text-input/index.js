@@ -234,13 +234,13 @@ const StyledTextareaContainer = styled.div`
     position: absolute;
     left: ${pxToRem(10)};
     right: ${pxToRem(2)};
-    bottom: ${pxToRem(3)};
+    bottom: ${pxToRem(2)};
     height: ${pxToRem(10)};
 
     background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0),
-      ${COLORS.background1}
+      rgba(255, 255, 255, 0.9)
     );
 
     pointer-events: none;
@@ -248,6 +248,9 @@ const StyledTextareaContainer = styled.div`
     textarea.k-Form-TextInput:disabled + & {
       display: none;
     }
+  }
+  .k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient {
+    bottom: ${pxToRem(3)};
   }
 `
 
