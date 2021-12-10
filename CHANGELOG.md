@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Logo: Add `YouMatterLogo` logo.
 Features: 
   - `RadioButton`: Add `small` to the size prop.
   - `RadioButtonSet`: Add `small` to the size prop.
