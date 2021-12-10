@@ -1,0 +1,76 @@
+import React from 'react'
+import styled from 'styled-components'
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
+
+import TYPOGRAPHY from '../../../../constants/typography-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { mq } from '../../../../constants/screen-config'
+
+const StyledButton = styled.button`
+  ${TYPOGRAPHY.fontStyles.regular}
+  display: inline-flex;
+  align-items: center;
+  gap: ${pxToRem(10)};
+  color: var(--color-grey-900);
+  text-align: left;
+
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--color-primary-500);
+  }
+
+  &:active {
+    color: var(--color-primary-700);
+  }
+
+  &:focus-visible {
+    outline-style: auto;
+  }
+
+  svg {
+    height: 1.25em;
+  }
+  svg,
+  svg path[fill]:not([fill='transparent']) {
+    fill: currentColor;
+  }
+
+  &.k-TextButton--normal {
+    font-size: pxToRem(14);
+
+    @media ${mq.tabletAndDesktop} {
+      font-size: pxToRem(16);
+    }
+  }
+
+  &.k-TextButton--big {
+    font-size: pxToRem(16);
+
+    @media ${mq.tabletAndDesktop} {
+      font-size: pxToRem(20);
+    }
+  }
+`
+
+export const TextButton = ({ className, size, ...props }) => (
+  <StyledButton
+    type="button"
+    className={classNames(
+      'k-TextButton',
+      'k-u-reset-button',
+      className,
+      `k-TextButton--${size}`,
+    )}
+    {...props}
+  />
+)
+
+TextButton.defaultProps = {
+  size: 'normal',
+}
+
+TextButton.propTypes = {
+  size: PropTypes.oneOf(['normal', 'big']),
+}
