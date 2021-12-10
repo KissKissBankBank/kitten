@@ -54,6 +54,7 @@ export const StyledLayout = styled.div`
         position: sticky;
         top: ${pxToRem(20)};
         bottom: ${pxToRem(20)};
+        transition: top var(--transition);
       }
     }
   }

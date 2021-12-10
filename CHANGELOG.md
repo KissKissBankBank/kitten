@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `DeskLayout`: Add layout component.
 - Feature: `DeskMenu`: Add organism component.
+- Feature: `StickyContainer`: Add `onChange` event prop.
+- Feature: `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
 
 ## [6.7.0] - 2021-12-08
 
