@@ -34,7 +34,6 @@ const HeaderNav = ({
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
   const [stickyState, setStickyState] = useState(null)
-  const [stuckState, setStuckState] = useState(false)
   const stickyContainerRef = useRef(null)
   const headerRef = useRef(null)
   const previousStickyState = usePrevious(stickyState)
@@ -51,8 +50,6 @@ const HeaderNav = ({
   useEffect(() => {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp')
   }, [isFixed, isMenuExpanded])
-
-  const handleStickyChange = ({ isStuck }) => setStuckState(isStuck)
 
   return (
     <Context.Provider
@@ -71,7 +68,6 @@ const HeaderNav = ({
         zIndex={zIndexConfig}
         className={classNames('k-HeaderNav__wrapper', {
           'k-HeaderNav--menuIsExpanded': isMenuExpanded,
-          'k-HeaderNav--isStuck': stuckState,
         })}
       >
         <StickyContainer
@@ -82,7 +78,6 @@ const HeaderNav = ({
             'k-HeaderNav__stickyContainer',
             stickyProps?.className,
           )}
-          onChange={handleStickyChange}
         >
           <nav
             ref={headerRef}
