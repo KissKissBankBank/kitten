@@ -1,15 +1,25 @@
 import React from 'react'
 import { TextInput } from './index'
+import { DocsPage } from 'storybook/docs-page'
+
+export default {
+  title: 'Form/TextInput',
+  component: TextInput,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TextInput" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+}
 
 export const Default = args => <TextInput {...args} />
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]
 
 Default.args = {
   tag: 'input',
@@ -79,3 +89,12 @@ Default.argTypes = {
     control: 'boolean',
   },
 }
+
+export const AsTextarea = args => <TextInput {...args} />
+
+AsTextarea.args = {
+  ...Default.args,
+  tag: 'textarea',
+}
+
+AsTextarea.argTypes = Default.args

@@ -332,7 +332,7 @@ export const StyledHeader = styled.header`
     }
 
     &:active {
-      border-color: currentColor;
+      border-top-color: currentColor;
       color: ${COLORS.primary1};
     }
 

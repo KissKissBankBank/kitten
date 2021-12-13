@@ -11,6 +11,9 @@ import {
   pxToRem,
   Badge,
   Button,
+  KissKissBankBankLogo,
+  MicrodonLogo,
+  GoodeedLogo,
 } from 'kitten'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
@@ -53,6 +56,34 @@ const InnerBurgerMenu = ({ isLogged }) => (
     <HeaderMenu.Item href="#987644">
       Le financement participatif
     </HeaderMenu.Item>
+    <HeaderMenu.Item
+      external
+      size="tiny"
+      href="#EXTERNAL_KISSKISSBANKBANK"
+      target="_blank"
+      rel="noopener"
+    >
+      <KissKissBankBankLogo />
+    </HeaderMenu.Item>
+    <HeaderMenu.Item
+      external
+      size="tiny"
+      href="#EXTERNAL_MICRODON"
+      target="_blank"
+      rel="noopener"
+    >
+      <MicrodonLogo />
+    </HeaderMenu.Item>
+    <HeaderMenu.Item
+      external
+      size="tiny"
+      href="#EXTERNAL_GOODEED"
+      target="_blank"
+      rel="noopener"
+    >
+      <GoodeedLogo />
+    </HeaderMenu.Item>
+
   </HeaderMenu>
 )
 

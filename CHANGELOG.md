@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `SummaryCard`: Add component.
 - Feature: `RewardSummaryCard`: Deprecate component.
+- Fix: `HeaderMenu`: Fix external item paddings.
+- Fix: `HeaderNav`: Fix border bottom on active nav link.
+- Fix: `TextInput`: Fix `textarea` gradient styles.
+- Feature: Logo: Add `YouMatterLogo` logo.
 
 ## [6.7.0] - 2021-12-08
 

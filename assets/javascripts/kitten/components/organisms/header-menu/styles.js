@@ -57,7 +57,7 @@ export const StyledList = styled.ul`
   .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
     display: flex;
     height: ${pxToRem(70)};
-    padding: ${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(30)};
+    padding: ${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(20)};
 
     align-items: center;
     align-self: flex-start;
@@ -158,6 +158,18 @@ export const StyledList = styled.ul`
 
     & + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
       padding-top: ${pxToRem(5)};
+    }
+
+    &.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+      height: ${pxToRem(40)};
+      padding-top: ${pxToRem(5)};
+      padding-bottom: ${pxToRem(5)};
+
+      svg,
+      img {
+        max-height: ${pxToRem(20)};
+        max-width: ${pxToRem(90)};
+      }
     }
   }
 

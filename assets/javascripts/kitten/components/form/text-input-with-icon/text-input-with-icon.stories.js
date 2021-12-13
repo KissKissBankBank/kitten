@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextInputWithIcon } from './index'
-import { Default as TextInputStory } from '../text-input/text-input.stories.js'
+import { Default as TextInputStory } from '../text-input/stories.js'
 import {
   SearchIcon,
   CheckedCircleIcon,
