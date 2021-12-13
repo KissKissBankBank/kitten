@@ -29,7 +29,7 @@ export const Partners = ({ className, ...props }) => (
     <div className="k-Footer__partners--block">
       <img
         alt=""
-        width="130"
+        width="140"
         height="50"
       />
       <Text

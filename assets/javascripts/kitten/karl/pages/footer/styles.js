@@ -15,7 +15,6 @@ export const StyledFooter = styled.footer`
   .k-Footer__gridWrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
 
     @media ${mq.mobileAndTablet} {
       grid-template-columns: 1fr;
@@ -57,7 +56,7 @@ export const StyledFooter = styled.footer`
     }
   }
 
-  .k-Footer__baselineText {
+  .k-Footer__baselineSocial {
     width: 70%;
     text-align: left;
     margin-top: ${pxToRem(40)};
@@ -66,10 +65,17 @@ export const StyledFooter = styled.footer`
       width: 50%;
       margin-top: 0;
     }
+
     @media ${mq.mobile} {
       width: 100%;
       margin-top: ${pxToRem(20)};
       text-align: center;
+    }
+  }
+
+  .k-Footer__baselineText {
+    @media ${mq.mobile} {
+      margin: 0 ${pxToRem(40)};
     }
   }
 
@@ -78,14 +84,14 @@ export const StyledFooter = styled.footer`
   .k-Footer__socialButton {
     display: flex;
     gap: ${pxToRem(18)};
+
     @media ${mq.desktop} {
       margin-bottom: ${pxToRem(50)};
     }
-
+    
     @media ${mq.mobile} {
       gap: ${pxToRem(15)};
       justify-content: space-between;
-
     }
   }
 
@@ -93,8 +99,8 @@ export const StyledFooter = styled.footer`
 
   .k-Footer__linkList  {
     list-style-type: none;
-    padding-inline-start: ${pxToRem(20)} ;
-    
+    padding-inline-start: ${pxToRem(20)};
+
     @media ${mq.mobile} {
       padding-inline-start: 0;
     }
@@ -144,22 +150,24 @@ export const StyledFooter = styled.footer`
     @media ${mq.mobileAndTablet} {
       font-size: ${pxToRem(12)};
     }
+
     @media ${mq.mobile} {
       margin-bottom: ${pxToRem(30)};
     }
   }
+
   .k-Footer__ecosystem--logos {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media ${mq.desktop} {
-      flex: 1 1 auto;
+    gap: ${pxToRem(30)};
+  
+    @media ${mq.tablet} {
+      gap: ${pxToRem(15)};
     }
+
     @media ${mq.mobile} {
       flex-direction: column;
-      gap: ${pxToRem(30)};
-      align-items: center;
     }
   }
 
@@ -182,6 +190,7 @@ export const StyledFooter = styled.footer`
 
     .k-Footer__partners--text {
       font-size: ${pxToRem(14)};
+  
       @media ${mq.mobile} {
         font-size: ${pxToRem(12)};
       }

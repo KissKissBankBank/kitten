@@ -24,22 +24,22 @@ export const Ecosystem = () => {
         <LendopolisLogo
           primaryColor="var(--color-grey-000)"
           secondaryColor="var(--color-grey-000)"
-          width="160"
+          width="180"
         />
         <GoodeedLogo
-          width= "127"
+          width= "147"
           color="var(--color-grey-000)" 
         />
         <MicrodonLogo
           color1="var(--color-grey-000)"
           color2="var(--color-grey-000)"
-          width="144"
+          width="164"
         />
         <YouMatterLogo
           color="var(--color-grey-000)"
-          width="160"
+          width="180"
         />
-        <MaisonDeCrowdfundingLogoOnDark width="155" />
+        <MaisonDeCrowdfundingLogoOnDark width="175" />
       </div>
     </div>
   )
