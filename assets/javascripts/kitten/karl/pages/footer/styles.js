@@ -25,6 +25,8 @@ export const StyledFooter = styled.footer`
   .k-Footer__stroke {
     color: var(--color-grey-000);
     margin: ${pxToRem(10)} 0;
+    width: ${pxToRem(5)};
+    height: ${pxToRem(2)};
 
     @media ${mq.mobile} {
       margin: ${pxToRem(10)} auto;

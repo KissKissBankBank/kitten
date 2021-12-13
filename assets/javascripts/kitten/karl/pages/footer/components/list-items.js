@@ -22,11 +22,7 @@ export const ListItems = () => {
         >
           Financer un projet
         </Text>
-        <HorizontalStroke
-          className="k-Footer__stroke"
-          color="var(--color-grey-000)"
-          customSize={{ width: 5, height: 2 }}
-        />
+        <HorizontalStroke className="k-Footer__stroke" />
         <ul className="k-Footer__linkList">
           <ListItem>
             Réussir sa collecte
@@ -74,10 +70,7 @@ export const ListItems = () => {
         >
           Partenariats
         </Text>
-        <HorizontalStroke
-          className="k-Footer__stroke"
-          color="var(--color-grey-000)"
-          customSize={{ width: 5, height: 2 }}
+        <HorizontalStroke className="k-Footer__stroke"
         />
         <ul className="k-Footer__linkList">
           <ListItem>
@@ -110,7 +103,7 @@ export const ListItems = () => {
         >
           À propos
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
+        <HorizontalStroke className="k-Footer__stroke" />
         <ul className="k-Footer__linkList">
           <ListItem>
             Nos valeurs
@@ -145,7 +138,7 @@ export const ListItems = () => {
         >
           Nos engagements
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" color="var(--color-grey-000)" customSize={{ width: 5, height: 2 }} />
+        <HorizontalStroke className="k-Footer__stroke" />
         <ul className="k-Footer__linkList">
           <ListItem>
             Santé et Handicap
