@@ -10,9 +10,9 @@ const ListItem = props => (
   </li>
 )
 
-export const ListItems = () => {
+export const ListItems = props => {
   return (
-    <div className="k-Footer__listWrapper">
+    <div className="k-Footer__listWrapper" {...props}>
     {/* 1 */}
       <div>
         <Text

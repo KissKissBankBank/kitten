@@ -1,9 +1,9 @@
 import React from 'react'
 import { DropdownSelect, Text } from 'kitten'
 
-export const Legal = () => {
+export const Legal = props => {
   return (
-    <div className="k-Footer__legal">
+    <div className="k-Footer__legal" {...props}>
       <DropdownSelect
         hideLabel
         size="tiny"
