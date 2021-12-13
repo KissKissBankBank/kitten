@@ -23,11 +23,8 @@ export const StyledFooter = styled.footer`
   }
 
   .k-Footer__stroke {
-    color: var(--color-grey-000);
     margin: ${pxToRem(10)} 0;
-    width: ${pxToRem(5)};
-    height: ${pxToRem(2)};
-
+  
     @media ${mq.mobile} {
       margin: ${pxToRem(10)} auto;
     }
@@ -90,7 +87,7 @@ export const StyledFooter = styled.footer`
     @media ${mq.desktop} {
       margin-bottom: ${pxToRem(50)};
     }
-    
+
     @media ${mq.mobile} {
       gap: ${pxToRem(15)};
       justify-content: space-between;
@@ -164,7 +161,7 @@ export const StyledFooter = styled.footer`
     align-items: center;
     gap: ${pxToRem(30)};
     margin: 0 ${pxToRem(20)};
-  
+
     @media ${mq.tablet} {
       gap: ${pxToRem(15)};
       margin: 0;

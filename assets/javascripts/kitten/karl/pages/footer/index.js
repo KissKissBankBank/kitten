@@ -11,7 +11,7 @@ import { HorizontalStroke } from 'kitten'
 import { StyledFooter } from './styles'
 import classNames from 'classnames'
 
-const Stroke = props => (
+const Stroke = ({ className, ...props }) => (
   <HorizontalStroke
     {...props}
     className={classNames(
@@ -19,6 +19,7 @@ const Stroke = props => (
       'k-u-margin-bottom-triple@s-down',
       'k-u-margin-top-quintuple@m-up',
       'k-u-margin-top-triple@s-down',
+      className,
     )}
     color="var(--color-grey-700)" 
     customSize={{ width: '100%', height: 1 }}

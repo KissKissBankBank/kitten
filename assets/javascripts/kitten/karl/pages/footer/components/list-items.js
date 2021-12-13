@@ -12,7 +12,10 @@ const ListItem = props => (
 
 export const ListItems = props => {
   return (
-    <div className="k-Footer__listWrapper" {...props}>
+    <div 
+      className="k-Footer__listWrapper k-u-margin-top-quintuple@l-up"
+      {...props}
+    >
     {/* 1 */}
       <div>
         <Text
@@ -22,7 +25,11 @@ export const ListItems = props => {
         >
           Financer un projet
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" />
+        <HorizontalStroke
+          className="k-Footer__stroke"
+          color="var(--color-grey-000)"
+          customSize={{ width: 5, height: 2 }}
+        />
         <ul className="k-Footer__linkList">
           <ListItem>
             Réussir sa collecte
@@ -70,7 +77,10 @@ export const ListItems = props => {
         >
           Partenariats
         </Text>
-        <HorizontalStroke className="k-Footer__stroke"
+        <HorizontalStroke
+          className="k-Footer__stroke"
+          color="var(--color-grey-000)"
+          customSize={{ width: 5, height: 2 }}
         />
         <ul className="k-Footer__linkList">
           <ListItem>
@@ -103,7 +113,11 @@ export const ListItems = props => {
         >
           À propos
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" />
+        <HorizontalStroke
+          className="k-Footer__stroke"
+          color="var(--color-grey-000)"
+          customSize={{ width: 5, height: 2 }}
+        />
         <ul className="k-Footer__linkList">
           <ListItem>
             Nos valeurs
@@ -138,7 +152,11 @@ export const ListItems = props => {
         >
           Nos engagements
         </Text>
-        <HorizontalStroke className="k-Footer__stroke" />
+        <HorizontalStroke 
+          className="k-Footer__stroke"
+          color="var(--color-grey-000)"
+          customSize={{ width: 5, height: 2 }}
+        />
         <ul className="k-Footer__linkList">
           <ListItem>
             Santé et Handicap
