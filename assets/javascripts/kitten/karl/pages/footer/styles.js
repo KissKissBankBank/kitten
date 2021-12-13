@@ -163,9 +163,11 @@ export const StyledFooter = styled.footer`
     justify-content: space-between;
     align-items: center;
     gap: ${pxToRem(30)};
+    margin: 0 ${pxToRem(20)};
   
     @media ${mq.tablet} {
       gap: ${pxToRem(15)};
+      margin: 0;
     }
 
     @media ${mq.mobile} {
