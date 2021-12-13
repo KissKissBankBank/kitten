@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { mq } from '../../../../constants/screen-config'
@@ -237,7 +236,7 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
   display: block;
   box-sizing: border-box;
   text-decoration: none;
-  background-color: ${COLORS.background1};
+  background-color: var(--color-grey-000);
 
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
@@ -246,11 +245,11 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
 
   &.k-SummaryCard--hasAction {
     &:hover {
-      background-color: ${COLORS.background2};
+      background-color: var(--color-grey-100);
       border-color: var(--color-grey-500);
     }
     &:active {
-      background-color: ${COLORS.background3};
+      background-color: var(--color-grey-200);
       border-color: var(--color-grey-600);
     }
   }
@@ -355,7 +354,7 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
     max-width: 100%;
     gap: ${pxToRem(10)};
 
-    color: ${COLORS.primary1};
+    color: var(--color-primary-500);
     ${TYPOGRAPHY.fontStyles.regular}
 
     span {
