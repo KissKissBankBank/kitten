@@ -51,10 +51,7 @@ export const StyledLayout = styled.div`
       position: relative;
 
       .k-DeskLayout__menu__inside {
-        position: sticky;
-        top: ${pxToRem(20)};
-        bottom: ${pxToRem(20)};
-        transition: top var(--transition);
+        position: fixed;
       }
     }
   }
