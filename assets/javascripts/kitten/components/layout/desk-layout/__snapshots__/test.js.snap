@@ -111,10 +111,7 @@ exports[`<DeskLayout /> compare with loading snapshot matches with snapshot 1`] 
   }
 
   .c0 .k-DeskLayout__menu .k-DeskLayout__menu__inside {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1.25rem;
-    bottom: 1.25rem;
+    position: fixed;
   }
 }
 
@@ -284,10 +281,7 @@ exports[`<DeskLayout /> compare with snapshot matches with snapshot 1`] = `
   }
 
   .c0 .k-DeskLayout__menu .k-DeskLayout__menu__inside {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1.25rem;
-    bottom: 1.25rem;
+    position: fixed;
   }
 }
 
