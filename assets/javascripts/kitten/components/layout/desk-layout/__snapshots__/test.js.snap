@@ -111,7 +111,12 @@ exports[`<DeskLayout /> compare with loading snapshot matches with snapshot 1`] 
   }
 
   .c0 .k-DeskLayout__menu .k-DeskLayout__menu__inside {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5.3125rem;
+    bottom: 1.25rem;
+    -webkit-transition: top var(--transition);
+    transition: top var(--transition);
   }
 }
 
@@ -281,7 +286,12 @@ exports[`<DeskLayout /> compare with snapshot matches with snapshot 1`] = `
   }
 
   .c0 .k-DeskLayout__menu .k-DeskLayout__menu__inside {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5.3125rem;
+    bottom: 1.25rem;
+    -webkit-transition: top var(--transition);
+    transition: top var(--transition);
   }
 }
 
