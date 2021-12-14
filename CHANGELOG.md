@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `StickyContainer`: Add `onChange` event prop.
+- Feature: `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
+
 ## [6.8.0] - 2021-12-14
 
 Features:
