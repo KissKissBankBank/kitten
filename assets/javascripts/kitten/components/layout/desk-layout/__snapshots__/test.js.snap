@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeskLayout /> compare with loading snapshot matches with snapshot 1`] = `
+.c0 {
+  --deskLayout-menu-width: 13.125rem;
+  --deskLayout-gutter: 5rem;
+  --deskLayout-offset: calc( var(--deskLayout-menu-width) + var(--deskLayout-gutter) );
+  height: 100%;
+  min-height: calc(100vh - 4.0625rem);
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--color-grey-100);
+  padding: 1.25rem 1.25rem;
+}
+
+.c0 .k-DeskLayout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.25rem var(--deskLayout-gutter);
+}
+
+.c0 .k-DeskLayout__menu:empty {
+  display: none;
+}
+
+.c0 .k-DeskLayout__loading {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+  gap: 0.125rem;
+}
+
+.c1 .k-Loader__circle {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: var(--border-radius-rounded);
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c1 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+}
+
+.c1 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c1 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@media (min-width:640px) {
+  .c0 {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 {
+    padding: 3.75rem 2.5rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout__menu {
+    width: var(--deskLayout-menu-width);
+    -webkit-flex: 0 0 var(--deskLayout-menu-width);
+    -ms-flex: 0 0 var(--deskLayout-menu-width);
+    flex: 0 0 var(--deskLayout-menu-width);
+    position: relative;
+  }
+
+  .c0 .k-DeskLayout__menu .k-DeskLayout__menu__inside {
+    position: fixed;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout__content {
+    max-width: calc(100% - (2 * var(--deskLayout-offset)));
+    -webkit-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    -ms-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+  }
+
+  .c0 .k-DeskLayout__content--fullWidth {
+    max-width: calc(100% - var(--deskLayout-offset));
+    -webkit-flex: 1 1 calc(100% - var(--deskLayout-offset));
+    -ms-flex: 1 1 calc(100% - var(--deskLayout-offset));
+    flex: 1 1 calc(100% - var(--deskLayout-offset));
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout__loading {
+    max-width: calc(100% - (2 * var(--deskLayout-offset)));
+    -webkit-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    -ms-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+  }
+}
+
+<div
+  className="c0 k-DeskLayout__wrapper"
+>
+  <div
+    className="k-DeskLayout"
+  >
+    <div
+      className="k-DeskLayout__menu"
+    >
+      <div
+        className="k-DeskLayout__menu__inside"
+      >
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+    <div
+      className="k-DeskLayout__loading"
+    >
+      <div
+        className="c1 k-Loader"
+      >
+        <svg
+          className="k-Loader__circle"
+          fill="var(--color-grey-900, #222)"
+          viewBox="0 0 5 5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx={2.5}
+            cy={2.5}
+            r={5}
+          />
+        </svg>
+        <svg
+          className="k-Loader__circle"
+          fill="var(--color-grey-900, #222)"
+          viewBox="0 0 5 5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx={2.5}
+            cy={2.5}
+            r={5}
+          />
+        </svg>
+        <svg
+          className="k-Loader__circle"
+          fill="var(--color-grey-900, #222)"
+          viewBox="0 0 5 5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx={2.5}
+            cy={2.5}
+            r={5}
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DeskLayout /> compare with snapshot matches with snapshot 1`] = `
+.c0 {
+  --deskLayout-menu-width: 13.125rem;
+  --deskLayout-gutter: 5rem;
+  --deskLayout-offset: calc( var(--deskLayout-menu-width) + var(--deskLayout-gutter) );
+  height: 100%;
+  min-height: calc(100vh - 4.0625rem);
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--color-grey-100);
+  padding: 1.25rem 1.25rem;
+}
+
+.c0 .k-DeskLayout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.25rem var(--deskLayout-gutter);
+}
+
+.c0 .k-DeskLayout__menu:empty {
+  display: none;
+}
+
+.c0 .k-DeskLayout__loading {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (min-width:640px) {
+  .c0 {
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 {
+    padding: 3.75rem 2.5rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout__menu {
+    width: var(--deskLayout-menu-width);
+    -webkit-flex: 0 0 var(--deskLayout-menu-width);
+    -ms-flex: 0 0 var(--deskLayout-menu-width);
+    flex: 0 0 var(--deskLayout-menu-width);
+    position: relative;
+  }
+
+  .c0 .k-DeskLayout__menu .k-DeskLayout__menu__inside {
+    position: fixed;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout__content {
+    max-width: calc(100% - (2 * var(--deskLayout-offset)));
+    -webkit-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    -ms-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+  }
+
+  .c0 .k-DeskLayout__content--fullWidth {
+    max-width: calc(100% - var(--deskLayout-offset));
+    -webkit-flex: 1 1 calc(100% - var(--deskLayout-offset));
+    -ms-flex: 1 1 calc(100% - var(--deskLayout-offset));
+    flex: 1 1 calc(100% - var(--deskLayout-offset));
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DeskLayout__loading {
+    max-width: calc(100% - (2 * var(--deskLayout-offset)));
+    -webkit-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    -ms-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+  }
+}
+
+<div
+  className="c0 k-DeskLayout__wrapper"
+>
+  <div
+    className="k-DeskLayout"
+  >
+    <div
+      className="k-DeskLayout__menu"
+    >
+      <div
+        className="k-DeskLayout__menu__inside"
+      >
+        <p>
+          Hello
+        </p>
+      </div>
+    </div>
+    <div
+      className="k-DeskLayout__content"
+    >
+      Content
+    </div>
+  </div>
+</div>
+`;
