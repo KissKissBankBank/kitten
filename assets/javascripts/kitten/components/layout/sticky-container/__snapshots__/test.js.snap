@@ -11,14 +11,14 @@ Array [
     }
   />,
   <div
-    className="sc-bdVaJa kvynwc k-StickyContainer k-StickyContainer--alwaysSticky"
+    className="sc-bdVaJa gOmLbQ k-StickyContainer k-StickyContainer--alwaysSticky"
   />,
 ]
 `;
 
 exports[`<StickyContainer /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa cgTuZD k-StickyContainer"
+  className="sc-bdVaJa ksUSRa k-StickyContainer"
 />
 `;
 
@@ -27,7 +27,7 @@ exports[`<StickyContainer /> never sticky matches with snapshot 1`] = `"test"`;
 exports[`<StickyContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sc-bdVaJa jBbUw k-StickyContainer custom__class"
+  className="sc-bdVaJa eGrRRE k-StickyContainer custom__class"
   style={
     Object {
       "color": "red",

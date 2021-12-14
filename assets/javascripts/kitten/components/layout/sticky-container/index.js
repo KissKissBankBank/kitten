@@ -13,8 +13,8 @@ import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledStickyContainer = styled.div`
   will-change: transform;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
+  transition-duration: var(--transition-timing);
+  transition-timing-function: var(--transition-timing-function);
 
   &.k-StickyContainer--alwaysSticky {
     position: fixed;

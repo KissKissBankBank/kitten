@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeskMenu /> with default props matches with snapshot 1`] = `
+.c0 {
+  --deskMenu-padding: 0.9375rem;
+  --deskMenu-image-size: 4.375rem;
+}
+
+.c0.k-DeskMenuWrapper--hasImage {
+  padding-top: calc(var(--deskMenu-image-size) / 2);
+}
+
+.c0 .k-DeskMenu {
+  border: var(--border);
+  border-radius: var(--border-radius-m);
+  padding: var(--deskMenu-padding);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.875rem;
+  background-color: var(--color-grey-000);
+}
+
+.c0 .k-DeskMenu__header .k-DeskMenu__header__image {
+  margin-top: calc( -1 * (var(--deskMenu-padding) + (var(--deskMenu-image-size) / 2)) );
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.9375rem;
+  width: var(--deskMenu-image-size);
+  height: var(--deskMenu-image-size);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--border-radius-rounded);
+}
+
+.c0 .k-DeskMenu__header .k-DeskMenu__header__content {
+  text-align: center;
+}
+
+.c0 .k-DeskMenu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color var(--transition),color var(--transition);
+  transition: background-color var(--transition),color var(--transition);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link) {
+  display: block;
+  padding: 0.9375rem 1.25rem;
+  border: 0;
+  background-color: var(--color-grey-000);
+  border-radius: var(--border-radius-xs);
+  text-align: left;
+  color: var(--color-grey-900);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link)[aria-current] {
+  background-color: var(--color-primary-100);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link):hover,
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link):active {
+  background-color: var(--color-primary-300);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link):focus-visible {
+  outline-style: auto;
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link {
+  color: var(--color-primary-500);
+  display: block;
+  text-align: center;
+  margin-bottom: 0.3125rem;
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link:hover {
+  color: var(--color-primary-700);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link:active {
+  color: var(--color-primary-900);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link:focus-visible {
+  outline-style: auto;
+}
+
+<nav
+  className="c0 k-DeskMenuWrapper"
+>
+  <div
+    className="k-DeskMenu"
+  >
+    <ul
+      className="k-DeskMenu__list"
+    >
+      <li
+        className="k-DeskMenu__itemWrapper"
+      >
+        <button
+          aria-current={null}
+          className="k-DeskMenu__item"
+          onClick={[Function]}
+          type="button"
+        >
+          First item
+        </button>
+      </li>
+      <li
+        className="k-DeskMenu__itemWrapper"
+      >
+        <a
+          aria-current="page"
+          className="k-DeskMenu__item"
+          href="#"
+        >
+          Second item
+        </a>
+      </li>
+      <li
+        className="k-DeskMenu__itemWrapper"
+      >
+        <a
+          aria-current={null}
+          className="k-DeskMenu__item k-DeskMenu__item--link"
+          href="#hello"
+        >
+          Third item (link)
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`<DeskMenu /> with header matches with snapshot 1`] = `
+.c0 {
+  --deskMenu-padding: 0.9375rem;
+  --deskMenu-image-size: 4.375rem;
+}
+
+.c0.k-DeskMenuWrapper--hasImage {
+  padding-top: calc(var(--deskMenu-image-size) / 2);
+}
+
+.c0 .k-DeskMenu {
+  border: var(--border);
+  border-radius: var(--border-radius-m);
+  padding: var(--deskMenu-padding);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.875rem;
+  background-color: var(--color-grey-000);
+}
+
+.c0 .k-DeskMenu__header .k-DeskMenu__header__image {
+  margin-top: calc( -1 * (var(--deskMenu-padding) + (var(--deskMenu-image-size) / 2)) );
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.9375rem;
+  width: var(--deskMenu-image-size);
+  height: var(--deskMenu-image-size);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--border-radius-rounded);
+}
+
+.c0 .k-DeskMenu__header .k-DeskMenu__header__content {
+  text-align: center;
+}
+
+.c0 .k-DeskMenu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: background-color var(--transition),color var(--transition);
+  transition: background-color var(--transition),color var(--transition);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link) {
+  display: block;
+  padding: 0.9375rem 1.25rem;
+  border: 0;
+  background-color: var(--color-grey-000);
+  border-radius: var(--border-radius-xs);
+  text-align: left;
+  color: var(--color-grey-900);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link)[aria-current] {
+  background-color: var(--color-primary-100);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link):hover,
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link):active {
+  background-color: var(--color-primary-300);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item:not(.k-DeskMenu__item--link):focus-visible {
+  outline-style: auto;
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link {
+  color: var(--color-primary-500);
+  display: block;
+  text-align: center;
+  margin-bottom: 0.3125rem;
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link:hover {
+  color: var(--color-primary-700);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link:active {
+  color: var(--color-primary-900);
+}
+
+.c0 .k-DeskMenu__list .k-DeskMenu__item.k-DeskMenu__item--link:focus-visible {
+  outline-style: auto;
+}
+
+<nav
+  className="c0 k-DeskMenuWrapper k-DeskMenuWrapper--hasImage"
+>
+  <div
+    className="k-DeskMenu"
+  >
+    <div
+      className="k-DeskMenu__header"
+    >
+      <img
+        alt="Alt"
+        className="k-DeskMenu__header__image"
+        src="/kitten.jpg"
+      />
+      <div
+        className="k-DeskMenu__header__content"
+      >
+        Hello world
+      </div>
+    </div>
+    <ul
+      className="k-DeskMenu__list"
+    >
+      <li
+        className="k-DeskMenu__itemWrapper"
+      >
+        <a
+          aria-current={null}
+          className="k-DeskMenu__item"
+          href="#"
+        >
+          First item
+        </a>
+      </li>
+      <li
+        className="k-DeskMenu__itemWrapper"
+      >
+        <a
+          aria-current="page"
+          className="k-DeskMenu__item"
+          href="#"
+        >
+          Second item
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

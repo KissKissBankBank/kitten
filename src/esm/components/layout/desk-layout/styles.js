@@ -1,0 +1,9 @@
+import styled from 'styled-components';
+import { CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
+import { mq } from '../../../constants/screen-config';
+import { pxToRem } from '../../../helpers/utils/typography';
+import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config';
+export var StyledLayout = styled.div.withConfig({
+  displayName: "styles__StyledLayout",
+  componentId: "zmvlwc-0"
+})(["--deskLayout-menu-width:", ";--deskLayout-gutter:", ";--deskLayout-offset:calc( var(--deskLayout-menu-width) + var(--deskLayout-gutter) );height:100%;min-height:calc(100vh - ", ");box-sizing:border-box;margin:0;background-color:var(--color-grey-100);padding:", " ", ";@media ", "{padding:", " ", ";}@media ", "{padding:", " ", ";}.k-DeskLayout{display:flex;flex-direction:column;gap:", " var(--deskLayout-gutter);@media ", "{flex-direction:row;}}.k-DeskLayout__menu{&:empty{display:none;}@media ", "{width:var(--deskLayout-menu-width);flex:0 0 var(--deskLayout-menu-width);position:relative;.k-DeskLayout__menu__inside{position:fixed;}}}@media ", "{.k-DeskLayout__content{max-width:calc(100% - (2 * var(--deskLayout-offset)));flex:1 1 calc(100% - (2 * var(--deskLayout-offset)));}.k-DeskLayout__content--fullWidth{max-width:calc(100% - var(--deskLayout-offset));flex:1 1 calc(100% - var(--deskLayout-offset));}}.k-DeskLayout__loading{align-self:stretch;display:flex;align-items:center;justify-content:center;@media ", "{max-width:calc(100% - (2 * var(--deskLayout-offset)));flex:1 1 calc(100% - (2 * var(--deskLayout-offset)));}}"], pxToRem(210), pxToRem(80), pxToRem(HEADER_HEIGHT), pxToRem(20), pxToRem(CONTAINER_PADDING_THIN), mq.tabletAndDesktop, pxToRem(40), pxToRem(CONTAINER_PADDING), mq.desktop, pxToRem(60), pxToRem(CONTAINER_PADDING), pxToRem(20), mq.desktop, mq.desktop, mq.desktop, mq.desktop);
