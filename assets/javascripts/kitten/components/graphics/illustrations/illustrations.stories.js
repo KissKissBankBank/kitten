@@ -8,6 +8,7 @@ import { LoudspeakerIllustration } from './loudspeaker-illustration'
 import { MixIllustration } from './mix-illustration'
 import { PhoneIllustration } from './phone-illustration'
 import { RocketIllustration } from './rocket-illustration'
+import { KkbbFlashIllustration } from './kkbb-flash-illustration'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};
@@ -53,7 +54,7 @@ const IllustrationWrapper = styled(({ className, children, name }) => {
     width: auto;
     height: auto;
     max-width: ${pxToRem(150)};
-    max-height: ${pxToRem(100)};
+    max-height: ${pxToRem(160)};
   }
 `
 
@@ -82,6 +83,11 @@ export const AllIllustrations = () => {
       <Group>
         <IllustrationWrapper name="LinkBoxIllustration">
           <LinkBoxIllustration />
+        </IllustrationWrapper>
+      </Group>
+      <Group>
+        <IllustrationWrapper name="KkbbFlashIllustration">
+          <KkbbFlashIllustration size="small" /> 
         </IllustrationWrapper>
       </Group>
     </Wrapper>

@@ -230,12 +230,14 @@ export { LoudspeakerIllustration } from './components/graphics/illustrations/lou
 export { MixIllustration } from './components/graphics/illustrations/mix-illustration'
 export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
 export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'
+export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
 export { GoodeedLogo } from './components/graphics/logos/goodeedlogo'
 export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
+export { MaisonDeCrowdfundingLogoOnDark } from './components/graphics/logos/mdc/on-dark'
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 export { YouMatterLogo } from './components/graphics/logos/youmatter'

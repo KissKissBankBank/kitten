@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `SummaryCard`: Add component.
-- Feature: `RewardSummaryCard`: Deprecate component.
+Features: 
+  - Logo: New `MaisonDeCrowdfundingLogoOnDark` logo.
+  - Logo: New `KkbbFlashIllustration` logo.
+  - `SummaryCard`: Add component.
+  - `RewardSummaryCard`: Deprecate component.
 - Fix: `HeaderMenu`: Fix external item paddings.
 - Fix: `HeaderNav`: Fix border bottom on active nav link.
 - Fix: `TextInput`: Fix `textarea` gradient styles.
