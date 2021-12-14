@@ -1199,6 +1199,12 @@ Object.defineProperty(exports, "RocketIllustration", {
     return _rocketIllustration.RocketIllustration;
   }
 });
+Object.defineProperty(exports, "KkbbFlashIllustration", {
+  enumerable: true,
+  get: function get() {
+    return _kkbbFlashIllustration.KkbbFlashIllustration;
+  }
+});
 Object.defineProperty(exports, "KissKissBankBankLogo", {
   enumerable: true,
   get: function get() {
@@ -1223,6 +1229,12 @@ Object.defineProperty(exports, "MaisonDeCrowdfundingLogo", {
     return _mdc.MaisonDeCrowdfundingLogo;
   }
 });
+Object.defineProperty(exports, "MaisonDeCrowdfundingLogoOnDark", {
+  enumerable: true,
+  get: function get() {
+    return _onDark.MaisonDeCrowdfundingLogoOnDark;
+  }
+});
 Object.defineProperty(exports, "MicrodonLogo", {
   enumerable: true,
   get: function get() {
@@ -1233,6 +1245,12 @@ Object.defineProperty(exports, "KkbbCoLogo", {
   enumerable: true,
   get: function get() {
     return _kkbbCo.KkbbCoLogo;
+  }
+});
+Object.defineProperty(exports, "YouMatterLogo", {
+  enumerable: true,
+  get: function get() {
+    return _youmatter.YouMatterLogo;
   }
 });
 Object.defineProperty(exports, "AdaptableGrid", {
@@ -1257,6 +1275,12 @@ Object.defineProperty(exports, "DashboardLayout", {
   enumerable: true,
   get: function get() {
     return _dashboardLayout.DashboardLayout;
+  }
+});
+Object.defineProperty(exports, "DeskLayout", {
+  enumerable: true,
+  get: function get() {
+    return _deskLayout.DeskLayout;
   }
 });
 Object.defineProperty(exports, "FlexWrapper", {
@@ -1761,6 +1785,12 @@ Object.defineProperty(exports, "DashboardMenu", {
   enumerable: true,
   get: function get() {
     return _dashboardMenu.DashboardMenu;
+  }
+});
+Object.defineProperty(exports, "DeskMenu", {
+  enumerable: true,
+  get: function get() {
+    return _deskMenu.DeskMenu;
   }
 });
 Object.defineProperty(exports, "HeaderMenu", {
@@ -2692,6 +2722,8 @@ var _phoneIllustration = require("./components/graphics/illustrations/phone-illu
 
 var _rocketIllustration = require("./components/graphics/illustrations/rocket-illustration");
 
+var _kkbbFlashIllustration = require("./components/graphics/illustrations/kkbb-flash-illustration");
+
 var _kisskissbankbanklogo = require("./components/graphics/logos/kisskissbankbanklogo");
 
 var _lendopolisLogo = require("./components/graphics/logos/lendopolis-logo");
@@ -2700,15 +2732,21 @@ var _goodeedlogo = require("./components/graphics/logos/goodeedlogo");
 
 var _mdc = require("./components/graphics/logos/mdc");
 
+var _onDark = require("./components/graphics/logos/mdc/on-dark");
+
 var _microdonlogo = require("./components/graphics/logos/microdonlogo");
 
 var _kkbbCo = require("./components/graphics/logos/kkbb-co");
+
+var _youmatter = require("./components/graphics/logos/youmatter");
 
 var _adaptableGrid = require("./components/layout/adaptable-grid");
 
 var _container = require("./components/layout/container");
 
 var _dashboardLayout = require("./components/layout/dashboard-layout");
+
+var _deskLayout = require("./components/layout/desk-layout");
 
 var _flexWrapper = require("./components/layout/flex-wrapper");
 
@@ -2853,6 +2891,8 @@ var _documentsStatusBox = require("./components/molecules/upload/documents-statu
 var _counterBlock = require("./components/organisms/counter-block");
 
 var _dashboardMenu = require("./components/organisms/dashboard-menu");
+
+var _deskMenu = require("./components/organisms/desk-menu");
 
 var _headerMenu = require("./components/organisms/header-menu");
 

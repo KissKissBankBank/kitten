@@ -10,7 +10,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 var StyledStickyContainer = styled.div.withConfig({
   displayName: "sticky-container__StyledStickyContainer",
   componentId: "sc-5q91xd-0"
-})(["will-change:transform;transition-duration:0.2s;transition-timing-function:ease;&.k-StickyContainer--alwaysSticky{position:fixed;}", ""], function (_ref) {
+})(["will-change:transform;transition-duration:var(--transition-timing);transition-timing-function:var(--transition-timing-function);&.k-StickyContainer--alwaysSticky{position:fixed;}", ""], function (_ref) {
   var stickyContainerStyleProps = _ref.stickyContainerStyleProps;
   return stickyContainerStyleProps;
 });
