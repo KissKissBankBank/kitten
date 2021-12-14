@@ -4,15 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Features: 
+## [6.8.0] - 2021-12-14
+
+Features:
+
   - Logo: New `MaisonDeCrowdfundingLogoOnDark` logo.
   - Logo: New `KkbbFlashIllustration` logo.
+  - Logo: Add `YouMatterLogo` logo.
   - `DeskLayout`: Add layout component.
   - `DeskMenu`: Add organism component.
-- Fix: `HeaderMenu`: Fix external item paddings.
-- Fix: `HeaderNav`: Fix border bottom on active nav link.
-- Fix: `TextInput`: Fix `textarea` gradient styles.
-- Feature: Logo: Add `YouMatterLogo` logo.
+
+Fixes:
+
+  - `HeaderMenu`: Fix external item paddings.
+  - `HeaderNav`: Fix border bottom on active nav link.
+  - `TextInput`: Fix `textarea` gradient styles.
 
 ## [6.7.0] - 2021-12-08
 

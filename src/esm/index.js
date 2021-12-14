@@ -201,19 +201,23 @@ export { LinkBoxIllustration } from './components/graphics/illustrations/link-bo
 export { LoudspeakerIllustration } from './components/graphics/illustrations/loudspeaker-illustration';
 export { MixIllustration } from './components/graphics/illustrations/mix-illustration';
 export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration';
-export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'; // Graphics/Logos
+export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration';
+export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'; // Graphics/Logos
 
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo';
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo';
 export { GoodeedLogo } from './components/graphics/logos/goodeedlogo';
 export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc';
+export { MaisonDeCrowdfundingLogoOnDark } from './components/graphics/logos/mdc/on-dark';
 export { MicrodonLogo } from './components/graphics/logos/microdonlogo';
-export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'; // Layout
+export { KkbbCoLogo } from './components/graphics/logos/kkbb-co';
+export { YouMatterLogo } from './components/graphics/logos/youmatter'; // Layout
 // ------
 
 export { AdaptableGrid, AdaptableGridCol } from './components/layout/adaptable-grid';
 export { Container } from './components/layout/container';
 export { DashboardLayout } from './components/layout/dashboard-layout';
+export { DeskLayout } from './components/layout/desk-layout';
 export { FlexWrapper } from './components/layout/flex-wrapper';
 export { Grid, GridCol } from './components/layout/grid';
 export { Marger } from './components/layout/marger';
@@ -296,6 +300,7 @@ export { DocumentsStatusBox } from './components/molecules/upload/documents-stat
 
 export { CounterBlock } from './components/organisms/counter-block';
 export { DashboardMenu } from './components/organisms/dashboard-menu';
+export { DeskMenu } from './components/organisms/desk-menu';
 export { HeaderMenu } from './components/organisms/header-menu';
 export { default as HeaderNav } from './components/organisms/header-nav';
 export { Hero } from './components/organisms/hero';
