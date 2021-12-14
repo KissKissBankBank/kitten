@@ -5,6 +5,7 @@ import { Text, pxToRem } from '../../..'
 import { KissKissBankBankLogo } from './kisskissbankbanklogo'
 import { GoodeedLogo } from './goodeedlogo'
 import { MaisonDeCrowdfundingLogo } from './mdc'
+import { MaisonDeCrowdfundingLogoOnDark } from './mdc/on-dark'
 import { MicrodonLogo } from './microdonlogo'
 import { LendopolisLogo } from './lendopolis-logo'
 import { KkbbCoLogo } from './kkbb-co'
@@ -86,6 +87,7 @@ export const AllLogos = () => {
 
       <Group title="Maison de Crowdfunding">
         <LogoContainer children={<MaisonDeCrowdfundingLogo />} />
+        <LogoContainer children={<MaisonDeCrowdfundingLogoOnDark />} />
       </Group>
 
       <Group title="Goodeed">
