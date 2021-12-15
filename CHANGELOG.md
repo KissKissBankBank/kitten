@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Logo: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
+
 ## [6.9.0] - 2021-12-15
 
 Features:
