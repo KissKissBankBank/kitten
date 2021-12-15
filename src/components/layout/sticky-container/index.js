@@ -80,7 +80,8 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
       top = _ref2.top,
       bottom = _ref2.bottom,
       isSticky = _ref2.isSticky,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className", "top", "bottom", "isSticky"]);
+      onChange = _ref2.onChange,
+      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "className", "top", "bottom", "isSticky", "onChange"]);
   var currentStickyContainer = (0, _react.useRef)(null);
 
   var _useState3 = (0, _react.useState)(false),
@@ -114,6 +115,11 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
     setContainerHeight(currentContainerHeight);
   }, []); // [] makes that Effect fire on Component mount only
 
+  (0, _react.useEffect)(function () {
+    onChange({
+      isStuck: stuck || isSticky === 'always'
+    });
+  }, [stuck, isSticky]);
   (0, _react.useEffect)(function () {
     if (['always', 'never'].includes(isSticky)) return;
 
@@ -211,8 +217,12 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
 
 var StickyContainer = (0, _react.forwardRef)(StickyContainerBase);
 exports.StickyContainer = StickyContainer;
+StickyContainer.defaultProps = {
+  onChange: function onChange() {}
+};
 StickyContainer.propTypes = {
   top: _propTypes.default.number,
   bottom: _propTypes.default.number,
-  isSticky: _propTypes.default.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'])
+  isSticky: _propTypes.default.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never']),
+  onChange: _propTypes.default.func
 };
