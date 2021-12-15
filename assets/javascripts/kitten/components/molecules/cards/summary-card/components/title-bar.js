@@ -56,6 +56,8 @@ TitleBar.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     amount: PropTypes.string,
+    frequency: PropTypes.string,
+    subscription: PropTypes.string,
     contributions: PropTypes.string,
     availability: PropTypes.string,
   }),

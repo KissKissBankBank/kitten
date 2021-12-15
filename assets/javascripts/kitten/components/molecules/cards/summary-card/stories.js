@@ -118,8 +118,8 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
             </SummaryCard.Image>
 
             <SummaryCard.Cell
-              name="info"
-              aria-describedby="SummaryList-ownerContribution-info"
+              name="title"
+              aria-describedby="SummaryList-ownerContribution-title"
             >
               <Text weight="bold" size="tiny">
                 Owner Contribution vel augue laoreet rutrum faucibus dolor
@@ -173,8 +173,8 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
           </Title>
           <SummaryCard.TitleBar
             values={{
-              image: "Visuel de l'abonement",
-              title: "Titre de l'abonement",
+              image: "Visuel de l'abonnement",
+              title: "Titre de l'abonnement",
               amount: 'Montant',
               frequency: 'Fréquence',
               subscription: 'Abonnements',
@@ -195,8 +195,8 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
             </SummaryCard.Image>
 
             <SummaryCard.Cell
-              name="info"
-              aria-describedby="SummaryList-ownerSubscription-info"
+              name="title"
+              aria-describedby="SummaryList-ownerSubscription-title"
             >
               <Text weight="bold" size="tiny">
                 Owner Subscription lacus vel augue.
@@ -207,19 +207,25 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="amount"
               aria-describedby="SummaryList-ownerSubscription-amount"
             >
-              <Text size="tiny">10 000 €</Text>
+              <Text size="tiny">10 €</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
-              name="contribution"
-              aria-describedby="SummaryList-ownerSubscription-contribution"
+              name="frequency"
+              aria-describedby="SummaryList-ownerSubscription-frequency"
             >
-              <Text size="tiny">1 452 000</Text>
+              <Text size="tiny">Trimestriel</Text>
+            </SummaryCard.Cell>
+            <SummaryCard.Cell
+              name="subscription"
+              aria-describedby="SummaryList-ownerSubscription-subscription"
+            >
+              <Text size="tiny">130</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
               name="availability"
               aria-describedby="SummaryList-ownerSubscription-availability"
             >
-              <Text size="tiny">Illimitée</Text>
+              <Text size="tiny">1000 / 1000</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell name="last-stretch">
               <DropdownMenu
