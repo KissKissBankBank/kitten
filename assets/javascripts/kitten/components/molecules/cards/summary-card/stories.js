@@ -7,6 +7,7 @@ import {
   FlexWrapper,
   Tag,
   Text,
+  Title,
 } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
@@ -91,6 +92,9 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
     <div ref={ref}>
       <FlexWrapper gap={50}>
         <div>
+          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+            Owner Contribution
+          </Title>
           <SummaryCard.TitleBar
             values={{
               image: 'Visuel de la contrepartie',
@@ -121,6 +125,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
                 Owner Contribution vel augue laoreet rutrum faucibus dolor
                 auctor.
               </Text>
+              <SummaryCard.TitleTag icon="star" text="Star" />
             </SummaryCard.Cell>
 
             <SummaryCard.Cell
@@ -163,12 +168,16 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
         </div>
 
         <div>
+          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+            Owner Subscription
+          </Title>
           <SummaryCard.TitleBar
             values={{
-              image: 'Visuel de la contrepartie',
-              title: 'Titre de la contrepartie',
+              image: "Visuel de l'abonement",
+              title: "Titre de l'abonement",
               amount: 'Montant',
-              contributions: 'Contributions',
+              frequency: 'Fréquence',
+              subscription: 'Abonnements',
               availability: 'Disponibilités',
             }}
             className="k-u-hidden@xs-down k-u-margin-bottom-single"
@@ -192,7 +201,6 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               <Text weight="bold" size="tiny">
                 Owner Subscription lacus vel augue.
               </Text>
-              <SummaryCard.TitleTag icon="star" text="Star" />
             </SummaryCard.Cell>
 
             <SummaryCard.Cell
@@ -235,6 +243,9 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
         </div>
 
         <div>
+          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+            Contributor Contribution
+          </Title>
           <SummaryCard.TitleBar
             values={{
               image: '',
@@ -313,6 +324,9 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
         </div>
 
         <div>
+          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+            Contributor Subscription
+          </Title>
           <SummaryCard.TitleBar
             values={{
               image: '',

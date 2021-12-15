@@ -8,116 +8,18 @@ import { mq } from '../../../../constants/screen-config'
    Type-specific common styles
    ****************************************/
 
-const contributorSubscriptionStyles = css`
-  @media ${mq.tabletAndDesktop} {
-    .k-SummaryCard-Wrapper__gridWrapper {
-      grid-template-columns:
-        minmax(${pxToRem(100)}, 3fr)
-        minmax(${pxToRem(80)}, 2fr)
-        ${pxToRem(80)}
-        ${pxToRem(120)}
-        ${pxToRem(80)}
-        ${pxToRem(110)}
-        ${pxToRem(40)};
-      grid-template-areas: 'title description amount payment status shipping last';
-    }
-
-    &.k-SummaryCard-Wrapper--large,
-    &.k-SummaryCard-Wrapper--medium {
-      .k-SummaryCard-Wrapper__gridWrapper {
-        grid-template-columns:
-          minmax(${pxToRem(100)}, 3fr)
-          minmax(${pxToRem(80)}, 2fr)
-          ${pxToRem(80)}
-          ${pxToRem(80)}
-          ${pxToRem(70)}
-          ${pxToRem(90)}
-          ${pxToRem(40)};
-        grid-template-areas: 'title description amount payment status shipping last';
-      }
-    }
-    &.k-SummaryCard-Wrapper--medium {
-      .k-SummaryCard-Wrapper__imageWrapper {
-        display: none;
-      }
-    }
-
-    &.k-SummaryCard-Wrapper--tablet,
-    &.k-SummaryCard-Wrapper--small,
-    &.k-SummaryCard-Wrapper--mobile {
-      .k-SummaryCard-Wrapper__imageWrapper {
-        display: none;
-      }
-      .k-SummaryCard-Wrapper__gridWrapper {
-        grid-template-columns:
-          minmax(${pxToRem(80)}, 1fr)
-          ${pxToRem(80)}
-          ${pxToRem(70)}
-          ${pxToRem(60)}
-          ${pxToRem(70)}
-          ${pxToRem(40)};
-        grid-template-areas: 'title description amount payment status last';
-
-        & > [class*='__shipping'] {
-          display: none;
-        }
-      }
-    }
-  }
-`
-const contributorContributionStyles = css`
-  @media ${mq.tabletAndDesktop} {
-    .k-SummaryCard-Wrapper__gridWrapper {
-      grid-template-columns:
-        minmax(${pxToRem(80)}, 1fr)
-        minmax(${pxToRem(80)}, 1fr)
-        ${pxToRem(80)}
-        ${pxToRem(80)}
-        ${pxToRem(120)}
-        ${pxToRem(50)};
-      grid-template-areas: 'title description amount payment shipping last';
-    }
-
-    &.k-SummaryCard-Wrapper--medium {
-      .k-SummaryCard-Wrapper__imageWrapper {
-        display: none;
-      }
-    }
-
-    &.k-SummaryCard-Wrapper--tablet,
-    &.k-SummaryCard-Wrapper--small,
-    &.k-SummaryCard-Wrapper--mobile {
-      .k-SummaryCard-Wrapper__imageWrapper {
-        display: none;
-      }
-      .k-SummaryCard-Wrapper__gridWrapper {
-        grid-template-columns:
-          minmax(${pxToRem(80)}, 1fr)
-          minmax(${pxToRem(80)}, 1fr)
-          ${pxToRem(70)}
-          ${pxToRem(70)}
-          ${pxToRem(50)};
-        grid-template-areas: 'title description amount payment last';
-
-        & > [class*='__shipping'] {
-          display: none;
-        }
-      }
-    }
-  }
-`
-
 const ownerSubscriptionStyles = css`
   /* TODO : styles */
   @media ${mq.tabletAndDesktop} {
     .k-SummaryCard-Wrapper__gridWrapper {
       grid-template-columns:
-        minmax(${pxToRem(140)}, 1fr)
-        ${pxToRem(90)}
-        ${pxToRem(100)}
-        ${pxToRem(90)}
-        ${pxToRem(20)};
-      grid-template-areas: 'info amount contribution availability last-stretch';
+      minmax(${pxToRem(80)}, 1fr)
+      minmax(${pxToRem(80)}, 1fr)
+      ${pxToRem(80)}
+      ${pxToRem(80)}
+      ${pxToRem(120)}
+      ${pxToRem(50)};
+      grid-template-areas: 'title description amount frequency subscription availability last-stretch';
     }
 
     &.k-SummaryCard-Wrapper--tablet {
@@ -177,6 +79,106 @@ const ownerContributionStyles = css`
         grid-template-areas: 'info amount contribution last-stretch';
 
         & > [class*='__availability'] {
+          display: none;
+        }
+      }
+    }
+  }
+`
+
+const contributorSubscriptionStyles = css`
+  @media ${mq.tabletAndDesktop} {
+    .k-SummaryCard-Wrapper__gridWrapper {
+      grid-template-columns:
+        minmax(${pxToRem(100)}, 3fr)
+        minmax(${pxToRem(80)}, 2fr)
+        ${pxToRem(80)}
+        ${pxToRem(120)}
+        ${pxToRem(80)}
+        ${pxToRem(110)}
+        ${pxToRem(40)};
+      grid-template-areas: 'title description amount payment status shipping last';
+    }
+
+    &.k-SummaryCard-Wrapper--large,
+    &.k-SummaryCard-Wrapper--medium {
+      .k-SummaryCard-Wrapper__gridWrapper {
+        grid-template-columns:
+          minmax(${pxToRem(100)}, 3fr)
+          minmax(${pxToRem(80)}, 2fr)
+          ${pxToRem(80)}
+          ${pxToRem(80)}
+          ${pxToRem(70)}
+          ${pxToRem(90)}
+          ${pxToRem(40)};
+        grid-template-areas: 'title description amount payment status shipping last';
+      }
+    }
+    &.k-SummaryCard-Wrapper--medium {
+      .k-SummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+    }
+
+    &.k-SummaryCard-Wrapper--tablet,
+    &.k-SummaryCard-Wrapper--small,
+    &.k-SummaryCard-Wrapper--mobile {
+      .k-SummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+      .k-SummaryCard-Wrapper__gridWrapper {
+        grid-template-columns:
+          minmax(${pxToRem(80)}, 1fr)
+          ${pxToRem(80)}
+          ${pxToRem(70)}
+          ${pxToRem(60)}
+          ${pxToRem(70)}
+          ${pxToRem(40)};
+        grid-template-areas: 'title description amount payment status last';
+
+        & > [class*='__shipping'] {
+          display: none;
+        }
+      }
+    }
+  }
+`
+
+const contributorContributionStyles = css`
+  @media ${mq.tabletAndDesktop} {
+    .k-SummaryCard-Wrapper__gridWrapper {
+      grid-template-columns:
+        minmax(${pxToRem(80)}, 1fr)
+        minmax(${pxToRem(80)}, 1fr)
+        ${pxToRem(80)}
+        ${pxToRem(80)}
+        ${pxToRem(120)}
+        ${pxToRem(50)};
+      grid-template-areas: 'title description amount payment shipping last';
+    }
+
+    &.k-SummaryCard-Wrapper--medium {
+      .k-SummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+    }
+
+    &.k-SummaryCard-Wrapper--tablet,
+    &.k-SummaryCard-Wrapper--small,
+    &.k-SummaryCard-Wrapper--mobile {
+      .k-SummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+      .k-SummaryCard-Wrapper__gridWrapper {
+        grid-template-columns:
+          minmax(${pxToRem(80)}, 1fr)
+          minmax(${pxToRem(80)}, 1fr)
+          ${pxToRem(70)}
+          ${pxToRem(70)}
+          ${pxToRem(50)};
+        grid-template-areas: 'title description amount payment last';
+
+        & > [class*='__shipping'] {
           display: none;
         }
       }
