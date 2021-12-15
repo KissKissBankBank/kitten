@@ -76,6 +76,11 @@ var HeaderNav = function HeaderNav(_ref) {
       stickyState = _useState6[0],
       setStickyState = _useState6[1];
 
+  var _useState7 = (0, _react.useState)(false),
+      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
+      stuckState = _useState8[0],
+      setStuckState = _useState8[1];
+
   var stickyContainerRef = (0, _react.useRef)(null);
   var headerRef = (0, _react.useRef)(null);
   var previousStickyState = (0, _usePreviousHook.usePrevious)(stickyState);
@@ -95,6 +100,12 @@ var HeaderNav = function HeaderNav(_ref) {
   (0, _react.useEffect)(function () {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp');
   }, [isFixed, isMenuExpanded]);
+
+  var handleStickyChange = function handleStickyChange(_ref3) {
+    var isStuck = _ref3.isStuck;
+    return setStuckState(isStuck);
+  };
+
   return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
       isLogged: isLogged,
@@ -109,13 +120,15 @@ var HeaderNav = function HeaderNav(_ref) {
     },
     zIndex: zIndexConfig,
     className: (0, _classnames.default)('k-HeaderNav__wrapper', {
-      'k-HeaderNav--menuIsExpanded': isMenuExpanded
+      'k-HeaderNav--menuIsExpanded': isMenuExpanded,
+      'k-HeaderNav--isStuck': stuckState
     })
   }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
     isSticky: stickyState
   }, stickyProps, {
-    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className)
+    className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps === null || stickyProps === void 0 ? void 0 : stickyProps.className),
+    onChange: handleStickyChange
   }), /*#__PURE__*/_react.default.createElement("nav", {
     ref: headerRef,
     id: id,
