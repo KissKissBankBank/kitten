@@ -141,8 +141,8 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               name="subscription"
               aria-describedby="SummaryList-ownerSubscription-subscription"
             >
-              <Text size="tiny" className="k-u-hidden@s-down">130</Text>
-              <Text size="tiny" className="k-u-hidden@m-up">130 abonnements en cours</Text>
+              <Text size="tiny" className="k-u-hidden@xs-down">130</Text>
+              <Text size="tiny" className="k-u-hidden@s-up">130 abonnements en cours</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
               className="k-u-hidden@xs-down"

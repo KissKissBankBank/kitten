@@ -2,7 +2,7 @@
 
 exports[`<SummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa kPixUJ k-SummaryCard k-SummaryCard-Wrapper--large"
+  className="sc-bdVaJa lihDuF k-SummaryCard k-SummaryCard-Wrapper--large"
 >
   <div
     className="k-SummaryCard__imageWrapper k-SummaryCard-Wrapper__imageWrapper"
