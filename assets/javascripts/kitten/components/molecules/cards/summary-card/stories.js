@@ -1,7 +1,6 @@
 import React from 'react'
 import { SummaryCard, useSummaryCardResizeObserver } from './index'
 import {
-  COLORS,
   DropdownMenu,
   EllipsisIcon,
   FlexWrapper,
@@ -152,7 +151,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
                 menuPosition="left"
                 button={({ open }) => (
                   <>
-                    <EllipsisIcon color={COLORS.font1} />
+                    <EllipsisIcon color="var(--color-grey-900)" />
                     <span className="k-u-a11y-visuallyHidden">
                       {open ? 'Click to close menu' : 'Click to open menu'}
                     </span>
@@ -237,7 +236,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
                 menuPosition="left"
                 button={({ open }) => (
                   <>
-                    <EllipsisIcon color={COLORS.font1} />
+                    <EllipsisIcon color="var(--color-grey-900)" />
                     <span className="k-u-a11y-visuallyHidden">
                       {open ? 'Click to close menu' : 'Click to open menu'}
                     </span>

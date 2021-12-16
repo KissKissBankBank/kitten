@@ -31,12 +31,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             type="ownerContribution"
           />
 
-          <SummaryCard
-            {...args}
-            size={size}
-            type="ownerContribution"
-            className="k-u-margin-bottom-single"
-          >
+          <SummaryCard {...args} size={size} type="ownerContribution">
             <SummaryCard.Image>
               <img
                 src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
@@ -45,13 +40,14 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             </SummaryCard.Image>
 
             <SummaryCard.Cell
-              name="info"
-              aria-describedby="SummaryList-ownerContribution-info"
+              name="title"
+              aria-describedby="SummaryList-ownerContribution-title"
             >
               <Text weight="bold" size="tiny">
                 Owner Contribution vel augue laoreet rutrum faucibus dolor
                 auctor.
               </Text>
+              <SummaryCard.TitleTag icon="star" text="Star" />
             </SummaryCard.Cell>
 
             <SummaryCard.Cell
@@ -67,6 +63,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               <Text size="tiny">1 452 000</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
+              className="k-u-hidden@xs-down"
               name="availability"
               aria-describedby="SummaryList-ownerContribution-availability"
             >
@@ -91,6 +88,23 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               </DropdownMenu>
             </SummaryCard.Cell>
           </SummaryCard>
+        </div>
+
+        <div>
+          <SummaryCard.TitleBar
+            values={{
+              image: "Visuel de l'abonnement",
+              title: "Titre de l'abonnement",
+              amount: 'Montant',
+              frequency: 'Fréquence',
+              subscription: 'Abonnements',
+              availability: 'Disponibilités',
+            }}
+            className="k-u-hidden@xs-down k-u-margin-bottom-single"
+            id="SummaryList-ownerSubscription"
+            size={size}
+            type="ownerSubscription"
+          />
 
           <SummaryCard {...args} size={size} type="ownerSubscription">
             <SummaryCard.Image>
@@ -101,32 +115,41 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             </SummaryCard.Image>
 
             <SummaryCard.Cell
-              name="info"
-              aria-describedby="SummaryList-ownerSubscription-info"
+              name="title"
+              aria-describedby="SummaryList-ownerSubscription-title"
             >
               <Text weight="bold" size="tiny">
                 Owner Subscription lacus vel augue.
               </Text>
-              <SummaryCard.TitleTag icon="star" text="Star" />
             </SummaryCard.Cell>
 
             <SummaryCard.Cell
               name="amount"
               aria-describedby="SummaryList-ownerSubscription-amount"
             >
-              <Text size="tiny">10 000 €</Text>
+              <Text size="tiny" className="k-u-hidden@s-down">10 €</Text>
+              <Text size="tiny" className="k-u-hidden@m-up">10 € / mois</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
-              name="contribution"
-              aria-describedby="SummaryList-ownerSubscription-contribution"
+              className="k-u-hidden@xs-down"
+              name="frequency"
+              aria-describedby="SummaryList-ownerSubscription-frequency"
             >
-              <Text size="tiny">1 452 000</Text>
+              <Text size="tiny">Trimestriel</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
+              name="subscription"
+              aria-describedby="SummaryList-ownerSubscription-subscription"
+            >
+              <Text size="tiny" className="k-u-hidden@s-down">130</Text>
+              <Text size="tiny" className="k-u-hidden@m-up">130 abonnements en cours</Text>
+            </SummaryCard.Cell>
+            <SummaryCard.Cell
+              className="k-u-hidden@xs-down"
               name="availability"
               aria-describedby="SummaryList-ownerSubscription-availability"
             >
-              <Text size="tiny">Illimitée</Text>
+              <Text size="tiny">1000 / 1000</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell name="last-stretch">
               <DropdownMenu
@@ -314,7 +337,6 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             </SummaryCard.Cell>
           </SummaryCard>
         </div>
-
 
         <div>
           <Title

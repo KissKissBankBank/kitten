@@ -64,7 +64,20 @@ const ownerSubscriptionStyles = css`
         display: none;
       }
     }
-    &.k-SummaryCard-Wrapper--medium,
+
+    &.k-SummaryCard-Wrapper--medium {
+      .k-SummaryCard-Wrapper__gridWrapper {
+        grid-template-columns:
+          minmax(${pxToRem(80)}, 1fr)
+          ${pxToRem(60)}
+          ${pxToRem(80)}
+          ${pxToRem(80)}
+          ${pxToRem(90)}
+          ${pxToRem(20)};
+        }
+      }
+    }
+
     &.k-SummaryCard-Wrapper--small,
     &.k-SummaryCard-Wrapper--mobile {
       .k-SummaryCard-Wrapper__imageWrapper {
@@ -72,9 +85,9 @@ const ownerSubscriptionStyles = css`
       }
       .k-SummaryCard-Wrapper__gridWrapper {
         grid-template-columns:
-          minmax(${pxToRem(80)}, 1fr)
-          ${pxToRem(70)}
-          ${pxToRem(70)}
+          minmax(${pxToRem(60)}, 1fr)
+          ${pxToRem(90)}
+          ${pxToRem(90)}
           ${pxToRem(20)};
         grid-template-areas: 'title amount subscription last-stretch';
         
