@@ -51,11 +51,11 @@ const ownerSubscriptionStyles = css`
     .k-SummaryCard-Wrapper__gridWrapper {
       grid-template-columns:
         minmax(${pxToRem(80)}, 1fr)
-        minmax(${pxToRem(80)}, 1fr)
         ${pxToRem(80)}
         ${pxToRem(80)}
-        ${pxToRem(120)}
-        ${pxToRem(50)};
+        ${pxToRem(90)}
+        ${pxToRem(110)}
+        ${pxToRem(20)};
       grid-template-areas: 'title amount frequency subscription availability last-stretch';
     }
 
@@ -64,6 +64,7 @@ const ownerSubscriptionStyles = css`
         display: none;
       }
     }
+    &.k-SummaryCard-Wrapper--medium,
     &.k-SummaryCard-Wrapper--small,
     &.k-SummaryCard-Wrapper--mobile {
       .k-SummaryCard-Wrapper__imageWrapper {
@@ -72,12 +73,12 @@ const ownerSubscriptionStyles = css`
       .k-SummaryCard-Wrapper__gridWrapper {
         grid-template-columns:
           minmax(${pxToRem(80)}, 1fr)
-          minmax(${pxToRem(80)}, 1fr)
           ${pxToRem(70)}
           ${pxToRem(70)}
-          ${pxToRem(50)};
-        grid-template-areas: 'title amount frequency last-stretch';
-
+          ${pxToRem(20)};
+        grid-template-areas: 'title amount subscription last-stretch';
+        
+        & > [class*='__frequency'],
         & > [class*='__availability'] {
           display: none;
         }

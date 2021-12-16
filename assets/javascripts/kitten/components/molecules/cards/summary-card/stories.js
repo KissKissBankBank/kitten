@@ -141,6 +141,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               <Text size="tiny">1 452 000</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
+              className="k-u-hidden@xs-down"
               name="availability"
               aria-describedby="SummaryList-ownerContribution-availability"
             >
@@ -207,9 +208,11 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="amount"
               aria-describedby="SummaryList-ownerSubscription-amount"
             >
-              <Text size="tiny">10 €</Text>
+              <Text size="tiny" className="k-u-hidden@s-down">10 €</Text>
+              <Text size="tiny" className="k-u-hidden@m-up">10 € / mois</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
+              className="k-u-hidden@xs-down"
               name="frequency"
               aria-describedby="SummaryList-ownerSubscription-frequency"
             >
@@ -219,9 +222,11 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="subscription"
               aria-describedby="SummaryList-ownerSubscription-subscription"
             >
-              <Text size="tiny">130</Text>
+              <Text size="tiny" className="k-u-hidden@s-down">130</Text>
+              <Text size="tiny" className="k-u-hidden@m-up">130 abonnements en cours</Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
+              className="k-u-hidden@xs-down"
               name="availability"
               aria-describedby="SummaryList-ownerSubscription-availability"
             >
