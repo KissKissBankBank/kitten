@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -16,13 +17,13 @@ export var Item = function Item(_ref) {
       isSelected = _ref.isSelected,
       as = _ref.as,
       tag = _ref.tag,
-      other = _objectWithoutProperties(_ref, ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var Component = as || tag;
   return /*#__PURE__*/React.createElement("li", _extends({
     role: "menuitem"
   }, liProps, {
-    className: classNames('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--".concat(size), {
+    className: classNames('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
       'k-HeaderMenu__item--external': external,
       'k-HeaderMenu__item--isSelected': isSelected,
       'k-HeaderMenu__item--hasButton': button,

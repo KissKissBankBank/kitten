@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.InformationBox = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,16 +25,18 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var _excluded = ["title", "titleProps", "children"];
+
 var StyledInformationBox = _styledComponents.default.div.withConfig({
   displayName: "information-box__StyledInformationBox",
-  componentId: "cr7cpl-0"
+  componentId: "sc-cr7cpl-0"
 })(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border);}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1);
 
 var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,
       titleProps = _ref.titleProps,
       children = _ref.children,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["title", "titleProps", "children"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledInformationBox, (0, _extends2.default)({}, other, {
     className: (0, _classnames.default)('k-InformationBox', other.className)
   }), /*#__PURE__*/_react.default.createElement("div", {

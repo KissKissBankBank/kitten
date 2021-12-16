@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import { Text } from '../../../../components/atoms/typography/text';
 export var SupTitle = function SupTitle(props) {

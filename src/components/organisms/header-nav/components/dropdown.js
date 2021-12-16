@@ -1,17 +1,11 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Dropdown = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -37,7 +31,11 @@ var _dropdownConfig = require("../../../../constants/dropdown-config");
 
 var _arrowIcon = require("../../../../components/graphics/icons/arrow-icon");
 
-var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Dropdown = /*#__PURE__*/_react.default.forwardRef(function (_ref, dropdownRef) {
   var button = _ref.button,
       buttonClassName = _ref.buttonClassName,
       buttonContentOnCollapsed = _ref.buttonContentOnCollapsed,
@@ -62,24 +60,20 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
   var dropdownButtonRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(isExpanded),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isExpandedState = _useState2[0],
-      setIsExpanded = _useState2[1];
+      isExpandedState = _useState[0],
+      setIsExpanded = _useState[1];
 
-  var _useState3 = (0, _react.useState)(null),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      toggleByEventType = _useState4[0],
-      setToggleByEventType = _useState4[1];
+  var _useState2 = (0, _react.useState)(null),
+      toggleByEventType = _useState2[0],
+      setToggleByEventType = _useState2[1];
 
-  var _useState5 = (0, _react.useState)(0),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      verticalReferenceElementState = _useState6[0],
-      setVerticalReferenceElement = _useState6[1];
+  var _useState3 = (0, _react.useState)(0),
+      verticalReferenceElementState = _useState3[0],
+      setVerticalReferenceElement = _useState3[1];
 
-  var _useState7 = (0, _react.useState)(0),
-      _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
-      horizontalReferenceElementState = _useState8[0],
-      setHorizontalReferenceElement = _useState8[1];
+  var _useState4 = (0, _react.useState)(0),
+      horizontalReferenceElementState = _useState4[0],
+      setHorizontalReferenceElement = _useState4[1];
 
   var windowWidth = (0, _useWindowWidthHook.useWindowWidth)();
   var keyboard = _events.default.keyboard;
@@ -107,7 +101,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     var toggleEvent = function toggleEvent(evt) {
       var _evt$detail;
 
-      return toggle(evt === null || evt === void 0 ? void 0 : (_evt$detail = evt.detail) === null || _evt$detail === void 0 ? void 0 : _evt$detail.nextExpandedState);
+      return toggle(evt == null ? void 0 : (_evt$detail = evt.detail) == null ? void 0 : _evt$detail.nextExpandedState);
     };
 
     window.addEventListener(_events.TOGGLE_DROPDOWN_EVENT, toggleEvent);
@@ -163,13 +157,13 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
   var manageA11yOn = function manageA11yOn(event) {
     event.stopPropagation();
     event.preventDefault();
-    var focusableElements = (0, _a11y.getFocusableElementsFrom)(dropdownContentRef === null || dropdownContentRef === void 0 ? void 0 : dropdownContentRef.current);
+    var focusableElements = (0, _a11y.getFocusableElementsFrom)(dropdownContentRef == null ? void 0 : dropdownContentRef.current);
     var kbdNav = (0, _a11y.keyboardNavigation)(focusableElements, {
       events: {
         prev: _events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
         next: _events.DROPDOWN_LAST_FOCUS_REACHED_EVENT
       },
-      triggeredElement: dropdownButtonRef === null || dropdownButtonRef === void 0 ? void 0 : dropdownButtonRef.current
+      triggeredElement: dropdownButtonRef == null ? void 0 : dropdownButtonRef.current
     });
     var tab = keyboard.tab,
         up = keyboard.up,
@@ -181,11 +175,11 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     if (event.keyCode === esc) return toggle(false);
 
     if (event.keyCode === left) {
-      return (0, _events.dispatchEvent)(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, dropdownButtonRef === null || dropdownButtonRef === void 0 ? void 0 : dropdownButtonRef.current)();
+      return (0, _events.dispatchEvent)(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, dropdownButtonRef == null ? void 0 : dropdownButtonRef.current)();
     }
 
     if (event.keyCode === right) {
-      return (0, _events.dispatchEvent)(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, dropdownButtonRef === null || dropdownButtonRef === void 0 ? void 0 : dropdownButtonRef.current)();
+      return (0, _events.dispatchEvent)(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, dropdownButtonRef == null ? void 0 : dropdownButtonRef.current)();
     }
 
     if (shiftTab(event) || event.keyCode === up) {
@@ -219,7 +213,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     if (!closeOnOuterClick || !isExpandedState) return;
 
     var handleBodyClick = function handleBodyClick(event) {
-      if (!event.target.matches(".".concat(className.replace(/\s+/g, '.'), " *"))) {
+      if (!event.target.matches("." + className.replace(/\s+/g, '.') + " *")) {
         toggle(false);
       }
     };

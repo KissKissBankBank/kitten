@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.InfoLines = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,6 +20,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
+
+var _excluded = ["className", "style", "infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"];
 
 var StyledInfoLines = _styledComponents.default.dl.withConfig({
   displayName: "info-lines__StyledInfoLines",
@@ -40,7 +40,7 @@ var InfoLines = function InfoLines(_ref) {
       descriptionTagList = _ref.descriptionTagList,
       titleTagList = _ref.titleTagList,
       itemTagList = _ref.itemTagList,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "style", "infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var TitleElement = titleTagList;
   var ItemElement = itemTagList;
   return /*#__PURE__*/_react.default.createElement(StyledInfoLines, (0, _extends2.default)({

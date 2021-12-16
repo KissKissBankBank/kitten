@@ -48,9 +48,12 @@ const getRangePageScrollLeft = (
   itemMarginBetween,
   containerPadding,
 ) =>
-  [...Array(numberOfPages).keys()].map(
-    page => page * (targetClientWidth + itemMarginBetween - containerPadding),
-  )
+  Array(numberOfPages)
+    .fill(0)
+    .map(
+      (el, page) =>
+        page * (targetClientWidth + itemMarginBetween - containerPadding),
+    )
 
 export const CarouselInner = ({
   currentPageIndex,
@@ -160,36 +163,38 @@ export const CarouselInner = ({
       onKeyDown={handleKeyDown}
       className="k-Carousel__inner"
     >
-      {[...Array(numberOfPages).keys()].map(index => {
-        const isActivePage = currentPageIndex === index
-        const hasPageBeenViewed = viewedPages.has(index)
+      {Array(numberOfPages)
+        .fill(0)
+        .map((el, index) => {
+          const isActivePage = currentPageIndex === index
+          const hasPageBeenViewed = viewedPages.has(index)
 
-        return (
-          <div
-            key={index}
-            role="button"
-            aria-label={pageClickText(index + 1)}
-            onClick={handlePageClick(index)}
-            className={classNames(
-              'k-Carousel__inner__pageContainer',
-              pagesClassName,
-              {
-                'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
-                'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed,
-              },
-            )}
-          >
-            <CarouselPage
-              exportVisibilityProps={exportVisibilityProps}
-              hasPageBeenViewed={hasPageBeenViewed}
-              isActivePage={isActivePage}
-              pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
-              numberOfItemsPerPage={numberOfItemsPerPage}
-              goToCurrentPage={() => goToPage(index)}
-            />
-          </div>
-        )
-      })}
+          return (
+            <div
+              key={index}
+              role="button"
+              aria-label={pageClickText(index + 1)}
+              onClick={handlePageClick(index)}
+              className={classNames(
+                'k-Carousel__inner__pageContainer',
+                pagesClassName,
+                {
+                  'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
+                  'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed,
+                },
+              )}
+            >
+              <CarouselPage
+                exportVisibilityProps={exportVisibilityProps}
+                hasPageBeenViewed={hasPageBeenViewed}
+                isActivePage={isActivePage}
+                pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
+                numberOfItemsPerPage={numberOfItemsPerPage}
+                goToCurrentPage={() => goToPage(index)}
+              />
+            </div>
+          )
+        })}
     </div>
   )
 }

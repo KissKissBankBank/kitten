@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -25,12 +25,11 @@ export var LocationInput = function LocationInput(_ref) {
       name = _ref.name,
       loadingText = _ref.loadingText,
       variant = _ref.variant,
-      others = _objectWithoutProperties(_ref, ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(defaultValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      address = _useState2[0],
-      updateAddress = _useState2[1];
+      address = _useState[0],
+      updateAddress = _useState[1];
 
   var handleChange = function handleChange(returnedAddress) {
     updateAddress(returnedAddress);
@@ -69,7 +68,7 @@ export var LocationInput = function LocationInput(_ref) {
     }, /*#__PURE__*/React.createElement("div", {
       className: "k-LocationInput__icon"
     }, /*#__PURE__*/React.createElement(LocationIcon, null)), /*#__PURE__*/React.createElement("input", getInputProps(_extends({}, inputProps, {
-      className: classNames('k-LocationInput__input', inputProps === null || inputProps === void 0 ? void 0 : inputProps.className, "k-LocationInput__input--".concat(variant))
+      className: classNames('k-LocationInput__input', inputProps == null ? void 0 : inputProps.className, "k-LocationInput__input--" + variant)
     }))), /*#__PURE__*/React.createElement("div", {
       className: "k-LocationInput__autocomplete"
     }, loading && /*#__PURE__*/React.createElement("div", {

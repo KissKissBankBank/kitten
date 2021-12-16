@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -39,7 +39,7 @@ var IconContainer = function IconContainer(_ref) {
   var status = _ref.status,
       children = _ref.children;
   return /*#__PURE__*/React.createElement(StyledIconContainer, {
-    className: classNames('k-DocumentManager__iconContainer', "k-DocumentManager__iconContainer--".concat(status))
+    className: classNames('k-DocumentManager__iconContainer', "k-DocumentManager__iconContainer--" + status)
   }, children, statusesWithIcons.includes(status) && /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentManager__iconContainer__statusIcon"
   }, status === 'valid' && /*#__PURE__*/React.createElement(CheckedCircleIcon, {
@@ -96,26 +96,23 @@ export var DocumentManager = function DocumentManager(_ref2) {
       replaceButtonText = _ref2$replaceButtonTe === void 0 ? 'Replace current' : _ref2$replaceButtonTe,
       _ref2$status = _ref2.status,
       status = _ref2$status === void 0 ? 'ready' : _ref2$status,
-      props = _objectWithoutProperties(_ref2, ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var _useState = useState(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      internalFileName = _useState2[0],
-      setInternalFileName = _useState2[1];
+      internalFileName = _useState[0],
+      setInternalFileName = _useState[1];
 
-  var _useState3 = useState(status),
-      _useState4 = _slicedToArray(_useState3, 2),
-      internalStatus = _useState4[0],
-      setInternalStatus = _useState4[1];
+  var _useState2 = useState(status),
+      internalStatus = _useState2[0],
+      setInternalStatus = _useState2[1];
 
   useEffect(function () {
     setInternalStatus(status);
   }, [status]);
 
-  var _useState5 = useState(disabled),
-      _useState6 = _slicedToArray(_useState5, 2),
-      internalDisabled = _useState6[0],
-      setInternalDisabled = _useState6[1];
+  var _useState3 = useState(disabled),
+      internalDisabled = _useState3[0],
+      setInternalDisabled = _useState3[1];
 
   useEffect(function () {
     setInternalDisabled(disabled);
@@ -125,7 +122,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
     var files = event.currentTarget.files;
     if (files.length < 1) return;
     var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? "".concat(tempFileName, " + ").concat(files.length - 1) : tempFileName;
+    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalFileName(tempText);
     onUpload(event);
@@ -197,7 +194,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
 
   return /*#__PURE__*/React.createElement(StyledDocumentDisplay, _extends({}, props, {
     id: id,
-    className: classNames('k-DocumentManager__display', "k-DocumentManager__display--".concat(status), props.className)
+    className: classNames('k-DocumentManager__display', "k-DocumentManager__display--" + status, props.className)
   }), /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentManager__display__container"
   }, /*#__PURE__*/React.createElement("div", {

@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.WarningCircleIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,6 +21,7 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["bgColor", "color", "circleColor", "warningColor", "width", "height", "title", "className"];
 var DEFAULT_WIDTH = 20;
 var DEFAULT_HEIGHT = 20;
 
@@ -35,7 +34,7 @@ var WarningCircleIcon = function WarningCircleIcon(_ref) {
       height = _ref.height,
       title = _ref.title,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["bgColor", "color", "circleColor", "warningColor", "width", "height", "title", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

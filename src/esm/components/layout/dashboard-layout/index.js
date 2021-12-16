@@ -1,6 +1,13 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style"],
+    _excluded2 = ["className", "hasButton", "buttonProps", "children", "isOpen"],
+    _excluded3 = ["openLabel", "closeLabel"],
+    _excluded4 = ["className", "children", "tag"],
+    _excluded5 = ["className"],
+    _excluded6 = ["className"],
+    _excluded7 = ["className"],
+    _excluded8 = ["className", "isOpen", "children"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import isFunction from 'lodash/fp/isFunction';
@@ -24,17 +31,15 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       _ref$overlayZIndex = _ref.overlayZIndex,
       overlayZIndex = _ref$overlayZIndex === void 0 ? 100 : _ref$overlayZIndex,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isOpen = _useState2[0],
-      setOpen = _useState2[1];
+      isOpen = _useState[0],
+      setOpen = _useState[1];
 
-  var _useState3 = useState([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      touchCoords = _useState4[0],
-      setTouchCoords = _useState4[1];
+  var _useState2 = useState([]),
+      touchCoords = _useState2[0],
+      setTouchCoords = _useState2[1];
 
   var sideBarElement = useRef(null);
   var contentElement = useRef(null);
@@ -44,7 +49,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
       var _child$props;
 
       if (!child || !child.props) return null;
-      return isFunction((_child$props = child.props) === null || _child$props === void 0 ? void 0 : _child$props.children) ? React.cloneElement(child, {
+      return isFunction((_child$props = child.props) == null ? void 0 : _child$props.children) ? /*#__PURE__*/React.cloneElement(child, {
         children: child.props.children(_extends({
           openSideBar: function openSideBar() {
             return setOpen(true);
@@ -54,7 +59,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
           },
           isSidebarOpen: isOpen
         }, otherProps))
-      }) : React.cloneElement(child, otherProps);
+      }) : /*#__PURE__*/React.cloneElement(child, otherProps);
     });
   };
 
@@ -69,8 +74,8 @@ export var DashboardLayout = function DashboardLayout(_ref) {
           return setOpen(false);
         },
         isSidebarOpen: isOpen
-      }, otherProps)) : React.cloneElement(child, _extends({
-        key: "content_child_".concat(index)
+      }, otherProps)) : /*#__PURE__*/React.cloneElement(child, _extends({
+        key: "content_child_" + index
       }, otherProps));
     });
   };
@@ -86,7 +91,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
         var _sideBarElement$curre;
 
         dispatchEvent(DASHBOARD_HIDE_CONTENT_EVENT)();
-        sideBarElement === null || sideBarElement === void 0 ? void 0 : (_sideBarElement$curre = sideBarElement.current) === null || _sideBarElement$curre === void 0 ? void 0 : _sideBarElement$curre.focus();
+        sideBarElement == null ? void 0 : (_sideBarElement$curre = sideBarElement.current) == null ? void 0 : _sideBarElement$curre.focus();
         window.addEventListener('keydown', handleKeyDown);
         contentElement.current.addEventListener('click', handleMainClick);
         sideBarElement.current.addEventListener('touchstart', handleTouchStart);
@@ -103,7 +108,7 @@ export var DashboardLayout = function DashboardLayout(_ref) {
         var _contentElement$curre;
 
         dispatchEvent(DASHBOARD_SHOW_CONTENT_EVENT)();
-        contentElement === null || contentElement === void 0 ? void 0 : (_contentElement$curre = contentElement.current) === null || _contentElement$curre === void 0 ? void 0 : _contentElement$curre.focus();
+        contentElement == null ? void 0 : (_contentElement$curre = contentElement.current) == null ? void 0 : _contentElement$curre.focus();
       }
     }
   }, [isOpen, sideBarElement, contentElement]);
@@ -111,14 +116,14 @@ export var DashboardLayout = function DashboardLayout(_ref) {
   var handleTouchStart = function handleTouchStart(event) {
     var _event$touches$;
 
-    setTouchCoords([event === null || event === void 0 ? void 0 : (_event$touches$ = event.touches[0]) === null || _event$touches$ === void 0 ? void 0 : _event$touches$.clientX]);
+    setTouchCoords([event == null ? void 0 : (_event$touches$ = event.touches[0]) == null ? void 0 : _event$touches$.clientX]);
   };
 
   var handleTouchEnd = function handleTouchEnd(event) {
     setTouchCoords(function (current) {
       var _event$changedTouches;
 
-      return [current[0], event === null || event === void 0 ? void 0 : (_event$changedTouches = event.changedTouches[0]) === null || _event$changedTouches === void 0 ? void 0 : _event$changedTouches.clientX];
+      return [current[0], event == null ? void 0 : (_event$changedTouches = event.changedTouches[0]) == null ? void 0 : _event$changedTouches.clientX];
     });
   };
 
@@ -220,12 +225,12 @@ var Header = function Header(_ref2) {
       buttonProps = _ref2.buttonProps,
       children = _ref2.children,
       isOpen = _ref2.isOpen,
-      props = _objectWithoutProperties(_ref2, ["className", "hasButton", "buttonProps", "children", "isOpen"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   var _ref3 = buttonProps || {},
       openLabel = _ref3.openLabel,
       closeLabel = _ref3.closeLabel,
-      otherButtonProps = _objectWithoutProperties(_ref3, ["openLabel", "closeLabel"]);
+      otherButtonProps = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("header", _extends({
     className: classNames('k-DashboardLayout__heading', className)
@@ -246,7 +251,7 @@ var SiteHeader = function SiteHeader(_ref4) {
       children = _ref4.children,
       _ref4$tag = _ref4.tag,
       tag = _ref4$tag === void 0 ? 'div' : _ref4$tag,
-      props = _objectWithoutProperties(_ref4, ["className", "children", "tag"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
   var SiteHeaderComponent = tag;
   return /*#__PURE__*/React.createElement(SiteHeaderComponent, _extends({
@@ -256,7 +261,7 @@ var SiteHeader = function SiteHeader(_ref4) {
 
 var SideContent = function SideContent(_ref5) {
   var className = _ref5.className,
-      props = _objectWithoutProperties(_ref5, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref5, _excluded5);
 
   return /*#__PURE__*/React.createElement("section", _extends({
     className: classNames('k-DashboardLayout__navigation', className)
@@ -265,7 +270,7 @@ var SideContent = function SideContent(_ref5) {
 
 var SideFooter = function SideFooter(_ref6) {
   var className = _ref6.className,
-      props = _objectWithoutProperties(_ref6, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref6, _excluded6);
 
   return /*#__PURE__*/React.createElement("footer", _extends({
     className: classNames('k-DashboardLayout__footer', className)
@@ -274,7 +279,7 @@ var SideFooter = function SideFooter(_ref6) {
 
 var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
-      props = _objectWithoutProperties(_ref7, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref7, _excluded7);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
@@ -285,7 +290,7 @@ var Toaster = function Toaster(_ref8) {
   var className = _ref8.className,
       isOpen = _ref8.isOpen,
       children = _ref8.children,
-      props = _objectWithoutProperties(_ref8, ["className", "isOpen", "children"]);
+      props = _objectWithoutPropertiesLoose(_ref8, _excluded8);
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-DashboardLayout__toaster__wrapper', 'k-DashboardLayout__fullWidth', className, {

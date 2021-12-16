@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useState, useEffect } from 'react';
 import { pauseEvent } from '../utils/pause-event';
 export var useDrag = function useDrag(_ref) {
@@ -7,33 +6,29 @@ export var useDrag = function useDrag(_ref) {
       disabled = _ref.disabled;
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isDragging = _useState2[0],
-      setDragging = _useState2[1];
+      isDragging = _useState[0],
+      setDragging = _useState[1];
+
+  var _useState2 = useState({
+    x: 0,
+    y: 0
+  }),
+      origin = _useState2[0],
+      setOrigin = _useState2[1];
 
   var _useState3 = useState({
     x: 0,
     y: 0
   }),
-      _useState4 = _slicedToArray(_useState3, 2),
-      origin = _useState4[0],
-      setOrigin = _useState4[1];
+      translation = _useState3[0],
+      setTranslation = _useState3[1];
 
-  var _useState5 = useState({
+  var _useState4 = useState({
     x: 0,
     y: 0
   }),
-      _useState6 = _slicedToArray(_useState5, 2),
-      translation = _useState6[0],
-      setTranslation = _useState6[1];
-
-  var _useState7 = useState({
-    x: 0,
-    y: 0
-  }),
-      _useState8 = _slicedToArray(_useState7, 2),
-      lastTranslation = _useState8[0],
-      setLastTranslation = _useState8[1];
+      lastTranslation = _useState4[0],
+      setLastTranslation = _useState4[1];
 
   useEffect(function () {
     if (!imageDimensions) return;

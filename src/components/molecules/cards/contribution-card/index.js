@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ContributionCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,6 +27,12 @@ var _context = require("./context");
 
 var _reactElements = require("../../../../helpers/react/react-elements");
 
+var _excluded = ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var ContributionCard = function ContributionCard(_ref) {
   var className = _ref.className,
       closeButtonLabel = _ref.closeButtonLabel,
@@ -45,7 +45,7 @@ var ContributionCard = function ContributionCard(_ref) {
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var imageChild = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: ContributionCard.Image
@@ -56,9 +56,8 @@ var ContributionCard = function ContributionCard(_ref) {
   });
 
   var _useState = (0, _react.useState)(true),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isInputEmpty = _useState2[0],
-      setEmptyInput = _useState2[1];
+      isInputEmpty = _useState[0],
+      setEmptyInput = _useState[1];
 
   if (!show) return null;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledContributionCard, (0, _extends2.default)({
@@ -73,7 +72,7 @@ var ContributionCard = function ContributionCard(_ref) {
     size: "micro",
     closeButtonLabel: closeButtonLabel,
     onClick: onClose
-  }), imageChild && (0, _react.cloneElement)(imageChild), /*#__PURE__*/_react.default.createElement("div", {
+  }), imageChild && /*#__PURE__*/(0, _react.cloneElement)(imageChild), /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-ContributionCard__gridWrapper', {
       'k-ContributionCard__gridWrapper--largeInput': largeInput
     })
@@ -83,8 +82,8 @@ var ContributionCard = function ContributionCard(_ref) {
       setEmptyInput: setEmptyInput
     }
   }, wrappedChildren.map(function (item, index) {
-    return (0, _react.cloneElement)(item, {
-      key: "ContributionCard-".concat(index)
+    return /*#__PURE__*/(0, _react.cloneElement)(item, {
+      key: "ContributionCard-" + index
     });
   }))));
 };

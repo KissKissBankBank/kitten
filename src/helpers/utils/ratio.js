@@ -1,8 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.computeFromRatio = void 0;
 
 var computeFromRatio = function computeFromRatio(_ref) {

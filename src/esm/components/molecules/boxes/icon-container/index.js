@@ -1,4 +1,3 @@
-import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -53,6 +52,8 @@ var IconWrapper = styled.div.withConfig({
   }
 });
 export var IconContainer = function IconContainer(_ref7) {
+  var _React$cloneElement;
+
   var icon = _ref7.icon,
       children = _ref7.children,
       color = _ref7.color,
@@ -72,10 +73,10 @@ export var IconContainer = function IconContainer(_ref7) {
     marginHeight: height / 2,
     marginWidth: iconWidth / 2,
     position: position
-  }, React.cloneElement(icon, _defineProperty({
+  }, /*#__PURE__*/React.cloneElement(icon, (_React$cloneElement = {
     width: iconWidth,
     height: height
-  }, 'aria-hidden', true))));
+  }, _React$cloneElement['aria-hidden'] = true, _React$cloneElement))));
 };
 IconContainer.propTypes = {
   icon: PropTypes.node.isRequired,

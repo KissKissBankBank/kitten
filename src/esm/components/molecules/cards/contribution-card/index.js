@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"];
 import React, { useState, cloneElement } from 'react';
 import { CloseButton } from '../../../../components/molecules/buttons/close-button';
 import { StyledContributionCard } from './styles';
@@ -22,7 +22,7 @@ export var ContributionCard = function ContributionCard(_ref) {
       onClose = _ref.onClose,
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
-      props = _objectWithoutProperties(_ref, ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var imageChild = getReactElementsByType({
     children: children,
@@ -34,9 +34,8 @@ export var ContributionCard = function ContributionCard(_ref) {
   });
 
   var _useState = useState(true),
-      _useState2 = _slicedToArray(_useState, 2),
-      isInputEmpty = _useState2[0],
-      setEmptyInput = _useState2[1];
+      isInputEmpty = _useState[0],
+      setEmptyInput = _useState[1];
 
   if (!show) return null;
   return /*#__PURE__*/React.createElement(StyledContributionCard, _extends({
@@ -51,7 +50,7 @@ export var ContributionCard = function ContributionCard(_ref) {
     size: "micro",
     closeButtonLabel: closeButtonLabel,
     onClick: onClose
-  }), imageChild && cloneElement(imageChild), /*#__PURE__*/React.createElement("div", {
+  }), imageChild && /*#__PURE__*/cloneElement(imageChild), /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ContributionCard__gridWrapper', {
       'k-ContributionCard__gridWrapper--largeInput': largeInput
     })
@@ -61,8 +60,8 @@ export var ContributionCard = function ContributionCard(_ref) {
       setEmptyInput: setEmptyInput
     }
   }, wrappedChildren.map(function (item, index) {
-    return cloneElement(item, {
-      key: "ContributionCard-".concat(index)
+    return /*#__PURE__*/cloneElement(item, {
+      key: "ContributionCard-" + index
     });
   }))));
 };

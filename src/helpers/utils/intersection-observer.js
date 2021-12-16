@@ -2,21 +2,16 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.IntersectionObserverClass = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _elementHelper = require("../dom/element-helper");
 
 var IntersectionObserverClass = function IntersectionObserverClass(options) {
   var _this = this;
 
-  (0, _classCallCheck2.default)(this, IntersectionObserverClass);
   this.observedComponents = new Map();
 
   this.intersectionCallback = function (entries) {
@@ -30,8 +25,10 @@ var IntersectionObserverClass = function IntersectionObserverClass(options) {
     });
   };
 
-  this.observe = function (elt) {
-    var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+  this.observe = function (elt, callback) {
+    if (callback === void 0) {
+      callback = function callback() {};
+    }
 
     if (_this.observer === null) {
       callback();

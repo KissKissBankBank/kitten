@@ -1,7 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"];
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -12,7 +11,7 @@ import { Button } from '../../../../components/molecules/buttons/button';
 import { Context } from './context';
 import { useDropdown } from '../hooks/use-dropdown';
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":searchMenu:close");
+var CLOSE_EVENT = namespace + ":searchMenu:close";
 export var SearchInput = function SearchInput(_ref) {
   var children = _ref.children,
       className = _ref.className,
@@ -24,25 +23,24 @@ export var SearchInput = function SearchInput(_ref) {
       onMenuToggle = _ref$onMenuToggle === void 0 ? function () {} : _ref$onMenuToggle,
       _ref$closeEvents = _ref.closeEvents,
       closeEvents = _ref$closeEvents === void 0 ? [] : _ref$closeEvents,
-      props = _objectWithoutProperties(_ref, ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useContext = useContext(Context),
       id = _useContext.id,
       callOnToggle = _useContext.callOnToggle;
 
   var _useState = useState(true),
-      _useState2 = _slicedToArray(_useState, 2),
-      isMobileInvisible = _useState2[0],
-      setMobileInvibility = _useState2[1];
+      isMobileInvisible = _useState[0],
+      setMobileInvibility = _useState[1];
 
   var buttonElement = useRef(null);
 
   var _useDropdown = useDropdown({
     callOnToggle: callOnToggle,
     dropdownClass: 'k-HeaderNav__searchInputDropdown',
-    closeEvents: [CLOSE_EVENT].concat(_toConsumableArray(closeEvents)),
-    inputId: "".concat(id, "__SearchMenu__Input"),
-    menuId: "".concat(id, "__SearchMenu__Menu")
+    closeEvents: [CLOSE_EVENT].concat(closeEvents),
+    inputId: id + "__SearchMenu__Input",
+    menuId: id + "__SearchMenu__Menu"
   }),
       dropdownProps = _useDropdown.dropdownProps,
       menuProps = _useDropdown.menuProps,
@@ -65,7 +63,7 @@ export var SearchInput = function SearchInput(_ref) {
       setTimeout(function () {
         var _dropdownProps$ref$cu;
 
-        dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref$cu = dropdownProps.ref.current) === null || _dropdownProps$ref$cu === void 0 ? void 0 : _dropdownProps$ref$cu.querySelector('input').focus();
+        dropdownProps == null ? void 0 : (_dropdownProps$ref$cu = dropdownProps.ref.current) == null ? void 0 : _dropdownProps$ref$cu.querySelector('input').focus();
       }, 5);
     }
   }, [isMobileInvisible]);
@@ -75,24 +73,24 @@ export var SearchInput = function SearchInput(_ref) {
     if (isDropdownExpanded) {
       var _dropdownProps$ref, _dropdownProps$ref$cu2;
 
-      dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref = dropdownProps.ref) === null || _dropdownProps$ref === void 0 ? void 0 : (_dropdownProps$ref$cu2 = _dropdownProps$ref.current) === null || _dropdownProps$ref$cu2 === void 0 ? void 0 : _dropdownProps$ref$cu2.querySelector('input').focus();
+      dropdownProps == null ? void 0 : (_dropdownProps$ref = dropdownProps.ref) == null ? void 0 : (_dropdownProps$ref$cu2 = _dropdownProps$ref.current) == null ? void 0 : _dropdownProps$ref$cu2.querySelector('input').focus();
     } else {
       var _dropdownProps$ref2, _dropdownProps$ref2$c;
 
-      dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref2 = dropdownProps.ref) === null || _dropdownProps$ref2 === void 0 ? void 0 : (_dropdownProps$ref2$c = _dropdownProps$ref2.current) === null || _dropdownProps$ref2$c === void 0 ? void 0 : _dropdownProps$ref2$c.addEventListener('focusin', handleFocusIn);
+      dropdownProps == null ? void 0 : (_dropdownProps$ref2 = dropdownProps.ref) == null ? void 0 : (_dropdownProps$ref2$c = _dropdownProps$ref2.current) == null ? void 0 : _dropdownProps$ref2$c.addEventListener('focusin', handleFocusIn);
     }
 
     return function () {
       var _dropdownProps$ref3, _dropdownProps$ref3$c;
 
-      dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref3 = dropdownProps.ref) === null || _dropdownProps$ref3 === void 0 ? void 0 : (_dropdownProps$ref3$c = _dropdownProps$ref3.current) === null || _dropdownProps$ref3$c === void 0 ? void 0 : _dropdownProps$ref3$c.removeEventListener('focusin', handleFocusIn);
+      dropdownProps == null ? void 0 : (_dropdownProps$ref3 = dropdownProps.ref) == null ? void 0 : (_dropdownProps$ref3$c = _dropdownProps$ref3.current) == null ? void 0 : _dropdownProps$ref3$c.removeEventListener('focusin', handleFocusIn);
     };
   }, [isDropdownExpanded]);
 
   var handleFocusIn = function handleFocusIn() {
     var _dropdownProps$ref$cu3;
 
-    if ((dropdownProps === null || dropdownProps === void 0 ? void 0 : (_dropdownProps$ref$cu3 = dropdownProps.ref.current) === null || _dropdownProps$ref$cu3 === void 0 ? void 0 : _dropdownProps$ref$cu3.querySelector('input').value.length) > 0) {
+    if ((dropdownProps == null ? void 0 : (_dropdownProps$ref$cu3 = dropdownProps.ref.current) == null ? void 0 : _dropdownProps$ref$cu3.querySelector('input').value.length) > 0) {
       openDropdown();
     }
   };

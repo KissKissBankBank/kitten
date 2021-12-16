@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "textSize", "strokeSize"];
 import React from 'react';
 import classNames from 'classnames';
 import { Text } from '../../../../atoms/typography/text';
@@ -8,7 +9,7 @@ export var Title = function Title(_ref) {
   var className = _ref.className,
       textSize = _ref.textSize,
       strokeSize = _ref.strokeSize,
-      props = _objectWithoutProperties(_ref, ["className", "textSize", "strokeSize"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("div", {
     className: classNames('k-BackingCard__titleWrapper', 'k-BackingCard__drawer')

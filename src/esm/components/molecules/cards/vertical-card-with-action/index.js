@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -21,7 +22,7 @@ export var VerticalCardWithAction = function VerticalCardWithAction(_ref) {
       button = _ref.button,
       buttonModifier = _ref.buttonModifier,
       buttonProps = _ref.buttonProps,
-      others = _objectWithoutProperties(_ref, ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledVerticalCardWithAction, others, /*#__PURE__*/React.createElement("div", {
     className: "k-u-margin-bottom-triple"

@@ -22,7 +22,7 @@ export var cssPropertyDistributor = function cssPropertyDistributor(_ref) {
   };
 
   if (!propertyGetter[property]) {
-    return console.warn("cssPropertyDistributor warning: property has a wrong value. Accepted values are ".concat(Object.keys(propertyGetter), "."));
+    return console.warn("cssPropertyDistributor warning: property has a wrong value. Accepted values are " + Object.keys(propertyGetter) + ".");
   }
 
   var propertyArray = elements.map(function (el) {

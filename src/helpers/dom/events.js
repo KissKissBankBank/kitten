@@ -1,9 +1,7 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.dispatchEvent = exports.DASHBOARD_SHOW_CONTENT_EVENT = exports.DASHBOARD_HIDE_CONTENT_EVENT = exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = exports.TOGGLE_DROPDOWN_EVENT = exports.DROPDOWN_EVENT = exports.A11Y_LAST_FOCUS_REACHED_EVENT = exports.A11Y_FIRST_FOCUS_REACHED_EVENT = exports.FOCUS_EVENT = exports.A11Y_EVENT = exports.domEvents = void 0;
+exports.__esModule = true;
+exports.domEvents = exports.dispatchEvent = exports.default = exports.TOGGLE_DROPDOWN_EVENT = exports.FOCUS_EVENT = exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = exports.DROPDOWN_EVENT = exports.DASHBOARD_SHOW_CONTENT_EVENT = exports.DASHBOARD_HIDE_CONTENT_EVENT = exports.A11Y_LAST_FOCUS_REACHED_EVENT = exports.A11Y_FIRST_FOCUS_REACHED_EVENT = exports.A11Y_EVENT = void 0;
 
 /**
  * @module '../../helpers/dom/events'
@@ -36,18 +34,18 @@ var A11Y_EVENT = 'accessibility';
 exports.A11Y_EVENT = A11Y_EVENT;
 var FOCUS_EVENT = 'focus';
 exports.FOCUS_EVENT = FOCUS_EVENT;
-var A11Y_FIRST_FOCUS_REACHED_EVENT = "".concat(A11Y_EVENT, ":").concat(FOCUS_EVENT, ":firstElementReached");
+var A11Y_FIRST_FOCUS_REACHED_EVENT = A11Y_EVENT + ":" + FOCUS_EVENT + ":firstElementReached";
 exports.A11Y_FIRST_FOCUS_REACHED_EVENT = A11Y_FIRST_FOCUS_REACHED_EVENT;
-var A11Y_LAST_FOCUS_REACHED_EVENT = "".concat(A11Y_EVENT, ":").concat(FOCUS_EVENT, ":lastElementReached"); // Dropdown events
+var A11Y_LAST_FOCUS_REACHED_EVENT = A11Y_EVENT + ":" + FOCUS_EVENT + ":lastElementReached"; // Dropdown events
 
 exports.A11Y_LAST_FOCUS_REACHED_EVENT = A11Y_LAST_FOCUS_REACHED_EVENT;
 var DROPDOWN_EVENT = 'dropdown';
 exports.DROPDOWN_EVENT = DROPDOWN_EVENT;
-var TOGGLE_DROPDOWN_EVENT = "".concat(DROPDOWN_EVENT, ":toggle:trigger");
+var TOGGLE_DROPDOWN_EVENT = DROPDOWN_EVENT + ":toggle:trigger";
 exports.TOGGLE_DROPDOWN_EVENT = TOGGLE_DROPDOWN_EVENT;
-var DROPDOWN_FIRST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":firstElementReached");
+var DROPDOWN_FIRST_FOCUS_REACHED_EVENT = DROPDOWN_EVENT + ":" + FOCUS_EVENT + ":firstElementReached";
 exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = DROPDOWN_FIRST_FOCUS_REACHED_EVENT;
-var DROPDOWN_LAST_FOCUS_REACHED_EVENT = "".concat(DROPDOWN_EVENT, ":").concat(FOCUS_EVENT, ":lastElementReached"); // DashboardLayout events
+var DROPDOWN_LAST_FOCUS_REACHED_EVENT = DROPDOWN_EVENT + ":" + FOCUS_EVENT + ":lastElementReached"; // DashboardLayout events
 
 exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = DROPDOWN_LAST_FOCUS_REACHED_EVENT;
 var DASHBOARD_HIDE_CONTENT_EVENT = 'dashboard:content:hide';
@@ -56,8 +54,11 @@ var DASHBOARD_SHOW_CONTENT_EVENT = 'dashboard:content:show';
 exports.DASHBOARD_SHOW_CONTENT_EVENT = DASHBOARD_SHOW_CONTENT_EVENT;
 
 var dispatchEvent = function dispatchEvent(eventName, detail) {
-  return function () {
-    var root = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window;
+  return function (root) {
+    if (root === void 0) {
+      root = window;
+    }
+
     return detail ? root.dispatchEvent(new CustomEvent(eventName, {
       detail: detail
     })) : root.dispatchEvent(new Event(eventName));

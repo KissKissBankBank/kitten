@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CommentForm = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -37,12 +31,18 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var _excluded = ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "closeButtonText", "defaultValue", "commentLabel", "id", "className", "onChange", "onClose"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var CommentFormWrapper = _styledComponents.default.div.withConfig({
   displayName: "comment-form__CommentFormWrapper",
   componentId: "sc-1hg07ex-0"
 })(["--commentForm-arrow-size:", ";display:flex;gap:", ";.k-CommentForm__image{width:", ";flex:0 0 ", ";padding-top:", ";img{width:", ";height:", ";overflow:hidden;object-fit:cover;object-position:center center;border-radius:", ";}}.k-CommentForm__form{flex-grow:1;display:flex;flex-direction:column;gap:", ";margin-left:var(--commentForm-arrow-size);position:relative;}.k-CommentForm__textarea{", " background-color:var(--color-grey-000);font-size:", ";color:", ";padding:", ";border-radius:", ";border:var(--border);resize:vertical;line-height:", ";min-height:", ";max-height:", ";::placeholder{color:var(--color-grey-600);}:hover{border-color:var(--color-grey-500);& + .k-CommentForm__arrow{border-right-color:var(--color-grey-500);}}:active{border-color:var(--color-grey-600);& + .k-CommentForm__arrow{border-right-color:var(--color-grey-600);}}:focus{outline:var(--outline-input);outline-offset:var(--outline-offset-input);& + .k-CommentForm__arrow{border-right-color:var(--color-grey-900);&::before{left:", ";}}}:disabled{cursor:not-allowed;color:var(--color-grey-900);border-color:var(--color-grey-500);background-color:var(--color-grey-300);::placeholder{color:var(--color-grey-600);}& + .k-CommentForm__arrow{border-right-color:var(--color-grey-500);&::before{border-right-color:var(--color-grey-300);}}}}.k-CommentForm__arrow{width:0;height:0;position:absolute;left:calc(-1 * var(--commentForm-arrow-size));top:calc(", " - var(--commentForm-arrow-size));border:var(--commentForm-arrow-size) solid transparent;border-left:0;border-right-color:var(--color-grey-400);z-index:1;&::before{content:'';position:absolute;left:", ";right:0;top:calc(-1 * var(--commentForm-arrow-size));width:0;height:0;border:var(--commentForm-arrow-size) solid transparent;border-left:0;border-right-color:var(--color-grey-000);z-index:2;}}.k-CommentForm__submit{display:inline-block;min-height:0;max-height:0;padding:0 ", ";height:var(--Button-dimension);align-self:flex-end;overflow:hidden;transition:max-height var(--transition),padding var(--transition);}.k-CommentForm__submit--is-visible{max-height:", ";padding:", " ", ";}.k-CommentForm__error{margin-top:", ";}"], (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(16), _colorsConfig.default.font1, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(50 - 30), (0, _typography.pxToRem)(20 * 5), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(50 / 2), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(-5));
 
-var CommentForm = _react.default.forwardRef(function (_ref, ref) {
+var CommentForm = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var avatarImgProps = _ref.avatarImgProps,
       placeholder = _ref.placeholder,
       onSubmit = _ref.onSubmit,
@@ -50,17 +50,18 @@ var CommentForm = _react.default.forwardRef(function (_ref, ref) {
       errorMessage = _ref.errorMessage,
       disabled = _ref.disabled,
       buttonText = _ref.buttonText,
+      closeButtonText = _ref.closeButtonText,
       defaultValue = _ref.defaultValue,
       commentLabel = _ref.commentLabel,
       id = _ref.id,
       className = _ref.className,
       onChange = _ref.onChange,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "defaultValue", "commentLabel", "id", "className", "onChange"]);
+      onClose = _ref.onClose,
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(defaultValue),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      value = _useState2[0],
-      setValue = _useState2[1];
+      value = _useState[0],
+      setValue = _useState[1];
 
   var handleChange = function handleChange(event) {
     setValue(event.target.value.trim());
@@ -98,17 +99,32 @@ var CommentForm = _react.default.forwardRef(function (_ref, ref) {
     minRows: 1,
     maxRows: 5,
     lineHeight: 20,
-    "aria-describedby": "".concat(id, "-description"),
+    "aria-describedby": id + "-description",
     "aria-label": props['aria-label'] || commentLabel
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-CommentForm__arrow"
   }), error && /*#__PURE__*/_react.default.createElement(_text.Text, {
-    id: "".concat(id, "-description"),
+    id: id + "-description",
     color: "error",
     size: "micro",
     weight: "regular",
     className: "k-CommentForm__error"
-  }, errorMessage), (value.length > 0 || !!defaultValue) && /*#__PURE__*/_react.default.createElement(_button.Button, {
+  }, errorMessage), onClose ? /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-u-flex k-u-flex-justifyContent-end k-u-flex-gap-single"
+  }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+    type: "button",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    onClick: onClose
+  }, closeButtonText), /*#__PURE__*/_react.default.createElement(_button.Button, {
+    type: "button",
+    modifier: "beryllium",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    onClick: handleSubmit
+  }, buttonText)) : (value.length > 0 || !!defaultValue) && /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
     modifier: "beryllium",
     size: "tiny",
@@ -127,6 +143,7 @@ CommentForm.propTypes = {
   'aria-label': _propTypes.default.string.isRequired,
   onChange: _propTypes.default.func,
   onSubmit: _propTypes.default.func,
+  onClose: _propTypes.default.func,
   placeholder: _propTypes.default.string,
   error: _propTypes.default.bool,
   errorMessage: _propTypes.default.string,
@@ -134,6 +151,7 @@ CommentForm.propTypes = {
   id: _propTypes.default.string,
   disabled: _propTypes.default.bool,
   buttonText: _propTypes.default.string,
+  closeButtonText: _propTypes.default.string,
   commentButton: (0, _deprecated.default)(_propTypes.default.string, 'Please use buttonText instead.'),
   avatarBadge: (0, _deprecated.default)(_propTypes.default.node, 'Not a feature anymore'),
   isDisabled: (0, _deprecated.default)(_propTypes.default.bool, 'Please use disabled instead'),
@@ -150,5 +168,6 @@ CommentForm.defaultProps = {
   defaultValue: '',
   id: 'CommentForm',
   disabled: false,
-  buttonText: 'Send'
+  buttonText: 'Send',
+  closeButtonText: 'Close'
 };

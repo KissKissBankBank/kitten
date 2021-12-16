@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Video = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -28,6 +22,12 @@ var _reactElements = require("../../../../helpers/react/react-elements");
 var _screenConfig = require("../../../../constants/screen-config");
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["className", "children", "ariaLabel", "autoPlay", "poster", "src"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var actionKeys = ['Enter', ' '];
 var playerButtonSize = 90;
@@ -45,13 +45,12 @@ var Video = function Video(_ref) {
       autoPlay = _ref.autoPlay,
       poster = _ref.poster,
       src = _ref.src,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "ariaLabel", "autoPlay", "poster", "src"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var videoElement = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(false),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isPlayerVisible = _useState2[0],
-      setPlayerVisibility = _useState2[1];
+      isPlayerVisible = _useState[0],
+      setPlayerVisibility = _useState[1];
 
   var loader = (0, _reactElements.getReactElementsByType)({
     children: children,

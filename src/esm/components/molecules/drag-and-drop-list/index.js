@@ -1,11 +1,7 @@
-import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _taggedTemplateLiteral from "@babel/runtime/helpers/esm/taggedTemplateLiteral";
-
-var _templateObject;
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yContainerLabelElement", "a11yInstructions", "gap", "style", "showHandle"],
+    _excluded2 = ["id"];
 import React, { useState } from 'react';
 import { DndContext, closestCenter, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
@@ -18,7 +14,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 import { Button } from '../../../components/molecules/buttons/button';
 import { MenuIcon } from '../../../components/graphics/icons/menu-icon';
 export var BUTTON_SHIFT = pxToRem(15 + 40);
-var DragAndDropListStyles = createGlobalStyle(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  .k-DragAndDropList {\n    display: flex;\n    flex-direction: column;\n    gap: var(--dragAndDropList-gap, ", ");\n    list-style: none;\n    padding: 0;\n    margin: 0;\n  }\n\n  .k-DragAndDropList__itemWrapper {\n    list-style: none;\n    display: block;\n    transform: translate3d(var(--translate-x, 0), var(--translate-y, 0), 0);\n    transform-origin: 0 0;\n    position: relative;\n    z-index: 1;\n\n    &:focus-within {\n      z-index: 2;\n    }\n  }\n\n  .k-DragAndDropList__item {\n    display: flex;\n    gap: ", ";\n    align-items: center;\n\n    &.k-DragAndDropList__item--isDragging:not(.k-DragAndDropList__item--dragOverlay) {\n      opacity: 0.4;\n\n      .k-DragAndDropList__item__button {\n        opacity: 0;\n      }\n    }\n\n    &.k-DragAndDropList__item--dragOverlay {\n      cursor: move;\n      z-index: 150;\n\n      .k-DragAndDropList__item__button {\n        cursor: move;\n      }\n    }\n\n    .k-DragAndDropList__item__child {\n      flex: 1 0 calc(100% - var(--dragAndDropList-button-shift, 0));\n      width: calc(100% - var(--dragAndDropList-button-shift, 0));\n      flex-grow: 1;\n    }\n\n    &.k-DragAndDropList__item--hasButton {\n      .k-DragAndDropList__item__button {\n        flex: 0 0 ", ";\n        padding: 0;\n        width: ", ";\n        box-sizing: border-box;\n        border-radius: var(--border-radius-rounded);\n        cursor: grab;\n      }\n\n      &.gu-mirror .k-DragAndDropList__item__button {\n        cursor: grabbing;\n      }\n\n      .k-DragAndDropList__item__child {\n        --dragAndDropList-button-shift: ", ";\n      }\n    }\n  }\n"])), pxToRem(15), pxToRem(15), pxToRem(40), pxToRem(40), BUTTON_SHIFT);
+var DragAndDropListStyles = createGlobalStyle([".k-DragAndDropList{display:flex;flex-direction:column;gap:var(--dragAndDropList-gap,", ");list-style:none;padding:0;margin:0;}.k-DragAndDropList__itemWrapper{list-style:none;display:block;transform:translate3d(var(--translate-x,0),var(--translate-y,0),0);transform-origin:0 0;position:relative;z-index:1;&:focus-within{z-index:2;}}.k-DragAndDropList__item{display:flex;gap:", ";align-items:center;&.k-DragAndDropList__item--isDragging:not(.k-DragAndDropList__item--dragOverlay){opacity:0.4;.k-DragAndDropList__item__button{opacity:0;}}&.k-DragAndDropList__item--dragOverlay{cursor:move;z-index:150;.k-DragAndDropList__item__button{cursor:move;}}.k-DragAndDropList__item__child{flex:1 0 calc(100% - var(--dragAndDropList-button-shift,0));width:calc(100% - var(--dragAndDropList-button-shift,0));flex-grow:1;}&.k-DragAndDropList__item--hasButton{.k-DragAndDropList__item__button{flex:0 0 ", ";padding:0;width:", ";box-sizing:border-box;border-radius:var(--border-radius-rounded);cursor:grab;}&.gu-mirror .k-DragAndDropList__item__button{cursor:grabbing;}.k-DragAndDropList__item__child{--dragAndDropList-button-shift:", ";}}}"], pxToRem(15), pxToRem(15), pxToRem(40), pxToRem(40), BUTTON_SHIFT);
 export var DragAndDropList = function DragAndDropList(_ref) {
   var children = _ref.children,
       className = _ref.className,
@@ -30,25 +26,24 @@ export var DragAndDropList = function DragAndDropList(_ref) {
       gap = _ref.gap,
       style = _ref.style,
       showHandle = _ref.showHandle,
-      props = _objectWithoutProperties(_ref, ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yContainerLabelElement", "a11yInstructions", "gap", "style", "showHandle"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(React.Children.toArray(children).map(function (child) {
     return child.props.id;
   })),
-      _useState2 = _slicedToArray(_useState, 2),
-      items = _useState2[0],
-      setItems = _useState2[1];
+      items = _useState[0],
+      setItems = _useState[1];
 
-  var _useState3 = useState(React.Children.toArray(children).reduce(function (acc, current) {
-    return _extends({}, acc, _defineProperty({}, current.props.id, current));
+  var _useState2 = useState(React.Children.toArray(children).reduce(function (acc, current) {
+    var _extends2;
+
+    return _extends({}, acc, (_extends2 = {}, _extends2[current.props.id] = current, _extends2));
   }, {})),
-      _useState4 = _slicedToArray(_useState3, 1),
-      childrenDict = _useState4[0];
+      childrenDict = _useState2[0];
 
-  var _useState5 = useState(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      activeId = _useState6[0],
-      setActiveId = _useState6[1];
+  var _useState3 = useState(null),
+      activeId = _useState3[0],
+      setActiveId = _useState3[1];
 
   var sensors = useSensors(useSensor(MouseSensor, {
     activationConstraint: {
@@ -135,16 +130,16 @@ export var DragAndDropList = function DragAndDropList(_ref) {
       id: id,
       showHandle: showHandle,
       a11yButtonLabel: a11yButtonLabel
-    }, React.cloneElement(childrenDict[id]));
-  }))), createPortal( /*#__PURE__*/React.createElement(DragOverlay, null, activeId ? /*#__PURE__*/React.createElement(Item, {
+    }, /*#__PURE__*/React.cloneElement(childrenDict[id]));
+  }))), /*#__PURE__*/createPortal( /*#__PURE__*/React.createElement(DragOverlay, null, activeId ? /*#__PURE__*/React.createElement(Item, {
     showHandle: showHandle,
     dragOverlay: true
-  }, React.cloneElement(childrenDict[activeId])) : null), document.body)), /*#__PURE__*/React.createElement(DragAndDropListStyles, null));
+  }, /*#__PURE__*/React.cloneElement(childrenDict[activeId])) : null), document.body)), /*#__PURE__*/React.createElement(DragAndDropListStyles, null));
 };
 
 var SortableItem = function SortableItem(_ref4) {
   var id = _ref4.id,
-      props = _objectWithoutProperties(_ref4, ["id"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded2);
 
   var _useSortable = useSortable({
     id: id
@@ -163,8 +158,8 @@ var SortableItem = function SortableItem(_ref4) {
     className: classNames('k-DragAndDropList__itemWrapper'),
     style: {
       transition: transition,
-      '--translate-x': transform ? "".concat(Math.round(transform.x), "px") : undefined,
-      '--translate-y': transform ? "".concat(Math.round(transform.y), "px") : undefined
+      '--translate-x': transform ? Math.round(transform.x) + "px" : undefined,
+      '--translate-y': transform ? Math.round(transform.y) + "px" : undefined
     }
   }, /*#__PURE__*/React.createElement(Item, _extends({
     listeners: listeners,
@@ -211,13 +206,13 @@ DragAndDropList.defaultProps = {
   a11yButtonLabel: 'Reorder',
   a11yAnnouncement: {
     onDragStart: function onDragStart(name, position, length) {
-      return "".concat(name, " grabbed from position ").concat(position, " of ").concat(length);
+      return name + " grabbed from position " + position + " of " + length;
     },
     onDragOver: function onDragOver(name, position, length) {
-      return "".concat(name, " was moved to position ").concat(position, " of ").concat(length);
+      return name + " was moved to position " + position + " of " + length;
     },
     onDragEnd: function onDragEnd(name, position, length) {
-      return "".concat(name, " was dropped at position ").concat(position, " of ").concat(length);
+      return name + " was dropped at position " + position + " of " + length;
     },
     cancel: 'Reranking cancelled.'
   },

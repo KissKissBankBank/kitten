@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.LocationInput = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,6 +27,12 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
+var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledLocationInput = _styledComponents.default.div.withConfig({
   displayName: "location-input__StyledLocationInput",
   componentId: "sc-1aqtnfv-0"
@@ -49,12 +49,11 @@ var LocationInput = function LocationInput(_ref) {
       name = _ref.name,
       loadingText = _ref.loadingText,
       variant = _ref.variant,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "variant"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(defaultValue),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      address = _useState2[0],
-      updateAddress = _useState2[1];
+      address = _useState[0],
+      updateAddress = _useState[1];
 
   var handleChange = function handleChange(returnedAddress) {
     updateAddress(returnedAddress);
@@ -93,7 +92,7 @@ var LocationInput = function LocationInput(_ref) {
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "k-LocationInput__icon"
     }, /*#__PURE__*/_react.default.createElement(_locationIcon.LocationIcon, null)), /*#__PURE__*/_react.default.createElement("input", getInputProps((0, _extends2.default)({}, inputProps, {
-      className: (0, _classnames.default)('k-LocationInput__input', inputProps === null || inputProps === void 0 ? void 0 : inputProps.className, "k-LocationInput__input--".concat(variant))
+      className: (0, _classnames.default)('k-LocationInput__input', inputProps == null ? void 0 : inputProps.className, "k-LocationInput__input--" + variant)
     }))), /*#__PURE__*/_react.default.createElement("div", {
       className: "k-LocationInput__autocomplete"
     }, loading && /*#__PURE__*/_react.default.createElement("div", {

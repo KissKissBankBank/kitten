@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["minRows", "maxRows", "rows", "onChange", "value", "lineHeight", "style"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -12,17 +12,15 @@ export var TextareaAutoResize = function TextareaAutoResize(_ref) {
       value = _ref.value,
       lineHeight = _ref.lineHeight,
       style = _ref.style,
-      others = _objectWithoutProperties(_ref, ["minRows", "maxRows", "rows", "onChange", "value", "lineHeight", "style"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(rows),
-      _useState2 = _slicedToArray(_useState, 2),
-      innerRows = _useState2[0],
-      setInnerRows = _useState2[1];
+      innerRows = _useState[0],
+      setInnerRows = _useState[1];
 
-  var _useState3 = useState(value),
-      _useState4 = _slicedToArray(_useState3, 2),
-      innerValue = _useState4[0],
-      setInnerValue = _useState4[1];
+  var _useState2 = useState(value),
+      innerValue = _useState2[0],
+      setInnerValue = _useState2[1];
 
   var handleChange = function handleChange(event) {
     var elementStyles = getComputedStyle(event.target);

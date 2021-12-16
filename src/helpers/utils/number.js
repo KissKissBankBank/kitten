@@ -1,9 +1,7 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.numberUtils = void 0;
+exports.__esModule = true;
+exports.numberUtils = exports.default = void 0;
 var numberUtils = {
   /**
    * Returns if a variable is a number or not.

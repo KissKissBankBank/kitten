@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "children", "icon", "status", "displayIcon", "iconPosition", "size", "fit"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -22,7 +23,7 @@ export var AlertBox = function AlertBox(_ref) {
       iconPosition = _ref.iconPosition,
       size = _ref.size,
       fit = _ref.fit,
-      others = _objectWithoutProperties(_ref, ["className", "children", "icon", "status", "displayIcon", "iconPosition", "size", "fit"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var internalIcon = function () {
     if (icon) return icon;
@@ -47,7 +48,7 @@ export var AlertBox = function AlertBox(_ref) {
 
   return /*#__PURE__*/React.createElement(AlertBoxWrapper, _extends({
     role: role,
-    className: classNames('k-AlertBox', className, "k-AlertBox--".concat(status), "k-AlertBox--".concat(size), "k-AlertBox--".concat(fit), "k-AlertBox--icon-".concat(iconPosition), {
+    className: classNames('k-AlertBox', className, "k-AlertBox--" + status, "k-AlertBox--" + size, "k-AlertBox--" + fit, "k-AlertBox--icon-" + iconPosition, {
       'k-AlertBox--hasIcon': displayIcon
     })
   }, others), displayIcon && /*#__PURE__*/React.createElement(IconBadge, {

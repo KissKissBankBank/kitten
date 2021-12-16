@@ -1,5 +1,5 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["id", "defaultValue", "className", "placeholder", "disabled", "buttonContent", "onChange", "onSubmit"];
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -11,9 +11,9 @@ import { mq } from '../../../constants/screen-config';
 import { TextareaAutoResize } from '../../../components/form/textarea-auto-resize';
 var InputWrapper = styled.div.withConfig({
   displayName: "modal-footer-input__InputWrapper",
-  componentId: "shdmkt-0"
+  componentId: "sc-shdmkt-0"
 })(["position:relative;width:100%;border-top:var(--border);transition:border var(--transition);:hover{border-top:var(--border-hover);}.k-ModalFooterInput__input{position:relative;display:flex;align-items:center;width:100%;box-sizing:border-box;margin:0;padding:", " ", " ", " ", ";min-height:", ";border:none;", " font-size:", ";line-height:", ";appearance:none;resize:none;transition:font-size var(--transition);@media ", "{padding:", ";padding-right:", ";}:focus{font-size:", ";outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&::placeholder,&:focus::placeholder{font-size:", ";color:var(--color-grey-600);}}.k-ModalFooterInput__button{position:absolute;display:flex;right:", ";bottom:", ";margin:0 !important;}"], pxToRem(15), pxToRem(50), pxToRem(15), pxToRem(10), pxToRem(50), TYPOGRAPHY.fontStyles.light, pxToRem(14), pxToRem(18), mq.tabletAndDesktop, pxToRem(15), pxToRem(60), pxToRem(16), pxToRem(14), pxToRem(5), pxToRem(5));
-export var ModalFooterInput = React.forwardRef(function (_ref, ref) {
+export var ModalFooterInput = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       defaultValue = _ref.defaultValue,
       className = _ref.className,
@@ -22,12 +22,11 @@ export var ModalFooterInput = React.forwardRef(function (_ref, ref) {
       buttonContent = _ref.buttonContent,
       onChange = _ref.onChange,
       onSubmit = _ref.onSubmit,
-      props = _objectWithoutProperties(_ref, ["id", "defaultValue", "className", "placeholder", "disabled", "buttonContent", "onChange", "onSubmit"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(defaultValue),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setValue = _useState2[1];
+      value = _useState[0],
+      setValue = _useState[1];
 
   var handleChange = function handleChange(e) {
     setValue(e.target.value.trim());

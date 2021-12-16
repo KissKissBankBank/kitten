@@ -1,5 +1,9 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children"],
+    _excluded2 = ["children"],
+    _excluded3 = ["children"],
+    _excluded4 = ["children"];
 import React from 'react';
 import { Button } from '../../../../components/molecules/buttons/button';
 import { FacebookIcon } from '../../../../components/graphics/icons/facebook-icon';
@@ -8,7 +12,7 @@ import { LinkedinIcon } from '../../../../components/graphics/icons/linkedin-ico
 import { InstagramIcon } from '../../../../components/graphics/icons/instagram-icon';
 export var FacebookButtonIconWords = function FacebookButtonIconWords(_ref) {
   var children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["children"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     modifier: "social_facebook"
@@ -19,7 +23,7 @@ export var FacebookButtonIconWords = function FacebookButtonIconWords(_ref) {
 };
 export var TwitterButtonIconWords = function TwitterButtonIconWords(_ref2) {
   var children = _ref2.children,
-      props = _objectWithoutProperties(_ref2, ["children"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     modifier: "social_twitter"
@@ -30,7 +34,7 @@ export var TwitterButtonIconWords = function TwitterButtonIconWords(_ref2) {
 };
 export var InstagramButtonIconWords = function InstagramButtonIconWords(_ref3) {
   var children = _ref3.children,
-      props = _objectWithoutProperties(_ref3, ["children"]);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     modifier: "social_instagram"
@@ -41,7 +45,7 @@ export var InstagramButtonIconWords = function InstagramButtonIconWords(_ref3) {
 };
 export var LinkedinButtonIconWords = function LinkedinButtonIconWords(_ref4) {
   var children = _ref4.children,
-      props = _objectWithoutProperties(_ref4, ["children"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
   return /*#__PURE__*/React.createElement(Button, _extends({}, props, {
     modifier: "social_linkedin"

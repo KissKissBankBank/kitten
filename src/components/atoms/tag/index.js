@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Tag = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,6 +23,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["type", "className"];
+
 var StyledTag = _styledComponents.default.span.withConfig({
   displayName: "tag__StyledTag",
   componentId: "sc-1dt82ne-0"
@@ -33,9 +33,9 @@ var StyledTag = _styledComponents.default.span.withConfig({
 var Tag = function Tag(_ref) {
   var type = _ref.type,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["type", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTag, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Tag', className, "k-Tag--".concat(type))
+    className: (0, _classnames.default)('k-Tag', className, "k-Tag--" + type)
   }, props));
 };
 

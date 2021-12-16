@@ -11,7 +11,7 @@ export var Deprecated = function Deprecated(_ref) {
 
       if (!owner) return;
       var componentName = owner.type.name;
-      console.warn("Warning: ".concat(componentName, " is deprecated."), warningMessage);
+      console.warn("Warning: " + componentName + " is deprecated.", warningMessage);
     }
   }, []);
   return children;

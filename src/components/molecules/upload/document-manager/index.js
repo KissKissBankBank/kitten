@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DocumentManager = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -47,6 +41,12 @@ var _visuallyHidden = require("../../../../components/accessibility/visually-hid
 
 var _screenConfig = require("../../../../constants/screen-config");
 
+var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledDocumentUploader = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentUploader",
   componentId: "sc-1nvgqfh-0"
@@ -73,7 +73,7 @@ var IconContainer = function IconContainer(_ref) {
   var status = _ref.status,
       children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(StyledIconContainer, {
-    className: (0, _classnames.default)('k-DocumentManager__iconContainer', "k-DocumentManager__iconContainer--".concat(status))
+    className: (0, _classnames.default)('k-DocumentManager__iconContainer', "k-DocumentManager__iconContainer--" + status)
   }, children, statusesWithIcons.includes(status) && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DocumentManager__iconContainer__statusIcon"
   }, status === 'valid' && /*#__PURE__*/_react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, {
@@ -130,26 +130,23 @@ var DocumentManager = function DocumentManager(_ref2) {
       replaceButtonText = _ref2$replaceButtonTe === void 0 ? 'Replace current' : _ref2$replaceButtonTe,
       _ref2$status = _ref2.status,
       status = _ref2$status === void 0 ? 'ready' : _ref2$status,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   var _useState = (0, _react.useState)(''),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      internalFileName = _useState2[0],
-      setInternalFileName = _useState2[1];
+      internalFileName = _useState[0],
+      setInternalFileName = _useState[1];
 
-  var _useState3 = (0, _react.useState)(status),
-      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
-      internalStatus = _useState4[0],
-      setInternalStatus = _useState4[1];
+  var _useState2 = (0, _react.useState)(status),
+      internalStatus = _useState2[0],
+      setInternalStatus = _useState2[1];
 
   (0, _react.useEffect)(function () {
     setInternalStatus(status);
   }, [status]);
 
-  var _useState5 = (0, _react.useState)(disabled),
-      _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-      internalDisabled = _useState6[0],
-      setInternalDisabled = _useState6[1];
+  var _useState3 = (0, _react.useState)(disabled),
+      internalDisabled = _useState3[0],
+      setInternalDisabled = _useState3[1];
 
   (0, _react.useEffect)(function () {
     setInternalDisabled(disabled);
@@ -159,7 +156,7 @@ var DocumentManager = function DocumentManager(_ref2) {
     var files = event.currentTarget.files;
     if (files.length < 1) return;
     var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? "".concat(tempFileName, " + ").concat(files.length - 1) : tempFileName;
+    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalFileName(tempText);
     onUpload(event);
@@ -231,7 +228,7 @@ var DocumentManager = function DocumentManager(_ref2) {
 
   return /*#__PURE__*/_react.default.createElement(StyledDocumentDisplay, (0, _extends2.default)({}, props, {
     id: id,
-    className: (0, _classnames.default)('k-DocumentManager__display', "k-DocumentManager__display--".concat(status), props.className)
+    className: (0, _classnames.default)('k-DocumentManager__display', "k-DocumentManager__display--" + status, props.className)
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DocumentManager__display__container"
   }, /*#__PURE__*/_react.default.createElement("div", {

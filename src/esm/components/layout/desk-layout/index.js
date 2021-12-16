@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "menu", "menuProps", "fullWidth", "contentProps", "loading", "loaderComponent"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -14,7 +15,7 @@ export var DeskLayout = function DeskLayout(_ref) {
       contentProps = _ref.contentProps,
       loading = _ref.loading,
       loaderComponent = _ref.loaderComponent,
-      props = _objectWithoutProperties(_ref, ["children", "className", "menu", "menuProps", "fullWidth", "contentProps", "loading", "loaderComponent"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledLayout, _extends({
     className: classNames('k-DeskLayout__wrapper', className)

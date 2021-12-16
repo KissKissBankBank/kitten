@@ -1,6 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _extends from "@babel/runtime/helpers/extends";
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -66,33 +64,28 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
       displayErrors = _ref$displayErrors === void 0 ? true : _ref$displayErrors;
 
   var _useState = useState(status),
-      _useState2 = _slicedToArray(_useState, 2),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
+      internalStatus = _useState[0],
+      setInternalStatus = _useState[1];
 
   useEffect(function () {
     return setInternalStatus(status);
   }, [status]);
 
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isDraggingOver = _useState4[0],
-      setDraggingOver = _useState4[1];
+  var _useState2 = useState(false),
+      isDraggingOver = _useState2[0],
+      setDraggingOver = _useState2[1];
 
-  var _useState5 = useState(initialValue),
-      _useState6 = _slicedToArray(_useState5, 2),
-      fileList = _useState6[0],
-      setFileList = _useState6[1];
+  var _useState3 = useState(initialValue),
+      fileList = _useState3[0],
+      setFileList = _useState3[1];
 
-  var _useState7 = useState([]),
-      _useState8 = _slicedToArray(_useState7, 2),
-      errorList = _useState8[0],
-      setErrorList = _useState8[1];
+  var _useState4 = useState([]),
+      errorList = _useState4[0],
+      setErrorList = _useState4[1];
 
-  var _useState9 = useState([errorMessageList]),
-      _useState10 = _slicedToArray(_useState9, 2),
-      internalErrorMessageList = _useState10[0],
-      setErrorMessageList = _useState10[1];
+  var _useState5 = useState([errorMessageList]),
+      internalErrorMessageList = _useState5[0],
+      setErrorMessageList = _useState5[1];
 
   var handleDragEnter = function handleDragEnter(e) {
     e.preventDefault();
@@ -122,13 +115,13 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     e.stopPropagation();
     if (disabled) return;
     setDraggingOver(false);
-    addFilesToList(_toConsumableArray(e === null || e === void 0 ? void 0 : (_e$dataTransfer = e.dataTransfer) === null || _e$dataTransfer === void 0 ? void 0 : _e$dataTransfer.files));
+    addFilesToList([].concat(e == null ? void 0 : (_e$dataTransfer = e.dataTransfer) == null ? void 0 : _e$dataTransfer.files));
   };
 
   var onFileInputChange = function onFileInputChange(e) {
     var _e$target;
 
-    addFilesToList(_toConsumableArray(e === null || e === void 0 ? void 0 : (_e$target = e.target) === null || _e$target === void 0 ? void 0 : _e$target.files));
+    addFilesToList([].concat(e == null ? void 0 : (_e$target = e.target) == null ? void 0 : _e$target.files));
   };
 
   useEffect(function () {
@@ -156,19 +149,18 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     setErrorMessageList([]);
     setErrorList([]);
     setFileList(function (currentList) {
-      var newList = _toConsumableArray(currentList);
-
+      var newList = [].concat(currentList);
       files.forEach(function (file) {
         var isValid = true;
 
         if ('File' in window && file instanceof File) {
           if (acceptedMimeTypes.length > 0 && !acceptedMimeTypes.includes(file.type)) {
             setErrorMessageList(function (current) {
-              return [].concat(_toConsumableArray(current), [typeErrorText(file.name)]);
+              return [].concat(current, [typeErrorText(file.name)]);
             });
             setInternalStatus('error');
             setErrorList(function (current) {
-              return [].concat(_toConsumableArray(current), [{
+              return [].concat(current, [{
                 file: file,
                 error: typeErrorText(file.name)
               }]);
@@ -178,11 +170,11 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
 
           if (!!acceptedFileSize && file.size > acceptedFileSize) {
             setErrorMessageList(function (current) {
-              return [].concat(_toConsumableArray(current), [sizeErrorText(file.name)]);
+              return [].concat(current, [sizeErrorText(file.name)]);
             });
             setInternalStatus('error');
             setErrorList(function (current) {
-              return [].concat(_toConsumableArray(current), [{
+              return [].concat(current, [{
                 file: file,
                 error: sizeErrorText(file.name)
               }]);
@@ -200,7 +192,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledDocumentsDropUploader, {
-    className: classNames('k-DocumentsDropUploader', className, "k-DocumentsDropUploader--".concat(internalStatus), {
+    className: classNames('k-DocumentsDropUploader', className, "k-DocumentsDropUploader--" + internalStatus, {
       'k-DocumentsDropUploader--isDraggingOver': isDraggingOver,
       'k-DocumentsDropUploader--disabled': disabled
     }),
@@ -214,7 +206,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     color: "currentColor"
   })), /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentsDropUploader__content",
-    id: "".concat(id, "-cropper-description")
+    id: id + "-cropper-description"
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentsDropUploader__title"
   }, managerTitle), fileList.length === 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
@@ -246,7 +238,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     id: id,
     onChange: onFileInputChange,
     disabled: disabled,
-    "aria-describedby": internalStatus === 'error' && internalErrorMessageList ? "".concat(id, "-error-description") : null,
+    "aria-describedby": internalStatus === 'error' && internalErrorMessageList ? id + "-error-description" : null,
     accept: acceptedMimeTypes.join(', '),
     multiple: true
   })), disabled || fileList.length === 0 ? /*#__PURE__*/React.createElement("label", {
@@ -263,7 +255,7 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     "aria-hidden": true
   }, "+\xA0"), labelText))), displayErrors && internalStatus === 'error' && internalErrorMessageList.length > 0 && /*#__PURE__*/React.createElement(StyledErrorList, {
     className: "k-DocumentsDropUploader__errorList",
-    id: "".concat(id, "-error-description")
+    id: id + "-error-description"
   }, internalErrorMessageList.map(function (errorMsg, index) {
     return /*#__PURE__*/React.createElement(Text, {
       key: errorMsg + index,

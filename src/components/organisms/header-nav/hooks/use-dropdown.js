@@ -2,20 +2,16 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.useDropdown = void 0;
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var useDropdown = function useDropdown(_ref) {
+  var _classNames;
+
   var dropdownContentWidth = _ref.dropdownContentWidth,
       dropdownAnchorSide = _ref.dropdownAnchorSide,
       callOnToggle = _ref.callOnToggle,
@@ -35,9 +31,8 @@ var useDropdown = function useDropdown(_ref) {
   var dropdownInputRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(!!isExpanded),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isDropdownExpanded = _useState2[0],
-      setDropdownExpandedState = _useState2[1];
+      isDropdownExpanded = _useState[0],
+      setDropdownExpandedState = _useState[1];
 
   var handleButtonClick = function handleButtonClick() {
     setDropdownExpandedState(function (currentValue) {
@@ -103,7 +98,7 @@ var useDropdown = function useDropdown(_ref) {
   var dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
-    className: (0, _classnames.default)(dropdownClass, (0, _defineProperty2.default)({}, "".concat(dropdownClass, "--isExpanded"), isDropdownExpanded))
+    className: (0, _classnames.default)(dropdownClass, (_classNames = {}, _classNames[dropdownClass + "--isExpanded"] = isDropdownExpanded, _classNames))
   };
   var buttonProps = {
     ref: dropdownButtonRef,
@@ -111,20 +106,20 @@ var useDropdown = function useDropdown(_ref) {
     'aria-controls': menuId,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
-    className: "".concat(dropdownClass, "__button")
+    className: dropdownClass + "__button"
   };
   var inputProps = {
     ref: dropdownInputRef,
     id: inputId,
     isExpanded: isDropdownExpanded,
     onChange: handleInputChange,
-    className: "".concat(dropdownClass, "__input")
+    className: dropdownClass + "__input"
   };
   var returnedWidth = dropdownContentWidth === NaN ? null : dropdownContentWidth;
   var menuProps = {
     ref: dropdownContentRef,
     id: menuId,
-    className: (0, _classnames.default)("".concat(dropdownClass, "__menu"), "".concat(dropdownClass, "__menu--is-").concat(dropdownAnchorSide || 'left')),
+    className: (0, _classnames.default)(dropdownClass + "__menu", dropdownClass + "__menu--is-" + (dropdownAnchorSide || 'left')),
     style: {
       width: returnedWidth
     },

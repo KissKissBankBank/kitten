@@ -2,10 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.FieldAutocompleteExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = void 0;
+exports.__esModule = true;
+exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = exports.FieldAutocompleteExample = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 

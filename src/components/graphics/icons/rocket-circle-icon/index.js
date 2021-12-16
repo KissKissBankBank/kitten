@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.RocketCircleIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,9 +27,11 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"];
+
 var StyledRocketCircle = _styledComponents.default.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
-  componentId: "hjcjwz-0"
+  componentId: "sc-hjcjwz-0"
 })(["display:flex;justify-content:center;align-items:center;width:", ";height:", ";border-radius:var(border-radius-rounded);background-color:", ";@media (min-width:", "){width:", ";height:", ";}.k-RocketCircleIcon__rocketIcon{padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}"], function (_ref) {
   var circleWidthMobile = _ref.circleWidthMobile;
   return (0, _typography.pxToRem)(circleWidthMobile);
@@ -74,7 +74,7 @@ var RocketCircleIcon = function RocketCircleIcon(_ref10) {
       rocketColor = _ref10.rocketColor,
       rocketTitle = _ref10.rocketTitle,
       className = _ref10.className,
-      others = (0, _objectWithoutProperties2.default)(_ref10, ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref10, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRocketCircle, (0, _extends2.default)({
     circleWidth: circleWidth,
     circleWidthMobile: circleWidthMobile,

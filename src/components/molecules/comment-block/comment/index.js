@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Comment = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31,12 +29,15 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _heartIconNext = require("../../../../components/graphics/icons-next/heart-icon-next");
 
+var _excluded = ["text", "ownerName", "ownerUrl", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"],
+    _excluded2 = ["children", "accessibilityLabel", "hasLiked", "className", "disabled"];
+
 var CommentWrapper = _styledComponents.default.div.withConfig({
   displayName: "comment__CommentWrapper",
   componentId: "sc-189ycjb-0"
 })(["--comment-arrow-size:", ";--comment-background-color:var(--color-grey-200);display:flex;gap:", ";padding:", ";border-radius:", ";flex-direction:column;position:relative;background-color:var(--comment-background-color);transition:background-color var(--transition);&.k-Comment--isSecondary{margin-left:", ";@media ", "{margin-left:", ";}}&.k-Comment--isHighlighted{--comment-background-color:var(--color-grey-400);.k-Comment__header__meta{color:var(--color-grey-700);}}&::before{content:'';width:0;height:0;position:absolute;left:calc(-1 * var(--comment-arrow-size));top:calc(50% - var(--comment-arrow-size));border:var(--comment-arrow-size) solid transparent;border-left:0;border-right-color:var(--comment-background-color);transition:border-right-color var(--transition);}.k-Comment__header{display:flex;gap:", ";align-items:center;justify-content:space-between;font-size:", ";}.k-Comment__header__meta{display:flex;gap:", ";align-items:center;color:var(--color-grey-600);}.k-Comment__header__image{display:block;width:", ";height:", ";overflow:hidden;object-fit:cover;object-position:center center;border-radius:", ";}.k-Comment__header__actions{display:flex;gap:", ";}.k-Comment__content{", " font-size:", ";}.k-Comment__footer{display:flex;gap:", ";}.k-Comment-LikeButton{display:flex;gap:", ";align-items:center;color:var(--color-grey-900);transition:color var(--transition);:disabled{cursor:not-allowed;opacity:0.5;}&[aria-pressed]{svg{color:var(--color-red-500);}}svg{max-width:", ";max-height:", ";transition:inherit;}:not(:disabled):hover{color:var(--color-primary-700);}}"], (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(20), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14));
 
-var Comment = _react.default.forwardRef(function (_ref, ref) {
+var Comment = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var text = _ref.text,
       ownerName = _ref.ownerName,
       ownerUrl = _ref.ownerUrl,
@@ -49,7 +50,7 @@ var Comment = _react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       isSecondary = _ref.isSecondary,
       isHighlighted = _ref.isHighlighted,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["text", "ownerName", "ownerUrl", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(CommentWrapper, (0, _extends2.default)({
     ref: ref || null,
     id: id,
@@ -97,7 +98,7 @@ Comment.LikeButton = function (_ref2) {
       hasLiked = _ref2.hasLiked,
       className = _ref2.className,
       disabled = _ref2.disabled,
-      props = (0, _objectWithoutProperties2.default)(_ref2, ["children", "accessibilityLabel", "hasLiked", "className", "disabled"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     role: "button",
     "aria-pressed": !!hasLiked || null,

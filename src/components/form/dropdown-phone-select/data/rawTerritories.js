@@ -1,8 +1,6 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.default = void 0;
 // Taken from react-phone-input2 v2.13.8
 // https://github.com/bl00mber/react-phone-input-2

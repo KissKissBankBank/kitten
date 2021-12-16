@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["tag", "className", "size", "withoutPointerEvents", "withBorder", "img"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -17,11 +18,11 @@ export var ButtonImage = function ButtonImage(_ref) {
       withoutPointerEvents = _ref.withoutPointerEvents,
       withBorder = _ref.withBorder,
       img = _ref.img,
-      others = _objectWithoutProperties(_ref, ["tag", "className", "size", "withoutPointerEvents", "withBorder", "img"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledButtonImage, _extends({
     as: tag,
-    className: classNames('k-ButtonImage', "k-ButtonImage--".concat(size), {
+    className: classNames('k-ButtonImage', "k-ButtonImage--" + size, {
       'k-ButtonImage--withoutPointerEvents': withoutPointerEvents,
       'k-ButtonImage--withBorder': withBorder
     }, className)

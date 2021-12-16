@@ -1,8 +1,8 @@
-import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 export var useDropdown = function useDropdown(_ref) {
+  var _classNames;
+
   var dropdownContentWidth = _ref.dropdownContentWidth,
       dropdownAnchorSide = _ref.dropdownAnchorSide,
       callOnToggle = _ref.callOnToggle,
@@ -22,9 +22,8 @@ export var useDropdown = function useDropdown(_ref) {
   var dropdownInputRef = useRef(null);
 
   var _useState = useState(!!isExpanded),
-      _useState2 = _slicedToArray(_useState, 2),
-      isDropdownExpanded = _useState2[0],
-      setDropdownExpandedState = _useState2[1];
+      isDropdownExpanded = _useState[0],
+      setDropdownExpandedState = _useState[1];
 
   var handleButtonClick = function handleButtonClick() {
     setDropdownExpandedState(function (currentValue) {
@@ -90,7 +89,7 @@ export var useDropdown = function useDropdown(_ref) {
   var dropdownProps = {
     ref: dropdownRef,
     'aria-live': 'polite',
-    className: classNames(dropdownClass, _defineProperty({}, "".concat(dropdownClass, "--isExpanded"), isDropdownExpanded))
+    className: classNames(dropdownClass, (_classNames = {}, _classNames[dropdownClass + "--isExpanded"] = isDropdownExpanded, _classNames))
   };
   var buttonProps = {
     ref: dropdownButtonRef,
@@ -98,20 +97,20 @@ export var useDropdown = function useDropdown(_ref) {
     'aria-controls': menuId,
     isExpanded: isDropdownExpanded,
     onClick: handleButtonClick,
-    className: "".concat(dropdownClass, "__button")
+    className: dropdownClass + "__button"
   };
   var inputProps = {
     ref: dropdownInputRef,
     id: inputId,
     isExpanded: isDropdownExpanded,
     onChange: handleInputChange,
-    className: "".concat(dropdownClass, "__input")
+    className: dropdownClass + "__input"
   };
   var returnedWidth = dropdownContentWidth === NaN ? null : dropdownContentWidth;
   var menuProps = {
     ref: dropdownContentRef,
     id: menuId,
-    className: classNames("".concat(dropdownClass, "__menu"), "".concat(dropdownClass, "__menu--is-").concat(dropdownAnchorSide || 'left')),
+    className: classNames(dropdownClass + "__menu", dropdownClass + "__menu--is-" + (dropdownAnchorSide || 'left')),
     style: {
       width: returnedWidth
     },

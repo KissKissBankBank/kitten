@@ -1,4 +1,3 @@
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
 import React from 'react';
 import classNames from 'classnames';
 export var CarouselPage = function CarouselPage(_ref) {
@@ -30,7 +29,7 @@ export var CarouselPage = function CarouselPage(_ref) {
       'k-Carousel__page--isActivePage': isActivePage,
       'k-Carousel__page--hasBeenViewed': hasPageBeenViewed
     })
-  }, _toConsumableArray(Array(numberOfItemsPerPage).keys()).map(function (index) {
+  }, Array(numberOfItemsPerPage).fill(0).map(function (el, index) {
     // If there's not enough items in the last page of the Carousel
     if (index >= pageItems.length) {
       return /*#__PURE__*/React.createElement("div", {
@@ -42,6 +41,6 @@ export var CarouselPage = function CarouselPage(_ref) {
     return /*#__PURE__*/React.createElement("div", {
       key: index,
       className: "k-Carousel__page__item"
-    }, React.cloneElement(pageItems[index], itemProps));
+    }, /*#__PURE__*/React.cloneElement(pageItems[index], itemProps));
   }));
 };

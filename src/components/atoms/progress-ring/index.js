@@ -1,17 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ProgressRing = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +20,12 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _excluded = ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var getDashLength = function getDashLength(radius) {
   return 2 * Math.PI * radius;
@@ -46,7 +48,7 @@ var rotateAnimate = function rotateAnimate(_ref2) {
 
 var StyledMeterCircle = _styledComponents.default.circle.withConfig({
   displayName: "progress-ring__StyledMeterCircle",
-  componentId: "sdx1nz-0"
+  componentId: "sc-sdx1nz-0"
 })(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;&.k-Meters__ProgressRing--orion{stroke-linecap:round;}"], function (_ref3) {
   var r = _ref3.r;
   return getDashLength(r);
@@ -60,7 +62,7 @@ var StyledMeterCircle = _styledComponents.default.circle.withConfig({
 }, function (_ref5) {
   var cx = _ref5.cx,
       cy = _ref5.cy;
-  return "".concat((0, _typography.pxToRem)(cx), " ").concat((0, _typography.pxToRem)(cy));
+  return (0, _typography.pxToRem)(cx) + " " + (0, _typography.pxToRem)(cy);
 }, rotateAnimate, function (_ref6) {
   var animationSpeed = _ref6.animationSpeed;
   return animationSpeed;
@@ -74,11 +76,11 @@ var ProgressRing = function ProgressRing(_ref7) {
       variant = _ref7.variant,
       className = _ref7.className,
       animationSpeed = _ref7.animationSpeed,
-      others = (0, _objectWithoutProperties2.default)(_ref7, ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded);
   var circleX = width / 2;
   var circleY = width / 2;
   var radius = circleX - strokeWidth;
-  var viewBox = "0 0 ".concat(width, " ").concat(width);
+  var viewBox = "0 0 " + width + " " + width;
   var progressValue = value < 100 ? value : 100;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({}, others, {
     width: width,
@@ -101,7 +103,7 @@ var ProgressRing = function ProgressRing(_ref7) {
     fill: "transparent",
     stroke: color,
     progressValue: progressValue,
-    className: (0, _classnames.default)('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--".concat(variant))
+    className: (0, _classnames.default)('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--" + variant)
   }));
 };
 

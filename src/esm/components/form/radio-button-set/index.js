@@ -1,5 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"],
+    _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -23,10 +25,10 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       children = _ref.children,
       size = _ref.size,
       labelProps = _ref.labelProps,
-      props = _objectWithoutProperties(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
-    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
+    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + variant),
     disabled: disabled
   }, props), label && /*#__PURE__*/React.createElement(Label, _extends({
     tag: "legend"
@@ -37,7 +39,7 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
   }, items.map(function (_ref2) {
     var id = _ref2.id,
         className = _ref2.className,
-        itemProps = _objectWithoutProperties(_ref2, ["id", "className"]);
+        itemProps = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
     return /*#__PURE__*/React.createElement(RadioButton, _extends({
       id: id,

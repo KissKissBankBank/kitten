@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["valid", "onChange", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -9,7 +10,7 @@ export var Input = function Input(_ref) {
   var valid = _ref.valid,
       _onChange = _ref.onChange,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["valid", "onChange", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Context.Consumer, null, function (_ref2) {
     var setEmptyInput = _ref2.setEmptyInput;
@@ -22,7 +23,7 @@ export var Input = function Input(_ref) {
       onChange: function onChange(event) {
         var _event$target, _event$target$value;
 
-        setEmptyInput(((_event$target = event.target) === null || _event$target === void 0 ? void 0 : (_event$target$value = _event$target.value) === null || _event$target$value === void 0 ? void 0 : _event$target$value.length) === 0);
+        setEmptyInput(((_event$target = event.target) == null ? void 0 : (_event$target$value = _event$target.value) == null ? void 0 : _event$target$value.length) === 0);
 
         _onChange(event);
       }

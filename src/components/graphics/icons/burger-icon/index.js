@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.BurgerIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,6 +20,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
+var _excluded = ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover", "style", "className"];
 
 var StyledItem = _styledComponents.default.svg.withConfig({
   displayName: "burger-icon__StyledItem",
@@ -39,7 +39,7 @@ var BurgerIcon = function BurgerIcon(_ref) {
       isAnimatedOnHover = _ref.isAnimatedOnHover,
       style = _ref.style,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover", "style", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
     role: "img",
     "aria-label": iconTitle || title,

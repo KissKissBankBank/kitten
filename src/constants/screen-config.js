@@ -1,13 +1,7 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.mq = exports.ScreenConfig = exports.ORDERED_SCREEN_SIZES = exports.SCREEN_SIZE_XL = exports.SCREEN_SIZE_L = exports.SCREEN_SIZE_M = exports.SCREEN_SIZE_S = exports.SCREEN_SIZE_XS = exports.SCREEN_SIZE_XXS = void 0;
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+exports.__esModule = true;
+exports.mq = exports.ScreenConfig = exports.SCREEN_SIZE_XXS = exports.SCREEN_SIZE_XS = exports.SCREEN_SIZE_XL = exports.SCREEN_SIZE_S = exports.SCREEN_SIZE_M = exports.SCREEN_SIZE_L = exports.ORDERED_SCREEN_SIZES = void 0;
 
 var _ScreenConfig;
 
@@ -25,31 +19,31 @@ var SCREEN_SIZE_XL = 'XL';
 exports.SCREEN_SIZE_XL = SCREEN_SIZE_XL;
 var ORDERED_SCREEN_SIZES = [SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L, SCREEN_SIZE_XL];
 exports.ORDERED_SCREEN_SIZES = ORDERED_SCREEN_SIZES;
-var ScreenConfig = (_ScreenConfig = {}, (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_XXS, {
+var ScreenConfig = (_ScreenConfig = {}, _ScreenConfig[SCREEN_SIZE_XXS] = {
   min: null,
   max: 399
-}), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_XS, {
+}, _ScreenConfig[SCREEN_SIZE_XS] = {
   min: 400,
   max: 639
-}), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_S, {
+}, _ScreenConfig[SCREEN_SIZE_S] = {
   min: 640,
   max: 767
-}), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_M, {
+}, _ScreenConfig[SCREEN_SIZE_M] = {
   min: 768,
   max: 1079
-}), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_L, {
+}, _ScreenConfig[SCREEN_SIZE_L] = {
   min: 1080,
   max: 1439
-}), (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_XL, {
+}, _ScreenConfig[SCREEN_SIZE_XL] = {
   min: 1440,
   max: null
-}), _ScreenConfig);
+}, _ScreenConfig);
 exports.ScreenConfig = ScreenConfig;
 var mq = {
-  mobile: "(max-width: ".concat(ScreenConfig.XS.max, "px)"),
-  mobileAndTablet: "(max-width: ".concat(ScreenConfig.M.max, "px)"),
-  tablet: "(min-width: ".concat(ScreenConfig.S.min, "px) and (max-width: ").concat(ScreenConfig.M.max, "px)"),
-  tabletAndDesktop: "(min-width: ".concat(ScreenConfig.S.min, "px)"),
-  desktop: "(min-width: ".concat(ScreenConfig.L.min, "px)")
+  mobile: "(max-width: " + ScreenConfig.XS.max + "px)",
+  mobileAndTablet: "(max-width: " + ScreenConfig.M.max + "px)",
+  tablet: "(min-width: " + ScreenConfig.S.min + "px) and (max-width: " + ScreenConfig.M.max + "px)",
+  tabletAndDesktop: "(min-width: " + ScreenConfig.S.min + "px)",
+  desktop: "(min-width: " + ScreenConfig.L.min + "px)"
 };
 exports.mq = mq;

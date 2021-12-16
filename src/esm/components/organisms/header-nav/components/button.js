@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className", "smallPadding"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -24,11 +25,11 @@ export var Button = function Button(_ref) {
       style = _ref.style,
       className = _ref.className,
       smallPadding = _ref.smallPadding,
-      props = _objectWithoutProperties(_ref, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className", "smallPadding"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  var hiddenMin = min ? "k-u-hidden@".concat(min, "-up") : '';
-  var hiddenMax = max ? "k-u-hidden@".concat(max, "-down") : '';
-  var textClassName = "k-HeaderNav__Button__text ".concat(hiddenMin, " ").concat(hiddenMax).trim();
+  var hiddenMin = min ? "k-u-hidden@" + min + "-up" : '';
+  var hiddenMax = max ? "k-u-hidden@" + max + "-down" : '';
+  var textClassName = ("k-HeaderNav__Button__text " + hiddenMin + " " + hiddenMax).trim();
   var ButtonComponent = 'a';
   var buttonProps = {
     href: href
@@ -65,7 +66,7 @@ export var Button = function Button(_ref) {
     }, style)
   }), text && /*#__PURE__*/React.createElement("span", {
     className: textClassName
-  }), icon && React.cloneElement(icon, {
+  }), icon && /*#__PURE__*/React.cloneElement(icon, {
     'aria-hidden': true
   }), icon && a11yText && /*#__PURE__*/React.createElement(VisuallyHidden, null, a11yText), text && /*#__PURE__*/React.createElement("span", {
     className: textClassName

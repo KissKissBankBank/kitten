@@ -1,9 +1,7 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = exports.domElementHelper = void 0;
+exports.__esModule = true;
+exports.domElementHelper = exports.default = void 0;
 
 /**
  * @module '../../helpers/dom/element-helper'

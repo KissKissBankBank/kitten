@@ -1,12 +1,13 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../../helpers/utils/ratio';
 export var MaisonDeCrowdfundingLogoOnDark = function MaisonDeCrowdfundingLogoOnDark(_ref) {
   var width = _ref.width,
       height = _ref.height,
-      props = _objectWithoutProperties(_ref, ["width", "height"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var DEFAULT_WIDTH = 159;
   var DEFAULT_HEIGHT = 36;
@@ -24,7 +25,7 @@ export var MaisonDeCrowdfundingLogoOnDark = function MaisonDeCrowdfundingLogoOnD
     role: "img",
     "aria-label": "MaisonDeCrowdfunding",
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 ".concat(viewBox.x, " ").concat(viewBox.y),
+    viewBox: "0 0 " + viewBox.x + " " + viewBox.y,
     width: computed.width,
     height: computed.height
   }, props), /*#__PURE__*/React.createElement("path", {

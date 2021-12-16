@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "position", "style"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -15,10 +16,10 @@ export var HeaderMenu = function HeaderMenu(_ref) {
       className = _ref.className,
       position = _ref.position,
       style = _ref.style,
-      props = _objectWithoutProperties(_ref, ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "position", "style"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledList, _extends({
-    className: classNames('k-HeaderMenu', className, "k-HeaderMenu--".concat(position), {
+    className: classNames('k-HeaderMenu', className, "k-HeaderMenu--" + position, {
       'k-HeaderMenu--hasBorders': !noBorder,
       'k-HeaderMenu--hasBorderOnSide': !!borderSide,
       'k-HeaderMenu--hasBorderOnSide-left': borderSide === 'left',
@@ -27,7 +28,7 @@ export var HeaderMenu = function HeaderMenu(_ref) {
       'k-HeaderMenu--hasBigItems': largeItem
     }),
     style: _extends({}, style, {
-      '--headerMenu-background-colors-hover': backgroundColors === null || backgroundColors === void 0 ? void 0 : backgroundColors.hover
+      '--headerMenu-background-colors-hover': backgroundColors == null ? void 0 : backgroundColors.hover
     })
   }, props));
 };

@@ -1,27 +1,15 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Overlay = exports.OPEN_OVERLAY_EVENT = exports.CLOSE_OVERLAY_EVENT = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,9 +19,11 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _excluded = ["className", "zIndex", "position"];
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var CLOSE_OVERLAY_EVENT = 'overlay-close';
 exports.CLOSE_OVERLAY_EVENT = CLOSE_OVERLAY_EVENT;
@@ -49,15 +39,12 @@ var StyledOverlay = _styledComponents.default.div.withConfig({
 });
 
 var Overlay = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(Overlay, _Component);
-
-  var _super = _createSuper(Overlay);
+  (0, _inheritsLoose2.default)(Overlay, _Component);
 
   function Overlay(props) {
     var _this;
 
-    (0, _classCallCheck2.default)(this, Overlay);
-    _this = _super.call(this, props);
+    _this = _Component.call(this, props) || this;
 
     _this.toggleActiveState = function () {
       return _this.setState({
@@ -83,37 +70,35 @@ var Overlay = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  (0, _createClass2.default)(Overlay, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.toggleEvent && window.addEventListener(this.props.toggleEvent, this.toggleActiveState);
-      this.props.closeEvent && window.addEventListener(this.props.closeEvent, this.disableActiveState);
-      this.props.openEvent && window.addEventListener(this.props.openEvent, this.enableActiveState);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.props.toggleEvent && window.removeEventListener(this.props.toggleEvent, this.toggleActiveState);
-      this.props.closeEvent && window.removeEventListener(this.props.closeEvent, this.disableActiveState);
-      this.props.openEvent && window.removeEventListener(this.props.openEvent, this.enableActiveState);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          zIndex = _this$props.zIndex,
-          position = _this$props.position,
-          other = (0, _objectWithoutProperties2.default)(_this$props, ["className", "zIndex", "position"]);
-      var isActive = this.state.isActive;
-      return /*#__PURE__*/_react.default.createElement(StyledOverlay, (0, _extends2.default)({
-        zIndex: zIndex,
-        className: (0, _classnames.default)(className, 'k-Overlay', "k-Overlay--".concat(position), {
-          'k-Overlay--isActive': isActive
-        })
-      }, other));
-    }
-  }]);
+  var _proto = Overlay.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.props.toggleEvent && window.addEventListener(this.props.toggleEvent, this.toggleActiveState);
+    this.props.closeEvent && window.addEventListener(this.props.closeEvent, this.disableActiveState);
+    this.props.openEvent && window.addEventListener(this.props.openEvent, this.enableActiveState);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.props.toggleEvent && window.removeEventListener(this.props.toggleEvent, this.toggleActiveState);
+    this.props.closeEvent && window.removeEventListener(this.props.closeEvent, this.disableActiveState);
+    this.props.openEvent && window.removeEventListener(this.props.openEvent, this.enableActiveState);
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        className = _this$props.className,
+        zIndex = _this$props.zIndex,
+        position = _this$props.position,
+        other = (0, _objectWithoutPropertiesLoose2.default)(_this$props, _excluded);
+    var isActive = this.state.isActive;
+    return /*#__PURE__*/_react.default.createElement(StyledOverlay, (0, _extends2.default)({
+      zIndex: zIndex,
+      className: (0, _classnames.default)(className, 'k-Overlay', "k-Overlay--" + position, {
+        'k-Overlay--isActive': isActive
+      })
+    }, other));
+  };
+
   return Overlay;
 }(_react.Component);
 

@@ -14,7 +14,7 @@ export var Title = function Title(_ref) {
       className = _ref.className,
       children = _ref.children;
   return /*#__PURE__*/React.createElement(StyledTitle, {
-    className: classNames("k-Steppers--VerticalStepper__title--".concat(variant), className)
+    className: classNames("k-Steppers--VerticalStepper__title--" + variant, className)
   }, children);
 };
 Title.protoTypes = {

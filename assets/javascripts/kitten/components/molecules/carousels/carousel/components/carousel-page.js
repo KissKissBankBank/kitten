@@ -32,18 +32,20 @@ export const CarouselPage = ({
         'k-Carousel__page--hasBeenViewed': hasPageBeenViewed,
       })}
     >
-      {[...Array(numberOfItemsPerPage).keys()].map(index => {
-        // If there's not enough items in the last page of the Carousel
-        if (index >= pageItems.length) {
-          return <div key={index} className="k-Carousel__page__item" />
-        }
+      {Array(numberOfItemsPerPage)
+        .fill(0)
+        .map((el, index) => {
+          // If there's not enough items in the last page of the Carousel
+          if (index >= pageItems.length) {
+            return <div key={index} className="k-Carousel__page__item" />
+          }
 
-        return (
-          <div key={index} className="k-Carousel__page__item">
-            {React.cloneElement(pageItems[index], itemProps)}
-          </div>
-        )
-      })}
+          return (
+            <div key={index} className="k-Carousel__page__item">
+              {React.cloneElement(pageItems[index], itemProps)}
+            </div>
+          )
+        })}
     </div>
   )
 }

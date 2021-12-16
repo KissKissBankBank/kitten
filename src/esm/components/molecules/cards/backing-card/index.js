@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "disabled", "hasBorder"];
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -11,7 +12,7 @@ export var BackingCard = function BackingCard(_ref) {
       className = _ref.className,
       disabled = _ref.disabled,
       hasBorder = _ref.hasBorder,
-      props = _objectWithoutProperties(_ref, ["children", "className", "disabled", "hasBorder"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var imageChild = getReactElementsByType({
     children: children,
@@ -30,13 +31,13 @@ export var BackingCard = function BackingCard(_ref) {
       'k-BackingCard--disabled': disabled,
       'k-BackingCard--hasBorder': hasBorder
     })
-  }), imageChild && cloneElement(imageChild), /*#__PURE__*/React.createElement("div", {
+  }), imageChild && /*#__PURE__*/cloneElement(imageChild), /*#__PURE__*/React.createElement("div", {
     className: "k-BackingCard__gridWrapper"
   }, wrappedChildren && wrappedChildren.map(function (item, index) {
-    return cloneElement(item, {
-      key: "BackingCard-".concat(index)
+    return /*#__PURE__*/cloneElement(item, {
+      key: "BackingCard-" + index
     });
-  })), buttonChild && cloneElement(buttonChild, {
+  })), buttonChild && /*#__PURE__*/cloneElement(buttonChild, {
     disabled: disabled
   }));
 };

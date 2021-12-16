@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["darker", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -9,7 +10,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 export var Separator = styled(function (_ref) {
   var darker = _ref.darker,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["darker", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var separatorClassName = classNames('k-Separator', {
     'k-Separator--darker': darker
@@ -19,7 +20,7 @@ export var Separator = styled(function (_ref) {
   }, props));
 }).withConfig({
   displayName: "separator__Separator",
-  componentId: "b93pln-0"
+  componentId: "sc-b93pln-0"
 })(["margin:0;border:none;background:", ";height:", ";&.k-Separator--darker{background:", ";}"], COLORS.line1, pxToRem(1), COLORS.line2);
 Separator.propTypes = {
   darker: PropTypes.bool

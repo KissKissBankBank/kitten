@@ -1,8 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _toArray from "@babel/runtime/helpers/esm/toArray";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"];
 
 var _this = this;
 
@@ -34,7 +32,7 @@ var processCountries = function processCountries(_ref) {
       labelInList: /*#__PURE__*/React.createElement(React.Fragment, null, localizedName, /*#__PURE__*/React.createElement("span", {
         className: "k-u-color-font2 k-u-margin-left-noneHalf"
       }, prefix, country.countryCode)),
-      labelSelected: "".concat(prefix).concat(country.countryCode),
+      labelSelected: "" + prefix + country.countryCode,
       icon: /*#__PURE__*/React.createElement(FlagIcon, {
         country: country.iso2,
         countryName: localizedName,
@@ -54,7 +52,7 @@ var formatNumber = function formatNumber(text, country) {
     return '';
   }
 
-  if ((text === null || text === void 0 ? void 0 : text.length) < 2 || pattern == '') {
+  if ((text == null ? void 0 : text.length) < 2 || pattern == '') {
     return text;
   }
 
@@ -70,7 +68,7 @@ var formatNumber = function formatNumber(text, country) {
       };
     }
 
-    var _acc$remainingText = _toArray(acc.remainingText),
+    var _acc$remainingText = acc.remainingText,
         head = _acc$remainingText[0],
         tail = _acc$remainingText.slice(1);
 
@@ -94,24 +92,24 @@ var getOptions = function getOptions(_ref2) {
   var options = [];
 
   if (preferredCountries) {
-    options.push.apply(options, _toConsumableArray(processCountries({
+    options.push.apply(options, processCountries({
       countries: preferredCountries,
       prefix: prefix,
       locale: locale,
       flagsUrl: flagsUrl
-    })));
+    }));
     options.push({
       separator: true,
       disabled: true
     });
   }
 
-  onlyCountries && options.push.apply(options, _toConsumableArray(processCountries({
+  onlyCountries && options.push.apply(options, processCountries({
     countries: onlyCountries,
     prefix: prefix,
     locale: locale,
     flagsUrl: flagsUrl
-  })));
+  }));
   return options;
 };
 
@@ -168,38 +166,32 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       flagsUrl = _ref3.flagsUrl,
       assumeCountry = _ref3.assumeCountry,
       inputProps = _ref3.inputProps,
-      props = _objectWithoutProperties(_ref3, ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"]);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded);
 
   // Consts
   var _useState = useState(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      getCountry = _useState2[0],
-      setCountry = _useState2[1];
+      getCountry = _useState[0],
+      setCountry = _useState[1];
 
-  var _useState3 = useState(''),
-      _useState4 = _slicedToArray(_useState3, 2),
-      getFormattedNumber = _useState4[0],
-      setFormattedNumber = _useState4[1];
+  var _useState2 = useState(''),
+      getFormattedNumber = _useState2[0],
+      setFormattedNumber = _useState2[1];
 
-  var _useState5 = useState(0),
-      _useState6 = _slicedToArray(_useState5, 2),
-      getCaretPosition = _useState6[0],
-      setCaretPosition = _useState6[1];
+  var _useState3 = useState(0),
+      getCaretPosition = _useState3[0],
+      setCaretPosition = _useState3[1];
 
-  var _useState7 = useState(placeholder),
-      _useState8 = _slicedToArray(_useState7, 2),
-      getInputPlaceholder = _useState8[0],
-      setInputPlaceholder = _useState8[1];
+  var _useState4 = useState(placeholder),
+      getInputPlaceholder = _useState4[0],
+      setInputPlaceholder = _useState4[1];
 
-  var _useState9 = useState(null),
-      _useState10 = _slicedToArray(_useState9, 2),
-      getDefaultSelectedValue = _useState10[0],
-      setDefaultSelectedValue = _useState10[1];
+  var _useState5 = useState(null),
+      getDefaultSelectedValue = _useState5[0],
+      setDefaultSelectedValue = _useState5[1];
 
-  var _useState11 = useState(''),
-      _useState12 = _slicedToArray(_useState11, 2),
-      getInputNumber = _useState12[0],
-      setInputNumber = _useState12[1];
+  var _useState6 = useState(''),
+      getInputNumber = _useState6[0],
+      setInputNumber = _useState6[1];
 
   var getPreviousFormattedNumber = usePrevious(getFormattedNumber);
 
@@ -245,7 +237,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
     setCaretPosition(caretPosition);
     setFormattedNumber(innerFormattedNumber);
     if (!onChange) return;
-    var numberToExport = "".concat(phoneProps.prefix).concat(countryCode, " ").concat(innerFormattedNumber);
+    var numberToExport = "" + phoneProps.prefix + countryCode + " " + innerFormattedNumber;
     onChange(numberToExport.replace(/[^0-9]+/g, ''), currentCountry, event, numberToExport);
   };
 
@@ -313,7 +305,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
   useEffect(function () {
     // Adjust caret position depending on the edit
     if (!getFormattedNumber || !getPreviousFormattedNumber) return;
-    var inputElement = document.getElementById("".concat(id, "_element-input"));
+    var inputElement = document.getElementById(id + "_element-input");
     var diff = getFormattedNumber.length - getPreviousFormattedNumber.length;
 
     if (diff < 0 || getCaretPosition < getFormattedNumber.length - 1) {
