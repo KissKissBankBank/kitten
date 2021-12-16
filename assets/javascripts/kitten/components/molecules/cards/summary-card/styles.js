@@ -78,8 +78,7 @@ const ownerSubscriptionStyles = css`
       }
     }
 
-    &.k-SummaryCard-Wrapper--small,
-    &.k-SummaryCard-Wrapper--mobile {
+    &.k-SummaryCard-Wrapper--small {
       .k-SummaryCard-Wrapper__imageWrapper {
         display: none;
       }
