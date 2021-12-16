@@ -3,9 +3,13 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-  - CommentForm: Add close button, add `onClose` and `closeButtonText` props
 
-Feature: `Accordeon`: Add `multiple` prop to let more than one item opened.
+## [6.10.0] - 2021-12-16
+
+Features:
+
+  - CommentForm: Add close button, add `onClose` and `closeButtonText` props
+  - `Accordeon`: Add `multiple` prop to let more than one item opened.
 
 ## [6.9.1] - 2021-12-15
 
