@@ -42,8 +42,8 @@ var Header = function Header(_ref) {
       return updateSelectedItem(index);
     },
     role: "button",
-    "aria-expanded": selectedItem === index,
-    "aria-disabled": closeOnClick ? null : selectedItem === index,
+    "aria-expanded": selectedItem.includes(index),
+    "aria-disabled": closeOnClick ? null : selectedItem.includes(index),
     id: componentId + "-" + id + "_header",
     "aria-controls": componentId + "-" + id + "_content"
   }, props), /*#__PURE__*/_react.default.createElement("span", {
@@ -51,7 +51,7 @@ var Header = function Header(_ref) {
   }, children), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-Accordeon__header__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    direction: selectedItem === index ? 'top' : 'bottom',
+    direction: selectedItem.includes(index) ? 'top' : 'bottom',
     "aria-hidden": true
   })));
 };

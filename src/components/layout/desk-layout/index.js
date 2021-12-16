@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DeskLayout = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -21,6 +19,8 @@ var _styles = require("./styles");
 
 var _loader = require("../../../components/atoms/loader");
 
+var _excluded = ["children", "className", "menu", "menuProps", "fullWidth", "contentProps", "loading", "loaderComponent"];
+
 var DeskLayout = function DeskLayout(_ref) {
   var children = _ref.children,
       className = _ref.className,
@@ -30,7 +30,7 @@ var DeskLayout = function DeskLayout(_ref) {
       contentProps = _ref.contentProps,
       loading = _ref.loading,
       loaderComponent = _ref.loaderComponent,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "className", "menu", "menuProps", "fullWidth", "contentProps", "loading", "loaderComponent"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledLayout, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DeskLayout__wrapper', className)
   }, props), /*#__PURE__*/_react.default.createElement("div", {

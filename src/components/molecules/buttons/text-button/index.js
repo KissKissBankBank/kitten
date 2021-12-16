@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TextButton = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,6 +23,8 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
+var _excluded = ["className", "size"];
+
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "text-button__StyledButton",
   componentId: "sc-1nng31q-0"
@@ -33,10 +33,10 @@ var StyledButton = _styledComponents.default.button.withConfig({
 var TextButton = function TextButton(_ref) {
   var className = _ref.className,
       size = _ref.size,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "size"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
     type: "button",
-    className: (0, _classnames.default)('k-TextButton', 'k-u-reset-button', className, "k-TextButton--".concat(size))
+    className: (0, _classnames.default)('k-TextButton', 'k-u-reset-button', className, "k-TextButton--" + size)
   }, props));
 };
 

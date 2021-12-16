@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "defaultValue", "commentLabel", "id", "className", "onChange"];
+var _excluded = ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "closeButtonText", "defaultValue", "commentLabel", "id", "className", "onChange", "onClose"];
 import React, { useState } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
@@ -24,11 +24,13 @@ export var CommentForm = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
       errorMessage = _ref.errorMessage,
       disabled = _ref.disabled,
       buttonText = _ref.buttonText,
+      closeButtonText = _ref.closeButtonText,
       defaultValue = _ref.defaultValue,
       commentLabel = _ref.commentLabel,
       id = _ref.id,
       className = _ref.className,
       onChange = _ref.onChange,
+      onClose = _ref.onClose,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(defaultValue),
@@ -81,7 +83,22 @@ export var CommentForm = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
     size: "micro",
     weight: "regular",
     className: "k-CommentForm__error"
-  }, errorMessage), (value.length > 0 || !!defaultValue) && /*#__PURE__*/React.createElement(Button, {
+  }, errorMessage), onClose ? /*#__PURE__*/React.createElement("div", {
+    className: "k-u-flex k-u-flex-justifyContent-end k-u-flex-gap-single"
+  }, /*#__PURE__*/React.createElement(Button, {
+    type: "button",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    onClick: onClose
+  }, closeButtonText), /*#__PURE__*/React.createElement(Button, {
+    type: "button",
+    modifier: "beryllium",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    onClick: handleSubmit
+  }, buttonText)) : (value.length > 0 || !!defaultValue) && /*#__PURE__*/React.createElement(Button, {
     type: "button",
     modifier: "beryllium",
     size: "tiny",
@@ -98,6 +115,7 @@ CommentForm.propTypes = {
   'aria-label': PropTypes.string.isRequired,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
+  onClose: PropTypes.func,
   placeholder: PropTypes.string,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
@@ -105,6 +123,7 @@ CommentForm.propTypes = {
   id: PropTypes.string,
   disabled: PropTypes.bool,
   buttonText: PropTypes.string,
+  closeButtonText: PropTypes.string,
   commentButton: deprecated(PropTypes.string, 'Please use buttonText instead.'),
   avatarBadge: deprecated(PropTypes.node, 'Not a feature anymore'),
   isDisabled: deprecated(PropTypes.bool, 'Please use disabled instead'),
@@ -121,5 +140,6 @@ CommentForm.defaultProps = {
   defaultValue: '',
   id: 'CommentForm',
   disabled: false,
-  buttonText: 'Send'
+  buttonText: 'Send',
+  closeButtonText: 'Close'
 };

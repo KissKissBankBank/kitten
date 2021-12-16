@@ -1,8 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className"];
+var _excluded = ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className", "multiple"];
 import React, { useState, cloneElement, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import isArray from 'lodash/fp/isArray';
+import remove from 'lodash/fp/remove';
 import { Item } from './components/item';
 import { Header } from './components/header';
 import { Content } from './components/content';
@@ -29,6 +31,7 @@ export var Accordeon = function Accordeon(_ref) {
       id = _ref.id,
       onChange = _ref.onChange,
       className = _ref.className,
+      multiple = _ref.multiple,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var items = getReactElementsByType({
@@ -36,7 +39,7 @@ export var Accordeon = function Accordeon(_ref) {
     type: Accordeon.Item
   });
 
-  var _useState = useState(selectedItem),
+  var _useState = useState(isArray(selectedItem) ? selectedItem : [selectedItem]),
       internalSelectedItem = _useState[0],
       setSelectedItem = _useState[1];
 
@@ -63,11 +66,29 @@ export var Accordeon = function Accordeon(_ref) {
   }, [accordeonElement]);
 
   var updateSelectedItem = function updateSelectedItem(newSelectedItem) {
-    var _items$newItem, _items$newItem$props;
+    var newItem;
+    var ids;
 
-    var newItem = closeOnClick && newSelectedItem === internalSelectedItem ? null : newSelectedItem;
+    if (multiple) {
+      newItem = internalSelectedItem.includes(newSelectedItem) ? remove(function (el) {
+        return el === newSelectedItem;
+      })(internalSelectedItem) : [].concat(internalSelectedItem, [newSelectedItem]);
+      ids = items.filter(function (_, index) {
+        return newItem.includes(index);
+      }).map(function (item) {
+        var _item$props;
+
+        return (_item$props = item.props) == null ? void 0 : _item$props.id;
+      });
+    } else {
+      var _items$newItem$, _items$newItem$$props;
+
+      newItem = closeOnClick && internalSelectedItem.includes(newSelectedItem) ? [] : [newSelectedItem];
+      ids = ((_items$newItem$ = items[newItem[0]]) == null ? void 0 : (_items$newItem$$props = _items$newItem$.props) == null ? void 0 : _items$newItem$$props.id) || id + "-" + newItem;
+    }
+
     setSelectedItem(newItem);
-    onChange(((_items$newItem = items[newItem]) == null ? void 0 : (_items$newItem$props = _items$newItem.props) == null ? void 0 : _items$newItem$props.id) || id + "-" + newItem);
+    onChange(ids);
   };
 
   var context = {
@@ -97,12 +118,13 @@ Accordeon.Item = Item;
 Accordeon.Header = Header;
 Accordeon.Content = Content;
 Accordeon.propTypes = {
-  selectedItem: PropTypes.number,
+  selectedItem: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
   onChange: PropTypes.func,
   isAnimated: PropTypes.bool,
   id: PropTypes.string,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
-  closeOnClick: PropTypes.bool
+  closeOnClick: PropTypes.bool,
+  multiple: PropTypes.bool
 };
 Accordeon.defaultProps = {
   selectedItem: null,
@@ -110,5 +132,6 @@ Accordeon.defaultProps = {
   isAnimated: true,
   id: 'accordeon',
   variant: 'orion',
-  closeOnClick: false
+  closeOnClick: false,
+  multiple: false
 };

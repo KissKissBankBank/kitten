@@ -13,6 +13,10 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _isArray = _interopRequireDefault(require("lodash/fp/isArray"));
+
+var _remove = _interopRequireDefault(require("lodash/fp/remove"));
+
 var _item = require("./components/item");
 
 var _header = require("./components/header");
@@ -39,7 +43,7 @@ var _debounce = require("../../../../helpers/utils/debounce");
 
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
-var _excluded = ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className"];
+var _excluded = ["closeOnClick", "variant", "children", "selectedItem", "isAnimated", "id", "onChange", "className", "multiple"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -59,13 +63,14 @@ var Accordeon = function Accordeon(_ref) {
       id = _ref.id,
       onChange = _ref.onChange,
       className = _ref.className,
+      multiple = _ref.multiple,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var items = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: Accordeon.Item
   });
 
-  var _useState = (0, _react.useState)(selectedItem),
+  var _useState = (0, _react.useState)((0, _isArray.default)(selectedItem) ? selectedItem : [selectedItem]),
       internalSelectedItem = _useState[0],
       setSelectedItem = _useState[1];
 
@@ -92,11 +97,29 @@ var Accordeon = function Accordeon(_ref) {
   }, [accordeonElement]);
 
   var updateSelectedItem = function updateSelectedItem(newSelectedItem) {
-    var _items$newItem, _items$newItem$props;
+    var newItem;
+    var ids;
 
-    var newItem = closeOnClick && newSelectedItem === internalSelectedItem ? null : newSelectedItem;
+    if (multiple) {
+      newItem = internalSelectedItem.includes(newSelectedItem) ? (0, _remove.default)(function (el) {
+        return el === newSelectedItem;
+      })(internalSelectedItem) : [].concat(internalSelectedItem, [newSelectedItem]);
+      ids = items.filter(function (_, index) {
+        return newItem.includes(index);
+      }).map(function (item) {
+        var _item$props;
+
+        return (_item$props = item.props) == null ? void 0 : _item$props.id;
+      });
+    } else {
+      var _items$newItem$, _items$newItem$$props;
+
+      newItem = closeOnClick && internalSelectedItem.includes(newSelectedItem) ? [] : [newSelectedItem];
+      ids = ((_items$newItem$ = items[newItem[0]]) == null ? void 0 : (_items$newItem$$props = _items$newItem$.props) == null ? void 0 : _items$newItem$$props.id) || id + "-" + newItem;
+    }
+
     setSelectedItem(newItem);
-    onChange(((_items$newItem = items[newItem]) == null ? void 0 : (_items$newItem$props = _items$newItem.props) == null ? void 0 : _items$newItem$props.id) || id + "-" + newItem);
+    onChange(ids);
   };
 
   var context = {
@@ -128,12 +151,13 @@ Accordeon.Item = _item.Item;
 Accordeon.Header = _header.Header;
 Accordeon.Content = _content.Content;
 Accordeon.propTypes = {
-  selectedItem: _propTypes.default.number,
+  selectedItem: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.array]),
   onChange: _propTypes.default.func,
   isAnimated: _propTypes.default.bool,
   id: _propTypes.default.string,
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
-  closeOnClick: _propTypes.default.bool
+  closeOnClick: _propTypes.default.bool,
+  multiple: _propTypes.default.bool
 };
 Accordeon.defaultProps = {
   selectedItem: null,
@@ -141,5 +165,6 @@ Accordeon.defaultProps = {
   isAnimated: true,
   id: 'accordeon',
   variant: 'orion',
-  closeOnClick: false
+  closeOnClick: false,
+  multiple: false
 };

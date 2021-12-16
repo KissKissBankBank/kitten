@@ -31,7 +31,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "defaultValue", "commentLabel", "id", "className", "onChange"];
+var _excluded = ["avatarImgProps", "placeholder", "onSubmit", "error", "errorMessage", "disabled", "buttonText", "closeButtonText", "defaultValue", "commentLabel", "id", "className", "onChange", "onClose"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -50,11 +50,13 @@ var CommentForm = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       errorMessage = _ref.errorMessage,
       disabled = _ref.disabled,
       buttonText = _ref.buttonText,
+      closeButtonText = _ref.closeButtonText,
       defaultValue = _ref.defaultValue,
       commentLabel = _ref.commentLabel,
       id = _ref.id,
       className = _ref.className,
       onChange = _ref.onChange,
+      onClose = _ref.onClose,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(defaultValue),
@@ -107,7 +109,22 @@ var CommentForm = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
     size: "micro",
     weight: "regular",
     className: "k-CommentForm__error"
-  }, errorMessage), (value.length > 0 || !!defaultValue) && /*#__PURE__*/_react.default.createElement(_button.Button, {
+  }, errorMessage), onClose ? /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-u-flex k-u-flex-justifyContent-end k-u-flex-gap-single"
+  }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+    type: "button",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    onClick: onClose
+  }, closeButtonText), /*#__PURE__*/_react.default.createElement(_button.Button, {
+    type: "button",
+    modifier: "beryllium",
+    size: "tiny",
+    fit: "content",
+    disabled: disabled,
+    onClick: handleSubmit
+  }, buttonText)) : (value.length > 0 || !!defaultValue) && /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
     modifier: "beryllium",
     size: "tiny",
@@ -126,6 +143,7 @@ CommentForm.propTypes = {
   'aria-label': _propTypes.default.string.isRequired,
   onChange: _propTypes.default.func,
   onSubmit: _propTypes.default.func,
+  onClose: _propTypes.default.func,
   placeholder: _propTypes.default.string,
   error: _propTypes.default.bool,
   errorMessage: _propTypes.default.string,
@@ -133,6 +151,7 @@ CommentForm.propTypes = {
   id: _propTypes.default.string,
   disabled: _propTypes.default.bool,
   buttonText: _propTypes.default.string,
+  closeButtonText: _propTypes.default.string,
   commentButton: (0, _deprecated.default)(_propTypes.default.string, 'Please use buttonText instead.'),
   avatarBadge: (0, _deprecated.default)(_propTypes.default.node, 'Not a feature anymore'),
   isDisabled: (0, _deprecated.default)(_propTypes.default.bool, 'Please use disabled instead'),
@@ -149,5 +168,6 @@ CommentForm.defaultProps = {
   defaultValue: '',
   id: 'CommentForm',
   disabled: false,
-  buttonText: 'Send'
+  buttonText: 'Send',
+  closeButtonText: 'Close'
 };

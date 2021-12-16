@@ -1,6 +1,10 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className"],
+    _excluded2 = ["className"],
+    _excluded3 = ["className"],
+    _excluded4 = ["children", "className", "fixedHeight", "readMoreButtonText"],
+    _excluded5 = ["className"];
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
@@ -16,7 +20,7 @@ var StyledCard = styled.article.withConfig({
 export var ContentCard = function ContentCard(_ref) {
   var children = _ref.children,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["children", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     className: classNames('k-ContentCard', className)
@@ -25,7 +29,7 @@ export var ContentCard = function ContentCard(_ref) {
 
 ContentCard.Header = function (_ref2) {
   var className = _ref2.className,
-      props = _objectWithoutProperties(_ref2, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement("aside", _extends({
     className: classNames('k-ContentCard__header', className)
@@ -34,7 +38,7 @@ ContentCard.Header = function (_ref2) {
 
 ContentCard.Title = function (_ref3) {
   var className = _ref3.className,
-      props = _objectWithoutProperties(_ref3, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
     as: "header",
@@ -49,12 +53,11 @@ ContentCard.Content = function (_ref4) {
       className = _ref4.className,
       fixedHeight = _ref4.fixedHeight,
       readMoreButtonText = _ref4.readMoreButtonText,
-      props = _objectWithoutProperties(_ref4, ["children", "className", "fixedHeight", "readMoreButtonText"]);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
   var _useState = useState(fixedHeight),
-      _useState2 = _slicedToArray(_useState, 2),
-      innerFixedHeight = _useState2[0],
-      setInnerFixedHeight = _useState2[1];
+      innerFixedHeight = _useState[0],
+      setInnerFixedHeight = _useState[1];
 
   useEffect(function () {
     setInnerFixedHeight(fixedHeight);
@@ -74,7 +77,7 @@ ContentCard.Content = function (_ref4) {
 
 ContentCard.Footer = function (_ref5) {
   var className = _ref5.className,
-      props = _objectWithoutProperties(_ref5, ["className"]);
+      props = _objectWithoutPropertiesLoose(_ref5, _excluded5);
 
   return /*#__PURE__*/React.createElement("footer", _extends({
     className: classNames('k-ContentCard__footer', className)

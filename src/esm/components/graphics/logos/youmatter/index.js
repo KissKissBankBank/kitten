@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["width", "height", "color"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
@@ -7,7 +8,7 @@ export var YouMatterLogo = function YouMatterLogo(_ref) {
   var width = _ref.width,
       height = _ref.height,
       color = _ref.color,
-      props = _objectWithoutProperties(_ref, ["width", "height", "color"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var DEFAULT_WIDTH = 231;
   var DEFAULT_HEIGHT = 40;
@@ -25,7 +26,7 @@ export var YouMatterLogo = function YouMatterLogo(_ref) {
     role: "img",
     "aria-label": "Youmatter",
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 ".concat(viewBox.x, " ").concat(viewBox.y),
+    viewBox: "0 0 " + viewBox.x + " " + viewBox.y,
     width: computed.width,
     height: computed.height,
     fill: color

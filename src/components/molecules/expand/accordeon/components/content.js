@@ -48,7 +48,7 @@ var Content = function Content(_ref) {
   }, [selectedItem, accordeonWidth]);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-Accordeon__content', className),
-    "aria-hidden": selectedItem !== index,
+    "aria-hidden": !selectedItem.includes(index),
     ref: contentEl,
     style: {
       '--accordeon-content-max-height': (0, _typography.pxToRem)(maxHeight)
