@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+  - CommentForm: Add close button, add `onClose` and `closeButtonText` props
 
 ## [6.9.1] - 2021-12-15
 

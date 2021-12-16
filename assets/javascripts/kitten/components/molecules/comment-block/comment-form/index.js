@@ -159,11 +159,13 @@ export const CommentForm = React.forwardRef(
       errorMessage,
       disabled,
       buttonText,
+      closeButtonText,
       defaultValue,
       commentLabel,
       id,
       className,
       onChange,
+      onClose,
       ...props
     },
     ref,
@@ -220,20 +222,44 @@ export const CommentForm = React.forwardRef(
               {errorMessage}
             </Text>
           )}
-          {(value.length > 0 || !!defaultValue) && (
-            <Button
-              type="button"
-              modifier="beryllium"
-              size="tiny"
-              fit="content"
-              disabled={disabled}
-              className={classNames('k-CommentForm__submit', {
-                'k-CommentForm__submit--is-visible': value.length > 0,
-              })}
-              onClick={handleSubmit}
-            >
-              {buttonText}
-            </Button>
+          {onClose ? (
+            <div className="k-u-flex k-u-flex-justifyContent-end k-u-flex-gap-single">
+              <Button
+                type="button"
+                size="tiny"
+                fit="content"
+                disabled={disabled}
+                onClick={onClose}
+              >
+                {closeButtonText}
+              </Button>
+              <Button
+                type="button"
+                modifier="beryllium"
+                size="tiny"
+                fit="content"
+                disabled={disabled}
+                onClick={handleSubmit}
+              >
+                {buttonText}
+              </Button>
+            </div>
+          ) : (
+            (value.length > 0 || !!defaultValue) && (
+              <Button
+                type="button"
+                modifier="beryllium"
+                size="tiny"
+                fit="content"
+                disabled={disabled}
+                className={classNames('k-CommentForm__submit', {
+                  'k-CommentForm__submit--is-visible': value.length > 0,
+                })}
+                onClick={handleSubmit}
+              >
+                {buttonText}
+              </Button>
+            )
           )}
         </div>
       </CommentFormWrapper>
@@ -246,6 +272,7 @@ CommentForm.propTypes = {
   'aria-label': PropTypes.string.isRequired,
   onChange: PropTypes.func,
   onSubmit: PropTypes.func,
+  onClose: PropTypes.func,
   placeholder: PropTypes.string,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
@@ -253,6 +280,7 @@ CommentForm.propTypes = {
   id: PropTypes.string,
   disabled: PropTypes.bool,
   buttonText: PropTypes.string,
+  closeButtonText: PropTypes.string,
   commentButton: deprecated(PropTypes.string, 'Please use buttonText instead.'),
   avatarBadge: deprecated(PropTypes.node, 'Not a feature anymore'),
   isDisabled: deprecated(PropTypes.bool, 'Please use disabled instead'),
@@ -271,4 +299,5 @@ CommentForm.defaultProps = {
   id: 'CommentForm',
   disabled: false,
   buttonText: 'Send',
+  closeButtonText: 'Close',
 }
