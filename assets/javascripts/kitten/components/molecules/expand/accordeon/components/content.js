@@ -15,7 +15,7 @@ export const Content = ({ id, children, index, className, ...props }) => {
   return (
     <div
       className={classNames('k-Accordeon__content', className)}
-      aria-hidden={selectedItem !== index}
+      aria-hidden={!selectedItem.includes(index)}
       ref={contentEl}
       style={{ '--accordeon-content-max-height': pxToRem(maxHeight) }}
       id={`${componentId}-${id}_content`}
