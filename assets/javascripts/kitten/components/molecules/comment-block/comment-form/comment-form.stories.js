@@ -25,6 +25,7 @@ export default {
     },
     placeholder: 'Leave a comment',
     buttonText: 'Comment',
+    onClose: action('onClose'),
     error: false,
     errorMessage: 'Cum sociis natoque penatibus et magnis',
     onSubmit: action('onSubmit'),
