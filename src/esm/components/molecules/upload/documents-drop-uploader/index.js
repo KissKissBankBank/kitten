@@ -115,13 +115,13 @@ export var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
     e.stopPropagation();
     if (disabled) return;
     setDraggingOver(false);
-    addFilesToList([].concat(e == null ? void 0 : (_e$dataTransfer = e.dataTransfer) == null ? void 0 : _e$dataTransfer.files));
+    addFilesToList(Array.from(e == null ? void 0 : (_e$dataTransfer = e.dataTransfer) == null ? void 0 : _e$dataTransfer.files));
   };
 
   var onFileInputChange = function onFileInputChange(e) {
     var _e$target;
 
-    addFilesToList([].concat(e == null ? void 0 : (_e$target = e.target) == null ? void 0 : _e$target.files));
+    addFilesToList(Array.from(e == null ? void 0 : (_e$target = e.target) == null ? void 0 : _e$target.files));
   };
 
   useEffect(function () {
