@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [6.11.0] - 2021-12-20
+
 Features:
 
   - `SummaryCard`: Add component.
