@@ -17,6 +17,7 @@ export var RewardSummaryCard = function RewardSummaryCard(_ref) {
       size = _ref.size,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  console.warn('RewardSummaryCard is deprecated. Please use `SummaryCard` instead.');
   var imageChild = getReactElementsByType({
     children: children,
     type: RewardSummaryCard.Image
