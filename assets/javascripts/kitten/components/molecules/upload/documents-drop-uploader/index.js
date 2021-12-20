@@ -239,11 +239,11 @@ export const DocumentsDropUploader = ({
 
     setDraggingOver(false)
 
-    addFilesToList([...e?.dataTransfer?.files])
+    addFilesToList(Array.from(e?.dataTransfer?.files))
   }
 
   const onFileInputChange = e => {
-    addFilesToList([...e?.target?.files])
+    addFilesToList(Array.from(e?.target?.files))
   }
 
   useEffect(() => {
