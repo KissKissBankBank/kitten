@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
--Fix: `DocumentsDropUploader`: Fix upload files.
+## [6.11.1] - 2021-12-20
+
+Fix: 
+- `DocumentsDropUploader`: Fix upload files.
 
 ## [6.11.0] - 2021-12-20
 
