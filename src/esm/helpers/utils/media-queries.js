@@ -1,9 +1,9 @@
 import { ScreenConfig, ORDERED_SCREEN_SIZES } from '../../constants/screen-config';
 export var getMinQuery = function getMinQuery(num) {
-  return "(min-width: ".concat(num, "px)");
+  return "(min-width: " + num + "px)";
 };
 export var getMaxQuery = function getMaxQuery(num) {
-  return "(max-width: ".concat(num, "px)");
+  return "(max-width: " + num + "px)";
 };
 export var getJoinedQueries = function getJoinedQueries(queries) {
   return queries.filter(function (q) {

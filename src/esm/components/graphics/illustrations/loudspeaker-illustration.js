@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 export var LoudspeakerIllustration = function LoudspeakerIllustration(props) {
   return /*#__PURE__*/React.createElement("svg", _extends({

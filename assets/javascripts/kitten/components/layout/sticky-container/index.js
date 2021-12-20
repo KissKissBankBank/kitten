@@ -61,7 +61,7 @@ function useScrollDirection() {
 }
 
 const StickyContainerBase = (
-  { children, className, top, bottom, isSticky, ...other },
+  { children, className, top, bottom, isSticky, onChange, ...other },
   ref,
 ) => {
   const currentStickyContainer = useRef(null)
@@ -83,6 +83,10 @@ const StickyContainerBase = (
       : 0
     setContainerHeight(currentContainerHeight)
   }, []) // [] makes that Effect fire on Component mount only
+
+  useEffect(() => {
+    onChange({ isStuck: stuck || isSticky === 'always' })
+  }, [stuck, isSticky])
 
   useEffect(() => {
     if (['always', 'never'].includes(isSticky)) return
@@ -220,6 +224,10 @@ const StickyContainerBase = (
 
 export const StickyContainer = forwardRef(StickyContainerBase)
 
+StickyContainer.defaultProps = {
+  onChange: () => {},
+}
+
 StickyContainer.propTypes = {
   top: PropTypes.number,
   bottom: PropTypes.number,
@@ -229,4 +237,5 @@ StickyContainer.propTypes = {
     'always',
     'never',
   ]),
+  onChange: PropTypes.func,
 }

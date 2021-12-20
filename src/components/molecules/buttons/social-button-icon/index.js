@@ -2,10 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.YoutubeButtonIcon = exports.InstagramButtonIcon = exports.LinkedinButtonIcon = exports.TwitterButtonIcon = exports.FacebookButtonIcon = void 0;
+exports.__esModule = true;
+exports.YoutubeButtonIcon = exports.TwitterButtonIcon = exports.LinkedinButtonIcon = exports.InstagramButtonIcon = exports.FacebookButtonIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 

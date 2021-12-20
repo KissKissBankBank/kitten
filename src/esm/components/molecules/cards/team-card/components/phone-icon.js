@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["phoneNumber", "tooltipColor", "className", "buttonLabel"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonIcon } from '../../../../molecules/buttons/button-icon';
@@ -12,11 +13,11 @@ export var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
       tooltipColor = _ref.tooltipColor,
       className = _ref.className,
       buttonLabel = _ref.buttonLabel,
-      props = _objectWithoutProperties(_ref, ["phoneNumber", "tooltipColor", "className", "buttonLabel"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ButtonIcon, {
     tag: "a",
-    href: "tel:".concat(phoneNumber),
+    href: "tel:" + phoneNumber,
     modifier: "hydrogen",
     size: "tiny",
     className: classNames('k-ButtonIcon--phone', 'k-u-hidden@s-up', className),

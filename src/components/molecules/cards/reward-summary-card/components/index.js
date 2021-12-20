@@ -1,69 +1,36 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Image", {
-  enumerable: true,
-  get: function get() {
-    return _image.Image;
-  }
-});
-Object.defineProperty(exports, "Title", {
-  enumerable: true,
-  get: function get() {
-    return _title.Title;
-  }
-});
-Object.defineProperty(exports, "TitleTag", {
-  enumerable: true,
-  get: function get() {
-    return _titleTag.TitleTag;
-  }
-});
-Object.defineProperty(exports, "Amount", {
-  enumerable: true,
-  get: function get() {
-    return _amount.Amount;
-  }
-});
-Object.defineProperty(exports, "Availability", {
-  enumerable: true,
-  get: function get() {
-    return _availability.Availability;
-  }
-});
-Object.defineProperty(exports, "Contribution", {
-  enumerable: true,
-  get: function get() {
-    return _contribution.Contribution;
-  }
-});
-Object.defineProperty(exports, "Options", {
-  enumerable: true,
-  get: function get() {
-    return _options.Options;
-  }
-});
-Object.defineProperty(exports, "TitleBar", {
-  enumerable: true,
-  get: function get() {
-    return _titleBar.TitleBar;
-  }
-});
+exports.__esModule = true;
+exports.TitleTag = exports.TitleBar = exports.Title = exports.Options = exports.Image = exports.Contribution = exports.Availability = exports.Amount = void 0;
 
 var _image = require("./image");
 
+exports.Image = _image.Image;
+
 var _title = require("./title");
+
+exports.Title = _title.Title;
 
 var _titleTag = require("./title-tag");
 
+exports.TitleTag = _titleTag.TitleTag;
+
 var _amount = require("./amount");
+
+exports.Amount = _amount.Amount;
 
 var _availability = require("./availability");
 
+exports.Availability = _availability.Availability;
+
 var _contribution = require("./contribution");
+
+exports.Contribution = _contribution.Contribution;
 
 var _options = require("./options");
 
+exports.Options = _options.Options;
+
 var _titleBar = require("./title-bar");
+
+exports.TitleBar = _titleBar.TitleBar;

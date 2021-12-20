@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Image from './components/image';
@@ -44,21 +44,19 @@ export var CrowdfundingCard = function CrowdfundingCard(_ref) {
       buttonText = _ref.buttonText,
       forceVersion = _ref.forceVersion,
       progressLabel = _ref.progressLabel,
-      others = _objectWithoutProperties(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion", "progressLabel"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
   };
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      shouldTruncateTitle = _useState2[0],
-      setTitleTruncate = _useState2[1];
+      shouldTruncateTitle = _useState[0],
+      setTitleTruncate = _useState[1];
 
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      shouldTruncateSubTitle = _useState4[0],
-      setSubTitleTruncate = _useState4[1];
+  var _useState2 = useState(false),
+      shouldTruncateSubTitle = _useState2[0],
+      setSubTitleTruncate = _useState2[1];
 
   useEffect(function () {
     if (domElementHelper.canUseDom() && typeof document !== 'undefined' && 'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`

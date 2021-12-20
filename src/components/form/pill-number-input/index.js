@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.PillNumberInput = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,9 +27,15 @@ var _nativeInputValueSetter = require("../../../helpers/dom/native-input-value-s
 
 var _createEvent = require("../../../helpers/dom/create-event");
 
+var _excluded = ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className", "disableInput", "disabled"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledPillNumberInput = _styledComponents.default.div.withConfig({
   displayName: "pill-number-input__StyledPillNumberInput",
-  componentId: "ujaaef-0"
+  componentId: "sc-ujaaef-0"
 })(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:var(--border);border-radius:var(--border-radius-rounded);transition:border-color 0.2s ease;&:hover{border-color:var(--color-grey-500);}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:disabled{background-color:", ";color:", ";}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill 0.2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}&.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled{background-color:", ";color:", ";}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(85), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), _colorsConfig.default.background1, _colorsConfig.default.font2, (0, _typography.pxToRem)(5), _colorsConfig.default.primary1, _colorsConfig.default.primary2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.font1);
 
 var PillNumberInput = function PillNumberInput(_ref) {
@@ -61,13 +61,12 @@ var PillNumberInput = function PillNumberInput(_ref) {
       disableInput = _ref$disableInput === void 0 ? false : _ref$disableInput,
       _ref$disabled = _ref.disabled,
       disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className", "disableInput", "disabled"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var inputRef = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(value),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      currentValue = _useState2[0],
-      setCurrentValue = _useState2[1];
+      currentValue = _useState[0],
+      setCurrentValue = _useState[1];
 
   var changeEvent = (0, _createEvent.createEvent)('change');
 

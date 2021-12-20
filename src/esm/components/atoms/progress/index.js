@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["color", "className", "value", "rampProps", "variant", "disabled"];
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -26,12 +26,11 @@ export var Progress = function Progress(_ref3) {
       rampProps = _ref3.rampProps,
       variant = _ref3.variant,
       disabled = _ref3.disabled,
-      others = _objectWithoutProperties(_ref3, ["color", "className", "value", "rampProps", "variant", "disabled"]);
+      others = _objectWithoutPropertiesLoose(_ref3, _excluded);
 
   var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      progressValue = _useState2[0],
-      setProgressValue = _useState2[1];
+      progressValue = _useState[0],
+      setProgressValue = _useState[1];
 
   useEffect(function () {
     var progress = 0;
@@ -44,11 +43,11 @@ export var Progress = function Progress(_ref3) {
     "aria-valuemin": valueMin,
     "aria-valuemax": valueMax,
     "aria-valuenow": progressValue,
-    className: classNames('k-Meters-Progress', className, "k-Meters-Progress--".concat(variant), {
+    className: classNames('k-Meters-Progress', className, "k-Meters-Progress--" + variant, {
       'k-Meters-Progress--disabled': disabled
     }),
     sliderColor: color,
-    progressValue: "".concat(progressValue, "%")
+    progressValue: progressValue + "%"
   }), /*#__PURE__*/React.createElement("div", _extends({}, rampProps, {
     className: classNames('k-Meters-Progress__ramp', rampProps.className)
   })));

@@ -2,12 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.useWindowWidth = void 0;
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = require("react");
 
@@ -20,9 +16,8 @@ var getWidth = function getWidth() {
 
 var useWindowWidth = function useWindowWidth() {
   var _useState = (0, _react.useState)(getWidth()),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      width = _useState2[0],
-      setWidth = _useState2[1];
+      width = _useState[0],
+      setWidth = _useState[1];
 
   (0, _react.useEffect)(function () {
     var timeoutId = null;

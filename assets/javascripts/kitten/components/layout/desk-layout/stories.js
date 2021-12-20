@@ -1,16 +1,25 @@
 import React from 'react'
 import { DeskLayout } from './index'
 import { DocsPage } from 'storybook/docs-page'
+import { createGlobalStyle } from 'styled-components'
 import {
   DeskMenu,
   Text,
   HeaderNav,
   KissKissBankBankLogo,
   KissKissLoadingAnimation,
+  HEADER_HEIGHT,
+  pxToRem,
 } from 'kitten'
 import { WithContributions } from './stories/with-contributions'
 import { WithProjects } from './stories/with-projects'
 import { WithForm } from './stories/with-form'
+
+const GlobalStyle = createGlobalStyle`
+  .k-HeaderNav--isStuck + * .k-DeskLayout__menu__inside {
+    top: ${pxToRem(HEADER_HEIGHT + 20)} !important;
+  }
+`
 
 export default {
   title: 'Layout/DeskLayout',
@@ -90,6 +99,7 @@ const VisitorMenu = props => {
 
 export const Default = args => (
   <div>
+    <GlobalStyle />
     <HeaderNav
       id="header_id"
       quickAccessProps={{
@@ -199,6 +209,7 @@ export const Default = args => (
 
 export const WithContributionsContent = args => (
   <div>
+    <GlobalStyle />
     <HeaderNav
       id="header_id"
       quickAccessProps={{
@@ -230,6 +241,7 @@ export const WithContributionsContent = args => (
 
 export const WithProjectsContent = args => (
   <div>
+    <GlobalStyle />
     <HeaderNav
       id="header_id"
       quickAccessProps={{
@@ -261,6 +273,7 @@ export const WithProjectsContent = args => (
 
 export const WithFormContent = args => (
   <div>
+    <GlobalStyle />
     <HeaderNav
       id="header_id"
       quickAccessProps={{
@@ -291,6 +304,7 @@ export const WithFormContent = args => (
 
 export const Loading = args => (
   <div>
+    <GlobalStyle />
     <HeaderNav
       id="header_id"
       quickAccessProps={{

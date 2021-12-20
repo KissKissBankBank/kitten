@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Separator = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,10 +21,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["darker", "className"];
 var Separator = (0, _styledComponents.default)(function (_ref) {
   var darker = _ref.darker,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["darker", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var separatorClassName = (0, _classnames.default)('k-Separator', {
     'k-Separator--darker': darker
   }, className);
@@ -35,7 +34,7 @@ var Separator = (0, _styledComponents.default)(function (_ref) {
   }, props));
 }).withConfig({
   displayName: "separator__Separator",
-  componentId: "b93pln-0"
+  componentId: "sc-b93pln-0"
 })(["margin:0;border:none;background:", ";height:", ";&.k-Separator--darker{background:", ";}"], _colorsConfig.default.line1, (0, _typography.pxToRem)(1), _colorsConfig.default.line2);
 exports.Separator = Separator;
 Separator.propTypes = {

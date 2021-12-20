@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CheckboxSet = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,6 +23,9 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../../components/form/label");
 
+var _excluded = ["items", "disabled", "className", "name", "error", "label", "children", "variant"],
+    _excluded2 = ["id", "className"];
+
 var StyledCheckboxSet = _styledComponents.default.fieldset.withConfig({
   displayName: "checkbox-set__StyledCheckboxSet",
   componentId: "sc-1x5pmus-0"
@@ -39,7 +40,7 @@ var CheckboxSet = function CheckboxSet(_ref) {
       label = _ref.label,
       children = _ref.children,
       variant = _ref.variant,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "label", "children", "variant"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledCheckboxSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-CheckboxSet', className),
     disabled: disabled
@@ -49,7 +50,7 @@ var CheckboxSet = function CheckboxSet(_ref) {
   }, label), children && !label && /*#__PURE__*/_react.default.createElement("legend", null, children), items.map(function (_ref2) {
     var id = _ref2.id,
         className = _ref2.className,
-        itemProps = (0, _objectWithoutProperties2.default)(_ref2, ["id", "className"]);
+        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
     return /*#__PURE__*/_react.default.createElement(_checkbox.Checkbox, (0, _extends2.default)({
       id: id,
       error: error,

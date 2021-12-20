@@ -390,6 +390,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
   closeOnClick={false}
   id="accordeon"
   isAnimated={false}
+  multiple={false}
   onChange={[Function]}
   selectedItem={null}
   variant="orion"
@@ -839,6 +840,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
   closeOnClick={false}
   id="accordeon"
   isAnimated={true}
+  multiple={false}
   onChange={[Function]}
   selectedItem={0}
   variant="orion"
@@ -1220,6 +1222,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
   closeOnClick={false}
   id="accordeon"
   isAnimated={true}
+  multiple={false}
   onChange={[Function]}
   selectedItem={null}
   variant="orion"

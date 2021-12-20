@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "size"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -14,11 +15,11 @@ var StyledButton = styled.button.withConfig({
 export var TextButton = function TextButton(_ref) {
   var className = _ref.className,
       size = _ref.size,
-      props = _objectWithoutProperties(_ref, ["className", "size"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
     type: "button",
-    className: classNames('k-TextButton', 'k-u-reset-button', className, "k-TextButton--".concat(size))
+    className: classNames('k-TextButton', 'k-u-reset-button', className, "k-TextButton--" + size)
   }, props));
 };
 TextButton.defaultProps = {

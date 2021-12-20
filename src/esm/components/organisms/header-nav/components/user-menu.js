@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"];
 import React, { cloneElement, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Context } from './context';
@@ -10,7 +10,7 @@ import { DropdownButton } from './dropdown-button';
 import { useDropdown } from '../hooks/use-dropdown';
 import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon';
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
+var CLOSE_EVENT = namespace + ":userMenu:close";
 export var UserMenu = function UserMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
@@ -19,7 +19,7 @@ export var UserMenu = function UserMenu(_ref) {
       className = _ref.className,
       padding = _ref.padding,
       mobilePadding = _ref.mobilePadding,
-      props = _objectWithoutProperties(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useContext = useContext(Context),
       id = _useContext.id,
@@ -38,9 +38,9 @@ export var UserMenu = function UserMenu(_ref) {
     dropdownContentWidth: dropdownContentWidth,
     callOnToggle: callOnToggle,
     dropdownAnchorSide: dropdownAnchorSide,
-    closeEvents: [CLOSE_EVENT].concat(_toConsumableArray(closeEvents)),
-    buttonId: "".concat(id, "__UserMenu__Button"),
-    menuId: "".concat(id, "__UserMenu__Menu")
+    closeEvents: [CLOSE_EVENT].concat(closeEvents),
+    buttonId: id + "__UserMenu__Button",
+    menuId: id + "__UserMenu__Menu"
   }),
       dropdownProps = _useDropdown.dropdownProps,
       buttonProps = _useDropdown.buttonProps,
@@ -59,11 +59,11 @@ export var UserMenu = function UserMenu(_ref) {
       '--UserMenu-Button-colorActive': buttonChild.props.colorActive || null
     },
     className: classNames('k-HeaderNav__UserMenuButton', buttonChild.props.className, buttonProps.className)
-  }), cloneElement(buttonChild), /*#__PURE__*/React.createElement(ArrowIcon, {
+  }), /*#__PURE__*/cloneElement(buttonChild), /*#__PURE__*/React.createElement(ArrowIcon, {
     direction: isDropdownExpanded ? 'top' : 'bottom',
     className: "k-u-margin-left-single k-u-hidden@xs-down",
     color: "currentColor"
-  })), /*#__PURE__*/React.createElement("div", menuProps, cloneElement(menuChild)));
+  })), /*#__PURE__*/React.createElement("div", menuProps, /*#__PURE__*/cloneElement(menuChild)));
 };
 
 UserMenu.Button = function (_ref2) {

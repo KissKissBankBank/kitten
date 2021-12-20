@@ -1,6 +1,6 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["options", "children"];
 import React, { useRef, useEffect, useState } from 'react';
 import useContinuousIntersectionObserver from './continuous-intersection-hook';
 import domElementHelper from '../dom/element-helper';
@@ -8,7 +8,7 @@ import domElementHelper from '../dom/element-helper';
 var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_ref) {
   var options = _ref.options,
       children = _ref.children,
-      props = _objectWithoutProperties(_ref, ["options", "children"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var beforeEl = useRef(null);
   var afterEl = useRef(null);
@@ -23,29 +23,24 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
   var isIOpossible = domElementHelper.canUseDom() && 'IntersectionObserver' in window;
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isBeforeElIntersecting = _useState2[0],
-      setBeforeElIntersecting = _useState2[1];
+      isBeforeElIntersecting = _useState[0],
+      setBeforeElIntersecting = _useState[1];
+
+  var _useState2 = useState(false),
+      isTargetElIntersecting = _useState2[0],
+      setTargetElIntersecting = _useState2[1];
 
   var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isTargetElIntersecting = _useState4[0],
-      setTargetElIntersecting = _useState4[1];
+      isAfterElIntersecting = _useState3[0],
+      setAfterElIntersecting = _useState3[1];
 
-  var _useState5 = useState(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      isAfterElIntersecting = _useState6[0],
-      setAfterElIntersecting = _useState6[1];
+  var _useState4 = useState(false),
+      isPartlyVisible = _useState4[0],
+      setPartlyVisible = _useState4[1];
 
-  var _useState7 = useState(false),
-      _useState8 = _slicedToArray(_useState7, 2),
-      isPartlyVisible = _useState8[0],
-      setPartlyVisible = _useState8[1];
-
-  var _useState9 = useState('before'),
-      _useState10 = _slicedToArray(_useState9, 2),
-      visibleElement = _useState10[0],
-      setVisibleElement = _useState10[1];
+  var _useState5 = useState('before'),
+      visibleElement = _useState5[0],
+      setVisibleElement = _useState5[1];
 
   if (isIOpossible) {
     useContinuousIntersectionObserver(_extends({

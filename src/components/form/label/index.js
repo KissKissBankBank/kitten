@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Label = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,9 +27,11 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _excluded = ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor", "dot", "style"];
+
 var StyledLabel = _styledComponents.default.label.withConfig({
   displayName: "label__StyledLabel",
-  componentId: "l6ih7y-0"
+  componentId: "sc-l6ih7y-0"
 })(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10));
 
 var Label = function Label(_ref) {
@@ -46,7 +46,7 @@ var Label = function Label(_ref) {
       htmlFor = _ref.htmlFor,
       dot = _ref.dot,
       style = _ref.style,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor", "dot", "style"]);
+      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var handleClick = function handleClick(e) {
     if (_elementHelper.default.canUseDom() && focusId) {
@@ -56,7 +56,7 @@ var Label = function Label(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(StyledLabel, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Label', className, "k-Label--".concat(size), {
+    className: (0, _classnames.default)('k-Label', className, "k-Label--" + size, {
       'k-Label--withoutPointerEvents': withoutPointerEvents
     }),
     htmlFor: focusId || htmlFor,
@@ -67,7 +67,7 @@ var Label = function Label(_ref) {
     title: dot.title,
     tabIndex: "-1",
     style: (0, _extends2.default)({
-      '--dot-background-color': (_dot$backgroundColor = dot === null || dot === void 0 ? void 0 : dot.backgroundColor) !== null && _dot$backgroundColor !== void 0 ? _dot$backgroundColor : null,
+      '--dot-background-color': (_dot$backgroundColor = dot == null ? void 0 : dot.backgroundColor) != null ? _dot$backgroundColor : null,
       '--dot-width': 'width' in dot ? (0, _typography.pxToRem)(dot.width) : null
     }, style)
   }));

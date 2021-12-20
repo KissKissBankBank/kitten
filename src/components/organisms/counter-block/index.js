@@ -2,12 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.CounterBlock = void 0;
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,22 +25,22 @@ var _typography = require("../../../helpers/utils/typography");
 
 var Container = _styledComponents.default.div.withConfig({
   displayName: "counter-block__Container",
-  componentId: "yl4mlz-0"
+  componentId: "sc-yl4mlz-0"
 })(["text-align:center;.styledText{line-height:0.7;white-space:nowrap;display:flex;padding-bottom:", ";margin:0;flex-grow:1;font-size:", ";justify-content:center;@media (min-width:", "px){font-size:", ";}@media (min-width:", "px){font-size:", ";padding-bottom:", ";}@media (min-width:", "px){font-size:", ";padding-bottom:", ";}@media (min-width:", "px){font-size:", ";padding-bottom:", ";}}.styledSubTitle{margin:0;}"], (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(50), _screenConfig.ScreenConfig.XS.min, (0, _typography.pxToRem)(66), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(96), (0, _typography.pxToRem)(6), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(116), (0, _typography.pxToRem)(7), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(158), (0, _typography.pxToRem)(10));
 
 var FlexContainer = _styledComponents.default.div.withConfig({
   displayName: "counter-block__FlexContainer",
-  componentId: "yl4mlz-1"
+  componentId: "sc-yl4mlz-1"
 })(["display:flex;justify-content:center;align-items:center;"]);
 
 var StrokeContainer = _styledComponents.default.div.withConfig({
   displayName: "counter-block__StrokeContainer",
-  componentId: "yl4mlz-2"
+  componentId: "sc-yl4mlz-2"
 })(["flex-grow:2;.styledStroke{width:100%;height:", ";}"], (0, _typography.pxToRem)(6));
 
 var Unit = _styledComponents.default.span.withConfig({
   displayName: "counter-block__Unit",
-  componentId: "yl4mlz-3"
+  componentId: "sc-yl4mlz-3"
 })(["display:inline-flex;align-self:center;font-size:0.5em;"]);
 
 var isString = function isString(val) {
@@ -91,7 +87,7 @@ var CounterBlock = function CounterBlock(_ref) {
     className: "styledSubTitle",
     size: "huge",
     tag: subTitleTag
-  }, (0, _defineProperty2.default)(_React$createElement, "tag", "p"), (0, _defineProperty2.default)(_React$createElement, "fontStyle", "italic"), (0, _defineProperty2.default)(_React$createElement, "weight", "light"), _React$createElement), subTitle)) : subTitle);
+  }, _React$createElement["tag"] = "p", _React$createElement.fontStyle = "italic", _React$createElement.weight = "light", _React$createElement), subTitle)) : subTitle);
 };
 
 exports.CounterBlock = CounterBlock;

@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Input = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -21,11 +19,13 @@ var _textInputWithUnit = require("../../../../form/text-input-with-unit");
 
 var _context = require("../context");
 
+var _excluded = ["valid", "onChange", "className"];
+
 var Input = function Input(_ref) {
   var valid = _ref.valid,
       _onChange = _ref.onChange,
       className = _ref.className,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["valid", "onChange", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var setEmptyInput = _ref2.setEmptyInput;
     return /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, (0, _extends2.default)({
@@ -37,7 +37,7 @@ var Input = function Input(_ref) {
       onChange: function onChange(event) {
         var _event$target, _event$target$value;
 
-        setEmptyInput(((_event$target = event.target) === null || _event$target === void 0 ? void 0 : (_event$target$value = _event$target.value) === null || _event$target$value === void 0 ? void 0 : _event$target$value.length) === 0);
+        setEmptyInput(((_event$target = event.target) == null ? void 0 : (_event$target$value = _event$target.value) == null ? void 0 : _event$target$value.length) === 0);
 
         _onChange(event);
       }

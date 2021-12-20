@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["legend", "value", "fullWidth"];
 import React from 'react';
 import classNames from 'classnames';
 import { Text } from '../../../../atoms/typography/text';
@@ -8,7 +9,7 @@ export var Info = function Info(_ref) {
       value = _ref.value,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
-      props = _objectWithoutProperties(_ref, ["legend", "value", "fullWidth"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("p", _extends({}, props, {
     className: classNames('k-BackingCard__info', 'k-u-size-tiny', 'k-u-line-height-normal', props.className, {

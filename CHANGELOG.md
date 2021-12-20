@@ -9,6 +9,25 @@ Features:
   - `SummaryCard`: Add component.
   - `RewardSummaryCard`: Deprecate component.
 
+## [6.10.0] - 2021-12-16
+
+Features:
+
+  - CommentForm: Add close button, add `onClose` and `closeButtonText` props
+  - `Accordeon`: Add `multiple` prop to let more than one item opened.
+
+## [6.9.1] - 2021-12-15
+
+Fix: 
+  - Logo: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
+
+## [6.9.0] - 2021-12-15
+
+Features:
+
+  - `StickyContainer`: Add `onChange` event prop.
+  - `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
+
 ## [6.8.0] - 2021-12-14
 
 Features:

@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["backgroundColor", "alt"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../../components/atoms/typography/text';
@@ -13,7 +14,7 @@ var Image = function Image(_ref) {
       _ref$imageProps = _ref.imageProps,
       backgroundColor = _ref$imageProps.backgroundColor,
       alt = _ref$imageProps.alt,
-      otherImageProps = _objectWithoutProperties(_ref$imageProps, ["backgroundColor", "alt"]),
+      otherImageProps = _objectWithoutPropertiesLoose(_ref$imageProps, _excluded),
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       avatarProps = _ref.avatarProps,
@@ -43,7 +44,7 @@ var Image = function Image(_ref) {
     }, videoProps.style) : videoProps.style
   }), videoSources.map(function (sourceProps) {
     return /*#__PURE__*/React.createElement("source", _extends({
-      key: "video_source_".concat(sourceProps.src)
+      key: "video_source_" + sourceProps.src
     }, sourceProps));
   }))), /*#__PURE__*/React.createElement("div", {
     className: "k-CrowdfundingCard__image__ownerContainer"

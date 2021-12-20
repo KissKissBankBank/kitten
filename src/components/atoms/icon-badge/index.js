@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.IconBadge = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,6 +20,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
 var _typography = require("../../../helpers/utils/typography");
+
+var _excluded = ["className", "children", "disabled", "valid", "empty", "big", "huge", "size", "border", "backgroundColor", "status", "hasBorder"];
 
 var StyledBadge = _styledComponents.default.span.withConfig({
   displayName: "icon-badge__StyledBadge",
@@ -43,9 +43,9 @@ var IconBadge = function IconBadge(_ref) {
       backgroundColor = _ref.backgroundColor,
       status = _ref.status,
       hasBorder = _ref.hasBorder,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size", "border", "backgroundColor", "status", "hasBorder"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--".concat(size), "k-IconBadge--".concat(status), {
+    className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--" + size, "k-IconBadge--" + status, {
       'k-IconBadge--disabled': disabled && status === 'info',
       // if default prop
       'k-IconBadge--valid': valid && status === 'info',
@@ -57,10 +57,10 @@ var IconBadge = function IconBadge(_ref) {
       'k-IconBadge--hasBorder': hasBorder
     }),
     style: {
-      '--iconBadge-background-color': backgroundColor !== null && backgroundColor !== void 0 ? backgroundColor : null,
+      '--iconBadge-background-color': backgroundColor != null ? backgroundColor : null,
       '--iconBadge-border-width': 'width' in border ? (0, _typography.pxToRem)(border.width) : null,
-      '--iconBadge-border-style': (_border$style = border === null || border === void 0 ? void 0 : border.style) !== null && _border$style !== void 0 ? _border$style : null,
-      '--iconBadge-border-color': (_border$color = border === null || border === void 0 ? void 0 : border.color) !== null && _border$color !== void 0 ? _border$color : null
+      '--iconBadge-border-style': (_border$style = border == null ? void 0 : border.style) != null ? _border$style : null,
+      '--iconBadge-border-color': (_border$color = border == null ? void 0 : border.color) != null ? _border$color : null
     }
   }, others), children);
 };

@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor", "dot", "style"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -11,7 +12,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 var StyledLabel = styled.label.withConfig({
   displayName: "label__StyledLabel",
-  componentId: "l6ih7y-0"
+  componentId: "sc-l6ih7y-0"
 })(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(ScreenConfig.S.min), stepToRem(0), stepToRem(0), stepToRem(-1), pxToRem(10));
 export var Label = function Label(_ref) {
   var _dot$backgroundColor;
@@ -25,7 +26,7 @@ export var Label = function Label(_ref) {
       htmlFor = _ref.htmlFor,
       dot = _ref.dot,
       style = _ref.style,
-      other = _objectWithoutProperties(_ref, ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor", "dot", "style"]);
+      other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var handleClick = function handleClick(e) {
     if (domElementHelper.canUseDom() && focusId) {
@@ -35,7 +36,7 @@ export var Label = function Label(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledLabel, _extends({
-    className: classNames('k-Label', className, "k-Label--".concat(size), {
+    className: classNames('k-Label', className, "k-Label--" + size, {
       'k-Label--withoutPointerEvents': withoutPointerEvents
     }),
     htmlFor: focusId || htmlFor,
@@ -46,7 +47,7 @@ export var Label = function Label(_ref) {
     title: dot.title,
     tabIndex: "-1",
     style: _extends({
-      '--dot-background-color': (_dot$backgroundColor = dot === null || dot === void 0 ? void 0 : dot.backgroundColor) !== null && _dot$backgroundColor !== void 0 ? _dot$backgroundColor : null,
+      '--dot-background-color': (_dot$backgroundColor = dot == null ? void 0 : dot.backgroundColor) != null ? _dot$backgroundColor : null,
       '--dot-width': 'width' in dot ? pxToRem(dot.width) : null
     }, style)
   }));

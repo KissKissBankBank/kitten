@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["color", "duration", "type", "name", "begin", "animated", "title"];
 import React from 'react';
 import COLORS from '../../../../constants/colors-config';
 export var FilterIcon = function FilterIcon(_ref) {
@@ -10,7 +11,7 @@ export var FilterIcon = function FilterIcon(_ref) {
       begin = _ref.begin,
       animated = _ref.animated,
       title = _ref.title,
-      others = _objectWithoutProperties(_ref, ["color", "duration", "type", "name", "begin", "animated", "title"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var animationDuration = animated ? duration : null;
   return /*#__PURE__*/React.createElement("svg", _extends({

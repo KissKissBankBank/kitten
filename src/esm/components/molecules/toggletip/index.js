@@ -1,6 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"],
+    _excluded2 = ["className", "zIndex", "color", "style"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -45,42 +46,35 @@ export var Toggletip = function Toggletip(_ref2) {
       actionProps = _ref2.actionProps,
       bubbleProps = _ref2.bubbleProps,
       targetElement = _ref2.targetElement,
-      props = _objectWithoutProperties(_ref2, ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"]);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      isHover = _useState2[0],
-      setHoverState = _useState2[1];
+      isHover = _useState[0],
+      setHoverState = _useState[1];
+
+  var _useState2 = useState(false),
+      hasBeenClicked = _useState2[0],
+      setClickedState = _useState2[1];
 
   var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      hasBeenClicked = _useState4[0],
-      setClickedState = _useState4[1];
+      isOpen = _useState3[0],
+      setOpen = _useState3[1];
+
+  var _useState4 = useState({}),
+      actionPosition = _useState4[0],
+      setActionPosition = _useState4[1];
 
   var _useState5 = useState(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      isOpen = _useState6[0],
-      setOpen = _useState6[1];
+      bubbleOnLeftSide = _useState5[0],
+      setBubbleOnLeftSide = _useState5[1];
 
-  var _useState7 = useState({}),
-      _useState8 = _slicedToArray(_useState7, 2),
-      actionPosition = _useState8[0],
-      setActionPosition = _useState8[1];
+  var _useState6 = useState(false),
+      bubbleLowTop = _useState6[0],
+      setBubbleLowTop = _useState6[1];
 
-  var _useState9 = useState(false),
-      _useState10 = _slicedToArray(_useState9, 2),
-      bubbleOnLeftSide = _useState10[0],
-      setBubbleOnLeftSide = _useState10[1];
-
-  var _useState11 = useState(false),
-      _useState12 = _slicedToArray(_useState11, 2),
-      bubbleLowTop = _useState12[0],
-      setBubbleLowTop = _useState12[1];
-
-  var _useState13 = useState(false),
-      _useState14 = _slicedToArray(_useState13, 2),
-      bubbleRightLimit = _useState14[0],
-      setBubbleRightLimit = _useState14[1];
+  var _useState7 = useState(false),
+      bubbleRightLimit = _useState7[0],
+      setBubbleRightLimit = _useState7[1];
 
   var actionElement = useRef(null);
 
@@ -88,7 +82,7 @@ export var Toggletip = function Toggletip(_ref2) {
       bubbleZIndex = bubbleProps.zIndex,
       bubbleColor = bubbleProps.color,
       bubbleStyle = bubbleProps.style,
-      otherBubbleProps = _objectWithoutProperties(bubbleProps, ["className", "zIndex", "color", "style"]);
+      otherBubbleProps = _objectWithoutPropertiesLoose(bubbleProps, _excluded2);
 
   useEffect(function () {
     if (isHover) {
@@ -107,8 +101,8 @@ export var Toggletip = function Toggletip(_ref2) {
     document.addEventListener('keydown', handleKeydownEscape);
     window.addEventListener('DOMContentLoaded', updateCoordinates);
     window.addEventListener('resize', throttleUpdateCoordinates);
-    var bubbleElement = (_actionElement$curren = actionElement.current) === null || _actionElement$curren === void 0 ? void 0 : (_actionElement$curren2 = _actionElement$curren.nextElementSibling) === null || _actionElement$curren2 === void 0 ? void 0 : _actionElement$curren2.children[0];
-    var bubbleElementCoords = (bubbleElement === null || bubbleElement === void 0 ? void 0 : bubbleElement.getBoundingClientRect()) || {};
+    var bubbleElement = (_actionElement$curren = actionElement.current) == null ? void 0 : (_actionElement$curren2 = _actionElement$curren.nextElementSibling) == null ? void 0 : _actionElement$curren2.children[0];
+    var bubbleElementCoords = (bubbleElement == null ? void 0 : bubbleElement.getBoundingClientRect()) || {};
     var shouldDisplayBubbleLowTop = actionPosition.top < bubbleElementCoords.height / 2;
     setBubbleLowTop(shouldDisplayBubbleLowTop);
     return function () {
@@ -166,7 +160,7 @@ export var Toggletip = function Toggletip(_ref2) {
   };
 
   return /*#__PURE__*/React.createElement(StyledWrapper, _extends({
-    className: classNames('k-Toggletip', className, "k-Toggletip--".concat(modifier)),
+    className: classNames('k-Toggletip', className, "k-Toggletip--" + modifier),
     style: _extends({
       '--toggletipAction-top': actionPosition.top ? pxToRem(actionPosition.top) : undefined,
       '--toggletipAction-left': actionPosition.left ? pxToRem(actionPosition.left) : undefined
@@ -177,7 +171,7 @@ export var Toggletip = function Toggletip(_ref2) {
     onMouseLeave: function onMouseLeave() {
       return setHoverState(false);
     }
-  }, props), !!targetElement && React.isValidElement(targetElement) ? /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
+  }, props), !!targetElement && /*#__PURE__*/React.isValidElement(targetElement) ? /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
     ref: actionElement,
     type: "button",
     "aria-label": actionLabel,

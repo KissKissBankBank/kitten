@@ -1,5 +1,3 @@
-import _toConsumableArray from "@babel/runtime/helpers/esm/toConsumableArray";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -18,9 +16,8 @@ export var DevGrid = function DevGrid(_ref) {
       zIndex = _ref.zIndex;
 
   var _useState = useState(visible),
-      _useState2 = _slicedToArray(_useState, 2),
-      isVisible = _useState2[0],
-      setVisibility = _useState2[1];
+      isVisible = _useState[0],
+      setVisibility = _useState[1];
 
   useEffect(function () {
     domElementHelper.canUseDom() && window.addEventListener('keydown', handleKeyDown);
@@ -63,10 +60,10 @@ export var DevGrid = function DevGrid(_ref) {
     className: "k-DevGrid__container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-DevGrid__row"
-  }, _toConsumableArray(Array(NUM_COLUMNS).keys()).map(function (item) {
+  }, Array(NUM_COLUMNS).fill(0).map(function (el, item) {
     return /*#__PURE__*/React.createElement("div", {
       className: "k-DevGrid__col",
-      key: "DevGrid_".concat(item + 1)
+      key: "DevGrid_" + (item + 1)
     }, /*#__PURE__*/React.createElement("div", {
       className: "k-DevGrid__inner"
     }));

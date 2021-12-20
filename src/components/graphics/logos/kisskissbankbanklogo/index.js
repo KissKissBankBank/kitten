@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.KissKissBankBankLogo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -17,12 +15,14 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["color", "width", "height", "tiny"];
+
 var KissKissBankBankLogo = function KissKissBankBankLogo(_ref) {
   var color = _ref.color,
       width = _ref.width,
       height = _ref.height,
       tiny = _ref.tiny,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "width", "height", "tiny"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var DEFAULT_WIDTH = 134;
   var DEFAULT_HEIGHT = 30;
   var TINY_WIDTH = 32;
@@ -40,7 +40,7 @@ var KissKissBankBankLogo = function KissKissBankBankLogo(_ref) {
     role: "img",
     "aria-label": "KissKissBankBank",
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 ".concat(viewBox.x, " ").concat(viewBox.y),
+    viewBox: "0 0 " + viewBox.x + " " + viewBox.y,
     width: computed.width,
     height: tiny ? computed.width : computed.height,
     fill: color

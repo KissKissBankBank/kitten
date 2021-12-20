@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "children", "disabled", "valid", "empty", "big", "huge", "size", "border", "backgroundColor", "status", "hasBorder"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -25,10 +26,10 @@ export var IconBadge = function IconBadge(_ref) {
       backgroundColor = _ref.backgroundColor,
       status = _ref.status,
       hasBorder = _ref.hasBorder,
-      others = _objectWithoutProperties(_ref, ["className", "children", "disabled", "valid", "empty", "big", "huge", "size", "border", "backgroundColor", "status", "hasBorder"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledBadge, _extends({
-    className: classNames('k-IconBadge', className, "k-IconBadge--".concat(size), "k-IconBadge--".concat(status), {
+    className: classNames('k-IconBadge', className, "k-IconBadge--" + size, "k-IconBadge--" + status, {
       'k-IconBadge--disabled': disabled && status === 'info',
       // if default prop
       'k-IconBadge--valid': valid && status === 'info',
@@ -40,10 +41,10 @@ export var IconBadge = function IconBadge(_ref) {
       'k-IconBadge--hasBorder': hasBorder
     }),
     style: {
-      '--iconBadge-background-color': backgroundColor !== null && backgroundColor !== void 0 ? backgroundColor : null,
+      '--iconBadge-background-color': backgroundColor != null ? backgroundColor : null,
       '--iconBadge-border-width': 'width' in border ? pxToRem(border.width) : null,
-      '--iconBadge-border-style': (_border$style = border === null || border === void 0 ? void 0 : border.style) !== null && _border$style !== void 0 ? _border$style : null,
-      '--iconBadge-border-color': (_border$color = border === null || border === void 0 ? void 0 : border.color) !== null && _border$color !== void 0 ? _border$color : null
+      '--iconBadge-border-style': (_border$style = border == null ? void 0 : border.style) != null ? _border$style : null,
+      '--iconBadge-border-color': (_border$color = border == null ? void 0 : border.color) != null ? _border$color : null
     }
   }, others), children);
 };

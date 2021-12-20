@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TeamCardIcons = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31,6 +29,8 @@ var _phoneIcon = require("./phone-icon");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
+var _excluded = ["email", "phoneNumber", "links", "socialLink"];
+
 var StyledTeamCardIcons = _styledComponents.default.div.withConfig({
   displayName: "icons__StyledTeamCardIcons",
   componentId: "sc-18r7e3-0"
@@ -41,7 +41,7 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
       phoneNumber = _ref.phoneNumber,
       links = _ref.links,
       socialLink = _ref.socialLink,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["email", "phoneNumber", "links", "socialLink"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var getSocialLinks = function getSocialLinks() {
     if (links.length > 0) return links; // handle deprecated `socialLink` prop
@@ -55,7 +55,7 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
   return /*#__PURE__*/_react.default.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
     size: "tiny",
     tag: "a",
-    href: "mailto:".concat(email),
+    href: "mailto:" + email,
     modifier: "hydrogen",
     className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon",
     "aria-label": "E-mail"
@@ -82,7 +82,7 @@ var SocialLinks = function SocialLinks(_ref2) {
       key: link.name,
       "aria-label": link.name,
       href: link.href,
-      modifier: "social_".concat(link.name),
+      modifier: "social_" + link.name,
       target: "_blank",
       rel: "noopener",
       className: "k-TeamCardIcons__buttonIcon",

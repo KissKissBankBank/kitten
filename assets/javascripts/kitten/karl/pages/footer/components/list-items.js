@@ -20,7 +20,7 @@ export const ListItems = props => {
       <div>
         <Text
           size="big"
-          weight="bold"
+          weight="regular"
           cssColor="var(--color-grey-000)"
         >
           Financer un projet
@@ -72,7 +72,7 @@ export const ListItems = props => {
       <div>
         <Text
           size="big"
-          weight="bold"
+          weight="regular"
           cssColor="var(--color-grey-000)"
         >
           Partenariats
@@ -108,7 +108,7 @@ export const ListItems = props => {
       <div>
         <Text
           size="big"
-          weight="bold"
+          weight="regular"
           cssColor="var(--color-grey-000)"
         >
           À propos
@@ -147,7 +147,7 @@ export const ListItems = props => {
       <div>
         <Text
           size="big"
-          weight="bold"
+          weight="regular"
           cssColor="var(--color-grey-000)"
         >
           Nos engagements

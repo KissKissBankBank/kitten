@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "labelProps", "onLabelClick", "indeterminate", "label", "variant"];
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -25,7 +26,7 @@ export var Checkbox = function Checkbox(_ref) {
       indeterminate = _ref.indeterminate,
       label = _ref.label,
       variant = _ref.variant,
-      inputProps = _objectWithoutProperties(_ref, ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "labelProps", "onLabelClick", "indeterminate", "label", "variant"]);
+      inputProps = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var inputElement = useRef(null);
   useEffect(function () {
@@ -34,7 +35,7 @@ export var Checkbox = function Checkbox(_ref) {
     }
   }, [indeterminate]);
   return /*#__PURE__*/React.createElement(StyledCheckbox, {
-    className: classNames('k-Form-Checkbox', "k-Form-Checkbox--".concat(variant), {
+    className: classNames('k-Form-Checkbox', "k-Form-Checkbox--" + variant, {
       'k-Form-Checkbox--error': error,
       'k-Form-Checkbox--disabled': disabled
     }, className)
@@ -49,24 +50,24 @@ export var Checkbox = function Checkbox(_ref) {
     htmlFor: id,
     onClick: onLabelClick
   }, labelProps, textProps, {
-    className: classNames('k-Form-Checkbox__label', textProps === null || textProps === void 0 ? void 0 : textProps.className, labelProps === null || labelProps === void 0 ? void 0 : labelProps.className)
+    className: classNames('k-Form-Checkbox__label', textProps == null ? void 0 : textProps.className, labelProps == null ? void 0 : labelProps.className)
   }), children), label && !children && /*#__PURE__*/React.createElement(Text, _extends({
     tag: "label",
     htmlFor: id,
     onClick: onLabelClick
   }, labelProps, textProps, {
-    className: classNames('k-Form-Checkbox__label', textProps === null || textProps === void 0 ? void 0 : textProps.className, labelProps === null || labelProps === void 0 ? void 0 : labelProps.className)
+    className: classNames('k-Form-Checkbox__label', textProps == null ? void 0 : textProps.className, labelProps == null ? void 0 : labelProps.className)
   }), label), label && children && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Text, _extends({
     tag: "label",
     htmlFor: id,
     onClick: onLabelClick,
     weight: "regular"
   }, labelProps, {
-    className: classNames('k-Form-Checkbox__label', labelProps === null || labelProps === void 0 ? void 0 : labelProps.className)
+    className: classNames('k-Form-Checkbox__label', labelProps == null ? void 0 : labelProps.className)
   }), label), /*#__PURE__*/React.createElement(Text, _extends({
     onClick: onLabelClick
   }, textProps, {
-    className: classNames('k-Form-Checkbox__content', textProps === null || textProps === void 0 ? void 0 : textProps.className)
+    className: classNames('k-Form-Checkbox__content', textProps == null ? void 0 : textProps.className)
   }), children)));
 };
 Checkbox.defaultProps = {

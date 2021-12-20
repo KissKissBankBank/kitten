@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import { Button } from '../../../../components/molecules/buttons/button';
 import { QuestionMarkIcon } from '../../../../components/graphics/icons/question-mark-icon';

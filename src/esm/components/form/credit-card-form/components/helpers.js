@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import isEmpty from 'lodash/fp/isEmpty';
 import max from 'lodash/fp/max';
@@ -67,7 +67,7 @@ export var getCreditCardFormat = function getCreditCardFormat(type) {
   var maxLength = max(type.lengths) || 0;
   if (!maxLength) return '#### #### #### ####';
   return Array(maxLength).fill('#').map(function (v, i) {
-    return type.gaps.includes(i + 1) ? "".concat(v, " ") : v;
+    return type.gaps.includes(i + 1) ? v + " " : v;
   }).join('');
 };
 export var withCode = function withCode(number) {

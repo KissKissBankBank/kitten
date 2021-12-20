@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.RadioButtonSet = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +22,9 @@ var _radioButton = require("../../../components/form/radio-button");
 var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../../components/form/label");
+
+var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"],
+    _excluded2 = ["id", "className"];
 
 var StyledRadioButtonSet = _styledComponents.default.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
@@ -42,9 +43,9 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       children = _ref.children,
       size = _ref.size,
       labelProps = _ref.labelProps,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButtonSet, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--".concat(variant)),
+    className: (0, _classnames.default)('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + variant),
     disabled: disabled
   }, props), label && /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
     tag: "legend"
@@ -55,7 +56,7 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
   }, items.map(function (_ref2) {
     var id = _ref2.id,
         className = _ref2.className,
-        itemProps = (0, _objectWithoutProperties2.default)(_ref2, ["id", "className"]);
+        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
     return /*#__PURE__*/_react.default.createElement(_radioButton.RadioButton, (0, _extends2.default)({
       id: id,
       variant: variant,

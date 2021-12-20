@@ -1,15 +1,7 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
+var _excluded = ["className", "zIndex", "position"];
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -24,16 +16,12 @@ var StyledOverlay = styled.div.withConfig({
   return zIndex;
 });
 export var Overlay = /*#__PURE__*/function (_Component) {
-  _inherits(Overlay, _Component);
-
-  var _super = _createSuper(Overlay);
+  _inheritsLoose(Overlay, _Component);
 
   function Overlay(props) {
     var _this;
 
-    _classCallCheck(this, Overlay);
-
-    _this = _super.call(this, props);
+    _this = _Component.call(this, props) || this;
 
     _this.toggleActiveState = function () {
       return _this.setState({
@@ -59,38 +47,35 @@ export var Overlay = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Overlay, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.toggleEvent && window.addEventListener(this.props.toggleEvent, this.toggleActiveState);
-      this.props.closeEvent && window.addEventListener(this.props.closeEvent, this.disableActiveState);
-      this.props.openEvent && window.addEventListener(this.props.openEvent, this.enableActiveState);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.props.toggleEvent && window.removeEventListener(this.props.toggleEvent, this.toggleActiveState);
-      this.props.closeEvent && window.removeEventListener(this.props.closeEvent, this.disableActiveState);
-      this.props.openEvent && window.removeEventListener(this.props.openEvent, this.enableActiveState);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          zIndex = _this$props.zIndex,
-          position = _this$props.position,
-          other = _objectWithoutProperties(_this$props, ["className", "zIndex", "position"]);
+  var _proto = Overlay.prototype;
 
-      var isActive = this.state.isActive;
-      return /*#__PURE__*/React.createElement(StyledOverlay, _extends({
-        zIndex: zIndex,
-        className: classNames(className, 'k-Overlay', "k-Overlay--".concat(position), {
-          'k-Overlay--isActive': isActive
-        })
-      }, other));
-    }
-  }]);
+  _proto.componentDidMount = function componentDidMount() {
+    this.props.toggleEvent && window.addEventListener(this.props.toggleEvent, this.toggleActiveState);
+    this.props.closeEvent && window.addEventListener(this.props.closeEvent, this.disableActiveState);
+    this.props.openEvent && window.addEventListener(this.props.openEvent, this.enableActiveState);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.props.toggleEvent && window.removeEventListener(this.props.toggleEvent, this.toggleActiveState);
+    this.props.closeEvent && window.removeEventListener(this.props.closeEvent, this.disableActiveState);
+    this.props.openEvent && window.removeEventListener(this.props.openEvent, this.enableActiveState);
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        className = _this$props.className,
+        zIndex = _this$props.zIndex,
+        position = _this$props.position,
+        other = _objectWithoutPropertiesLoose(_this$props, _excluded);
+
+    var isActive = this.state.isActive;
+    return /*#__PURE__*/React.createElement(StyledOverlay, _extends({
+      zIndex: zIndex,
+      className: classNames(className, 'k-Overlay', "k-Overlay--" + position, {
+        'k-Overlay--isActive': isActive
+      })
+    }, other));
+  };
 
   return Overlay;
 }(Component);

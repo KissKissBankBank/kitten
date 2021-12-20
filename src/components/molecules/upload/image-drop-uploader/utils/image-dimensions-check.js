@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.areImageDimensionsValid = void 0;
 
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));

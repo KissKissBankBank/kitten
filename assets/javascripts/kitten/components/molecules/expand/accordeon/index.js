@@ -1,5 +1,7 @@
 import React, { useState, cloneElement, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import isArray from 'lodash/fp/isArray'
+import remove from 'lodash/fp/remove'
 import { Item } from './components/item'
 import { Header } from './components/header'
 import { Content } from './components/content'
@@ -167,10 +169,13 @@ export const Accordeon = ({
   id,
   onChange,
   className,
+  multiple,
   ...props
 }) => {
   const items = getReactElementsByType({ children, type: Accordeon.Item })
-  const [internalSelectedItem, setSelectedItem] = useState(selectedItem)
+  const [internalSelectedItem, setSelectedItem] = useState(
+    isArray(selectedItem) ? selectedItem : [selectedItem],
+  )
   const [accordeonWidth, setAccordeonWidth] = useState(0)
   const debouncedAccordeonWidth = useDebounce(accordeonWidth, 200)
   const accordeonElement = useRef(null)
@@ -192,14 +197,24 @@ export const Accordeon = ({
   }, [accordeonElement])
 
   const updateSelectedItem = newSelectedItem => {
-    const newItem =
-      closeOnClick && newSelectedItem === internalSelectedItem
-        ? null
-        : newSelectedItem
-
+    let newItem
+    let ids
+    if (multiple) {
+      newItem = internalSelectedItem.includes(newSelectedItem)
+        ? remove(el => el === newSelectedItem)(internalSelectedItem)
+        : [...internalSelectedItem, newSelectedItem]
+      ids = items
+        .filter((_, index) => newItem.includes(index))
+        .map(item => item.props?.id)
+    } else {
+      newItem =
+        closeOnClick && internalSelectedItem.includes(newSelectedItem)
+          ? []
+          : [newSelectedItem]
+      ids = items[newItem[0]]?.props?.id || `${id}-${newItem}`
+    }
     setSelectedItem(newItem)
-
-    onChange(items[newItem]?.props?.id || `${id}-${newItem}`)
+    onChange(ids)
   }
 
   const context = {
@@ -239,12 +254,13 @@ Accordeon.Header = Header
 Accordeon.Content = Content
 
 Accordeon.propTypes = {
-  selectedItem: PropTypes.number,
+  selectedItem: PropTypes.oneOfType([PropTypes.number, PropTypes.array]),
   onChange: PropTypes.func,
   isAnimated: PropTypes.bool,
   id: PropTypes.string,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   closeOnClick: PropTypes.bool,
+  multiple: PropTypes.bool,
 }
 
 Accordeon.defaultProps = {
@@ -254,4 +270,5 @@ Accordeon.defaultProps = {
   id: 'accordeon',
   variant: 'orion',
   closeOnClick: false,
+  multiple: false,
 }

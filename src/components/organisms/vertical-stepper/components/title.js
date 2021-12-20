@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Title = void 0;
 
 var _react = _interopRequireDefault(require("react"));
@@ -31,7 +29,7 @@ var Title = function Title(_ref) {
       className = _ref.className,
       children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(StyledTitle, {
-    className: (0, _classnames.default)("k-Steppers--VerticalStepper__title--".concat(variant), className)
+    className: (0, _classnames.default)("k-Steppers--VerticalStepper__title--" + variant, className)
   }, children);
 };
 

@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "className", "top", "bottom", "isSticky", "onChange"];
 import React, { useRef, useState, useEffect, useImperativeHandle, forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import classNames from 'classnames';
@@ -29,9 +29,8 @@ function useScrollDirection() {
   // See also https://www.iwakoscott.com/blog/useRef
   // save the new scroll position in state
   var _useState = useState(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      scrollPos = _useState2[0],
-      setScrollPos = _useState2[1]; // useRef Hook to save the old scroll state.
+      scrollPos = _useState[0],
+      setScrollPos = _useState[1]; // useRef Hook to save the old scroll state.
 
 
   var oldScrollPos = useRef(0);
@@ -59,29 +58,26 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
       top = _ref2.top,
       bottom = _ref2.bottom,
       isSticky = _ref2.isSticky,
-      other = _objectWithoutProperties(_ref2, ["children", "className", "top", "bottom", "isSticky"]);
+      onChange = _ref2.onChange,
+      other = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var currentStickyContainer = useRef(null);
 
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      stuck = _useState4[0],
-      setStuckState = _useState4[1];
+  var _useState2 = useState(false),
+      stuck = _useState2[0],
+      setStuckState = _useState2[1];
 
-  var _useState5 = useState(0),
-      _useState6 = _slicedToArray(_useState5, 2),
-      containerHeight = _useState6[0],
-      setContainerHeight = _useState6[1];
+  var _useState3 = useState(0),
+      containerHeight = _useState3[0],
+      setContainerHeight = _useState3[1];
 
-  var _useState7 = useState(false),
-      _useState8 = _slicedToArray(_useState7, 2),
-      currentlyUnsticking = _useState8[0],
-      setCurrentlyUnstickingState = _useState8[1];
+  var _useState4 = useState(false),
+      currentlyUnsticking = _useState4[0],
+      setCurrentlyUnstickingState = _useState4[1];
 
   var _useScrollDirection = useScrollDirection(),
-      _useScrollDirection2 = _slicedToArray(_useScrollDirection, 2),
-      scrollDirectionDown = _useScrollDirection2[0],
-      scrollDirectionUp = _useScrollDirection2[1];
+      scrollDirectionDown = _useScrollDirection[0],
+      scrollDirectionUp = _useScrollDirection[1];
 
   useImperativeHandle(ref, function () {
     return {
@@ -94,6 +90,11 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
     setContainerHeight(currentContainerHeight);
   }, []); // [] makes that Effect fire on Component mount only
 
+  useEffect(function () {
+    onChange({
+      isStuck: stuck || isSticky === 'always'
+    });
+  }, [stuck, isSticky]);
   useEffect(function () {
     if (['always', 'never'].includes(isSticky)) return;
 
@@ -189,9 +190,13 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
   }, other), children));
 };
 
-export var StickyContainer = forwardRef(StickyContainerBase);
+export var StickyContainer = /*#__PURE__*/forwardRef(StickyContainerBase);
+StickyContainer.defaultProps = {
+  onChange: function onChange() {}
+};
 StickyContainer.propTypes = {
   top: PropTypes.number,
   bottom: PropTypes.number,
-  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'])
+  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never']),
+  onChange: PropTypes.func
 };

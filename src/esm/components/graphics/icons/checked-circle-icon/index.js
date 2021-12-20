@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["circleColor", "checkedColor", "color", "bgColor", "title", "width", "height", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
@@ -17,7 +18,7 @@ export var CheckedCircleIcon = function CheckedCircleIcon(_ref) {
       width = _ref.width,
       height = _ref.height,
       className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["circleColor", "checkedColor", "color", "bgColor", "title", "width", "height", "className"]);
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
@@ -59,5 +60,5 @@ export var checkedCircleIconAsString = function checkedCircleIconAsString(_ref2)
       bgColor = _ref2.bgColor,
       circleColor = _ref2.circleColor,
       checkedColor = _ref2.checkedColor;
-  return "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><circle fill=\"".concat(circleColor || bgColor, "\" cx=\"10\" cy=\"10\" r=\"10\" /><path fill=\"").concat(checkedColor || color, "\" d=\"M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z\"/></svg>");
+  return "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\"><circle fill=\"" + (circleColor || bgColor) + "\" cx=\"10\" cy=\"10\" r=\"10\" /><path fill=\"" + (checkedColor || color) + "\" d=\"M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z\"/></svg>";
 };

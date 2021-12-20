@@ -1,4 +1,4 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
+import _extends from "@babel/runtime/helpers/extends";
 import React, { useRef } from 'react';
 import useLazyObserver from '../helpers/utils/lazy-hook';
 

@@ -1,6 +1,5 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _asyncToGenerator from "@babel/runtime/helpers/esm/asyncToGenerator";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
+import _extends from "@babel/runtime/helpers/extends";
+import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -86,48 +85,40 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
       dimensionErrorText = _ref$dimensionErrorTe === void 0 ? '' : _ref$dimensionErrorTe;
 
   var _useState = useState(status),
-      _useState2 = _slicedToArray(_useState, 2),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
+      internalStatus = _useState[0],
+      setInternalStatus = _useState[1];
 
   useEffect(function () {
     return setInternalStatus(status);
   }, [status]);
 
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isDraggingOver = _useState4[0],
-      setDraggingOver = _useState4[1];
+  var _useState2 = useState(false),
+      isDraggingOver = _useState2[0],
+      setDraggingOver = _useState2[1];
 
-  var _useState5 = useState(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      imageRawData = _useState6[0],
-      setImageRawData = _useState6[1];
+  var _useState3 = useState(null),
+      imageRawData = _useState3[0],
+      setImageRawData = _useState3[1];
 
-  var _useState7 = useState(initialValue),
-      _useState8 = _slicedToArray(_useState7, 2),
-      imageDataURL = _useState8[0],
-      setImageDataURL = _useState8[1];
+  var _useState4 = useState(initialValue),
+      imageDataURL = _useState4[0],
+      setImageDataURL = _useState4[1];
 
-  var _useState9 = useState({}),
-      _useState10 = _slicedToArray(_useState9, 2),
-      cropperData = _useState10[0],
-      setCropperData = _useState10[1];
+  var _useState5 = useState({}),
+      cropperData = _useState5[0],
+      setCropperData = _useState5[1];
 
-  var _useState11 = useState(initialCrop),
-      _useState12 = _slicedToArray(_useState11, 2),
-      internalInitialCrop = _useState12[0],
-      setInternalInitialCrop = _useState12[1];
+  var _useState6 = useState(initialCrop),
+      internalInitialCrop = _useState6[0],
+      setInternalInitialCrop = _useState6[1];
 
-  var _useState13 = useState(error),
-      _useState14 = _slicedToArray(_useState13, 2),
-      isError = _useState14[0],
-      setError = _useState14[1];
+  var _useState7 = useState(error),
+      isError = _useState7[0],
+      setError = _useState7[1];
 
-  var _useState15 = useState(errorMessage),
-      _useState16 = _slicedToArray(_useState15, 2),
-      internalErrorMessage = _useState16[0],
-      setErrorMessage = _useState16[1];
+  var _useState8 = useState(errorMessage),
+      internalErrorMessage = _useState8[0],
+      setErrorMessage = _useState8[1];
 
   useEffect(function () {
     if (initialValue !== '') {
@@ -219,7 +210,7 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
 
             onUpload({
               value: reader.result,
-              name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+              name: (imageRawData == null ? void 0 : imageRawData.name) || null,
               file: imageRawData || null
             });
 
@@ -262,7 +253,7 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
           case 8:
             onChange({
               value: imageDataURL,
-              name: (imageRawData === null || imageRawData === void 0 ? void 0 : imageRawData.name) || null,
+              name: (imageRawData == null ? void 0 : imageRawData.name) || null,
               file: imageRawData || null,
               cropperData: cropperData
             });
@@ -358,7 +349,7 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     id: id,
     onChange: onFileInputChange,
     disabled: disabled,
-    "aria-describedby": isError && internalErrorMessage ? "".concat(id, "-error-description") : null,
+    "aria-describedby": isError && internalErrorMessage ? id + "-error-description" : null,
     accept: acceptedMimeTypes.join(', ')
   })), /*#__PURE__*/React.createElement("label", _extends({}, buttonProps, {
     htmlFor: id,
@@ -387,8 +378,8 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     },
     src: imageDataURL,
     onChange: handleCropperChange,
-    id: "".concat(id, "-cropper"),
-    "aria-describedby": "".concat(id, "-cropper-description"),
+    id: id + "-cropper",
+    "aria-describedby": id + "-cropper-description",
     initialCrop: internalInitialCrop,
     disabled: disabled
   }) : /*#__PURE__*/React.createElement("div", {
@@ -405,7 +396,7 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "k-ImageDropUploader__manager__content",
-    id: "".concat(id, "-cropper-description")
+    id: id + "-cropper-description"
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-ImageDropUploader__manager__title"
   }, managerTitle), /*#__PURE__*/React.createElement("div", {
@@ -417,7 +408,7 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     size: "micro",
     closeButtonLabel: cancelButtonText
   })), isError && internalErrorMessage && /*#__PURE__*/React.createElement(Text, {
-    id: "".concat(id, "-error-description"),
+    id: id + "-error-description",
     as: "p",
     size: "micro",
     color: "error",

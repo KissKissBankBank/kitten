@@ -1,5 +1,5 @@
 import React from 'react';
-export var Context = React.createContext({
+export var Context = /*#__PURE__*/React.createContext({
   id: 'kkbbAndCoHeaderNav',
   isLogged: false,
   callOnToggle: function callOnToggle() {},

@@ -1,5 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -24,11 +25,11 @@ export var TagButton = function TagButton(_ref) {
       size = _ref.size,
       tag = _ref.tag,
       as = _ref.as,
-      others = _objectWithoutProperties(_ref, ["children", "modifier", "selected", "tiny", "big", "huge", "icon", "className", "variant", "size", "tag", "as"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledTagButton, _extends({
     type: !tag && !as ? 'button' : null,
-    className: classNames('k-Buttons__tagButton', className, "k-Buttons__tagButton--".concat(modifier), "k-Buttons__tagButton--".concat(variant), "k-Buttons__tagButton--".concat(size), {
+    className: classNames('k-Buttons__tagButton', className, "k-Buttons__tagButton--" + modifier, "k-Buttons__tagButton--" + variant, "k-Buttons__tagButton--" + size, {
       'k-Buttons__tagButton--selected': selected,
       'k-Buttons__tagButton--icon': icon
     }),

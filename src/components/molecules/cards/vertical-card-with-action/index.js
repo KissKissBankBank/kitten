@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.VerticalCardWithAction = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -27,6 +25,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"];
+
 var StyledVerticalCardWithAction = _styledComponents.default.div.withConfig({
   displayName: "vertical-card-with-action__StyledVerticalCardWithAction",
   componentId: "sc-1dv1gv6-0"
@@ -41,7 +41,7 @@ var VerticalCardWithAction = function VerticalCardWithAction(_ref) {
       button = _ref.button,
       buttonModifier = _ref.buttonModifier,
       buttonProps = _ref.buttonProps,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledVerticalCardWithAction, others, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-u-margin-bottom-triple"
   }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {

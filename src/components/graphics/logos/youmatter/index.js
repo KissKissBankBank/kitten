@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.YouMatterLogo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -17,11 +15,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
+var _excluded = ["width", "height", "color"];
+
 var YouMatterLogo = function YouMatterLogo(_ref) {
   var width = _ref.width,
       height = _ref.height,
       color = _ref.color,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["width", "height", "color"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var DEFAULT_WIDTH = 231;
   var DEFAULT_HEIGHT = 40;
   var computed = (0, _ratio.computeFromRatio)({
@@ -38,7 +38,7 @@ var YouMatterLogo = function YouMatterLogo(_ref) {
     role: "img",
     "aria-label": "Youmatter",
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 ".concat(viewBox.x, " ").concat(viewBox.y),
+    viewBox: "0 0 " + viewBox.x + " " + viewBox.y,
     width: computed.width,
     height: computed.height,
     fill: color

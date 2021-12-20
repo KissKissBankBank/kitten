@@ -1,17 +1,9 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.DevGrid = void 0;
-
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -27,6 +19,10 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _elementHelper = require("../../../helpers/dom/element-helper");
 
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var StyledDev = _styledComponents.default.div.withConfig({
   displayName: "dev-grid__StyledDev",
   componentId: "sc-1xn9237-0"
@@ -39,9 +35,8 @@ var DevGrid = function DevGrid(_ref) {
       zIndex = _ref.zIndex;
 
   var _useState = (0, _react.useState)(visible),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isVisible = _useState2[0],
-      setVisibility = _useState2[1];
+      isVisible = _useState[0],
+      setVisibility = _useState[1];
 
   (0, _react.useEffect)(function () {
     _elementHelper.domElementHelper.canUseDom() && window.addEventListener('keydown', handleKeyDown);
@@ -84,10 +79,10 @@ var DevGrid = function DevGrid(_ref) {
     className: "k-DevGrid__container"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DevGrid__row"
-  }, (0, _toConsumableArray2.default)(Array(_gridConfig.NUM_COLUMNS).keys()).map(function (item) {
+  }, Array(_gridConfig.NUM_COLUMNS).fill(0).map(function (el, item) {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "k-DevGrid__col",
-      key: "DevGrid_".concat(item + 1)
+      key: "DevGrid_" + (item + 1)
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "k-DevGrid__inner"
     }));

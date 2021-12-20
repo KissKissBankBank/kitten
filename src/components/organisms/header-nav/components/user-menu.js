@@ -1,19 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.UserMenu = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,8 +25,14 @@ var _useDropdown2 = require("../hooks/use-dropdown");
 
 var _arrowIcon = require("../../../../components/graphics/icons/arrow-icon");
 
+var _excluded = ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = "".concat(namespace, ":userMenu:close");
+var CLOSE_EVENT = namespace + ":userMenu:close";
 
 var UserMenu = function UserMenu(_ref) {
   var children = _ref.children,
@@ -42,7 +42,7 @@ var UserMenu = function UserMenu(_ref) {
       className = _ref.className,
       padding = _ref.padding,
       mobilePadding = _ref.mobilePadding,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "closeEvents", "dropdownAnchorSide", "className", "padding", "mobilePadding"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_context.Context),
       id = _useContext.id,
@@ -61,9 +61,9 @@ var UserMenu = function UserMenu(_ref) {
     dropdownContentWidth: dropdownContentWidth,
     callOnToggle: callOnToggle,
     dropdownAnchorSide: dropdownAnchorSide,
-    closeEvents: [CLOSE_EVENT].concat((0, _toConsumableArray2.default)(closeEvents)),
-    buttonId: "".concat(id, "__UserMenu__Button"),
-    menuId: "".concat(id, "__UserMenu__Menu")
+    closeEvents: [CLOSE_EVENT].concat(closeEvents),
+    buttonId: id + "__UserMenu__Button",
+    menuId: id + "__UserMenu__Menu"
   }),
       dropdownProps = _useDropdown.dropdownProps,
       buttonProps = _useDropdown.buttonProps,
@@ -82,11 +82,11 @@ var UserMenu = function UserMenu(_ref) {
       '--UserMenu-Button-colorActive': buttonChild.props.colorActive || null
     },
     className: (0, _classnames.default)('k-HeaderNav__UserMenuButton', buttonChild.props.className, buttonProps.className)
-  }), (0, _react.cloneElement)(buttonChild), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+  }), /*#__PURE__*/(0, _react.cloneElement)(buttonChild), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     direction: isDropdownExpanded ? 'top' : 'bottom',
     className: "k-u-margin-left-single k-u-hidden@xs-down",
     color: "currentColor"
-  })), /*#__PURE__*/_react.default.createElement("div", menuProps, (0, _react.cloneElement)(menuChild)));
+  })), /*#__PURE__*/_react.default.createElement("div", menuProps, /*#__PURE__*/(0, _react.cloneElement)(menuChild)));
 };
 
 exports.UserMenu = UserMenu;

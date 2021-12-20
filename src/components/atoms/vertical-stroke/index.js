@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.VerticalStroke = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -23,10 +21,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _excluded = ["className", "size"];
 var VerticalStroke = (0, _styledComponents.default)(function (_ref) {
   var className = _ref.className,
       size = _ref.size,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["className", "size"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var verticalStrokeClassName = (0, _classnames.default)('k-VerticalStroke', {
     'k-VerticalStroke--tiny': size === 'tiny',
     'k-VerticalStroke--default': size === 'default',

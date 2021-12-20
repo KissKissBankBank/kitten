@@ -1,6 +1,6 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["limit", "onChange", "disabled", "value", "defaultValue"];
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
@@ -11,7 +11,7 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 import classNames from 'classnames';
 var StyledTextInputWithLimit = styled.div.withConfig({
   displayName: "text-input-with-limit__StyledTextInputWithLimit",
-  componentId: "ufrmmb-0"
+  componentId: "sc-ufrmmb-0"
 })(["position:relative;display:block;.k-Form-TextInputWithLimit__limitNumber{", ";font-size:", ";line-height:1.3;position:absolute;right:", ";top:", ";color:", ";text-shadow:", " 0 0 ", ",-", " 0 0 ", ",0 ", " 0 ", ",0 -", " 0 ", ",", " ", " ", ",-", " -", " 0 ", ",", " -", " 0 ", ",-", " ", " 0 ", ";pointer-events:none;.k-Form-TextInputWithLimit__limitNumber--disabled{text-shadow:none;}}&:focus + .k-Form-TextInputWithLimit__limitNumber,&:focus-within + .k-Form-TextInputWithLimit__limitNumber{color:", ";}.k-Form-TextInputWithLimit__limitNumber--error{color:", " !important;}.k-Form-TextInput__textareaContainer--orion,.k-Form-TextInput--orion{& + .k-Form-TextInputWithLimit__limitNumber{top:initial;bottom:", ";right:", ";}}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-2), pxToRem(5), pxToRem(5), COLORS.font2, pxToRem(2), COLORS.background1, pxToRem(2), COLORS.background1, pxToRem(2), COLORS.background1, pxToRem(2), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, COLORS.font1, COLORS.error, pxToRem(15), pxToRem(15));
 export var TextInputWithLimit = function TextInputWithLimit(_ref) {
   var limit = _ref.limit,
@@ -19,16 +19,14 @@ export var TextInputWithLimit = function TextInputWithLimit(_ref) {
       disabled = _ref.disabled,
       value = _ref.value,
       defaultValue = _ref.defaultValue,
-      others = _objectWithoutProperties(_ref, ["limit", "onChange", "disabled", "value", "defaultValue"]);
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(value || defaultValue),
-      _useState2 = _slicedToArray(_useState, 1),
-      textValue = _useState2[0];
+      textValue = _useState[0];
 
-  var _useState3 = useState(textValue.length),
-      _useState4 = _slicedToArray(_useState3, 2),
-      length = _useState4[0],
-      setLength = _useState4[1];
+  var _useState2 = useState(textValue.length),
+      length = _useState2[0],
+      setLength = _useState2[1];
 
   return /*#__PURE__*/React.createElement(StyledTextInputWithLimit, {
     className: "k-Form-TextInputWithLimit"

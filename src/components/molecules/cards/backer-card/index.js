@@ -2,12 +2,10 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.BackerCard = void 0;
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,6 +20,8 @@ var _marger = require("../../../../components/layout/marger");
 var _text = require("../../../../components/atoms/typography/text");
 
 var _buttonImage = require("../../../../components/molecules/buttons/button-image");
+
+var _excluded = ["title", "subtitle", "imgProps", "description"];
 
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "backer-card__StyledCard",
@@ -42,7 +42,7 @@ var BackerCard = function BackerCard(_ref) {
       subtitle = _ref.subtitle,
       imgProps = _ref.imgProps,
       description = _ref.description,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["title", "subtitle", "imgProps", "description"]);
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledCard, others, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "4",
     bottom: "1"

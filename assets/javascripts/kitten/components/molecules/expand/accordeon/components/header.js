@@ -16,8 +16,8 @@ export const Header = ({ id, children, index, className, ...props }) => {
       className={classNames('k-Accordeon__header', className)}
       onClick={() => updateSelectedItem(index)}
       role="button"
-      aria-expanded={selectedItem === index}
-      aria-disabled={closeOnClick ? null : selectedItem === index}
+      aria-expanded={selectedItem.includes(index)}
+      aria-disabled={closeOnClick ? null : selectedItem.includes(index)}
       id={`${componentId}-${id}_header`}
       aria-controls={`${componentId}-${id}_content`}
       {...props}
@@ -25,7 +25,7 @@ export const Header = ({ id, children, index, className, ...props }) => {
       <span className="k-Accordeon__header__content">{children}</span>
       <span className="k-Accordeon__header__arrow">
         <ArrowIcon
-          direction={selectedItem === index ? 'top' : 'bottom'}
+          direction={selectedItem.includes(index) ? 'top' : 'bottom'}
           aria-hidden
         />
       </span>

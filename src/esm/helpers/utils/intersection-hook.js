@@ -1,4 +1,3 @@
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import { useEffect, useState } from 'react';
 import { IntersectionObserverClass } from './intersection-observer';
 
@@ -8,9 +7,8 @@ var useIntersectionObserver = function useIntersectionObserver(_ref) {
   var Observer = new IntersectionObserverClass(options);
 
   var _useState = useState(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      withIntersectionObserver = _useState2[0],
-      setIntersectionObserver = _useState2[1];
+      withIntersectionObserver = _useState[0],
+      setIntersectionObserver = _useState[1];
 
   useEffect(function () {
     if (!observedComponentRef || observedComponentRef && !observedComponentRef.current) {

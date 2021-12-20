@@ -1,13 +1,13 @@
-import _extends from "@babel/runtime/helpers/esm/extends";
-import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["children", "col", "offset", "as", "className"];
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { NUM_COLUMNS, GUTTER } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-var GridProperties = createContext({});
+var GridProperties = /*#__PURE__*/createContext({});
 export var AdaptableGrid = function AdaptableGrid(_ref) {
   var children = _ref.children,
       gutter = _ref.gutter,
@@ -35,12 +35,11 @@ export var AdaptableGridCol = function AdaptableGridCol(_ref2) {
       offset = _ref2.offset,
       as = _ref2.as,
       className = _ref2.className,
-      other = _objectWithoutProperties(_ref2, ["children", "col", "offset", "as", "className"]);
+      other = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   var _useState = useState(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      styles = _useState2[0],
-      setStyles = _useState2[1];
+      styles = _useState[0],
+      setStyles = _useState[1];
 
   var _useContext = useContext(GridProperties),
       colAlign = _useContext.colAlign,
@@ -53,8 +52,8 @@ export var AdaptableGridCol = function AdaptableGridCol(_ref2) {
 
     var stylesByMediaQuery = Object.keys(ScreenConfig).map(function (size) {
       var mediaQuery = size.toLowerCase();
-      var col = props["col-".concat(mediaQuery)];
-      var offset = props["offset-".concat(mediaQuery)];
+      var col = props["col-" + mediaQuery];
+      var offset = props["offset-" + mediaQuery];
 
       if (!col && !offset) {
         return false;

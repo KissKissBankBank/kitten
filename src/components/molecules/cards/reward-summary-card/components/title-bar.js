@@ -2,9 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.TitleBar = void 0;
 
 var _react = _interopRequireDefault(require("react"));
@@ -28,36 +26,36 @@ var TitleBar = function TitleBar(_ref) {
       contributions = values.contributions,
       availability = values.availability;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledRewardSummaryTitles, {
-    className: (0, _classnames.default)('k-RewardSummaryCard-TitleBar', className, "k-RewardSummaryCard-Wrapper--".concat(size))
+    className: (0, _classnames.default)('k-RewardSummaryCard-TitleBar', className, "k-RewardSummaryCard-Wrapper--" + size)
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-RewardSummaryCard-Wrapper__imageWrapper"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__image",
-    id: "".concat(id, "-image")
+    id: id + "-image"
   }, image)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-RewardSummaryCard-Wrapper__gridWrapper"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__title",
-    id: "".concat(id, "-title")
+    id: id + "-title"
   }, title), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__amount",
-    id: "".concat(id, "-amount")
+    id: id + "-amount"
   }, amount), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__contributions",
-    id: "".concat(id, "-contributions")
+    id: id + "-contributions"
   }, contributions), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     weight: "regular",
     className: "k-RewardSummaryCard-TitleBar__availability",
-    id: "".concat(id, "-availability")
+    id: id + "-availability"
   }, availability)));
 };
 

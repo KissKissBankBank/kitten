@@ -1,17 +1,13 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.ClickableCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -24,6 +20,14 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _typography = require("../../../../helpers/utils/typography");
+
+var _excluded = ["backgroundColor", "borderColor", "children", "disabled", "fluid", "size"],
+    _excluded2 = ["children", "fit", "shape"],
+    _excluded3 = ["children"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var StyledClickableCard = _styledComponents.default.button.withConfig({
   displayName: "clickable-card__StyledClickableCard",
@@ -49,7 +53,7 @@ var ClickableCard = function ClickableCard(_ref5) {
       disabled = _ref5.disabled,
       fluid = _ref5.fluid,
       size = _ref5.size,
-      props = (0, _objectWithoutProperties2.default)(_ref5, ["backgroundColor", "borderColor", "children", "disabled", "fluid", "size"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref5, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledClickableCard, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ClickableCard', 'k-u-reset-button', props.className, {
       'k-ClickableCard--fluid': fluid
@@ -67,15 +71,15 @@ var ClickableCardImage = function ClickableCardImage(_ref6) {
   var children = _ref6.children,
       fit = _ref6.fit,
       shape = _ref6.shape,
-      props = (0, _objectWithoutProperties2.default)(_ref6, ["children", "fit", "shape"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded2);
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-ClickableCard__image', props.className, "k-ClickableCard__image--".concat(shape), "k-ClickableCard__image--".concat(fit))
+    className: (0, _classnames.default)('k-ClickableCard__image', props.className, "k-ClickableCard__image--" + shape, "k-ClickableCard__image--" + fit)
   }), children);
 };
 
 var ClickableCardContent = function ClickableCardContent(_ref7) {
   var children = _ref7.children,
-      props = (0, _objectWithoutProperties2.default)(_ref7, ["children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded3);
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ClickableCard__content', props.className)
   }), children);
