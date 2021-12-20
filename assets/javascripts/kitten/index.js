@@ -330,6 +330,10 @@ export {
   RewardSummaryCard,
   useRewardSummaryCardResizeObserver,
 } from './components/molecules/cards/reward-summary-card'
+export {
+  SummaryCard,
+  useSummaryCardResizeObserver,
+} from './components/molecules/cards/summary-card'
 export { SimpleCard } from './components/molecules/cards/simple-card'
 export { TeamCard } from './components/molecules/cards/team-card'
 export { Triptych } from './components/molecules/cards/triptych'

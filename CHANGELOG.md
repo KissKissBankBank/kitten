@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+
+  - `SummaryCard`: Add component.
+  - `RewardSummaryCard`: Deprecate component.
+
 ## [6.10.0] - 2021-12-16
 
 Features:
