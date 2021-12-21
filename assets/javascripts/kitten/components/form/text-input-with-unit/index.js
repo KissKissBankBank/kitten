@@ -49,16 +49,14 @@ const StyledTextInputWithUnit = styled.div`
     background-color: var(--color-grey-000);
 
     &.k-Form-TextInputWithUnit__unit--valid {
-      border-color: var(--color-success-300);
-      color: var(--color-success-500);
+      border: var(--border-success);
     }
     &.k-Form-TextInputWithUnit__unit--error {
-      border-color: var(--color-danger-300);
-      color: var(--color-danger-500);
+      border: var(--border-danger);
     }
     &.k-Form-TextInputWithUnit__unit--disabled {
-      color: var(--color-grey-500);
-      background-color: var(--color-grey-300);
+      color: var(--color-grey-700);
+      background-color: var(--color-grey-200);
     }
     &.k-Form-TextInputWithUnit__unit--tiny {
       padding: 0 ${pxToRem(10)};

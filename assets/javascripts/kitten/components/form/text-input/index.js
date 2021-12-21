@@ -22,7 +22,7 @@ const StyledInput = styled.input`
   appearance: none;
   background-color: var(--color-grey-000);
   color: var(--color-grey-900);
-  border-color: var(--color-grey-500);
+  border-color: var(--color-grey-400);
   height: var(--input-height);
   min-height: var(--input-height);
 
@@ -102,12 +102,12 @@ const StyledInput = styled.input`
 
   &.k-Form-TextInput--valid {
     color: var(--color-grey-900);
-    border-color: var(--color-success-500);
+    border: var(--border-success);
   }
 
   &.k-Form-TextInput--error {
     color: var(--color-grey-900);
-    border-color: var(--color-danger-500);
+    border: var(--border-danger);
   }
 
   &:invalid {
@@ -147,8 +147,8 @@ const StyledInput = styled.input`
 
   // DARK BACKGROUND
   &.k-Form-TextInput--darkBackground {
-    background-color: var(--color-grey-700);
-    border-color: var(--color-grey-700);
+    background-color: var(--color-grey-800);
+    border-color: var(--color-grey-800);
     color: var(--color-grey-000);
 
     ::placeholder {
@@ -220,8 +220,8 @@ const StyledTextareaContainer = styled.div`
   }
 
   &.k-Form-TextInput--darkBackground {
-    background-color: var(--color-grey-700);
-    border-color: var(--color-grey-700);
+    background-color: var(--color-grey-800);
+    border-color: var(--color-grey-800);
     color: var(--color-grey-000);
 
     ::placeholder {

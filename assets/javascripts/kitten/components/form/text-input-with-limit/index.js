@@ -18,7 +18,7 @@ const StyledTextInputWithLimit = styled.div`
     right: ${pxToRem(5)};
     top: ${pxToRem(5)};
 
-    color: var(--color-grey-500);
+    color: var(--color-grey-600);
     text-shadow: ${pxToRem(2)} 0 0 var(--color-grey-000),
       -${pxToRem(2)} 0 0 var(--color-grey-000),
       0 ${pxToRem(2)} 0 var(--color-grey-000),
@@ -36,11 +36,7 @@ const StyledTextInputWithLimit = styled.div`
 
   &:focus + .k-Form-TextInputWithLimit__limitNumber,
   &:focus-within + .k-Form-TextInputWithLimit__limitNumber {
-    color: var(--color-grey-900);
-  }
-
-  .k-Form-TextInputWithLimit__limitNumber--error {
-    color: ar(--color-danger-500) !important;
+    color: var(--color-grey-600);
   }
 
   .k-Form-TextInput__textareaContainer--orion,

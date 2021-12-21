@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Input`: New UI.
 - Feature:  Logo: New `LendopolisLogoOnDark` logo.
 
 ## [6.11.1] - 2021-12-20
