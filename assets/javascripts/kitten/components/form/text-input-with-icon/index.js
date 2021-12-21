@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
-import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import classNames from 'classnames'
 
@@ -23,11 +22,11 @@ const StyledTextInputWithIcon = styled.div`
     &.k-Form-TextInputWithIcon__icon--disabled > svg:not(.k-ColorSvg) {
       &[stroke]:not([stroke='none']),
       & [stroke]:not([stroke='none']) {
-        stroke: ${COLORS.font2};
+        stroke: var(--color-grey-500);
       }
       &[fill]:not([fill='none']),
       & [fill]:not([fill='none']) {
-        fill: ${COLORS.font2};
+        fill: var(--color-grey-500);
       }
     }
   }
