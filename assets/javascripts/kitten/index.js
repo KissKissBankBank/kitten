@@ -235,6 +235,7 @@ export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
+export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark'
 export { GoodeedLogo } from './components/graphics/logos/goodeedlogo'
 export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
 export { MaisonDeCrowdfundingLogoOnDark } from './components/graphics/logos/mdc/on-dark'
