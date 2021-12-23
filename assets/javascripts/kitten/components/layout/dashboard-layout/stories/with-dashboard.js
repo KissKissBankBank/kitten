@@ -35,7 +35,7 @@ export const StoryWithDashboard = () => (
       <Title modifier="quinary" className="k-u-margin-none">
         Curabitur blandit tempus porttitor.
       </Title>
-      <Button borderRadius={6}>
+      <Button>
         <GlobeIcon width="16" height="16" />
         <span>Voir ma page projet</span>
       </Button>

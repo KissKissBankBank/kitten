@@ -4,7 +4,6 @@ import { Button as KittenButton } from '../../../../molecules/buttons/button'
 
 export const Button = ({ className, ...props }) => (
   <KittenButton
-    borderRadius={4}
     modifier="helium"
     {...props}
     className={classNames(
