@@ -122,10 +122,11 @@ exports[`<DeskLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 @media (min-width:1080px) {
   .c0 .k-DeskLayout__content {
-    max-width: calc(100% - (2 * var(--deskLayout-offset)));
-    -webkit-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
-    -ms-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
-    flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    max-width: 41.875rem;
+    -webkit-flex: 1 1 41.875rem;
+    -ms-flex: 1 1 41.875rem;
+    flex: 1 1 41.875rem;
+    margin-top: 2.1875rem;
   }
 
   .c0 .k-DeskLayout__content--fullWidth {
@@ -297,10 +298,11 @@ exports[`<DeskLayout /> compare with snapshot matches with snapshot 1`] = `
 
 @media (min-width:1080px) {
   .c0 .k-DeskLayout__content {
-    max-width: calc(100% - (2 * var(--deskLayout-offset)));
-    -webkit-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
-    -ms-flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
-    flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+    max-width: 41.875rem;
+    -webkit-flex: 1 1 41.875rem;
+    -ms-flex: 1 1 41.875rem;
+    flex: 1 1 41.875rem;
+    margin-top: 2.1875rem;
   }
 
   .c0 .k-DeskLayout__content--fullWidth {
