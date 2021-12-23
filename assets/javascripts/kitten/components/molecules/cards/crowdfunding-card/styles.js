@@ -1,9 +1,8 @@
 import styled, { keyframes, css } from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import COLORS from '../../../../constants/colors-config'
 
-const COMPONENT_GUTTER = pxToRem(10)
+const COMPONENT_GUTTER = pxToRem(15)
 
 const loadingKeyframes = keyframes`
   from { transform: translateX(-100%) }
@@ -11,12 +10,22 @@ const loadingKeyframes = keyframes`
 `
 
 const mobileStyles = css`
+  --crowdfundingCard--border-width: 1px;
+  --crowdfundingCard--border-radius: 8px;
+  --crowdfundingCard--border-color: var(--color-grey-400);
+  
+  /* CARD STYLE */
+
+  border: var(--crowdfundingCard--border-width) solid
+    var(--crowdfundingCard--border-color);
+  border-radius: var(--crowdfundingCard--border-radius);
+
   position: relative;
-  padding-bottom: ${pxToRem(5)};
+  padding-bottom: ${pxToRem(10)};
   overflow: hidden;
   display: block;
-  background: ${COLORS.background1};
-  color: ${COLORS.font1};
+  background: var(--color-grey-000);
+  color: var(--color-grey-900);
 
   &[href] {
     text-decoration: inherit;
@@ -37,7 +46,7 @@ const mobileStyles = css`
       }
 
       .k-CrowdfundingCard__title__title {
-        color: ${COLORS.primary1};
+        color: var(--color-primary-500);
       }
     }
   }
@@ -71,7 +80,7 @@ const mobileStyles = css`
 
   .k-CrowdfundingCard__image__avatar {
     margin-left: ${COMPONENT_GUTTER};
-    background-color: ${COLORS.line2};
+    background-color: var(--color-grey-400);
   }
 
   .k-CrowdfundingCard__image__owner {
@@ -85,14 +94,14 @@ const mobileStyles = css`
     position: relative;
     top: 0;
     margin-top: ${pxToRem(-30)};
-    background-color: ${COLORS.background1};
+    background-color: var(--color-grey-000);
   }
 
   .k-CrowdfundingCard__title {
     flex: 1;
     padding: 0;
     line-height: 1;
-    margin-top: ${pxToRem(10)};
+    margin-top: ${pxToRem(30)};
   }
 
   .k-CrowdfundingCard__title__title {
@@ -101,13 +110,13 @@ const mobileStyles = css`
 
   .k-CrowdfundingCard__title__loadingElement {
     display: block;
-    background-color: ${COLORS.line2};
-    border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
+    background-color: ar(--color-grey-400);
+    border-bottom: ${pxToRem(1)} solid var(--color-grey-000);
     height: ${pxToRem(24)};
 
     &:last-of-type {
       width: 70%;
-      border-top: ${pxToRem(1)} solid ${COLORS.background1};
+      border-top: ${pxToRem(1)} solid var(--color-grey-000);
       border-bottom: 0;
     }
   }
@@ -146,7 +155,7 @@ const mobileStyles = css`
 
   .k-CrowdfundingCard__subtitle__loadingElement {
     display: block;
-    background-color: ${COLORS.line2};
+    background-color: ar(--color-grey-400);
     width: ${pxToRem(80)};
     height: ${pxToRem(12)};
   }
@@ -174,14 +183,14 @@ const mobileStyles = css`
 
   .k-CrowdfundingCard__informations__loadingElement {
     display: block;
-    background-color: ${COLORS.line2};
-    border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
+    background-color: ar(--color-grey-400);
+    border-bottom: ${pxToRem(1)} solid var(--color-grey-000);
     width: ${pxToRem(40)};
     height: ${pxToRem(16)};
 
     &:last-of-type {
       width: ${pxToRem(65)};
-      border-top: ${pxToRem(1)} solid ${COLORS.background1};
+      border-top: ${pxToRem(1)} solid var(--color-grey-000);
       border-bottom: 0;
     }
   }
@@ -192,7 +201,6 @@ const mobileStyles = css`
     align-items: center;
     padding: 0;
     margin-top: ${pxToRem(5)};
-    margin-bottom: ${pxToRem(10)};
   }
 
   .k-CrowdfundingCard__progressBar__progress {
@@ -227,38 +235,38 @@ const mobileStyles = css`
   &.k-CrowdfundingCard--isLoading {
     .k-CrowdfundingCard__image__imageContainer {
       overflow: hidden;
-      background-color: ${COLORS.line2};
+      background-color: ar(--color-grey-400);
     }
 
     .k-CrowdfundingCard__image__title {
-      background-color: ${COLORS.line2};
-      border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
+      background-color: ar(--color-grey-400);
+      border-bottom: ${pxToRem(1)} solid var(--color-grey-000);
       width: ${pxToRem(70)};
       height: ${pxToRem(14)};
     }
 
     .k-CrowdfundingCard__subtitle__horizontalStroke {
-      background-color: ${COLORS.line2};
+      background-color: ar(--color-grey-400);
     }
 
     .k-CrowdfundingCard__image__description {
-      background-color: ${COLORS.line2};
-      border-top: ${pxToRem(1)} solid ${COLORS.background1};
+      background-color: ar(--color-grey-400);
+      border-top: ${pxToRem(1)} solid var(--color-grey-000);
       width: ${pxToRem(100)};
       height: ${pxToRem(14)};
     }
 
     .k-CrowdfundingCard__progressBar__loadingPercent {
       display: block;
-      background-color: ${COLORS.line2};
-      border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
+      background-color: ar(--color-grey-400);
+      border-bottom: ${pxToRem(1)} solid var(--color-grey-000);
       width: ${pxToRem(40)};
       height: ${pxToRem(16)};
     }
 
     .k-CrowdfundingCard__cardButton__loadingButton {
-      background-color: ${COLORS.line2};
-      border-color: ${COLORS.line2};
+      background-color: ar(--color-grey-400);
+      border-color: ar(--color-grey-400);
     }
   }
 
@@ -288,7 +296,7 @@ const mobileStyles = css`
     top: 0;
     right: 0;
     display: none;
-    background-color: ${COLORS.background1};
+    background-color: var(--color-grey-000);
     padding: ${COMPONENT_GUTTER};
     line-height: 1;
   }
@@ -296,7 +304,7 @@ const mobileStyles = css`
   .k-CrowdfundingCard__widgetState {
     display: flex;
     position: absolute;
-    background: ${COLORS.font1};
+    background: var(--color-grey-900);
     border-radius: var(--border-radius-rounded);
     margin: ${pxToRem(10)} ${pxToRem(10)} 0 0;
     right: 0;
@@ -332,7 +340,7 @@ const tabletStyles = css`
   }
 
   .k-CrowdfundingCard__informations {
-    margin-top: ${pxToRem(20)};
+    margin-top: ${pxToRem(30)};
     padding: 0 ${COMPONENT_GUTTER};
   }
 
@@ -346,7 +354,6 @@ const tabletStyles = css`
 
   .k-CrowdfundingCard__progressBar {
     padding: 0 ${COMPONENT_GUTTER};
-    margin-bottom: ${pxToRem(20)};
   }
 
   .k-CrowdfundingCard__progressBar__percent {

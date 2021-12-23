@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '../../../../../components/atoms/typography/text'
-import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
 import Truncate from 'react-truncate'
 import classNames from 'classnames'
 
@@ -38,11 +37,6 @@ class Subtitle extends PureComponent {
 
     return (
       <div className="k-CrowdfundingCard__subtitle__container">
-        <HorizontalStroke
-          className="k-CrowdfundingCard__subtitle__horizontalStroke"
-          size="micro"
-        />
-
         {subTitle && !loading && (
           <Text
             className={classNames(
@@ -56,6 +50,7 @@ class Subtitle extends PureComponent {
             weight="regular"
             tag="p"
             color="font1"
+            fontStyle="italic"
           >
             {subTitleTruncate && (
               <Truncate className="k-CrowdfundingCard__noWrap">
