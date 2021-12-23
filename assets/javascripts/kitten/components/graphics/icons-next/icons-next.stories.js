@@ -8,23 +8,27 @@ import {
   CogIconNext,
   EyeIconNext,
   FacebookIconNext,
+  GiftIconNext,
+  HeartIconNext,
+  HeartWithClickIconNext,
   HomeIconNext,
   InfiniteIconNext,
   InstagramIconNext,
+  LargeArrowIconNext,
   LinkedinIconNext,
   MessengerIconNext,
   PlusIconNext,
+  ShieldIconNext,
   SpeechBubbleIconNext,
   StatsIconNext,
+  StatusIconNext,
+  SunIconNext,
   TagIconNext,
   ThumbUpIconNext,
   TwitterIconNext,
   UsersIconNext,
   WhatsappIconNext,
   WindowEditIconNext,
-  HeartIconNext,
-  LargeArrowIconNext,
-  StatusIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -152,6 +156,18 @@ export const AllIcons = ({ colorInput }) => {
         </IconContainer>
         <IconContainer>
           <HeartIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <GiftIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <HeartWithClickIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <ShieldIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <SunIconNext color={colorInput} />
         </IconContainer>
       </Group>
       <Group title="Arrows">
