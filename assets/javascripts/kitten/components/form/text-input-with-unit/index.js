@@ -4,7 +4,6 @@ import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
 import classNames from 'classnames'
 
 const StyledTextInputWithUnit = styled.div`
@@ -42,24 +41,22 @@ const StyledTextInputWithUnit = styled.div`
     border-left: var(--border);
     border-radius: 0;
     box-sizing: border-box;
-    color: ${COLORS.font1};
+    color: var(--color-grey-900);
     white-space: nowrap;
     transition: all 0.2s;
     font-size: ${stepToRem(0)};
     ${TYPOGRAPHY.fontStyles.regular};
-    background-color: ${COLORS.background1};
+    background-color: var(--color-grey-000);
 
     &.k-Form-TextInputWithUnit__unit--valid {
-      border-color: ${COLORS.tertiary2};
-      color: ${COLORS.valid};
+      border: var(--border-success);
     }
     &.k-Form-TextInputWithUnit__unit--error {
-      border-color: ${COLORS.error3};
-      color: ${COLORS.error};
+      border: var(--border-danger);
     }
     &.k-Form-TextInputWithUnit__unit--disabled {
-      color: ${COLORS.font2};
-      background-color: ${COLORS.line1};
+      color: var(--color-grey-700);
+      background-color: var(--color-grey-200);
     }
     &.k-Form-TextInputWithUnit__unit--tiny {
       padding: 0 ${pxToRem(10)};
@@ -83,7 +80,7 @@ const StyledTextInputWithUnit = styled.div`
   &:focus-within {
     .k-Form-TextInputWithUnit__unit {
       border-color: var(--color-grey-500);
-      color: ${COLORS.font1};
+      color: var(--color-grey-900);
     }
   }
 

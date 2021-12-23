@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
@@ -21,8 +20,8 @@ const StyledInput = styled.input`
   border-radius: 0;
   width: 100%;
   appearance: none;
-  background-color: ${COLORS.background1};
-  color: ${COLORS.font1};
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
   border-color: var(--color-grey-400);
   height: var(--input-height);
   min-height: var(--input-height);
@@ -30,7 +29,7 @@ const StyledInput = styled.input`
   transition: border-color 0.2s ease;
 
   ::placeholder {
-    color: ${COLORS.font3};
+    color: var(--color-grey-900);
   }
 
   // SIZES
@@ -91,29 +90,29 @@ const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: ${COLORS.font1};
-    border-color: ${COLORS.line2};
-    background-color: ${COLORS.line1};
+    color: var(--color-grey-900);
+    border-color: var(--color-grey-200);
+    background-color: var(--color-grey-200);
     cursor: not-allowed;
 
     ::placeholder {
-      color: ${COLORS.line3};
+      color: var(--color-grey-700);
     }
   }
 
   &.k-Form-TextInput--valid {
-    color: ${COLORS.font1};
-    border-color: ${COLORS.tertiary2};
+    color: var(--color-grey-900);
+    border: var(--border-success);
   }
 
   &.k-Form-TextInput--error {
-    color: ${COLORS.font1};
-    border-color: ${COLORS.error3};
+    color: var(--color-grey-900);
+    border: var(--border-danger);
   }
 
   &:invalid {
     box-shadow: none;
-    color: ${COLORS.font1};
+    color: var(--color-grey-900);
     border: var(--border-danger);
   }
 
@@ -122,8 +121,8 @@ const StyledInput = styled.input`
   }
 
   &:focus {
-    color: ${COLORS.font1};
-    border-color: ${COLORS.font2};
+    color: var(--color-grey-900);
+    border-color: var(--color-grey-500);
     outline: var(--outline-input);
     outline-offset: var(--outline-offset-input);
   }
@@ -148,12 +147,12 @@ const StyledInput = styled.input`
 
   // DARK BACKGROUND
   &.k-Form-TextInput--darkBackground {
-    background-color: ${COLORS.grey1};
-    border-color: ${COLORS.grey1};
-    color: ${COLORS.background1};
+    background-color: var(--color-grey-800);
+    border-color: var(--color-grey-800);
+    color: var(--color-grey-000);
 
     ::placeholder {
-      color: ${COLORS.line2};
+      color: var(--color-grey-400);
     }
   }
 `
@@ -221,12 +220,12 @@ const StyledTextareaContainer = styled.div`
   }
 
   &.k-Form-TextInput--darkBackground {
-    background-color: ${COLORS.grey1};
-    border-color: ${COLORS.grey1};
-    color: ${COLORS.background1};
+    background-color: var(--color-grey-800);
+    border-color: var(--color-grey-800);
+    color: var(--color-grey-000);
 
     ::placeholder {
-      color: ${COLORS.line2};
+      color: var(--color-grey-400);;
     }
   }
 

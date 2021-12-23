@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
-import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import classNames from 'classnames'
@@ -19,15 +18,15 @@ const StyledTextInputWithLimit = styled.div`
     right: ${pxToRem(5)};
     top: ${pxToRem(5)};
 
-    color: ${COLORS.font2};
-    text-shadow: ${pxToRem(2)} 0 0 ${COLORS.background1},
-      -${pxToRem(2)} 0 0 ${COLORS.background1},
-      0 ${pxToRem(2)} 0 ${COLORS.background1},
-      0 -${pxToRem(2)} 0 ${COLORS.background1},
-      ${pxToRem(1)} ${pxToRem(1)} ${COLORS.background1},
-      -${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
-      ${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
-      -${pxToRem(1)} ${pxToRem(1)} 0 ${COLORS.background1};
+    color: var(--color-grey-600);
+    text-shadow: ${pxToRem(2)} 0 0 var(--color-grey-000),
+      -${pxToRem(2)} 0 0 var(--color-grey-000),
+      0 ${pxToRem(2)} 0 var(--color-grey-000),
+      0 -${pxToRem(2)} 0 var(--color-grey-000),
+      ${pxToRem(1)} ${pxToRem(1)} var(--color-grey-000),
+      -${pxToRem(1)} -${pxToRem(1)} 0 var(--color-grey-000),
+      ${pxToRem(1)} -${pxToRem(1)} 0 var(--color-grey-000),
+      -${pxToRem(1)} ${pxToRem(1)} 0 var(--color-grey-000);
     pointer-events: none;
 
     .k-Form-TextInputWithLimit__limitNumber--disabled {
@@ -37,11 +36,7 @@ const StyledTextInputWithLimit = styled.div`
 
   &:focus + .k-Form-TextInputWithLimit__limitNumber,
   &:focus-within + .k-Form-TextInputWithLimit__limitNumber {
-    color: ${COLORS.font1};
-  }
-
-  .k-Form-TextInputWithLimit__limitNumber--error {
-    color: ${COLORS.error} !important;
+    color: var(--color-grey-600);
   }
 
   .k-Form-TextInput__textareaContainer--orion,

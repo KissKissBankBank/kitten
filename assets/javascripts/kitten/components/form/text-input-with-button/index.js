@@ -5,7 +5,6 @@ import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
 import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -64,14 +63,14 @@ const StyledTextInputWithButton = styled.div`
       border-radius: var(--text-input-button-radius);
 
       border: none;
-      background-color: ${COLORS.background1};
+      background-color: var(--color-grey-000);
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: ${COLORS.line1};
+        background-color: var(--color-grey-300);
       }
       &:active {
-        background-color: ${COLORS.line2};
+        background-color: var(--color-grey-400);
       }
     }
 
@@ -118,14 +117,14 @@ const StyledTextInputWithButton = styled.div`
   }
 
   &.k-Form-TextInputWithButton__button--valid {
-    background-color: ${COLORS.valid};
-    border-color: ${COLORS.valid};
+    background-color: var(--color-success-500);
+    border-color: var(--color-success-500);
   }
 
   &.k-Form-TextInputWithButton__button--error {
     cursor: not-allowed;
-    background-color: ${COLORS.error};
-    border-color: ${COLORS.error};
+    background-color: var(--color-danger-500);
+    border-color: var(--color-danger-500);
   }
 `
 

@@ -7,7 +7,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   type="button"
 >
   <div
-    className="sc-htpNat dvAITH k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-htpNat gmmxZP k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -53,7 +53,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat dvAITH k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-htpNat gmmxZP k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -88,7 +88,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat dvAITH k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-htpNat gmmxZP k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -134,7 +134,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat dvAITH k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-htpNat gmmxZP k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
@@ -180,7 +180,7 @@ exports[`<TextCopy /> should match snapshot with variant etc. 1`] = `
     This is a description
   </span>
   <div
-    className="sc-htpNat dvAITH k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
+    className="sc-htpNat gmmxZP k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--orion k-Form-TextInput--regular"
     disabled={false}
     name="text"
   >
