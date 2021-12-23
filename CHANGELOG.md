@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `Input`: New UI.
 - Fix: Improve `borderRadius` of buttons on all cards.
 - Feature: Logo: New `LendopolisLogoOnDark` logo.
+- Fix: `DeskLayout`: Style adjustments.
 
 ## [6.11.1] - 2021-12-20
 

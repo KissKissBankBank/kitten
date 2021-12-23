@@ -61,8 +61,9 @@ export const StyledLayout = styled.div`
 
   @media ${mq.desktop} {
     .k-DeskLayout__content {
-      max-width: calc(100% - (2 * var(--deskLayout-offset)));
-      flex: 1 1 calc(100% - (2 * var(--deskLayout-offset)));
+      max-width: ${pxToRem(670)};
+      flex: 1 1 ${pxToRem(670)};
+      margin-top: ${pxToRem(35)};
     }
 
     .k-DeskLayout__content--fullWidth {

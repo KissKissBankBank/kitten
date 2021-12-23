@@ -3,8 +3,6 @@ import {
   FlexWrapper,
   Tag,
   Text,
-  DropdownMenu,
-  EllipsisIcon,
   SummaryCard,
   Title,
   useSummaryCardResizeObserver,
@@ -17,165 +15,9 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
     <div ref={ref}>
       <FlexWrapper gap={50}>
         <div>
-          <SummaryCard.TitleBar
-            values={{
-              image: 'Visuel de la contrepartie',
-              title: 'Titre de la contrepartie',
-              amount: 'Montant',
-              contributions: 'Contributions',
-              availability: 'Disponibilités',
-            }}
-            className="k-u-hidden@xs-down k-u-margin-bottom-single"
-            id="SummaryList-ownerContribution"
-            size={size}
-            type="ownerContribution"
-          />
-
-          <SummaryCard {...args} size={size} type="ownerContribution">
-            <SummaryCard.Image>
-              <img
-                src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
-                alt=""
-              />
-            </SummaryCard.Image>
-
-            <SummaryCard.Cell
-              name="title"
-              aria-describedby="SummaryList-ownerContribution-title"
-            >
-              <Text weight="bold" size="tiny">
-                Owner Contribution vel augue laoreet rutrum faucibus dolor
-                auctor.
-              </Text>
-              <SummaryCard.TitleTag icon="star" text="Star" />
-            </SummaryCard.Cell>
-
-            <SummaryCard.Cell
-              name="amount"
-              aria-describedby="SummaryList-ownerContribution-amount"
-            >
-              <Text size="tiny">10 000 €</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell
-              name="contribution"
-              aria-describedby="SummaryList-ownerContribution-contribution"
-            >
-              <Text size="tiny">1 452 000</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell
-              className="k-u-hidden@xs-down"
-              name="availability"
-              aria-describedby="SummaryList-ownerContribution-availability"
-            >
-              <Text size="tiny">Illimitée</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell name="last-stretch">
-              <DropdownMenu
-                menuPosition="left"
-                button={({ open }) => (
-                  <>
-                    <EllipsisIcon color="var(--color-grey-900)" />
-                    <span className="k-u-a11y-visuallyHidden">
-                      {open ? 'Click to close menu' : 'Click to open menu'}
-                    </span>
-                  </>
-                )}
-              >
-                <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
-                <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
-                <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
-                <DropdownMenu.Button>Supprimer</DropdownMenu.Button>
-              </DropdownMenu>
-            </SummaryCard.Cell>
-          </SummaryCard>
-        </div>
-
-        <div>
-          <SummaryCard.TitleBar
-            values={{
-              image: "Visuel de l'abonnement",
-              title: "Titre de l'abonnement",
-              amount: 'Montant',
-              frequency: 'Fréquence',
-              subscription: 'Abonnements',
-              availability: 'Disponibilités',
-            }}
-            className="k-u-hidden@xs-down k-u-margin-bottom-single"
-            id="SummaryList-ownerSubscription"
-            size={size}
-            type="ownerSubscription"
-          />
-
-          <SummaryCard {...args} size={size} type="ownerSubscription">
-            <SummaryCard.Image>
-              <img
-                src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
-                alt=""
-              />
-            </SummaryCard.Image>
-
-            <SummaryCard.Cell
-              name="title"
-              aria-describedby="SummaryList-ownerSubscription-title"
-            >
-              <Text weight="bold" size="tiny">
-                Owner Subscription lacus vel augue.
-              </Text>
-            </SummaryCard.Cell>
-
-            <SummaryCard.Cell
-              name="amount"
-              aria-describedby="SummaryList-ownerSubscription-amount"
-            >
-              <Text size="tiny" className="k-u-hidden@s-down">10 €</Text>
-              <Text size="tiny" className="k-u-hidden@m-up">10 € / mois</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell
-              className="k-u-hidden@xs-down"
-              name="frequency"
-              aria-describedby="SummaryList-ownerSubscription-frequency"
-            >
-              <Text size="tiny">Trimestriel</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell
-              name="subscription"
-              aria-describedby="SummaryList-ownerSubscription-subscription"
-            >
-              <Text size="tiny" className="k-u-hidden@xs-down">130</Text>
-              <Text size="tiny" className="k-u-hidden@s-up">130 abonnements en cours</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell
-              className="k-u-hidden@xs-down"
-              name="availability"
-              aria-describedby="SummaryList-ownerSubscription-availability"
-            >
-              <Text size="tiny">1000 / 1000</Text>
-            </SummaryCard.Cell>
-            <SummaryCard.Cell name="last-stretch">
-              <DropdownMenu
-                menuPosition="left"
-                button={({ open }) => (
-                  <>
-                    <EllipsisIcon color="var(--color-grey-900)" />
-                    <span className="k-u-a11y-visuallyHidden">
-                      {open ? 'Click to close menu' : 'Click to open menu'}
-                    </span>
-                  </>
-                )}
-              >
-                <DropdownMenu.Link href="#">Editer</DropdownMenu.Link>
-                <DropdownMenu.Link href="#">Dupliquer</DropdownMenu.Link>
-                <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
-                <DropdownMenu.Button>Supprimer</DropdownMenu.Button>
-              </DropdownMenu>
-            </SummaryCard.Cell>
-          </SummaryCard>
-        </div>
-
-        <div>
           <Title
             modifier="senary"
-            className="k-u-margin-bottom-tripleHalf k-u-margin-top-septuble"
+            className="k-u-margin-bottom-tripleHalf"
             noMargin
           >
             Abonnements et dons récurrents
@@ -197,7 +39,12 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             type="contributorSubscription"
           />
 
-          <SummaryCard className="k-u-margin-bottom-single" {...args} size={size} type="contributorSubscription">
+          <SummaryCard
+            className="k-u-margin-bottom-single"
+            {...args}
+            size={size}
+            type="contributorSubscription"
+          >
             <SummaryCard.Image className="k-u-hidden@xs-down">
               <img
                 src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
@@ -362,7 +209,12 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             type="contributorContribution"
           />
 
-          <SummaryCard className="k-u-margin-bottom-single" {...args} size={size} type="contributorContribution">
+          <SummaryCard
+            className="k-u-margin-bottom-single"
+            {...args}
+            size={size}
+            type="contributorContribution"
+          >
             <SummaryCard.Image className="k-u-hidden@xs-down">
               <img
                 src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
@@ -435,7 +287,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               aria-describedby="SummaryList-contributorContribution-title"
             >
               <Text weight="bold" size="tiny">
-              Dé-mots : imaginer, écrire, rire
+                Dé-mots : imaginer, écrire, rire
               </Text>
             </SummaryCard.Cell>
 
@@ -482,7 +334,6 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
             </SummaryCard.Cell>
           </SummaryCard>
         </div>
-
       </FlexWrapper>
     </div>
   )
