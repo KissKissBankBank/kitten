@@ -16,7 +16,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     htmlFor="DocumentManager"
     style={
       Object {
-        "--Button-border-radius": "0.375rem",
+        "--Button-border-radius": null,
       }
     }
     type="button"
@@ -107,7 +107,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     htmlFor="DocumentManager"
     style={
       Object {
-        "--Button-border-radius": "0.375rem",
+        "--Button-border-radius": null,
       }
     }
     type="button"

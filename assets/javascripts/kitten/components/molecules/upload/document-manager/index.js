@@ -290,7 +290,6 @@ export const DocumentManager = ({
         />
         <Button
           fit="fluid"
-          borderRadius={6}
           {...buttonProps}
           as="label"
           htmlFor={id}
@@ -351,7 +350,6 @@ export const DocumentManager = ({
       >
         <Button
           fit="fluid"
-          borderRadius={6}
           {...buttonProps}
           as="div"
           className={classNames(

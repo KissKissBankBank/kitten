@@ -53,7 +53,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       disabled={true}
       style={
         Object {
-          "--Button-border-radius": "0.25rem",
+          "--Button-border-radius": null,
         }
       }
       type="submit"
