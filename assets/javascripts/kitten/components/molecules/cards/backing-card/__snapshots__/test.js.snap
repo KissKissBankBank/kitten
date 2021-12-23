@@ -163,7 +163,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     disabled={true}
     style={
       Object {
-        "--Button-border-radius": "0.25rem",
+        "--Button-border-radius": null,
       }
     }
     type="button"

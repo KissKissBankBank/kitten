@@ -19,7 +19,6 @@ export const Action = ({ isInputValid, title, className, ...props }) => {
         />
       ) : (
         <Button
-          borderRadius={4}
           type="submit"
           className={classNames('k-ContributionCard__action', className)}
           modifier="helium"
