@@ -20,6 +20,17 @@ const StyledList = styled.ul`
       }
     `}
 
+  .k-List__item {
+    display: flex;
+    gap: ${pxToRem(10)};
+    align-items: center;
+  }
+
+  .k-List__marker {
+    display: inline-flex;
+    align-items: center;
+  }
+
   ${({ styles }) => styles}
 `
 
@@ -29,6 +40,7 @@ export const List = ({
   className,
   bottomBorderRadiusValue,
   withBottomBorderRadius,
+  markerElement,
   ...props
 }) => {
   const radiusValue =
@@ -46,7 +58,14 @@ export const List = ({
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) return null
 
-        return <li key={index}>{child}</li>
+        return (
+          <li key={index} className="k-List__item">
+            {markerElement && (
+              <span aria-hidden className="k-List__marker">{markerElement}</span>
+            )}
+            {child}
+          </li>
+        )
       })}
     </StyledList>
   )
@@ -55,10 +74,12 @@ export const List = ({
 List.ButtonItem = ButtonItem
 
 List.defaultProps = {
+  markerElement: null,
   bottomBorderRadiusValue: 0,
 }
 
 List.propTypes = {
+  markerElement: PropTypes.node,
   bottomBorderRadiusValue: PropTypes.number,
   withBottomBorderRadius: deprecated(
     PropTypes.number,

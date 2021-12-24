@@ -2,19 +2,25 @@
 
 exports[`<List> by default matches with snapshot 1`] = `
 <ul
-  className="sc-bwzfXH eSuJfv k-List"
+  className="sc-bwzfXH jeWXlm k-List"
 >
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div>
       Item 1
     </div>
   </li>
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div>
       Item 2
     </div>
   </li>
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div>
       Item 3
     </div>
@@ -24,9 +30,11 @@ exports[`<List> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 <ul
-  className="sc-bwzfXH eSuJfv k-List"
+  className="sc-bwzfXH jeWXlm k-List"
 >
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div
       aria-disabled={false}
       className="sc-bdVaJa bHVrUD k-List__button k-List__button--withTopBorder"
@@ -69,7 +77,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       </div>
     </div>
   </li>
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div
       aria-disabled={false}
       className="sc-bdVaJa bHVrUD k-List__button k-List__button--isActive"
@@ -112,7 +122,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       </div>
     </div>
   </li>
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div
       aria-disabled={false}
       className="sc-bdVaJa bHVrUD k-List__button"
@@ -137,9 +149,11 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> with a disabled button matches with snapshot 1`] = `
 <ul
-  className="sc-bwzfXH eSuJfv k-List"
+  className="sc-bwzfXH jeWXlm k-List"
 >
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div
       aria-disabled={false}
       className="sc-bdVaJa bHVrUD k-List__button k-List__button--withTopBorder"
@@ -182,7 +196,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       </div>
     </div>
   </li>
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div
       aria-disabled={true}
       className="sc-bdVaJa bHVrUD k-List__button"
@@ -225,7 +241,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       </div>
     </div>
   </li>
-  <li>
+  <li
+    className="k-List__item"
+  >
     <div
       aria-disabled={false}
       className="sc-bdVaJa bHVrUD k-List__button"

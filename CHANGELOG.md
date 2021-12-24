@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Improve `borderRadius` of buttons on all cards.
 - Feature: Logo: New `LendopolisLogoOnDark` logo.
 - Fix: `DeskLayout`: Style adjustments.
+- Feature: Utilities: Add `k-u-letter-spacing` utilities.
+- Feature: `List`: Add `markerElement` prop, accepts a React node.
+- Feature: `FloatingMenu`: Add component.
+- Feature: `HeroLayout`: Add component.
 
 ## [6.11.1] - 2021-12-20
 

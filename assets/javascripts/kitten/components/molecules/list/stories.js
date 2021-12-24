@@ -1,7 +1,7 @@
 import React from 'react'
 import { List } from './index'
 import styled from 'styled-components'
-import { pxToRem, Text } from '../../..'
+import { pxToRem, Text, LargeArrowIconNext } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const ExampleWrapper = styled.div`
@@ -59,9 +59,19 @@ export default {
 export const SimpleList = () => {
   return (
     <List>
-      <div>Item 1</div>
-      <div>Item 2</div>
-      <div>Item 3</div>
+      <Text>Item 1</Text>
+      <Text>Item 2</Text>
+      <Text>Item 3</Text>
+    </List>
+  )
+}
+
+export const ListWithCustomMarker = () => {
+  return (
+    <List markerElement={<LargeArrowIconNext width="10" />}>
+      <Text>Item 1</Text>
+      <Text>Item 2</Text>
+      <Text>Item 3</Text>
     </List>
   )
 }
