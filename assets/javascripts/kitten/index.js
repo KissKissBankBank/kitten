@@ -201,6 +201,7 @@ export { AirplaneIconNext } from './components/graphics/icons-next/airplane-icon
 export { BubbleIconNext } from './components/graphics/icons-next/bubble-icon-next'
 export { CheckedShieldIconNext } from './components/graphics/icons-next/checked-shield-icon-next'
 export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-next'
+export { CircleIconNext } from './components/graphics/icons-next/circle-icon-next'
 export { CogIconNext } from './components/graphics/icons-next/cog-icon-next'
 export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next'
