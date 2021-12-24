@@ -13,6 +13,7 @@ export const HeartWithClickIconNext = ({
     height="31"
     viewBox="0 0 30 31"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
     {...props}
   >
     {title && <title>{title}</title>}

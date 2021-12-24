@@ -7,6 +7,7 @@ export const SunIconNext = ({ color, title, ...props }) => (
     height="29"
     viewBox="0 0 29 29"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
     {...props}
   >
     {title && <title>{title}</title>}

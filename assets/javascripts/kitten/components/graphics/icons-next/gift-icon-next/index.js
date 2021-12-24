@@ -7,6 +7,7 @@ export const GiftIconNext = ({ giftColor, ribbonColor,  title, ...props }) => (
     height="30"
     viewBox="0 0 28 30"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
     {...props}
   >
     {title && <title>{title}</title>}

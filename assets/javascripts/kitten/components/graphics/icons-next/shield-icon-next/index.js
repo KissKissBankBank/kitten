@@ -13,6 +13,7 @@ export const ShieldIconNext = ({
     height="30"
     viewBox="0 0 27 30"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
     {...props}
   >
     {title && <title>{title}</title>}

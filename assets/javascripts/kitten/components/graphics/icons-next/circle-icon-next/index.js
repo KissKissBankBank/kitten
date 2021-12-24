@@ -7,6 +7,7 @@ export const CircleIconNext = ({ circleColor, crossColor,  title, ...props }) =>
     height="28"
     viewBox="0 0 28 28"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
     {...props}
   >
     {title && <title>{title}</title>}
@@ -22,7 +23,7 @@ CircleIconNext.propTypes = {
 }
 
 CircleIconNext.defaultProps = {
-  circleColor: '#fff',
+  circleColor: '#222',
   crossColor: '#006cff',
   title: null,
 }
