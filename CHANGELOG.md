@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Icons: Add the following icons:
+  `HeartWithClickIconNext`,
+  `GiftIconNext`,
+  `ColorCheckedShieldIconNext`,
+  `SunIconNext`,
+  `CrossCircleIconNext`.
 - Fix: `Input`: New UI.
 - Fix: Improve `borderRadius` of buttons on all cards.
 - Feature: Logo: New `LendopolisLogoOnDark` logo.
