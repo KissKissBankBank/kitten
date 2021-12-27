@@ -327,6 +327,7 @@ export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card
 export { EngagementCard } from './components/molecules/cards/engagement-card'
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'
 export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card'
+export { ProjectCard } from './components/molecules/cards/project-card'
 export {
   RewardSummaryCard,
   useRewardSummaryCardResizeObserver,
