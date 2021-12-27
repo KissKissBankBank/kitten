@@ -2,11 +2,12 @@ import styled from 'styled-components'
 import {
   AirplaneIconNext,
   BubbleIconNext,
-  CrossIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
-  CrossCircleIconNext,
   CogIconNext,
+  ColorCheckedShieldIconNext,
+  CrossCircleIconNext,
+  CrossIconNext,
   EyeIconNext,
   FacebookIconNext,
   GiftIconNext,
@@ -19,7 +20,6 @@ import {
   LinkedinIconNext,
   MessengerIconNext,
   PlusIconNext,
-  ColorCheckedShieldIconNext,
   SpeechBubbleIconNext,
   StatsIconNext,
   StatusIconNext,
@@ -177,13 +177,13 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           />
         </IconContainer>
         <IconContainer>
-          <SunIconNext color={colorInput} />
-        </IconContainer>
-        <IconContainer>
           <CrossCircleIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
+        </IconContainer>
+        <IconContainer>
+          <SunIconNext color={colorInput} />
         </IconContainer>
       </Group>
       <Group title="Arrows">
