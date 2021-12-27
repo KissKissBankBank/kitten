@@ -93,7 +93,7 @@ export const StyledLayout = styled.div`
       margin: ${pxToRem(50)} ${pxToRem(70)} ${pxToRem(100)};
       display: grid;
       grid-template-columns:
-        minmax(${pxToRem(210)}, 1fr) minmax(auto, ${pxToRem(760)})
+        minmax(${pxToRem(210)}, 1fr) minmax(auto, ${pxToRem(670)})
         minmax(${pxToRem(210)}, 1fr);
       gap: ${pxToRem(70)};
     }

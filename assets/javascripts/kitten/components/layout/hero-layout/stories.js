@@ -16,7 +16,10 @@ import {
   TYPOGRAPHY,
   Grid,
   GridCol,
-  HeartIconNext,
+  HeartWithClickIconNext,
+  GiftIconNext,
+  ColorCheckedShieldIconNext,
+  CrossCircleIconNext,
   Separator,
   List,
   LargeArrowIconNext,
@@ -82,8 +85,8 @@ const StyledGridCol = styled(GridCol)`
 
   svg {
     margin-top: ${pxToRem(5)};
-    flex: 0 0 ${pxToRem(20)};
-    max-width: ${pxToRem(20)};
+    flex: 0 0 ${pxToRem(30)};
+    max-width: ${pxToRem(30)};
   }
 `
 
@@ -311,28 +314,28 @@ export const Default = args => (
               </Text>
             </GridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartIconNext width="30" />
+              <HeartWithClickIconNext />
               <Text>
                 Sélectionnez un abonnement ou faites un don récurrent du montant
                 de votre choix
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartIconNext width="30" />
+              <ColorCheckedShieldIconNext />
               <Text>
                 Validez votre abonnement via notre formulaire de paiement
                 sécurisé
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartIconNext width="30" />
+              <GiftIconNext />
               <Text>
                 Recevez chaque mois ou chaque trimestre le contenu de votre
                 abonnement
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartIconNext width="30" />
+              <CrossCircleIconNext />
               <Text>
                 Résiliez votre abonnement à tout moment depuis votre compte
               </Text>
