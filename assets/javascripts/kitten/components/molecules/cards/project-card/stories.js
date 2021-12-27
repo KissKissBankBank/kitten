@@ -83,40 +83,7 @@ export const Default = ({ progressProps, ...args }) => (
 Default.args = args
 Default.argTypes = argTypes
 
-export const WithVideo = ({ progressProps, ...args }) => (
-  <ProjectCard {...args}>
-    <ProjectCard.Title>
-      The Office, la série culte décortiquée par S!CK
-    </ProjectCard.Title>
-    <ProjectCard.Line>
-      <Text size="micro" fontStyle="italic">
-        par{' '}
-        <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
-          Bidules
-        </a>
-      </Text>
-    </ProjectCard.Line>
-    <ProjectCard.Item>
-      <Text weight="bold" size="tiny">
-        134
-      </Text>
-      <Text size="micro">contributeurs</Text>
-    </ProjectCard.Item>
-    <ProjectCard.Item>
-      <Text weight="bold" size="tiny">
-        7 jours
-      </Text>
-      <Text size="micro">restants</Text>
-    </ProjectCard.Item>
-    <ProjectCard.Item>
-      <Text weight="bold" size="tiny">
-        9 930 €
-      </Text>
-      <Text size="micro">sur 12 000 €</Text>
-    </ProjectCard.Item>
-    <ProjectCard.Progress {...progressProps} />
-  </ProjectCard>
-)
+export const WithVideo = Default
 
 WithVideo.args = {
   ...args,
