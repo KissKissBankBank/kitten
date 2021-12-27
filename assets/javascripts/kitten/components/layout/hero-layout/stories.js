@@ -91,13 +91,13 @@ const StyledGridCol = styled(GridCol)`
 `
 
 const GlobalStyle = createGlobalStyle`
-  @media ${mq.mobile} {
+  @media ${mq.mobileAndTablet} {
     .k-HeaderNav--isStuck + * .k-HeroLayout__sticky.k-HeroLayout__menu {
       top: ${pxToRem(HEADER_HEIGHT)} !important;
     }
   }
 
-  @media ${mq.tabletAndDesktop} {
+  @media ${mq.desktop} {
     .k-HeaderNav--isStuck + * .k-HeroLayout__sticky__inside {
       top: ${pxToRem(HEADER_HEIGHT + 20)} !important;
     }

@@ -99,10 +99,12 @@ export const StyledLayout = styled.div`
     }
   }
 
-  @media ${mq.mobile} {
+  @media ${mq.mobileAndTablet} {
     .k-HeroLayout__sticky.k-HeroLayout__menu {
+      transition: top var(--transition);
       position: sticky;
       top: 0;
+      z-index: 2;
     }
   }
 
