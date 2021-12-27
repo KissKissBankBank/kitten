@@ -5,7 +5,7 @@ import {
   CrossIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
-  CircleIconNext,
+  CrossCircleIconNext,
   CogIconNext,
   EyeIconNext,
   FacebookIconNext,
@@ -19,7 +19,7 @@ import {
   LinkedinIconNext,
   MessengerIconNext,
   PlusIconNext,
-  ShieldIconNext,
+  ColorCheckedShieldIconNext,
   SpeechBubbleIconNext,
   StatsIconNext,
   StatusIconNext,
@@ -103,7 +103,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = ({ colorInput }) => {
+export const AllIcons = ({ colorInput, secondaryColorInput }) => {
   return (
     <Container>
       <Group>
@@ -159,19 +159,31 @@ export const AllIcons = ({ colorInput }) => {
           <HeartIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <GiftIconNext color={colorInput} />
+          <GiftIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
         </IconContainer>
         <IconContainer>
-          <HeartWithClickIconNext color={colorInput} />
+          <HeartWithClickIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
         </IconContainer>
         <IconContainer>
-          <ShieldIconNext color={colorInput} />
+          <ColorCheckedShieldIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
         </IconContainer>
         <IconContainer>
           <SunIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <CircleIconNext color={colorInput} />
+          <CrossCircleIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
         </IconContainer>
       </Group>
       <Group title="Arrows">
@@ -233,8 +245,10 @@ export default {
   title: 'Graphics/Icons Next',
   args: {
     colorInput: '#333',
+    secondaryColorInput: '#006cff',
   },
   argTypes: {
     colorInput: { control: 'color' },
+    secondaryColorInput: { control: 'color' },
   },
 }
