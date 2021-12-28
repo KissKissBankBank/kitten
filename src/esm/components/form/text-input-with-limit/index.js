@@ -5,14 +5,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
 import PropTypes from 'prop-types';
-import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import classNames from 'classnames';
 var StyledTextInputWithLimit = styled.div.withConfig({
   displayName: "text-input-with-limit__StyledTextInputWithLimit",
   componentId: "sc-ufrmmb-0"
-})(["position:relative;display:block;.k-Form-TextInputWithLimit__limitNumber{", ";font-size:", ";line-height:1.3;position:absolute;right:", ";top:", ";color:", ";text-shadow:", " 0 0 ", ",-", " 0 0 ", ",0 ", " 0 ", ",0 -", " 0 ", ",", " ", " ", ",-", " -", " 0 ", ",", " -", " 0 ", ",-", " ", " 0 ", ";pointer-events:none;.k-Form-TextInputWithLimit__limitNumber--disabled{text-shadow:none;}}&:focus + .k-Form-TextInputWithLimit__limitNumber,&:focus-within + .k-Form-TextInputWithLimit__limitNumber{color:", ";}.k-Form-TextInputWithLimit__limitNumber--error{color:", " !important;}.k-Form-TextInput__textareaContainer--orion,.k-Form-TextInput--orion{& + .k-Form-TextInputWithLimit__limitNumber{top:initial;bottom:", ";right:", ";}}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-2), pxToRem(5), pxToRem(5), COLORS.font2, pxToRem(2), COLORS.background1, pxToRem(2), COLORS.background1, pxToRem(2), COLORS.background1, pxToRem(2), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, pxToRem(1), pxToRem(1), COLORS.background1, COLORS.font1, COLORS.error, pxToRem(15), pxToRem(15));
+})(["position:relative;display:block;.k-Form-TextInputWithLimit__limitNumber{", ";font-size:", ";line-height:1.3;position:absolute;right:", ";top:", ";color:var(--color-grey-600);text-shadow:", " 0 0 var(--color-grey-000),-", " 0 0 var(--color-grey-000),0 ", " 0 var(--color-grey-000),0 -", " 0 var(--color-grey-000),", " ", " var(--color-grey-000),-", " -", " 0 var(--color-grey-000),", " -", " 0 var(--color-grey-000),-", " ", " 0 var(--color-grey-000);pointer-events:none;.k-Form-TextInputWithLimit__limitNumber--disabled{text-shadow:none;}}&:focus + .k-Form-TextInputWithLimit__limitNumber,&:focus-within + .k-Form-TextInputWithLimit__limitNumber{color:var(--color-grey-600);}.k-Form-TextInput__textareaContainer--orion,.k-Form-TextInput--orion{& + .k-Form-TextInputWithLimit__limitNumber{top:initial;bottom:", ";right:", ";}}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-2), pxToRem(5), pxToRem(5), pxToRem(2), pxToRem(2), pxToRem(2), pxToRem(2), pxToRem(1), pxToRem(1), pxToRem(1), pxToRem(1), pxToRem(1), pxToRem(1), pxToRem(1), pxToRem(1), pxToRem(15), pxToRem(15));
 export var TextInputWithLimit = function TextInputWithLimit(_ref) {
   var limit = _ref.limit,
       _onChange = _ref.onChange,

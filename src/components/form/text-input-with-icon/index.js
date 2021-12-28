@@ -19,8 +19,6 @@ var _textInput = require("../../../components/form/text-input");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _visuallyHidden = require("../../accessibility/visually-hidden");
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -30,7 +28,7 @@ var _excluded = ["disabled", "icon", "iconPosition", "accessibilityLabel", "id"]
 var StyledTextInputWithIcon = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-icon__StyledTextInputWithIcon",
   componentId: "sc-rvt8kr-0"
-})(["position:relative;.k-Form-TextInputWithIcon__icon{display:flex;position:absolute;align-items:center;justify-content:center;z-index:1;top:0;width:", ";height:100%;&.k-Form-TextInputWithIcon__icon--disabled > svg:not(.k-ColorSvg){&[stroke]:not([stroke='none']),& [stroke]:not([stroke='none']){stroke:", ";}&[fill]:not([fill='none']),& [fill]:not([fill='none']){fill:", ";}}}&.k-Form-TextInputWithIcon--icon_left{.k-Form-TextInputWithIcon__input{padding-left:", ";}.k-Form-TextInputWithIcon__icon{left:0;}}&.k-Form-TextInputWithIcon--icon_right{.k-Form-TextInputWithIcon__input{padding-right:", ";}.k-Form-TextInputWithIcon__icon{right:0;}}"], (0, _typography.pxToRem)(50), _colorsConfig.default.font2, _colorsConfig.default.font2, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50));
+})(["position:relative;.k-Form-TextInputWithIcon__icon{display:flex;position:absolute;align-items:center;justify-content:center;z-index:1;top:0;width:", ";height:100%;&.k-Form-TextInputWithIcon__icon--disabled > svg:not(.k-ColorSvg){&[stroke]:not([stroke='none']),& [stroke]:not([stroke='none']){stroke:var(--color-grey-500);}&[fill]:not([fill='none']),& [fill]:not([fill='none']){fill:var(--color-grey-500);}}}&.k-Form-TextInputWithIcon--icon_left{.k-Form-TextInputWithIcon__input{padding-left:", ";}.k-Form-TextInputWithIcon__icon{left:0;}}&.k-Form-TextInputWithIcon--icon_right{.k-Form-TextInputWithIcon__input{padding-right:", ";}.k-Form-TextInputWithIcon__icon{right:0;}}"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50));
 
 var TextInputWithIcon = function TextInputWithIcon(_ref) {
   var disabled = _ref.disabled,

@@ -91,7 +91,11 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
     <div ref={ref}>
       <FlexWrapper gap={50}>
         <div>
-          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+          <Title
+            modifier="septenary"
+            noMargin
+            className="k-u-margin-bottom-double"
+          >
             Owner Contribution
           </Title>
           <SummaryCard.TitleBar
@@ -168,7 +172,11 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
         </div>
 
         <div>
-          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+          <Title
+            modifier="septenary"
+            noMargin
+            className="k-u-margin-bottom-double"
+          >
             Owner Subscription
           </Title>
           <SummaryCard.TitleBar
@@ -207,8 +215,12 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="amount"
               aria-describedby="SummaryList-ownerSubscription-amount"
             >
-              <Text size="tiny" className="k-u-hidden@s-down">10 €</Text>
-              <Text size="tiny" className="k-u-hidden@m-up">10 € / mois</Text>
+              <Text size="tiny" className="k-u-hidden@s-down">
+                10 €
+              </Text>
+              <Text size="tiny" className="k-u-hidden@m-up">
+                10 € / mois
+              </Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
               className="k-u-hidden@xs-down"
@@ -221,8 +233,12 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="subscription"
               aria-describedby="SummaryList-ownerSubscription-subscription"
             >
-              <Text size="tiny" className="k-u-hidden@xs-down">130</Text>
-              <Text size="tiny" className="k-u-hidden@s-up">130 abonnements en cours</Text>
+              <Text size="tiny" className="k-u-hidden@xs-down">
+                130
+              </Text>
+              <Text size="tiny" className="k-u-hidden@s-up">
+                130 abonnements en cours
+              </Text>
             </SummaryCard.Cell>
             <SummaryCard.Cell
               className="k-u-hidden@xs-down"
@@ -253,7 +269,11 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
         </div>
 
         <div>
-          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+          <Title
+            modifier="septenary"
+            noMargin
+            className="k-u-margin-bottom-double"
+          >
             Contributor Contribution
           </Title>
           <SummaryCard.TitleBar
@@ -334,7 +354,11 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
         </div>
 
         <div>
-          <Title modifier="septenary" noMargin className="k-u-margin-bottom-double">
+          <Title
+            modifier="septenary"
+            noMargin
+            className="k-u-margin-bottom-double"
+          >
             Contributor Subscription
           </Title>
           <SummaryCard.TitleBar

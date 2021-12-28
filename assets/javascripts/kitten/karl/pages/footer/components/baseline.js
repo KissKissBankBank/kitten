@@ -1,8 +1,5 @@
 import React from 'react'
-import { 
-  Title,
-  KkbbFlashIllustration,
-} from 'kitten'
+import { Title, KkbbFlashIllustration } from 'kitten'
 import { SocialButton } from './social-button'
 
 export const Baseline = props => {
@@ -18,7 +15,8 @@ export const Baseline = props => {
           cssColor="var(--color-grey-000)"
           className="k-Footer__baselineText"
         >
-          Nous aidons les créateurs et les entrepreneurs à financer et faire vivre leurs projets.
+          Nous aidons les créateurs et les entrepreneurs à financer et faire
+          vivre leurs projets.
         </Title>
         <SocialButton className="k-u-hidden@l-up k-u-margin-top-double@m-down" />
       </div>

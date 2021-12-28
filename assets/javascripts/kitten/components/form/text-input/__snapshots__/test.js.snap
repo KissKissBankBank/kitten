@@ -71,7 +71,7 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH hhmzsO k-Form-TextInput__textareaContainer"
+  className="sc-bwzfXH daljfe k-Form-TextInput__textareaContainer"
 >
   <textarea
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular"

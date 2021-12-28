@@ -50,7 +50,7 @@ GoodeedLogo.propTypes = {
 }
 
 GoodeedLogo.defaultProps = {
-  color: "url(#a)",
+  color: 'url(#a)',
   width: null,
   height: null,
 }

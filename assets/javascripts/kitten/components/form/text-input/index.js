@@ -225,7 +225,7 @@ const StyledTextareaContainer = styled.div`
     color: var(--color-grey-000);
 
     ::placeholder {
-      color: var(--color-grey-400);;
+      color: var(--color-grey-400);
     }
   }
 

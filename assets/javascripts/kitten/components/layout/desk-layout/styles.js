@@ -35,11 +35,11 @@ export const StyledLayout = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${pxToRem(20)} var(--deskLayout-gutter);
-    max-width: ${pxToRem(CONTAINER_MAX_WIDTH - (2 * CONTAINER_PADDING_THIN))};
+    max-width: ${pxToRem(CONTAINER_MAX_WIDTH - 2 * CONTAINER_PADDING_THIN)};
     margin: 0 auto;
 
     @media ${mq.tabletAndDesktop} {
-      max-width: ${pxToRem(CONTAINER_MAX_WIDTH - (2 * CONTAINER_PADDING))};
+      max-width: ${pxToRem(CONTAINER_MAX_WIDTH - 2 * CONTAINER_PADDING)};
     }
 
     @media ${mq.desktop} {

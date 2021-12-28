@@ -53,7 +53,7 @@ GoodeedLogo.propTypes = {
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 GoodeedLogo.defaultProps = {
-  color: "url(#a)",
+  color: 'url(#a)',
   width: null,
   height: null
 };
