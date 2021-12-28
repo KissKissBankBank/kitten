@@ -89,6 +89,26 @@ export const Default = args => {
   )
 }
 
+export const Controlled = args => {
+  const [controlledList, setControlledList] = useState([
+    { value: 'object disabled', disabled: true },
+    'hey',
+    { value: 'object enabled', disabled: false },
+  ])
+  return (
+    <TagInput
+      {...args}
+      itemsList={controlledList}
+      onChange={newList => setControlledList(newList)}
+      helpMessage={
+        args.disabled
+          ? 'This input is disabled.'
+          : 'Press Enter or comma to add an item to the list.'
+      }
+    />
+  )
+}
+
 export const WithNodeElements = args => {
   return (
     <TagInput
