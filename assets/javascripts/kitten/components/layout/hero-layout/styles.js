@@ -87,15 +87,38 @@ export const StyledLayout = styled.div`
     margin: 0 var(--container-padding) ${pxToRem(60)};
     display: flex;
     flex-direction: column;
-    gap: ${pxToRem(50)};
+    gap: ${pxToRem(50)} ${pxToRem(70)};
+    display: grid;
+
+    @media ${mq.mobileAndTablet} {
+      grid-template-areas: 'menu' 'content' 'aside';
+    }
 
     @media ${mq.desktop} {
       margin: ${pxToRem(50)} ${pxToRem(70)} ${pxToRem(100)};
-      display: grid;
       grid-template-columns:
-        minmax(${pxToRem(210)}, 1fr) minmax(auto, ${pxToRem(670)})
+        minmax(${pxToRem(210)}, 1fr)
+        minmax(auto, ${pxToRem(670)})
         minmax(${pxToRem(210)}, 1fr);
-      gap: ${pxToRem(70)};
+      grid-template-areas: 'menu content aside';
+    }
+
+    .k-HeroLayout__menu {
+      grid-area: menu;
+    }
+
+    .k-HeroLayout__aside {
+      grid-area: aside;
+    }
+
+    .k-HeroLayout__loading,
+    .k-HeroLayout__content {
+      grid-area: content;
+    }
+
+    .k-HeroLayout__loading {
+      justify-self: center;
+      align-self: center;
     }
   }
 

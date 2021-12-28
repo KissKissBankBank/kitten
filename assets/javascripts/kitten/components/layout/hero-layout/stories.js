@@ -29,6 +29,7 @@ import {
   YoutubeButtonIcon,
   EnvelopeIcon,
   FloatingMenu,
+  Paragraph,
 } from 'kitten'
 
 import Footer from 'kitten/karl/pages/footer'
@@ -90,6 +91,20 @@ const StyledGridCol = styled(GridCol)`
   }
 `
 
+const StyledAsideCard = styled(FlexWrapper)`
+  @media ${mq.mobileAndTablet} {
+    border: var(--border);
+    padding: ${pxToRem(30)} ${pxToRem(10)};
+    align-items: center;
+    border-radius: var(--border-radius-m);
+
+    .kiss-AsideTitle {
+      text-align: center;
+      font-size: ${pxToRem(10)};
+    }
+  }
+`
+
 const GlobalStyle = createGlobalStyle`
   @media ${mq.mobileAndTablet} {
     .k-HeaderNav--isStuck + * .k-HeroLayout__sticky.k-HeroLayout__menu {
@@ -113,18 +128,23 @@ export default {
     },
   },
   args: {
-    fullWidth: false,
+    isContentLoading: false,
     primary500: '#19b4fa',
     primary700: '#05a8e6',
   },
   argTypes: {
-    fullWidth: { control: 'boolean' },
+    isContentLoading: { control: 'boolean' },
     primary500: { control: 'color' },
     primary700: { control: 'color' },
   },
 }
 
-export const Default = ({primary500, primary700, ...args}) => (
+export const Default = ({
+  primary500,
+  primary700,
+  isContentLoading,
+  ...args
+}) => (
   <>
     <GlobalStyle />
     <HeaderNav
@@ -151,287 +171,402 @@ export const Default = ({primary500, primary700, ...args}) => (
         '--color-primary-500': primary500,
         '--color-primary-700': primary700,
       }}
-      hero_bg={<img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />}
-      hero_header={
-        <a href="#" className="k-u-block">
-          <StyledAvatar
-            src={`/kitten-${9 - Math.floor(Math.random() * 10)}.jpg`}
-            alt="Nom du porteur de projet"
-          />
-        </a>
-      }
-      hero_content={
-        <FlexWrapper className="k-u-flex-alignItems-center" gap={30}>
-          <Title noMargin modifier="primary">
-            Magna Condimentum Mollis Tortor
-          </Title>
-          <Text
-            tag="p"
-            weight="regular"
-            size="giant"
-            className="k-u-margin-none k-u-letter-spacing-10"
-          >
-            Duis mollis, est non commodo luctus, nisi erat Textorttitor ligula,
-            eget lacinia odio sem nec elit.
-          </Text>
-          <StyledCounter>
-            <span className="kiss-ProjectPage-hero-number">538</span>
-            <span className="kiss-ProjectPage-hero-text">abonnés</span>
-          </StyledCounter>
-          <FlexWrapper direction="row" gap={5}>
-            <Button fit="content" size="tiny" rounded>
-              Partager
-            </Button>
-            <Button fit="content" size="tiny" rounded>
-              Ajouter aux favoris
-            </Button>
-            <Button fit="content" size="tiny" modifier="helium" rounded>
-              S’abonner
-            </Button>
-          </FlexWrapper>
-        </FlexWrapper>
-      }
-      menu={
-        <FloatingMenu style={{ margin: '0 -10px' }}>
-          <FloatingMenu.Item href="#">Abonnements</FloatingMenu.Item>
-          <FloatingMenu.Item href="#" isActive>
-            À propos
-          </FloatingMenu.Item>
-          <FloatingMenu.Item href="#">Actualités</FloatingMenu.Item>
-          <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
-        </FloatingMenu>
-      }
-      aside={
-        <FlexWrapper gap={20}>
-          <div>
-            <Text
-              tag="h3"
-              size="micro"
-              transform="uppercase"
-              className="k-u-margin-top-none k-u-margin-bottom-single k-u-letter-spacing-10"
-            >
-              Nous suivre
-            </Text>
-            <FlexWrapper direction="row" gap={10}>
-              <a href="#">
-                <FacebookButtonIcon rounded size="tiny" />
-              </a>
-              <a href="#">
-                <TwitterButtonIcon rounded size="tiny" />
-              </a>
-              <a href="#">
-                <InstagramButtonIcon rounded size="tiny" />
-              </a>
-              <a href="#">
-                <YoutubeButtonIcon rounded size="tiny" />
-              </a>
-            </FlexWrapper>
-          </div>
-
-          <div>
-            <Text
-              tag="h3"
-              size="micro"
-              transform="uppercase"
-              className="k-u-margin-top-none k-u-margin-bottom-noneHalf k-u-letter-spacing-10"
-            >
-              Site internet
-            </Text>
-            <div>
-              <Button fit="content" rounded size="micro">
-                www.mad-movies.com
-              </Button>
-            </div>
-          </div>
-
-          <div>
-            <Text
-              tag="h3"
-              size="micro"
-              transform="uppercase"
-              className="k-u-margin-top-none k-u-margin-bottom-noneHalf k-u-letter-spacing-10"
-            >
-              Contact
-            </Text>
-            <div>
-              <Button fit="content" rounded size="tiny">
-                <EnvelopeIcon />
-                <span>Nous écrire</span>
-              </Button>
-            </div>
-          </div>
-        </FlexWrapper>
-      }
-      promo={
-        <>
-          <Grid>
-            <GridCol
-              col="12"
-              col-s="6"
-              col-l="4"
-              offset-l="2"
-              className="k-u-align-center"
-            >
-              <Title tag="h2" noMargin modifier="tertiary">
-                Abonnez-vous
-              </Title>
-              <Text>
-                à partir de{' '}
-                <strong className="k-u-weight-bold">12&nbsp;€</strong> par mois
-              </Text>
-            </GridCol>
-            <GridCol col="12" col-s="6" col-l="4">
-              <Text
-                tag="h3"
-                weight="bold"
-                transform="uppercase"
-                size="tiny"
-                cssColor="var(--color-primary-500)"
-                className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
-              >
-                Pourquoi s’abonner&nbsp;?
-              </Text>
-              <List
-                markerElement={
-                  <LargeArrowIconNext
-                    color="var(--color-primary-500)"
-                    width="10"
-                  />
-                }
-              >
-                <Text size="big">Contribuez à faire vivre ce projet</Text>
-                <Text size="big">Recevez un contenu exclusif</Text>
-                <Text size="big">
-                  Faites partie du cercle privilégié d’abonnés
-                </Text>
-              </List>
-            </GridCol>
-          </Grid>
-          <Separator darker className="k-u-margin-vertical-double" />
-          <Grid>
-            <GridCol col="12">
-              <Text
-                tag="h3"
-                weight="bold"
-                transform="uppercase"
-                size="tiny"
-                cssColor="var(--color-primary-500)"
-                className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
-              >
-                Comment ça marche&nbsp;?
-              </Text>
-            </GridCol>
-            <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartWithClickIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
-              <Text>
-                Sélectionnez un abonnement ou faites un don récurrent du montant
-                de votre choix
-              </Text>
-            </StyledGridCol>
-            <StyledGridCol col="12" col-s="6" col-l="3">
-              <ColorCheckedShieldIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
-              <Text>
-                Validez votre abonnement via notre formulaire de paiement
-                sécurisé
-              </Text>
-            </StyledGridCol>
-            <StyledGridCol col="12" col-s="6" col-l="3">
-              <GiftIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
-              <Text>
-                Recevez chaque mois ou chaque trimestre le contenu de votre
-                abonnement
-              </Text>
-            </StyledGridCol>
-            <StyledGridCol col="12" col-s="6" col-l="3">
-              <CrossCircleIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
-              <Text>
-                Résiliez votre abonnement à tout moment depuis votre compte
-              </Text>
-            </StyledGridCol>
-          </Grid>
-        </>
-      }
     >
-      <p className="k-u-margin-top-none">
-        Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-        sit amet fermentum. Curabitur blandit tempus porttitor. Nullam quis
-        risus eget urna mollis ornare vel eu leo.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo
-        risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus,
-        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-        massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-        euismod. Curabitur blandit tempus porttitor.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo
-        cursus magna, vel scelerisque nisl consectetur et. Sed posuere
-        consectetur est at lobortis. Vestibulum id ligula porta felis euismod
-        semper.
-      </p>
-      <p>
-        Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-        sit amet fermentum. Curabitur blandit tempus porttitor. Nullam quis
-        risus eget urna mollis ornare vel eu leo.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo
-        risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus,
-        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-        massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-        euismod. Curabitur blandit tempus porttitor.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo
-        cursus magna, vel scelerisque nisl consectetur et. Sed posuere
-        consectetur est at lobortis. Vestibulum id ligula porta felis euismod
-        semper.
-      </p>
-      <p>
-        Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-        sit amet fermentum. Curabitur blandit tempus porttitor. Nullam quis
-        risus eget urna mollis ornare vel eu leo.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo
-        risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus,
-        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-        massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-        euismod. Curabitur blandit tempus porttitor.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo
-        cursus magna, vel scelerisque nisl consectetur et. Sed posuere
-        consectetur est at lobortis. Vestibulum id ligula porta felis euismod
-        semper.
-      </p>
-      <p>
-        Sed posuere consectetur est at lobortis. Cras mattis consectetur purus
-        sit amet fermentum. Curabitur blandit tempus porttitor. Nullam quis
-        risus eget urna mollis ornare vel eu leo.
-      </p>
-      <p>
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo
-        risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus,
-        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-        massa justo sit amet risus. Etiam porta sem malesuada magna mollis
-        euismod. Curabitur blandit tempus porttitor.
-      </p>
-      <p className="k-u-margin-bottom-none">
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-        Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo
-        cursus magna, vel scelerisque nisl consectetur et. Sed posuere
-        consectetur est at lobortis. Vestibulum id ligula porta felis euismod
-        semper.
-      </p>
+      <HeroLayout.Hero>
+        <HeroLayout.Hero.Image>
+          <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
+        </HeroLayout.Hero.Image>
+
+        <HeroLayout.Hero.Block>
+          <a href="#" className="k-u-block">
+            <StyledAvatar
+              src={`/kitten-${9 - Math.floor(Math.random() * 10)}.jpg`}
+              alt="Nom du porteur de projet"
+            />
+          </a>
+        </HeroLayout.Hero.Block>
+
+        <HeroLayout.Hero.Block>
+          <FlexWrapper className="k-u-flex-alignItems-center" gap={30}>
+            <Title noMargin modifier="primary">
+              Magna Condimentum Mollis Tortor
+            </Title>
+            <Text
+              tag="p"
+              weight="regular"
+              size="giant"
+              className="k-u-margin-none k-u-letter-spacing-10"
+            >
+              Duis mollis, est non commodo luctus, nisi erat Textorttitor
+              ligula, eget lacinia odio sem nec elit.
+            </Text>
+            <StyledCounter>
+              <span className="kiss-ProjectPage-hero-number">538</span>
+              <span className="kiss-ProjectPage-hero-text">abonnés</span>
+            </StyledCounter>
+            <FlexWrapper direction="row" gap={5}>
+              <Button fit="content" size="tiny" rounded>
+                Partager
+              </Button>
+              <Button fit="content" size="tiny" rounded>
+                Ajouter aux favoris
+              </Button>
+              <Button fit="content" size="tiny" modifier="helium" rounded>
+                S’abonner
+              </Button>
+            </FlexWrapper>
+          </FlexWrapper>
+        </HeroLayout.Hero.Block>
+      </HeroLayout.Hero>
+
+      <HeroLayout.Promo>
+        <Grid>
+          <GridCol
+            col="12"
+            col-s="6"
+            col-l="4"
+            offset-l="2"
+            className="k-u-align-center@l-up k-u-margin-bottom-triple"
+          >
+            <Title tag="h2" noMargin modifier="tertiary">
+              Abonnez-vous
+            </Title>
+            <Text cssColor="var(--color-grey-700)">
+              à partir de 12&nbsp;€ par mois
+            </Text>
+          </GridCol>
+          <GridCol col="12" col-s="6" col-l="4">
+            <Text
+              tag="h3"
+              weight="bold"
+              transform="uppercase"
+              size="tiny"
+              className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
+            >
+              Pourquoi s’abonner&nbsp;?
+            </Text>
+            <List
+              gap="10"
+              markerElement={
+                <LargeArrowIconNext
+                  color="var(--color-primary-500)"
+                  width="10"
+                />
+              }
+            >
+              <Paragraph
+                modifier="primary"
+                tag="span"
+                className="k-u-line-height-1-25"
+              >
+                Contribuez à faire vivre ce projet
+              </Paragraph>
+              <Paragraph
+                modifier="primary"
+                tag="span"
+                className="k-u-line-height-1-25"
+              >
+                Recevez un contenu exclusif
+              </Paragraph>
+              <Paragraph
+                modifier="primary"
+                tag="span"
+                className="k-u-line-height-1-25"
+              >
+                Faites partie du cercle privilégié d’abonnés
+              </Paragraph>
+            </List>
+          </GridCol>
+        </Grid>
+        <Separator
+          darker
+          className="k-u-margin-vertical-double k-u-hidden@xs-down"
+        />
+        <Grid className="k-u-hidden@xs-down">
+          <GridCol col="12">
+            <Text
+              tag="h3"
+              weight="bold"
+              transform="uppercase"
+              size="tiny"
+              className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
+            >
+              Comment ça marche&nbsp;?
+            </Text>
+          </GridCol>
+          <StyledGridCol col="12" col-s="6" col-l="3">
+            <HeartWithClickIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text>
+              Sélectionnez un abonnement ou faites un don récurrent du montant
+              de votre choix
+            </Text>
+          </StyledGridCol>
+          <StyledGridCol col="12" col-s="6" col-l="3">
+            <ColorCheckedShieldIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text>
+              Validez votre abonnement via notre formulaire de paiement sécurisé
+            </Text>
+          </StyledGridCol>
+          <StyledGridCol col="12" col-s="6" col-l="3">
+            <GiftIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text>
+              Recevez chaque mois ou chaque trimestre le contenu de votre
+              abonnement
+            </Text>
+          </StyledGridCol>
+          <StyledGridCol col="12" col-s="6" col-l="3">
+            <CrossCircleIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text>
+              Résiliez votre abonnement à tout moment depuis votre compte
+            </Text>
+          </StyledGridCol>
+        </Grid>
+      </HeroLayout.Promo>
+
+      <HeroLayout.Main>
+        <HeroLayout.Main.Menu>
+          <FloatingMenu style={{ margin: '0 -10px' }}>
+            <FloatingMenu.Item href="#">Abonnements</FloatingMenu.Item>
+            <FloatingMenu.Item href="#" isActive>
+              À propos
+            </FloatingMenu.Item>
+            <FloatingMenu.Item href="#">Actualités</FloatingMenu.Item>
+            <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
+          </FloatingMenu>
+        </HeroLayout.Main.Menu>
+        <HeroLayout.Main.Aside>
+          <StyledAsideCard gap={20}>
+            <div>
+              <Text
+                tag="h3"
+                size="micro"
+                transform="uppercase"
+                className="kiss-AsideTitle k-u-margin-top-none k-u-margin-bottom-single k-u-letter-spacing-10"
+              >
+                Nous suivre
+              </Text>
+              <FlexWrapper direction="row" gap={10}>
+                <a href="#">
+                  <FacebookButtonIcon rounded size="tiny" />
+                </a>
+                <a href="#">
+                  <TwitterButtonIcon rounded size="tiny" />
+                </a>
+                <a href="#">
+                  <InstagramButtonIcon rounded size="tiny" />
+                </a>
+                <a href="#">
+                  <YoutubeButtonIcon rounded size="tiny" />
+                </a>
+              </FlexWrapper>
+            </div>
+
+            <div>
+              <Text
+                tag="h3"
+                size="micro"
+                transform="uppercase"
+                className="kiss-AsideTitle k-u-margin-top-none k-u-margin-bottom-noneHalf k-u-letter-spacing-10"
+              >
+                Site internet
+              </Text>
+              <div>
+                <Button fit="content" rounded size="micro">
+                  www.mad-movies.com
+                </Button>
+              </div>
+            </div>
+
+            <div>
+              <Text
+                tag="h3"
+                size="micro"
+                transform="uppercase"
+                className="kiss-AsideTitle k-u-margin-top-none k-u-margin-bottom-noneHalf k-u-letter-spacing-10"
+              >
+                Contact
+              </Text>
+              <div>
+                <Button fit="content" rounded size="tiny">
+                  <EnvelopeIcon />
+                  <span>Nous écrire</span>
+                </Button>
+              </div>
+            </div>
+          </StyledAsideCard>
+        </HeroLayout.Main.Aside>
+        <HeroLayout.Main.Content
+          loading={isContentLoading}
+          loaderComponent={<KissKissLoadingAnimation />}
+        >
+          <p className="k-u-margin-top-none">
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+          <p>
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+          <p>
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+          <p>
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p className="k-u-margin-bottom-none">
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+        </HeroLayout.Main.Content>
+      </HeroLayout.Main>
+
+      <HeroLayout.Promo className="k-u-hidden@s-up">
+        <Grid>
+          <GridCol col="12">
+            <Text
+              tag="h3"
+              weight="bold"
+              transform="uppercase"
+              size="tiny"
+              className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-single"
+            >
+              Comment ça marche&nbsp;?
+            </Text>
+          </GridCol>
+          <StyledGridCol
+            col="12"
+            col-s="6"
+            col-l="3"
+            className="k-u-flex-alignItems-center k-u-margin-top-double"
+          >
+            <HeartWithClickIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text size="tiny">
+              Sélectionnez un abonnement ou faites un don récurrent du montant
+              de votre choix
+            </Text>
+          </StyledGridCol>
+          <StyledGridCol
+            col="12"
+            col-s="6"
+            col-l="3"
+            className="k-u-flex-alignItems-center k-u-margin-top-double"
+          >
+            <ColorCheckedShieldIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text size="tiny">
+              Validez votre abonnement via notre formulaire de paiement sécurisé
+            </Text>
+          </StyledGridCol>
+          <StyledGridCol
+            col="12"
+            col-s="6"
+            col-l="3"
+            className="k-u-flex-alignItems-center k-u-margin-top-double"
+          >
+            <GiftIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text size="tiny">
+              Recevez chaque mois ou chaque trimestre le contenu de votre
+              abonnement
+            </Text>
+          </StyledGridCol>
+          <StyledGridCol
+            col="12"
+            col-s="6"
+            col-l="3"
+            className="k-u-flex-alignItems-center k-u-margin-top-double"
+          >
+            <CrossCircleIconNext
+              color="var(--color-grey-900)"
+              secondaryColor="var(--color-primary-500)"
+            />
+            <Text size="tiny">
+              Résiliez votre abonnement à tout moment depuis votre compte
+            </Text>
+          </StyledGridCol>
+        </Grid>
+      </HeroLayout.Promo>
     </HeroLayout>
     <Footer className="k-u-margin-top-quintuple" />
   </>
