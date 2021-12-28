@@ -33,8 +33,6 @@ export const StyledCard = styled.div`
 
   .k-ProjectCard__image {
     overflow: hidden;
-    border-top-left-radius: var(--border-radius-m);
-    border-top-right-radius: var(--border-radius-m);
 
     .k-ProjectCard__image__image {
       display: block;
@@ -56,19 +54,19 @@ export const StyledCard = styled.div`
   .k-ProjectCard__sticker {
     position: absolute;
     height: ${pxToRem(22)};
+    box-sizing: border-box;
     top: ${pxToRem(-11)};
     left: ${pxToRem(15)};
     max-width: calc(100% - ${pxToRem(2 * (10 + 15))});
 
-    line-height: ${pxToRem(22)};
+    line-height: ${pxToRem(20)};
     background-color: var(--projectCard-statusColor);
     border-radius: var(--border-radius-rounded);
-    padding: ${pxToRem(0)} ${pxToRem(10)};
+    padding: ${pxToRem(0)} ${pxToRem(10)} ${pxToRem(2)};
 
     color: var(--color-grey-000);
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${pxToRem(12)};
-    display: inline-block;
   }
 
   .k-ProjectCard__title,

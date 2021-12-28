@@ -83,7 +83,7 @@ export const Default = ({ progressProps, ...args }) => (
 Default.args = args
 Default.argTypes = argTypes
 
-export const WithVideo = Default
+export const WithVideo = args => <Default {...args} />
 
 WithVideo.args = {
   ...args,
