@@ -26,6 +26,7 @@ export const ProjectCard = ({
         className,
         `k-ProjectCard--${status}`,
       )}
+      href={href}
       {...props}
     >
       <div className="k-ProjectCard__image">
