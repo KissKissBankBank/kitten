@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Logo: New `LendopolisLogoOnDark` logo.
 - Fix: `DeskLayout`: Style adjustments.
 - Fix: `DeskLayout`: Width fixes.
+- Feature: `ProjectCard`: Add component.
+- Fix: `Progress`: Modernize component.
 
 ## [6.11.1] - 2021-12-20
 
