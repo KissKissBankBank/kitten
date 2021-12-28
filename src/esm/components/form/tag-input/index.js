@@ -18,15 +18,16 @@ export var TagInput = function TagInput(_ref) {
       id = _ref.id,
       addEventKeys = _ref.addEventKeys,
       removeEventKeys = _ref.removeEventKeys,
+      itemsListFromProps = _ref.itemsList,
       initialItemsList = _ref.initialItemsList,
       helpMessage = _ref.helpMessage,
       disabled = _ref.disabled,
       size = _ref.size,
       variant = _ref.variant;
 
-  var _useState = useState([].concat(initialItemsList)),
+  var _useState = useState(Array.from(itemsListFromProps || initialItemsList)),
       itemsList = _useState[0],
-      setItemList = _useState[1];
+      setItemsList = _useState[1];
 
   var _useState2 = useState(null),
       lastRemoved = _useState2[0],
@@ -41,9 +42,8 @@ export var TagInput = function TagInput(_ref) {
   };
 
   var addValueToList = function addValueToList(value) {
-    setItemList(function (currentList) {
-      return [].concat(currentList, [value]);
-    });
+    var newList = [].concat(itemsList, [value]);
+    itemsListFromProps ? onChange(newList) : setItemsList(newList);
   };
 
   var removeLastValueFromList = function removeLastValueFromList() {
@@ -54,20 +54,18 @@ export var TagInput = function TagInput(_ref) {
     }
 
     setLastRemoved(lastItem);
-    setItemList(function (currentList) {
-      return currentList.slice(0, -1);
-    });
+    var newList = Array.from(itemsList.slice(0, -1));
+    itemsListFromProps ? onChange(newList) : setItemsList(newList);
   };
 
   var removeValueFromList = function removeValueFromList(item) {
     var valueToRemove = (item == null ? void 0 : item.value) || item;
     setLastRemoved(valueToRemove);
-    setItemList(function (currentList) {
-      return currentList.filter(function (item) {
-        var itemValue = (item == null ? void 0 : item.value) || item;
-        return itemValue !== valueToRemove;
-      });
+    var newList = itemsList.filter(function (item) {
+      var itemValue = (item == null ? void 0 : item.value) || item;
+      return itemValue !== valueToRemove;
     });
+    itemsListFromProps ? onChange(Array.from(newList)) : setItemsList(newList);
   };
 
   var undoRemove = function undoRemove() {
@@ -76,8 +74,15 @@ export var TagInput = function TagInput(_ref) {
   };
 
   useEffect(function () {
-    onChange(itemsList);
+    if (!itemsListFromProps) {
+      onChange(itemsList);
+    }
   }, [itemsList]);
+  useEffect(function () {
+    if (itemsListFromProps) {
+      setItemsList(itemsListFromProps);
+    }
+  }, [itemsListFromProps]);
 
   var onKeyDown = function onKeyDown(event) {
     if (addEventKeys.includes(event.key)) {
@@ -162,6 +167,7 @@ export var TagInput = function TagInput(_ref) {
 };
 TagInput.defaultProps = {
   initialItemsList: [],
+  itemsList: undefined,
   addEventKeys: ['Enter', ','],
   removeEventKeys: ['Backspace'],
   placeholder: '',
@@ -173,6 +179,7 @@ TagInput.defaultProps = {
 TagInput.propTypes = {
   id: PropTypes.string.isRequired,
   initialItemsList: PropTypes.arrayOf(PropTypes.any),
+  itemsList: PropTypes.arrayOf(PropTypes.any),
   addEventKeys: PropTypes.arrayOf(PropTypes.string),
   removeEventKeys: PropTypes.arrayOf(PropTypes.string),
   placeholder: PropTypes.string,
