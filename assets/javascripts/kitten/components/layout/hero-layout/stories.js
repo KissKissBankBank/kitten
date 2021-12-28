@@ -30,6 +30,9 @@ import {
   EnvelopeIcon,
   FloatingMenu,
   Paragraph,
+  AirplaneIconNext,
+  EnvelopeIconNext,
+  StarIconNext,
 } from 'kitten'
 
 import Footer from 'kitten/karl/pages/footer'
@@ -205,11 +208,20 @@ export const Default = ({
               <span className="kiss-ProjectPage-hero-text">abonnés</span>
             </StyledCounter>
             <FlexWrapper direction="row" gap={5}>
-              <Button fit="content" size="tiny" rounded>
-                Partager
+              <Button fit="icon" size="tiny" rounded className="k-u-hidden@l-up">
+                <EnvelopeIconNext />
+              </Button>
+              <Button fit="icon" size="tiny" rounded className="k-u-hidden@l-up">
+                <AirplaneIconNext />
+              </Button>
+              <Button fit="content" size="tiny" rounded className="k-u-hidden@m-down">
+                <AirplaneIconNext />
+                <span>Partager</span>
               </Button>
               <Button fit="content" size="tiny" rounded>
-                Ajouter aux favoris
+                <StarIconNext />
+                <span className="k-u-hidden@m-down">Ajouter aux favoris</span>
+                <span className="k-u-hidden@xxs-down k-u-hidden@l-up">Favoris</span>
               </Button>
               <Button fit="content" size="tiny" modifier="helium" rounded>
                 S’abonner

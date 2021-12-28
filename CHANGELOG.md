@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `List`: Add `markerElement` prop, accepts a React node.
 - Feature: `List`: Add `gap` prop, accepts a number.
 - Feature: Utilities: Add `k-u-line-height-1-25` and `k-u-line-height-1-40` CSS utilities.
+- Feature: Add the following icon components:
+  - `EnvelopeIconNext`,
+  - `StarIconNext`.
 
 ## [6.12.0] - 2021-12-28
 
@@ -17,11 +20,11 @@ Features:
 
 - `ProjectCard`: Add component.
 - Add the following icon components:
-  `HeartWithClickIconNext`,
-  `GiftIconNext`,
-  `ColorCheckedShieldIconNext`,
-  `SunIconNext`,
-  `CrossCircleIconNext`.
+  - `HeartWithClickIconNext`,
+  - `GiftIconNext`,
+  - `ColorCheckedShieldIconNext`,
+  - `SunIconNext`,
+  - `CrossCircleIconNext`.
 - Logos: Add `LendopolisLogoOnDark` logo.
 
 Fixes:

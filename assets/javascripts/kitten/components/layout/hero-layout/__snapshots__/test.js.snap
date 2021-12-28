@@ -114,7 +114,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   }
 }
 
-@media (min-width:1080px) {
+@media (min-width:640px) {
   .c0 .k-HeroLayout__promo {
     padding: 3.125rem var(--container-padding) 1.875rem;
   }
@@ -286,7 +286,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:1080px) {
+@media (min-width:640px) {
   .c0 .k-HeroLayout__promo {
     padding: 3.125rem var(--container-padding) 1.875rem;
   }

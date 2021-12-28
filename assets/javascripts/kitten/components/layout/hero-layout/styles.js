@@ -78,7 +78,7 @@ export const StyledLayout = styled.div`
     background-color: var(--color-grey-200);
     padding: ${pxToRem(30)} var(--container-padding);
 
-    @media ${mq.desktop} {
+    @media ${mq.tabletAndDesktop} {
       padding: ${pxToRem(50)} var(--container-padding) ${pxToRem(30)};
     }
   }
