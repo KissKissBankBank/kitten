@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Improve `borderRadius` of buttons on all cards.
 - Feature: Logo: New `LendopolisLogoOnDark` logo.
 - Fix: `DeskLayout`: Style adjustments.
+- Fix: `DeskLayout`: Width fixes.
 
 ## [6.11.1] - 2021-12-20
 
