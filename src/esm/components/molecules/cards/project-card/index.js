@@ -1,0 +1,114 @@
+import _extends from "@babel/runtime/helpers/extends";
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["backgroundColor", "alt", "imageClassName"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps"],
+    _excluded3 = ["className"],
+    _excluded4 = ["className"],
+    _excluded5 = ["className"],
+    _excluded6 = ["className", "value"];
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { StyledCard } from './styles';
+import { Text } from '../../../../components/atoms/typography/text';
+import { Title } from '../../../../components/atoms/typography/title';
+import { Progress } from '../../../../components/atoms/progress';
+import { GifVideo } from '../../../../components/atoms/video/gif-video';
+export var ProjectCard = function ProjectCard(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      href = _ref.href,
+      _ref$imageProps = _ref.imageProps,
+      backgroundColor = _ref$imageProps.backgroundColor,
+      alt = _ref$imageProps.alt,
+      imageClassName = _ref$imageProps.imageClassName,
+      otherImageProps = _objectWithoutPropertiesLoose(_ref$imageProps, _excluded),
+      status = _ref.status,
+      sticker = _ref.sticker,
+      videoSources = _ref.videoSources,
+      videoProps = _ref.videoProps,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded2);
+
+  return /*#__PURE__*/React.createElement(StyledCard, _extends({
+    as: href ? 'a' : 'div',
+    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status)
+  }, props), /*#__PURE__*/React.createElement("div", {
+    className: "k-ProjectCard__image"
+  }, videoSources.length == 0 && /*#__PURE__*/React.createElement("img", _extends({}, otherImageProps, {
+    alt: alt || '',
+    className: classNames('k-ProjectCard__image__image', imageClassName)
+  })), videoSources.length > 0 && /*#__PURE__*/React.createElement(GifVideo, _extends({
+    poster: otherImageProps.src
+  }, videoProps, {
+    className: classNames('k-ProjectCard__image__image', videoProps.className)
+  }), videoSources.map(function (sourceProps) {
+    return /*#__PURE__*/React.createElement("source", _extends({
+      key: "video_source_" + sourceProps.src
+    }, sourceProps));
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "k-ProjectCard__content"
+  }, sticker && /*#__PURE__*/React.createElement("div", {
+    className: "k-ProjectCard__sticker k-u-ellipsis"
+  }, sticker), children));
+};
+ProjectCard.defaultProps = {
+  status: 'normal',
+  imageProps: {
+    src: '',
+    alt: ''
+  },
+  videoProps: {},
+  videoSources: []
+};
+ProjectCard.propTypes = {
+  status: PropTypes.oneOf(['normal', 'danger', 'warning', 'success', 'disabled']),
+  imageProps: PropTypes.object,
+  videoProps: PropTypes.object,
+  videoSources: PropTypes.array
+};
+
+ProjectCard.Title = function (_ref2) {
+  var className = _ref2.className,
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
+
+  return /*#__PURE__*/React.createElement(Title, _extends({
+    modifier: "senary",
+    noMargin: true,
+    className: classNames('k-ProjectCard__title', className)
+  }, props));
+};
+
+ProjectCard.Line = function (_ref3) {
+  var className = _ref3.className,
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded4);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-ProjectCard__line', className)
+  }, props));
+};
+
+ProjectCard.Item = function (_ref4) {
+  var className = _ref4.className,
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded5);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-ProjectCard__item', className)
+  }, props));
+};
+
+ProjectCard.Progress = function (_ref5) {
+  var className = _ref5.className,
+      value = _ref5.value,
+      props = _objectWithoutPropertiesLoose(_ref5, _excluded6);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-ProjectCard__progress', className)
+  }, props), /*#__PURE__*/React.createElement(Progress, _extends({
+    variant: "andromeda",
+    value: value
+  }, props)), /*#__PURE__*/React.createElement(Text, {
+    weight: "bold",
+    size: "tiny",
+    lineHeight: "1"
+  }, value, "\xA0%"));
+};

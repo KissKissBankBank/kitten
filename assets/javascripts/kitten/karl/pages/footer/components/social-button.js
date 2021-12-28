@@ -1,5 +1,5 @@
 import React from 'react'
-import { 
+import {
   FacebookIconNext,
   LinkedinIconNext,
   TwitterIconNext,
@@ -12,10 +12,8 @@ import classNames from 'classnames'
 export const SocialButton = props => {
   return (
     <div
-      { ...props }
-      className={classNames(
-        'k-Footer__socialButton', props.className,
-      )}
+      {...props}
+      className={classNames('k-Footer__socialButton', props.className)}
     >
       <Button fit="icon" modifier="beryllium" rounded>
         <FacebookIconNext />

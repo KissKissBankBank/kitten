@@ -87,7 +87,7 @@ export const AllIllustrations = () => {
       </Group>
       <Group>
         <IllustrationWrapper name="KkbbFlashIllustration">
-          <KkbbFlashIllustration size="small" /> 
+          <KkbbFlashIllustration size="small" />
         </IllustrationWrapper>
       </Group>
     </Wrapper>

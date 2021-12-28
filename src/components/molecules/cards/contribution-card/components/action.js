@@ -43,7 +43,6 @@ var Action = function Action(_ref) {
     color: _colorsConfig.default.background1,
     title: title
   }) : /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
-    borderRadius: 4,
     type: "submit",
     className: (0, _classnames.default)('k-ContributionCard__action', className),
     modifier: "helium",
