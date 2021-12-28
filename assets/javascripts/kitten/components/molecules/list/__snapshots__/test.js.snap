@@ -2,7 +2,13 @@
 
 exports[`<List> by default matches with snapshot 1`] = `
 <ul
-  className="sc-bwzfXH jeWXlm k-List"
+  className="sc-bwzfXH epiqhU k-List"
+  style={
+    Object {
+      "--list-bottomRadiusValue": 0,
+      "--list-gap": 0,
+    }
+  }
 >
   <li
     className="k-List__item"
@@ -30,7 +36,13 @@ exports[`<List> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 <ul
-  className="sc-bwzfXH jeWXlm k-List"
+  className="sc-bwzfXH epiqhU k-List"
+  style={
+    Object {
+      "--list-bottomRadiusValue": 0,
+      "--list-gap": 0,
+    }
+  }
 >
   <li
     className="k-List__item"
@@ -149,7 +161,13 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> with a disabled button matches with snapshot 1`] = `
 <ul
-  className="sc-bwzfXH jeWXlm k-List"
+  className="sc-bwzfXH epiqhU k-List"
+  style={
+    Object {
+      "--list-bottomRadiusValue": 0,
+      "--list-gap": 0,
+    }
+  }
 >
   <li
     className="k-List__item"
@@ -284,6 +302,92 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
           />
         </svg>
       </div>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`<List> with custom marker matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH epiqhU k-List"
+  style={
+    Object {
+      "--list-bottomRadiusValue": 0,
+      "--list-gap": 0,
+    }
+  }
+>
+  <li
+    className="k-List__item"
+  >
+    <span
+      aria-hidden={true}
+      className="k-List__marker"
+    >
+      😽
+    </span>
+    <div>
+      Item 1
+    </div>
+  </li>
+  <li
+    className="k-List__item"
+  >
+    <span
+      aria-hidden={true}
+      className="k-List__marker"
+    >
+      😽
+    </span>
+    <div>
+      Item 2
+    </div>
+  </li>
+  <li
+    className="k-List__item"
+  >
+    <span
+      aria-hidden={true}
+      className="k-List__marker"
+    >
+      😽
+    </span>
+    <div>
+      Item 3
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`<List> with gap matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH epiqhU k-List"
+  style={
+    Object {
+      "--list-bottomRadiusValue": 0,
+      "--list-gap": "0.625rem",
+    }
+  }
+>
+  <li
+    className="k-List__item"
+  >
+    <div>
+      Item 1
+    </div>
+  </li>
+  <li
+    className="k-List__item"
+  >
+    <div>
+      Item 2
+    </div>
+  </li>
+  <li
+    className="k-List__item"
+  >
+    <div>
+      Item 3
     </div>
   </li>
 </ul>

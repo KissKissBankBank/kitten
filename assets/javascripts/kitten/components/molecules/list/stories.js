@@ -28,6 +28,7 @@ export default {
   ],
   args: {
     bottomBorderRadiusValue: 0,
+    gap: 0,
     hasArrow: false,
     disabled: false,
     active: false,
@@ -35,6 +36,9 @@ export default {
   },
   argTypes: {
     bottomBorderRadiusValue: {
+      control: 'number',
+    },
+    gap: {
       control: 'number',
     },
     hasArrow: {
@@ -56,9 +60,9 @@ export default {
   },
 }
 
-export const SimpleList = () => {
+export const SimpleList = ({ gap }) => {
   return (
-    <List>
+    <List gap={gap}>
       <Text>Item 1</Text>
       <Text>Item 2</Text>
       <Text>Item 3</Text>
@@ -66,9 +70,9 @@ export const SimpleList = () => {
   )
 }
 
-export const ListWithCustomMarker = () => {
+export const ListWithCustomMarker = ({ gap }) => {
   return (
-    <List markerElement={<LargeArrowIconNext width="10" />}>
+    <List gap={gap} markerElement={<LargeArrowIconNext width="10" />}>
       <Text>Item 1</Text>
       <Text>Item 2</Text>
       <Text>Item 3</Text>

@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `FloatingMenu`: Add component.
 - Feature: Utilities: Add `k-u-letter-spacing` utilities.
 - Feature: `List`: Add `markerElement` prop, accepts a React node.
+- Feature: `List`: Add `gap` prop, accepts a number.
 
 ## [6.12.0] - 2021-12-28
 
