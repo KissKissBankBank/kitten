@@ -280,7 +280,7 @@ export const Default = ({
         </Grid>
         <Separator
           darker
-          className="k-u-margin-vertical-double k-u-hidden@xs-down"
+          className="k-u-margin-top-quintuple k-u-margin-bottom-double k-u-hidden@xs-down"
         />
         <Grid className="k-u-hidden@xs-down">
           <GridCol col="12">
