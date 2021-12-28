@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-iujRgT gcWuOe k-ProjectCard k-ProjectCard--normal"
+  className="sc-iujRgT fONJLb k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
