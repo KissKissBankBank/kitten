@@ -83,7 +83,6 @@ const InnerBurgerMenu = ({ isLogged }) => (
     >
       <GoodeedLogo />
     </HeaderMenu.Item>
-
   </HeaderMenu>
 )
 

@@ -127,8 +127,14 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw cBladz k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -264,8 +270,14 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw bAnCdf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -430,8 +442,14 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw cBladz k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -567,8 +585,14 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw bAnCdf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -1092,8 +1116,14 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw cBladz k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -1229,8 +1259,14 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw bAnCdf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -1395,8 +1431,14 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw cBladz k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -1532,8 +1574,14 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw bAnCdf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -1704,8 +1752,14 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={100}
-                className="sc-gzVnrw cBladz k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"
@@ -1841,8 +1895,14 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 aria-valuemax={100}
                 aria-valuemin={0}
                 aria-valuenow={42}
-                className="sc-gzVnrw bAnCdf k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
+                className="sc-gzVnrw kxjpGN k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--orion"
                 role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
               >
                 <div
                   className="k-Meters-Progress__ramp"

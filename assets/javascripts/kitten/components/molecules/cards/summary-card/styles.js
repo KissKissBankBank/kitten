@@ -9,42 +9,42 @@ import { mq } from '../../../../constants/screen-config'
    ****************************************/
 
 const ownerContributionStyles = css`
-   @media ${mq.tabletAndDesktop} {
-     .k-SummaryCard-Wrapper__gridWrapper {
-       grid-template-columns:
-         minmax(${pxToRem(140)}, 1fr)
-         ${pxToRem(90)}
-         ${pxToRem(100)}
-         ${pxToRem(90)}
-         ${pxToRem(20)};
-       grid-template-areas: 'title amount contribution availability last-stretch';
-     }
- 
-     &.k-SummaryCard-Wrapper--tablet {
-       .k-SummaryCard-Wrapper__imageWrapper {
-         display: none;
-       }
-     }
-     &.k-SummaryCard-Wrapper--small,
-     &.k-SummaryCard-Wrapper--mobile {
-       .k-SummaryCard-Wrapper__imageWrapper {
-         display: none;
-       }
-       .k-SummaryCard-Wrapper__gridWrapper {
-         grid-template-columns:
-           minmax(${pxToRem(120)}, 1fr)
-           ${pxToRem(90)}
-           ${pxToRem(90)}
-           ${pxToRem(20)};
-         grid-template-areas: 'title amount contribution last-stretch';
- 
-         & > [class*='__availability'] {
-           display: none;
-         }
-       }
-     }
-   }
- `
+  @media ${mq.tabletAndDesktop} {
+    .k-SummaryCard-Wrapper__gridWrapper {
+      grid-template-columns:
+        minmax(${pxToRem(140)}, 1fr)
+        ${pxToRem(90)}
+        ${pxToRem(100)}
+        ${pxToRem(90)}
+        ${pxToRem(20)};
+      grid-template-areas: 'title amount contribution availability last-stretch';
+    }
+
+    &.k-SummaryCard-Wrapper--tablet {
+      .k-SummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+    }
+    &.k-SummaryCard-Wrapper--small,
+    &.k-SummaryCard-Wrapper--mobile {
+      .k-SummaryCard-Wrapper__imageWrapper {
+        display: none;
+      }
+      .k-SummaryCard-Wrapper__gridWrapper {
+        grid-template-columns:
+          minmax(${pxToRem(120)}, 1fr)
+          ${pxToRem(90)}
+          ${pxToRem(90)}
+          ${pxToRem(20)};
+        grid-template-areas: 'title amount contribution last-stretch';
+
+        & > [class*='__availability'] {
+          display: none;
+        }
+      }
+    }
+  }
+`
 
 const ownerSubscriptionStyles = css`
   @media ${mq.tabletAndDesktop} {

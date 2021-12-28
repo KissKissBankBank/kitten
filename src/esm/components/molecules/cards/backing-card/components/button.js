@@ -9,7 +9,6 @@ export var Button = function Button(_ref) {
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(KittenButton, _extends({
-    borderRadius: 4,
     modifier: "helium"
   }, props, {
     className: classNames('k-BackingCard__button', 'k-BackingCard__drawer', className)

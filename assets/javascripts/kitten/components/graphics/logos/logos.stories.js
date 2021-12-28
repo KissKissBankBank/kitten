@@ -8,7 +8,7 @@ import { MaisonDeCrowdfundingLogo } from './mdc'
 import { MaisonDeCrowdfundingLogoOnDark } from './mdc/on-dark'
 import { MicrodonLogo } from './microdonlogo'
 import { LendopolisLogo } from './lendopolis-logo'
-import { LendopolisLogoOnDark} from './lendopolis-logo/on-dark'
+import { LendopolisLogoOnDark } from './lendopolis-logo/on-dark'
 import { KkbbCoLogo } from './kkbb-co'
 import { YouMatterLogo } from './youmatter'
 

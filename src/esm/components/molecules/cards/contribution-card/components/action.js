@@ -22,7 +22,6 @@ export var Action = function Action(_ref) {
     color: COLORS.background1,
     title: title
   }) : /*#__PURE__*/React.createElement(Button, _extends({
-    borderRadius: 4,
     type: "submit",
     className: classNames('k-ContributionCard__action', className),
     modifier: "helium",
