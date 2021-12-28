@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: `TagInput`: Add `itemsList` prop to control values.
+- Fix: `ProjectCard`: Fix link props.
+- Feature: `TagInput`: Add `itemsList` prop to control values.
 
 ## [6.12.0] - 2021-12-28
 

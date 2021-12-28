@@ -6,9 +6,17 @@ export const StyledCard = styled.div`
   border: var(--border);
   border-radius: var(--border-radius-m);
   overflow: hidden;
+  color: var(--color-grey-900);
+  text-decoration: none;
+  transition: border var(--transition);
 
-  &[href] {
+  &[href]:active,
+  &[href]:hover {
     border: var(--border-hover);
+  }
+
+  &[href]:focus-visible {
+    outline: var(--outline);
   }
 
   &.k-ProjectCard--normal {
