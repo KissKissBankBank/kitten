@@ -114,13 +114,17 @@ export default {
   },
   args: {
     fullWidth: false,
+    primary500: '#19b4fa',
+    primary700: '#05a8e6',
   },
   argTypes: {
     fullWidth: { control: 'boolean' },
+    primary500: { control: 'color' },
+    primary700: { control: 'color' },
   },
 }
 
-export const Default = args => (
+export const Default = ({primary500, primary700, ...args}) => (
   <>
     <GlobalStyle />
     <HeaderNav
@@ -143,6 +147,10 @@ export const Default = args => (
     </HeaderNav>
     <HeroLayout
       {...args}
+      style={{
+        '--color-primary-500': primary500,
+        '--color-primary-700': primary700,
+      }}
       hero_bg={<img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />}
       hero_header={
         <a href="#" className="k-u-block">
@@ -314,28 +322,28 @@ export const Default = args => (
               </Text>
             </GridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartWithClickIconNext />
+              <HeartWithClickIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
               <Text>
                 Sélectionnez un abonnement ou faites un don récurrent du montant
                 de votre choix
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <ColorCheckedShieldIconNext />
+              <ColorCheckedShieldIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
               <Text>
                 Validez votre abonnement via notre formulaire de paiement
                 sécurisé
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <GiftIconNext />
+              <GiftIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
               <Text>
                 Recevez chaque mois ou chaque trimestre le contenu de votre
                 abonnement
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <CrossCircleIconNext />
+              <CrossCircleIconNext color="var(--color-grey-900)" secondaryColor="var(--color-primary-500)" />
               <Text>
                 Résiliez votre abonnement à tout moment depuis votre compte
               </Text>
