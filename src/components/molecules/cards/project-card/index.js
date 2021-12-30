@@ -48,7 +48,8 @@ var ProjectCard = function ProjectCard(_ref) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCard, (0, _extends2.default)({
     as: href ? 'a' : 'div',
-    className: (0, _classnames.default)('k-ProjectCard', className, "k-ProjectCard--" + status)
+    className: (0, _classnames.default)('k-ProjectCard', className, "k-ProjectCard--" + status),
+    href: href
   }, props), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-ProjectCard__image"
   }, videoSources.length == 0 && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, otherImageProps, {

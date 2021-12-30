@@ -31,7 +31,8 @@ export var ProjectCard = function ProjectCard(_ref) {
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     as: href ? 'a' : 'div',
-    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status)
+    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status),
+    href: href
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "k-ProjectCard__image"
   }, videoSources.length == 0 && /*#__PURE__*/React.createElement("img", _extends({}, otherImageProps, {

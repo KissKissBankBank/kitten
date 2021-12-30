@@ -83,6 +83,15 @@ export const Default = ({ progressProps, ...args }) => (
 Default.args = args
 Default.argTypes = argTypes
 
+export const AsLink = args => <Default {...args} />
+
+AsLink.args = {
+  ...args,
+  href: '//www.kisskissbankbank.com',
+  'aria-label': 'The Office, la série culte décortiquée par S!CK',
+}
+AsLink.argTypes = argTypes
+
 export const WithVideo = args => <Default {...args} />
 
 WithVideo.args = {
