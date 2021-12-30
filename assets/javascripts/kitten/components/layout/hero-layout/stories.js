@@ -133,7 +133,8 @@ export default {
   },
   args: {
     projectTitle: 'Magna Condimentum Mollis Tortor',
-    projectSlogan: 'Duis mollis, est non commodo luctus, nisi erat Textorttitor ligula, eget lacinia odio sem nec elit.',
+    projectSlogan:
+      'Duis mollis, est non commodo luctus, nisi erat Textorttitor ligula, eget lacinia odio sem nec elit.',
     bannerUrl: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
     isContentLoading: false,
     primary500: '#19b4fa',
@@ -217,20 +218,37 @@ export const Default = ({
               <span className="kiss-ProjectPage-hero-text">abonnés</span>
             </StyledCounter>
             <FlexWrapper direction="row" gap={5}>
-              <Button fit="icon" size="tiny" rounded className="k-u-hidden@l-up">
+              <Button
+                fit="icon"
+                size="tiny"
+                rounded
+                className="k-u-hidden@l-up"
+              >
                 <EnvelopeIconNext />
               </Button>
-              <Button fit="icon" size="tiny" rounded className="k-u-hidden@l-up">
+              <Button
+                fit="icon"
+                size="tiny"
+                rounded
+                className="k-u-hidden@l-up"
+              >
                 <AirplaneIconNext />
               </Button>
-              <Button fit="content" size="tiny" rounded className="k-u-hidden@m-down">
+              <Button
+                fit="content"
+                size="tiny"
+                rounded
+                className="k-u-hidden@m-down"
+              >
                 <AirplaneIconNext />
                 <span>Partager</span>
               </Button>
               <Button fit="content" size="tiny" rounded>
                 <StarIconNext />
                 <span className="k-u-hidden@m-down">Ajouter aux favoris</span>
-                <span className="k-u-hidden@xxs-down k-u-hidden@l-up">Favoris</span>
+                <span className="k-u-hidden@xxs-down k-u-hidden@l-up">
+                  Favoris
+                </span>
               </Button>
               <Button fit="content" size="tiny" modifier="helium" rounded>
                 S’abonner
@@ -332,7 +350,8 @@ export const Default = ({
                 secondaryColor="var(--color-primary-500)"
               />
               <Text>
-                Validez votre abonnement via notre formulaire de paiement sécurisé
+                Validez votre abonnement via notre formulaire de paiement
+                sécurisé
               </Text>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
@@ -557,7 +576,8 @@ export const Default = ({
                 secondaryColor="var(--color-primary-500)"
               />
               <Text size="tiny">
-                Validez votre abonnement via notre formulaire de paiement sécurisé
+                Validez votre abonnement via notre formulaire de paiement
+                sécurisé
               </Text>
             </StyledGridCol>
             <StyledGridCol
