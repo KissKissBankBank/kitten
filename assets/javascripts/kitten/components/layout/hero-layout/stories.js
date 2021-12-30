@@ -33,6 +33,7 @@ import {
   AirplaneIconNext,
   EnvelopeIconNext,
   StarIconNext,
+  Container,
 } from 'kitten'
 
 import Footer from 'kitten/karl/pages/footer'
@@ -232,119 +233,121 @@ export const Default = ({
       </HeroLayout.Hero>
 
       <HeroLayout.Promo>
-        <Grid>
-          <GridCol
-            col="12"
-            col-s="6"
-            col-l="4"
-            offset-l="2"
-            className="k-u-align-center@l-up k-u-margin-bottom-triple"
-          >
-            <Title tag="h2" noMargin modifier="tertiary">
-              Abonnez-vous
-            </Title>
-            <Text cssColor="var(--color-grey-700)">
-              à partir de 12&nbsp;€ par mois
-            </Text>
-          </GridCol>
-          <GridCol col="12" col-s="6" col-l="4">
-            <Text
-              tag="h3"
-              weight="bold"
-              transform="uppercase"
-              size="tiny"
-              className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
+        <Container>
+          <Grid>
+            <GridCol
+              col="12"
+              col-s="6"
+              col-l="4"
+              offset-l="2"
+              className="k-u-align-center@l-up k-u-margin-bottom-triple"
             >
-              Pourquoi s’abonner&nbsp;?
-            </Text>
-            <List
-              gap="10"
-              markerElement={
-                <LargeArrowIconNext
-                  color="var(--color-primary-500)"
-                  width="10"
-                />
-              }
-            >
-              <Paragraph
-                modifier="primary"
-                tag="span"
-                className="k-u-line-height-1-25"
+              <Title tag="h2" noMargin modifier="tertiary">
+                Abonnez-vous
+              </Title>
+              <Text cssColor="var(--color-grey-700)">
+                à partir de 12&nbsp;€ par mois
+              </Text>
+            </GridCol>
+            <GridCol col="12" col-s="6" col-l="4">
+              <Text
+                tag="h3"
+                weight="bold"
+                transform="uppercase"
+                size="tiny"
+                className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
               >
-                Contribuez à faire vivre ce projet
-              </Paragraph>
-              <Paragraph
-                modifier="primary"
-                tag="span"
-                className="k-u-line-height-1-25"
+                Pourquoi s’abonner&nbsp;?
+              </Text>
+              <List
+                gap="10"
+                markerElement={
+                  <LargeArrowIconNext
+                    color="var(--color-primary-500)"
+                    width="10"
+                  />
+                }
               >
-                Recevez un contenu exclusif
-              </Paragraph>
-              <Paragraph
-                modifier="primary"
-                tag="span"
-                className="k-u-line-height-1-25"
+                <Paragraph
+                  modifier="primary"
+                  tag="span"
+                  className="k-u-line-height-1-25"
+                >
+                  Contribuez à faire vivre ce projet
+                </Paragraph>
+                <Paragraph
+                  modifier="primary"
+                  tag="span"
+                  className="k-u-line-height-1-25"
+                >
+                  Recevez un contenu exclusif
+                </Paragraph>
+                <Paragraph
+                  modifier="primary"
+                  tag="span"
+                  className="k-u-line-height-1-25"
+                >
+                  Faites partie du cercle privilégié d’abonnés
+                </Paragraph>
+              </List>
+            </GridCol>
+          </Grid>
+          <Separator
+            darker
+            className="k-u-margin-top-quintuple k-u-margin-bottom-double k-u-hidden@xs-down"
+          />
+          <Grid className="k-u-hidden@xs-down">
+            <GridCol col="12">
+              <Text
+                tag="h3"
+                weight="bold"
+                transform="uppercase"
+                size="tiny"
+                className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
               >
-                Faites partie du cercle privilégié d’abonnés
-              </Paragraph>
-            </List>
-          </GridCol>
-        </Grid>
-        <Separator
-          darker
-          className="k-u-margin-top-quintuple k-u-margin-bottom-double k-u-hidden@xs-down"
-        />
-        <Grid className="k-u-hidden@xs-down">
-          <GridCol col="12">
-            <Text
-              tag="h3"
-              weight="bold"
-              transform="uppercase"
-              size="tiny"
-              className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
-            >
-              Comment ça marche&nbsp;?
-            </Text>
-          </GridCol>
-          <StyledGridCol col="12" col-s="6" col-l="3">
-            <HeartWithClickIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text>
-              Sélectionnez un abonnement ou faites un don récurrent du montant
-              de votre choix
-            </Text>
-          </StyledGridCol>
-          <StyledGridCol col="12" col-s="6" col-l="3">
-            <ColorCheckedShieldIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text>
-              Validez votre abonnement via notre formulaire de paiement sécurisé
-            </Text>
-          </StyledGridCol>
-          <StyledGridCol col="12" col-s="6" col-l="3">
-            <GiftIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text>
-              Recevez chaque mois ou chaque trimestre le contenu de votre
-              abonnement
-            </Text>
-          </StyledGridCol>
-          <StyledGridCol col="12" col-s="6" col-l="3">
-            <CrossCircleIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text>
-              Résiliez votre abonnement à tout moment depuis votre compte
-            </Text>
-          </StyledGridCol>
-        </Grid>
+                Comment ça marche&nbsp;?
+              </Text>
+            </GridCol>
+            <StyledGridCol col="12" col-s="6" col-l="3">
+              <HeartWithClickIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text>
+                Sélectionnez un abonnement ou faites un don récurrent du montant
+                de votre choix
+              </Text>
+            </StyledGridCol>
+            <StyledGridCol col="12" col-s="6" col-l="3">
+              <ColorCheckedShieldIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text>
+                Validez votre abonnement via notre formulaire de paiement sécurisé
+              </Text>
+            </StyledGridCol>
+            <StyledGridCol col="12" col-s="6" col-l="3">
+              <GiftIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text>
+                Recevez chaque mois ou chaque trimestre le contenu de votre
+                abonnement
+              </Text>
+            </StyledGridCol>
+            <StyledGridCol col="12" col-s="6" col-l="3">
+              <CrossCircleIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text>
+                Résiliez votre abonnement à tout moment depuis votre compte
+              </Text>
+            </StyledGridCol>
+          </Grid>
+        </Container>
       </HeroLayout.Promo>
 
       <HeroLayout.Main>
@@ -507,77 +510,79 @@ export const Default = ({
       </HeroLayout.Main>
 
       <HeroLayout.Promo className="k-u-hidden@s-up">
-        <Grid>
-          <GridCol col="12">
-            <Text
-              tag="h3"
-              weight="bold"
-              transform="uppercase"
-              size="tiny"
-              className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-single"
+        <Container>
+          <Grid>
+            <GridCol col="12">
+              <Text
+                tag="h3"
+                weight="bold"
+                transform="uppercase"
+                size="tiny"
+                className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-single"
+              >
+                Comment ça marche&nbsp;?
+              </Text>
+            </GridCol>
+            <StyledGridCol
+              col="12"
+              col-s="6"
+              col-l="3"
+              className="k-u-flex-alignItems-center k-u-margin-top-double"
             >
-              Comment ça marche&nbsp;?
-            </Text>
-          </GridCol>
-          <StyledGridCol
-            col="12"
-            col-s="6"
-            col-l="3"
-            className="k-u-flex-alignItems-center k-u-margin-top-double"
-          >
-            <HeartWithClickIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text size="tiny">
-              Sélectionnez un abonnement ou faites un don récurrent du montant
-              de votre choix
-            </Text>
-          </StyledGridCol>
-          <StyledGridCol
-            col="12"
-            col-s="6"
-            col-l="3"
-            className="k-u-flex-alignItems-center k-u-margin-top-double"
-          >
-            <ColorCheckedShieldIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text size="tiny">
-              Validez votre abonnement via notre formulaire de paiement sécurisé
-            </Text>
-          </StyledGridCol>
-          <StyledGridCol
-            col="12"
-            col-s="6"
-            col-l="3"
-            className="k-u-flex-alignItems-center k-u-margin-top-double"
-          >
-            <GiftIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text size="tiny">
-              Recevez chaque mois ou chaque trimestre le contenu de votre
-              abonnement
-            </Text>
-          </StyledGridCol>
-          <StyledGridCol
-            col="12"
-            col-s="6"
-            col-l="3"
-            className="k-u-flex-alignItems-center k-u-margin-top-double"
-          >
-            <CrossCircleIconNext
-              color="var(--color-grey-900)"
-              secondaryColor="var(--color-primary-500)"
-            />
-            <Text size="tiny">
-              Résiliez votre abonnement à tout moment depuis votre compte
-            </Text>
-          </StyledGridCol>
-        </Grid>
+              <HeartWithClickIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text size="tiny">
+                Sélectionnez un abonnement ou faites un don récurrent du montant
+                de votre choix
+              </Text>
+            </StyledGridCol>
+            <StyledGridCol
+              col="12"
+              col-s="6"
+              col-l="3"
+              className="k-u-flex-alignItems-center k-u-margin-top-double"
+            >
+              <ColorCheckedShieldIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text size="tiny">
+                Validez votre abonnement via notre formulaire de paiement sécurisé
+              </Text>
+            </StyledGridCol>
+            <StyledGridCol
+              col="12"
+              col-s="6"
+              col-l="3"
+              className="k-u-flex-alignItems-center k-u-margin-top-double"
+            >
+              <GiftIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text size="tiny">
+                Recevez chaque mois ou chaque trimestre le contenu de votre
+                abonnement
+              </Text>
+            </StyledGridCol>
+            <StyledGridCol
+              col="12"
+              col-s="6"
+              col-l="3"
+              className="k-u-flex-alignItems-center k-u-margin-top-double"
+            >
+              <CrossCircleIconNext
+                color="var(--color-grey-900)"
+                secondaryColor="var(--color-primary-500)"
+              />
+              <Text size="tiny">
+                Résiliez votre abonnement à tout moment depuis votre compte
+              </Text>
+            </StyledGridCol>
+          </Grid>
+        </Container>
       </HeroLayout.Promo>
     </HeroLayout>
     <Footer className="k-u-margin-top-quintuple" />

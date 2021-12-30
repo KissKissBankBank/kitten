@@ -76,10 +76,10 @@ export const StyledLayout = styled.div`
 
   .k-HeroLayout__promo {
     background-color: var(--color-grey-200);
-    padding: ${pxToRem(30)} var(--container-padding);
+    padding: ${pxToRem(30)} 0;
 
     @media ${mq.tabletAndDesktop} {
-      padding: ${pxToRem(50)} var(--container-padding) ${pxToRem(30)};
+      padding: ${pxToRem(50)} 0 ${pxToRem(30)};
     }
   }
 
