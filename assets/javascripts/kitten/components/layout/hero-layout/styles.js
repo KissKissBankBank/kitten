@@ -3,17 +3,19 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
-import {
-  HEADER_HEIGHT
-} from '../../../components/organisms/header-nav/config'
+import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 export const StyledLayout = styled.div`
   --container-padding: ${pxToRem(CONTAINER_PADDING_THIN)};
+  --heroLayout-imageHeight: ${pxToRem(300)};
 
   @media ${mq.tabletAndDesktop} {
     --container-padding: ${pxToRem(CONTAINER_PADDING)};
+  }
+  @media ${mq.desktop} {
+    --heroLayout-imageHeight: ${pxToRem(500)};
   }
 
   display: block;
@@ -21,18 +23,54 @@ export const StyledLayout = styled.div`
   .k-HeroLayout__hero {
     position: relative;
     padding: ${pxToRem(135)} var(--container-padding) ${pxToRem(100)};
+
+    @media ${mq.desktop} {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
+      box-sizing: border-box;
+      min-height: calc(100vh - ${pxToRem(HEADER_HEIGHT)});
+      padding: ${pxToRem(20)} var(--container-padding) ${pxToRem(20)};
+      margin-bottom: ${pxToRem(50)};
+    }
+  }
+
+  .k-HeroLayout__hero__grid {
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: ${pxToRem(25)};
 
-    @media ${mq.desktop} {
-      box-sizing: border-box;
-      min-height: calc(100vh - ${pxToRem(HEADER_HEIGHT)});
-      justify-content: end;
-      padding: ${pxToRem(20)} var(--container-padding) ${pxToRem(20)};
-      margin-bottom: ${pxToRem(50)};
+    ::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: calc(-1 * var(--container-padding));
+      right: calc(-1 * var(--container-padding));
+      background: linear-gradient(
+        to bottom,
+        hsla(0deg, 0%, 100%, 0),
+        hsla(0deg, 0%, 100%, 0.3) 20%,
+        hsla(0deg, 0%, 100%, 0.9) 60%,
+        var(--color-grey-000)
+      );
 
+      @media ${mq.mobileAndTablet} {
+        height: var(--heroLayout-imageHeight);
+      }
+      @media ${mq.desktop} {
+        bottom: calc(
+          max(calc(100vh - ${pxToRem(HEADER_HEIGHT)} - ${pxToRem(20)}), 100%) -
+            var(--heroLayout-imageHeight)
+        );
+      }
+    }
+
+    @media ${mq.desktop} {
+      position: relative;
       gap: ${pxToRem(65)};
     }
   }
@@ -43,12 +81,8 @@ export const StyledLayout = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: ${pxToRem(300)};
     background-color: var(--color-grey-000);
-
-    @media ${mq.desktop} {
-      height: ${pxToRem(600)};
-    }
+    height: var(--heroLayout-imageHeight);
 
     img {
       display: block;
@@ -56,22 +90,6 @@ export const StyledLayout = styled.div`
       height: 100%;
       object-fit: cover;
       object-position: center;
-    }
-
-    ::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: linear-gradient(
-        to bottom,
-        hsla(0deg, 0%, 100%, 0),
-        hsla(0deg, 0%, 100%, 0.3) 20%,
-        hsla(0deg, 0%, 100%, 0.9) 60%,
-        var(--color-grey-000)
-      );
     }
   }
 

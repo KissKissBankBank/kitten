@@ -5,6 +5,10 @@ import PropTypes from 'prop-types'
 import { StyledLayout } from './styles'
 import { Loader } from '../../../components/atoms/loader'
 import { Grid, GridCol } from '../../../components/layout/grid'
+import {
+  getReactElementsByType,
+  getReactElementsWithoutType,
+} from '../../../helpers/react/react-elements'
 
 export const HeroLayout = ({ className, children, ...props }) => (
   <StyledLayout className={classNames('k-HeroLayout', className)} {...props}>
@@ -12,26 +16,43 @@ export const HeroLayout = ({ className, children, ...props }) => (
   </StyledLayout>
 )
 
-HeroLayout.Hero = ({ className, ...props }) => (
-  <div className={classNames('k-HeroLayout__hero', className)} {...props} />
-)
+const Hero = ({ className, children, ...props }) => {
+  const imageElement = getReactElementsByType({
+    children: children,
+    type: HeroImage,
+  })[0]
+  const otherChildren = getReactElementsWithoutType({
+    children: children,
+    type: HeroImage,
+  })
 
-HeroLayout.Hero.Image = ({ className, ...props }) => (
+  return (
+    <div className={classNames('k-HeroLayout__hero', className)} {...props}>
+      {imageElement}
+      <Grid className="k-HeroLayout__hero__grid">{otherChildren}</Grid>
+    </div>
+  )
+}
+
+const HeroImage = ({ className, ...props }) => (
   <div
     className={classNames('k-HeroLayout__hero__background', className)}
     {...props}
   />
 )
 
-HeroLayout.Hero.Block = ({ children, className, ...props }) => (
-  <Grid
+const HeroBlock = ({ children, className, ...props }) => (
+  <GridCol
     className={classNames('k-HeroLayout__hero__block', className)}
+    col="12"
+    col-s="10"
+    offset-s="1"
+    col-l="8"
+    offset-l="2"
     {...props}
   >
-    <GridCol col="12" col-s="10" offset-s="1" col-l="8" offset-l="2">
-      {children}
-    </GridCol>
-  </Grid>
+    {children}
+  </GridCol>
 )
 
 HeroLayout.Promo = ({ className, ...props }) => (
@@ -99,3 +120,7 @@ HeroLayout.Main.Content.propTypes = {
   loading: PropTypes.bool,
   loaderComponent: PropTypes.node,
 }
+
+HeroLayout.Hero = Hero
+HeroLayout.Hero.Image = HeroImage
+HeroLayout.Hero.Block = HeroBlock
