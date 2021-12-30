@@ -132,11 +132,17 @@ export default {
     },
   },
   args: {
+    projectTitle: 'Magna Condimentum Mollis Tortor',
+    projectSlogan: 'Duis mollis, est non commodo luctus, nisi erat Textorttitor ligula, eget lacinia odio sem nec elit.',
+    bannerUrl: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
     isContentLoading: false,
     primary500: '#19b4fa',
     primary700: '#05a8e6',
   },
   argTypes: {
+    projectTitle: { control: 'text' },
+    projectSlogan: { control: 'text' },
+    bannerUrl: { control: 'text' },
     isContentLoading: { control: 'boolean' },
     primary500: { control: 'color' },
     primary700: { control: 'color' },
@@ -147,6 +153,9 @@ export const Default = ({
   primary500,
   primary700,
   isContentLoading,
+  projectTitle,
+  projectSlogan,
+  bannerUrl,
   ...args
 }) => (
   <>
@@ -178,7 +187,7 @@ export const Default = ({
     >
       <HeroLayout.Hero>
         <HeroLayout.Hero.Image>
-          <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
+          <img src={bannerUrl} alt="" />
         </HeroLayout.Hero.Image>
 
         <HeroLayout.Hero.Block>
@@ -193,7 +202,7 @@ export const Default = ({
         <HeroLayout.Hero.Block>
           <FlexWrapper className="k-u-flex-alignItems-center" gap={30}>
             <Title noMargin modifier="primary">
-              Magna Condimentum Mollis Tortor
+              {projectTitle}
             </Title>
             <Text
               tag="p"
@@ -201,8 +210,7 @@ export const Default = ({
               size="giant"
               className="k-u-margin-none k-u-letter-spacing-10"
             >
-              Duis mollis, est non commodo luctus, nisi erat Textorttitor
-              ligula, eget lacinia odio sem nec elit.
+              {projectSlogan}
             </Text>
             <StyledCounter>
               <span className="kiss-ProjectPage-hero-number">538</span>
