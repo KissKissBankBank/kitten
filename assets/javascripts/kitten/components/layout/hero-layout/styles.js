@@ -3,6 +3,9 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
+import {
+  HEADER_HEIGHT
+} from '../../../components/organisms/header-nav/config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -24,7 +27,11 @@ export const StyledLayout = styled.div`
     gap: ${pxToRem(25)};
 
     @media ${mq.desktop} {
-      padding: ${pxToRem(165)} var(--container-padding) ${pxToRem(70)};
+      box-sizing: border-box;
+      min-height: calc(100vh - ${pxToRem(HEADER_HEIGHT)});
+      justify-content: end;
+      padding: ${pxToRem(20)} var(--container-padding) ${pxToRem(20)};
+      margin-bottom: ${pxToRem(50)};
 
       gap: ${pxToRem(65)};
     }
