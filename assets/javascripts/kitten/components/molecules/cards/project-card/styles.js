@@ -3,6 +3,10 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 
 export const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
   border: var(--border);
   border-radius: var(--border-radius-m);
   overflow: hidden;
@@ -41,6 +45,7 @@ export const StyledCard = styled.div`
 
   .k-ProjectCard__image {
     overflow: hidden;
+    flex: 0 0 auto;
 
     .k-ProjectCard__image__image {
       display: block;
@@ -52,10 +57,11 @@ export const StyledCard = styled.div`
   }
 
   .k-ProjectCard__content {
+    flex: 1 0 auto;
     position: relative;
     padding: ${pxToRem(30)} ${pxToRem(15)} ${pxToRem(10)};
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: ${pxToRem(10)};
   }
 
@@ -79,13 +85,23 @@ export const StyledCard = styled.div`
 
   .k-ProjectCard__title,
   .k-ProjectCard__line,
+  .k-ProjectCard__itemsLine,
   .k-ProjectCard__progress {
-    grid-column: span 3;
+    flex: 0 0 auto;
+  }
+
+  .k-ProjectCard__itemsLine {
+    display: flex;
+    gap: ${pxToRem(10)};
+    flex: 1 0 auto;
+    margin-top: ${pxToRem(20)};
+    align-items: end;
   }
 
   .k-ProjectCard__item {
-    margin-top: ${pxToRem(20)};
-    grid-column: span 1;
+    --projectCard-itemWidth: calc((100% - (2 * ${pxToRem(10)})) / 3);
+    flex: 0 0 var(--projectCard-itemWidth);
+    width: var(--projectCard-itemWidth);
 
     > * {
       line-height: ${pxToRem(16)};
@@ -107,5 +123,9 @@ export const StyledCard = styled.div`
         height: ${pxToRem(4)};
       }
     }
+  }
+
+  &.k-ProjectCard--isStretched {
+    height: 100%;
   }
 `

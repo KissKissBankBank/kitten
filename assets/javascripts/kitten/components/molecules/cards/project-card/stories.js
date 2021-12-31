@@ -52,30 +52,32 @@ export const Default = ({ progressProps, ...args }) => (
         </a>
       </Text>
     </ProjectCard.Line>
-    <ProjectCard.Item>
-      <Text className="k-u-ellipsis" weight="bold" size="tiny">
-        134
-      </Text>
-      <Text className="k-u-ellipsis" size="micro">
-        contributeurs
-      </Text>
-    </ProjectCard.Item>
-    <ProjectCard.Item>
-      <Text className="k-u-ellipsis" weight="bold" size="tiny">
-        7 jours
-      </Text>
-      <Text className="k-u-ellipsis" size="micro">
-        restants
-      </Text>
-    </ProjectCard.Item>
-    <ProjectCard.Item>
-      <Text className="k-u-ellipsis" weight="bold" size="tiny">
-        9 930 €
-      </Text>
-      <Text className="k-u-ellipsis" size="micro">
-        sur 12 000 €
-      </Text>
-    </ProjectCard.Item>
+    <ProjectCard.ItemsLine>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          134
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          contributeurs
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          7 jours
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          restants
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          9 930 €
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          sur 12 000 €
+        </Text>
+      </ProjectCard.Item>
+    </ProjectCard.ItemsLine>
     <ProjectCard.Progress {...progressProps} />
   </ProjectCard>
 )
