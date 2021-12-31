@@ -16,6 +16,7 @@ export const ProjectCard = ({
   sticker,
   videoSources,
   videoProps,
+  stretch,
   ...props
 }) => {
   return (
@@ -25,6 +26,9 @@ export const ProjectCard = ({
         'k-ProjectCard',
         className,
         `k-ProjectCard--${status}`,
+        {
+          'k-ProjectCard--isStretched': stretch,
+        },
       )}
       href={href}
       {...props}
@@ -77,6 +81,7 @@ ProjectCard.defaultProps = {
   },
   videoProps: {},
   videoSources: [],
+  stretch: false,
 }
 
 ProjectCard.propTypes = {
@@ -90,6 +95,7 @@ ProjectCard.propTypes = {
   imageProps: PropTypes.object,
   videoProps: PropTypes.object,
   videoSources: PropTypes.array,
+  stretch: PropTypes.bool,
 }
 
 ProjectCard.Title = ({ className, ...props }) => {
@@ -109,6 +115,15 @@ ProjectCard.Line = ({ className, ...props }) => {
   )
 }
 
+ProjectCard.ItemsLine = ({ className, ...props }) => {
+  return (
+    <div
+      className={classNames('k-ProjectCard__itemsLine', className)}
+      {...props}
+    />
+  )
+}
+
 ProjectCard.Item = ({ className, ...props }) => {
   return (
     <div className={classNames('k-ProjectCard__item', className)} {...props} />
@@ -117,10 +132,7 @@ ProjectCard.Item = ({ className, ...props }) => {
 
 ProjectCard.Progress = ({ className, value, ...props }) => {
   return (
-    <div
-      className={classNames('k-ProjectCard__progress', className)}
-      {...props}
-    >
+    <div className={classNames('k-ProjectCard__progress', className)}>
       <Progress variant="andromeda" value={value} {...props} />
       <Text weight="bold" size="tiny" lineHeight="1">
         {value}&nbsp;%
