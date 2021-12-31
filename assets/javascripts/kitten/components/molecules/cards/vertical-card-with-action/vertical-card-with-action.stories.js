@@ -21,7 +21,7 @@ export default {
     title: { control: 'text' },
     buttonModifier: {
       control: 'select',
-      options: [buttonModifiers],
+      options: buttonModifiers,
     },
     buttonProps: { control: 'object' },
     description: { control: 'text' },
@@ -30,7 +30,7 @@ export default {
     titleTag: { control: 'text' },
   },
   args: {
-    button: 'Butron text',
+    button: 'Button text',
     title: 'Custom title',
     buttonModifier: 'helium',
     buttonProps: {
