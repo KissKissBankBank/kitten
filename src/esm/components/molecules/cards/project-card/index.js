@@ -1,11 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch"],
     _excluded3 = ["className"],
     _excluded4 = ["className"],
     _excluded5 = ["className"],
-    _excluded6 = ["className", "value"];
+    _excluded6 = ["className"],
+    _excluded7 = ["className", "value"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -27,11 +28,14 @@ export var ProjectCard = function ProjectCard(_ref) {
       sticker = _ref.sticker,
       videoSources = _ref.videoSources,
       videoProps = _ref.videoProps,
+      stretch = _ref.stretch,
       props = _objectWithoutPropertiesLoose(_ref, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     as: href ? 'a' : 'div',
-    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status),
+    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status, {
+      'k-ProjectCard--isStretched': stretch
+    }),
     href: href
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "k-ProjectCard__image"
@@ -59,13 +63,15 @@ ProjectCard.defaultProps = {
     alt: ''
   },
   videoProps: {},
-  videoSources: []
+  videoSources: [],
+  stretch: false
 };
 ProjectCard.propTypes = {
   status: PropTypes.oneOf(['normal', 'danger', 'warning', 'success', 'disabled']),
   imageProps: PropTypes.object,
   videoProps: PropTypes.object,
-  videoSources: PropTypes.array
+  videoSources: PropTypes.array,
+  stretch: PropTypes.bool
 };
 
 ProjectCard.Title = function (_ref2) {
@@ -88,23 +94,32 @@ ProjectCard.Line = function (_ref3) {
   }, props));
 };
 
-ProjectCard.Item = function (_ref4) {
+ProjectCard.ItemsLine = function (_ref4) {
   var className = _ref4.className,
       props = _objectWithoutPropertiesLoose(_ref4, _excluded5);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-ProjectCard__itemsLine', className)
+  }, props));
+};
+
+ProjectCard.Item = function (_ref5) {
+  var className = _ref5.className,
+      props = _objectWithoutPropertiesLoose(_ref5, _excluded6);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ProjectCard__item', className)
   }, props));
 };
 
-ProjectCard.Progress = function (_ref5) {
-  var className = _ref5.className,
-      value = _ref5.value,
-      props = _objectWithoutPropertiesLoose(_ref5, _excluded6);
+ProjectCard.Progress = function (_ref6) {
+  var className = _ref6.className,
+      value = _ref6.value,
+      props = _objectWithoutPropertiesLoose(_ref6, _excluded7);
 
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ProjectCard__progress', className)
-  }, props), /*#__PURE__*/React.createElement(Progress, _extends({
+  }, /*#__PURE__*/React.createElement(Progress, _extends({
     variant: "andromeda",
     value: value
   }, props)), /*#__PURE__*/React.createElement(Text, {
