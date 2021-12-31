@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from './index'
 import {
-  CrowdfundingCard,
+  ProjectCard,
   CONTAINER_PADDING,
   Grid,
   GridCol,
@@ -9,7 +9,8 @@ import {
   PhoneIllustration,
   pxToRem,
   ScreenConfig,
-} from '../../../..'
+  Text,
+} from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import styled from 'styled-components'
 
@@ -89,7 +90,7 @@ const data = [
     thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
-    title: 'Item B',
+    title: 'Item B with a pretty long title on two lines',
     imageSrc: '/kitten-2.jpg',
     thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
@@ -104,7 +105,8 @@ const data = [
     thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
   {
-    title: 'Item E',
+    title:
+      'Item Ewith the longest title ever in all the world, three lines for sure',
     imageSrc: '/kitten-5.jpg',
     thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   },
@@ -174,7 +176,7 @@ export const InNestedGrid = args => (
 export const WithPassedProps = args => (
   <Carousel {...args}>
     {data.map(item => (
-      <ViewedCardComponent item={item} key={`CrowdfundingCard${item.title}`} />
+      <ViewedCardComponent item={item} key={`ProjectCard${item.title}`} />
     ))}
   </Carousel>
 )
@@ -184,8 +186,8 @@ WithPassedProps.args = {
 }
 
 const CardComponent = ({ item }) => (
-  <CrowdfundingCard
-    key={`CrowdfundingCard${item.title}`}
+  <ProjectCard
+    key={`ProjectCard${item.title}`}
     href="#"
     imageProps={{
       src: item.imageSrc,
@@ -193,25 +195,47 @@ const CardComponent = ({ item }) => (
       backgroundColor: '#d8d8d8',
       color: '#333',
     }}
-    avatarProps={{
-      src: item.thumbSrc,
-      alt: 'Avatar alt',
-    }}
-    ownerTitle="Title"
-    ownerDescription="Custom description"
-    titleProps={{
-      tag: 'h4',
-    }}
-    cardTitle={item.title}
-    cardSubTitle="Custom subtitle"
-    titlesMinHeight
-    progress={84}
-    state="Custom state"
-  />
+    stretch
+  >
+    <ProjectCard.Title>{item.title}</ProjectCard.Title>
+    <ProjectCard.Line>
+      <em>subtitle</em>
+    </ProjectCard.Line>
+
+    <ProjectCard.ItemsLine>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          134
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          contributeurs
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          7 jours
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          restants
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          9 930 €
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          sur 12 000 €
+        </Text>
+      </ProjectCard.Item>
+    </ProjectCard.ItemsLine>
+
+    <ProjectCard.Progress aria-label="Progrès de la campagne" value="84" />
+  </ProjectCard>
 )
 
 const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
-  <CrowdfundingCard
+  <ProjectCard
+    key={`ProjectCard${item.title}`}
     href="#"
     imageProps={{
       src: hasPageBeenViewed ? item.imageSrc : null,
@@ -219,21 +243,43 @@ const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
       backgroundColor: '#d8d8d8',
       color: '#333',
     }}
-    avatarProps={{
-      src: item.thumbSrc,
-      alt: 'Avatar alt',
-    }}
-    ownerTitle="Was the page viewed?"
-    ownerDescription={hasPageBeenViewed ? 'Viewed' : 'Not viewed'}
-    titleProps={{
-      tag: 'h4',
-    }}
-    cardTitle={item.title}
-    cardSubTitle={isActivePage ? 'Is active page' : 'Inactive page'}
-    titlesMinHeight
-    progress={84}
-    state="Custom state"
-  />
+    sticker={hasPageBeenViewed ? 'Viewed' : 'Not viewed'}
+    stretch
+  >
+    <ProjectCard.Title>{item.title}</ProjectCard.Title>
+    <ProjectCard.Line>
+      <em>{isActivePage ? 'Is active page' : 'Inactive page'}</em>
+    </ProjectCard.Line>
+
+    <ProjectCard.ItemsLine>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          134
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          contributeurs
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          7 jours
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          restants
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          9 930 €
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          sur 12 000 €
+        </Text>
+      </ProjectCard.Item>
+    </ProjectCard.ItemsLine>
+
+    <ProjectCard.Progress aria-label="Progrès de la campagne" value="84" />
+  </ProjectCard>
 )
 
 const engagementsData = [
