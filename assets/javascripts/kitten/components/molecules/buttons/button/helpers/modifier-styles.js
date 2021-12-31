@@ -17,6 +17,9 @@ export const modifierStyles = modifier => {
 
   switch (modifier) {
     case 'hydrogen':
+    case 'carbon':
+    case 'oxygen':
+    case 'calcium':
       borderColor = 'var(--color-grey-400)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
@@ -39,19 +42,6 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.font1
       backgroundColor = COLORS.font1
       color = COLORS.background1
-      break
-
-    case 'carbon':
-      borderColor = COLORS.background1
-      backgroundColor = COLORS.background1
-      color = COLORS.font1
-      break
-
-    case 'oxygen':
-      borderColor = COLORS.primary4
-      borderStyle = 'dashed'
-      backgroundColor = COLORS.background1
-      color = COLORS.primary1
       break
 
     case 'copper':
@@ -112,18 +102,6 @@ export const modifierStyles = modifier => {
       activeBorderColor = COLORS.error5
       activeBgColor = COLORS.error5
       activeColor = COLORS.background1
-      break
-
-    case 'calcium':
-      borderColor = 'var(--color-grey-400)'
-      backgroundColor = COLORS.background1
-      color = COLORS.font1
-      hoverBorderColor = COLORS.primary4
-      hoverBgColor = COLORS.background1
-      hoverColor = COLORS.font1
-      activeBorderColor = COLORS.primary1
-      activeBgColor = COLORS.primary5
-      activeColor = COLORS.font1
       break
 
     /* Social modifiers */

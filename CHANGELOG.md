@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Deprecate the following modifier values:
+    - `carbon`,
+    - `oxygen`,
+    - `calcium`,
+    - `social_facebook`,
+    - `social_twitter`,
+    - `social_linkedin`,
+    - `social_instagram`,
+    - `social_youtube`.
+
+
 ## [6.13.1] - 2021-12-31
 
 Fix:

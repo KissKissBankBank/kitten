@@ -70,10 +70,10 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `oxygen` `modifier` prop', () => {
+  describe('with `scandium` `modifier` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<Button modifier="oxygen">MyButton</Button>)
+        .create(<Button modifier="scandium">MyButton</Button>)
         .toJSON()
     })
 
@@ -216,28 +216,6 @@ describe('<Button />', () => {
   describe('with fluid', () => {
     beforeEach(() => {
       component = renderer.create(<Button fit="fluid">!</Button>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with variant', () => {
-    beforeEach(() => {
-      component = renderer.create(<Button>Orion</Button>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with variant and fluid', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<Button fit="fluid">Orion fluid</Button>)
-        .toJSON()
     })
 
     it('matches with snapshot', () => {
