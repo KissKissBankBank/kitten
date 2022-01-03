@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `ContributionCard`: Improve styles.
+- Fix: `AvatarWithTextAndBadge`: Add `border` on the avatar image.
 - Feature: `ProjectCard`: Add mobile styles.
 - Fix: `SummaryCard`: Fix title-bar styles.
 
