@@ -13,7 +13,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `social_linkedin`,
     - `social_instagram`,
     - `social_youtube`.
-
+- Feature: `SocialButtonIcon` & `SocialButtonIconText`: Change style.
+- Feature: `HeroLayout`: Add component.
+- Feature: `FloatingMenu`: Add component.
+- Feature: Utilities: Add `k-u-letter-spacing` utilities.
+- Feature: `List`: Add `markerElement` prop, accepts a React node.
+- Feature: `List`: Add `gap` prop, accepts a number.
+- Feature: Utilities: Add `k-u-line-height-1-25` and `k-u-line-height-1-40` CSS utilities.
+- Feature: Add the following icon components:
+  - `EnvelopeIconNext`,
+  - `StarIconNext`.
 
 ## [6.13.1] - 2021-12-31
 
@@ -37,11 +46,11 @@ Features:
 
 - `ProjectCard`: Add component.
 - Add the following icon components:
-  `HeartWithClickIconNext`,
-  `GiftIconNext`,
-  `ColorCheckedShieldIconNext`,
-  `SunIconNext`,
-  `CrossCircleIconNext`.
+  - `HeartWithClickIconNext`,
+  - `GiftIconNext`,
+  - `ColorCheckedShieldIconNext`,
+  - `SunIconNext`,
+  - `CrossCircleIconNext`.
 - Logos: Add `LendopolisLogoOnDark` logo.
 
 Fixes:

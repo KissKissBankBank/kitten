@@ -6,7 +6,6 @@ import {
   InstagramButtonIcon,
   YoutubeButtonIcon,
 } from './index'
-import { Grid, GridCol } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -19,29 +18,21 @@ export default {
       ),
     },
   },
-  decorators: [story => <div className="story-Container">{story()}</div>],
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--thin">
+        {story()}
+      </div>
+    ),
+  ],
 }
 
 export const SocialButtonIcon = () => (
-  <Grid>
-    <GridCol col-s="3" col-l="2">
-      <FacebookButtonIcon>Facebook</FacebookButtonIcon>
-    </GridCol>
-
-    <GridCol col-s="3" col-l="2">
-      <TwitterButtonIcon>Twitter</TwitterButtonIcon>
-    </GridCol>
-
-    <GridCol col-s="3" col-l="2">
-      <InstagramButtonIcon>Instagram</InstagramButtonIcon>
-    </GridCol>
-
-    <GridCol col-s="3" col-l="2">
-      <LinkedinButtonIcon>Linkedin</LinkedinButtonIcon>
-    </GridCol>
-
-    <GridCol col-s="3" col-l="2">
-      <YoutubeButtonIcon>Youtube</YoutubeButtonIcon>
-    </GridCol>
-  </Grid>
+  <>
+    <FacebookButtonIcon>Facebook</FacebookButtonIcon>
+    <TwitterButtonIcon>Twitter</TwitterButtonIcon>
+    <InstagramButtonIcon>Instagram</InstagramButtonIcon>
+    <LinkedinButtonIcon>Linkedin</LinkedinButtonIcon>
+    <YoutubeButtonIcon>Youtube</YoutubeButtonIcon>
+  </>
 )

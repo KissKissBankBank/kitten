@@ -8,6 +8,7 @@ import {
   ColorCheckedShieldIconNext,
   CrossCircleIconNext,
   CrossIconNext,
+  EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
   GiftIconNext,
@@ -21,6 +22,7 @@ import {
   MessengerIconNext,
   PlusIconNext,
   SpeechBubbleIconNext,
+  StarIconNext,
   StatsIconNext,
   StatusIconNext,
   SunIconNext,
@@ -184,6 +186,12 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         </IconContainer>
         <IconContainer>
           <SunIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EnvelopeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <StarIconNext color={colorInput} />
         </IconContainer>
       </Group>
       <Group title="Arrows">

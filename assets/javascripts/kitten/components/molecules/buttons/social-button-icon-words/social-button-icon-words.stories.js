@@ -5,7 +5,6 @@ import {
   InstagramButtonIconWords,
   LinkedinButtonIconWords,
 } from './index'
-import { Grid, GridCol } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -18,25 +17,16 @@ export default {
       ),
     },
   },
-  decorators: [story => <div className="story-Container">{story()}</div>],
+  decorators: [
+    story => <div className="story-Container story-Grid">{story()}</div>,
+  ],
 }
 
 export const SocialButtonIconWords = () => (
-  <Grid>
-    <GridCol col-s="6" col-l="3">
-      <FacebookButtonIconWords fit="fluid">Facebook</FacebookButtonIconWords>
-    </GridCol>
-
-    <GridCol col-s="6" col-l="3">
-      <TwitterButtonIconWords fit="fluid">Twitter</TwitterButtonIconWords>
-    </GridCol>
-
-    <GridCol col-s="6" col-l="3">
-      <InstagramButtonIconWords fit="fluid">Instagram</InstagramButtonIconWords>
-    </GridCol>
-
-    <GridCol col-s="6" col-l="3">
-      <LinkedinButtonIconWords fit="fluid">Linkedin</LinkedinButtonIconWords>
-    </GridCol>
-  </Grid>
+  <>
+    <FacebookButtonIconWords fit="fluid">Facebook</FacebookButtonIconWords>
+    <TwitterButtonIconWords fit="fluid">Twitter</TwitterButtonIconWords>
+    <InstagramButtonIconWords fit="fluid">Instagram</InstagramButtonIconWords>
+    <LinkedinButtonIconWords fit="fluid">Linkedin</LinkedinButtonIconWords>
+  </>
 )
