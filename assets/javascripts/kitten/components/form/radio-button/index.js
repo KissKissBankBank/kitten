@@ -240,7 +240,7 @@ const StyledRadioButton = styled.div`
     &.k-Form-RadioButton--small {
       width: 100%;
       display: flex;
- 
+
       .k-Form-RadioButton__label {
         padding: ${pxToRem(12 - 2)} ${pxToRem(15)};
         min-height: 0;

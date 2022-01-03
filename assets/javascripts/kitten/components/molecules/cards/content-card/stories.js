@@ -86,9 +86,7 @@ export const Default = ({ contentFixedHeight, ...args }) => (
         </FlexWrapper>
         <TextButton size="big">
           <AirplaneIconNext />
-          <span className="k-u-hidden@s-down">
-            Partager
-          </span>
+          <span className="k-u-hidden@s-down">Partager</span>
         </TextButton>
       </FlexWrapper>
     </ContentCard.Footer>

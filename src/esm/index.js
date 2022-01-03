@@ -175,26 +175,31 @@ export { BubbleIconNext } from './components/graphics/icons-next/bubble-icon-nex
 export { CheckedShieldIconNext } from './components/graphics/icons-next/checked-shield-icon-next';
 export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-next';
 export { CogIconNext } from './components/graphics/icons-next/cog-icon-next';
+export { ColorCheckedShieldIconNext } from './components/graphics/icons-next/color-checked-shield-icon-next';
+export { CrossCircleIconNext } from './components/graphics/icons-next/cross-circle-icon-next';
 export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next';
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next';
 export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon-next';
+export { GiftIconNext } from './components/graphics/icons-next/gift-icon-next';
+export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next';
+export { HeartWithClickIconNext } from './components/graphics/icons-next/heart-icon-next/with-click';
 export { HomeIconNext } from './components/graphics/icons-next/home-icon-next';
 export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next';
 export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next';
+export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next';
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next';
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next';
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next';
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next';
 export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next';
 export { StatusIconNext } from './components/graphics/icons-next/status-icon-next';
+export { SunIconNext } from './components/graphics/icons-next/sun-icon-next';
 export { TagIconNext } from './components/graphics/icons-next/tag-icon-next';
 export { ThumbUpIconNext } from './components/graphics/icons-next/thumb-up-icon-next';
 export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-next';
 export { UsersIconNext } from './components/graphics/icons-next/users-icon-next';
 export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next';
-export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next';
-export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next';
-export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next'; // Graphics/Illustrations
+export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'; // Graphics/Illustrations
 
 export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration';
 export { LinkBoxIllustration } from './components/graphics/illustrations/link-box-illustration';
@@ -206,6 +211,7 @@ export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-
 
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo';
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo';
+export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark';
 export { GoodeedLogo } from './components/graphics/logos/goodeedlogo';
 export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc';
 export { MaisonDeCrowdfundingLogoOnDark } from './components/graphics/logos/mdc/on-dark';
@@ -275,6 +281,7 @@ export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card
 export { EngagementCard } from './components/molecules/cards/engagement-card';
 export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image';
 export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card';
+export { ProjectCard } from './components/molecules/cards/project-card';
 export { RewardSummaryCard, useRewardSummaryCardResizeObserver } from './components/molecules/cards/reward-summary-card';
 export { SummaryCard, useSummaryCardResizeObserver } from './components/molecules/cards/summary-card';
 export { SimpleCard } from './components/molecules/cards/simple-card';

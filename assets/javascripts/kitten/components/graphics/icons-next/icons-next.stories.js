@@ -2,29 +2,36 @@ import styled from 'styled-components'
 import {
   AirplaneIconNext,
   BubbleIconNext,
-  CrossIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
   CogIconNext,
+  ColorCheckedShieldIconNext,
+  CrossCircleIconNext,
+  CrossIconNext,
+  EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
+  GiftIconNext,
+  HeartIconNext,
+  HeartWithClickIconNext,
   HomeIconNext,
   InfiniteIconNext,
   InstagramIconNext,
+  LargeArrowIconNext,
   LinkedinIconNext,
   MessengerIconNext,
   PlusIconNext,
   SpeechBubbleIconNext,
+  StarIconNext,
   StatsIconNext,
+  StatusIconNext,
+  SunIconNext,
   TagIconNext,
   ThumbUpIconNext,
   TwitterIconNext,
   UsersIconNext,
   WhatsappIconNext,
   WindowEditIconNext,
-  HeartIconNext,
-  LargeArrowIconNext,
-  StatusIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -98,7 +105,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = ({ colorInput }) => {
+export const AllIcons = ({ colorInput, secondaryColorInput }) => {
   return (
     <Container>
       <Group>
@@ -152,6 +159,39 @@ export const AllIcons = ({ colorInput }) => {
         </IconContainer>
         <IconContainer>
           <HeartIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <GiftIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <HeartWithClickIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <ColorCheckedShieldIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <CrossCircleIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <SunIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EnvelopeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <StarIconNext color={colorInput} />
         </IconContainer>
       </Group>
       <Group title="Arrows">
@@ -213,8 +253,10 @@ export default {
   title: 'Graphics/Icons Next',
   args: {
     colorInput: '#333',
+    secondaryColorInput: '#006cff',
   },
   argTypes: {
     colorInput: { control: 'color' },
+    secondaryColorInput: { control: 'color' },
   },
 }

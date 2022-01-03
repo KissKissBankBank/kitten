@@ -64,5 +64,5 @@ YouMatterLogo.propTypes = {
 YouMatterLogo.defaultProps = {
   width: null,
   height: null,
-  color: "#222"
+  color: '#222'
 };

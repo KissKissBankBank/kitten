@@ -4,16 +4,59 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `Input`: New UI.
-- Fix: Improve `borderRadius` of buttons on all cards.
-- Feature: Logo: New `LendopolisLogoOnDark` logo.
-- Fix: `DeskLayout`: Style adjustments.
 - Feature: `SocialButtonIcon` & `SocialButtonIconText`: Change style.
 - Feature: `Button`: Deprecate `social_*` modifiers.
+- Feature: `HeroLayout`: Add component.
+- Feature: `FloatingMenu`: Add component.
+- Feature: Utilities: Add `k-u-letter-spacing` utilities.
+- Feature: `List`: Add `markerElement` prop, accepts a React node.
+- Feature: `List`: Add `gap` prop, accepts a number.
+- Feature: Utilities: Add `k-u-line-height-1-25` and `k-u-line-height-1-40` CSS utilities.
+- Feature: Add the following icon components:
+  - `EnvelopeIconNext`,
+  - `StarIconNext`.
+
+## [6.13.1] - 2021-12-31
+
+Fix:
+
+-  `ProjectCard`: Fix display.
+
+## [6.13.0] - 2021-12-28
+
+Feature:
+
+- `TagInput`: Add `itemsList` prop to control values.
+
+Fix:
+
+-  `ProjectCard`: Fix link props.
+
+## [6.12.0] - 2021-12-28
+
+Features:
+
+- `ProjectCard`: Add component.
+- Add the following icon components:
+  - `HeartWithClickIconNext`,
+  - `GiftIconNext`,
+  - `ColorCheckedShieldIconNext`,
+  - `SunIconNext`,
+  - `CrossCircleIconNext`.
+- Logos: Add `LendopolisLogoOnDark` logo.
+
+Fixes:
+
+- Improve border radius on buttons on all cards.
+- `Input`: New UI style.
+- `DeskLayout`: Style adjustments.
+- `DeskLayout`: Width fixes.
+- `Progress`: Modernize component.
 
 ## [6.11.1] - 2021-12-20
 
-Fix: 
+Fix:
+
 - `DocumentsDropUploader`: Fix upload files.
 
 ## [6.11.0] - 2021-12-20
@@ -27,13 +70,14 @@ Features:
 
 Features:
 
-  - CommentForm: Add close button, add `onClose` and `closeButtonText` props
+  - `CommentForm`: Add close button, add `onClose` and `closeButtonText` props
   - `Accordeon`: Add `multiple` prop to let more than one item opened.
 
 ## [6.9.1] - 2021-12-15
 
-Fix: 
-  - Logo: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
+Fix:
+
+  - Logos: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
 
 ## [6.9.0] - 2021-12-15
 
@@ -46,17 +90,18 @@ Features:
 
 Features:
 
-  - Logo: New `MaisonDeCrowdfundingLogoOnDark` logo.
-  - Logo: New `KkbbFlashIllustration` logo.
-  - Logo: Add `YouMatterLogo` logo.
-  - `DeskLayout`: Add layout component.
-  - `DeskMenu`: Add organism component.
+- Add the following Logo components:
+  - `MaisonDeCrowdfundingLogoOnDark`,
+  - `KkbbFlashIllustration`,
+  - `YouMatterLogo`.
+- `DeskLayout`: Add layout component.
+- `DeskMenu`: Add organism component.
 
 Fixes:
 
-  - `HeaderMenu`: Fix external item paddings.
-  - `HeaderNav`: Fix border bottom on active nav link.
-  - `TextInput`: Fix `textarea` gradient styles.
+- `HeaderMenu`: Fix external item paddings.
+- `HeaderNav`: Fix border bottom on active nav link.
+- `TextInput`: Fix `textarea` gradient styles.
 
 ## [6.7.0] - 2021-12-08
 

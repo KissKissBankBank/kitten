@@ -33,31 +33,23 @@ var valueMax = 100;
 var StyledProgress = _styledComponents.default.div.withConfig({
   displayName: "progress__StyledProgress",
   componentId: "sc-8timnv-0"
-})(["max-width:100%;.k-Meters-Progress__ramp{position:relative;height:", ";background:", ";&::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;max-width:", ";transition:max-width 1s cubic-bezier(0,0.5,0.3,1);background:", ";}}&.k-Meters-Progress--disabled,&.is-disabled{.k-Meters-Progress__ramp::after{background:", ";}}&.k-Meters-Progress--orion .k-Meters-Progress__ramp{&,&::after{border-radius:var(--border-radius-xs);}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref) {
-  var progressValue = _ref.progressValue;
-  return progressValue;
-}, function (_ref2) {
-  var sliderColor = _ref2.sliderColor;
-  return sliderColor;
-}, _colorsConfig.default.line2);
+})(["max-width:100%;.k-Meters-Progress__ramp{position:relative;height:", ";background:", ";&::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;max-width:var(--progress-value);transition:max-width 1s cubic-bezier(0,0.5,0.3,1);background:var(--progress-color);}}&.k-Meters-Progress--disabled,&.is-disabled{.k-Meters-Progress__ramp::after{background:", ";}}&.k-Meters-Progress--orion .k-Meters-Progress__ramp{&,&::after{border-radius:var(--border-radius-xs);}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.line2);
 
-var Progress = function Progress(_ref3) {
-  var color = _ref3.color,
-      className = _ref3.className,
-      value = _ref3.value,
-      rampProps = _ref3.rampProps,
-      variant = _ref3.variant,
-      disabled = _ref3.disabled,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded);
+var Progress = function Progress(_ref) {
+  var color = _ref.color,
+      className = _ref.className,
+      value = _ref.value,
+      rampProps = _ref.rampProps,
+      variant = _ref.variant,
+      disabled = _ref.disabled,
+      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(0),
       progressValue = _useState[0],
       setProgressValue = _useState[1];
 
   (0, _react.useEffect)(function () {
-    var progress = 0;
-    var valueAsNumber = parseInt(value, 10);
-    if (valueAsNumber < valueMin) progress = valueMin;else if (valueAsNumber > valueMax) progress = valueMax;else progress = valueAsNumber;
+    var progress = Math.min(Math.max(parseInt(value, 10), valueMin), valueMax);
     setProgressValue(progress);
   }, [value]);
   return /*#__PURE__*/_react.default.createElement(StyledProgress, (0, _extends2.default)({}, others, {
@@ -68,8 +60,10 @@ var Progress = function Progress(_ref3) {
     className: (0, _classnames.default)('k-Meters-Progress', className, "k-Meters-Progress--" + variant, {
       'k-Meters-Progress--disabled': disabled
     }),
-    sliderColor: color,
-    progressValue: progressValue + "%"
+    style: {
+      '--progress-color': color,
+      '--progress-value': progressValue + "%"
+    }
   }), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, rampProps, {
     className: (0, _classnames.default)('k-Meters-Progress__ramp', rampProps.className)
   })));
@@ -78,7 +72,7 @@ var Progress = function Progress(_ref3) {
 exports.Progress = Progress;
 Progress.defaultProps = {
   color: _colorsConfig.default.primary1,
-  value: 50,
+  value: '50',
   rampProps: {},
   variant: 'orion'
 };

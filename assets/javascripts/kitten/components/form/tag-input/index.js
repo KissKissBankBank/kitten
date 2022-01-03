@@ -190,20 +190,24 @@ export const TagInput = ({
   id,
   addEventKeys,
   removeEventKeys,
+  itemsList: itemsListFromProps,
   initialItemsList,
   helpMessage,
   disabled,
   size,
   variant,
 }) => {
-  const [itemsList, setItemList] = useState([...initialItemsList])
+  const [itemsList, setItemsList] = useState(
+    Array.from(itemsListFromProps || initialItemsList),
+  )
   const [lastRemoved, setLastRemoved] = useState(null)
   const inputEl = useRef(null)
 
   const focusInputEl = () => !disabled && inputEl?.current?.focus()
 
   const addValueToList = value => {
-    setItemList(currentList => [...currentList, value])
+    const newList = [...itemsList, value]
+    itemsListFromProps ? onChange(newList) : setItemsList(newList)
   }
 
   const removeLastValueFromList = () => {
@@ -214,18 +218,18 @@ export const TagInput = ({
     }
 
     setLastRemoved(lastItem)
-    setItemList(currentList => currentList.slice(0, -1))
+    const newList = Array.from(itemsList.slice(0, -1))
+    itemsListFromProps ? onChange(newList) : setItemsList(newList)
   }
 
   const removeValueFromList = item => {
     const valueToRemove = item?.value || item
     setLastRemoved(valueToRemove)
-    setItemList(currentList =>
-      currentList.filter(item => {
-        const itemValue = item?.value || item
-        return itemValue !== valueToRemove
-      }),
-    )
+    const newList = itemsList.filter(item => {
+      const itemValue = item?.value || item
+      return itemValue !== valueToRemove
+    })
+    itemsListFromProps ? onChange(Array.from(newList)) : setItemsList(newList)
   }
 
   const undoRemove = () => {
@@ -234,8 +238,16 @@ export const TagInput = ({
   }
 
   useEffect(() => {
-    onChange(itemsList)
+    if (!itemsListFromProps) {
+      onChange(itemsList)
+    }
   }, [itemsList])
+
+  useEffect(() => {
+    if (itemsListFromProps) {
+      setItemsList(itemsListFromProps)
+    }
+  }, [itemsListFromProps])
 
   const onKeyDown = event => {
     if (addEventKeys.includes(event.key)) {
@@ -353,6 +365,7 @@ export const TagInput = ({
 
 TagInput.defaultProps = {
   initialItemsList: [],
+  itemsList: undefined,
   addEventKeys: ['Enter', ','],
   removeEventKeys: ['Backspace'],
   placeholder: '',
@@ -365,6 +378,7 @@ TagInput.defaultProps = {
 TagInput.propTypes = {
   id: PropTypes.string.isRequired,
   initialItemsList: PropTypes.arrayOf(PropTypes.any),
+  itemsList: PropTypes.arrayOf(PropTypes.any),
   addEventKeys: PropTypes.arrayOf(PropTypes.string),
   removeEventKeys: PropTypes.arrayOf(PropTypes.string),
   placeholder: PropTypes.string,

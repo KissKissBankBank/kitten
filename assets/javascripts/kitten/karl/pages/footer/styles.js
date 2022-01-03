@@ -24,7 +24,7 @@ export const StyledFooter = styled.footer`
 
   .k-Footer__stroke {
     margin: ${pxToRem(10)} 0;
-  
+
     @media ${mq.mobile} {
       margin: ${pxToRem(10)} auto;
     }
@@ -79,7 +79,7 @@ export const StyledFooter = styled.footer`
   }
 
   /* SOCIALBUTTON */
-  
+
   .k-Footer__socialButton {
     display: flex;
     gap: ${pxToRem(18)};
@@ -96,7 +96,7 @@ export const StyledFooter = styled.footer`
 
   /* LISTITEMS */
 
-  .k-Footer__linkList  {
+  .k-Footer__linkList {
     list-style-type: none;
     padding-inline-start: ${pxToRem(20)};
 
@@ -141,7 +141,7 @@ export const StyledFooter = styled.footer`
   }
 
   /* ECOSYSTEMS */
-    
+
   .k-Footer__ecosystem--title {
     font-size: ${pxToRem(14)};
     text-align: center;
@@ -177,7 +177,7 @@ export const StyledFooter = styled.footer`
   .k-Footer__partners {
     display: flex;
     gap: ${pxToRem(80)};
-    
+
     @media ${mq.mobile} {
       flex-direction: column;
       gap: ${pxToRem(30)};
@@ -191,7 +191,7 @@ export const StyledFooter = styled.footer`
 
     .k-Footer__partners--text {
       font-size: ${pxToRem(14)};
-  
+
       @media ${mq.mobile} {
         font-size: ${pxToRem(12)};
       }
@@ -205,7 +205,7 @@ export const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     @media ${mq.mobileAndTablet} {
       flex-direction: column;
       gap: ${pxToRem(20)};

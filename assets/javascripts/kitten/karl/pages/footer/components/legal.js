@@ -17,19 +17,29 @@ export const Legal = props => {
       />
       <ul className="k-Footer__legal--list">
         <li>
-          <a href="#" className="k-Footer__linkList--item">Conditions générales</a>
+          <a href="#" className="k-Footer__linkList--item">
+            Conditions générales
+          </a>
         </li>
         <li>
-          <a href="#" className="k-Footer__linkList--item">Mentions légales</a>
+          <a href="#" className="k-Footer__linkList--item">
+            Mentions légales
+          </a>
         </li>
         <li>
-          <a href="#" className="k-Footer__linkList--item">Données personnelles</a>
+          <a href="#" className="k-Footer__linkList--item">
+            Données personnelles
+          </a>
         </li>
         <li>
-          <a href="#" className="k-Footer__linkList--item">Cookies</a>
+          <a href="#" className="k-Footer__linkList--item">
+            Cookies
+          </a>
         </li>
         <li>
-          <a href="#" className="k-Footer__linkList--item">Réclamations</a>
+          <a href="#" className="k-Footer__linkList--item">
+            Réclamations
+          </a>
         </li>
       </ul>
       <Text size="tiny" cssColor="var(--color-grey-600)">

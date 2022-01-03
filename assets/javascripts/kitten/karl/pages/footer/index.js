@@ -21,14 +21,14 @@ const Stroke = ({ className, ...props }) => (
       'k-u-margin-top-triple@s-down',
       className,
     )}
-    color="var(--color-grey-700)" 
+    color="var(--color-grey-700)"
     customSize={{ width: '100%', height: 1 }}
   />
 )
 
-const Footer = () => {
+const Footer = props => {
   return (
-    <StyledFooter>
+    <StyledFooter {...props}>
       <div className="k-Footer__gridWrapper">
         <Baseline />
         <Stroke className="k-u-hidden@l-up" />

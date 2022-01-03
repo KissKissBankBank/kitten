@@ -23,9 +23,9 @@ const StyledProgress = styled.div`
       left: 0;
       right: 0;
       bottom: 0;
-      max-width: ${({ progressValue }) => progressValue};
+      max-width: var(--progress-value);
       transition: max-width 1s cubic-bezier(0, 0.5, 0.3, 1);
-      background: ${({ sliderColor }) => sliderColor};
+      background: var(--progress-color);
     }
   }
 
@@ -56,12 +56,7 @@ export const Progress = ({
   const [progressValue, setProgressValue] = useState(0)
 
   useEffect(() => {
-    let progress = 0
-    let valueAsNumber = parseInt(value, 10)
-
-    if (valueAsNumber < valueMin) progress = valueMin
-    else if (valueAsNumber > valueMax) progress = valueMax
-    else progress = valueAsNumber
+    const progress = Math.min(Math.max(parseInt(value, 10), valueMin), valueMax)
 
     setProgressValue(progress)
   }, [value])
@@ -81,8 +76,10 @@ export const Progress = ({
           'k-Meters-Progress--disabled': disabled,
         },
       )}
-      sliderColor={color}
-      progressValue={`${progressValue}%`}
+      style={{
+        '--progress-color': color,
+        '--progress-value': `${progressValue}%`,
+      }}
     >
       <div
         {...rampProps}
@@ -94,7 +91,7 @@ export const Progress = ({
 
 Progress.defaultProps = {
   color: COLORS.primary1,
-  value: 50,
+  value: '50',
   rampProps: {},
   variant: 'orion',
 }
