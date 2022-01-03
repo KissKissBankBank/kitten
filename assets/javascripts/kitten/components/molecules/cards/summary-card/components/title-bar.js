@@ -21,6 +21,7 @@ export const TitleBar = ({ className, values, size, id, type }) => {
           <Text
             size="micro"
             weight="regular"
+            cssColor="var(--color-grey-700)"
             className="k-SummaryCard-TitleBar__image"
             id={`${id}-image`}
           >
@@ -35,6 +36,7 @@ export const TitleBar = ({ className, values, size, id, type }) => {
             id={`${id}-${item}`}
             size="micro"
             weight="regular"
+            cssColor="var(--color-grey-700)"
             className={`k-SummaryCard-TitleBar__${item}`}
             style={{ '--summaryCardCell-name': item }}
           >
