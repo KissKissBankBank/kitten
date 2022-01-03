@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { mq } from '../../../../constants/screen-config'
 
 export const StyledContributionCard = styled.article`
   /* CARD STYLE */
@@ -16,7 +16,7 @@ export const StyledContributionCard = styled.article`
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);
 
-  @media (min-width: ${ScreenConfig.M.min}px) {
+  @media ${mq.tablet} {
     height: calc(${pxToRem(100)} + 2 * var(--border-width));
     display: flex;
   }
@@ -31,11 +31,11 @@ export const StyledContributionCard = styled.article`
     align-items: center;
     justify-content: center;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tablet} {
       flex: 0 0 ${pxToRem(160)};
     }
 
-    @media (max-width: ${ScreenConfig.S.max}px) {
+    @media ${mq.mobile} {
       padding-top: calc(5 / 8 * 100%);
     }
 
@@ -56,7 +56,7 @@ export const StyledContributionCard = styled.article`
     svg {
       width: 80%;
 
-      @media (min-width: ${ScreenConfig.M.min}px) {
+      @media ${mq.tablet} {
         width: 100%;
       }
     }
@@ -80,14 +80,14 @@ export const StyledContributionCard = styled.article`
     align-items: center;
     align-content: flex-start;
     grid-gap: ${pxToRem(20)} ${pxToRem(10)};
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tablet} {
       width: 100%;
 
       grid-gap: 0 ${pxToRem(10)};
-      grid-template-columns: auto ${pxToRem(85)} ${pxToRem(150)};
+      grid-template-columns: auto ${pxToRem(85)} ${pxToRem(110)};
       grid-template-rows: 1fr;
 
       &.k-ContributionCard__gridWrapper--largeInput {
@@ -106,7 +106,7 @@ export const StyledContributionCard = styled.article`
     line-height: ${pxToRem(16)};
     place-self: center start;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tablet} {
       font-size: ${stepToRem(0)};
       margin-top: 0;
 
@@ -123,7 +123,7 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__amount {
     place-self: center flex-end;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tablet} {
       margin-right: ${pxToRem(10)};
       margin-top: 0;
       place-self: center center;
@@ -135,7 +135,7 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__input {
     place-self: flex-start center;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tablet} {
       place-self: center flex-start;
     }
   }
@@ -143,8 +143,7 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__action {
     place-self: flex-start center;
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      margin-right: ${pxToRem(10)};
+    @media ${mq.tablet} {
       place-self: center flex-end;
     }
   }
