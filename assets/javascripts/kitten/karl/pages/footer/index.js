@@ -26,9 +26,9 @@ const Stroke = ({ className, ...props }) => (
   />
 )
 
-const Footer = () => {
+const Footer = props => {
   return (
-    <StyledFooter>
+    <StyledFooter {...props}>
       <div className="k-Footer__gridWrapper">
         <Baseline />
         <Stroke className="k-u-hidden@l-up" />
