@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
     box-sizing: border-box;
     display: flex;
     overflow: hidden;
-    border: 0;
+    border: var(--border-width) solid var(--color-grey-300);
     padding: 0;
 
     color: var(--k-Avatar-color);

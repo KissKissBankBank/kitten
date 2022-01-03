@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `AvatarWithTextAndBadge`: Add `border` on the avatar image.
+
 ## [6.14.0] - 2022-01-03
 
 Features:
