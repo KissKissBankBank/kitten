@@ -38,14 +38,14 @@ const StyledTagButton = styled.button`
 
       &:hover,
       &:focus {
-        border: var(--border-hover);
+        border: var(--border-hover-primary);
         background-color: ${COLORS.background1};
         color: ${COLORS.font1};
       }
 
       &:active {
         background-color: ${COLORS.background1};
-        border: var(--border-active);
+        border: var(--border-active-primary);
         color: ${COLORS.font1};
       }
 
@@ -117,17 +117,17 @@ const StyledTagButton = styled.button`
   &.k-Buttons__tagButton--helium,
   &.k-Buttons__tagButton--hydrogen {
     color: ${COLORS.font1};
-    border-color: var(--color-grey-400);
+    border: var(--border);
     background-color: ${COLORS.background1};
     &:hover,
     &:focus {
       color: ${COLORS.background1};
-      border-color: ${COLORS.primary2};
+      border: var(--border-hover-primary);
       background-color: ${COLORS.primary2};
     }
     &:active {
       color: ${COLORS.primary2};
-      border-color: ${COLORS.primary2};
+      border: var(--border-active-primary);
       background-color: ${COLORS.background1};
     }
     &:disabled {
