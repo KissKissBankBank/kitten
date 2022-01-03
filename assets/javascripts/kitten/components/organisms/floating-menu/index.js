@@ -5,7 +5,6 @@ import classNames from 'classnames'
 
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { getReactElementsByType } from '../../../helpers/react/react-elements'
 import { mq, ScreenConfig } from '../../../constants/screen-config'
 
 const StyledFloatingMenu = styled.nav`

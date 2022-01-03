@@ -231,8 +231,12 @@ export const Button = ({
   mobileFit,
   ...props
 }) => {
-  if(deprecatedModifiers.includes(modifier)) {
-    console.warn(`The modifier ${modifier} has been deprecated. Please use one for the following: ${buttonModifiers.join(', ')}.`)
+  if (deprecatedModifiers.includes(modifier)) {
+    console.warn(
+      `The modifier ${modifier} has been deprecated. Please use one for the following: ${buttonModifiers.join(
+        ', ',
+      )}.`,
+    )
   }
 
   const actualSize = (() => {

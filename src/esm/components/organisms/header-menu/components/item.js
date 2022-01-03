@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
-import { Button } from '../../../../components/molecules/buttons/button';
+import { Button, buttonModifiers } from '../../../../components/molecules/buttons/button';
 export var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,
@@ -49,7 +49,7 @@ Item.propTypes = {
   href: PropTypes.string,
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
-  modifier: PropTypes.oneOf([null, undefined, 'light', 'default', 'hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'boron', 'neon', 'iron', 'calcium']),
+  modifier: PropTypes.oneOf([null, undefined, 'light', 'default'].concat(buttonModifiers)),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
   tag: PropTypes.string
