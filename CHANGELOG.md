@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContributionCard`: Improve styles.
+
 ## [6.13.1] - 2021-12-31
 
 Fix:
