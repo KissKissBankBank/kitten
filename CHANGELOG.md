@@ -14,6 +14,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `EnvelopeIconNext`,
   - `StarIconNext`.
 
+## [6.13.1] - 2021-12-31
+
+Fix:
+
+-  `ProjectCard`: Fix display.
+
 ## [6.13.0] - 2021-12-28
 
 Feature:

@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-GMQeP JHEfv k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP xuQuD k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -77,7 +77,6 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      aria-label="Progrès de la campagne"
       className="k-ProjectCard__progress"
     >
       <div
@@ -111,7 +110,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-GMQeP JHEfv k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP xuQuD k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -185,7 +184,6 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      aria-label="Progrès de la campagne"
       className="k-ProjectCard__progress"
     >
       <div
