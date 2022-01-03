@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `ButtonGroup`: Fix styles.
 - Fix: `TagButton`: Fix styles.
 - Fix: `CheckableButton`: Fix styles.
+- Fix: `SummaryCard`: Fix title-bar styles.
 
 ## [6.14.0] - 2022-01-03
 

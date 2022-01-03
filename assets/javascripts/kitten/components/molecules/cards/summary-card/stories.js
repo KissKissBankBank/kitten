@@ -106,7 +106,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               contributions: 'Contributions',
               availability: 'Disponibilités',
             }}
-            className="k-u-hidden@xs-down k-u-margin-bottom-single"
+            className="k-u-hidden@xs-down k-u-margin-bottom-singleHalf"
             id="SummaryList-ownerContribution"
             size={size}
             type="ownerContribution"
@@ -188,7 +188,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               subscription: 'Abonnements',
               availability: 'Disponibilités',
             }}
-            className="k-u-hidden@xs-down k-u-margin-bottom-single"
+            className="k-u-hidden@xs-down k-u-margin-bottom-singleHalf"
             id="SummaryList-ownerSubscription"
             size={size}
             type="ownerSubscription"
@@ -286,7 +286,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               shipping: 'Livraison',
               action: '',
             }}
-            className="k-u-hidden@xs-down k-u-margin-bottom-single"
+            className="k-u-hidden@xs-down k-u-margin-bottom-singleHalf"
             id="SummaryList-contributorContribution"
             size={size}
             type="contributorContribution"
@@ -372,7 +372,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               shipping: 'Livraison',
               action: '',
             }}
-            className="k-u-hidden@xs-down k-u-margin-bottom-single"
+            className="k-u-hidden@xs-down k-u-margin-bottom-singleHalf"
             id="SummaryList-contributorSubscription"
             size={size}
             type="contributorSubscription"
