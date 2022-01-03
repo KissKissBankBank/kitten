@@ -4,8 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Deprecate the following modifier values:
+    - `carbon`,
+    - `oxygen`,
+    - `calcium`,
+    - `social_facebook`,
+    - `social_twitter`,
+    - `social_linkedin`,
+    - `social_instagram`,
+    - `social_youtube`.
 - Feature: `SocialButtonIcon` & `SocialButtonIconText`: Change style.
-- Feature: `Button`: Deprecate `social_*` modifiers.
 - Feature: `HeroLayout`: Add component.
 - Feature: `FloatingMenu`: Add component.
 - Feature: Utilities: Add `k-u-letter-spacing` utilities.

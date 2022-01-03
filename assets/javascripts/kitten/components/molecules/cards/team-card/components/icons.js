@@ -73,6 +73,7 @@ const SocialLinks = ({ links = [] }) => (
           key={link.name}
           aria-label={link.name}
           href={link.href}
+          modifier="hydrogen"
           target="_blank"
           rel="noopener"
           className="k-TeamCardIcons__buttonIcon"

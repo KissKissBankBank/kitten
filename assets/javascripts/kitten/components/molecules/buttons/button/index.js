@@ -9,16 +9,24 @@ import { modifierStyles } from './helpers/modifier-styles'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import classNames from 'classnames'
 
+const deprecatedModifiers = [
+  'carbon',
+  'oxygen',
+  'calcium',
+  'social_facebook',
+  'social_twitter',
+  'social_linkedin',
+  'social_instagram',
+  'social_youtube',
+]
+
 export const buttonModifiers = [
   'hydrogen',
   'helium',
   'lithium',
   'beryllium',
-  'carbon',
-  'oxygen',
   'copper',
   'boron',
-  'calcium',
   'scandium',
   'neon',
   'iron',
@@ -223,6 +231,10 @@ export const Button = ({
   mobileFit,
   ...props
 }) => {
+  if(deprecatedModifiers.includes(modifier)) {
+    console.warn(`The modifier ${modifier} has been deprecated. Please use one for the following: ${buttonModifiers.join(', ')}.`)
+  }
+
   const actualSize = (() => {
     switch (true) {
       case !!size:
@@ -302,7 +314,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
-  modifier: PropTypes.oneOf(buttonModifiers),
+  modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
   variant: PropTypes.oneOf(buttonVariants),
 }
 Button.defaultProps = {

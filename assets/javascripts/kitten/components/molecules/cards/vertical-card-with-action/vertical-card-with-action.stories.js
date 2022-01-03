@@ -1,6 +1,7 @@
 import React from 'react'
 import { VerticalCardWithAction } from './index'
 import { action } from '@storybook/addon-actions'
+import { buttonModifiers } from '../../../../components/molecules/buttons/button'
 
 export default {
   title: 'Molecules/Cards/VerticalCardWithAction',
@@ -20,20 +21,7 @@ export default {
     title: { control: 'text' },
     buttonModifier: {
       control: 'select',
-      options: [
-        'hydrogen',
-        'helium',
-        'lithium',
-        'beryllium',
-        'carbon',
-        'oxygen',
-        'checked',
-        'copper',
-        'boron',
-        'neon',
-        'iron',
-        'calcium',
-      ],
+      options: buttonModifiers,
     },
     buttonProps: { control: 'object' },
     description: { control: 'text' },
@@ -42,7 +30,7 @@ export default {
     titleTag: { control: 'text' },
   },
   args: {
-    button: 'Butron text',
+    button: 'Button text',
     title: 'Custom title',
     buttonModifier: 'helium',
     buttonProps: {
