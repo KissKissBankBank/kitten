@@ -7,31 +7,42 @@ import { InstagramIcon } from '../../../../components/graphics/icons/instagram-i
 import { YoutubeIcon } from '../../../../components/graphics/icons/youtube-icon'
 
 export const FacebookButtonIcon = props => (
-  <Button {...props} modifier="social_facebook" fit="icon">
+  <Button {...props}>
     <FacebookIcon width="14" height="14" />
   </Button>
 )
 
 export const TwitterButtonIcon = props => (
-  <Button {...props} modifier="social_twitter" fit="icon">
+  <Button {...props}>
     <TwitterIcon width="15" height="15" />
   </Button>
 )
 
 export const LinkedinButtonIcon = props => (
-  <Button {...props} modifier="social_linkedin" fit="icon">
+  <Button {...props}>
     <LinkedinIcon width="12" height="12" />
   </Button>
 )
 
 export const InstagramButtonIcon = props => (
-  <Button {...props} modifier="social_instagram" fit="icon">
+  <Button {...props}>
     <InstagramIcon width="16" height="16" />
   </Button>
 )
 
 export const YoutubeButtonIcon = props => (
-  <Button {...props} modifier="social_youtube" fit="icon">
+  <Button {...props}>
     <YoutubeIcon width="16" height="16" />
   </Button>
 )
+
+const defaultProps = {
+  modifier: 'beryllium',
+  fit: 'icon',
+}
+
+FacebookButtonIcon.defaultProps = defaultProps
+TwitterButtonIcon.defaultProps = defaultProps
+LinkedinButtonIcon.defaultProps = defaultProps
+InstagramButtonIcon.defaultProps = defaultProps
+YoutubeButtonIcon.defaultProps = defaultProps

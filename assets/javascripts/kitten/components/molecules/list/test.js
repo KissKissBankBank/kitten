@@ -20,6 +20,38 @@ describe('<List>', () => {
     })
   })
 
+  describe('with gap', () => {
+    it('matches with snapshot', () => {
+      const component = renderer
+        .create(
+          <List gap={10}>
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+          </List>,
+        )
+        .toJSON()
+
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with custom marker', () => {
+    it('matches with snapshot', () => {
+      const component = renderer
+        .create(
+          <List markerElement={<>😽</>}>
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+          </List>,
+        )
+        .toJSON()
+
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with <ListButtonItem>', () => {
     describe('by default', () => {
       it('matches with snapshot', () => {

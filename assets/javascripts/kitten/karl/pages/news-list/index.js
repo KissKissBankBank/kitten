@@ -107,7 +107,7 @@ const NewsList = () => {
       </Head>
       <Container>
         <NewsContainer>
-          <Button size="big" fit="fluid" modifier="oxygen">
+          <Button size="big" fit="fluid" modifier="helium">
             <InstrumentTagIcon width="14" />
             <span>Créer une nouvelle actu</span>
           </Button>

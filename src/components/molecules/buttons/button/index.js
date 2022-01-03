@@ -30,7 +30,8 @@ var _screenConfig = require("../../../../constants/screen-config");
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit"];
-var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'scandium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
+var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
+var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron'];
 exports.buttonModifiers = buttonModifiers;
 var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 exports.buttonFitOptions = buttonFitOptions;
@@ -70,6 +71,10 @@ var Button = function Button(_ref2) {
       fit = _ref2.fit,
       mobileFit = _ref2.mobileFit,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
+
+  if (deprecatedModifiers.includes(modifier)) {
+    console.warn("The modifier " + modifier + " has been deprecated. Please use one for the following: " + buttonModifiers.join(', ') + ".");
+  }
 
   var actualSize = function () {
     switch (true) {
@@ -142,7 +147,7 @@ Button.propTypes = {
   size: _propTypes.default.oneOf(buttonSizes),
   fit: _propTypes.default.oneOf(buttonFitOptions),
   mobileFit: _propTypes.default.oneOf(buttonMobileFitOptions),
-  modifier: _propTypes.default.oneOf(buttonModifiers),
+  modifier: _propTypes.default.oneOf([].concat(buttonModifiers, deprecatedModifiers)),
   variant: _propTypes.default.oneOf(buttonVariants)
 };
 Button.defaultProps = {

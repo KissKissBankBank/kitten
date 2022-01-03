@@ -4,7 +4,10 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import { Button } from '../../../../components/molecules/buttons/button'
+import {
+  Button,
+  buttonModifiers,
+} from '../../../../components/molecules/buttons/button'
 
 export const Item = ({
   children,
@@ -76,18 +79,7 @@ Item.propTypes = {
     undefined,
     'light',
     'default',
-    'hydrogen',
-    'helium',
-    'lithium',
-    'beryllium',
-    'carbon',
-    'oxygen',
-    'copper',
-    'checked',
-    'boron',
-    'neon',
-    'iron',
-    'calcium',
+    ...buttonModifiers,
   ]),
   size: PropTypes.oneOf(['normal', 'tiny', 'big']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),

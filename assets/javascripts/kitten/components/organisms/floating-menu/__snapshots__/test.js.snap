@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
+.c0 {
+  border: var(--border);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1.875rem;
+  background-color: var(--color-grey-000);
+  overflow: hidden;
+  min-width: 11.5625rem;
+  border-bottom-left-radius: var(--border-radius-m);
+  border-bottom-right-radius: var(--border-radius-m);
+}
+
+.c0 .k-FloatingMenu__list {
+  margin: 0;
+  padding: 0 0.625rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.125rem 0.625rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.c0 .k-FloatingMenu__list .k-FloatingMenu__item {
+  height: 3.125rem;
+  padding-bottom: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1.25rem;
+  color: var(--color-grey-900);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: border-color var(--transition);
+  transition: border-color var(--transition);
+  white-space: nowrap;
+  border-color: transparent;
+  border-width: 0.25rem 0 0;
+  border-style: solid;
+}
+
+.c0 .k-FloatingMenu__list .k-FloatingMenu__item[aria-current] {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  -webkit-letter-spacing: .01rem;
+  -moz-letter-spacing: .01rem;
+  -ms-letter-spacing: .01rem;
+  letter-spacing: .01rem;
+  font-weight: 600;
+  border-color: var(--color-gray-900);
+}
+
+.c0 .k-FloatingMenu__list .k-FloatingMenu__item:hover,
+.c0 .k-FloatingMenu__list .k-FloatingMenu__item:active {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  -webkit-letter-spacing: .01rem;
+  -moz-letter-spacing: .01rem;
+  -ms-letter-spacing: .01rem;
+  letter-spacing: .01rem;
+  font-weight: 600;
+}
+
+.c0 .k-FloatingMenu__list .k-FloatingMenu__item:focus-visible {
+  outline-style: auto;
+}
+
+@media (max-width:639px) {
+  .c0 {
+    border-top: 0;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 {
+    border-radius: var(--border-radius-m);
+    padding: 0.625rem 0;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-FloatingMenu__list {
+    padding: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:399px) {
+  .c0 .k-FloatingMenu__list .k-FloatingMenu__item {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-FloatingMenu__list .k-FloatingMenu__item {
+    padding-bottom: 0;
+    padding-left: 1rem;
+    border-width: 0 0 0 0.25rem;
+  }
+}
+
+<nav
+  className="c0 k-FloatingMenu"
+>
+  <ul
+    className="k-FloatingMenu__list"
+  >
+    <li
+      className="k-FloatingMenu__itemWrapper"
+    >
+      <button
+        aria-current={null}
+        className="k-FloatingMenu__item"
+        onClick={[Function]}
+        type="button"
+      >
+        First item
+      </button>
+    </li>
+    <li
+      className="k-FloatingMenu__itemWrapper"
+    >
+      <a
+        aria-current="page"
+        className="k-FloatingMenu__item"
+        href="#"
+      >
+        Second item
+      </a>
+    </li>
+    <li
+      className="k-FloatingMenu__itemWrapper"
+    >
+      <a
+        aria-current={null}
+        className="k-FloatingMenu__item"
+        href="#hello"
+        linkStyle={true}
+      >
+        Third item (link)
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
