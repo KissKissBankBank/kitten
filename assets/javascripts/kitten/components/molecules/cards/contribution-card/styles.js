@@ -16,7 +16,7 @@ export const StyledContributionCard = styled.article`
   border-color: var(--contributionCard--border-color);
   border-radius: var(--contributionCard--border-radius);
 
-  @media ${mq.tablet} {
+  @media ${mq.tabletAndDesktop} {
     height: calc(${pxToRem(100)} + 2 * var(--border-width));
     display: flex;
   }
@@ -31,7 +31,7 @@ export const StyledContributionCard = styled.article`
     align-items: center;
     justify-content: center;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndDesktop} {
       flex: 0 0 ${pxToRem(160)};
     }
 
@@ -56,7 +56,7 @@ export const StyledContributionCard = styled.article`
     svg {
       width: 80%;
 
-      @media ${mq.tablet} {
+      @media ${mq.tabletAndDesktop} {
         width: 100%;
       }
     }
@@ -83,7 +83,7 @@ export const StyledContributionCard = styled.article`
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndDesktop} {
       width: 100%;
 
       grid-gap: 0 ${pxToRem(10)};
@@ -106,7 +106,7 @@ export const StyledContributionCard = styled.article`
     line-height: ${pxToRem(16)};
     place-self: center start;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndDesktop} {
       font-size: ${stepToRem(0)};
       margin-top: 0;
 
@@ -123,7 +123,7 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__amount {
     place-self: center flex-end;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndDesktop} {
       margin-right: ${pxToRem(10)};
       margin-top: 0;
       place-self: center center;
@@ -135,7 +135,7 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__input {
     place-self: flex-start center;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndDesktop} {
       place-self: center flex-start;
     }
   }
@@ -143,7 +143,7 @@ export const StyledContributionCard = styled.article`
   .k-ContributionCard__action {
     place-self: flex-start center;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndDesktop} {
       place-self: center flex-end;
     }
   }
