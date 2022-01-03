@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `ContributionCard`: Improve styles.
+- Feature: `ProjectCard`: Add mobile styles.
+- Fix: `SummaryCard`: Fix title-bar styles.
 
 ## [6.14.0] - 2022-01-03
 
