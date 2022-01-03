@@ -41,7 +41,7 @@ export const Default = args => {
       <div>
         <CheckableButton {...args}>My Button</CheckableButton>
         <p className="k-u-weight-light k-u-size-micro">
-          Button controlled by the "Checked" knob
+          Button controlled by the "isChecked" knob
         </p>
       </div>
       <div>

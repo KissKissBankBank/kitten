@@ -23,6 +23,12 @@ export const modifierStyles = modifier => {
       borderColor = 'var(--color-grey-400)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
+      hoverBorderColor = 'var(--color-primary-300)'
+      hoverBgColor = COLORS.background1
+      hoverColor = COLORS.font1
+      activeBorderColor = 'var(--color-primary-500)'
+      activeBgColor = COLORS.background1
+      activeColor = COLORS.font1
       break
 
     case 'helium':
@@ -33,9 +39,15 @@ export const modifierStyles = modifier => {
 
     case 'lithium':
     case 'checked':
-      borderColor = COLORS.primary4
-      backgroundColor = COLORS.background1
-      color = COLORS.primary1
+      borderColor = 'var(--color-primary-500)'
+      backgroundColor = 'var(--color-primary-100)'
+      color = COLORS.font1
+      hoverBorderColor = 'var(--color-primary-700)'
+      hoverBgColor = 'var(--color-primary-300)'
+      hoverColor = COLORS.font1
+      activeBorderColor = 'var(--color-primary-900)'
+      activeBgColor = 'var(--color-primary-300)'
+      activeColor = COLORS.font1
       break
 
     case 'beryllium':
@@ -119,11 +131,11 @@ export const modifierStyles = modifier => {
       &,
       path {
         fill: currentColor;
-        transition: fill 0.2s;
+        transition: fill var(--transition);
       }
     }
 
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
 
     ${modifier !== 'checked' &&
     css`

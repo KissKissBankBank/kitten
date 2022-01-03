@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import styled from 'styled-components'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
-import classNames from 'classnames'
 
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
@@ -55,10 +56,16 @@ const StyledTagButton = styled.button`
         color: ${COLORS.font3};
       }
 
-      &.k-Buttons__tagButton--selected {
+      &.k-Buttons__tagButton--active {
         background-color: ${COLORS.primary5};
-        border: var(--border-active);
+        border: var(--border-active-primary);
         color: ${COLORS.font1};
+
+        &:hover,
+        &:focus,
+        &:active {
+          border-color: var(--color-primary-700);
+        }
       }
     }
   }
@@ -150,10 +157,16 @@ const StyledTagButton = styled.button`
       color: ${COLORS.background1};
     }
   }
-  &.k-Buttons__tagButton--selected {
+  &.k-Buttons__tagButton--active {
     color: ${COLORS.background1};
-    border: var(--border-active);
+    border: var(--border-active-primary);
     background-color: ${COLORS.primary1};
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: var(--color-primary-700);
+    }
   }
 `
 
@@ -161,6 +174,7 @@ export const TagButton = ({
   children,
   modifier,
   selected,
+  active,
   tiny,
   big,
   huge,
@@ -182,7 +196,7 @@ export const TagButton = ({
         `k-Buttons__tagButton--${variant}`,
         `k-Buttons__tagButton--${size}`,
         {
-          'k-Buttons__tagButton--selected': selected,
+          'k-Buttons__tagButton--active': active || selected,
           'k-Buttons__tagButton--icon': icon,
         },
       )}
@@ -198,7 +212,8 @@ TagButton.propTypes = {
   modifier: PropTypes.oneOf(['helium', 'hydrogen', 'carbon']),
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
   icon: PropTypes.bool,
-  selected: PropTypes.bool,
+  active: PropTypes.bool,
+  selected: deprecated(PropTypes.bool, 'Please use `active` instead.'),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
@@ -207,6 +222,6 @@ TagButton.defaultProps = {
   modifier: 'hydrogen',
   icon: false,
   size: 'regular',
-  selected: false,
+  active: false,
   variant: 'orion',
 }

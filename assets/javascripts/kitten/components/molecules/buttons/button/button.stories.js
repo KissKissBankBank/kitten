@@ -21,6 +21,7 @@ const args = {
   children: 'My Button',
   fit: 'min-width',
   mobileFit: undefined,
+  active: false,
 }
 
 const argTypes = {
@@ -64,6 +65,10 @@ const argTypes = {
     name: 'mobileFit',
     control: 'select',
     options: buttonMobileFitOptions,
+  },
+  active: {
+    name: 'active',
+    control: 'boolean',
   },
 }
 

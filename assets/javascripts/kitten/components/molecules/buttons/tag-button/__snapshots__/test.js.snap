@@ -64,10 +64,16 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600,#949494);
 }
 
-.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active {
   background-color: var(--color-primary-100,#e8f7fe);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
+}
+
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 .c0:disabled {
@@ -174,10 +180,16 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
 }
 
-.c0.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--active {
   color: var(--color-grey-000,#fff);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 <button
@@ -252,10 +264,16 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600,#949494);
 }
 
-.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active {
   background-color: var(--color-primary-100,#e8f7fe);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
+}
+
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 .c0:disabled {
@@ -362,14 +380,20 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
 }
 
-.c0.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--active {
   color: var(--color-grey-000,#fff);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   background-color: var(--color-primary-500,#19b4fa);
 }
 
+.c0.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
+}
+
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular k-Buttons__tagButton--selected"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--orion k-Buttons__tagButton--regular k-Buttons__tagButton--active"
   type="button"
 >
   MyButton
@@ -440,10 +464,16 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600,#949494);
 }
 
-.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active {
   background-color: var(--color-primary-100,#e8f7fe);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
+}
+
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 .c0:disabled {
@@ -550,10 +580,16 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
 }
 
-.c0.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--active {
   color: var(--color-grey-000,#fff);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 <button
@@ -628,10 +664,16 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600,#949494);
 }
 
-.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active {
   background-color: var(--color-primary-100,#e8f7fe);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
+}
+
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 .c0:disabled {
@@ -738,10 +780,16 @@ exports[`<TagButton /> with \`variant\` prop matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
 }
 
-.c0.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--active {
   color: var(--color-grey-000,#fff);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 <button
@@ -816,10 +864,16 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   color: var(--color-grey-600,#949494);
 }
 
-.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active {
   background-color: var(--color-primary-100,#e8f7fe);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
+}
+
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 .c0:disabled {
@@ -926,10 +980,16 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
 }
 
-.c0.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--active {
   color: var(--color-grey-000,#fff);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 <button
@@ -1021,10 +1081,16 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   color: var(--color-grey-600,#949494);
 }
 
-.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active {
   background-color: var(--color-primary-100,#e8f7fe);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
+}
+
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--orion.k-Buttons__tagButton--hydrogen.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 .c0:disabled {
@@ -1131,10 +1197,16 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   color: var(--color-grey-000,#fff);
 }
 
-.c0.k-Buttons__tagButton--selected {
+.c0.k-Buttons__tagButton--active {
   color: var(--color-grey-000,#fff);
-  border: var(--border-active);
+  border: var(--border-active-primary);
   background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-Buttons__tagButton--active:hover,
+.c0.k-Buttons__tagButton--active:focus,
+.c0.k-Buttons__tagButton--active:active {
+  border-color: var(--color-primary-700);
 }
 
 <button
