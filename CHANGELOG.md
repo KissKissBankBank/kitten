@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Button`: Change `lithium` modifier styles.
+- Feature: `Button`: Change `hydrogen` and `lithium` modifier styles.
 - Feature: `Button`: Add `active` prop that switches modifier to `lithium` when true.
 - Feature: `TagButton`: Deprecate `selected` prop, use new `active` instead.
 - Fix: `ButtonGroup`: Fix styles.
