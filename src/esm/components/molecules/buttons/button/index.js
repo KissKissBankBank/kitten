@@ -11,7 +11,8 @@ import styled from 'styled-components';
 import { modifierStyles } from './helpers/modifier-styles';
 import { ScreenConfig } from '../../../../constants/screen-config';
 import classNames from 'classnames';
-export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'boron', 'calcium', 'scandium', 'neon', 'iron', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
+var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
+export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron'];
 export var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 export var buttonMobileFitOptions = [null].concat(buttonFitOptions);
 export var buttonSizes = ['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular'];
@@ -44,6 +45,10 @@ export var Button = function Button(_ref2) {
       fit = _ref2.fit,
       mobileFit = _ref2.mobileFit,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded);
+
+  if (deprecatedModifiers.includes(modifier)) {
+    console.warn("The modifier " + modifier + " has been deprecated. Please use one for the following: " + buttonModifiers.join(', ') + ".");
+  }
 
   var actualSize = function () {
     switch (true) {
@@ -114,7 +119,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
-  modifier: PropTypes.oneOf(buttonModifiers),
+  modifier: PropTypes.oneOf([].concat(buttonModifiers, deprecatedModifiers)),
   variant: PropTypes.oneOf(buttonVariants)
 };
 Button.defaultProps = {

@@ -1,7 +1,6 @@
 import React from 'react'
 import { FloatingMenu } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import { Text } from 'kitten'
 
 export default {
   title: 'Organisms/FloatingMenu',

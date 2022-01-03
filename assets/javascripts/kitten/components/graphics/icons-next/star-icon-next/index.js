@@ -18,7 +18,6 @@ export const StarIconNext = ({ color, title, ...props }) => (
   </svg>
 )
 
-
 StarIconNext.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,

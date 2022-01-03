@@ -4,25 +4,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Button`: Deprecate the following modifier values:
-    - `carbon`,
-    - `oxygen`,
-    - `calcium`,
-    - `social_facebook`,
-    - `social_twitter`,
-    - `social_linkedin`,
-    - `social_instagram`,
-    - `social_youtube`.
-- Feature: `SocialButtonIcon` & `SocialButtonIconText`: Change style.
-- Feature: `HeroLayout`: Add component.
-- Feature: `FloatingMenu`: Add component.
-- Feature: Utilities: Add `k-u-letter-spacing` utilities.
-- Feature: `List`: Add `markerElement` prop, accepts a React node.
-- Feature: `List`: Add `gap` prop, accepts a number.
-- Feature: Utilities: Add `k-u-line-height-1-25` and `k-u-line-height-1-40` CSS utilities.
-- Feature: Add the following icon components:
+## [6.14.0] - 2022-01-03
+
+Features:
+
+- `HeroLayout`: Add component.
+- `FloatingMenu`: Add component.
+- Add the following icon components:
   - `EnvelopeIconNext`,
   - `StarIconNext`.
+- Utilities: Add `k-u-letter-spacing` utilities.
+- Utilities: Add `k-u-line-height-1-25` and `k-u-line-height-1-40` CSS utilities.
+- `SocialButtonIcon` & `SocialButtonIconText`: Change style.
+- `List`: Add `markerElement` prop, accepts a React node.
+- `List`: Add `gap` prop, accepts a number.
+- `Button`: Deprecate the following modifier values:
+  - `carbon`,
+  - `oxygen`,
+  - `calcium`,
+  - `social_facebook`,
+  - `social_twitter`,
+  - `social_linkedin`,
+  - `social_instagram`,
+  - `social_youtube`.
 
 ## [6.13.1] - 2021-12-31
 
