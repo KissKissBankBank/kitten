@@ -122,6 +122,7 @@ const StyledWrapper = styled.div`
     &:hover .k-Avatar,
     &:focus .k-Avatar {
       opacity: 0.8;
+      border: var(--border-hover);
     }
   }
 `
