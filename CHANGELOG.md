@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `SocialButtonIcon` & `SocialButtonIconText`: Change style.
+- Feature: `Button`: Deprecate `social_*` modifiers.
 - Feature: `HeroLayout`: Add component.
 - Feature: `FloatingMenu`: Add component.
 - Feature: Utilities: Add `k-u-letter-spacing` utilities.

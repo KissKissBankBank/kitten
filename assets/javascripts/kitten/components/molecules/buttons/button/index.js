@@ -22,11 +22,6 @@ export const buttonModifiers = [
   'scandium',
   'neon',
   'iron',
-  'social_facebook',
-  'social_twitter',
-  'social_linkedin',
-  'social_instagram',
-  'social_youtube',
 ]
 
 export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']
