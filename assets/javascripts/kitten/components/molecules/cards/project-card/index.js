@@ -134,7 +134,12 @@ ProjectCard.Progress = ({ className, value, ...props }) => {
   return (
     <div className={classNames('k-ProjectCard__progress', className)}>
       <Progress variant="andromeda" value={value} {...props} />
-      <Text weight="bold" size="tiny" lineHeight="1">
+      <Text
+        weight="bold"
+        size="tiny"
+        lineHeight="1"
+        className="k-u-hidden@xs-down"
+      >
         {value}&nbsp;%
       </Text>
     </div>

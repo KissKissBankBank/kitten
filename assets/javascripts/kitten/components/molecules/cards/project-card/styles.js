@@ -91,22 +91,17 @@ export const StyledCard = styled.div`
   }
 
   .k-ProjectCard__itemsLine {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: ${pxToRem(10)};
     flex: 1 0 auto;
     margin-top: ${pxToRem(20)};
     align-items: end;
   }
 
-  .k-ProjectCard__item {
-    --projectCard-itemWidth: calc((100% - (2 * ${pxToRem(10)})) / 3);
-    flex: 0 0 var(--projectCard-itemWidth);
-    width: var(--projectCard-itemWidth);
-
-    > * {
-      line-height: ${pxToRem(16)};
-      display: block;
-    }
+  .k-ProjectCard__item > * {
+    line-height: ${pxToRem(16)};
+    display: block;
   }
 
   .k-ProjectCard__progress {
