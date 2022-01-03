@@ -62,15 +62,15 @@ export const modifierStyles = modifier => {
       break
 
     case 'copper':
-      borderColor = COLORS.error3
+      borderColor = 'var(--color-danger-300)'
       backgroundColor = COLORS.background1
-      color = COLORS.error
-      hoverBorderColor = 'currentColor'
+      color = 'var(--color-danger-500)'
+      hoverBorderColor = 'var(--color-danger-500)'
       hoverBgColor = COLORS.background1
-      hoverColor = COLORS.error
-      activeBorderColor = 'currentColor'
+      hoverColor = 'var(--color-danger-500)'
+      activeBorderColor = 'var(--color-danger-700)'
       activeBgColor = COLORS.background1
-      activeColor = COLORS.error
+      activeColor = 'var(--color-danger-700)'
       break
 
     case 'boron':
@@ -110,14 +110,14 @@ export const modifierStyles = modifier => {
       break
 
     case 'iron':
-      borderColor = COLORS.error
-      backgroundColor = COLORS.error
+      borderColor = 'var(--color-danger-500)'
+      backgroundColor = 'var(--color-danger-500)'
       color = COLORS.background1
-      hoverBorderColor = COLORS.error4
-      hoverBgColor = COLORS.error4
+      hoverBorderColor = 'var(--color-danger-700)'
+      hoverBgColor = 'var(--color-danger-700)'
       hoverColor = COLORS.background1
-      activeBorderColor = COLORS.error5
-      activeBgColor = COLORS.error5
+      activeBorderColor = 'var(--color-danger-900)'
+      activeBgColor = 'var(--color-danger-900)'
       activeColor = COLORS.background1
       break
   }

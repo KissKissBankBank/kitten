@@ -1010,9 +1010,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-danger-300,#ffb2c7);
+  border: var(--border-width) solid var(--color-danger-300);
   background-color: var(--color-grey-000,#fff);
-  color: var(--color-danger-500,#ff0046);
+  color: var(--color-danger-500);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -1107,15 +1107,15 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: currentColor;
+  border-color: var(--color-danger-500);
   background-color: var(--color-grey-000,#fff);
-  color: var(--color-danger-500,#ff0046);
+  color: var(--color-danger-500);
 }
 
 .c0:active {
-  border-color: currentColor;
+  border-color: var(--color-danger-700);
   background-color: var(--color-grey-000,#fff);
-  color: var(--color-danger-500,#ff0046);
+  color: var(--color-danger-700);
 }
 
 .c0:disabled,
