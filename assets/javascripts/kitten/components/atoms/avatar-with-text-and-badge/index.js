@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
     box-sizing: border-box;
     display: flex;
     overflow: hidden;
-    border: 0;
+    border: var(--border-width) solid var(--color-grey-300);
     padding: 0;
 
     color: var(--k-Avatar-color);
@@ -122,6 +122,7 @@ const StyledWrapper = styled.div`
     &:hover .k-Avatar,
     &:focus .k-Avatar {
       opacity: 0.8;
+      border: var(--border-hover);
     }
   }
 `

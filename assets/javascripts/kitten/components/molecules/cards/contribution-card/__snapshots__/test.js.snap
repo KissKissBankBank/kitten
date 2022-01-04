@@ -2,7 +2,7 @@
 
 exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH gHtNyi k-ContributionCard"
+  className="sc-bwzfXH hSxNBk k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "var(--color-grey-400)",
@@ -66,7 +66,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH gHtNyi k-ContributionCard"
+  className="sc-bwzfXH hSxNBk k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "var(--color-grey-400)",

@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `ButtonGroup`: Fix styles.
 - Fix: `TagButton`: Fix styles.
 - Fix: `CheckableButton`: Fix styles.
+- Fix: `ContributionCard`: Improve styles.
+- Fix: `AvatarWithTextAndBadge`: Add `border` on the avatar image.
 - Feature: `ProjectCard`: Add mobile styles.
 - Fix: `SummaryCard`: Fix title-bar styles.
 
