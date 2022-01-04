@@ -39,6 +39,7 @@ const StyledDeskMenu = styled.nav`
       object-position: center;
       display: block;
       border-radius: var(--border-radius-rounded);
+      border: var(--border-width) solid var(--color-grey-300);
     }
 
     .k-DeskMenu__header__content {
