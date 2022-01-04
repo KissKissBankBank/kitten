@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { TextInput } from '../../../components/form/text-input'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
+import { TextInput } from '../../../components/form/text-input'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { modifierStyles } from '../../../components/molecules/buttons/button/helpers/modifier-styles'
-import deprecated from 'prop-types-extra/lib/deprecated'
+import { Button } from '../../../components/molecules/buttons/button'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledTextInputWithButton = styled.div`
@@ -22,25 +22,8 @@ const StyledTextInputWithButton = styled.div`
   &:not(.k-Form-TextInputWithButton--insetButton) {
     display: flex;
 
-    .k-Form-TextInputWithButton__input {
-      border-right: 0;
-    }
-
-    .k-Form-TextInputWithButton__button {
-      border-radius: 0;
-      padding: 0 ${pxToRem(30)};
-      ${({ modifier }) => modifierStyles(modifier)};
-    }
-
-    &.k-Form-TextInputWithButton--roudedButton {
-      .k-Form-TextInputWithButton__input {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-      .k-Form-TextInputWithButton__button {
-        border-top-right-radius: var(--border-radius-s);
-        border-bottom-right-radius: var(--border-radius-s);
-      }
+    &.k-Form-TextInputWithButton--orion {
+      gap: ${pxToRem(10)};
     }
   }
 
@@ -143,50 +126,60 @@ export const TextInputWithButton = React.forwardRef(
       inputValue,
       className,
       inset,
+      variant,
       ...others
     },
     ref,
-  ) => (
-    <StyledTextInputWithButton
-      className={classNames(
-        'k-Form-TextInputWithButton',
-        `k-Form-TextInputWithButton--${size}`,
-        {
-          'k-Form-TextInputWithButton--insetButton': inset,
-          'k-Form-TextInputWithButton--roudedButton': rounded,
-        },
-      )}
-      modifier={modifier}
-    >
-      <TextInput
-        className={classNames('k-Form-TextInputWithButton__input', className)}
-        {...others}
-        valid={valid}
-        error={error}
-        disabled={disabled}
-        size={size}
-        rounded={rounded}
-        value={inputValue}
-        ref={ref || null}
-      />
-      <button
-        type="button"
-        {...buttonProps}
+  ) => {
+    const ButtonComponent = inset ? 'button' : Button
+
+    return (
+      <StyledTextInputWithButton
         className={classNames(
-          'k-Form-TextInputWithButton__button',
-          buttonProps?.className,
+          'k-Form-TextInputWithButton',
+          `k-Form-TextInputWithButton--${size}`,
+          `k-Form-TextInputWithButton--${variant}`,
           {
-            'k-Form-TextInputWithButton__button--valid': valid,
-            'k-Form-TextInputWithButton__button--error': error,
-            'k-Form-TextInputWithButton__button--disabled': disabled,
+            'k-Form-TextInputWithButton--insetButton': inset,
+            'k-Form-TextInputWithButton--roudedButton': rounded,
           },
         )}
-        disabled={disabled}
       >
-        {value || buttonValue}
-      </button>
-    </StyledTextInputWithButton>
-  ),
+        <TextInput
+          ref={ref || null}
+          {...others}
+          className={classNames('k-Form-TextInputWithButton__input', className)}
+          valid={valid}
+          error={error}
+          disabled={disabled}
+          size={size}
+          rounded={rounded}
+          value={inputValue}
+          variant={variant}
+        />
+        <ButtonComponent
+          type="button"
+          {...buttonProps}
+          className={classNames(
+            'k-Form-TextInputWithButton__button',
+            buttonProps?.className,
+            {
+              'k-Form-TextInputWithButton__button--valid': valid,
+              'k-Form-TextInputWithButton__button--error': error,
+              'k-Form-TextInputWithButton__button--disabled': disabled,
+            },
+          )}
+          disabled={disabled}
+          variant={variant}
+          modifier={modifier}
+          size={size}
+          disabled={disabled}
+        >
+          {value || buttonValue}
+        </ButtonComponent>
+      </StyledTextInputWithButton>
+    )
+  }
 )
 
 TextInputWithButton.propTypes = {
