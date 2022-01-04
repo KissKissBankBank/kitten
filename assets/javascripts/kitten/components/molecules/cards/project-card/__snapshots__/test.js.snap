@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-GMQeP jscRmH k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP fpqKGX k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -93,7 +93,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down"
+        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %
@@ -105,7 +105,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-GMQeP jscRmH k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP fpqKGX k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -200,7 +200,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down"
+        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %

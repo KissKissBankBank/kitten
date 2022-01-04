@@ -173,3 +173,23 @@ WithVideo.args = {
   ],
 }
 WithVideo.argTypes = argTypes
+
+export const Loading = args => (
+  <ProjectCard {...args}>
+    <ProjectCard.Title />
+    <ProjectCard.Line />
+    <ProjectCard.ItemsLine>
+      <ProjectCard.Item />
+      <ProjectCard.Item />
+      <ProjectCard.Item />
+    </ProjectCard.ItemsLine>
+    <ProjectCard.Progress />
+  </ProjectCard>
+)
+
+Loading.args = {
+  ...args,
+  imageProps: {},
+  loading: true,
+}
+Loading.argTypes = argTypes
