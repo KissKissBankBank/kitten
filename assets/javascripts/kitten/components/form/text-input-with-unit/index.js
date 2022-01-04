@@ -32,10 +32,10 @@ const StyledTextInputWithUnit = styled.div`
     display: flex;
     z-index: 1;
     position: absolute;
-    right: ${pxToRem(2)};
-    top: ${pxToRem(2)};
-    bottom: ${pxToRem(2)};
-    min-width: ${pxToRem(42)};
+    right: ${pxToRem(3)};
+    top: ${pxToRem(3)};
+    bottom: ${pxToRem(3)};
+    min-width: ${pxToRem(40)};
     align-items: center;
     justify-content: center;
     border-left: var(--border);
@@ -62,7 +62,7 @@ const StyledTextInputWithUnit = styled.div`
       padding: 0 ${pxToRem(10)};
     }
     &.k-Form-TextInputWithUnit__unit--regular {
-      padding: 0 ${pxToRem(15)};
+      padding: 0 ${pxToRem(12)};
     }
     &.k-Form-TextInputWithUnit__unit--big,
     &.k-Form-TextInputWithUnit__unit--huge {
