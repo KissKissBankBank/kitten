@@ -10,7 +10,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
@@ -34,7 +34,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     name="text"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     onClick={[Function]}
     style={
@@ -60,7 +60,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
@@ -123,7 +123,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     name="text"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width k-Button--disabled"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width k-Button--disabled"
     disabled={true}
     style={
       Object {
@@ -147,7 +147,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
@@ -173,7 +173,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     value="foobar"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
@@ -197,7 +197,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--tiny k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Button--tiny k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
@@ -221,7 +221,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
+    className="sc-htpNat kTmmQJ k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
