@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button } from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'
 
 const StyledButtonGroup = styled.div`
@@ -35,9 +34,11 @@ const StyledButtonGroup = styled.div`
     &:hover {
       z-index: 1;
     }
+
     &.k-ButtonGroup__button--isActive {
       z-index: 2;
     }
+
     &:focus-visible {
       z-index: 3;
     }

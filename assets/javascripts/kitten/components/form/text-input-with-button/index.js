@@ -179,7 +179,7 @@ export const TextInputWithButton = React.forwardRef(
         </ButtonComponent>
       </StyledTextInputWithButton>
     )
-  }
+  },
 )
 
 TextInputWithButton.propTypes = {

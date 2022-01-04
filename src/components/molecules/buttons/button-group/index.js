@@ -19,8 +19,6 @@ var _button = require("../../../../components/molecules/buttons/button");
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _excluded = ["className", "variant"],
@@ -29,7 +27,7 @@ var _excluded = ["className", "variant"],
 var StyledButtonGroup = _styledComponents.default.div.withConfig({
   displayName: "button-group__StyledButtonGroup",
   componentId: "sc-gkwk7e-0"
-})(["display:flex;justify-content:center;.k-ButtonGroup__button{position:relative;z-index:0;min-width:auto;width:auto;&:not(:last-child){margin-right:", ";}&:first-child{border-top-left-radius:var(--border-radius-s);border-bottom-left-radius:var(--border-radius-s);}&:last-child{border-top-right-radius:var(--border-radius-s);border-bottom-right-radius:var(--border-radius-s);}&.k-ButtonGroup__button--isActive{border-radius:var(--border-radius-s);z-index:1;}&:active,&:hover,&:focus{border-radius:var(--border-radius-s);z-index:2;}}&.k-ButtonGroup--orion{.k-ButtonGroup__button{border-radius:var(--border-radius-s);color:", ";border:var(--border);background-color:", ";&:hover,&:focus,&:active{color:", ";border:var(--border-hover);background-color:", ";}&.k-ButtonGroup__button--isActive{color:", ";border:var(--border-active);background-color:", ";}&:first-child{border-top-right-radius:0;border-bottom-right-radius:0;}&:last-child{border-top-left-radius:0;border-bottom-left-radius:0;}}}"], (0, _typography.pxToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.primary5);
+})(["display:flex;justify-content:center;.k-ButtonGroup__button{position:relative;z-index:0;min-width:auto;width:auto;border-radius:0;&:not(:last-child){margin-right:", ";}&:first-child{border-top-left-radius:var(--border-radius-s);border-bottom-left-radius:var(--border-radius-s);}&:last-child{border-top-right-radius:var(--border-radius-s);border-bottom-right-radius:var(--border-radius-s);}&:active,&:hover{z-index:1;}&.k-ButtonGroup__button--isActive{z-index:2;}&:focus-visible{z-index:3;}}"], (0, _typography.pxToRem)(-1));
 
 var ButtonGroup = function ButtonGroup(_ref) {
   var className = _ref.className,
@@ -49,6 +47,7 @@ var ButtonGroupButton = function ButtonGroupButton(_ref2) {
       active = _ref2.active,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, props, {
+    active: active,
     className: (0, _classnames.default)('k-ButtonGroup__button', className, {
       'k-ButtonGroup__button--isActive': active
     })

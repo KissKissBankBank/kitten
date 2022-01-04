@@ -22,7 +22,7 @@ Default.args = {
   modifier: 'helium',
   buttonProps: {
     fit: 'icon',
-  }
+  },
 }
 
 Default.argTypes = {

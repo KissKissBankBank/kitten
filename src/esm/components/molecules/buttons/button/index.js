@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit"];
+var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -44,6 +44,7 @@ export var Button = function Button(_ref2) {
       as = _ref2.as,
       fit = _ref2.fit,
       mobileFit = _ref2.mobileFit,
+      active = _ref2.active,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
   if (deprecatedModifiers.includes(modifier)) {
@@ -78,6 +79,7 @@ export var Button = function Button(_ref2) {
     }
   }();
 
+  var internalModifier = active ? 'lithium' : modifier;
   var internalTag = as || tag;
 
   var fitClass = function () {
@@ -94,8 +96,8 @@ export var Button = function Button(_ref2) {
   }();
 
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
-    className: classNames('k-Button', className, "k-Button--" + actualSize, "k-Button--" + modifier, "k-Button--" + variant, "k-Button--fit-" + fitClass, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
-    modifier: modifier,
+    className: classNames('k-Button', className, "k-Button--" + actualSize, "k-Button--" + internalModifier, "k-Button--" + variant, "k-Button--fit-" + fitClass, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
+    modifier: internalModifier,
     style: {
       '--Button-border-radius': borderRadius > 0 ? pxToRem(borderRadius) : null
     },
@@ -120,7 +122,8 @@ Button.propTypes = {
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
   modifier: PropTypes.oneOf([].concat(buttonModifiers, deprecatedModifiers)),
-  variant: PropTypes.oneOf(buttonVariants)
+  variant: PropTypes.oneOf(buttonVariants),
+  active: PropTypes.bool
 };
 Button.defaultProps = {
   tag: 'button',
@@ -132,5 +135,6 @@ Button.defaultProps = {
   modifier: 'hydrogen',
   variant: 'orion',
   fit: 'min-width',
-  mobileFit: null
+  mobileFit: null,
+  active: false
 };
