@@ -111,6 +111,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 }
 
 .c1 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -146,6 +147,10 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c1.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1:disabled,
@@ -219,14 +224,6 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 
 .c1.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c1.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c1.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -358,7 +355,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 >
   <button
     aria-label="Text of the tooltip"
-    className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonWithTooltip__button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,

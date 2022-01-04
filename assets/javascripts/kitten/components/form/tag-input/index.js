@@ -19,6 +19,7 @@ const StyledWrapper = styled.div`
   transition: border 0.2s ease;
   padding: var(--tagInput-padding-vertical, ${pxToRem(10)})
     var(--tagInput-padding-horizontal, ${pxToRem(10)});
+  border-radius: var(--border-radius-s);
 
   &:focus-within {
     outline: var(--outline-input);
@@ -175,12 +176,6 @@ const StyledWrapper = styled.div`
       font-size: ${stepToRem(0)};
     }
   }
-
-  // VARIANTS
-
-  &.k-Form-TagList--orion {
-    border-radius: var(--border-radius-s);
-  }
 `
 
 export const TagInput = ({
@@ -195,7 +190,6 @@ export const TagInput = ({
   helpMessage,
   disabled,
   size,
-  variant,
 }) => {
   const [itemsList, setItemsList] = useState(
     Array.from(itemsListFromProps || initialItemsList),
@@ -284,7 +278,6 @@ export const TagInput = ({
         'k-Form-TagList',
         className,
         `k-Form-TagList--${size}`,
-        `k-Form-TagList--${variant}`,
         {
           'k-Form-TagList--disabled': disabled,
         },
@@ -372,7 +365,6 @@ TagInput.defaultProps = {
   onChange: () => {},
   disabled: false,
   size: 'regular',
-  variant: 'orion',
 }
 
 TagInput.propTypes = {
@@ -386,5 +378,4 @@ TagInput.propTypes = {
   disabled: PropTypes.bool,
   helpMessage: PropTypes.node.isRequired,
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }

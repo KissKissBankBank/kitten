@@ -29,11 +29,6 @@ export default {
       name: 'loadingText',
       control: 'text',
     },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
-    },
     gPlaceApiKey: {
       name: 'gPlaceApiKey (story prop)',
       control: 'text',
@@ -46,7 +41,6 @@ export default {
     inputProps: {},
     name: 'location-input',
     loadingText: 'Loading',
-    variant: 'orion',
     gPlaceApiKey: 'YOUR KEY',
   },
   parameters: {

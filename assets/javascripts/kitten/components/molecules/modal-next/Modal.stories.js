@@ -123,11 +123,6 @@ const argTypes = {
     name: 'zIndex',
     control: 'number',
   },
-  variant: {
-    name: 'variant',
-    options: ['andromeda', 'orion'],
-    control: 'inline-radio',
-  },
   headerTitle: {
     name: 'headerTitle',
     control: 'object',
@@ -321,46 +316,6 @@ export const ComplexWithOrion = ({ contentText, ...args }) => (
     )}
   </Modal>
 )
-ComplexWithOrion.args = {
-  ...args,
-  variant: 'orion',
-  headerTitle: (
-    <Text weight="bold" size="giant">
-      Modal title
-    </Text>
-  ),
-  headerActions: ({ close }) => (
-    <>
-      <Button
-        className="k-u-hidden@xs-down"
-        modifier="helium"
-        type="button"
-        onClick={close}
-      >
-        <span>
-          <SaveIcon width="16" />
-        </span>
-        <span>Sauvegarder</span>
-      </Button>
-      <Button
-        className="k-u-hidden@s-up"
-        fit="icon"
-        modifier="helium"
-        type="button"
-        onClick={close}
-        aria-label="Sauvegarder"
-      >
-        <SaveIcon width="16" />
-      </Button>
-    </>
-  ),
-  headerMessage: (
-    <Text size="micro" weight="light" cssColor={COLORS.grey1}>
-      This is a header message
-    </Text>
-  ),
-}
-ComplexWithOrion.argTypes = argTypes
 
 export const CustomInnerSize = ({ contentText, ...args }) => (
   <Modal {...args}>

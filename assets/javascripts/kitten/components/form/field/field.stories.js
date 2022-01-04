@@ -53,7 +53,6 @@ WithInput.args = {
   limit: undefined,
   unit: undefined,
   noMargin: false,
-  variant: 'orion',
 }
 WithInput.argTypes = {
   id: { control: 'text' },
@@ -71,7 +70,6 @@ WithInput.argTypes = {
   limit: { control: 'number' },
   unit: { control: 'text' },
   noMargin: { control: 'boolean' },
-  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
 export const WithPassword = args => {
@@ -87,7 +85,6 @@ WithPassword.args = {
   placeholder: 'Placeholder…',
   error: false,
   errorMessage: 'Error message…',
-  variant: 'orion',
 }
 WithPassword.argTypes = {
   id: { control: 'text' },
@@ -99,7 +96,6 @@ WithPassword.argTypes = {
   placeholder: { control: 'text' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
-  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
 export const WithRadioButtons = args => {
@@ -129,7 +125,6 @@ WithRadioButtons.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
-  variant: 'orion',
 }
 WithRadioButtons.argTypes = {
   id: { control: 'text' },
@@ -141,7 +136,6 @@ WithRadioButtons.argTypes = {
   items: { control: 'object' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
-  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }
 
 export const WithAutocomplete = args => {
@@ -169,7 +163,6 @@ WithAutocomplete.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
-  variant: 'orion',
 }
 WithAutocomplete.argTypes = {
   id: { control: 'text' },
@@ -182,5 +175,4 @@ WithAutocomplete.argTypes = {
   items: { control: 'object' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
-  variant: { control: 'select', options: ['andromeda', 'orion'] },
 }

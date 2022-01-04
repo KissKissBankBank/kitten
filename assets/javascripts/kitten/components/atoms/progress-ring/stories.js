@@ -26,7 +26,6 @@ export default {
     value: 50,
     width: 160,
     strokeWidth: 5,
-    variant: 'orion',
     animationSpeed: 1.4,
   },
   argTypes: {
@@ -49,11 +48,6 @@ export default {
       name: 'strokeWidth',
       description: 'Width of circle (stroke).',
       control: 'number',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
     },
     animationSpeed: {
       name: 'animationSpeed',

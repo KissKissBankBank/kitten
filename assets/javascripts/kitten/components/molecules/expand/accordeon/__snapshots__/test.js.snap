@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -127,136 +127,9 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
-<div
-  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--andromeda k-Accordeon--isAnimated"
->
-  <div
-    className="k-Accordeon__item"
-  >
-    <button
-      aria-controls="accordeon-accordeon-0_content"
-      aria-disabled={false}
-      aria-expanded={false}
-      className="k-Accordeon__header"
-      id="accordeon-accordeon-0_header"
-      onClick={[Function]}
-      role="button"
-    >
-      <span
-        className="k-Accordeon__header__content"
-      >
-        Header
-      </span>
-      <span
-        className="k-Accordeon__header__arrow"
-      >
-        <svg
-          aria-hidden={true}
-          className=""
-          fill="var(--color-grey-900, #222)"
-          height="5.64"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 8.48 5.64"
-          width="8.48"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          
-          <path
-            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-          />
-        </svg>
-      </span>
-    </button>
-    <div
-      aria-hidden={true}
-      aria-labelledby="accordeon-accordeon-0_header"
-      className="k-Accordeon__content"
-      id="accordeon-accordeon-0_content"
-      style={
-        Object {
-          "--accordeon-content-max-height": 0,
-        }
-      }
-    >
-      <div
-        className="k-Accordeon__content_marger"
-      >
-        Content
-      </div>
-      <div />
-    </div>
-  </div>
-  <div
-    className="k-Accordeon__item"
-  >
-    <button
-      aria-controls="accordeon-accordeon-1_content"
-      aria-disabled={false}
-      aria-expanded={false}
-      className="k-Accordeon__header"
-      id="accordeon-accordeon-1_header"
-      onClick={[Function]}
-      role="button"
-    >
-      <span
-        className="k-Accordeon__header__content"
-      >
-        Header
-      </span>
-      <span
-        className="k-Accordeon__header__arrow"
-      >
-        <svg
-          aria-hidden={true}
-          className=""
-          fill="var(--color-grey-900, #222)"
-          height="5.64"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 8.48 5.64"
-          width="8.48"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          
-          <path
-            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-          />
-        </svg>
-      </span>
-    </button>
-    <div
-      aria-hidden={true}
-      aria-labelledby="accordeon-accordeon-1_header"
-      className="k-Accordeon__content"
-      id="accordeon-accordeon-1_content"
-      style={
-        Object {
-          "--accordeon-content-max-height": 0,
-        }
-      }
-    >
-      <div
-        className="k-Accordeon__content_marger"
-      >
-        Content
-      </div>
-      <div />
-    </div>
-  </div>
-</div>
-`;
-
 exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fJvDPv k-Accordeon custom1 k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa hUJKJU k-Accordeon custom1 k-Accordeon--isAnimated"
   data-test={true}
 >
   <div
@@ -393,13 +266,12 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
   multiple={false}
   onChange={[Function]}
   selectedItem={null}
-  variant="orion"
 >
   <styled.div
-    className="k-Accordeon k-Accordeon--orion"
+    className="k-Accordeon"
   >
     <StyledComponent
-      className="k-Accordeon k-Accordeon--orion"
+      className="k-Accordeon"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -407,31 +279,13 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "fJvDPv",
+            "lastClassName": "hUJKJU",
             "rules": Array [
-              ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
+              ".k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
-              ";}.k-Accordeon__header{display:block;margin:0;width:100%;box-sizing:border-box;overflow:visible;background:transparent;border:var(--border);font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;}.k-Accordeon__content{",
-              "font-family: Maax, Helvetica, Arial, sans-serif;",
-              "font-weight: 400;",
-              " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;border:var(--border);border-top:0;visibility:visible;opacity:1;max-height:var(--accordeon-content-max-height,unset);&[aria-hidden='true']{visibility:hidden;opacity:0;--accordeon-content-max-height:0 !important;}}&.k-Accordeon--isAnimated .k-Accordeon__header{transition:border 0.4s ease,border-radius 0.4s ease;transition-delay:0s;&[aria-hidden='true']{transition-delay:0.4s;}}&.k-Accordeon--isAnimated .k-Accordeon__content{overflow:hidden;transition:visibility 0s ease,all 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}}@media (prefers-reduced-motion:reduce){&.k-Accordeon--isAnimated{.k-Accordeon__header,.k-Accordeon__content{transition:none !important;}}}&.k-Accordeon--andromeda{.k-Accordeon__header{",
-              "font-family: Maax, Helvetica, Arial, sans-serif;",
-              "font-weight: 400;",
-              " padding:",
-              "1.25rem",
-              ";min-height:",
-              "1.875rem",
-              ";border-radius:var(--border-radius-xs);.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
-              "var(--color-grey-200, #f6f6f6)",
-              ";border-bottom-left-radius:var(--border-radius-xs);border-bottom-right-radius:var(--border-radius-xs);padding:",
-              "0.00625rem",
-              " ",
-              "1.875rem",
-              ";}.k-Accordeon__content_marger{padding-top:",
-              "1.875rem",
-              ";padding-bottom:",
-              "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__header{position:relative;padding:",
+              ";}.k-Accordeon__header{display:block;position:relative;min-height:",
+              "3.125rem",
+              ";margin:0;width:100%;box-sizing:border-box;overflow:visible;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -439,12 +293,10 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "1.5625rem",
               " ",
               "1.875rem",
-              ";",
+              ";background:transparent;border:var(--border);border-radius:var(--border-radius-m);",
               "font-family: Maax, Helvetica, Arial, sans-serif;",
               "font-weight: 500;",
-              " min-height:",
-              "3.125rem",
-              ";border-radius:var(--border-radius-m);@media (min-width:",
+              " color:inherit;cursor:pointer;text-align:left;@media (min-width:",
               "640",
               "px){min-height:",
               "4.375rem",
@@ -452,15 +304,18 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
               "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
-              ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
-              "var(--color-grey-000, #fff)",
-              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);padding:",
+              ";display:flex;align-items:center;}}.k-Accordeon__content{",
+              "font-family: Maax, Helvetica, Arial, sans-serif;",
+              "font-weight: 400;",
+              " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;padding:",
               "0.00625rem",
               " ",
               "1.875rem",
-              ";.k-Accordeon__content_marger{padding-bottom:",
+              ";background-color:",
+              "var(--color-grey-000, #fff)",
+              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);border:var(--border);border-top:0;visibility:visible;opacity:1;max-height:var(--accordeon-content-max-height,unset);&[aria-hidden='true']{visibility:hidden;opacity:0;--accordeon-content-max-height:0 !important;}.k-Accordeon__content_marger{padding-bottom:",
               "1.875rem",
-              ";}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
+              ";}}&.k-Accordeon--isAnimated .k-Accordeon__header{transition:border 0.4s ease,border-radius 0.4s ease;transition-delay:0s;&[aria-hidden='true']{transition-delay:0.4s;}}&.k-Accordeon--isAnimated .k-Accordeon__content{overflow:hidden;transition:visibility 0s ease,all 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}}@media (prefers-reduced-motion:reduce){&.k-Accordeon--isAnimated{.k-Accordeon__header,.k-Accordeon__content{transition:none !important;}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
             ],
           },
           "foldedComponentIds": Array [],
@@ -475,7 +330,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion"
+            class="sc-bdVaJa hUJKJU k-Accordeon"
           >
             <div
               class="k-Accordeon__item"
@@ -584,7 +439,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
       }
     >
       <div
-        className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion"
+        className="sc-bdVaJa hUJKJU k-Accordeon"
       >
         <Item
           id="accordeon-0"
@@ -770,7 +625,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -843,13 +698,12 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
   multiple={false}
   onChange={[Function]}
   selectedItem={0}
-  variant="orion"
 >
   <styled.div
-    className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+    className="k-Accordeon k-Accordeon--isAnimated"
   >
     <StyledComponent
-      className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+      className="k-Accordeon k-Accordeon--isAnimated"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -857,31 +711,13 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "fJvDPv",
+            "lastClassName": "hUJKJU",
             "rules": Array [
-              ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
+              ".k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
-              ";}.k-Accordeon__header{display:block;margin:0;width:100%;box-sizing:border-box;overflow:visible;background:transparent;border:var(--border);font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;}.k-Accordeon__content{",
-              "font-family: Maax, Helvetica, Arial, sans-serif;",
-              "font-weight: 400;",
-              " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;border:var(--border);border-top:0;visibility:visible;opacity:1;max-height:var(--accordeon-content-max-height,unset);&[aria-hidden='true']{visibility:hidden;opacity:0;--accordeon-content-max-height:0 !important;}}&.k-Accordeon--isAnimated .k-Accordeon__header{transition:border 0.4s ease,border-radius 0.4s ease;transition-delay:0s;&[aria-hidden='true']{transition-delay:0.4s;}}&.k-Accordeon--isAnimated .k-Accordeon__content{overflow:hidden;transition:visibility 0s ease,all 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}}@media (prefers-reduced-motion:reduce){&.k-Accordeon--isAnimated{.k-Accordeon__header,.k-Accordeon__content{transition:none !important;}}}&.k-Accordeon--andromeda{.k-Accordeon__header{",
-              "font-family: Maax, Helvetica, Arial, sans-serif;",
-              "font-weight: 400;",
-              " padding:",
-              "1.25rem",
-              ";min-height:",
-              "1.875rem",
-              ";border-radius:var(--border-radius-xs);.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
-              "var(--color-grey-200, #f6f6f6)",
-              ";border-bottom-left-radius:var(--border-radius-xs);border-bottom-right-radius:var(--border-radius-xs);padding:",
-              "0.00625rem",
-              " ",
-              "1.875rem",
-              ";}.k-Accordeon__content_marger{padding-top:",
-              "1.875rem",
-              ";padding-bottom:",
-              "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__header{position:relative;padding:",
+              ";}.k-Accordeon__header{display:block;position:relative;min-height:",
+              "3.125rem",
+              ";margin:0;width:100%;box-sizing:border-box;overflow:visible;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -889,12 +725,10 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "1.5625rem",
               " ",
               "1.875rem",
-              ";",
+              ";background:transparent;border:var(--border);border-radius:var(--border-radius-m);",
               "font-family: Maax, Helvetica, Arial, sans-serif;",
               "font-weight: 500;",
-              " min-height:",
-              "3.125rem",
-              ";border-radius:var(--border-radius-m);@media (min-width:",
+              " color:inherit;cursor:pointer;text-align:left;@media (min-width:",
               "640",
               "px){min-height:",
               "4.375rem",
@@ -902,15 +736,18 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
               "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
-              ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
-              "var(--color-grey-000, #fff)",
-              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);padding:",
+              ";display:flex;align-items:center;}}.k-Accordeon__content{",
+              "font-family: Maax, Helvetica, Arial, sans-serif;",
+              "font-weight: 400;",
+              " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;padding:",
               "0.00625rem",
               " ",
               "1.875rem",
-              ";.k-Accordeon__content_marger{padding-bottom:",
+              ";background-color:",
+              "var(--color-grey-000, #fff)",
+              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);border:var(--border);border-top:0;visibility:visible;opacity:1;max-height:var(--accordeon-content-max-height,unset);&[aria-hidden='true']{visibility:hidden;opacity:0;--accordeon-content-max-height:0 !important;}.k-Accordeon__content_marger{padding-bottom:",
               "1.875rem",
-              ";}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
+              ";}}&.k-Accordeon--isAnimated .k-Accordeon__header{transition:border 0.4s ease,border-radius 0.4s ease;transition-delay:0s;&[aria-hidden='true']{transition-delay:0.4s;}}&.k-Accordeon--isAnimated .k-Accordeon__content{overflow:hidden;transition:visibility 0s ease,all 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}}@media (prefers-reduced-motion:reduce){&.k-Accordeon--isAnimated{.k-Accordeon__header,.k-Accordeon__content{transition:none !important;}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
             ],
           },
           "foldedComponentIds": Array [],
@@ -925,7 +762,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+            class="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1033,7 +870,7 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
       }
     >
       <div
-        className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+        className="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1225,13 +1062,12 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
   multiple={false}
   onChange={[Function]}
   selectedItem={null}
-  variant="orion"
 >
   <styled.div
-    className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+    className="k-Accordeon k-Accordeon--isAnimated"
   >
     <StyledComponent
-      className="k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+      className="k-Accordeon k-Accordeon--isAnimated"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -1239,31 +1075,13 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "fJvDPv",
+            "lastClassName": "hUJKJU",
             "rules": Array [
-              ".k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
+              ".k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__item ~ .k-Accordeon__item{margin-top:",
               "0.9375rem",
-              ";}.k-Accordeon__header{display:block;margin:0;width:100%;box-sizing:border-box;overflow:visible;background:transparent;border:var(--border);font:inherit;color:inherit;background-color:transparent;cursor:pointer;text-align:left;}.k-Accordeon__content{",
-              "font-family: Maax, Helvetica, Arial, sans-serif;",
-              "font-weight: 400;",
-              " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;border:var(--border);border-top:0;visibility:visible;opacity:1;max-height:var(--accordeon-content-max-height,unset);&[aria-hidden='true']{visibility:hidden;opacity:0;--accordeon-content-max-height:0 !important;}}&.k-Accordeon--isAnimated .k-Accordeon__header{transition:border 0.4s ease,border-radius 0.4s ease;transition-delay:0s;&[aria-hidden='true']{transition-delay:0.4s;}}&.k-Accordeon--isAnimated .k-Accordeon__content{overflow:hidden;transition:visibility 0s ease,all 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}}@media (prefers-reduced-motion:reduce){&.k-Accordeon--isAnimated{.k-Accordeon__header,.k-Accordeon__content{transition:none !important;}}}&.k-Accordeon--andromeda{.k-Accordeon__header{",
-              "font-family: Maax, Helvetica, Arial, sans-serif;",
-              "font-weight: 400;",
-              " padding:",
-              "1.25rem",
-              ";min-height:",
-              "1.875rem",
-              ";border-radius:var(--border-radius-xs);.k-Accordeon__header__arrow{display:none;}}.k-Accordeon__content{background-color:",
-              "var(--color-grey-200, #f6f6f6)",
-              ";border-bottom-left-radius:var(--border-radius-xs);border-bottom-right-radius:var(--border-radius-xs);padding:",
-              "0.00625rem",
-              " ",
-              "1.875rem",
-              ";}.k-Accordeon__content_marger{padding-top:",
-              "1.875rem",
-              ";padding-bottom:",
-              "1.875rem",
-              ";}}&.k-Accordeon--orion{.k-Accordeon__item{border-radius:var(--border-radius-m);}.k-Accordeon__header{position:relative;padding:",
+              ";}.k-Accordeon__header{display:block;position:relative;min-height:",
+              "3.125rem",
+              ";margin:0;width:100%;box-sizing:border-box;overflow:visible;padding:",
               "1.5625rem",
               " ",
               "3.125rem",
@@ -1271,12 +1089,10 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "1.5625rem",
               " ",
               "1.875rem",
-              ";",
+              ";background:transparent;border:var(--border);border-radius:var(--border-radius-m);",
               "font-family: Maax, Helvetica, Arial, sans-serif;",
               "font-weight: 500;",
-              " min-height:",
-              "3.125rem",
-              ";border-radius:var(--border-radius-m);@media (min-width:",
+              " color:inherit;cursor:pointer;text-align:left;@media (min-width:",
               "640",
               "px){min-height:",
               "4.375rem",
@@ -1284,15 +1100,18 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
               "var(--color-grey-000, #fff)",
               ";}.k-Accordeon__header__arrow{position:absolute;top:0;bottom:0;right:",
               "1.25rem",
-              ";display:flex;align-items:center;}}.k-Accordeon__content{background-color:",
-              "var(--color-grey-000, #fff)",
-              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);padding:",
+              ";display:flex;align-items:center;}}.k-Accordeon__content{",
+              "font-family: Maax, Helvetica, Arial, sans-serif;",
+              "font-weight: 400;",
+              " box-sizing:border-box;visibility:visible;overflow:visible;height:auto;padding:",
               "0.00625rem",
               " ",
               "1.875rem",
-              ";.k-Accordeon__content_marger{padding-bottom:",
+              ";background-color:",
+              "var(--color-grey-000, #fff)",
+              ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);border:var(--border);border-top:0;visibility:visible;opacity:1;max-height:var(--accordeon-content-max-height,unset);&[aria-hidden='true']{visibility:hidden;opacity:0;--accordeon-content-max-height:0 !important;}.k-Accordeon__content_marger{padding-bottom:",
               "1.875rem",
-              ";}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
+              ";}}&.k-Accordeon--isAnimated .k-Accordeon__header{transition:border 0.4s ease,border-radius 0.4s ease;transition-delay:0s;&[aria-hidden='true']{transition-delay:0.4s;}}&.k-Accordeon--isAnimated .k-Accordeon__content{overflow:hidden;transition:visibility 0s ease,all 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}}@media (prefers-reduced-motion:reduce){&.k-Accordeon--isAnimated{.k-Accordeon__header,.k-Accordeon__content{transition:none !important;}}}.k-Accordeon__header[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}",
             ],
           },
           "foldedComponentIds": Array [],
@@ -1307,7 +1126,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       forwardedRef={
         Object {
           "current": <div
-            class="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+            class="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
           >
             <div
               class="k-Accordeon__item"
@@ -1416,7 +1235,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
       }
     >
       <div
-        className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+        className="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
       >
         <Item
           id="accordeon-0"
@@ -1602,7 +1421,7 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fJvDPv k-Accordeon k-Accordeon--orion k-Accordeon--isAnimated"
+  className="sc-bdVaJa hUJKJU k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"

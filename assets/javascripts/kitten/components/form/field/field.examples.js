@@ -39,7 +39,6 @@ export const FieldInputExample = ({
   unit,
   size,
   noMargin,
-  variant,
 }) => (
   <FieldBase
     id={id}
@@ -59,7 +58,6 @@ export const FieldInputExample = ({
       placeholder={placeholder}
       error={error}
       noMargin={noMargin}
-      variant={variant}
     />
   </FieldBase>
 )
@@ -73,7 +71,6 @@ export const FieldPasswordExample = ({
   placeholder,
   error,
   errorMessage,
-  variant,
   size,
 }) => (
   <FieldBase
@@ -93,7 +90,6 @@ export const FieldPasswordExample = ({
       hiddenIconLabel="Hide password"
       placeholder={placeholder}
       error={error}
-      variant={variant}
     />
   </FieldBase>
 )
@@ -107,7 +103,6 @@ export const FieldRadioButtonSetExample = ({
   items,
   error,
   errorMessage,
-  variant,
 }) => (
   <FieldBase
     id={id}
@@ -122,7 +117,6 @@ export const FieldRadioButtonSetExample = ({
       name="radio"
       items={items}
       error={error}
-      variant={variant}
     />
   </FieldBase>
 )
@@ -138,7 +132,6 @@ export const FieldAutocompleteExample = ({
   errorMessage,
   items,
   size,
-  variant,
 }) => (
   <FieldBase
     id={id}
@@ -156,7 +149,6 @@ export const FieldAutocompleteExample = ({
       placeholder={placeholder}
       error={error}
       items={items}
-      variant={variant}
     />
   </FieldBase>
 )

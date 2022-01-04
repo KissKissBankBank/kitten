@@ -53,16 +53,6 @@ describe('<TagButton />', () => {
     })
   })
 
-  describe('with `variant` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TagButton>MyButton</TagButton>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with icon', () => {
     beforeEach(() => {
       component = renderer

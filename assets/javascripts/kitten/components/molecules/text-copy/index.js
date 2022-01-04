@@ -24,7 +24,12 @@ const fadeInAndOut = keyframes`
 const Wrapper = styled.button`
   position: relative;
   display: flex;
+  gap: ${pxToRem(5)};
   width: 100%;
+
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    flex-direction: column;
+  }
 
   .k-TextCopy__text {
     display: flex;
@@ -70,37 +75,20 @@ const Wrapper = styled.button`
     animation: 3s ${fadeInAndOut} ease-out;
   }
 
-  &.k-TextCopy--andromeda {
-    .k-TextCopy__text {
-      border-right: 0;
+  &:hover {
+    .k-Button {
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.primary2};
     }
   }
 
-  &.k-TextCopy--orion {
-    gap: ${pxToRem(5)};
-
-    &:hover {
-      .k-Button {
-        border-color: ${COLORS.primary2};
-        background-color: ${COLORS.primary2};
-      }
-    }
-
-    &:active {
-      .k-Button {
-        border-color: ${COLORS.primary3};
-        background-color: ${COLORS.primary3};
-      }
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      flex-direction: column;
-    }
-
-    .k-Button.k-Button--orion {
-      border-radius: var(--border-radius-s);
+  &:active {
+    .k-Button {
+      border-color: ${COLORS.primary3};
+      background-color: ${COLORS.primary3};
     }
   }
+
 `
 
 export const TextCopy = ({
@@ -111,7 +99,6 @@ export const TextCopy = ({
   forceOneLine,
   buttonText,
   buttonModifier,
-  variant,
 }) => {
   const [isMessageVisible, setMessageVisibility] = useState(false)
   const textElement = useRef(null)
@@ -147,7 +134,6 @@ export const TextCopy = ({
       className={classNames(
         'k-TextCopy',
         'k-u-reset-button',
-        `k-TextCopy--${variant}`,
       )}
       type="button"
       onClick={copyText}
@@ -158,7 +144,6 @@ export const TextCopy = ({
         className={classNames('k-TextCopy__text', 'k-u-reset-button', {
           'k-TextCopy__text--forceOneLine': forceOneLine,
         })}
-        variant={variant}
       >
         <span ref={textElement}>{children}</span>
       </TextInput>
@@ -167,7 +152,6 @@ export const TextCopy = ({
         as="span"
         modifier={!!buttonText ? buttonModifier : 'hydrogen'}
         className="k-TextCopy__buttonTextButton"
-        variant={variant}
         fit={buttonText ? 'content' : 'icon'}
       >
         {!!buttonText ? buttonText : <CopyIcon />}
@@ -198,7 +182,6 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 TextCopy.defaultProps = {
@@ -208,5 +191,4 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
-  variant: 'orion',
 }

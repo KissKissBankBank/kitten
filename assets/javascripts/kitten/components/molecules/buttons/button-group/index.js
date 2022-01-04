@@ -45,14 +45,13 @@ const StyledButtonGroup = styled.div`
   }
 `
 
-export const ButtonGroup = ({ className, variant, ...props }) => (
+export const ButtonGroup = ({ className, ...props }) => (
   <StyledButtonGroup
     role="group"
     {...props}
     className={classNames(
       'k-ButtonGroup',
       className,
-      `k-ButtonGroup--${variant}`,
     )}
   />
 )
@@ -68,11 +67,3 @@ const ButtonGroupButton = ({ className, active, ...props }) => (
 )
 
 ButtonGroup.Button = ButtonGroupButton
-
-ButtonGroup.propTypes = {
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
-}
-
-ButtonGroup.defaultProps = {
-  variant: 'orion',
-}

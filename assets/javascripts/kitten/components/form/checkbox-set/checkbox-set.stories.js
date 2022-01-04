@@ -37,7 +37,6 @@ export default {
       },
     ],
     disabled: false,
-    variant: 'orion',
   },
   argTypes: {
     name: {
@@ -59,11 +58,6 @@ export default {
     disabled: {
       name: 'disabled',
       control: 'boolean',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
     },
   },
 }

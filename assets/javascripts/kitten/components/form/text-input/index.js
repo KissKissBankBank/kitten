@@ -69,13 +69,8 @@ const StyledInput = styled.input`
     }
   }
 
-  // VARIANTS
-
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
-
-  &.k-Form-TextInput--orion {
-    border-radius: var(--border-radius-s);
-  }
+  border-radius: var(--border-radius-s);
 
   &.k-Form-TextInput--rounded {
     border-radius: var(--border-radius-rounded);
@@ -172,45 +167,43 @@ const StyledTextareaContainer = styled.div`
 
     padding-bottom: 0;
 
-    &.k-Form-TextInput--orion {
-      &.k-Form-TextInput--tiny {
-        padding-top: ${pxToRem(9)};
-        padding-bottom: ${pxToRem(9)};
-      }
+    &.k-Form-TextInput--tiny {
+      padding-top: ${pxToRem(9)};
+      padding-bottom: ${pxToRem(9)};
+    }
 
-      &.k-Form-TextInput--regular {
-        padding-top: ${pxToRem(14)};
-        padding-bottom: ${pxToRem(14)};
-      }
+    &.k-Form-TextInput--regular {
+      padding-top: ${pxToRem(14)};
+      padding-bottom: ${pxToRem(14)};
+    }
 
-      &.k-Form-TextInput--big {
-        padding-top: ${pxToRem(18)};
-        padding-bottom: ${pxToRem(18)};
+    &.k-Form-TextInput--big {
+      padding-top: ${pxToRem(18)};
+      padding-bottom: ${pxToRem(18)};
 
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          padding-top: ${pxToRem(21)};
-          padding-bottom: ${pxToRem(21)};
-        }
-      }
-
-      &.k-Form-TextInput--huge {
+      @media (min-width: ${ScreenConfig.M.min}px) {
         padding-top: ${pxToRem(21)};
         padding-bottom: ${pxToRem(21)};
-
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          padding-top: ${pxToRem(27)};
-          padding-bottom: ${pxToRem(27)};
-        }
       }
+    }
 
-      &.k-Form-TextInput--giant {
-        padding-top: ${pxToRem(21)};
-        padding-bottom: ${pxToRem(21)};
+    &.k-Form-TextInput--huge {
+      padding-top: ${pxToRem(21)};
+      padding-bottom: ${pxToRem(21)};
 
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          padding-top: ${pxToRem(32)};
-          padding-bottom: ${pxToRem(32)};
-        }
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        padding-top: ${pxToRem(27)};
+        padding-bottom: ${pxToRem(27)};
+      }
+    }
+
+    &.k-Form-TextInput--giant {
+      padding-top: ${pxToRem(21)};
+      padding-bottom: ${pxToRem(21)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        padding-top: ${pxToRem(32)};
+        padding-bottom: ${pxToRem(32)};
       }
     }
   }
@@ -263,7 +256,6 @@ export class TextInput extends PureComponent {
     disabled: PropTypes.bool,
     name: PropTypes.string,
     digits: PropTypes.number,
-    variant: PropTypes.oneOf(['orion', 'andromeda']),
     rounded: PropTypes.bool,
     darkBackground: PropTypes.bool,
   }
@@ -277,7 +269,6 @@ export class TextInput extends PureComponent {
     disabled: false,
     name: 'text',
     digits: null,
-    variant: 'orion',
     rounded: false,
     darkBackground: false,
   }
@@ -292,7 +283,6 @@ export class TextInput extends PureComponent {
       size,
       center,
       tag,
-      variant,
       className,
       style,
       rounded,
@@ -318,7 +308,6 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput',
               className,
               digitsClass,
-              `k-Form-TextInput--${variant}`,
               `k-Form-TextInput--${size}`,
               {
                 'k-Form-TextInput--valid': valid,
@@ -347,7 +336,6 @@ export class TextInput extends PureComponent {
             'k-Form-TextInput',
             className,
             digitsClass,
-            `k-Form-TextInput--${variant}`,
             `k-Form-TextInput--${size}`,
             {
               'k-Form-TextInput--valid': valid,

@@ -97,16 +97,6 @@ describe('<TextInput />', () => {
     })
   })
 
-  describe('with `variant` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TextInput />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with `darkBackground` prop', () => {
     beforeEach(() => {
       component = renderer.create(<TextInput darkBackground />).toJSON()

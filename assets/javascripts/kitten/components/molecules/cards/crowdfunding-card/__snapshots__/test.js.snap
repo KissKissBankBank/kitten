@@ -693,6 +693,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 .c2 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -728,6 +729,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c2.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2:disabled,
@@ -801,14 +806,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c2.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c2.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -1373,7 +1370,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid"
+      className="c2 k-Button k-Button--regular k-Button--helium k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,
@@ -1450,6 +1447,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c2 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1485,6 +1483,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c2.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2:disabled,
@@ -1558,14 +1560,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c2.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2 svg:not(.k-ColorSvg),
@@ -2128,7 +2122,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid"
+      className="c2 k-Button k-Button--regular k-Button--helium k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,
@@ -2209,6 +2203,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 .c3 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -2244,6 +2239,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   color: var(--color-grey-000,#fff);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c3.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c3:disabled,
@@ -2317,14 +2316,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c3.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c3.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c3 svg:not(.k-ColorSvg),
@@ -2901,7 +2892,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3 k-Button k-Button--regular k-Button--helium k-Button--orion k-Button--fit-fluid"
+      className="c3 k-Button k-Button--regular k-Button--helium k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,

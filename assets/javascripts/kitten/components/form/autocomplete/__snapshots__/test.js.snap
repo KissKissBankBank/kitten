@@ -14,6 +14,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   width: 100%;
   height: 3.125rem;
   box-sizing: border-box;
+  border-radius: var(--border-radius-s);
   background: var(--color-grey-000,#fff);
   border: var(--border-width) solid var(--color-grey-400);
   padding: 0 0.9375rem;
@@ -162,12 +163,8 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   fill: var(--color-grey-500,#b8b8b8);
 }
 
-.c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-  border-radius: var(--border-radius-s);
-}
-
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--orion"
+  className="c0 k-Form-Autocomplete"
 >
   <input
     aria-activedescendant=""
@@ -202,6 +199,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   width: 100%;
   height: 3.125rem;
   box-sizing: border-box;
+  border-radius: var(--border-radius-s);
   background: var(--color-grey-000,#fff);
   border: var(--border-width) solid var(--color-grey-400);
   padding: 0 0.9375rem;
@@ -350,12 +348,8 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   fill: var(--color-grey-500,#b8b8b8);
 }
 
-.c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-  border-radius: var(--border-radius-s);
-}
-
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--orion k-Form-Autocomplete--hasIcon-left"
+  className="c0 k-Form-Autocomplete k-Form-Autocomplete--hasIcon-left"
 >
   <input
     aria-activedescendant=""
@@ -442,6 +436,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   width: 100%;
   height: 3.125rem;
   box-sizing: border-box;
+  border-radius: var(--border-radius-s);
   background: var(--color-grey-000,#fff);
   border: var(--border-width) solid var(--color-grey-400);
   padding: 0 0.9375rem;
@@ -590,12 +585,8 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   fill: var(--color-grey-500,#b8b8b8);
 }
 
-.c0.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-  border-radius: var(--border-radius-s);
-}
-
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--orion"
+  className="c0 k-Form-Autocomplete"
 >
   <input
     aria-activedescendant=""

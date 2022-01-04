@@ -15,7 +15,8 @@ const StyledTextInputWithUnit = styled.div`
   }
 
   .k-Form-TextInputWithUnit__input {
-    padding-right: ${pxToRem(50)};
+    border-radius: var(--border-radius-s);
+    padding-right: ${pxToRem(42)};
 
     &[type='number'] {
       appearance: textfield;
@@ -38,7 +39,6 @@ const StyledTextInputWithUnit = styled.div`
     min-width: ${pxToRem(40)};
     align-items: center;
     justify-content: center;
-    border-left: var(--border);
     border-radius: 0;
     box-sizing: border-box;
     color: var(--color-grey-900);
@@ -48,12 +48,6 @@ const StyledTextInputWithUnit = styled.div`
     ${TYPOGRAPHY.fontStyles.regular};
     background-color: var(--color-grey-000);
 
-    &.k-Form-TextInputWithUnit__unit--valid {
-      border: var(--border-success);
-    }
-    &.k-Form-TextInputWithUnit__unit--error {
-      border: var(--border-danger);
-    }
     &.k-Form-TextInputWithUnit__unit--disabled {
       color: var(--color-grey-700);
       background-color: var(--color-grey-200);
@@ -83,23 +77,12 @@ const StyledTextInputWithUnit = styled.div`
       color: var(--color-grey-900);
     }
   }
-
-  &.k-Form-TextInputWithUnit--orion {
-    .k-Form-TextInputWithUnit__input {
-      border-radius: var(--border-radius-s);
-      padding-right: ${pxToRem(42)};
-    }
-    .k-Form-TextInputWithUnit__unit {
-      border: none;
-    }
-  }
 `
 
 export const TextInputWithUnit = ({
   unit,
   unitWord,
   size,
-  variant,
   digits,
   className,
   valid,
@@ -115,7 +98,6 @@ export const TextInputWithUnit = ({
       {...wrapperProps}
       className={classNames(
         'k-Form-TextInputWithUnit',
-        `k-Form-TextInputWithUnit--${variant}`,
         wrapperProps.className,
         {
           'k-Form-TextInputWithUnit--hasDigits': !!digits,
@@ -130,7 +112,6 @@ export const TextInputWithUnit = ({
         disabled={disabled}
         size={size}
         className={classNames('k-Form-TextInputWithUnit__input', className)}
-        variant={variant}
       />
       <span
         className={classNames(
@@ -159,7 +140,6 @@ TextInputWithUnit.propTypes = {
   unit: PropTypes.string,
   unitWord: PropTypes.bool,
   digits: PropTypes.number,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
   wrapperProps: PropTypes.object,
 }
@@ -174,6 +154,5 @@ TextInputWithUnit.defaultProps = {
   size: 'regular',
   disabled: false,
   digits: null,
-  variant: 'orion',
   wrapperProps: {},
 }

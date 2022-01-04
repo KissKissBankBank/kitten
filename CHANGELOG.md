@@ -4,6 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Remove `variant` props for the following components:
+  - `ProgressRing`,
+  - `Autocomplete`,
+  - `Checkbox`,
+  - `CheckboxSet`,
+  - `DropdownSelect`,
+  - `Field`,
+  - `LocationInput`,
+  - `TagInput`,
+  - `TextInput`,
+  - `TextInputWithUnit`,
+  - `Button`,
+  - `Accordion`,
+  - `ModalNext`,
+  - `TextCopy`,
+  - `VerticalStepper`.
+- Feature: `TagButton`: Deprecate `modifier` and `icon` props.
+
 ## [6.15.0] - 2022-01-04
 
 Features:

@@ -56,11 +56,6 @@ const argTypes = {
   labelPropsGetter: {
     name: 'labelPropsGetter',
   },
-  variant: {
-    name: 'variant',
-    options: ['andromeda', 'orion'],
-    control: 'inline-radio',
-  },
   size: {
     name: 'size',
     options: ['micro', 'tiny', 'normal', 'big', 'huge', 'giant'],
@@ -135,7 +130,6 @@ const args = {
   labelText: 'label',
   options: options,
   size: 'normal',
-  variant: 'orion',
   comboboxButtonLabelText: 'label',
   noResultText: 'No results',
   menuZIndex: 1000,

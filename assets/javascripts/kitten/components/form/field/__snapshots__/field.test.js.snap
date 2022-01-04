@@ -30,7 +30,7 @@ Array [
     className="k-u-margin-top-single"
   >
     <div
-      className="sc-gqjmRU eUVHFv k-Form-Autocomplete k-Form-Autocomplete--orion"
+      className="sc-gqjmRU gjKmgo k-Form-Autocomplete"
     >
       <input
         aria-activedescendant=""
@@ -128,7 +128,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb fFOOSx k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-bxivhb btMIEa k-Form-TextInput k-Form-TextInput--regular k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -227,7 +227,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-bxivhb fFOOSx k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--regular"
+      className="sc-bxivhb btMIEa k-Form-TextInput k-Form-TextInput--regular"
       disabled={false}
       id="input"
       name="field"
@@ -315,7 +315,7 @@ Array [
       className="sc-EHOje hDOVye k-Form-TextInputWithLimit"
     >
       <input
-        className="sc-bxivhb fFOOSx k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb btMIEa k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--regular"
         defaultValue=""
         disabled={false}
         id="input"
@@ -408,10 +408,10 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <div
-      className="sc-bZQynM hpUVPr k-Form-TextInputWithUnit k-Form-TextInputWithUnit--orion"
+      className="sc-bZQynM qNVVv k-Form-TextInputWithUnit"
     >
       <input
-        className="sc-bxivhb fFOOSx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb btMIEa k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"
@@ -506,7 +506,7 @@ Array [
       className="sc-iwsKbI eBUYfs k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb fFOOSx k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-bxivhb btMIEa k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--regular k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -634,7 +634,7 @@ Array [
       className="sc-iwsKbI eBUYfs k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb fFOOSx k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--orion k-Form-TextInput--regular"
+        className="sc-bxivhb btMIEa k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--regular"
         disabled={false}
         id="input"
         name="field"

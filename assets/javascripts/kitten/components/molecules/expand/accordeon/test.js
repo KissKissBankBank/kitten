@@ -199,30 +199,6 @@ describe('<Accordeon />', () => {
     })
   })
 
-  describe('with an variant', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <Accordeon variant="andromeda">
-            <Accordeon.Item>
-              <Accordeon.Header>Header</Accordeon.Header>
-              <Accordeon.Content>Content</Accordeon.Content>
-            </Accordeon.Item>
-
-            <Accordeon.Item>
-              <Accordeon.Header>Header</Accordeon.Header>
-              <Accordeon.Content>Content</Accordeon.Content>
-            </Accordeon.Item>
-          </Accordeon>,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with custom classNames', () => {
     beforeEach(() => {
       component = renderer

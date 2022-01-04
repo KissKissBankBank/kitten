@@ -19,7 +19,6 @@ export default {
     forceOneLine: false,
     buttonText: 'Je suis un bouton',
     buttonModifier: undefined,
-    variant: 'orion',
     children: 'My text to copy on click',
   },
   argTypes: {
@@ -52,11 +51,6 @@ export default {
       name: 'modifier',
       options: buttonModifiers,
       control: 'select',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
     },
     children: {
       name: 'children',
