@@ -133,7 +133,7 @@ ProjectCard.Item = ({ className, ...props }) => {
 ProjectCard.Progress = ({ className, value, ...props }) => {
   return (
     <div className={classNames('k-ProjectCard__progress', className)}>
-      <Progress variant="andromeda" value={value} {...props} />
+      <Progress value={value} {...props} />
       <Text
         weight="bold"
         size="tiny"

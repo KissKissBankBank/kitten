@@ -22,7 +22,6 @@ export default {
     value: 50,
     color: COLORS.primary1,
     rampProps: { style: { height: 6 } },
-    variant: 'orion',
   },
   argTypes: {
     value: {
@@ -36,11 +35,6 @@ export default {
     rampProps: {
       name: 'rampProps',
       control: 'object',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
     },
   },
 }

@@ -15,6 +15,7 @@ const StyledProgress = styled.div`
     position: relative;
     height: ${pxToRem(2)};
     background: ${COLORS.line1};
+    border-radius: var(--border-radius-xs);
 
     &::after {
       content: '';
@@ -25,6 +26,7 @@ const StyledProgress = styled.div`
       bottom: 0;
       max-width: var(--progress-value);
       transition: max-width 1s cubic-bezier(0, 0.5, 0.3, 1);
+      border-radius: var(--border-radius-xs);
       background: var(--progress-color);
     }
   }
@@ -35,13 +37,6 @@ const StyledProgress = styled.div`
       background: ${COLORS.line2};
     }
   }
-
-  &.k-Meters-Progress--orion .k-Meters-Progress__ramp {
-    &,
-    &::after {
-      border-radius: var(--border-radius-xs);
-    }
-  }
 `
 
 export const Progress = ({
@@ -49,7 +44,6 @@ export const Progress = ({
   className,
   value,
   rampProps,
-  variant,
   disabled,
   ...others
 }) => {
@@ -71,7 +65,6 @@ export const Progress = ({
       className={classNames(
         'k-Meters-Progress',
         className,
-        `k-Meters-Progress--${variant}`,
         {
           'k-Meters-Progress--disabled': disabled,
         },
@@ -93,12 +86,10 @@ Progress.defaultProps = {
   color: COLORS.primary1,
   value: '50',
   rampProps: {},
-  variant: 'orion',
 }
 
 Progress.propTypes = {
   color: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rampProps: PropTypes.object,
-  variant: PropTypes.oneOf(['orion', 'andromeda']),
 }
