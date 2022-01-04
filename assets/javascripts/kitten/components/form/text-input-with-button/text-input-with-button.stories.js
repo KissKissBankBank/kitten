@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchIcon } from '../../../components/graphics/icons/search-icon'
+import { SearchIcon } from 'kitten'
 import { TextInputWithButton } from './index'
 import { Default as TextInputStory } from '../text-input/stories.js'
 import { buttonModifiers } from '../../../components/molecules/buttons/button'
@@ -20,6 +20,9 @@ Default.args = {
   inset: false,
   buttonValue: <SearchIcon />,
   modifier: 'helium',
+  buttonProps: {
+    fit: 'icon',
+  }
 }
 
 Default.argTypes = {

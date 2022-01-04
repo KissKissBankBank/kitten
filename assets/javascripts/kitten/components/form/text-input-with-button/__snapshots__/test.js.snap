@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -10,8 +10,13 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="k-Form-TextInputWithButton__button"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
@@ -21,7 +26,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -29,9 +34,14 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     name="text"
   />
   <button
-    className="k-Form-TextInputWithButton__button"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
     onClick={[Function]}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
@@ -41,7 +51,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -50,12 +60,17 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     placeholder="Les props sont transmises"
   />
   <button
-    className="k-Form-TextInputWithButton__button"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     <div
-      className="sc-bxivhb iWsuw k-Loader"
+      className="sc-ifAKCX dZXleA k-Loader"
     >
       <svg
         className="k-Loader__circle"
@@ -100,7 +115,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--disabled"
@@ -108,8 +123,13 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     name="text"
   />
   <button
-    className="k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width k-Button--disabled"
     disabled={true}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
@@ -119,7 +139,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--error"
@@ -127,8 +147,13 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
@@ -138,7 +163,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular"
@@ -148,8 +173,13 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     value="foobar"
   />
   <button
-    className="k-Form-TextInputWithButton__button"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
@@ -159,7 +189,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--tiny"
@@ -167,8 +197,13 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="k-Form-TextInputWithButton__button"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Button--tiny k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
@@ -178,7 +213,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat gnwfnh k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+  className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--regular k-Form-TextInputWithButton--undefined"
 >
   <input
     className="sc-bdVaJa keRrbA k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--regular k-Form-TextInput--valid"
@@ -186,8 +221,13 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid"
+    className="sc-htpNat dEiioD k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--regular k-Button--beryllium k-Button--orion k-Button--fit-min-width"
     disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
     type="button"
   >
     Button
