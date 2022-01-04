@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking Change: Remove `variant` props for the following components:
+  - `Progress`,
   - `ProgressRing`,
   - `Autocomplete`,
   - `Checkbox`,
