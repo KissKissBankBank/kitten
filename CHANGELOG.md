@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithUnit`: Improve styles.
 - Fix: `ContributionCard`: Improve styles.
 - Fix: `AvatarWithTextAndBadge`: Add `border` on the avatar image.
 - Feature: `ProjectCard`: Add mobile styles.
