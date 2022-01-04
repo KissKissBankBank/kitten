@@ -10,13 +10,15 @@ describe('<ProjectCard />', () => {
       component = renderer
         .create(
           <ProjectCard
-            sticker="Prolongation"
             status="normal"
             imageProps={{
               src: 'kitten.jpg',
               alt: 'image alt',
             }}
           >
+            <ProjectCard.Sticker className="k-u-hidden@xs-down">
+              Prolongation
+            </ProjectCard.Sticker>
             <ProjectCard.Title>
               The Office, la série culte décortiquée par S!CK
             </ProjectCard.Title>
@@ -42,7 +44,7 @@ describe('<ProjectCard />', () => {
             </ProjectCard.Item>
             <ProjectCard.Progress
               aria-label="Progrès de la campagne"
-              value="55"
+              value={55}
             />
           </ProjectCard>,
         )
@@ -60,7 +62,6 @@ describe('<ProjectCard />', () => {
         .create(
           <ProjectCard
             href="//hello.world"
-            sticker="Prolongation"
             status="normal"
             imageProps={{
               src: 'kitten.jpg',
@@ -92,7 +93,7 @@ describe('<ProjectCard />', () => {
             </ProjectCard.Item>
             <ProjectCard.Progress
               aria-label="Progrès de la campagne"
-              value="55"
+              value={55}
             />
           </ProjectCard>,
         )

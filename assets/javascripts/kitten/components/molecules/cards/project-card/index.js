@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import deprecated from 'prop-types-extra/lib/deprecated'
+import Truncate from 'react-truncate'
+
 import { StyledCard } from './styles'
 import { Text } from '../../../../components/atoms/typography/text'
 import { Title } from '../../../../components/atoms/typography/title'
@@ -17,6 +20,7 @@ export const ProjectCard = ({
   videoSources,
   videoProps,
   stretch,
+  loading,
   ...props
 }) => {
   return (
@@ -28,6 +32,7 @@ export const ProjectCard = ({
         `k-ProjectCard--${status}`,
         {
           'k-ProjectCard--isStretched': stretch,
+          'k-ProjectCard--isLoading': loading,
         },
       )}
       href={href}
@@ -82,9 +87,11 @@ ProjectCard.defaultProps = {
   videoProps: {},
   videoSources: [],
   stretch: false,
+  loading: false,
 }
 
 ProjectCard.propTypes = {
+  sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
   status: PropTypes.oneOf([
     'normal',
     'danger',
@@ -96,16 +103,19 @@ ProjectCard.propTypes = {
   videoProps: PropTypes.object,
   videoSources: PropTypes.array,
   stretch: PropTypes.bool,
+  loading: PropTypes.bool,
 }
 
-ProjectCard.Title = ({ className, ...props }) => {
+ProjectCard.Title = ({ children, className, ...props }) => {
   return (
     <Title
-      modifier="senary"
+      modifier="septenary"
       noMargin
       className={classNames('k-ProjectCard__title', className)}
       {...props}
-    />
+    >
+      <Truncate lines={2}>{children}</Truncate>
+    </Title>
   )
 }
 
@@ -130,18 +140,32 @@ ProjectCard.Item = ({ className, ...props }) => {
   )
 }
 
+ProjectCard.Sticker = ({ className, ...props }) => {
+  return (
+    <div className={classNames('k-ProjectCard__sticker k-u-ellipsis', className)} {...props} />
+  )
+}
+
 ProjectCard.Progress = ({ className, value, ...props }) => {
   return (
     <div className={classNames('k-ProjectCard__progress', className)}>
-      <Progress variant="andromeda" value={value} {...props} />
+      <Progress value={value} {...props} />
       <Text
         weight="bold"
         size="tiny"
         lineHeight="1"
-        className="k-u-hidden@xs-down"
+        className="k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         {value}&nbsp;%
       </Text>
     </div>
   )
+}
+
+ProjectCard.Progress.defaultProps = {
+  value: 0,
+}
+
+ProjectCard.Progress.propTypes = {
+  value: PropTypes.number,
 }
