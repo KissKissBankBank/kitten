@@ -17,6 +17,7 @@ export const ProjectCard = ({
   videoSources,
   videoProps,
   stretch,
+  loading,
   ...props
 }) => {
   return (
@@ -28,6 +29,7 @@ export const ProjectCard = ({
         `k-ProjectCard--${status}`,
         {
           'k-ProjectCard--isStretched': stretch,
+          'k-ProjectCard--isLoading': loading,
         },
       )}
       href={href}
@@ -82,6 +84,7 @@ ProjectCard.defaultProps = {
   videoProps: {},
   videoSources: [],
   stretch: false,
+  loading: false,
 }
 
 ProjectCard.propTypes = {
@@ -96,6 +99,7 @@ ProjectCard.propTypes = {
   videoProps: PropTypes.object,
   videoSources: PropTypes.array,
   stretch: PropTypes.bool,
+  loading: PropTypes.bool,
 }
 
 ProjectCard.Title = ({ className, ...props }) => {
@@ -138,10 +142,18 @@ ProjectCard.Progress = ({ className, value, ...props }) => {
         weight="bold"
         size="tiny"
         lineHeight="1"
-        className="k-u-hidden@xs-down"
+        className="k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         {value}&nbsp;%
       </Text>
     </div>
   )
+}
+
+ProjectCard.Progress.defaultProps = {
+  value: 0,
+}
+
+ProjectCard.Progress.propTypes = {
+  value: PropTypes.number,
 }

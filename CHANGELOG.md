@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ProjectCard`: Add `loading` prop.
+
 ## [6.15.0] - 2022-01-04
 
 Features:
