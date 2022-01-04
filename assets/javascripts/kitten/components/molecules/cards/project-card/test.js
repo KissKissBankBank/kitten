@@ -44,7 +44,7 @@ describe('<ProjectCard />', () => {
             </ProjectCard.Item>
             <ProjectCard.Progress
               aria-label="Progrès de la campagne"
-              value="55"
+              value={55}
             />
           </ProjectCard>,
         )
@@ -93,7 +93,7 @@ describe('<ProjectCard />', () => {
             </ProjectCard.Item>
             <ProjectCard.Progress
               aria-label="Progrès de la campagne"
-              value="55"
+              value={55}
             />
           </ProjectCard>,
         )

@@ -78,10 +78,10 @@ export const StyledCard = styled.div`
     left: ${pxToRem(15)};
     max-width: calc(100% - ${pxToRem(2 * (10 + 15))});
 
-    line-height: ${pxToRem(20)};
+    line-height: ${pxToRem(19)};
     background-color: var(--projectCard-statusColor);
     border-radius: var(--border-radius-rounded);
-    padding: ${pxToRem(0)} ${pxToRem(10)} ${pxToRem(2)};
+    padding: ${pxToRem(0)} ${pxToRem(10)} ${pxToRem(3)};
 
     color: var(--color-grey-000);
     ${TYPOGRAPHY.fontStyles.regular}

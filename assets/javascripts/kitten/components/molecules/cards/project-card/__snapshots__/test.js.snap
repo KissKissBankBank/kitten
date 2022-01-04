@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-GMQeP fpqKGX k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP jRriBR k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -18,14 +18,33 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <h1
-      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--senary k-Title--noMargin"
+      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      The Office, la série culte décortiquée par S!CK
+      <span
+        width={0}
+      >
+        <span />
+        <span>
+          The Office, la série culte décortiquée par S!CK
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          …
+        </span>
+      </span>
     </h1>
     <div
       className="k-ProjectCard__line"
@@ -79,7 +98,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={55}
-        className="sc-iwsKbI hzYOtL k-Meters-Progress k-Meters-Progress--andromeda"
+        className="sc-iwsKbI hzYOtL k-Meters-Progress k-Meters-Progress--orion"
         role="progressbar"
         style={
           Object {
@@ -105,7 +124,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-GMQeP fpqKGX k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP jRriBR k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -125,14 +144,33 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       Prolongation
     </div>
     <h1
-      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--senary k-Title--noMargin"
+      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      The Office, la série culte décortiquée par S!CK
+      <span
+        width={0}
+      >
+        <span />
+        <span>
+          The Office, la série culte décortiquée par S!CK
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          …
+        </span>
+      </span>
     </h1>
     <div
       className="k-ProjectCard__line"
@@ -186,7 +224,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={0}
-        className="sc-iwsKbI hzYOtL k-Meters-Progress k-Meters-Progress--andromeda"
+        className="sc-iwsKbI hzYOtL k-Meters-Progress k-Meters-Progress--orion"
         role="progressbar"
         style={
           Object {

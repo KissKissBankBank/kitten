@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `ProjectCard`: Deprecate `sticker` prop.
 - Feature: `Utilities`: Add `k-u-transform-capitalize` utility class.
 - Feature: `ProjectCard`: Add `loading` prop.
+- Fix: `ProjectCard`: Style fixes.
 
 ## [6.15.0] - 2022-01-04
 

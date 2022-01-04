@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'prop-types-extra/lib/deprecated'
+import Truncate from 'react-truncate'
+
 import { StyledCard } from './styles'
 import { Text } from '../../../../components/atoms/typography/text'
 import { Title } from '../../../../components/atoms/typography/title'
@@ -104,14 +106,16 @@ ProjectCard.propTypes = {
   loading: PropTypes.bool,
 }
 
-ProjectCard.Title = ({ className, ...props }) => {
+ProjectCard.Title = ({ children, className, ...props }) => {
   return (
     <Title
-      modifier="senary"
+      modifier="septenary"
       noMargin
       className={classNames('k-ProjectCard__title', className)}
       {...props}
-    />
+    >
+      <Truncate lines={2}>{children}</Truncate>
+    </Title>
   )
 }
 
@@ -145,7 +149,7 @@ ProjectCard.Sticker = ({ className, ...props }) => {
 ProjectCard.Progress = ({ className, value, ...props }) => {
   return (
     <div className={classNames('k-ProjectCard__progress', className)}>
-      <Progress variant="andromeda" value={value} {...props} />
+      <Progress value={value} {...props} />
       <Text
         weight="bold"
         size="tiny"
