@@ -35,8 +35,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -123,21 +123,21 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -184,9 +184,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -222,8 +222,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
   background-color: var(--color-grey-000,#fff);
-  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
-  transition: border-color 0.2s ease,background 0.2s ease;
+  -webkit-transition: border-color var(--transition),background-color var(--transition);
+  transition: border-color var(--transition),background-color var(--transition);
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
@@ -257,69 +257,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-700,#05a8e6);
-}
-
-.c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-grey-300,#eee);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-}
-
-.c1.k-Button--orion[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -421,11 +358,11 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  border: var(--border-width) solid var(--color-primary-500);
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900,#222);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -512,21 +449,21 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -573,9 +510,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -611,8 +548,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
   background-color: var(--color-grey-000,#fff);
-  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
-  transition: border-color 0.2s ease,background 0.2s ease;
+  -webkit-transition: border-color var(--transition),background-color var(--transition);
+  transition: border-color var(--transition),background-color var(--transition);
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
@@ -646,69 +583,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-700,#05a8e6);
-}
-
-.c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-grey-300,#eee);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-}
-
-.c1.k-Button--orion[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -810,11 +684,11 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  border: var(--border-width) solid var(--color-primary-500);
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900,#222);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -901,21 +775,21 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -962,9 +836,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -1000,8 +874,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
   background-color: var(--color-grey-000,#fff);
-  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
-  transition: border-color 0.2s ease,background 0.2s ease;
+  -webkit-transition: border-color var(--transition),background-color var(--transition);
+  transition: border-color var(--transition),background-color var(--transition);
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
@@ -1035,69 +909,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-700,#05a8e6);
-}
-
-.c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-grey-300,#eee);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-}
-
-.c1.k-Button--orion[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -1199,11 +1010,11 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-danger-300,#ffb2c7);
+  border: var(--border-width) solid var(--color-danger-300);
   background-color: var(--color-grey-000,#fff);
-  color: var(--color-danger-500,#ff0046);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  color: var(--color-danger-500);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1290,21 +1101,21 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: currentColor;
+  border-color: var(--color-danger-500);
   background-color: var(--color-grey-000,#fff);
-  color: var(--color-danger-500,#ff0046);
+  color: var(--color-danger-500);
 }
 
 .c0:active {
-  border-color: currentColor;
+  border-color: var(--color-danger-700);
   background-color: var(--color-grey-000,#fff);
-  color: var(--color-danger-500,#ff0046);
+  color: var(--color-danger-700);
 }
 
 .c0:disabled,
@@ -1351,9 +1162,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -1389,8 +1200,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
   background-color: var(--color-grey-000,#fff);
-  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
-  transition: border-color 0.2s ease,background 0.2s ease;
+  -webkit-transition: border-color var(--transition),background-color var(--transition);
+  transition: border-color var(--transition),background-color var(--transition);
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
@@ -1424,69 +1235,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-700,#05a8e6);
-}
-
-.c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-grey-300,#eee);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-}
-
-.c1.k-Button--orion[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {
@@ -1588,11 +1336,11 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  border: var(--border-width) solid var(--color-primary-500);
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900,#222);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1679,21 +1427,21 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -1740,9 +1488,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
-  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
@@ -1778,8 +1526,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   margin: 0 var(--CheckableButton-checkMargin);
   border: var(--border);
   background-color: var(--color-grey-000,#fff);
-  -webkit-transition: border-color 0.2s ease,background 0.2s ease;
-  transition: border-color 0.2s ease,background 0.2s ease;
+  -webkit-transition: border-color var(--transition),background-color var(--transition);
+  transition: border-color var(--transition),background-color var(--transition);
 }
 
 .c1.k-CheckableButton--left[aria-checked]::after {
@@ -1813,69 +1561,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
   --CheckableButton-checkMargin: 1.25rem;
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):focus:not([aria-checked])::after,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):focus:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--andromeda.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--andromeda.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-primary-700,#05a8e6);
-}
-
-.c1.k-Button--andromeda[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover {
-  border-color: var(--color-primary-300,#bae8fd);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):hover:not([aria-checked])::after,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):hover:not([aria-checked])::after {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):focus,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):focus {
-  border-color: var(--color-grey-300,#eee);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled)[aria-checked],
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled)[aria-checked] {
-  border-color: var(--color-primary-500,#19b4fa);
-  color: var(--color-grey-900,#222);
-}
-
-.c1.k-Button--orion.k-Button--lithium:not(:disabled):active,
-.c1.k-Button--orion.k-Button--hydrogen:not(:disabled):active {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-000,#fff);
-}
-
-.c1.k-Button--orion[aria-checked]:focus {
-  border-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:40rem) {

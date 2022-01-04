@@ -15,6 +15,7 @@ const StyledButtonGroup = styled.div`
     z-index: 0;
     min-width: auto;
     width: auto;
+    border-radius: 0;
 
     &:not(:last-child) {
       margin-right: ${pxToRem(-1)};
@@ -30,48 +31,15 @@ const StyledButtonGroup = styled.div`
       border-bottom-right-radius: var(--border-radius-s);
     }
 
-    &.k-ButtonGroup__button--isActive {
-      border-radius: var(--border-radius-s);
+    &:active,
+    &:hover {
       z-index: 1;
     }
-    &:active,
-    &:hover,
-    &:focus {
-      border-radius: var(--border-radius-s);
+    &.k-ButtonGroup__button--isActive {
       z-index: 2;
     }
-  }
-
-  &.k-ButtonGroup--orion {
-    .k-ButtonGroup__button {
-      border-radius: var(--border-radius-s);
-      color: ${COLORS.font1};
-      border: var(--border);
-      background-color: ${COLORS.background1};
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: ${COLORS.font1};
-        border: var(--border-hover);
-        background-color: ${COLORS.background1};
-      }
-
-      &.k-ButtonGroup__button--isActive {
-        color: ${COLORS.font1};
-        border: var(--border-active);
-        background-color: ${COLORS.primary5};
-      }
-
-      &:first-child {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-
-      &:last-child {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
+    &:focus-visible {
+      z-index: 3;
     }
   }
 `
@@ -91,6 +59,7 @@ export const ButtonGroup = ({ className, variant, ...props }) => (
 const ButtonGroupButton = ({ className, active, ...props }) => (
   <Button
     {...props}
+    active={active}
     className={classNames('k-ButtonGroup__button', className, {
       'k-ButtonGroup__button--isActive': active,
     })}

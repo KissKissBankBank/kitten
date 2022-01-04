@@ -229,6 +229,7 @@ export const Button = ({
   as,
   fit,
   mobileFit,
+  active,
   ...props
 }) => {
   if (deprecatedModifiers.includes(modifier)) {
@@ -260,6 +261,8 @@ export const Button = ({
     }
   })()
 
+  const internalModifier = active ? 'lithium' : modifier
+
   const internalTag = as || tag
 
   const fitClass = (() => {
@@ -279,7 +282,7 @@ export const Button = ({
         'k-Button',
         className,
         `k-Button--${actualSize}`,
-        `k-Button--${modifier}`,
+        `k-Button--${internalModifier}`,
         `k-Button--${variant}`,
         `k-Button--fit-${fitClass}`,
         {
@@ -288,7 +291,7 @@ export const Button = ({
           'k-Button--rounded': rounded,
         },
       )}
-      modifier={modifier}
+      modifier={internalModifier}
       style={{
         '--Button-border-radius':
           borderRadius > 0 ? pxToRem(borderRadius) : null,
@@ -320,6 +323,7 @@ Button.propTypes = {
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
   modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
   variant: PropTypes.oneOf(buttonVariants),
+  active: PropTypes.bool,
 }
 Button.defaultProps = {
   tag: 'button',
@@ -332,4 +336,5 @@ Button.defaultProps = {
   variant: 'orion',
   fit: 'min-width',
   mobileFit: null,
+  active: false,
 }

@@ -35,8 +35,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -123,8 +123,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -261,8 +261,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -349,8 +349,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -487,8 +487,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -575,8 +575,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -713,8 +713,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -801,8 +801,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -939,8 +939,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1027,8 +1027,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -1165,8 +1165,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1253,8 +1253,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -1391,8 +1391,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1479,8 +1479,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -1617,8 +1617,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1705,8 +1705,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,

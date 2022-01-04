@@ -144,8 +144,8 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c1:disabled,
@@ -232,21 +232,21 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 .c1 svg:not(.k-ColorSvg),
 .c1 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c1:hover,
 .c1:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c1:disabled,
