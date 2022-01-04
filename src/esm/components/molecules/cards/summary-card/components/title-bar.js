@@ -23,6 +23,7 @@ export var TitleBar = function TitleBar(_ref) {
   }, /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     weight: "regular",
+    cssColor: "var(--color-grey-700)",
     className: "k-SummaryCard-TitleBar__image",
     id: id + "-image"
   }, image)), /*#__PURE__*/React.createElement("div", {
@@ -33,6 +34,7 @@ export var TitleBar = function TitleBar(_ref) {
       id: id + "-" + item,
       size: "micro",
       weight: "regular",
+      cssColor: "var(--color-grey-700)",
       className: "k-SummaryCard-TitleBar__" + item,
       style: {
         '--summaryCardCell-name': item

@@ -139,6 +139,7 @@ ProjectCard.Progress = function (_ref6) {
   }, props)), /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "bold",
     size: "tiny",
-    lineHeight: "1"
+    lineHeight: "1",
+    className: "k-u-hidden@xs-down"
   }, value, "\xA0%"));
 };

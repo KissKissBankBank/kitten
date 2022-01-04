@@ -125,6 +125,7 @@ ProjectCard.Progress = function (_ref6) {
   }, props)), /*#__PURE__*/React.createElement(Text, {
     weight: "bold",
     size: "tiny",
-    lineHeight: "1"
+    lineHeight: "1",
+    className: "k-u-hidden@xs-down"
   }, value, "\xA0%"));
 };

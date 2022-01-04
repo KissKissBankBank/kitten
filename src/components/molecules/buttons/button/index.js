@@ -29,7 +29,7 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit"];
+var _excluded = ["children", "modifier", "variant", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
 var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
 var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron'];
 exports.buttonModifiers = buttonModifiers;
@@ -70,6 +70,7 @@ var Button = function Button(_ref2) {
       as = _ref2.as,
       fit = _ref2.fit,
       mobileFit = _ref2.mobileFit,
+      active = _ref2.active,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
 
   if (deprecatedModifiers.includes(modifier)) {
@@ -104,6 +105,7 @@ var Button = function Button(_ref2) {
     }
   }();
 
+  var internalModifier = active ? 'lithium' : modifier;
   var internalTag = as || tag;
 
   var fitClass = function () {
@@ -120,8 +122,8 @@ var Button = function Button(_ref2) {
   }();
 
   return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Button', className, "k-Button--" + actualSize, "k-Button--" + modifier, "k-Button--" + variant, "k-Button--fit-" + fitClass, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
-    modifier: modifier,
+    className: (0, _classnames.default)('k-Button', className, "k-Button--" + actualSize, "k-Button--" + internalModifier, "k-Button--" + variant, "k-Button--fit-" + fitClass, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
+    modifier: internalModifier,
     style: {
       '--Button-border-radius': borderRadius > 0 ? (0, _typography.pxToRem)(borderRadius) : null
     },
@@ -148,7 +150,8 @@ Button.propTypes = {
   fit: _propTypes.default.oneOf(buttonFitOptions),
   mobileFit: _propTypes.default.oneOf(buttonMobileFitOptions),
   modifier: _propTypes.default.oneOf([].concat(buttonModifiers, deprecatedModifiers)),
-  variant: _propTypes.default.oneOf(buttonVariants)
+  variant: _propTypes.default.oneOf(buttonVariants),
+  active: _propTypes.default.bool
 };
 Button.defaultProps = {
   tag: 'button',
@@ -160,5 +163,6 @@ Button.defaultProps = {
   modifier: 'hydrogen',
   variant: 'orion',
   fit: 'min-width',
-  mobileFit: null
+  mobileFit: null,
+  active: false
 };

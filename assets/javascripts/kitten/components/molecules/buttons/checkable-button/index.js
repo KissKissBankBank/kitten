@@ -76,7 +76,8 @@ const StyledCheckableButton = styled(Button)`
       border: var(--border);
       background-color: ${COLORS.background1};
 
-      transition: border-color var(--transition), background-color var(--transition);
+      transition: border-color var(--transition),
+        background-color var(--transition);
     }
 
     &[aria-checked]::after {

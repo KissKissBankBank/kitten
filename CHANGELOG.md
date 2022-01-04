@@ -4,18 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Button`: Change `hydrogen` and `lithium` modifier styles.
-- Feature: `Button`: Add `active` prop that switches modifier to `lithium` when true.
-- Feature: `TagButton`: Deprecate `selected` prop, use new `active` instead.
-- Fix: `ButtonGroup`: Fix styles.
-- Fix: `TagButton`: Fix styles.
-- Fix: `CheckableButton`: Fix styles.
-- Fix: `TextInputWithUnit`: Improve styles.
-- Fix: `ContributionCard`: Improve styles.
-- Fix: `AvatarWithTextAndBadge` and `DeskMenu`: Add `border` on the avatar image.
-- Feature: `ProjectCard`: Add mobile styles.
-- Fix: `SummaryCard`: Fix title-bar styles.
-- Fix: `TextInputWithButton`: Fix orion styles.
+## [6.15.0] - 2022-01-04
+
+Features:
+
+- `ProjectCard`: Add mobile styles.
+- `Button`: Change `hydrogen` and `lithium` modifier styles.
+- `TagButton`: Deprecate `selected` prop, use new `active` instead.
+- `Button`: Add `active` prop that switches modifier to `lithium` when true.
+
+Fixes:
+
+- `TagButton`: Fix styles.
+- `ButtonGroup`: Fix styles.
+- `CheckableButton`: Fix styles.
+- `ContributionCard`: Improve styles.
+- `SummaryCard`: Fix title-bar styles.
+- `TextInputWithUnit`: Improve styles.
+- `TextInputWithButton`: Fix orion styles.
+- `AvatarWithTextAndBadge` and `DeskMenu`: Add `border` on the avatar image.
 
 ## [6.14.0] - 2022-01-03
 

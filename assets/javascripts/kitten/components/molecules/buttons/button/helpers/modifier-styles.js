@@ -135,7 +135,8 @@ export const modifierStyles = modifier => {
       }
     }
 
-    transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+    transition: background-color var(--transition), color var(--transition),
+      border-color var(--transition);
 
     ${modifier !== 'checked' &&
     css`
