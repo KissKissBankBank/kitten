@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import { StyledCard } from './styles'
 import { Text } from '../../../../components/atoms/typography/text'
 import { Title } from '../../../../components/atoms/typography/title'
@@ -85,6 +86,7 @@ ProjectCard.defaultProps = {
 }
 
 ProjectCard.propTypes = {
+  sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
   status: PropTypes.oneOf([
     'normal',
     'danger',
@@ -127,6 +129,12 @@ ProjectCard.ItemsLine = ({ className, ...props }) => {
 ProjectCard.Item = ({ className, ...props }) => {
   return (
     <div className={classNames('k-ProjectCard__item', className)} {...props} />
+  )
+}
+
+ProjectCard.Sticker = ({ className, ...props }) => {
+  return (
+    <div className={classNames('k-ProjectCard__sticker k-u-ellipsis', className)} {...props} />
   )
 }
 

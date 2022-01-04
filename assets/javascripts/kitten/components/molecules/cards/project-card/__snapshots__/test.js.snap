@@ -17,11 +17,6 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
   <div
     className="k-ProjectCard__content"
   >
-    <div
-      className="k-ProjectCard__sticker k-u-ellipsis"
-    >
-      Prolongation
-    </div>
     <h1
       className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--senary k-Title--noMargin"
       style={
@@ -125,7 +120,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <div
-      className="k-ProjectCard__sticker k-u-ellipsis"
+      className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
     >
       Prolongation
     </div>

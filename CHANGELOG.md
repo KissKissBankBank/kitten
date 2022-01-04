@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ProjectCard`: Add `ProjectCard.Sticker` subcomponent.
+- Feature: `ProjectCard`: Deprecate `sticker` prop.
+- Feature: `Utilities`: Add `k-u-transform-capitalize` utility class.
+
 ## [6.15.0] - 2022-01-04
 
 Features:
