@@ -48,7 +48,7 @@ export const Default = ({ progressProps, ...args }) => (
       The Office, la série culte décortiquée par S!CK
     </ProjectCard.Title>
     <ProjectCard.Line>
-      <Text size="micro" fontStyle="italic">
+      <Text size="micro">
         par{' '}
         <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
           Bidules
@@ -99,7 +99,7 @@ export const WithButton = ({ progressProps, ...args }) => (
       The Office, la série culte décortiquée par S!CK
     </ProjectCard.Title>
     <ProjectCard.Line>
-      <Text size="micro" fontStyle="italic">
+      <Text size="micro">
         par{' '}
         <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
           Bidules
