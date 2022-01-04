@@ -726,8 +726,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   border: var(--border-width) solid var(--color-primary-500,#19b4fa);
   background-color: var(--color-primary-500,#19b4fa);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c2:disabled,
@@ -814,8 +814,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 .c2 svg:not(.k-ColorSvg),
 .c2 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c2:hover,
@@ -1483,8 +1483,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   border: var(--border-width) solid var(--color-primary-500,#19b4fa);
   background-color: var(--color-primary-500,#19b4fa);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c2:disabled,
@@ -1571,8 +1571,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 .c2 svg:not(.k-ColorSvg),
 .c2 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c2:hover,
@@ -2242,8 +2242,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   border: var(--border-width) solid var(--color-primary-500,#19b4fa);
   background-color: var(--color-primary-500,#19b4fa);
   color: var(--color-grey-000,#fff);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c3:disabled,
@@ -2330,8 +2330,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c3 svg:not(.k-ColorSvg),
 .c3 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c3:hover,

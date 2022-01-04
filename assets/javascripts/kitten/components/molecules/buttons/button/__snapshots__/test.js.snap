@@ -35,8 +35,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -123,21 +123,21 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -249,8 +249,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -337,21 +337,21 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -461,8 +461,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -549,21 +549,21 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -673,8 +673,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -761,21 +761,21 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -885,8 +885,8 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   border: var(--border-width) solid var(--color-grey-900,#222);
   background-color: var(--color-grey-900,#222);
   color: var(--color-grey-600,#949494);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -973,8 +973,8 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
@@ -1097,8 +1097,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1185,21 +1185,21 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -1309,8 +1309,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1397,21 +1397,21 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -1523,8 +1523,8 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1611,21 +1611,21 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -1735,8 +1735,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -1823,21 +1823,21 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -1947,8 +1947,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -2035,21 +2035,21 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -2159,8 +2159,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -2247,21 +2247,21 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -2371,8 +2371,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -2459,21 +2459,21 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -2583,8 +2583,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -2671,21 +2671,21 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -2795,8 +2795,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -2883,21 +2883,21 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -3007,8 +3007,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -3095,21 +3095,21 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
@@ -3224,8 +3224,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
 .c0:disabled,
@@ -3312,21 +3312,21 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
 }
 
 .c0:hover,
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-300);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,

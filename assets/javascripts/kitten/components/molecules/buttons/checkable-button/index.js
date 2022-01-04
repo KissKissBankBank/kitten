@@ -52,8 +52,8 @@ const StyledCheckableButton = styled(Button)`
       bottom: calc((var(--CheckableButton-dimension) / 2 + ${pxToRem(1)}) * -1);
       opacity: 0;
       transform-origin: 50% 50%;
-      transition: opacity 0.2s ease,
-        transform 0.2s cubic-bezier(0.3, -0.5, 0.8, 1);
+      transition: opacity var(--transition),
+        transform var(--transition-duration) cubic-bezier(0.3, -0.5, 0.8, 1);
       transform: scale(0);
     }
     &[aria-checked]::after {
@@ -76,7 +76,7 @@ const StyledCheckableButton = styled(Button)`
       border: var(--border);
       background-color: ${COLORS.background1};
 
-      transition: border-color 0.2s ease, background 0.2s ease;
+      transition: border-color var(--transition), background-color var(--transition);
     }
 
     &[aria-checked]::after {
@@ -109,72 +109,6 @@ const StyledCheckableButton = styled(Button)`
   &.k-Button--giant {
     --CheckableButton-dimension: ${pxToRem(24)};
     --CheckableButton-checkMargin: ${pxToRem(20)};
-  }
-
-  &.k-Button--andromeda {
-    &.k-Button--lithium,
-    &.k-Button--hydrogen {
-      &:not(:disabled) {
-        &:hover,
-        &:focus {
-          border-color: ${COLORS.primary4};
-          background-color: ${COLORS.background1};
-          color: ${COLORS.primary1};
-
-          &:not([aria-checked])::after {
-            border-color: ${COLORS.primary4};
-          }
-        }
-
-        &:active {
-          border-color: ${COLORS.primary2};
-          background-color: ${COLORS.background1};
-          color: ${COLORS.primary2};
-        }
-      }
-    }
-
-    &[aria-checked]:focus {
-      border-color: ${COLORS.primary1};
-      color: ${COLORS.primary1};
-    }
-  }
-
-  &.k-Button--orion {
-    &.k-Button--lithium,
-    &.k-Button--hydrogen {
-      &:not(:disabled) {
-        &:hover {
-          border-color: ${COLORS.primary4};
-          background-color: ${COLORS.background1};
-          color: ${COLORS.font1};
-
-          &:not([aria-checked])::after {
-            border-color: ${COLORS.primary4};
-          }
-        }
-
-        &:focus {
-          border-color: ${COLORS.line1};
-          background-color: ${COLORS.background1};
-          color: ${COLORS.font1};
-        }
-
-        &[aria-checked] {
-          border-color: ${COLORS.primary1};
-          color: ${COLORS.font1};
-        }
-
-        &:active {
-          border-color: ${COLORS.primary2};
-          background-color: ${COLORS.background1};
-        }
-      }
-    }
-
-    &[aria-checked]:focus {
-      border-color: ${COLORS.primary1};
-    }
   }
 `
 
