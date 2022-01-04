@@ -499,7 +499,7 @@ export const StyledDropdown = styled.div`
       }
     }
 
-    &.k-Form-Dropdown--orion.k-Form-Dropdown--isOpen {
+    &.k-Form-Dropdown--isOpen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
         border-bottom-left-radius: 0;
@@ -524,7 +524,7 @@ export const StyledDropdown = styled.div`
       }
     }
 
-    &.k-Form-Dropdown--orion.k-Form-Dropdown--isOpen {
+    &.k-Form-Dropdown--isOpen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
         border-top-left-radius: 0;

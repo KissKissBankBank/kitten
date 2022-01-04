@@ -292,31 +292,6 @@ FullSize.args = {
 }
 FullSize.argTypes = argTypes
 
-export const ComplexWithOrion = ({ contentText, ...args }) => (
-  <Modal {...args}>
-    {() => (
-      <>
-        <Modal.Block className="k-u-background-color-background3">
-          <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
-            <span>
-              Inside a <code>Modal.Block</code>
-            </span>
-            <br />
-            {contentText}
-          </Text>
-        </Modal.Block>
-        <Modal.Paragraph align="left">
-          <span>
-            Inside a <code>Modal.Paragraph</code>
-          </span>
-          <br />
-          {contentText}
-        </Modal.Paragraph>
-      </>
-    )}
-  </Modal>
-)
-
 export const CustomInnerSize = ({ contentText, ...args }) => (
   <Modal {...args}>
     {() => (
@@ -343,7 +318,6 @@ export const CustomInnerSize = ({ contentText, ...args }) => (
 
 CustomInnerSize.args = {
   ...args,
-  variant: 'orion',
   contentCols: {
     xxs: 12,
     s: 10,

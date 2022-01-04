@@ -103,6 +103,7 @@ export const FieldRadioButtonSetExample = ({
   items,
   error,
   errorMessage,
+  variant,
 }) => (
   <FieldBase
     id={id}
@@ -117,6 +118,7 @@ export const FieldRadioButtonSetExample = ({
       name="radio"
       items={items}
       error={error}
+      variant={variant}
     />
   </FieldBase>
 )
