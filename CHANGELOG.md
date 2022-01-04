@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `CheckableButton`: Fix styles.
 - Fix: `TextInputWithUnit`: Improve styles.
 - Fix: `ContributionCard`: Improve styles.
-- Fix: `AvatarWithTextAndBadge`: Add `border` on the avatar image.
+- Fix: `AvatarWithTextAndBadge` and `DeskMenu`: Add `border` on the avatar image.
 - Feature: `ProjectCard`: Add mobile styles.
 - Fix: `SummaryCard`: Fix title-bar styles.
 - Fix: `TextInputWithButton`: Fix orion styles.
