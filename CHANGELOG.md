@@ -22,7 +22,7 @@ Fixes:
 - `SummaryCard`: Fix title-bar styles.
 - `TextInputWithUnit`: Improve styles.
 - `TextInputWithButton`: Fix orion styles.
-- `AvatarWithTextAndBadge`: Add `border` on the avatar image.
+- `AvatarWithTextAndBadge` and `DeskMenu`: Add `border` on the avatar image.
 
 ## [6.14.0] - 2022-01-03
 

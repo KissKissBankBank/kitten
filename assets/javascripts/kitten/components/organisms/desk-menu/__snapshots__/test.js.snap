@@ -36,6 +36,7 @@ exports[`<DeskMenu /> with default props matches with snapshot 1`] = `
   object-position: center;
   display: block;
   border-radius: var(--border-radius-rounded);
+  border: var(--border-width) solid var(--color-grey-300);
 }
 
 .c0 .k-DeskMenu__header .k-DeskMenu__header__content {
@@ -192,6 +193,7 @@ exports[`<DeskMenu /> with header matches with snapshot 1`] = `
   object-position: center;
   display: block;
   border-radius: var(--border-radius-rounded);
+  border: var(--border-width) solid var(--color-grey-300);
 }
 
 .c0 .k-DeskMenu__header .k-DeskMenu__header__content {
