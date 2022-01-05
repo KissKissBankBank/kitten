@@ -1,15 +1,18 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch"],
-    _excluded3 = ["className"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading"],
+    _excluded3 = ["children", "className"],
     _excluded4 = ["className"],
     _excluded5 = ["className"],
     _excluded6 = ["className"],
-    _excluded7 = ["className", "value"];
+    _excluded7 = ["className"],
+    _excluded8 = ["className", "value"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import deprecated from 'prop-types-extra/lib/deprecated';
+import Truncate from 'react-truncate';
 import { StyledCard } from './styles';
 import { Text } from '../../../../components/atoms/typography/text';
 import { Title } from '../../../../components/atoms/typography/title';
@@ -29,12 +32,14 @@ export var ProjectCard = function ProjectCard(_ref) {
       videoSources = _ref.videoSources,
       videoProps = _ref.videoProps,
       stretch = _ref.stretch,
+      loading = _ref.loading,
       props = _objectWithoutPropertiesLoose(_ref, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     as: href ? 'a' : 'div',
     className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status, {
-      'k-ProjectCard--isStretched': stretch
+      'k-ProjectCard--isStretched': stretch,
+      'k-ProjectCard--isLoading': loading
     }),
     href: href
   }, props), /*#__PURE__*/React.createElement("div", {
@@ -64,25 +69,31 @@ ProjectCard.defaultProps = {
   },
   videoProps: {},
   videoSources: [],
-  stretch: false
+  stretch: false,
+  loading: false
 };
 ProjectCard.propTypes = {
+  sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
   status: PropTypes.oneOf(['normal', 'danger', 'warning', 'success', 'disabled']),
   imageProps: PropTypes.object,
   videoProps: PropTypes.object,
   videoSources: PropTypes.array,
-  stretch: PropTypes.bool
+  stretch: PropTypes.bool,
+  loading: PropTypes.bool
 };
 
 ProjectCard.Title = function (_ref2) {
-  var className = _ref2.className,
+  var children = _ref2.children,
+      className = _ref2.className,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
-    modifier: "senary",
+    modifier: "septenary",
     noMargin: true,
     className: classNames('k-ProjectCard__title', className)
-  }, props));
+  }, props), /*#__PURE__*/React.createElement(Truncate, {
+    lines: 2
+  }, children));
 };
 
 ProjectCard.Line = function (_ref3) {
@@ -112,20 +123,35 @@ ProjectCard.Item = function (_ref5) {
   }, props));
 };
 
-ProjectCard.Progress = function (_ref6) {
+ProjectCard.Sticker = function (_ref6) {
   var className = _ref6.className,
-      value = _ref6.value,
       props = _objectWithoutPropertiesLoose(_ref6, _excluded7);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-ProjectCard__sticker k-u-ellipsis', className)
+  }, props));
+};
+
+ProjectCard.Progress = function (_ref7) {
+  var className = _ref7.className,
+      value = _ref7.value,
+      props = _objectWithoutPropertiesLoose(_ref7, _excluded8);
 
   return /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ProjectCard__progress', className)
   }, /*#__PURE__*/React.createElement(Progress, _extends({
-    variant: "andromeda",
     value: value
   }, props)), /*#__PURE__*/React.createElement(Text, {
     weight: "bold",
     size: "tiny",
     lineHeight: "1",
-    className: "k-u-hidden@xs-down"
+    className: "k-u-hidden@xs-down k-ProjectCard__progress__text"
   }, value, "\xA0%"));
+};
+
+ProjectCard.Progress.defaultProps = {
+  value: 0
+};
+ProjectCard.Progress.propTypes = {
+  value: PropTypes.number
 };
