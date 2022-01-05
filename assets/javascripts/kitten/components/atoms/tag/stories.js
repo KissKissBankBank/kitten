@@ -17,6 +17,7 @@ export default {
   ],
   args: {
     type: 'info',
+    size: 'regular',
     children: '5 contributors',
   },
   argTypes: {
@@ -25,6 +26,11 @@ export default {
       options: ['info', 'warning', 'success', 'error', 'disabled'],
       control: 'radio',
     },
+    size: {
+      name: 'size',
+      options: ['regular', 'small' ],
+      control: 'radio',
+    }
   },
 }
 
