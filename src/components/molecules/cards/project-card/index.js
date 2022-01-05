@@ -15,6 +15,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
+var _reactTruncate = _interopRequireDefault(require("react-truncate"));
+
 var _styles = require("./styles");
 
 var _text = require("../../../../components/atoms/typography/text");
@@ -26,12 +30,13 @@ var _progress = require("../../../../components/atoms/progress");
 var _gifVideo = require("../../../../components/atoms/video/gif-video");
 
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch"],
-    _excluded3 = ["className"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading"],
+    _excluded3 = ["children", "className"],
     _excluded4 = ["className"],
     _excluded5 = ["className"],
     _excluded6 = ["className"],
-    _excluded7 = ["className", "value"];
+    _excluded7 = ["className"],
+    _excluded8 = ["className", "value"];
 
 var ProjectCard = function ProjectCard(_ref) {
   var children = _ref.children,
@@ -47,11 +52,13 @@ var ProjectCard = function ProjectCard(_ref) {
       videoSources = _ref.videoSources,
       videoProps = _ref.videoProps,
       stretch = _ref.stretch,
+      loading = _ref.loading,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCard, (0, _extends2.default)({
     as: href ? 'a' : 'div',
     className: (0, _classnames.default)('k-ProjectCard', className, "k-ProjectCard--" + status, {
-      'k-ProjectCard--isStretched': stretch
+      'k-ProjectCard--isStretched': stretch,
+      'k-ProjectCard--isLoading': loading
     }),
     href: href
   }, props), /*#__PURE__*/_react.default.createElement("div", {
@@ -83,24 +90,30 @@ ProjectCard.defaultProps = {
   },
   videoProps: {},
   videoSources: [],
-  stretch: false
+  stretch: false,
+  loading: false
 };
 ProjectCard.propTypes = {
+  sticker: (0, _deprecated.default)(_propTypes.default.node, 'Please use `ProjectCard.Sticker` instead.'),
   status: _propTypes.default.oneOf(['normal', 'danger', 'warning', 'success', 'disabled']),
   imageProps: _propTypes.default.object,
   videoProps: _propTypes.default.object,
   videoSources: _propTypes.default.array,
-  stretch: _propTypes.default.bool
+  stretch: _propTypes.default.bool,
+  loading: _propTypes.default.bool
 };
 
 ProjectCard.Title = function (_ref2) {
-  var className = _ref2.className,
+  var children = _ref2.children,
+      className = _ref2.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded3);
   return /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
-    modifier: "senary",
+    modifier: "septenary",
     noMargin: true,
     className: (0, _classnames.default)('k-ProjectCard__title', className)
-  }, props));
+  }, props), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
+    lines: 2
+  }, children));
 };
 
 ProjectCard.Line = function (_ref3) {
@@ -127,19 +140,33 @@ ProjectCard.Item = function (_ref5) {
   }, props));
 };
 
-ProjectCard.Progress = function (_ref6) {
+ProjectCard.Sticker = function (_ref6) {
   var className = _ref6.className,
-      value = _ref6.value,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded7);
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-ProjectCard__sticker k-u-ellipsis', className)
+  }, props));
+};
+
+ProjectCard.Progress = function (_ref7) {
+  var className = _ref7.className,
+      value = _ref7.value,
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded8);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-ProjectCard__progress', className)
   }, /*#__PURE__*/_react.default.createElement(_progress.Progress, (0, _extends2.default)({
-    variant: "andromeda",
     value: value
   }, props)), /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "bold",
     size: "tiny",
     lineHeight: "1",
-    className: "k-u-hidden@xs-down"
+    className: "k-u-hidden@xs-down k-ProjectCard__progress__text"
   }, value, "\xA0%"));
+};
+
+ProjectCard.Progress.defaultProps = {
+  value: 0
+};
+ProjectCard.Progress.propTypes = {
+  value: _propTypes.default.number
 };
