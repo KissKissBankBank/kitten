@@ -5,6 +5,12 @@ export const StyledWrapper = styled.div`
   border: var(--border);
   border-radius: var(--border-radius-m);
   padding: ${pxToRem(30)};
+  max-width: ${pxToRem(533)};
+  box-sizing: border-box;
+  
+  @media ${mq.mobile} {
+    width: 100%;
+  }
 
   .k-SubscriptionDetails__title {
     display: flex;
@@ -43,7 +49,6 @@ export const StyledWrapper = styled.div`
     justify-content: center;
     align-self: stretch;
     width: ${pxToRem(231)};
-    height: ${pxToRem(137)};
     
     @media ${mq.mobile} {
       height: ${pxToRem(186)};
@@ -68,6 +73,8 @@ export const StyledWrapper = styled.div`
   .k-SubscriptionDetails__list {
     list-style-type: none;
     padding-inline-start: 0;
+    margin-block-start: ${pxToRem(15)};
+    margin-block-end: 0;
   }
 
   .k-SubscriptionDetails__listItem {

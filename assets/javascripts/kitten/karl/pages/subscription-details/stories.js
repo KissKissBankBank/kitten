@@ -37,9 +37,21 @@ const List = ({
   ...props
 }) => (
   <div className="k-SubscriptionDetails__listWrapper" {...props}>
-    <Text weight={subtitleWeight} size={subtitleSize} className="k-SubscriptionDetails__subtitle">{subtitle}</Text>
+    <Text
+      weight={subtitleWeight}
+      size={subtitleSize}
+      className="k-SubscriptionDetails__subtitle"
+    >
+      {subtitle}
+    </Text>
     <Text size="tiny" className="k-SubscriptionDetails__amount">{amount}</Text>
-    <Tag type={typeTag} size="small" className="k-SubscriptionDetails__tag">{tag}</Tag>
+    <Tag
+      type={typeTag}
+      size="small"
+      className="k-SubscriptionDetails__tag"
+    >
+      {tag}
+    </Tag>
     <Text size="tiny" className="k-SubscriptionDetails__date">{date}</Text>
   </div>
 )
@@ -47,7 +59,7 @@ const List = ({
 export const ContributorPayment = () => {
   return (
     <Grid>
-      <GridCol col-m="8">
+      <GridCol col-m="6">
         <StyledWrapper>
           <div className="k-SubscriptionDetails__title">
             <div>
@@ -118,11 +130,99 @@ export const ContributorPayment = () => {
 
 export const ContributorSubscription = () => {
   return (
+    <StyledWrapper>
+      <div className="k-SubscriptionDetails__gridWrapper">
+        <div
+          className="k-SubscriptionDetails__imageWrapper"
+          style={{ height: '137px' }}
+        >
+          <img
+            src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+            alt=""
+          />
+        </div>
+        <div>
+          <Text weight="regular" size="tiny">Club des lecteurs</Text>
+          <Text size="tiny" weight="light"><br />
+            par{' '}
+            <Text weight="bold" size="regular">
+              Sick Magazine
+            </Text>
+          </Text>
+          <ul className="k-SubscriptionDetails__list">
+            <li className="k-SubscriptionDetails__listItem">
+              <StatusIconNext status="success" color="var(--color-primary-500)" />
+              <Text size="tiny">Le nouveau numéro</Text>
+            </li>
+            <li className="k-SubscriptionDetails__listItem">
+              <StatusIconNext status="success" color="var(--color-primary-500)" />
+              <Text size="tiny">Les coulisses de l'édition</Text>
+            </li>
+            <li className="k-SubscriptionDetails__listItem">
+              <StatusIconNext status="success" color="var(--color-primary-500)" />
+              <Text size="tiny">Un poster édition limitée</Text>
+            </li>
+            <li className="k-SubscriptionDetails__listItem">
+              <StatusIconNext status="success" color="var(--color-primary-500)" />
+              <Text size="tiny">Une surprise collector</Text>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <Stroke />
+      <div className="k-SubscriptionDetails__details">
+        <div>
+          <Text size="tiny">Fréquence</Text>
+          <Text
+            tag="p"
+            weight="bold"
+            size="tiny"
+            className="k-u-margin-none"
+          >
+            Mensuel
+          </Text>
+        </div>
+        <div>
+          <Text size="tiny">Mode de livraison</Text>
+          <Text
+            tag="p"
+            weight="bold"
+            size="tiny"
+            className="k-u-margin-none"
+          >
+            Livraison
+          </Text>
+        </div>
+      </div>
+    
+      <Stroke />
+      <div className="k-SubscriptionDetails__option">
+        <Text size="tiny">Option</Text>
+        <Text
+          tag="p"
+          weight="bold"
+          size="tiny"
+          className="k-u-margin-none"
+        >
+          Végétarien
+        </Text>
+      </div>
+    </StyledWrapper>
+  )
+}
+
+export const ContributorReward = () => {
+  return (
     <Grid>
-      <GridCol col-m="8">
+      <GridCol col-m="6">
         <StyledWrapper>
           <div className="k-SubscriptionDetails__gridWrapper">
-            <div className="k-SubscriptionDetails__imageWrapper">
+            <div
+              className="k-SubscriptionDetails__imageWrapper"
+              style={{ height: '159px' }}
+            >
               <img
                 src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
                 alt=""
@@ -137,21 +237,20 @@ export const ContributorSubscription = () => {
                 </Text>
               </Text>
               <ul className="k-SubscriptionDetails__list">
-                <li className="k-SubscriptionDetails__listItem">
-                  <StatusIconNext status="success" color="var(--color-primary-500)" />
-                  <Text size="tiny">Le nouveau numéro</Text>
+              <li className="k-SubscriptionDetails__listItem">
+                  <Text size="tiny">Édition Barkley.</Text>
                 </li>
                 <li className="k-SubscriptionDetails__listItem">
-                  <StatusIconNext status="success" color="var(--color-primary-500)" />
-                  <Text size="tiny">Les coulisses de l'édition</Text>
+                  <Text size="tiny">- Le livre Les Finisseurs (signé par les auteurs).</Text>
                 </li>
                 <li className="k-SubscriptionDetails__listItem">
-                  <StatusIconNext status="success" color="var(--color-primary-500)" />
-                  <Text size="tiny">Un poster édition limitée</Text>
+                  <Text size="tiny">- Le coffret édition limitée.</Text>
                 </li>
                 <li className="k-SubscriptionDetails__listItem">
-                  <StatusIconNext status="success" color="var(--color-primary-500)" />
-                  <Text size="tiny">Une surprise collector</Text>
+                  <Text size="tiny">- Un tirage 20 x 30 cm (signé par Alexis Berg).</Text>
+                </li>
+                <li className="k-SubscriptionDetails__listItem">
+                  <Text size="tiny">- Le DVD du film Les Finisseurs</Text>
                 </li>
               </ul>
             </div>
@@ -161,14 +260,14 @@ export const ContributorSubscription = () => {
           <Stroke />
           <div className="k-SubscriptionDetails__details">
             <div>
-              <Text size="tiny">Fréquence</Text>
+              <Text size="tiny">Option</Text>
               <Text
                 tag="p"
                 weight="bold"
                 size="tiny"
                 className="k-u-margin-none"
               >
-                Mensuel
+                Végétarien, bleu
               </Text>
             </div>
             <div>
@@ -182,19 +281,6 @@ export const ContributorSubscription = () => {
                 Livraison
               </Text>
             </div>
-          </div>
-        
-          <Stroke />
-          <div className="k-SubscriptionDetails__option">
-            <Text size="tiny">Option</Text>
-            <Text
-              tag="p"
-              weight="bold"
-              size="tiny"
-              className="k-u-margin-none"
-            >
-              Végétarien
-            </Text>
           </div>
         </StyledWrapper>
   
