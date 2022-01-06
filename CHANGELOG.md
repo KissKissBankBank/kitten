@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
+
 ## [6.16.0] - 2022-01-05
 
 Features: 
