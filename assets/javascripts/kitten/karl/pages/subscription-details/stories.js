@@ -18,7 +18,6 @@ const PaymentList = ({
   className,
   subtitleWeight,
   subtitle,
-  subtitleSize,
   amount,
   tag,
   typeTag,
@@ -28,7 +27,7 @@ const PaymentList = ({
   <div className="k-SubscriptionDetails__listWrapper" {...props}>
     <Text
       weight={subtitleWeight}
-      size={subtitleSize}
+      size="tiny"
       className="k-SubscriptionDetails__subtitle"
     >
       {subtitle}
@@ -70,7 +69,6 @@ export const ContributorPayment = () => {
           <PaymentList
             subtitle="Avril"
             amount="12 €"
-            subtitleSize="tiny"
             tag="Validé"
             typeTag="success"
             date="le 01/03/21"
@@ -78,7 +76,6 @@ export const ContributorPayment = () => {
           <PaymentList
             subtitle="Mars"
             amount="12 €"
-            subtitleSize="tiny"
             tag="Validé"
             typeTag="success"
             date="le 01/03/21"
@@ -86,7 +83,6 @@ export const ContributorPayment = () => {
           <PaymentList
             subtitle="Février"
             amount="12 €"
-            subtitleSize="tiny"
             tag="Validé"
             typeTag="success"
             date="le 01/03/21"
@@ -94,7 +90,6 @@ export const ContributorPayment = () => {
           <PaymentList
             subtitle="Janvier"
             amount="12 €"
-            subtitleSize="tiny"
             tag="Validé"
             typeTag="success"
             date="le 01/03/21"

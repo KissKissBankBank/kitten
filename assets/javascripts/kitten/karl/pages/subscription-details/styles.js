@@ -24,6 +24,10 @@ export const StyledWrapper = styled.div`
     align-content: flex-start;
     gap: ${pxToRem(20)};
     margin-bottom: ${pxToRem(5)};
+    
+    @media ${mq.mobile} {
+      gap: ${pxToRem(18)};
+    }
   }
 
   .k-SubscriptionDetails__subtitle {
