@@ -22,7 +22,6 @@ export const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     align-content: flex-start;
-    width: 100%;
     gap: ${pxToRem(20)};
     margin-bottom: ${pxToRem(5)};
   }
@@ -32,8 +31,9 @@ export const StyledWrapper = styled.div`
   }
 
   .k-SubscriptionDetails__gridWrapper {
-    display: flex;
     gap: ${pxToRem(30)};
+    grid-template-columns: 1fr 1fr;
+    display: grid;
 
     @media ${mq.mobile} {
       display: block;
@@ -43,15 +43,14 @@ export const StyledWrapper = styled.div`
   .k-SubscriptionDetails__imageWrapper {
     position: relative;
     overflow: hidden;
-
+    padding-top: calc((5 / 8) * 100%); /* ratio: 16/10 */
+    
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: stretch;
-    width: ${pxToRem(231)};
     
     @media ${mq.mobile} {
-      height: ${pxToRem(186)};
       width: 100%;
       margin-bottom: ${pxToRem(15)};
     }
@@ -63,7 +62,7 @@ export const StyledWrapper = styled.div`
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      max-height: ${pxToRem(133)};
       object-fit: cover;
       object-position: center center;
       transition: transform 0.2s ease-in-out;
@@ -73,13 +72,13 @@ export const StyledWrapper = styled.div`
   .k-SubscriptionDetails__list {
     list-style-type: none;
     padding-inline-start: 0;
-    margin-block-start: ${pxToRem(15)};
+    margin-block-start: 0;
     margin-block-end: 0;
   }
 
   .k-SubscriptionDetails__listItem {
-    svg {
-      margin-right: ${pxToRem(10)};
+    span::before {
+      content: "–";
     }
   }
 
@@ -87,5 +86,6 @@ export const StyledWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: start;
+    gap: ${pxToRem(30)};
   }
 `

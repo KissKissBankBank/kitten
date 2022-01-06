@@ -2,30 +2,19 @@ import React from 'react'
 import { StyledWrapper } from './styles'
 import {
   Tag,
-  HorizontalStroke,
+  Separator,
   Text,
   StatusIconNext,
   Grid,
   GridCol,
+  List,
 } from 'kitten'
-import classNames from 'classnames'
 
 export default {
   title: 'pages/SubscriptionDetails',
 }
-const Stroke = ({ className, ...props }) => (
-  <HorizontalStroke
-    {...props}
-    color="var(--color-grey-400)"
-    className={classNames(
-      'k-u-margin-bottom-singleHalf',
-      'k-u-margin-top-singleHalf',
-    )}
-    customSize={{ width: '100%', height: 1 }}
-  />
-)
 
-const List = ({
+const PaymentList = ({
   className,
   subtitleWeight,
   subtitle,
@@ -76,9 +65,9 @@ export const ContributorPayment = () => {
             </div>
             <Tag type="success">Actif</Tag>
           </div>
-          <Stroke />
+          <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
 
-          <List
+          <PaymentList
             subtitle="Avril"
             amount="12 €"
             subtitleSize="tiny"
@@ -86,7 +75,7 @@ export const ContributorPayment = () => {
             typeTag="success"
             date="le 01/03/21"
           />
-          <List
+          <PaymentList
             subtitle="Mars"
             amount="12 €"
             subtitleSize="tiny"
@@ -94,7 +83,7 @@ export const ContributorPayment = () => {
             typeTag="success"
             date="le 01/03/21"
           />
-          <List
+          <PaymentList
             subtitle="Février"
             amount="12 €"
             subtitleSize="tiny"
@@ -102,7 +91,7 @@ export const ContributorPayment = () => {
             typeTag="success"
             date="le 01/03/21"
           />
-          <List
+          <PaymentList
             subtitle="Janvier"
             amount="12 €"
             subtitleSize="tiny"
@@ -111,9 +100,9 @@ export const ContributorPayment = () => {
             date="le 01/03/21"
           />
 
-          <Stroke />
+          <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
 
-          <List
+          <PaymentList
             subtitleWeight="bold"
             subtitle="Petit Plus"
             amount="2 €"
@@ -132,10 +121,7 @@ export const ContributorSubscription = () => {
   return (
     <StyledWrapper>
       <div className="k-SubscriptionDetails__gridWrapper">
-        <div
-          className="k-SubscriptionDetails__imageWrapper"
-          style={{ height: '137px' }}
-        >
+        <div className="k-SubscriptionDetails__imageWrapper">
           <img
             src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
             alt=""
@@ -149,29 +135,17 @@ export const ContributorSubscription = () => {
               Sick Magazine
             </Text>
           </Text>
-          <ul className="k-SubscriptionDetails__list">
-            <li className="k-SubscriptionDetails__listItem">
-              <StatusIconNext status="success" color="var(--color-primary-500)" />
-              <Text size="tiny">Le nouveau numéro</Text>
-            </li>
-            <li className="k-SubscriptionDetails__listItem">
-              <StatusIconNext status="success" color="var(--color-primary-500)" />
-              <Text size="tiny">Les coulisses de l'édition</Text>
-            </li>
-            <li className="k-SubscriptionDetails__listItem">
-              <StatusIconNext status="success" color="var(--color-primary-500)" />
-              <Text size="tiny">Un poster édition limitée</Text>
-            </li>
-            <li className="k-SubscriptionDetails__listItem">
-              <StatusIconNext status="success" color="var(--color-primary-500)" />
-              <Text size="tiny">Une surprise collector</Text>
-            </li>
-          </ul>
+          <List markerElement={<StatusIconNext status="success" color="var(--color-primary-500)" />}>
+            <Text size="tiny">Le nouveau numéro</Text>
+            <Text size="tiny">Les coulisses de l'édition</Text>
+            <Text size="tiny">Un poster édition limitée</Text>
+            <Text size="tiny">Une surprise collector</Text>
+          </List>
         </div>
-
+        
       </div>
 
-      <Stroke />
+      <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
       <div className="k-SubscriptionDetails__details">
         <div>
           <Text size="tiny">Fréquence</Text>
@@ -197,7 +171,7 @@ export const ContributorSubscription = () => {
         </div>
       </div>
     
-      <Stroke />
+      <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
       <div className="k-SubscriptionDetails__option">
         <Text size="tiny">Option</Text>
         <Text
@@ -219,10 +193,7 @@ export const ContributorReward = () => {
       <GridCol col-m="6">
         <StyledWrapper>
           <div className="k-SubscriptionDetails__gridWrapper">
-            <div
-              className="k-SubscriptionDetails__imageWrapper"
-              style={{ height: '159px' }}
-            >
+            <div className="k-SubscriptionDetails__imageWrapper">
               <img
                 src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
                 alt=""
@@ -236,28 +207,32 @@ export const ContributorReward = () => {
                   Sick Magazine
                 </Text>
               </Text>
+              
+              <Text
+                tag="p"
+                size="tiny"
+                className="k-u-margin-top-single k-u-margin-bottom-none"
+              >
+                Édition Barkley.
+              </Text>
               <ul className="k-SubscriptionDetails__list">
-              <li className="k-SubscriptionDetails__listItem">
-                  <Text size="tiny">Édition Barkley.</Text>
+                <li className="k-SubscriptionDetails__listItem">
+                  <Text size="tiny">{' '}Le livre Les Finisseurs (signé par les auteurs).</Text>
                 </li>
                 <li className="k-SubscriptionDetails__listItem">
-                  <Text size="tiny">- Le livre Les Finisseurs (signé par les auteurs).</Text>
+                  <Text size="tiny">{' '}Le coffret édition limitée.</Text>
                 </li>
                 <li className="k-SubscriptionDetails__listItem">
-                  <Text size="tiny">- Le coffret édition limitée.</Text>
+                  <Text size="tiny">{' '}Un tirage 20 x 30 cm (signé par Alexis Berg).</Text>
                 </li>
                 <li className="k-SubscriptionDetails__listItem">
-                  <Text size="tiny">- Un tirage 20 x 30 cm (signé par Alexis Berg).</Text>
-                </li>
-                <li className="k-SubscriptionDetails__listItem">
-                  <Text size="tiny">- Le DVD du film Les Finisseurs</Text>
+                  <Text size="tiny">{' '}Le DVD du film Les Finisseurs</Text>
                 </li>
               </ul>
             </div>
-
           </div>
 
-          <Stroke />
+          <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
           <div className="k-SubscriptionDetails__details">
             <div>
               <Text size="tiny">Option</Text>

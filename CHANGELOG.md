@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Tag`: Add `size` prop defaults to `regular`.
+- Fix: `Tag`:  New UI - colors style.
 
 ## [6.16.0] - 2022-01-05
 
