@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledTag = styled.span`
   height: ${pxToRem(30)};
@@ -13,38 +13,59 @@ const StyledTag = styled.span`
   padding: 0 ${pxToRem(10)};
   white-space: nowrap;
   line-height: ${pxToRem(30)};
-  ${TYPOGRAPHY.fontStyles.light}
-  font-size: ${stepToRem(-1)};
+  ${TYPOGRAPHY.fontStyles.regular}
+  font-size: ${pxToRem(14)};
   border-radius: var(--border-radius-xs);
 
   &.k-Tag--info {
-    background-color: ${COLORS.primary5};
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-700);
   }
   &.k-Tag--warning {
-    background-color: ${COLORS.orange1};
+    background-color: var(--color-warning-100);
+    color: var(--color-warning-700);
   }
   &.k-Tag--success {
-    background-color: ${COLORS.valid1};
+    background-color: var(--color-success-100);
+    color: var(--color-success-700);
   }
   &.k-Tag--error {
-    background-color: ${COLORS.error2};
+    background-color: var(--color-danger-100);
+    color: var(--color-danger-700);
   }
   &.k-Tag--disabled {
-    background-color: ${COLORS.line1};
+    background-color: var(--color-grey-100);
+    color: var(--color-grey-700);
+  }
+
+  &.k-Tag--small {
+    height: ${pxToRem(20)};
+    padding: 0 ${pxToRem(5)};
+    font-size: ${pxToRem(10)};
+    line-height: ${pxToRem(20)};
   }
 `
 
-export const Tag = ({ type, className, ...props }) => (
+export const Tag = ({ type, size, className, ...props }) => (
   <StyledTag
-    className={classNames('k-Tag', className, `k-Tag--${type}`)}
+    className={
+      classNames(
+        'k-Tag',
+        className,
+        `k-Tag--${type}`,
+        `k-Tag--${size}`
+      )
+    }
     {...props}
   />
 )
 
 Tag.propTypes = {
   type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
+  size: PropTypes.oneOf(['regular', 'small']),
 }
 
 Tag.defaultProps = {
   type: 'info',
+  size: 'regular',
 }
