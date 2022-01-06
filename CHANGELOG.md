@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Tag`: Add `size` prop defaults to `regular`.
 - Fix: `Tag`:  New UI - colors style.
+- Fix: `ImageDropUploader`: Add background color.
 
 ## [6.16.0] - 2022-01-05
 
