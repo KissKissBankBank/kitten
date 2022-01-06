@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
 - Fix: `DeskLayout`: Fix menu column width.
 - Fix: `ImageDropUploader`: Add background color.
 
