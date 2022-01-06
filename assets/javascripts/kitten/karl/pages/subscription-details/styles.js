@@ -76,6 +76,7 @@ export const StyledWrapper = styled.div`
   .k-SubscriptionDetails__listItem {
     span::before {
       content: "–";
+      margin-right: ${pxToRem(6);
     }
   }
 
