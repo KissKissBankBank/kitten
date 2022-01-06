@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ImageDropUploader`: Add background color.
+
 ## [6.16.0] - 2022-01-05
 
 Features: 
