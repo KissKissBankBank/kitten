@@ -73,13 +73,6 @@ export const StyledWrapper = styled.div`
     }
   }
 
-  .k-SubscriptionDetails__list {
-    list-style-type: none;
-    padding-inline-start: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
   .k-SubscriptionDetails__listItem {
     span::before {
       content: "–";
