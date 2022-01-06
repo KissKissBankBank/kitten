@@ -2,7 +2,7 @@
 
 exports[`<DeskLayout /> compare with loading snapshot matches with snapshot 1`] = `
 .c0 {
-  --deskLayout-menu-width: 13.125rem;
+  --deskLayout-menu-width: 13.75rem;
   --deskLayout-gutter: 5rem;
   --deskLayout-offset: calc( var(--deskLayout-menu-width) + var(--deskLayout-gutter) );
   height: 100%;
@@ -221,7 +221,7 @@ exports[`<DeskLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 exports[`<DeskLayout /> compare with snapshot matches with snapshot 1`] = `
 .c0 {
-  --deskLayout-menu-width: 13.125rem;
+  --deskLayout-menu-width: 13.75rem;
   --deskLayout-gutter: 5rem;
   --deskLayout-offset: calc( var(--deskLayout-menu-width) + var(--deskLayout-gutter) );
   height: 100%;
