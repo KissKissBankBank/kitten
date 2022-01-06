@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DeskLayout`: Fix menu column width.
+
 ## [6.16.0] - 2022-01-05
 
 Features: 
