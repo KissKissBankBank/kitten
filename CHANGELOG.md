@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Tag`: Add `size` prop defaults to `regular`.
 - Fix: `Tag`:  New UI - colors style.
+- Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
 - Fix: `DeskLayout`: Fix menu column width.
 - Fix: `ImageDropUploader`: Add background color.
 
