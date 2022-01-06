@@ -211,10 +211,10 @@ export const ContributorReward = () => {
                 Édition Barkley.
               </Text>
               <List className="k-SubscriptionDetails__listItem">
-                <Text size="tiny">{' '}Le livre Les Finisseurs (signé par les auteurs).</Text>
-                <Text size="tiny">{' '}Le coffret édition limitée.</Text>
-                <Text size="tiny">{' '}Un tirage 20 x 30 cm (signé par Alexis Berg).</Text>
-                <Text size="tiny">{' '}Le DVD du film Les Finisseurs</Text>
+                <Text size="tiny">Le livre Les Finisseurs (signé par les auteurs).</Text>
+                <Text size="tiny">Le coffret édition limitée.</Text>
+                <Text size="tiny">Un tirage 20 x 30 cm (signé par Alexis Berg).</Text>
+                <Text size="tiny">Le DVD du film Les Finisseurs</Text>
               </List>
             </div>
           </div>
