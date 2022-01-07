@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `LocationInput`,
   - `TagInput`,
   - `TextInput`,
+  - `TextInputWithButton`,
   - `TextInputWithUnit`,
   - `Button`,
   - `Accordion`,
