@@ -23,6 +23,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `TextCopy`,
   - `VerticalStepper`.
 - Feature: `TagButton`: Deprecate `modifier` and `icon` props.
+- Feature: `Tag`: Add `size` prop defaults to `regular`.
+- Fix: `Tag`:  New UI - colors style.
+- Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
+- Fix: `DeskLayout`: Fix menu column width.
+- Fix: `ImageDropUploader`: Add background color.
+
+## [6.16.0] - 2022-01-05
+
+Features:
+- `ProjectCard`: Add `ProjectCard.Sticker` subcomponent.
+- `ProjectCard`: Deprecate `sticker` prop.
+- `Utilities`: Add `k-u-transform-capitalize` utility class.
+- `ProjectCard`: Add `loading` prop.
+
+Fix:
+
+- `ProjectCard`: Style fixes.
 
 ## [6.15.0] - 2022-01-04
 

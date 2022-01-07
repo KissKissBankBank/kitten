@@ -1,6 +1,11 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
+
+const loadingKeyframes = keyframes`
+  from { transform: translateX(-100%) }
+  to { transform: translateX(100%) }
+`
 
 export const StyledCard = styled.div`
   display: flex;
@@ -73,10 +78,10 @@ export const StyledCard = styled.div`
     left: ${pxToRem(15)};
     max-width: calc(100% - ${pxToRem(2 * (10 + 15))});
 
-    line-height: ${pxToRem(20)};
+    line-height: ${pxToRem(19)};
     background-color: var(--projectCard-statusColor);
     border-radius: var(--border-radius-rounded);
-    padding: ${pxToRem(0)} ${pxToRem(10)} ${pxToRem(2)};
+    padding: ${pxToRem(0)} ${pxToRem(10)} ${pxToRem(3)};
 
     color: var(--color-grey-000);
     ${TYPOGRAPHY.fontStyles.regular}
@@ -122,5 +127,63 @@ export const StyledCard = styled.div`
 
   &.k-ProjectCard--isStretched {
     height: 100%;
+  }
+
+  &.k-ProjectCard--isLoading {
+    --projectCard-statusColor: var(--color-grey-400);
+
+    position: relative;
+    border-color: var(--color-grey-300);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 25%,
+        rgba(255, 255, 255, 0) 50%
+      );
+      animation: x 2s linear infinite;
+      animation-name: ${loadingKeyframes};
+    }
+
+    .k-ProjectCard__image {
+      background-color: var(--color-grey-300);
+    }
+
+    .k-ProjectCard__image__image {
+      opacity: 0;
+    }
+
+    .k-ProjectCard__title {
+      min-height: ${pxToRem(20)};
+    }
+
+    .k-ProjectCard__line {
+      min-height: ${pxToRem(16)};
+    }
+
+    .k-ProjectCard__item {
+      min-width: ${pxToRem(50)};
+      min-height: ${pxToRem(16)};
+    }
+
+    .k-ProjectCard__sticker {
+      display: none;
+    }
+
+    .k-ProjectCard__title,
+    .k-ProjectCard__line,
+    .k-ProjectCard__item,
+    .k-ProjectCard__progress__text {
+      color: var(--color-grey-300);
+      background-color: var(--color-grey-300);
+    }
   }
 `

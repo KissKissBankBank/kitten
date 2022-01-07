@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-GMQeP jscRmH k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP jRriBR k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -17,20 +17,34 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
   <div
     className="k-ProjectCard__content"
   >
-    <div
-      className="k-ProjectCard__sticker k-u-ellipsis"
-    >
-      Prolongation
-    </div>
     <h1
-      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--senary k-Title--noMargin"
+      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      The Office, la série culte décortiquée par S!CK
+      <span
+        width={0}
+      >
+        <span />
+        <span>
+          The Office, la série culte décortiquée par S!CK
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          …
+        </span>
+      </span>
     </h1>
     <div
       className="k-ProjectCard__line"
@@ -98,7 +112,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down"
+        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %
@@ -110,7 +124,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-GMQeP jscRmH k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP jRriBR k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -125,19 +139,38 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <div
-      className="k-ProjectCard__sticker k-u-ellipsis"
+      className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
     >
       Prolongation
     </div>
     <h1
-      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--senary k-Title--noMargin"
+      className="sc-jzJRlG bCaHVY k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      The Office, la série culte décortiquée par S!CK
+      <span
+        width={0}
+      >
+        <span />
+        <span>
+          The Office, la série culte décortiquée par S!CK
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          …
+        </span>
+      </span>
     </h1>
     <div
       className="k-ProjectCard__line"
@@ -205,7 +238,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down"
+        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %

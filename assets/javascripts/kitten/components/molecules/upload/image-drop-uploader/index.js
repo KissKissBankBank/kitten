@@ -49,6 +49,7 @@ const StyledImageDropUploader = styled.div`
     text-align: center;
     color: ${COLORS.font1};
     cursor: pointer;
+    background-color: var(--color-grey-000);
 
     transition: border-color 0.2s ease, color 0.2s ease;
 
@@ -60,6 +61,10 @@ const StyledImageDropUploader = styled.div`
       border-color: ${COLORS.primary4};
       color: ${COLORS.primary1};
     }
+  }
+
+  .k-ImageDropUploader__manager {
+    background-color: var(--color-grey-000);
   }
 
   input[type='file']:active:not(:disabled) + .k-ImageDropUploader__button {

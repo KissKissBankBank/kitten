@@ -9,6 +9,7 @@ import { MaisonDeCrowdfundingLogoOnDark } from './mdc/on-dark'
 import { MicrodonLogo } from './microdonlogo'
 import { LendopolisLogo } from './lendopolis-logo'
 import { LendopolisLogoOnDark } from './lendopolis-logo/on-dark'
+import { LendopolisLogoVerticalOnDark } from './lendopolis-logo/vertical-on-dark'
 import { KkbbCoLogo } from './kkbb-co'
 import { YouMatterLogo } from './youmatter'
 
@@ -76,6 +77,7 @@ export const AllLogos = () => {
       <Group title="Lendopolis">
         <LogoContainer children={<LendopolisLogo />} />
         <LogoContainer children={<LendopolisLogoOnDark />} />
+        <LogoContainer children={<LendopolisLogoVerticalOnDark />} />
         <LogoContainer
           className="noMaxDimensions"
           name="version tiny"

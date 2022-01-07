@@ -9,7 +9,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config'
 
 export const StyledLayout = styled.div`
-  --deskLayout-menu-width: ${pxToRem(210)};
+  --deskLayout-menu-width: ${pxToRem(220)};
   --deskLayout-gutter: ${pxToRem(80)};
   --deskLayout-offset: calc(
     var(--deskLayout-menu-width) + var(--deskLayout-gutter)
