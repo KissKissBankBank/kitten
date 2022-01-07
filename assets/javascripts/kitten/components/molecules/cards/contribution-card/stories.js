@@ -108,8 +108,9 @@ export const PetitPlus = (...args) => {
       </ContributionCard.Image>
 
       <ContributionCard.Title>
-        Un petit plus pour 900 care
+        Un petit plus pour 900 care - Un petit plus pour 900 care
         <ContributionCard.Description>
+          Donnez encore plus de chances à ce projet de voir le jour.
           Donnez encore plus de chances à ce projet de voir le jour.
         </ContributionCard.Description>
       </ContributionCard.Title>

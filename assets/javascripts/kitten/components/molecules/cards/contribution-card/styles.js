@@ -35,6 +35,10 @@ export const StyledContributionCard = styled.article`
       flex: 0 0 ${pxToRem(160)};
     }
 
+    @media ${mq.mobileAndTablet} {
+      flex: 0 0 ${pxToRem(120)};
+    }
+
     @media ${mq.mobile} {
       padding-top: calc(5 / 8 * 100%);
     }
