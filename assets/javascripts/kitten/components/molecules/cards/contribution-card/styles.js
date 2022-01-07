@@ -31,11 +31,11 @@ export const StyledContributionCard = styled.article`
     align-items: center;
     justify-content: center;
 
-    @media ${mq.tabletAndDesktop} {
+    @media ${mq.desktop} {
       flex: 0 0 ${pxToRem(160)};
     }
 
-    @media ${mq.mobileAndTablet} {
+    @media ${mq.tablet} {
       flex: 0 0 ${pxToRem(120)};
     }
 
