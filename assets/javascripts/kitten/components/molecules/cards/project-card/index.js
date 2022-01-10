@@ -91,7 +91,10 @@ ProjectCard.defaultProps = {
 }
 
 ProjectCard.propTypes = {
-  sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
+  sticker: deprecated(
+    PropTypes.node,
+    'Please use `ProjectCard.Sticker` instead.',
+  ),
   status: PropTypes.oneOf([
     'normal',
     'danger',
@@ -142,7 +145,10 @@ ProjectCard.Item = ({ className, ...props }) => {
 
 ProjectCard.Sticker = ({ className, ...props }) => {
   return (
-    <div className={classNames('k-ProjectCard__sticker k-u-ellipsis', className)} {...props} />
+    <div
+      className={classNames('k-ProjectCard__sticker k-u-ellipsis', className)}
+      {...props}
+    />
   )
 }
 

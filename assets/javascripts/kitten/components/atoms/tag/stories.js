@@ -28,9 +28,9 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['regular', 'small' ],
+      options: ['regular', 'small'],
       control: 'radio',
-    }
+    },
   },
 }
 

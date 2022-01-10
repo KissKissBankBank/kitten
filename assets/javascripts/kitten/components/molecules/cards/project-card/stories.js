@@ -39,9 +39,7 @@ const args = {
 
 export const Default = ({ progressProps, ...args }) => (
   <ProjectCard {...args}>
-    <ProjectCard.Sticker
-      className="k-u-transform-capitalize k-u-hidden@xs-down"
-    >
+    <ProjectCard.Sticker className="k-u-transform-capitalize k-u-hidden@xs-down">
       Prolongation
     </ProjectCard.Sticker>
     <ProjectCard.Title>
@@ -90,9 +88,7 @@ Default.argTypes = argTypes
 
 export const WithButton = ({ progressProps, ...args }) => (
   <ProjectCard {...args}>
-    <ProjectCard.Sticker
-      className="k-u-transform-capitalize k-u-hidden@xs-down"
-    >
+    <ProjectCard.Sticker className="k-u-transform-capitalize k-u-hidden@xs-down">
       Prolongation
     </ProjectCard.Sticker>
     <ProjectCard.Title>
