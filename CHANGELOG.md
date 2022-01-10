@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Icons`: Add `EditIconNext` and `FilterIconNext` components.
 - Feature: `Tag`: Add `size` prop defaults to `regular`.
 - Fix: `Tag`:  New UI - colors style.
 - Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
