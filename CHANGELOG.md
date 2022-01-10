@@ -4,14 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ContributionCard`: Fix image display.
-- Feature: `Icons`: Add `EditIconNext` and `FilterIconNext` components.
-- Feature: `Tag`: Add `size` prop defaults to `regular`.
-- Fix: `Tag`:  New UI - colors style.
-- Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
-- Fix: `DeskLayout`: Fix menu column width.
-- Fix: `ImageDropUploader`: Add background color.
-- Fix: Graphics: Remove SVG errors.
+## [6.17.0] - 2022-01-10
+
+Features:
+
+- `Icons`: Add `EditIconNext` and `FilterIconNext` components.
+- `Tag`: Add `size` prop defaults to `regular`.
+- Logos: Add `LendopolisLogoVerticalOnDark` logo.
+
+Fixes:
+
+- `Tag`:  New UI - colors style.
+- `ContributionCard`: Fix image display.
+- `DeskLayout`: Fix menu column width.
+- `ImageDropUploader`: Add background color.
+- Graphics: Remove SVG errors.
 
 ## [6.16.0] - 2022-01-05
 

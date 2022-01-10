@@ -136,7 +136,7 @@ export const StyledCard = styled.div`
     border-color: var(--color-grey-300);
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       bottom: 0;

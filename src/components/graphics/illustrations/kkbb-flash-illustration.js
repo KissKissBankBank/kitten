@@ -26,7 +26,7 @@ var KkbbFlashIllustration = function KkbbFlashIllustration(_ref) {
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
     }, props), /*#__PURE__*/_react.default.createElement("g", {
-      "clip-path": "url(#a)"
+      clipPath: "url(#a)"
     }, /*#__PURE__*/_react.default.createElement("path", {
       d: "M120.493 79.155a1.872 1.872 0 0 1-.933-.26c-.97.399-2.01.598-3.058.588a6.22 6.22 0 0 1-3.664-1.061l-57.487 60.255L49.169 154l41.749-43.781 29.631-31.064h-.056ZM110.949 45.732v1.41a9.091 9.091 0 0 1 4.497-1.015 12.62 12.62 0 0 1 2.057.158L144.639 7.56l-6.992.146-26.698 38.026ZM66.446 89.638l-25.045.158-2.945 5.45 25.787-.158 2.203-5.45Z",
       fill: "#19B4FA"
@@ -53,7 +53,7 @@ var KkbbFlashIllustration = function KkbbFlashIllustration(_ref) {
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, props), /*#__PURE__*/_react.default.createElement("g", {
-    "clip-path": "url(#a)"
+    clipPath: "url(#a)"
   }, /*#__PURE__*/_react.default.createElement("path", {
     d: "M169.785 111.537a2.631 2.631 0 0 1-1.314-.365c-1.367.56-2.832.842-4.309.826a8.77 8.77 0 0 1-5.164-1.494l-81.003 84.905-8.712 21.592 58.828-61.692 41.754-43.772h-.08ZM156.337 64.442v1.988a12.807 12.807 0 0 1 6.336-1.431c.971-.005 1.94.069 2.899.222l38.237-54.568-9.852.207-37.62 53.582ZM93.628 126.308l-35.29.222-4.15 7.68 36.336-.223 3.104-7.679Z",
     fill: "#19B4FA"
