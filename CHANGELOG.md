@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContributionCard`: Fix image display.
 - Feature: `Icons`: Add `EditIconNext` and `FilterIconNext` components.
 - Feature: `Tag`: Add `size` prop defaults to `regular`.
 - Fix: `Tag`:  New UI - colors style.
@@ -13,7 +14,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [6.16.0] - 2022-01-05
 
-Features: 
+Features:
+
 - `ProjectCard`: Add `ProjectCard.Sticker` subcomponent.
 - `ProjectCard`: Deprecate `sticker` prop.
 - `Utilities`: Add `k-u-transform-capitalize` utility class.
