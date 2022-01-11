@@ -179,7 +179,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         </IconContainer>
       </Group>
 
-      <Group title="Bicolore icons">
+      <Group title="Bicolor icons">
         <IconContainer>
           <ColorCheckedShieldIconNext
             color={colorInput}
