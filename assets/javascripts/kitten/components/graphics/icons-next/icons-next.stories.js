@@ -163,30 +163,6 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <HeartIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <GiftIconNext
-            color={colorInput}
-            secondaryColor={secondaryColorInput}
-          />
-        </IconContainer>
-        <IconContainer>
-          <HeartWithClickIconNext
-            color={colorInput}
-            secondaryColor={secondaryColorInput}
-          />
-        </IconContainer>
-        <IconContainer>
-          <ColorCheckedShieldIconNext
-            color={colorInput}
-            secondaryColor={secondaryColorInput}
-          />
-        </IconContainer>
-        <IconContainer>
-          <CrossCircleIconNext
-            color={colorInput}
-            secondaryColor={secondaryColorInput}
-          />
-        </IconContainer>
-        <IconContainer>
           <SunIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
@@ -202,7 +178,35 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <FilterIconNext color={colorInput} />
         </IconContainer>
       </Group>
-      <Group title="Arrows">
+
+      <Group title="Icônes bicolores">
+        <IconContainer>
+          <ColorCheckedShieldIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <GiftIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <HeartWithClickIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+        <IconContainer>
+          <CrossCircleIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
+        </IconContainer>
+      </Group>
+
+      <Group title="Icônes flèches">
         <IconContainer suffix='direction="up"'>
           <LargeArrowIconNext color={colorInput} direction="up" />
         </IconContainer>
@@ -216,7 +220,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <LargeArrowIconNext color={colorInput} direction="right" />
         </IconContainer>
       </Group>
-      <Group title="Status icons">
+
+      <Group title="Icônes statuts">
         <IconContainer suffix="status=info">
           <StatusIconNext status="info" color={colorInput} />
         </IconContainer>
@@ -233,7 +238,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <StatusIconNext status="danger" color={colorInput} />
         </IconContainer>
       </Group>
-      <Group title="Social">
+
+      <Group title="Icônes réseaux sociaux">
         <IconContainer>
           <FacebookIconNext color={colorInput} />
         </IconContainer>
