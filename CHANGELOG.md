@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextInput`: Improve placeholder style.
+- Feature: `ColorSelect`: Add component.
 
 ## [6.17.0] - 2022-01-10
 

@@ -8,18 +8,21 @@ import debounce from 'lodash/fp/debounce'
 
 import { hexToHSL, HSLToHex } from './helpers/color-transforms'
 
-const getClosestContrast = ({color, contrastColor, contrastRatio}) => {
+const getClosestContrast = ({ color, contrastColor, contrastRatio }) => {
   const { h, s, l } = hexToHSL(color)
 
   let lRange = range(0)(Math.round(l))
   let whileCount = 0
 
+  // Binary search
   while (lRange.length > 1 && whileCount < 100) {
     whileCount += 1
 
     const midPoint = Math.floor(lRange.length / 2)
-    const midPointColor = HSLToHex({h, s, l: lRange[midPoint]})
-    const isMidPointColorValid = ratio(midPointColor, contrastColor) > contrastRatio
+    const midPointColor = HSLToHex({ h, s, l: lRange[midPoint] })
+    const isMidPointColorValid =
+      ratio(midPointColor, contrastColor) > contrastRatio
+
     if (isMidPointColorValid) {
       lRange.splice(0, midPoint)
     } else {
@@ -29,7 +32,7 @@ const getClosestContrast = ({color, contrastColor, contrastRatio}) => {
     }
   }
 
-  return HSLToHex({h, s, l: lRange[0]})
+  return HSLToHex({ h, s, l: lRange[0] })
 }
 
 export const ColorSelect = ({
@@ -39,14 +42,16 @@ export const ColorSelect = ({
   contrastRatio,
   ...props
 }) => {
-  const [color, setColor] = useState(value);
+  const [color, setColor] = useState(value)
 
   const handleChange = color => {
     const isContrastValid = ratio(color, contrastColor) > contrastRatio
 
     if (!isContrastValid) {
       const newColor = getClosestContrast({
-        color, contrastColor, contrastRatio
+        color,
+        contrastColor,
+        contrastRatio,
       })
 
       setColor(newColor)
@@ -63,9 +68,7 @@ export const ColorSelect = ({
     handleChange(value)
   }, [value])
 
-  return (
-    <HexColorPicker color={color} onChange={debounce(100)(handleChange)} />
-  )
+  return <HexColorPicker color={color} onChange={debounce(100)(handleChange)} />
 }
 
 ColorSelect.propTypes = {

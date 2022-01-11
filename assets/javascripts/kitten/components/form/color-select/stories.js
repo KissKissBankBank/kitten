@@ -43,7 +43,7 @@ export default {
   },
 }
 
-export const Default = ({value, ...args}) => {
+export const Default = ({ value, ...args }) => {
   const [currentValue, setCurrentValue] = useState(value)
 
   const handleChange = color => {
@@ -54,7 +54,12 @@ export const Default = ({value, ...args}) => {
   return (
     <>
       <ColorSelect {...args} value={value} onChange={handleChange} />
-      <Text>Current value: <strong className="k-u-strong">{currentValue}</strong></Text>
+      <div>
+        <div style={{width: 100, height: 80, backgroundColor: currentValue}} />
+        <Text cssColor={currentValue}>
+          <strong className="k-u-strong">{currentValue}</strong>
+        </Text>
+      </div>
     </>
   )
 }
