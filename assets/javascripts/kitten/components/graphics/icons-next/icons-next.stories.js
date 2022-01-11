@@ -162,7 +162,6 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         <IconContainer>
           <HeartIconNext color={colorInput} />
         </IconContainer>
-
         <IconContainer>
           <SunIconNext color={colorInput} />
         </IconContainer>
@@ -179,6 +178,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <FilterIconNext color={colorInput} />
         </IconContainer>
       </Group>
+
       <Group title="Bicolore icons">
         <IconContainer>
           <ColorCheckedShieldIconNext
@@ -205,6 +205,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           />
         </IconContainer>
       </Group>
+
       <Group title="Arrows">
         <IconContainer suffix='direction="up"'>
           <LargeArrowIconNext color={colorInput} direction="up" />
@@ -219,6 +220,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <LargeArrowIconNext color={colorInput} direction="right" />
         </IconContainer>
       </Group>
+
       <Group title="Status icons">
         <IconContainer suffix="status=info">
           <StatusIconNext status="info" color={colorInput} />
@@ -236,6 +238,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <StatusIconNext status="danger" color={colorInput} />
         </IconContainer>
       </Group>
+      
       <Group title="Social">
         <IconContainer>
           <FacebookIconNext color={colorInput} />
