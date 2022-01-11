@@ -206,7 +206,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         </IconContainer>
       </Group>
 
-      <Group title="Flèches">
+      <Group title="Icônes flèches">
         <IconContainer suffix='direction="up"'>
           <LargeArrowIconNext color={colorInput} direction="up" />
         </IconContainer>
@@ -239,7 +239,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         </IconContainer>
       </Group>
 
-      <Group title="Icônes sociaux">
+      <Group title="Icônes réseaux sociaux">
         <IconContainer>
           <FacebookIconNext color={colorInput} />
         </IconContainer>
