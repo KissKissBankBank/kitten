@@ -4,9 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Tokens`: Update yellow colors.
-- Fix: `TextInput`: Improve placeholder style.
-- Fix: `createEvent`: Prevent SSR issue.
+
+## [6.18.0] - 2022-01-11
+
+Feature: 
+
+- `Tokens`: Update yellow colors.
+
+Fixes:
+
+  - `TextInput`: Improve placeholder style.
+  - `createEvent`: Prevent SSR issue.
 
 ## [6.17.0] - 2022-01-10
 
