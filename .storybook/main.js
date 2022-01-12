@@ -56,8 +56,8 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
-    '@storybook/addon-a11y',
     '@storybook/addon-measure',
+    '@storybook/addon-storysource',
     'storybook-design-token',
   ],
 }
