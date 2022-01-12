@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   AirplaneIconNext,
+  BankCardIconNext,
   BubbleIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
@@ -8,6 +9,7 @@ import {
   ColorCheckedShieldIconNext,
   CrossCircleIconNext,
   CrossIconNext,
+  CubeIconNext,
   EditIconNext,
   EnvelopeIconNext,
   EyeIconNext,
@@ -176,6 +178,12 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         </IconContainer>
         <IconContainer>
           <FilterIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <CubeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <BankCardIconNext color={colorInput} />
         </IconContainer>
       </Group>
 

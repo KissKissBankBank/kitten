@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Icons`: Add the following icon components:
+  - `BankCardIconNext`,
+  - `CubeIconNext`
 
 ## [6.18.0] - 2022-01-11
 
