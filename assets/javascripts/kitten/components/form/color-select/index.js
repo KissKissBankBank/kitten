@@ -22,23 +22,21 @@ const StyledColorSelect = styled.div`
     pointer-events: none;
 
     path {
-      opacity: .5;
+      opacity: 0.5;
       cursor: not-allowed;
     }
   }
 `
 
-const hsvArrayToObject = chromaHsvArray => ({
-  h: Math.round(chromaHsvArray[0]),
-  s: chromaHsvArray[1],
-  v: chromaHsvArray[2],
-})
-
-const hsvObjectToArray = hsvObject => ([
-  hsvObject.h,
-  hsvObject.s,
-  hsvObject.v,
-])
+const hexToHsv = color => {
+  const hsvArray = colorConvert.hex.hsv(color)
+  return {
+    h: Math.round(hsvArray[0]),
+    s: hsvArray[1],
+    v: hsvArray[2],
+  }
+}
+const hsvToHex = color => colorConvert.hsv.hex([color.h, color.s, color.v])
 
 export const ColorSelect = ({
   onChange,
@@ -48,12 +46,17 @@ export const ColorSelect = ({
   ...props
 }) => {
   // Input is hex, output is Hex, internal color is HSV
-  const [color, setColor] = useState(hsvArrayToObject(colorConvert.hex.hsv(value)))
-  useEffect(() => { onChange(colorConvert.hsv.hex(...hsvObjectToArray(color))) }, [color])
-  useEffect(() => { handleChange(hsvArrayToObject(colorConvert.hex.hsv(value))) }, [value])
+  const [color, setColor] = useState(hexToHsv(value))
+  useEffect(() => {
+    onChange(hsvToHex(color))
+  }, [color])
+  useEffect(() => {
+    handleChange(hexToHsv(value))
+  }, [value])
 
   const handleChange = color => {
-    const isContrastValid = ratio(colorConvert.hsv.hex(...hsvObjectToArray(color)), contrastColor) > contrastRatio
+    const isContrastValid =
+      ratio(hsvToHex(color), contrastColor) > contrastRatio
 
     if (!isContrastValid) {
       const newColor = getClosestContrast({
@@ -73,12 +76,12 @@ export const ColorSelect = ({
 
     let vRange = range(0)(Math.round(v))
 
-    const newV = findClosestValidColor({h, s, vRange})
+    const newV = findClosestValidColor({ h, s, vRange })
 
     return { h, s, v: newV }
   }
 
-  const getCoordinatesList = (color) => {
+  const getCoordinatesList = color => {
     const { h } = color
     const coords = []
 
@@ -87,7 +90,7 @@ export const ColorSelect = ({
 
       const s = i * (100 / SVG_COLS_COUNT)
 
-      const v = findClosestValidColor({h, s, vRange})
+      const v = findClosestValidColor({ h, s, vRange })
 
       coords.push(`L ${i} ${100 - v}`)
     }
@@ -95,7 +98,7 @@ export const ColorSelect = ({
     return coords.join(' ')
   }
 
-  const findClosestValidColor = ({h, s, vRange}) => {
+  const findClosestValidColor = ({ h, s, vRange }) => {
     let whileCount = 0
 
     // Binary search
@@ -103,7 +106,7 @@ export const ColorSelect = ({
       whileCount += 1
 
       const midPoint = Math.floor(vRange.length / 2)
-      const midPointColor = colorConvert.hsv.hex(...hsvObjectToArray({ h, s, v: vRange[midPoint] }))
+      const midPointColor = hsvToHex({ h, s, v: vRange[midPoint] })
       const isMidPointColorValid =
         ratio(midPointColor, contrastColor) > contrastRatio
 
@@ -122,13 +125,20 @@ export const ColorSelect = ({
   return (
     <StyledColorSelect>
       <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
-      <svg viewBox={`0 0 ${SVG_COLS_COUNT} 100`} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path fill="white" d={`
+      <svg
+        viewBox={`0 0 ${SVG_COLS_COUNT} 100`}
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="white"
+          d={`
                   M0 0
                   ${getCoordinatesList(color)}
                   L${SVG_COLS_COUNT} 0
                   z
-                `}/>
+                `}
+        />
       </svg>
     </StyledColorSelect>
   )

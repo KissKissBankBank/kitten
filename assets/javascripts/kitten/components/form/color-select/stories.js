@@ -55,7 +55,9 @@ export const Default = ({ value, ...args }) => {
     <>
       <ColorSelect {...args} value={value} onChange={handleChange} />
       <div>
-        <div style={{width: 100, height: 80, backgroundColor: currentValue}} />
+        <div
+          style={{ width: 100, height: 80, backgroundColor: currentValue }}
+        />
         <Text cssColor={currentValue}>
           <strong className="k-u-strong">{currentValue}</strong>
         </Text>

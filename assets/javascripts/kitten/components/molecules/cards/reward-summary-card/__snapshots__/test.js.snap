@@ -91,7 +91,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
       className="k-RewardSummaryCard__options k-u-hidden@xs-down"
     >
       <details
-        className="sc-bHwgHz jAmPCL k-DropdownMenu k-DropdownMenu--left"
+        className="sc-krDsej eGLjEr k-DropdownMenu k-DropdownMenu--left"
         onKeyDown={[Function]}
         onToggle={[Function]}
         open={false}
@@ -133,7 +133,7 @@ exports[`<RewardSummaryCard /> with some props matches with snapshot 1`] = `
           </span>
         </summary>
         <div
-          className="sc-esjQYD fztPYo k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+          className="sc-kIPQKe duXVyS k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
           onClick={[Function]}
           style={
             Object {
