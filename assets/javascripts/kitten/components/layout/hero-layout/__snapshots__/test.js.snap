@@ -9,7 +9,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 .c0 .k-HeroLayout__hero {
   position: relative;
-  padding: 8.4375rem var(--container-padding) 6.25rem;
+  padding: 8.4375rem var(--container-padding) 4.375rem;
 }
 
 .c0 .k-HeroLayout__hero__grid {
@@ -76,7 +76,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 3.125rem 4.375rem;
+  gap: 3.125rem 3.125rem;
   display: grid;
 }
 
@@ -153,7 +153,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 @media (min-width:640px) {
   .c0 .k-HeroLayout__promo {
-    padding: 3.125rem 0 1.875rem;
+    padding: 3.75rem 0;
   }
 }
 
@@ -165,7 +165,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 @media (min-width:1080px) {
   .c0 .k-HeroLayout__page {
-    margin: 3.125rem 4.375rem 6.25rem;
+    margin: 4.375rem 4.375rem 6.25rem;
     grid-template-columns: minmax(13.125rem,1fr) minmax(auto,41.875rem) minmax(13.125rem,1fr);
     grid-template-areas: 'menu content aside';
   }
@@ -218,7 +218,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 
 .c0 .k-HeroLayout__hero {
   position: relative;
-  padding: 8.4375rem var(--container-padding) 6.25rem;
+  padding: 8.4375rem var(--container-padding) 4.375rem;
 }
 
 .c0 .k-HeroLayout__hero__grid {
@@ -285,7 +285,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 3.125rem 4.375rem;
+  gap: 3.125rem 3.125rem;
   display: grid;
 }
 
@@ -362,7 +362,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 
 @media (min-width:640px) {
   .c0 .k-HeroLayout__promo {
-    padding: 3.125rem 0 1.875rem;
+    padding: 3.75rem 0;
   }
 }
 
@@ -374,7 +374,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 
 @media (min-width:1080px) {
   .c0 .k-HeroLayout__page {
-    margin: 3.125rem 4.375rem 6.25rem;
+    margin: 4.375rem 4.375rem 6.25rem;
     grid-template-columns: minmax(13.125rem,1fr) minmax(auto,41.875rem) minmax(13.125rem,1fr);
     grid-template-areas: 'menu content aside';
   }
