@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
 - Feature: `Tokens`: Update colors token in `tokens.json`.
 - Fix: `TextInput`: Improve placeholder style.
 - Fix: `ImageDropUploader`: Style fixes.
