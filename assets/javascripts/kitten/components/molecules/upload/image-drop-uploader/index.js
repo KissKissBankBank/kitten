@@ -27,11 +27,13 @@ const StyledImageDropUploader = styled.div`
   }
 
   input[type='file']:focus + label {
-    border: ${pxToRem(2)} solid ${COLORS.primary4};
+    outline: ${pxToRem(2)} solid ${COLORS.primary4};
+    outline-offset: ${pxToRem(-2)};
   }
 
   input[type='file']:focus-visible + label {
     outline: auto;
+    outline-offset: initial;
   }
 
   .k-ImageDropUploader__button {
@@ -63,6 +65,10 @@ const StyledImageDropUploader = styled.div`
     }
   }
 
+  .k-ImageDropUploader__button__uploadIcon {
+    flex: 0 0 auto;
+  }
+
   .k-ImageDropUploader__manager {
     background-color: var(--color-grey-000);
   }
@@ -71,6 +77,7 @@ const StyledImageDropUploader = styled.div`
     border-color: ${COLORS.primary1};
     color: ${COLORS.primary1};
   }
+
   &.k-ImageDropUploader--isDraggingOver .k-ImageDropUploader__button {
     border-color: ${COLORS.primary1};
     color: ${COLORS.primary1};
@@ -90,9 +97,10 @@ const StyledImageDropUploader = styled.div`
     .k-ImageDropUploader__manager {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.background2};
-      color: ${COLORS.grey1};
+      color: var(--color-grey-700);
       cursor: not-allowed;
     }
+
     .k-ImageDropUploader__manager__cropper {
       pointer-events: none;
       background-color: ${COLORS.background2};
@@ -101,17 +109,25 @@ const StyledImageDropUploader = styled.div`
         filter: grayscale(1) opacity(0.4);
       }
     }
+
+    .k-ImageDropUploader__button__text,
+    .k-ImageDropUploader__manager__text {
+      color: var(--color-grey-600);
+    }
   }
 
   .k-ImageDropUploader__button__title,
   .k-ImageDropUploader__manager__title {
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
+    line-height: 1em;
   }
   .k-ImageDropUploader__button__text,
   .k-ImageDropUploader__manager__text {
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-2)};
+    color: ${COLORS.grey1};
+    line-height: 1em;
   }
 
   .k-ImageDropUploader__manager {
@@ -125,6 +141,7 @@ const StyledImageDropUploader = styled.div`
     display: flex;
     gap: ${pxToRem(15)};
   }
+
   .k-ImageDropUploader__manager__cropper {
     background-color: ${COLORS.primary4};
     flex: 0 0 ${pxToRem(CROP_WIDTH)};
@@ -132,6 +149,7 @@ const StyledImageDropUploader = styled.div`
     height: var(--ImageDropUploader-cropHeight, ${pxToRem(CROP_WIDTH)});
     overflow: hidden;
     position: relative;
+    align-self: center;
 
     img {
       position: absolute;
@@ -380,12 +398,7 @@ export const ImageDropUploader = ({
             <span className="k-ImageDropUploader__button__title">
               {buttonTitle}
             </span>
-            <span
-              className={classNames('k-ImageDropUploader__button__text', {
-                'k-u-color-font1': !disabled,
-                'k-u-color-font2': disabled,
-              })}
-            >
+            <span className="k-ImageDropUploader__button__text">
               {buttonText}
             </span>
           </label>

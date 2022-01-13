@@ -144,13 +144,11 @@ const args = {
   buttonProps: {},
   buttonTitle: 'Upload an image',
   buttonText: (
-    <>
-      Ratio: 16/10 (800x500px)
-      <br />
-      Max size: 5MB
-      <br />
-      Format: JPG, PNG, GIF
-    </>
+    <div class=" k-u-flex k-u-flex-direction-column k-u-flex-gap-noneHalf">
+      <span>Recadrage&nbsp;: Carré (500x500px)</span>
+      <span>Taille max&nbsp;: 5&nbsp;Mo</span>
+      <span>Format&nbsp;: JPEG, PNG ou GIF.</span>
+    </div>
   ),
   managerTitle: 'Frame your image',
   managerText: 'You can move your image around the frame',
