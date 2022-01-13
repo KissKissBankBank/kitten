@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Tokens`: Update colors token in `tokens.json`.
 - Fix: `TextInput`: Improve placeholder style.
 - Fix: `ImageDropUploader`: Style fixes.
 - Fix: `HeroLayout`: Improve style.
