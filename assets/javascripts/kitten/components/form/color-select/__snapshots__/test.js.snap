@@ -2,7 +2,7 @@
 
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-htpNat jRpPzz k-FlexWrapper k-u-flex-alignItems-start"
+  className="sc-ifAKCX bEyifv k-FlexWrapper sc-EHOje joRwLW k-Form-ColorSelect"
   max={42}
   min={2}
   name="test-slider-input"
@@ -16,7 +16,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
   }
 >
   <div
-    className="sc-bxivhb edmqcL"
+    className="k-Form-ColorSelect__picker"
   >
     <div
       className="react-colorful"
@@ -104,12 +104,32 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
       />
     </svg>
   </div>
-  <input
-    className="sc-bdVaJa dBdJAo k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--tiny"
-    onBlur={[Function]}
-    onChange={[Function]}
-    spellCheck="false"
-    value="#006AFF"
-  />
+  <div
+    className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny k-Form-TextInputWithButton--orion"
+  >
+    <input
+      className="sc-bdVaJa dBdJAo k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--tiny"
+      disabled={false}
+      name="text"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyUp={[Function]}
+      spellCheck="false"
+      value="#006cff"
+    />
+    <button
+      className="sc-htpNat jgfDNT k-Button k-Form-TextInputWithButton__button k-Button--tiny k-Button--helium k-Button--orion k-Button--fit-content"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "--Button-border-radius": null,
+        }
+      }
+      type="button"
+    >
+      Confirm
+    </button>
+  </div>
 </div>
 `;

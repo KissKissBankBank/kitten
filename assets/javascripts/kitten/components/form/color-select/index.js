@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import range from 'lodash/fp/range'
 import debounce from 'lodash/fp/debounce'
 import colorConvert from 'color-convert'
-import { HsvColorPicker, HexColorInput } from 'react-colorful'
+import { HexColorPicker, HexColorInput } from 'react-colorful'
 import { ratio } from 'wcag-color'
 
 import { TextInputWithButton } from '../text-input-with-button'
@@ -34,10 +34,12 @@ const StyledColorSelect = styled(FlexWrapper)`
   .react-colorful {
     width: 100%;
   }
+  .react-colorful__interactive:focus-visible .react-colorful__pointer {
+    outline-style: auto;
+  }
 `
 
 const hexToHsv = color => {
-  console.log(color)
   const hsvArray = colorConvert.hex.hsv(color)
   return {
     h: Math.round(hsvArray[0]),
@@ -59,48 +61,53 @@ export const ColorSelect = ({
   className,
   inputProps,
   buttonProps,
+  buttonValue,
   ...props
 }) => {
   const [inputValue, setInputValue] = useState(value)
+  const [buttonEnabled, setButtonEnabled] = useState(true)
+  const [color, setColor] = useState(value)
 
-  // Input is hex, output is Hex, internal color is HSV
-  const [color, setColor] = useState(hexToHsv(value))
   useEffect(() => {
-    setInputValue(hsvToHex(color))
-    onChange(hsvToHex(color))
+    setInputValue(color)
+    onChange(color)
   }, [color])
   useEffect(() => {
-    handleChange(hexToHsv(value))
+    handleChange(value)
   }, [value])
 
-  const handleChange = value => {
-    if (contrastRatio === 0) { setColor(value) }
+  const handleChange = changedColor => {
+    if (contrastRatio === 0) {
+      setColor(changedColor)
+    }
 
-    const isContrastValid =
-      ratio(hsvToHex(value), contrastColor) > contrastRatio
+    const isContrastValid = ratio(changedColor, contrastColor) > contrastRatio
 
     if (!isContrastValid) {
-      const newValue = getClosestContrast({
-        color: value,
+      const newColor = getClosestContrast({
+        color: changedColor,
         contrastColor,
         contrastRatio,
       })
 
-      setColor(newValue)
+      setColor(newColor)
     } else {
-      setColor(value)
+      setColor(changedColor)
     }
   }
 
-  const handleButtonClick = event => {
-    console.log(inputValue)
-    handleChange(hexToHsv(inputValue))
+  const handleButtonClick = () => {
+    handleChange(inputValue)
   }
 
   const handleInputKey = event => {
-    if (event.key !== 'Enter') return
+    setButtonEnabled(
+      event.target.value.length === 4 || event.target.value.length === 7,
+    )
 
-    handleChange(hexToHsv(event.target.value))
+    if (event.key !== 'Enter' || !buttonEnabled) return
+
+    handleChange(event.target.value)
   }
 
   const handleInputChange = value => {
@@ -108,17 +115,17 @@ export const ColorSelect = ({
   }
 
   const getClosestContrast = ({ color }) => {
-    const { h, s, v } = color
+    const { h, s, v } = hexToHsv(color)
 
     let vRange = range(0)(Math.round(v))
 
     const newV = findClosestValidColor({ h, s, vRange })
 
-    return { h, s, v: newV }
+    return hsvToHex({ h, s, v: newV })
   }
 
   const getCoordinatesList = color => {
-    const { h } = color
+    const { h } = hexToHsv(color)
     const coords = []
 
     for (let i = 0; i <= SVG_COLS_COUNT; i++) {
@@ -165,7 +172,7 @@ export const ColorSelect = ({
       {...props}
     >
       <div className="k-Form-ColorSelect__picker">
-        <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
+        <HexColorPicker color={color} onChange={debounce(100)(handleChange)} />
         {contrastRatio !== 0 && (
           <svg
             viewBox={`0 0 ${SVG_COLS_COUNT} 100`}
@@ -186,12 +193,14 @@ export const ColorSelect = ({
         buttonProps={{
           fit: 'content',
           onClick: handleButtonClick,
-          ...buttonProps
+          disabled: !buttonEnabled,
+          ...buttonProps,
         }}
+        buttonValue={buttonValue}
         modifier="helium"
         as={HexColorInput}
-        color={hsvToHex(color)}
-        onKeyPress={handleInputKey}
+        color={color}
+        onKeyUp={handleInputKey}
         prefixed
         onChange={debounce(100)(handleInputChange)}
       />
@@ -206,6 +215,7 @@ ColorSelect.propTypes = {
   contrastRatio: PropTypes.number,
   inputProps: PropTypes.object,
   buttonProps: PropTypes.object,
+  buttonValue: PropTypes.node,
 }
 
 ColorSelect.defaultProps = {
@@ -215,4 +225,5 @@ ColorSelect.defaultProps = {
   contrastRatio: 4.5,
   inputProps: {},
   buttonProps: {},
+  buttonValue: 'Confirm',
 }
