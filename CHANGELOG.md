@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fixes:
+
+  - `HeroLayout`: Improve style.
 
 ## [6.18.0] - 2022-01-11
 
