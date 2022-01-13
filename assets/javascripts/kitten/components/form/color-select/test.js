@@ -8,11 +8,10 @@ describe('<ColorSelect />', () => {
       .create(
         <ColorSelect
           name="test-slider-input"
-          onChange={e => parseInt(e.target.value, 10)}
-          initialValue={5}
-          min={2}
-          max={42}
-          step={2}
+          onChange={() => {}}
+          value="#556954"
+          contrastColor="#555"
+          contrastRatio="3"
         />,
       )
       .toJSON()
