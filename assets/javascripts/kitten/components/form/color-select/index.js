@@ -1,39 +1,44 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { HexColorPicker } from 'react-colorful'
-import { ratio } from 'wcag-color'
+import styled from 'styled-components'
 import range from 'lodash/fp/range'
 import debounce from 'lodash/fp/debounce'
+import colorConvert from 'color-convert'
+import { HsvColorPicker } from 'react-colorful'
+import { ratio } from 'wcag-color'
 
-import { hexToHSL, HSLToHex } from './helpers/color-transforms'
+const SVG_COLS_COUNT = 10
 
-const getClosestContrast = ({ color, contrastColor, contrastRatio }) => {
-  const { h, s, l } = hexToHSL(color)
+const StyledColorSelect = styled.div`
+  position: relative;
 
-  let lRange = range(0)(Math.round(l))
-  let whileCount = 0
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 164px;
+    pointer-events: none;
 
-  // Binary search
-  while (lRange.length > 1 && whileCount < 100) {
-    whileCount += 1
-
-    const midPoint = Math.floor(lRange.length / 2)
-    const midPointColor = HSLToHex({ h, s, l: lRange[midPoint] })
-    const isMidPointColorValid =
-      ratio(midPointColor, contrastColor) > contrastRatio
-
-    if (isMidPointColorValid) {
-      lRange.splice(0, midPoint)
-    } else {
-      lRange.reverse()
-      lRange.splice(0, midPoint)
-      lRange.reverse()
+    path {
+      opacity: .5;
+      cursor: not-allowed;
     }
   }
+`
 
-  return HSLToHex({ h, s, l: lRange[0] })
-}
+const hsvArrayToObject = chromaHsvArray => ({
+  h: Math.round(chromaHsvArray[0]),
+  s: chromaHsvArray[1],
+  v: chromaHsvArray[2],
+})
+
+const hsvObjectToArray = hsvObject => ([
+  hsvObject.h,
+  hsvObject.s,
+  hsvObject.v,
+])
 
 export const ColorSelect = ({
   onChange,
@@ -42,10 +47,13 @@ export const ColorSelect = ({
   contrastRatio,
   ...props
 }) => {
-  const [color, setColor] = useState(value)
+  // Input is hex, output is Hex, internal color is HSV
+  const [color, setColor] = useState(hsvArrayToObject(colorConvert.hex.hsv(value)))
+  useEffect(() => { onChange(colorConvert.hsv.hex(...hsvObjectToArray(color))) }, [color])
+  useEffect(() => { handleChange(hsvArrayToObject(colorConvert.hex.hsv(value))) }, [value])
 
   const handleChange = color => {
-    const isContrastValid = ratio(color, contrastColor) > contrastRatio
+    const isContrastValid = ratio(colorConvert.hsv.hex(...hsvObjectToArray(color)), contrastColor) > contrastRatio
 
     if (!isContrastValid) {
       const newColor = getClosestContrast({
@@ -60,15 +68,70 @@ export const ColorSelect = ({
     }
   }
 
-  useEffect(() => {
-    onChange(color)
-  }, [color])
+  const getClosestContrast = ({ color }) => {
+    const { h, s, v } = color
 
-  useEffect(() => {
-    handleChange(value)
-  }, [value])
+    let vRange = range(0)(Math.round(v))
 
-  return <HexColorPicker color={color} onChange={debounce(100)(handleChange)} />
+    const newV = findClosestValidColor({h, s, vRange})
+
+    return { h, s, v: newV }
+  }
+
+  const getCoordinatesList = (color) => {
+    const { h } = color
+    const coords = []
+
+    for (let i = 0; i <= SVG_COLS_COUNT; i++) {
+      let vRange = range(0)(100)
+
+      const s = i * (100 / SVG_COLS_COUNT)
+
+      const v = findClosestValidColor({h, s, vRange})
+
+      coords.push(`L ${i} ${100 - v}`)
+    }
+
+    return coords.join(' ')
+  }
+
+  const findClosestValidColor = ({h, s, vRange}) => {
+    let whileCount = 0
+
+    // Binary search
+    while (vRange.length > 1 && whileCount < 100) {
+      whileCount += 1
+
+      const midPoint = Math.floor(vRange.length / 2)
+      const midPointColor = colorConvert.hsv.hex(...hsvObjectToArray({ h, s, v: vRange[midPoint] }))
+      const isMidPointColorValid =
+        ratio(midPointColor, contrastColor) > contrastRatio
+
+      if (!isMidPointColorValid) {
+        vRange.splice(midPoint, vRange.length)
+      }
+
+      if (isMidPointColorValid) {
+        vRange.splice(0, midPoint)
+      }
+    }
+
+    return vRange[0] + 1
+  }
+
+  return (
+    <StyledColorSelect>
+      <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
+      <svg viewBox={`0 0 ${SVG_COLS_COUNT} 100`} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path fill="white" d={`
+                  M0 0
+                  ${getCoordinatesList(color)}
+                  L${SVG_COLS_COUNT} 0
+                  z
+                `}/>
+      </svg>
+    </StyledColorSelect>
+  )
 }
 
 ColorSelect.propTypes = {
