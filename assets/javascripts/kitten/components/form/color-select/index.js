@@ -8,29 +8,36 @@ import colorConvert from 'color-convert'
 import { HsvColorPicker, HexColorInput } from 'react-colorful'
 import { ratio } from 'wcag-color'
 
-import { StyledInput } from '../text-input'
+import { TextInputWithButton } from '../text-input-with-button'
 import { FlexWrapper } from '../../../components/layout/flex-wrapper'
 
 const SVG_COLS_COUNT = 10
 
-const StyledColorSelect = styled.div`
-  position: relative;
+const StyledColorSelect = styled(FlexWrapper)`
+  .k-Form-ColorSelect__picker {
+    position: relative;
 
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 164px;
-    pointer-events: none;
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 164px;
+      pointer-events: none;
 
-    path {
-      opacity: 0.5;
+      path {
+        opacity: 0.5;
+      }
     }
+  }
+
+  .react-colorful {
+    width: 100%;
   }
 `
 
 const hexToHsv = color => {
+  console.log(color)
   const hsvArray = colorConvert.hex.hsv(color)
   return {
     h: Math.round(hsvArray[0]),
@@ -50,11 +57,16 @@ export const ColorSelect = ({
   error,
   disabled,
   className,
+  inputProps,
+  buttonProps,
   ...props
 }) => {
+  const [inputValue, setInputValue] = useState(value)
+
   // Input is hex, output is Hex, internal color is HSV
   const [color, setColor] = useState(hexToHsv(value))
   useEffect(() => {
+    setInputValue(hsvToHex(color))
     onChange(hsvToHex(color))
   }, [color])
   useEffect(() => {
@@ -62,6 +74,8 @@ export const ColorSelect = ({
   }, [value])
 
   const handleChange = value => {
+    if (contrastRatio === 0) { setColor(value) }
+
     const isContrastValid =
       ratio(hsvToHex(value), contrastColor) > contrastRatio
 
@@ -78,8 +92,19 @@ export const ColorSelect = ({
     }
   }
 
+  const handleButtonClick = event => {
+    console.log(inputValue)
+    handleChange(hexToHsv(inputValue))
+  }
+
+  const handleInputKey = event => {
+    if (event.key !== 'Enter') return
+
+    handleChange(hexToHsv(event.target.value))
+  }
+
   const handleInputChange = value => {
-    handleChange(hexToHsv(value))
+    setInputValue(value)
   }
 
   const getClosestContrast = ({ color }) => {
@@ -134,41 +159,43 @@ export const ColorSelect = ({
   }
 
   return (
-    <FlexWrapper
+    <StyledColorSelect
       gap={20}
-      className={classNames('k-u-flex-alignItems-start', className)}
+      className={classNames('k-Form-ColorSelect', className)}
       {...props}
     >
-      <StyledColorSelect>
+      <div className="k-Form-ColorSelect__picker">
         <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
-        <svg
-          viewBox={`0 0 ${SVG_COLS_COUNT} 100`}
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="white"
-            d={`M0 0 ${getCoordinatesList(color)} L${SVG_COLS_COUNT} 0z`}
-          />
-        </svg>
-      </StyledColorSelect>
-      <StyledInput
-        className={classNames(
-          'k-Form-TextInput',
-          'k-Form-TextInput--orion',
-          'k-Form-TextInput--tiny',
-          {
-            'k-Form-TextInput--valid': valid,
-            'k-Form-TextInput--error': error,
-            'k-Form-TextInput--disabled': disabled,
-          },
+        {contrastRatio !== 0 && (
+          <svg
+            viewBox={`0 0 ${SVG_COLS_COUNT} 100`}
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="white"
+              d={`M0 0 ${getCoordinatesList(color)} L${SVG_COLS_COUNT} 0z`}
+            />
+          </svg>
         )}
+      </div>
+      <TextInputWithButton
+        {...inputProps}
+        variant="orion"
+        size="tiny"
+        buttonProps={{
+          fit: 'content',
+          onClick: handleButtonClick,
+          ...buttonProps
+        }}
+        modifier="helium"
         as={HexColorInput}
         color={hsvToHex(color)}
-        onChange={debounce(1500)(handleInputChange)}
+        onKeyPress={handleInputKey}
         prefixed
+        onChange={debounce(100)(handleInputChange)}
       />
-    </FlexWrapper>
+    </StyledColorSelect>
   )
 }
 
@@ -177,6 +204,8 @@ ColorSelect.propTypes = {
   value: PropTypes.string,
   contrastColor: PropTypes.string,
   contrastRatio: PropTypes.number,
+  inputProps: PropTypes.object,
+  buttonProps: PropTypes.object,
 }
 
 ColorSelect.defaultProps = {
@@ -184,4 +213,6 @@ ColorSelect.defaultProps = {
   value: '#006cff',
   contrastColor: '#fff',
   contrastRatio: 4.5,
+  inputProps: {},
+  buttonProps: {},
 }
