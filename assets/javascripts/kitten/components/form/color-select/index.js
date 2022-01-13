@@ -5,8 +5,11 @@ import styled from 'styled-components'
 import range from 'lodash/fp/range'
 import debounce from 'lodash/fp/debounce'
 import colorConvert from 'color-convert'
-import { HsvColorPicker } from 'react-colorful'
+import { HsvColorPicker, HexColorInput } from 'react-colorful'
 import { ratio } from 'wcag-color'
+
+import { StyledInput } from '../text-input'
+import { FlexWrapper } from '../../../components/layout/flex-wrapper'
 
 const SVG_COLS_COUNT = 10
 
@@ -23,7 +26,6 @@ const StyledColorSelect = styled.div`
 
     path {
       opacity: 0.5;
-      cursor: not-allowed;
     }
   }
 `
@@ -36,13 +38,17 @@ const hexToHsv = color => {
     v: hsvArray[2],
   }
 }
-const hsvToHex = color => colorConvert.hsv.hex([color.h, color.s, color.v])
+const hsvToHex = color =>
+  `#${colorConvert.hsv.hex([color.h, color.s, color.v])}`
 
 export const ColorSelect = ({
   onChange,
   value,
   contrastColor,
   contrastRatio,
+  valid,
+  error,
+  disabled,
   ...props
 }) => {
   // Input is hex, output is Hex, internal color is HSV
@@ -54,21 +60,25 @@ export const ColorSelect = ({
     handleChange(hexToHsv(value))
   }, [value])
 
-  const handleChange = color => {
+  const handleChange = value => {
     const isContrastValid =
-      ratio(hsvToHex(color), contrastColor) > contrastRatio
+      ratio(hsvToHex(value), contrastColor) > contrastRatio
 
     if (!isContrastValid) {
-      const newColor = getClosestContrast({
-        color,
+      const newValue = getClosestContrast({
+        color: value,
         contrastColor,
         contrastRatio,
       })
 
-      setColor(newColor)
+      setColor(newValue)
     } else {
-      setColor(color)
+      setColor(value)
     }
+  }
+
+  const handleInputChange = value => {
+    handleChange(hexToHsv(value))
   }
 
   const getClosestContrast = ({ color }) => {
@@ -92,7 +102,7 @@ export const ColorSelect = ({
 
       const v = findClosestValidColor({ h, s, vRange })
 
-      coords.push(`L ${i} ${100 - v}`)
+      coords.push(`L${i} ${100 - v}`)
     }
 
     return coords.join(' ')
@@ -123,24 +133,36 @@ export const ColorSelect = ({
   }
 
   return (
-    <StyledColorSelect>
-      <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
-      <svg
-        viewBox={`0 0 ${SVG_COLS_COUNT} 100`}
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-      >
-        <path
-          fill="white"
-          d={`
-                  M0 0
-                  ${getCoordinatesList(color)}
-                  L${SVG_COLS_COUNT} 0
-                  z
-                `}
-        />
-      </svg>
-    </StyledColorSelect>
+    <FlexWrapper gap={20} className="k-u-flex-alignItems-start">
+      <StyledColorSelect>
+        <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
+        <svg
+          viewBox={`0 0 ${SVG_COLS_COUNT} 100`}
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="white"
+            d={`M0 0 ${getCoordinatesList(color)} L${SVG_COLS_COUNT} 0z`}
+          />
+        </svg>
+      </StyledColorSelect>
+      <StyledInput
+        className={classNames(
+          'k-Form-TextInput',
+          'k-Form-TextInput--orion',
+          'k-Form-TextInput--tiny',
+          {
+            'k-Form-TextInput--valid': valid,
+            'k-Form-TextInput--error': error,
+            'k-Form-TextInput--disabled': disabled,
+          },
+        )}
+        as={HexColorInput}
+        color={hsvToHex(color)}
+        onChange={debounce(1500)(handleInputChange)}
+      />
+    </FlexWrapper>
   )
 }
 
