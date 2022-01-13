@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `TextInput`: Improve placeholder style.
 - Fix: `ImageDropUploader`: Style fixes.
 - Fix: `HeroLayout`: Improve style.
+- Fix: `TagButton`: Fix test to remove deprecation warning.
 
 ## [6.18.0] - 2022-01-11
 
