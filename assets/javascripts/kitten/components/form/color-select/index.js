@@ -49,6 +49,7 @@ export const ColorSelect = ({
   valid,
   error,
   disabled,
+  className,
   ...props
 }) => {
   // Input is hex, output is Hex, internal color is HSV
@@ -133,7 +134,11 @@ export const ColorSelect = ({
   }
 
   return (
-    <FlexWrapper gap={20} className="k-u-flex-alignItems-start">
+    <FlexWrapper
+      gap={20}
+      className={classNames('k-u-flex-alignItems-start', className)}
+      {...props}
+    >
       <StyledColorSelect>
         <HsvColorPicker color={color} onChange={debounce(100)(handleChange)} />
         <svg
@@ -161,6 +166,7 @@ export const ColorSelect = ({
         as={HexColorInput}
         color={hsvToHex(color)}
         onChange={debounce(1500)(handleInputChange)}
+        prefixed
       />
     </FlexWrapper>
   )

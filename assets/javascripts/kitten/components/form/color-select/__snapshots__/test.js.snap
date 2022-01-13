@@ -2,97 +2,114 @@
 
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa iKBwfb"
+  className="sc-htpNat jRpPzz k-FlexWrapper k-u-flex-alignItems-start"
+  max={42}
+  min={2}
+  name="test-slider-input"
+  step={2}
+  style={
+    Object {
+      "--flexWrapper-direction": "column",
+      "--flexWrapper-gap": "1.25rem",
+      "--flexWrapper-padding": null,
+    }
+  }
 >
   <div
-    className="react-colorful"
+    className="sc-bxivhb edmqcL"
   >
     <div
-      className="react-colorful__saturation"
-      style={
-        Object {
-          "backgroundColor": "hsl(215, 100%, 50%)",
+      className="react-colorful"
+    >
+      <div
+        className="react-colorful__saturation"
+        style={
+          Object {
+            "backgroundColor": "hsl(215, 100%, 50%)",
+          }
         }
-      }
-    >
-      <div
-        aria-label="Color"
-        aria-valuetext="Saturation 100%, Brightness 100%"
-        className="react-colorful__interactive"
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-        role="slider"
-        tabIndex={0}
       >
         <div
-          className="react-colorful__pointer react-colorful__saturation-pointer"
-          style={
-            Object {
-              "left": "100%",
-              "top": "0%",
-            }
-          }
+          aria-label="Color"
+          aria-valuetext="Saturation 100%, Brightness 100%"
+          className="react-colorful__interactive"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          role="slider"
+          tabIndex={0}
         >
           <div
-            className="react-colorful__pointer-fill"
+            className="react-colorful__pointer react-colorful__saturation-pointer"
             style={
               Object {
-                "backgroundColor": "hsl(215, 100%, 50%)",
+                "left": "100%",
+                "top": "0%",
               }
             }
-          />
+          >
+            <div
+              className="react-colorful__pointer-fill"
+              style={
+                Object {
+                  "backgroundColor": "hsl(215, 100%, 50%)",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="react-colorful__hue react-colorful__last-control"
+      >
+        <div
+          aria-label="Hue"
+          aria-valuetext={215}
+          className="react-colorful__interactive"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          role="slider"
+          tabIndex={0}
+        >
+          <div
+            className="react-colorful__pointer react-colorful__hue-pointer"
+            style={
+              Object {
+                "left": "59.72222222222222%",
+                "top": "50%",
+              }
+            }
+          >
+            <div
+              className="react-colorful__pointer-fill"
+              style={
+                Object {
+                  "backgroundColor": "hsl(215, 100%, 50%)",
+                }
+              }
+            />
+          </div>
         </div>
       </div>
     </div>
-    <div
-      className="react-colorful__hue react-colorful__last-control"
+    <svg
+      preserveAspectRatio="none"
+      viewBox="0 0 10 100"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <div
-        aria-label="Hue"
-        aria-valuetext={215}
-        className="react-colorful__interactive"
-        onKeyDown={[Function]}
-        onMouseDown={[Function]}
-        onTouchStart={[Function]}
-        role="slider"
-        tabIndex={0}
-      >
-        <div
-          className="react-colorful__pointer react-colorful__hue-pointer"
-          style={
-            Object {
-              "left": "59.72222222222222%",
-              "top": "50%",
-            }
-          }
-        >
-          <div
-            className="react-colorful__pointer-fill"
-            style={
-              Object {
-                "backgroundColor": "hsl(215, 100%, 50%)",
-              }
-            }
-          />
-        </div>
-      </div>
-    </div>
+      <path
+        d="M0 0 L0 53 L1 50 L2 46 L3 42 L4 38 L5 33 L6 27 L7 21 L8 14 L9 6 L10 0 L10 0z"
+        fill="white"
+      />
+    </svg>
   </div>
-  <svg
-    preserveAspectRatio="none"
-    viewBox="0 0 10 100"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="
-                  M0 0
-                  L 0 53 L 1 50 L 2 46 L 3 42 L 4 38 L 5 33 L 6 27 L 7 21 L 8 14 L 9 6 L 10 0
-                  L10 0
-                  z
-                "
-      fill="white"
-    />
-  </svg>
+  <input
+    className="sc-bdVaJa dBdJAo k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--tiny"
+    onBlur={[Function]}
+    onChange={[Function]}
+    spellCheck="false"
+    value="#006AFF"
+  />
 </div>
 `;
