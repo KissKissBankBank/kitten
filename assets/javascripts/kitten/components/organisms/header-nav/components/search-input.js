@@ -85,6 +85,38 @@ export const SearchInput = ({
     searchInputProps.onChange(event)
   }
 
+  const handleKeyDown = event => {
+    if (!isDropdownExpanded) return
+    const arrowKeys = ['ArrowDown', 'ArrowUp']
+    if (!arrowKeys.includes(event.key)) return
+
+    const wrapper = event.target.closest('form.k-HeaderNav__searchInput')
+    const focusableElements = Array.from(
+      wrapper.querySelectorAll(
+        '.k-HeaderNav__floatingDropdown button, .k-HeaderNav__floatingDropdown a, input',
+      ),
+    )
+    const focusedElementIndex = focusableElements.findIndex(
+      el => el === document.activeElement,
+    )
+
+    let destination = 0
+
+    if (
+      event.key === 'ArrowDown' &&
+      focusedElementIndex < focusableElements.length - 1
+    ) {
+      destination = focusedElementIndex + 1
+    }
+
+    if (event.key === 'ArrowUp' && focusedElementIndex > 0) {
+      destination = focusedElementIndex - 1
+    }
+
+    event.preventDefault()
+    focusableElements[destination].focus()
+  }
+
   return (
     <form
       {...props}
@@ -97,6 +129,7 @@ export const SearchInput = ({
           'k-HeaderNav__searchInput--mobileInvisible': isMobileInvisible,
         },
       )}
+      onKeyDown={handleKeyDown}
     >
       <TextInputWithButton
         size="tiny"
