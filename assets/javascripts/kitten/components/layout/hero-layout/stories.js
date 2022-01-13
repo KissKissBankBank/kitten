@@ -123,13 +123,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const StyledFlexWrapper = styled(FlexWrapper)`
-  flex-direction: row;
-  @media ${mq.mobileAndTablet} {
-    flex-direction: column;
-  }
-`
-
 export default {
   title: 'Layout/HeroLayout',
   component: HeroLayout,
@@ -219,7 +212,10 @@ export const Default = ({
               <span className="kiss-ProjectPage-hero-number">538</span>
               <span className="kiss-ProjectPage-hero-text">abonnés</span>
             </StyledCounter>
-            <StyledFlexWrapper gap={5}>
+            <FlexWrapper
+              gap={5}
+              className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
+            >
               <FlexWrapper direction="row" gap={5}>
                 <Button fit="content" size="tiny" rounded>
                   <AirplaneIconNext />
@@ -244,7 +240,7 @@ export const Default = ({
                   S’abonner
                 </Button>
               </FlexWrapper>
-            </StyledFlexWrapper>
+            </FlexWrapper>
           </FlexWrapper>
         </HeroLayout.Hero.Block>
       </HeroLayout.Hero>
