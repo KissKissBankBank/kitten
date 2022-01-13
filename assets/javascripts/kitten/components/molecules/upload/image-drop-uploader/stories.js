@@ -145,15 +145,9 @@ const args = {
   buttonTitle: 'Upload an image',
   buttonText: (
     <div class=" k-u-flex k-u-flex-direction-column k-u-flex-gap-noneHalf">
-      <span>
-        Recadrage&nbsp;: Carré (500x500px)
-      </span>
-      <span>
-        Taille max&nbsp;: 5&nbsp;Mo
-      </span>
-      <span>
-        Format&nbsp;: JPEG, PNG ou GIF.
-      </span>
+      <span>Recadrage&nbsp;: Carré (500x500px)</span>
+      <span>Taille max&nbsp;: 5&nbsp;Mo</span>
+      <span>Format&nbsp;: JPEG, PNG ou GIF.</span>
     </div>
   ),
   managerTitle: 'Frame your image',
@@ -170,7 +164,7 @@ const args = {
   dimensionErrorText: 'Image dimensions too big (4096x4096px max)',
   acceptedImageDimensions: { width: 4096, height: 4096 },
   cancelButtonText: 'Cancel',
-  cropRatio: 10 / 10,
+  cropRatio: 16 / 10,
   canCrop: true,
   canCancel: true,
   fileInputProps: {},

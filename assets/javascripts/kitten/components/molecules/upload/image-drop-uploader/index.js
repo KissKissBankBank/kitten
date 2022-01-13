@@ -40,7 +40,6 @@ const StyledImageDropUploader = styled.div`
     box-sizing: border-box;
     display: flex;
     width: 100%;
-    height: ${pxToRem(125)};
     padding: ${pxToRem(15)};
     border-radius: var(--border-radius-m);
     border: var(--border-width) dashed var(--color-grey-400);
@@ -135,7 +134,6 @@ const StyledImageDropUploader = styled.div`
     border-radius: var(--border-radius-m);
     padding: ${pxToRem(15)} ${pxToRem(45)} ${pxToRem(15)} ${pxToRem(15)};
     width: 100%;
-    height: ${pxToRem(125)};
     position: relative;
     box-sizing: border-box;
     border: var(--border);
