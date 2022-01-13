@@ -217,13 +217,13 @@ export const Default = ({
               className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
             >
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="tiny" rounded>
+                <Button fit="content" size="regular" rounded>
                   <AirplaneIconNext />
                   <span>Partager</span>
                 </Button>
                 <Button
                   fit="content"
-                  size="tiny"
+                  size="regular"
                   rounded
                   className="k-u-hidden@l-up"
                 >
@@ -232,11 +232,11 @@ export const Default = ({
                 </Button>
               </FlexWrapper>
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="tiny" rounded>
+                <Button fit="content" size="regular" rounded>
                   <StarIconNext />
                   <span>Ajouter aux favoris</span>
                 </Button>
-                <Button fit="content" size="tiny" modifier="helium" rounded>
+                <Button fit="content" size="regular" modifier="helium" rounded>
                   S’abonner
                 </Button>
               </FlexWrapper>
