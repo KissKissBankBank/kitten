@@ -86,7 +86,7 @@ const StyledCounter = styled.div`
 const StyledGridCol = styled(GridCol)`
   display: flex;
   gap: ${pxToRem(20)};
-  padding: 0 ${pxToRem(20)} !important;
+  padding-bottom: ${pxToRem(20)};
 
   svg {
     margin-top: ${pxToRem(5)};
@@ -120,6 +120,13 @@ const GlobalStyle = createGlobalStyle`
     .k-HeaderNav--isStuck + * .k-HeroLayout__sticky__inside {
       top: ${pxToRem(HEADER_HEIGHT + 20)} !important;
     }
+  }
+`
+
+const StyledFlexWrapper = styled(FlexWrapper)`
+  flex-direction: row;
+  @media ${mq.mobileAndTablet} {
+    flex-direction: column;
   }
 `
 
@@ -205,55 +212,39 @@ export const Default = ({
             <Title noMargin modifier="primary">
               {projectTitle}
             </Title>
-            <Text
-              tag="p"
-              weight="regular"
-              size="giant"
-              className="k-u-margin-none k-u-letter-spacing-10"
-            >
+            <Text tag="p" size="giant" className="k-u-margin-none">
               {projectSlogan}
             </Text>
             <StyledCounter>
               <span className="kiss-ProjectPage-hero-number">538</span>
               <span className="kiss-ProjectPage-hero-text">abonnés</span>
             </StyledCounter>
-            <FlexWrapper direction="row" gap={5}>
-              <Button
-                fit="icon"
-                size="tiny"
-                rounded
-                className="k-u-hidden@l-up"
-              >
-                <EnvelopeIconNext />
-              </Button>
-              <Button
-                fit="icon"
-                size="tiny"
-                rounded
-                className="k-u-hidden@l-up"
-              >
-                <AirplaneIconNext />
-              </Button>
-              <Button
-                fit="content"
-                size="tiny"
-                rounded
-                className="k-u-hidden@m-down"
-              >
-                <AirplaneIconNext />
-                <span>Partager</span>
-              </Button>
-              <Button fit="content" size="tiny" rounded>
-                <StarIconNext />
-                <span className="k-u-hidden@m-down">Ajouter aux favoris</span>
-                <span className="k-u-hidden@xxs-down k-u-hidden@l-up">
-                  Favoris
-                </span>
-              </Button>
-              <Button fit="content" size="tiny" modifier="helium" rounded>
-                S’abonner
-              </Button>
-            </FlexWrapper>
+            <StyledFlexWrapper gap={5}>
+              <FlexWrapper direction="row" gap={5}>
+                <Button fit="content" size="tiny" rounded>
+                  <AirplaneIconNext />
+                  <span>Partager</span>
+                </Button>
+                <Button
+                  fit="content"
+                  size="tiny"
+                  rounded
+                  className="k-u-hidden@l-up"
+                >
+                  <EnvelopeIconNext />
+                  <span>Nous écrire</span>
+                </Button>
+              </FlexWrapper>
+              <FlexWrapper direction="row" gap={5}>
+                <Button fit="content" size="tiny" rounded>
+                  <StarIconNext />
+                  <span>Ajouter aux favoris</span>
+                </Button>
+                <Button fit="content" size="tiny" modifier="helium" rounded>
+                  S’abonner
+                </Button>
+              </FlexWrapper>
+            </StyledFlexWrapper>
           </FlexWrapper>
         </HeroLayout.Hero.Block>
       </HeroLayout.Hero>
@@ -266,7 +257,7 @@ export const Default = ({
               col-s="6"
               col-l="4"
               offset-l="2"
-              className="k-u-align-center@l-up k-u-margin-bottom-triple"
+              className="k-u-margin-bottom-triple"
             >
               <Title tag="h2" noMargin modifier="tertiary">
                 Abonnez-vous
@@ -294,27 +285,15 @@ export const Default = ({
                   />
                 }
               >
-                <Paragraph
-                  modifier="primary"
-                  tag="span"
-                  className="k-u-line-height-1-25"
-                >
+                <Text size="default" className="k-u-line-height-1-25">
                   Contribuez à faire vivre ce projet
-                </Paragraph>
-                <Paragraph
-                  modifier="primary"
-                  tag="span"
-                  className="k-u-line-height-1-25"
-                >
+                </Text>
+                <Text size="default" className="k-u-line-height-1-25">
                   Recevez un contenu exclusif
-                </Paragraph>
-                <Paragraph
-                  modifier="primary"
-                  tag="span"
-                  className="k-u-line-height-1-25"
-                >
+                </Text>
+                <Text size="default" className="k-u-line-height-1-25">
                   Faites partie du cercle privilégié d’abonnés
-                </Paragraph>
+                </Text>
               </List>
             </GridCol>
           </Grid>
@@ -322,7 +301,7 @@ export const Default = ({
             darker
             className="k-u-margin-top-quintuple k-u-margin-bottom-double k-u-hidden@xs-down"
           />
-          <Grid className="k-u-hidden@xs-down">
+          <Grid className="k-u-margin-top-triple">
             <GridCol col="12">
               <Text
                 tag="h3"
@@ -339,39 +318,55 @@ export const Default = ({
                 color="var(--color-grey-900)"
                 secondaryColor="var(--color-primary-500)"
               />
-              <Text>
+              <Paragraph
+                tag="span"
+                modifier="secondary"
+                className="k-u-line-height-1-25"
+              >
                 Sélectionnez un abonnement ou faites un don récurrent du montant
                 de votre choix
-              </Text>
+              </Paragraph>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
               <ColorCheckedShieldIconNext
                 color="var(--color-grey-900)"
                 secondaryColor="var(--color-primary-500)"
               />
-              <Text>
+              <Paragraph
+                tag="span"
+                modifier="secondary"
+                className="k-u-line-height-1-25"
+              >
                 Validez votre abonnement via notre formulaire de paiement
                 sécurisé
-              </Text>
+              </Paragraph>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
               <GiftIconNext
                 color="var(--color-grey-900)"
                 secondaryColor="var(--color-primary-500)"
               />
-              <Text>
+              <Paragraph
+                tag="span"
+                modifier="secondary"
+                className="k-u-line-height-1-25"
+              >
                 Recevez chaque mois ou chaque trimestre le contenu de votre
                 abonnement
-              </Text>
+              </Paragraph>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
               <CrossCircleIconNext
                 color="var(--color-grey-900)"
                 secondaryColor="var(--color-primary-500)"
               />
-              <Text>
+              <Paragraph
+                tag="span"
+                modifier="secondary"
+                className="k-u-line-height-1-25"
+              >
                 Résiliez votre abonnement à tout moment depuis votre compte
-              </Text>
+              </Paragraph>
             </StyledGridCol>
           </Grid>
         </Container>
@@ -535,83 +530,6 @@ export const Default = ({
           </p>
         </HeroLayout.Main.Content>
       </HeroLayout.Main>
-
-      <HeroLayout.Promo className="k-u-hidden@s-up">
-        <Container>
-          <Grid>
-            <GridCol col="12">
-              <Text
-                tag="h3"
-                weight="bold"
-                transform="uppercase"
-                size="tiny"
-                className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-single"
-              >
-                Comment ça marche&nbsp;?
-              </Text>
-            </GridCol>
-            <StyledGridCol
-              col="12"
-              col-s="6"
-              col-l="3"
-              className="k-u-flex-alignItems-center k-u-margin-top-double"
-            >
-              <HeartWithClickIconNext
-                color="var(--color-grey-900)"
-                secondaryColor="var(--color-primary-500)"
-              />
-              <Text size="tiny">
-                Sélectionnez un abonnement ou faites un don récurrent du montant
-                de votre choix
-              </Text>
-            </StyledGridCol>
-            <StyledGridCol
-              col="12"
-              col-s="6"
-              col-l="3"
-              className="k-u-flex-alignItems-center k-u-margin-top-double"
-            >
-              <ColorCheckedShieldIconNext
-                color="var(--color-grey-900)"
-                secondaryColor="var(--color-primary-500)"
-              />
-              <Text size="tiny">
-                Validez votre abonnement via notre formulaire de paiement
-                sécurisé
-              </Text>
-            </StyledGridCol>
-            <StyledGridCol
-              col="12"
-              col-s="6"
-              col-l="3"
-              className="k-u-flex-alignItems-center k-u-margin-top-double"
-            >
-              <GiftIconNext
-                color="var(--color-grey-900)"
-                secondaryColor="var(--color-primary-500)"
-              />
-              <Text size="tiny">
-                Recevez chaque mois ou chaque trimestre le contenu de votre
-                abonnement
-              </Text>
-            </StyledGridCol>
-            <StyledGridCol
-              col="12"
-              col-s="6"
-              col-l="3"
-              className="k-u-flex-alignItems-center k-u-margin-top-double"
-            >
-              <CrossCircleIconNext
-                color="var(--color-grey-900)"
-                secondaryColor="var(--color-primary-500)"
-              />
-              <Text size="tiny">
-                Résiliez votre abonnement à tout moment depuis votre compte
-              </Text>
-            </StyledGridCol>
-          </Grid>
-        </Container>
-      </HeroLayout.Promo>
     </HeroLayout>
     <Footer className="k-u-margin-top-quintuple" />
   </>
