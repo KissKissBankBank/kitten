@@ -21,6 +21,20 @@ const StyledAccordeon = styled.div`
     margin-top: ${pxToRem(15)};
   }
 
+  .k-Accordeon__item:hover {
+    .k-Accordeon__header,
+    .k-Accordeon__content {
+      border-color: var(--color-grey-500);
+    }
+  }
+
+  .k-Accordeon__item.k-Accordeon__item--expanded {
+    .k-Accordeon__header,
+    .k-Accordeon__content {
+      border-color: var(--color-grey-900);
+    }
+  }
+
   .k-Accordeon__header {
     display: block;
 
@@ -37,6 +51,10 @@ const StyledAccordeon = styled.div`
     background-color: transparent;
     cursor: pointer;
     text-align: left;
+
+    &:hover:active {
+      border-color: var(--color-grey-900);
+    }
   }
 
   .k-Accordeon__content {
