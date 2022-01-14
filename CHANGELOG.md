@@ -4,14 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
-- Feature: `Tokens`: Update colors token in `tokens.json`.
-- Fix: `TextInput`: Improve placeholder style.
 - Feature: `ColorSelect`: Add component.
 - Fix: `TextInputWithButton`: Fix `disabled` prop priority.
-- Fix: `ImageDropUploader`: Style fixes.
-- Fix: `HeroLayout`: Improve style.
-- Fix: `TagButton`: Fix test to remove deprecation warning.
+
+## [6.19.0] - 2022-01-14
+
+Features: 
+
+- `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
+- `Tokens`: Update colors token in `tokens.json`.
+
+Fixes:
+
+- `TextInput`: Improve placeholder style.
+- `ImageDropUploader`: Style fixes.
+- `HeroLayout`: Improve style.
+- `TagButton`: Fix test to remove deprecation warning.
 
 ## [6.18.0] - 2022-01-11
 

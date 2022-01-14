@@ -106,10 +106,34 @@ export var SearchInput = function SearchInput(_ref) {
     searchInputProps.onChange(event);
   };
 
+  var handleKeyDown = function handleKeyDown(event) {
+    if (!isDropdownExpanded) return;
+    var arrowKeys = ['ArrowDown', 'ArrowUp'];
+    if (!arrowKeys.includes(event.key)) return;
+    var wrapper = event.target.closest('form.k-HeaderNav__searchInput');
+    var focusableElements = Array.from(wrapper.querySelectorAll('.k-HeaderNav__floatingDropdown button, .k-HeaderNav__floatingDropdown a, input'));
+    var focusedElementIndex = focusableElements.findIndex(function (el) {
+      return el === document.activeElement;
+    });
+    var destination = 0;
+
+    if (event.key === 'ArrowDown' && focusedElementIndex < focusableElements.length - 1) {
+      destination = focusedElementIndex + 1;
+    }
+
+    if (event.key === 'ArrowUp' && focusedElementIndex > 0) {
+      destination = focusedElementIndex - 1;
+    }
+
+    event.preventDefault();
+    focusableElements[destination].focus();
+  };
+
   return /*#__PURE__*/React.createElement("form", _extends({}, props, dropdownProps, {
     className: classNames('k-HeaderNav__searchInput', className, dropdownProps.className, {
       'k-HeaderNav__searchInput--mobileInvisible': isMobileInvisible
-    })
+    }),
+    onKeyDown: handleKeyDown
   }), /*#__PURE__*/React.createElement(TextInputWithButton, _extends({
     size: "tiny",
     rounded: true,
