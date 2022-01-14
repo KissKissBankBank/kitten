@@ -41,7 +41,7 @@ const StyledCheckableButton = styled(Button)`
       background-image: url(${getCircleIcon(COLORS.error)});
     }
     &:disabled::after {
-      background-image: url(${getCircleIcon(COLORS.line2)});
+      background-image: url(${getCircleIcon(COLORS.font3)});
     }
   }
 
