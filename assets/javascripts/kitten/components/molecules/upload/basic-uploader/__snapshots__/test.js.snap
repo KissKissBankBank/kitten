@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-htpNat jlHrvy k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat cTqVRW k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa jqFNVL k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa bdPpdu k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
@@ -44,7 +44,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-htpNat jlHrvy k-BasicUploader k-BasicUploader--ready"
+  className="sc-htpNat cTqVRW k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -53,7 +53,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa jqFNVL k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa bdPpdu k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
@@ -86,7 +86,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-htpNat jlHrvy k-BasicUploader k-BasicUploader--valid"
+  className="sc-htpNat cTqVRW k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -96,7 +96,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa jqFNVL k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+    className="sc-bdVaJa bdPpdu k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
