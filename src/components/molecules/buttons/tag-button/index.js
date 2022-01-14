@@ -63,7 +63,7 @@ TagButton.propTypes = {
   size: _propTypes.default.oneOf(['tiny', 'regular', 'big', 'huge']),
   icon: _propTypes.default.bool,
   active: _propTypes.default.bool,
-  selected: (0, _deprecated.default)(_propTypes.default.bool, 'Please use `active` instead.'),
+  selected: (0, _deprecated.default)(_propTypes.default.bool, 'Please use `active` instead'),
   variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 TagButton.defaultProps = {
