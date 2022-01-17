@@ -18,7 +18,6 @@ export const CubeIconNext = ({ color, title, ...props }) => (
 
 CubeIconNext.propTypes = {
   color: PropTypes.string,
-  secondaryColor: PropTypes.string,
   title: PropTypes.string,
 }
 

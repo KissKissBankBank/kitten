@@ -161,8 +161,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
         </IconContainer>
-        <IconContainer suffix="bgColor">
-          <HeartIconNext color={colorInput} bgColor={bgColorInput} />
+        <IconContainer>
+          <HeartIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <SunIconNext color={colorInput} />
@@ -170,8 +170,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         <IconContainer>
           <EnvelopeIconNext color={colorInput} />
         </IconContainer>
-        <IconContainer suffix="bgColor">
-          <StarIconNext color={colorInput} bgColor={bgColorInput} />
+        <IconContainer>
+          <StarIconNext color={colorInput}/>
         </IconContainer>
         <IconContainer>
           <EditIconNext color={colorInput} />
@@ -188,8 +188,11 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
       </Group>
 
       <Group title="Icônes remplis">
-      <IconContainer>
-          <HeartIconNext color={colorInput} bgColor="#fff" />
+      <IconContainer suffix="bgColor">
+          <HeartIconNext color={colorInput} bgColor="#222" />
+        </IconContainer>
+        <IconContainer suffix="bgColor">
+          <StarIconNext color={colorInput} bgColor="#222" />
         </IconContainer>
       </Group>
 
