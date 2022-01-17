@@ -178,8 +178,8 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         <svg
           aria-hidden="true"
           focusable="false"
-          height="17"
-          viewBox="0 0 20 17"
+          height="18"
+          viewBox="0 0 20 18"
           width="20"
           xmlns="http://www.w3.org/2000/svg"
         >
