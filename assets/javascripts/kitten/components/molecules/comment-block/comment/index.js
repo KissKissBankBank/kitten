@@ -121,7 +121,6 @@ export const Comment = React.forwardRef(
     {
       text,
       ownerName,
-      ownerUrl,
       avatarImgProps,
       commentDate,
       footer,
@@ -146,16 +145,14 @@ export const Comment = React.forwardRef(
     >
       <div className="k-Comment__header">
         <div className="k-Comment__header__meta">
-          <a href={ownerUrl}>
-            <img
-              alt=""
-              {...avatarImgProps}
-              className="k-Comment__header__image"
-            />
-          </a>
-          <a href={ownerUrl} className="k-u-link k-u-link-font1 k-u-ellipsis">
+          <img
+            alt=""
+            {...avatarImgProps}
+            className="k-Comment__header__image"
+          />
+          <Text weight="regular" color="font1" className="k-u-ellipsis">
             {ownerName}
-          </a>
+          </Text>
           <Text size="micro" aria-hidden>
             •
           </Text>
@@ -214,7 +211,7 @@ Comment.LikeButton = ({
 
 Comment.propTypes = {
   ownerName: PropTypes.string,
-  ownerUrl: PropTypes.string,
+  ownerUrl: deprecated(PropTypes.string, 'Not used anymore'),
   avatarImgProps: PropTypes.object,
   commentDate: PropTypes.string,
   headerActions: PropTypes.node,
@@ -232,7 +229,6 @@ Comment.propTypes = {
 Comment.defaultProps = {
   footer: null,
   ownerName: '',
-  ownerUrl: '',
   headerActions: null,
   avatarImgProps: {},
   commentDate: '',
