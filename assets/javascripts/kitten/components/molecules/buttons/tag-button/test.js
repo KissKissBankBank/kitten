@@ -41,10 +41,10 @@ describe('<TagButton />', () => {
     })
   })
 
-  describe('with `selected` prop', () => {
+  describe('with `active` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TagButton selected>MyButton</TagButton>)
+        .create(<TagButton active>MyButton</TagButton>)
         .toJSON()
     })
 
