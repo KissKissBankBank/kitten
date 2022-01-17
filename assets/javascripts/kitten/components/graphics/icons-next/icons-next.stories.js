@@ -15,6 +15,7 @@ import {
   EyeIconNext,
   FacebookIconNext,
   FilterIconNext,
+  GiftIcon,
   GiftIconNext,
   HeartIconNext,
   HeartWithClickIconNext,
@@ -23,8 +24,10 @@ import {
   InstagramIconNext,
   LargeArrowIconNext,
   LinkedinIconNext,
+  LockOutlineIcon,
   MessengerIconNext,
   PlusIconNext,
+  RefundIcon,
   SpeechBubbleIconNext,
   StarIconNext,
   StatsIconNext,
@@ -184,6 +187,15 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <BankCardIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <RefundIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <GiftIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <LockOutlineIcon color={colorInput} />
         </IconContainer>
       </Group>
 

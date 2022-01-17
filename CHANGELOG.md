@@ -8,6 +8,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `BankCardIconNext`,
   - `CubeIconNext`
 - Feature: `StarIconNext`: Add `bgColor` prop.
+- Feature: `Icons`: Move icons :
+  - `RefundIcon`,
+  - `GiftIcon`,
+  - `LockOutlineIcon`
+to `icon-next` file.
 
 ## [6.19.0] - 2022-01-14
 
