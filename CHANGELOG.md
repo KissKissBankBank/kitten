@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `StarIconNext`: Add `bgColor` prop.
+
 ## [6.19.0] - 2022-01-14
 
 Features: 
