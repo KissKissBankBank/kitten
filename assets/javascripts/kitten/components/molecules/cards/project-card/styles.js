@@ -49,15 +49,29 @@ export const StyledCard = styled.div`
   }
 
   .k-ProjectCard__image {
+    position: relative;
     overflow: hidden;
     flex: 0 0 auto;
 
     .k-ProjectCard__image__image {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 10;
       object-fit: cover;
       object-position: center;
+      @supports (aspect-ratio: 16 / 10) {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    @supports not (aspect-ratio: 16 / 10) {
+      height: 0;
+      padding-bottom: calc((10 / 16) * 100%);
+
+      .k-ProjectCard__image__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -78,10 +92,10 @@ export const StyledCard = styled.div`
     left: ${pxToRem(15)};
     max-width: calc(100% - ${pxToRem(2 * (10 + 15))});
 
-    line-height: ${pxToRem(19)};
+    line-height: ${pxToRem(22)};
     background-color: var(--projectCard-statusColor);
     border-radius: var(--border-radius-rounded);
-    padding: ${pxToRem(0)} ${pxToRem(10)} ${pxToRem(3)};
+    padding: ${pxToRem(0)} ${pxToRem(10)};
 
     color: var(--color-grey-000);
     ${TYPOGRAPHY.fontStyles.regular}
