@@ -10,21 +10,16 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     <div
       className="k-Comment__header__meta"
     >
-      <a
-        href=""
-      >
-        <img
-          alt="Image alt"
-          className="k-Comment__header__image"
-          src="#image"
-        />
-      </a>
-      <a
-        className="k-u-link k-u-link-font1 k-u-ellipsis"
-        href=""
+      <img
+        alt="Image alt"
+        className="k-Comment__header__image"
+        src="#image"
+      />
+      <span
+        className="k-u-color-font1 k-u-weight-regular k-u-ellipsis"
       >
         Custom name
-      </a>
+      </span>
       <span
         aria-hidden={true}
         className="k-u-size-micro k-u-weight-light"
@@ -59,21 +54,16 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     <div
       className="k-Comment__header__meta"
     >
-      <a
-        href=""
-      >
-        <img
-          alt="Image alt"
-          className="k-Comment__header__image"
-          src="#image"
-        />
-      </a>
-      <a
-        className="k-u-link k-u-link-font1 k-u-ellipsis"
-        href=""
+      <img
+        alt="Image alt"
+        className="k-Comment__header__image"
+        src="#image"
+      />
+      <span
+        className="k-u-color-font1 k-u-weight-regular k-u-ellipsis"
       >
         Custom name
-      </a>
+      </span>
       <span
         aria-hidden={true}
         className="k-u-size-micro k-u-weight-light"
@@ -134,21 +124,16 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     <div
       className="k-Comment__header__meta"
     >
-      <a
-        href=""
-      >
-        <img
-          alt="Image alt"
-          className="k-Comment__header__image"
-          src="#image"
-        />
-      </a>
-      <a
-        className="k-u-link k-u-link-font1 k-u-ellipsis"
-        href=""
+      <img
+        alt="Image alt"
+        className="k-Comment__header__image"
+        src="#image"
+      />
+      <span
+        className="k-u-color-font1 k-u-weight-regular k-u-ellipsis"
       >
         Custom name
-      </a>
+      </span>
       <span
         aria-hidden={true}
         className="k-u-size-micro k-u-weight-light"

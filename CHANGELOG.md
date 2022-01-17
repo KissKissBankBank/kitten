@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `StarIconNext`: Add `bgColor` prop.
 - Fix: `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
+- Deprecation/Change: `Comment`: Deprecate `ownerUrl` prop.
 
 ## [6.19.0] - 2022-01-14
 
