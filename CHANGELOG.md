@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `StarIconNext`: Add `bgColor` prop.
+- Deprecation/Change: `Comment`: Deprecate `ownerUrl` prop.
 
 ## [6.19.0] - 2022-01-14
 

@@ -27,7 +27,6 @@ export default {
     },
     commentDate: '2 min',
     ownerName: 'Dominique Hipsaume',
-    ownerUrl: '#helloworld',
     showFooter: true,
     isSecondary: false,
     isHighlighted: false,
@@ -47,10 +46,6 @@ export default {
       control: 'text',
     },
     ownerName: {
-      name: 'ownerName',
-      control: 'text',
-    },
-    ownerUrl: {
       name: 'ownerName',
       control: 'text',
     },
