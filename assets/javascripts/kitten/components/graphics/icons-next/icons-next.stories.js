@@ -187,6 +187,12 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         </IconContainer>
       </Group>
 
+      <Group title="Icônes remplis">
+      <IconContainer>
+          <HeartIconNext color={colorInput} bgColor="#fff" />
+        </IconContainer>
+      </Group>
+
       <Group title="Icônes bicolores">
         <IconContainer>
           <ColorCheckedShieldIconNext

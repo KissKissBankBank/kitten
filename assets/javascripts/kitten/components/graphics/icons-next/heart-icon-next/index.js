@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 export const HeartIconNext = ({ color, bgColor, ...props }) => (
   <svg
-    viewBox="0 0 20 17"
+    viewBox="0 0 20 18"
     width="20"
-    height="17"
+    height="18"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
