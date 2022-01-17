@@ -75,7 +75,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
       ) : (
         <Text weight="light" size="micro">
           {children?.type?.name}
-          {suffix && <> {suffix}</>}
+          {suffix && <><br/>{suffix}</>}
         </Text>
       )}
     </div>
@@ -107,7 +107,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = ({ colorInput, secondaryColorInput }) => {
+export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
   return (
     <Container>
       <Group>
@@ -159,8 +159,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
         </IconContainer>
-        <IconContainer>
-          <HeartIconNext color={colorInput} />
+        <IconContainer suffix="bgColor">
+          <HeartIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
         <IconContainer>
           <SunIconNext color={colorInput} />
@@ -168,8 +168,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         <IconContainer>
           <EnvelopeIconNext color={colorInput} />
         </IconContainer>
-        <IconContainer>
-          <StarIconNext color={colorInput} />
+        <IconContainer suffix="bgColor">
+          <StarIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
         <IconContainer>
           <EditIconNext color={colorInput} />
@@ -268,9 +268,11 @@ export default {
   args: {
     colorInput: '#333',
     secondaryColorInput: '#006cff',
+    bgColorInput: 'rgba(0,0,0,0)',
   },
   argTypes: {
     colorInput: { control: 'color' },
     secondaryColorInput: { control: 'color' },
+    bgColorInput: { control: 'color' },
   },
 }
