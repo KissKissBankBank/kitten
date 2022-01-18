@@ -201,7 +201,6 @@ export { CheckedShieldIconNext } from './components/graphics/icons-next/checked-
 export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-next'
 export { CogIconNext } from './components/graphics/icons-next/cog-icon-next'
 export { ColorCheckedShieldIconNext } from './components/graphics/icons-next/color-checked-shield-icon-next'
-export { CrossCircleEmptyIconNext } from './components/graphics/icons-next/cross-circle-empty-icon-next'
 export { CrossCircleIconNext } from './components/graphics/icons-next/cross-circle-icon-next'
 export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
 export { CubeIconNext } from './components/graphics/icons-next/cube-icon-next'

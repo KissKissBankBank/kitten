@@ -7,7 +7,6 @@ import {
   ChronoIconNext,
   CogIconNext,
   ColorCheckedShieldIconNext,
-  CrossCircleEmptyIconNext,
   CrossCircleIconNext,
   CrossIconNext,
   CubeIconNext,
@@ -131,9 +130,6 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <ChronoIconNext color={colorInput} />
-        </IconContainer>
-        <IconContainer>
-          <CrossCircleEmptyIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <CrossIconNext color={colorInput} />
