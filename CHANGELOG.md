@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HorizontalCrowdfundingCard`: Add `noProgress` prop, defaults to `false`.
+
 ## [7.0.0] - 2022-01-18
 
 Breaking Changes:

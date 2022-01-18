@@ -124,6 +124,7 @@ export const HorizontalCrowdfundingCard = ({
   progressColor = COLORS.primary1,
   className,
   noProgressOnMobile = false,
+  noProgress = false,
   ...props
 }) => {
   return (
@@ -154,21 +155,23 @@ export const HorizontalCrowdfundingCard = ({
         {description}
       </Text>
       <div className="k-HorizontalCrowdfundingCard__info">{info}</div>
-      <div className="k-HorizontalCrowdfundingCard__progress">
-        <Progress
-          value={progress}
-          color={progressColor}
-          rampProps={{ style: { height: 4 } }}
-          className="k-HorizontalCrowdfundingCard__progress__ramp"
-        />
-        <Text
-          weight="light"
-          size="micro"
-          className="k-HorizontalCrowdfundingCard__progress__value"
-        >
-          {progress}&nbsp;%
-        </Text>
-      </div>
+      {!noProgress && (
+        <div className="k-HorizontalCrowdfundingCard__progress">
+          <Progress
+            value={progress}
+            color={progressColor}
+            rampProps={{ style: { height: 4 } }}
+            className="k-HorizontalCrowdfundingCard__progress__ramp"
+          />
+          <Text
+            weight="light"
+            size="micro"
+            className="k-HorizontalCrowdfundingCard__progress__value"
+          >
+            {progress}&nbsp;%
+          </Text>
+        </div>
+      )}
     </StyledCard>
   )
 }
@@ -182,5 +185,6 @@ HorizontalCrowdfundingCard.propTypes = {
   info: PropTypes.node,
   progress: PropTypes.number,
   progressColor: PropTypes.string,
+  noProgress: PropTypes.bool,
   noProgressOnMobile: PropTypes.bool,
 }
