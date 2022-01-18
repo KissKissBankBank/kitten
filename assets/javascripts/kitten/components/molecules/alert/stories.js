@@ -14,7 +14,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Alert" />,
     },
     design: {
-      type: 'Alert',
+      type: 'figma',
       url: 'https://www.figma.com/file/U2KVyc2tmJXkZObaSDOj71/Design-System-Kitten?node-id=1463%3A8374',
     },
   },
