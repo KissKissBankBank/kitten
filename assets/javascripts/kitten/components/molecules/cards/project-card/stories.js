@@ -2,6 +2,7 @@ import React from 'react'
 import { ProjectCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
 import { Text, Button } from 'kitten'
+import Truncate from 'react-truncate'
 
 export default {
   title: 'Molecules/Cards/ProjectCard',
@@ -169,6 +170,47 @@ WithVideo.args = {
   ],
 }
 WithVideo.argTypes = argTypes
+
+
+export const PermanentProject = ({ progressProps, ...args }) => (
+  <ProjectCard {...args}>
+    <ProjectCard.Sticker className="k-u-transform-capitalize k-u-hidden@xs-down">
+      Prolongation
+    </ProjectCard.Sticker>
+    <ProjectCard.Title>
+      The Office, la série culte décortiquée par S!CK
+    </ProjectCard.Title>
+    <ProjectCard.Line>
+      <Text size="micro">
+        <Truncate lines={2}>Ne laisser personne pour compte : plus qu’une devise. Un objectif et une valeur de Un objectif et une valeur de Un objectif et une valeur de</Truncate>
+      </Text>
+    </ProjectCard.Line>
+    <ProjectCard.Line>
+      <Text size="micro">
+        par{' '}
+        <strong className="k-u-weight-bold">
+          Bidules
+        </strong>
+      </Text>
+    </ProjectCard.Line>
+    <ProjectCard.Line className="k-u-flex k-u-flex-justifyContent-sb k-u-flex-alignItems-baseline">
+      <div>
+        <Text size="big" weight="bold">
+          172
+        </Text>
+        <Text size="tiny">
+          {' '}abonnés
+        </Text>
+      </div>
+      <Text size="tiny" weight="regular" className="k-u-link k-u-link-primary1">
+        S’abonner
+      </Text>
+    </ProjectCard.Line>
+  </ProjectCard>
+)
+
+PermanentProject.args = args
+PermanentProject.argTypes = argTypes
 
 export const Loading = args => (
   <ProjectCard {...args}>

@@ -35,6 +35,7 @@ export default {
     progress: 69,
     progressColor: COLORS.primary1,
     noProgressOnMobile: false,
+    noProgress: false,
   },
   argTypes: {
     href: {
@@ -73,6 +74,10 @@ export default {
     },
     noProgressOnMobile: {
       name: 'noProgressOnMobile',
+      control: 'boolean',
+    },
+    noProgress: {
+      name: 'noProgress',
       control: 'boolean',
     },
   },
@@ -150,6 +155,16 @@ export const Default = args => {
     <HorizontalCrowdfundingCard
       {...args}
       info={<InfoComponent info={args.info} />}
+    />
+  )
+}
+
+export const PermanentProject = args => {
+  return (
+    <HorizontalCrowdfundingCard
+      {...args}
+      noProgress
+      info={<Text weight="regular" size="micro" color="primary1">158 abonnés</Text>}
     />
   )
 }
