@@ -64,3 +64,36 @@ exports[`<HorizontalCrowdfundingCard /> by default matches with snapshot 1`] = `
   </div>
 </a>
 `;
+
+exports[`<HorizontalCrowdfundingCard /> with noProgress prop matches with snapshot 1`] = `
+<a
+  className="sc-bwzfXH dsSPqy k-HorizontalCrowdfundingCard"
+  href="#"
+>
+  <div
+    className="k-HorizontalCrowdfundingCard__imageWrapper"
+  >
+    <img
+      alt=""
+      src="#image"
+    />
+  </div>
+  <h3
+    className="k-u-size-tiny k-u-weight-regular k-HorizontalCrowdfundingCard__title"
+  >
+    Custom title
+  </h3>
+  <p
+    className="k-u-size-micro k-u-weight-light k-HorizontalCrowdfundingCard__description"
+  >
+    Custom description
+  </p>
+  <div
+    className="k-HorizontalCrowdfundingCard__info"
+  >
+    <span>
+      Test info
+    </span>
+  </div>
+</a>
+`;

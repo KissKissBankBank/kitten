@@ -27,4 +27,25 @@ describe('<HorizontalCrowdfundingCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with noProgress prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <HorizontalCrowdfundingCard
+            title="Custom title"
+            description="Custom description"
+            href="#"
+            imageProps={{ src: '#image', alt: '' }}
+            info={<span>Test info</span>}
+            noProgress
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
