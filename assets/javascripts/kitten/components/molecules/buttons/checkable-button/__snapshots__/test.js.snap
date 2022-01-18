@@ -127,24 +127,29 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 .c1::after {
@@ -173,7 +178,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -453,10 +458,15 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
-.c0:focus {
+.c0:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:focus {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-100);
   color: var(--color-grey-900,#222);
 }
 
@@ -468,9 +478,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-600);
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-600);
 }
 
 .c1::after {
@@ -499,7 +509,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -779,10 +789,15 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   transition: fill var(--transition);
 }
 
-.c0:hover,
-.c0:focus {
+.c0:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:focus {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-100);
   color: var(--color-grey-900,#222);
 }
 
@@ -794,9 +809,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-600);
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-600);
 }
 
 .c1::after {
@@ -825,7 +840,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -1105,7 +1120,12 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-danger-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-danger-500);
+}
+
 .c0:focus {
   border-color: var(--color-danger-500);
   background-color: var(--color-grey-000,#fff);
@@ -1120,9 +1140,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 .c1::after {
@@ -1151,7 +1171,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {
@@ -1431,10 +1451,15 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
-.c0:focus {
+.c0:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:focus {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-100);
   color: var(--color-grey-900,#222);
 }
 
@@ -1446,9 +1471,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-600);
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-600);
 }
 
 .c1::after {
@@ -1477,7 +1502,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1.k-CheckableButton--bottom:disabled::after,
 .c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTQwMCwgI2Q4ZDhkOCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
 }
 
 .c1.k-CheckableButton--bottom::after {

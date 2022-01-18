@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Button`: Add modifier-specific styles for `disabled` state.
 - Fix: `Accordeon`: New style for active state.
 - Feature: `Icons`: Add the following icon components:
   - `BankCardIconNext`,

@@ -127,24 +127,29 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -341,24 +346,29 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -553,24 +563,29 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -765,24 +780,29 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -977,11 +997,16 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   transition: fill var(--transition);
 }
 
-.c0:hover,
-.c0:focus {
+.c0:hover {
   border-color: var(--color-grey-800,#2d2d2d);
   background-color: var(--color-grey-800,#2d2d2d);
   color: var(--color-grey-000,#fff);
+}
+
+.c0:focus {
+  border-color: var(--color-grey-800,#2d2d2d);
+  background-color: var(--color-grey-900,#222);
+  color: var(--color-grey-600,#949494);
 }
 
 .c0:active {
@@ -992,9 +1017,9 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-200);
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -1189,24 +1214,29 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -1401,24 +1431,29 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -1615,24 +1650,29 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -1827,24 +1867,29 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -2039,24 +2084,29 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -2251,24 +2301,29 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -2463,24 +2518,29 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -2675,24 +2735,29 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -2887,24 +2952,29 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -3099,24 +3169,29 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -3316,24 +3391,29 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
