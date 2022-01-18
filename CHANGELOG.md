@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Remove `RewardSummaryCard` and replace with `SummaryCard` in stories.
+
 - Breaking Change: Remove `variant` props for the following components:
   - `Progress`,
   - `ProgressRing`,

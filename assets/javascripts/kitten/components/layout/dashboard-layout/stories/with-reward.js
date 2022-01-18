@@ -2,8 +2,8 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import styled from 'styled-components'
 import {
-  RewardSummaryCard,
-  useRewardSummaryCardResizeObserver,
+  SummaryCard,
+  useSummaryCardResizeObserver,
   Title,
   DropdownMenu,
   COLORS,
@@ -13,6 +13,7 @@ import {
   mq,
   useWindowWidth,
   ScreenConfig,
+  Text,
 } from 'kitten'
 
 const StyledDragAndDropList = styled(DragAndDropList)`
@@ -41,26 +42,36 @@ const RewardCardComponent = ({
   id,
   ...props
 }) => (
-  <RewardSummaryCard id={id} {...props}>
-    <RewardSummaryCard.Image>
+  <SummaryCard id={id} {...props} type="ownerContribution">
+    <SummaryCard.Image>
       <img alt="" {...imageProps} />
-    </RewardSummaryCard.Image>
-    <div style={{ display: 'grid' }}>
-      <RewardSummaryCard.Title aria-describedby="RewardSummaryList-title">
+    </SummaryCard.Image>
+    <SummaryCard.Cell name="title" aria-describedby="RewardSummaryList-title">
+      <Text weight="bold" size="tiny">
         {title}
-      </RewardSummaryCard.Title>
-      {!!star && <RewardSummaryCard.TitleTag text="Contrepartie star" />}
-    </div>
-    <RewardSummaryCard.Amount aria-describedby="RewardSummaryList-amount">
-      {amount}
-    </RewardSummaryCard.Amount>
-    <RewardSummaryCard.Contribution aria-describedby="RewardSummaryList-contribution">
-      {contribution}
-    </RewardSummaryCard.Contribution>
-    <RewardSummaryCard.Availability aria-describedby="RewardSummaryList-availability">
-      {availability}
-    </RewardSummaryCard.Availability>
-    <RewardSummaryCard.Options>
+      </Text>
+      {!!star && <SummaryCard.TitleTag text="Contrepartie star" />}
+    </SummaryCard.Cell>
+    <SummaryCard.Cell
+      name="amount"
+      aria-describedby="SummaryList-ownerContribution-amount"
+    >
+      <Text size="tiny">{amount}</Text>
+    </SummaryCard.Cell>
+    <SummaryCard.Cell
+      name="contribution"
+      aria-describedby="SummaryList-ownerContribution-contribution"
+    >
+      <Text size="tiny">{contribution}</Text>
+    </SummaryCard.Cell>
+    <SummaryCard.Cell
+      className="k-u-hidden@xs-down"
+      name="availability"
+      aria-describedby="SummaryList-ownerContribution-availability"
+    >
+      <Text size="tiny">{availability}</Text>
+    </SummaryCard.Cell>
+    <SummaryCard.Cell name="last-stretch">
       <DropdownMenu
         button={() => <EllipsisIcon color={COLORS.font1} />}
         menuPosition="left"
@@ -70,12 +81,12 @@ const RewardCardComponent = ({
         <DropdownMenu.Link href="#">Désactiver</DropdownMenu.Link>
         <DropdownMenu.Link>Supprimer</DropdownMenu.Link>
       </DropdownMenu>
-    </RewardSummaryCard.Options>
-  </RewardSummaryCard>
+    </SummaryCard.Cell>
+  </SummaryCard>
 )
 
 export const StoryWithReward = () => {
-  const { ref, size } = useRewardSummaryCardResizeObserver()
+  const { ref, size } = useSummaryCardResizeObserver()
 
   // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
   const windowWidth = useWindowWidth()
@@ -104,7 +115,7 @@ export const StoryWithReward = () => {
         être déplacé à l'aide des flèches haut/bas du clavier.
       </p>
 
-      <RewardSummaryCard.TitleBar
+      <SummaryCard.TitleBar
         values={{
           image: 'Visuel de la contrepartie',
           title: 'Titre de la contrepartie',
@@ -115,6 +126,7 @@ export const StoryWithReward = () => {
         className="k-u-hidden@xs-down k-u-margin-bottom-double"
         id="RewardSummaryList"
         size={size}
+        type="ownerContribution"
       />
 
       <StyledDragAndDropList
