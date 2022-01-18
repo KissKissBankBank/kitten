@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge", "onClick"];
+var _excluded = ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "bridge", "onClick"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -18,7 +18,6 @@ export var Step = function Step(_ref) {
       statusProps = _ref.statusProps,
       children = _ref.children,
       className = _ref.className,
-      variant = _ref.variant,
       bridge = _ref.bridge,
       onClick = _ref.onClick,
       other = _objectWithoutPropertiesLoose(_ref, _excluded);
@@ -31,16 +30,13 @@ export var Step = function Step(_ref) {
   }, /*#__PURE__*/React.createElement(StyledLink, _extends({
     as: other.href && !disabled ? 'a' : 'span',
     onClick: disabled ? null : onClick
-  }, other, {
-    variant: variant
-  }), /*#__PURE__*/React.createElement(Status, _extends({
+  }, other), /*#__PURE__*/React.createElement(Status, _extends({
     success: success,
     valid: valid,
     error: error,
     waiting: waiting,
     disabled: disabled,
-    bridge: bridge,
-    variant: variant
+    bridge: bridge
   }, statusProps)), /*#__PURE__*/React.createElement("div", {
     className: classNames(STEP_CLASSNAME, 'k-Steppers--VerticalStepper__step--link--content', {
       'k-Steppers--VerticalStepper__step--link--content--disabled': disabled

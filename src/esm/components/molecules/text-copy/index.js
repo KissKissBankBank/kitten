@@ -15,7 +15,7 @@ var fadeInAndOut = keyframes(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
 var Wrapper = styled.button.withConfig({
   displayName: "text-copy__Wrapper",
   componentId: "sc-hjbj35-0"
-})(["position:relative;display:flex;width:100%;.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:calc(1.15 * ", ");text-align:left;overflow:hidden;span{max-width:100%;max-height:calc(2 * 1.15 * ", ");overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine span{white-space:nowrap;}}.k-TextCopy__buttonTextButton{flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:var(--border);align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;}&.k-TextCopy--andromeda{.k-TextCopy__text{border-right:0;}}&.k-TextCopy--orion{gap:", ";&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}@media (max-width:", "){flex-direction:column;}.k-Button.k-Button--orion{border-radius:var(--border-radius-s);}}"], stepToRem(-1), stepToRem(-1), pxToRem(15), pxToRem(10), pxToRem(50), fadeInAndOut, pxToRem(5), COLORS.primary2, COLORS.primary2, COLORS.primary3, COLORS.primary3, pxToRem(ScreenConfig.XS.max));
+})(["position:relative;display:flex;gap:", ";width:100%;@media (max-width:", "){flex-direction:column;}.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:calc(1.15 * ", ");text-align:left;overflow:hidden;span{max-width:100%;max-height:calc(2 * 1.15 * ", ");overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine span{white-space:nowrap;}}.k-TextCopy__buttonTextButton{flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:var(--border);align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;}&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}"], pxToRem(5), pxToRem(ScreenConfig.XS.max), stepToRem(-1), stepToRem(-1), pxToRem(15), pxToRem(10), pxToRem(50), fadeInAndOut, COLORS.primary2, COLORS.primary2, COLORS.primary3, COLORS.primary3);
 export var TextCopy = function TextCopy(_ref) {
   var children = _ref.children,
       textToCopy = _ref.textToCopy,
@@ -23,8 +23,7 @@ export var TextCopy = function TextCopy(_ref) {
       description = _ref.description,
       forceOneLine = _ref.forceOneLine,
       buttonText = _ref.buttonText,
-      buttonModifier = _ref.buttonModifier,
-      variant = _ref.variant;
+      buttonModifier = _ref.buttonModifier;
 
   var _useState = useState(false),
       isMessageVisible = _useState[0],
@@ -64,22 +63,20 @@ export var TextCopy = function TextCopy(_ref) {
     window.getSelection().addRange(range);
   });
   return /*#__PURE__*/React.createElement(Wrapper, {
-    className: classNames('k-TextCopy', 'k-u-reset-button', "k-TextCopy--" + variant),
+    className: classNames('k-TextCopy', 'k-u-reset-button'),
     type: "button",
     onClick: copyText
   }, description && /*#__PURE__*/React.createElement(VisuallyHidden, null, description), /*#__PURE__*/React.createElement(TextInput, {
     as: "div",
     className: classNames('k-TextCopy__text', 'k-u-reset-button', {
       'k-TextCopy__text--forceOneLine': forceOneLine
-    }),
-    variant: variant
+    })
   }, /*#__PURE__*/React.createElement("span", {
     ref: textElement
   }, children)), /*#__PURE__*/React.createElement(Button, {
     as: "span",
     modifier: !!buttonText ? buttonModifier : 'hydrogen',
     className: "k-TextCopy__buttonTextButton",
-    variant: variant,
     fit: buttonText ? 'content' : 'icon'
   }, !!buttonText ? buttonText : /*#__PURE__*/React.createElement(CopyIcon, null)), alertMessage && isMessageVisible && /*#__PURE__*/React.createElement(ArrowContainer, {
     color: COLORS.primary1,
@@ -100,8 +97,7 @@ TextCopy.propTypes = {
   description: PropTypes.string,
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
-  buttonModifier: PropTypes.string,
-  variant: PropTypes.oneOf(['andromeda', 'orion'])
+  buttonModifier: PropTypes.string
 };
 TextCopy.defaultProps = {
   alertMessage: undefined,
@@ -109,6 +105,5 @@ TextCopy.defaultProps = {
   description: undefined,
   forceOneLine: false,
   buttonText: undefined,
-  buttonModifier: 'helium',
-  variant: 'orion'
+  buttonModifier: 'helium'
 };

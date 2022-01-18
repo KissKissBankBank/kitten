@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button } from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -49,10 +48,7 @@ export const ButtonGroup = ({ className, ...props }) => (
   <StyledButtonGroup
     role="group"
     {...props}
-    className={classNames(
-      'k-ButtonGroup',
-      className,
-    )}
+    className={classNames('k-ButtonGroup', className)}
   />
 )
 

@@ -23,7 +23,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../../components/form/label");
 
-var _excluded = ["items", "disabled", "className", "name", "error", "label", "children", "variant"],
+var _excluded = ["items", "disabled", "className", "name", "error", "label", "children"],
     _excluded2 = ["id", "className"];
 
 var StyledCheckboxSet = _styledComponents.default.fieldset.withConfig({
@@ -39,7 +39,6 @@ var CheckboxSet = function CheckboxSet(_ref) {
       error = _ref.error,
       label = _ref.label,
       children = _ref.children,
-      variant = _ref.variant,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledCheckboxSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-CheckboxSet', className),
@@ -55,7 +54,6 @@ var CheckboxSet = function CheckboxSet(_ref) {
       id: id,
       error: error,
       name: name,
-      variant: variant,
       key: id
     }, itemProps, {
       className: (0, _classnames.default)('k-Form-CheckboxSet__checkbox', className)
@@ -74,8 +72,7 @@ CheckboxSet.propTypes = {
     defaultChecked: _propTypes.default.bool,
     children: _propTypes.default.node
   })),
-  disabled: _propTypes.default.bool,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
+  disabled: _propTypes.default.bool
 };
 CheckboxSet.defaultProps = {
   name: 'checkboxSet',
@@ -88,6 +85,5 @@ CheckboxSet.defaultProps = {
     id: 'myCheckbox' // Replace by a real value
 
   }],
-  disabled: false,
-  variant: 'orion'
+  disabled: false
 };

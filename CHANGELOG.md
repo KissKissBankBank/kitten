@@ -4,9 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Remove `RewardSummaryCard` and replace with `SummaryCard` in stories.
+## [7.0.0] - 2022-01-18
 
-- Breaking Change: Remove `variant` props for the following components:
+Breaking Changes:
+
+- Remove `RewardSummaryCard` and replace with `SummaryCard` in stories.
+- Remove `variant` props for the following components:
   - `Progress`,
   - `ProgressRing`,
   - `Autocomplete`,
@@ -24,19 +27,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ModalNext`,
   - `TextCopy`,
   - `VerticalStepper`.
-- Feature: `Button`: Add modifier-specific styles for `disabled` state.
-- Fix: `Accordeon`: New style for active state.
-- Feature: `Icons`: Add the following icon components:
+
+Deprecation/Change:
+
+- `Comment`: Deprecate `ownerUrl` prop.
+
+Features:
+
+- `Button`: Add modifier-specific styles for `disabled` state.
+- `Icons`: Add the following icon components:
   - `BankCardIconNext`,
   - `CubeIconNext`.
-- Feature: `StarIconNext`: Add `bgColor` prop.
-- Feature: `Icons`: Move the following icons to `icons-next` directory:
+- `StarIconNext`: Add `bgColor` prop.
+- `Icons`: Move the following icons to `icons-next` directory:
   - `RefundIcon`,
   - `GiftIcon`,
   - `LockOutlineIcon`.
-- Fix: `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
-- Deprecation/Change: `Comment`: Deprecate `ownerUrl` prop.
-- Feature: `LendopolisLogoVerticalOnDark`: Add CSS class names.
+- `LendopolisLogoVerticalOnDark`: Add CSS class names.
+
+Fixes:
+
+- `Accordeon`: New style for active state.
+- `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
 
 ## [6.19.0] - 2022-01-14
 

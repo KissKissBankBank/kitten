@@ -52,7 +52,6 @@ var DropdownSelect = function DropdownSelect(_ref) {
       disabled = props.disabled,
       hideLabel = props.hideLabel,
       id = props.id,
-      variant = props.variant,
       size = props.size,
       a11yStatusError = props.a11yStatusError,
       a11yStatusValid = props.a11yStatusValid,
@@ -149,7 +148,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDropdown, {
-    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--" + variant, "k-Form-Dropdown--" + modifier, "k-Form-Dropdown--" + direction, "k-Form-Dropdown--" + size, "k-Form-Dropdown--arrowPosition-" + arrowPosition, className, {
+    className: (0, _classnames.default)('k-Form-Dropdown', "k-Form-Dropdown--" + modifier, "k-Form-Dropdown--" + direction, "k-Form-Dropdown--" + size, "k-Form-Dropdown--arrowPosition-" + arrowPosition, className, {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -211,7 +210,6 @@ DropdownSelect.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -239,7 +237,6 @@ DropdownSelect.propTypes = {
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   size: _propTypes.default.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: _propTypes.default.string,
   a11yStatusValid: _propTypes.default.string,

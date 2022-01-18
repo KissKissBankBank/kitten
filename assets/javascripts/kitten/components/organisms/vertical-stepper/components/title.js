@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
@@ -21,10 +20,7 @@ const StyledTitle = styled.p`
 export const Title = ({ className, children }) => {
   return (
     <StyledTitle
-      className={classNames(
-        'k-Steppers--VerticalStepper__title',
-        className,
-      )}
+      className={classNames('k-Steppers--VerticalStepper__title', className)}
     >
       {children}
     </StyledTitle>

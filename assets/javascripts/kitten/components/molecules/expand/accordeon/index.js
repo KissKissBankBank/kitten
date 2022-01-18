@@ -209,13 +209,9 @@ export const Accordeon = ({
 
   return (
     <StyledAccordeon
-      className={classNames(
-        'k-Accordeon',
-        className,
-        {
-          'k-Accordeon--isAnimated': isAnimated,
-        },
-      )}
+      className={classNames('k-Accordeon', className, {
+        'k-Accordeon--isAnimated': isAnimated,
+      })}
       ref={accordeonElement}
       {...props}
     >

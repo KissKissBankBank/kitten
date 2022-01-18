@@ -11,8 +11,6 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 
 var _react = _interopRequireDefault(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _button = require("../../../../components/molecules/buttons/button");
@@ -21,7 +19,7 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className", "variant"],
+var _excluded = ["className"],
     _excluded2 = ["className", "active"];
 
 var StyledButtonGroup = _styledComponents.default.div.withConfig({
@@ -31,12 +29,11 @@ var StyledButtonGroup = _styledComponents.default.div.withConfig({
 
 var ButtonGroup = function ButtonGroup(_ref) {
   var className = _ref.className,
-      variant = _ref.variant,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledButtonGroup, (0, _extends2.default)({
     role: "group"
   }, props, {
-    className: (0, _classnames.default)('k-ButtonGroup', className, "k-ButtonGroup--" + variant)
+    className: (0, _classnames.default)('k-ButtonGroup', className)
   }));
 };
 
@@ -55,9 +52,3 @@ var ButtonGroupButton = function ButtonGroupButton(_ref2) {
 };
 
 ButtonGroup.Button = ButtonGroupButton;
-ButtonGroup.propTypes = {
-  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
-};
-ButtonGroup.defaultProps = {
-  variant: 'orion'
-};

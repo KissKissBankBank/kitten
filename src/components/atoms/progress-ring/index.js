@@ -21,7 +21,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"];
+var _excluded = ["color", "value", "width", "strokeWidth", "className", "animationSpeed"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -49,7 +49,7 @@ var rotateAnimate = function rotateAnimate(_ref2) {
 var StyledMeterCircle = _styledComponents.default.circle.withConfig({
   displayName: "progress-ring__StyledMeterCircle",
   componentId: "sc-sdx1nz-0"
-})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;&.k-Meters__ProgressRing--orion{stroke-linecap:round;}"], function (_ref3) {
+})(["stroke-linecap:butt;stroke-linecap:round;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;"], function (_ref3) {
   var r = _ref3.r;
   return getDashLength(r);
 }, function (_ref4) {
@@ -73,7 +73,6 @@ var ProgressRing = function ProgressRing(_ref7) {
       value = _ref7.value,
       width = _ref7.width,
       strokeWidth = _ref7.strokeWidth,
-      variant = _ref7.variant,
       className = _ref7.className,
       animationSpeed = _ref7.animationSpeed,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded);
@@ -103,7 +102,7 @@ var ProgressRing = function ProgressRing(_ref7) {
     fill: "transparent",
     stroke: color,
     progressValue: progressValue,
-    className: (0, _classnames.default)('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--" + variant)
+    className: (0, _classnames.default)('k-Meters__ProgressRing', className)
   }));
 };
 
@@ -113,7 +112,6 @@ ProgressRing.defaultProps = {
   value: 0,
   width: 50,
   strokeWidth: 5,
-  variant: 'orion',
   animationSpeed: 1.4
 };
 ProgressRing.propTypes = {
@@ -121,6 +119,5 @@ ProgressRing.propTypes = {
   value: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   width: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   strokeWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   animationSpeed: _propTypes.default.number
 };

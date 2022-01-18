@@ -21,6 +21,9 @@ var modifierStyles = function modifierStyles(modifier) {
   var activeBorderColor = _colorsConfig.default.primary3;
   var activeBgColor = _colorsConfig.default.primary3;
   var activeColor = _colorsConfig.default.background1;
+  var disabledBorderColor = 'var(--color-grey-200)';
+  var disabledBgColor = 'var(--color-grey-200)';
+  var disabledColor = 'var(--color-grey-600)';
 
   switch (modifier) {
     case 'hydrogen':
@@ -30,12 +33,14 @@ var modifierStyles = function modifierStyles(modifier) {
       borderColor = 'var(--color-grey-400)';
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.font1;
-      hoverBorderColor = 'var(--color-primary-300)';
+      hoverBorderColor = 'var(--color-primary-500)';
       hoverBgColor = _colorsConfig.default.background1;
       hoverColor = _colorsConfig.default.font1;
-      activeBorderColor = 'var(--color-primary-500)';
+      activeBorderColor = 'var(--color-primary-700)';
       activeBgColor = _colorsConfig.default.background1;
       activeColor = _colorsConfig.default.font1;
+      disabledBorderColor = 'var(--color-grey-400)';
+      disabledBgColor = 'var(--color-grey-000)';
       break;
 
     case 'helium':
@@ -55,6 +60,8 @@ var modifierStyles = function modifierStyles(modifier) {
       activeBorderColor = 'var(--color-primary-900)';
       activeBgColor = 'var(--color-primary-300)';
       activeColor = _colorsConfig.default.font1;
+      disabledBorderColor = 'var(--color-grey-600)';
+      disabledBgColor = 'var(--color-grey-300)';
       break;
 
     case 'beryllium':
@@ -78,6 +85,8 @@ var modifierStyles = function modifierStyles(modifier) {
       activeBorderColor = 'var(--color-danger-700)';
       activeBgColor = _colorsConfig.default.background1;
       activeColor = 'var(--color-danger-700)';
+      disabledBorderColor = 'var(--color-grey-400)';
+      disabledBgColor = 'var(--color-grey-000)';
       break;
 
     case 'boron':
@@ -129,7 +138,7 @@ var modifierStyles = function modifierStyles(modifier) {
       break;
   }
 
-  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill var(--transition);}}transition:background-color var(--transition),color var(--transition),border-color var(--transition);", " &:disabled,&.k-Button--disabled{border:var(--border-width) solid ", ";background-color:", ";color:", ";}"], borderSize, borderStyle, borderColor, backgroundColor, color, modifier !== 'checked' && (0, _styledComponents.css)(["&:hover,&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, activeBorderColor, activeBgColor, activeColor), _colorsConfig.default.background3, _colorsConfig.default.background3, _colorsConfig.default.font3);
+  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill var(--transition);}}transition:background-color var(--transition),color var(--transition),border-color var(--transition);", " &:disabled,&.k-Button--disabled{border:var(--border-width) solid ", ";background-color:", ";color:", ";}"], borderSize, borderStyle, borderColor, backgroundColor, color, modifier !== 'checked' && (0, _styledComponents.css)(["&:hover{border-color:", ";background-color:", ";color:", ";}&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, hoverBorderColor, backgroundColor, color, activeBorderColor, activeBgColor, activeColor), disabledBorderColor, disabledBgColor, disabledColor);
 };
 
 exports.modifierStyles = modifierStyles;

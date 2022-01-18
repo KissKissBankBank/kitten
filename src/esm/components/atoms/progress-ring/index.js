@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"];
+var _excluded = ["color", "value", "width", "strokeWidth", "className", "animationSpeed"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
@@ -30,7 +30,7 @@ var rotateAnimate = function rotateAnimate(_ref2) {
 var StyledMeterCircle = styled.circle.withConfig({
   displayName: "progress-ring__StyledMeterCircle",
   componentId: "sc-sdx1nz-0"
-})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;&.k-Meters__ProgressRing--orion{stroke-linecap:round;}"], function (_ref3) {
+})(["stroke-linecap:butt;stroke-linecap:round;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;"], function (_ref3) {
   var r = _ref3.r;
   return getDashLength(r);
 }, function (_ref4) {
@@ -53,7 +53,6 @@ export var ProgressRing = function ProgressRing(_ref7) {
       value = _ref7.value,
       width = _ref7.width,
       strokeWidth = _ref7.strokeWidth,
-      variant = _ref7.variant,
       className = _ref7.className,
       animationSpeed = _ref7.animationSpeed,
       others = _objectWithoutPropertiesLoose(_ref7, _excluded);
@@ -84,7 +83,7 @@ export var ProgressRing = function ProgressRing(_ref7) {
     fill: "transparent",
     stroke: color,
     progressValue: progressValue,
-    className: classNames('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--" + variant)
+    className: classNames('k-Meters__ProgressRing', className)
   }));
 };
 ProgressRing.defaultProps = {
@@ -92,7 +91,6 @@ ProgressRing.defaultProps = {
   value: 0,
   width: 50,
   strokeWidth: 5,
-  variant: 'orion',
   animationSpeed: 1.4
 };
 ProgressRing.propTypes = {
@@ -100,6 +98,5 @@ ProgressRing.propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   animationSpeed: PropTypes.number
 };

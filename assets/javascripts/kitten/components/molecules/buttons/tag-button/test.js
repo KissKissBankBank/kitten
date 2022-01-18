@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { TagButton } from './index'
-import { VisaIcon } from '../../../..'
 
 describe('<TagButton />', () => {
   let component

@@ -23,5 +23,5 @@ export var CloseButton = function CloseButton(_ref) {
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
   buttonModifier: 'hydrogen',
-  variant: 'andromeda'
+  borderRadius: 0
 };

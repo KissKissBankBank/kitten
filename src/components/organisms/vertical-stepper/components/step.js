@@ -25,7 +25,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _index = require("../index");
 
-var _excluded = ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge", "onClick"];
+var _excluded = ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "bridge", "onClick"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -40,7 +40,6 @@ var Step = function Step(_ref) {
       statusProps = _ref.statusProps,
       children = _ref.children,
       className = _ref.className,
-      variant = _ref.variant,
       bridge = _ref.bridge,
       onClick = _ref.onClick,
       other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
@@ -52,16 +51,13 @@ var Step = function Step(_ref) {
   }, /*#__PURE__*/_react.default.createElement(StyledLink, (0, _extends2.default)({
     as: other.href && !disabled ? 'a' : 'span',
     onClick: disabled ? null : onClick
-  }, other, {
-    variant: variant
-  }), /*#__PURE__*/_react.default.createElement(_status.Status, (0, _extends2.default)({
+  }, other), /*#__PURE__*/_react.default.createElement(_status.Status, (0, _extends2.default)({
     success: success,
     valid: valid,
     error: error,
     waiting: waiting,
     disabled: disabled,
-    bridge: bridge,
-    variant: variant
+    bridge: bridge
   }, statusProps)), /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)(_index.STEP_CLASSNAME, 'k-Steppers--VerticalStepper__step--link--content', {
       'k-Steppers--VerticalStepper__step--link--content--disabled': disabled

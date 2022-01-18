@@ -88,7 +88,6 @@ const Wrapper = styled.button`
       background-color: ${COLORS.primary3};
     }
   }
-
 `
 
 export const TextCopy = ({
@@ -131,10 +130,7 @@ export const TextCopy = ({
 
   return (
     <Wrapper
-      className={classNames(
-        'k-TextCopy',
-        'k-u-reset-button',
-      )}
+      className={classNames('k-TextCopy', 'k-u-reset-button')}
       type="button"
       onClick={copyText}
     >
