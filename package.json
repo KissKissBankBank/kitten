@@ -46,6 +46,7 @@
     "resize-observer-polyfill": "^1.5.1",
     "slugify": "^1.5.0",
     "smoothscroll-polyfill": "^0.4.4",
+    "storybook-addon-designs": "^6.2.1",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
