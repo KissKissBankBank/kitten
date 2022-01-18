@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Icons`: Add the following icon components:
   - `BankCardIconNext`,
-  - `CubeIconNext`
+  - `CubeIconNext`,
+  - `CrossCircleEmptyIconNext`
 - Feature: `StarIconNext`: Add `bgColor` prop.
 - Feature: `Icons`: Move icons :
   - `RefundIcon`,
