@@ -200,7 +200,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
       </Group>
 
       <Group title="Icônes remplis">
-      <IconContainer suffix="bgColor">
+        <IconContainer suffix="bgColor">
           <HeartIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
         <IconContainer suffix="bgColor">
