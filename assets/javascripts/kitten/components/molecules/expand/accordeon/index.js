@@ -65,7 +65,7 @@ const StyledAccordeon = styled.div`
     }
 
     &[aria-expanded='true'] {
-      border-bottom-color: ${COLORS.background1};
+      border-bottom-color: ${COLORS.background1} !important;
     }
 
     .k-Accordeon__header__arrow {
