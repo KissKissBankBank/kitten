@@ -40,7 +40,6 @@ import { FilterIcon } from './filter-icon'
 import { FlagIcon, flagList } from './flag-icon'
 import { FlashCircleIcon } from './flash-circle-icon'
 import { GarbageIcon } from './garbage-icon'
-import { GiftIcon } from './gift-icon'
 import { GiropayIcon } from './giropay-icon'
 import { GlobeIcon } from './globe-icon'
 import { GrabberIcon } from './grabber-icon'
@@ -58,7 +57,6 @@ import { LinkIcon } from './link-icon'
 import { ListIcon } from './list-icon'
 import { LocationIcon } from './location-icon'
 import { LockIcon } from './lock-icon'
-import { LockOutlineIcon } from './lock-outline-icon'
 import { LoudspeakerIcon } from './loudspeaker-icon'
 import { MaestroIcon } from './maestro-icon'
 import { MasterCardIcon } from './mastercard-icon'
@@ -71,7 +69,6 @@ import { PayPalIcon } from './paypal-icon'
 import { PeopleIcon } from './people-icon'
 import { PhoneIcon } from './phone-icon'
 import { QuestionMarkIcon } from './question-mark-icon'
-import { RefundIcon } from './refund-icon'
 import { RocketCircleIcon } from './rocket-circle-icon'
 import { RocketIcon } from './rocket-icon'
 import { SaveIcon } from './save-icon'
@@ -285,7 +282,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
       <Group title="Other icons">
         <IconContainer children={<GarbageIcon color={colorInput} />} />
         <IconContainer children={<LockIcon color={colorInput} />} />
-        <IconContainer children={<LockOutlineIcon color={colorInput} />} />
         <IconContainer children={<SearchIcon color={colorInput} />} />
         <IconContainer children={<WaitingIcon color={colorInput} />} />
         <IconContainer children={<WarningIcon color={colorInput} />} />
@@ -341,7 +337,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
           children={<KissKissBankBankIcon color={colorInput} width="90" />}
         />
         <IconContainer children={<EmbedIcon color={colorInput} />} />
-        <IconContainer children={<GiftIcon color={colorInput} />} />
         <IconContainer children={<EditIcon color={colorInput} />} />
         <IconContainer children={<SaveIcon color={colorInput} />} />
         <IconContainer children={<DocIcon color={colorInput} />} />
@@ -367,7 +362,6 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
         <IconContainer children={<StatsIcon color={colorInput} />} />
         <IconContainer children={<SpeechBubbleIcon color={colorInput} />} />
         <IconContainer children={<HourglassIcon color={colorInput} />} />
-        <IconContainer children={<RefundIcon color={colorInput} />} />
         <IconContainer children={<EllipsisIcon color={colorInput} />} />
         <IconContainer children={<NoImageIcon color={colorInput} />} />
         <IconContainer children={<EnvelopeIcon color={colorInput} />} />

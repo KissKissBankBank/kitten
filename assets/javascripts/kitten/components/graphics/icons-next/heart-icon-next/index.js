@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const HeartIconNext = ({ color, bgColor, ...props }) => (
+export const HeartIconNext = ({ color, bgColor, title, ...props }) => (
   <svg
-    viewBox="0 0 20 17"
+    viewBox="0 0 20 18"
     width="20"
-    height="17"
+    height="18"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
+    {title && <title>{title}</title>}
     <path
       d="M10.222 5.142c.04-.209.028-.119.028-.119s.005-.033.009-.063c.053-.38.155-.752.305-1.106.229-.543.566-1.033.99-1.441.424-.408.926-.724 1.476-.929.55-.205 1.135-.294 1.72-.262 2.225.119 4.064 2.165 4.065 4.602.001.91-.193 1.809-.568 2.638a6.3116 6.3116 0 0 1-1.606 2.158.702.702 0 0 1-.069.053l-6.08 5.276a.7504.7504 0 0 1-.983.001l-6.15-5.33a6.3051 6.3051 0 0 1-1.605-2.157 6.369 6.369 0 0 1-.568-2.635c0-2.431 1.838-4.476 4.055-4.605.017-.001.034-.002.052-.002h.149c.015 0 .028.001.042.001v-.001c1.141 0 2.236.459 3.043 1.278.399.404.712.881.925 1.399.135.328.23.673.283 1.027.007.045.015.087.015.087l.028.13c.029.266.393.266.444 0Z"
       fill={bgColor}
@@ -24,9 +25,11 @@ export const HeartIconNext = ({ color, bgColor, ...props }) => (
 HeartIconNext.propTypes = {
   color: PropTypes.string,
   bgColor: PropTypes.string,
+  title: PropTypes.string,
 }
 
 HeartIconNext.defaultProps = {
   color: '#222',
   bgColor: 'transparent',
+  title: null,
 }

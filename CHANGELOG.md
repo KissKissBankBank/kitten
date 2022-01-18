@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Accordeon`: New style for active state.
+- Feature: `Icons`: Add the following icon components:
+  - `BankCardIconNext`,
+  - `CubeIconNext`.
+- Feature: `StarIconNext`: Add `bgColor` prop.
+- Feature: `Icons`: Move the following icons to `icons-next` directory:
+  - `RefundIcon`,
+  - `GiftIcon`,
+  - `LockOutlineIcon`.
+- Fix: `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
+- Deprecation/Change: `Comment`: Deprecate `ownerUrl` prop.
+- Feature: `LendopolisLogoVerticalOnDark`: Add CSS class names.
 
 ## [6.19.0] - 2022-01-14
 
