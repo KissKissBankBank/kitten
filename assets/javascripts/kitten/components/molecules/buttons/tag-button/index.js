@@ -136,7 +136,7 @@ TagButton.propTypes = {
   active: PropTypes.bool,
   icon: deprecated(PropTypes.bool, 'Icon is not implemented anymore.'),
   modifier: deprecated(PropTypes.string, 'Modifiers are not implemented anymore.'),
-  selected: deprecated(PropTypes.bool, 'Please use `active` instead.'),
+  selected: deprecated(PropTypes.bool, 'Please use `active` instead'),
 }
 
 TagButton.defaultProps = {

@@ -2,7 +2,7 @@
 
 exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH hSxNBk k-ContributionCard"
+  className="sc-bwzfXH htthwf k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "var(--color-grey-400)",
@@ -36,7 +36,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       className="sc-EHOje cXqnKQ k-Form-TextInputWithUnit k-ContributionCard__inputWrapper"
     >
       <input
-        className="sc-bxivhb btMIEa k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--regular"
+        className="sc-bxivhb fHDXwB k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--regular"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -49,7 +49,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </span>
     </div>
     <button
-      className="sc-bdVaJa eDQcaZ k-Button k-ContributionCard__action k-Button--regular k-Button--helium k-Button--fit-content k-Button--disabled"
+      className="sc-bdVaJa ijFtgX k-Button k-ContributionCard__action k-Button--regular k-Button--helium k-Button--fit-content k-Button--disabled"
       disabled={true}
       style={
         Object {
@@ -66,7 +66,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bwzfXH hSxNBk k-ContributionCard"
+  className="sc-bwzfXH htthwf k-ContributionCard"
   style={
     Object {
       "--contributionCard--border-color": "var(--color-grey-400)",

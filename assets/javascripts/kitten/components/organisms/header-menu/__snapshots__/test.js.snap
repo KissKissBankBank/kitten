@@ -378,11 +378,14 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c1:hover,
-.c1:focus {
+.c1:hover {
   border-color: var(--color-primary-700,#05a8e6);
   background-color: var(--color-primary-700,#05a8e6);
   color: var(--color-grey-000,#fff);
+}
+
+.c1:focus {
+  border-color: var(--color-primary-700,#05a8e6);
 }
 
 .c1:active {
@@ -393,9 +396,9 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
 
 .c1:disabled,
 .c1.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-200);
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-600);
 }
 
 .c0 {

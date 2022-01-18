@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-GMQeP jRriBR k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP jJzkWf k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -124,7 +124,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-GMQeP jRriBR k-ProjectCard k-ProjectCard--normal"
+  className="sc-GMQeP jJzkWf k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"

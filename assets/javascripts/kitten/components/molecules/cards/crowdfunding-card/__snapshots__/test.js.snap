@@ -812,10 +812,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   transition: fill var(--transition);
 }
 
-.c2:hover,
-.c2:focus {
+.c2:hover {
   border-color: var(--color-primary-700,#05a8e6);
   background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
+}
+
+.c2:focus {
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-500,#19b4fa);
   color: var(--color-grey-000,#fff);
 }
 
@@ -827,9 +832,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-200);
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-600);
 }
 
 .c0 {
@@ -1566,10 +1571,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   transition: fill var(--transition);
 }
 
-.c2:hover,
-.c2:focus {
+.c2:hover {
   border-color: var(--color-primary-700,#05a8e6);
   background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
+}
+
+.c2:focus {
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-500,#19b4fa);
   color: var(--color-grey-000,#fff);
 }
 
@@ -1581,9 +1591,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-200);
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-600);
 }
 
 .c0 {
@@ -2322,10 +2332,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   transition: fill var(--transition);
 }
 
-.c3:hover,
-.c3:focus {
+.c3:hover {
   border-color: var(--color-primary-700,#05a8e6);
   background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
+}
+
+.c3:focus {
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-500,#19b4fa);
   color: var(--color-grey-000,#fff);
 }
 
@@ -2337,9 +2352,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3:disabled,
 .c3.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-200);
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-600);
 }
 
 .c0 {

@@ -22,7 +22,7 @@ export const StyledLayout = styled.div`
 
   .k-HeroLayout__hero {
     position: relative;
-    padding: ${pxToRem(135)} var(--container-padding) ${pxToRem(100)};
+    padding: ${pxToRem(135)} var(--container-padding) ${pxToRem(70)};
 
     @media ${mq.desktop} {
       display: flex;
@@ -104,7 +104,7 @@ export const StyledLayout = styled.div`
     padding: ${pxToRem(30)} 0;
 
     @media ${mq.tabletAndDesktop} {
-      padding: ${pxToRem(50)} 0 ${pxToRem(30)};
+      padding: ${pxToRem(60)} 0;
     }
   }
 
@@ -112,7 +112,7 @@ export const StyledLayout = styled.div`
     margin: 0 var(--container-padding) ${pxToRem(60)};
     display: flex;
     flex-direction: column;
-    gap: ${pxToRem(50)} ${pxToRem(70)};
+    gap: ${pxToRem(50)} ${pxToRem(50)};
     display: grid;
 
     @media ${mq.mobileAndTablet} {
@@ -120,7 +120,7 @@ export const StyledLayout = styled.div`
     }
 
     @media ${mq.desktop} {
-      margin: ${pxToRem(50)} ${pxToRem(70)} ${pxToRem(100)};
+      margin: ${pxToRem(70)} ${pxToRem(70)} ${pxToRem(100)};
       grid-template-columns:
         minmax(${pxToRem(210)}, 1fr)
         minmax(auto, ${pxToRem(670)})

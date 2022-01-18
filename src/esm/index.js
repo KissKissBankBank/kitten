@@ -178,8 +178,10 @@ export { CogIconNext } from './components/graphics/icons-next/cog-icon-next';
 export { ColorCheckedShieldIconNext } from './components/graphics/icons-next/color-checked-shield-icon-next';
 export { CrossCircleIconNext } from './components/graphics/icons-next/cross-circle-icon-next';
 export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next';
+export { EditIconNext } from './components/graphics/icons-next/edit-icon-next';
 export { EnvelopeIconNext } from './components/graphics/icons-next/envelope-icon-next';
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next';
+export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next';
 export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon-next';
 export { GiftIconNext } from './components/graphics/icons-next/gift-icon-next';
 export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next';
@@ -214,6 +216,7 @@ export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo';
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo';
 export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark';
+export { LendopolisLogoVerticalOnDark } from './components/graphics/logos/lendopolis-logo/vertical-on-dark';
 export { GoodeedLogo } from './components/graphics/logos/goodeedlogo';
 export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc';
 export { MaisonDeCrowdfundingLogoOnDark } from './components/graphics/logos/mdc/on-dark';

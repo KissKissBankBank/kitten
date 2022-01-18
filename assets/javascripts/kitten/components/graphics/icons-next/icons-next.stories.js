@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   AirplaneIconNext,
+  BankCardIconNext,
   BubbleIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
@@ -8,9 +9,13 @@ import {
   ColorCheckedShieldIconNext,
   CrossCircleIconNext,
   CrossIconNext,
+  CubeIconNext,
+  EditIconNext,
   EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
+  FilterIconNext,
+  GiftIcon,
   GiftIconNext,
   HeartIconNext,
   HeartWithClickIconNext,
@@ -19,8 +24,10 @@ import {
   InstagramIconNext,
   LargeArrowIconNext,
   LinkedinIconNext,
+  LockOutlineIcon,
   MessengerIconNext,
   PlusIconNext,
+  RefundIcon,
   SpeechBubbleIconNext,
   StarIconNext,
   StatsIconNext,
@@ -73,7 +80,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
       ) : (
         <Text weight="light" size="micro">
           {children?.type?.name}
-          {suffix && <> {suffix}</>}
+          {suffix && <><br/>{suffix}</>}
         </Text>
       )}
     </div>
@@ -105,7 +112,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
   }
 `
 
-export const AllIcons = ({ colorInput, secondaryColorInput }) => {
+export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
   return (
     <Container>
       <Group>
@@ -113,10 +120,10 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <AirplaneIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <BubbleIconNext color={colorInput} />
+          <BankCardIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <CrossIconNext color={colorInput} />
+          <BubbleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <CheckedShieldIconNext color={colorInput} />
@@ -125,10 +132,31 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <ChronoIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <CrossIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <CogIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <CubeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EditIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EnvelopeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <EyeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <FilterIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <GiftIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <HeartIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <HomeIconNext color={colorInput} />
@@ -137,13 +165,25 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <InfiniteIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <LockOutlineIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <PlusIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <RefundIcon color={colorInput} />
         </IconContainer>
         <IconContainer>
           <SpeechBubbleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <StatsIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <StarIconNext color={colorInput}/>
+        </IconContainer>
+        <IconContainer>
+          <SunIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <TagIconNext color={colorInput} />
@@ -157,8 +197,23 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
         </IconContainer>
+      </Group>
+
+      <Group title="Icônes remplis">
+        <IconContainer suffix="bgColor">
+          <HeartIconNext color={colorInput} bgColor={bgColorInput} />
+        </IconContainer>
+        <IconContainer suffix="bgColor">
+          <StarIconNext color={colorInput} bgColor={bgColorInput} />
+        </IconContainer>
+      </Group>
+
+      <Group title="Icônes bicolores">
         <IconContainer>
-          <HeartIconNext color={colorInput} />
+          <ColorCheckedShieldIconNext
+            color={colorInput}
+            secondaryColor={secondaryColorInput}
+          />
         </IconContainer>
         <IconContainer>
           <GiftIconNext
@@ -173,28 +228,14 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           />
         </IconContainer>
         <IconContainer>
-          <ColorCheckedShieldIconNext
-            color={colorInput}
-            secondaryColor={secondaryColorInput}
-          />
-        </IconContainer>
-        <IconContainer>
           <CrossCircleIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
         </IconContainer>
-        <IconContainer>
-          <SunIconNext color={colorInput} />
-        </IconContainer>
-        <IconContainer>
-          <EnvelopeIconNext color={colorInput} />
-        </IconContainer>
-        <IconContainer>
-          <StarIconNext color={colorInput} />
-        </IconContainer>
       </Group>
-      <Group title="Arrows">
+
+      <Group title="Icônes flèches">
         <IconContainer suffix='direction="up"'>
           <LargeArrowIconNext color={colorInput} direction="up" />
         </IconContainer>
@@ -208,7 +249,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <LargeArrowIconNext color={colorInput} direction="right" />
         </IconContainer>
       </Group>
-      <Group title="Status icons">
+
+      <Group title="Icônes statuts">
         <IconContainer suffix="status=info">
           <StatusIconNext status="info" color={colorInput} />
         </IconContainer>
@@ -225,7 +267,8 @@ export const AllIcons = ({ colorInput, secondaryColorInput }) => {
           <StatusIconNext status="danger" color={colorInput} />
         </IconContainer>
       </Group>
-      <Group title="Social">
+
+      <Group title="Icônes réseaux sociaux">
         <IconContainer>
           <FacebookIconNext color={colorInput} />
         </IconContainer>
@@ -254,9 +297,11 @@ export default {
   args: {
     colorInput: '#333',
     secondaryColorInput: '#006cff',
+    bgColorInput: 'rgba(0,0,0,0)',
   },
   argTypes: {
     colorInput: { control: 'color' },
     secondaryColorInput: { control: 'color' },
+    bgColorInput: { control: 'color' },
   },
 }

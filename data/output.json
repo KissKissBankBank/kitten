@@ -107,17 +107,17 @@
     },
     "yellow": {
       "100": {
-        "value": "#fff9dc",
+        "value": "#fff3d2",
         "type": "color",
         "description": "Very Light Yellow"
       },
       "300": {
-        "value": "#ffe975",
+        "value": "#ffdd84",
         "type": "color",
         "description": "Light Yellow"
       },
       "500": {
-        "value": "#ffd600",
+        "value": "#ffb800",
         "type": "color",
         "description": "Yellow"
       },
@@ -127,7 +127,7 @@
         "description": "Dark Yellow"
       },
       "900": {
-        "value": "#5a4c00",
+        "value": "#4e3800",
         "type": "color",
         "description": "Very Dark Yellow"
       }

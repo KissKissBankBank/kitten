@@ -22,16 +22,65 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ModalNext`,
   - `TextCopy`,
   - `VerticalStepper`.
-- Feature: `TagButton`: Deprecate `modifier` and `icon` props.
-- Feature: `Tag`: Add `size` prop defaults to `regular`.
-- Fix: `Tag`:  New UI - colors style.
-- Feature: Logos: Add `LendopolisLogoVerticalOnDark` logo.
-- Fix: `DeskLayout`: Fix menu column width.
-- Fix: `ImageDropUploader`: Add background color.
+- Feature: `Button`: Add modifier-specific styles for `disabled` state.
+- Fix: `Accordeon`: New style for active state.
+- Feature: `Icons`: Add the following icon components:
+  - `BankCardIconNext`,
+  - `CubeIconNext`.
+- Feature: `StarIconNext`: Add `bgColor` prop.
+- Feature: `Icons`: Move the following icons to `icons-next` directory:
+  - `RefundIcon`,
+  - `GiftIcon`,
+  - `LockOutlineIcon`.
+- Fix: `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
+- Deprecation/Change: `Comment`: Deprecate `ownerUrl` prop.
+- Feature: `LendopolisLogoVerticalOnDark`: Add CSS class names.
+
+## [6.19.0] - 2022-01-14
+
+Features:
+
+- `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
+- `Tokens`: Update colors token in `tokens.json`.
+
+Fixes:
+
+- `TextInput`: Improve placeholder style.
+- `ImageDropUploader`: Style fixes.
+- `HeroLayout`: Improve style.
+- `TagButton`: Fix test to remove deprecation warning.
+
+## [6.18.0] - 2022-01-11
+
+Feature:
+
+- `Tokens`: Update yellow colors.
+
+Fixes:
+
+  - `TextInput`: Improve placeholder style.
+  - `createEvent`: Prevent SSR issue.
+
+## [6.17.0] - 2022-01-10
+
+Features:
+
+- `Icons`: Add `EditIconNext` and `FilterIconNext` components.
+- `Tag`: Add `size` prop defaults to `regular`.
+- Logos: Add `LendopolisLogoVerticalOnDark` logo.
+
+Fixes:
+
+- `Tag`:  New UI - colors style.
+- `ContributionCard`: Fix image display.
+- `DeskLayout`: Fix menu column width.
+- `ImageDropUploader`: Add background color.
+- Graphics: Remove SVG errors.
 
 ## [6.16.0] - 2022-01-05
 
 Features:
+
 - `ProjectCard`: Add `ProjectCard.Sticker` subcomponent.
 - `ProjectCard`: Deprecate `sticker` prop.
 - `Utilities`: Add `k-u-transform-capitalize` utility class.

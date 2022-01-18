@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -48,14 +47,12 @@ const StyledTag = styled.span`
 
 export const Tag = ({ type, size, className, ...props }) => (
   <StyledTag
-    className={
-      classNames(
-        'k-Tag',
-        className,
-        `k-Tag--${type}`,
-        `k-Tag--${size}`
-      )
-    }
+    className={classNames(
+      'k-Tag',
+      className,
+      `k-Tag--${type}`,
+      `k-Tag--${size}`,
+    )}
     {...props}
   />
 )

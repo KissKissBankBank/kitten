@@ -29,7 +29,7 @@ const StyledInput = styled.input`
   transition: border-color 0.2s ease;
 
   ::placeholder {
-    color: var(--color-grey-900);
+    color: var(--color-grey-700);
   }
 
   // SIZES
@@ -85,11 +85,14 @@ const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: var(--color-grey-900);
+    color: var(--color-grey-700);
     border-color: var(--color-grey-200);
     background-color: var(--color-grey-200);
     cursor: not-allowed;
 
+    &:hover {
+      border-color: var(--color-grey-200);
+    }
     ::placeholder {
       color: var(--color-grey-700);
     }
