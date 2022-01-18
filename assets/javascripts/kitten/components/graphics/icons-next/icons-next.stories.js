@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   AirplaneIconNext,
+  BankCardIconNext,
   BubbleIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
@@ -8,11 +9,13 @@ import {
   ColorCheckedShieldIconNext,
   CrossCircleIconNext,
   CrossIconNext,
+  CubeIconNext,
   EditIconNext,
   EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
   FilterIconNext,
+  GiftIcon,
   GiftIconNext,
   HeartIconNext,
   HeartWithClickIconNext,
@@ -21,8 +24,10 @@ import {
   InstagramIconNext,
   LargeArrowIconNext,
   LinkedinIconNext,
+  LockOutlineIcon,
   MessengerIconNext,
   PlusIconNext,
+  RefundIcon,
   SpeechBubbleIconNext,
   StarIconNext,
   StatsIconNext,
@@ -115,10 +120,10 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <AirplaneIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <BubbleIconNext color={colorInput} />
+          <BankCardIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <CrossIconNext color={colorInput} />
+          <BubbleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <CheckedShieldIconNext color={colorInput} />
@@ -127,10 +132,31 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <ChronoIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <CrossIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <CogIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <CubeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EditIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <EnvelopeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <EyeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <FilterIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <GiftIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <HeartIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <HomeIconNext color={colorInput} />
@@ -139,13 +165,25 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <InfiniteIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <LockOutlineIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <PlusIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <RefundIcon color={colorInput} />
         </IconContainer>
         <IconContainer>
           <SpeechBubbleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <StatsIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <StarIconNext color={colorInput}/>
+        </IconContainer>
+        <IconContainer>
+          <SunIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <TagIconNext color={colorInput} />
@@ -159,23 +197,14 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
         </IconContainer>
+      </Group>
+
+      <Group title="Icônes remplis">
         <IconContainer suffix="bgColor">
           <HeartIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
-        <IconContainer>
-          <SunIconNext color={colorInput} />
-        </IconContainer>
-        <IconContainer>
-          <EnvelopeIconNext color={colorInput} />
-        </IconContainer>
         <IconContainer suffix="bgColor">
           <StarIconNext color={colorInput} bgColor={bgColorInput} />
-        </IconContainer>
-        <IconContainer>
-          <EditIconNext color={colorInput} />
-        </IconContainer>
-        <IconContainer>
-          <FilterIconNext color={colorInput} />
         </IconContainer>
       </Group>
 
