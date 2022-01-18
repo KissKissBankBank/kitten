@@ -2,6 +2,7 @@
 
 exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -37,6 +38,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -110,14 +115,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -205,7 +202,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   disabled={null}
   href="#helloWorld"
   style={
@@ -221,6 +218,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -256,6 +254,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -329,14 +331,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -424,7 +418,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 }
 
 <input
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   disabled={null}
   style={
     Object {
@@ -438,6 +432,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 
 exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -473,6 +468,10 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -546,14 +545,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -641,7 +632,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": "0.25rem",
@@ -655,6 +646,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -690,6 +682,10 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -763,14 +759,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -858,7 +846,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,
@@ -872,6 +860,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -909,6 +898,10 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -980,14 +973,6 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1075,7 +1060,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--scandium k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--scandium k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1089,6 +1074,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 
 exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1124,6 +1110,10 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -1197,14 +1187,6 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1292,7 +1274,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1306,6 +1288,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1341,6 +1324,10 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -1414,14 +1401,6 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1509,7 +1488,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   disabled={null}
   href="#helloWorld"
   style={
@@ -1525,6 +1504,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<Button /> with fluid matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1560,6 +1540,10 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -1633,14 +1617,6 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1728,7 +1704,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1742,6 +1718,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1777,6 +1754,10 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -1850,14 +1831,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1945,7 +1918,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1959,6 +1932,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1994,6 +1968,10 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -2067,14 +2045,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2162,7 +2132,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2176,6 +2146,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -2211,6 +2182,10 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -2284,14 +2259,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2379,7 +2346,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2393,6 +2360,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -2428,6 +2396,10 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -2501,14 +2473,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2596,7 +2560,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2610,6 +2574,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -2645,6 +2610,10 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -2718,14 +2687,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -2813,7 +2774,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2827,6 +2788,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -2862,6 +2824,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -2935,14 +2901,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3030,7 +2988,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -3044,6 +3002,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -3079,6 +3038,10 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -3152,14 +3115,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3247,7 +3202,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -3266,6 +3221,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 exports[`<Button /> with text matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -3301,6 +3257,10 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -3374,14 +3334,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -3469,7 +3421,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,

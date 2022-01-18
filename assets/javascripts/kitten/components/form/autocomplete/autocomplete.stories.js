@@ -166,7 +166,6 @@ const args = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
-  variant: 'orion',
 }
 
 const argTypes = {
@@ -216,10 +215,6 @@ const argTypes = {
   isLoading: {
     name: 'isLoading',
     control: 'boolean',
-  },
-  variant: {
-    control: 'inline-radio',
-    options: ['andromeda', 'orion'],
   },
 }
 

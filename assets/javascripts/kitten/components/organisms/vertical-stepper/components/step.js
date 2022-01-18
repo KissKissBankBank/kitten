@@ -16,7 +16,6 @@ export const Step = ({
   statusProps,
   children,
   className,
-  variant,
   bridge,
   onClick,
   ...other
@@ -32,7 +31,6 @@ export const Step = ({
         as={other.href && !disabled ? 'a' : 'span'}
         onClick={disabled ? null : onClick}
         {...other}
-        variant={variant}
       >
         <Status
           success={success}
@@ -41,7 +39,6 @@ export const Step = ({
           waiting={waiting}
           disabled={disabled}
           bridge={bridge}
-          variant={variant}
           {...statusProps}
         />
 

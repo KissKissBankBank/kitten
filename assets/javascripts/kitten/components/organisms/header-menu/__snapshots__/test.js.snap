@@ -258,6 +258,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 
 exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
 .c1 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -291,6 +292,10 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   border: var(--border-width) solid;
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c1.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1:disabled,
@@ -364,14 +369,6 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
 
 .c1.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c1.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c1.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1 svg:not(.k-ColorSvg),
@@ -703,7 +700,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
     role="menuitem"
   >
     <button
-      className="c1 k-Button k-HeaderMenu__item__button k-Button--regular k-Button--null k-Button--orion k-Button--fit-fluid"
+      className="c1 k-Button k-HeaderMenu__item__button k-Button--regular k-Button--null k-Button--fit-fluid"
       href="#"
       style={
         Object {

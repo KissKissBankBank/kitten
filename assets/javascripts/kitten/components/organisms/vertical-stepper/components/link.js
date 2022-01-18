@@ -15,12 +15,23 @@ const StyledParagraph = styled.span`
 
   .k-Steppers--VerticalStepper__link {
     ${TYPOGRAPHY.fontStyles.regular};
-    font-size: ${pxToRem(12)};
+    font-size: ${stepToRem(-2)};
     line-height: normal;
     color: ${COLORS.primary1};
     text-decoration: none;
 
     transition: color 0.4s;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      font-size: ${stepToRem(-1)};
+    }
+
+    :before {
+      padding: 0 ${pxToRem(8)};
+      content: '●';
+      font-size: ${pxToRem(8)};
+      color: ${COLORS.font1};
+    }
 
     &:hover,
     &:focus,
@@ -28,23 +39,9 @@ const StyledParagraph = styled.span`
       color: ${COLORS.primary3};
     }
   }
-
-  .k-Steppers--VerticalStepper__link--orion {
-    font-size: ${stepToRem(-2)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      font-size: ${stepToRem(-1)};
-    }
-    :before {
-      padding: 0 ${pxToRem(8)};
-      content: '●';
-      font-size: ${pxToRem(8)};
-      color: ${COLORS.font1};
-    }
-  }
 `
 
-export const Link = ({ variant, className, ...props }) => {
+export const Link = ({ className, ...props }) => {
   return (
     <StyledParagraph>
       <span
@@ -52,18 +49,9 @@ export const Link = ({ variant, className, ...props }) => {
         className={classNames(
           LINK_CLASSNAME,
           'k-Steppers--VerticalStepper__link',
-          `k-Steppers--VerticalStepper__link--${variant}`,
           className,
         )}
       />
     </StyledParagraph>
   )
-}
-
-Link.protoTypes = {
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
-}
-
-Link.defaultProps = {
-  variant: 'orion',
 }

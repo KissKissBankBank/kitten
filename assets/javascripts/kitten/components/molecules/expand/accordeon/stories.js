@@ -40,11 +40,6 @@ export default {
       name: 'selectedItem',
       control: 'number',
     },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
-    },
     children: {
       name: 'children',
       control: null,
@@ -56,7 +51,6 @@ const args = {
   id: 'Accordeon',
   isAnimated: true,
   closeOnClick: false,
-  variant: 'orion',
   onChange: action('onChange'),
 }
 

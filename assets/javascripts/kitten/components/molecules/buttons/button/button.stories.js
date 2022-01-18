@@ -5,19 +5,17 @@ import {
   buttonFitOptions,
   buttonMobileFitOptions,
   buttonSizes,
-  buttonVariants,
 } from './index'
 import { HeartIcon, PayPalIcon, Badge, Cart } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 const args = {
-  borderRadius: 0,
+  borderRadius: null,
   modifier: 'hydrogen',
   rounded: false,
   disabled: false,
   size: 'regular',
   tag: undefined,
-  variant: 'orion',
   children: 'My Button',
   fit: 'min-width',
   mobileFit: undefined,
@@ -46,11 +44,6 @@ const argTypes = {
   tag: {
     name: 'tag',
     control: 'text',
-  },
-  variant: {
-    name: 'variant',
-    options: buttonVariants,
-    control: 'inline-radio',
   },
   children: {
     name: 'children',

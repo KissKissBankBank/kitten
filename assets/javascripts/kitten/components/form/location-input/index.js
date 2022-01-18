@@ -22,6 +22,7 @@ const StyledLocationInput = styled.div`
     display: block;
     box-sizing: border-box;
     padding: 0 ${pxToRem(15)} 0 ${pxToRem(35)};
+    border-radius: var(--border-radius-s);
 
     width: 100%;
     height: ${pxToRem(50)};
@@ -56,12 +57,6 @@ const StyledLocationInput = styled.div`
       &::placeholder {
         opacity: 1;
       }
-    }
-
-    // VARIANT
-
-    &.k-LocationInput__input--orion {
-      border-radius: var(--border-radius-s);
     }
   }
 
@@ -132,7 +127,6 @@ export const LocationInput = ({
   inputProps,
   name,
   loadingText,
-  variant,
   ...others
 }) => {
   const [address, updateAddress] = useState(defaultValue)
@@ -171,7 +165,6 @@ export const LocationInput = ({
               className: classNames(
                 'k-LocationInput__input',
                 inputProps?.className,
-                `k-LocationInput__input--${variant}`,
               ),
             })}
           />
@@ -217,7 +210,6 @@ LocationInput.defaultProps = {
   inputProps: {},
   name: 'location-input',
   loadingText: 'Loading...',
-  variant: 'orion',
 }
 
 LocationInput.propTypes = {
@@ -227,5 +219,4 @@ LocationInput.propTypes = {
   inputProps: PropTypes.object,
   name: PropTypes.string,
   loadingText: PropTypes.string,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }

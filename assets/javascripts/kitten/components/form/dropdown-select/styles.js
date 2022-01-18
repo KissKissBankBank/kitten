@@ -31,6 +31,7 @@ export const StyledDropdown = styled.div`
     width: 100%;
     height: var(--DropdownSelect-buttonHeight);
     margin: 0;
+    border-radius: var(--border-radius-s);
 
     display: flex;
     gap: ${pxToRem(10)};
@@ -102,6 +103,7 @@ export const StyledDropdown = styled.div`
     margin: 0;
     overflow-y: scroll;
     list-style: none;
+    border-radius: var(--border-radius-s);
 
     &:not(:empty) {
       border: var(--DropdownSelect-border) solid var(--color-grey-400);
@@ -119,6 +121,7 @@ export const StyledDropdown = styled.div`
     line-height: 1.3;
     display: flex;
     align-items: center;
+    min-height: ${pxToRem(40)};
 
     &.k-Form-Dropdown__item--level_2 {
       padding-left: ${pxToRem(30)};
@@ -180,118 +183,56 @@ export const StyledDropdown = styled.div`
     }
   }
 
-  /* VARIANT: ANDROMEDA */
+  /* SIZES */
 
-  &.k-Form-Dropdown--andromeda {
-    --DropdownSelect--arrowContainerWidth: ${pxToRem(40 + 2)};
-    .k-Form-DropdownCombobox__input,
-    .k-Form-DropdownSelect__content {
-      padding: 0 ${pxToRem(5)};
-    }
-
-    /* ANDROMEDA SIZES */
-
-    &.k-Form-Dropdown--tiny {
-      --DropdownSelect-buttonHeight: ${pxToRem(40)};
-      --DropdownSelect--arrowContainerWidth: ${pxToRem(30 + 2)};
-
-      .k-Form-Dropdown__item {
-        min-height: ${pxToRem(40)};
-        padding-top: ${pxToRem(8)};
-        padding-bottom: ${pxToRem(8)};
-      }
-    }
-
-    &.k-Form-Dropdown--big {
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        --DropdownSelect-buttonHeight: ${pxToRem(60)};
-        --DropdownSelect--arrowContainerWidth: ${pxToRem(50 + 2)};
-      }
-    }
-
-    &.k-Form-Dropdown--huge,
-    &.k-Form-Dropdown--giant {
-      --DropdownSelect-buttonHeight: ${pxToRem(70)};
-      --DropdownSelect--arrowContainerWidth: ${pxToRem(50 + 2)};
-      .k-Form-DropdownCombobox,
-      .k-Form-DropdownSelect__button {
-        font-size: ${stepToRem(0)};
-      }
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --DropdownSelect--arrowContainerWidth: ${pxToRem(60 + 2)};
-        &.k-Form-Dropdown--huge {
-          --DropdownSelect-buttonHeight: ${pxToRem(80)};
-        }
-        &.k-Form-Dropdown--giant {
-          --DropdownSelect-buttonHeight: ${pxToRem(90)};
-        }
+  &.k-Form-Dropdown--micro,
+  &.k-Form-Dropdown--tiny {
+    .k-Form-DropdownCombobox__statusBadges,
+    .k-Form-DropdownSelect__button__statusBadges {
+      svg {
+        width: ${pxToRem(20)};
+        height: ${pxToRem(20)};
       }
     }
   }
 
-  /* VARIANT: ORION */
+  &.k-Form-Dropdown--micro {
+    --DropdownSelect-buttonHeight: ${pxToRem(30)};
+  }
 
-  &.k-Form-Dropdown--orion {
-    .k-Form-DropdownCombobox,
-    .k-Form-DropdownSelect__button,
-    .k-Form-Dropdown__list {
-      border-radius: var(--border-radius-s);
+  &.k-Form-Dropdown--tiny {
+    --DropdownSelect-buttonHeight: ${pxToRem(40)};
+  }
+
+  &.k-Form-Dropdown--normal {
+    --DropdownSelect-buttonHeight: ${pxToRem(50)};
+  }
+
+  &.k-Form-Dropdown--big,
+  &.k-Form-Dropdown--huge,
+  &.k-Form-Dropdown--giant {
+    --DropdownSelect-buttonHeight: ${pxToRem(60)};
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      --DropdownSelect-buttonHeight: ${pxToRem(70)};
+      --DropdownSelect-arrowContainerWidth: ${pxToRem(50)};
     }
+  }
 
-    .k-Form-Dropdown__item {
-      min-height: ${pxToRem(40)};
-    }
-
-    &.k-Form-Dropdown--micro,
-    &.k-Form-Dropdown--tiny {
-      .k-Form-DropdownCombobox__statusBadges,
-      .k-Form-DropdownSelect__button__statusBadges {
-        svg {
-          width: ${pxToRem(20)};
-          height: ${pxToRem(20)};
-        }
+  &.k-Form-Dropdown--huge {
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      --DropdownSelect-buttonHeight: ${pxToRem(80)};
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        font-size: ${stepToRem(0)};
       }
     }
-
-    &.k-Form-Dropdown--micro {
-      --DropdownSelect-buttonHeight: ${pxToRem(30)};
-    }
-
-    &.k-Form-Dropdown--tiny {
-      --DropdownSelect-buttonHeight: ${pxToRem(40)};
-    }
-
-    &.k-Form-Dropdown--normal {
-      --DropdownSelect-buttonHeight: ${pxToRem(50)};
-    }
-
-    &.k-Form-Dropdown--big,
-    &.k-Form-Dropdown--huge,
-    &.k-Form-Dropdown--giant {
-      --DropdownSelect-buttonHeight: ${pxToRem(60)};
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        --DropdownSelect-buttonHeight: ${pxToRem(70)};
-        --DropdownSelect-arrowContainerWidth: ${pxToRem(50)};
-      }
-    }
-
-    &.k-Form-Dropdown--huge {
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --DropdownSelect-buttonHeight: ${pxToRem(80)};
-        .k-Form-DropdownCombobox,
-        .k-Form-DropdownSelect__button {
-          font-size: ${stepToRem(0)};
-        }
-      }
-    }
-    &.k-Form-Dropdown--giant {
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        --DropdownSelect-buttonHeight: ${pxToRem(90)};
-        .k-Form-DropdownCombobox,
-        .k-Form-DropdownSelect__button {
-          font-size: ${stepToRem(0)};
-        }
+  }
+  &.k-Form-Dropdown--giant {
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      --DropdownSelect-buttonHeight: ${pxToRem(90)};
+      .k-Form-DropdownCombobox,
+      .k-Form-DropdownSelect__button {
+        font-size: ${stepToRem(0)};
       }
     }
   }
@@ -315,14 +256,6 @@ export const StyledDropdown = styled.div`
     .k-Form-DropdownSelect__button__statusBadges {
       order: 3;
     }
-
-    &.k-Form-Dropdown--andromeda {
-      .k-Form-DropdownCombobox__arrowButton__arrowBox,
-      .k-Form-DropdownSelect__button__arrowBox {
-        padding-right: ${pxToRem(10)};
-        border-right: inherit;
-      }
-    }
   }
 
   /* ARROWPOSITION: RIGHT */
@@ -342,14 +275,6 @@ export const StyledDropdown = styled.div`
     .k-Form-DropdownCombobox__statusBadges,
     .k-Form-DropdownSelect__button__statusBadges {
       order: 2;
-    }
-
-    &.k-Form-Dropdown--andromeda {
-      .k-Form-DropdownCombobox__arrowButton__arrowBox,
-      .k-Form-DropdownSelect__button__arrowBox {
-        padding-left: ${pxToRem(10)};
-        border-left: inherit;
-      }
     }
   }
 
@@ -574,7 +499,7 @@ export const StyledDropdown = styled.div`
       }
     }
 
-    &.k-Form-Dropdown--orion.k-Form-Dropdown--isOpen {
+    &.k-Form-Dropdown--isOpen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
         border-bottom-left-radius: 0;
@@ -599,7 +524,7 @@ export const StyledDropdown = styled.div`
       }
     }
 
-    &.k-Form-Dropdown--orion.k-Form-Dropdown--isOpen {
+    &.k-Form-Dropdown--isOpen {
       .k-Form-DropdownCombobox,
       .k-Form-DropdownSelect__button {
         border-top-left-radius: 0;

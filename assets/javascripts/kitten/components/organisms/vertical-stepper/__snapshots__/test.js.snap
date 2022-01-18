@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
-.c3.k-Steppers--VerticalStepper__statusContainer--orion {
+.c3 {
   border-width: 0.25rem;
   border-style: solid;
   border-color: var(--color-grey-000,#fff);
@@ -23,76 +23,41 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: var(--border-radius-rounded);
   box-sizing: border-box;
   margin-right: 0.6875rem;
+  z-index: 1;
+  padding: 0.1875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.1875rem solid var(--color-grey-000,#fff);
+  border-radius: var(--border-radius-rounded);
   background-color: var(--color-grey-000,#fff);
-  border: var(--border);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-success-500,#61d079);
-  border-color: var(--color-success-500,#61d079);
+  background-color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-grey-000,#fff);
   border-color: var(--color-primary-500,#19b4fa);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
   color: var(--color-danger-500,#ff0046);
-  border-color: var(--color-danger-300,#ffb2c7);
+  border-color: var(--color-danger-500,#ff0046);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
-  color: var(--color-primary-500,#19b4fa);
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
-  color: var(--color-grey-000,#fff);
-  border-color: var(--color-grey-400,#d8d8d8);
-  background-color: var(--color-grey-400,#d8d8d8);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
-  box-sizing: border-box;
-  width: 100%;
-  border: 0.1875rem solid var(--color-grey-000,#fff);
-  z-index: 1;
-  padding: 0.1875rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: var(--border-radius-rounded);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-primary-500,#19b4fa);
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-grey-000,#fff);
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
   background-color: var(--color-grey-000,#fff);
   border-color: var(--color-grey-300,#eee);
 }
 
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-danger-500,#ff0046);
-  border-color: var(--color-danger-500,#ff0046);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
   background-color: var(--color-grey-000,#fff);
   border-color: var(--color-grey-300,#eee);
   border-width: 0.125rem;
@@ -103,13 +68,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   margin-right: 0.9375rem;
 }
 
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--bridge {
   height: 1.3125rem;
   position: relative;
   border: 0;
 }
 
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--bridge::before {
   width: 0.125rem;
   content: '';
   position: absolute;
@@ -207,18 +172,15 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c4 {
-  margin: 0;
+  margin: 0 0 0.3125rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: normal;
-}
-
-.c4.k-Steppers--VerticalStepper__title--orion {
+  -webkit-letter-spacing: .01rem;
+  -moz-letter-spacing: .01rem;
+  -ms-letter-spacing: .01rem;
+  letter-spacing: .01rem;
+  font-weight: 600;
   font-size: 0.75rem;
-  font-weight: bold;
   line-height: 1;
-  margin-bottom: 0.3125rem;
 }
 
 .c5 {
@@ -239,21 +201,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   transition: color 0.4s;
 }
 
-.c5 .k-Steppers--VerticalStepper__link:hover,
-.c5 .k-Steppers--VerticalStepper__link:focus,
-.c5 .k-Steppers--VerticalStepper__link:active {
-  color: var(--color-primary-900,#0496cc);
-}
-
-.c5 .k-Steppers--VerticalStepper__link--orion {
-  font-size: 0.75rem;
-}
-
-.c5 .k-Steppers--VerticalStepper__link--orion:before {
+.c5 .k-Steppers--VerticalStepper__link:before {
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
   color: var(--color-grey-900,#222);
+}
+
+.c5 .k-Steppers--VerticalStepper__link:hover,
+.c5 .k-Steppers--VerticalStepper__link:focus,
+.c5 .k-Steppers--VerticalStepper__link:active {
+  color: var(--color-primary-900,#0496cc);
 }
 
 .c6 {
@@ -293,6 +251,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c0 .k-Steppers--VerticalStepper {
   margin: 0;
   padding: 0;
+  margin-left: -0.3125rem;
   list-style: none;
 }
 
@@ -302,23 +261,16 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   bottom: 0;
   left: 0.875rem;
   z-index: -1;
+  border-left: none;
   content: '';
   border-left: 0.125rem dashed var(--color-grey-300,#eee);
 }
 
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion {
-  margin-left: -0.3125rem;
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
-  border-left: none;
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
+.c0 .k-Steppers--VerticalStepper li:not(:last-of-type) {
   position: relative;
 }
 
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+.c0 .k-Steppers--VerticalStepper li:not(:last-of-type)::after {
   content: '';
   position: absolute;
   left: 1rem;
@@ -329,18 +281,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   z-index: -1;
 }
 
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
+.c0 .k-Steppers--VerticalStepper li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
   background-color: var(--color-primary-500,#19b4fa);
 }
 
 @media (min-width:640px) {
-  .c3.k-Steppers--VerticalStepper__statusContainer--orion {
+  .c3 {
     border-width: 0.3125rem;
   }
 }
 
 @media (min-width:640px) {
-  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
+  .c3 .k-Steppers--VerticalStepper__status {
     width: 1.875rem;
     height: 1.875rem;
     border-radius: var(--border-radius-rounded);
@@ -349,7 +301,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 @media (min-width:640px) {
-  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
     width: 1rem;
     height: 1rem;
     border-radius: var(--border-radius-rounded);
@@ -359,19 +311,19 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 @media (min-width:640px) {
-  .c4.k-Steppers--VerticalStepper__title--orion {
+  .c4 {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:640px) {
-  .c5 .k-Steppers--VerticalStepper__link--orion {
+  .c5 .k-Steppers--VerticalStepper__link {
     font-size: 0.875rem;
   }
 }
 
 @media (min-width:640px) {
-  .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+  .c0 .k-Steppers--VerticalStepper li:not(:last-of-type)::after {
     width: 0.1875rem;
     left: 1.15625rem;
   }
@@ -381,7 +333,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   className="c0"
 >
   <ul
-    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__orion"
+    className="k-Steppers--VerticalStepper"
     role="tablist"
   >
     <li
@@ -392,10 +344,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+          className="c3 k-Steppers--VerticalStepper__statusContainer"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--success"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--success"
           >
             <svg
               fill="#fff"
@@ -414,7 +366,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title"
           >
             Title
           </p>
@@ -422,7 +374,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link"
             >
               Link
             </span>
@@ -438,10 +390,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+          className="c3 k-Steppers--VerticalStepper__statusContainer"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--valid"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--valid"
           >
             <svg
               height="6"
@@ -462,7 +414,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title"
           >
             Title
           </p>
@@ -489,7 +441,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link"
             >
               Link
             </span>
@@ -505,10 +457,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+          className="c3 k-Steppers--VerticalStepper__statusContainer"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--error"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--error"
           >
             <svg
               height="10"
@@ -527,7 +479,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title"
           >
             Title
           </p>
@@ -550,7 +502,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           >
             <span
               as="a"
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link"
               href="#"
             >
               Link
@@ -567,17 +519,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+          className="c3 k-Steppers--VerticalStepper__statusContainer"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--waiting"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--waiting"
           />
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title"
           >
             Title
           </p>
@@ -585,7 +537,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link"
             >
               Link
             </span>
@@ -601,17 +553,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+          className="c3 k-Steppers--VerticalStepper__statusContainer"
         >
           <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion"
+            className="k-Steppers--VerticalStepper__status"
           />
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
         >
           <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
+            className="c4 k-Steppers--VerticalStepper__title"
           >
             Title
           </p>
@@ -619,542 +571,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c5"
           >
             <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
+              className="VerticalStepper__link k-Steppers--VerticalStepper__link"
             >
               Link
             </span>
           </span>
-        </div>
-      </a>
-    </li>
-  </ul>
-</nav>
-`;
-
-exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
-.c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border-width: 0.25rem;
-  border-style: solid;
-  border-color: var(--color-grey-000,#fff);
-}
-
-.c3 .k-Steppers--VerticalStepper__status {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: var(--border-radius-rounded);
-  box-sizing: border-box;
-  margin-right: 0.6875rem;
-  background-color: var(--color-grey-000,#fff);
-  border: var(--border);
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-success-500,#61d079);
-  border-color: var(--color-success-500,#61d079);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-primary-500,#19b4fa);
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-danger-500,#ff0046);
-  border-color: var(--color-danger-300,#ffb2c7);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
-  color: var(--color-primary-500,#19b4fa);
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
-  color: var(--color-grey-000,#fff);
-  border-color: var(--color-grey-400,#d8d8d8);
-  background-color: var(--color-grey-400,#d8d8d8);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
-  box-sizing: border-box;
-  width: 100%;
-  border: 0.1875rem solid var(--color-grey-000,#fff);
-  z-index: 1;
-  padding: 0.1875rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: var(--border-radius-rounded);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-primary-500,#19b4fa);
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
-  background-color: var(--color-grey-000,#fff);
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
-  background-color: var(--color-grey-000,#fff);
-  border-color: var(--color-grey-300,#eee);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
-  color: var(--color-danger-500,#ff0046);
-  border-color: var(--color-danger-500,#ff0046);
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-  background-color: var(--color-grey-000,#fff);
-  border-color: var(--color-grey-300,#eee);
-  border-width: 0.125rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: var(--border-radius-rounded);
-  margin-left: 0.4375rem;
-  margin-right: 0.9375rem;
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
-  height: 1.3125rem;
-  position: relative;
-  border: 0;
-}
-
-.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
-  width: 0.125rem;
-  content: '';
-  position: absolute;
-  height: 100%;
-  border-left: 0.1875rem dotted var(--color-grey-300,#eee);
-  margin-left: 0.1875rem;
-}
-
-.c1 {
-  padding: 0.9375rem 0;
-}
-
-.c1:first-of-type {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.c1:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.c1 li:not(:last-of-type) {
-  margin: 0 !important;
-}
-
-.c1 li:not(:last-of-type)::after {
-  display: none;
-}
-
-.c1.k-Steppers--VerticalStepper__item--bridge {
-  padding: 0.5rem 0;
-}
-
-.c2 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.625rem;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2 .VerticalStepper__step {
-  -webkit-transition: -webkit-transform 0.4s;
-  -webkit-transition: transform 0.4s;
-  transition: transform 0.4s;
-}
-
-.c2 .VerticalStepper__link {
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
-}
-
-.c2:hover .VerticalStepper__step,
-.c2:focus .VerticalStepper__step,
-.c2:active .VerticalStepper__step {
-  -webkit-transform: translateX(0.3125rem);
-  -ms-transform: translateX(0.3125rem);
-  transform: translateX(0.3125rem);
-}
-
-.c2:hover .VerticalStepper__link,
-.c2:focus .VerticalStepper__link,
-.c2:active .VerticalStepper__link {
-  color: var(--color-primary-900,#0496cc);
-}
-
-.c2 .k-Steppers--VerticalStepper__step--link--content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  color: var(--color-grey-900,#222);
-}
-
-.c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
-  color: var(--color-grey-500,#b8b8b8);
-}
-
-.c4 {
-  margin: 0;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: normal;
-}
-
-.c4.k-Steppers--VerticalStepper__title--orion {
-  font-size: 0.75rem;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 0.3125rem;
-}
-
-.c5 {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.c5 .k-Steppers--VerticalStepper__link {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: normal;
-  color: var(--color-primary-500,#19b4fa);
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
-}
-
-.c5 .k-Steppers--VerticalStepper__link:hover,
-.c5 .k-Steppers--VerticalStepper__link:focus,
-.c5 .k-Steppers--VerticalStepper__link:active {
-  color: var(--color-primary-900,#0496cc);
-}
-
-.c5 .k-Steppers--VerticalStepper__link--orion {
-  font-size: 0.75rem;
-}
-
-.c5 .k-Steppers--VerticalStepper__link--orion:before {
-  padding: 0 0.5rem;
-  content: '●';
-  font-size: 0.5rem;
-  color: var(--color-grey-900,#222);
-}
-
-.c0 {
-  position: relative;
-  padding: 1px 0;
-}
-
-.c0 .k-Steppers--VerticalStepper {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.c0 .k-Steppers--VerticalStepper:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0.875rem;
-  z-index: -1;
-  content: '';
-  border-left: 0.125rem dashed var(--color-grey-300,#eee);
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion {
-  margin-left: -0.3125rem;
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
-  border-left: none;
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
-  position: relative;
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
-  content: '';
-  position: absolute;
-  left: 1rem;
-  top: 1.875rem;
-  background-color: var(--color-grey-300,#eee);
-  width: 0.125rem;
-  height: 100%;
-  z-index: -1;
-}
-
-.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
-  background-color: var(--color-primary-500,#19b4fa);
-}
-
-@media (min-width:640px) {
-  .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-    border-width: 0.3125rem;
-  }
-}
-
-@media (min-width:640px) {
-  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: var(--border-radius-rounded);
-    margin-right: 0.9375rem;
-  }
-}
-
-@media (min-width:640px) {
-  .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-    width: 1rem;
-    height: 1rem;
-    border-radius: var(--border-radius-rounded);
-    margin-right: 1.25rem;
-    border-width: 0.1875rem;
-  }
-}
-
-@media (min-width:640px) {
-  .c4.k-Steppers--VerticalStepper__title--orion {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:640px) {
-  .c5 .k-Steppers--VerticalStepper__link--orion {
-    font-size: 0.875rem;
-  }
-}
-
-@media (min-width:640px) {
-  .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
-    width: 0.1875rem;
-    left: 1.15625rem;
-  }
-}
-
-<nav
-  className="c0"
->
-  <ul
-    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__orion"
-    role="tablist"
-  >
-    <li
-      className="c1 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
-    >
-      <a
-        className="c2"
-        href="#"
-      >
-        <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
-        >
-          <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--success"
-          >
-            <svg
-              fill="#fff"
-              height="8"
-              viewBox="0 0 11 8"
-              width="10"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
-              />
-            </svg>
-          </span>
-        </div>
-        <div
-          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-        >
-          <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
-          >
-            Title
-          </p>
-          <span
-            className="c5"
-          >
-            <span
-              className="VerticalStepper__link k-Steppers--VerticalStepper__link k-Steppers--VerticalStepper__link--orion"
-            >
-              Link
-            </span>
-          </span>
-        </div>
-      </a>
-    </li>
-    <li
-      className="c1 k-Steppers--VerticalStepper__item"
-    >
-      <a
-        className="c2"
-        href="#"
-      >
-        <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
-        >
-          <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--valid"
-          >
-            <svg
-              height="6"
-              viewBox="0 0 6 6"
-              width="6"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="3"
-                cy="3"
-                fill="var(--color-primary-500, #19b4fa)"
-                r="3"
-              />
-            </svg>
-          </span>
-        </div>
-        <div
-          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-        >
-          <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
-          >
-            Title
-          </p>
-        </div>
-      </a>
-    </li>
-    <li
-      className="c1 k-Steppers--VerticalStepper__item"
-    >
-      <a
-        className="c2"
-        href="#"
-      >
-        <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
-        >
-          <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--error"
-          >
-            <svg
-              height="10"
-              width="2"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-                fill="var(--color-danger-500, #ff0046)"
-                fillRule="evenodd"
-              />
-            </svg>
-          </span>
-        </div>
-        <div
-          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-        >
-          <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
-          >
-            Title
-          </p>
-        </div>
-      </a>
-    </li>
-    <li
-      className="c1 k-Steppers--VerticalStepper__item"
-    >
-      <a
-        className="c2"
-        href="#"
-      >
-        <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
-        >
-          <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--waiting"
-          />
-        </div>
-        <div
-          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-        >
-          <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
-          >
-            Title
-          </p>
-        </div>
-      </a>
-    </li>
-    <li
-      className="c1 k-Steppers--VerticalStepper__item"
-    >
-      <a
-        className="c2"
-        href="#"
-      >
-        <div
-          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
-        >
-          <span
-            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion"
-          />
-        </div>
-        <div
-          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-        >
-          <p
-            className="c4 k-Steppers--VerticalStepper__title--orion"
-          >
-            Title
-          </p>
         </div>
       </a>
     </li>

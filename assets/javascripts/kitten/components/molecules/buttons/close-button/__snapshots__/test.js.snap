@@ -2,6 +2,7 @@
 
 exports[`<CloseButton /> default matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -37,6 +38,10 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -110,14 +115,6 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -206,10 +203,10 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
-      "--Button-border-radius": null,
+      "--Button-border-radius": 0,
     }
   }
   title="Close"
@@ -234,6 +231,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 exports[`<CloseButton /> with props matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -269,6 +267,10 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -342,14 +344,6 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -438,10 +432,10 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
-      "--Button-border-radius": null,
+      "--Button-border-radius": 0,
     }
   }
   title="Close"

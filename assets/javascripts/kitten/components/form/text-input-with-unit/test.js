@@ -66,16 +66,4 @@ describe('<TextInputWithUnit />', () => {
       expect(component).toMatchSnapshot()
     })
   })
-
-  describe('with variant prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<TextInputWithUnit>€</TextInputWithUnit>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
 })

@@ -7,41 +7,26 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import classNames from 'classnames'
 
 const StyledTitle = styled.p`
-  margin: 0;
+  margin: 0 0 ${pxToRem(5)};
 
-  ${TYPOGRAPHY.fontStyles.regular};
-  font-size: ${stepToRem(0)};
-  line-height: normal;
+  ${TYPOGRAPHY.fontStyles.bold};
+  font-size: ${stepToRem(-2)};
+  line-height: 1;
 
-  &.k-Steppers--VerticalStepper__title--orion {
-    font-size: ${stepToRem(-2)};
-    font-weight: bold;
-    line-height: 1;
-    margin-bottom: ${pxToRem(5)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      font-size: ${stepToRem(-1)};
-    }
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    font-size: ${stepToRem(-1)};
   }
 `
 
-export const Title = ({ variant, className, children }) => {
+export const Title = ({ className, children }) => {
   return (
     <StyledTitle
       className={classNames(
-        `k-Steppers--VerticalStepper__title--${variant}`,
+        'k-Steppers--VerticalStepper__title',
         className,
       )}
     >
       {children}
     </StyledTitle>
   )
-}
-
-Title.protoTypes = {
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
-}
-
-Title.defaultProps = {
-  variant: 'orion',
 }

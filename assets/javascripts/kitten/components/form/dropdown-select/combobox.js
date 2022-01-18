@@ -34,7 +34,6 @@ export const DropdownCombobox = ({
   disabled,
   hideLabel,
   id,
-  variant,
   size,
   a11yStatusError,
   a11yStatusValid,
@@ -160,7 +159,6 @@ export const DropdownCombobox = ({
     <StyledDropdown
       className={classNames(
         'k-Form-Dropdown',
-        `k-Form-Dropdown--${variant}`,
         `k-Form-Dropdown--${modifier}`,
         `k-Form-Dropdown--${direction}`,
         `k-Form-Dropdown--${size}`,
@@ -273,7 +271,6 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
-  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -301,7 +298,6 @@ DropdownCombobox.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,

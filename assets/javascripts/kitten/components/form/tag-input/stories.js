@@ -24,7 +24,6 @@ export default {
     disabled: false,
     helpMessage: 'Press Enter or comma to add an item to the list.',
     size: 'regular',
-    variant: 'orion',
     addEventKeys: ['Enter', ','],
     removeEventKeys: ['Backspace'],
   },
@@ -53,11 +52,6 @@ export default {
       name: 'size',
       options: ['tiny', 'regular', 'big', 'huge', 'giant'],
       control: 'select',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
     },
     addEventKeys: {
       name: 'addEventKeys',

@@ -17,6 +17,10 @@ import { useDebounce } from '../../../../helpers/utils/debounce'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 
 const StyledAccordeon = styled.div`
+  .k-Accordeon__item {
+    border-radius: var(--border-radius-m);
+  }
+
   .k-Accordeon__item ~ .k-Accordeon__item {
     margin-top: ${pxToRem(15)};
   }
@@ -37,20 +41,41 @@ const StyledAccordeon = styled.div`
 
   .k-Accordeon__header {
     display: block;
+    position: relative;
 
+    min-height: ${pxToRem(50)};
     margin: 0;
     width: 100%;
     box-sizing: border-box;
     overflow: visible;
+    padding: ${pxToRem(25)} ${pxToRem(30 + 10 + 10)} ${pxToRem(25)}
+      ${pxToRem(30)};
 
     background: transparent;
     border: var(--border);
+    border-radius: var(--border-radius-m);
 
-    font: inherit;
+    ${TYPOGRAPHY.fontStyles.regular}
     color: inherit;
-    background-color: transparent;
     cursor: pointer;
     text-align: left;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      min-height: ${pxToRem(70)};
+    }
+
+    &[aria-expanded='true'] {
+      border-bottom-color: ${COLORS.background1} !important;
+    }
+
+    .k-Accordeon__header__arrow {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: ${pxToRem(20)};
+      display: flex;
+      align-items: center;
+    }
 
     &:hover:active {
       border-color: var(--color-grey-900);
@@ -63,6 +88,11 @@ const StyledAccordeon = styled.div`
     visibility: visible;
     overflow: visible;
     height: auto;
+    padding: ${pxToRem(0.1)} ${pxToRem(30)};
+
+    background-color: ${COLORS.background1};
+    border-bottom-left-radius: var(--border-radius-m);
+    border-bottom-right-radius: var(--border-radius-m);
     border: var(--border);
     border-top: 0;
 
@@ -74,6 +104,10 @@ const StyledAccordeon = styled.div`
       visibility: hidden;
       opacity: 0;
       --accordeon-content-max-height: 0 !important;
+    }
+
+    .k-Accordeon__content_marger {
+      padding-bottom: ${pxToRem(30)};
     }
   }
 
@@ -103,75 +137,6 @@ const StyledAccordeon = styled.div`
     }
   }
 
-  &.k-Accordeon--andromeda {
-    .k-Accordeon__header {
-      ${TYPOGRAPHY.fontStyles.light}
-      padding: ${pxToRem(20)};
-      min-height: ${pxToRem(30)};
-      border-radius: var(--border-radius-xs);
-
-      .k-Accordeon__header__arrow {
-        display: none;
-      }
-    }
-
-    .k-Accordeon__content {
-      background-color: ${COLORS.background3};
-      border-bottom-left-radius: var(--border-radius-xs);
-      border-bottom-right-radius: var(--border-radius-xs);
-      padding: ${pxToRem(0.1)} ${pxToRem(30)};
-    }
-
-    .k-Accordeon__content_marger {
-      padding-top: ${pxToRem(30)};
-      padding-bottom: ${pxToRem(30)};
-    }
-  }
-
-  &.k-Accordeon--orion {
-    .k-Accordeon__item {
-      border-radius: var(--border-radius-m);
-    }
-
-    .k-Accordeon__header {
-      position: relative;
-      padding: ${pxToRem(25)} ${pxToRem(30 + 10 + 10)} ${pxToRem(25)}
-        ${pxToRem(30)};
-      ${TYPOGRAPHY.fontStyles.regular}
-
-      min-height: ${pxToRem(50)};
-      border-radius: var(--border-radius-m);
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        min-height: ${pxToRem(70)};
-      }
-
-      &[aria-expanded='true'] {
-        border-bottom-color: ${COLORS.background1};
-      }
-
-      .k-Accordeon__header__arrow {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: ${pxToRem(20)};
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    .k-Accordeon__content {
-      background-color: ${COLORS.background1};
-      border-bottom-left-radius: var(--border-radius-m);
-      border-bottom-right-radius: var(--border-radius-m);
-      padding: ${pxToRem(0.1)} ${pxToRem(30)};
-
-      .k-Accordeon__content_marger {
-        padding-bottom: ${pxToRem(30)};
-      }
-    }
-  }
-
   .k-Accordeon__header[aria-expanded='true'] {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -180,7 +145,6 @@ const StyledAccordeon = styled.div`
 
 export const Accordeon = ({
   closeOnClick,
-  variant,
   children,
   selectedItem,
   isAnimated,
@@ -248,7 +212,6 @@ export const Accordeon = ({
       className={classNames(
         'k-Accordeon',
         className,
-        `k-Accordeon--${variant}`,
         {
           'k-Accordeon--isAnimated': isAnimated,
         },
@@ -276,7 +239,6 @@ Accordeon.propTypes = {
   onChange: PropTypes.func,
   isAnimated: PropTypes.bool,
   id: PropTypes.string,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   closeOnClick: PropTypes.bool,
   multiple: PropTypes.bool,
 }
@@ -286,7 +248,6 @@ Accordeon.defaultProps = {
   onChange: () => {},
   isAnimated: true,
   id: 'accordeon',
-  variant: 'orion',
   closeOnClick: false,
   multiple: false,
 }

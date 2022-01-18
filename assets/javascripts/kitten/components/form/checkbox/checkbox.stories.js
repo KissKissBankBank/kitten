@@ -40,11 +40,6 @@ export default {
       name: 'disabled',
       control: 'boolean',
     },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
-    },
     onLabelClick: {
       name: 'onLabelClick',
     },
@@ -59,7 +54,6 @@ const args = {
   indeterminate: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   onLabelClick: () => {},
 }
 

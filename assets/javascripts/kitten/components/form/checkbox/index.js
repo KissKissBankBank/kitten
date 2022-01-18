@@ -43,6 +43,7 @@ const StyledCheckbox = styled.div`
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
     margin: 0 ${pxToRem(10)} 0 0;
+    border-radius: var(--border-radius-s);
 
     background-color: ${COLORS.background1};
     border: var(--border);
@@ -93,10 +94,6 @@ const StyledCheckbox = styled.div`
     }
   }
 
-  &.k-Form-Checkbox--orion .k-Form-Checkbox__input {
-    border-radius: var(--border-radius-s);
-  }
-
   .k-Form-Checkbox__link,
   label a {
     ${TYPOGRAPHY.fontStyles.regular}
@@ -133,7 +130,6 @@ export const Checkbox = ({
   onLabelClick,
   indeterminate,
   label,
-  variant,
   ...inputProps
 }) => {
   const inputElement = useRef(null)
@@ -148,7 +144,6 @@ export const Checkbox = ({
     <StyledCheckbox
       className={classNames(
         'k-Form-Checkbox',
-        `k-Form-Checkbox--${variant}`,
         {
           'k-Form-Checkbox--error': error,
           'k-Form-Checkbox--disabled': disabled,
@@ -237,7 +232,6 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   onLabelClick: () => {},
 }
 
@@ -250,6 +244,5 @@ Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node,
   label: PropTypes.string,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   onLabelClick: PropTypes.func,
 }

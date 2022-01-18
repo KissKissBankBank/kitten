@@ -12,7 +12,7 @@ import { ICON_TINY } from '../../../components/molecules/buttons/button/standalo
 import { Paragraph } from '../../../components/atoms/typography/paragraph/next'
 import { Text } from '../../../components/atoms/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { ScreenConfig, mq } from '../../../constants/screen-config'
 import { Title } from '../../atoms/typography/title'
 import COLORS from '../../../constants/colors-config'
 import {
@@ -58,10 +58,15 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${COLORS.background1};
     box-sizing: border-box;
     transform: scale(0.94);
-    margin: auto;
-    width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING_THIN)});
     display: flex;
     flex-direction: column;
+
+    margin: auto;
+    width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING_THIN)});
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       width: calc(100vw - ${pxToRem(2 * CONTAINER_PADDING)})
@@ -87,6 +92,7 @@ const GlobalStyle = createGlobalStyle`
         --Modal-contentCols: 6;
       }
     }
+
     &.k-ModalNext__content--huge {
       --Modal-colNumber: 10;
 
@@ -94,6 +100,7 @@ const GlobalStyle = createGlobalStyle`
         --Modal-contentCols: 6;
       }
     }
+
     &.k-ModalNext__content--giant {
       --Modal-colNumber: 12;
 
@@ -103,15 +110,44 @@ const GlobalStyle = createGlobalStyle`
       @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
         --Modal-contentCols: 6;
       }
+
+      @media ${mq.mobileAndTablet} {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      @media ${mq.mobile} {
+        overflow: auto;
+        min-height: calc(100% - ${pxToRem(50 * 2)});
+        margin: 0;
+        min-height: 100%;
+        border-radius: 0;
+      }
     }
+
     &.k-ModalNext__content--fullSize {
       min-width: 100vw;
       height: 100%;
       margin: 0;
     }
 
+    &:not(.k-ModalNext__content--fullSize) {
+      border-radius: var(--border-radius-l);
+
+      .k-ModalNext__closeButton .k-Button {
+        border-radius: 0;
+        border-top-right-radius: var(--border-radius-l);
+        border-top: 0;
+        border-right: 0;
+      }
+    }
+
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       &.k-ModalNext__content--fullSizeOnMobile {
+        border-radius: 0 !important;
         min-width: 100vw;
         height: 100%;
         margin: 0;
@@ -133,6 +169,14 @@ const GlobalStyle = createGlobalStyle`
       }
     }
 
+    &.k-ModalNext__content--hasHeader {
+      --Modal-headerHeight: ${pxToRem(80)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        --Modal-headerHeight: ${pxToRem(100)};
+      }
+    }
+
     .k-ModalNext__header {
       flex: 0 0 auto;
       position: sticky;
@@ -146,6 +190,9 @@ const GlobalStyle = createGlobalStyle`
       padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
       padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
       background-color: ${COLORS.background1};
+
+      border-top-left-radius: var(--border-radius-l);
+      border-top-right-radius: var(--border-radius-l);
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         padding-left: ${pxToRem(CONTAINER_PADDING)};
@@ -181,6 +228,12 @@ const GlobalStyle = createGlobalStyle`
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
           left: ${pxToRem(CONTAINER_PADDING + 40 + 35)};
+        }
+      }
+
+      .k-Button {
+        @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+          ${() => ICON_TINY}
         }
       }
     }
@@ -299,7 +352,7 @@ const GlobalStyle = createGlobalStyle`
         margin-right: calc(-1 * var(--Modal-contentMargin) * ${oneGridColXl});
       }
 
-      .k-Button--orion:first-child:last-child {
+      .k-Button:first-child:last-child {
         border-radius: 0;
       }
     }
@@ -309,7 +362,7 @@ const GlobalStyle = createGlobalStyle`
         margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
         margin-bottom: 0;
 
-        .k-Button--orion:first-child:last-child {
+        .k-Button:first-child:last-child {
           border-radius: 0;
         }
       }
@@ -319,84 +372,6 @@ const GlobalStyle = createGlobalStyle`
       margin-bottom:
     }
   }
-
-  /* ANDROMEDA STYLES */
-
-  .k-ModalNext__content--andromeda {
-    .k-ModalNext__header {
-      border-bottom: var(--border);
-      margin-bottom: ${pxToRem(50)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding-left: ${pxToRem(CONTAINER_PADDING)};
-        padding-right: ${pxToRem(CONTAINER_PADDING)};
-      }
-    }
-
-    &.k-ModalNext__content--hasHeader {
-      --Modal-headerHeight: ${pxToRem(60)};
-    }
-  }
-
-
-  /* ORION STYLES */
-
-  .k-ModalNext__content--orion {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-
-    &:not(.k-ModalNext__content--fullSize) {
-      border-radius: var(--border-radius-l);
-
-      .k-ModalNext__closeButton .k-Button {
-        border-top-right-radius: var(--border-radius-l);
-      }
-    }
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-      &.k-ModalNext__content--fullSizeOnMobile {
-        border-radius: 0 !important;
-      }
-    }
-
-    &.k-ModalNext__content--hasHeader {
-      --Modal-headerHeight: ${pxToRem(80)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        --Modal-headerHeight: ${pxToRem(100)};
-      }
-    }
-
-    .k-ModalNext__header {
-      border-top-left-radius: var(--border-radius-l);
-      border-top-right-radius: var(--border-radius-l);
-
-      .k-Button {
-        @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-          ${() => ICON_TINY}
-        }
-      }
-    }
-
-    &.k-ModalNext__content--giant {
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100vw;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-        overflow: auto;
-        min-height: calc(100% - ${pxToRem(50 * 2)});
-        margin: 0;
-        min-height: 100%;
-        border-radius: 0;
-      }
-    }
-  }
-
 
   /* OVERLAY STYLES */
 
@@ -412,46 +387,29 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
     background-color: rgba(34, 34, 34, .8);
 
-    &.k-ModalNext__overlay--andromeda {
-      &:not(.k-ModalNext__overlay--fullSize) {
-        &::before,
-        &::after {
-          content: '';
-          flex: 1 1 33%;
-          min-height: ${pxToRem(50)};
+    &:not(.k-ModalNext__overlay--giant):not(.k-ModalNext__overlay--fullSize) {
+      &::before,
+      &::after {
+        content: '';
+        flex: 1 1 33%;
+        min-height: ${pxToRem(50)};
 
-          @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-            min-height: ${pxToRem(100)};
-          }
+        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+          min-height: ${pxToRem(80)};
         }
       }
     }
-
-    &.k-ModalNext__overlay--orion {
-      &:not(.k-ModalNext__overlay--giant):not(.k-ModalNext__overlay--fullSize) {
-        &::before,
-        &::after {
+    &.k-ModalNext__overlay--giant {
+      &::before,
+      &::after {
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
           content: '';
           flex: 1 1 33%;
           min-height: ${pxToRem(50)};
-
-          @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-            min-height: ${pxToRem(80)};
-          }
         }
-      }
-      &.k-ModalNext__overlay--giant {
-        &::before,
-        &::after {
-          @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-            content: '';
-            flex: 1 1 33%;
-            min-height: ${pxToRem(50)};
-          }
 
-          @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-            min-height: ${pxToRem(80)};
-          }
+        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+          min-height: ${pxToRem(80)};
         }
       }
     }
@@ -656,7 +614,6 @@ const InnerModal = ({
   fullSize,
   fullSizeOnMobile,
   fullSizeTitle,
-  variant,
   headerTitle,
   headerActions,
   headerMessage,
@@ -703,7 +660,6 @@ const InnerModal = ({
           base: classNames(
             'k-ModalNext__content',
             `k-ModalNext__content--${size}`,
-            `k-ModalNext__content--${variant}`,
             {
               'k-ModalNext__content--hasHeader': shouldDisplayHeader,
               'k-ModalNext__content--fullSize': fullSize,
@@ -718,7 +674,6 @@ const InnerModal = ({
           base: classNames(
             'k-ModalNext__overlay',
             `k-ModalNext__overlay--${size}`,
-            `k-ModalNext__overlay--${variant}`,
             {
               'k-ModalNext__overlay--fullSize': fullSize,
               'k-ModalNext__overlay--fullSizeOnMobile': fullSizeOnMobile,
@@ -750,8 +705,7 @@ const InnerModal = ({
                   <CloseButton
                     modifier="hydrogen"
                     onClick={close}
-                    variant={variant}
-                    size={variant === 'orion' ? 'regular' : 'micro'}
+                    size="regular"
                     closeButtonLabel={closeButtonLabel}
                     aria-labelledby={
                       !!headerMessage ? 'ModalHeaderMessage' : null
@@ -860,7 +814,6 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   fullSizeTitle: deprecated(PropTypes.string, 'Please use `headerTitle`.'),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   headerTitle: PropTypes.node,
   headerActions: PropTypes.func,
   headerMessage: PropTypes.node,
@@ -880,7 +833,6 @@ Modal.defaultProps = {
   size: 'regular',
   isOpen: false,
   zIndex: 110,
-  variant: 'orion',
   headerTitle: null,
   headerActions: null,
   headerMessage: null,

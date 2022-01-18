@@ -2,6 +2,7 @@
 
 exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -37,6 +38,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -110,14 +115,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -318,7 +315,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   disabled={false}
   style={
     Object {
@@ -333,6 +330,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -368,6 +366,10 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -441,14 +443,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -649,7 +643,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--fit-min-width"
   disabled={false}
   style={
     Object {
@@ -664,6 +658,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -699,6 +694,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -772,14 +771,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -980,7 +971,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--orion k-Button--fit-min-width k-Button--disabled"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--fit-min-width k-Button--disabled"
   disabled={true}
   style={
     Object {
@@ -995,6 +986,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1032,6 +1024,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
 
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1103,14 +1099,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1311,7 +1299,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--fit-min-width"
   disabled={false}
   style={
     Object {
@@ -1326,6 +1314,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -1361,6 +1350,10 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -1434,14 +1427,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--fit-fluid {
   width: 100%;
-}
-
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0 svg:not(.k-ColorSvg),
@@ -1642,7 +1627,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--orion k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--fit-min-width"
   disabled={false}
   style={
     Object {

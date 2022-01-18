@@ -19,19 +19,13 @@ export default {
     ),
   ],
   argTypes: {
-    modifier: { control: 'radio', options: ['helium', 'hydrogen', 'carbon'] },
     size: { control: 'radio', options: ['tiny', 'regular', 'big', 'huge'] },
-    icon: { control: 'boolean' },
     active: { control: 'boolean' },
-    variant: { control: 'inline-radio', options: ['andromeda', 'orion'] },
     children: { control: 'text' },
   },
   args: {
-    modifier: 'hydrogen',
     size: 'regular',
-    icon: false,
     active: false,
-    variant: 'orion',
     children: 'My Tag',
   },
 }

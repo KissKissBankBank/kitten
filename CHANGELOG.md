@@ -4,6 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Remove `variant` props for the following components:
+  - `Progress`,
+  - `ProgressRing`,
+  - `Autocomplete`,
+  - `Checkbox`,
+  - `CheckboxSet`,
+  - `DropdownSelect`,
+  - `Field`,
+  - `LocationInput`,
+  - `TagInput`,
+  - `TextInput`,
+  - `TextInputWithButton`,
+  - `TextInputWithUnit`,
+  - `Button`,
+  - `Accordion`,
+  - `ModalNext`,
+  - `TextCopy`,
+  - `VerticalStepper`.
 - Feature: `Button`: Add modifier-specific styles for `disabled` state.
 - Fix: `Accordeon`: New style for active state.
 - Feature: `Icons`: Add the following icon components:
@@ -20,7 +38,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [6.19.0] - 2022-01-14
 
-Features: 
+Features:
 
 - `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
 - `Tokens`: Update colors token in `tokens.json`.
@@ -34,7 +52,7 @@ Fixes:
 
 ## [6.18.0] - 2022-01-11
 
-Feature: 
+Feature:
 
 - `Tokens`: Update yellow colors.
 

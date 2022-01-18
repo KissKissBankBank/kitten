@@ -17,12 +17,8 @@ export default {
       </div>
     ),
   ],
-  argTypes: {
-    variant: { control: 'inline-radio', options: ['andromeda', 'orion'] },
-  },
-  args: {
-    variant: 'orion',
-  },
+  argTypes: {},
+  args: {},
 }
 
 export const Default = args => (
