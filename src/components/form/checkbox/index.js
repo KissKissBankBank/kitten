@@ -25,7 +25,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _excluded = ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "labelProps", "onLabelClick", "indeterminate", "label", "variant"];
+var _excluded = ["className", "id", "children", "inputClassName", "error", "disabled", "textProps", "labelProps", "onLabelClick", "indeterminate", "label"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -34,7 +34,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var StyledCheckbox = _styledComponents.default.div.withConfig({
   displayName: "checkbox__StyledCheckbox",
   componentId: "sc-1fornr-0"
-})(["", " font-size:", ";line-height:1.5;display:flex;align-items:flex-start;flex-wrap:wrap;margin:", " 0;&.k-Form-Checkbox--disabled input,&.k-Form-Checkbox--disabled label{cursor:not-allowed;}.k-Form-Checkbox__label{flex-basis:calc(100% - ", ");cursor:pointer;transition:color 0.2s;", " &:active{color:", ";}}.k-Form-Checkbox__input{appearance:none;box-sizing:border-box;display:inline-block;flex-shrink:0;width:", ";height:", ";margin:0 ", " 0 0;background-color:", ";border:var(--border);cursor:pointer;transition:border-color 0.2s,background-color 0.2s;&:focus{border:var(--border-active-primary);}&:checked,&:indeterminate{background-color:", ";background-repeat:no-repeat;background-position:center;border:var(--border-active-primary);}&:checked{background-image:url(\"data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%0A%3E%3Cpath d='M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z' /%3E%3Cpath d='M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z' /%3E%3C/svg%3E%0A\");}&:indeterminate{background-image:url(\"data:image/svg+xml,%3Csvg width='6' height='2' viewBox='0 0 6 2' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%0A%3E%3Crect width='6' height='2' /%3E%3C/svg%3E%0A\");}&:disabled{background-color:", ";border:var(--border-disabled);}&:disabled:checked{border:var(--border-disabled-active);background-color:", ";background-image:url(\"data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg' fill='%23b8b8b8'%0A%3E%3Cpath d='M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z' /%3E%3Cpath d='M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z' /%3E%3C/svg%3E%0A\");}}&.k-Form-Checkbox--error .k-Form-Checkbox__input{border:var(--border-danger);&:checked{background-color:", ";&:focus{box-shadow:0 0 ", " ", ";}}}&.k-Form-Checkbox--orion .k-Form-Checkbox__input{border-radius:var(--border-radius-s);}.k-Form-Checkbox__link,label a{", " color:", ";text-decoration:none;transition:color 0.2s;&:hover{color:", ";text-decoration:none;}&:active{color:", ";text-decoration:none;}}.k-Form-Checkbox__content{flex:1 0 calc(100% - ", ");margin:", " 0 0 ", ";}"], _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20 + 10), _typographyConfig.default.fontStyles.light, _colorsConfig.default.primary3, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.line1, _colorsConfig.default.line2, _colorsConfig.default.error, (0, _typography.pxToRem)(3), _colorsConfig.default.error, _typographyConfig.default.fontStyles.regular, _colorsConfig.default.primary1, _colorsConfig.default.primary3, _colorsConfig.default.primary3, (0, _typography.pxToRem)(20 + 10), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20 + 10));
+})(["", " font-size:", ";line-height:1.5;display:flex;align-items:flex-start;flex-wrap:wrap;margin:", " 0;&.k-Form-Checkbox--disabled input,&.k-Form-Checkbox--disabled label{cursor:not-allowed;}.k-Form-Checkbox__label{flex-basis:calc(100% - ", ");cursor:pointer;transition:color 0.2s;", " &:active{color:", ";}}.k-Form-Checkbox__input{appearance:none;box-sizing:border-box;display:inline-block;flex-shrink:0;width:", ";height:", ";margin:0 ", " 0 0;border-radius:var(--border-radius-s);background-color:", ";border:var(--border);cursor:pointer;transition:border-color 0.2s,background-color 0.2s;&:focus{border:var(--border-active-primary);}&:checked,&:indeterminate{background-color:", ";background-repeat:no-repeat;background-position:center;border:var(--border-active-primary);}&:checked{background-image:url(\"data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%0A%3E%3Cpath d='M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z' /%3E%3Cpath d='M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z' /%3E%3C/svg%3E%0A\");}&:indeterminate{background-image:url(\"data:image/svg+xml,%3Csvg width='6' height='2' viewBox='0 0 6 2' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%0A%3E%3Crect width='6' height='2' /%3E%3C/svg%3E%0A\");}&:disabled{background-color:", ";border:var(--border-disabled);}&:disabled:checked{border:var(--border-disabled-active);background-color:", ";background-image:url(\"data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg' fill='%23b8b8b8'%0A%3E%3Cpath d='M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z' /%3E%3Cpath d='M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z' /%3E%3C/svg%3E%0A\");}}&.k-Form-Checkbox--error .k-Form-Checkbox__input{border:var(--border-danger);&:checked{background-color:", ";&:focus{box-shadow:0 0 ", " ", ";}}}.k-Form-Checkbox__link,label a{", " color:", ";text-decoration:none;transition:color 0.2s;&:hover{color:", ";text-decoration:none;}&:active{color:", ";text-decoration:none;}}.k-Form-Checkbox__content{flex:1 0 calc(100% - ", ");margin:", " 0 0 ", ";}"], _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20 + 10), _typographyConfig.default.fontStyles.light, _colorsConfig.default.primary3, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.line1, _colorsConfig.default.line2, _colorsConfig.default.error, (0, _typography.pxToRem)(3), _colorsConfig.default.error, _typographyConfig.default.fontStyles.regular, _colorsConfig.default.primary1, _colorsConfig.default.primary3, _colorsConfig.default.primary3, (0, _typography.pxToRem)(20 + 10), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20 + 10));
 
 var Checkbox = function Checkbox(_ref) {
   var className = _ref.className,
@@ -48,7 +48,6 @@ var Checkbox = function Checkbox(_ref) {
       onLabelClick = _ref.onLabelClick,
       indeterminate = _ref.indeterminate,
       label = _ref.label,
-      variant = _ref.variant,
       inputProps = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var inputElement = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
@@ -57,7 +56,7 @@ var Checkbox = function Checkbox(_ref) {
     }
   }, [indeterminate]);
   return /*#__PURE__*/_react.default.createElement(StyledCheckbox, {
-    className: (0, _classnames.default)('k-Form-Checkbox', "k-Form-Checkbox--" + variant, {
+    className: (0, _classnames.default)('k-Form-Checkbox', {
       'k-Form-Checkbox--error': error,
       'k-Form-Checkbox--disabled': disabled
     }, className)
@@ -101,7 +100,6 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   onLabelClick: function onLabelClick() {}
 };
 Checkbox.propTypes = {
@@ -113,6 +111,5 @@ Checkbox.propTypes = {
   id: _propTypes.default.string.isRequired,
   children: _propTypes.default.node,
   label: _propTypes.default.string,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   onLabelClick: _propTypes.default.func
 };

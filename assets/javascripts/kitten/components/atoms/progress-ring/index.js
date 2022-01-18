@@ -74,10 +74,7 @@ export const ProgressRing = ({
         fill="transparent"
         stroke={color}
         progressValue={progressValue}
-        className={classNames(
-          'k-Meters__ProgressRing',
-          className,
-        )}
+        className={classNames('k-Meters__ProgressRing', className)}
       />
     </svg>
   )

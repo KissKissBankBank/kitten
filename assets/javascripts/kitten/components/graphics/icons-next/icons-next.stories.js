@@ -80,7 +80,12 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
       ) : (
         <Text weight="light" size="micro">
           {children?.type?.name}
-          {suffix && <><br/>{suffix}</>}
+          {suffix && (
+            <>
+              <br />
+              {suffix}
+            </>
+          )}
         </Text>
       )}
     </div>
@@ -180,7 +185,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <StatsIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
-          <StarIconNext color={colorInput}/>
+          <StarIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <SunIconNext color={colorInput} />

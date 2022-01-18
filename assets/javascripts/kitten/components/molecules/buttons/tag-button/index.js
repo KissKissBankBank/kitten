@@ -110,7 +110,7 @@ export const TagButton = ({
   as,
   ...props
 }) => {
-  const others = ((({ modifier, icon, ...rest }) => rest)(props))
+  const others = (({ modifier, icon, ...rest }) => rest)(props)
 
   return (
     <StyledTagButton
@@ -135,7 +135,10 @@ TagButton.propTypes = {
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
   active: PropTypes.bool,
   icon: deprecated(PropTypes.bool, 'Icon is not implemented anymore.'),
-  modifier: deprecated(PropTypes.string, 'Modifiers are not implemented anymore.'),
+  modifier: deprecated(
+    PropTypes.string,
+    'Modifiers are not implemented anymore.',
+  ),
   selected: deprecated(PropTypes.bool, 'Please use `active` instead'),
 }
 

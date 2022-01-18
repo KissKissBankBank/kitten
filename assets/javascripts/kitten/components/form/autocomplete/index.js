@@ -287,14 +287,10 @@ export const Autocomplete = ({
 
   return (
     <Wrapper
-      className={classNames(
-        'k-Form-Autocomplete',
-        className,
-        {
-          [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
-          'k-Form-Autocomplete--disabled': props.disabled,
-        },
-      )}
+      className={classNames('k-Form-Autocomplete', className, {
+        [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
+        'k-Form-Autocomplete--disabled': props.disabled,
+      })}
     >
       <input
         {...props}

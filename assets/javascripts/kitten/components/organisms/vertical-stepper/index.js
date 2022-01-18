@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { Step } from './components/step'
@@ -18,10 +17,7 @@ export const VerticalStepper = ({ children, variant, className, ...props }) => {
     <StyledNav>
       <ul
         role="tablist"
-        className={classNames(
-          'k-Steppers--VerticalStepper',
-          className,
-        )}
+        className={classNames('k-Steppers--VerticalStepper', className)}
         {...props}
       >
         {children}
@@ -37,7 +33,7 @@ const StyledNav = styled.nav`
   .k-Steppers--VerticalStepper {
     margin: 0;
     padding: 0;
-      margin-left: ${pxToRem(-5)};
+    margin-left: ${pxToRem(-5)};
 
     list-style: none;
 
@@ -47,7 +43,7 @@ const StyledNav = styled.nav`
       bottom: 0;
       left: ${pxToRem(14)};
       z-index: -1;
-        border-left: none;
+      border-left: none;
 
       content: '';
       border-left: ${pxToRem(2)} dashed ${COLORS.line1};

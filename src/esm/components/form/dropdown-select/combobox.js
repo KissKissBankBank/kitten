@@ -36,7 +36,6 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       disabled = _ref.disabled,
       hideLabel = _ref.hideLabel,
       id = _ref.id,
-      variant = _ref.variant,
       size = _ref.size,
       a11yStatusError = _ref.a11yStatusError,
       a11yStatusValid = _ref.a11yStatusValid,
@@ -166,7 +165,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     setFlattenedOptions(flatOptions);
   }, [options]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
-    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--" + variant, "k-Form-Dropdown--" + modifier, "k-Form-Dropdown--" + direction, "k-Form-Dropdown--" + size, "k-Form-Dropdown--arrowPosition-" + arrowPosition, className, {
+    className: classNames('k-Form-Dropdown', "k-Form-Dropdown--" + modifier, "k-Form-Dropdown--" + direction, "k-Form-Dropdown--" + size, "k-Form-Dropdown--arrowPosition-" + arrowPosition, className, {
       'k-Form-Dropdown--isOpen': isOpen > 0,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
@@ -242,7 +241,6 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  variant: 'orion',
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
@@ -271,7 +269,6 @@ DropdownCombobox.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
   size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,

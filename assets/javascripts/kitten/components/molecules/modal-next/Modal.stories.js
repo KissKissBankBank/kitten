@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Modal } from './index'
-import { Button, Text, SaveIcon, COLORS } from '../../..'
+import { Button, Text } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

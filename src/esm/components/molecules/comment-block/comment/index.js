@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["text", "ownerName", "ownerUrl", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"],
+var _excluded = ["text", "ownerName", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"],
     _excluded2 = ["children", "accessibilityLabel", "hasLiked", "className", "disabled"];
 import React from 'react';
 import styled from 'styled-components';
@@ -19,7 +19,6 @@ var CommentWrapper = styled.div.withConfig({
 export var Comment = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var text = _ref.text,
       ownerName = _ref.ownerName,
-      ownerUrl = _ref.ownerUrl,
       avatarImgProps = _ref.avatarImgProps,
       commentDate = _ref.commentDate,
       footer = _ref.footer,
@@ -42,15 +41,14 @@ export var Comment = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
     className: "k-Comment__header"
   }, /*#__PURE__*/React.createElement("div", {
     className: "k-Comment__header__meta"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: ownerUrl
   }, /*#__PURE__*/React.createElement("img", _extends({
     alt: ""
   }, avatarImgProps, {
     className: "k-Comment__header__image"
-  }))), /*#__PURE__*/React.createElement("a", {
-    href: ownerUrl,
-    className: "k-u-link k-u-link-font1 k-u-ellipsis"
+  })), /*#__PURE__*/React.createElement(Text, {
+    weight: "regular",
+    color: "font1",
+    className: "k-u-ellipsis"
   }, ownerName), /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     "aria-hidden": true
@@ -95,7 +93,7 @@ Comment.LikeButton = function (_ref2) {
 
 Comment.propTypes = {
   ownerName: PropTypes.string,
-  ownerUrl: PropTypes.string,
+  ownerUrl: deprecated(PropTypes.string, 'Not used anymore'),
   avatarImgProps: PropTypes.object,
   commentDate: PropTypes.string,
   headerActions: PropTypes.node,
@@ -109,7 +107,6 @@ Comment.propTypes = {
 Comment.defaultProps = {
   footer: null,
   ownerName: '',
-  ownerUrl: '',
   headerActions: null,
   avatarImgProps: {},
   commentDate: '',

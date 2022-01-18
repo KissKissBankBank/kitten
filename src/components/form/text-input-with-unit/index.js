@@ -23,7 +23,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["unit", "unitWord", "size", "variant", "digits", "className", "valid", "error", "disabled", "wrapperProps"];
+var _excluded = ["unit", "unitWord", "size", "digits", "className", "valid", "error", "disabled", "wrapperProps"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -32,13 +32,12 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var StyledTextInputWithUnit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-unit__StyledTextInputWithUnit",
   componentId: "sc-gjmccx-0"
-})(["position:relative;width:1%;&:not(.k-Form-TextInputWithUnit--hasDigits){width:100%;}.k-Form-TextInputWithUnit__input{padding-right:", ";&[type='number']{appearance:textfield;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{margin:0;appearance:none;}}}.k-Form-TextInputWithUnit__unit{display:flex;z-index:1;position:absolute;right:", ";top:", ";bottom:", ";min-width:", ";align-items:center;justify-content:center;border-left:var(--border);border-radius:0;box-sizing:border-box;color:var(--color-grey-900);white-space:nowrap;transition:all 0.2s;font-size:", ";", ";background-color:var(--color-grey-000);&.k-Form-TextInputWithUnit__unit--valid{border:var(--border-success);}&.k-Form-TextInputWithUnit__unit--error{border:var(--border-danger);}&.k-Form-TextInputWithUnit__unit--disabled{color:var(--color-grey-700);background-color:var(--color-grey-200);}&.k-Form-TextInputWithUnit__unit--tiny{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--regular{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--big,&.k-Form-TextInputWithUnit__unit--huge{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--giant{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--hasUnitWord{font-size:", ";}}&:focus-within{.k-Form-TextInputWithUnit__unit{border-color:var(--color-grey-500);color:var(--color-grey-900);}}&.k-Form-TextInputWithUnit--orion{.k-Form-TextInputWithUnit__input{border-radius:var(--border-radius-s);padding-right:", ";}.k-Form-TextInputWithUnit__unit{border:none;}}"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(40), (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(25), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(42));
+})(["position:relative;width:1%;&:not(.k-Form-TextInputWithUnit--hasDigits){width:100%;}.k-Form-TextInputWithUnit__input{border-radius:var(--border-radius-s);padding-right:", ";&[type='number']{appearance:textfield;&::-webkit-inner-spin-button,&::-webkit-outer-spin-button{margin:0;appearance:none;}}}.k-Form-TextInputWithUnit__unit{display:flex;z-index:1;position:absolute;right:", ";top:", ";bottom:", ";min-width:", ";align-items:center;justify-content:center;border-radius:0;box-sizing:border-box;color:var(--color-grey-900);white-space:nowrap;transition:all 0.2s;font-size:", ";", ";background-color:var(--color-grey-000);&.k-Form-TextInputWithUnit__unit--disabled{color:var(--color-grey-700);background-color:var(--color-grey-200);}&.k-Form-TextInputWithUnit__unit--tiny{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--regular{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--big,&.k-Form-TextInputWithUnit__unit--huge{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--giant{padding:0 ", ";}&.k-Form-TextInputWithUnit__unit--hasUnitWord{font-size:", ";}}&:focus-within{.k-Form-TextInputWithUnit__unit{border-color:var(--color-grey-500);color:var(--color-grey-900);}}"], (0, _typography.pxToRem)(42), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(40), (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(25), (0, _typography.stepToRem)(-1));
 
 var TextInputWithUnit = function TextInputWithUnit(_ref) {
   var unit = _ref.unit,
       unitWord = _ref.unitWord,
       size = _ref.size,
-      variant = _ref.variant,
       digits = _ref.digits,
       className = _ref.className,
       valid = _ref.valid,
@@ -48,7 +47,7 @@ var TextInputWithUnit = function TextInputWithUnit(_ref) {
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var input = (0, _react.useRef)(null);
   return /*#__PURE__*/_react.default.createElement(StyledTextInputWithUnit, (0, _extends2.default)({}, wrapperProps, {
-    className: (0, _classnames.default)('k-Form-TextInputWithUnit', "k-Form-TextInputWithUnit--" + variant, wrapperProps.className, {
+    className: (0, _classnames.default)('k-Form-TextInputWithUnit', wrapperProps.className, {
       'k-Form-TextInputWithUnit--hasDigits': !!digits
     })
   }), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
@@ -58,8 +57,7 @@ var TextInputWithUnit = function TextInputWithUnit(_ref) {
     error: error,
     disabled: disabled,
     size: size,
-    className: (0, _classnames.default)('k-Form-TextInputWithUnit__input', className),
-    variant: variant
+    className: (0, _classnames.default)('k-Form-TextInputWithUnit__input', className)
   })), /*#__PURE__*/_react.default.createElement("span", {
     className: (0, _classnames.default)('k-Form-TextInputWithUnit__unit', "k-Form-TextInputWithUnit__unit--" + size, {
       'k-Form-TextInputWithUnit__unit--valid': valid,
@@ -80,7 +78,6 @@ TextInputWithUnit.propTypes = {
   unit: _propTypes.default.string,
   unitWord: _propTypes.default.bool,
   digits: _propTypes.default.number,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   size: _propTypes.default.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
   wrapperProps: _propTypes.default.object
 };
@@ -94,6 +91,5 @@ TextInputWithUnit.defaultProps = {
   size: 'regular',
   disabled: false,
   digits: null,
-  variant: 'orion',
   wrapperProps: {}
 };

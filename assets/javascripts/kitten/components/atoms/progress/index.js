@@ -62,13 +62,9 @@ export const Progress = ({
       aria-valuemin={valueMin}
       aria-valuemax={valueMax}
       aria-valuenow={progressValue}
-      className={classNames(
-        'k-Meters-Progress',
-        className,
-        {
-          'k-Meters-Progress--disabled': disabled,
-        },
-      )}
+      className={classNames('k-Meters-Progress', className, {
+        'k-Meters-Progress--disabled': disabled,
+      })}
       style={{
         '--progress-color': color,
         '--progress-value': `${progressValue}%`,
