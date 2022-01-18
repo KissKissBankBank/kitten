@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Accordeon`: New style for active state.
 - Feature: `Icons`: Add the following icon components:
   - `BankCardIconNext`,
   - `CubeIconNext`.
