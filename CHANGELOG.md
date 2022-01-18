@@ -9,11 +9,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `CubeIconNext`,
   - `CrossCircleEmptyIconNext`
 - Feature: `StarIconNext`: Add `bgColor` prop.
-- Feature: `Icons`: Move icons :
+- Feature: `Icons`: Move the following icons to `icons-next` directory:
   - `RefundIcon`,
   - `GiftIcon`,
-  - `LockOutlineIcon`
-to `icon-next` file.
+  - `LockOutlineIcon`.
 - Fix: `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
 - Deprecation/Change: `Comment`: Deprecate `ownerUrl` prop.
 

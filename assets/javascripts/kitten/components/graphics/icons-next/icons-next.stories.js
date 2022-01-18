@@ -205,10 +205,10 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
 
       <Group title="Icônes remplis">
       <IconContainer suffix="bgColor">
-          <HeartIconNext color={colorInput} bgColor="#222" />
+          <HeartIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
         <IconContainer suffix="bgColor">
-          <StarIconNext color={colorInput} bgColor="#222" />
+          <StarIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
       </Group>
 
