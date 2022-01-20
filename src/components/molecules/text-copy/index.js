@@ -49,7 +49,8 @@ var TextCopy = function TextCopy(_ref) {
       description = _ref.description,
       forceOneLine = _ref.forceOneLine,
       buttonText = _ref.buttonText,
-      buttonModifier = _ref.buttonModifier;
+      buttonModifier = _ref.buttonModifier,
+      size = _ref.size;
 
   var _useState = (0, _react.useState)(false),
       isMessageVisible = _useState[0],
@@ -96,14 +97,16 @@ var TextCopy = function TextCopy(_ref) {
     as: "div",
     className: (0, _classnames.default)('k-TextCopy__text', 'k-u-reset-button', {
       'k-TextCopy__text--forceOneLine': forceOneLine
-    })
+    }),
+    size: size
   }, /*#__PURE__*/_react.default.createElement("span", {
     ref: textElement
   }, children)), /*#__PURE__*/_react.default.createElement(_button.Button, {
     as: "span",
     modifier: !!buttonText ? buttonModifier : 'hydrogen',
     className: "k-TextCopy__buttonTextButton",
-    fit: buttonText ? 'content' : 'icon'
+    fit: buttonText ? 'content' : 'icon',
+    size: size
   }, !!buttonText ? buttonText : /*#__PURE__*/_react.default.createElement(_copyIcon.CopyIcon, null)), alertMessage && isMessageVisible && /*#__PURE__*/_react.default.createElement(_arrowContainer.ArrowContainer, {
     color: _colorsConfig.default.primary1,
     position: "top",
@@ -125,7 +128,8 @@ TextCopy.propTypes = {
   description: _propTypes.default.string,
   forceOneLine: _propTypes.default.bool,
   buttonText: _propTypes.default.string,
-  buttonModifier: _propTypes.default.string
+  buttonModifier: _propTypes.default.string,
+  size: _propTypes.default.oneOf(['tiny', 'regular', 'big', 'huge', 'giant'])
 };
 TextCopy.defaultProps = {
   alertMessage: undefined,
@@ -133,5 +137,6 @@ TextCopy.defaultProps = {
   description: undefined,
   forceOneLine: false,
   buttonText: undefined,
-  buttonModifier: 'helium'
+  buttonModifier: 'helium',
+  size: 'regular'
 };

@@ -56,6 +56,13 @@ export default {
       name: 'children',
       control: 'text',
     },
+    size: {
+      name: 'size',
+      description: 'Button and input size',
+      control: 'select',
+      default: 'regular',
+      options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+    },
   },
 }
 

@@ -27,7 +27,7 @@ var _progress = require("../../../../components/atoms/progress");
 
 var _text = require("../../../../components/atoms/typography/text");
 
-var _excluded = ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile"];
+var _excluded = ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile", "noProgress"];
 
 var StyledCard = _styledComponents.default.a.withConfig({
   displayName: "horizontal-crowdfunding-card__StyledCard",
@@ -57,6 +57,8 @@ var HorizontalCrowdfundingCard = function HorizontalCrowdfundingCard(_ref) {
       className = _ref.className,
       _ref$noProgressOnMobi = _ref.noProgressOnMobile,
       noProgressOnMobile = _ref$noProgressOnMobi === void 0 ? false : _ref$noProgressOnMobi,
+      _ref$noProgress = _ref.noProgress,
+      noProgress = _ref$noProgress === void 0 ? false : _ref$noProgress,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({
     href: href,
@@ -79,7 +81,7 @@ var HorizontalCrowdfundingCard = function HorizontalCrowdfundingCard(_ref) {
     className: "k-HorizontalCrowdfundingCard__description"
   }, description), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-HorizontalCrowdfundingCard__info"
-  }, info), /*#__PURE__*/_react.default.createElement("div", {
+  }, info), !noProgress && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-HorizontalCrowdfundingCard__progress"
   }, /*#__PURE__*/_react.default.createElement(_progress.Progress, {
     value: progress,
@@ -107,5 +109,6 @@ HorizontalCrowdfundingCard.propTypes = {
   info: _propTypes.default.node,
   progress: _propTypes.default.number,
   progressColor: _propTypes.default.string,
+  noProgress: _propTypes.default.bool,
   noProgressOnMobile: _propTypes.default.bool
 };
