@@ -4,9 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `HorizontalCrowdfundingCard`: Add `noProgress` prop, defaults to `false`.
 
-- Fix: `TextCopy`: Add `size` prop, default to `regular`
+## [7.1.0] - 2022-01-20
+
+Features: 
+
+- `HorizontalCrowdfundingCard`: Add `noProgress` prop, defaults to `false`.
+- `TextCopy`: Add `size` prop, default to `regular`.
 
 ## [7.0.0] - 2022-01-18
 
