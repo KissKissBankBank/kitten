@@ -77,11 +77,17 @@ const StyledTextInputWithUnit = styled.div`
       color: var(--color-grey-900);
     }
   }
+
+  .k-Form-TextInputWithUnit__unit--secondUnit {
+    font-weight: 400;
+    margin-left: ${pxToRem(7)};
+  }
 `
 
 export const TextInputWithUnit = ({
   unit,
   unitWord,
+  secondUnit,
   size,
   digits,
   className,
@@ -125,8 +131,14 @@ export const TextInputWithUnit = ({
           },
         )}
       >
-        {unit || unitWord}
+        {unit || unitWord }
+        <span className={classNames(
+          { 'k-Form-TextInputWithUnit__unit--secondUnit': secondUnit }
+        )}>
+          {secondUnit}
+        </span>
       </span>
+
     </StyledTextInputWithUnit>
   )
 }
@@ -138,6 +150,7 @@ TextInputWithUnit.propTypes = {
   center: PropTypes.bool,
   disabled: PropTypes.bool,
   unit: PropTypes.string,
+  secondUnit: PropTypes.string,
   unitWord: PropTypes.bool,
   digits: PropTypes.number,
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
@@ -146,6 +159,7 @@ TextInputWithUnit.propTypes = {
 
 TextInputWithUnit.defaultProps = {
   unit: 'λ',
+  secondUnit: '',
   unitWord: false,
   type: 'number',
   valid: false,
