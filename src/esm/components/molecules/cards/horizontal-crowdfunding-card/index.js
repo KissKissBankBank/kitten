@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile"];
+var _excluded = ["href", "imageProps", "title", "titleTag", "description", "info", "progress", "progressColor", "className", "noProgressOnMobile", "noProgress"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -37,6 +37,8 @@ export var HorizontalCrowdfundingCard = function HorizontalCrowdfundingCard(_ref
       className = _ref.className,
       _ref$noProgressOnMobi = _ref.noProgressOnMobile,
       noProgressOnMobile = _ref$noProgressOnMobi === void 0 ? false : _ref$noProgressOnMobi,
+      _ref$noProgress = _ref.noProgress,
+      noProgress = _ref$noProgress === void 0 ? false : _ref$noProgress,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
@@ -60,7 +62,7 @@ export var HorizontalCrowdfundingCard = function HorizontalCrowdfundingCard(_ref
     className: "k-HorizontalCrowdfundingCard__description"
   }, description), /*#__PURE__*/React.createElement("div", {
     className: "k-HorizontalCrowdfundingCard__info"
-  }, info), /*#__PURE__*/React.createElement("div", {
+  }, info), !noProgress && /*#__PURE__*/React.createElement("div", {
     className: "k-HorizontalCrowdfundingCard__progress"
   }, /*#__PURE__*/React.createElement(Progress, {
     value: progress,
@@ -86,5 +88,6 @@ HorizontalCrowdfundingCard.propTypes = {
   info: PropTypes.node,
   progress: PropTypes.number,
   progressColor: PropTypes.string,
+  noProgress: PropTypes.bool,
   noProgressOnMobile: PropTypes.bool
 };
