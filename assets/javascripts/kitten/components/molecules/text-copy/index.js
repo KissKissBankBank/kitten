@@ -98,6 +98,7 @@ export const TextCopy = ({
   forceOneLine,
   buttonText,
   buttonModifier,
+  size,
 }) => {
   const [isMessageVisible, setMessageVisibility] = useState(false)
   const textElement = useRef(null)
@@ -140,6 +141,7 @@ export const TextCopy = ({
         className={classNames('k-TextCopy__text', 'k-u-reset-button', {
           'k-TextCopy__text--forceOneLine': forceOneLine,
         })}
+        size={size}
       >
         <span ref={textElement}>{children}</span>
       </TextInput>
@@ -149,6 +151,7 @@ export const TextCopy = ({
         modifier={!!buttonText ? buttonModifier : 'hydrogen'}
         className="k-TextCopy__buttonTextButton"
         fit={buttonText ? 'content' : 'icon'}
+        size={size}
       >
         {!!buttonText ? buttonText : <CopyIcon />}
       </Button>
@@ -178,6 +181,7 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
 }
 
 TextCopy.defaultProps = {
@@ -187,4 +191,5 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
+  size: 'regular',
 }
