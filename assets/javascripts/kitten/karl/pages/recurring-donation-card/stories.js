@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackingCard, TextInputWithUnit, Text, Title } from 'kitten'
+import { BackingCard, TextInputWithUnit, Text, Title, Label } from 'kitten'
 import { StyledRecurringDonation } from './styles'
 
 export default {
@@ -8,51 +8,57 @@ export default {
 
 export const OuSoutenezNous = (props) => {
   return (
-    <StyledRecurringDonation>
-      <BackingCard
-        as="button"
-        className="k-u-reset-button"
-        {...props}
-      >
-        <BackingCard.Title>
-          <Title tag="h3" modifier="quaternary" noMargin>
-            … ou soutenez nous
-          </Title>
-        </BackingCard.Title>
+    <div className="story-Container story-Grid story-Grid--large">
+      <StyledRecurringDonation>
+        <BackingCard
+          as="button"
+          className="k-u-reset-button"
+          {...props}
+        >
+          <BackingCard.Title>
+            <Title tag="h3" modifier="quaternary" noMargin>
+              … ou soutenez nous
+            </Title>
+          </BackingCard.Title>
 
-        <BackingCard.Description>
-          <Text tag="p" size="default" className="k-u-margin-bottom-double">
-            Faites un don mensuel du montant de votre choix pour continuer à faire vivre notre projet&nbsp;:
-          </Text>
-          <div className="k-RecurringDonation__thumbnailsThreesome">
-            <div as="button" className="k-RecurringDonation__thumbnail">
-              <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">
-                2 €
-              </Text>
-              <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
-            </div>
-            <div as="button" className="k-RecurringDonation__thumbnail">
-              <Text className="k-u-margin-none"tag="p" className="k-u-margin-none" weight="bold" size="huge">5 €</Text>
-              <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
-            </div>
-            <div as="button" className="k-RecurringDonation__thumbnail">
-              <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">10 €</Text>
-              <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
-            </div>
-          </div>
-
-          <div className="k-u-align-center">
-            <Text tag="p" weight="bold" size="default" style={{ marginBottom: '7' }}>
-              ou un montant libre&nbsp;:
+          <BackingCard.Description>
+            <Text tag="p" size="default" className="k-u-margin-bottom-double">
+              Faites un don mensuel du montant de votre choix pour continuer à faire vivre notre projet&nbsp;:
             </Text>
-            <TextInputWithUnit unit="€" secondUnit="par mois" style={{ fontSize: '14px' }} />
-          </div>
-        </BackingCard.Description>
-        
-        <BackingCard.Button className="k-RecurringDonation__button">
-          Nous soutenir
-        </BackingCard.Button>
-      </BackingCard>
-    </StyledRecurringDonation>
+            <div className="k-RecurringDonation__thumbnailsThreesome">
+              <div as="button" className="k-RecurringDonation__thumbnail">
+                <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">
+                  2&nbsp;€
+                </Text>
+                <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
+              </div>
+              <div as="button" className="k-RecurringDonation__thumbnail">
+                <Text className="k-u-margin-none"tag="p" className="k-u-margin-none" weight="bold" size="huge">5&nbsp;€</Text>
+                <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
+              </div>
+              <div as="button" className="k-RecurringDonation__thumbnail">
+                <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">10&nbsp;€</Text>
+                <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
+              </div>
+            </div>
+          </BackingCard.Description>
+          
+          <BackingCard.Form className="k-RecurringDonation__form">
+            <Label className="k-u-margin-bottom-single">
+              ou un montant libre&nbsp;:
+            </Label>
+            <TextInputWithUnit
+              className="k-RecurringDonation__unitInput"
+              unit="€"
+              secondUnit="par mois"
+            />
+          </BackingCard.Form>
+  
+          <BackingCard.Button className="k-RecurringDonation__button">
+            Nous soutenir
+          </BackingCard.Button>
+        </BackingCard>
+      </StyledRecurringDonation>
+    </div>
   )
 }

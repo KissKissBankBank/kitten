@@ -119,7 +119,7 @@ export const StyledBackingCard = styled.article`
     }
 
     .k-BackingCard__description * {
-      ${TYPOGRAPHY.fontStyles.light.fontFamily};
+      ${TYPOGRAPHY.fontStyles.light};
       font-size: ${stepToRem(-2)};
       line-height: calc(1.5 * ${stepToRem(-2)});
     }

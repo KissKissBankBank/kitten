@@ -80,7 +80,7 @@ const StyledTextInputWithUnit = styled.div`
 
   .k-Form-TextInputWithUnit__unit--secondUnit {
     font-weight: 400;
-    margin-left: ${pxToRem(7)};
+    margin-left: ${pxToRem(5)};
   }
 `
 
