@@ -132,11 +132,14 @@ export const TextInputWithUnit = ({
         )}
       >
         {unit || unitWord }
-        <span className={classNames(
-          { 'k-Form-TextInputWithUnit__unit--secondUnit': secondUnit }
-        )}>
-          {secondUnit}
-        </span>
+
+        {secondUnit && (
+          <span className={classNames(
+            { 'k-Form-TextInputWithUnit__unit--secondUnit': secondUnit }
+          )}>
+            {secondUnit}
+          </span>
+        )}
       </span>
     </StyledTextInputWithUnit>
   )

@@ -14,11 +14,7 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
   >
     λ
-    <span
-      className=""
-    >
-      
-    </span>
+    
   </span>
 </div>
 `;
@@ -37,11 +33,7 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular k-Form-TextInputWithUnit__unit--disabled"
   >
     λ
-    <span
-      className=""
-    >
-      
-    </span>
+    
   </span>
 </div>
 `;
@@ -60,10 +52,29 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular k-Form-TextInputWithUnit__unit--error"
   >
     λ
+    
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with secondUnit prop matches with snapshot 1`] = `
+<div
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
+>
+  <input
+    className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
+  >
+    λ
     <span
-      className=""
+      className="k-Form-TextInputWithUnit__unit--secondUnit"
     >
-      
+      par mois
     </span>
   </span>
 </div>
@@ -83,11 +94,7 @@ exports[`<TextInputWithUnit /> with size prop matches with snapshot 1`] = `
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--big"
   >
     λ
-    <span
-      className=""
-    >
-      
-    </span>
+    
   </span>
 </div>
 `;
@@ -108,11 +115,7 @@ exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
   >
     λ
-    <span
-      className=""
-    >
-      
-    </span>
+    
   </span>
 </div>
 `;
@@ -131,11 +134,7 @@ exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
     className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular k-Form-TextInputWithUnit__unit--valid"
   >
     λ
-    <span
-      className=""
-    >
-      
-    </span>
+    
   </span>
 </div>
 `;

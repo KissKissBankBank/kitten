@@ -422,11 +422,7 @@ Array [
         className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
       >
         €
-        <span
-          className=""
-        >
-          
-        </span>
+        
       </span>
     </div>
   </div>,

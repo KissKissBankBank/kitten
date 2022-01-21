@@ -66,4 +66,14 @@ describe('<TextInputWithUnit />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with secondUnit prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithUnit secondUnit="par mois" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
