@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { pxToRem } from 'kitten'
 
-
 export const StyledRecurringDonation = styled.div`  
   .k-RecurringDonation__thumbnailsThreesome {
     display: flex;
@@ -10,9 +9,14 @@ export const StyledRecurringDonation = styled.div`
   }
 
   .k-RecurringDonation__thumbnail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     border: var(--border);
-    padding: ${pxToRem(24)} ${pxToRem(18)};
+    width: ${pxToRem(93)};
+    height: ${pxToRem(89)};
+    box-sizing: border-box;
     border-radius: var(--border-radius-m);
 
     &:hover,
