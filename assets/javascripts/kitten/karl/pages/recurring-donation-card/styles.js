@@ -7,7 +7,6 @@ export const StyledRecurringDonation = styled.div`
     display: flex;
     justify-content: center;
     gap: ${pxToRem(5)};
-    margin-bottom: ${pxToRem(20)};
   }
 
   .k-RecurringDonation__thumbnail {

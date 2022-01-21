@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat MYbHE k-Form-TextInputWithUnit"
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
 >
   <input
     className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
@@ -25,7 +25,7 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat MYbHE k-Form-TextInputWithUnit"
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
 >
   <input
     className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular k-Form-TextInput--disabled"
@@ -48,7 +48,7 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat MYbHE k-Form-TextInputWithUnit"
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
 >
   <input
     className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular k-Form-TextInput--error"
@@ -71,7 +71,7 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat MYbHE k-Form-TextInputWithUnit"
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
 >
   <input
     className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--big"
@@ -94,7 +94,7 @@ exports[`<TextInputWithUnit /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
 <div
-  className="sc-htpNat MYbHE k-Form-TextInputWithUnit"
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
 >
   <input
     className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
@@ -119,7 +119,7 @@ exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat MYbHE k-Form-TextInputWithUnit"
+  className="sc-htpNat hjmnFi k-Form-TextInputWithUnit"
 >
   <input
     className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular k-Form-TextInput--valid"

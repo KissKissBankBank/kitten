@@ -138,7 +138,6 @@ export const TextInputWithUnit = ({
           {secondUnit}
         </span>
       </span>
-
     </StyledTextInputWithUnit>
   )
 }
@@ -151,7 +150,7 @@ TextInputWithUnit.propTypes = {
   disabled: PropTypes.bool,
   unit: PropTypes.string,
   secondUnit: PropTypes.string,
-  unitWord: PropTypes.bool,
+  unitWord: PropTypes.string,
   digits: PropTypes.number,
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
   wrapperProps: PropTypes.object,

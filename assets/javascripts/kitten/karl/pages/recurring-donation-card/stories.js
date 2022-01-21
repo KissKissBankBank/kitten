@@ -22,7 +22,7 @@ export const OuSoutenezNous = (props) => {
           </BackingCard.Title>
 
           <BackingCard.Description>
-            <Text tag="p" size="default" className="k-u-margin-bottom-double">
+            <Text tag="p" size="default" className="k-u-margin-bottom-double k-u-margin-top-none">
               Faites un don mensuel du montant de votre choix pour continuer à faire vivre notre projet&nbsp;:
             </Text>
             <div className="k-RecurringDonation__thumbnailsThreesome">

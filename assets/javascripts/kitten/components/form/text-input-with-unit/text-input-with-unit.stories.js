@@ -16,7 +16,7 @@ Default.args = {
   ...TextInputStory.args,
   unit: '€',
   secondUnit:'par mois',
-  unitWord: false,
+  unitWord: '',
   wrapper: {},
 }
 
@@ -32,7 +32,7 @@ Default.argTypes = {
   },
   unitWord: {
     name: 'unitWord',
-    control: 'boolean',
+    control: 'text',
   },
   wrapperProps: {
     name: 'wrapperProps',
