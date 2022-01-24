@@ -46,7 +46,6 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
         className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
       >
         €
-        
       </span>
     </div>
     <button

@@ -15,8 +15,7 @@ Default.decorators = [
 Default.args = {
   ...TextInputStory.args,
   unit: '€',
-  secondUnit:'par mois',
-  unitWord: '',
+  unitWord: {},
   wrapper: {},
 }
 
@@ -26,13 +25,9 @@ Default.argTypes = {
     name: 'unit',
     control: 'text',
   },
-  secondUnit: {
-    name: 'secondUnit',
-    control: 'text',
-  },
   unitWord: {
     name: 'unitWord',
-    control: 'text',
+    control: 'object',
   },
   wrapperProps: {
     name: 'wrapperProps',

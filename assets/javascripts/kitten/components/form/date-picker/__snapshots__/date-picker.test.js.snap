@@ -29,7 +29,6 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
         className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
       >
         📅
-        
       </span>
     </div>
   </div>

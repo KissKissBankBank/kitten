@@ -132,14 +132,6 @@ export const TextInputWithUnit = ({
         )}
       >
         {unit || unitWord }
-
-        {secondUnit && (
-          <span className={classNames(
-            { 'k-Form-TextInputWithUnit__unit--secondUnit': secondUnit }
-          )}>
-            {secondUnit}
-          </span>
-        )}
       </span>
     </StyledTextInputWithUnit>
   )
@@ -152,17 +144,15 @@ TextInputWithUnit.propTypes = {
   center: PropTypes.bool,
   disabled: PropTypes.bool,
   unit: PropTypes.string,
-  secondUnit: PropTypes.string,
-  unitWord: PropTypes.string,
+  unitWord: PropTypes.node,
   digits: PropTypes.number,
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
   wrapperProps: PropTypes.object,
 }
 
 TextInputWithUnit.defaultProps = {
-  unit: 'λ',
-  secondUnit: '',
-  unitWord: false,
+  unit: '',
+  unitWord: null,
   type: 'number',
   valid: false,
   error: false,
