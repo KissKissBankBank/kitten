@@ -26,7 +26,7 @@ export const OuSoutenezNous = (props) => {
               <Text tag="p" size="default" className="k-u-margin-bottom-double k-u-margin-top-none">
                 Faites un don mensuel du montant de votre choix pour continuer à faire vivre notre projet&nbsp;:
               </Text>
-              <div className="k-RecurringDonation__thumbnailsThreesome">
+              <div className="k-RecurringDonation__thumbnailsTrio">
                 <div as="button" className="k-RecurringDonation__thumbnail">
                   <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">
                     2&nbsp;€
@@ -50,8 +50,7 @@ export const OuSoutenezNous = (props) => {
               </Label>
               <TextInputWithUnit
                 className="k-RecurringDonation__unitInput"
-                unit="€"
-                secondUnit="par mois"
+                unitWord={<p>€{' '}<span className="k-u-weight-light">par mois</span></p>}
               />
             </BackingCard.Form>
     

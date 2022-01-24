@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { pxToRem } from 'kitten'
 
 export const StyledRecurringDonation = styled.div`  
-  .k-RecurringDonation__thumbnailsThreesome {
+  .k-RecurringDonation__thumbnailsTrio {
     display: flex;
     justify-content: space-between;
     gap: ${pxToRem(5)};
