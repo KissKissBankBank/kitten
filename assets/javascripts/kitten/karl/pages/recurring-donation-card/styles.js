@@ -4,7 +4,7 @@ import { pxToRem } from 'kitten'
 export const StyledRecurringDonation = styled.div`  
   .k-RecurringDonation__thumbnailsThreesome {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: ${pxToRem(5)};
   }
 
@@ -28,12 +28,6 @@ export const StyledRecurringDonation = styled.div`
       border-color: var(--color-blue-500);
       background-color: var(--color-blue-100);
     }
-  }
-
-  .k-RecurringDonation__button {
-    width: ${pxToRem(162)};
-    margin: 0 auto;
-    margin-bottom: ${pxToRem(30)};
   }
 
   .k-RecurringDonation__unitInput {
