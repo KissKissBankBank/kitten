@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import { pxToRem } from 'kitten'
 
-export const StyledRecurringDonation = styled.div`  
+export const StyledRecurringDonation = styled.div` 
   .k-RecurringDonation__thumbnailsTrio {
     display: flex;
     justify-content: space-between;
     gap: ${pxToRem(5)};
+    margin-bottom: ${pxToRem(20)};
   }
 
   .k-RecurringDonation__thumbnail {
@@ -18,6 +19,7 @@ export const StyledRecurringDonation = styled.div`
     height: ${pxToRem(89)};
     box-sizing: border-box;
     border-radius: var(--border-radius-m);
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -30,12 +32,7 @@ export const StyledRecurringDonation = styled.div`
     }
   }
 
-  .k-RecurringDonation__unitInput {
-    font-size: ${pxToRem(14)};
-  }
-
   .k-RecurringDonation__form {
-    text-align: center;
-    padding: 0 ${pxToRem(40)};
+    padding: 0 ${pxToRem(35)};
   }
 `
