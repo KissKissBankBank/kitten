@@ -151,7 +151,7 @@ TextInputWithUnit.propTypes = {
 }
 
 TextInputWithUnit.defaultProps = {
-  unit: '',
+  unit: null,
   unitWord: null,
   type: 'number',
   valid: false,
