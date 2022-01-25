@@ -2,6 +2,7 @@
 
 exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c1 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -37,6 +38,10 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c1.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c1:disabled,
@@ -112,14 +117,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c1.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c1.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
 .c1 svg:not(.k-ColorSvg),
 .c1 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -127,27 +124,33 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c1:hover,
+.c1:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c1:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c1:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c1:disabled,
 .c1.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 .c2 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -183,6 +186,10 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c2.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c2:disabled,
@@ -258,14 +265,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c2.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
 .c2 svg:not(.k-ColorSvg),
 .c2 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -273,10 +272,15 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c2:hover,
-.c2:focus {
+.c2:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
+}
+
+.c2:focus {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-100);
   color: var(--color-grey-900,#222);
 }
 
@@ -288,9 +292,9 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c2:disabled,
 .c2.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-600);
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-600);
 }
 
 .c0 {
@@ -444,11 +448,11 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-ButtonGroup k-ButtonGroup--orion"
+  className="c0 k-ButtonGroup"
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -459,7 +463,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--lithium k-Button--orion k-Button--fit-min-width"
+    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--lithium k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -470,490 +474,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
-    style={
-      Object {
-        "--Button-border-radius": null,
-      }
-    }
-    type="button"
-  >
-    Button3
-  </button>
-</div>
-`;
-
-exports[`<ButtonGroup /> with variant prop matches with snapshot 1`] = `
-.c1 {
-  position: relative;
-  box-sizing: border-box;
-  min-height: var(--Button-dimension);
-  padding: var(--Button-padding);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-grey-900,#222);
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  border-radius: var(--Button-border-radius,0);
-  min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-}
-
-.c1:disabled,
-.c1.k-Button--disabled {
-  cursor: not-allowed;
-}
-
-.c1:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c1:focus-visible {
-  outline: auto;
-}
-
-.c1.k-Button--nano {
-  --Button-dimension: 1.25rem;
-  --Button-min-width: 6.25rem;
-  --Button-padding: 0 0.375rem;
-  font-size: 0.75rem;
-}
-
-.c1.k-Button--micro {
-  --Button-dimension: 1.875rem;
-  --Button-min-width: 8.125rem;
-  --Button-padding: 0.3125rem 0.625rem;
-  font-size: 0.75rem;
-}
-
-.c1.k-Button--tiny {
-  --Button-dimension: 2.5rem;
-  --Button-min-width: 10rem;
-  --Button-padding: 0.4375rem 1.25rem;
-}
-
-.c1.k-Button--regular {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c1.k-Button--big {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c1.k-Button--huge {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c1.k-Button--giant {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c1.k-Button--fit-min-width {
-  min-width: var(--Button-min-width);
-}
-
-.c1.k-Button--fit-icon {
-  padding: 0;
-  overflow: hidden;
-  width: var(--Button-dimension);
-  height: var(--Button-dimension);
-}
-
-.c1.k-Button--fit-fluid {
-  width: 100%;
-}
-
-.c1.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c1.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
-.c1 svg:not(.k-ColorSvg),
-.c1 svg:not(.k-ColorSvg) path {
-  fill: currentColor;
-  -webkit-transition: fill var(--transition);
-  transition: fill var(--transition);
-}
-
-.c1:hover,
-.c1:focus {
-  border-color: var(--color-primary-300);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1:active {
-  border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c1:disabled,
-.c1.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
-}
-
-.c2 {
-  position: relative;
-  box-sizing: border-box;
-  min-height: var(--Button-dimension);
-  padding: var(--Button-padding);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-grey-900,#222);
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  border-radius: var(--Button-border-radius,0);
-  min-width: 0;
-  border: var(--border-width) solid var(--color-primary-500);
-  background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
-  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-}
-
-.c2:disabled,
-.c2.k-Button--disabled {
-  cursor: not-allowed;
-}
-
-.c2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2:focus-visible {
-  outline: auto;
-}
-
-.c2.k-Button--nano {
-  --Button-dimension: 1.25rem;
-  --Button-min-width: 6.25rem;
-  --Button-padding: 0 0.375rem;
-  font-size: 0.75rem;
-}
-
-.c2.k-Button--micro {
-  --Button-dimension: 1.875rem;
-  --Button-min-width: 8.125rem;
-  --Button-padding: 0.3125rem 0.625rem;
-  font-size: 0.75rem;
-}
-
-.c2.k-Button--tiny {
-  --Button-dimension: 2.5rem;
-  --Button-min-width: 10rem;
-  --Button-padding: 0.4375rem 1.25rem;
-}
-
-.c2.k-Button--regular {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c2.k-Button--big {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c2.k-Button--huge {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c2.k-Button--giant {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c2.k-Button--fit-min-width {
-  min-width: var(--Button-min-width);
-}
-
-.c2.k-Button--fit-icon {
-  padding: 0;
-  overflow: hidden;
-  width: var(--Button-dimension);
-  height: var(--Button-dimension);
-}
-
-.c2.k-Button--fit-fluid {
-  width: 100%;
-}
-
-.c2.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c2.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
-.c2 svg:not(.k-ColorSvg),
-.c2 svg:not(.k-ColorSvg) path {
-  fill: currentColor;
-  -webkit-transition: fill var(--transition);
-  transition: fill var(--transition);
-}
-
-.c2:hover,
-.c2:focus {
-  border-color: var(--color-primary-700);
-  background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
-}
-
-.c2:active {
-  border-color: var(--color-primary-900);
-  background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
-}
-
-.c2:disabled,
-.c2.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c0 .k-ButtonGroup__button {
-  position: relative;
-  z-index: 0;
-  min-width: auto;
-  width: auto;
-  border-radius: 0;
-}
-
-.c0 .k-ButtonGroup__button:not(:last-child) {
-  margin-right: -0.0625rem;
-}
-
-.c0 .k-ButtonGroup__button:first-child {
-  border-top-left-radius: var(--border-radius-s);
-  border-bottom-left-radius: var(--border-radius-s);
-}
-
-.c0 .k-ButtonGroup__button:last-child {
-  border-top-right-radius: var(--border-radius-s);
-  border-bottom-right-radius: var(--border-radius-s);
-}
-
-.c0 .k-ButtonGroup__button:active,
-.c0 .k-ButtonGroup__button:hover {
-  z-index: 1;
-}
-
-.c0 .k-ButtonGroup__button.k-ButtonGroup__button--isActive {
-  z-index: 2;
-}
-
-.c0 .k-ButtonGroup__button:focus-visible {
-  z-index: 3;
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--big {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 4.375rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--huge {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c1.k-Button--giant {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5.625rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width:39.9375rem) {
-  .c1[class*='k-Button--mobile-fit'] {
-    min-width: initial !important;
-    padding: var(--Button-padding);
-    width: initial;
-    height: initial;
-    width: initial;
-  }
-
-  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
-    min-width: var(--Button-min-width) !important;
-  }
-
-  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
-    padding: 0;
-    overflow: hidden;
-    width: var(--Button-dimension);
-    height: var(--Button-dimension);
-  }
-
-  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
-    width: 100%;
-  }
-}
-
-@media (min-width:40rem) {
-  .c2.k-Button--big {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 4.375rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c2.k-Button--huge {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c2.k-Button--giant {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5.625rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width:39.9375rem) {
-  .c2[class*='k-Button--mobile-fit'] {
-    min-width: initial !important;
-    padding: var(--Button-padding);
-    width: initial;
-    height: initial;
-    width: initial;
-  }
-
-  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
-    min-width: var(--Button-min-width) !important;
-  }
-
-  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
-    padding: 0;
-    overflow: hidden;
-    width: var(--Button-dimension);
-    height: var(--Button-dimension);
-  }
-
-  .c2[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
-    width: 100%;
-  }
-}
-
-<div
-  className="c0 k-ButtonGroup k-ButtonGroup--orion"
-  role="group"
->
-  <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
-    style={
-      Object {
-        "--Button-border-radius": null,
-      }
-    }
-    type="button"
-  >
-    Button1
-  </button>
-  <button
-    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--lithium k-Button--orion k-Button--fit-min-width"
-    style={
-      Object {
-        "--Button-border-radius": null,
-      }
-    }
-    type="button"
-  >
-    Button2
-  </button>
-  <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--orion k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,

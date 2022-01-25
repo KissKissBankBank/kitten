@@ -23,7 +23,6 @@ export const Default = args => <TextInput {...args} />
 
 Default.args = {
   tag: 'input',
-  variant: 'orion',
   valid: false,
   error: false,
   disabled: false,
@@ -40,11 +39,6 @@ Default.argTypes = {
   tag: {
     name: 'tag',
     options: ['input', 'textarea'],
-    control: 'inline-radio',
-  },
-  variant: {
-    name: 'variant',
-    options: ['andromeda', 'orion'],
     control: 'inline-radio',
   },
   valid: {

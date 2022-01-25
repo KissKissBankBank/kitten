@@ -21,7 +21,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["color", "className", "value", "rampProps", "variant", "disabled"];
+var _excluded = ["color", "className", "value", "rampProps", "disabled"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -33,14 +33,13 @@ var valueMax = 100;
 var StyledProgress = _styledComponents.default.div.withConfig({
   displayName: "progress__StyledProgress",
   componentId: "sc-8timnv-0"
-})(["max-width:100%;.k-Meters-Progress__ramp{position:relative;height:", ";background:", ";&::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;max-width:var(--progress-value);transition:max-width 1s cubic-bezier(0,0.5,0.3,1);background:var(--progress-color);}}&.k-Meters-Progress--disabled,&.is-disabled{.k-Meters-Progress__ramp::after{background:", ";}}&.k-Meters-Progress--orion .k-Meters-Progress__ramp{&,&::after{border-radius:var(--border-radius-xs);}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.line2);
+})(["max-width:100%;.k-Meters-Progress__ramp{position:relative;height:", ";background:", ";border-radius:var(--border-radius-xs);&::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;max-width:var(--progress-value);transition:max-width 1s cubic-bezier(0,0.5,0.3,1);border-radius:var(--border-radius-xs);background:var(--progress-color);}}&.k-Meters-Progress--disabled,&.is-disabled{.k-Meters-Progress__ramp::after{background:", ";}}"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.line2);
 
 var Progress = function Progress(_ref) {
   var color = _ref.color,
       className = _ref.className,
       value = _ref.value,
       rampProps = _ref.rampProps,
-      variant = _ref.variant,
       disabled = _ref.disabled,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
@@ -57,7 +56,7 @@ var Progress = function Progress(_ref) {
     "aria-valuemin": valueMin,
     "aria-valuemax": valueMax,
     "aria-valuenow": progressValue,
-    className: (0, _classnames.default)('k-Meters-Progress', className, "k-Meters-Progress--" + variant, {
+    className: (0, _classnames.default)('k-Meters-Progress', className, {
       'k-Meters-Progress--disabled': disabled
     }),
     style: {
@@ -73,12 +72,10 @@ exports.Progress = Progress;
 Progress.defaultProps = {
   color: _colorsConfig.default.primary1,
   value: '50',
-  rampProps: {},
-  variant: 'orion'
+  rampProps: {}
 };
 Progress.propTypes = {
   color: _propTypes.default.string,
   value: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
-  rampProps: _propTypes.default.object,
-  variant: _propTypes.default.oneOf(['orion', 'andromeda'])
+  rampProps: _propTypes.default.object
 };

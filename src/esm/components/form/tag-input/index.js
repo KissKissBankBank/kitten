@@ -10,7 +10,7 @@ import { ScreenConfig } from '../../../constants/screen-config';
 var StyledWrapper = styled.div.withConfig({
   displayName: "tag-input__StyledWrapper",
   componentId: "sc-1iqglpj-0"
-})(["display:flex;align-items:center;font-size:", ";box-sizing:border-box;border-radius:0;width:100%;border:var(--border);transition:border 0.2s ease;padding:var(--tagInput-padding-vertical,", ") var(--tagInput-padding-horizontal,", ");&:focus-within{outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&:hover{border:var(--border-hover);}.k-Form-TagList__list{width:100%;display:flex;flex-wrap:wrap;gap:", ";list-style:none;padding:0;margin:0;}.k-Form-TagList__item{padding:0;margin:0;order:1;max-width:100%;overflow:hidden;}.k-Form-TagList__inputItem{flex:1 0 auto;order:2;&:last-of-type .k-Form-TagList__input:empty::before{content:attr(aria-placeholder);}}.k-Form-TagList__input{width:100%;height:100%;min-width:", ";display:block;padding:", " 0 ", ";box-sizing:border-box;line-height:1;", ";cursor:text;&:empty::before{color:", ";content:' ';}&:focus{outline-offset:", ";}}.k-Form-TagList__tagItem{display:flex;color:", ";background-color:", ";border-radius:var(--border-radius-xs);height:var(--tagInput-tag-height,", ");align-items:center;transition:color 0.2s ease,background-color 0.2s ease;cursor:default;&:hover{background-color:", ";}&.k-Form-TagList__tagItem--disabled{color:", ";background-color:", ";.k-Form-TagList__tag,.k-Form-TagList__button{cursor:not-allowed;}}}.k-Form-TagList__tag{", ";padding:0 ", " 0.15em ", ";line-height:1;}.k-Form-TagList__button{", ";border:0;background-color:transparent;color:inherit;padding:0 ", " 0 ", ";align-self:stretch;display:flex;align-items:center;cursor:pointer;outline-offset:", ";}&.k-Form-TagList--disabled{cursor:not-allowed;.k-Form-TagList__tagItem{color:", ";background-color:", ";}.k-Form-TagList__tag,.k-Form-TagList__button{cursor:not-allowed;}}&.k-Form-TagList--tiny{--tagInput-padding-vertical:", ";--tagInput-tag-height:", ";min-height:", ";}&.k-Form-TagList--regular{--tagInput-padding-vertical:", ";min-height:", ";}&.k-Form-TagList--big{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--huge{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--giant{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--orion{border-radius:var(--border-radius-s);}"], stepToRem(-1), pxToRem(10), pxToRem(10), pxToRem(8), pxToRem(20), pxToRem(7), pxToRem(6), TYPOGRAPHY.fontStyles.light, COLORS.font2, pxToRem(2), COLORS.text1, COLORS.primary5, pxToRem(30), COLORS.primary4, COLORS.font2, COLORS.line1, TYPOGRAPHY.fontStyles.regular, pxToRem(2), pxToRem(10), TYPOGRAPHY.fontStyles.bold, pxToRem(12), pxToRem(10), pxToRem(-2), COLORS.font2, COLORS.line1, pxToRem(4), pxToRem(24), pxToRem(40), pxToRem(5), pxToRem(50), pxToRem(60), pxToRem(32), ScreenConfig.M.min, pxToRem(70), stepToRem(0), pxToRem(70), pxToRem(36), ScreenConfig.M.min, pxToRem(80), stepToRem(0), pxToRem(70), pxToRem(40), ScreenConfig.M.min, pxToRem(90), stepToRem(0));
+})(["display:flex;align-items:center;font-size:", ";box-sizing:border-box;border-radius:0;width:100%;border:var(--border);transition:border 0.2s ease;padding:var(--tagInput-padding-vertical,", ") var(--tagInput-padding-horizontal,", ");border-radius:var(--border-radius-s);&:focus-within{outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&:hover{border:var(--border-hover);}.k-Form-TagList__list{width:100%;display:flex;flex-wrap:wrap;gap:", ";list-style:none;padding:0;margin:0;}.k-Form-TagList__item{padding:0;margin:0;order:1;max-width:100%;overflow:hidden;}.k-Form-TagList__inputItem{flex:1 0 auto;order:2;&:last-of-type .k-Form-TagList__input:empty::before{content:attr(aria-placeholder);}}.k-Form-TagList__input{width:100%;height:100%;min-width:", ";display:block;padding:", " 0 ", ";box-sizing:border-box;line-height:1;", ";cursor:text;&:empty::before{color:", ";content:' ';}&:focus{outline-offset:", ";}}.k-Form-TagList__tagItem{display:flex;color:", ";background-color:", ";border-radius:var(--border-radius-xs);height:var(--tagInput-tag-height,", ");align-items:center;transition:color 0.2s ease,background-color 0.2s ease;cursor:default;&:hover{background-color:", ";}&.k-Form-TagList__tagItem--disabled{color:", ";background-color:", ";.k-Form-TagList__tag,.k-Form-TagList__button{cursor:not-allowed;}}}.k-Form-TagList__tag{", ";padding:0 ", " 0.15em ", ";line-height:1;}.k-Form-TagList__button{", ";border:0;background-color:transparent;color:inherit;padding:0 ", " 0 ", ";align-self:stretch;display:flex;align-items:center;cursor:pointer;outline-offset:", ";}&.k-Form-TagList--disabled{cursor:not-allowed;.k-Form-TagList__tagItem{color:", ";background-color:", ";}.k-Form-TagList__tag,.k-Form-TagList__button{cursor:not-allowed;}}&.k-Form-TagList--tiny{--tagInput-padding-vertical:", ";--tagInput-tag-height:", ";min-height:", ";}&.k-Form-TagList--regular{--tagInput-padding-vertical:", ";min-height:", ";}&.k-Form-TagList--big{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--huge{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--giant{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}"], stepToRem(-1), pxToRem(10), pxToRem(10), pxToRem(8), pxToRem(20), pxToRem(7), pxToRem(6), TYPOGRAPHY.fontStyles.light, COLORS.font2, pxToRem(2), COLORS.text1, COLORS.primary5, pxToRem(30), COLORS.primary4, COLORS.font2, COLORS.line1, TYPOGRAPHY.fontStyles.regular, pxToRem(2), pxToRem(10), TYPOGRAPHY.fontStyles.bold, pxToRem(12), pxToRem(10), pxToRem(-2), COLORS.font2, COLORS.line1, pxToRem(4), pxToRem(24), pxToRem(40), pxToRem(5), pxToRem(50), pxToRem(60), pxToRem(32), ScreenConfig.M.min, pxToRem(70), stepToRem(0), pxToRem(70), pxToRem(36), ScreenConfig.M.min, pxToRem(80), stepToRem(0), pxToRem(70), pxToRem(40), ScreenConfig.M.min, pxToRem(90), stepToRem(0));
 export var TagInput = function TagInput(_ref) {
   var placeholder = _ref.placeholder,
       onChange = _ref.onChange,
@@ -22,8 +22,7 @@ export var TagInput = function TagInput(_ref) {
       initialItemsList = _ref.initialItemsList,
       helpMessage = _ref.helpMessage,
       disabled = _ref.disabled,
-      size = _ref.size,
-      variant = _ref.variant;
+      size = _ref.size;
 
   var _useState = useState(Array.from(itemsListFromProps || initialItemsList)),
       itemsList = _useState[0],
@@ -109,7 +108,7 @@ export var TagInput = function TagInput(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledWrapper, {
-    className: classNames('k-Form-TagList', className, "k-Form-TagList--" + size, "k-Form-TagList--" + variant, {
+    className: classNames('k-Form-TagList', className, "k-Form-TagList--" + size, {
       'k-Form-TagList--disabled': disabled
     }),
     onClick: focusInputEl
@@ -173,8 +172,7 @@ TagInput.defaultProps = {
   placeholder: '',
   onChange: function onChange() {},
   disabled: false,
-  size: 'regular',
-  variant: 'orion'
+  size: 'regular'
 };
 TagInput.propTypes = {
   id: PropTypes.string.isRequired,
@@ -186,6 +184,5 @@ TagInput.propTypes = {
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   helpMessage: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
-  variant: PropTypes.oneOf(['andromeda', 'orion'])
+  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant'])
 };

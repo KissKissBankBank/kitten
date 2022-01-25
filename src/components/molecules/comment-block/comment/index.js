@@ -29,7 +29,7 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _heartIconNext = require("../../../../components/graphics/icons-next/heart-icon-next");
 
-var _excluded = ["text", "ownerName", "ownerUrl", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"],
+var _excluded = ["text", "ownerName", "avatarImgProps", "commentDate", "footer", "headerActions", "id", "children", "className", "isSecondary", "isHighlighted"],
     _excluded2 = ["children", "accessibilityLabel", "hasLiked", "className", "disabled"];
 
 var CommentWrapper = _styledComponents.default.div.withConfig({
@@ -40,7 +40,6 @@ var CommentWrapper = _styledComponents.default.div.withConfig({
 var Comment = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var text = _ref.text,
       ownerName = _ref.ownerName,
-      ownerUrl = _ref.ownerUrl,
       avatarImgProps = _ref.avatarImgProps,
       commentDate = _ref.commentDate,
       footer = _ref.footer,
@@ -62,15 +61,14 @@ var Comment = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
     className: "k-Comment__header"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Comment__header__meta"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: ownerUrl
   }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
     alt: ""
   }, avatarImgProps, {
     className: "k-Comment__header__image"
-  }))), /*#__PURE__*/_react.default.createElement("a", {
-    href: ownerUrl,
-    className: "k-u-link k-u-link-font1 k-u-ellipsis"
+  })), /*#__PURE__*/_react.default.createElement(_text.Text, {
+    weight: "regular",
+    color: "font1",
+    className: "k-u-ellipsis"
   }, ownerName), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     "aria-hidden": true
@@ -116,7 +114,7 @@ Comment.LikeButton = function (_ref2) {
 
 Comment.propTypes = {
   ownerName: _propTypes.default.string,
-  ownerUrl: _propTypes.default.string,
+  ownerUrl: (0, _deprecated.default)(_propTypes.default.string, 'Not used anymore'),
   avatarImgProps: _propTypes.default.object,
   commentDate: _propTypes.default.string,
   headerActions: _propTypes.default.node,
@@ -130,7 +128,6 @@ Comment.propTypes = {
 Comment.defaultProps = {
   footer: null,
   ownerName: '',
-  ownerUrl: '',
   headerActions: null,
   avatarImgProps: {},
   commentDate: '',

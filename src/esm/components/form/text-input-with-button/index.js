@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset", "variant"];
+var _excluded = ["valid", "error", "disabled", "size", "value", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -14,7 +14,7 @@ import { ScreenConfig } from '../../../constants/screen-config';
 var StyledTextInputWithButton = styled.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",
   componentId: "sc-1yqni7d-0"
-})([".k-Form-TextInputWithButton__button{", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;}&:not(.k-Form-TextInputWithButton--insetButton){display:flex;&.k-Form-TextInputWithButton--orion{gap:", ";}}&.k-Form-TextInputWithButton--insetButton{position:relative;.k-Form-TextInputWithButton__input{padding-right:calc(var(--text-input-size) + ", ");}.k-Form-TextInputWithButton__button{display:flex;align-items:center;justify-content:center;position:absolute;top:", ";bottom:", ";right:", ";min-width:calc(var(--text-input-size) - ", " * 2);border-radius:var(--text-input-button-radius);border:none;background-color:var(--color-grey-000);transition:background-color 0.2s ease;&:hover{background-color:var(--color-grey-300);}&:active{background-color:var(--color-grey-400);}}.k-Form-TextInput--orion + .k-Form-TextInputWithButton__button{--text-input-button-radius:var(--border-radius-s);}&.k-Form-TextInputWithButton--roudedButton .k-Form-TextInputWithButton__button{--text-input-button-radius:var(--border-radius-rounded);}}&.k-Form-TextInputWithButton--tiny{--text-input-size:", ";}&.k-Form-TextInputWithButton--regular{--text-input-size:", ";}&.k-Form-TextInputWithButton--big{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton--huge{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton--giant{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton__button--valid{background-color:var(--color-success-500);border-color:var(--color-success-500);}&.k-Form-TextInputWithButton__button--error{cursor:not-allowed;background-color:var(--color-danger-500);border-color:var(--color-danger-500);}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(10), pxToRem(15), pxToRem(4), pxToRem(4), pxToRem(4), pxToRem(4), pxToRem(40), pxToRem(50), pxToRem(60), ScreenConfig.M.min, pxToRem(70), pxToRem(70), ScreenConfig.M.min, pxToRem(80), pxToRem(70), ScreenConfig.M.min, pxToRem(90));
+})([".k-Form-TextInputWithButton__button{", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;}&:not(.k-Form-TextInputWithButton--insetButton){display:flex;gap:", ";}&.k-Form-TextInputWithButton--insetButton{position:relative;.k-Form-TextInputWithButton__input{padding-right:calc(var(--text-input-size) + ", ");}.k-Form-TextInputWithButton__button{display:flex;align-items:center;justify-content:center;position:absolute;top:", ";bottom:", ";right:", ";min-width:calc(var(--text-input-size) - ", " * 2);border-radius:var(--text-input-button-radius);--text-input-button-radius:var(--border-radius-s);border:none;background-color:var(--color-grey-000);transition:background-color 0.2s ease;&:hover{background-color:var(--color-grey-300);}&:active{background-color:var(--color-grey-400);}}&.k-Form-TextInputWithButton--roudedButton .k-Form-TextInputWithButton__button{--text-input-button-radius:var(--border-radius-rounded);}}&.k-Form-TextInputWithButton--tiny{--text-input-size:", ";}&.k-Form-TextInputWithButton--regular{--text-input-size:", ";}&.k-Form-TextInputWithButton--big{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton--huge{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton--giant{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton__button--valid{background-color:var(--color-success-500);border-color:var(--color-success-500);}&.k-Form-TextInputWithButton__button--error{cursor:not-allowed;background-color:var(--color-danger-500);border-color:var(--color-danger-500);}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(10), pxToRem(15), pxToRem(4), pxToRem(4), pxToRem(4), pxToRem(4), pxToRem(40), pxToRem(50), pxToRem(60), ScreenConfig.M.min, pxToRem(70), pxToRem(70), ScreenConfig.M.min, pxToRem(80), pxToRem(70), ScreenConfig.M.min, pxToRem(90));
 export var TextInputWithButton = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   var _extends2;
 
@@ -30,12 +30,11 @@ export var TextInputWithButton = /*#__PURE__*/React.forwardRef(function (_ref, r
       inputValue = _ref.inputValue,
       className = _ref.className,
       inset = _ref.inset,
-      variant = _ref.variant,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var ButtonComponent = inset ? 'button' : Button;
   return /*#__PURE__*/React.createElement(StyledTextInputWithButton, {
-    className: classNames('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--" + size, "k-Form-TextInputWithButton--" + variant, {
+    className: classNames('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--" + size, {
       'k-Form-TextInputWithButton--insetButton': inset,
       'k-Form-TextInputWithButton--roudedButton': rounded
     })
@@ -48,8 +47,7 @@ export var TextInputWithButton = /*#__PURE__*/React.forwardRef(function (_ref, r
     disabled: disabled,
     size: size,
     rounded: rounded,
-    value: inputValue,
-    variant: variant
+    value: inputValue
   })), /*#__PURE__*/React.createElement(ButtonComponent, _extends({
     type: "button"
   }, buttonProps, (_extends2 = {
@@ -59,7 +57,6 @@ export var TextInputWithButton = /*#__PURE__*/React.forwardRef(function (_ref, r
       'k-Form-TextInputWithButton__button--disabled': disabled
     }),
     disabled: disabled,
-    variant: variant,
     modifier: modifier,
     size: size
   }, _extends2["disabled"] = disabled, _extends2)), value || buttonValue));

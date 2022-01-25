@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button } from '../../../../components/molecules/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -45,15 +44,11 @@ const StyledButtonGroup = styled.div`
   }
 `
 
-export const ButtonGroup = ({ className, variant, ...props }) => (
+export const ButtonGroup = ({ className, ...props }) => (
   <StyledButtonGroup
     role="group"
     {...props}
-    className={classNames(
-      'k-ButtonGroup',
-      className,
-      `k-ButtonGroup--${variant}`,
-    )}
+    className={classNames('k-ButtonGroup', className)}
   />
 )
 
@@ -68,11 +63,3 @@ const ButtonGroupButton = ({ className, active, ...props }) => (
 )
 
 ButtonGroup.Button = ButtonGroupButton
-
-ButtonGroup.propTypes = {
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
-}
-
-ButtonGroup.defaultProps = {
-  variant: 'orion',
-}

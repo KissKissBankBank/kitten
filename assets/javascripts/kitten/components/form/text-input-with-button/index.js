@@ -21,10 +21,7 @@ const StyledTextInputWithButton = styled.div`
 
   &:not(.k-Form-TextInputWithButton--insetButton) {
     display: flex;
-
-    &.k-Form-TextInputWithButton--orion {
-      gap: ${pxToRem(10)};
-    }
+    gap: ${pxToRem(10)};
   }
 
   &.k-Form-TextInputWithButton--insetButton {
@@ -44,6 +41,7 @@ const StyledTextInputWithButton = styled.div`
       right: ${pxToRem(4)};
       min-width: calc(var(--text-input-size) - ${pxToRem(4)} * 2);
       border-radius: var(--text-input-button-radius);
+      --text-input-button-radius: var(--border-radius-s);
 
       border: none;
       background-color: var(--color-grey-000);
@@ -55,10 +53,6 @@ const StyledTextInputWithButton = styled.div`
       &:active {
         background-color: var(--color-grey-400);
       }
-    }
-
-    .k-Form-TextInput--orion + .k-Form-TextInputWithButton__button {
-      --text-input-button-radius: var(--border-radius-s);
     }
 
     &.k-Form-TextInputWithButton--roudedButton
@@ -126,7 +120,6 @@ export const TextInputWithButton = React.forwardRef(
       inputValue,
       className,
       inset,
-      variant,
       ...others
     },
     ref,
@@ -138,7 +131,6 @@ export const TextInputWithButton = React.forwardRef(
         className={classNames(
           'k-Form-TextInputWithButton',
           `k-Form-TextInputWithButton--${size}`,
-          `k-Form-TextInputWithButton--${variant}`,
           {
             'k-Form-TextInputWithButton--insetButton': inset,
             'k-Form-TextInputWithButton--roudedButton': rounded,
@@ -155,7 +147,6 @@ export const TextInputWithButton = React.forwardRef(
           size={size}
           rounded={rounded}
           value={inputValue}
-          variant={variant}
         />
         <ButtonComponent
           type="button"
@@ -170,7 +161,6 @@ export const TextInputWithButton = React.forwardRef(
             },
           )}
           disabled={disabled || buttonProps.disabled}
-          variant={variant}
           modifier={modifier}
           size={size}
         >

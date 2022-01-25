@@ -2,6 +2,7 @@
 
 exports[`<CloseButton /> default matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -37,6 +38,10 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -112,14 +117,6 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -127,24 +124,29 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -201,10 +203,10 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
-      "--Button-border-radius": null,
+      "--Button-border-radius": 0,
     }
   }
   title="Close"
@@ -229,6 +231,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 exports[`<CloseButton /> with props matches with snapshot 1`] = `
 .c0 {
+  --Button-border-radius: var(--border-radius-s);
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -264,6 +267,10 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
 }
 
 .c0:disabled,
@@ -339,14 +346,6 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   width: 100%;
 }
 
-.c0.k-Button--orion:not(.k-Button--rounded) {
-  --Button-border-radius: var(--border-radius-s);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
 .c0 svg:not(.k-ColorSvg),
 .c0 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -354,24 +353,29 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   transition: fill var(--transition);
 }
 
-.c0:hover,
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
 .c0:focus {
-  border-color: var(--color-primary-300);
+  border-color: var(--color-primary-500);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:active {
-  border-color: var(--color-primary-500);
+  border-color: var(--color-primary-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
 }
 
 .c0:disabled,
 .c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-200,#f6f6f6);
-  background-color: var(--color-grey-200,#f6f6f6);
-  color: var(--color-grey-600,#949494);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
 }
 
 @media (min-width:40rem) {
@@ -428,10 +432,10 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--fit-icon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
-      "--Button-border-radius": null,
+      "--Button-border-radius": 0,
     }
   }
   title="Close"

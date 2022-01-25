@@ -147,15 +147,9 @@ $ npm login
   * Update the version with the version of the library.
 - Update the `package-lock.json` file:
   * Update the version with the version of the library.
-- Run this command:
-
-```sh
-bin/release NEW_VERSION
-```
-
+- Run the command `bin/release NEW_VERSION`
+  (replace `NEW_VERSION` with your version number)
 - Follow the link to create the pull request on Github.
-- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
-  related CHANGELOG.
 
 ### Release!
 
@@ -163,8 +157,6 @@ Once the pull request is accepted:
 
 - Merge the pull request into master.
 - Delete the release branch.
-- Run this command:
-
-```sh
-bin/publish with-storybook
-```
+- Run this command: `bin/publish with-storybook`
+- Announce the release on KissKissBankBank's #kit-ui Slack channel 
+  with the related CHANGELOG when the new release is ready to be used.

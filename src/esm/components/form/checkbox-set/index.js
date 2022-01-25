@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["items", "disabled", "className", "name", "error", "label", "children", "variant"],
+var _excluded = ["items", "disabled", "className", "name", "error", "label", "children"],
     _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -21,7 +21,6 @@ export var CheckboxSet = function CheckboxSet(_ref) {
       error = _ref.error,
       label = _ref.label,
       children = _ref.children,
-      variant = _ref.variant,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledCheckboxSet, _extends({
@@ -39,7 +38,6 @@ export var CheckboxSet = function CheckboxSet(_ref) {
       id: id,
       error: error,
       name: name,
-      variant: variant,
       key: id
     }, itemProps, {
       className: classNames('k-Form-CheckboxSet__checkbox', className)
@@ -56,8 +54,7 @@ CheckboxSet.propTypes = {
     defaultChecked: PropTypes.bool,
     children: PropTypes.node
   })),
-  disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(['andromeda', 'orion'])
+  disabled: PropTypes.bool
 };
 CheckboxSet.defaultProps = {
   name: 'checkboxSet',
@@ -70,6 +67,5 @@ CheckboxSet.defaultProps = {
     id: 'myCheckbox' // Replace by a real value
 
   }],
-  disabled: false,
-  variant: 'orion'
+  disabled: false
 };

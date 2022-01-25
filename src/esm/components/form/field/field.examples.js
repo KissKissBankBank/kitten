@@ -32,8 +32,7 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
       limit = _ref2.limit,
       unit = _ref2.unit,
       size = _ref2.size,
-      noMargin = _ref2.noMargin,
-      variant = _ref2.variant;
+      noMargin = _ref2.noMargin;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -50,8 +49,7 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
     name: "field",
     placeholder: placeholder,
     error: error,
-    noMargin: noMargin,
-    variant: variant
+    noMargin: noMargin
   }));
 };
 export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
@@ -63,7 +61,6 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
       placeholder = _ref3.placeholder,
       error = _ref3.error,
       errorMessage = _ref3.errorMessage,
-      variant = _ref3.variant,
       size = _ref3.size;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
@@ -80,8 +77,7 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
     iconLabel: "Show password",
     hiddenIconLabel: "Hide password",
     placeholder: placeholder,
-    error: error,
-    variant: variant
+    error: error
   }));
 };
 export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
@@ -119,8 +115,7 @@ export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
       error = _ref5.error,
       errorMessage = _ref5.errorMessage,
       items = _ref5.items,
-      size = _ref5.size,
-      variant = _ref5.variant;
+      size = _ref5.size;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -135,7 +130,6 @@ export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
     name: "field",
     placeholder: placeholder,
     error: error,
-    items: items,
-    variant: variant
+    items: items
   }));
 };

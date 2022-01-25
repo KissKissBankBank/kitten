@@ -7,9 +7,62 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `ColorSelect`: Add component.
 - Fix: `TextInputWithButton`: Fix `disabled` prop priority.
 
-## [6.19.0] - 2022-01-14
+## [7.1.0] - 2022-01-20
 
 Features: 
+
+- `HorizontalCrowdfundingCard`: Add `noProgress` prop, defaults to `false`.
+- `TextCopy`: Add `size` prop, default to `regular`.
+
+## [7.0.0] - 2022-01-18
+
+Breaking Changes:
+
+- Remove `RewardSummaryCard` and replace with `SummaryCard` in stories.
+- Remove `variant` props for the following components:
+  - `Progress`,
+  - `ProgressRing`,
+  - `Autocomplete`,
+  - `Checkbox`,
+  - `CheckboxSet`,
+  - `DropdownSelect`,
+  - `Field`,
+  - `LocationInput`,
+  - `TagInput`,
+  - `TextInput`,
+  - `TextInputWithButton`,
+  - `TextInputWithUnit`,
+  - `Button`,
+  - `Accordion`,
+  - `ModalNext`,
+  - `TextCopy`,
+  - `VerticalStepper`.
+
+Deprecation/Change:
+
+- `Comment`: Deprecate `ownerUrl` prop.
+
+Features:
+
+- `Button`: Add modifier-specific styles for `disabled` state.
+- `Icons`: Add the following icon components:
+  - `BankCardIconNext`,
+  - `CubeIconNext`.
+- `StarIconNext`: Add `bgColor` prop.
+- `Icons`: Move the following icons to `icons-next` directory:
+  - `RefundIcon`,
+  - `GiftIcon`,
+  - `LockOutlineIcon`.
+- `LendopolisLogoVerticalOnDark`: Add CSS class names.
+
+Fixes:
+
+- `Accordeon`: New style for active state.
+- `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
+
+## [6.19.0] - 2022-01-14
+
+Features:
 
 - `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
 - `Tokens`: Update colors token in `tokens.json`.
@@ -23,7 +76,7 @@ Fixes:
 
 ## [6.18.0] - 2022-01-11
 
-Feature: 
+Feature:
 
 - `Tokens`: Update yellow colors.
 

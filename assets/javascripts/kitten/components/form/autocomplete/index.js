@@ -23,6 +23,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: ${pxToRem(50)};
     box-sizing: border-box;
+    border-radius: var(--border-radius-s);
 
     background: ${COLORS.background1};
     border: ${borderSize} solid var(--color-grey-400);
@@ -156,12 +157,6 @@ const Wrapper = styled.div`
       }
     }
   }
-
-  /* VARIANTS */
-
-  &.k-Form-Autocomplete--orion .k-Form-Autocomplete__input {
-    border-radius: var(--border-radius-s);
-  }
 `
 
 export const Autocomplete = ({
@@ -178,7 +173,6 @@ export const Autocomplete = ({
   isLoading,
   noResultMessage,
   shouldShowNoResultMessage,
-  variant,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -293,15 +287,10 @@ export const Autocomplete = ({
 
   return (
     <Wrapper
-      className={classNames(
-        'k-Form-Autocomplete',
-        className,
-        `k-Form-Autocomplete--${variant}`,
-        {
-          [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
-          'k-Form-Autocomplete--disabled': props.disabled,
-        },
-      )}
+      className={classNames('k-Form-Autocomplete', className, {
+        [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
+        'k-Form-Autocomplete--disabled': props.disabled,
+      })}
     >
       <input
         {...props}
@@ -410,7 +399,6 @@ Autocomplete.propTypes = {
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
   isLoading: PropTypes.bool,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 Autocomplete.defaultProps = {
@@ -422,5 +410,4 @@ Autocomplete.defaultProps = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
-  variant: 'orion',
 }

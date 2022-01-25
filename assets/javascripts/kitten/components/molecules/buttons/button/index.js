@@ -46,9 +46,13 @@ export const buttonSizes = [
   'regular',
 ]
 
-export const buttonVariants = ['andromeda', 'orion']
-
 const StyledButton = styled.button`
+  --Button-border-radius: var(--border-radius-s);
+
+  &.k-Button--rounded {
+    --Button-border-radius: var(--border-radius-rounded);
+  }
+
   position: relative;
   box-sizing: border-box;
   min-height: var(--Button-dimension);
@@ -195,16 +199,6 @@ const StyledButton = styled.button`
     }
   }
 
-  /* BORDER RADIUS */
-
-  &.k-Button--orion:not(.k-Button--rounded) {
-    --Button-border-radius: var(--border-radius-s);
-  }
-
-  &.k-Button--rounded {
-    --Button-border-radius: var(--border-radius-rounded);
-  }
-
   /* MODIFIERS */
 
   ${({ modifier }) => modifierStyles(modifier)}
@@ -217,7 +211,6 @@ const StyledButton = styled.button`
 export const Button = ({
   children,
   modifier,
-  variant,
   size,
   className,
   rounded,
@@ -283,7 +276,6 @@ export const Button = ({
         className,
         `k-Button--${actualSize}`,
         `k-Button--${internalModifier}`,
-        `k-Button--${variant}`,
         `k-Button--fit-${fitClass}`,
         {
           [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
@@ -294,7 +286,7 @@ export const Button = ({
       modifier={internalModifier}
       style={{
         '--Button-border-radius':
-          borderRadius > 0 ? pxToRem(borderRadius) : null,
+          borderRadius != null ? pxToRem(borderRadius) : null,
       }}
       type="button"
       as={internalTag}
@@ -322,7 +314,6 @@ Button.propTypes = {
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
   modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
-  variant: PropTypes.oneOf(buttonVariants),
   active: PropTypes.bool,
 }
 Button.defaultProps = {
@@ -330,10 +321,9 @@ Button.defaultProps = {
   fluid: false,
   icon: false,
   rounded: false,
-  borderRadius: 0,
+  borderRadius: null,
   size: 'regular',
   modifier: 'hydrogen',
-  variant: 'orion',
   fit: 'min-width',
   mobileFit: null,
   active: false,

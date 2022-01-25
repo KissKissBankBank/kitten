@@ -13,8 +13,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _typography = require("../../../../helpers/utils/typography");
@@ -27,26 +25,19 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _index = require("../index");
 
-var _excluded = ["variant", "className"];
+var _excluded = ["className"];
 
 var StyledParagraph = _styledComponents.default.span.withConfig({
   displayName: "link__StyledParagraph",
   componentId: "sc-qm89ct-0"
-})(["margin:0;padding:0;line-height:1;.k-Steppers--VerticalStepper__link{", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;&:hover,&:focus,&:active{color:", ";}}.k-Steppers--VerticalStepper__link--orion{font-size:", ";@media (min-width:", "px){font-size:", ";}:before{padding:0 ", ";content:'\u25CF';font-size:", ";color:", ";}}"], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.primary1, _colorsConfig.default.primary3, (0, _typography.stepToRem)(-2), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), _colorsConfig.default.font1);
+})(["margin:0;padding:0;line-height:1;.k-Steppers--VerticalStepper__link{", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;@media (min-width:", "px){font-size:", ";}:before{padding:0 ", ";content:'\u25CF';font-size:", ";color:", ";}&:hover,&:focus,&:active{color:", ";}}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-2), _colorsConfig.default.primary1, _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), _colorsConfig.default.font1, _colorsConfig.default.primary3);
 
 var Link = function Link(_ref) {
-  var variant = _ref.variant,
-      className = _ref.className,
+  var className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledParagraph, null, /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)(_index.LINK_CLASSNAME, 'k-Steppers--VerticalStepper__link', "k-Steppers--VerticalStepper__link--" + variant, className)
+    className: (0, _classnames.default)(_index.LINK_CLASSNAME, 'k-Steppers--VerticalStepper__link', className)
   })));
 };
 
 exports.Link = Link;
-Link.protoTypes = {
-  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
-};
-Link.defaultProps = {
-  variant: 'orion'
-};

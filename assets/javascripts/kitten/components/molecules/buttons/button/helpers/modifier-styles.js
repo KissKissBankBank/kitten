@@ -14,6 +14,9 @@ export const modifierStyles = modifier => {
   let activeBorderColor = COLORS.primary3
   let activeBgColor = COLORS.primary3
   let activeColor = COLORS.background1
+  let disabledBorderColor = 'var(--color-grey-200)'
+  let disabledBgColor = 'var(--color-grey-200)'
+  let disabledColor = 'var(--color-grey-600)'
 
   switch (modifier) {
     case 'hydrogen':
@@ -23,12 +26,14 @@ export const modifierStyles = modifier => {
       borderColor = 'var(--color-grey-400)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
-      hoverBorderColor = 'var(--color-primary-300)'
+      hoverBorderColor = 'var(--color-primary-500)'
       hoverBgColor = COLORS.background1
       hoverColor = COLORS.font1
-      activeBorderColor = 'var(--color-primary-500)'
+      activeBorderColor = 'var(--color-primary-700)'
       activeBgColor = COLORS.background1
       activeColor = COLORS.font1
+      disabledBorderColor = 'var(--color-grey-400)'
+      disabledBgColor = 'var(--color-grey-000)'
       break
 
     case 'helium':
@@ -48,6 +53,8 @@ export const modifierStyles = modifier => {
       activeBorderColor = 'var(--color-primary-900)'
       activeBgColor = 'var(--color-primary-300)'
       activeColor = COLORS.font1
+      disabledBorderColor = 'var(--color-grey-600)'
+      disabledBgColor = 'var(--color-grey-300)'
       break
 
     case 'beryllium':
@@ -71,6 +78,8 @@ export const modifierStyles = modifier => {
       activeBorderColor = 'var(--color-danger-700)'
       activeBgColor = COLORS.background1
       activeColor = 'var(--color-danger-700)'
+      disabledBorderColor = 'var(--color-grey-400)'
+      disabledBgColor = 'var(--color-grey-000)'
       break
 
     case 'boron':
@@ -140,11 +149,16 @@ export const modifierStyles = modifier => {
 
     ${modifier !== 'checked' &&
     css`
-      &:hover,
-      &:focus {
+      &:hover {
         border-color: ${hoverBorderColor};
         background-color: ${hoverBgColor};
         color: ${hoverColor};
+      }
+
+      &:focus {
+        border-color: ${hoverBorderColor};
+        background-color: ${backgroundColor};
+        color: ${color};
       }
 
       &:active {
@@ -156,9 +170,9 @@ export const modifierStyles = modifier => {
 
     &:disabled,
     &.k-Button--disabled {
-      border: var(--border-width) solid ${COLORS.background3};
-      background-color: ${COLORS.background3};
-      color: ${COLORS.font3};
+      border: var(--border-width) solid ${disabledBorderColor};
+      background-color: ${disabledBgColor};
+      color: ${disabledColor};
     }
   `
 }

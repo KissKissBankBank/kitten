@@ -31,7 +31,7 @@ var _loader = require("../../atoms/loader");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage", "variant"];
+var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -44,7 +44,7 @@ var borderSize = 'var(--border-width)';
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "autocomplete__Wrapper",
   componentId: "sc-lfeqwe-0"
-})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid var(--color-grey-400);padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border:var(--border-danger);color:", ";:focus{border-color:var(--color-grey-500);color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}.k-Form-Autocomplete__suggestions{position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid var(--color-grey-400);border-top:none;list-style:none;height:calc(", " * var(--Autocomplete-suggestions,1));max-height:", ";}.k-Form-Autocomplete__suggestion__item{padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}&[aria-selected='true']{background-color:", ";}}}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}&.k-Form-Autocomplete--orion .k-Form-Autocomplete__input{border-radius:var(--border-radius-s);}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, borderSize, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.error3, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(50), _colorsConfig.default.background1, borderSize, (0, _typography.pxToRem)(itemHeight), (0, _typography.pxToRem)(itemHeight * maxItemsVisibled), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background3, _colorsConfig.default.line1, (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2);
+})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;border-radius:var(--border-radius-s);background:", ";border:", " solid var(--color-grey-400);padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border:var(--border-danger);color:", ";:focus{border-color:var(--color-grey-500);color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}.k-Form-Autocomplete__suggestions{position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid var(--color-grey-400);border-top:none;list-style:none;height:calc(", " * var(--Autocomplete-suggestions,1));max-height:", ";}.k-Form-Autocomplete__suggestion__item{padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}&[aria-selected='true']{background-color:", ";}}}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, borderSize, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.error3, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(50), _colorsConfig.default.background1, borderSize, (0, _typography.pxToRem)(itemHeight), (0, _typography.pxToRem)(itemHeight * maxItemsVisibled), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background3, _colorsConfig.default.line1, (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2);
 
 var Autocomplete = function Autocomplete(_ref) {
   var _classNames;
@@ -62,7 +62,6 @@ var Autocomplete = function Autocomplete(_ref) {
       isLoading = _ref.isLoading,
       noResultMessage = _ref.noResultMessage,
       shouldShowNoResultMessage = _ref.shouldShowNoResultMessage,
-      variant = _ref.variant,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(defaultItems),
@@ -181,7 +180,7 @@ var Autocomplete = function Autocomplete(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(Wrapper, {
-    className: (0, _classnames.default)('k-Form-Autocomplete', className, "k-Form-Autocomplete--" + variant, (_classNames = {}, _classNames["k-Form-Autocomplete--hasIcon-" + iconPosition] = !!icon, _classNames['k-Form-Autocomplete--disabled'] = props.disabled, _classNames))
+    className: (0, _classnames.default)('k-Form-Autocomplete', className, (_classNames = {}, _classNames["k-Form-Autocomplete--hasIcon-" + iconPosition] = !!icon, _classNames['k-Form-Autocomplete--disabled'] = props.disabled, _classNames))
   }, /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({}, props, {
     error: error,
     ref: inputEl,
@@ -258,8 +257,7 @@ Autocomplete.propTypes = {
   onBlur: _propTypes.default.func,
   onKeyDown: _propTypes.default.func,
   onSelect: _propTypes.default.func,
-  isLoading: _propTypes.default.bool,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
+  isLoading: _propTypes.default.bool
 };
 Autocomplete.defaultProps = {
   error: false,
@@ -269,6 +267,5 @@ Autocomplete.defaultProps = {
   onBlur: function onBlur() {},
   onKeyDown: function onKeyDown() {},
   onSelect: function onSelect() {},
-  isLoading: false,
-  variant: 'orion'
+  isLoading: false
 };
