@@ -6,10 +6,9 @@ import range from 'lodash/fp/range'
 import debounce from 'lodash/fp/debounce'
 import { HexColorPicker, HexColorInput } from 'react-colorful'
 import { colord, extend } from 'colord'
-import a11yPlugin from "colord/plugins/a11y"
+import a11yPlugin from 'colord/plugins/a11y'
 
 import { TextInput } from '../text-input'
-import { FlexWrapper } from '../../../components/layout/flex-wrapper'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 extend([a11yPlugin])
@@ -76,11 +75,9 @@ export const ColorSelect = ({
   children,
   ...props
 }) => {
-  const [inputValue, setInputValue] = useState(value)
   const [color, setColor] = useState(value)
 
   useEffect(() => {
-    setInputValue(color)
     onChange(color)
   }, [color])
   useEffect(() => {
@@ -92,7 +89,8 @@ export const ColorSelect = ({
       setColor(changedColor)
     }
 
-    const isContrastValid = colord(changedColor).contrast(CONTRAST_COLOR) > contrastRatio
+    const isContrastValid =
+      colord(changedColor).contrast(CONTRAST_COLOR) > contrastRatio
 
     if (!isContrastValid) {
       const newColor = getClosestContrast({
@@ -115,10 +113,6 @@ export const ColorSelect = ({
     if (event.target.value.length === 7) {
       handleChange(event.target.value)
     }
-  }
-
-  const handleInputChange = value => {
-    setInputValue(value)
   }
 
   const getClosestContrast = ({ color }) => {
@@ -193,7 +187,10 @@ export const ColorSelect = ({
         )}
       </div>
       <div className="k-Form-ColorSelect__grid">
-        <div className="k-Form-ColorSelect__swatch" style={{ backgroundColor: color }} />
+        <div
+          className="k-Form-ColorSelect__swatch"
+          style={{ backgroundColor: color }}
+        />
         <TextInput
           {...inputProps}
           size="tiny"
@@ -202,7 +199,6 @@ export const ColorSelect = ({
           color={color}
           onKeyUp={handleInputKey}
           prefixed
-          onChange={debounce(100)(handleInputChange)}
         />
         <div className="k-Form-ColorSelect__witness">{children}</div>
       </div>

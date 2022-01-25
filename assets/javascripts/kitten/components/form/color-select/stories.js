@@ -51,11 +51,11 @@ export const Default = ({ value, ...args }) => {
 
   useEffect(() => {
     setColorsObject({
-      '--color-primary-100': colord(currentValue).lighten(.24).toHex(),
-      '--color-primary-300': colord(currentValue).lighten(.12).toHex(),
+      '--color-primary-100': colord(currentValue).lighten(0.24).toHex(),
+      '--color-primary-300': colord(currentValue).lighten(0.12).toHex(),
       '--color-primary-500': currentValue,
-      '--color-primary-700': colord(currentValue).darken(.12).toHex(),
-      '--color-primary-900': colord(currentValue).darken(.24).toHex(),
+      '--color-primary-700': colord(currentValue).darken(0.12).toHex(),
+      '--color-primary-900': colord(currentValue).darken(0.24).toHex(),
     })
   }, [currentValue])
 
@@ -72,7 +72,9 @@ export const Default = ({ value, ...args }) => {
           style={colorsObject}
         >
           <Text size="tiny">Rendu&nbsp;:</Text>
-          <Button modifier="helium" rounded size="tiny" fit="content">S’abonner</Button>
+          <Button modifier="helium" rounded size="tiny" fit="content">
+            S’abonner
+          </Button>
         </div>
       </ColorSelect>
       <div>
@@ -84,21 +86,45 @@ export const Default = ({ value, ...args }) => {
         </Text>
         <div className="k-u-flex" style={colorsObject}>
           <div
-            style={{ width: '20%', flexBasis: '1 0 20%', height: 40, backgroundColor: colorsObject['--color-primary-100'] }}
+            style={{
+              width: '20%',
+              flexBasis: '1 0 20%',
+              height: 40,
+              backgroundColor: colorsObject['--color-primary-100'],
+            }}
           />
           <div
-            style={{ width: '20%', flexBasis: '1 0 20%', height: 40, backgroundColor: colorsObject['--color-primary-300'] }}
+            style={{
+              width: '20%',
+              flexBasis: '1 0 20%',
+              height: 40,
+              backgroundColor: colorsObject['--color-primary-300'],
+            }}
           />
           <div
-            style={{ width: '20%', flexBasis: '1 0 20%', height: 40, backgroundColor: colorsObject['--color-primary-500'] }}
+            style={{
+              width: '20%',
+              flexBasis: '1 0 20%',
+              height: 40,
+              backgroundColor: colorsObject['--color-primary-500'],
+            }}
           />
           <div
-            style={{ width: '20%', flexBasis: '1 0 20%', height: 40, backgroundColor: colorsObject['--color-primary-700'] }}
+            style={{
+              width: '20%',
+              flexBasis: '1 0 20%',
+              height: 40,
+              backgroundColor: colorsObject['--color-primary-700'],
+            }}
           />
           <div
-            style={{ width: '20%', flexBasis: '1 0 20%', height: 40, backgroundColor: colorsObject['--color-primary-900'] }}
+            style={{
+              width: '20%',
+              flexBasis: '1 0 20%',
+              height: 40,
+              backgroundColor: colorsObject['--color-primary-900'],
+            }}
           />
-
         </div>
       </div>
     </>

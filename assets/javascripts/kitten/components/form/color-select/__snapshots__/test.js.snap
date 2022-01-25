@@ -2,15 +2,8 @@
 
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-ifAKCX bEyifv k-FlexWrapper sc-EHOje joRwLW k-Form-ColorSelect"
+  className="sc-htpNat jIcaou k-Form-ColorSelect"
   name="test-slider-input"
-  style={
-    Object {
-      "--flexWrapper-direction": "column",
-      "--flexWrapper-gap": "1.25rem",
-      "--flexWrapper-padding": null,
-    }
-  }
 >
   <div
     className="k-Form-ColorSelect__picker"
@@ -96,16 +89,24 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M0 0 L0 99 L1 99 L2 99 L3 99 L4 99 L5 99 L6 99 L7 99 L8 99 L9 99 L10 99 L10 0z"
-        fill="white"
+        d="M0 0 L0 41 L1 40 L2 38 L3 37 L4 35 L5 35 L6 33 L7 33 L8 32 L9 32 L10 32 L10 0z"
+        fill="#ffffff"
       />
     </svg>
   </div>
   <div
-    className="sc-bxivhb gfIaXq k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny k-Form-TextInputWithButton--orion"
+    className="k-Form-ColorSelect__grid"
   >
+    <div
+      className="k-Form-ColorSelect__swatch"
+      style={
+        Object {
+          "backgroundColor": "#556954",
+        }
+      }
+    />
     <input
-      className="sc-bdVaJa dBdJAo k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--orion k-Form-TextInput--tiny"
+      className="sc-bdVaJa dBdJAo k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--tiny k-Form-TextInput--alignCenter"
       disabled={false}
       name="text"
       onBlur={[Function]}
@@ -114,19 +115,9 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
       spellCheck="false"
       value="#556954"
     />
-    <button
-      className="sc-htpNat jgfDNT k-Button k-Form-TextInputWithButton__button k-Button--tiny k-Button--helium k-Button--orion k-Button--fit-content"
-      disabled={false}
-      onClick={[Function]}
-      style={
-        Object {
-          "--Button-border-radius": null,
-        }
-      }
-      type="button"
-    >
-      Confirm
-    </button>
+    <div
+      className="k-Form-ColorSelect__witness"
+    />
   </div>
 </div>
 `;

@@ -11,7 +11,7 @@ describe('<ColorSelect />', () => {
           onChange={() => {}}
           value="#556954"
           contrastColor="#555"
-          contrastRatio="3"
+          contrastRatio={3}
         />,
       )
       .toJSON()
