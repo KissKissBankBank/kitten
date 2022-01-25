@@ -4,16 +4,20 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import range from 'lodash/fp/range'
 import debounce from 'lodash/fp/debounce'
-import colorConvert from 'color-convert'
 import { HexColorPicker, HexColorInput } from 'react-colorful'
-import { ratio } from 'wcag-color'
+import { colord, extend } from 'colord'
+import a11yPlugin from "colord/plugins/a11y"
 
-import { TextInputWithButton } from '../text-input-with-button'
+import { TextInput } from '../text-input'
 import { FlexWrapper } from '../../../components/layout/flex-wrapper'
+import { pxToRem } from '../../../helpers/utils/typography'
+
+extend([a11yPlugin])
 
 const SVG_COLS_COUNT = 10
+const CONTRAST_COLOR = '#ffffff'
 
-const StyledColorSelect = styled(FlexWrapper)`
+const StyledColorSelect = styled.div`
   .k-Form-ColorSelect__picker {
     position: relative;
 
@@ -22,7 +26,7 @@ const StyledColorSelect = styled(FlexWrapper)`
       top: 0;
       left: 0;
       width: 100%;
-      height: 164px;
+      height: ${pxToRem(164)};
       pointer-events: none;
 
       path {
@@ -31,41 +35,48 @@ const StyledColorSelect = styled(FlexWrapper)`
     }
   }
 
+  .k-Form-ColorSelect__grid {
+    margin-top: ${pxToRem(10)};
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(${pxToRem(100)}, 1fr));
+    gap: ${pxToRem(10)};
+  }
+
+  .k-Form-ColorSelect__swatch {
+    border-radius: var(--border-radius-s);
+  }
+
+  .k-Form-ColorSelect__witness {
+    grid-column: span 2;
+  }
+
   .react-colorful {
     width: 100%;
   }
   .react-colorful__interactive:focus-visible .react-colorful__pointer {
     outline-style: auto;
   }
-`
-
-const hexToHsv = color => {
-  const hsvArray = colorConvert.hex.hsv(color)
-  return {
-    h: Math.round(hsvArray[0]),
-    s: hsvArray[1],
-    v: hsvArray[2],
+  .react-colorful__saturation {
+    border-radius: var(--border-radius-s) var(--border-radius-s) 0 0;
   }
-}
-const hsvToHex = color =>
-  `#${colorConvert.hsv.hex([color.h, color.s, color.v])}`
+  .react-colorful__last-control {
+    border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
+  }
+`
 
 export const ColorSelect = ({
   onChange,
   value,
-  contrastColor,
   contrastRatio,
   valid,
   error,
   disabled,
   className,
   inputProps,
-  buttonProps,
-  buttonValue,
+  children,
   ...props
 }) => {
   const [inputValue, setInputValue] = useState(value)
-  const [buttonEnabled, setButtonEnabled] = useState(true)
   const [color, setColor] = useState(value)
 
   useEffect(() => {
@@ -81,12 +92,12 @@ export const ColorSelect = ({
       setColor(changedColor)
     }
 
-    const isContrastValid = ratio(changedColor, contrastColor) > contrastRatio
+    const isContrastValid = colord(changedColor).contrast(CONTRAST_COLOR) > contrastRatio
 
     if (!isContrastValid) {
       const newColor = getClosestContrast({
         color: changedColor,
-        contrastColor,
+        CONTRAST_COLOR,
         contrastRatio,
       })
 
@@ -96,18 +107,14 @@ export const ColorSelect = ({
     }
   }
 
-  const handleButtonClick = () => {
-    handleChange(inputValue)
-  }
-
   const handleInputKey = event => {
-    setButtonEnabled(
-      event.target.value.length === 4 || event.target.value.length === 7,
-    )
+    if (event.key === 'Enter') {
+      handleChange(event.target.value)
+    }
 
-    if (event.key !== 'Enter' || !buttonEnabled) return
-
-    handleChange(event.target.value)
+    if (event.target.value.length === 7) {
+      handleChange(event.target.value)
+    }
   }
 
   const handleInputChange = value => {
@@ -115,17 +122,17 @@ export const ColorSelect = ({
   }
 
   const getClosestContrast = ({ color }) => {
-    const { h, s, v } = hexToHsv(color)
+    const { h, s, v } = colord(color).toHsv()
 
     let vRange = range(0)(Math.round(v))
 
     const newV = findClosestValidColor({ h, s, vRange })
 
-    return hsvToHex({ h, s, v: newV })
+    return colord({ h, s, v: newV }).toHex()
   }
 
   const getCoordinatesList = color => {
-    const { h } = hexToHsv(color)
+    const { h } = colord(color).toHsv()
     const coords = []
 
     for (let i = 0; i <= SVG_COLS_COUNT; i++) {
@@ -149,9 +156,9 @@ export const ColorSelect = ({
       whileCount += 1
 
       const midPoint = Math.floor(vRange.length / 2)
-      const midPointColor = hsvToHex({ h, s, v: vRange[midPoint] })
+      const midPointColor = colord({ h, s, v: vRange[midPoint] }).toHex()
       const isMidPointColorValid =
-        ratio(midPointColor, contrastColor) > contrastRatio
+        colord(midPointColor).contrast(CONTRAST_COLOR) > contrastRatio
 
       if (!isMidPointColorValid) {
         vRange.splice(midPoint, vRange.length)
@@ -167,7 +174,6 @@ export const ColorSelect = ({
 
   return (
     <StyledColorSelect
-      gap={20}
       className={classNames('k-Form-ColorSelect', className)}
       {...props}
     >
@@ -180,30 +186,26 @@ export const ColorSelect = ({
             preserveAspectRatio="none"
           >
             <path
-              fill="white"
+              fill={CONTRAST_COLOR}
               d={`M0 0 ${getCoordinatesList(color)} L${SVG_COLS_COUNT} 0z`}
             />
           </svg>
         )}
       </div>
-      <TextInputWithButton
-        {...inputProps}
-        variant="orion"
-        size="tiny"
-        buttonProps={{
-          fit: 'content',
-          onClick: handleButtonClick,
-          disabled: !buttonEnabled,
-          ...buttonProps,
-        }}
-        buttonValue={buttonValue}
-        modifier="helium"
-        as={HexColorInput}
-        color={color}
-        onKeyUp={handleInputKey}
-        prefixed
-        onChange={debounce(100)(handleInputChange)}
-      />
+      <div className="k-Form-ColorSelect__grid">
+        <div className="k-Form-ColorSelect__swatch" style={{ backgroundColor: color }} />
+        <TextInput
+          {...inputProps}
+          size="tiny"
+          center
+          as={HexColorInput}
+          color={color}
+          onKeyUp={handleInputKey}
+          prefixed
+          onChange={debounce(100)(handleInputChange)}
+        />
+        <div className="k-Form-ColorSelect__witness">{children}</div>
+      </div>
     </StyledColorSelect>
   )
 }
@@ -211,19 +213,13 @@ export const ColorSelect = ({
 ColorSelect.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
-  contrastColor: PropTypes.string,
   contrastRatio: PropTypes.number,
   inputProps: PropTypes.object,
-  buttonProps: PropTypes.object,
-  buttonValue: PropTypes.node,
 }
 
 ColorSelect.defaultProps = {
   onChange: () => {},
   value: '#006cff',
-  contrastColor: '#fff',
   contrastRatio: 4.5,
   inputProps: {},
-  buttonProps: {},
-  buttonValue: 'Confirm',
 }
