@@ -106,7 +106,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
       }
     />
     <input
-      className="sc-bdVaJa dBdJAo k-Form-TextInput k-Form-TextInput--orion k-Form-TextInput--tiny k-Form-TextInput--alignCenter"
+      className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInput--tiny k-Form-TextInput--alignCenter"
       disabled={false}
       name="text"
       onBlur={[Function]}
