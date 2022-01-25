@@ -20,8 +20,8 @@ exports[`<HighlightHalo /> HighlightHalo with multiple props matches with snapsh
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-animation-name: iwhber,iTFZKx,fDpJFR;
-  animation-name: iwhber,iTFZKx,fDpJFR;
+  -webkit-animation-name: ilgnca,iMQLye,jCjZZj;
+  animation-name: ilgnca,iMQLye,jCjZZj;
   -webkit-animation-duration: 0.5s,4s,0.1s;
   animation-duration: 0.5s,4s,0.1s;
   -webkit-animation-timing-function: ease-in-out,ease-in-out,ease-in-out;
@@ -85,8 +85,8 @@ exports[`<HighlightHalo /> simple HighlightHalo  matches with snapshot 1`] = `
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-animation-name: iwhber,iTFZKx,fDpJFR;
-  animation-name: iwhber,iTFZKx,fDpJFR;
+  -webkit-animation-name: ilgnca,iMQLye,jCjZZj;
+  animation-name: ilgnca,iMQLye,jCjZZj;
   -webkit-animation-duration: 0.5s,4s,0.1s;
   animation-duration: 0.5s,4s,0.1s;
   -webkit-animation-timing-function: ease-in-out,ease-in-out,ease-in-out;
