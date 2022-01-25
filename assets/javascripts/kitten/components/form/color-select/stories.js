@@ -66,7 +66,12 @@ export const Default = ({ value, ...args }) => {
 
   return (
     <>
-      <ColorSelect {...args} value={value} onChange={handleChange}>
+      <ColorSelect
+        {...args}
+        value={value}
+        onChange={handleChange}
+        inputProps={{ 'aria-label': 'Code hexadécimal de la couleur' }}
+      >
         <div
           className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-end k-u-flex-gap-single"
           style={colorsObject}

@@ -12,6 +12,7 @@ describe('<ColorSelect />', () => {
           value="#556954"
           contrastColor="#555"
           contrastRatio={3}
+          inputProps={{ 'aria-label': 'Code hexadécimal de la couleur' }}
         />,
       )
       .toJSON()

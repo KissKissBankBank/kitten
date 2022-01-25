@@ -106,6 +106,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
       }
     />
     <input
+      aria-label="Code hexadécimal de la couleur"
       className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInput--tiny k-Form-TextInput--alignCenter"
       disabled={false}
       name="text"
