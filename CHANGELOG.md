@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `TextInputWithUnit`: Add `secondUnit` prop.
+- Fix: `TextInputWithUnit`: Improve `unitWord` propTypes.
 
 ## [7.1.0] - 2022-01-20
 

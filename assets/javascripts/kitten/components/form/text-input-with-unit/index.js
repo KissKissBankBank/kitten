@@ -131,7 +131,7 @@ export const TextInputWithUnit = ({
           },
         )}
       >
-        {unit || unitWord }
+        {unit || unitWord}
       </span>
     </StyledTextInputWithUnit>
   )
