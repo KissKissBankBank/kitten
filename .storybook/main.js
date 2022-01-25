@@ -61,4 +61,5 @@ module.exports = {
     'storybook-addon-designs',
     'storybook-design-token',
   ],
+  staticDirs: ['./public'],
 }
