@@ -13,7 +13,7 @@ export const StyledRecurringDonation = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     border: var(--border);
     width: ${pxToRem(93)};
     height: ${pxToRem(89)};

@@ -14,7 +14,7 @@ export default {
 
 export const DonRecurent = (props) => {
   return (
-    <div className="story-Container story-Grid">
+    <div className="story-Container story-Grid story-Grid--large">
       <StyledRecurringDonation>
         <BackingCard {...props}>
           <BackingCard.Title>
@@ -28,20 +28,20 @@ export const DonRecurent = (props) => {
               Faites un don mensuel du montant de votre choix pour continuer à faire vivre notre projet&nbsp;:
             </Text>
             <div className="k-RecurringDonation__thumbnailsTrio">
-              <div as="button" className="k-RecurringDonation__thumbnail">
+              <button className="k-RecurringDonation__thumbnail k-u-reset-button">
                 <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">
                   2&nbsp;€
                 </Text>
                 <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
-              </div>
-              <div as="button" className="k-RecurringDonation__thumbnail">
+              </button>
+              <button className="k-RecurringDonation__thumbnail k-u-reset-button">
                 <Text className="k-u-margin-none" tag="p" weight="bold" size="huge">5&nbsp;€</Text>
                 <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
-              </div>
-              <div as="button" className="k-RecurringDonation__thumbnail">
+              </button>
+              <button className="k-RecurringDonation__thumbnail k-u-reset-button">
                 <Text tag="p" className="k-u-margin-none" weight="bold" size="huge">10&nbsp;€</Text>
                 <Text className="k-u-margin-none" tag="p" size="tiny">par mois</Text>
-              </div>
+              </button>
             </div>
 
             <div className="k-RecurringDonation__form">
