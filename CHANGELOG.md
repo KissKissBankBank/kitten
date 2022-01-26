@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `LocationInput`: Improve styles.
 
 ## [7.1.0] - 2022-01-20
 
