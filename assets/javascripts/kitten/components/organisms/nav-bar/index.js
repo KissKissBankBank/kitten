@@ -10,6 +10,7 @@ import {
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config'
 
 const StyledNavBar = styled.div`
   width: auto;
@@ -87,6 +88,10 @@ const StyledNavBar = styled.div`
     }
   }
 
+  &.k-NavBar--small .k-NavBar__link {
+    height: ${pxToRem(HEADER_HEIGHT)};
+  }
+
   &.k-NavBar--big .k-NavBar__link {
     height: ${pxToRem(80)};
 
@@ -159,5 +164,5 @@ NavBar.propTypes = {
     activeLink: PropTypes.string,
     activeBorder: PropTypes.string,
   }),
-  modifier: PropTypes.oneOf(['regular', 'big']),
+  modifier: PropTypes.oneOf(['small', 'regular', 'big']),
 }
