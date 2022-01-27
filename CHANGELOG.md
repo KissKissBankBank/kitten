@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `LocationInput`: Improve styles.
+- Feature: `NavBar`: Add `small` value on `modifier` prop.
 
 ## [7.1.0] - 2022-01-20
 

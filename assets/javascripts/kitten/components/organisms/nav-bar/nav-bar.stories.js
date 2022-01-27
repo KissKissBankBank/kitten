@@ -26,7 +26,7 @@ export default {
     colors: {
       control: 'object',
     },
-    modifier: { control: 'radio', options: ['regular', 'big'] },
+    modifier: { control: 'radio', options: ['small', 'regular', 'big'] },
     listProps: { control: 'object' },
     navProps: { control: 'object' },
   },
