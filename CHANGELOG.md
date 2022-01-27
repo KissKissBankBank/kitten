@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `LocationInput`: Improve styles.
 - Feature: `NavBar`: Add `small` value on `modifier` prop.
+- Fix: `HeroLayout`: Fix Hero sizing on large screens.
 
 ## [7.1.0] - 2022-01-20
 
