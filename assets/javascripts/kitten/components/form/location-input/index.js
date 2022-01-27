@@ -28,7 +28,6 @@ const StyledLocationInput = styled.div`
     height: ${pxToRem(50)};
     background: ${COLORS.background1};
     border: var(--border);
-    border-radius: 0;
     color: ${COLORS.font1};
 
     transition: color 0.2s, border-color 0.2s;
