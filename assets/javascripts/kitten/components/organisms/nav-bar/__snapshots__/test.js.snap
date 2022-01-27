@@ -96,6 +96,10 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   border-width: 0.25rem;
 }
 
+.c0.k-NavBar--small .k-NavBar__link {
+  height: 4.0625rem;
+}
+
 .c0.k-NavBar--big .k-NavBar__link {
   height: 5rem;
 }
@@ -278,6 +282,10 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   border-width: 0.25rem;
 }
 
+.c0.k-NavBar--small .k-NavBar__link {
+  height: 4.0625rem;
+}
+
 .c0.k-NavBar--big .k-NavBar__link {
   height: 5rem;
 }
@@ -458,6 +466,10 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   border-color: var(--color-primary-500,#19b4fa);
   color: var(--color-primary-500,#19b4fa);
   border-width: 0.25rem;
+}
+
+.c0.k-NavBar--small .k-NavBar__link {
+  height: 4.0625rem;
 }
 
 .c0.k-NavBar--big .k-NavBar__link {
