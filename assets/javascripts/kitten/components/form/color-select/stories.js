@@ -77,7 +77,13 @@ export const Default = ({ value, ...args }) => {
           style={colorsObject}
         >
           <Text size="tiny">Rendu&nbsp;:</Text>
-          <Button modifier="helium" rounded size="tiny" fit="content">
+          <Button
+            modifier="helium"
+            rounded
+            size="tiny"
+            fit="content"
+            type="button"
+          >
             S’abonner
           </Button>
         </div>
