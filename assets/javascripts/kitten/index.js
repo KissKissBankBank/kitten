@@ -7,58 +7,52 @@
 
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
-// Atoms
-// -----
 
-export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
-export { Badge } from './components/atoms/badge'
-export { HighlightHalo } from './components/atoms/highlight-halo'
-export { HorizontalStroke } from './components/atoms/horizontal-stroke'
-export { IconBadge } from './components/atoms/icon-badge'
-export { KissKissLoadingAnimation } from './components/atoms/kisskiss-loading-animation'
-export { LendoLoadingAnimation } from './components/atoms/lendo-loading-animation'
-export { Loader } from './components/atoms/loader'
-export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
-export { Progress } from './components/atoms/progress'
-export { ProgressRing } from './components/atoms/progress-ring'
-export { Separator } from './components/atoms/separator'
-export { StatusWithBullet } from './components/atoms/status-with-bullet'
+// Action
+export { Button } from './components/action/button'
+export { ButtonIcon } from './components/action/button-icon'
+export { ButtonGroup } from './components/action/button-group'
+export { ButtonImage } from './components/action/button-image'
+export { ButtonQuestionMarkIcon } from './components/action/button-question-mark-icon'
+export { ButtonWithTooltip } from './components/action/button-with-tooltip'
+export { CheckableButton } from './components/action/checkable-button'
+export { CloseButton } from './components/action/close-button'
 export {
-  StepperIcon,
-  StepperIconDefault,
-  StepperIconInProgress,
-  StepperIconValidated,
-} from './components/atoms/stepper-icon'
-export { Tag } from './components/atoms/tag'
-export { VerticalStroke } from './components/atoms/vertical-stroke'
+  FacebookButtonIconWords,
+  TwitterButtonIconWords,
+  LinkedinButtonIconWords,
+  InstagramButtonIconWords,
+} from './components/action/social-button-icon-words'
+export {
+  FacebookButtonIcon,
+  TwitterButtonIcon,
+  LinkedinButtonIcon,
+  InstagramButtonIcon,
+  YoutubeButtonIcon,
+} from './components/action/social-button-icon'
+export { TagButton } from './components/action/tag-button'
+export { TextButton } from './components/action/text-button'
+
+export { modifierStyles as buttonModifierStyles } from './components/action/button/helpers/modifier-styles'
+
+
+// Layout
+// ------
 
 export {
-  strokeModifierStyles,
-  strokeModifierStylesWithoutMargin,
-} from './components/atoms/horizontal-stroke/common/stroke-modifier-styles'
-
-// Atoms/Typography
-export { Paragraph } from './components/atoms/typography/paragraph'
-export { SupTitle } from './components/atoms/typography/sup-title'
-export { Text } from './components/atoms/typography/text'
-export { Title } from './components/atoms/typography/title'
-export { TitleWithStroke } from './components/atoms/typography/title-with-stroke'
-export {
-  titleModifiers,
-  titleModifierStyles,
-  titleModifiersNames,
-  titleHelperModifierStyles,
-} from './components/atoms/typography/common/title-modifier-styles'
-export { modifierStyles as paragraphModifierStyles } from './components/atoms/typography/paragraph/helpers/modifier-styles'
-
-// Atoms/Videos
-export { Video } from './components/atoms/video/video'
-export { GifVideo } from './components/atoms/video/gif-video'
-
-// Dev
-// ---
-
-export { DevGrid } from './components/dev/dev-grid'
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/layout/adaptable-grid'
+export { Container } from './components/layout/container'
+export { DashboardLayout } from './components/layout/dashboard-layout'
+export { DeskLayout } from './components/layout/desk-layout'
+export { FlexWrapper } from './components/layout/flex-wrapper'
+export { Grid, GridCol } from './components/layout/grid'
+export { HeroLayout } from './components/layout/hero-layout'
+export { Marger } from './components/layout/marger'
+export { Row } from './components/layout/row'
+export { ScrollableContainer } from './components/layout/scrollable-container'
+export { StickyContainer } from './components/layout/sticky-container'
 
 // Form
 // ----
@@ -68,9 +62,7 @@ export { Checkbox } from './components/form/checkbox'
 export { CheckboxSet } from './components/form/checkbox-set'
 export { CreditCardForm } from './components/form/credit-card-form'
 export { DatePicker } from './components/form/date-picker'
-export { DropdownPhoneSelect } from './components/form/dropdown-phone-select'
-export { DropdownSelect } from './components/form/dropdown-select'
-export { DropdownSelectWithInput } from './components/form/dropdown-select-with-input'
+
 export { Field } from './components/form/field'
 export { FormActions } from './components/form/form-actions'
 export { Label } from './components/form/label'
@@ -91,204 +83,304 @@ export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { ToggleSwitch } from './components/form/toggle-switch'
 
-// Graphics
+// Typography
+export { Paragraph } from './components/typography/paragraph'
+export { SupTitle } from './components/typography/sup-title'
+export { Text } from './components/typography/text'
+export { Title } from './components/typography/title'
+export { TitleWithStroke } from './components/typography/title-with-stroke'
+export {
+  titleModifiers,
+  titleModifierStyles,
+  titleModifiersNames,
+  titleHelperModifierStyles,
+} from './components/typography/common/title-modifier-styles'
+export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
+
+
+// visuals
 // --------
 
-// Graphics/Icons
-export { AlignCenterIcon } from './components/graphics/icons/align-center-icon'
-export { AlignLeftIcon } from './components/graphics/icons/align-left-icon'
-export { AlignRightIcon } from './components/graphics/icons/align-right-icon'
-export { ArrowIcon } from './components/graphics/icons/arrow-icon'
-export { LongArrowIcon } from './components/graphics/icons/long-arrow-icon'
-export { BancontactIcon } from './components/graphics/icons/bancontact-icon'
-export { BlockquoteIcon } from './components/graphics/icons/blockquote-icon'
-export { BoldIcon } from './components/graphics/icons/bold-icon'
-export { BubbleIcon } from './components/graphics/icons/bubble-icon'
-export { BurgerIcon } from './components/graphics/icons/burger-icon/index'
-export { ButtonIcon as EditorButtonIcon } from './components/graphics/icons/button-icon'
-export { CameraIcon } from './components/graphics/icons/camera-icon'
-export { Cart } from './components/graphics/icons/cart'
-export { CbIcon } from './components/graphics/icons/cb-icon'
-export { CheckedCircleIcon } from './components/graphics/icons/checked-circle-icon'
-export { CheckedIcon } from './components/graphics/icons/checked-icon'
-export { ClockCircleIcon } from './components/graphics/icons/clock-circle-icon'
-export { ClockIcon } from './components/graphics/icons/clock-icon'
-export { CopyIcon } from './components/graphics/icons/copy-icon'
-export { CrossCircleIcon } from './components/graphics/icons/cross-circle-icon'
-export { CrossIcon } from './components/graphics/icons/cross-icon'
-export { DocIcon } from './components/graphics/icons/doc-icon'
-export { DocumentIconEmpty } from './components/graphics/icons/document-icon-empty'
-export { DocumentIconHouse } from './components/graphics/icons/document-icon-house'
-export { DocumentIconPerson } from './components/graphics/icons/document-icon-person'
-export { DotIcon } from './components/graphics/icons/dot-icon'
-export { DoubleArrowIcon } from './components/graphics/icons/double-arrow-icon'
-export { DownloadIcon as ExportIcon } from './components/graphics/icons/download-icon'
-export { DownloadIcon } from './components/graphics/icons/download-icon'
-export { EditIcon } from './components/graphics/icons/edit-icon'
-export { EllipsisIcon } from './components/graphics/icons/ellipsis-icon'
-export { EmailIcon } from './components/graphics/icons/email-icon'
-export { EmbedIcon } from './components/graphics/icons/embed-icon'
-export { EnvelopeIcon } from './components/graphics/icons/envelope-icon'
-export { ExportIconAlternate } from './components/graphics/icons/export-icon-alternate'
-export { FacebookIcon } from './components/graphics/icons/facebook-icon'
-export { FacebookIconWithBackground } from './components/graphics/icons/facebook-icon-with-background'
-export { FilterIcon } from './components/graphics/icons/filter-icon'
-export { FlagIcon, flagList } from './components/graphics/icons/flag-icon'
-export { FlashCircleIcon } from './components/graphics/icons/flash-circle-icon'
-export { GarbageIcon } from './components/graphics/icons/garbage-icon'
-export { GiropayIcon } from './components/graphics/icons/giropay-icon'
-export { GlobeIcon } from './components/graphics/icons/globe-icon'
-export { GrabberIcon } from './components/graphics/icons/grabber-icon'
-export { HeartIcon } from './components/graphics/icons/heart-icon'
-export { IdealIcon } from './components/graphics/icons/ideal-icon'
-export { ImageIcon } from './components/graphics/icons/image-icon'
-export { InstagramIcon } from './components/graphics/icons/instagram-icon'
-export { InstrumentTagIcon } from './components/graphics/icons/instrument-tag-icon'
-export { ItalicIcon } from './components/graphics/icons/italic-icon'
-export { KissKissBankBankIcon } from './components/graphics/icons/kisskissbankbank-icon'
-export { LinkedinIcon } from './components/graphics/icons/linkedin-icon'
-export { LinkIcon } from './components/graphics/icons/link-icon'
-export { ListIcon } from './components/graphics/icons/list-icon'
-export { LocationIcon } from './components/graphics/icons/location-icon'
-export { LockIcon } from './components/graphics/icons/lock-icon'
-export { LoginIcon } from './components/graphics/icons/login-icon'
-export { NoImageIcon } from './components/graphics/icons/no-image-icon'
-export { MaestroIcon } from './components/graphics/icons/maestro-icon'
-export { MasterCardIcon } from './components/graphics/icons/mastercard-icon'
-export { MenuIcon } from './components/graphics/icons/menu-icon'
-export { MessengerIcon } from './components/graphics/icons/messenger-icon'
-export { ParagraphIcon } from './components/graphics/icons/paragraph-icon'
-export { PasswordIcon } from './components/graphics/icons/password-icon'
-export { PayPalIcon } from './components/graphics/icons/paypal-icon'
-export { PhoneIcon } from './components/graphics/icons/phone-icon'
-export { QuestionMarkIcon } from './components/graphics/icons/question-mark-icon'
-export { RocketCircleIcon } from './components/graphics/icons/rocket-circle-icon'
-export { RocketIcon } from './components/graphics/icons/rocket-icon'
-export { SaveIcon } from './components/graphics/icons/save-icon'
-export { SearchIcon } from './components/graphics/icons/search-icon'
-export { SofortIcon } from './components/graphics/icons/sofort-icon'
-export { StarIcon } from './components/graphics/icons/star-icon'
-export { StrokeIcon } from './components/graphics/icons/stroke-icon'
-export { Title1Icon } from './components/graphics/icons/title-1-icon'
-export { Title2Icon } from './components/graphics/icons/title-2-icon'
-export { Title3Icon } from './components/graphics/icons/title-3-icon'
-export { Title4Icon } from './components/graphics/icons/title-4-icon'
-export { TwitterIcon } from './components/graphics/icons/twitter-icon'
-export { TypologyTagIcon } from './components/graphics/icons/typology-tag-icon'
-export { UploadIcon } from './components/graphics/icons/upload-icon'
-export { VideoIcon } from './components/graphics/icons/video-icon'
-export { VisaIcon } from './components/graphics/icons/visa-icon'
-export { WaitingIcon } from './components/graphics/icons/waiting-icon'
-export { WarningCircleIcon } from './components/graphics/icons/warning-circle-icon'
-export { WarningIcon } from './components/graphics/icons/warning-icon'
-export { WhatsAppIcon } from './components/graphics/icons/whatsapp-icon'
-export { YoutubeIcon } from './components/graphics/icons/youtube-icon'
-export { HomeIcon } from './components/graphics/icons/home-icon'
-export { TagIcon } from './components/graphics/icons/tag-icon'
-export { FileIcon } from './components/graphics/icons/file-icon'
-export { LoudspeakerIcon } from './components/graphics/icons/loudspeaker-icon'
-export { ShieldIcon } from './components/graphics/icons/shield-icon'
-export { ShieldCheckIcon } from './components/graphics/icons/shield-check-icon'
-export { PeopleIcon } from './components/graphics/icons/people-icon'
-export { StatsIcon } from './components/graphics/icons/stats-icon'
-export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon'
+// visuals/Icons
+export { AlignCenterIcon } from './components/visuals/icons/align-center-icon'
+export { AlignLeftIcon } from './components/visuals/icons/align-left-icon'
+export { AlignRightIcon } from './components/visuals/icons/align-right-icon'
+export { ArrowIcon } from './components/visuals/icons/arrow-icon'
+export { LongArrowIcon } from './components/visuals/icons/long-arrow-icon'
+export { BancontactIcon } from './components/visuals/icons/bancontact-icon'
+export { BlockquoteIcon } from './components/visuals/icons/blockquote-icon'
+export { BoldIcon } from './components/visuals/icons/bold-icon'
+export { BubbleIcon } from './components/visuals/icons/bubble-icon'
+export { BurgerIcon } from './components/visuals/icons/burger-icon/index'
+export { ButtonIcon as EditorButtonIcon } from './components/visuals/icons/button-icon'
+export { CameraIcon } from './components/visuals/icons/camera-icon'
+export { Cart } from './components/visuals/icons/cart'
+export { CbIcon } from './components/visuals/icons/cb-icon'
+export { CheckedCircleIcon } from './components/visuals/icons/checked-circle-icon'
+export { CheckedIcon } from './components/visuals/icons/checked-icon'
+export { ClockCircleIcon } from './components/visuals/icons/clock-circle-icon'
+export { ClockIcon } from './components/visuals/icons/clock-icon'
+export { CopyIcon } from './components/visuals/icons/copy-icon'
+export { CrossCircleIcon } from './components/visuals/icons/cross-circle-icon'
+export { CrossIcon } from './components/visuals/icons/cross-icon'
+export { DocIcon } from './components/visuals/icons/doc-icon'
+export { DocumentIconEmpty } from './components/visuals/icons/document-icon-empty'
+export { DocumentIconHouse } from './components/visuals/icons/document-icon-house'
+export { DocumentIconPerson } from './components/visuals/icons/document-icon-person'
+export { DotIcon } from './components/visuals/icons/dot-icon'
+export { DoubleArrowIcon } from './components/visuals/icons/double-arrow-icon'
+export { DownloadIcon as ExportIcon } from './components/visuals/icons/download-icon'
+export { DownloadIcon } from './components/visuals/icons/download-icon'
+export { EditIcon } from './components/visuals/icons/edit-icon'
+export { EllipsisIcon } from './components/visuals/icons/ellipsis-icon'
+export { EmailIcon } from './components/visuals/icons/email-icon'
+export { EmbedIcon } from './components/visuals/icons/embed-icon'
+export { EnvelopeIcon } from './components/visuals/icons/envelope-icon'
+export { ExportIconAlternate } from './components/visuals/icons/export-icon-alternate'
+export { FacebookIcon } from './components/visuals/icons/facebook-icon'
+export { FacebookIconWithBackground } from './components/visuals/icons/facebook-icon-with-background'
+export { FilterIcon } from './components/visuals/icons/filter-icon'
+export { FlagIcon, flagList } from './components/visuals/icons/flag-icon'
+export { FlashCircleIcon } from './components/visuals/icons/flash-circle-icon'
+export { GarbageIcon } from './components/visuals/icons/garbage-icon'
+export { GiropayIcon } from './components/visuals/icons/giropay-icon'
+export { GlobeIcon } from './components/visuals/icons/globe-icon'
+export { GrabberIcon } from './components/visuals/icons/grabber-icon'
+export { HeartIcon } from './components/visuals/icons/heart-icon'
+export { IdealIcon } from './components/visuals/icons/ideal-icon'
+export { ImageIcon } from './components/visuals/icons/image-icon'
+export { InstagramIcon } from './components/visuals/icons/instagram-icon'
+export { InstrumentTagIcon } from './components/visuals/icons/instrument-tag-icon'
+export { ItalicIcon } from './components/visuals/icons/italic-icon'
+export { KissKissBankBankIcon } from './components/visuals/icons/kisskissbankbank-icon'
+export { LinkedinIcon } from './components/visuals/icons/linkedin-icon'
+export { LinkIcon } from './components/visuals/icons/link-icon'
+export { ListIcon } from './components/visuals/icons/list-icon'
+export { LocationIcon } from './components/visuals/icons/location-icon'
+export { LockIcon } from './components/visuals/icons/lock-icon'
+export { LoginIcon } from './components/visuals/icons/login-icon'
+export { NoImageIcon } from './components/visuals/icons/no-image-icon'
+export { MaestroIcon } from './components/visuals/icons/maestro-icon'
+export { MasterCardIcon } from './components/visuals/icons/mastercard-icon'
+export { MenuIcon } from './components/visuals/icons/menu-icon'
+export { MessengerIcon } from './components/visuals/icons/messenger-icon'
+export { ParagraphIcon } from './components/visuals/icons/paragraph-icon'
+export { PasswordIcon } from './components/visuals/icons/password-icon'
+export { PayPalIcon } from './components/visuals/icons/paypal-icon'
+export { PhoneIcon } from './components/visuals/icons/phone-icon'
+export { QuestionMarkIcon } from './components/visuals/icons/question-mark-icon'
+export { RocketCircleIcon } from './components/visuals/icons/rocket-circle-icon'
+export { RocketIcon } from './components/visuals/icons/rocket-icon'
+export { SaveIcon } from './components/visuals/icons/save-icon'
+export { SearchIcon } from './components/visuals/icons/search-icon'
+export { SofortIcon } from './components/visuals/icons/sofort-icon'
+export { StarIcon } from './components/visuals/icons/star-icon'
+export { StrokeIcon } from './components/visuals/icons/stroke-icon'
+export { Title1Icon } from './components/visuals/icons/title-1-icon'
+export { Title2Icon } from './components/visuals/icons/title-2-icon'
+export { Title3Icon } from './components/visuals/icons/title-3-icon'
+export { Title4Icon } from './components/visuals/icons/title-4-icon'
+export { TwitterIcon } from './components/visuals/icons/twitter-icon'
+export { TypologyTagIcon } from './components/visuals/icons/typology-tag-icon'
+export { UploadIcon } from './components/visuals/icons/upload-icon'
+export { VideoIcon } from './components/visuals/icons/video-icon'
+export { VisaIcon } from './components/visuals/icons/visa-icon'
+export { WaitingIcon } from './components/visuals/icons/waiting-icon'
+export { WarningCircleIcon } from './components/visuals/icons/warning-circle-icon'
+export { WarningIcon } from './components/visuals/icons/warning-icon'
+export { WhatsAppIcon } from './components/visuals/icons/whatsapp-icon'
+export { YoutubeIcon } from './components/visuals/icons/youtube-icon'
+export { HomeIcon } from './components/visuals/icons/home-icon'
+export { TagIcon } from './components/visuals/icons/tag-icon'
+export { FileIcon } from './components/visuals/icons/file-icon'
+export { LoudspeakerIcon } from './components/visuals/icons/loudspeaker-icon'
+export { ShieldIcon } from './components/visuals/icons/shield-icon'
+export { ShieldCheckIcon } from './components/visuals/icons/shield-check-icon'
+export { PeopleIcon } from './components/visuals/icons/people-icon'
+export { StatsIcon } from './components/visuals/icons/stats-icon'
+export { SpeechBubbleIcon } from './components/visuals/icons/speech-bubble-icon'
 
-// Graphics/IconsNext
-export { AirplaneIconNext } from './components/graphics/icons-next/airplane-icon-next'
-export { BankCardIconNext } from './components/graphics/icons-next/bank-card-icon-next'
-export { BubbleIconNext } from './components/graphics/icons-next/bubble-icon-next'
-export { CheckedShieldIconNext } from './components/graphics/icons-next/checked-shield-icon-next'
-export { ChronoIconNext } from './components/graphics/icons-next/chrono-icon-next'
-export { CogIconNext } from './components/graphics/icons-next/cog-icon-next'
-export { ColorCheckedShieldIconNext } from './components/graphics/icons-next/color-checked-shield-icon-next'
-export { CrossCircleIconNext } from './components/graphics/icons-next/cross-circle-icon-next'
-export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
-export { CubeIconNext } from './components/graphics/icons-next/cube-icon-next'
-export { EditIconNext } from './components/graphics/icons-next/edit-icon-next'
-export { EnvelopeIconNext } from './components/graphics/icons-next/envelope-icon-next'
-export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next'
-export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next'
-export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon-next'
-export { GiftIcon } from './components/graphics/icons-next/gift-icon'
-export { GiftIconNext } from './components/graphics/icons-next/gift-icon-next'
-export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next'
-export { HeartWithClickIconNext } from './components/graphics/icons-next/heart-icon-next/with-click'
-export { HomeIconNext } from './components/graphics/icons-next/home-icon-next'
-export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next'
-export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next'
-export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next'
-export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next'
-export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon'
-export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next'
-export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
-export { RefundIcon } from './components/graphics/icons-next/refund-icon'
-export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next'
-export { StarIconNext } from './components/graphics/icons-next/star-icon-next'
-export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next'
-export { StatusIconNext } from './components/graphics/icons-next/status-icon-next'
-export { SunIconNext } from './components/graphics/icons-next/sun-icon-next'
-export { TagIconNext } from './components/graphics/icons-next/tag-icon-next'
-export { ThumbUpIconNext } from './components/graphics/icons-next/thumb-up-icon-next'
-export { TwitterIconNext } from './components/graphics/icons-next/twitter-icon-next'
-export { UsersIconNext } from './components/graphics/icons-next/users-icon-next'
-export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next'
-export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'
+// visuals/IconsNext
+export { AirplaneIconNext } from './components/visuals/icons-next/airplane-icon-next'
+export { BankCardIconNext } from './components/visuals/icons-next/bank-card-icon-next'
+export { BubbleIconNext } from './components/visuals/icons-next/bubble-icon-next'
+export { CheckedShieldIconNext } from './components/visuals/icons-next/checked-shield-icon-next'
+export { ChronoIconNext } from './components/visuals/icons-next/chrono-icon-next'
+export { CogIconNext } from './components/visuals/icons-next/cog-icon-next'
+export { ColorCheckedShieldIconNext } from './components/visuals/icons-next/color-checked-shield-icon-next'
+export { CrossCircleIconNext } from './components/visuals/icons-next/cross-circle-icon-next'
+export { CrossIconNext } from './components/visuals/icons-next/cross-icon-next'
+export { CubeIconNext } from './components/visuals/icons-next/cube-icon-next'
+export { EditIconNext } from './components/visuals/icons-next/edit-icon-next'
+export { EnvelopeIconNext } from './components/visuals/icons-next/envelope-icon-next'
+export { EyeIconNext } from './components/visuals/icons-next/eye-icon-next'
+export { FilterIconNext } from './components/visuals/icons-next/filter-icon-next'
+export { FacebookIconNext } from './components/visuals/icons-next/facebook-icon-next'
+export { GiftIcon } from './components/visuals/icons-next/gift-icon'
+export { GiftIconNext } from './components/visuals/icons-next/gift-icon-next'
+export { HeartIconNext } from './components/visuals/icons-next/heart-icon-next'
+export { HeartWithClickIconNext } from './components/visuals/icons-next/heart-icon-next/with-click'
+export { HomeIconNext } from './components/visuals/icons-next/home-icon-next'
+export { InfiniteIconNext } from './components/visuals/icons-next/infinite-icon-next'
+export { InstagramIconNext } from './components/visuals/icons-next/instagram-icon-next'
+export { LargeArrowIconNext } from './components/visuals/icons-next/large-arrow-icon-next'
+export { LinkedinIconNext } from './components/visuals/icons-next/linkedin-icon-next'
+export { LockOutlineIcon } from './components/visuals/icons-next/lock-outline-icon'
+export { MessengerIconNext } from './components/visuals/icons-next/messenger-icon-next'
+export { PlusIconNext } from './components/visuals/icons-next/plus-icon-next'
+export { RefundIcon } from './components/visuals/icons-next/refund-icon'
+export { SpeechBubbleIconNext } from './components/visuals/icons-next/speech-bubble-icon-next'
+export { StarIconNext } from './components/visuals/icons-next/star-icon-next'
+export { StatsIconNext } from './components/visuals/icons-next/stats-icon-next'
+export { StatusIconNext } from './components/visuals/icons-next/status-icon-next'
+export { SunIconNext } from './components/visuals/icons-next/sun-icon-next'
+export { TagIconNext } from './components/visuals/icons-next/tag-icon-next'
+export { ThumbUpIconNext } from './components/visuals/icons-next/thumb-up-icon-next'
+export { TwitterIconNext } from './components/visuals/icons-next/twitter-icon-next'
+export { UsersIconNext } from './components/visuals/icons-next/users-icon-next'
+export { WhatsappIconNext } from './components/visuals/icons-next/whatsapp-icon-next'
+export { WindowEditIconNext } from './components/visuals/icons-next/window-edit-icon-next'
 
-// Graphics/Illustrations
-export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration'
-export { LinkBoxIllustration } from './components/graphics/illustrations/link-box-illustration'
-export { LoudspeakerIllustration } from './components/graphics/illustrations/loudspeaker-illustration'
-export { MixIllustration } from './components/graphics/illustrations/mix-illustration'
-export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
-export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'
-export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'
+// visuals/Illustrations
+export { LightbulbIllustration } from './components/visuals/illustrations/lightbulb-illustration'
+export { LinkBoxIllustration } from './components/visuals/illustrations/link-box-illustration'
+export { LoudspeakerIllustration } from './components/visuals/illustrations/loudspeaker-illustration'
+export { MixIllustration } from './components/visuals/illustrations/mix-illustration'
+export { PhoneIllustration } from './components/visuals/illustrations/phone-illustration'
+export { RocketIllustration } from './components/visuals/illustrations/rocket-illustration'
+export { KkbbFlashIllustration } from './components/visuals/illustrations/kkbb-flash-illustration'
 
-// Graphics/Logos
-export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
-export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
-export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark'
-export { LendopolisLogoVerticalOnDark } from './components/graphics/logos/lendopolis-logo/vertical-on-dark'
-export { GoodeedLogo } from './components/graphics/logos/goodeedlogo'
-export { MaisonDeCrowdfundingLogo } from './components/graphics/logos/mdc'
-export { MaisonDeCrowdfundingLogoOnDark } from './components/graphics/logos/mdc/on-dark'
-export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
-export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
-export { YouMatterLogo } from './components/graphics/logos/youmatter'
+// visuals/Logos
+export { KissKissBankBankLogo } from './components/visuals/logos/kisskissbankbanklogo'
+export { LendopolisLogo } from './components/visuals/logos/lendopolis-logo'
+export { LendopolisLogoOnDark } from './components/visuals/logos/lendopolis-logo/on-dark'
+export { LendopolisLogoVerticalOnDark } from './components/visuals/logos/lendopolis-logo/vertical-on-dark'
+export { GoodeedLogo } from './components/visuals/logos/goodeedlogo'
+export { MaisonDeCrowdfundingLogo } from './components/visuals/logos/mdc'
+export { MaisonDeCrowdfundingLogoOnDark } from './components/visuals/logos/mdc/on-dark'
+export { MicrodonLogo } from './components/visuals/logos/microdonlogo'
+export { KkbbCoLogo } from './components/visuals/logos/kkbb-co'
+export { YouMatterLogo } from './components/visuals/logos/youmatter'
 
-// Layout
-// ------
+
+// Structure
+export { BulletList } from './components/structure/bullet-list'
+
+// Structure/Cards
+export { BackerCard } from './components/structure/cards/backer-card'
+export { BackingCard } from './components/structure/cards/backing-card'
+export { ClickableCard } from './components/structure/cards/clickable-card'
+export { ContentCard } from './components/structure/cards/content-card'
+export { ContributionCard } from './components/structure/cards/contribution-card'
+export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card'
+export { EngagementCard } from './components/structure/cards/engagement-card'
+export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image'
+export { HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-crowdfunding-card'
+export { ProjectCard } from './components/structure/cards/project-card'
+export {
+  SummaryCard,
+  useSummaryCardResizeObserver,
+} from './components/structure/cards/summary-card'
+export { SimpleCard } from './components/structure/cards/simple-card'
+export { TeamCard } from './components/structure/cards/team-card'
+export { Triptych } from './components/structure/cards/triptych'
+export { VerticalCard } from './components/structure/cards/vertical-card'
+export { VerticalCardWithAction } from './components/structure/cards/vertical-card-with-action'
+
+// structure/Carousels
+export { Carousel } from './components/structure/carousels/carousel'
+export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel'
+export { SimpleCarousel } from './components/structure/carousels/simple-carousel'
+
+export { DropdownPhoneSelect } from './components/structure/dropdown-phone-select'
+export { DropdownSelect } from './components/structure/dropdown-select'
+export { DropdownSelectWithInput } from './components/structure/dropdown-select-with-input'
+
+
+// Structure/Expand
+export { Accordeon } from './components/structure/expand/accordeon'
+export { Details } from './components/structure/expand/details'
+export { DropdownMenu } from './components/structure/expand/dropdown-menu'
+export { ExpandBoard } from './components/structure/expand/expand-board'
+
+export { Hero } from './components/structure/hero'
+export { InfoLines } from './components/structure/info-lines'
+export { Line } from './components/structure/line'
+export { List } from './components/structure/list'
+export { Separator } from './components/structure/separator'
+
+
+// Structure/Tables
+export { DoubleEntryTable } from './components/structure/tables/double-entry-table'
+export { ListTable } from './components/structure/tables/list-table'
+export { SingleEntryTable } from './components/structure/tables/single-entry-table'
+
+
+// Information
+
+// Overlay
+
+// Interaction
+
+// Feedback
+
+// Navigation
+
+___________________________________
+
+// Atoms
+// -----
+
+export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
+export { Badge } from './components/atoms/badge'
+export { HighlightHalo } from './components/atoms/highlight-halo'
+export { HorizontalStroke } from './components/atoms/horizontal-stroke'
+export { IconBadge } from './components/atoms/icon-badge'
+export { KissKissLoadingAnimation } from './components/atoms/kisskiss-loading-animation'
+export { LendoLoadingAnimation } from './components/atoms/lendo-loading-animation'
+export { Loader } from './components/atoms/loader'
+export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
+export { Progress } from './components/atoms/progress'
+export { ProgressRing } from './components/atoms/progress-ring'
+export { StatusWithBullet } from './components/atoms/status-with-bullet'
+export {
+  StepperIcon,
+  StepperIconDefault,
+  StepperIconInProgress,
+  StepperIconValidated,
+} from './components/atoms/stepper-icon'
+export { Tag } from './components/atoms/tag'
+export { VerticalStroke } from './components/atoms/vertical-stroke'
 
 export {
-  AdaptableGrid,
-  AdaptableGridCol,
-} from './components/layout/adaptable-grid'
-export { Container } from './components/layout/container'
-export { DashboardLayout } from './components/layout/dashboard-layout'
-export { DeskLayout } from './components/layout/desk-layout'
-export { FlexWrapper } from './components/layout/flex-wrapper'
-export { Grid, GridCol } from './components/layout/grid'
-export { HeroLayout } from './components/layout/hero-layout'
-export { Marger } from './components/layout/marger'
-export { Row } from './components/layout/row'
-export { ScrollableContainer } from './components/layout/scrollable-container'
-export { StickyContainer } from './components/layout/sticky-container'
+  strokeModifierStyles,
+  strokeModifierStylesWithoutMargin,
+} from './components/atoms/horizontal-stroke/common/stroke-modifier-styles'
+
+
+// Atoms/Videos
+export { Video } from './components/atoms/video/video'
+export { GifVideo } from './components/atoms/video/gif-video'
+
+// Dev
+// ---
+
+export { DevGrid } from './components/dev/dev-grid'
+
+
 
 // Molecules
 // ---------
 
 export { Alert } from './components/molecules/alert'
 export { AlertBox } from './components/molecules/alert-box'
-export { BulletList } from './components/molecules/bullet-list'
 export { CheckList } from './components/molecules/check-list'
 export { CommentAvatar } from './components/molecules/comment-block/comment-avatar'
 export { CommentForm } from './components/molecules/comment-block/comment-form'
 export { Comment } from './components/molecules/comment-block/comment'
 export { DragAndDropList } from './components/molecules/drag-and-drop-list'
 export { EmbedPlayer } from './components/molecules/embed/embed-player'
-export { InfoLines } from './components/molecules/info-lines'
-export { Line } from './components/molecules/line'
 export { LinkList } from './components/molecules/link-list'
-export { List } from './components/molecules/list'
 export { Modal } from './components/molecules/modal'
 export { Modal as ModalNext } from './components/molecules/modal-next'
 export { Overlay } from './components/molecules/overlay'
@@ -303,64 +395,7 @@ export { IconContainer } from './components/molecules/boxes/icon-container'
 export { InformationBox } from './components/molecules/boxes/information-box'
 export { LinkBox } from './components/molecules/boxes/link-box'
 
-// Molecules/Buttons
-export { Button } from './components/molecules/buttons/button'
-export { ButtonIcon } from './components/molecules/buttons/button-icon'
-export { ButtonGroup } from './components/molecules/buttons/button-group'
-export { ButtonImage } from './components/molecules/buttons/button-image'
-export { ButtonQuestionMarkIcon } from './components/molecules/buttons/button-question-mark-icon'
-export { ButtonWithTooltip } from './components/molecules/buttons/button-with-tooltip'
-export { CheckableButton } from './components/molecules/buttons/checkable-button'
-export { CloseButton } from './components/molecules/buttons/close-button'
-export {
-  FacebookButtonIconWords,
-  TwitterButtonIconWords,
-  LinkedinButtonIconWords,
-  InstagramButtonIconWords,
-} from './components/molecules/buttons/social-button-icon-words'
-export {
-  FacebookButtonIcon,
-  TwitterButtonIcon,
-  LinkedinButtonIcon,
-  InstagramButtonIcon,
-  YoutubeButtonIcon,
-} from './components/molecules/buttons/social-button-icon'
-export { TagButton } from './components/molecules/buttons/tag-button'
-export { TextButton } from './components/molecules/buttons/text-button'
 
-export { modifierStyles as buttonModifierStyles } from './components/molecules/buttons/button/helpers/modifier-styles'
-
-// Molecules/Cards
-export { BackerCard } from './components/molecules/cards/backer-card'
-export { BackingCard } from './components/molecules/cards/backing-card'
-export { ClickableCard } from './components/molecules/cards/clickable-card'
-export { ContentCard } from './components/molecules/cards/content-card'
-export { ContributionCard } from './components/molecules/cards/contribution-card'
-export { CrowdfundingCard } from './components/molecules/cards/crowdfunding-card'
-export { EngagementCard } from './components/molecules/cards/engagement-card'
-export { EngagementCardWithImage } from './components/molecules/cards/engagement-card-with-image'
-export { HorizontalCrowdfundingCard } from './components/molecules/cards/horizontal-crowdfunding-card'
-export { ProjectCard } from './components/molecules/cards/project-card'
-export {
-  SummaryCard,
-  useSummaryCardResizeObserver,
-} from './components/molecules/cards/summary-card'
-export { SimpleCard } from './components/molecules/cards/simple-card'
-export { TeamCard } from './components/molecules/cards/team-card'
-export { Triptych } from './components/molecules/cards/triptych'
-export { VerticalCard } from './components/molecules/cards/vertical-card'
-export { VerticalCardWithAction } from './components/molecules/cards/vertical-card-with-action'
-
-// Molecules/Carousels
-export { Carousel } from './components/molecules/carousels/carousel'
-export { NavTabCarousel } from './components/molecules/carousels/nav-tab-carousel'
-export { SimpleCarousel } from './components/molecules/carousels/simple-carousel'
-
-// Molecules/Expand
-export { Accordeon } from './components/molecules/expand/accordeon'
-export { Details } from './components/molecules/expand/details'
-export { DropdownMenu } from './components/molecules/expand/dropdown-menu'
-export { ExpandBoard } from './components/molecules/expand/expand-board'
 
 // Molecules/Upload
 export { BasicUploader } from './components/molecules/upload/basic-uploader'
@@ -378,7 +413,7 @@ export { DeskMenu } from './components/organisms/desk-menu'
 export { FloatingMenu } from './components/organisms/floating-menu'
 export { HeaderMenu } from './components/organisms/header-menu'
 export { default as HeaderNav } from './components/organisms/header-nav'
-export { Hero } from './components/organisms/hero'
+
 export { HorizontalTimeline } from './components/organisms/horizontal-timeline'
 export { IconList } from './components/organisms/icon-list'
 export { NavBar } from './components/organisms/nav-bar'
@@ -388,10 +423,6 @@ export { Timeline } from './components/organisms/timeline'
 export { VerticalProgress } from './components/organisms/vertical-progress'
 export { VerticalStepper } from './components/organisms/vertical-stepper'
 
-// Organisms/Tables
-export { DoubleEntryTable } from './components/organisms/tables/double-entry-table'
-export { ListTable } from './components/organisms/tables/list-table'
-export { SingleEntryTable } from './components/organisms/tables/single-entry-table'
 
 // ---------
 // CONSTANTS
