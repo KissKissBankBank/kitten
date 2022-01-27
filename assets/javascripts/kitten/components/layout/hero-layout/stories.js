@@ -273,7 +273,7 @@ export const Default = ({
                 Pourquoi s’abonner&nbsp;?
               </Text>
               <List
-                gap="10"
+                gap={10}
                 markerElement={
                   <LargeArrowIconNext
                     color="var(--color-primary-500)"

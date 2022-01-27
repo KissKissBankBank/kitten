@@ -29,13 +29,11 @@ export default {
   argTypes: {
     spaced: {
       name: 'spaced',
-      defaultValue: false,
       description: 'Adds an horizontal margin to the badge.',
       control: 'boolean',
     },
     withBorder: {
       name: 'withBorder',
-      defaultValue: true,
       description: 'Adds a border to the badge.',
       control: 'boolean',
     },

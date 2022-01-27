@@ -38,73 +38,62 @@ export default {
   argTypes: {
     hoverable: {
       name: 'Hoverable',
-      defaultValue: false,
       control: 'boolean',
     },
     imageAlt: {
       name: 'Image Alt (story prop)',
-      defaultValue: null,
       description: 'Prop `alt` on subcomponent `AvatarWithTextAndBadge.Image`',
       control: 'text',
     },
     imageSize: {
       name: 'Image Size (story prop)',
-      defaultValue: 'regular',
       description: 'Prop `size` on subcomponent `AvatarWithTextAndBadge.Image`',
       options: ['regular', 'big'],
       control: 'inline-radio',
     },
     imageIsDisplayed: {
       name: 'Image Is Displayed (story prop)',
-      defaultValue: null,
       description:
         'Controls the prop `src` on subcomponent `AvatarWithTextAndBadge.Image`',
       control: 'boolean',
     },
     imageText: {
       name: 'Image Text (story prop)',
-      defaultValue: '',
       description: 'Prop `text` on subcomponent `AvatarWithTextAndBadge.Image`',
       control: 'text',
     },
     imageBackgroundColor: {
       name: 'Image BackgroundColor (story prop)',
-      defaultValue: COLORS.primary3,
       description:
         'Prop `backgroundColor` on subcomponent `AvatarWithTextAndBadge.Image`',
       control: 'color',
     },
     imageTextColor: {
       name: 'Image TextColor (story prop)',
-      defaultValue: COLORS.background1,
       description:
         'Prop `textColor` on subcomponent `AvatarWithTextAndBadge.Image`',
       control: 'color',
     },
     badgeValue: {
       name: 'Badge number (story prop)',
-      defaultValue: null,
       description:
         'Children of the subcomponent `AvatarWithTextAndBadge.Badge`',
       control: 'number',
     },
     badgeBackgroundColor: {
       name: 'Badge backgroundColor (story prop)',
-      defaultValue: COLORS.primary1,
       description:
         'Prop `backgroundColor` of subcomponent `AvatarWithTextAndBadge.Badge`',
       control: 'color',
     },
     badgeA11yText: {
       name: 'Badge a11yText (story prop)',
-      defaultValue: 'Notification(s)',
       description:
         'Prop `a11yText` of subcomponent `AvatarWithTextAndBadge.Badge`',
       control: 'text',
     },
     textContent: {
       name: 'Text content (story prop)',
-      defaultValue: '',
       description: 'Children of the subcomponent `AvatarWithTextAndBadge.Text`',
       control: 'text',
     },
@@ -116,7 +105,6 @@ export default {
     },
     textWithEllipsisOverflow: {
       name: 'Text has overflow ellipsis (story prop)',
-      defaultValue: false,
       description:
         'Prop `withEllipsisOverflow` of subcomponent `AvatarWithTextAndBadge.Text`',
       control: 'boolean',
