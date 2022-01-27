@@ -375,6 +375,15 @@ class CarouselBase extends Component {
   }
 }
 
+const positionsPropTypes = PropTypes.oneOf([
+  'top',
+  'right',
+  'bottom',
+  'left',
+  'bottom-left',
+  'bottom-right',
+])
+
 CarouselBase.defaultProps = {
   itemsPerPage: 0,
   hidePaginationOnMobile: false,
@@ -443,15 +452,6 @@ CarouselBase.propTypes = {
     'Provide `Carousel` with children instead of data/renderItem',
   ),
 }
-
-const positionsPropTypes = PropTypes.oneOf([
-  'top',
-  'right',
-  'bottom',
-  'left',
-  'bottom-left',
-  'bottom-right',
-])
 
 export const Carousel = withMediaQueries({
   viewportIsXSOrLess: true,

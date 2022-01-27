@@ -1,5 +1,5 @@
-module.exports ={
-  "extends": ["plugin:prettier/recommended"],
+module.exports = {
+  "extends": ["plugin:prettier/recommended", "plugin:storybook/recommended"],
   "parser": "babel-eslint",
   "plugins": ["react"],
   "parserOptions": {
@@ -15,9 +15,11 @@ module.exports ={
       "ignoreRestSiblings": true,
       "argsIgnorePattern": "^_"
     }],
-    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-console": ["error", {
+      "allow": ["warn", "error"]
+    }],
     "no-debugger": "error",
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-vars": "error"
   }
-}
+};

@@ -285,8 +285,8 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
 
 .c0 .k-ButtonWithTooltip__button:hover + .k-ButtonWithTooltip__tooltip,
 .c0 .k-ButtonWithTooltip__button:focus + .k-ButtonWithTooltip__tooltip {
-  -webkit-animation: 0.16s ease bDmclk;
-  animation: 0.16s ease bDmclk;
+  -webkit-animation: 0.16s ease bTakcF;
+  animation: 0.16s ease bTakcF;
   -webkit-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
   -ms-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
   transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
