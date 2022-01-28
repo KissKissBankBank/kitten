@@ -11,10 +11,11 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
+import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config';
 var StyledNavBar = styled.div.withConfig({
   displayName: "nav-bar__StyledNavBar",
   componentId: "sc-ui0yo2-0"
-})(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--big .k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}"], pxToRem(CONTAINER_PADDING_THIN), function (_ref) {
+})(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--small .k-NavBar__link{height:", ";}&.k-NavBar--big .k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}"], pxToRem(CONTAINER_PADDING_THIN), function (_ref) {
   var colors = _ref.colors;
   return colors.background || COLORS.primary6;
 }, pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(25), pxToRem(ScreenConfig.S.min), pxToRem(50), pxToRem(65), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), function (_ref2) {
@@ -32,7 +33,7 @@ var StyledNavBar = styled.div.withConfig({
 }, function (_ref6) {
   var colors = _ref6.colors;
   return colors.activeLink || COLORS.primary1;
-}, pxToRem(4), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(80), pxToRem(ScreenConfig.S.min), pxToRem(100));
+}, pxToRem(4), pxToRem(ScreenConfig.S.min), pxToRem(80), pxToRem(HEADER_HEIGHT), pxToRem(80), pxToRem(ScreenConfig.S.min), pxToRem(100));
 
 var NavBarItem = function NavBarItem(_ref7) {
   var active = _ref7.active,
@@ -89,5 +90,5 @@ NavBar.propTypes = {
     activeLink: PropTypes.string,
     activeBorder: PropTypes.string
   }),
-  modifier: PropTypes.oneOf(['regular', 'big'])
+  modifier: PropTypes.oneOf(['small', 'regular', 'big'])
 };
