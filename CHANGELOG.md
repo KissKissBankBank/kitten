@@ -4,10 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Deprecation/Change: Dependencies: Use StyledComponents 5.
-- Fix: `LocationInput`: Improve styles.
-- Feature: `NavBar`: Add `small` value on `modifier` prop.
 - Fix: `HeroLayout`: Fix Hero sizing on large screens.
+
+## [7.2.0] - 2022-01-28
+
+Deprecation/Change:
+
+- Dependencies: Use StyledComponents 5.
+
+Feature:
+
+- `NavBar`: Add `small` value on `modifier` prop.
+
+Fix:
+
+- `LocationInput`: Improve styles.
 
 ## [7.1.0] - 2022-01-20
 
