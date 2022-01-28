@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../../components/atoms/typography/text'
-import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
+import { Text } from '../../../../../components/typography/text'
+import { HorizontalStroke } from '../../../../../components/typography/horizontal-stroke'
 import Truncate from 'react-truncate'
 import classNames from 'classnames'
 

@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/layout/container'
 import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Title as KittenTitle } from '../../../../components/atoms/typography/title'
+import { Title as KittenTitle } from '../../../../components/typography/title'
 import {
   HorizontalStroke,
   DEFAULT,
   BIG,
-} from '../../../../components/atoms/horizontal-stroke'
+} from '../../../../components/typography/horizontal-stroke'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 

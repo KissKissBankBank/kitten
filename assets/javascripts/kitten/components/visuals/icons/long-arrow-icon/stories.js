@@ -4,7 +4,7 @@ import { LongArrowIcon } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Graphics/Icons/LongArrowIcon',
+  title: 'Visuals/Icons/LongArrowIcon',
   component: LongArrowIcon,
   parameters: {
     docs: {

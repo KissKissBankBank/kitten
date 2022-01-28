@@ -8,8 +8,8 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
-import { QuestionMarkIcon } from '../../../components/graphics/icons/question-mark-icon'
-import { WarningIcon } from '../../../components/graphics/icons/warning-icon'
+import { QuestionMarkIcon } from '../../../components/visuals/icons/question-mark-icon'
+import { WarningIcon } from '../../../components/visuals/icons/warning-icon'
 
 const StyledWrapper = styled.span`
   --toggletipAction-size: ${pxToRem(24)};

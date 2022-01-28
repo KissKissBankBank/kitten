@@ -4,7 +4,7 @@ import { COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Graphics/Icons/BurgerIcon',
+  title: 'Visuals/Icons/BurgerIcon',
   component: BurgerIcon,
   parameters: {
     docs: {

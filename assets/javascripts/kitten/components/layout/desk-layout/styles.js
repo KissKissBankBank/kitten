@@ -6,7 +6,7 @@ import {
 } from '../../../constants/grid-config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config'
+import { HEADER_HEIGHT } from '../../../components/navigation/header-nav/config'
 
 export const StyledLayout = styled.div`
   --deskLayout-menu-width: ${pxToRem(220)};

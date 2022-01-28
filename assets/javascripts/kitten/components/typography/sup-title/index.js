@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '../../../../components/atoms/typography/text'
+import { Text } from '../../../../components/typography/text'
 
 export const SupTitle = props => (
   <Text

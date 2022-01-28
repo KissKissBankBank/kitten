@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
-import { ArrowContainer } from '../../../../components/molecules/boxes/arrow-container'
+import { ArrowContainer } from '../../../../components/information/boxes/arrow-container'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'

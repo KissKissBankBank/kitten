@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container } from '../../../../../components/layout/container'
 import { Grid, GridCol } from '../../../../../components/layout/grid'
-import { Title } from '../../../../../components/atoms/typography/title'
+import { Title } from '../../../../../components/typography/title'
 import { CardWithButton } from './card-with-button'
-import { Triptych } from '../../../../../components/molecules/cards/triptych'
+import { Triptych } from '../../../../../components/structure/cards/triptych'
 import COLORS from '../../../../../constants/colors-config'
 
 const SolutionsTriptych = () => (

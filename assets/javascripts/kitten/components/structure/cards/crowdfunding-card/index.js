@@ -9,7 +9,7 @@ import State from './components/state'
 import CardButton from './components/button'
 import classNames from 'classnames'
 import { StyledCrowdfundingCard } from './styles'
-import { Text } from '../../../../components/atoms/typography/text'
+import { Text } from '../../../../components/typography/text'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 
 export const CrowdfundingCard = ({

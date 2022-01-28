@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { DropdownSelectWithInput } from '../../../components/form/dropdown-select-with-input'
+import { DropdownSelectWithInput } from '../../../components/structure/dropdown-select-with-input'
 import CountryData from './data/CountryData.js'
 import memoize from 'lodash/memoize'
 import reduce from 'lodash/reduce'
 import startsWith from 'lodash/startsWith'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 import locale_fr from './data/lang/fr'
-import { FlagIcon } from '../../../components/graphics/icons/flag-icon'
+import { FlagIcon } from '../../../components/visuals/icons/flag-icon'
 
 const removeCountryCodeFromFormat = format => {
   return format.replace(/\+[.]+\s/gi, '')

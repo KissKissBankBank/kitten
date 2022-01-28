@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon'
+import { ArrowIcon } from '../../../../components/visuals/icons/arrow-icon'
 
 describe('<ArrowIcon />', () => {
   describe('default props', () => {

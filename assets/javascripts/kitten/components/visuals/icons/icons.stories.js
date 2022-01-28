@@ -382,7 +382,7 @@ export const AllIcons = ({ colorInput, bgColorInput }) => {
 }
 
 export default {
-  title: 'Graphics/Icons',
+  title: 'Visuals/Icons',
   args: {
     colorInput: '#333',
     bgColorInput: '#FFF',

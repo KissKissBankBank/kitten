@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Tag } from '../../../../../components/atoms/tag'
+import { Tag } from '../../../../../components/information/tag'
 import { DiamondIcon } from '../../../../../components/graphics/icons/diamond-icon'
 import { StarIcon } from '../../../../../components/graphics/icons/star-icon'
 

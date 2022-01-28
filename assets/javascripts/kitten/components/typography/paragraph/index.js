@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import TYPOGRAPHY from '../../../../constants/typography-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const modifierList = ['primary', 'secondary', 'tertiary', 'quaternary']

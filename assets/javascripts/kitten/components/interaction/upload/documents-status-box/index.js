@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Text } from '../../../../components/atoms/typography/text'
-import { ClockCircleIcon } from '../../../../components/graphics/icons/clock-circle-icon'
-import { CheckedCircleIcon } from '../../../../components/graphics/icons/checked-circle-icon'
-import { CrossCircleIcon } from '../../../../components/graphics/icons/cross-circle-icon'
+import { Text } from '../../../../components/typography/text'
+import { ClockCircleIcon } from '../../../../components/visuals/icons/clock-circle-icon'
+import { CheckedCircleIcon } from '../../../../components/visuals/icons/checked-circle-icon'
+import { CrossCircleIcon } from '../../../../components/visuals/icons/cross-circle-icon'
 
 const StyledDocumentsStatusBox = styled.div`
   border-radius: var(--border-radius-m);

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Title } from '../../../components/atoms/typography/title'
-import { Text } from '../../../components/atoms/typography/text'
+import { Title } from '../../../components/typography/title'
+import { Text } from '../../../components/typography/text'
 import { Marger } from '../../../components/layout/marger'
-import { HorizontalStroke } from '../../../components/atoms/horizontal-stroke'
+import { HorizontalStroke } from '../../../components/typography/horizontal-stroke'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 

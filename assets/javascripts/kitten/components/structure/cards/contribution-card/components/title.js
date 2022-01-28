@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../../components/atoms/typography/text'
+import { Text } from '../../../../../components/typography/text'
 
 export const Title = ({ largeTitle, ...props }) => {
   return (

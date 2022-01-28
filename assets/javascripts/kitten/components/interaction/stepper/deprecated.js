@@ -8,7 +8,7 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-import { StepperIcon } from '../../../components/atoms/stepper-icon'
+import { StepperIcon } from '../../../components/interaction/stepper-icon'
 
 const StyledStepper = styled.nav`
   ${TYPOGRAPHY.fontStyles.regular}

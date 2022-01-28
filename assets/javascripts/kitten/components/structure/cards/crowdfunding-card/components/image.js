@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../../components/atoms/typography/text'
-import { ButtonImage } from '../../../../../components/molecules/buttons/button-image'
+import { Text } from '../../../../../components/typography/text'
+import { ButtonImage } from '../../../../../components/actions/button-image'
 import COLORS from '../../../../../constants/colors-config'
 import classNames from 'classnames'
-import { GifVideo } from '../../../../../components/atoms/video/gif-video'
+import { GifVideo } from '../../../../../components/information/video/gif-video'
 
 const Image = ({
   imageContainerBackground,

@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import classNames from 'classnames';
-import { Text } from '../../../../atoms/typography/text';
+import { Text } from '../../../../typography/text';
 export var Amount = function Amount(props) {
   return /*#__PURE__*/React.createElement(Text, _extends({
     tag: "p",

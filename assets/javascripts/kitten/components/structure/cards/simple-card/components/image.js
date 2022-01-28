@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Text } from '../../../../../components/atoms/typography/text'
+import { Text } from '../../../../../components/typography/text'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 import COLORS from '../../../../../constants/colors-config'
 

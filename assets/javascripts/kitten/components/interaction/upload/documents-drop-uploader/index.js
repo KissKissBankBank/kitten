@@ -5,10 +5,10 @@ import classNames from 'classnames'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { UploadIcon } from '../../../../components/graphics/icons/upload-icon'
-import { CrossIcon } from '../../../../components/graphics/icons/cross-icon'
-import { Text } from '../../../../components/atoms/typography/text'
-import { Tag } from '../../../../components/atoms/tag'
+import { UploadIcon } from '../../../../components/visuals/icons/upload-icon'
+import { CrossIcon } from '../../../../components/visuals/icons/cross-icon'
+import { Text } from '../../../../components/typography/text'
+import { Tag } from '../../../../components/information/tag'
 
 const StyledDocumentsDropUploader = styled.div`
   border-radius: var(--border-radius-m);

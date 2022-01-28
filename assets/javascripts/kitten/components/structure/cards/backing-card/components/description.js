@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Text } from '../../../../../components/atoms/typography/text'
+import { Text } from '../../../../../components/typography/text'
 
 export const Description = ({
   children,

@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Triptych } from './index'
-import { Title } from '../../../atoms/typography/title'
+import { Title } from '../../../typography/title'
 import { VerticalCardWithAction } from '../../cards/vertical-card-with-action'
 
 describe('<Triptych />', () => {

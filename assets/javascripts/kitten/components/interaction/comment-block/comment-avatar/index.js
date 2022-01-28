@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { ButtonImage } from '../../../../components/molecules/buttons/button-image'
-import { Text } from '../../../../components/atoms/typography/text'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { ButtonImage } from '../../../components/actions/button-image'
+import { Text } from '../../../components/typography/text'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledAvatar = styled.div`
   display: flex;

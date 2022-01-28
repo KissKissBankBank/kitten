@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Marger } from '../../../../components/layout/marger'
-import { Text } from '../../../../components/atoms/typography/text'
-import { ButtonImage } from '../../../../components/molecules/buttons/button-image'
+import { Text } from '../../../../components/typography/text'
+import { ButtonImage } from '../../../../components/actions/button-image'
 
 const StyledCard = styled.div`
   padding: 0 ${pxToRem(20)};

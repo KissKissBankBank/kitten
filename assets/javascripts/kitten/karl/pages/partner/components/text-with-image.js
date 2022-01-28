@@ -3,15 +3,15 @@ import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/layout/container'
 import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Title } from '../../../../components/atoms/typography/title'
-import { Paragraph } from '../../../../components/atoms/typography/paragraph'
-import { Text } from '../../../../components/atoms/typography/text'
-import { Button } from '../../../../components/molecules/buttons/button'
+import { Title } from '../../../../components/typography/title'
+import { Paragraph } from '../../../../components/typography/paragraph'
+import { Text } from '../../../../components/typography/text'
+import { Button } from '../../../../components/actions/button'
 import {
   FLUID,
   DEFAULT,
   BIG,
-} from '../../../../components/molecules/buttons/button/standalone-styles'
+} from '../../../../components/actions/button/standalone-styles'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

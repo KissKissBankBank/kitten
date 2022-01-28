@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 
-import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
+import { ArrowIcon } from '../../../visuals/icons/arrow-icon'
 import {
   Button,
   buttonModifiers,
-} from '../../../../components/molecules/buttons/button'
+} from '../../../../components/actions/button'
 
 export const Item = ({
   children,

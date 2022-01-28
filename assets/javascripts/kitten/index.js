@@ -8,30 +8,30 @@
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
 
-// Action
-export { Button } from './components/action/button'
-export { ButtonIcon } from './components/action/button-icon'
-export { ButtonGroup } from './components/action/button-group'
-export { ButtonImage } from './components/action/button-image'
-export { ButtonQuestionMarkIcon } from './components/action/button-question-mark-icon'
-export { ButtonWithTooltip } from './components/action/button-with-tooltip'
-export { CheckableButton } from './components/action/checkable-button'
-export { CloseButton } from './components/action/close-button'
+// Actions
+export { Button } from './components/actions/button'
+export { ButtonIcon } from './components/actions/button-icon'
+export { ButtonGroup } from './components/actions/button-group'
+export { ButtonImage } from './components/actions/button-image'
+export { ButtonQuestionMarkIcon } from './components/actions/button-question-mark-icon'
+export { ButtonWithTooltip } from './components/actions/button-with-tooltip'
+export { CheckableButton } from './components/actions/checkable-button'
+export { CloseButton } from './components/actions/close-button'
 export {
   FacebookButtonIconWords,
   TwitterButtonIconWords,
   LinkedinButtonIconWords,
   InstagramButtonIconWords,
-} from './components/action/social-button-icon-words'
+} from './components/actions/social-button-icon-words'
 export {
   FacebookButtonIcon,
   TwitterButtonIcon,
   LinkedinButtonIcon,
   InstagramButtonIcon,
   YoutubeButtonIcon,
-} from './components/action/social-button-icon'
-export { TagButton } from './components/action/tag-button'
-export { TextButton } from './components/action/text-button'
+} from './components/actions/social-button-icon'
+export { TagButton } from './components/actions/tag-button'
+export { TextButton } from './components/actions/text-button'
 
 export { modifierStyles as buttonModifierStyles } from './components/action/button/helpers/modifier-styles'
 
@@ -55,35 +55,35 @@ export { ScrollableContainer } from './components/layout/scrollable-container'
 export { StickyContainer } from './components/layout/sticky-container'
 export { DevGrid } from './components/layout/dev-grid'
 
-// Form
+// Forms
 // ----
 
-export { Autocomplete } from './components/form/autocomplete'
-export { Checkbox } from './components/form/checkbox'
-export { CheckboxSet } from './components/form/checkbox-set'
-export { CreditCardForm } from './components/form/credit-card-form'
-export { DatePicker } from './components/form/date-picker'
+export { Autocomplete } from './components/forms/autocomplete'
+export { Checkbox } from './components/forms/checkbox'
+export { CheckboxSet } from './components/forms/checkbox-set'
+export { CreditCardForm } from './components/forms/credit-card-forms'
+export { DatePicker } from './components/forms/date-picker'
 
-export { Field } from './components/form/field'
-export { FormActions } from './components/form/form-actions'
-export { Label } from './components/form/label'
-export { LocationInput } from './components/form/location-input'
-export { ModalFooterInput } from './components/form/modal-footer-input'
-export { PasswordInput } from './components/form/password-input'
-export { PillNumberInput } from './components/form/pill-number-input'
-export { RadioButton } from './components/form/radio-button'
-export { RadioButtonSet } from './components/form/radio-button-set'
-export { RangeSlider } from './components/form/range-slider'
-export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'
-export { TagInput } from './components/form/tag-input'
-export { TextareaAutoResize } from './components/form/textarea-auto-resize'
-export { TextInput } from './components/form/text-input'
-export { TextInputWithButton } from './components/form/text-input-with-button'
-export { TextInputWithIcon } from './components/form/text-input-with-icon'
-export { TextInputWithLimit } from './components/form/text-input-with-limit'
-export { TextInputWithUnit } from './components/form/text-input-with-unit'
-export { ToggleSwitch } from './components/form/toggle-switch'
-export { TextCopy } from './components/form/text-copy'
+export { Field } from './components/forms/field'
+export { FormActions } from './components/forms/forms-actions'
+export { Label } from './components/forms/label'
+export { LocationInput } from './components/forms/location-input'
+export { ModalFooterInput } from './components/forms/modal-footer-input'
+export { PasswordInput } from './components/forms/password-input'
+export { PillNumberInput } from './components/forms/pill-number-input'
+export { RadioButton } from './components/forms/radio-button'
+export { RadioButtonSet } from './components/forms/radio-button-set'
+export { RangeSlider } from './components/forms/range-slider'
+export { StandaloneRangeDatePicker } from './components/forms/standalone-range-date-picker'
+export { TagInput } from './components/forms/tag-input'
+export { TextareaAutoResize } from './components/forms/textarea-auto-resize'
+export { TextInput } from './components/forms/text-input'
+export { TextInputWithButton } from './components/forms/text-input-with-button'
+export { TextInputWithIcon } from './components/forms/text-input-with-icon'
+export { TextInputWithLimit } from './components/forms/text-input-with-limit'
+export { TextInputWithUnit } from './components/forms/text-input-with-unit'
+export { ToggleSwitch } from './components/forms/toggle-switch'
+export { TextCopy } from './components/forms/text-copy'
 
 
 // Typography
@@ -111,7 +111,7 @@ export {
 // visuals
 // --------
 
-// visuals/Icons
+// visual/Icons
 export { AlignCenterIcon } from './components/visuals/icons/align-center-icon'
 export { AlignLeftIcon } from './components/visuals/icons/align-left-icon'
 export { AlignRightIcon } from './components/visuals/icons/align-right-icon'
@@ -306,7 +306,6 @@ export { DropdownPhoneSelect } from './components/structure/dropdown-phone-selec
 export { DropdownSelect } from './components/structure/dropdown-select'
 export { DropdownSelectWithInput } from './components/structure/dropdown-select-with-input'
 
-
 // Structure/Expand
 export { Accordeon } from './components/structure/expand/accordeon'
 export { Details } from './components/structure/expand/details'
@@ -327,12 +326,11 @@ export { SingleEntryTable } from './components/structure/tables/single-entry-tab
 
 
 // Information
-
 export { Alert } from './components/information/alert'
 export { AlertBox } from './components/information/alert-box'
 export { AvatarWithTextAndBadge } from './components/information/avatar-with-text-and-badge'
 export { Badge } from './components/information/badge'
-export { CounterBlock } from './components/organisms/counter-block'
+export { CounterBlock } from './components/information/counter-block'
 export { IconBadge } from './components/information/icon-badge'
 export { StatusWithBullet } from './components/information/status-with-bullet'
 export { Tag } from './components/information/tag'
@@ -402,7 +400,6 @@ export { CheckList } from './components/feedback/check-list'
 
 
 // Navigation
-
 export { DashboardMenu } from './components/navigation/dashboard-menu'
 export { DeskMenu } from './components/navigation/desk-menu'
 export { FloatingMenu } from './components/navigation/floating-menu'
@@ -410,13 +407,6 @@ export { HeaderMenu } from './components/navigation/header-menu'
 export { default as HeaderNav } from './components/navigation/header-nav'
 export { NavBar } from './components/navigation/nav-bar'
 export { Pagination } from './components/navigation/pagination'
-
-___________________________________
-
-
-// Molecules
-// ---------
-
 
 // ---------
 // CONSTANTS
@@ -473,21 +463,21 @@ export {
   ICON_BIG as BUTTON_STYLE_ICON_BIG,
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
-} from './components/molecules/buttons/button/standalone-styles'
-export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/molecules/carousels/carousel/styles'
+} from './components/actions/button/standalone-styles'
+export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/structure/carousels/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,
   TINY as HORIZONTAL_STROKE_STYLE_TINY,
   DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT,
   BIG as HORIZONTAL_STROKE_STYLE_BIG,
   HUGE as HORIZONTAL_STROKE_STYLE_HUGE,
-} from './components/atoms/horizontal-stroke'
-export { BUTTON_SHIFT as DRAG_AND_DROP_LIST_BUTTON_SHIFT } from './components/molecules/drag-and-drop-list'
-export { HEADER_HEIGHT } from './components/organisms/header-nav/config'
+} from './components/typography/horizontal-stroke'
+export { BUTTON_SHIFT as DRAG_AND_DROP_LIST_BUTTON_SHIFT } from './components/interaction/drag-and-drop-list'
+export { HEADER_HEIGHT } from './components/navigation/header-nav/config'
 export {
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,
-} from './components/molecules/overlay'
+} from './components/overlay/overlay'
 
 // -------
 // HELPERS

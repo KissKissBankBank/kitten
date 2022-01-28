@@ -109,4 +109,4 @@ export const AllLogos = () => {
   )
 }
 
-export default { title: 'Graphics/Logos' }
+export default { title: 'Visuals/Logos' }

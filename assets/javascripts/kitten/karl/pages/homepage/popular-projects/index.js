@@ -1,9 +1,9 @@
 import React from 'react'
-import { CrowdfundingCard } from '../../../../components/molecules/cards/crowdfunding-card'
-import { Carousel } from '../../../../components/molecules/carousels/carousel'
+import { CrowdfundingCard } from '../../../../components/structure/cards/crowdfunding-card'
+import { Carousel } from '../../../../components/structure/carousels/carousel'
 import { Container } from '../../../../components/layout/container'
 import { mediaQueries } from '../../../../hoc/media-queries'
-import { Text } from '../../../../components/atoms/typography/text'
+import { Text } from '../../../../components/typography/text'
 
 const InfoComponent = () => (
   <>

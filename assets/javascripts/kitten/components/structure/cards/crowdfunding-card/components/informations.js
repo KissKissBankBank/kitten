@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../../components/atoms/typography/text'
+import { Text } from '../../../../../components/typography/text'
 
 class Informations extends PureComponent {
   static propTypes = {

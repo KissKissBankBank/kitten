@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
-import { Text } from '../../../../components/atoms/typography/text'
+import { Text } from '../../../../components/typography/text'
 import { mq } from '../../../../constants/screen-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { HeartIconNext } from '../../../../components/graphics/icons-next/heart-icon-next'
+import { HeartIconNext } from '../../../../components/visuals/icons-next/heart-icon-next'
 
 const CommentWrapper = styled.div`
   --comment-arrow-size: ${pxToRem(7)};

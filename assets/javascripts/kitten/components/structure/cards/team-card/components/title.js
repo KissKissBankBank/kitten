@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../atoms/typography/text'
+import { Text } from '../../../../typography/text'
 import { Marger } from '../../../../layout/marger'
 
 export const TeamCardTitle = ({ children, subTitle }) => (

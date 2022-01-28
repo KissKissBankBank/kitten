@@ -4,7 +4,7 @@ import { LargeArrowIconNext } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Graphics/Icons Next/LargeArrowIconNext',
+  title: 'Visuals/Icons Next/LargeArrowIconNext',
   component: LargeArrowIconNext,
   parameters: {
     docs: {

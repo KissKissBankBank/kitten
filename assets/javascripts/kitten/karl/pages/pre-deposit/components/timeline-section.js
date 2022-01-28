@@ -1,10 +1,10 @@
 import React from 'react'
 import { Grid, GridCol } from '../../../../components/layout/grid'
 import { Container } from '../../../../components/layout/container'
-import { Title } from '../../../../components/atoms/typography/title'
-import { Paragraph } from '../../../../components/atoms/typography/paragraph'
-import { Button } from '../../../../components/molecules/buttons/button'
-import { Timeline } from '../../../../components/organisms/timeline'
+import { Title } from '../../../../components/typography/title'
+import { Paragraph } from '../../../../components/typography/paragraph'
+import { Button } from '../../../../components/actions/button'
+import { Timeline } from '../../../../components/feedback/timeline'
 import COLORS from '../../../../constants/colors-config'
 
 const ButtonComponent = () => (
