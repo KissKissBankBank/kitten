@@ -53,6 +53,7 @@ export { Marger } from './components/layout/marger'
 export { Row } from './components/layout/row'
 export { ScrollableContainer } from './components/layout/scrollable-container'
 export { StickyContainer } from './components/layout/sticky-container'
+export { DevGrid } from './components/layout/dev-grid'
 
 // Form
 // ----
@@ -82,6 +83,8 @@ export { TextInputWithIcon } from './components/form/text-input-with-icon'
 export { TextInputWithLimit } from './components/form/text-input-with-limit'
 export { TextInputWithUnit } from './components/form/text-input-with-unit'
 export { ToggleSwitch } from './components/form/toggle-switch'
+export { TextCopy } from './components/form/text-copy'
+
 
 // Typography
 export { Paragraph } from './components/typography/paragraph'
@@ -96,6 +99,13 @@ export {
   titleHelperModifierStyles,
 } from './components/typography/common/title-modifier-styles'
 export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
+
+export { HorizontalStroke } from './components/typography/horizontal-stroke'
+export { VerticalStroke } from './components/typography/vertical-stroke'
+export {
+  strokeModifierStyles,
+  strokeModifierStylesWithoutMargin,
+} from './components/typography/horizontal-stroke/common/stroke-modifier-styles'
 
 
 // visuals
@@ -287,7 +297,7 @@ export { Triptych } from './components/structure/cards/triptych'
 export { VerticalCard } from './components/structure/cards/vertical-card'
 export { VerticalCardWithAction } from './components/structure/cards/vertical-card-with-action'
 
-// structure/Carousels
+// Structure/Carousels
 export { Carousel } from './components/structure/carousels/carousel'
 export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel'
 export { SimpleCarousel } from './components/structure/carousels/simple-carousel'
@@ -318,110 +328,94 @@ export { SingleEntryTable } from './components/structure/tables/single-entry-tab
 
 // Information
 
+export { Alert } from './components/information/alert'
+export { AlertBox } from './components/information/alert-box'
+export { AvatarWithTextAndBadge } from './components/information/avatar-with-text-and-badge'
+export { Badge } from './components/information/badge'
+export { CounterBlock } from './components/organisms/counter-block'
+export { IconBadge } from './components/information/icon-badge'
+export { StatusWithBullet } from './components/information/status-with-bullet'
+export { Tag } from './components/information/tag'
+export { LinkList } from './components/information/link-list'
+
+
+// Information/Videos
+export { Video } from './components/information/video/video'
+export { GifVideo } from './components/information/video/gif-video'
+
+
+
+// Information/Boxes
+export { ArrowContainer } from './components/information/boxes/arrow-container'
+export { DocLinkBox } from './components/information/boxes/doc-link-box'
+export { IconContainer } from './components/information/boxes/icon-container'
+export { InformationBox } from './components/information/boxes/information-box'
+export { LinkBox } from './components/information/boxes/link-box'
+
+
 // Overlay
+export { Modal } from './components/overlay/modal'
+export { Modal as ModalNext } from './components/overlay/modal-next'
+export { Overlay } from './components/overlay/overlay'
+export { Toggletip } from './components/overlay/toggletip'
 
 // Interaction
 
-// Feedback
+// Interaction/CommentBlock
+export { CommentAvatar } from './components/interaction/comment-block/comment-avatar'
+export { CommentForm } from './components/interaction/comment-block/comment-form'
+export { Comment } from './components/interaction/comment-block/comment'
 
-// Navigation
+export { DragAndDropList } from './components/interaction/drag-and-drop-list'
+export { EmbedPlayer } from './components/interaction/embed/embed-player'
+export { ResponsiveIframeContainer } from './components/interaction/embed/responsive-iframe-container'
 
-___________________________________
-
-// Atoms
-// -----
-
-export { AvatarWithTextAndBadge } from './components/atoms/avatar-with-text-and-badge'
-export { Badge } from './components/atoms/badge'
-export { HighlightHalo } from './components/atoms/highlight-halo'
-export { HorizontalStroke } from './components/atoms/horizontal-stroke'
-export { IconBadge } from './components/atoms/icon-badge'
-export { KissKissLoadingAnimation } from './components/atoms/kisskiss-loading-animation'
-export { LendoLoadingAnimation } from './components/atoms/lendo-loading-animation'
-export { Loader } from './components/atoms/loader'
-export { LoaderWithParagraph } from './components/atoms/loader-with-paragraph'
-export { Progress } from './components/atoms/progress'
-export { ProgressRing } from './components/atoms/progress-ring'
-export { StatusWithBullet } from './components/atoms/status-with-bullet'
+export { HighlightHalo } from './components/interaction/highlight-halo'
 export {
   StepperIcon,
   StepperIconDefault,
   StepperIconInProgress,
   StepperIconValidated,
-} from './components/atoms/stepper-icon'
-export { Tag } from './components/atoms/tag'
-export { VerticalStroke } from './components/atoms/vertical-stroke'
+} from './components/interaction/stepper-icon'
+export { Stepper } from './components/interaction/stepper'
 
-export {
-  strokeModifierStyles,
-  strokeModifierStylesWithoutMargin,
-} from './components/atoms/horizontal-stroke/common/stroke-modifier-styles'
+// Interaction/Upload
+export { BasicUploader } from './components/interaction/upload/basic-uploader'
+export { DocumentManager } from './components/interaction/upload/document-manager'
+export { ImageDropUploader } from './components/interaction/upload/image-drop-uploader'
+export { DocumentsDropUploader } from './components/interaction/upload/documents-drop-uploader'
+export { DocumentsStatusBox } from './components/interaction/upload/documents-status-box'
+
+// Feedback
+export { HorizontalTimeline } from './components/feedback/horizontal-timeline'
+export { IconList } from './components/feedback/icon-list'
+export { KissKissLoadingAnimation } from './components/feedback/kisskiss-loading-animation'
+export { LendoLoadingAnimation } from './components/feedback/lendo-loading-animation'
+export { Loader } from './components/feedback/loader'
+export { LoaderWithParagraph } from './components/feedback/loader-with-paragraph'
+export { Progress } from './components/feedback/progress'
+export { ProgressRing } from './components/feedback/progress-ring'
+export { Timeline } from './components/feedback/timeline'
+export { VerticalProgress } from './components/feedback/vertical-progress'
+export { VerticalStepper } from './components/feedback/vertical-stepper'
+export { CheckList } from './components/feedback/check-list'
 
 
-// Atoms/Videos
-export { Video } from './components/atoms/video/video'
-export { GifVideo } from './components/atoms/video/gif-video'
+// Navigation
 
-// Dev
-// ---
+export { DashboardMenu } from './components/navigation/dashboard-menu'
+export { DeskMenu } from './components/navigation/desk-menu'
+export { FloatingMenu } from './components/navigation/floating-menu'
+export { HeaderMenu } from './components/navigation/header-menu'
+export { default as HeaderNav } from './components/navigation/header-nav'
+export { NavBar } from './components/navigation/nav-bar'
+export { Pagination } from './components/navigation/pagination'
 
-export { DevGrid } from './components/dev/dev-grid'
-
+___________________________________
 
 
 // Molecules
 // ---------
-
-export { Alert } from './components/molecules/alert'
-export { AlertBox } from './components/molecules/alert-box'
-export { CheckList } from './components/molecules/check-list'
-export { CommentAvatar } from './components/molecules/comment-block/comment-avatar'
-export { CommentForm } from './components/molecules/comment-block/comment-form'
-export { Comment } from './components/molecules/comment-block/comment'
-export { DragAndDropList } from './components/molecules/drag-and-drop-list'
-export { EmbedPlayer } from './components/molecules/embed/embed-player'
-export { LinkList } from './components/molecules/link-list'
-export { Modal } from './components/molecules/modal'
-export { Modal as ModalNext } from './components/molecules/modal-next'
-export { Overlay } from './components/molecules/overlay'
-export { ResponsiveIframeContainer } from './components/molecules/embed/responsive-iframe-container'
-export { TextCopy } from './components/molecules/text-copy'
-export { Toggletip } from './components/molecules/toggletip'
-
-// Molecules/Boxes
-export { ArrowContainer } from './components/molecules/boxes/arrow-container'
-export { DocLinkBox } from './components/molecules/boxes/doc-link-box'
-export { IconContainer } from './components/molecules/boxes/icon-container'
-export { InformationBox } from './components/molecules/boxes/information-box'
-export { LinkBox } from './components/molecules/boxes/link-box'
-
-
-
-// Molecules/Upload
-export { BasicUploader } from './components/molecules/upload/basic-uploader'
-export { DocumentManager } from './components/molecules/upload/document-manager'
-export { ImageDropUploader } from './components/molecules/upload/image-drop-uploader'
-export { DocumentsDropUploader } from './components/molecules/upload/documents-drop-uploader'
-export { DocumentsStatusBox } from './components/molecules/upload/documents-status-box'
-
-// Organisms
-// ---------
-
-export { CounterBlock } from './components/organisms/counter-block'
-export { DashboardMenu } from './components/organisms/dashboard-menu'
-export { DeskMenu } from './components/organisms/desk-menu'
-export { FloatingMenu } from './components/organisms/floating-menu'
-export { HeaderMenu } from './components/organisms/header-menu'
-export { default as HeaderNav } from './components/organisms/header-nav'
-
-export { HorizontalTimeline } from './components/organisms/horizontal-timeline'
-export { IconList } from './components/organisms/icon-list'
-export { NavBar } from './components/organisms/nav-bar'
-export { Pagination } from './components/organisms/pagination'
-export { Stepper } from './components/organisms/stepper'
-export { Timeline } from './components/organisms/timeline'
-export { VerticalProgress } from './components/organisms/vertical-progress'
-export { VerticalStepper } from './components/organisms/vertical-stepper'
 
 
 // ---------
