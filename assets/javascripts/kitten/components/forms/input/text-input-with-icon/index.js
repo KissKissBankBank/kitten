@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { pxToRem } from '../../helpers/utils/typography'
-import { TextInput } from '../../../components/forms/text-input'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { TextInput } from '../../../../forms/inputs/text-input'
 import PropTypes from 'prop-types'
-import { VisuallyHidden } from '../../accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../../accessibility/visually-hidden'
 import classNames from 'classnames'
 
 const StyledTextInputWithIcon = styled.div`

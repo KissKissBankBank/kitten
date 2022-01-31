@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Marger } from '../../../../components/layout/marger'
-import { Text } from '../../../../components/typography/text'
-import { ButtonImage } from '../../../../components/actions/button-image'
+import { Marger } from '../../../layout/marger'
+import { Text } from '../../../typography/text'
+import { ButtonImage } from '../../../actions/button-image'
 
 const StyledCard = styled.div`
   padding: 0 ${pxToRem(20)};

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { TextInputWithUnit } from '../../../../form/text-input-with-unit'
+import { TextInputWithUnit } from '../../../../forms/inputs/text-input-with-unit'
 import { Context } from '../context'
 
 export const Input = ({ valid, onChange, className, ...props }) => {

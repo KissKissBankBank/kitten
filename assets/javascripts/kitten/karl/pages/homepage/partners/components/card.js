@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
-import { Title } from '../../../../../components/typography/title'
-import { Text } from '../../../../../components/typography/text'
+import { Title } from '../../../../../typography/title'
+import { Text } from '../../../../../typography/text'
 import { ScreenConfig } from '../../../../../constants/screen-config'
-import { GridCol } from '../../../../../components/layout/grid'
+import { GridCol } from '../../../../../layout/grid'
 import classNames from 'classnames'
 
 const StyledCard = styled.article`

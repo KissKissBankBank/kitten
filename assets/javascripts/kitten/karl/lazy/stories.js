@@ -1,7 +1,7 @@
 import React from 'react'
-import { Marger } from '../../components/layout/marger'
-import { Container } from '../../components/layout/container'
-import { Grid, GridCol } from '../../components/layout/grid'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 import LazyHook from './lazy-hook.js'
 import ImgWithLazy from './img-with-lazy.js'
 

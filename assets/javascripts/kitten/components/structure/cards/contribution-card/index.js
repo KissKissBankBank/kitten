@@ -1,5 +1,5 @@
 import React, { useState, cloneElement } from 'react'
-import { CloseButton } from '../../../../components/actions/close-button'
+import { CloseButton } from '../../../actions/close-button'
 import { StyledContributionCard } from './styles'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'

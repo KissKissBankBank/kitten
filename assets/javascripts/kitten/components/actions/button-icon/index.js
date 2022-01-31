@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Button } from '../../../components/actions/button'
+import { Button } from '../../actions/button'
 import { pxToRem } from '../../../helpers/utils/typography'
 import styled from 'styled-components'
 

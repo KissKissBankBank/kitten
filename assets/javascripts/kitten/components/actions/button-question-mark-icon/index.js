@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button } from '../../../components/actions/button'
-import { QuestionMarkIcon } from '../../../../components/visuals/icons/question-mark-icon'
+import { Button } from '../../actions/button'
+import { QuestionMarkIcon } from '../../graphics/icons/question-mark-icon'
 
 export const ButtonQuestionMarkIcon = props => (
   <Button

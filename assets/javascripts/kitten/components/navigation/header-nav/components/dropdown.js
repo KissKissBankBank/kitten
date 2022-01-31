@@ -17,7 +17,7 @@ import {
   keyboardNavigation,
 } from '../../../../helpers/dom/a11y'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../../constants/dropdown-config'
-import { ArrowIcon } from '../../../../components/visuals/icons/arrow-icon'
+import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 
 export const Dropdown = React.forwardRef(
   (

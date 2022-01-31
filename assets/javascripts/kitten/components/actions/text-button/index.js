@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { mq } from '../../../../constants/screen-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { mq } from '../../../constants/screen-config'
 
 const StyledButton = styled.button`
   ${TYPOGRAPHY.fontStyles.regular}

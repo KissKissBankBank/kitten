@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import COLORS from '../../../../constants/colors-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import COLORS from '../../../constants/colors-config'
 
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};

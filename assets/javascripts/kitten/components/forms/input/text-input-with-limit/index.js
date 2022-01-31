@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { TextInput } from '../../../components/forms/text-input'
+import { TextInput } from '../../../../forms/inputs/text-input'
 import PropTypes from 'prop-types'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../constants/typography-config'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import TYPOGRAPHY from '../../../../constants/typography-config'
 import classNames from 'classnames'
 
 const StyledTextInputWithLimit = styled.div`

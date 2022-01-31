@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { Loader } from '../../../components/feedback/loader'
-import { Paragraph } from '../../../components/typography/paragraph'
+import { Loader } from '../../feedback/loader'
+import { Paragraph } from '../../typography/paragraph'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Tag } from '../../../../../components/information/tag'
-import { LockIcon } from '../../../../../components/visuals/icons/lock-icon'
-import { StarIcon } from '../../../../../components/visuals/icons/star-icon'
+import { Tag } from '../../../../information/tag'
+import { LockIcon } from '../../../../graphics/icons/lock-icon'
+import { StarIcon } from '../../../../graphics/icons/star-icon'
 
 export const TitleTag = ({ text, icon, className, ...props }) => {
   const iconDisplay = (() => {

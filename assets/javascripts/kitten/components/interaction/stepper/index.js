@@ -7,8 +7,8 @@ import classNames from 'classnames'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { Text } from '../../../components/typography/text'
-import { StepperIcon } from '../../../components/interaction/stepper-icon'
+import { Text } from '../../typography/text'
+import { StepperIcon } from '../../interaction/stepper-icon'
 
 import { Stepper as DeprecatedStepper } from './deprecated'
 

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { Text } from '../../../../components/typography/text'
-import { Paragraph as SideParagraph } from '../../../../components/typography/paragraph/next'
+import { Text } from '../../../typography/text'
+import { Paragraph as SideParagraph } from '../../../typography/paragraph/next'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 

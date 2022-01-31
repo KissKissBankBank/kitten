@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button } from '../../../../components/actions/button'
+import { Button } from '../../actions/button'
 import styled from 'styled-components'
-import { checkedCircleIconAsString } from '../../../visuals/icons/checked-circle-icon'
-import { encodeSvgString } from '../../../../helpers/utils/encode-svg'
-import COLORS from '../../../../constants/colors-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { checkedCircleIconAsString } from '../../graphics/icons/checked-circle-icon'
+import { encodeSvgString } from '../../../helpers/utils/encode-svg'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
 
 const getCircleIcon = color =>

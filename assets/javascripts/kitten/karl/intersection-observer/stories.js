@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
-import { Marger } from '../../components/layout/marger'
-import { Container } from '../../components/layout/container'
-import { Grid, GridCol } from '../../components/layout/grid'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 
 import useIntersectionObserver from '../../helpers/utils/intersection-hook'
 

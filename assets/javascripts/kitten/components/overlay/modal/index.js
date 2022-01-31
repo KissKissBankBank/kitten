@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
-import { CloseButton } from '../../../components/actions/close-button'
+import { CloseButton } from '../../actions/close-button'
 import { createGlobalStyle } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'

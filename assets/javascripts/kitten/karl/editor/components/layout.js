@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container } from '../../../components/layout/container'
-import { Grid, GridCol } from '../../../components/layout/grid'
-import { Marger } from '../../../components/layout/marger'
+import { Container } from '../../../layout/container'
+import { Grid, GridCol } from '../../../layout/grid'
+import { Marger } from '../../../layout/marger'
 
 const Layout = ({ children }) => {
   return (

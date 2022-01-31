@@ -5,8 +5,8 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import { Progress } from '../../../../components/feedback/progress'
-import { Text } from '../../../../components/typography/text'
+import { Progress } from '../../../feedback/progress'
+import { Text } from '../../../typography/text'
 
 const StyledCard = styled.a`
   border: var(--border-width) solid transparent;

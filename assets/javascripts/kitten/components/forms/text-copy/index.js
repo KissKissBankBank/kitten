@@ -5,12 +5,12 @@ import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { CopyIcon } from '../../visuals/icons/copy-icon'
+import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../information/boxes/arrow-container'
 import { Text } from '../../typography/text'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import { Button } from '../../actions/button'
-import { TextInput } from '../../forms/text-input'
+import { TextInput } from '../../forms/inputs/text-input'
 
 const fadeInAndOut = keyframes`
   0%, 100% {

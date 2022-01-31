@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Title } from '../../../../components/typography/title'
-import { Paragraph } from '../../../../components/typography/paragraph/next'
-import { Button } from '../../../../components/actions/button'
+import { Title } from '../../../typography/title'
+import { Paragraph } from '../../../typography/paragraph/next'
+import { Button } from '../../../actions/button'
 import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'
 

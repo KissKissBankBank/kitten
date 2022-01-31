@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { BurgerIcon } from '../../../../components/visuals/icons/burger-icon'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+import { BurgerIcon } from '../../../graphics/icons/burger-icon'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 import COLORS from '../../../../constants/colors-config'
 import { Context } from './context'
 import classNames from 'classnames'

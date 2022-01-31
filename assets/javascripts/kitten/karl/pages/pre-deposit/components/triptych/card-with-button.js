@@ -1,10 +1,10 @@
 import React from 'react'
-import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
-import { Text } from '../../../../../components/typography/text'
-import { Paragraph } from '../../../../../components/typography/paragraph'
+import { Marger } from '../../../../../layout/marger'
+import { Title } from '../../../../../typography/title'
+import { Text } from '../../../../../typography/text'
+import { Paragraph } from '../../../../../typography/paragraph'
 import { parseHtml } from '../../../../../helpers/utils/parser'
-import { HorizontalStroke } from '../../../../../components/typography/horizontal-stroke'
+import { HorizontalStroke } from '../../../../../typography/horizontal-stroke'
 import COLORS from '../../../../../constants/colors-config'
 
 export const CardWithButton = ({

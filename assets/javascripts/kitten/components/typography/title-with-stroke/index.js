@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import COLORS from '../../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import COLORS from '../../../constants/colors-config'
 import {
   titleModifierStyles,
   titleModifiersNames,
 } from '../common/title-modifier-styles'
-import { strokeModifierStyles } from '../../../atoms/horizontal-stroke/common/stroke-modifier-styles'
+import { strokeModifierStyles } from '../../typography/horizontal-stroke/common/stroke-modifier-styles'
 
 const StyledTitleWithStroke = styled.div`
   --TitleWithStroke-css-color: ${COLORS.font1};

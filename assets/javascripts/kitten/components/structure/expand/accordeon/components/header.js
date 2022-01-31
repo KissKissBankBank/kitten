@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Context } from './context'
-import { ArrowIcon } from '../../../../../components/graphics/icons/arrow-icon'
+import { ArrowIcon } from '../../../../graphics/icons/arrow-icon'
 import classNames from 'classnames'
 
 export const Header = ({ id, children, index, className, ...props }) => {

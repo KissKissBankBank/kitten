@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
-import { ArrowIcon } from '../../../../components/visuals/icons/arrow-icon'
-import { Button } from '../../../../components/action/button'
+import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
+import { Button } from '../../../actions/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Text } from '../../../../components/typography/text'
+import { Text } from '../../../typography/text'
 
 const StyledText = styled(Text)`
   margin-top: 0;

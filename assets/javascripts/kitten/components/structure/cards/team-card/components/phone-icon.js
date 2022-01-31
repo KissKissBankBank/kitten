@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from '../../../../molecules/buttons/button-icon'
+import { ButtonIcon } from '../../../../actions/button-icon'
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon'
 import { TeamCardButtonWithTooltip } from './button-with-tooltip'
 import COLORS from '../../../../../constants/colors-config'

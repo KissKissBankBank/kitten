@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 
 export const Button = ({
   a11yText,

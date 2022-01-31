@@ -1,10 +1,10 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/layout/container'
-import { Paragraph } from '../../../../components/typography/paragraph'
-import { Button } from '../../../../components/actions/button'
-import { Title } from '../../../../components/typography/title'
+import { Grid, GridCol } from '../../../../layout/grid'
+import { Marger } from '../../../../layout/marger'
+import { Container } from '../../../../layout/container'
+import { Paragraph } from '../../../../typography/paragraph'
+import { Button } from '../../../../actions/button'
+import { Title } from '../../../../typography/title'
 import COLORS from '../../../../constants/colors-config'
 
 const HeaderWithBackground = ({ backgroundImage }) => (

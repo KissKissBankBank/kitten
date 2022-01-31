@@ -5,10 +5,10 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import Truncate from 'react-truncate'
 
 import { StyledCard } from './styles'
-import { Text } from '../../../../components/typography/text'
-import { Title } from '../../../../components/typography/title'
-import { Progress } from '../../../../components/feedback/progress'
-import { GifVideo } from '../../../../components/information/video/gif-video'
+import { Text } from '../../../typography/text'
+import { Title } from '../../../typography/title'
+import { Progress } from '../../../feedback/progress'
+import { GifVideo } from '../../../information/video/gif-video'
 
 export const ProjectCard = ({
   children,

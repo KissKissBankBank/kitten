@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { cssPropertyDistributor } from '../../helpers/dom/css-property-distributor'
-import { Container } from '../../components/layout/container'
+import { Container } from '../../layout/container'
 
 const StyledP = styled.p`
   margin-top: 2rem;

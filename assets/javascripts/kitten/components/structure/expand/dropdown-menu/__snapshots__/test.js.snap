@@ -199,8 +199,8 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0[open] .k-DropdownMenu__menu {
-  -webkit-animation: 0.16s ease dFbfpe;
-  animation: 0.16s ease dFbfpe;
+  -webkit-animation: 0.16s ease egqQGv;
+  animation: 0.16s ease egqQGv;
 }
 
 .c0.k-DropdownMenu--left .k-DropdownMenu__menu {

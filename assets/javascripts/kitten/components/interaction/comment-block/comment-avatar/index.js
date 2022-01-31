@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { ButtonImage } from '../../../components/actions/button-image'
-import { Text } from '../../../components/typography/text'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { ButtonImage } from '../../../actions/button-image'
+import { Text } from '../../../typography/text'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledAvatar = styled.div`
   display: flex;
@@ -14,7 +14,6 @@ const StyledAvatar = styled.div`
 
 const StyledPosition = styled.div`
   position: relative;
-  margin-bottom: ${pxToRem(10)};
 `
 
 const buttonImgHuge = pxToRem(80)

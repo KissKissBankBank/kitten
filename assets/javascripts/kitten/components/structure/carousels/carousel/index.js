@@ -7,12 +7,12 @@ import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
 } from '../../../../constants/grid-config'
-import { Button } from '../../../../components/actions/button'
-import { ArrowIcon } from '../../../../components/visuals/icons/arrow-icon'
+import { Button } from '../../../actions/button'
+import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 import classNames from 'classnames'
-import { Grid, GridCol } from '../../../../components/layout/grid'
+import { Grid, GridCol } from '../../../layout/grid'
 
 import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles'
 

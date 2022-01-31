@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Badge as BadgeComponent } from '../../../../components/information/badge'
+import { Badge as BadgeComponent } from '../../../information/badge'
 import COLORS from '../../../../constants/colors-config'
 
 export const Badge = ({ backgroundColor, ...props }) => (

@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
-import { Badge as BadgeComponent } from '../../../components/information/badge'
+import { Badge as BadgeComponent } from '../../information/badge'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'

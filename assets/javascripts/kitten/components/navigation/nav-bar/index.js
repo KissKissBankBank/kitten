@@ -10,7 +10,7 @@ import {
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { HEADER_HEIGHT } from '../../../components/navigation/header-nav/config'
+import { HEADER_HEIGHT } from '../../navigation/header-nav/config'
 
 const StyledNavBar = styled.div`
   width: auto;

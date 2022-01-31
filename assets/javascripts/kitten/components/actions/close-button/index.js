@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button } from '../../../components/actions/button'
-import { CrossIcon } from '../../../../components/visuals/icons/cross-icon'
+import { Button } from '../../actions/button'
+import { CrossIcon } from '../../graphics/icons/cross-icon'
 
 export const CloseButton = ({
   closeButtonLabel,

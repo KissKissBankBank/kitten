@@ -2,12 +2,12 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { DropdownSelectWithInput } from './index'
 
-import { FacebookIcon } from '../../../components/visuals/icons/facebook-icon'
-import { TwitterIcon } from '../../../components/visuals/icons/twitter-icon'
-import { LinkedinIcon } from '../../../components/visuals/icons/linkedin-icon'
-import { InstagramIcon } from '../../../components/visuals/icons/instagram-icon'
-import { YoutubeIcon } from '../../../components/visuals/icons/youtube-icon'
-import { GlobeIcon } from '../../../components/visuals/icons/globe-icon'
+import { FacebookIcon } from '../../graphics/icons/facebook-icon'
+import { TwitterIcon } from '../../graphics/icons/twitter-icon'
+import { LinkedinIcon } from '../../graphics/icons/linkedin-icon'
+import { InstagramIcon } from '../../graphics/icons/instagram-icon'
+import { YoutubeIcon } from '../../graphics/icons/youtube-icon'
+import { GlobeIcon } from '../../graphics/icons/globe-icon'
 
 describe('<DropdownSelectWithInput />', () => {
   it('should match its snapshot with props', () => {

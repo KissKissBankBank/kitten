@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckboxSet } from '../../../components/form/checkbox-set'
+import { CheckboxSet } from '../../forms/checkbox-set'
 import renderer from 'react-test-renderer'
 
 describe('<CheckboxSet />', () => {

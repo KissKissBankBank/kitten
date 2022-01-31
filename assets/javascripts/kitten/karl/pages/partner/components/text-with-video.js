@@ -12,8 +12,8 @@ import {
   Video,
   Loader,
 } from '../../../../index'
-import { DEFAULT, BIG } from '../../../../components/horizontal-stroke'
-import { FLUID } from '../../../../components/actions/button/standalone-styles'
+import { DEFAULT, BIG } from '../../../../horizontal-stroke'
+import { FLUID } from '../../../../actions/button/standalone-styles'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,

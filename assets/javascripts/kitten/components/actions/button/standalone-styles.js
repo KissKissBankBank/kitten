@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 export const FLUID = css`
   --Button-min-width: initial;

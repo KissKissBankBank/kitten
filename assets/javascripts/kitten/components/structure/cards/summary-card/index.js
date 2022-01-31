@@ -7,7 +7,7 @@ import {
   getReactElementsByType,
   getReactElementsWithoutType,
 } from '../../../../helpers/react/react-elements'
-import { NoImageIcon } from '../../../../components/visuals/icons/no-image-icon'
+import { NoImageIcon } from '../../../graphics/icons/no-image-icon'
 
 export const SummaryCard = ({
   children,

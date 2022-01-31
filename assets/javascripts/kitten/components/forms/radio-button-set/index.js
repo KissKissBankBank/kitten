@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { RadioButton } from '../../../components/forms/radio-button'
+import { RadioButton } from '../../forms/radio-button'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { Label } from '../../../components/forms/label'
+import { Label } from '../../forms/label'
 
 const StyledRadioButtonSet = styled.fieldset`
   margin: 0;

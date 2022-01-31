@@ -1,7 +1,7 @@
 import React from 'react'
 import { VisuallyHidden } from './index'
 import { Button } from '../../actions/button'
-import { HeartIcon } from '../../visuals/icons/heart-icon'
+import { HeartIcon } from '../../graphics/icons/heart-icon'
 
 export const Default = () => (
   <Button icon>

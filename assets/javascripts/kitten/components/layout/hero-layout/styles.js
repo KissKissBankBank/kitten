@@ -3,7 +3,7 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
-import { HEADER_HEIGHT } from '../../../components/navigation/header-nav/config'
+import { HEADER_HEIGHT } from '../../navigation/header-nav/config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 

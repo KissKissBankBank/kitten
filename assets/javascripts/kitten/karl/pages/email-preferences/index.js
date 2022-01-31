@@ -1,10 +1,10 @@
 import React from 'react'
 import HorizontalCard from './components/horizontal-card'
 
-import { Container } from '../../../components/layout/container'
-import { Title } from '../../../components/typography/title'
-import { Text } from '../../../components/typography/text'
-import { ToggleSwitch } from '../../../components/forms/toggle-switch'
+import { Container } from '../../../layout/container'
+import { Title } from '../../../typography/title'
+import { Text } from '../../../typography/text'
+import { ToggleSwitch } from '../../../forms/toggle-switch'
 import COLORS from '../../../constants/colors-config'
 
 import styled from 'styled-components'

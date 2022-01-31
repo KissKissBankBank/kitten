@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { TextInput } from '../../../forms/text-input'
-import { TextInputWithLimit } from '../../../form/text-input-with-limit'
-import { TextInputWithUnit } from '../../../form/text-input-with-unit'
+import { TextInput } from '../../../forms/inputs/text-input'
+import { TextInputWithLimit } from '../../../forms/inputs/text-input-with-limit'
+import { TextInputWithUnit } from '../../../forms/inputs/text-input-with-unit'
 
 export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
   let Input = TextInput

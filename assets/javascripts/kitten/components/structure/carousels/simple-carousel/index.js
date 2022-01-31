@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 
 const StyledContainer = styled.div`
   ${({ addBottomMargin }) =>

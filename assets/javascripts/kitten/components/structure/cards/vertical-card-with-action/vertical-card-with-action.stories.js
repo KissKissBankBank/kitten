@@ -1,7 +1,7 @@
 import React from 'react'
 import { VerticalCardWithAction } from './index'
 import { action } from '@storybook/addon-actions'
-import { buttonModifiers } from '../../../../components/actions/button'
+import { buttonModifiers } from '../../../actions/button'
 
 export default {
   title: 'Molecules/Cards/VerticalCardWithAction',

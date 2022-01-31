@@ -3,11 +3,11 @@ import isEmpty from 'lodash/fp/isEmpty'
 import max from 'lodash/fp/max'
 import creditCardType, { types } from 'credit-card-type'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { CbIcon } from '../../../visuals/icons/cb-icon'
-import { VisaIcon } from '../../../visuals/icons/visa-icon'
-import { MasterCardIcon } from '../../../visuals/icons/mastercard-icon'
-import { MaestroIcon } from '../../../visuals/icons/maestro-icon'
-import { BancontactIcon } from '../../../visuals/icons/bancontact-icon'
+import { CbIcon } from '../../../graphics/icons/cb-icon'
+import { VisaIcon } from '../../../graphics/icons/visa-icon'
+import { MasterCardIcon } from '../../../graphics/icons/mastercard-icon'
+import { MaestroIcon } from '../../../graphics/icons/maestro-icon'
+import { BancontactIcon } from '../../../graphics/icons/bancontact-icon'
 
 creditCardType.addCard({
   niceType: 'Bancontact',

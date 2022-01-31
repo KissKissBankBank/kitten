@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Container } from '../../../components/layout/container'
-import { Grid, GridCol } from '../../../components/layout/grid'
+import { Container } from '../../layout/container'
+import { Grid, GridCol } from '../../layout/grid'
 import { mq } from '../../../constants/screen-config'
 import {
   NUM_COLUMNS,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { RadioButtonSet } from '../../../components/forms/radio-button-set'
+import { RadioButtonSet } from '../../forms/radio-button-set'
 import renderer from 'react-test-renderer'
 
 describe('<RadioButtonSet />', () => {

@@ -2,11 +2,11 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import COLORS from '../../../../constants/colors-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ArrowContainer } from '../../../../components/information/boxes/arrow-container'
-import { Button } from '../../../../components/actions/button'
-import { Text } from '../../../../components/typography/text'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { ArrowContainer } from '../../information/boxes/arrow-container'
+import { Button } from '../../actions/button'
+import { Text } from '../../typography/text'
 
 const ARROW_SIZE = 7
 const ARROW_DISTANCE = 10

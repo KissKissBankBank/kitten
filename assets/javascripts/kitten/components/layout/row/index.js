@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
-import { Container } from '../../../components/layout/container'
+import { Container } from '../../layout/container'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'

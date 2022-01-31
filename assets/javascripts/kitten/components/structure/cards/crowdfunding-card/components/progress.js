@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { Progress } from '../../../../../components/feedback/progress'
-import { Text } from '../../../../../components/typography/text'
+import { Progress } from '../../../../feedback/progress'
+import { Text } from '../../../../typography/text'
 import COLORS from '../../../../../constants/colors-config'
 import classNames from 'classnames'
 

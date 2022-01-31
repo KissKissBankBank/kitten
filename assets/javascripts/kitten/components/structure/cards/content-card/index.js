@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { mq } from '../../../../constants/screen-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Title } from '../../../../components/typography/title'
+import { Title } from '../../../typography/title'
 
 const StyledCard = styled.article`
   padding: ${pxToRem(30)} ${pxToRem(30)} ${pxToRem(20)};

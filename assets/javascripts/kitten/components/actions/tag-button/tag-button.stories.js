@@ -1,6 +1,6 @@
 import React from 'react'
 import { TagButton } from './index'
-import { VisaIcon } from '../../../..'
+import { VisaIcon } from '../../../../visuals/icons/visa-icon'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

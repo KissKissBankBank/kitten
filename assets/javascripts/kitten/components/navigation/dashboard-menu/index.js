@@ -7,9 +7,9 @@ import find from 'lodash/fp/find'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { ArrowIcon } from '../../../components/visuals/icons/arrow-icon'
-import { DoubleArrowIcon } from '../../../components/visuals/icons/double-arrow-icon'
-import { FlexWrapper } from '../../../components/layout/flex-wrapper'
+import { ArrowIcon } from '../../graphics/icons/arrow-icon'
+import { DoubleArrowIcon } from '../../graphics/icons/double-arrow-icon'
+import { FlexWrapper } from '../../layout/flex-wrapper'
 import { mq } from '../../../constants/screen-config'
 
 const zoomInAndOpacity = keyframes`

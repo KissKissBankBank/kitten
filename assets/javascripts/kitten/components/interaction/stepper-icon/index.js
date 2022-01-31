@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ArrowIcon } from '../../../components/visuals/icons/arrow-icon'
-import { CheckedIcon } from '../../../components/visuals/icons/checked-icon'
-import { IconBadge } from '../../../components/information/icon-badge'
+import { ArrowIcon } from '../../graphics/icons/arrow-icon'
+import { CheckedIcon } from '../../graphics/icons/checked-icon'
+import { IconBadge } from '../../information/icon-badge'
 
 export const StepperIconDefault = props => (
   <StepperIcon {...props} state="default" />

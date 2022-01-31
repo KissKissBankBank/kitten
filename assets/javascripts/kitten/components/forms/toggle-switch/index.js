@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { LockIcon } from '../../../components/visuals/icons/lock-icon'
+import { LockIcon } from '../../graphics/icons/lock-icon'
 
 const SwitchWrapper = styled.div`
   --toggleSwitch-width: ${pxToRem(60)};
