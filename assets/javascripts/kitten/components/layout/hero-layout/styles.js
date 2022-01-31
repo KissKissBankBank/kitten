@@ -157,7 +157,7 @@ export const StyledLayout = styled.div`
 
     .k-HeroLayout__sticky__inside {
       position: sticky;
-      top: ${pxToRem(20)};
+      top: ${pxToRem(HEADER_HEIGHT + 20)};
       bottom: ${pxToRem(20)};
       transition: top var(--transition);
     }

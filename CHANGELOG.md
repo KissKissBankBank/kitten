@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `AlertBox`: Improve styles.
 - Fix: `HeroLayout`: Fix Hero sizing on large screens.
+- Fix: `HeroLayout`: Fix sticky columns position on desktop.
 
 ## [7.2.0] - 2022-01-28
 

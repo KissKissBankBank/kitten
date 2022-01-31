@@ -182,7 +182,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   .c0 .k-HeroLayout__sticky__inside {
     position: -webkit-sticky;
     position: sticky;
-    top: 1.25rem;
+    top: 5.3125rem;
     bottom: 1.25rem;
     -webkit-transition: top var(--transition);
     transition: top var(--transition);
@@ -379,7 +379,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   .c0 .k-HeroLayout__sticky__inside {
     position: -webkit-sticky;
     position: sticky;
-    top: 1.25rem;
+    top: 5.3125rem;
     bottom: 1.25rem;
     -webkit-transition: top var(--transition);
     transition: top var(--transition);
