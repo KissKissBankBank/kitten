@@ -56,8 +56,8 @@ const AlertBoxWrapper = styled.div`
   }
 
   &.k-AlertBox--big {
-    gap: ${pxToRem(15)};
-    padding: ${pxToRem(15)};
+    gap: ${pxToRem(20)};
+    padding: ${pxToRem(20)};
 
     .k-AlertBox__icon {
       width: ${pxToRem(30)};
