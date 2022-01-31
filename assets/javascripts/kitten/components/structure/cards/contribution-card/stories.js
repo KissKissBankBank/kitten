@@ -62,7 +62,7 @@ const args = {
 
 export default {
   component: ContributionCard,
-  title: 'Molecules/Cards/ContributionCard',
+  title: 'Structure/Cards/ContributionCard',
   parameters: {
     docs: {
       page: () => (

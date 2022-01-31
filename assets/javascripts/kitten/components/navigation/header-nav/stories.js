@@ -30,7 +30,7 @@ const argTypes = {
 }
 
 export default {
-  title: 'Organisms/HeaderNav',
+  title: 'Navigation/HeaderNav',
   parameters: {
     docs: {
       page: () => (

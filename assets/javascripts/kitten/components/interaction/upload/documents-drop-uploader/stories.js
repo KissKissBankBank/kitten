@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DocumentsDropUploader,
-  title: 'Molecules/Upload/DocumentsDropUploader',
+  title: 'Interaction/Upload/DocumentsDropUploader',
   parameters: {
     docs: {
       page: () => (

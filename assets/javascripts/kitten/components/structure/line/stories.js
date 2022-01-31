@@ -3,7 +3,7 @@ import { Line } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Line',
+  title: 'Structure/Line',
   component: Line,
   parameters: {
     docs: {

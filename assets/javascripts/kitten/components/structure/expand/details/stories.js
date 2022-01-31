@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Molecules/Expand/Details',
+  title: 'Structure/Expand/Details',
   component: Details,
   parameters: {
     docs: {

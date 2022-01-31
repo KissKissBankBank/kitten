@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Paragraph,
-  title: 'Atoms/Typography/Paragraph',
+  title: 'Typography/Paragraph',
   parameters: {
     docs: {
       page: () => (

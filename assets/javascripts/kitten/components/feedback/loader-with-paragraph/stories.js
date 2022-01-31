@@ -3,7 +3,7 @@ import { LoaderWithParagraph } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/LoaderWithParagraph',
+  title: 'Feedback/LoaderWithParagraph',
   component: LoaderWithParagraph,
   parameters: {
     docs: {

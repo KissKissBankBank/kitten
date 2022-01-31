@@ -289,8 +289,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__selectorWrapper[open] .k-DashboardMenu__selectorList {
-  -webkit-animation: 0.16s ease-out fGnrqT;
-  animation: 0.16s ease-out fGnrqT;
+  -webkit-animation: 0.16s ease-out kqywvJ;
+  animation: 0.16s ease-out kqywvJ;
 }
 
 .c0 .k-DashboardMenu__selectorWrapper::before {
@@ -309,8 +309,8 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__selectorWrapper[open]::before {
-  -webkit-animation: 0.16s ease-out hLOrmQ;
-  animation: 0.16s ease-out hLOrmQ;
+  -webkit-animation: 0.16s ease-out bKPByE;
+  animation: 0.16s ease-out bKPByE;
   opacity: 1;
 }
 

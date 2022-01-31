@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-hKwDye gmgewQ k-DocumentManager__uploader"
+  className="sc-bxivhb hwWgDN k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdvvtL gdafnu k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdVaJa brpVbO k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
@@ -28,10 +28,10 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-bZQynM chfdve k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
-            className="sc-dkPtRN duawKr k-ColorSvg"
+            className="sc-htpNat jpRHgA k-ColorSvg"
             height="33"
             viewBox="0 0 25 33"
             width="25"
@@ -92,7 +92,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-hKwDye gmgewQ k-DocumentManager__uploader"
+  className="sc-bxivhb hwWgDN k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -102,7 +102,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdvvtL gdafnu k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdVaJa brpVbO k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
@@ -119,10 +119,10 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-bZQynM chfdve k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
-            className="sc-dkPtRN duawKr k-ColorSvg"
+            className="sc-htpNat jpRHgA k-ColorSvg"
             height="33"
             viewBox="0 0 25 33"
             width="25"

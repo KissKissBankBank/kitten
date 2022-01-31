@@ -3,7 +3,7 @@ import { LendoLoadingAnimation } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/LendoLoadingAnimation',
+  title: 'Feedback/LendoLoadingAnimation',
   component: LendoLoadingAnimation,
   parameters: {
     docs: {

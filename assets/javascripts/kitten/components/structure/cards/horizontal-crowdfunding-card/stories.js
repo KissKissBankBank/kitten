@@ -4,7 +4,7 @@ import { HorizontalCrowdfundingCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Cards/HorizontalCrowdfundingCard',
+  title: 'Structure/Cards/HorizontalCrowdfundingCard',
   component: HorizontalCrowdfundingCard,
   parameters: {
     docs: {

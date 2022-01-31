@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Triptych,
-  title: 'Molecules/Cards/Triptych',
+  title: 'Structure/Cards/Triptych',
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="Triptych" />,

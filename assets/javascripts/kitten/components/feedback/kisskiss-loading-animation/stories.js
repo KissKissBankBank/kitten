@@ -4,7 +4,7 @@ import { KissKissLoadingAnimation } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/KissKissLoadingAnimation',
+  title: 'Feedback/KissKissLoadingAnimation',
   component: KissKissLoadingAnimation,
   parameters: {
     docs: {

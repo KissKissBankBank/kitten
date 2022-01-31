@@ -37,7 +37,7 @@ const args = {
 }
 
 export default {
-  title: 'Molecules/Cards/SimpleCard',
+  title: 'Structure/Cards/SimpleCard',
   component: SimpleCard,
   parameters: {
     docs: {

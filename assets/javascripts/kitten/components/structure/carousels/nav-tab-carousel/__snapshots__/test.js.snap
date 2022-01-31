@@ -2,13 +2,13 @@
 
 exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 <div
-  className="sc-pVTFL bGhloB"
+  className="sc-dnqmqq bIRGVN"
 >
   <button
-    className="sc-hKwDye hoWJKE k-u-reset-button"
+    className="sc-bxivhb bRvliI k-u-reset-button"
   >
     <svg
-      className="sc-eCImPb kXNvqa"
+      className="sc-ifAKCX jyHSSs"
       fill="#fff"
       height="5.64"
       style={
@@ -26,43 +26,43 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-jRQBWg dsYHBn"
+      className="sc-EHOje Cpfri"
     >
       Foobar 1
     </div>
   </button>
   <div
-    className="sc-furwcr ejFCqn"
+    className="sc-htoDjs dBedLo"
   >
     <a
       aria-current={false}
-      className="sc-iCfMLu cezBwz"
+      className="sc-gzVnrw gDLVFt"
       href="http://www.google.com"
       tabIndex="0"
     />
     <a
       aria-current={true}
-      className="sc-iCfMLu kFDaQg"
+      className="sc-gzVnrw eGVjLW"
       href="http://www.cowboybebop.com"
       tabIndex="0"
     />
     <a
       aria-current={false}
-      className="sc-iCfMLu cezBwz"
+      className="sc-gzVnrw gDLVFt"
       href="http://www.starwars.com"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-dkPtRN huLYMd k-u-reset-button"
+    className="sc-htpNat gLegyR k-u-reset-button"
   >
     <div
-      className="sc-gKclnd jSyGWq"
+      className="sc-bZQynM hJDVrx"
     >
       Foobar 2
     </div>
     <svg
-      className="sc-eCImPb kXNvqa"
+      className="sc-ifAKCX jyHSSs"
       fill="var(--color-grey-900, #222)"
       height="5.64"
       style={
@@ -85,13 +85,13 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 
 exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
 <div
-  className="sc-pVTFL bGhloB"
+  className="sc-dnqmqq bIRGVN"
 >
   <button
-    className="sc-hKwDye hoWJKE k-u-reset-button"
+    className="sc-bxivhb bRvliI k-u-reset-button"
   >
     <svg
-      className="sc-eCImPb kXNvqa"
+      className="sc-ifAKCX jyHSSs"
       fill="#fff"
       height="5.64"
       style={
@@ -109,40 +109,40 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-jRQBWg dsYHBn"
+      className="sc-EHOje Cpfri"
     >
       Foobar 1
     </div>
   </button>
   <div
-    className="sc-furwcr ejFCqn"
+    className="sc-htoDjs dBedLo"
   >
     <div
       aria-current={false}
-      className="sc-iCfMLu cezBwz"
+      className="sc-gzVnrw gDLVFt"
       tabIndex="0"
     />
     <div
       aria-current={true}
-      className="sc-iCfMLu kFDaQg"
+      className="sc-gzVnrw eGVjLW"
       tabIndex="0"
     />
     <div
       aria-current={false}
-      className="sc-iCfMLu cezBwz"
+      className="sc-gzVnrw gDLVFt"
       tabIndex="0"
     />
   </div>
   <button
-    className="sc-dkPtRN huLYMd k-u-reset-button"
+    className="sc-htpNat gLegyR k-u-reset-button"
   >
     <div
-      className="sc-gKclnd jSyGWq"
+      className="sc-bZQynM hJDVrx"
     >
       Foobar 2
     </div>
     <svg
-      className="sc-eCImPb kXNvqa"
+      className="sc-ifAKCX jyHSSs"
       fill="var(--color-grey-900, #222)"
       height="5.64"
       style={

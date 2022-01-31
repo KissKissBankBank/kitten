@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   component: BasicUploader,
-  title: 'Molecules/Upload/BasicUploader',
+  title: 'Interaction/Upload/BasicUploader',
   parameters: {
     docs: {
       page: () => (

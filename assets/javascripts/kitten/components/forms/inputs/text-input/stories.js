@@ -3,7 +3,7 @@ import { TextInput } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Form/TextInput',
+  title: 'Forms/Inputs/TextInput',
   component: TextInput,
   parameters: {
     docs: {

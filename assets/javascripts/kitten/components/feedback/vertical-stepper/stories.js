@@ -4,7 +4,7 @@ import { Text } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Organisms/VerticalStepper',
+  title: 'Feedback/VerticalStepper',
   component: VerticalStepper,
   decorators: [
     story => (

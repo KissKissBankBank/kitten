@@ -15,7 +15,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: DropdownSelectWithInput,
-  title: 'Form/DropdownSelectWithInput',
+  title: 'Structure/DropdownSelectWithInput',
   parameters: {
     docs: {
       page: () => (

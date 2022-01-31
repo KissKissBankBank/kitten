@@ -3,7 +3,7 @@ import { LocationInput } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Form/LocationInput',
+  title: 'Forms/Inputs/LocationInput',
   component: LocationInput,
   decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {

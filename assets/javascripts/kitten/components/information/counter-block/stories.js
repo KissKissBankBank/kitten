@@ -55,7 +55,7 @@ export const Default = args => {
 }
 
 export default {
-  title: 'Organisms/CounterBlock',
+  title: 'Information/CounterBlock',
   component: CounterBlock,
   parameters: {
     docs: {

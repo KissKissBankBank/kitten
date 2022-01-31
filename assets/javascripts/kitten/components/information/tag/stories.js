@@ -3,7 +3,7 @@ import { Tag } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/Tag',
+  title: 'Information/Tag',
   component: Tag,
   parameters: {
     docs: { page: () => <DocsPage filepath={__filename} importString="Tag" /> },

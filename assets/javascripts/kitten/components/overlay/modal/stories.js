@@ -59,7 +59,7 @@ const StoryButton = ({ children }) => (
 )
 
 export default {
-  title: 'Molecules/Modal',
+  title: 'Overlay/Modal',
   component: Modal,
   parameters: {
     docs: {

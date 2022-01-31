@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/HighlightHalo',
+  title: 'Interaction/HighlightHalo',
   component: HighlightHalo,
   parameters: {
     docs: {

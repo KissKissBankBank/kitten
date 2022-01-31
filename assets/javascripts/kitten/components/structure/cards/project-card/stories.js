@@ -5,7 +5,7 @@ import { Text, Button } from 'kitten'
 import Truncate from 'react-truncate'
 
 export default {
-  title: 'Molecules/Cards/ProjectCard',
+  title: 'Structure/Cards/ProjectCard',
   component: ProjectCard,
   parameters: {
     docs: {

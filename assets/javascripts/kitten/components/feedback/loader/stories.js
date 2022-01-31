@@ -4,7 +4,7 @@ import { Loader } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/Loader',
+  title: 'Feedback/Loader',
   component: Loader,
   parameters: {
     docs: {

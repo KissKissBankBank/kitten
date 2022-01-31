@@ -4,7 +4,7 @@ import { Text, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/AvatarWithTextAndBadge',
+  title: 'Information/AvatarWithTextAndBadge',
   component: AvatarWithTextAndBadge,
   parameters: {
     docs: {

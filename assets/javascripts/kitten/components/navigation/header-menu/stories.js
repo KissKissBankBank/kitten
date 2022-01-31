@@ -4,7 +4,7 @@ import { LendopolisLogo } from '../../../'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Organisms/HeaderMenu',
+  title: 'Navigation/HeaderMenu',
   component: HeaderMenu,
   parameters: {
     docs: {

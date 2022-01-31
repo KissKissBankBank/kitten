@@ -1,0 +1,69 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+import * as stories from './horizontal-stroke.stories.js'
+import { HorizontalStroke } from './index'
+import { FileUrl } from 'storybook/file-url'
+
+
+<Meta title="Typography/HorizontalStroke" component={HorizontalStroke} />
+
+# HorizontalStroke
+
+## Source
+
+<FileUrl filepath={__filename} />
+
+## Import
+
+```js
+import { HorizontalStroke } from '@kisskissbankbank/kitten'
+```
+
+### Size CSS
+
+```js
+import {
+  HORIZONTAL_STROKE_STYLES_TINY,
+  HORIZONTAL_STROKE_STYLES_DEFAULT,
+  HORIZONTAL_STROKE_STYLES_BIG,
+  HORIZONTAL_STROKE_STYLES_HUGE,
+} from '@kisskissbankbank/kitten'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<HorizontalStroke />
+```
+
+#### Modifier
+
+```js
+<HorizontalStroke modifier="primary" />
+<HorizontalStroke modifier="secondary" />
+<HorizontalStroke modifier="tertiary" />
+<HorizontalStroke modifier="quaternary" />
+<HorizontalStroke modifier="quinary" />
+<HorizontalStroke modifier="senary" />
+<HorizontalStroke modifier="septenary" />
+```
+
+#### Size
+
+```js
+<HorizontalStroke size="tiny" />
+<HorizontalStroke size="default" />
+<HorizontalStroke size="big" />
+<HorizontalStroke size="huge" />
+```
+
+#### Custom size
+
+```js
+<HorizontalStroke customSize={{ width: 100, height: 50 }} />
+```

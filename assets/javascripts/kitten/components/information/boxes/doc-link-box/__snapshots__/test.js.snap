@@ -2,7 +2,7 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdvvtL fPifkT"
+  className="sc-bdVaJa kmEUCe"
   href="#"
 >
   <span
@@ -101,7 +101,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdvvtL fPifkT"
+  className="sc-bdVaJa kmEUCe"
   href="#foobar"
   rel="noopener"
   target="_blank"

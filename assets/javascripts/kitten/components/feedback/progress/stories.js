@@ -4,7 +4,7 @@ import { COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/Progress',
+  title: 'Feedback/Progress',
   component: Progress,
   parameters: {
     docs: {

@@ -8,7 +8,7 @@ import { StyledCard } from './styles'
 import { Text } from '../../../typography/text'
 import { Title } from '../../../typography/title'
 import { Progress } from '../../../feedback/progress'
-import { GifVideo } from '../../../information/video/gif-video'
+import { GifVideo } from '../../../information/videos/gif-video'
 
 export const ProjectCard = ({
   children,

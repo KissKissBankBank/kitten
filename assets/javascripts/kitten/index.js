@@ -337,8 +337,8 @@ export { Tag } from './components/information/tag'
 
 
 // Information/Videos
-export { Video } from './components/information/video/video'
-export { GifVideo } from './components/information/video/gif-video'
+export { Video } from './components/information/videos/video'
+export { GifVideo } from './components/information/videos/gif-video'
 
 
 

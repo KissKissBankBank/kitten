@@ -37,7 +37,7 @@ const argTypes = {
 
 export default {
   component: Hero,
-  title: 'Organisms/Hero',
+  title: 'Structure/Hero',
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="Hero" />,

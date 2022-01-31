@@ -4,7 +4,7 @@ import { COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Embed/ResponsiveIframeContainer',
+  title: 'Interaction/Embed/ResponsiveIframeContainer',
   component: ResponsiveIframeContainer,
   parameters: {
     docs: {

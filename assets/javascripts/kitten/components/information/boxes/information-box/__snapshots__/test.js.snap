@@ -2,13 +2,13 @@
 
 exports[`<InformationBox /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ ijgGDH k-InformationBox"
+  className="sc-bwzfXH kzJerj k-InformationBox"
 >
   <div
     className="k-InformationBox__container"
   >
     <p
-      className="sc-bdvvtL eyTmrc k-Title k-InformationBox__title k-u-margin-bottom-single k-Title--quaternary k-Title--noMargin"
+      className="sc-bdVaJa jELdRX k-Title k-InformationBox__title k-u-margin-bottom-single k-Title--quaternary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -24,14 +24,14 @@ exports[`<InformationBox /> by default matches with snapshot 1`] = `
 
 exports[`<InformationBox /> with contents matches with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ ijgGDH k-InformationBox"
+  className="sc-bwzfXH kzJerj k-InformationBox"
 >
   <div
     className="k-InformationBox__container"
   >
     <h3
       aria-label="custom aria prop"
-      className="sc-bdvvtL eyTmrc k-Title k-InformationBox__title k-u-margin-bottom-single customClassName k-Title--quaternary k-Title--noMargin"
+      className="sc-bdVaJa jELdRX k-Title k-InformationBox__title k-u-margin-bottom-single customClassName k-Title--quaternary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,

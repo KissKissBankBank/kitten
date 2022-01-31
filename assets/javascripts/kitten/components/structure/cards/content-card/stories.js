@@ -11,7 +11,7 @@ import {
 } from 'kitten'
 
 export default {
-  title: 'Molecules/Cards/ContentCard',
+  title: 'Structure/Cards/ContentCard',
   component: ContentCard,
   parameters: {
     docs: {

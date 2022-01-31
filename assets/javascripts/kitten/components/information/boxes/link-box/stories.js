@@ -4,7 +4,7 @@ import { FlashCircleIcon, Text, COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Boxes/LinkBox',
+  title: 'Information/Boxes/LinkBox',
   component: LinkBox,
   parameters: {
     docs: {

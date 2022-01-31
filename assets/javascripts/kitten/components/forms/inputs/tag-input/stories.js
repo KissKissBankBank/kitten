@@ -3,7 +3,7 @@ import { TagInput } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Form/TagInput',
+  title: 'Forms/Inputs/TagInput',
   component: TagInput,
   parameters: {
     docs: {

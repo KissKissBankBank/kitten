@@ -56,7 +56,7 @@ const args = {
 
 export default {
   component: SummaryCard,
-  title: 'Molecules/Cards/SummaryCard',
+  title: 'Structure/Cards/SummaryCard',
   parameters: {
     component: SummaryCard,
   },

@@ -109,7 +109,7 @@ const argTypes = {
 
 export default {
   component: DocumentManager,
-  title: 'Molecules/Upload/DocumentManager',
+  title: 'Interaction/Upload/DocumentManager',
   parameters: {
     docs: {
       page: () => (

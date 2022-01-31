@@ -3,7 +3,7 @@ import { FloatingMenu } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Organisms/FloatingMenu',
+  title: 'Navigation/FloatingMenu',
   component: FloatingMenu,
   parameters: {
     docs: {

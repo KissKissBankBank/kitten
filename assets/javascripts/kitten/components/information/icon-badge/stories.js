@@ -4,7 +4,7 @@ import { StarIcon, COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/IconBadge',
+  title: 'Information/IconBadge',
   component: IconBadge,
   parameters: {
     docs: {

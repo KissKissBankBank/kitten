@@ -2,10 +2,10 @@
 
 exports[`<BackerCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gRWzMW"
+  className="sc-htpNat NvylU"
 >
   <div
-    className="sc-bdvvtL bFaRXD"
+    className="sc-bdVaJa eYYfEq"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
@@ -14,10 +14,10 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="sc-bdvvtL kDDJrJ"
+    className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="sc-gsDKAQ dtksTK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-eCImPb bXGXzj"
+      className="sc-bwzfXH bYGDhL k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX vzBGi"
     >
       <img
         alt=""
@@ -27,7 +27,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="sc-bdvvtL jMBxLn"
+    className="sc-bdVaJa cfvEqV"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
@@ -40,27 +40,27 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 
 exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gRWzMW"
+  className="sc-htpNat NvylU"
 >
   <div
-    className="sc-bdvvtL bFaRXD"
+    className="sc-bdVaJa eYYfEq"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
     >
       Backer name
       <span
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-hKwDye lnIyHp"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-bxivhb cATKsk"
       >
         Subtitle
       </span>
     </span>
   </div>
   <div
-    className="sc-bdvvtL kDDJrJ"
+    className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="sc-gsDKAQ dtksTK k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-eCImPb bXGXzj"
+      className="sc-bwzfXH bYGDhL k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents sc-ifAKCX vzBGi"
     >
       <img
         alt=""
@@ -70,7 +70,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="sc-bdvvtL jMBxLn"
+    className="sc-bdVaJa cfvEqV"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"

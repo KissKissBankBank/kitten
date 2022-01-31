@@ -1,0 +1,48 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs'
+import * as stories from './link-list.stories.js'
+import { LinkList } from './index'
+import { FileUrl } from 'storybook/file-url'
+
+
+<Meta title="Navigation/LinkList" component={LinkList} />
+
+# LinkList
+
+## Source
+
+<FileUrl filepath={__filename} />
+
+## Import
+
+```js
+import { LinkList } from '@kisskissbankbank/kitten'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="SimpleList" story={stories.SimpleList} />
+</Canvas>
+
+#### Default
+
+```js
+<LinkList />
+```
+
+### With Items
+
+```js
+  <LinkList items={ [{ key: …, item: …, href: …, weight: …, }] }/>
+```
+
+
+### With Dark Background
+
+<Canvas>
+  <Story name="WithDarkBackground" story={stories.WithDarkBackground} />
+</Canvas>
+
+```js
+  <LinkList color="…" />
+ ```

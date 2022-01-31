@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Default,
-  title: 'Molecules/Cards/ClickableCard',
+  title: 'Structure/Cards/ClickableCard',
   parameters: {
     docs: {
       page: () => (

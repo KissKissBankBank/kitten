@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: HorizontalTimeline,
-  title: 'Organisms/HorizontalTimeline',
+  title: 'Feedback/HorizontalTimeline',
   parameters: {
     docs: {
       page: () => (

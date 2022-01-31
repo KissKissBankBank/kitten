@@ -3,7 +3,7 @@ import { StepperIcon } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/StepperIcon',
+  title: 'Interaction/StepperIcon',
   component: StepperIcon,
   parameters: {
     docs: {

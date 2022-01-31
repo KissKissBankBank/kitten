@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TitleWithStroke,
-  title: 'Atoms/Typography/TitleWithStroke',
+  title: 'Typography/TitleWithStroke',
   parameters: {
     docs: {
       page: () => (

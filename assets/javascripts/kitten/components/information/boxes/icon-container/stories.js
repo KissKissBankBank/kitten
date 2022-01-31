@@ -4,7 +4,7 @@ import { CheckedCircleIcon, COLORS, Text } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Boxes/IconContainer',
+  title: 'Information/Boxes/IconContainer',
   component: IconContainer,
   parameters: {
     docs: {

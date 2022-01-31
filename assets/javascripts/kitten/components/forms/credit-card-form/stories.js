@@ -4,7 +4,7 @@ import { DefaultExample, CustomExample } from './examples'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Form/CreditCardForm',
+  title: 'FormsCreditCardForm',
   component: CreditCardForm,
   parameters: {
     docs: {

@@ -2,20 +2,20 @@
 
 exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL kWHSEY sc-gsDKAQ jozYjE"
+  className="sc-bdVaJa mTdHm sc-bwzfXH hWGVlc"
 >
   <div
-    className="sc-dkPtRN kmaGku"
+    className="sc-htpNat dTIKuu"
   />
 </div>
 `;
 
 exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL kWHSEY sc-gsDKAQ jozYjE"
+  className="sc-bdVaJa mTdHm sc-bwzfXH hWGVlc"
 >
   <div
-    className="sc-dkPtRN kmaGku"
+    className="sc-htpNat dTIKuu"
   >
     <nav>
       <ul>
@@ -37,10 +37,10 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sc-bdvvtL kWeqQD sc-gsDKAQ jozYjE custom__class"
+  className="sc-bdVaJa qHGnQ sc-bwzfXH hWGVlc custom__class"
 >
   <div
-    className="sc-dkPtRN kXQsEB"
+    className="sc-htpNat bEOKkq"
   />
 </div>
 `;

@@ -4,7 +4,7 @@ import { Text, COLORS } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Boxes/ArrowContainer',
+  title: 'Information/Boxes/ArrowContainer',
   component: ArrowContainer,
   parameters: {
     docs: {

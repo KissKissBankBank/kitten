@@ -12,7 +12,7 @@ const handleCloseClick = () => window.dispatchEvent(new Event(CLOSE_EVENT))
 const handleOpenClick = () => window.dispatchEvent(new Event(OPEN_EVENT))
 
 export default {
-  title: 'Molecules/Overlay',
+  title: 'Overlay/Overlay',
   component: Overlay,
   parameters: {
     docs: {

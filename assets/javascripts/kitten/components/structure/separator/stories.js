@@ -3,7 +3,7 @@ import { Separator } from './'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/Separator',
+  title: 'Structure/Separator',
   component: Separator,
   parameters: {
     docs: {

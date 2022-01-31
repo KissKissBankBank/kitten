@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ProgressRing,
-  title: 'Atoms/ProgressRing',
+  title: 'Feedback/ProgressRing',
   parameters: {
     component: ProgressRing,
     docs: {

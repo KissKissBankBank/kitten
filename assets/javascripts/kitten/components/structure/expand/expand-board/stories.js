@@ -15,7 +15,7 @@ const Styles = styled.div`
 
 export default {
   component: ExpandBoard,
-  title: 'Molecules/Expand/ExpandBoard',
+  title: 'Structure/Expand/ExpandBoard',
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="ExpandBoard" />,

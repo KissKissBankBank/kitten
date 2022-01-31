@@ -194,7 +194,7 @@ export const ModifierMetrics = () => (
 
 export default {
   component: Title,
-  title: 'Atoms/Typography/Title',
+  title: 'Typography/Title',
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="Title" />,

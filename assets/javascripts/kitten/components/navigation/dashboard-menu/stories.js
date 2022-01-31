@@ -27,7 +27,7 @@ import { action } from '@storybook/addon-actions'
 import styled from 'styled-components'
 
 export default {
-  title: 'Organisms/DashboardMenu',
+  title: 'Navigation/DashboardMenu',
   component: DashboardMenu,
   parameters: {
     docs: {

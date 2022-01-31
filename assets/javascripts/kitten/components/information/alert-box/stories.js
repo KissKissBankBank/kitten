@@ -4,7 +4,7 @@ import { DocsPage } from 'storybook/docs-page'
 import { ThumbUpIconNext } from 'kitten'
 
 export default {
-  title: 'Molecules/AlertBox',
+  title: 'Information/AlertBox',
   component: AlertBox,
   parameters: {
     docs: {

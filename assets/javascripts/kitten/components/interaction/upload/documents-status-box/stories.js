@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 export default {
   component: DocumentsStatusBox,
-  title: 'Molecules/Upload/DocumentsStatusBox',
+  title: 'Interaction/Upload/DocumentsStatusBox',
   parameters: {
     docs: {
       page: () => (

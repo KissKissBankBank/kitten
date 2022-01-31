@@ -3,7 +3,7 @@ import { VerticalStroke } from './'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/VerticalStroke',
+  title: 'Typography/VerticalStroke',
   component: VerticalStroke,
   parameters: {
     docs: {

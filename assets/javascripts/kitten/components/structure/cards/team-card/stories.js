@@ -4,7 +4,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TeamCard,
-  title: 'Molecules/Cards/TeamCard',
+  title: 'Structure/Cards/TeamCard',
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="TeamCard" />,

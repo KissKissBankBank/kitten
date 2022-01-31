@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Expand/DropdownMenu',
+  title: 'Structure/Expand/DropdownMenu',
   component: DropdownMenu,
   parameters: {
     docs: {

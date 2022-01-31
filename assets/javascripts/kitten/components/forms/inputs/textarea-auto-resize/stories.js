@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TextareaAutoResize,
-  title: 'Form/TextareaAutoResize',
+  title: 'Forms/Inputs/TextareaAutoResize',
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">

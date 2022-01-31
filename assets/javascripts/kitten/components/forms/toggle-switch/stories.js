@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: ToggleSwitch,
-  title: 'Form/ToggleSwitch',
+  title: 'Forms/ToggleSwitch',
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">

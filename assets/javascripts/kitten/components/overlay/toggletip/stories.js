@@ -4,7 +4,7 @@ import COLORS from '../../../constants/colors-config'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Toggletip',
+  title: 'Overlay/Toggletip',
   component: Toggletip,
   parameters: {
     docs: {

@@ -19,7 +19,7 @@ const argTypes = {
 }
 
 export default {
-  title: 'Molecules/Buttons/ButtonWithTooltip',
+  title: 'Actions/ButtonWithTooltip',
   component: ButtonWithTooltip,
   parameters: {
     docs: {

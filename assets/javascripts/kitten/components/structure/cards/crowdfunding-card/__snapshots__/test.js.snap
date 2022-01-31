@@ -320,8 +320,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
@@ -495,10 +495,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     -ms-flex-align: center;
     align-items: center;
   }
-}
-
-@media (min-width:67.5rem) {
-
 }
 
 <div
@@ -1079,8 +1075,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
@@ -1306,10 +1302,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     -ms-flex-align: center;
     align-items: center;
   }
-}
-
-@media (min-width:67.5rem) {
-
 }
 
 <div
@@ -1842,8 +1834,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
@@ -2603,8 +2595,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
@@ -2830,10 +2822,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     -ms-flex-align: center;
     align-items: center;
   }
-}
-
-@media (min-width:67.5rem) {
-
 }
 
 <div

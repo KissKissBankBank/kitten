@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Form/RangeSlider',
+  title: 'Forms/RangeSlider',
   component: RangeSlider,
   decorators: [
     story => (

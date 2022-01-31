@@ -3,7 +3,7 @@ import { InformationBox } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Boxes/InformationBox',
+  title: 'Information/Boxes/InformationBox',
   component: InformationBox,
   parameters: {
     docs: {

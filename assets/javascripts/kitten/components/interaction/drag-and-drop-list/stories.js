@@ -14,7 +14,7 @@ import {
 } from 'kitten'
 
 export default {
-  title: 'Molecules/DragAndDropList',
+  title: 'Interaction/DragAndDropList',
   component: DragAndDropList,
   decorators: [story => <div className="story-Container">{story()}</div>],
   parameters: {

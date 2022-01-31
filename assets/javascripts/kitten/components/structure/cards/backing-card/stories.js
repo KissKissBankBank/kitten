@@ -41,7 +41,7 @@ const args = {
 }
 
 export default {
-  title: 'Molecules/Cards/BackingCard',
+  title: 'Structure/Cards/BackingCard',
   component: BackingCard,
   parameters: {
     docs: {

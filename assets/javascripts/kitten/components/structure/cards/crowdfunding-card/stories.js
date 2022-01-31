@@ -74,7 +74,7 @@ const argTypes = {
 
 export default {
   component: CrowdfundingCard,
-  title: 'Molecules/Cards/CrowdfundingCard',
+  title: 'Structure/Cards/CrowdfundingCard',
   parameters: {
     docs: {
       page: () => (

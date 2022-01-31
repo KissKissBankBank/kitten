@@ -4,7 +4,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: EngagementCardWithImage,
-  title: 'Molecules/Cards/EngagementCardWithImage',
+  title: 'Structure/Cards/EngagementCardWithImage',
   parameters: {
     docs: {
       page: () => (

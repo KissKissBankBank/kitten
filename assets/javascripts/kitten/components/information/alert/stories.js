@@ -6,7 +6,7 @@ import { DocsPage } from 'storybook/docs-page'
 import { CrossIconNext, COLORS } from 'kitten'
 
 export default {
-  title: 'Molecules/Alert',
+  title: 'Information/Alert',
   component: Alert,
   decorators: [withDesign],
   parameters: {

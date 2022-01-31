@@ -16,7 +16,7 @@ const ExampleText = styled(Text)`
 `
 
 export default {
-  title: 'Molecules/List',
+  title: 'Structure/List',
   component: List,
   parameters: {
     docs: {

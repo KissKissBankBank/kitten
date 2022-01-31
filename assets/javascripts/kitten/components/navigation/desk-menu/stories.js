@@ -4,7 +4,7 @@ import { DocsPage } from 'storybook/docs-page'
 import { Text } from 'kitten'
 
 export default {
-  title: 'Organisms/DeskMenu',
+  title: 'Navigation/DeskMenu',
   component: DeskMenu,
   parameters: {
     docs: {

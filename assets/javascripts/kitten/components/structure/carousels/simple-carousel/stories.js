@@ -4,7 +4,7 @@ import { Marger, Title, Paragraph, HorizontalStroke, Button } from '../../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Carousels/SimpleCarousel',
+  title: 'Structure/Carousels/SimpleCarousel',
   component: SimpleCarousel,
   parameters: {
     docs: {

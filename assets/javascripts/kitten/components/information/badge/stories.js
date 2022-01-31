@@ -4,7 +4,7 @@ import { COLORS } from '../../..'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Atoms/Badge',
+  title: 'Information/Badge',
   component: Badge,
   parameters: {
     docs: {

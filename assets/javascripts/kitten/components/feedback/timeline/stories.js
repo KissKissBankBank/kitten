@@ -4,7 +4,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: Timeline,
-  title: 'Organisms/Timeline',
+  title: 'Feedback/Timeline',
   parameters: {
     docs: {
       page: () => <DocsPage filepath={__filename} importString="Timeline" />,

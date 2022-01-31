@@ -3,7 +3,7 @@ import { DocLinkBox } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Boxes/DocLinkBox',
+  title: 'Information/Boxes/DocLinkBox',
   component: DocLinkBox,
   parameters: {
     docs: {

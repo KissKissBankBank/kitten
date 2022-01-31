@@ -4,7 +4,7 @@ import { DocsPage } from 'storybook/docs-page'
 import { buttonModifiers } from '../../../actions/button'
 
 export default {
-  title: 'Molecules/TextCopy',
+  title: 'Forms/TextCopy',
   component: TextCopy,
   parameters: {
     docs: {

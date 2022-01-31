@@ -4,7 +4,7 @@ import { HeartIconNext } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Molecules/Buttons/TextButton',
+  title: 'Actions/TextButton',
   component: TextButton,
   parameters: {
     docs: {
