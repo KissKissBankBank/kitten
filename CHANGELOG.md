@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Organisation: Update organization of files such as :
+- Organization: Update organization of files such as :
   - `Documentation`,
   - `Helpers`,
   - `Tokens`,
