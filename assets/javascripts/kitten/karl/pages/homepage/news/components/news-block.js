@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
-import COLORS from '../../../../../constants/colors-config'
-import TYPOGRAPHY from '../../../../../constants/typography-config'
-import { ScreenConfig } from '../../../../../constants/screen-config'
 import {
+  pxToRem,
+  stepToRem,
+  COLORS,
+  TYPOGRAPHY,
+  ScreenConfig,
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
-} from '../../../../../constants/grid-config'
+} from 'kitten'
 
 const gridGapThin = pxToRem(10)
 const gridGapMedium = pxToRem(20)

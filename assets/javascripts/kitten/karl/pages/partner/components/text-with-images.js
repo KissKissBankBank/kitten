@@ -1,13 +1,16 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../layout/marger'
-import { Container } from '../../../../layout/container'
-import { Grid, GridCol } from '../../../../layout/grid'
-import { Title } from '../../../../typography/title'
-import { Text } from '../../../../typography/text'
-import { Button } from '../../../../actions/button'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Text,
+  Button,
+  pxToRem,
+  ScreenConfig,
+} from 'kitten'
 
 const StyledGrid = styled.div`
   display: grid;

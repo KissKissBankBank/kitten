@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Button from './button'
-import { Details } from '../../../structure/expand/details'
-import { ParagraphIcon } from '../../../graphics/icons/paragraph-icon'
-import { Title1Icon } from '../../../graphics/icons/title-1-icon'
-import { Title2Icon } from '../../../graphics/icons/title-2-icon'
-import { Title3Icon } from '../../../graphics/icons/title-3-icon'
-import { Title4Icon } from '../../../graphics/icons/title-4-icon'
-import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import { pxToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
+import {
+  Details,
+  ParagraphIcon,
+  Title1Icon,
+  Title2Icon,
+  Title3Icon,
+  Title4Icon,
+  ArrowIcon,
+  pxToRem,
+  COLORS,
+} from 'kitten'
 
 const List = styled.ul`
   position: absolute;

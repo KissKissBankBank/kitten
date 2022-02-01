@@ -7,14 +7,14 @@ import TimelineSection from './timeline-section'
 import TipsSection from './tips/tips-section'
 import CarouselSection from './carousel-section'
 import PartnersSection from './partners-section'
-
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import {
+  pxToRem,
+  stepToRem,
+  ScreenConfig,
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
-} from '../../../../constants/grid-config'
-import COLORS from '../../../../constants/colors-config'
+  COLORS,
+ } from 'kitten'
 
 const StyledPreDeposit = styled.div`
   .PreDeposit__header {

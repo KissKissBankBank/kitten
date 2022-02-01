@@ -1,7 +1,10 @@
 import React from 'react'
-import { Container } from '../../../layout/container'
-import { Grid, GridCol } from '../../../layout/grid'
-import { Marger } from '../../../layout/marger'
+import {
+  Container,
+  Grid,
+  GridCol,
+  Marger,
+} from 'kitten'
 
 const Layout = ({ children }) => {
   return (

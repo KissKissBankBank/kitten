@@ -1,13 +1,21 @@
 import React, { memo, Fragment } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../layout/marger'
-import { Container } from '../../../../layout/container'
-import { Title } from '../../../../typography/title'
-import { Text } from '../../../../typography/text'
-import { Button, FLUID } from '../../../../actions/button'
-import { Triptych as KittenTriptych } from '../../../../structure/cards/triptych'
-import { Grid, GridCol } from '../../../../layout/grid'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import {
+  Marger,
+  Container,
+  Title,
+  Text,
+  Triptych as KittenTriptych,
+  Grid,
+  GridCol,
+  ScreenConfig,
+} from 'kitten'
+import {
+  Button,
+  FLUID,
+} from '../../../../components/actions/button'
+
+
 
 const StyledButton = styled(props => <Button as="a" {...props} />)`
   @media (max-width: ${ScreenConfig.XS.max}px) {

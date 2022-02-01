@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '../../../actions/button'
-import { ICON } from '../../../actions/button/standalone-styles'
-import { modifierStyles } from '../../../actions/button/helpers/modifier-styles'
-import COLORS from '../../../constants/colors-config'
+import {
+  Button,
+  COLORS,
+} from 'kitten'
+import { ICON } from '../../../components/actions/button/standalone-styles'
+import { modifierStyles } from '../../../components/actions/button/helpers/modifier-styles'
 
 export default styled(({ tag, ...props }) => (
   <Button fit="icon" as={tag} {...props} />

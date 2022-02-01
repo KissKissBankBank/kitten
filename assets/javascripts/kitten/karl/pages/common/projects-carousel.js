@@ -1,22 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container } from '../../../layout/container'
-import { Grid, GridCol } from '../../../layout/grid'
-import { Marger } from '../../../layout/marger'
-import { Title } from '../../../typography/title'
-import { Text } from '../../../typography/text'
-import { HorizontalStroke } from '../../../typography/horizontal-stroke'
-import { Button } from '../../../actions/button'
-import { Carousel } from '../../../structure/carousels/carousel'
-import { ScreenConfig, SCREEN_SIZE_M } from '../../../constants/screen-config'
 import {
+  Container,
+  Grid,
+  GridCol,
+  Marger,
+  Title,
+  Text,
+  HorizontalStroke,
+  Button,
+  Carousel,
+  ScreenConfig,
+  SCREEN_SIZE_M,
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
-import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import { CrowdfundingCard } from '../../../structure/cards/crowdfunding-card'
-import { withMediaQueries } from '../../../hoc/media-queries'
-import { pxToRem } from '../../../helpers/utils/typography'
+  ArrowIcon,
+  CrowdfundingCard,
+  withMediaQueries,
+  pxToRem,
+} from 'kitten'
 import styled from 'styled-components'
 
 const StyledThanks = styled.div`

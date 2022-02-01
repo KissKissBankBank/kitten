@@ -1,16 +1,19 @@
 import React from 'react'
-import { Container } from '../../../../layout/container'
-import { Grid, GridCol } from '../../../../layout/grid'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { Title } from '../../../../typography/title'
-import { Text } from '../../../../typography/text'
-import { Marger } from '../../../../layout/marger'
-import { HorizontalStroke } from '../../../../typography/horizontal-stroke'
-import { Field } from '../../../../forms/field'
-import { Checkbox } from '../../../../forms/checkbox'
-import { Button } from '../../../../actions/button'
-import COLORS from '../../../../constants/colors-config'
 import styled from 'styled-components'
+import {
+  Container,
+  Grid,
+  GridCol,
+  ScreenConfig,
+  Title,
+  Text,
+  Marger,
+  HorizontalStroke,
+  Field,
+  Checkbox,
+  Button,
+  COLORS,
+} from 'kitten'
 
 const StyledBackground = styled.div`
   min-height: 100vh;

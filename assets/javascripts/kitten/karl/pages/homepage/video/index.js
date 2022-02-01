@@ -12,7 +12,7 @@ import {
   EmbedPlayer,
   Grid,
   GridCol,
-} from '../../../..'
+} from 'kitten'
 
 const StyledVideo = styled(Grid)`
   align-items: center;

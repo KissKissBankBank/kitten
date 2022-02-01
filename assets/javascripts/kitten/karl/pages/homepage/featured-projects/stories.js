@@ -1,9 +1,12 @@
 import React from 'react'
 import { FeaturedProjects } from './index'
-import { Container } from '../../../../layout/container'
+import {
+  Container,
+  stepToRem,
+  pxToRem,
+  ScreenConfig
+} from 'kitten'
 import styled from 'styled-components'
-import { stepToRem, pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledContainer = styled(Container)`
   margin-top: 1rem;

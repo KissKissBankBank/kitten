@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
-import { GarbageIcon } from '../../../../graphics/icons/garbage-icon'
-import { EditIcon } from '../../../../graphics/icons/edit-icon'
-import { ButtonIcon } from '../../../../actions/button-icon'
-import { Title } from '../../../../typography/title'
-import { Text } from '../../../../typography/text'
-import { Button } from '../../../../actions/button'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import {
+  pxToRem,
+  COLORS,
+  GarbageIcon,
+  EditIcon,
+  ButtonIcon,
+  Title,
+  Text,
+  Button,
+  ScreenConfig,
+} from 'kitten'
 
 const borderWidth = 2
 const wrapperPadding = 30

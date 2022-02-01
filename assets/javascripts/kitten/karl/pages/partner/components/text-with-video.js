@@ -11,15 +11,15 @@ import {
   Button,
   Video,
   Loader,
-} from '../../../../index'
-import { DEFAULT, BIG } from '../../../../horizontal-stroke'
-import { FLUID } from '../../../../actions/button/standalone-styles'
+  pxToRem,
+  ScreenConfig,
+} from 'kitten'
+import { DEFAULT, BIG } from '../../../../components/typography/horizontal-stroke'
+import { FLUID } from '../../../../components/actions/button/standalone-styles'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
 } from '../../../../constants/grid-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledGrid = styled(Grid)`
   align-items: center;

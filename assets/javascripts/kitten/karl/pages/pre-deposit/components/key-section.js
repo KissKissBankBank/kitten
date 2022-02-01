@@ -1,11 +1,14 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../layout/grid'
-import { Container } from '../../../../layout/container'
-import { Marger } from '../../../../layout/marger'
-import { TitleWithStroke } from '../../../../typography/title-with-stroke'
-import { Text } from '../../../../typography/text'
-import { BulletList } from '../../../../structure/bullet-list'
-import { Button } from '../../../../actions/button'
+import {
+  Grid,
+  GridCol,
+  Container,
+  Marger,
+  TitleWithStroke,
+  Text,
+  BulletList,
+  Button,
+} from 'kitten'
 
 const KeySection = () => (
   <Container className="PreDeposit__keySection">

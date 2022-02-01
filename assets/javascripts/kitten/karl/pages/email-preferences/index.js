@@ -1,12 +1,12 @@
 import React from 'react'
 import HorizontalCard from './components/horizontal-card'
-
-import { Container } from '../../../layout/container'
-import { Title } from '../../../typography/title'
-import { Text } from '../../../typography/text'
-import { ToggleSwitch } from '../../../forms/toggle-switch'
-import COLORS from '../../../constants/colors-config'
-
+import {
+  Container,
+  Title,
+  Text,
+  ToggleSwitch,
+  COLORS,
+} from 'kitten'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`

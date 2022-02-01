@@ -4,17 +4,19 @@ import Toolbar from './components/toolbar'
 import Actions from './components/actions'
 import Button from './components/button'
 import TagList from './components/tag-list'
-import { BoldIcon } from '../../graphics/icons/bold-icon'
-import { ItalicIcon } from '../../graphics/icons/italic-icon'
-import { BlockquoteIcon } from '../../graphics/icons/blockquote-icon'
-import { ListIcon } from '../../graphics/icons/list-icon'
-import { AlignLeftIcon } from '../../graphics/icons/align-left-icon'
-import { AlignCenterIcon } from '../../graphics/icons/align-center-icon'
-import { AlignRightIcon } from '../../graphics/icons/align-right-icon'
-import { ImageIcon } from '../../graphics/icons/image-icon'
-import { VideoIcon } from '../../graphics/icons/video-icon'
-import { LinkIcon } from '../../graphics/icons/link-icon'
-import { ButtonIcon } from '../../graphics/icons/button-icon'
+import {
+  BoldIcon,
+  ItalicIcon,
+  BlockquoteIcon,
+  ListIcon,
+  AlignLeftIcon,
+  AlignCenterIcon,
+  AlignRightIcon,
+  ImageIcon,
+  VideoIcon,
+  LinkIcon,
+  ButtonIcon
+} from 'kitten'
 
 export default {
   title: 'pages/Editor',

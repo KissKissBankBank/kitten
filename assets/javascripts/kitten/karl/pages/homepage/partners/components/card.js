@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
-import { Title } from '../../../../../typography/title'
-import { Text } from '../../../../../typography/text'
-import { ScreenConfig } from '../../../../../constants/screen-config'
-import { GridCol } from '../../../../../layout/grid'
+import {
+  pxToRem,
+  stepToRem,
+  Title,
+  Text,
+  ScreenConfig,
+  GridCol,
+} from 'kitten'
 import classNames from 'classnames'
 
 const StyledCard = styled.article`

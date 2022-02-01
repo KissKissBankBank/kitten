@@ -1,10 +1,13 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../../layout/grid'
-import { Container } from '../../../../../layout/container'
-import { parseHtml } from '../../../../../helpers/utils/parser'
-import { SimpleCarousel } from '../.././../../../structure/carousels/simple-carousel'
+import { 
+  Grid,
+  GridCol,
+  Container,
+  parseHtml,
+  SimpleCarousel,
+  COLORS,
+} from 'kitten'
 import { Tip } from './tip'
-import COLORS from '../../../../../constants/colors-config'
 
 const tips = [
   {

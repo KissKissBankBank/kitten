@@ -1,17 +1,19 @@
 import React from 'react'
 import NewsCard from './news-card'
 import styled, { css } from 'styled-components'
-import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { HorizontalStroke } from '../../../typography/horizontal-stroke'
-import { Title } from '../../../typography/title'
-import { Paragraph } from '../../../typography/paragraph'
-import { Text } from '../../../typography/text'
-import { Container } from '../../../layout/container'
-import { Button } from '../../../actions/button'
-import { InstrumentTagIcon } from '../../../graphics/icons/instrument-tag-icon'
-import { pxToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
+import {
+  ArrowIcon,
+  ScreenConfig,
+  HorizontalStroke,
+  Title,
+  Paragraph,
+  Text,
+  Container,
+  Button,
+  InstrumentTagIcon,
+  pxToRem,
+  COLORS,
+} from 'kitten'
 
 const Head = styled.div`
   background-color: ${COLORS.primary5};

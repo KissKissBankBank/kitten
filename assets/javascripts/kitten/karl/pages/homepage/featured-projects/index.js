@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
-import { Title } from '../../../../typography/title'
-import { Grid, GridCol } from '../../../../layout/grid'
-import { Carousel } from '../../../../structure/carousels/carousel'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { mediaQueries } from '../../../../hoc/media-queries'
+import {
+  Title,
+  Grid,
+  GridCol,
+  Carousel,
+  pxToRem,
+  ScreenConfig,
+  mediaQueries,
+} from 'kitten'
 
 const StyledFeaturedProjects = styled(Grid)`
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {

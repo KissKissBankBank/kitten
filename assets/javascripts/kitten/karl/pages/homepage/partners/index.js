@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { Title } from '../../../../typography/title'
-import { Carousel } from '../../../../structure/carousels/carousel'
-import { mediaQueries } from '../../../../hoc/media-queries'
-import { Grid, GridCol } from '../../../../layout/grid'
+import {
+  pxToRem,
+  Title,
+  Carousel,
+  mediaQueries,
+  Grid,
+  GridCol,
+} from 'kitten'
 import classNames from 'classnames'
 
 const StyledPartners = styled.div`

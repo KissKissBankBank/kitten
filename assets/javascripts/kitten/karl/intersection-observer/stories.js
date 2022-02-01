@@ -1,9 +1,11 @@
 import React, { useRef } from 'react'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../layout/container'
-import { Grid, GridCol } from '../../layout/grid'
-
-import useIntersectionObserver from '../../helpers/utils/intersection-hook'
+import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  useIntersectionObserver,
+} from 'kitten'
 
 const ObservedComponent = ({ children, ...props }) => {
   const options = {
