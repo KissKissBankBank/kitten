@@ -4,6 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Organisation: Update organization of files such as :
+  - `Documentation`,
+  - `Helpers`,
+  - `Tokens`,
+  - `Accessibility`,
+  - `Layout`,
+  - `Graphics`,
+  - `Typography`,
+  - `Action`,
+  - `Form`,
+  - `Structure`,
+  - `Information`,
+  - `Overlay`,
+  - `Interaction`,
+  - `Feedback`,
+  - `Naviagtion`,
+  - `Pages`.
+
 - Fix: `LocationInput`: Improve styles.
 - Feature: `NavBar`: Add `small` value on `modifier` prop.
 
