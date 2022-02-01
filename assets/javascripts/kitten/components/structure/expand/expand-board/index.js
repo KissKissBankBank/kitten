@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Button } from '../../../actions/button'
+import { Button } from '../../../action/button'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'

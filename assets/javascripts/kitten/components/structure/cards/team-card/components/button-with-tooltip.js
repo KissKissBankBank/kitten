@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from '../../../../actions/button-icon'
+import { ButtonIcon } from '../../../../action/button-icon'
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon'
 import COLORS from '../../../../../constants/colors-config'
 import styled from 'styled-components'

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Button } from '../../../../actions/button'
+import { Button } from '../../../../action/button'
 import { CheckedCircleIcon } from '../../../../graphics/icons/checked-circle-icon'
 import COLORS from '../../../../../constants/colors-config'
 import { Context } from '../context'

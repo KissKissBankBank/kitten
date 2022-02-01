@@ -1,6 +1,6 @@
 import React from 'react'
 import { Details } from './index'
-import { Text } from '../../../..'
+import { Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

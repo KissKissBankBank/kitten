@@ -1,6 +1,6 @@
 import React from 'react'
 import { Toggletip } from './index'
-import COLORS from '../../../constants/colors-config'
+import COLORS from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Comment } from './index'
 import { Text } from 'kitten'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Interaction/CommentBlock/Comment',

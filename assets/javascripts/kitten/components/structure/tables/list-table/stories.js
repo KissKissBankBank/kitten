@@ -12,6 +12,7 @@ import {
   Checkbox,
   DropdownSelect,
 } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 import { ToggleableStory } from './stories/toggleable'
 

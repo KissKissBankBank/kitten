@@ -1,7 +1,8 @@
 import React from 'react'
 import { VerticalCardWithAction } from './index'
 import { action } from '@storybook/addon-actions'
-import { buttonModifiers } from '../../../actions/button'
+import { buttonModifiers } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Structure/Cards/VerticalCardWithAction',

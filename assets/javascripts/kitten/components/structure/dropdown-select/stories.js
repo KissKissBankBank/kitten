@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { DropdownSelect } from './index'
-import { Button } from '../../../index'
-import { ArrowIcon } from '../../graphics/icons/arrow-icon'
-import { Text } from '../../typography/text'
+import { Button, ArrowIcon, Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

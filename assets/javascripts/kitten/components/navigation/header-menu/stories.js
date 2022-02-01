@@ -1,6 +1,6 @@
 import React from 'react'
 import { HeaderMenu } from './index'
-import { LendopolisLogo } from '../../../'
+import { LendopolisLogo } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

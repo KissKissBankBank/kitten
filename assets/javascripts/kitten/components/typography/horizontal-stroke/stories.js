@@ -1,6 +1,7 @@
 import React from 'react'
-import { COLORS } from '../../..'
+import { COLORS } from 'kitten'
 import { HorizontalStroke } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: HorizontalStroke,

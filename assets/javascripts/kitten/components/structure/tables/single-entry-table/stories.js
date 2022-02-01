@@ -1,5 +1,6 @@
 import React from 'react'
 import { SingleEntryTable } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Structure/Tables/SingleEntryTable',

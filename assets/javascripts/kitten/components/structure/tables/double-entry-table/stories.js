@@ -1,5 +1,6 @@
 import React from 'react'
 import { DoubleEntryTable } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Structure/Tables/DoubleEntryTable',

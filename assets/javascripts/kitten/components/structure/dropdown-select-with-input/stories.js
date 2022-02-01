@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { DropdownSelectWithInput } from './index'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 import {
   FlexWrapper,
@@ -10,8 +11,7 @@ import {
   InstagramIcon,
   YoutubeIcon,
   GlobeIcon,
-} from '../../..'
-import { DocsPage } from 'storybook/docs-page'
+} from 'kitten'
 
 export default {
   component: DropdownSelectWithInput,

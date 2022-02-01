@@ -1,5 +1,6 @@
 import React from 'react'
 import { SupTitle } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: SupTitle,

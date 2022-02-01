@@ -8,7 +8,8 @@ import {
   MixIllustration,
   PhoneIllustration,
   COLORS,
-} from '../../../..'
+} from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Structure/Cards/EngagementCard',

@@ -1,6 +1,6 @@
 import React from 'react'
 import { HorizontalTimeline } from './index'
-import { ScrollableContainer, Text, Grid, GridCol } from '../../..'
+import { ScrollableContainer, Text, Grid, GridCol } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

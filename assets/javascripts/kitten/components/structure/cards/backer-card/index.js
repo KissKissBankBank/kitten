@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Marger } from '../../../layout/marger'
 import { Text } from '../../../typography/text'
-import { ButtonImage } from '../../../actions/button-image'
+import { ButtonImage } from '../../../action/button-image'
 
 const StyledCard = styled.div`
   padding: 0 ${pxToRem(20)};

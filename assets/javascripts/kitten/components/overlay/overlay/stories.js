@@ -1,6 +1,6 @@
 import React from 'react'
 import { Overlay } from './index'
-import { Button } from '../../..'
+import { Button } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const TOGGLE_EVENT = 'event:toggle'

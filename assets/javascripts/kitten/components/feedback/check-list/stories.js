@@ -1,5 +1,6 @@
 import React from 'react'
 import { CheckList } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: CheckList,

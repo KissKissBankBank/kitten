@@ -1,5 +1,6 @@
 import React from 'react'
 import { AdaptableGrid, AdaptableGridCol } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: AdaptableGrid,

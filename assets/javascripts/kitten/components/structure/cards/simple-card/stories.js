@@ -1,7 +1,7 @@
 import React from 'react'
 import { SimpleCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import { COLORS } from '../../../..'
+import { COLORS } from 'kitten'
 
 const argTypes = {
   imageProps: { control: 'object' },

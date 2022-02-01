@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavTabCarousel } from './index'
-import { COLORS } from '../../../..'
+import { COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

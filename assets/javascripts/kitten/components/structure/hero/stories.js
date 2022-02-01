@@ -1,5 +1,5 @@
 import React from 'react'
-import { COLORS } from '../../..'
+import { COLORS } from 'kitten'
 import { Hero } from './index'
 import { DocsPage } from 'storybook/docs-page'
 

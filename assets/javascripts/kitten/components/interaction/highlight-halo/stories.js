@@ -1,6 +1,6 @@
 import React from 'react'
 import { HighlightHalo } from './index'
-import { COLORS } from '../../..'
+import { COLORS } from 'kitten'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 

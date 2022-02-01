@@ -15,7 +15,7 @@ import {
   ScreenConfig,
 } from 'kitten'
 import { DEFAULT, BIG } from '../../../../components/typography/horizontal-stroke'
-import { FLUID } from '../../../../components/actions/button/standalone-styles'
+import { FLUID } from '../../../../components/action/button/standalone-styles'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,

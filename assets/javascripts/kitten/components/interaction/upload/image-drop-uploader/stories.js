@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ImageDropUploader } from './index'
-import { BackingCard, Grid, GridCol, Tag } from '../../../..'
+import { BackingCard, Grid, GridCol, Tag } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

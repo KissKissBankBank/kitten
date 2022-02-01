@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button } from '../../../../actions/button'
+import { Button } from '../../../../action/button'
 
 const CardButton = ({ text, loading }) => (
   <div className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer">

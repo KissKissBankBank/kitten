@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Interactions/CommentBlock/CommentForm',
+  title: 'Interaction/CommentBlock/CommentForm',
   component: CommentForm,
   decorators: [
     story => (

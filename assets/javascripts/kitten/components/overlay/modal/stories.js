@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Title, Paragraph, Modal, Marger } from '../../..'
+import { Button, Title, Paragraph, Modal, Marger } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const paragraphContainer = `

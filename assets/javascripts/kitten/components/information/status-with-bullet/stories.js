@@ -1,5 +1,6 @@
 import React from 'react'
 import { StatusWithBullet } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: StatusWithBullet,

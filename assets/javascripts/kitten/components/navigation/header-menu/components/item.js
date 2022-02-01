@@ -7,7 +7,7 @@ import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import {
   Button,
   buttonModifiers,
-} from '../../../actions/button'
+} from '../../../action/button'
 
 export const Item = ({
   children,

@@ -1,6 +1,7 @@
 import React from 'react'
 import { IconList } from './index'
-import { Text, LockIcon } from '../../..'
+import { Text, LockIcon } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: IconList,

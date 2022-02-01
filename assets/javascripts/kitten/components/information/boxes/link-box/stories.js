@@ -1,6 +1,6 @@
 import React from 'react'
 import { LinkBox } from './index'
-import { FlashCircleIcon, Text, COLORS } from '../../../..'
+import { FlashCircleIcon, Text, COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

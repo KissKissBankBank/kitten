@@ -1,7 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
-import { COLORS, EllipsisIcon } from '../../../..'
+import { COLORS, EllipsisIcon } from 'kitten'
 import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
 

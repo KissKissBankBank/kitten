@@ -1,6 +1,6 @@
 import React from 'react'
 import { Triptych } from './index'
-import { VerticalCardWithAction, Title } from '../../../..'
+import { VerticalCardWithAction, Title } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

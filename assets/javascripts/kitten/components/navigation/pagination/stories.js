@@ -1,6 +1,7 @@
 import React from 'react'
 import { Pagination } from './index'
 import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Navigation/Pagination',

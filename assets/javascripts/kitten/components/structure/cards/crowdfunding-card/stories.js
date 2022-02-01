@@ -1,6 +1,6 @@
 import React from 'react'
 import { CrowdfundingCard } from './index'
-import { Text, parseHtml } from '../../../..'
+import { Text, parseHtml } from 'kitten'
 import { STATE_CHOICES } from './stories/project-state'
 import { DocsPage } from 'storybook/docs-page'
 

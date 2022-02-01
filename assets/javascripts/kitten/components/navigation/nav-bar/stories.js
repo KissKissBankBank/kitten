@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavBar } from './index'
-import { COLORS, ScrollableContainer } from '../../..'
+import { COLORS, ScrollableContainer } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Navigation/NavBar',

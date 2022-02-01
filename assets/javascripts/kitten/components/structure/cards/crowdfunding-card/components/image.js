@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '../../../../typography/text'
-import { ButtonImage } from '../../../../actions/button-image'
+import { ButtonImage } from '../../../../action/button-image'
 import COLORS from '../../../../../constants/colors-config'
 import classNames from 'classnames'
-import { GifVideo } from '../../../../information/videos/gif-video'
+import { GifVideo } from '../../../../information/gif-video'
 
 const Image = ({
   imageContainerBackground,

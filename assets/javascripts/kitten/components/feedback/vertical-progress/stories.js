@@ -1,6 +1,7 @@
 import React from 'react'
 import { VerticalProgress } from './index'
-import { Text, LinkBox, Button } from '../../..'
+import { Text, LinkBox, Button } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: VerticalProgress,

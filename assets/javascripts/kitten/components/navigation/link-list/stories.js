@@ -1,5 +1,6 @@
 import React from 'react'
 import { LinkList } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: LinkList,

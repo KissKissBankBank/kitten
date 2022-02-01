@@ -1,6 +1,6 @@
 import React from 'react'
 import { IconContainer } from './index'
-import { CheckedCircleIcon, COLORS, Text } from '../../../..'
+import { CheckedCircleIcon, COLORS, Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

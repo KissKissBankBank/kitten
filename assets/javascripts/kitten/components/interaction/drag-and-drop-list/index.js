@@ -27,7 +27,7 @@ import PropTypes from 'prop-types'
 import { createGlobalStyle } from 'styled-components'
 
 import { pxToRem } from '../../../helpers/utils/typography'
-import { Button } from '../../actions/button'
+import { Button } from '../../action/button'
 import { MenuIcon } from '../../graphics/icons/menu-icon'
 
 export const BUTTON_SHIFT = pxToRem(15 + 40)

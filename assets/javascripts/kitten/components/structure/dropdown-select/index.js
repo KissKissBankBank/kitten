@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelect } from 'downshift'
-import { Label } from '../../forms/label'
+import { Label } from '../../form/label'
 import classNames from 'classnames'
 import { WarningCircleIcon } from '../../graphics/icons/warning-circle-icon'
 import { CheckedCircleIcon } from '../../graphics/icons/checked-circle-icon'

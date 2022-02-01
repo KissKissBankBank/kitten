@@ -1,6 +1,6 @@
 import React from 'react'
 import { VerticalStepper } from './index'
-import { Text } from '../../..'
+import { Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

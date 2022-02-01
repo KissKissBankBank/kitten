@@ -1,5 +1,6 @@
 import React from 'react'
 import { BulletList } from './index'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: BulletList,

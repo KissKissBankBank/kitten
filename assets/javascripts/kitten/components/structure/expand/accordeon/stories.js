@@ -1,6 +1,6 @@
 import React from 'react'
 import { Accordeon } from './index'
-import { DropdownSelect } from '../../../..'
+import { DropdownSelect } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 

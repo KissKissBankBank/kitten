@@ -1,7 +1,7 @@
 import React from 'react'
 import { VisuallyHidden } from './index'
-import { Button } from '../../actions/button'
-import { HeartIcon } from '../../graphics/icons/heart-icon'
+import { Button, HeartIcon } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: VisuallyHidden,

@@ -8,32 +8,32 @@
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
 
-// Actions
-export { Button } from './components/actions/button'
-export { ButtonIcon } from './components/actions/button-icon'
-export { ButtonGroup } from './components/actions/button-group'
-export { ButtonImage } from './components/actions/button-image'
-export { ButtonQuestionMarkIcon } from './components/actions/button-question-mark-icon'
-export { ButtonWithTooltip } from './components/actions/button-with-tooltip'
-export { CheckableButton } from './components/actions/checkable-button'
-export { CloseButton } from './components/actions/close-button'
+// Action
+export { Button } from './components/action/button'
+export { ButtonIcon } from './components/action/button-icon'
+export { ButtonGroup } from './components/action/button-group'
+export { ButtonImage } from './components/action/button-image'
+export { ButtonQuestionMarkIcon } from './components/action/button-question-mark-icon'
+export { ButtonWithTooltip } from './components/action/button-with-tooltip'
+export { CheckableButton } from './components/action/checkable-button'
+export { CloseButton } from './components/action/close-button'
 export {
   FacebookButtonIconWords,
   TwitterButtonIconWords,
   LinkedinButtonIconWords,
   InstagramButtonIconWords,
-} from './components/actions/social-button-icon-words'
+} from './components/action/social-button-icon-words'
 export {
   FacebookButtonIcon,
   TwitterButtonIcon,
   LinkedinButtonIcon,
   InstagramButtonIcon,
   YoutubeButtonIcon,
-} from './components/actions/social-button-icon'
-export { TagButton } from './components/actions/tag-button'
-export { TextButton } from './components/actions/text-button'
+} from './components/action/social-button-icon'
+export { TagButton } from './components/action/tag-button'
+export { TextButton } from './components/action/text-button'
 
-export { modifierStyles as buttonModifierStyles } from './components/actions/button/helpers/modifier-styles'
+export { modifierStyles as buttonModifierStyles } from './components/action/button/helpers/modifier-styles'
 
 
 // Layout
@@ -55,38 +55,42 @@ export { ScrollableContainer } from './components/layout/scrollable-container'
 export { StickyContainer } from './components/layout/sticky-container'
 export { DevGrid } from './components/layout/dev-grid'
 
-// Forms
+
+// Form
 // ----
 
-export { Autocomplete } from './components/forms/autocomplete'
-export { Checkbox } from './components/forms/checkbox'
-export { CheckboxSet } from './components/forms/checkbox-set'
-export { CreditCardForm } from './components/forms/credit-card-form'
-export { DatePicker } from './components/forms/date-picker'
+export { Autocomplete } from './components/form/autocomplete'
+export { Checkbox } from './components/form/checkbox'
+export { CheckboxSet } from './components/form/checkbox-set'
+export { CreditCardForm } from './components/form/credit-card-form'
+export { DatePicker } from './components/form/date-picker'
+export { Field } from './components/form/field'
+export { FormActions } from './components/form/form-actions'
+export { Label } from './components/form/label'
+export { PillNumberInput } from './components/form/pill-number-input'
+export { RadioButton } from './components/form/radio-button'
+export { RadioButtonSet } from './components/form/radio-button-set'
+export { RangeSlider } from './components/form/range-slider'
+export { ToggleSwitch } from './components/form/toggle-switch'
+export { TextCopy } from './components/form/text-copy'
+export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'
 
-export { Field } from './components/forms/field'
-export { FormActions } from './components/forms/form-actions'
-export { Label } from './components/forms/label'
-export { LocationInput } from './components/forms/inputs/location-input'
-export { ModalFooterInput } from './components/forms/inputs/modal-footer-input'
-export { PasswordInput } from './components/forms/inputs/password-input'
-export { PillNumberInput } from './components/forms/pill-number-input'
-export { RadioButton } from './components/forms/radio-button'
-export { RadioButtonSet } from './components/forms/radio-button-set'
-export { RangeSlider } from './components/forms/range-slider'
-export { StandaloneRangeDatePicker } from './components/forms/standalone-range-date-picker'
-export { TagInput } from './components/forms/inputs/tag-input'
-export { TextareaAutoResize } from './components/forms/inputs/textarea-auto-resize'
-export { TextInput } from './components/forms/inputs/text-input'
-export { TextInputWithButton } from './components/forms/inputs/text-input-with-button'
-export { TextInputWithIcon } from './components/forms/inputs/text-input-with-icon'
-export { TextInputWithLimit } from './components/forms/inputs/text-input-with-limit'
-export { TextInputWithUnit } from './components/forms/inputs/text-input-with-unit'
-export { ToggleSwitch } from './components/forms/toggle-switch'
-export { TextCopy } from './components/forms/text-copy'
+// Form/Input
+export { LocationInput } from './components/form/input/location-input'
+export { ModalFooterInput } from './components/form/input/modal-footer-input'
+export { PasswordInput } from './components/form/input/password-input'
+export { TagInput } from './components/form/input/tag-input'
+export { TextareaAutoResize } from './components/form/input/textarea-auto-resize'
+export { TextInput } from './components/form/input/text-input'
+export { TextInputWithButton } from './components/form/input/text-input-with-button'
+export { TextInputWithIcon } from './components/form/input/text-input-with-icon'
+export { TextInputWithLimit } from './components/form/input/text-input-with-limit'
+export { TextInputWithUnit } from './components/form/input/text-input-with-unit'
 
 
 // Typography
+// ----
+
 export { Paragraph } from './components/typography/paragraph'
 export { SupTitle } from './components/typography/sup-title'
 export { Text } from './components/typography/text'
@@ -108,10 +112,10 @@ export {
 } from './components/typography/horizontal-stroke/common/stroke-modifier-styles'
 
 
-// graphics
+// Graphics
 // --------
 
-// visual/Icons
+// Graphics/Icons
 export { AlignCenterIcon } from './components/graphics/icons/align-center-icon'
 export { AlignLeftIcon } from './components/graphics/icons/align-left-icon'
 export { AlignRightIcon } from './components/graphics/icons/align-right-icon'
@@ -210,7 +214,7 @@ export { PeopleIcon } from './components/graphics/icons/people-icon'
 export { StatsIcon } from './components/graphics/icons/stats-icon'
 export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon'
 
-// graphics/IconsNext
+// Graphics/IconsNext
 export { AirplaneIconNext } from './components/graphics/icons-next/airplane-icon-next'
 export { BankCardIconNext } from './components/graphics/icons-next/bank-card-icon-next'
 export { BubbleIconNext } from './components/graphics/icons-next/bubble-icon-next'
@@ -251,7 +255,7 @@ export { UsersIconNext } from './components/graphics/icons-next/users-icon-next'
 export { WhatsappIconNext } from './components/graphics/icons-next/whatsapp-icon-next'
 export { WindowEditIconNext } from './components/graphics/icons-next/window-edit-icon-next'
 
-// graphics/Illustrations
+// Graphics/Illustrations
 export { LightbulbIllustration } from './components/graphics/illustrations/lightbulb-illustration'
 export { LinkBoxIllustration } from './components/graphics/illustrations/link-box-illustration'
 export { LoudspeakerIllustration } from './components/graphics/illustrations/loudspeaker-illustration'
@@ -260,7 +264,7 @@ export { PhoneIllustration } from './components/graphics/illustrations/phone-ill
 export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'
 export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'
 
-// graphics/Logos
+// Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
 export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark'
@@ -274,7 +278,7 @@ export { YouMatterLogo } from './components/graphics/logos/youmatter'
 
 
 // Structure
-export { BulletList } from './components/structure/bullet-list'
+// --------
 
 // Structure/Cards
 export { BackerCard } from './components/structure/cards/backer-card'
@@ -301,23 +305,20 @@ export { VerticalCardWithAction } from './components/structure/cards/vertical-ca
 export { Carousel } from './components/structure/carousels/carousel'
 export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel'
 export { SimpleCarousel } from './components/structure/carousels/simple-carousel'
-
 export { DropdownPhoneSelect } from './components/structure/dropdown-phone-select'
 export { DropdownSelect } from './components/structure/dropdown-select'
 export { DropdownSelectWithInput } from './components/structure/dropdown-select-with-input'
 
-// Structure/Expand
 export { Accordeon } from './components/structure/expand/accordeon'
 export { Details } from './components/structure/expand/details'
 export { DropdownMenu } from './components/structure/expand/dropdown-menu'
 export { ExpandBoard } from './components/structure/expand/expand-board'
-
 export { Hero } from './components/structure/hero'
 export { InfoLines } from './components/structure/info-lines'
 export { Line } from './components/structure/line'
 export { List } from './components/structure/list'
 export { Separator } from './components/structure/separator'
-
+export { BulletList } from './components/structure/bullet-list'
 
 // Structure/Tables
 export { DoubleEntryTable } from './components/structure/tables/double-entry-table'
@@ -326,6 +327,8 @@ export { SingleEntryTable } from './components/structure/tables/single-entry-tab
 
 
 // Information
+// --------
+
 export { Alert } from './components/information/alert'
 export { AlertBox } from './components/information/alert-box'
 export { AvatarWithTextAndBadge } from './components/information/avatar-with-text-and-badge'
@@ -334,13 +337,8 @@ export { CounterBlock } from './components/information/counter-block'
 export { IconBadge } from './components/information/icon-badge'
 export { StatusWithBullet } from './components/information/status-with-bullet'
 export { Tag } from './components/information/tag'
-
-
-// Information/Videos
-export { Video } from './components/information/videos/video'
-export { GifVideo } from './components/information/videos/gif-video'
-
-
+export { Video } from './components/information/video'
+export { GifVideo } from './components/information/gif-video'
 
 // Information/Boxes
 export { ArrowContainer } from './components/information/boxes/arrow-container'
@@ -351,22 +349,26 @@ export { LinkBox } from './components/information/boxes/link-box'
 
 
 // Overlay
+// --------
+
 export { Modal } from './components/overlay/modal'
 export { Modal as ModalNext } from './components/overlay/modal-next'
 export { Overlay } from './components/overlay/overlay'
 export { Toggletip } from './components/overlay/toggletip'
 
+
 // Interaction
+// --------
 
 // Interaction/CommentBlock
 export { CommentAvatar } from './components/interaction/comment-block/comment-avatar'
 export { CommentForm } from './components/interaction/comment-block/comment-form'
 export { Comment } from './components/interaction/comment-block/comment'
 
+
 export { DragAndDropList } from './components/interaction/drag-and-drop-list'
 export { EmbedPlayer } from './components/interaction/embed/embed-player'
 export { ResponsiveIframeContainer } from './components/interaction/embed/responsive-iframe-container'
-
 export { HighlightHalo } from './components/interaction/highlight-halo'
 export {
   StepperIcon,
@@ -384,6 +386,8 @@ export { DocumentsDropUploader } from './components/interaction/upload/documents
 export { DocumentsStatusBox } from './components/interaction/upload/documents-status-box'
 
 // Feedback
+// --------
+
 export { HorizontalTimeline } from './components/feedback/horizontal-timeline'
 export { IconList } from './components/feedback/icon-list'
 export { KissKissLoadingAnimation } from './components/feedback/kisskiss-loading-animation'
@@ -399,6 +403,8 @@ export { CheckList } from './components/feedback/check-list'
 
 
 // Navigation
+// --------
+
 export { DashboardMenu } from './components/navigation/dashboard-menu'
 export { DeskMenu } from './components/navigation/desk-menu'
 export { FloatingMenu } from './components/navigation/floating-menu'
@@ -463,7 +469,7 @@ export {
   ICON_BIG as BUTTON_STYLE_ICON_BIG,
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
-} from './components/actions/button/standalone-styles'
+} from './components/action/button/standalone-styles'
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/structure/carousels/carousel/styles'
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,

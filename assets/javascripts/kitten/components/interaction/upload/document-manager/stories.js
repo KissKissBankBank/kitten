@@ -6,7 +6,7 @@ import {
   DocumentIconHouse,
   DocumentIconPerson,
   usePrevious,
-} from '../../../..'
+} from 'kitten'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 

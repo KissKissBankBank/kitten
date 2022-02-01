@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import { StickyContainer } from './index'
-import { COLORS, createRangeFromZeroTo } from '../../..'
-
+import { COLORS, createRangeFromZeroTo } from 'kitten'
 
 export default {
   component: StickyContainer,

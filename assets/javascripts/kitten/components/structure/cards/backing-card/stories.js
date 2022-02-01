@@ -13,7 +13,7 @@ import {
   GifVideo,
   useMedia,
   getMinQuery,
-} from '../../../..'
+} from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const StyledCarouselContainer = styled.div`

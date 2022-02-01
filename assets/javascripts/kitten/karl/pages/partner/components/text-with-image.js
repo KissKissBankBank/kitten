@@ -16,7 +16,7 @@ import {
   FLUID,
   DEFAULT,
   BIG,
-} from '../../../../components/actions/button/standalone-styles'
+} from '../../../../components/action/button/standalone-styles'
 
 const StyledGrid = styled(Grid)`
   align-items: center;

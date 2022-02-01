@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { TextInputWithButton } from '../../../forms/inputs/text-input-with-button'
+import { TextInputWithButton } from '../../../form/input/text-input-with-button'
 import { SearchIcon } from '../../../graphics/icons/search-icon'
 import { CrossIcon } from '../../../graphics/icons/cross-icon'
-import { Button } from '../../../actions/button'
+import { Button } from '../../../action/button'
 import { Context } from './context'
 import { useDropdown } from '../hooks/use-dropdown'
 

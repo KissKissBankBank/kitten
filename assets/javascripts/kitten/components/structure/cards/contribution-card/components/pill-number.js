@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { PillNumberInput } from '../../../../forms/pill-number-input'
+import { PillNumberInput } from '../../../../form/pill-number-input'
 
 export const PillNumber = props => {
   return (

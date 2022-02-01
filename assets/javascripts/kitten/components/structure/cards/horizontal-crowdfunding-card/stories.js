@@ -1,5 +1,5 @@
 import React from 'react'
-import { COLORS, ClockCircleIcon, CheckedCircleIcon, Text } from '../../../..'
+import { COLORS, ClockCircleIcon, CheckedCircleIcon, Text } from 'kitten'
 import { HorizontalCrowdfundingCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ClickableCard } from './index'
-import { Text, COLORS } from '../../../..'
+import { Text, COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

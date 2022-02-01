@@ -13,7 +13,7 @@ import {
 import {
   Button,
   FLUID,
-} from '../../../../components/actions/button'
+} from '../../../../components/action/button'
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { IconBadge } from './index'
-import { StarIcon, COLORS } from '../../..'
+import { StarIcon, COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
