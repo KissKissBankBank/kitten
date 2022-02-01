@@ -3,6 +3,8 @@ import classNames from 'classnames'
 import { Text } from '../../../../atoms/typography/text'
 
 export const Info = ({ legend, value, fullWidth = false, ...props }) => {
+  console.warn('This subcomponent is deprecated. Please use another one.')
+
   return (
     <p
       {...props}

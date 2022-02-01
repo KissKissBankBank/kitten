@@ -23,6 +23,7 @@ export const BackingCard = ({
   className,
   disabled,
   hasBorder,
+  stretch,
   ...props
 }) => {
   const imageChild = getReactElementsByType({
@@ -44,6 +45,7 @@ export const BackingCard = ({
       className={classNames('k-BackingCard', className, {
         'k-BackingCard--disabled': disabled,
         'k-BackingCard--hasBorder': hasBorder,
+        'k-BackingCard--isStretched': stretch,
       })}
     >
       {imageChild && cloneElement(imageChild)}
@@ -73,9 +75,11 @@ BackingCard.Description = Description
 BackingCard.defaultProps = {
   hasBorder: true,
   disabled: false,
+  stretch: false,
 }
 
 BackingCard.propTypes = {
   hasBorder: PropTypes.bool,
   disabled: PropTypes.bool,
+  stretch: PropTypes.bool,
 }

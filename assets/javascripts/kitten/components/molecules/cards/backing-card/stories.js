@@ -18,11 +18,18 @@ import { DocsPage } from 'storybook/docs-page'
 
 const StyledCarouselContainer = styled.div`
   .k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(80 - 4)} 0 ${pxToRem(20 - 4)};
+    padding: 0 ${pxToRem(40 - 4)} 0 ${pxToRem(20 - 4)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${pxToRem(120 - 4)} 0 ${pxToRem(40 - 4)};
+      padding: 0 ${pxToRem(60 - 4)} 0 ${pxToRem(40 - 4)};
     }
+  }
+
+  .k-Carousel__page {
+    height: 100% !important;
+  }
+  .k-Carousel__page__item {
+    padding-top: ${pxToRem(12)} !important;
   }
 `
 
@@ -63,14 +70,14 @@ export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
         Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
       </BackingCard.Title>
       <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-      <BackingCard.Info
-        legend="Prix de livraison&nbsp;:"
-        value="5&nbsp;€ (en France)"
-      />
-      <BackingCard.Info
-        legend="Livraison estimée&nbsp;:"
-        value="Janvier 2022"
-      />
+      <BackingCard.TagList>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">5</strong> contributeurs
+        </Tag>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">2/6</strong> disponibles
+        </Tag>
+      </BackingCard.TagList>
       <BackingCard.Description
         moreButtonText="See more…"
         truncateText={truncateText}
@@ -94,14 +101,6 @@ export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
           Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
         </p>
       </BackingCard.Description>
-      <BackingCard.TagList>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">5</strong> contributeurs
-        </Tag>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">2/6</strong> disponibles
-        </Tag>
-      </BackingCard.TagList>
       {hasButton && <BackingCard.Button>Je soutiens</BackingCard.Button>}
     </BackingCard>
   )
@@ -142,14 +141,14 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
         Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
       </BackingCard.Title>
       <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-      <BackingCard.Info
-        legend="Prix de livraison&nbsp;:"
-        value="5&nbsp;€ (en France)"
-      />
-      <BackingCard.Info
-        legend="Livraison estimée&nbsp;:"
-        value="Janvier 2022"
-      />
+      <BackingCard.TagList>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">5</strong> contributeurs
+        </Tag>
+        <Tag as="li">
+          <strong className="k-u-weight-regular">2/6</strong> disponibles
+        </Tag>
+      </BackingCard.TagList>
       <BackingCard.Description
         moreButtonText="See more…"
         truncateText={truncateText}
@@ -173,14 +172,6 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
           Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
         </p>
       </BackingCard.Description>
-      <BackingCard.TagList>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">5</strong> contributeurs
-        </Tag>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">2/6</strong> disponibles
-        </Tag>
-      </BackingCard.TagList>
       <BackingCard.Button>Je soutiens</BackingCard.Button>
     </BackingCard>
   )
@@ -227,7 +218,7 @@ export const InACarouselComponent = () => {
         loop
         tinyButtons
       >
-        <BackingCard as="button" className="k-u-reset-button">
+        <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Image id="one_such_ID" className="hellowORLD">
             <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
@@ -236,14 +227,14 @@ export const InACarouselComponent = () => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -267,31 +258,21 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard as="button" className="k-u-reset-button">
+        <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
+          <BackingCard.Title>Smol titl.</BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -315,18 +296,10 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard as="button" className="k-u-reset-button">
+        <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Image>
             <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
@@ -341,14 +314,14 @@ export const InACarouselComponent = () => {
           </BackingCard.Image>
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -372,28 +345,20 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard as="button" className="k-u-reset-button">
+        <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -417,19 +382,11 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
-          <BackingCard.Title textSize="giant" strokeSize="default">
+        <BackingCard stretch>
+          <BackingCard.Title textSize="giant">
             Je donne ce que je veux
           </BackingCard.Title>
           <BackingCard.Form>
@@ -444,7 +401,7 @@ export const InACarouselComponent = () => {
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
+        <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.Image>
             <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
@@ -453,6 +410,14 @@ export const InACarouselComponent = () => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -476,22 +441,22 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
+        <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.HeadingTag icon="star" text="Star reward" />
           <BackingCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
           </BackingCard.Title>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -515,17 +480,9 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
+        <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.Image>
             <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
@@ -539,6 +496,14 @@ export const InACarouselComponent = () => {
             </GifVideo>
           </BackingCard.Image>
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -562,18 +527,18 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
+        <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+          <BackingCard.TagList>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">5</strong> contributeurs
+            </Tag>
+            <Tag as="li">
+              <strong className="k-u-weight-regular">2/6</strong> disponibles
+            </Tag>
+          </BackingCard.TagList>
           <BackingCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-weight-light k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
@@ -597,14 +562,6 @@ export const InACarouselComponent = () => {
               tell
             </p>
           </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
         </BackingCard>
       </Carousel>
     </StyledCarouselContainer>

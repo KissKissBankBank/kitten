@@ -12,6 +12,7 @@ export const Amount = props => {
       className={classNames(
         'k-BackingCard__amount',
         'k-BackingCard__drawer',
+        'k-u-align-center',
         props.className,
       )}
     />

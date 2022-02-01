@@ -11,6 +11,7 @@ export const StyledBackingCard = styled.article`
 
   /* CARD STYLE */
 
+  position: relative;
   border: var(--backingCard--border-width) solid
     var(--backingCard--border-color);
   border-radius: var(--backingCard--border-radius);
@@ -18,6 +19,10 @@ export const StyledBackingCard = styled.article`
   flex-direction: column;
   align-items: stretch;
   transition: border-color 0.2s ease-in-out;
+
+  &.k-BackingCard--isStretched {
+    height: 100%;
+  }
 
   &.k-BackingCard--hasBorder {
     --backingCard--border-width: var(--border-width);
@@ -32,7 +37,7 @@ export const StyledBackingCard = styled.article`
 
   .k-BackingCard__gridWrapper {
     flex: 1 1 auto;
-    padding: ${pxToRem(30)};
+    padding: ${pxToRem(20)};
     display: grid;
     grid-template-columns: [row-start] var(--backingCard--grid-col) [row-end];
     grid-gap: ${pxToRem(20)};
@@ -58,6 +63,7 @@ export const StyledBackingCard = styled.article`
   }
 
   .k-BackingCard__button {
+    margin: 0 ${pxToRem(20)} ${pxToRem(20)};
     flex: 0 0 auto;
   }
 
@@ -90,11 +96,19 @@ export const StyledBackingCard = styled.article`
     }
   }
 
-  .k-BackingCard__amount {
-    font-size: ${stepToRem(5)};
+  .k-BackingCard__titleWrapper {
+    line-height: ${pxToRem(22)};
+    height: ${pxToRem(44)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .k-BackingCard__button {
-    margin: 0 ${pxToRem(30)} ${pxToRem(30)};
+
+  .k-BackingCard__amount {
+    position: relative;
+    top: ${pxToRem(-5)};
+    font-size: ${stepToRem(5)};
+    color: var(--color-primary-500);
   }
 
   .k-BackingCard__descriptionWrapper {
@@ -105,16 +119,7 @@ export const StyledBackingCard = styled.article`
       max-height: calc(3 * 1.5 * ${stepToRem(-2)});
 
       .k-BackingCard__description__moreButton {
-        position: absolute;
-        top: calc(2 * 1.5 * ${stepToRem(-2)});
-        right: 0;
-        padding-left: ${pxToRem(40)};
         line-height: 1.5;
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) ${pxToRem(30)}
-        );
       }
     }
 
@@ -126,10 +131,13 @@ export const StyledBackingCard = styled.article`
   }
 
   .k-BackingCard__headingTag {
-    justify-self: start;
+    position: absolute;
+    top: ${pxToRem(-12)};
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: ${pxToRem(10)};
+    gap: ${pxToRem(6)};
 
     color: ${COLORS.primary1};
     ${TYPOGRAPHY.fontStyles.regular}
@@ -158,11 +166,13 @@ export const StyledBackingCard = styled.article`
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: ${pxToRem(10)};
   }
 
   &.k-BackingCard--disabled {
-    color: ${COLORS.font2};
+    color: var(--color-grey-500);
     cursor: not-allowed;
 
     .k-BackingCard__imageWrapper {
@@ -173,13 +183,22 @@ export const StyledBackingCard = styled.article`
       }
     }
 
-    .k-Tag {
-      color: ${COLORS.font2};
-      background-color: ${COLORS.line1};
+    .k-BackingCard__amount {
+      color: var(--color-grey-500);
     }
 
-    .k-BackingCard__description__moreButton {
-      color: ${COLORS.font2};
+    .k-Tag:not(.k-BackingCard__headingTag) {
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-500);
+    }
+
+    .k-Tag.k-BackingCard__headingTag {
+      background-color: var(--color-grey-500);
+      color: var(--color-grey-100);
+    }
+
+    .k-BackingCard__description__moreButton.k-u-color-primary1 {
+      color: var(--color-grey-600) !important;
     }
   }
 

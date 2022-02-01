@@ -1,9 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
+import Truncate from 'react-truncate'
 import { Text } from '../../../../atoms/typography/text'
-import { HorizontalStroke } from '../../../../atoms/horizontal-stroke'
 
-export const Title = ({ className, textSize, strokeSize, ...props }) => {
+export const Title = ({ className, textSize, children, ...props }) => {
   return (
     <div
       className={classNames(
@@ -20,20 +20,16 @@ export const Title = ({ className, textSize, strokeSize, ...props }) => {
         className={classNames(
           'k-BackingCard__title',
           'k-u-margin-none',
+          'k-u-align-center',
           className,
         )}
-      />
-      {!!strokeSize && (
-        <HorizontalStroke
-          size={strokeSize}
-          className="k-u-margin-top-singleHalf k-u-margin-bottom-single"
-        />
-      )}
+      >
+        <Truncate lines={2}>{children}</Truncate>
+      </Text>
     </div>
   )
 }
 
 Title.defaultProps = {
-  textSize: 'default',
-  strokeSize: null,
+  textSize: 'big',
 }

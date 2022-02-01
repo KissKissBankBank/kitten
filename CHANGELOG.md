@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Deprecation/change: `BackingCard`: Deprecate `BackingCard.Info`.
+- Deprecation/change: `BackingCard`: Remove `strokeSize` prop from `BackingCard.Title`.
+- Feature: `Tag`: Add `variant` prop, defaults to `light`, accepts `dark`.
+- Feature: `BackingCard`: Change design & adjust story.
+- Feature: `BackingCard`: Add `stretch` prop.
 - Fix: `AlertBox`: Improve styles.
 - Fix: `HeroLayout`: Fix Hero sizing on large screens.
 - Fix: `HeroLayout`: Fix sticky columns position on desktop.
