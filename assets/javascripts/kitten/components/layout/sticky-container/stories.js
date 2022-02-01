@@ -2,23 +2,59 @@ import React, { useRef } from 'react'
 import { StickyContainer } from './index'
 import { COLORS, createRangeFromZeroTo } from '../../..'
 
-const storyDecorator = story => (
-  <div
-    className="story-Container"
-    style={{
-      minHeight: '1200px',
-      backgroundColor: COLORS.line1,
-      position: 'relative',
-    }}
-  >
-    {story()}
-    <ul>
-      {createRangeFromZeroTo(100).map(i => {
-        return <li key={i}>🐱</li>
-      })}
-    </ul>
-  </div>
-)
+
+export default {
+  component: StickyContainer,
+  title: 'Layout/StickyContainer',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="StickyContainer" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div
+        className="story-Container"
+        style={{
+          minHeight: '1200px',
+          backgroundColor: COLORS.line1,
+          position: 'relative',
+        }}
+      >
+        {story()}
+        <ul>
+          {createRangeFromZeroTo(100).map(i => {
+            return <li key={i}>🐱</li>
+          })}
+        </ul>
+      </div>
+    ),
+  ],
+
+  argTypes: {
+    top: {
+      name: 'top',
+      control: 'number',
+    },
+    bottom: {
+      name: 'bottom',
+      control: 'number',
+    },
+    isSticky: {
+      name: 'isSticky',
+      options: ['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'],
+      control: 'select',
+    },
+  },
+  
+  args: {
+    top: null,
+    bottom: null,
+    isSticky: 'never',
+  },
+}
+
+export const Default = args => <StickyContainer {...args} />
 
 export const AlwaysSticky = args => (
   <StickyContainer {...args}>
@@ -90,44 +126,22 @@ export const StickyBottomOnScrollDown = args => (
   </StickyContainer>
 )
 
-const argTypes = {
-  top: {
-    name: 'top',
-    control: 'number',
-  },
-  bottom: {
-    name: 'bottom',
-    control: 'number',
-  },
-  isSticky: {
-    name: 'isSticky',
-    options: ['topOnScrollUp', 'bottomOnScrollDown', 'always', 'never'],
-    control: 'select',
-  },
-}
+AlwaysSticky.decorators = Default.decorators
+AlwaysSticky.argTypes = Default.argTypes
+AlwaysSticky.args = { ...Default.args, isSticky: 'always' }
 
-const args = {
-  top: null,
-  bottom: null,
-  isSticky: 'never',
-}
+NeverSticky.decorators = Default.decorators
+NeverSticky.argTypes = Default.argTypes
+NeverSticky.args = { ...Default.args, isSticky: 'never' }
 
-AlwaysSticky.decorators = [storyDecorator]
-AlwaysSticky.argTypes = argTypes
-AlwaysSticky.args = { ...args, isSticky: 'always' }
+StickyTopOnScrollUp.decorators = Default.decorators
+StickyTopOnScrollUp.argTypes = Default.argTypes
+StickyTopOnScrollUp.args = { ...Default.args, isSticky: 'topOnScrollUp', top: 0 }
 
-NeverSticky.decorators = [storyDecorator]
-NeverSticky.argTypes = argTypes
-NeverSticky.args = { ...args, isSticky: 'never' }
-
-StickyTopOnScrollUp.decorators = [storyDecorator]
-StickyTopOnScrollUp.argTypes = argTypes
-StickyTopOnScrollUp.args = { ...args, isSticky: 'topOnScrollUp', top: 0 }
-
-StickyBottomOnScrollDown.decorators = [storyDecorator]
-StickyBottomOnScrollDown.argTypes = argTypes
+StickyBottomOnScrollDown.decorators = Default.decorators
+StickyBottomOnScrollDown.argTypes = Default.argTypes
 StickyBottomOnScrollDown.args = {
-  ...args,
+  ...Default.args,
   isSticky: 'bottomOnScrollDown',
   bottom: 0,
 }

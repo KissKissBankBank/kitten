@@ -3,7 +3,7 @@ import { ModalFooterInput } from './index'
 import { action } from '@storybook/addon-actions'
 
 export default {
-  title: 'Form/ModalFooterInput',
+  title: 'Forms/Inputs/ModalFooterInput',
   component: ModalFooterInput,
   decorators: [
     story => (

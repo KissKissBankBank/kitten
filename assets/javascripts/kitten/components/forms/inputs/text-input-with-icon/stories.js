@@ -7,41 +7,50 @@ import {
   WarningCircleIcon,
   Loader,
   COLORS,
-} from '../../..'
+} from 'kitten'
+
+export default {
+  component: TextInputWithIcon,
+  title: 'Forms/Inputs/TextInputWithIcon',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="TextInputWithIcon" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+
+  args: {
+    ...TextInputStory.args,
+    icon: <SearchIcon aria-label="Search icon" width="15" height="15" />,
+    iconPosition: 'left',
+    accessibilityLabel: 'Icon label',
+  },
+
+  argTypes: {
+    ...TextInputStory.argTypes,
+    icon: {
+      name: 'icon',
+      control: 'object',
+    },
+    iconPosition: {
+      name: 'iconPosition',
+      options: ['left', 'right'],
+      control: 'inline-radio',
+    },
+    accessibilityLabel: {
+      name: 'accessibilityLabel',
+      control: 'text',
+    },
+  },
+}
 
 export const Default = args => <TextInputWithIcon {...args} />
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]
-
-Default.args = {
-  ...TextInputStory.args,
-  icon: <SearchIcon aria-label="Search icon" width="15" height="15" />,
-  iconPosition: 'left',
-  accessibilityLabel: 'Icon label',
-}
-
-Default.argTypes = {
-  ...TextInputStory.argTypes,
-  icon: {
-    name: 'icon',
-    control: 'object',
-  },
-  iconPosition: {
-    name: 'iconPosition',
-    options: ['left', 'right'],
-    control: 'inline-radio',
-  },
-  accessibilityLabel: {
-    name: 'accessibilityLabel',
-    control: 'text',
-  },
-}
 
 export const Validation = args => {
   const IconComponent = () => {

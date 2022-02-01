@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonIcon } from './index'
-import { QuestionMarkIcon } from '../../../..'
+import { QuestionMarkIcon } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

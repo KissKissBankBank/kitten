@@ -1,29 +1,42 @@
 import React from 'react'
 import { BulletList } from './index'
 
-export const Default = args => <BulletList {...args} />
-
-Default.decorators = [
-  story => <div className="story-Container story-Grid">{story()}</div>,
-]
-
-Default.args = {
-  size: 'regular',
-  items: [
-    { key: '1', item: 'Dis Manibus' },
-    { key: '2', item: 'Calpurnia Felicla' },
-    { key: '3', item: 'Germulio coniugi' },
+export default {
+  component: BulletList,
+  title: 'Structure/BulletList',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="BulletList" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        {story()}
+      </div>
+    ),
   ],
+
+  args: {
+    size: 'regular',
+    items: [
+      { key: '1', item: 'Dis Manibus' },
+      { key: '2', item: 'Calpurnia Felicla' },
+      { key: '3', item: 'Germulio coniugi' },
+    ],
+  },
+
+  argTypes: {
+    size: {
+      name: 'size',
+      options: ['tiny', 'regular', 'large', 'big', 'huge'],
+      control: 'select',
+    },
+    items: {
+      name: 'items',
+      control: 'object',
+    },
+  },
 }
 
-Default.argTypes = {
-  size: {
-    name: 'size',
-    options: ['tiny', 'regular', 'large', 'big', 'huge'],
-    control: 'select',
-  },
-  items: {
-    name: 'items',
-    control: 'object',
-  },
-}
+export const Default = args => <BulletList {...args} />

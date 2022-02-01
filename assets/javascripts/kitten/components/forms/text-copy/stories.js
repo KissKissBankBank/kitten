@@ -1,7 +1,7 @@
 import React from 'react'
 import { TextCopy } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import { buttonModifiers } from '../../../actions/button'
+import { buttonModifiers } from '../../actions/button'
 
 export default {
   title: 'Forms/TextCopy',

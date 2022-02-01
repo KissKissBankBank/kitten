@@ -2,6 +2,23 @@ import React from 'react'
 import { IconList } from './index'
 import { Text, LockIcon } from '../../..'
 
+export default {
+  component: IconList,
+  title: 'Feedback/IconList',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="IconList" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+}
+
 export const Default = () => (
   <IconList>
     <IconList.Item
@@ -29,11 +46,3 @@ export const Default = () => (
     </IconList.Item>
   </IconList>
 )
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]

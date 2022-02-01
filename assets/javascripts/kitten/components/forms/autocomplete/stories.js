@@ -122,6 +122,89 @@ const items = [
   'York Chocolate',
 ]
 
+export default {
+  component: Autocomplete,
+  title: 'Forms/Autocomplete',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Autocomplete" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+
+  args: {
+    name: 'autocomplete',
+    items,
+    error: false,
+    icon: null,
+    iconPosition: 'left',
+    updateSuggestionsStrategy: null,
+    noResultMessage: 'No result',
+    shouldShowNoResultMessage: true,
+    onChange: () => {},
+    onBlur: () => {},
+    onKeyDown: () => {},
+    onSelect: () => {},
+    isLoading: false,
+  },
+  
+  argTypes: {
+    name: {
+      name: 'name',
+      control: 'text',
+    },
+    items: {
+      name: 'items',
+      control: 'object',
+    },
+    error: {
+      name: 'error',
+      control: 'boolean',
+    },
+    icon: {
+      name: 'icon',
+    },
+    iconPosition: {
+      name: 'iconPosition',
+      options: ['left', 'right'],
+      control: 'inline-radio',
+    },
+    updateSuggestionsStrategy: {
+      name: 'updateSuggestionsStrategy',
+    },
+    noResultMessage: {
+      name: 'noResultMessage',
+      control: 'text',
+    },
+    shouldShowNoResultMessage: {
+      name: 'shouldShowNoResultMessage',
+      control: 'boolean',
+    },
+    onChange: {
+      name: 'onChange',
+    },
+    onBlur: {
+      name: 'onBlur',
+    },
+    onKeyDown: {
+      name: 'onKeyDown',
+    },
+    onSelect: {
+      name: 'onSelect',
+    },
+    isLoading: {
+      name: 'isLoading',
+      control: 'boolean',
+    },
+  },
+}
+
 export const Default = args => (
   <Field>
     <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
@@ -146,82 +229,6 @@ export const WithIcon = args => (
   </Field>
 )
 
-const storyDecorator = story => (
-  <div className="story-Container story-Grid story-Grid--large">
-    <div>{story()}</div>
-  </div>
-)
-
-const args = {
-  name: 'autocomplete',
-  items,
-  error: false,
-  icon: null,
-  iconPosition: 'left',
-  updateSuggestionsStrategy: null,
-  noResultMessage: 'No result',
-  shouldShowNoResultMessage: true,
-  onChange: () => {},
-  onBlur: () => {},
-  onKeyDown: () => {},
-  onSelect: () => {},
-  isLoading: false,
-}
-
-const argTypes = {
-  name: {
-    name: 'name',
-    control: 'text',
-  },
-  items: {
-    name: 'items',
-    control: 'object',
-  },
-  error: {
-    name: 'error',
-    control: 'boolean',
-  },
-  icon: {
-    name: 'icon',
-  },
-  iconPosition: {
-    name: 'iconPosition',
-    options: ['left', 'right'],
-    control: 'inline-radio',
-  },
-  updateSuggestionsStrategy: {
-    name: 'updateSuggestionsStrategy',
-  },
-  noResultMessage: {
-    name: 'noResultMessage',
-    control: 'text',
-  },
-  shouldShowNoResultMessage: {
-    name: 'shouldShowNoResultMessage',
-    control: 'boolean',
-  },
-  onChange: {
-    name: 'onChange',
-  },
-  onBlur: {
-    name: 'onBlur',
-  },
-  onKeyDown: {
-    name: 'onKeyDown',
-  },
-  onSelect: {
-    name: 'onSelect',
-  },
-  isLoading: {
-    name: 'isLoading',
-    control: 'boolean',
-  },
-}
-
-Default.decorators = [storyDecorator]
-Default.argTypes = argTypes
-Default.args = args
-
-WithIcon.decorators = [storyDecorator]
-WithIcon.argTypes = argTypes
-WithIcon.args = { ...args, icon: <LocationIcon /> }
+WithIcon.decorators = Default.decorator
+WithIcon.argTypes = Default.argTypes
+WithIcon.args = { ...Default.args, icon: <LocationIcon /> }

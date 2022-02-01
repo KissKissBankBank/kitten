@@ -1,6 +1,23 @@
 import React from 'react'
 import { CheckList } from './index'
 
+export default {
+  component: CheckList,
+  title: 'Feedback/CheckList',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="CheckList" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid">
+        {story()}
+      </div>
+    ),
+  ],
+}
+
 export const Default = () => (
   <CheckList>
     <CheckList.Item done>Huit caractères minimum</CheckList.Item>
@@ -9,7 +26,3 @@ export const Default = () => (
     <CheckList.Item>Un chiffre</CheckList.Item>
   </CheckList>
 )
-
-Default.decorators = [
-  story => <div className="story-Container story-Grid">{story()}</div>,
-]

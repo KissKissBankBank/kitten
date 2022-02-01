@@ -1,6 +1,6 @@
 import React from 'react'
 import { Paragraph } from './index'
-import { Marger, Text } from '../../../..'
+import { Marger, Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

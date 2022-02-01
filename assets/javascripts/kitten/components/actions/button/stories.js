@@ -6,7 +6,7 @@ import {
   buttonMobileFitOptions,
   buttonSizes,
 } from './index'
-import { HeartIcon, PayPalIcon, Badge, Cart } from '../../../..'
+import { HeartIcon, PayPalIcon, Badge, Cart } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const args = {

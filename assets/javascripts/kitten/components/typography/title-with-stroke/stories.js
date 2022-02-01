@@ -1,6 +1,6 @@
 import React from 'react'
 import { TitleWithStroke } from './index'
-import { COLORS, Marger, Text } from '../../../..'
+import { COLORS, Marger, Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

@@ -1,18 +1,33 @@
 import React from 'react'
 import { SupTitle } from './index'
 
-export const Default = args => <SupTitle {...args} />
+export default {
+  component: SupTitle,
+  title: 'Typography/SupTitle',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="SupTitle" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container">
+        {story()}
+      </div>
+    ),
+  ],
 
-Default.decorators = [story => <div className="story-Container">{story()}</div>]
+  args: {
+    children: 'Lorem ipsum dolor sit amet…',
+  },
 
-Default.args = {
-  children: 'Lorem ipsum dolor sit amet…',
-}
-
-Default.argTypes = {
-  children: {
-    name: 'children',
-    description: 'Content of the SupTitle',
-    control: 'text',
+  argTypes: {
+    children: {
+      name: 'children',
+      description: 'Content of the SupTitle',
+      control: 'text',
+    },
   },
 }
+
+export const Default = args => <SupTitle {...args} />

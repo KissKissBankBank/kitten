@@ -1,5 +1,5 @@
 import React from 'react'
-import { GiftIcon } from '../../../..'
+import { GiftIcon } from 'kitten'
 import { ButtonWithTooltip } from './index'
 
 const args = {

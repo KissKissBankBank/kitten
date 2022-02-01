@@ -1,6 +1,6 @@
 import React from 'react'
 import { Title } from './index'
-import { Marger, Text } from '../../../..'
+import { Marger, Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const argTypes = {

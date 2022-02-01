@@ -2,6 +2,23 @@ import React from 'react'
 import { VerticalProgress } from './index'
 import { Text, LinkBox, Button } from '../../..'
 
+export default {
+  component: VerticalProgress,
+  title: 'Feedback/VerticalProgress',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="VerticalProgress" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+}
+
 export const Default = () => {
   return (
     <VerticalProgress withoutBorder>
@@ -92,11 +109,3 @@ export const Default = () => {
     </VerticalProgress>
   )
 }
-
-Default.decorators = [
-  story => (
-    <div className="story-Container story-Grid story-Grid--large">
-      {story()}
-    </div>
-  ),
-]

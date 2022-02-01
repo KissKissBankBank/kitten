@@ -2,49 +2,58 @@ import React from 'react'
 import { COLORS } from '../../..'
 import { HorizontalStroke } from './index'
 
-export const Default = args => <HorizontalStroke {...args} />
-
-Default.decorators = [
-  story => (
-    <div className="story-Container">
-      <div>{story()}</div>
-    </div>
-  ),
-]
-
-Default.args = {
-  size: 'default',
-  modifier: null,
-  customSize: null,
-  color: COLORS.font1,
-}
-
-Default.argTypes = {
-  size: {
-    name: 'size',
-    options: ['micro', 'tiny', 'default', 'big', 'huge'],
-    control: 'select',
-  },
-  modifier: {
-    name: 'modifier',
-    options: {
-      null: null,
-      primary: 'primary',
-      secondary: 'secondary',
-      tertiary: 'tertiary',
-      quaternary: 'quaternary',
-      quinary: 'quinary',
-      senary: 'senary',
-      septenary: 'septenary',
+export default {
+  component: HorizontalStroke,
+  title: 'Typography/HorizontalStroke',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="HorizontalStroke" />,
     },
-    control: 'select',
   },
-  customSize: {
-    name: 'customSize',
-    control: 'object',
+  decorators: [
+    story => (
+      <div className="story-Container">
+        {story()}
+      </div>
+    ),
+  ],
+
+  args: {
+    size: 'default',
+    modifier: null,
+    customSize: null,
+    color: COLORS.font1,
   },
-  color: {
-    name: 'color',
-    control: 'color',
+
+  argTypes: {
+    size: {
+      name: 'size',
+      options: ['micro', 'tiny', 'default', 'big', 'huge'],
+      control: 'select',
+    },
+    modifier: {
+      name: 'modifier',
+      options: {
+        null: null,
+        primary: 'primary',
+        secondary: 'secondary',
+        tertiary: 'tertiary',
+        quaternary: 'quaternary',
+        quinary: 'quinary',
+        senary: 'senary',
+        septenary: 'septenary',
+      },
+      control: 'select',
+    },
+    customSize: {
+      name: 'customSize',
+      control: 'object',
+    },
+    color: {
+      name: 'color',
+      control: 'color',
+    },
   },
 }
+
+export const Default = args => <HorizontalStroke {...args} />
