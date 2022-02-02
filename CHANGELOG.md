@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking changes:
+  - `GiftIconNext`: Remplace by `ColorGiftIconNext`.
+  - `CrossCircleIconNext`: Remplace by `ColorCrossCircleIconNext`.
+  - `HeartWithClickIconNext`: Remplace by `ColorHeartWithClickIconNext`.
+- Feature: Add `CrossCircleIconNext` component.
+
 - Fix: `AlertBox`: Improve styles.
 - Fix: `HeroLayout`: Fix Hero sizing on large screens.
 - Fix: `HeroLayout`: Fix sticky columns position on desktop.
+
 
 ## [7.2.0] - 2022-01-28
 

@@ -8,7 +8,7 @@ import { Text } from '../../../../components/atoms/typography/text'
 import { mq } from '../../../../constants/screen-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { HeartIconNext } from '../../../../components/graphics/icons-next/heart-icon-next'
+import { HeartIconNext } from '../../../graphics/icons-next/heart-icon-next'
 
 const CommentWrapper = styled.div`
   --comment-arrow-size: ${pxToRem(7)};
