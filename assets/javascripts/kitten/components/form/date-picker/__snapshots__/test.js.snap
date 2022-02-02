@@ -2,17 +2,17 @@
 
 exports[`<DatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX MOzZa"
+  className="sc-eCImPb jxzzsy"
 >
   <div
     className="DayPickerInput"
   >
     <div
-      className="sc-htpNat bnHKtc k-Form-TextInputWithUnit"
+      className="sc-dkPtRN dmAISn k-Form-TextInputWithUnit"
     >
       <input
         autoComplete="off"
-        className="sc-bdVaJa NdpVx k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
+        className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
         disabled={false}
         name="text"
         onBlur={[Function]}
@@ -37,7 +37,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
 
 exports[`<DatePicker /> with custom input matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX MOzZa"
+  className="sc-eCImPb jxzzsy"
 >
   <div
     className="DayPickerInput"

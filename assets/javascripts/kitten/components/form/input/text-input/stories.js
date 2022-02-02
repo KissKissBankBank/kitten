@@ -30,7 +30,6 @@ Default.args = {
   center: false,
   rounded: false,
   placeholder: 'Les props sont transmises',
-  digits: null,
   name: 'text-input',
   darkBackground: false,
 }

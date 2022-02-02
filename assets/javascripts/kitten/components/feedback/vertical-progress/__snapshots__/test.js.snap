@@ -2,7 +2,7 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 <div
-  className="sc-htpNat hYPssP k-VerticalProgress__wrapper"
+  className="sc-dkPtRN bjPaWP k-VerticalProgress__wrapper"
 >
   <nav
     className="k-VerticalProgress"
@@ -12,10 +12,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       role="tablist"
     >
       <li
-        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
+        className="sc-gsDKAQ kJOHtw k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa hgyEtB k-VerticalProgress__status k-VerticalProgress__status--actions"
+          className="sc-bdvvtL kOSBuC k-VerticalProgress__status k-VerticalProgress__status--actions"
         >
           <span
             className="k-VerticalProgress__icon"
@@ -50,10 +50,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
+        className="sc-gsDKAQ kJOHtw k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa hgyEtB k-VerticalProgress__status k-VerticalProgress__status--waiting"
+          className="sc-bdvvtL kOSBuC k-VerticalProgress__status k-VerticalProgress__status--waiting"
         >
           <span
             className="k-VerticalProgress__icon"
@@ -81,10 +81,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
+        className="sc-gsDKAQ kJOHtw k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa hgyEtB k-VerticalProgress__status k-VerticalProgress__status--publish"
+          className="sc-bdvvtL kOSBuC k-VerticalProgress__status k-VerticalProgress__status--publish"
         >
           <span
             className="k-VerticalProgress__icon"
@@ -112,10 +112,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
+        className="sc-gsDKAQ kJOHtw k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa hgyEtB k-VerticalProgress__status k-VerticalProgress__status--valid"
+          className="sc-bdvvtL kOSBuC k-VerticalProgress__status k-VerticalProgress__status--valid"
         >
           <span
             className="k-VerticalProgress__icon"
@@ -150,10 +150,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         />
       </li>
       <li
-        className="sc-bwzfXH jcEmZz k-VerticalProgress__item"
+        className="sc-gsDKAQ kJOHtw k-VerticalProgress__item"
       >
         <div
-          className="sc-bdVaJa hgyEtB k-VerticalProgress__status k-VerticalProgress__status--disabled"
+          className="sc-bdvvtL kOSBuC k-VerticalProgress__status k-VerticalProgress__status--disabled"
         >
           <span
             className="k-VerticalProgress__icon"

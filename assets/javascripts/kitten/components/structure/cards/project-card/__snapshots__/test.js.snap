@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-jtRfpW gjzCuP k-ProjectCard k-ProjectCard--normal"
+  className="sc-fIosxK fzcEFw k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -18,7 +18,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <h1
-      className="sc-ksYbfQ eXrmZx k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-ksdxgE hAxxPQ k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -98,7 +98,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={55}
-        className="sc-cIShpX gnIRTV k-Meters-Progress"
+        className="sc-jrQzAO ktgVTc k-Meters-Progress"
         role="progressbar"
         style={
           Object {
@@ -124,7 +124,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-jtRfpW gjzCuP k-ProjectCard k-ProjectCard--normal"
+  className="sc-fIosxK fzcEFw k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -144,7 +144,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       Prolongation
     </div>
     <h1
-      className="sc-ksYbfQ eXrmZx k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-ksdxgE hAxxPQ k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -224,7 +224,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={0}
-        className="sc-cIShpX gnIRTV k-Meters-Progress"
+        className="sc-jrQzAO ktgVTc k-Meters-Progress"
         role="progressbar"
         style={
           Object {

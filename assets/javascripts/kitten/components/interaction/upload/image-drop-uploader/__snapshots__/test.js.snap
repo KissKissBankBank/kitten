@@ -2,7 +2,7 @@
 
 exports[`<ImageDropUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bwzfXH hoddpU k-ImageDropUploader"
+  className="sc-gsDKAQ cTrJuj k-ImageDropUploader"
 >
   <input
     accept="image/jpeg, image/png, image/gif, image/webp"
@@ -50,7 +50,7 @@ exports[`<ImageDropUploader /> should match snapshot 1`] = `
 
 exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
 <div
-  className="sc-bwzfXH hoddpU k-ImageDropUploader k-ImageDropUploader--error"
+  className="sc-gsDKAQ cTrJuj k-ImageDropUploader k-ImageDropUploader--error"
 >
   <div
     className="k-ImageDropUploader__manager"
@@ -100,7 +100,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </div>
     <button
       aria-label="Cancel"
-      className="sc-bdVaJa brpVbO k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--fit-icon"
+      className="sc-bdvvtL gdafnu k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--fit-icon"
       disabled={false}
       onClick={[Function]}
       style={
@@ -138,7 +138,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
 
 exports[`<ImageDropUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-bwzfXH hoddpU k-ImageDropUploader"
+  className="sc-gsDKAQ cTrJuj k-ImageDropUploader"
 >
   <input
     accept="image/jpeg, image/png, image/gif, image/webp"
@@ -188,7 +188,7 @@ exports[`<ImageDropUploader /> should match snapshot with props 1`] = `
 
 exports[`<ImageDropUploader /> should match snapshot with props 2`] = `
 <div
-  className="sc-bwzfXH hoddpU k-ImageDropUploader k-ImageDropUploader--disabled"
+  className="sc-gsDKAQ cTrJuj k-ImageDropUploader k-ImageDropUploader--disabled"
 >
   <input
     accept="image/jpeg, image/png, image/gif, image/webp"

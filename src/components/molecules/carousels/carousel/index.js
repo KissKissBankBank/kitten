@@ -353,6 +353,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
   return CarouselBase;
 }(_react.Component);
 
+var positionsPropTypes = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
+
 CarouselBase.defaultProps = {
   itemsPerPage: 0,
   hidePaginationOnMobile: false,
@@ -410,9 +412,6 @@ CarouselBase.propTypes = {
   renderItem: (0, _deprecated.default)(_propTypes.default.func, 'Provide `Carousel` with children instead of data/renderItem'),
   withoutLeftOffset: (0, _deprecated.default)(_propTypes.default.bool, 'Provide `Carousel` with children instead of data/renderItem')
 };
-
-var positionsPropTypes = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
-
 var Carousel = (0, _mediaQueries.withMediaQueries)({
   viewportIsXSOrLess: true,
   viewportIsMOrLess: true,

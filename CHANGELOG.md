@@ -22,8 +22,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Naviagtion`,
   - `Pages`.
 
-- Fix: `LocationInput`: Improve styles.
-- Feature: `NavBar`: Add `small` value on `modifier` prop.
+- Fix: `AlertBox`: Improve styles.
+- Fix: `HeroLayout`: Fix Hero sizing on large screens.
+- Fix: `HeroLayout`: Fix sticky columns position on desktop.
+
+
+## [7.2.0] - 2022-01-28
+
+Deprecation/Change:
+
+- Dependencies: Use StyledComponents 5.
+
+Feature:
+
+- `NavBar`: Add `small` value on `modifier` prop.
+
+Fix:
+
+- `LocationInput`: Improve styles.
 
 ## [7.1.0] - 2022-01-20
 

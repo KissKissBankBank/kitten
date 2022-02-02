@@ -27,13 +27,15 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _config = require("../../../components/organisms/header-nav/config");
+
 var _excluded = ["active", "children", "className", "linkProps"],
     _excluded2 = ["children", "className", "navProps", "listProps", "colors", "modifier"];
 
 var StyledNavBar = _styledComponents.default.div.withConfig({
   displayName: "nav-bar__StyledNavBar",
   componentId: "sc-ui0yo2-0"
-})(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--big .k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), function (_ref) {
+})(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--small .k-NavBar__link{height:", ";}&.k-NavBar--big .k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), function (_ref) {
   var colors = _ref.colors;
   return colors.background || _colorsConfig.default.primary6;
 }, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(65), _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), function (_ref2) {
@@ -51,7 +53,7 @@ var StyledNavBar = _styledComponents.default.div.withConfig({
 }, function (_ref6) {
   var colors = _ref6.colors;
   return colors.activeLink || _colorsConfig.default.primary1;
-}, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(100));
+}, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_config.HEADER_HEIGHT), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(100));
 
 var NavBarItem = function NavBarItem(_ref7) {
   var active = _ref7.active,
@@ -108,5 +110,5 @@ NavBar.propTypes = {
     activeLink: _propTypes.default.string,
     activeBorder: _propTypes.default.string
   }),
-  modifier: _propTypes.default.oneOf(['regular', 'big'])
+  modifier: _propTypes.default.oneOf(['small', 'regular', 'big'])
 };

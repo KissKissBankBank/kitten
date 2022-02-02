@@ -115,12 +115,6 @@ const GlobalStyle = createGlobalStyle`
       top: ${pxToRem(HEADER_HEIGHT)} !important;
     }
   }
-
-  @media ${mq.desktop} {
-    .k-HeaderNav--isStuck + * .k-HeroLayout__sticky__inside {
-      top: ${pxToRem(HEADER_HEIGHT + 20)} !important;
-    }
-  }
 `
 
 export default {
@@ -273,7 +267,7 @@ export const Default = ({
                 Pourquoi s’abonner&nbsp;?
               </Text>
               <List
-                gap="10"
+                gap={10}
                 markerElement={
                   <LargeArrowIconNext
                     color="var(--color-primary-500)"

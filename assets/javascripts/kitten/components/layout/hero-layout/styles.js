@@ -30,8 +30,7 @@ export const StyledLayout = styled.div`
       justify-content: end;
 
       box-sizing: border-box;
-      min-height: calc(100vh - ${pxToRem(HEADER_HEIGHT)});
-      padding: ${pxToRem(20)} var(--container-padding) ${pxToRem(20)};
+      padding: ${pxToRem(60)} var(--container-padding) ${pxToRem(20)};
       margin-bottom: ${pxToRem(50)};
     }
   }
@@ -42,32 +41,6 @@ export const StyledLayout = styled.div`
     flex-direction: column;
     align-items: stretch;
     gap: ${pxToRem(25)};
-
-    ::after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: calc(-1 * var(--container-padding));
-      right: calc(-1 * var(--container-padding));
-      background: linear-gradient(
-        to bottom,
-        hsla(0deg, 0%, 100%, 0),
-        hsla(0deg, 0%, 100%, 0.3) 20%,
-        hsla(0deg, 0%, 100%, 0.9) 60%,
-        var(--color-grey-000)
-      );
-
-      @media ${mq.mobileAndTablet} {
-        height: var(--heroLayout-imageHeight);
-      }
-      @media ${mq.desktop} {
-        bottom: calc(
-          max(calc(100vh - ${pxToRem(HEADER_HEIGHT)} - ${pxToRem(20)}), 100%) -
-            var(--heroLayout-imageHeight)
-        );
-      }
-    }
 
     @media ${mq.desktop} {
       position: relative;
@@ -90,6 +63,23 @@ export const StyledLayout = styled.div`
       height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+
+    ::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--heroLayout-imageHeight);
+      background: linear-gradient(
+        to bottom,
+        hsla(0deg, 0%, 100%, 0) 15%,
+        hsla(0deg, 0%, 100%, 0.3) 30%,
+        hsla(0deg, 0%, 100%, 0.9) 70%,
+        var(--color-grey-000)
+      );
     }
   }
 
@@ -167,7 +157,7 @@ export const StyledLayout = styled.div`
 
     .k-HeroLayout__sticky__inside {
       position: sticky;
-      top: ${pxToRem(20)};
+      top: ${pxToRem(HEADER_HEIGHT + 20)};
       bottom: ${pxToRem(20)};
       transition: top var(--transition);
     }
