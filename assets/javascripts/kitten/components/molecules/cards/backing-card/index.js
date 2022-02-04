@@ -12,6 +12,7 @@ import {
   TagList,
   HeadingTag,
   Description,
+  Contents,
 } from './components'
 import {
   getReactElementsByType,
@@ -23,8 +24,35 @@ export const BackingCard = ({
   className,
   disabled,
   hasBorder,
+  stretch,
   ...props
 }) => {
+  const contentsChild = getReactElementsByType({
+    children,
+    type: BackingCard.Contents,
+  })[0]
+
+  if (!!contentsChild) {
+    return (
+      <StyledBackingCard
+        {...props}
+        className={classNames('k-BackingCard', className, {
+          'k-BackingCard--disabled': disabled,
+          'k-BackingCard--hasBorder': hasBorder,
+          'k-BackingCard--isStretched': stretch,
+        })}
+      >
+        {children}
+      </StyledBackingCard>
+    )
+  }
+
+  // Old card version
+
+  console.warn(
+    'This use of the BackingCard is deprecated. Please wrap contents with `BackingCard.Contents`.',
+  )
+
   const imageChild = getReactElementsByType({
     children,
     type: BackingCard.Image,
@@ -44,6 +72,7 @@ export const BackingCard = ({
       className={classNames('k-BackingCard', className, {
         'k-BackingCard--disabled': disabled,
         'k-BackingCard--hasBorder': hasBorder,
+        'k-BackingCard--isStretched': stretch,
       })}
     >
       {imageChild && cloneElement(imageChild)}
@@ -69,13 +98,16 @@ BackingCard.Button = Button
 BackingCard.TagList = TagList
 BackingCard.HeadingTag = HeadingTag
 BackingCard.Description = Description
+BackingCard.Contents = Contents
 
 BackingCard.defaultProps = {
   hasBorder: true,
   disabled: false,
+  stretch: false,
 }
 
 BackingCard.propTypes = {
   hasBorder: PropTypes.bool,
   disabled: PropTypes.bool,
+  stretch: PropTypes.bool,
 }

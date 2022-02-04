@@ -18,11 +18,8 @@ export const HeadingTag = ({ text, icon, className, ...props }) => {
 
   return (
     <Tag
-      className={classNames(
-        'k-BackingCard__headingTag',
-        'k-BackingCard__drawer',
-        className,
-      )}
+      variant="dark"
+      className={classNames('k-BackingCard__headingTag', className)}
       {...props}
     >
       {iconDisplay}

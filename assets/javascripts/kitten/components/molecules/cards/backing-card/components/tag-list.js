@@ -1,15 +1,15 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export const TagList = props => {
+export const TagList = ({ className, ...props }) => {
   return (
     <ul
-      {...props}
       className={classNames(
         'k-BackingCard__tagList',
         'k-BackingCard__drawer',
-        props.className,
+        className,
       )}
+      {...props}
     />
   )
 }
