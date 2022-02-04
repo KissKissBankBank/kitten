@@ -112,6 +112,11 @@ export const StyledBackingCard = styled.article`
     position: relative;
     top: ${pxToRem(-5)};
     font-size: ${stepToRem(5)};
+    color: var(--color-primary-500);
+  }
+
+  .k-BackingCard__amount__suffix {
+    color: var(--color-grey-700);
   }
 
   .k-BackingCard__descriptionWrapper {
@@ -174,6 +179,34 @@ export const StyledBackingCard = styled.article`
     gap: ${pxToRem(10)};
   }
 
+  &.k-BackingCard--hasHover:hover:not(.k-BackingCard--disabled),
+  button&:hover:not(.k-BackingCard--disabled),
+  a&:hover:not(.k-BackingCard--disabled) {
+    --backingCard--border-color: var(--color-grey-500);
+
+    cursor: pointer;
+
+    .k-BackingCard__imageWrapper {
+      img,
+      figure,
+      video {
+        transform: scale(1.05);
+      }
+    }
+    .k-BackingCard__button:not(.k-Button--disabled) {
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.primary2};
+    }
+    .k-BackingCard__description__moreButton {
+      color: ${COLORS.primary2};
+    }
+  }
+
+  button&:active,
+  a&:active {
+    --backingCard--border-color: var(--color-grey-600);
+  }
+
   &.k-BackingCard--disabled {
     color: var(--color-grey-500);
     cursor: not-allowed;
@@ -186,7 +219,8 @@ export const StyledBackingCard = styled.article`
       }
     }
 
-    .k-BackingCard__amount {
+    .k-BackingCard__amount,
+    .k-BackingCard__amount__suffix {
       color: var(--color-grey-500);
     }
 
@@ -203,33 +237,5 @@ export const StyledBackingCard = styled.article`
     .k-BackingCard__description__moreButton.k-u-color-primary1 {
       color: var(--color-grey-600) !important;
     }
-  }
-
-  &.k-BackingCard--hasHover:hover,
-  button&:hover,
-  a&:hover {
-    --backingCard--border-color: var(--color-grey-500);
-
-    cursor: pointer;
-
-    .k-BackingCard__imageWrapper {
-      img,
-      figure,
-      video {
-        transform: scale(1.05);
-      }
-    }
-    .k-BackingCard__button {
-      border-color: ${COLORS.primary2};
-      background-color: ${COLORS.primary2};
-    }
-    .k-BackingCard__description__moreButton {
-      color: ${COLORS.primary2};
-    }
-  }
-
-  button&:active,
-  a&:active {
-    --backingCard--border-color: var(--color-grey-600);
   }
 `

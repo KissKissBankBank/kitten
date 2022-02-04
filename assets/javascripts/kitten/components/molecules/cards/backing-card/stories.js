@@ -62,10 +62,16 @@ export const Default = ({
   hasImage,
   hasButton,
   hasAmountSuffix,
+  disabled,
   ...args
 }) => {
   return (
-    <BackingCard {...args} as="button" className="k-u-reset-button">
+    <BackingCard
+      {...args}
+      disabled={disabled}
+      as="button"
+      className="k-u-reset-button"
+    >
       {hasImage && (
         <BackingCard.Image>
           <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
@@ -111,7 +117,9 @@ export const Default = ({
           </p>
         </BackingCard.Description>
       </BackingCard.Contents>
-      {hasButton && <BackingCard.Button>Je soutiens</BackingCard.Button>}
+      {hasButton && (
+        <BackingCard.Button disabled={disabled}>Je soutiens</BackingCard.Button>
+      )}
     </BackingCard>
   )
 }
