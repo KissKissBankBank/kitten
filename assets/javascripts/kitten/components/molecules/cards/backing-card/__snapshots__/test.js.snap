@@ -2,7 +2,7 @@
 
 exports[`<BackingCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dLa-dGL k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdvvtL gLRWLC k-BackingCard k-BackingCard--hasBorder"
 >
   <div
     className="k-BackingCard__gridWrapper"
@@ -41,7 +41,9 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
       <div
         className="k-BackingCard__description"
       >
-        Custom description
+        <div>
+          Custom description
+        </div>
       </div>
     </div>
   </div>
@@ -50,7 +52,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
 
 exports[`<BackingCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dLa-dGL k-BackingCard k-BackingCard--disabled"
+  className="sc-bdvvtL gLRWLC k-BackingCard k-BackingCard--disabled"
 >
   <div
     className="k-BackingCard__imageWrapper"
@@ -123,31 +125,33 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       </span>
     </p>
     <div
-      className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible k-BackingCard__descriptionWrapper--truncateText"
+      className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible"
     >
       <div
-        className="k-BackingCard__description"
+        className="k-BackingCard__description k-BackingCard__description--truncateText"
       >
-        <p
-          className="k-u-margin-none"
-        >
-          Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-        </p>
-        <p
-          className="k-u-margin-none"
-        >
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-        <p
-          className="k-u-margin-none"
-        >
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-        <p
-          className="k-u-margin-none"
-        >
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
+        <div>
+          <p
+            className="k-u-margin-none"
+          >
+            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+          </p>
+          <p
+            className="k-u-margin-none"
+          >
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p
+            className="k-u-margin-none"
+          >
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p
+            className="k-u-margin-none"
+          >
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+        </div>
       </div>
     </div>
     <ul
