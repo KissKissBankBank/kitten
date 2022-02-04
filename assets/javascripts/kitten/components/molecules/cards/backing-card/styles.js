@@ -135,7 +135,7 @@ export const StyledBackingCard = styled.article`
       overflow: hidden;
       position: relative;
       max-height: calc(
-        8 * (var(--backingCard-description-fontSize) + ${pxToRem(4)})
+        6 * (var(--backingCard-description-fontSize) + ${pxToRem(4)})
       );
     }
 
