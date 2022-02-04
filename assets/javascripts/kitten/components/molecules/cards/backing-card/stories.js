@@ -13,16 +13,23 @@ import {
   GifVideo,
   useMedia,
   getMinQuery,
-} from '../../../..'
+} from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 const StyledCarouselContainer = styled.div`
   .k-Carousel--showOtherPages .k-Carousel__inner {
-    padding: 0 ${pxToRem(80 - 4)} 0 ${pxToRem(20 - 4)};
+    padding: 0 ${pxToRem(40 - 4)} 0 ${pxToRem(20 - 4)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${pxToRem(120 - 4)} 0 ${pxToRem(40 - 4)};
+      padding: 0 ${pxToRem(60 - 4)} 0 ${pxToRem(40 - 4)};
     }
+  }
+
+  .k-Carousel__page {
+    height: 100% !important;
+  }
+  .k-Carousel__page__item {
+    padding-top: ${pxToRem(12)} !important;
   }
 `
 
@@ -58,50 +65,44 @@ export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
           <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
         </BackingCard.Image>
       )}
-      <BackingCard.HeadingTag icon="star" text="Star reward" />
-      <BackingCard.Title>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-      </BackingCard.Title>
-      <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-      <BackingCard.Info
-        legend="Prix de livraison&nbsp;:"
-        value="5&nbsp;€ (en France)"
-      />
-      <BackingCard.Info
-        legend="Livraison estimée&nbsp;:"
-        value="Janvier 2022"
-      />
-      <BackingCard.Description
-        moreButtonText="See more…"
-        truncateText={truncateText}
-      >
-        <p className="k-u-weight-light k-u-margin-none">
-          <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-          tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-          <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
-          sed ipsum.
-        </p>
-        <p className="k-u-weight-light k-u-margin-none">
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-        <p className="k-u-weight-light k-u-margin-none">
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-        <p className="k-u-weight-light k-u-margin-none">
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-      </BackingCard.Description>
-      <BackingCard.TagList>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">5</strong> contributeurs
-        </Tag>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">2/6</strong> disponibles
-        </Tag>
-      </BackingCard.TagList>
+      <BackingCard.Contents>
+        <BackingCard.HeadingTag icon="star" text="Star reward" />
+        <BackingCard.Title>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+        </BackingCard.Title>
+        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.TagList>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">5</strong> contributeurs
+          </Tag>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">2/6</strong> disponibles
+          </Tag>
+        </BackingCard.TagList>
+        <BackingCard.Description
+          moreButtonText="See more…"
+          truncateText={truncateText}
+        >
+          <p className="k-u-weight-light k-u-margin-none">
+            <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+            <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
+            sed ipsum.
+          </p>
+          <p className="k-u-weight-light k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-weight-light k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-weight-light k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+        </BackingCard.Description>
+      </BackingCard.Contents>
       {hasButton && <BackingCard.Button>Je soutiens</BackingCard.Button>}
     </BackingCard>
   )
@@ -128,59 +129,53 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
       <BackingCard.Image>
         <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
           <source
-            src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
+            src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
             type="video/webm"
           />
           <source
-            src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.mp4"
+            src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
             type="video/mp4"
           />
         </GifVideo>
       </BackingCard.Image>
-      <BackingCard.HeadingTag icon="star" text="Star reward" />
-      <BackingCard.Title>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-      </BackingCard.Title>
-      <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-      <BackingCard.Info
-        legend="Prix de livraison&nbsp;:"
-        value="5&nbsp;€ (en France)"
-      />
-      <BackingCard.Info
-        legend="Livraison estimée&nbsp;:"
-        value="Janvier 2022"
-      />
-      <BackingCard.Description
-        moreButtonText="See more…"
-        truncateText={truncateText}
-      >
-        <p className="k-u-weight-light k-u-margin-none">
-          <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-          tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-          <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
-          sed ipsum.
-        </p>
-        <p className="k-u-weight-light k-u-margin-none">
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-        <p className="k-u-weight-light k-u-margin-none">
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-        <p className="k-u-weight-light k-u-margin-none">
-          Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-          Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
-        </p>
-      </BackingCard.Description>
-      <BackingCard.TagList>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">5</strong> contributeurs
-        </Tag>
-        <Tag as="li">
-          <strong className="k-u-weight-regular">2/6</strong> disponibles
-        </Tag>
-      </BackingCard.TagList>
+      <BackingCard.Contents>
+        <BackingCard.HeadingTag icon="star" text="Star reward" />
+        <BackingCard.Title>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+        </BackingCard.Title>
+        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.TagList>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">5</strong> contributeurs
+          </Tag>
+          <Tag as="li">
+            <strong className="k-u-weight-regular">2/6</strong> disponibles
+          </Tag>
+        </BackingCard.TagList>
+        <BackingCard.Description
+          moreButtonText="See more…"
+          truncateText={truncateText}
+        >
+          <p className="k-u-weight-light k-u-margin-none">
+            <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+            <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
+            sed ipsum.
+          </p>
+          <p className="k-u-weight-light k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-weight-light k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p className="k-u-weight-light k-u-margin-none">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+        </BackingCard.Description>
+      </BackingCard.Contents>
       <BackingCard.Button>Je soutiens</BackingCard.Button>
     </BackingCard>
   )
@@ -227,106 +222,92 @@ export const InACarouselComponent = () => {
         loop
         tinyButtons
       >
-        <BackingCard as="button" className="k-u-reset-button">
+        <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Image id="one_such_ID" className="hellowORLD">
             <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
-          <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+          <BackingCard.Contents>
+            <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
+            <BackingCard.Title>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+            </BackingCard.Title>
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard as="button" className="k-u-reset-button">
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+        <BackingCard stretch as="button" className="k-u-reset-button">
+          <BackingCard.Contents>
+            <BackingCard.HeadingTag icon="star" text="Star reward" />
+            <BackingCard.Title>Smol titl.</BackingCard.Title>
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard as="button" className="k-u-reset-button">
+        <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Image>
             <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
@@ -339,193 +320,187 @@ export const InACarouselComponent = () => {
               />
             </GifVideo>
           </BackingCard.Image>
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+          <BackingCard.Contents>
+            <BackingCard.HeadingTag icon="star" text="Star reward" />
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard as="button" className="k-u-reset-button">
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
-            legend="Prix de livraison&nbsp;:"
-            value="5&nbsp;€ (en France)"
-          />
-          <BackingCard.Info
-            legend="Livraison estimée&nbsp;:"
-            value="Janvier 2022"
-          />
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+        <BackingCard stretch as="button" className="k-u-reset-button">
+          <BackingCard.Contents>
+            <BackingCard.HeadingTag icon="star" text="Star reward" />
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
           <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard>
-          <BackingCard.Title textSize="giant" strokeSize="default">
-            Je donne ce que je veux
-          </BackingCard.Title>
-          <BackingCard.Form>
-            <Label
-              htmlFor="text_input_with_unit"
-              className="k-u-margin-bottom-single"
-            >
-              Montant de votre don
-            </Label>
-            <TextInputWithUnit id="text_input_with_unit" unit="€" />
-          </BackingCard.Form>
+        <BackingCard stretch>
+          <BackingCard.Contents>
+            <BackingCard.Title textSize="giant">
+              Je donne ce que je veux
+            </BackingCard.Title>
+            <BackingCard.Form>
+              <Label
+                htmlFor="text_input_with_unit"
+                className="k-u-margin-bottom-single"
+              >
+                Montant de votre don
+              </Label>
+              <TextInputWithUnit id="text_input_with_unit" unit="€" />
+            </BackingCard.Form>
+          </BackingCard.Contents>
           <BackingCard.Button>Je soutiens</BackingCard.Button>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
+        <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.Image>
             <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
           </BackingCard.Image>
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+          <BackingCard.Contents>
+            <BackingCard.HeadingTag icon="star" text="Star reward" />
+            <BackingCard.Title>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+            </BackingCard.Title>
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Title>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+        <BackingCard stretch disabled className="k-u-reset-button">
+          <BackingCard.Contents>
+            <BackingCard.HeadingTag icon="star" text="Star reward" />
+            <BackingCard.Title>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+            </BackingCard.Title>
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
+        <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.Image>
             <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
@@ -538,73 +513,77 @@ export const InACarouselComponent = () => {
               />
             </GifVideo>
           </BackingCard.Image>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+          <BackingCard.Contents>
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
         </BackingCard>
 
-        <BackingCard disabled className="k-u-reset-button">
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Description moreButtonText="See more…" truncateText>
-            <p className="k-u-weight-light k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-              tellus eget condimentum rhoncus, sem quam semper libero,{' '}
-              <em className="k-u-style-italic">sit amet adipiscing</em> sem
-              neque sed ipsum.
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-            <p className="k-u-weight-light k-u-margin-none">
-              Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-              enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-              tell
-            </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
-            </Tag>
-            <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
-            </Tag>
-          </BackingCard.TagList>
+        <BackingCard stretch disabled className="k-u-reset-button">
+          <BackingCard.Contents>
+            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+            <BackingCard.TagList>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">5</strong> contributeurs
+              </Tag>
+              <Tag as="li">
+                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              </Tag>
+            </BackingCard.TagList>
+            <BackingCard.Description moreButtonText="See more…" truncateText>
+              <p className="k-u-weight-light k-u-margin-none">
+                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+                tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+                <em className="k-u-style-italic">sit amet adipiscing</em> sem
+                neque sed ipsum.
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+              <p className="k-u-weight-light k-u-margin-none">
+                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                tell
+              </p>
+            </BackingCard.Description>
+          </BackingCard.Contents>
         </BackingCard>
       </Carousel>
     </StyledCarouselContainer>

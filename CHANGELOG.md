@@ -9,7 +9,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
   - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
 - Feature: Add `CrossCircleIconNext` component.
-
+- Deprecation/Change: `BackingCard`: Deprecate `BackingCard.Info`.
+- Deprecation/Change: `BackingCard`: Deprecate old layout without `BackingCard.Contents`.
+- Deprecation/Change: `BackingCard`: Remove `strokeSize` prop from `BackingCard.Title`.
+- Feature: `Tag`: Add `variant` prop, defaults to `light`, accepts `dark`.
+- Feature: `BackingCard`: Change design & adjust story.
+- Feature: `BackingCard`: Add `stretch` prop.
+- Feature: `BackingCard`: Add `BackingCard.Contents` subcomponent.
 - Fix: `AlertBox`: Improve styles.
 - Fix: `HeroLayout`: Fix Hero sizing on large screens.
 - Fix: `HeroLayout`: Fix sticky columns position on desktop.
