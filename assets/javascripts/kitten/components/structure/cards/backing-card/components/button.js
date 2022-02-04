@@ -5,11 +5,12 @@ import { Button as KittenButton } from '../../../../action/button'
 export const Button = ({ className, ...props }) => (
   <KittenButton
     modifier="helium"
-    {...props}
+    fit="content"
     className={classNames(
       'k-BackingCard__button',
       'k-BackingCard__drawer',
       className,
     )}
+    {...props}
   />
 )
