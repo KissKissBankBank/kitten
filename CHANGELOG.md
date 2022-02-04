@@ -5,9 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking changes:
-  - `GiftIconNext`: Remplace by `ColorGiftIconNext`.
-  - `CrossCircleIconNext`: Remplace by `ColorCrossCircleIconNext`.
-  - `HeartWithClickIconNext`: Remplace by `ColorHeartWithClickIconNext`.
+  - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
+  - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
+  - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
 - Feature: Add `CrossCircleIconNext` component.
 
 - Fix: `AlertBox`: Improve styles.
