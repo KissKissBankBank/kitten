@@ -16,8 +16,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Form`,
   - `Structure`,
   - `Information`,
-  - `Overlay`,
+  - `Layer`,
   - `Interaction`,
+  - `Embed`,
   - `Feedback`,
   - `Naviagtion`,
   - `Pages`.

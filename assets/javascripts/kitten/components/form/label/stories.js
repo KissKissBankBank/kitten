@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Label } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import COLORS from 'kitten'
+import { COLORS } from 'kitten'
 
 export default {
   title: 'Form/Label',

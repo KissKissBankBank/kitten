@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 import { StyledLayout } from './styles'
-import { Loader } from '../../feedback/loader'
+import { Loader } from '../../graphics/animations/loader'
 import { Grid, GridCol } from '../../layout/grid'
 import {
   getReactElementsByType,

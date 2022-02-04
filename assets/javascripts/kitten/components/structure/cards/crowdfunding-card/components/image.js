@@ -4,7 +4,7 @@ import { Text } from '../../../../typography/text'
 import { ButtonImage } from '../../../../action/button-image'
 import COLORS from '../../../../../constants/colors-config'
 import classNames from 'classnames'
-import { GifVideo } from '../../../../information/gif-video'
+import { GifVideo } from '../../../../embed/gif-video'
 
 const Image = ({
   imageContainerBackground,

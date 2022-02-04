@@ -13,7 +13,7 @@ import { CrossCircleIcon } from '../../../graphics/icons/cross-circle-icon'
 import { ClockCircleIcon } from '../../../graphics/icons/clock-circle-icon'
 import { CrossIcon } from '../../../graphics/icons/cross-icon'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
-import { Loader } from '../../../feedback/loader'
+import { Loader } from '../../../graphics/animations/loader'
 
 const StyledBasicUploader = styled.div`
   input[type='file'] {

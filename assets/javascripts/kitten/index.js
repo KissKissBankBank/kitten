@@ -9,6 +9,8 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
 
 // Action
+// ------
+
 export { Button } from './components/action/button'
 export { ButtonIcon } from './components/action/button-icon'
 export { ButtonGroup } from './components/action/button-group'
@@ -32,28 +34,31 @@ export {
 } from './components/action/social-button-icon'
 export { TagButton } from './components/action/tag-button'
 export { TextButton } from './components/action/text-button'
+export { TextCopy } from './components/action/text-copy'
 
 export { modifierStyles as buttonModifierStyles } from './components/action/button/helpers/modifier-styles'
 
 
-// Layout
-// ------
+// Embed
+// -----
 
-export {
-  AdaptableGrid,
-  AdaptableGridCol,
-} from './components/layout/adaptable-grid'
-export { Container } from './components/layout/container'
-export { DashboardLayout } from './components/layout/dashboard-layout'
-export { DeskLayout } from './components/layout/desk-layout'
-export { FlexWrapper } from './components/layout/flex-wrapper'
-export { Grid, GridCol } from './components/layout/grid'
-export { HeroLayout } from './components/layout/hero-layout'
-export { Marger } from './components/layout/marger'
-export { Row } from './components/layout/row'
-export { ScrollableContainer } from './components/layout/scrollable-container'
-export { StickyContainer } from './components/layout/sticky-container'
-export { DevGrid } from './components/layout/dev-grid'
+export { EmbedPlayer } from './components/embed/embed-player'
+export { Video } from './components/embed/video'
+export { GifVideo } from './components/embed/gif-video'
+export { ResponsiveIframeContainer } from './components/embed/responsive-iframe-container'
+
+
+// Feedback
+// --------
+
+export { HorizontalTimeline } from './components/feedback/horizontal-timeline'
+export { IconList } from './components/feedback/icon-list'
+export { Progress } from './components/feedback/progress'
+export { ProgressRing } from './components/feedback/progress-ring'
+export { Timeline } from './components/feedback/timeline'
+export { VerticalProgress } from './components/feedback/vertical-progress'
+export { VerticalStepper } from './components/feedback/vertical-stepper'
+export { CheckList } from './components/feedback/check-list'
 
 
 // Form
@@ -72,7 +77,6 @@ export { RadioButton } from './components/form/radio-button'
 export { RadioButtonSet } from './components/form/radio-button-set'
 export { RangeSlider } from './components/form/range-slider'
 export { ToggleSwitch } from './components/form/toggle-switch'
-export { TextCopy } from './components/form/text-copy'
 export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'
 
 // Form/Input
@@ -87,33 +91,21 @@ export { TextInputWithIcon } from './components/form/input/text-input-with-icon'
 export { TextInputWithLimit } from './components/form/input/text-input-with-limit'
 export { TextInputWithUnit } from './components/form/input/text-input-with-unit'
 
-
-// Typography
-// ----
-
-export { Paragraph } from './components/typography/paragraph'
-export { SupTitle } from './components/typography/sup-title'
-export { Text } from './components/typography/text'
-export { Title } from './components/typography/title'
-export { TitleWithStroke } from './components/typography/title-with-stroke'
-export {
-  titleModifiers,
-  titleModifierStyles,
-  titleModifiersNames,
-  titleHelperModifierStyles,
-} from './components/typography/common/title-modifier-styles'
-export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
-
-export { HorizontalStroke } from './components/typography/horizontal-stroke'
-export { VerticalStroke } from './components/typography/vertical-stroke'
-export {
-  strokeModifierStyles,
-  strokeModifierStylesWithoutMargin,
-} from './components/typography/horizontal-stroke/common/stroke-modifier-styles'
+// Form/Select
+export { DropdownPhoneSelect } from './components/form/select/dropdown-phone-select'
+export { DropdownSelect } from './components/form/select/dropdown-select'
+export { DropdownSelectWithInput } from './components/form/select/dropdown-select-with-input'
 
 
 // Graphics
 // --------
+
+// Graphics/Animations
+export { KissKissLoadingAnimation } from './components/graphics/animations/kisskiss-loading-animation'
+export { LendoLoadingAnimation } from './components/graphics/animations/lendo-loading-animation'
+export { Loader } from './components/graphics/animations/loader'
+export { LoaderWithParagraph } from './components/graphics/animations/loader-with-paragraph'
+export { HighlightHalo } from './components/graphics/animations/highlight-halo'
 
 // Graphics/Icons
 export { AlignCenterIcon } from './components/graphics/icons/align-center-icon'
@@ -277,8 +269,95 @@ export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 export { YouMatterLogo } from './components/graphics/logos/youmatter'
 
 
+// Information
+// -----------
+
+export { Alert } from './components/information/alert'
+export { AlertBox } from './components/information/alert-box'
+export { AvatarWithTextAndBadge } from './components/information/avatar-with-text-and-badge'
+export { Badge } from './components/information/badge'
+export { CounterBlock } from './components/information/counter-block'
+export { IconBadge } from './components/information/icon-badge'
+export { StatusWithBullet } from './components/information/status-with-bullet'
+export { Tag } from './components/information/tag'
+
+// Information/Boxes
+export { ArrowContainer } from './components/information/boxes/arrow-container'
+export { DocLinkBox } from './components/information/boxes/doc-link-box'
+export { IconContainer } from './components/information/boxes/icon-container'
+export { InformationBox } from './components/information/boxes/information-box'
+export { LinkBox } from './components/information/boxes/link-box'
+
+
+// Interaction
+// -----------
+
+// Interaction/CommentBlock
+export { CommentAvatar } from './components/interaction/comment-block/comment-avatar'
+export { CommentForm } from './components/interaction/comment-block/comment-form'
+export { Comment } from './components/interaction/comment-block/comment'
+
+export { DragAndDropList } from './components/interaction/drag-and-drop-list'
+export {
+  StepperIcon,
+  StepperIconDefault,
+  StepperIconInProgress,
+  StepperIconValidated,
+} from './components/interaction/stepper-icon'
+export { Stepper } from './components/interaction/stepper'
+
+// Interaction/Upload
+export { BasicUploader } from './components/interaction/upload/basic-uploader'
+export { DocumentManager } from './components/interaction/upload/document-manager'
+export { ImageDropUploader } from './components/interaction/upload/image-drop-uploader'
+export { DocumentsDropUploader } from './components/interaction/upload/documents-drop-uploader'
+export { DocumentsStatusBox } from './components/interaction/upload/documents-status-box'
+
+
+// Layer
+// -----
+
+export { Modal } from './components/layer/modal'
+export { Modal as ModalNext } from './components/layer/modal-next'
+export { Overlay } from './components/layer/overlay'
+export { Toggletip } from './components/layer/toggletip'
+
+
+// Layout
+// ------
+
+export {
+  AdaptableGrid,
+  AdaptableGridCol,
+} from './components/layout/adaptable-grid'
+export { Container } from './components/layout/container'
+export { DashboardLayout } from './components/layout/dashboard-layout'
+export { DeskLayout } from './components/layout/desk-layout'
+export { FlexWrapper } from './components/layout/flex-wrapper'
+export { Grid, GridCol } from './components/layout/grid'
+export { HeroLayout } from './components/layout/hero-layout'
+export { Marger } from './components/layout/marger'
+export { Row } from './components/layout/row'
+export { ScrollableContainer } from './components/layout/scrollable-container'
+export { StickyContainer } from './components/layout/sticky-container'
+export { DevGrid } from './components/layout/dev-grid'
+
+
+// Navigation
+// ----------
+
+export { DashboardMenu } from './components/navigation/dashboard-menu'
+export { DeskMenu } from './components/navigation/desk-menu'
+export { FloatingMenu } from './components/navigation/floating-menu'
+export { HeaderMenu } from './components/navigation/header-menu'
+export { default as HeaderNav } from './components/navigation/header-nav'
+export { NavBar } from './components/navigation/nav-bar'
+export { Pagination } from './components/navigation/pagination'
+export { LinkList } from './components/navigation/link-list'
+
+
 // Structure
-// --------
+// ---------
 
 // Structure/Cards
 export { BackerCard } from './components/structure/cards/backer-card'
@@ -305,9 +384,6 @@ export { VerticalCardWithAction } from './components/structure/cards/vertical-ca
 export { Carousel } from './components/structure/carousels/carousel'
 export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel'
 export { SimpleCarousel } from './components/structure/carousels/simple-carousel'
-export { DropdownPhoneSelect } from './components/structure/dropdown-phone-select'
-export { DropdownSelect } from './components/structure/dropdown-select'
-export { DropdownSelectWithInput } from './components/structure/dropdown-select-with-input'
 
 export { Accordeon } from './components/structure/expand/accordeon'
 export { Details } from './components/structure/expand/details'
@@ -326,93 +402,29 @@ export { ListTable } from './components/structure/tables/list-table'
 export { SingleEntryTable } from './components/structure/tables/single-entry-table'
 
 
-// Information
-// --------
+// Typography
+// ----------
 
-export { Alert } from './components/information/alert'
-export { AlertBox } from './components/information/alert-box'
-export { AvatarWithTextAndBadge } from './components/information/avatar-with-text-and-badge'
-export { Badge } from './components/information/badge'
-export { CounterBlock } from './components/information/counter-block'
-export { IconBadge } from './components/information/icon-badge'
-export { StatusWithBullet } from './components/information/status-with-bullet'
-export { Tag } from './components/information/tag'
-export { Video } from './components/information/video'
-export { GifVideo } from './components/information/gif-video'
-
-// Information/Boxes
-export { ArrowContainer } from './components/information/boxes/arrow-container'
-export { DocLinkBox } from './components/information/boxes/doc-link-box'
-export { IconContainer } from './components/information/boxes/icon-container'
-export { InformationBox } from './components/information/boxes/information-box'
-export { LinkBox } from './components/information/boxes/link-box'
-
-
-// Overlay
-// --------
-
-export { Modal } from './components/overlay/modal'
-export { Modal as ModalNext } from './components/overlay/modal-next'
-export { Overlay } from './components/overlay/overlay'
-export { Toggletip } from './components/overlay/toggletip'
-
-
-// Interaction
-// --------
-
-// Interaction/CommentBlock
-export { CommentAvatar } from './components/interaction/comment-block/comment-avatar'
-export { CommentForm } from './components/interaction/comment-block/comment-form'
-export { Comment } from './components/interaction/comment-block/comment'
-
-
-export { DragAndDropList } from './components/interaction/drag-and-drop-list'
-export { EmbedPlayer } from './components/interaction/embed/embed-player'
-export { ResponsiveIframeContainer } from './components/interaction/embed/responsive-iframe-container'
-export { HighlightHalo } from './components/interaction/highlight-halo'
+export { Paragraph } from './components/typography/paragraph'
+export { SupTitle } from './components/typography/sup-title'
+export { Text } from './components/typography/text'
+export { Title } from './components/typography/title'
+export { TitleWithStroke } from './components/typography/title-with-stroke'
 export {
-  StepperIcon,
-  StepperIconDefault,
-  StepperIconInProgress,
-  StepperIconValidated,
-} from './components/interaction/stepper-icon'
-export { Stepper } from './components/interaction/stepper'
+  titleModifiers,
+  titleModifierStyles,
+  titleModifiersNames,
+  titleHelperModifierStyles,
+} from './components/typography/common/title-modifier-styles'
+export { modifierStyles as paragraphModifierStyles } from './components/typography/paragraph/helpers/modifier-styles'
 
-// Interaction/Upload
-export { BasicUploader } from './components/interaction/upload/basic-uploader'
-export { DocumentManager } from './components/interaction/upload/document-manager'
-export { ImageDropUploader } from './components/interaction/upload/image-drop-uploader'
-export { DocumentsDropUploader } from './components/interaction/upload/documents-drop-uploader'
-export { DocumentsStatusBox } from './components/interaction/upload/documents-status-box'
+export { HorizontalStroke } from './components/typography/horizontal-stroke'
+export { VerticalStroke } from './components/typography/vertical-stroke'
+export {
+  strokeModifierStyles,
+  strokeModifierStylesWithoutMargin,
+} from './components/typography/horizontal-stroke/common/stroke-modifier-styles'
 
-// Feedback
-// --------
-
-export { HorizontalTimeline } from './components/feedback/horizontal-timeline'
-export { IconList } from './components/feedback/icon-list'
-export { KissKissLoadingAnimation } from './components/feedback/kisskiss-loading-animation'
-export { LendoLoadingAnimation } from './components/feedback/lendo-loading-animation'
-export { Loader } from './components/feedback/loader'
-export { LoaderWithParagraph } from './components/feedback/loader-with-paragraph'
-export { Progress } from './components/feedback/progress'
-export { ProgressRing } from './components/feedback/progress-ring'
-export { Timeline } from './components/feedback/timeline'
-export { VerticalProgress } from './components/feedback/vertical-progress'
-export { VerticalStepper } from './components/feedback/vertical-stepper'
-export { CheckList } from './components/feedback/check-list'
-
-
-// Navigation
-// --------
-
-export { DashboardMenu } from './components/navigation/dashboard-menu'
-export { DeskMenu } from './components/navigation/desk-menu'
-export { FloatingMenu } from './components/navigation/floating-menu'
-export { HeaderMenu } from './components/navigation/header-menu'
-export { default as HeaderNav } from './components/navigation/header-nav'
-export { NavBar } from './components/navigation/nav-bar'
-export { Pagination } from './components/navigation/pagination'
-export { LinkList } from './components/navigation/link-list'
 
 // ---------
 // CONSTANTS
@@ -483,7 +495,7 @@ export { HEADER_HEIGHT } from './components/navigation/header-nav/config'
 export {
   CLOSE_OVERLAY_EVENT,
   OPEN_OVERLAY_EVENT,
-} from './components/overlay/overlay'
+} from './components/layer/overlay'
 
 // -------
 // HELPERS

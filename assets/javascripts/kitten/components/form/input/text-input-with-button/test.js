@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { TextInputWithButton } from './index'
-import { Loader } from '../../../feedback/loader'
+import { Loader } from '../../../graphics/animations/loader'
 
 describe('<TextInputWithButton />', () => {
   let component

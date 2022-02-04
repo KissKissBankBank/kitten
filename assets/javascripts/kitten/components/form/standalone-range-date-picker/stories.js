@@ -1,6 +1,6 @@
 import React from 'react'
 import { StandaloneRangeDatePicker } from './index'
-import COLORS from 'kitten'
+import { COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
