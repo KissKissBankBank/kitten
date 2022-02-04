@@ -22,7 +22,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Feedback`,
   - `Naviagtion`,
   - `Pages`.
-
 - Deprecation/Change: `BackingCard`: Deprecate `BackingCard.Info`.
 - Deprecation/Change: `BackingCard`: Deprecate old layout without `BackingCard.Contents`.
 - Deprecation/Change: `BackingCard`: Remove `strokeSize` prop from `BackingCard.Title`.
@@ -33,7 +32,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `AlertBox`: Improve styles.
 - Fix: `HeroLayout`: Fix Hero sizing on large screens.
 - Fix: `HeroLayout`: Fix sticky columns position on desktop.
-
 
 ## [7.2.0] - 2022-01-28
 
