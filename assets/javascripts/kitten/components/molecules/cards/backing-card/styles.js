@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { mq } from '../../../../constants/screen-config'
 
 export const StyledBackingCard = styled.article`

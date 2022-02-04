@@ -2,7 +2,7 @@
 
 exports[`<BackingCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL jAuwxA k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdvvtL csRwKU k-BackingCard k-BackingCard--hasBorder"
 >
   <div
     className="k-BackingCard__gridWrapper"
@@ -11,7 +11,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
       className="k-BackingCard__titleWrapper k-BackingCard__drawer"
     >
       <h3
-        className="k-u-line-height-1 k-u-size-big k-u-weight-bold k-BackingCard__title k-u-margin-none k-u-align-center"
+        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center"
       >
         <span
           width={0}
@@ -52,7 +52,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
 
 exports[`<BackingCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL jAuwxA k-BackingCard k-BackingCard--disabled"
+  className="sc-bdvvtL csRwKU k-BackingCard k-BackingCard--disabled"
 >
   <div
     className="k-BackingCard__imageWrapper"
@@ -89,7 +89,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__titleWrapper k-BackingCard__drawer"
     >
       <h3
-        className="k-u-line-height-1 k-u-size-big k-u-weight-bold k-BackingCard__title k-u-margin-none k-u-align-center"
+        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center"
       >
         <span
           width={0}
@@ -117,12 +117,12 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__drawer k-BackingCard__amount__wrapper k-u-align-center"
     >
       <span
-        className="k-u-line-height-1 k-u-weight-bold k-BackingCard__amount k-u-block"
+        className="k-u-weight-bold k-BackingCard__amount k-u-block"
       >
         65 €
       </span>
       <span
-        className="k-u-letter-spacing-10 k-u-line-height-1-4 k-u-size-nano k-u-transform-uppercase k-u-weight-regular k-BackingCard__amount__suffix k-u-block"
+        className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-regular k-BackingCard__amount__suffix k-u-block"
       >
         Etiam Consectetur Venenatis
       </span>
