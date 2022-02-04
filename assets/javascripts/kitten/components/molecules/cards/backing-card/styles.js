@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { mq } from '../../../../constants/screen-config'
 
 export const StyledBackingCard = styled.article`
   --backingCard--border-width: 0;
@@ -119,20 +120,31 @@ export const StyledBackingCard = styled.article`
     color: var(--color-grey-700);
   }
 
-  .k-BackingCard__description--truncateText {
-    overflow: hidden;
-    position: relative;
-    max-height: calc(3 * 1.5 * ${stepToRem(-2)});
-  }
-  .k-BackingCard__description__moreButton {
-    line-height: 1.5;
-  }
-
   .k-BackingCard__descriptionWrapper {
+    --backingCard-description-fontSize: ${pxToRem(12)};
+
+    @media ${mq.tabletAndDesktop} {
+      --backingCard-description-fontSize: ${pxToRem(14)};
+    }
+
+    .k-BackingCard__description--truncateText {
+      overflow: hidden;
+      position: relative;
+      max-height: calc(
+        8 * (var(--backingCard-description-fontSize) + ${pxToRem(4)})
+      );
+    }
+
+    .k-BackingCard__description__moreButton {
+      margin-top: ${pxToRem(10)};
+    }
+
     .k-BackingCard__description * {
       ${TYPOGRAPHY.fontStyles.light.fontFamily};
-      font-size: ${stepToRem(-2)};
-      line-height: calc(1.5 * ${stepToRem(-2)});
+      font-size: var(--backingCard-description-fontSize);
+      line-height: calc(
+        (var(--backingCard-description-fontSize) + ${pxToRem(4)})
+      );
     }
   }
 
