@@ -15,7 +15,6 @@ export const Amount = ({ className, suffix, children, ...props }) => {
     >
       <Text
         weight="bold"
-        lineHeight="1"
         className="k-BackingCard__amount k-u-block"
       >
         {children}
@@ -23,10 +22,8 @@ export const Amount = ({ className, suffix, children, ...props }) => {
       {suffix && (
         <Text
           weight="regular"
-          lineHeight="1.4"
           transform="uppercase"
           letterSpacing="10%"
-          size="nano"
           className="k-BackingCard__amount__suffix k-u-block"
         >
           {suffix}

@@ -38,7 +38,7 @@ export const StyledBackingCard = styled.article`
 
   .k-BackingCard__gridWrapper {
     flex: 1 1 auto;
-    padding: ${pxToRem(20)};
+    padding: ${pxToRem(10)} ${pxToRem(20)} ${pxToRem(20)};
     display: grid;
     grid-template-columns: [row-start] var(--backingCard--grid-col) [row-end];
     grid-gap: ${pxToRem(20)};
@@ -112,11 +112,15 @@ export const StyledBackingCard = styled.article`
   .k-BackingCard__amount {
     position: relative;
     top: ${pxToRem(-5)};
-    font-size: ${stepToRem(5)};
+    font-size: ${pxToRem(28)};
     color: var(--color-primary-500);
+    line-height: 0.9em;
+    letter-spacing: -0.015em !important;
   }
 
   .k-BackingCard__amount__suffix {
+    font-size: ${pxToRem(10)};
+    line-height: ${pxToRem(22)};
     color: var(--color-grey-700);
   }
 
