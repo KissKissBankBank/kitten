@@ -119,18 +119,16 @@ export const StyledBackingCard = styled.article`
     color: var(--color-grey-700);
   }
 
-  .k-BackingCard__descriptionWrapper {
+  .k-BackingCard__description--truncateText {
     overflow: hidden;
     position: relative;
+    max-height: calc(3 * 1.5 * ${stepToRem(-2)});
+  }
+  .k-BackingCard__description__moreButton {
+    line-height: 1.5;
+  }
 
-    &.k-BackingCard__descriptionWrapper--truncateText {
-      max-height: calc(3 * 1.5 * ${stepToRem(-2)});
-
-      .k-BackingCard__description__moreButton {
-        line-height: 1.5;
-      }
-    }
-
+  .k-BackingCard__descriptionWrapper {
     .k-BackingCard__description * {
       ${TYPOGRAPHY.fontStyles.light.fontFamily};
       font-size: ${stepToRem(-2)};
