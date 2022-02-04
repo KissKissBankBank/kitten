@@ -16,6 +16,7 @@ export const Text = ({
   transform,
   weight,
   style,
+  letterSpacing,
   ...others
 }) => {
   const Tag = as || tag
@@ -34,10 +35,15 @@ export const Text = ({
       'k-u-decoration-underline': decoration == 'underline',
       'k-u-decoration-none': decoration == 'none',
 
+      // Letter spacing.
+      'k-u-letter-spacing-10': letterSpacing == '10%',
+
       // Line height.
       'k-u-line-height-normal': lineHeight == 'normal',
       'k-u-line-height-1': lineHeight == '1',
+      'k-u-line-height-1-25': lineHeight == '1.25',
       'k-u-line-height-1-3': lineHeight == '1.3',
+      'k-u-line-height-1-4': lineHeight == '1.4',
 
       // Font Feature Settings.
       'k-u-font-setting-tnum': setting == 'tnum', // Monospaced numbers.
@@ -100,6 +106,7 @@ Text.propTypes = {
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  letterSpacing: PropTypes.string,
 }
 
 Text.defaultProps = {
@@ -114,4 +121,5 @@ Text.defaultProps = {
   tag: 'span',
   transform: null,
   weight: 'light',
+  letterSpacing: null,
 }

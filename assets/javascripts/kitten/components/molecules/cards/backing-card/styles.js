@@ -104,11 +104,14 @@ export const StyledBackingCard = styled.article`
     justify-content: center;
   }
 
+  .k-BackingCard__amount__wrapper {
+    margin: 0;
+  }
+
   .k-BackingCard__amount {
     position: relative;
     top: ${pxToRem(-5)};
     font-size: ${stepToRem(5)};
-    color: var(--color-primary-500);
   }
 
   .k-BackingCard__descriptionWrapper {

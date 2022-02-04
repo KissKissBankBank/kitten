@@ -2,19 +2,38 @@ import React from 'react'
 import classNames from 'classnames'
 import { Text } from '../../../../atoms/typography/text'
 
-export const Amount = ({ className, ...props }) => {
+export const Amount = ({ className, suffix, children, ...props }) => {
   return (
-    <Text
-      tag="p"
-      weight="bold"
-      lineHeight="1"
+    <p
       className={classNames(
-        'k-BackingCard__amount',
         'k-BackingCard__drawer',
+        'k-BackingCard__amount__wrapper',
         'k-u-align-center',
         className,
       )}
       {...props}
-    />
+    >
+      <Text
+        weight="bold"
+        lineHeight="1"
+        cssColor="var(--color-primary-500)"
+        className="k-BackingCard__amount k-u-block"
+      >
+        {children}
+      </Text>
+      {suffix && (
+        <Text
+          weight="regular"
+          lineHeight="1.4"
+          transform="uppercase"
+          letterSpacing="10%"
+          size="nano"
+          cssColor="var(--color-grey-700)"
+          className="k-BackingCard__amount__suffix k-u-block"
+        >
+          {suffix}
+        </Text>
+      )}
+    </p>
   )
 }

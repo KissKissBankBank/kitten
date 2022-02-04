@@ -57,7 +57,13 @@ export default {
   },
 }
 
-export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
+export const Default = ({
+  truncateText,
+  hasImage,
+  hasButton,
+  hasAmountSuffix,
+  ...args
+}) => {
   return (
     <BackingCard {...args} as="button" className="k-u-reset-button">
       {hasImage && (
@@ -70,7 +76,9 @@ export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
         <BackingCard.Title>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
         </BackingCard.Title>
-        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.Amount suffix={hasAmountSuffix ? 'Par mois' : null}>
+          65&nbsp;€
+        </BackingCard.Amount>
         <BackingCard.TagList>
           <Tag as="li">
             <strong className="k-u-weight-regular">5</strong> contributeurs
@@ -116,11 +124,16 @@ Default.argTypes = {
   ...argTypes,
   hasImage: { name: 'has Image (story prop)', control: 'boolean' },
   hasButton: { name: 'has Button (story prop)', control: 'boolean' },
+  hasAmountSuffix: {
+    name: 'has Amount suffix (story prop)',
+    control: 'boolean',
+  },
 }
 Default.args = {
   ...args,
   hasImage: true,
   hasButton: true,
+  hasAmountSuffix: false,
 }
 
 export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
