@@ -93,7 +93,7 @@ Text.propTypes = {
   cssColor: PropTypes.string,
   decoration: PropTypes.oneOf(['underline', 'none']),
   setting: PropTypes.oneOf(['tnum']),
-  lineHeight: PropTypes.oneOf(['normal', '1', '1.3']),
+  lineHeight: PropTypes.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
   size: PropTypes.oneOf([
     'giant',
     'huge',
