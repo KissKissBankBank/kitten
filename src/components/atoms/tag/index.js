@@ -21,29 +21,32 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["type", "size", "className"];
+var _excluded = ["type", "size", "variant", "className"];
 
 var StyledTag = _styledComponents.default.span.withConfig({
   displayName: "tag__StyledTag",
   componentId: "sc-1dt82ne-0"
-})(["height:", ";box-sizing:border-box;display:inline-block;padding:0 ", ";white-space:nowrap;line-height:", ";", " font-size:", ";border-radius:var(--border-radius-xs);&.k-Tag--info{background-color:var(--color-primary-100);color:var(--color-primary-700);}&.k-Tag--warning{background-color:var(--color-warning-100);color:var(--color-warning-700);}&.k-Tag--success{background-color:var(--color-success-100);color:var(--color-success-700);}&.k-Tag--error{background-color:var(--color-danger-100);color:var(--color-danger-700);}&.k-Tag--disabled{background-color:var(--color-grey-100);color:var(--color-grey-700);}&.k-Tag--small{height:", ";padding:0 ", ";font-size:", ";line-height:", ";}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
+})(["height:", ";box-sizing:border-box;display:inline-block;padding:0 ", ";white-space:nowrap;line-height:", ";", " font-size:", ";border-radius:var(--border-radius-rounded);text-transform:uppercase;letter-spacing:0.1em;&.k-Tag--light.k-Tag--info{background-color:var(--color-primary-100);color:var(--color-grey-900);}&.k-Tag--light.k-Tag--warning{background-color:var(--color-warning-100);color:var(--color-grey-900);}&.k-Tag--light.k-Tag--success{background-color:var(--color-success-100);color:var(--color-grey-900);}&.k-Tag--light.k-Tag--error{background-color:var(--color-danger-100);color:var(--color-grey-900);}&.k-Tag--light.k-Tag--disabled{background-color:var(--color-grey-300);color:var(--color-grey-900);}&.k-Tag--status.k-Tag--info{background-color:var(--color-primary-100);color:var(--color-primary-700);}&.k-Tag--status.k-Tag--warning{background-color:var(--color-warning-100);color:var(--color-warning-900);}&.k-Tag--status.k-Tag--success{background-color:var(--color-success-100);color:var(--color-success-700);}&.k-Tag--status.k-Tag--error{background-color:var(--color-danger-100);color:var(--color-danger-700);}&.k-Tag--status.k-Tag--disabled{background-color:var(--color-grey-300);color:var(--color-grey-800);}&.k-Tag--dark.k-Tag--info{background-color:var(--color-primary-500);color:var(--color-grey-000);}&.k-Tag--dark.k-Tag--warning{background-color:var(--color-warning-700);color:var(--color-grey-000);}&.k-Tag--dark.k-Tag--success{background-color:var(--color-success-500);color:var(--color-grey-000);}&.k-Tag--dark.k-Tag--error{background-color:var(--color-danger-500);color:var(--color-grey-000);}&.k-Tag--dark.k-Tag--disabled{background-color:var(--color-grey-900);color:var(--color-grey-000);}&.k-Tag--small{height:", ";padding:0 ", ";font-size:", ";line-height:", ";}"], (0, _typography.pxToRem)(24), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(24), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(18));
 
 var Tag = function Tag(_ref) {
   var type = _ref.type,
       size = _ref.size,
+      variant = _ref.variant,
       className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledTag, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Tag', className, "k-Tag--" + type, "k-Tag--" + size)
+    className: (0, _classnames.default)('k-Tag', className, "k-Tag--" + type, "k-Tag--" + size, "k-Tag--" + variant)
   }, props));
 };
 
 exports.Tag = Tag;
 Tag.propTypes = {
   type: _propTypes.default.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
-  size: _propTypes.default.oneOf(['regular', 'small'])
+  size: _propTypes.default.oneOf(['regular', 'small']),
+  variant: _propTypes.default.oneOf(['light', 'status', 'dark'])
 };
 Tag.defaultProps = {
   type: 'info',
-  size: 'regular'
+  size: 'regular',
+  variant: 'status'
 };

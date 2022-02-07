@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Tag } from '../../../../../components/atoms/tag';
 import { DiamondIcon } from '../../../../../components/graphics/icons/diamond-icon';
-import { StarIcon } from '../../../../../components/graphics/icons/star-icon';
+import { StarIconNext } from '../../../../../components/graphics/icons-next/star-icon-next';
 export var HeadingTag = function HeadingTag(_ref) {
   var text = _ref.text,
       icon = _ref.icon,
@@ -23,7 +23,7 @@ export var HeadingTag = function HeadingTag(_ref) {
 
       case 'star':
       default:
-        return /*#__PURE__*/React.createElement(StarIcon, {
+        return /*#__PURE__*/React.createElement(StarIconNext, {
           width: "14",
           height: "13"
         });
@@ -31,7 +31,8 @@ export var HeadingTag = function HeadingTag(_ref) {
   }();
 
   return /*#__PURE__*/React.createElement(Tag, _extends({
-    className: classNames('k-BackingCard__headingTag', 'k-BackingCard__drawer', className)
+    variant: "dark",
+    className: classNames('k-BackingCard__headingTag', className)
   }, props), iconDisplay, text);
 };
 HeadingTag.propTypes = {

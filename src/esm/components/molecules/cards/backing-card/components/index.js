@@ -7,3 +7,4 @@ export { Button } from './button';
 export { TagList } from './tag-list';
 export { HeadingTag } from './heading-tag';
 export { Description } from './description';
+export { Contents } from './contents';

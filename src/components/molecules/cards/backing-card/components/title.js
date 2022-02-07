@@ -13,34 +13,30 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _reactTruncate = _interopRequireDefault(require("react-truncate"));
+
 var _text = require("../../../../atoms/typography/text");
 
-var _horizontalStroke = require("../../../../atoms/horizontal-stroke");
-
-var _excluded = ["className", "textSize", "strokeSize"];
+var _excluded = ["className", "textSize", "children"];
 
 var Title = function Title(_ref) {
   var className = _ref.className,
       textSize = _ref.textSize,
-      strokeSize = _ref.strokeSize,
+      children = _ref.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-BackingCard__titleWrapper', 'k-BackingCard__drawer')
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     tag: "h3",
-    weight: "bold",
-    lineHeight: "1"
-  }, props, {
-    size: textSize,
-    className: (0, _classnames.default)('k-BackingCard__title', 'k-u-margin-none', className)
-  })), !!strokeSize && /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
-    size: strokeSize,
-    className: "k-u-margin-top-singleHalf k-u-margin-bottom-single"
-  }));
+    weight: "regular",
+    className: (0, _classnames.default)('k-BackingCard__title', 'k-u-margin-none', 'k-u-align-center', className),
+    size: textSize
+  }, props), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
+    lines: 2
+  }, children)));
 };
 
 exports.Title = Title;
 Title.defaultProps = {
-  textSize: 'default',
-  strokeSize: null
+  textSize: 'big'
 };
