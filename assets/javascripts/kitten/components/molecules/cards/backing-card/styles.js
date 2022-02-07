@@ -106,9 +106,6 @@ export const StyledBackingCard = styled.article`
 
   .k-BackingCard__title {
     width: 100%;
-  }
-
-  .k-BackingCard__title--isTruncated {
     white-space: nowrap;
   }
 
