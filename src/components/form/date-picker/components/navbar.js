@@ -11,7 +11,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-var _arrowIcon = require("../../../../components/graphics/icons/arrow-icon");
+var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
 var _typography = require("../../../../helpers/utils/typography");
 

@@ -9,7 +9,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _gridConfig = require("../../../constants/grid-config");
 
-var _config = require("../../../components/organisms/header-nav/config");
+var _config = require("../../navigation/header-nav/config");
 
 var _screenConfig = require("../../../constants/screen-config");
 

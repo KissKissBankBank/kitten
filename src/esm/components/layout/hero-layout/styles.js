@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
-import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config';
+import { HEADER_HEIGHT } from '../../navigation/header-nav/config';
 import { mq } from '../../../constants/screen-config';
 import { pxToRem } from '../../../helpers/utils/typography';
 export var StyledLayout = styled.div.withConfig({

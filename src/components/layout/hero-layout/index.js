@@ -17,9 +17,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styles = require("./styles");
 
-var _loader = require("../../../components/atoms/loader");
+var _loader = require("../../graphics/animations/loader");
 
-var _grid = require("../../../components/layout/grid");
+var _grid = require("../../layout/grid");
 
 var _reactElements = require("../../../helpers/react/react-elements");
 

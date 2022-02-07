@@ -6,9 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classNames from 'classnames';
-import { Checkbox } from '../../../components/form/checkbox';
+import { Checkbox } from '../../form/checkbox';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { Label } from '../../../components/form/label';
+import { Label } from '../../form/label';
 var StyledCheckboxSet = styled.fieldset.withConfig({
   displayName: "checkbox-set__StyledCheckboxSet",
   componentId: "sc-1x5pmus-0"

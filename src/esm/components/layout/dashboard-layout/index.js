@@ -18,8 +18,8 @@ import { useMedia } from '../../../helpers/utils/use-media-query';
 import { getMinQuery } from '../../../helpers/utils/media-queries';
 import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../../helpers/react/react-elements';
 import { DASHBOARD_HIDE_CONTENT_EVENT, DASHBOARD_SHOW_CONTENT_EVENT, dispatchEvent } from '../../../helpers/dom/events';
-import { BurgerIcon } from '../../../components/graphics/icons/burger-icon';
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon';
+import { BurgerIcon } from '../../graphics/icons/burger-icon';
+import { ArrowIcon } from '../../graphics/icons/arrow-icon';
 import { Flow } from './flow';
 import { StyledDashboard } from './styles';
 export var DashboardLayout = function DashboardLayout(_ref) {

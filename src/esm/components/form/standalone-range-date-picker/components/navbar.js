@@ -1,10 +1,10 @@
 import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon';
-import { Button } from '../../../../components/molecules/buttons/button';
+import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
+import { Button } from '../../../action/button';
 import { pxToRem } from '../../../../helpers/utils/typography';
-import { Text } from '../../../../components/atoms/typography/text';
+import { Text } from '../../../typography/text';
 var StyledText = styled(Text).withConfig({
   displayName: "navbar__StyledText",
   componentId: "sc-s8n4n7-0"

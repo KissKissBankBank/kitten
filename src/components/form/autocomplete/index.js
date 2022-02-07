@@ -27,7 +27,7 @@ var _visuallyHidden = require("../../accessibility/visually-hidden");
 
 var _slugify = _interopRequireDefault(require("slugify"));
 
-var _loader = require("../../atoms/loader");
+var _loader = require("../../graphics/animations/loader");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 

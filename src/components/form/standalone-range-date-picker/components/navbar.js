@@ -11,13 +11,13 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _arrowIcon = require("../../../../components/graphics/icons/arrow-icon");
+var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
-var _button = require("../../../../components/molecules/buttons/button");
+var _button = require("../../../action/button");
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _text = require("../../../../components/atoms/typography/text");
+var _text = require("../../../typography/text");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 

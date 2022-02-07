@@ -17,9 +17,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _label = require("../../../form/label");
 
-var _toggletip = require("../../../molecules/toggletip");
+var _toggletip = require("../../../layer/toggletip");
 
-var _line = require("../../../molecules/line");
+var _line = require("../../../structure/line");
 
 var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel"];
 

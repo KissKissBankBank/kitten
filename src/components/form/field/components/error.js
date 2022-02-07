@@ -11,7 +11,7 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 
 var _react = _interopRequireDefault(require("react"));
 
-var _text = require("../../../atoms/typography/text");
+var _text = require("../../../typography/text");
 
 var _excluded = ["children"];
 
