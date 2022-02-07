@@ -40,7 +40,9 @@ describe('<BackingCard />', () => {
               <BackingCard.Title>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
               </BackingCard.Title>
-              <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+              <BackingCard.Amount suffix="Etiam Consectetur Venenatis">
+                65&nbsp;€
+              </BackingCard.Amount>
               <BackingCard.Description moreButtonText="See more…" truncateText>
                 <p className="k-u-margin-none">
                   Maecenas tempus, tellus eget condimentum rhoncus, sem quam

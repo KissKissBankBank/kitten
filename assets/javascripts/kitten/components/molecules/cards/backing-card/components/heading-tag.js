@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Tag } from '../../../../../components/atoms/tag'
 import { DiamondIcon } from '../../../../../components/graphics/icons/diamond-icon'
-import { StarIcon } from '../../../../../components/graphics/icons/star-icon'
+import { StarIconNext } from '../../../../../components/graphics/icons-next/star-icon-next'
 
 export const HeadingTag = ({ text, icon, className, ...props }) => {
   const iconDisplay = (() => {
@@ -12,7 +12,7 @@ export const HeadingTag = ({ text, icon, className, ...props }) => {
         return <DiamondIcon width="18" height="20" />
       case 'star':
       default:
-        return <StarIcon width="14" height="13" />
+        return <StarIconNext width="14" height="13" />
     }
   })()
 

@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"];
+var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style", "letterSpacing"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -18,6 +18,7 @@ export var Text = function Text(_ref) {
       transform = _ref.transform,
       weight = _ref.weight,
       style = _ref.style,
+      letterSpacing = _ref.letterSpacing,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var Tag = as || tag;
@@ -32,10 +33,14 @@ export var Text = function Text(_ref) {
     // Decoration.
     'k-u-decoration-underline': decoration == 'underline',
     'k-u-decoration-none': decoration == 'none',
+    // Letter spacing.
+    'k-u-letter-spacing-10': letterSpacing == '10%',
     // Line height.
     'k-u-line-height-normal': lineHeight == 'normal',
     'k-u-line-height-1': lineHeight == '1',
+    'k-u-line-height-1-25': lineHeight == '1.25',
     'k-u-line-height-1-3': lineHeight == '1.3',
+    'k-u-line-height-1-4': lineHeight == '1.4',
     // Font Feature Settings.
     'k-u-font-setting-tnum': setting == 'tnum',
     // Monospaced numbers.
@@ -69,11 +74,12 @@ Text.propTypes = {
   cssColor: PropTypes.string,
   decoration: PropTypes.oneOf(['underline', 'none']),
   setting: PropTypes.oneOf(['tnum']),
-  lineHeight: PropTypes.oneOf(['normal', '1', '1.3']),
+  lineHeight: PropTypes.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
   size: PropTypes.oneOf(['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
-  weight: PropTypes.oneOf(['light', 'regular', 'bold'])
+  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  letterSpacing: PropTypes.string
 };
 Text.defaultProps = {
   className: null,
@@ -86,5 +92,6 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: 'light'
+  weight: 'light',
+  letterSpacing: null
 };

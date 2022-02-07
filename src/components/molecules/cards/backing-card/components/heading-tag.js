@@ -19,7 +19,7 @@ var _tag = require("../../../../../components/atoms/tag");
 
 var _diamondIcon = require("../../../../../components/graphics/icons/diamond-icon");
 
-var _starIcon = require("../../../../../components/graphics/icons/star-icon");
+var _starIconNext = require("../../../../../components/graphics/icons-next/star-icon-next");
 
 var _excluded = ["text", "icon", "className"];
 
@@ -39,7 +39,7 @@ var HeadingTag = function HeadingTag(_ref) {
 
       case 'star':
       default:
-        return /*#__PURE__*/_react.default.createElement(_starIcon.StarIcon, {
+        return /*#__PURE__*/_react.default.createElement(_starIconNext.StarIconNext, {
           width: "14",
           height: "13"
         });
@@ -47,7 +47,8 @@ var HeadingTag = function HeadingTag(_ref) {
   }();
 
   return /*#__PURE__*/_react.default.createElement(_tag.Tag, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-BackingCard__headingTag', 'k-BackingCard__drawer', className)
+    variant: "dark",
+    className: (0, _classnames.default)('k-BackingCard__headingTag', className)
   }, props), iconDisplay, text);
 };
 

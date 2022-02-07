@@ -1,7 +1,7 @@
 "use strict";
 
 exports.__esModule = true;
-exports.Title = exports.TagList = exports.Info = exports.Image = exports.HeadingTag = exports.Form = exports.Description = exports.Button = exports.Amount = void 0;
+exports.Title = exports.TagList = exports.Info = exports.Image = exports.HeadingTag = exports.Form = exports.Description = exports.Contents = exports.Button = exports.Amount = void 0;
 
 var _info = require("./info");
 
@@ -38,3 +38,7 @@ exports.HeadingTag = _headingTag.HeadingTag;
 var _description = require("./description");
 
 exports.Description = _description.Description;
+
+var _contents = require("./contents");
+
+exports.Contents = _contents.Contents;

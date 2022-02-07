@@ -13,16 +13,15 @@ export const Title = ({ className, textSize, children, ...props }) => {
     >
       <Text
         tag="h3"
-        weight="bold"
-        lineHeight="1"
+        weight="regular"
         className={classNames(
           'k-BackingCard__title',
           'k-u-margin-none',
           'k-u-align-center',
           className,
         )}
-        {...props}
         size={textSize}
+        {...props}
       >
         <Truncate lines={2}>{children}</Truncate>
       </Text>

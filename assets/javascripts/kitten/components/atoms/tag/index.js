@@ -20,21 +20,42 @@ const StyledTag = styled.span`
 
   &.k-Tag--light.k-Tag--info {
     background-color: var(--color-primary-100);
-    color: var(--color-primary-700);
+    color: var(--color-grey-900);
   }
   &.k-Tag--light.k-Tag--warning {
     background-color: var(--color-warning-100);
-    color: var(--color-warning-900);
+    color: var(--color-grey-900);
   }
   &.k-Tag--light.k-Tag--success {
     background-color: var(--color-success-100);
-    color: var(--color-success-700);
+    color: var(--color-grey-900);
   }
   &.k-Tag--light.k-Tag--error {
     background-color: var(--color-danger-100);
-    color: var(--color-danger-700);
+    color: var(--color-grey-900);
   }
   &.k-Tag--light.k-Tag--disabled {
+    background-color: var(--color-grey-300);
+    color: var(--color-grey-900);
+  }
+
+  &.k-Tag--status.k-Tag--info {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-700);
+  }
+  &.k-Tag--status.k-Tag--warning {
+    background-color: var(--color-warning-100);
+    color: var(--color-warning-900);
+  }
+  &.k-Tag--status.k-Tag--success {
+    background-color: var(--color-success-100);
+    color: var(--color-success-700);
+  }
+  &.k-Tag--status.k-Tag--error {
+    background-color: var(--color-danger-100);
+    color: var(--color-danger-700);
+  }
+  &.k-Tag--status.k-Tag--disabled {
     background-color: var(--color-grey-300);
     color: var(--color-grey-800);
   }
@@ -84,11 +105,11 @@ export const Tag = ({ type, size, variant, className, ...props }) => (
 Tag.propTypes = {
   type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
   size: PropTypes.oneOf(['regular', 'small']),
-  variant: PropTypes.oneOf(['light', 'dark']),
+  variant: PropTypes.oneOf(['light', 'status', 'dark']),
 }
 
 Tag.defaultProps = {
   type: 'info',
   size: 'regular',
-  variant: 'light',
+  variant: 'status',
 }
