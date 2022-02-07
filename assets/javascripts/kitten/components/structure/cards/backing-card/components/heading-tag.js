@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Tag } from '../../../../information/tag'
 import { DiamondIcon } from '../../../../graphics/icons/diamond-icon'
-import { StarIconNext } from '../../../../graphics/icons/star-icon'
+import { StarIconNext } from '../../../../graphics/icons-next/star-icon-next'
 
 export const HeadingTag = ({ text, icon, className, ...props }) => {
   const iconDisplay = (() => {
