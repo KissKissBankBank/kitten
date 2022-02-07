@@ -23,9 +23,9 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _lightbulbIllustration = require("../../../../components/graphics/illustrations/lightbulb-illustration");
+var _lightbulbIllustration = require("../../../graphics/illustrations/lightbulb-illustration");
 
-var _loader = require("../../../../components/atoms/loader");
+var _loader = require("../../../graphics/animations/loader");
 
 var _reactElements = require("../../../../helpers/react/react-elements");
 

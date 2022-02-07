@@ -29,9 +29,9 @@ var _reactElements = require("../../../helpers/react/react-elements");
 
 var _events = require("../../../helpers/dom/events");
 
-var _burgerIcon = require("../../../components/graphics/icons/burger-icon");
+var _burgerIcon = require("../../graphics/icons/burger-icon");
 
-var _arrowIcon = require("../../../components/graphics/icons/arrow-icon");
+var _arrowIcon = require("../../graphics/icons/arrow-icon");
 
 var _flow = require("./flow");
 

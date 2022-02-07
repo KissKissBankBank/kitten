@@ -17,7 +17,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _text = require("../../../components/atoms/typography/text");
+var _text = require("../../typography/text");
 
 var _typography = require("../../../helpers/utils/typography");
 

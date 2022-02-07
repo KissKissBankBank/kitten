@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { StyledLayout } from './styles';
-import { Loader } from '../../../components/atoms/loader';
+import { Loader } from '../../graphics/animations/loader';
 export var DeskLayout = function DeskLayout(_ref) {
   var children = _ref.children,
       className = _ref.className,

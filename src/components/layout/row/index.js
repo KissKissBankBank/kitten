@@ -17,7 +17,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _container = require("../../../components/layout/container");
+var _container = require("../../layout/container");
 
 var _typography = require("../../../helpers/utils/typography");
 

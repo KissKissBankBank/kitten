@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { CONTAINER_PADDING_THIN, CONTAINER_PADDING, CONTAINER_MAX_WIDTH } from '../../../constants/grid-config';
 import { mq } from '../../../constants/screen-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { HEADER_HEIGHT } from '../../../components/organisms/header-nav/config';
+import { HEADER_HEIGHT } from '../../navigation/header-nav/config';
 export var StyledLayout = styled.div.withConfig({
   displayName: "styles__StyledLayout",
   componentId: "sc-zmvlwc-0"

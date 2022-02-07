@@ -4,9 +4,9 @@ var _excluded = ["limit", "unit", "noMargin", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { TextInput } from '../../../form/text-input';
-import { TextInputWithLimit } from '../../../form/text-input-with-limit';
-import { TextInputWithUnit } from '../../../form/text-input-with-unit';
+import { TextInput } from '../../../form/input/text-input';
+import { TextInputWithLimit } from '../../../form/input/text-input-with-limit';
+import { TextInputWithUnit } from '../../../form/input/text-input-with-unit';
 export var FieldInput = function FieldInput(_ref) {
   var limit = _ref.limit,
       unit = _ref.unit,

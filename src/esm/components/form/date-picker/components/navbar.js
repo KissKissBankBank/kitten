@@ -1,7 +1,7 @@
 import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import { ArrowIcon } from '../../../../components/graphics/icons/arrow-icon';
+import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
 import { pxToRem } from '../../../../helpers/utils/typography';
 var StyledArrowIcon = styled.div.withConfig({
   displayName: "navbar__StyledArrowIcon",

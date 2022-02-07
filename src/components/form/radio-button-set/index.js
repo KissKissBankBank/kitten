@@ -17,11 +17,11 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _radioButton = require("../../../components/form/radio-button");
+var _radioButton = require("../../form/radio-button");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _label = require("../../../components/form/label");
+var _label = require("../../form/label");
 
 var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"],
     _excluded2 = ["id", "className"];

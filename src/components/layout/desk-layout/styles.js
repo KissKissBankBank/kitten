@@ -13,7 +13,7 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _config = require("../../../components/organisms/header-nav/config");
+var _config = require("../../navigation/header-nav/config");
 
 var StyledLayout = _styledComponents.default.div.withConfig({
   displayName: "styles__StyledLayout",

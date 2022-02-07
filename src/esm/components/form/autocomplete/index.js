@@ -10,7 +10,7 @@ import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
 import { VisuallyHidden } from '../../accessibility/visually-hidden';
 import slugify from 'slugify';
-import { Loader } from '../../atoms/loader';
+import { Loader } from '../../graphics/animations/loader';
 import classNames from 'classnames';
 var itemHeight = 38;
 var maxItemsVisibled = 3;

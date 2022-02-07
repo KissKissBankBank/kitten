@@ -1,35 +1,36 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "secondaryColor", "title"];
+var _excluded = ["color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 export var CrossCircleIconNext = function CrossCircleIconNext(_ref) {
   var color = _ref.color,
-      secondaryColor = _ref.secondaryColor,
       title = _ref.title,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement("svg", _extends({
-    width: "28",
-    height: "28",
-    viewBox: "0 0 28 28",
+    width: "25",
+    height: "25",
+    viewBox: "0 0 25 25",
     xmlns: "http://www.w3.org/2000/svg",
     fill: "none"
   }, props), title && /*#__PURE__*/React.createElement("title", null, title), /*#__PURE__*/React.createElement("path", {
     fill: color,
-    d: "M14 0a14 14 0 1 0 .01 28.01A14 14 0 0 0 14 0Zm0 2a12 12 0 1 1-.01 24.01A12 12 0 0 1 14 2Z"
+    fillRule: "evenodd",
+    d: "M12.048 22a9.6 9.6 0 009.6-9.6 9.6 9.6 0 10-9.6 9.6zm0 2.4c6.628 0 12-5.373 12-12 0-6.628-5.372-12-12-12-6.627 0-12 5.372-12 12 0 6.627 5.373 12 12 12z",
+    clipRule: "evenodd"
   }), /*#__PURE__*/React.createElement("path", {
-    fill: secondaryColor,
-    d: "M19.06 11.06a1.5 1.5 0 0 0-2.12-2.12L14 11.88l-2.94-2.94a1.5 1.5 0 0 0-2.12 2.12L11.88 14l-2.94 2.94a1.5 1.5 0 0 0 2.12 2.12L14 16.12l2.94 2.94a1.5 1.5 0 0 0 2.12-2.12L16.12 14l2.94-2.94Z"
+    fill: color,
+    fillRule: "evenodd",
+    d: "M16.359 9.854a1.25 1.25 0 00-1.768-1.768l-2.544 2.545-2.545-2.545a1.25 1.25 0 00-1.768 1.768l2.545 2.545-2.545 2.544a1.25 1.25 0 001.768 1.768l2.545-2.545 2.544 2.545a1.25 1.25 0 101.768-1.768L13.814 12.4l2.545-2.545z",
+    clipRule: "evenodd"
   }));
 };
 CrossCircleIconNext.propTypes = {
   color: PropTypes.string,
-  secondaryColor: PropTypes.string,
   title: PropTypes.string
 };
 CrossCircleIconNext.defaultProps = {
   color: '#222',
-  secondaryColor: '#006cff',
   title: null
 };
