@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const HeartWithClickIconNext = ({
+export const ColorHeartWithClickIconNext = ({
   color,
   secondaryColor,
   title,
@@ -27,13 +27,13 @@ export const HeartWithClickIconNext = ({
   </svg>
 )
 
-HeartWithClickIconNext.propTypes = {
+ColorHeartWithClickIconNext.propTypes = {
   color: PropTypes.string,
   secondaryColor: PropTypes.string,
   title: PropTypes.string,
 }
 
-HeartWithClickIconNext.defaultProps = {
+ColorHeartWithClickIconNext.defaultProps = {
   color: '#222',
   secondaryColor: '#006cff',
   title: null,
