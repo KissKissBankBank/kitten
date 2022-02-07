@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 import Truncate from 'react-truncate'
 import { Text } from '../../../../atoms/typography/text'
 
 export const Title = ({ className, textSize, children, ...props }) => {
+  const [isTruncated, setTruncated] = useState(false)
+
   return (
     <div
       className={classNames(
@@ -19,11 +21,16 @@ export const Title = ({ className, textSize, children, ...props }) => {
           'k-u-margin-none',
           'k-u-align-center',
           className,
+          {
+            'k-BackingCard__title--isTruncated': isTruncated,
+          },
         )}
         size={textSize}
         {...props}
       >
-        <Truncate lines={2}>{children}</Truncate>
+        <Truncate lines={2} onTruncate={current => setTruncated(current)}>
+          {children}
+        </Truncate>
       </Text>
     </div>
   )
