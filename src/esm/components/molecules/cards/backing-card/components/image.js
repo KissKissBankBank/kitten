@@ -7,7 +7,7 @@ export var Image = function Image(_ref) {
   var className = _ref.className,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement("div", _extends({}, props, {
+  return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-BackingCard__imageWrapper', className)
-  }));
+  }, props));
 };
