@@ -1,5 +1,5 @@
 import React from 'react'
-import { DevGrid } from '../../assets/javascripts/kitten/components/layout/dev-grid'
+import { DevGrid } from '../../assets/javascripts/kitten/components/dev/dev-grid'
 
 export const DevGridDecorator = ({ children }) => (
   <>

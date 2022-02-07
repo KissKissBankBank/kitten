@@ -39,6 +39,12 @@ export { TextCopy } from './components/action/text-copy'
 export { modifierStyles as buttonModifierStyles } from './components/action/button/helpers/modifier-styles'
 
 
+// Dev
+// -----
+
+export { DevGrid } from './components/dev/dev-grid'
+
+
 // Embed
 // -----
 
@@ -340,8 +346,6 @@ export { Marger } from './components/layout/marger'
 export { Row } from './components/layout/row'
 export { ScrollableContainer } from './components/layout/scrollable-container'
 export { StickyContainer } from './components/layout/sticky-container'
-export { DevGrid } from './components/layout/dev-grid'
-
 
 // Navigation
 // ----------

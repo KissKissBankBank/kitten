@@ -4,24 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Organization: Update organization of files such as :
-  - `Documentation`,
-  - `Helpers`,
-  - `Tokens`,
-  - `Accessibility`,
-  - `Layout`,
-  - `Graphics`,
-  - `Typography`,
-  - `Action`,
-  - `Form`,
-  - `Structure`,
-  - `Information`,
-  - `Layer`,
-  - `Interaction`,
-  - `Embed`,
-  - `Feedback`,
-  - `Naviagtion`,
-  - `Pages`.
+- Move component files for a better organization.
+
 - Deprecation/Change: `BackingCard`: Deprecate `BackingCard.Info`.
 - Deprecation/Change: `BackingCard`: Deprecate old layout without `BackingCard.Contents`.
 - Deprecation/Change: `BackingCard`: Remove `strokeSize` prop from `BackingCard.Title`.
