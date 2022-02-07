@@ -57,9 +57,21 @@ export default {
   },
 }
 
-export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
+export const Default = ({
+  truncateText,
+  hasImage,
+  hasButton,
+  hasAmountSuffix,
+  disabled,
+  ...args
+}) => {
   return (
-    <BackingCard {...args} as="button" className="k-u-reset-button">
+    <BackingCard
+      {...args}
+      disabled={disabled}
+      as="button"
+      className="k-u-reset-button"
+    >
       {hasImage && (
         <BackingCard.Image>
           <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
@@ -70,13 +82,15 @@ export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
         <BackingCard.Title>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
         </BackingCard.Title>
-        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
+        <BackingCard.Amount suffix={hasAmountSuffix ? 'Par mois' : null}>
+          65&nbsp;€
+        </BackingCard.Amount>
         <BackingCard.TagList>
-          <Tag as="li">
+          <Tag as="li" variant="light">
             <strong className="k-u-weight-regular">5</strong> contributeurs
           </Tag>
-          <Tag as="li">
-            <strong className="k-u-weight-regular">2/6</strong> disponibles
+          <Tag as="li" variant="light">
+            <strong className="k-u-weight-regular">2</strong> disponibles
           </Tag>
         </BackingCard.TagList>
         <BackingCard.Description
@@ -103,7 +117,9 @@ export const Default = ({ truncateText, hasImage, hasButton, ...args }) => {
           </p>
         </BackingCard.Description>
       </BackingCard.Contents>
-      {hasButton && <BackingCard.Button>Je soutiens</BackingCard.Button>}
+      {hasButton && (
+        <BackingCard.Button disabled={disabled}>Je soutiens</BackingCard.Button>
+      )}
     </BackingCard>
   )
 }
@@ -116,11 +132,16 @@ Default.argTypes = {
   ...argTypes,
   hasImage: { name: 'has Image (story prop)', control: 'boolean' },
   hasButton: { name: 'has Button (story prop)', control: 'boolean' },
+  hasAmountSuffix: {
+    name: 'has Amount suffix (story prop)',
+    control: 'boolean',
+  },
 }
 Default.args = {
   ...args,
   hasImage: true,
   hasButton: true,
+  hasAmountSuffix: false,
 }
 
 export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
@@ -145,11 +166,11 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
         </BackingCard.Title>
         <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
         <BackingCard.TagList>
-          <Tag as="li">
+          <Tag as="li" variant="light">
             <strong className="k-u-weight-regular">5</strong> contributeurs
           </Tag>
-          <Tag as="li">
-            <strong className="k-u-weight-regular">2/6</strong> disponibles
+          <Tag as="li" variant="light">
+            <strong className="k-u-weight-regular">2</strong> disponibles
           </Tag>
         </BackingCard.TagList>
         <BackingCard.Description
@@ -233,11 +254,11 @@ export const InACarouselComponent = () => {
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -273,11 +294,11 @@ export const InACarouselComponent = () => {
             <BackingCard.Title>Smol titl.</BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -324,11 +345,11 @@ export const InACarouselComponent = () => {
             <BackingCard.HeadingTag icon="star" text="Star reward" />
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -363,11 +384,11 @@ export const InACarouselComponent = () => {
             <BackingCard.HeadingTag icon="star" text="Star reward" />
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -426,11 +447,11 @@ export const InACarouselComponent = () => {
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -467,11 +488,11 @@ export const InACarouselComponent = () => {
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -516,11 +537,11 @@ export const InACarouselComponent = () => {
           <BackingCard.Contents>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>
@@ -553,11 +574,11 @@ export const InACarouselComponent = () => {
           <BackingCard.Contents>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
-              <Tag as="li">
+              <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
-              <Tag as="li">
-                <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <Tag as="li" variant="light">
+                <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
             </BackingCard.TagList>
             <BackingCard.Description moreButtonText="See more…" truncateText>

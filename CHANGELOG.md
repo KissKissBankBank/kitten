@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Text`: Add `1.25` and `1.4` values for `lineHeight` prop.
+- Feature: `Text`: Add `letterSpacing` prop.
+- Feature: `BackingCard`: Add `suffix` prop to `BackingCard.Amount`.
 - Deprecation/Change: `BackingCard`: Deprecate `BackingCard.Info`.
 - Deprecation/Change: `BackingCard`: Deprecate old layout without `BackingCard.Contents`.
 - Deprecation/Change: `BackingCard`: Remove `strokeSize` prop from `BackingCard.Title`.
