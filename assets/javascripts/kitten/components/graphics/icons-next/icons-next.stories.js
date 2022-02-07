@@ -7,8 +7,11 @@ import {
   ChronoIconNext,
   CogIconNext,
   ColorCheckedShieldIconNext,
-  CrossCircleIconNext,
+  ColorCrossCircleIconNext,
+  ColorHeartWithClickIconNext,
+  ColorGiftIconNext,
   CrossIconNext,
+  CrossCircleIconNext,
   CubeIconNext,
   EditIconNext,
   EnvelopeIconNext,
@@ -16,9 +19,7 @@ import {
   FacebookIconNext,
   FilterIconNext,
   GiftIcon,
-  GiftIconNext,
   HeartIconNext,
-  HeartWithClickIconNext,
   HomeIconNext,
   InfiniteIconNext,
   InstagramIconNext,
@@ -140,6 +141,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <CrossIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <CrossCircleIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <CogIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
@@ -221,19 +225,19 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           />
         </IconContainer>
         <IconContainer>
-          <GiftIconNext
+          <ColorGiftIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
         </IconContainer>
         <IconContainer>
-          <HeartWithClickIconNext
+          <ColorHeartWithClickIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
         </IconContainer>
         <IconContainer>
-          <CrossCircleIconNext
+          <ColorCrossCircleIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
