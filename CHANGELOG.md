@@ -7,10 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [8.0.0] - 2022-02-07
 
-- Move component files for a better organization.
-
 Breaking changes:
-
+  - Move component files for a better organization.
   - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
   - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
   - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
@@ -18,7 +16,6 @@ Breaking changes:
 Feature:
 
   - Add `CrossCircleIconNext` component.
-
 
 ## [7.3.0] - 2022-02-07
 
