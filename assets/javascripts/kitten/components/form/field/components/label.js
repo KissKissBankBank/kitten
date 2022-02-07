@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Label } from '../../../form/label'
-import { Toggletip } from '../../../molecules/toggletip'
-import { Line } from '../../../molecules/line'
+import { Toggletip } from '../../../layer/toggletip'
+import { Line } from '../../../structure/line'
 
 export class FieldLabel extends Component {
   render() {

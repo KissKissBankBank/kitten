@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from 'kitten'
 import { containerStyles, titleStyles } from './styles'
 
 const StyledTitle = styled.h2`

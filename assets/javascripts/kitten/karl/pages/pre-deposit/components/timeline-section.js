@@ -1,11 +1,14 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Container } from '../../../../components/layout/container'
-import { Title } from '../../../../components/atoms/typography/title'
-import { Paragraph } from '../../../../components/atoms/typography/paragraph'
-import { Button } from '../../../../components/molecules/buttons/button'
-import { Timeline } from '../../../../components/organisms/timeline'
-import COLORS from '../../../../constants/colors-config'
+import {
+  Grid,
+  GridCol,
+  Container,
+  Title,
+  Paragraph,
+  Button,
+  Timeline,
+  COLORS,
+} from 'kitten'
 
 const ButtonComponent = () => (
   <div className="k-u-margin-top-quadruple">

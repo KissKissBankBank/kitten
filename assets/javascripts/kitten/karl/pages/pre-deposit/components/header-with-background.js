@@ -1,11 +1,14 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/layout/container'
-import { Paragraph } from '../../../../components/atoms/typography/paragraph'
-import { Button } from '../../../../components/molecules/buttons/button'
-import { Title } from '../../../../components/atoms/typography/title'
-import COLORS from '../../../../constants/colors-config'
+import {
+  Grid,
+  GridCol,
+  Marger,
+  Container,
+  Paragraph,
+  Button,
+  Title,
+  COLORS,
+ } from 'kitten'
 
 const HeaderWithBackground = ({ backgroundImage }) => (
   <div style={{ backgroundImage }} className="PreDeposit__header">

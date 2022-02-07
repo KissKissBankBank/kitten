@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { Checkbox } from '../../../components/form/checkbox'
+import { Checkbox } from '../../form/checkbox'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { Label } from '../../../components/form/label'
+import { Label } from '../../form/label'
 
 const StyledCheckboxSet = styled.fieldset`
   margin: 0;

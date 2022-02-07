@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 import { StyledLayout } from './styles'
-import { Loader } from '../../../components/atoms/loader'
+import { Loader } from '../../graphics/animations/loader'
 
 export const DeskLayout = ({
   children,

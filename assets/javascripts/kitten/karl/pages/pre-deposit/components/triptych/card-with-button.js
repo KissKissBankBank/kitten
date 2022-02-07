@@ -1,11 +1,13 @@
 import React from 'react'
-import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/atoms/typography/title'
-import { Text } from '../../../../../components/atoms/typography/text'
-import { Paragraph } from '../../../../../components/atoms/typography/paragraph'
-import { parseHtml } from '../../../../../helpers/utils/parser'
-import { HorizontalStroke } from '../../../../../components/atoms/horizontal-stroke'
-import COLORS from '../../../../../constants/colors-config'
+import {
+  Marger,
+  Title,
+  Text,
+  Paragraph,
+  HorizontalStroke,
+  parseHtml,
+  COLORS,
+} from 'kitten'
 
 export const CardWithButton = ({
   imageProps,

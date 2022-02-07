@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import ContinuousIntersectionObserver from '../../helpers/utils/continuous-intersection-observer'
+import { ContinuousIntersectionObserver } from 'kitten'
 import AnimatedNumbers from './animated-numbers'
 
 const GlobalStyle = createGlobalStyle`

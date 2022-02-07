@@ -1,6 +1,6 @@
 import React from 'react'
 import { Video } from './index'
-import { Container } from '../../../../components/layout/container'
+import { Container } from 'kitten'
 
 export default {
   component: Video,

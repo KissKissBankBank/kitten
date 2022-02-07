@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridCol } from '../../../..'
+import { Grid, GridCol } from 'kitten'
 import { ArrowIcon } from './index'
 import { DocsPage } from 'storybook/docs-page'
 

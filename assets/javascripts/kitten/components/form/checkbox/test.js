@@ -1,7 +1,7 @@
 import React from 'react'
 import sinon from 'sinon'
-import { Checkbox } from '../../../components/form/checkbox'
-import { Text } from '../../../components/atoms/typography/text'
+import { Checkbox } from '../../form/checkbox'
+import { Text } from '../../typography/text'
 import renderer from 'react-test-renderer'
 
 const sinonTest = require('sinon-test')(sinon)

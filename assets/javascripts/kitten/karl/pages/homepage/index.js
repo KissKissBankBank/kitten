@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title } from '../../../components/atoms/typography/title'
-import { TitleWithStroke } from '../../../components/atoms/typography/title-with-stroke'
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { Container } from '../../../components/layout/container'
-import { Grid, GridCol } from '../../../components/layout/grid'
-import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
+import {
+  Title,
+  TitleWithStroke,
+  ArrowIcon,
+  pxToRem,
+  stepToRem,
+  Container,
+  Grid,
+  GridCol,
+  ScreenConfig,
+  TYPOGRAPHY,
+  COLORS,
+} from 'kitten'
 import { EngagementsCarousel } from './engagements-carousel'
 import { FeaturedProjects } from './featured-projects'
 import { PopularProjects } from './popular-projects'

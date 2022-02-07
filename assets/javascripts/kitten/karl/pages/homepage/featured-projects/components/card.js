@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
-import { Title } from '../../../../../components/atoms/typography/title'
-import { Text } from '../../../../../components/atoms/typography/text'
-import { ScreenConfig } from '../../../../../constants/screen-config'
-import { GridCol } from '../../../../../components/layout/grid'
-import { ProgressRing } from '../../../../../components/atoms/progress-ring'
-import COLORS from '../../../../../constants/colors-config'
-import { CheckedIcon } from '../../../../../components/graphics/icons/checked-icon'
-import { RocketCircleIcon } from '../../../../../components/graphics/icons/rocket-circle-icon'
-import { mediaQueries } from '../../../../../hoc/media-queries'
+import {
+  pxToRem,
+  stepToRem,
+  Title,
+  Text,
+  ScreenConfig,
+  GridCol,
+  ProgressRing,
+  COLORS,
+  CheckedIcon,
+  RocketCircleIcon,
+  mediaQueries,
+} from 'kitten'
 import classNames from 'classnames'
 
 const StyledCard = styled.div`

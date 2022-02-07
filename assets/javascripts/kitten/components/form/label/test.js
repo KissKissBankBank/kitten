@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Label } from '../../../components/form/label'
+import { Label } from '../../form/label'
 
 describe('<Label />', () => {
   it('should match its empty snapshot', () => {

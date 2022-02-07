@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { DocsPage } from 'storybook/docs-page'
 
 import { DashboardLayout } from './index'
 
@@ -8,8 +9,6 @@ import { StoryWithTable } from './stories/with-table'
 import { StoryWithDashboard } from './stories/with-dashboard'
 import { StoryWithReward } from './stories/with-reward'
 import { StoryWithFlow } from './stories/with-flow'
-
-import { DocsPage } from 'storybook/docs-page'
 
 export default {
   title: 'Layout/DashboardLayout',
