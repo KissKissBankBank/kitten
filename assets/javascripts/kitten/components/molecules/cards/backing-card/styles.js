@@ -100,9 +100,6 @@ export const StyledBackingCard = styled.article`
   .k-BackingCard__titleWrapper {
     line-height: ${pxToRem(22)};
     height: ${pxToRem(44)};
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .k-BackingCard__amount__wrapper {

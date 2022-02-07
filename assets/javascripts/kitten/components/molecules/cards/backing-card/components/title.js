@@ -20,8 +20,8 @@ export const Title = ({ className, textSize, children, ...props }) => {
           'k-u-align-center',
           className,
         )}
-        {...props}
         size={textSize}
+        {...props}
       >
         <Truncate lines={2}>{children}</Truncate>
       </Text>
