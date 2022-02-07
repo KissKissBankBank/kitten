@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-
 ## [8.0.0] - 2022-02-07
 
 Breaking changes:
