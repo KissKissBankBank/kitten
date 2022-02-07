@@ -15,20 +15,22 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _text = require("../../../../atoms/typography/text");
 
-var _excluded = ["legend", "value", "fullWidth"];
+var _excluded = ["className", "legend", "value", "fullWidth"];
 
 var Info = function Info(_ref) {
-  var legend = _ref.legend,
+  var className = _ref.className,
+      legend = _ref.legend,
       value = _ref.value,
       _ref$fullWidth = _ref.fullWidth,
       fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  return /*#__PURE__*/_react.default.createElement("p", (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-BackingCard__info', 'k-u-size-tiny', 'k-u-line-height-normal', props.className, {
+  console.warn('This subcomponent is deprecated. Please use another one.');
+  return /*#__PURE__*/_react.default.createElement("p", (0, _extends2.default)({
+    className: (0, _classnames.default)('k-BackingCard__info', 'k-u-size-tiny', 'k-u-line-height-normal', className, {
       'k-BackingCard__halfDrawer': !fullWidth,
       'k-BackingCard__drawer': fullWidth
     })
-  }), /*#__PURE__*/_react.default.createElement(_text.Text, {
+  }, props), /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "k-BackingCard__info__legend",
     weight: "regular",
     size: "tiny",

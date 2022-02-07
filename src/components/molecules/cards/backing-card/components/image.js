@@ -18,9 +18,9 @@ var _excluded = ["className"];
 var Image = function Image(_ref) {
   var className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-BackingCard__imageWrapper', className)
-  }));
+  }, props));
 };
 
 exports.Image = Image;

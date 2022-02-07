@@ -14,6 +14,7 @@ export const Description = ({
   const [displayMoreButton, setMoreButtonDisplay] = useState(false)
 
   useEffect(() => {
+    setMoreButtonDisplay(false)
     if (!truncateText) return
     if (!descriptionElementRef) return
 
@@ -29,7 +30,6 @@ export const Description = ({
 
   return (
     <div
-      ref={descriptionElementRef}
       className={classNames(
         'k-BackingCard__descriptionWrapper',
         'k-BackingCard__drawer',
@@ -37,12 +37,18 @@ export const Description = ({
         className,
         {
           'k-BackingCard__descriptionWrapper--hasMore': displayMoreButton,
-          'k-BackingCard__descriptionWrapper--truncateText': truncateText,
         },
       )}
       {...props}
     >
-      <div className="k-BackingCard__description">{children}</div>
+      <div
+        ref={descriptionElementRef}
+        className={classNames('k-BackingCard__description', {
+          'k-BackingCard__description--truncateText': truncateText,
+        })}
+      >
+        <div>{children}</div>
+      </div>
 
       {displayMoreButton && (
         <Text

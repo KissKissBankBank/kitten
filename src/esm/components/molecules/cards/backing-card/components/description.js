@@ -21,6 +21,7 @@ export var Description = function Description(_ref) {
   useEffect(function () {
     var _descriptionElementRe;
 
+    setMoreButtonDisplay(false);
     if (!truncateText) return;
     if (!descriptionElementRef) return;
     var parent = descriptionElementRef.current;
@@ -32,14 +33,15 @@ export var Description = function Description(_ref) {
     }
   }, [descriptionElementRef, truncateText]);
   return /*#__PURE__*/React.createElement("div", _extends({
-    ref: descriptionElementRef,
     className: classNames('k-BackingCard__descriptionWrapper', 'k-BackingCard__drawer', 'k-BackingCard__drawer--extensible', className, {
-      'k-BackingCard__descriptionWrapper--hasMore': displayMoreButton,
-      'k-BackingCard__descriptionWrapper--truncateText': truncateText
+      'k-BackingCard__descriptionWrapper--hasMore': displayMoreButton
     })
   }, props), /*#__PURE__*/React.createElement("div", {
-    className: "k-BackingCard__description"
-  }, children), displayMoreButton && /*#__PURE__*/React.createElement(Text, {
+    ref: descriptionElementRef,
+    className: classNames('k-BackingCard__description', {
+      'k-BackingCard__description--truncateText': truncateText
+    })
+  }, /*#__PURE__*/React.createElement("div", null, children)), displayMoreButton && /*#__PURE__*/React.createElement(Text, {
     className: "k-BackingCard__description__moreButton",
     color: "primary1",
     weight: "regular",

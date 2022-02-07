@@ -9,11 +9,7 @@ export default {
     docs: { page: () => <DocsPage filepath={__filename} importString="Tag" /> },
   },
   decorators: [
-    story => (
-      <div className="story-Container story-Grid story-Grid--large">
-        {story()}
-      </div>
-    ),
+    story => <div className="story-Container story-Grid">{story()}</div>,
   ],
   args: {
     type: 'info',
@@ -34,7 +30,7 @@ export default {
     },
     variant: {
       name: 'variant',
-      options: ['light', 'dark'],
+      options: ['light', 'status', 'dark'],
       control: 'radio',
     },
   },
@@ -48,6 +44,11 @@ export const AllVariants = () => {
   return (
     <>
       <div>
+        <Tag variant="status" type="info" size="regular">
+          Abonnement
+        </Tag>
+      </div>
+      <div>
         <Tag variant="light" type="info" size="regular">
           Abonnement
         </Tag>
@@ -55,6 +56,11 @@ export const AllVariants = () => {
       <div>
         <Tag variant="dark" type="info" size="regular">
           Abonnement
+        </Tag>
+      </div>
+      <div>
+        <Tag variant="status" type="success" size="regular">
+          Validée
         </Tag>
       </div>
       <div>
@@ -68,6 +74,11 @@ export const AllVariants = () => {
         </Tag>
       </div>
       <div>
+        <Tag variant="status" type="error" size="regular">
+          Échoué
+        </Tag>
+      </div>
+      <div>
         <Tag variant="light" type="error" size="regular">
           Échoué
         </Tag>
@@ -75,6 +86,11 @@ export const AllVariants = () => {
       <div>
         <Tag variant="dark" type="error" size="regular">
           Échoué
+        </Tag>
+      </div>
+      <div>
+        <Tag variant="status" type="warning" size="regular">
+          En pause
         </Tag>
       </div>
       <div>
@@ -88,6 +104,11 @@ export const AllVariants = () => {
         </Tag>
       </div>
       <div>
+        <Tag variant="status" type="disabled" size="regular">
+          Don libre
+        </Tag>
+      </div>
+      <div>
         <Tag variant="light" type="disabled" size="regular">
           Don libre
         </Tag>
@@ -95,6 +116,11 @@ export const AllVariants = () => {
       <div>
         <Tag variant="dark" type="disabled" size="regular">
           Don libre
+        </Tag>
+      </div>
+      <div>
+        <Tag variant="status" type="info" size="small">
+          Abonnement
         </Tag>
       </div>
       <div>
@@ -108,6 +134,11 @@ export const AllVariants = () => {
         </Tag>
       </div>
       <div>
+        <Tag variant="status" type="success" size="small">
+          Validée
+        </Tag>
+      </div>
+      <div>
         <Tag variant="light" type="success" size="small">
           Validée
         </Tag>
@@ -115,6 +146,11 @@ export const AllVariants = () => {
       <div>
         <Tag variant="dark" type="success" size="small">
           Validée
+        </Tag>
+      </div>
+      <div>
+        <Tag variant="status" type="error" size="small">
+          Échoué
         </Tag>
       </div>
       <div>
@@ -128,6 +164,11 @@ export const AllVariants = () => {
         </Tag>
       </div>
       <div>
+        <Tag variant="status" type="warning" size="small">
+          En pause
+        </Tag>
+      </div>
+      <div>
         <Tag variant="light" type="warning" size="small">
           En pause
         </Tag>
@@ -135,6 +176,11 @@ export const AllVariants = () => {
       <div>
         <Tag variant="dark" type="warning" size="small">
           En pause
+        </Tag>
+      </div>
+      <div>
+        <Tag variant="status" type="disabled" size="small">
+          Don libre
         </Tag>
       </div>
       <div>

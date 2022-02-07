@@ -3,11 +3,11 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["className"];
 import React from 'react';
 import classNames from 'classnames';
-export var TagList = function TagList(_ref) {
+export var Contents = function Contents(_ref) {
   var className = _ref.className,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement("ul", _extends({
-    className: classNames('k-BackingCard__tagList', 'k-BackingCard__drawer', className)
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-BackingCard__gridWrapper', className)
   }, props));
 };

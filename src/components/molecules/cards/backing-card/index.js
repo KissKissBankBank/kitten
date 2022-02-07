@@ -21,7 +21,7 @@ var _components = require("./components");
 
 var _reactElements = require("../../../../helpers/react/react-elements");
 
-var _excluded = ["children", "className", "disabled", "hasBorder"];
+var _excluded = ["children", "className", "disabled", "hasBorder", "stretch"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -32,7 +32,25 @@ var BackingCard = function BackingCard(_ref) {
       className = _ref.className,
       disabled = _ref.disabled,
       hasBorder = _ref.hasBorder,
+      stretch = _ref.stretch,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  var contentsChild = (0, _reactElements.getReactElementsByType)({
+    children: children,
+    type: BackingCard.Contents
+  })[0];
+
+  if (!!contentsChild) {
+    return /*#__PURE__*/_react.default.createElement(_styles.StyledBackingCard, (0, _extends2.default)({}, props, {
+      className: (0, _classnames.default)('k-BackingCard', className, {
+        'k-BackingCard--disabled': disabled,
+        'k-BackingCard--hasBorder': hasBorder,
+        'k-BackingCard--isStretched': stretch
+      })
+    }), children);
+  } // Old card version
+
+
+  console.warn('This use of the BackingCard is deprecated. Please wrap contents with `BackingCard.Contents`.');
   var imageChild = (0, _reactElements.getReactElementsByType)({
     children: children,
     type: BackingCard.Image
@@ -48,7 +66,8 @@ var BackingCard = function BackingCard(_ref) {
   return /*#__PURE__*/_react.default.createElement(_styles.StyledBackingCard, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-BackingCard', className, {
       'k-BackingCard--disabled': disabled,
-      'k-BackingCard--hasBorder': hasBorder
+      'k-BackingCard--hasBorder': hasBorder,
+      'k-BackingCard--isStretched': stretch
     })
   }), imageChild && /*#__PURE__*/(0, _react.cloneElement)(imageChild), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-BackingCard__gridWrapper"
@@ -71,11 +90,14 @@ BackingCard.Button = _components.Button;
 BackingCard.TagList = _components.TagList;
 BackingCard.HeadingTag = _components.HeadingTag;
 BackingCard.Description = _components.Description;
+BackingCard.Contents = _components.Contents;
 BackingCard.defaultProps = {
   hasBorder: true,
-  disabled: false
+  disabled: false,
+  stretch: false
 };
 BackingCard.propTypes = {
   hasBorder: _propTypes.default.bool,
-  disabled: _propTypes.default.bool
+  disabled: _propTypes.default.bool,
+  stretch: _propTypes.default.bool
 };

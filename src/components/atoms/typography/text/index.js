@@ -15,7 +15,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style"];
+var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style", "letterSpacing"];
 
 var Text = function Text(_ref) {
   var className = _ref.className,
@@ -31,6 +31,7 @@ var Text = function Text(_ref) {
       transform = _ref.transform,
       weight = _ref.weight,
       style = _ref.style,
+      letterSpacing = _ref.letterSpacing,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var Tag = as || tag;
   var textClassName = (0, _classnames.default)({
@@ -44,10 +45,14 @@ var Text = function Text(_ref) {
     // Decoration.
     'k-u-decoration-underline': decoration == 'underline',
     'k-u-decoration-none': decoration == 'none',
+    // Letter spacing.
+    'k-u-letter-spacing-10': letterSpacing == '10%',
     // Line height.
     'k-u-line-height-normal': lineHeight == 'normal',
     'k-u-line-height-1': lineHeight == '1',
+    'k-u-line-height-1-25': lineHeight == '1.25',
     'k-u-line-height-1-3': lineHeight == '1.3',
+    'k-u-line-height-1-4': lineHeight == '1.4',
     // Font Feature Settings.
     'k-u-font-setting-tnum': setting == 'tnum',
     // Monospaced numbers.
@@ -83,11 +88,12 @@ Text.propTypes = {
   cssColor: _propTypes.default.string,
   decoration: _propTypes.default.oneOf(['underline', 'none']),
   setting: _propTypes.default.oneOf(['tnum']),
-  lineHeight: _propTypes.default.oneOf(['normal', '1', '1.3']),
+  lineHeight: _propTypes.default.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
   size: _propTypes.default.oneOf(['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
   transform: _propTypes.default.oneOf(['uppercase']),
-  weight: _propTypes.default.oneOf(['light', 'regular', 'bold'])
+  weight: _propTypes.default.oneOf(['light', 'regular', 'bold']),
+  letterSpacing: _propTypes.default.string
 };
 Text.defaultProps = {
   className: null,
@@ -100,5 +106,6 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: 'light'
+  weight: 'light',
+  letterSpacing: null
 };
