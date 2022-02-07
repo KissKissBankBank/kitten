@@ -141,6 +141,22 @@ export const StyledBackingCard = styled.article`
       max-height: calc(
         6 * (var(--backingCard-description-fontSize) + ${pxToRem(4)})
       );
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: calc(
+          2 * (var(--backingCard-description-fontSize) + ${pxToRem(4)})
+        );
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1)
+        );
+      }
     }
 
     .k-BackingCard__description__moreButton {

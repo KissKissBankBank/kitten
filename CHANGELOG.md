@@ -4,9 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `BackingCard`: Add gradient on truncated description.
+
 ## [8.0.0] - 2022-02-07
 
 Breaking changes:
+
   - Move component files for a better organization.
   - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
   - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
