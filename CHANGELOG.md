@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 
   - Move component files for a better organization.
-  -  `Icons`:
+  -  `Icons`: Add the following components:
     - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
     - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
     - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
