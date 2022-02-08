@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Icons` : Add `PeopleIconNext` component.
 - Fix: `BackingCard`: Add gradient on truncated description.
+- Fix: `BackingCard`: New styles for `disabled` state.
+- Fix: `BackingCard`: Better margin when no image.
+- Feature: `BackingCard`: Allow null icon on `BackingCard.HeadingTag`.
 
 ## [8.0.0] - 2022-02-07
 
