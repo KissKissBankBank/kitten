@@ -4,18 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Icons` : Add `PeopleIconNext` component.
-- Fix: `BackingCard`: Add gradient on truncated description.
-- Fix: `BackingCard`: New styles for `disabled` state.
-- Fix: `BackingCard`: Better margin when no image.
-- Feature: `BackingCard`: Allow null icon on `BackingCard.HeadingTag`.
+## [8.1.0] - 2022-02-08
+
+Features:
+
+- `BackingCard`: Allow null icon on `BackingCard.HeadingTag`.
+- `Icons`: Add `PeopleIconNext` component.
+
+Fixes:
+
+- `BackingCard`: Add gradient on truncated description.
+- `BackingCard`: Better margin when no image.
+- `BackingCard`: New styles for `disabled` state.
 
 ## [8.0.0] - 2022-02-07
 
 Breaking changes:
 
   - Move component files for a better organization.
-  -  `Icons`: Add the following components:
+  - `Icons`: Add the following components:
     - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
     - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
     - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.

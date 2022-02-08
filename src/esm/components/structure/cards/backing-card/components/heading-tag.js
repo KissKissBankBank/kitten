@@ -22,11 +22,13 @@ export var HeadingTag = function HeadingTag(_ref) {
         });
 
       case 'star':
-      default:
         return /*#__PURE__*/React.createElement(StarIconNext, {
           width: "14",
           height: "13"
         });
+
+      default:
+        return null;
     }
   }();
 
@@ -36,10 +38,10 @@ export var HeadingTag = function HeadingTag(_ref) {
   }, props), iconDisplay, text);
 };
 HeadingTag.propTypes = {
-  icon: PropTypes.oneOf(['star', 'diamond']),
+  icon: PropTypes.oneOf([null, 'star', 'diamond']),
   text: PropTypes.node
 };
 HeadingTag.defaultProps = {
-  icon: 'star',
+  icon: null,
   text: null
 };
