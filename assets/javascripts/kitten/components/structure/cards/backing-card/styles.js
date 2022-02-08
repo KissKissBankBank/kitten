@@ -242,34 +242,31 @@ export const StyledBackingCard = styled.article`
   }
 
   &.k-BackingCard--disabled {
-    color: var(--color-grey-500);
+    color: var(--color-grey-700);
     cursor: not-allowed;
 
-    .k-BackingCard__imageWrapper {
-      img,
-      figure,
-      video {
-        filter: grayscale(1) opacity(0.4);
-      }
-    }
-
+    .k-BackingCard__title,
     .k-BackingCard__amount,
     .k-BackingCard__amount__suffix {
-      color: var(--color-grey-500);
+      color: var(--color-grey-900);
     }
 
     .k-Tag:not(.k-BackingCard__headingTag) {
-      background-color: var(--color-grey-200);
-      color: var(--color-grey-500);
+      background-color: var(--color-grey-300);
+      color: var(--color-grey-800);
     }
 
     .k-Tag.k-BackingCard__headingTag {
-      background-color: var(--color-grey-500);
-      color: var(--color-grey-100);
+      background-color: var(--color-grey-800);
+      color: var(--color-grey-000);
     }
 
     .k-BackingCard__description__moreButton.k-u-color-primary1 {
-      color: var(--color-grey-600) !important;
+      color: var(--color-grey-700) !important;
+    }
+
+    .k-BackingCard__button {
+      display: none !important;
     }
   }
 `

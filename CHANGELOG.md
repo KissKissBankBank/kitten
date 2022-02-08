@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `BackingCard`: Add gradient on truncated description.
+- Fix: `BackingCard`: New styles for `disabled` state.
 
 ## [8.0.0] - 2022-02-07
 
