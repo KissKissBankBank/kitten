@@ -33,12 +33,11 @@ export var Description = function Description(_ref) {
     }
   }, [descriptionElementRef, truncateText]);
   return /*#__PURE__*/React.createElement("div", _extends({
-    className: classNames('k-BackingCard__descriptionWrapper', 'k-BackingCard__drawer', 'k-BackingCard__drawer--extensible', className, {
-      'k-BackingCard__descriptionWrapper--hasMore': displayMoreButton
-    })
+    className: classNames('k-BackingCard__descriptionWrapper', 'k-BackingCard__drawer', 'k-BackingCard__drawer--extensible', className)
   }, props), /*#__PURE__*/React.createElement("div", {
     ref: descriptionElementRef,
     className: classNames('k-BackingCard__description', {
+      'k-BackingCard__description--hasMore': displayMoreButton,
       'k-BackingCard__description--truncateText': truncateText
     })
   }, /*#__PURE__*/React.createElement("div", null, children)), displayMoreButton && /*#__PURE__*/React.createElement(Text, {

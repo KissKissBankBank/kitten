@@ -50,12 +50,11 @@ var Description = function Description(_ref) {
     }
   }, [descriptionElementRef, truncateText]);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-BackingCard__descriptionWrapper', 'k-BackingCard__drawer', 'k-BackingCard__drawer--extensible', className, {
-      'k-BackingCard__descriptionWrapper--hasMore': displayMoreButton
-    })
+    className: (0, _classnames.default)('k-BackingCard__descriptionWrapper', 'k-BackingCard__drawer', 'k-BackingCard__drawer--extensible', className)
   }, props), /*#__PURE__*/_react.default.createElement("div", {
     ref: descriptionElementRef,
     className: (0, _classnames.default)('k-BackingCard__description', {
+      'k-BackingCard__description--hasMore': displayMoreButton,
       'k-BackingCard__description--truncateText': truncateText
     })
   }, /*#__PURE__*/_react.default.createElement("div", null, children)), displayMoreButton && /*#__PURE__*/_react.default.createElement(_text.Text, {

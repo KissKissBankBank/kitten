@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `BackingCard`: Fix truncation gradient display.
+## [8.1.1] - 2022-02-08
+
+Fix:
+
+- `BackingCard`: Fix truncation gradient display.
 
 ## [8.1.0] - 2022-02-08
 
