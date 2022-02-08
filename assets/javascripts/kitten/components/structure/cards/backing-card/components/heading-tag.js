@@ -11,8 +11,9 @@ export const HeadingTag = ({ text, icon, className, ...props }) => {
       case 'diamond':
         return <DiamondIcon width="18" height="20" />
       case 'star':
-      default:
         return <StarIconNext width="14" height="13" />
+      default:
+        return null
     }
   })()
 
@@ -29,10 +30,10 @@ export const HeadingTag = ({ text, icon, className, ...props }) => {
 }
 
 HeadingTag.propTypes = {
-  icon: PropTypes.oneOf(['star', 'diamond']),
+  icon: PropTypes.oneOf([null, 'star', 'diamond']),
   text: PropTypes.node,
 }
 HeadingTag.defaultProps = {
-  icon: 'star',
+  icon: null,
   text: null,
 }
