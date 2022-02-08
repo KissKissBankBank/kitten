@@ -78,7 +78,11 @@ export const Default = ({
         </BackingCard.Image>
       )}
       <BackingCard.Contents>
-        <BackingCard.HeadingTag icon="star" text="Star reward" />
+        {disabled ? (
+          <BackingCard.HeadingTag text="Unavailable" />
+        ) : (
+          <BackingCard.HeadingTag icon="star" text="Star reward" />
+        )}
         <BackingCard.Title>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
         </BackingCard.Title>
