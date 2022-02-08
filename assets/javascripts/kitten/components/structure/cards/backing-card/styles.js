@@ -46,6 +46,10 @@ export const StyledBackingCard = styled.article`
     overflow: hidden;
     text-align: left;
 
+    &:first-child {
+      padding-top: ${pxToRem(30)};
+    }
+
     .k-BackingCard__drawer {
       grid-column: row-start / span row-end;
       align-self: start;
