@@ -47,7 +47,7 @@ export const StyledBackingCard = styled.article`
     text-align: left;
 
     &:first-child {
-      padding-top: ${pxToRem(30)};
+      padding-top: ${pxToRem(20)};
     }
 
     .k-BackingCard__drawer {
