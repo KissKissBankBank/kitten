@@ -146,7 +146,7 @@ export const StyledBackingCard = styled.article`
         6 * (var(--backingCard-description-fontSize) + ${pxToRem(4)})
       );
 
-      &::after {
+      &.k-BackingCard__description--hasMore::after {
         content: '';
         position: absolute;
         height: calc(

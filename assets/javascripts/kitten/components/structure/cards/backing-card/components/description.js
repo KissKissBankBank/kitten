@@ -35,15 +35,13 @@ export const Description = ({
         'k-BackingCard__drawer',
         'k-BackingCard__drawer--extensible',
         className,
-        {
-          'k-BackingCard__descriptionWrapper--hasMore': displayMoreButton,
-        },
       )}
       {...props}
     >
       <div
         ref={descriptionElementRef}
         className={classNames('k-BackingCard__description', {
+          'k-BackingCard__description--hasMore': displayMoreButton,
           'k-BackingCard__description--truncateText': truncateText,
         })}
       >
