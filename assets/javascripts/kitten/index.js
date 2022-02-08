@@ -240,6 +240,7 @@ export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next'
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon'
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next'
+export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { RefundIcon } from './components/graphics/icons-next/refund-icon'
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next'

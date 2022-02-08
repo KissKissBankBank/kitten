@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Icons` : Add `PeopleIconNext` component.
 - Fix: `BackingCard`: Add gradient on truncated description.
 - Fix: `BackingCard`: New styles for `disabled` state.
 - Fix: `BackingCard`: Better margin when no image.
@@ -14,13 +15,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Breaking changes:
 
   - Move component files for a better organization.
-  - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
-  - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
-  - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
+  -  `Icons`: Add the following components:
+    - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
+    - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
+    - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
 
 Feature:
 
-  - Add `CrossCircleIconNext` component.
+  - `Icons`: Add `CrossCircleIconNext` component.
 
 ## [7.3.0] - 2022-02-07
 
