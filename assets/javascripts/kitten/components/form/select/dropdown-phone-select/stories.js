@@ -1,7 +1,7 @@
-import React from 'react'
-import { DropdownPhoneSelect } from './index'
 import flagFile from 'icons/flags.png'
+import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
+import { DropdownPhoneSelect } from './index'
 
 export default {
   component: DropdownPhoneSelect,
@@ -152,4 +152,25 @@ export const Default = args => {
 
 export const WithoutValues = args => {
   return <DropdownPhoneSelect {...args} />
+}
+
+export const WithParser = args => {
+  return (
+    <div>
+      <DropdownPhoneSelect
+        {...{ ...args, value: '+33 06 77 13 82 40' }}
+        normalizer={(value, country) => {
+          if (
+            country?.countryCode === '33' &&
+            value.startsWith('0') &&
+            value.length > 2
+          ) {
+            return value.substring(1)
+          }
+          return value
+        }}
+      />
+      <p>parser delete first zero on french phone number</p>
+    </div>
+  )
 }
