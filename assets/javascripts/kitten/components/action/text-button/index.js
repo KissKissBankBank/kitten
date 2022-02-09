@@ -38,18 +38,18 @@ const StyledButton = styled.button`
   }
 
   &.k-TextButton--normal {
-    font-size: pxToRem(14);
+    font-size: ${pxToRem(14)};
 
     @media ${mq.tabletAndDesktop} {
-      font-size: pxToRem(16);
+      font-size: ${pxToRem(16)};
     }
   }
 
   &.k-TextButton--big {
-    font-size: pxToRem(16);
+    font-size: ${pxToRem(16)};
 
     @media ${mq.tabletAndDesktop} {
-      font-size: pxToRem(20);
+      font-size: ${pxToRem(20)};
     }
   }
 `
