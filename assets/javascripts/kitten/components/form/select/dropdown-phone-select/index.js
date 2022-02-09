@@ -42,11 +42,11 @@ const processCountries = ({ countries, prefix, locale, flagsUrl }) => {
   })
 }
 
-const formatNumber = (text, country, parser) => {
+const formatNumber = (text, country, normalizer) => {
   if (!country) return text
   const { format } = country
   if (!format) return text
-  text = parser(text, country)
+  text = normalizer(text, country)
   const pattern = removeCountryCodeFromFormat(format)
 
   if (!text || text.length === 0) {
@@ -170,7 +170,7 @@ export const DropdownPhoneSelect = ({
   flagsUrl,
   assumeCountry,
   inputProps,
-  parser,
+  normalizer,
   ...props
 }) => {
   // Consts
@@ -229,7 +229,11 @@ export const DropdownPhoneSelect = ({
 
     let innerFormattedNumber = ''
     if (innerValue.length > 0) {
-      innerFormattedNumber = formatNumber(innerValue, currentCountry, parser)
+      innerFormattedNumber = formatNumber(
+        innerValue,
+        currentCountry,
+        normalizer,
+      )
     }
 
     const caretPosition = event.target.selectionStart
@@ -384,7 +388,7 @@ DropdownPhoneSelect.defaultProps = {
   assumeCountry: 'fr',
 
   onChange: () => {},
-  parser: value => value,
+  normalizer: value => value,
 }
 
 DropdownPhoneSelect.propTypes = {
@@ -415,5 +419,5 @@ DropdownPhoneSelect.propTypes = {
   flagsUrl: PropTypes.string.isRequired,
   assumeCountry: PropTypes.string,
   onChange: PropTypes.func,
-  parser: PropTypes.func,
+  normalizer: PropTypes.func,
 }

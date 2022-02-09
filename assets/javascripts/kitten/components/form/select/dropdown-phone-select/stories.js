@@ -159,7 +159,7 @@ export const WithParser = args => {
     <div>
       <DropdownPhoneSelect
         {...{ ...args, value: '+33 06 77 13 82 40' }}
-        parser={(value, country) => {
+        normalizer={(value, country) => {
           if (
             country?.countryCode === '33' &&
             value.startsWith('0') &&
