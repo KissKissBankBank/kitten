@@ -82,7 +82,6 @@ const formatNumber = (text, country, parser) => {
       remainingText: text.split(''),
     },
   )
-  console.log(formattedObject.formattedText)
   return formattedObject.formattedText
 }
 
