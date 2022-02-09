@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import { DropdownSelectWithInput } from '../../../../components/form/select/dropdown-select-with-input'
-import CountryData from './data/CountryData.js'
 import memoize from 'lodash/memoize'
 import reduce from 'lodash/reduce'
 import startsWith from 'lodash/startsWith'
+import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
+import { FlagIcon } from '../../../graphics/icons/flag-icon'
+import { DropdownSelectWithInput } from '../dropdown-select-with-input'
+import CountryData from './data/CountryData.js'
 import locale_fr from './data/lang/fr'
-import { FlagIcon } from '../../../../components/graphics/icons/flag-icon'
 
 const removeCountryCodeFromFormat = format => {
   return format.replace(/\+[.]+\s/gi, '')
@@ -42,17 +42,17 @@ const processCountries = ({ countries, prefix, locale, flagsUrl }) => {
   })
 }
 
-const formatNumber = (text, country) => {
+const formatNumber = (text, country, parser) => {
   if (!country) return text
   const { format } = country
   if (!format) return text
-
+  text = parser(text, country)
   const pattern = removeCountryCodeFromFormat(format)
 
   if (!text || text.length === 0) {
     return ''
   }
-  if (text?.length < 2 || pattern == '') {
+  if (text?.length < 2 || pattern === '') {
     return text
   }
 
@@ -82,7 +82,7 @@ const formatNumber = (text, country) => {
       remainingText: text.split(''),
     },
   )
-
+  console.log(formattedObject.formattedText)
   return formattedObject.formattedText
 }
 
@@ -123,7 +123,7 @@ const getOptions = ({
 }
 
 const guessSelectedCountry = memoize((inputNumber, country, onlyCountries) => {
-  const secondBestGuess = onlyCountries.find(o => o.iso2 == country)
+  const secondBestGuess = onlyCountries.find(o => o.iso2 === country)
   if (inputNumber.trim() === '') return secondBestGuess
 
   const bestGuess = onlyCountries.reduce(
@@ -153,10 +153,10 @@ const getCountryObjectFromIso = (country, onlyCountries) => {
   let newSelectedCountry
   if (country.indexOf(0) >= '0' && country.indexOf(0) <= '9') {
     // "country" is a digit
-    newSelectedCountry = onlyCountries.find(o => o.dialCode == +country)
+    newSelectedCountry = onlyCountries.find(o => o.dialCode === +country)
   } else {
     // "country" is an iso string
-    newSelectedCountry = onlyCountries.find(o => o.iso2 == country)
+    newSelectedCountry = onlyCountries.find(o => o.iso2 === country)
   }
   return newSelectedCountry
 }
@@ -171,6 +171,7 @@ export const DropdownPhoneSelect = ({
   flagsUrl,
   assumeCountry,
   inputProps,
+  parser,
   ...props
 }) => {
   // Consts
@@ -229,7 +230,7 @@ export const DropdownPhoneSelect = ({
 
     let innerFormattedNumber = ''
     if (innerValue.length > 0) {
-      innerFormattedNumber = formatNumber(innerValue, currentCountry)
+      innerFormattedNumber = formatNumber(innerValue, currentCountry, parser)
     }
 
     const caretPosition = event.target.selectionStart
@@ -300,9 +301,9 @@ export const DropdownPhoneSelect = ({
           inputNumber = inputNumber.slice(countryGuess.countryCode.length)
         }
       }
-    } else if (defaultCountry != '') {
+    } else if (defaultCountry !== '') {
       // Default country
-      countryGuess = onlyCountries.find(o => o.iso2 == defaultCountry) || 0
+      countryGuess = onlyCountries.find(o => o.iso2 === defaultCountry) || 0
     } else {
       // Empty params
       countryGuess = 0
@@ -384,6 +385,7 @@ DropdownPhoneSelect.defaultProps = {
   assumeCountry: 'fr',
 
   onChange: () => {},
+  parser: value => value,
 }
 
 DropdownPhoneSelect.propTypes = {
@@ -414,4 +416,5 @@ DropdownPhoneSelect.propTypes = {
   flagsUrl: PropTypes.string.isRequired,
   assumeCountry: PropTypes.string,
   onChange: PropTypes.func,
+  parser: PropTypes.func,
 }
