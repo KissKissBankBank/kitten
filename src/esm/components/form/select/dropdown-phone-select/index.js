@@ -1,19 +1,19 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps"];
+var _excluded = ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps", "normalizer"];
 
 var _this = this;
 
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { DropdownSelectWithInput } from '../../../../components/form/select/dropdown-select-with-input';
-import CountryData from './data/CountryData.js';
 import memoize from 'lodash/memoize';
 import reduce from 'lodash/reduce';
 import startsWith from 'lodash/startsWith';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import { usePrevious } from '../../../../helpers/utils/use-previous-hook';
+import { FlagIcon } from '../../../graphics/icons/flag-icon';
+import { DropdownSelectWithInput } from '../dropdown-select-with-input';
+import CountryData from './data/CountryData.js';
 import locale_fr from './data/lang/fr';
-import { FlagIcon } from '../../../../components/graphics/icons/flag-icon';
 
 var removeCountryCodeFromFormat = function removeCountryCodeFromFormat(format) {
   return format.replace(/\+[.]+\s/gi, '');
@@ -42,17 +42,20 @@ var processCountries = function processCountries(_ref) {
   });
 };
 
-var formatNumber = function formatNumber(text, country) {
+var formatNumber = function formatNumber(text, country, normalizer) {
+  var _text;
+
   if (!country) return text;
   var format = country.format;
   if (!format) return text;
+  text = normalizer(text, country);
   var pattern = removeCountryCodeFromFormat(format);
 
   if (!text || text.length === 0) {
     return '';
   }
 
-  if ((text == null ? void 0 : text.length) < 2 || pattern == '') {
+  if (((_text = text) == null ? void 0 : _text.length) < 2 || pattern === '') {
     return text;
   }
 
@@ -115,7 +118,7 @@ var getOptions = function getOptions(_ref2) {
 
 var guessSelectedCountry = memoize(function (inputNumber, country, onlyCountries) {
   var secondBestGuess = onlyCountries.find(function (o) {
-    return o.iso2 == country;
+    return o.iso2 === country;
   });
   if (inputNumber.trim() === '') return secondBestGuess;
   var bestGuess = onlyCountries.reduce(function (selectedCountry, country) {
@@ -144,12 +147,12 @@ var getCountryObjectFromIso = function getCountryObjectFromIso(country, onlyCoun
   if (country.indexOf(0) >= '0' && country.indexOf(0) <= '9') {
     // "country" is a digit
     newSelectedCountry = onlyCountries.find(function (o) {
-      return o.dialCode == +country;
+      return o.dialCode === +country;
     });
   } else {
     // "country" is an iso string
     newSelectedCountry = onlyCountries.find(function (o) {
-      return o.iso2 == country;
+      return o.iso2 === country;
     });
   }
 
@@ -166,6 +169,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       flagsUrl = _ref3.flagsUrl,
       assumeCountry = _ref3.assumeCountry,
       inputProps = _ref3.inputProps,
+      normalizer = _ref3.normalizer,
       props = _objectWithoutPropertiesLoose(_ref3, _excluded);
 
   // Consts
@@ -221,7 +225,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
     var innerFormattedNumber = '';
 
     if (innerValue.length > 0) {
-      innerFormattedNumber = formatNumber(innerValue, currentCountry);
+      innerFormattedNumber = formatNumber(innerValue, currentCountry, normalizer);
     }
 
     var caretPosition = event.target.selectionStart;
@@ -276,10 +280,10 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
           inputNumber = inputNumber.slice(countryGuess.countryCode.length);
         }
       }
-    } else if (defaultCountry != '') {
+    } else if (defaultCountry !== '') {
       // Default country
       countryGuess = onlyCountries.find(function (o) {
-        return o.iso2 == defaultCountry;
+        return o.iso2 === defaultCountry;
       }) || 0;
     } else {
       // Empty params
@@ -353,7 +357,10 @@ DropdownPhoneSelect.defaultProps = {
   placeholder: 'Telephone',
   flagsUrl: './flags.png',
   assumeCountry: 'fr',
-  onChange: function onChange() {}
+  onChange: function onChange() {},
+  normalizer: function normalizer(value) {
+    return value;
+  }
 };
 DropdownPhoneSelect.propTypes = {
   phoneProps: PropTypes.shape({
@@ -380,5 +387,6 @@ DropdownPhoneSelect.propTypes = {
   placeholder: PropTypes.string,
   flagsUrl: PropTypes.string.isRequired,
   assumeCountry: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  normalizer: PropTypes.func
 };
