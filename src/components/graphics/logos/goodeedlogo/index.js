@@ -46,7 +46,7 @@ var GoodeedLogo = function GoodeedLogo(_ref) {
     y1: "76.906%",
     x2: "0%",
     y2: "0%",
-    id: "a"
+    id: "GoodeedLogo-a"
   }, /*#__PURE__*/_react.default.createElement("stop", {
     stopColor: "#53B1E7",
     offset: "0%"
@@ -67,7 +67,7 @@ GoodeedLogo.propTypes = {
   height: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
 GoodeedLogo.defaultProps = {
-  color: 'url(#a)',
+  color: 'url(#GoodeedLogo-a)',
   width: null,
   height: null
 };

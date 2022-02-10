@@ -159,13 +159,13 @@ export var DocumentManager = function DocumentManager(_ref2) {
     }, documentIcon)), /*#__PURE__*/React.createElement("div", {
       className: "k-DocumentManager__uploader__content"
     }, /*#__PURE__*/React.createElement(Text, {
-      tag: "p",
+      tag: "div",
       weight: "regular",
       size: "tiny",
       lineHeight: "normal",
       className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
     }, internalStatus === 'file-selected' ? internalFileName : buttonTitle), internalStatus === 'ready' && /*#__PURE__*/React.createElement(Text, {
-      tag: "p",
+      tag: "div",
       weight: "light",
       size: "micro",
       lineHeight: "normal",
@@ -202,12 +202,12 @@ export var DocumentManager = function DocumentManager(_ref2) {
   }, documentIcon)), /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentManager__display__content"
   }, /*#__PURE__*/React.createElement(Text, {
-    tag: "p",
+    tag: "div",
     weight: "regular",
     size: "tiny",
     className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
   }, displayTitle), /*#__PURE__*/React.createElement(Text, {
-    tag: "p",
+    tag: "div",
     weight: "light",
     size: "micro",
     className: "k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
@@ -230,20 +230,20 @@ export var DocumentManager = function DocumentManager(_ref2) {
 DocumentManager.propTypes = {
   id: PropTypes.string.isRequired,
   buttonProps: PropTypes.object,
+  buttonSubtitle: PropTypes.node,
+  buttonTitle: PropTypes.node,
   canCancel: PropTypes.bool,
   cancelButtonText: PropTypes.string,
+  canReplace: PropTypes.bool,
   disabled: PropTypes.bool,
+  displaySubtitle: PropTypes.node,
+  displayTitle: PropTypes.node,
   documentIcon: PropTypes.node,
-  errorText: PropTypes.string,
   fileInputProps: PropTypes.object,
-  fileName: PropTypes.string,
   loaderAnimation: PropTypes.node,
   loaderText: PropTypes.node,
   onCancel: PropTypes.func,
   onUpload: PropTypes.func,
-  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  displaySubtitle: PropTypes.node,
-  displayTitle: PropTypes.node,
-  buttonSubtitle: PropTypes.node,
-  buttonTitle: PropTypes.node
+  replaceButtonText: PropTypes.node,
+  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading'])
 };

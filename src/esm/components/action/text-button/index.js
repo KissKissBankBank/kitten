@@ -11,7 +11,7 @@ import { mq } from '../../../constants/screen-config';
 var StyledButton = styled.button.withConfig({
   displayName: "text-button__StyledButton",
   componentId: "sc-1b04xr2-0"
-})(["", " display:inline-flex;align-items:center;gap:", ";color:var(--color-grey-900);text-align:left;transition:color var(--transition);&:hover{color:var(--color-primary-500);}&:active{color:var(--color-primary-700);}&:focus-visible{outline-style:auto;}svg{height:1.25em;}svg,svg path[fill]:not([fill='transparent']){fill:currentColor;}&.k-TextButton--normal{font-size:pxToRem(14);@media ", "{font-size:pxToRem(16);}}&.k-TextButton--big{font-size:pxToRem(16);@media ", "{font-size:pxToRem(20);}}"], TYPOGRAPHY.fontStyles.regular, pxToRem(10), mq.tabletAndDesktop, mq.tabletAndDesktop);
+})(["", " display:inline-flex;align-items:center;gap:", ";color:var(--color-grey-900);text-align:left;transition:color var(--transition);&:hover{color:var(--color-primary-500);}&:active{color:var(--color-primary-700);}&:focus-visible{outline-style:auto;}svg{height:1.25em;}svg,svg path[fill]:not([fill='transparent']){fill:currentColor;}&.k-TextButton--normal{font-size:", ";@media ", "{font-size:", ";}}&.k-TextButton--big{font-size:", ";@media ", "{font-size:", ";}}"], TYPOGRAPHY.fontStyles.regular, pxToRem(10), pxToRem(14), mq.tabletAndDesktop, pxToRem(16), pxToRem(16), mq.tabletAndDesktop, pxToRem(20));
 export var TextButton = function TextButton(_ref) {
   var className = _ref.className,
       size = _ref.size,

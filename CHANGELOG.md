@@ -4,14 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `TextButton`: Improve styles.
-- Fix: `DashboardLayout`: Fix main wrapper focus style.
-- Fix: `DocumentsManager`: Fix markup.
-- Feature: `BackingCard`: Add `truncateText` prop to `BackingCard.Title`.
-- Fix: Markup: Fix duplicate ID issue on the following SVG components:
+## [8.3.0] - 2022-02-10
+
+Feature:
+
+- `BackingCard`: Add `truncateText` prop to `BackingCard.Title`.
+
+Fixes:
+
+- Markup: Fix duplicate ID issue on the following SVG components:
   - `GoodeedLogo`
   - `PhoneIllustration`
   - `KkbbFlashIllustration`
+- `DashboardLayout`: Fix main wrapper focus style.
+- `DocumentsManager`: Fix markup.
+- `TextButton`: Improve styles.
 
 ## [8.2.0] - 2022-02-09
 
