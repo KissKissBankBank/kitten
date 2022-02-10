@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `TextButton`: Improve styles.
 - Fix: `DocumentsManager`: Fix markup.
+- Feature: `BackingCard`: Add `truncateText` prop to `BackingCard.Title`.
 
 ## [8.2.0] - 2022-02-09
 

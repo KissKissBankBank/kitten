@@ -101,9 +101,13 @@ export const StyledBackingCard = styled.article`
     }
   }
 
-  .k-BackingCard__titleWrapper {
-    line-height: ${pxToRem(22)};
-    height: ${pxToRem(44)};
+  .k-BackingCard__title {
+    --BackingCardTitle-lineHeight: ${pxToRem(22)};
+    line-height: var(--BackingCardTitle-lineHeight);
+  }
+
+  .k-BackingCard__title--truncateText {
+    height: calc(2 * var(--BackingCardTitle-lineHeight));
     display: flex;
     align-items: center;
   }

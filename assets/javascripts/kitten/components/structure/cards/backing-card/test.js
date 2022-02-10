@@ -27,6 +27,27 @@ describe('<BackingCard />', () => {
     })
   })
 
+  describe('not truncated title', () => {
+    const component = renderer
+      .create(
+        <BackingCard>
+          <BackingCard.Contents>
+            <BackingCard.Title truncateText={false}>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+            </BackingCard.Title>
+            <BackingCard.Description>
+              Custom description
+            </BackingCard.Description>
+          </BackingCard.Contents>
+        </BackingCard>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with some props', () => {
     beforeEach(() => {
       component = renderer
