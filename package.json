@@ -104,7 +104,6 @@
     "sass-loader": "11.0.1",
     "sinon": "10.0.0",
     "sinon-test": "3.0.0",
-    "storybook-addon-designs": "6.2.1",
     "storybook-design-token": "1.4.0",
     "style-dictionary": "^3.0.3",
     "style-loader": "3.2.1",
