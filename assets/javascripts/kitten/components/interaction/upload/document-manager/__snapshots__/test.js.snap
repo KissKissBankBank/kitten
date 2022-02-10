@@ -56,16 +56,16 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
       <div
         className="k-DocumentManager__uploader__content"
       >
-        <p
+        <div
           className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
         >
           
-        </p>
-        <p
+        </div>
+        <div
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
         >
           
-        </p>
+        </div>
       </div>
       <div
         className="k-DocumentManager__uploader__uploadIcon"
@@ -147,16 +147,16 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
       <div
         className="k-DocumentManager__uploader__content"
       >
-        <p
+        <div
           className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
         >
           
-        </p>
-        <p
+        </div>
+        <div
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
         >
           
-        </p>
+        </div>
       </div>
       <div
         className="k-DocumentManager__uploader__uploadIcon"
