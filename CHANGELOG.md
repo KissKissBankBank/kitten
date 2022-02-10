@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [8.2.0] - 2022-02-09
 
-Feature: 
+Feature:
 
 - `DropdownPhoneSelect`: Add `normalizer` prop to modify value.
 
