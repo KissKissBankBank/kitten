@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `TextButton`: Improve styles.
 - Fix: `DashboardLayout`: Fix main wrapper focus style.
 - Fix: `DocumentsManager`: Fix markup.
+- Fix: Markup: Fix duplicate ID issue on the following SVG components:
+  - `GoodeedLogo`
+  - `PhoneIllustration`
+  - `KkbbFlashIllustration`
 
 ## [8.2.0] - 2022-02-09
 
