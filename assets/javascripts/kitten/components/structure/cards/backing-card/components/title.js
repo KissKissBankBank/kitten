@@ -3,12 +3,21 @@ import classNames from 'classnames'
 import Truncate from 'react-truncate'
 import { Text } from '../../../../typography/text'
 
-export const Title = ({ className, textSize, children, ...props }) => {
+export const Title = ({
+  className,
+  textSize,
+  children,
+  truncateText,
+  ...props
+}) => {
   return (
     <div
       className={classNames(
         'k-BackingCard__titleWrapper',
         'k-BackingCard__drawer',
+        {
+          'k-BackingCard__titleWrapper--truncateText': truncateText,
+        },
       )}
     >
       <Text
@@ -23,7 +32,11 @@ export const Title = ({ className, textSize, children, ...props }) => {
         size={textSize}
         {...props}
       >
-        <Truncate lines={2}>{children}</Truncate>
+        {truncateText ? (
+          <Truncate lines={2}>{children}</Truncate>
+        ) : (
+          <>{children}</>
+        )}
       </Text>
     </div>
   )
@@ -31,4 +44,5 @@ export const Title = ({ className, textSize, children, ...props }) => {
 
 Title.defaultProps = {
   textSize: 'big',
+  truncateText: true,
 }
