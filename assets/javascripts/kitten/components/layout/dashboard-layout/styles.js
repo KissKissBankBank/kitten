@@ -34,8 +34,8 @@ export const StyledDashboard = styled.div`
       display: none;
     }
   }
-  .k-DashboardLayout__mainWrapper:focus {
-    outline-offset: ${pxToRem(2)};
+  .k-DashboardLayout__mainWrapper:focus-visible {
+    outline: 1px dotted;
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
@@ -373,7 +373,7 @@ export const StyledDashboard = styled.div`
     transition-delay: 0, 0;
     opacity: 0;
 
-    &:focus,
+    &:focus-visible,
     &:active {
       left: 0;
       opacity: 1;

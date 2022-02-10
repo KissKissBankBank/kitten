@@ -5,12 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextButton`: Improve styles.
+- Fix: `DashboardLayout`: Fix main wrapper focus style.
 - Fix: `DocumentsManager`: Fix markup.
 - Feature: `BackingCard`: Add `truncateText` prop to `BackingCard.Title`.
+- Fix: Markup: Fix duplicate ID issue on the following SVG components:
+  - `GoodeedLogo`
+  - `PhoneIllustration`
+  - `KkbbFlashIllustration`
 
 ## [8.2.0] - 2022-02-09
 
-Feature: 
+Feature:
 
 - `DropdownPhoneSelect`: Add `normalizer` prop to modify value.
 
