@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextButton`: Improve styles.
+- Fix: `DocumentsManager`: Fix markup.
 
 ## [8.2.0] - 2022-02-09
 
