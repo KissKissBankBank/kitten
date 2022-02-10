@@ -7,7 +7,7 @@ export var PhoneIllustration = function PhoneIllustration(props) {
     viewBox: "0 0 66 62",
     xmlns: "http://www.w3.org/2000/svg"
   }, props), /*#__PURE__*/React.createElement("title", null, "Phone"), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("rect", {
-    id: "a",
+    id: "PhoneIllustration-a",
     x: "21",
     y: "10",
     width: "24",
@@ -47,7 +47,7 @@ export var PhoneIllustration = function PhoneIllustration(props) {
     stroke: "#59F091",
     mask: "url(#b)",
     strokeWidth: "2.273",
-    xlinkHref: "#a"
+    xlinkHref: "#PhoneIllustration-a"
   }), /*#__PURE__*/React.createElement("circle", {
     fill: "#FFF",
     cx: "33",

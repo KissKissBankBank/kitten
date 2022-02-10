@@ -17,26 +17,30 @@ var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 
 var _text = require("../../../../typography/text");
 
-var _excluded = ["className", "textSize", "children"];
+var _excluded = ["className", "textSize", "children", "truncateText"];
 
 var Title = function Title(_ref) {
   var className = _ref.className,
       textSize = _ref.textSize,
       children = _ref.children,
+      truncateText = _ref.truncateText,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: (0, _classnames.default)('k-BackingCard__titleWrapper', 'k-BackingCard__drawer')
+    className: (0, _classnames.default)('k-BackingCard__titleWrapper', 'k-BackingCard__drawer', {
+      'k-BackingCard__titleWrapper--truncateText': truncateText
+    })
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     tag: "h3",
     weight: "regular",
     className: (0, _classnames.default)('k-BackingCard__title', 'k-u-margin-none', 'k-u-align-center', className),
     size: textSize
-  }, props), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
+  }, props), truncateText ? /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
     lines: 2
-  }, children)));
+  }, children) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children)));
 };
 
 exports.Title = Title;
 Title.defaultProps = {
-  textSize: 'big'
+  textSize: 'big',
+  truncateText: true
 };

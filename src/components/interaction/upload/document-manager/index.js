@@ -193,13 +193,13 @@ var DocumentManager = function DocumentManager(_ref2) {
     }, documentIcon)), /*#__PURE__*/_react.default.createElement("div", {
       className: "k-DocumentManager__uploader__content"
     }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-      tag: "p",
+      tag: "div",
       weight: "regular",
       size: "tiny",
       lineHeight: "normal",
       className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
     }, internalStatus === 'file-selected' ? internalFileName : buttonTitle), internalStatus === 'ready' && /*#__PURE__*/_react.default.createElement(_text.Text, {
-      tag: "p",
+      tag: "div",
       weight: "light",
       size: "micro",
       lineHeight: "normal",
@@ -236,12 +236,12 @@ var DocumentManager = function DocumentManager(_ref2) {
   }, documentIcon)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DocumentManager__display__content"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-    tag: "p",
+    tag: "div",
     weight: "regular",
     size: "tiny",
     className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
   }, displayTitle), /*#__PURE__*/_react.default.createElement(_text.Text, {
-    tag: "p",
+    tag: "div",
     weight: "light",
     size: "micro",
     className: "k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
@@ -266,20 +266,20 @@ exports.DocumentManager = DocumentManager;
 DocumentManager.propTypes = {
   id: _propTypes.default.string.isRequired,
   buttonProps: _propTypes.default.object,
+  buttonSubtitle: _propTypes.default.node,
+  buttonTitle: _propTypes.default.node,
   canCancel: _propTypes.default.bool,
   cancelButtonText: _propTypes.default.string,
+  canReplace: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
+  displaySubtitle: _propTypes.default.node,
+  displayTitle: _propTypes.default.node,
   documentIcon: _propTypes.default.node,
-  errorText: _propTypes.default.string,
   fileInputProps: _propTypes.default.object,
-  fileName: _propTypes.default.string,
   loaderAnimation: _propTypes.default.node,
   loaderText: _propTypes.default.node,
   onCancel: _propTypes.default.func,
   onUpload: _propTypes.default.func,
-  status: _propTypes.default.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  displaySubtitle: _propTypes.default.node,
-  displayTitle: _propTypes.default.node,
-  buttonSubtitle: _propTypes.default.node,
-  buttonTitle: _propTypes.default.node
+  replaceButtonText: _propTypes.default.node,
+  status: _propTypes.default.oneOf(['ready', 'error', 'valid', 'wait', 'loading'])
 };
