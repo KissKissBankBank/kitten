@@ -36,6 +36,10 @@ const StyledCarouselContainer = styled.div`
 const argTypes = {
   disabled: { control: 'boolean' },
   hasBorder: { control: 'boolean' },
+  truncateTitle: {
+    name: 'BackingCard.Title: truncate Text',
+    control: 'boolean',
+  },
   truncateText: {
     name: 'BackingCard.Description: truncate Text',
     control: 'boolean',
@@ -44,6 +48,7 @@ const argTypes = {
 const args = {
   disabled: false,
   hasBorder: true,
+  truncateTitle: true,
   truncateText: false,
 }
 
@@ -63,6 +68,7 @@ export const Default = ({
   hasButton,
   hasAmountSuffix,
   disabled,
+  truncateTitle,
   ...args
 }) => {
   return (
@@ -83,7 +89,7 @@ export const Default = ({
         ) : (
           <BackingCard.HeadingTag icon="star" text="Star reward" />
         )}
-        <BackingCard.Title>
+        <BackingCard.Title truncateText={truncateTitle}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
         </BackingCard.Title>
         <BackingCard.Amount suffix={hasAmountSuffix ? 'Par mois' : null}>
@@ -165,7 +171,7 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
       </BackingCard.Image>
       <BackingCard.Contents>
         <BackingCard.HeadingTag icon="star" text="Star reward" />
-        <BackingCard.Title>
+        <BackingCard.Title truncateText={truncateTitle}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
         </BackingCard.Title>
         <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
@@ -253,7 +259,7 @@ export const InACarouselComponent = () => {
           </BackingCard.Image>
           <BackingCard.Contents>
             <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
-            <BackingCard.Title>
+            <BackingCard.Title truncateText={truncateTitle}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
@@ -295,7 +301,7 @@ export const InACarouselComponent = () => {
         <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Contents>
             <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>Smol titl.</BackingCard.Title>
+            <BackingCard.Title truncateText={truncateTitle}>Smol titl.</BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
               <Tag as="li" variant="light">
@@ -446,7 +452,7 @@ export const InACarouselComponent = () => {
           </BackingCard.Image>
           <BackingCard.Contents>
             <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>
+            <BackingCard.Title truncateText={truncateTitle}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
@@ -487,7 +493,7 @@ export const InACarouselComponent = () => {
         <BackingCard stretch disabled className="k-u-reset-button">
           <BackingCard.Contents>
             <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title>
+            <BackingCard.Title truncateText={truncateTitle}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>

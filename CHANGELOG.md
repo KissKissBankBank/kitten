@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `BackingCard`: Fix `BackingCard.Title` untruncated style.
+
 ## [8.3.0] - 2022-02-10
 
 Feature:
