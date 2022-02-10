@@ -2,7 +2,7 @@
 
 exports[`<BackingCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL iYhuhI k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdvvtL poVc k-BackingCard k-BackingCard--hasBorder"
 >
   <div
     className="k-BackingCard__gridWrapper"
@@ -52,7 +52,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
 
 exports[`<BackingCard /> not truncated title matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL iYhuhI k-BackingCard k-BackingCard--hasBorder"
+  className="sc-bdvvtL poVc k-BackingCard k-BackingCard--hasBorder"
 >
   <div
     className="k-BackingCard__gridWrapper"
@@ -83,7 +83,7 @@ exports[`<BackingCard /> not truncated title matches with snapshot 1`] = `
 
 exports[`<BackingCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL iYhuhI k-BackingCard k-BackingCard--disabled"
+  className="sc-bdvvtL poVc k-BackingCard k-BackingCard--disabled"
 >
   <div
     className="k-BackingCard__imageWrapper"

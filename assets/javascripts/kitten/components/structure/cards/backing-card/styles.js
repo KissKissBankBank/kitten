@@ -110,11 +110,11 @@ export const StyledBackingCard = styled.article`
     height: calc(2 * var(--BackingCardTitle-lineHeight));
     display: flex;
     align-items: center;
-  }
 
-  .k-BackingCard__title {
-    width: 100%;
-    white-space: nowrap;
+    .k-BackingCard__title {
+      width: 100%;
+      white-space: nowrap;
+    }
   }
 
   .k-BackingCard__amount__wrapper {
