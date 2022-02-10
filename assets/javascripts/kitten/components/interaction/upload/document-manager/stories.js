@@ -90,19 +90,19 @@ const argTypes = {
     control: 'radio',
   },
   displaySubtitle: {
-    name: 'subtitle',
+    name: 'display subtitle',
     control: 'text',
   },
   displayTitle: {
-    name: 'title',
+    name: 'display title',
     control: 'text',
   },
   buttonSubtitle: {
-    name: 'subtitle',
+    name: 'button subtitle',
     control: 'text',
   },
   buttonTitle: {
-    name: 'title',
+    name: 'button title',
     control: 'text',
   },
 }

@@ -306,7 +306,7 @@ export const DocumentManager = ({
             </div>
             <div className="k-DocumentManager__uploader__content">
               <Text
-                tag="p"
+                tag="div"
                 weight="regular"
                 size="tiny"
                 lineHeight="normal"
@@ -318,7 +318,7 @@ export const DocumentManager = ({
               </Text>
               {internalStatus === 'ready' && (
                 <Text
-                  tag="p"
+                  tag="div"
                   weight="light"
                   size="micro"
                   lineHeight="normal"
@@ -381,7 +381,7 @@ export const DocumentManager = ({
 
         <div className="k-DocumentManager__display__content">
           <Text
-            tag="p"
+            tag="div"
             weight="regular"
             size="tiny"
             className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
@@ -389,7 +389,7 @@ export const DocumentManager = ({
             {displayTitle}
           </Text>
           <Text
-            tag="p"
+            tag="div"
             weight="light"
             size="micro"
             className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
@@ -433,20 +433,20 @@ export const DocumentManager = ({
 DocumentManager.propTypes = {
   id: PropTypes.string.isRequired,
   buttonProps: PropTypes.object,
+  buttonSubtitle: PropTypes.node,
+  buttonTitle: PropTypes.node,
   canCancel: PropTypes.bool,
   cancelButtonText: PropTypes.string,
+  canReplace: PropTypes.bool,
   disabled: PropTypes.bool,
+  displaySubtitle: PropTypes.node,
+  displayTitle: PropTypes.node,
   documentIcon: PropTypes.node,
-  errorText: PropTypes.string,
   fileInputProps: PropTypes.object,
-  fileName: PropTypes.string,
   loaderAnimation: PropTypes.node,
   loaderText: PropTypes.node,
   onCancel: PropTypes.func,
   onUpload: PropTypes.func,
+  replaceButtonText: PropTypes.node,
   status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  displaySubtitle: PropTypes.node,
-  displayTitle: PropTypes.node,
-  buttonSubtitle: PropTypes.node,
-  buttonTitle: PropTypes.node,
 }
