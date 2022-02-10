@@ -29,7 +29,7 @@ export const GoodeedLogo = ({ color, width, height, ...props }) => {
     >
       <title>Goodeed</title>
       <defs>
-        <linearGradient x1="100%" y1="76.906%" x2="0%" y2="0%" id="a">
+        <linearGradient x1="100%" y1="76.906%" x2="0%" y2="0%" id="GoodeedLogo-a">
           <stop stopColor="#53B1E7" offset="0%" />
           <stop stopColor="#75D6FF" offset="100%" />
         </linearGradient>
@@ -50,7 +50,7 @@ GoodeedLogo.propTypes = {
 }
 
 GoodeedLogo.defaultProps = {
-  color: 'url(#a)',
+  color: 'url(#GoodeedLogo-a)',
   width: null,
   height: null,
 }
