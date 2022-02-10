@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `TextButton`: Improve styles.
+- Fix: `DashboardLayout`: Fix main wrapper focus style.
 - Fix: `DocumentsManager`: Fix markup.
 - Fix: Markup: Fix duplicate ID issue on the following SVG components:
   - `GoodeedLogo`
@@ -13,7 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [8.2.0] - 2022-02-09
 
-Feature: 
+Feature:
 
 - `DropdownPhoneSelect`: Add `normalizer` prop to modify value.
 
