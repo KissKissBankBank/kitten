@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `ColorSelect`: Add component.
 - Fix: `TextInputWithButton`: Fix `disabled` prop priority.
+- Fix: `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
 
 ## [8.3.1] - 2022-02-10
 
