@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SummaryCard /> default matches with snapshot 1`] = `
+<div
+  className="sc-bdvvtL fgEEwc k-SummaryCard k-SummaryCard-Wrapper--large"
+>
+  <div
+    className="k-SummaryCard__imageWrapper k-SummaryCard-Wrapper__imageWrapper"
+  >
+    <img
+      alt=""
+      src="/kitten.jpg"
+    />
+  </div>
+  <div
+    className="k-SummaryCard__gridWrapper k-SummaryCard-Wrapper__gridWrapper"
+  >
+    <div
+      className="k-SummaryCard__cell k-SummaryCard__cell__title"
+      style={
+        Object {
+          "--summaryCardCell-name": "title",
+        }
+      }
+    >
+      Stickers Free Boobs Club
+    </div>
+    <div
+      className="k-SummaryCard__cell k-SummaryCard__cell__amount"
+      style={
+        Object {
+          "--summaryCardCell-name": "amount",
+        }
+      }
+    >
+      10 000€
+    </div>
+  </div>
+</div>
+`;

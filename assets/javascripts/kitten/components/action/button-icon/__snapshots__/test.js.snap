@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonIcon /> by default matches with snapshot 1`] = `
+<button
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</button>
+`;
+
+exports[`<ButtonIcon /> className prop matches with snapshot 1`] = `
+<button
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon test_className_prop k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</button>
+`;
+
+exports[`<ButtonIcon /> modifier prop matches with snapshot 1`] = `
+<button
+  className="sc-bdvvtL ea-dQkw k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--helium k-Button--fit-icon"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</button>
+`;
+
+exports[`<ButtonIcon /> rounded prop matches with snapshot 1`] = `
+<button
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</button>
+`;
+
+exports[`<ButtonIcon /> size prop matches with snapshot 1`] = `
+<button
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--nano k-Button--nano k-Button--hydrogen k-Button--fit-icon"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</button>
+`;
+
+exports[`<ButtonIcon /> tag prop matches with snapshot 1`] = `
+<span
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  disabled={null}
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</span>
+`;
+
+exports[`<ButtonIcon /> with tag="a" and no href matches with snapshot 1`] = `
+<a
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  disabled={null}
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</a>
+`;
+
+exports[`<ButtonIcon /> with tag="a" href="foo" matches with snapshot 1`] = `
+<a
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  disabled={null}
+  href="foo"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  <svg
+    className="k-ButtonIcon__svg"
+  />
+</a>
+`;
+
+exports[`<ButtonIcon /> without children matches with snapshot 1`] = `
+<button
+  className="sc-bdvvtL gdafnu k-Button sc-gsDKAQ jHnLLM k-ButtonIcon k-ButtonIcon--regular k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+/>
+`;

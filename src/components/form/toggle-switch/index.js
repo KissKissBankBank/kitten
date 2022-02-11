@@ -23,7 +23,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _lockIcon = require("../../../components/graphics/icons/lock-icon");
+var _lockIcon = require("../../graphics/icons/lock-icon");
 
 var _excluded = ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "locked", "reverseOrder", "switchProps", "onChange", "style"];
 

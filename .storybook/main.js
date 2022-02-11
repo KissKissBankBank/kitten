@@ -58,7 +58,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-a11y',
     '@storybook/addon-measure',
-    'storybook-addon-designs',
     'storybook-design-token',
   ],
+  staticDirs: ['./public'],
 }

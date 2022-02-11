@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/atoms/typography/title-with-stroke'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { Grid, GridCol } from '../../../../components/layout/grid'
-import { CONTAINER_PADDING } from '../../../../constants/grid-config'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import COLORS from '../../../../constants/colors-config'
+import {
+  TitleWithStroke,
+  pxToRem,
+  stepToRem,
+  ScreenConfig,
+  Grid,
+  GridCol,
+  CONTAINER_PADDING,
+  TYPOGRAPHY,
+  COLORS,
+} from 'kitten'
 
 const portraitImageRatio = 50 / 67
 const bulletSize = 4

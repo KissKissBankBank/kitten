@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--fit-min-width"
+    disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--fit-min-width"
+    onClick={[Function]}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+    placeholder="Les props sont transmises"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--fit-min-width"
+    disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    <div
+      className="sc-eCImPb gxyOqw k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular k-Form-TextInput--disabled"
+    disabled={true}
+    name="text"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--regular k-Button--beryllium k-Button--fit-min-width k-Button--disabled"
+    disabled={true}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular k-Form-TextInput--error"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--regular k-Button--beryllium k-Button--fit-min-width"
+    disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+    placeholder="Les props sont transmises"
+    value="foobar"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Button--regular k-Button--beryllium k-Button--fit-min-width"
+    disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--tiny"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--tiny"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Button--tiny k-Button--beryllium k-Button--fit-min-width"
+    disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye kruCtu k-Form-TextInputWithButton k-Form-TextInputWithButton--regular"
+>
+  <input
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithButton__input k-Form-TextInput--regular k-Form-TextInput--valid"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-dkPtRN jjAuDr k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--regular k-Button--beryllium k-Button--fit-min-width"
+    disabled={false}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;

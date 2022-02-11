@@ -1,22 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container } from '../../../components/layout/container'
-import { Grid, GridCol } from '../../../components/layout/grid'
-import { Marger } from '../../../components/layout/marger'
-import { Title } from '../../../components/atoms/typography/title'
-import { Text } from '../../../components/atoms/typography/text'
-import { HorizontalStroke } from '../../../components/atoms/horizontal-stroke'
-import { Button } from '../../../components/molecules/buttons/button'
-import { Carousel } from '../../../components/molecules/carousels/carousel'
-import { ScreenConfig, SCREEN_SIZE_M } from '../../../constants/screen-config'
 import {
+  Container,
+  Grid,
+  GridCol,
+  Marger,
+  Title,
+  Text,
+  HorizontalStroke,
+  Button,
+  Carousel,
+  ScreenConfig,
+  SCREEN_SIZE_M,
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
-} from '../../../constants/grid-config'
-import { ArrowIcon } from '../../../components/graphics/icons/arrow-icon'
-import { CrowdfundingCard } from '../../../components/molecules/cards/crowdfunding-card'
-import { withMediaQueries } from '../../../hoc/media-queries'
-import { pxToRem } from '../../../helpers/utils/typography'
+  ArrowIcon,
+  CrowdfundingCard,
+  withMediaQueries,
+  pxToRem,
+} from 'kitten'
 import styled from 'styled-components'
 
 const StyledThanks = styled.div`

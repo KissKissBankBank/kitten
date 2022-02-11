@@ -1,6 +1,8 @@
 import styled from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
+import {
+  pxToRem,
+  ScreenConfig,
+} from 'kitten'
 
 const Actions = styled.div`
   display: flex;

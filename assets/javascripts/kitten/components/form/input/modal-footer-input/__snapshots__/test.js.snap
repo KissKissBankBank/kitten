@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalFooterInput /> with empty snapshot matches with snapshot 1`] = `
+<div
+  className="sc-gsDKAQ dtUkXI k-ModalFooterInput"
+>
+  <textarea
+    aria-label="Input Label"
+    className="k-ModalFooterInput__input"
+    defaultValue=""
+    id="Id"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    placeholder=""
+    rows={1}
+    style={
+      Object {
+        "lineHeight": "1.125rem",
+      }
+    }
+  />
+  <button
+    className="sc-bdvvtL gDZTIK k-Button k-ModalFooterInput__button k-Button--tiny k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+    disabled={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Send
+  </button>
+</div>
+`;

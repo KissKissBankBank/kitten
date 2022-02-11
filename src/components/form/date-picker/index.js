@@ -19,7 +19,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _textInputWithUnit = require("../../../components/form/text-input-with-unit");
+var _textInputWithUnit = require("../../form/input/text-input-with-unit");
 
 var _typography = require("../../../helpers/utils/typography");
 

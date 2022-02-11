@@ -1,9 +1,11 @@
 import React from 'react'
-import { CrowdfundingCard } from '../../../../components/molecules/cards/crowdfunding-card'
-import { Carousel } from '../../../../components/molecules/carousels/carousel'
-import { Container } from '../../../../components/layout/container'
-import { mediaQueries } from '../../../../hoc/media-queries'
-import { Text } from '../../../../components/atoms/typography/text'
+import {
+  CrowdfundingCard,
+  Carousel,
+  Container,
+  mediaQueries,
+  Text
+} from 'kitten'
 
 const InfoComponent = () => (
   <>

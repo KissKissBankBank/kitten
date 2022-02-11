@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
+<div
+  className="sc-pVTFL bGhloB"
+>
+  <button
+    className="sc-hKwDye hoWJKE k-u-reset-button"
+  >
+    <svg
+      className="sc-eCImPb kXNvqa"
+      fill="#fff"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(-90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+    <div
+      className="sc-jRQBWg dsYHBn"
+    >
+      Foobar 1
+    </div>
+  </button>
+  <div
+    className="sc-furwcr ejFCqn"
+  >
+    <a
+      aria-current={false}
+      className="sc-iCfMLu cezBwz"
+      href="http://www.google.com"
+      tabIndex="0"
+    />
+    <a
+      aria-current={true}
+      className="sc-iCfMLu kFDaQg"
+      href="http://www.cowboybebop.com"
+      tabIndex="0"
+    />
+    <a
+      aria-current={false}
+      className="sc-iCfMLu cezBwz"
+      href="http://www.starwars.com"
+      tabIndex="0"
+    />
+  </div>
+  <button
+    className="sc-dkPtRN huLYMd k-u-reset-button"
+  >
+    <div
+      className="sc-gKclnd jSyGWq"
+    >
+      Foobar 2
+    </div>
+    <svg
+      className="sc-eCImPb kXNvqa"
+      fill="var(--color-grey-900, #222)"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
+<div
+  className="sc-pVTFL bGhloB"
+>
+  <button
+    className="sc-hKwDye hoWJKE k-u-reset-button"
+  >
+    <svg
+      className="sc-eCImPb kXNvqa"
+      fill="#fff"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(-90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+    <div
+      className="sc-jRQBWg dsYHBn"
+    >
+      Foobar 1
+    </div>
+  </button>
+  <div
+    className="sc-furwcr ejFCqn"
+  >
+    <div
+      aria-current={false}
+      className="sc-iCfMLu cezBwz"
+      tabIndex="0"
+    />
+    <div
+      aria-current={true}
+      className="sc-iCfMLu kFDaQg"
+      tabIndex="0"
+    />
+    <div
+      aria-current={false}
+      className="sc-iCfMLu cezBwz"
+      tabIndex="0"
+    />
+  </div>
+  <button
+    className="sc-dkPtRN huLYMd k-u-reset-button"
+  >
+    <div
+      className="sc-gKclnd jSyGWq"
+    >
+      Foobar 2
+    </div>
+    <svg
+      className="sc-eCImPb kXNvqa"
+      fill="var(--color-grey-900, #222)"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+  </button>
+</div>
+`;

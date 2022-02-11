@@ -9,8 +9,8 @@ import { useModal } from '../../../../helpers/dom/use-modal'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { CrossIcon } from '../../../../components/graphics/icons/cross-icon'
-import { LightbulbIllustration as Lightbulb } from '../../../../components/graphics/illustrations/lightbulb-illustration'
+import { CrossIcon } from '../../../graphics/icons/cross-icon'
+import { LightbulbIllustration as Lightbulb } from '../../../graphics/illustrations/lightbulb-illustration'
 import {
   DASHBOARD_HIDE_CONTENT_EVENT,
   DASHBOARD_SHOW_CONTENT_EVENT,

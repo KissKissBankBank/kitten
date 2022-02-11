@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
+<div
+  className="sc-hKwDye hMLNuz"
+>
+  <div
+    className="sc-gsDKAQ ctNjuL"
+  >
+    <p
+      className="sc-bdvvtL eyTmrc k-Title k-Title--tertiary k-Title--noMargin"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
+    >
+      foo
+    </p>
+  </div>
+  <div
+    className="sc-eCImPb gSMPrP"
+  >
+    <div
+      className="sc-jRQBWg fDBxTI k-u-hidden@m-down"
+    >
+      <div
+        className="sc-dkPtRN jBwBHH k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        color="var(--color-grey-900, #222)"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
+      />
+    </div>
+    <p
+      className="k-u-style-italic k-u-weight-bold styledText"
+    >
+      13 106
+    </p>
+    <div
+      className="sc-jRQBWg fDBxTI k-u-hidden@m-down"
+    >
+      <div
+        className="sc-dkPtRN jBwBHH k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        color="var(--color-grey-900, #222)"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="sc-gsDKAQ bsaqBj"
+  >
+    <p
+      className="k-u-size-huge k-u-style-italic k-u-weight-light styledSubTitle"
+    >
+      bar
+    </p>
+  </div>
+</div>
+`;

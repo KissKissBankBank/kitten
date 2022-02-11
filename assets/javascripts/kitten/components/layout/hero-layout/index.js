@@ -3,8 +3,8 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 import { StyledLayout } from './styles'
-import { Loader } from '../../../components/atoms/loader'
-import { Grid, GridCol } from '../../../components/layout/grid'
+import { Loader } from '../../graphics/animations/loader'
+import { Grid, GridCol } from '../../layout/grid'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,

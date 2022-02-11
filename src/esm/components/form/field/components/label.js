@@ -5,8 +5,8 @@ var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Label } from '../../../form/label';
-import { Toggletip } from '../../../molecules/toggletip';
-import { Line } from '../../../molecules/line';
+import { Toggletip } from '../../../layer/toggletip';
+import { Line } from '../../../structure/line';
 export var FieldLabel = /*#__PURE__*/function (_Component) {
   _inheritsLoose(FieldLabel, _Component);
 

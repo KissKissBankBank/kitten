@@ -6,7 +6,7 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import styled, { css } from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
-import { TextInputWithUnit as TextInputWithUnitBase } from '../../../components/form/text-input-with-unit';
+import { TextInputWithUnit as TextInputWithUnitBase } from '../../form/input/text-input-with-unit';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { Navbar } from './components/navbar';

@@ -17,9 +17,9 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _text = require("../../../../components/atoms/typography/text");
+var _text = require("../../../typography/text");
 
-var _next = require("../../../../components/atoms/typography/paragraph/next");
+var _next = require("../../../typography/paragraph/next");
 
 var _screenConfig = require("../../../../constants/screen-config");
 

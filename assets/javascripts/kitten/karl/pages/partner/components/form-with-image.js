@@ -15,7 +15,7 @@ import {
   ScreenConfig,
   COLORS,
   CheckedCircleIcon,
-} from '../../../..'
+} from 'kitten'
 
 const StyledImage = styled.div`
   height: ${pxToRem(800)};

@@ -8,7 +8,7 @@ import { HexColorPicker, HexColorInput } from 'react-colorful'
 import { colord, extend } from 'colord'
 import a11yPlugin from 'colord/plugins/a11y'
 
-import { TextInput } from '../text-input'
+import { TextInput } from '../input/text-input'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 extend([a11yPlugin])

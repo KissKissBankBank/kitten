@@ -27,9 +27,9 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _crossIcon = require("../../../../components/graphics/icons/cross-icon");
+var _crossIcon = require("../../../graphics/icons/cross-icon");
 
-var _lightbulbIllustration = require("../../../../components/graphics/illustrations/lightbulb-illustration");
+var _lightbulbIllustration = require("../../../graphics/illustrations/lightbulb-illustration");
 
 var _events = require("../../../../helpers/dom/events");
 

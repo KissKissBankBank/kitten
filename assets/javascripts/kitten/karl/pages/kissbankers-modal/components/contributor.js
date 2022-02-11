@@ -1,15 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import {
+  COLORS,
+  pxToRem,
+  TYPOGRAPHY,
+  ScreenConfig,
+} from 'kitten'
 import { containerStyles, titleStyles } from './styles'
 import {
   AdaptableGrid as Grid,
   AdaptableGridCol as GridCol,
 } from '../../../../components/layout/adaptable-grid'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledTitle = styled.h2`
   ${titleStyles}

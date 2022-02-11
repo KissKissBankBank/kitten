@@ -6,9 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classNames from 'classnames';
-import { RadioButton } from '../../../components/form/radio-button';
+import { RadioButton } from '../../form/radio-button';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { Label } from '../../../components/form/label';
+import { Label } from '../../form/label';
 var StyledRadioButtonSet = styled.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
   componentId: "sc-1bde3vb-0"

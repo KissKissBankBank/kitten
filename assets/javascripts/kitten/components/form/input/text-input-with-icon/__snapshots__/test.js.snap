@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+>
+  
+  <input
+    aria-labelledby={null}
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+  />
+  <span
+    aria-hidden="true"
+    className="k-Form-TextInputWithIcon__icon"
+  >
+    <svg
+      aria-label={null}
+      fill="none"
+      height={14}
+      viewBox="0 0 15 15"
+      width={14}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+        fill="#333"
+      />
+      <path
+        d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+>
+  
+  <input
+    aria-labelledby={null}
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--regular k-Form-TextInput--disabled"
+    disabled={true}
+    name="text"
+  />
+  <span
+    aria-hidden="true"
+    className="k-Form-TextInputWithIcon__icon k-Form-TextInputWithIcon__icon--disabled"
+  >
+    <svg
+      aria-label={null}
+      fill="none"
+      height={14}
+      viewBox="0 0 15 15"
+      width={14}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+        fill="#333"
+      />
+      <path
+        d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
+<div
+  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_right"
+>
+  
+  <input
+    aria-labelledby={null}
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--regular k-Form-TextInput--valid"
+    disabled={false}
+    name="text"
+  />
+  <span
+    aria-hidden="true"
+    className="k-Form-TextInputWithIcon__icon"
+  >
+    <svg
+      aria-label={null}
+      fill="none"
+      height={14}
+      viewBox="0 0 15 15"
+      width={14}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+        fill="#333"
+      />
+      <path
+        d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+>
+  
+  <input
+    aria-labelledby={null}
+    className="sc-bdvvtL bmDMDs k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+    placeholder="Les props sont transmises"
+  />
+  <span
+    aria-hidden="true"
+    className="k-Form-TextInputWithIcon__icon"
+  >
+    <svg
+      aria-label={null}
+      fill="none"
+      height={14}
+      viewBox="0 0 15 15"
+      width={14}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.7 13.3l-3.5-3.5a1 1 0 00-1.4 1.4l3.5 3.5a1 1 0 001.4-1.4z"
+        fill="#333"
+      />
+      <path
+        d="M6.3 0a6.3 6.3 0 100 12.6A6.3 6.3 0 006.3 0zm0 2a4.3 4.3 0 110 8.6 4.3 4.3 0 010-8.6z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;

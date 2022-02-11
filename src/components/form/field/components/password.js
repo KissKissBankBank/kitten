@@ -7,7 +7,7 @@ exports.FieldPassword = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _passwordInput = require("../../password-input");
+var _passwordInput = require("../../../form/input/password-input");
 
 var FieldPassword = function FieldPassword(props) {
   return /*#__PURE__*/_react.default.createElement("div", {

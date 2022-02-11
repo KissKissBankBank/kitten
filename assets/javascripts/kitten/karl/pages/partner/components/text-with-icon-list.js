@@ -1,15 +1,18 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/layout/container'
-import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Title } from '../../../../components/atoms/typography/title'
-import { Text } from '../../../../components/atoms/typography/text'
-import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
-import { Button } from '../../../../components/molecules/buttons/button'
-import { FLUID } from '../../../../components/molecules/buttons/button/standalone-styles'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { IconList } from '../../../../components/organisms/icon-list'
+import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Text,
+  HorizontalStroke,
+  Button,
+  FLUID,
+  ScreenConfig,
+  IconList,
+} from 'kitten'
 
 const StyledGrid = styled(Grid)`
   align-items: center;

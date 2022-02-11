@@ -17,7 +17,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styles = require("./styles");
 
-var _loader = require("../../../components/atoms/loader");
+var _loader = require("../../graphics/animations/loader");
 
 var _excluded = ["children", "className", "menu", "menuProps", "fullWidth", "contentProps", "loading", "loaderComponent"];
 

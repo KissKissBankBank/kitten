@@ -1,10 +1,13 @@
 import React from 'react'
-import { Container } from '../../../../../components/layout/container'
-import { Grid, GridCol } from '../../../../../components/layout/grid'
-import { Title } from '../../../../../components/atoms/typography/title'
+import {
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Triptych,
+  COLORS,
+ } from 'kitten'
 import { CardWithButton } from './card-with-button'
-import { Triptych } from '../../../../../components/molecules/cards/triptych'
-import COLORS from '../../../../../constants/colors-config'
 
 const SolutionsTriptych = () => (
   <div className="k-u-margin-top-octuple k-u-margin-top-decuple@l-up">

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { HeaderNav, KissKissBankBankLogo } from '../../../..'
+import { HeaderNav, KissKissBankBankLogo } from 'kitten'
 import TextWithVideo from './text-with-video'
 import TextWithIconsList from './text-with-icon-list'
 import TextWithImages from './text-with-images'

@@ -7,8 +7,11 @@ import {
   ChronoIconNext,
   CogIconNext,
   ColorCheckedShieldIconNext,
-  CrossCircleIconNext,
+  ColorCrossCircleIconNext,
+  ColorHeartWithClickIconNext,
+  ColorGiftIconNext,
   CrossIconNext,
+  CrossCircleIconNext,
   CubeIconNext,
   EditIconNext,
   EnvelopeIconNext,
@@ -16,9 +19,7 @@ import {
   FacebookIconNext,
   FilterIconNext,
   GiftIcon,
-  GiftIconNext,
   HeartIconNext,
-  HeartWithClickIconNext,
   HomeIconNext,
   InfiniteIconNext,
   InstagramIconNext,
@@ -26,6 +27,7 @@ import {
   LinkedinIconNext,
   LockOutlineIcon,
   MessengerIconNext,
+  PeopleIconNext,
   PlusIconNext,
   RefundIcon,
   SpeechBubbleIconNext,
@@ -140,6 +142,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <CrossIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <CrossCircleIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <CogIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
@@ -171,6 +176,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <LockOutlineIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <PeopleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <PlusIconNext color={colorInput} />
@@ -221,19 +229,19 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           />
         </IconContainer>
         <IconContainer>
-          <GiftIconNext
+          <ColorGiftIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
         </IconContainer>
         <IconContainer>
-          <HeartWithClickIconNext
+          <ColorHeartWithClickIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />
         </IconContainer>
         <IconContainer>
-          <CrossCircleIconNext
+          <ColorCrossCircleIconNext
             color={colorInput}
             secondaryColor={secondaryColorInput}
           />

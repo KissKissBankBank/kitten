@@ -7,6 +7,105 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `ColorSelect`: Add component.
 - Fix: `TextInputWithButton`: Fix `disabled` prop priority.
 
+## [8.3.1] - 2022-02-10
+
+Fix:
+
+- `BackingCard`: Fix `BackingCard.Title` untruncated style.
+
+## [8.3.0] - 2022-02-10
+
+Feature:
+
+- `BackingCard`: Add `truncateText` prop to `BackingCard.Title`.
+
+Fixes:
+
+- Markup: Fix duplicate ID issue on the following SVG components:
+  - `GoodeedLogo`
+  - `PhoneIllustration`
+  - `KkbbFlashIllustration`
+- `DashboardLayout`: Fix main wrapper focus style.
+- `DocumentsManager`: Fix markup.
+- `TextButton`: Improve styles.
+
+## [8.2.0] - 2022-02-09
+
+Feature:
+
+- `DropdownPhoneSelect`: Add `normalizer` prop to modify value.
+
+## [8.1.1] - 2022-02-08
+
+Fix:
+
+- `BackingCard`: Fix truncation gradient display.
+
+## [8.1.0] - 2022-02-08
+
+Features:
+
+- `BackingCard`: Allow null icon on `BackingCard.HeadingTag`.
+- `Icons`: Add `PeopleIconNext` component.
+
+Fixes:
+
+- `BackingCard`: Add gradient on truncated description.
+- `BackingCard`: Better margin when no image.
+- `BackingCard`: New styles for `disabled` state.
+
+## [8.0.0] - 2022-02-07
+
+Breaking changes:
+
+  - Move component files for a better organization.
+  - `Icons`: Add the following components:
+    - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
+    - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
+    - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
+
+Feature:
+
+  - `Icons`: Add `CrossCircleIconNext` component.
+
+## [7.3.0] - 2022-02-07
+
+Deprecations/Changes:
+
+- `BackingCard`: Deprecate `BackingCard.Info`.
+- `BackingCard`: Deprecate old layout without `BackingCard.Contents`.
+- `BackingCard`: Remove `strokeSize` prop from `BackingCard.Title`.
+
+Features:
+
+- `BackingCard`: Change design & adjust story.
+- `BackingCard`: Add `stretch` prop.
+- `BackingCard`: Add `BackingCard.Contents` subcomponent.
+- `BackingCard`: Add `suffix` prop to `BackingCard.Amount`.
+- `Tag`: Add `variant` prop, defaults to `light`, accepts `dark`.
+- `Text`: Add `1.25` and `1.4` values for `lineHeight` prop.
+- `Text`: Add `letterSpacing` prop.
+
+Fixes:
+
+- `AlertBox`: Improve styles.
+- `HeroLayout`: Fix Hero sizing on large screens.
+- `HeroLayout`: Fix sticky columns position on desktop.
+
+## [7.2.0] - 2022-01-28
+
+Deprecation/Change:
+
+- Dependencies: Use StyledComponents 5.
+
+Feature:
+
+- `NavBar`: Add `small` value on `modifier` prop.
+
+Fix:
+
+- `LocationInput`: Improve styles.
+
 ## [7.1.0] - 2022-01-20
 
 Features: 

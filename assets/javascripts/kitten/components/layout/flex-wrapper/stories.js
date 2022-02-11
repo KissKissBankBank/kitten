@@ -1,5 +1,5 @@
 import React from 'react'
-import { HorizontalCrowdfundingCard } from '../../..'
+import { HorizontalCrowdfundingCard } from 'kitten'
 import { FlexWrapper } from './index.js'
 import { DocsPage } from 'storybook/docs-page'
 

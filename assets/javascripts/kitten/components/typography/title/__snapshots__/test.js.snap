@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> by default matches with snapshot 1`] = `
+<h1
+  className="sc-bdvvtL eyTmrc k-Title k-Title--primary"
+  style={
+    Object {
+      "--Title-css-color": null,
+    }
+  }
+/>
+`;
+
+exports[`<Title /> with props matches with snapshot 1`] = `
+<h3
+  className="sc-bdvvtL eyTmrc k-Title k-Title--quinary k-Title--noMargin k-Title--italic"
+  style={
+    Object {
+      "--Title-css-color": "#555",
+    }
+  }
+>
+  Lorem ipsum dolor sit amet…
+</h3>
+`;

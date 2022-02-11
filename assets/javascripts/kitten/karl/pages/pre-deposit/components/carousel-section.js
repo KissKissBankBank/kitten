@@ -1,12 +1,15 @@
 import React from 'react'
-import { Container } from '../../../../components/layout/container'
-import { Grid, GridCol } from '../../../../components/layout/grid'
-import { Marger } from '../../../../components/layout/marger'
-import { Title } from '../../../../components/atoms/typography/title'
-import { HorizontalStroke } from '../../../../components/atoms/horizontal-stroke'
-import { Carousel } from '../../../../components/molecules/carousels/carousel'
-import { SimpleCard } from '../../../../components/molecules/cards/simple-card'
-import { SCREEN_SIZE_M } from '../../../../constants/screen-config'
+import {
+  Container,
+  Grid,
+  GridCol,
+  Marger,
+  Title,
+  HorizontalStroke,
+  Carousel,
+  SimpleCard,
+  SCREEN_SIZE_M,
+} from 'kitten'
 import classNames from 'classnames'
 
 const creators = [

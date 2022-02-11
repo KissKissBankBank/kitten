@@ -5,6 +5,7 @@ export const Legal = props => {
   return (
     <div className="k-Footer__legal" {...props}>
       <DropdownSelect
+        id="lang-select"
         hideLabel
         size="tiny"
         modifier="boron"

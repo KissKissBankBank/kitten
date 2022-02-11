@@ -17,11 +17,11 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _checkbox = require("../../../components/form/checkbox");
+var _checkbox = require("../../form/checkbox");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _label = require("../../../components/form/label");
+var _label = require("../../form/label");
 
 var _excluded = ["items", "disabled", "className", "name", "error", "label", "children"],
     _excluded2 = ["id", "className"];

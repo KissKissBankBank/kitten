@@ -1,0 +1,1941 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN bctRfx k-Carousel"
+>
+  <div
+    className="k-Carousel__inner"
+    onKeyDown={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      aria-label="Page 1"
+      className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="A Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    A Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    A Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={100}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                100 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="B Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    B Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    B Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={42}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                42 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN bctRfx k-Carousel"
+>
+  <div
+    className="k-Carousel__inner"
+    onKeyDown={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      aria-label="Page 1"
+      className="k-Carousel__inner__pageContainer custom-class k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="A Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    A Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    A Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={100}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                100 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="B Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    B Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    B Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={42}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                42 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
+
+exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN kczqDg k-Carousel k-LegacyCarousel"
+>
+  <div
+    className="sc-gsDKAQ hebEnC k-Grid"
+  >
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
+    >
+      <div
+        className="k-Carousel__inner"
+        onKeyDown={[Function]}
+        onScroll={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          aria-label="Page 1"
+          className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+          onClick={[Function]}
+          role="button"
+        >
+          <div
+            className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+          >
+            <div
+              className="k-Carousel__page__item"
+            >
+              <div
+                className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                href={null}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "--Image-container-ratio": 0.625,
+                  }
+                }
+                title="A"
+              >
+                <div
+                  className="k-CrowdfundingCard__image"
+                >
+                  <div
+                    className="k-CrowdfundingCard__image__imageContainer"
+                    style={null}
+                  >
+                    <img
+                      alt=""
+                      className="k-CrowdfundingCard__image__image"
+                      src="https://placehold.it/160x100/caf4fe/caf4fe"
+                      style={
+                        Object {
+                          "backgroundColor": "var(--color-grey-400, #d8d8d8)",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="k-CrowdfundingCard__image__ownerContainer"
+                  >
+                    <div
+                      className="k-u-margin-top-single"
+                    >
+                      <span
+                        className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                      >
+                        <img
+                          alt=""
+                          className="k-ButtonImage__img"
+                          src="https://placehold.it/100x100/caf4fe/caf4fe"
+                        />
+                      </span>
+                    </div>
+                    <div
+                      className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                    >
+                      <div
+                        className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                      >
+                        
+                      </div>
+                      <div
+                        className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__titleAndDesc"
+                >
+                  
+                  
+                  
+                  
+                </div>
+                
+                
+              </div>
+            </div>
+            <div
+              className="k-Carousel__page__item"
+            />
+            <div
+              className="k-Carousel__page__item"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN kczqDg k-Carousel k-LegacyCarousel"
+>
+  <div
+    className="sc-gsDKAQ hebEnC k-Grid"
+  >
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--11-l k-Grid__col--offset-0-l"
+    >
+      <div
+        className="k-Carousel__inner"
+        onKeyDown={[Function]}
+        onScroll={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          aria-label="Page 1"
+          className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+          onClick={[Function]}
+          role="button"
+        >
+          <div
+            className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+          >
+            <div
+              className="k-Carousel__page__item"
+            >
+              <div
+                className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                href={null}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "--Image-container-ratio": 0.625,
+                  }
+                }
+                title="A"
+              >
+                <div
+                  className="k-CrowdfundingCard__image"
+                >
+                  <div
+                    className="k-CrowdfundingCard__image__imageContainer"
+                    style={null}
+                  >
+                    <img
+                      alt=""
+                      className="k-CrowdfundingCard__image__image"
+                      src="https://placehold.it/160x100/caf4fe/caf4fe"
+                      style={
+                        Object {
+                          "backgroundColor": "var(--color-grey-400, #d8d8d8)",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="k-CrowdfundingCard__image__ownerContainer"
+                  >
+                    <div
+                      className="k-u-margin-top-single"
+                    >
+                      <span
+                        className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                      >
+                        <img
+                          alt=""
+                          className="k-ButtonImage__img"
+                          src="https://placehold.it/100x100/caf4fe/caf4fe"
+                        />
+                      </span>
+                    </div>
+                    <div
+                      className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                    >
+                      <div
+                        className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                      >
+                        
+                      </div>
+                      <div
+                        className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__titleAndDesc"
+                >
+                  
+                  
+                  
+                  
+                </div>
+                
+                
+              </div>
+            </div>
+            <div
+              className="k-Carousel__page__item"
+            />
+            <div
+              className="k-Carousel__page__item"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN kczqDg k-Carousel k-LegacyCarousel"
+>
+  <div
+    className="sc-gsDKAQ hebEnC k-Grid"
+  >
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
+    >
+      <div
+        className="k-Carousel__inner"
+        onKeyDown={[Function]}
+        onScroll={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          aria-label="Page 1"
+          className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+          onClick={[Function]}
+          role="button"
+        >
+          <div
+            className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+          >
+            <div
+              className="k-Carousel__page__item"
+            >
+              <div
+                className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+                href={null}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "--Image-container-ratio": 0.625,
+                  }
+                }
+                title="A"
+              >
+                <div
+                  className="k-CrowdfundingCard__image"
+                >
+                  <div
+                    className="k-CrowdfundingCard__image__imageContainer"
+                    style={null}
+                  >
+                    <img
+                      alt=""
+                      className="k-CrowdfundingCard__image__image"
+                      src="https://placehold.it/160x100/caf4fe/caf4fe"
+                      style={
+                        Object {
+                          "backgroundColor": "var(--color-grey-400, #d8d8d8)",
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="k-CrowdfundingCard__image__ownerContainer"
+                  >
+                    <div
+                      className="k-u-margin-top-single"
+                    >
+                      <span
+                        className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                      >
+                        <img
+                          alt=""
+                          className="k-ButtonImage__img"
+                          src="https://placehold.it/100x100/caf4fe/caf4fe"
+                        />
+                      </span>
+                    </div>
+                    <div
+                      className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                    >
+                      <div
+                        className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                      >
+                        
+                      </div>
+                      <div
+                        className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                      >
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__titleAndDesc"
+                >
+                  
+                  
+                  
+                  
+                </div>
+                
+                
+              </div>
+            </div>
+            <div
+              className="k-Carousel__page__item"
+            />
+            <div
+              className="k-Carousel__page__item"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN bctRfx k-Carousel"
+>
+  <div
+    className="k-Carousel__inner"
+    onKeyDown={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      aria-label="Page 1"
+      className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="A Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    A Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    A Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={100}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                100 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="B Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    B Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    B Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={42}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                42 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN hhokTj k-Carousel"
+>
+  <div
+    className="k-Carousel__inner"
+    onKeyDown={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      aria-label="Page 1"
+      className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="A Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    A Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    A Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={100}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                100 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="B Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    B Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    B Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={42}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                42 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+        <div
+          className="k-Carousel__page__item"
+        />
+        <div
+          className="k-Carousel__page__item"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN bctRfx k-Carousel"
+>
+  <div
+    className="k-Carousel__inner"
+    onKeyDown={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      aria-label="Page 1"
+      className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="A Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    A Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    A Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={100}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "100%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                100 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <a
+            className="sc-furwcr fVFzGY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight k-CrowdfundingCard--isStretched"
+            href="https://kitten.kisskissbankbank.com/"
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "--Image-container-ratio": 0.625,
+              }
+            }
+            title="B Lorem ipsum…"
+          >
+            <div
+              className="k-CrowdfundingCard__image"
+            >
+              <div
+                className="k-CrowdfundingCard__image__imageContainer"
+                style={null}
+              >
+                <img
+                  alt=""
+                  className="k-CrowdfundingCard__image__image"
+                  src="#image"
+                />
+              </div>
+              <div
+                className="k-CrowdfundingCard__image__ownerContainer"
+              >
+                <div
+                  className="k-u-margin-top-single"
+                >
+                  <span
+                    className="sc-hKwDye iKQcFJ k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+                  >
+                    <img
+                      alt=""
+                      className="k-ButtonImage__img"
+                      src="#image"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
+                >
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+                  >
+                    B Owner title
+                  </div>
+                  <div
+                    className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+                  >
+                    B Owner description
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__titleAndDesc"
+            >
+              
+              
+              
+              
+            </div>
+            <div
+              className="k-CrowdfundingCard__informations"
+            >
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+              <div
+                className="k-CrowdfundingCard__informations__infoContainer"
+              >
+                <span
+                  className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
+                >
+                  Lorem ipsum…
+                </span>
+              </div>
+            </div>
+            <div
+              className="k-CrowdfundingCard__progressBar"
+            >
+              <div
+                aria-label="Crowdfunding progress"
+                aria-valuemax={100}
+                aria-valuemin={0}
+                aria-valuenow={42}
+                className="sc-iCfMLu bMnFjp k-Meters-Progress k-CrowdfundingCard__progressBar__progress"
+                role="progressbar"
+                style={
+                  Object {
+                    "--progress-color": "var(--color-primary-500, #19b4fa)",
+                    "--progress-value": "42%",
+                  }
+                }
+              >
+                <div
+                  className="k-Meters-Progress__ramp"
+                  style={
+                    Object {
+                      "height": "4px",
+                    }
+                  }
+                />
+              </div>
+              <span
+                className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+              >
+                42 %
+              </span>
+            </div>
+            <div
+              className="k-CrowdfundingCard__state"
+            >
+              <span
+                className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+              >
+                Lorem ipsum…
+              </span>
+            </div>
+            
+          </a>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

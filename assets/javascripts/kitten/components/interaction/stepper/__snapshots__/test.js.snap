@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb lbcvSl"
+    >
+      <span
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn"
+        tabIndex="0"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        />
+        Default Item
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb lbcvSl"
+    >
+      <a
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        href="https://www.kisskissbankbank.com"
+        rel=""
+        target="_self"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        />
+        Default Link
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb lbcvSl"
+    >
+      <a
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        href="https://www.kisskissbankbank.com"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        />
+        External Item
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb lbcvSl"
+    >
+      <a
+        aria-current="page"
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        href="https://www.kisskissbankbank.com"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        />
+        External Item
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb bOoqEJ"
+    >
+      <span
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn"
+        tabIndex="0"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        />
+        Default Item
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb gydIeX"
+    >
+      <span
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn"
+        tabIndex="0"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        >
+          <svg
+            className=""
+            fill="var(--color-grey-900, #222)"
+            height="5.64"
+            style={
+              Object {
+                "transform": "rotate(90deg)",
+              }
+            }
+            viewBox="0 0 8.48 5.64"
+            width="8.48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+            />
+          </svg>
+        </span>
+        Progress Item
+      </span>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb gydIeX"
+    >
+      <a
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-primary1"
+        href="https://www.kisskissbankbank.com"
+        rel=""
+        target="_self"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--info"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        >
+          <svg
+            className=""
+            fill="var(--color-grey-900, #222)"
+            height="5.64"
+            style={
+              Object {
+                "transform": "rotate(90deg)",
+              }
+            }
+            viewBox="0 0 8.48 5.64"
+            width="8.48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+            />
+          </svg>
+        </span>
+        Progress Link
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN eLuarp"
+>
+  <ul
+    className="sc-hKwDye dfxAVe"
+  >
+    <li
+      className="sc-eCImPb lbcvSl"
+    >
+      <span
+        className="k-u-size-tiny k-u-weight-regular sc-jRQBWg jdfuVn"
+        tabIndex="0"
+      >
+        <span
+          className="sc-bdvvtL iyNfkx k-IconBadge k-Stepper__icon k-IconBadge--tiny k-IconBadge--success"
+          style={
+            Object {
+              "--iconBadge-background-color": null,
+              "--iconBadge-border-color": null,
+              "--iconBadge-border-style": null,
+              "--iconBadge-border-width": null,
+            }
+          }
+        >
+          <svg
+            fill="#fff"
+            height="8"
+            viewBox="0 0 11 8"
+            width="11"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+            />
+          </svg>
+        </span>
+        Validated Item
+      </span>
+    </li>
+  </ul>
+</div>
+`;

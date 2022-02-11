@@ -8,7 +8,7 @@ import {
   pxToRem,
   mediaQueries,
   ScreenConfig,
-} from '../../../..'
+} from 'kitten'
 
 const engagementsData = [
   {

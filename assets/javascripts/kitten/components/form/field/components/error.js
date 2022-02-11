@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '../../../atoms/typography/text'
+import { Text } from '../../../typography/text'
 
 export const FieldError = ({ children, ...others }) => {
   return (

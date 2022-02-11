@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-import { LockIcon } from '../../../components/graphics/icons/lock-icon';
+import { LockIcon } from '../../graphics/icons/lock-icon';
 var SwitchWrapper = styled.div.withConfig({
   displayName: "toggle-switch__SwitchWrapper",
   componentId: "sc-ski4b0-0"
