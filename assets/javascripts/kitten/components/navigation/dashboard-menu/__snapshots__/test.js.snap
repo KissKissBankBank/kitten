@@ -111,6 +111,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text * {
   white-space: nowrap;
   overflow-x: hidden;
+  overflow-y: visible;
   text-overflow: ellipsis;
 }
 
@@ -366,21 +367,18 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
   right: -0.3125rem;
   max-height: 18.1875rem;
   padding: 0 0.1875rem 0.1875rem;
+  overflow-x: hidden;
   overflow-y: scroll;
+  overscroll-behavior: contain;
   box-sizing: border-box;
   background: var(--color-grey-900,#222);
   -webkit-transform-origin: top left;
   -ms-transform-origin: top left;
   transform-origin: top left;
-  pointer-events: none;
   border-bottom-left-radius: var(--border-radius-m);
   border-bottom-right-radius: var(--border-radius-m);
   border: 0.125rem solid var(--color-grey-700,#636363);
   border-top: 0;
-}
-
-.c0 .k-DashboardMenu__selectorList .k-DashboardMenu__selectorButton {
-  pointer-events: auto;
 }
 
 @media (min-width:640px) {
