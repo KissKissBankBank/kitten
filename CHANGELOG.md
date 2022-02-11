@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `HeroLayout`: Keep same padding for all screen sizes.
 - Feature: `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
 - Feature: `Carousel`: More accessible handling of prev/next click.
+- Fix: `DropdownMenu`: Fix button argument.
 
 ## [8.3.1] - 2022-02-10
 
