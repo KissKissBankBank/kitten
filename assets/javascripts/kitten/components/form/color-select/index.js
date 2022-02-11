@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { forwardRef, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
@@ -37,7 +37,7 @@ const StyledColorSelect = styled.div`
   .k-Form-ColorSelect__grid {
     margin-top: ${pxToRem(10)};
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(${pxToRem(100)}, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(${pxToRem(95)}, 1fr));
     gap: ${pxToRem(10)};
   }
 
@@ -195,7 +195,7 @@ export const ColorSelect = ({
           {...inputProps}
           size="tiny"
           center
-          as={HexColorInput}
+          as={forwardRef((props, ref) => <HexColorInput {...props} />)}
           color={color}
           onKeyUp={handleInputKey}
           prefixed

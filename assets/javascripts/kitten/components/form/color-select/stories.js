@@ -50,12 +50,14 @@ export const Default = ({ value, ...args }) => {
   const [colorsObject, setColorsObject] = useState({})
 
   useEffect(() => {
+    const currentColor = colord(currentValue).toHsl()
+
     setColorsObject({
-      '--color-primary-100': colord(currentValue).lighten(0.24).toHex(),
-      '--color-primary-300': colord(currentValue).lighten(0.12).toHex(),
+      '--color-primary-100': colord({ ...currentColor, l: 95 }).toHex(),
+      '--color-primary-300': colord({ ...currentColor, l: (95 + currentColor.l) / 2 }).toHex(),
       '--color-primary-500': currentValue,
-      '--color-primary-700': colord(currentValue).darken(0.12).toHex(),
-      '--color-primary-900': colord(currentValue).darken(0.24).toHex(),
+      '--color-primary-700': colord({ ...currentColor, l: (0 + currentColor.l) / 4 * 3 }).toHex(),
+      '--color-primary-900': colord({ ...currentColor, l: (0 + currentColor.l) / 2 }).toHex(),
     })
   }, [currentValue])
 
