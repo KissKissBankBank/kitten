@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
+- Fix: `HeroLayout`: Keep same padding for all screen sizes.
 
 ## [8.3.1] - 2022-02-10
 
