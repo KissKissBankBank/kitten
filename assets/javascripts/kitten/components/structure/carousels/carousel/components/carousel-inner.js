@@ -171,10 +171,7 @@ export const CarouselInner = ({
 
           return (
             <div
-              key={index}
-              role="button"
-              aria-label={pageClickText(index + 1)}
-              onClick={handlePageClick(index)}
+              key={`inner_${index}`}
               className={classNames(
                 'k-Carousel__inner__pageContainer',
                 pagesClassName,
@@ -192,6 +189,14 @@ export const CarouselInner = ({
                 numberOfItemsPerPage={numberOfItemsPerPage}
                 goToCurrentPage={() => goToPage(index)}
               />
+              {!isActivePage && (
+                <button
+                  type="button"
+                  onClick={handlePageClick(index)}
+                  className="k-u-reset-button k-Carousel__inner__button"
+                  aria-label={pageClickText(index + 1)}
+                />
+              )}
             </div>
           )
         })}

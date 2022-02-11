@@ -30,7 +30,6 @@ export const StyledLayout = styled.div`
       justify-content: end;
 
       box-sizing: border-box;
-      padding: ${pxToRem(60)} var(--container-padding) ${pxToRem(20)};
       margin-bottom: ${pxToRem(50)};
     }
   }

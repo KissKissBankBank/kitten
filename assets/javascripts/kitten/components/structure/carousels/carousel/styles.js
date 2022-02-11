@@ -347,13 +347,19 @@ export const StyledCarouselContainer = styled.div`
     .k-Carousel__inner__pageContainer {
       width: 100%;
       scroll-snap-align: start;
+      position: relative;
 
-      &:not(.k-Carousel__inner__pageContainer--isActivePage) {
+      .k-Carousel__inner__button {
         cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-        .k-Carousel__page__item > * {
-          pointer-events: none;
-        }
+      &:not(.k-Carousel__inner__pageContainer--isActivePage) .k-Carousel__page__item > * {
+        pointer-events: none;
       }
     }
   }
