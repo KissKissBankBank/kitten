@@ -37,11 +37,11 @@ export const CarouselPage = ({
         .map((el, index) => {
           // If there's not enough items in the last page of the Carousel
           if (index >= pageItems.length) {
-            return <div key={index} className="k-Carousel__page__item" />
+            return <div key={`page_${index}`} className="k-Carousel__page__item" />
           }
 
           return (
-            <div key={index} className="k-Carousel__page__item">
+            <div key={`page_${index}`} className="k-Carousel__page__item">
               {React.cloneElement(pageItems[index], itemProps)}
             </div>
           )

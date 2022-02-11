@@ -60,8 +60,9 @@ export const parameters = {
 
 export const decorators = [
   story => (
-    <DevGridDecorator>
+    <main>
       {story()}
-    </DevGridDecorator>
+      <DevGridDecorator />
+    </main>
   ),
 ]
