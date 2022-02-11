@@ -127,7 +127,6 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
     -ms-flex-pack: end;
     justify-content: end;
     box-sizing: border-box;
-    padding: 3.75rem var(--container-padding) 1.25rem;
     margin-bottom: 3.125rem;
   }
 }
@@ -324,7 +323,6 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
     -ms-flex-pack: end;
     justify-content: end;
     box-sizing: border-box;
-    padding: 3.75rem var(--container-padding) 1.25rem;
     margin-bottom: 3.125rem;
   }
 }
