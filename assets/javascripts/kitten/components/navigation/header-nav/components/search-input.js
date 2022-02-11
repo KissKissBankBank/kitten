@@ -18,6 +18,8 @@ export const SearchInput = ({
   searchButtonProps = {},
   onMenuToggle = () => {},
   closeEvents = [],
+  a11yMobileOpen = 'Ouvrir la recherche',
+  a11yMobileClose = 'Fermer la recherche',
   ...props
 }) => {
   const { id, callOnToggle } = useContext(Context)
@@ -155,6 +157,9 @@ export const SearchInput = ({
           className="k-u-hidden@m-up"
         >
           <SearchIcon />
+          <span className="k-u-a11y-visuallyHidden">
+            {a11yMobileOpen}
+          </span>
         </Button>
       ) : (
         <button
@@ -162,6 +167,9 @@ export const SearchInput = ({
           onClick={handleFoldButtonClick}
         >
           <CrossIcon size="big" />
+          <span className="k-u-a11y-visuallyHidden">
+            {a11yMobileClose}
+          </span>
         </button>
       )}
 
@@ -186,4 +194,6 @@ SearchInput.propTypes = {
   searchButtonProps: PropTypes.object,
   onMenuToggle: PropTypes.func,
   closeEvents: PropTypes.array,
+  a11yMobileOpen: PropTypes.node,
+  a11yMobileClose: PropTypes.node,
 }

@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
 - Fix: `HeroLayout`: Keep same padding for all screen sizes.
+- Feature: `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
 
 ## [8.3.1] - 2022-02-10
 
