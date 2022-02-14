@@ -1,96 +1,218 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DocumentManager /> should match snapshot 1`] = `
+exports[`<DocumentManager /> should match snapshot with active state props 1`] = `
 <div
-  className="sc-hKwDye gmgewQ k-DocumentManager__uploader"
+  className="sc-jRQBWg egcpYu k-DocumentManager__display k-DocumentManager__display--valid"
+  id="DocumentManager"
 >
-  <input
-    disabled={false}
-    id="DocumentManager"
-    onChange={[Function]}
-    type="file"
-  />
-  <label
-    className="sc-bdvvtL gdafnu k-Button k-DocumentManager__uploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
-    disabled={null}
-    htmlFor="DocumentManager"
-    style={
-      Object {
-        "--Button-border-radius": null,
-      }
-    }
-    type="button"
+  <div
+    className="k-DocumentManager__display__container"
   >
     <div
-      className="k-DocumentManager__uploader__container"
+      className="k-DocumentManager__display__documentIcon"
     >
       <div
-        className="k-DocumentManager__uploader__documentIcon"
-      >
-        <div
-          className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
-        >
-          <svg
-            className="sc-dkPtRN duawKr k-ColorSvg"
-            height="33"
-            viewBox="0 0 25 33"
-            width="25"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            
-            <path
-              className="kiss-DocumentIcon__shadow"
-              d="M3 3h 15l 7 7V33H3L3 3z"
-            />
-            <path
-              className="kiss-DocumentIcon__bg"
-              d="M0 0h15l7 7V30H0L0 0z"
-            />
-            <path
-              className="kiss-DocumentIcon__fold"
-              d="M15 0v7h7L15 0z"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        className="k-DocumentManager__uploader__content"
-      >
-        <div
-          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
-        >
-          
-        </div>
-        <div
-          className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="k-DocumentManager__uploader__uploadIcon"
+        className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--valid"
       >
         <svg
-          aria-hidden={true}
-          className="k-DocumentManager__uploader__button__uploadIcon"
-          fill="#fff"
-          height="13"
-          viewBox="0 0 12 13"
-          width="12"
+          className="sc-dkPtRN duawKr k-ColorSvg"
+          height="33"
+          viewBox="0 0 25 33"
+          width="25"
           xmlns="http://www.w3.org/2000/svg"
         >
           
           <path
-            d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+            className="kiss-DocumentIcon__shadow"
+            d="M3 3h 15l 7 7V33H3L3 3z"
+          />
+          <path
+            className="kiss-DocumentIcon__bg"
+            d="M0 0h15l7 7V30H0L0 0z"
+          />
+          <path
+            className="kiss-DocumentIcon__fold"
+            d="M15 0v7h7L15 0z"
           />
         </svg>
+        <div
+          className="k-DocumentManager__iconContainer__statusIcon"
+        >
+          <svg
+            className="k-ColorSvg"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              fill="var(--color-success-500, #61d079)"
+              r="10"
+            />
+            <path
+              d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+              fill="var(--color-grey-000, #fff)"
+            />
+          </svg>
+        </div>
       </div>
     </div>
-  </label>
+    <div
+      className="k-DocumentManager__display__content"
+    >
+      <div
+        className="k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+      >
+        document validate
+      </div>
+      <div
+        className="k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+      >
+        document.jpg
+      </div>
+      <button
+        className="k-DocumentManager__actionButton k-u-reset-button"
+        onClick={[Function]}
+      >
+        <span
+          className="k-u-size-tiny k-u-weight-regular k-DocumentManager__actionButton__text"
+        >
+          Cancel
+        </span>
+      </button>
+      <button
+        className="k-DocumentManager__actionButton k-u-reset-button"
+        onClick={[Function]}
+      >
+        <span
+          className="k-u-size-tiny k-u-weight-regular k-DocumentManager__actionButton__text"
+        >
+          Replace document
+        </span>
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`<DocumentManager /> should match snapshot with props 1`] = `
+exports[`<DocumentManager /> should match snapshot with error state props and content 1`] = `
+<div
+  className="sc-jRQBWg egcpYu k-DocumentManager__display k-DocumentManager__display--error"
+  id="DocumentManager"
+>
+  <div
+    className="k-DocumentManager__display__container"
+  >
+    <div
+      className="k-DocumentManager__display__documentIcon"
+    >
+      <div
+        className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--error"
+      >
+        <svg
+          className="sc-dkPtRN duawKr k-ColorSvg"
+          height="33"
+          viewBox="0 0 25 33"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            className="kiss-DocumentIcon__shadow"
+            d="M3 3h 15l 7 7V33H3L3 3z"
+          />
+          <path
+            className="kiss-DocumentIcon__bg"
+            d="M0 0h15l7 7V30H0L0 0z"
+          />
+          <path
+            className="kiss-DocumentIcon__fold"
+            d="M15 0v7h7L15 0z"
+          />
+        </svg>
+        <div
+          className="k-DocumentManager__iconContainer__statusIcon"
+        >
+          <svg
+            className="k-ColorSvg"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="10"
+              cy="10"
+              fill="var(--color-danger-500, #ff0046)"
+              r="10"
+            />
+            <path
+              d="M11.414 10l2.122-2.12-1.415-1.416L10 8.586 7.88 6.464 6.463 7.88 8.586 10l-2.122 2.12 1.415 1.416L10 11.414l2.12 2.122 1.416-1.415L11.414 10z"
+              fill="var(--color-grey-000, #fff)"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-DocumentManager__display__content"
+    >
+      <div
+        className="k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+      >
+        document validate
+      </div>
+      <div
+        className="k-DocumentManager__display__content__content k-u-margin-top-noneHalf"
+      >
+        <p>
+          Mauvaise adresse :
+        </p>
+        <ul>
+          <li>
+            Etiam porta sem malesuada magna mollis euismod.
+          </li>
+          <li>
+            Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+          </li>
+          <li>
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          </li>
+        </ul>
+      </div>
+      <div
+        className="k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+      >
+        document.jpg
+      </div>
+      <button
+        className="k-DocumentManager__actionButton k-u-reset-button"
+        onClick={[Function]}
+      >
+        <span
+          className="k-u-size-tiny k-u-weight-regular k-DocumentManager__actionButton__text"
+        >
+          Cancel
+        </span>
+      </button>
+      <button
+        className="k-DocumentManager__actionButton k-u-reset-button"
+        onClick={[Function]}
+      >
+        <span
+          className="k-u-size-tiny k-u-weight-regular k-DocumentManager__actionButton__text"
+        >
+          Replace document
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DocumentManager /> should match snapshot with ready state props 1`] = `
 <div
   className="sc-hKwDye gmgewQ k-DocumentManager__uploader"
 >
