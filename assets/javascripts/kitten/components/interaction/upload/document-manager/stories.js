@@ -16,7 +16,7 @@ const args = {
   id: 'DocumentManager',
   buttonProps: {},
   canCancel: true,
-  cancelButtonText: '',
+  cancelButtonText: 'Upload another document',
   disabled: false,
   documentIcon: <DocumentIconEmpty />,
   errorText: null,
