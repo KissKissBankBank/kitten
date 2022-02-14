@@ -259,7 +259,7 @@ export const DropdownMenu = ({
     >
       <summary className="k-DropdownMenu__button">
         <span className="k-DropdownMenu__button__inside">
-          {button({ open })}
+          {button({ open: isOpen })}
         </span>
       </summary>
       <ArrowContainer
