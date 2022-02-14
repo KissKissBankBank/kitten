@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
 import { ArrowContainer } from '../../../information/boxes/arrow-container'
@@ -150,17 +150,24 @@ export const DropdownMenu = ({
   ...rest
 }) => {
   const detailsElement = useRef(null)
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(openProp)
   const [hasClicked, setHasClicked] = useState(false)
+
+  useEffect(() => {
+    setIsOpen(openProp)
+    setHasClicked(true)
+  }, [openProp])
 
   const onLinkClicked = () => {
     setIsOpen(false)
     setHasClicked(true)
   }
 
-  const handleToggle = () => {
+  const handleToggle = event => {
+    onToggle(event)
+
     if (!hasClicked) {
-      return setIsOpen(!isOpen)
+      return setIsOpen(event.target.open)
     }
     return setHasClicked(false)
   }
@@ -204,14 +211,14 @@ export const DropdownMenu = ({
 
     switch (event.key) {
       case 'Escape':
-        if (!open) return
+        if (!isOpen) break
 
         detailsElement.current?.querySelector('summary')?.click()
         event.preventDefault()
         event.stopPropagation()
         break
       case 'ArrowDown':
-        if (isSummaryFocused && !open) {
+        if (isSummaryFocused && !isOpen) {
           document.activeElement?.click()
         }
 
@@ -220,9 +227,7 @@ export const DropdownMenu = ({
         event.preventDefault()
         break
       case 'ArrowUp':
-        if (isSummaryFocused && !open) {
-          document.activeElement?.click()
-        }
+        if (!isOpen) break
 
         getSibling('prev')?.focus()
 

@@ -260,7 +260,6 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   className="c0 k-DropdownMenu k-DropdownMenu--left"
   onKeyDown={[Function]}
   onToggle={[Function]}
-  open={false}
   role="menu"
 >
   <summary
