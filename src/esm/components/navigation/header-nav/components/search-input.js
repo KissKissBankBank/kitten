@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"];
+var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents", "a11yMobileOpen", "a11yMobileClose"];
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -23,6 +23,10 @@ export var SearchInput = function SearchInput(_ref) {
       onMenuToggle = _ref$onMenuToggle === void 0 ? function () {} : _ref$onMenuToggle,
       _ref$closeEvents = _ref.closeEvents,
       closeEvents = _ref$closeEvents === void 0 ? [] : _ref$closeEvents,
+      _ref$a11yMobileOpen = _ref.a11yMobileOpen,
+      a11yMobileOpen = _ref$a11yMobileOpen === void 0 ? 'Ouvrir la recherche' : _ref$a11yMobileOpen,
+      _ref$a11yMobileClose = _ref.a11yMobileClose,
+      a11yMobileClose = _ref$a11yMobileClose === void 0 ? 'Fermer la recherche' : _ref$a11yMobileClose,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useContext = useContext(Context),
@@ -152,12 +156,16 @@ export var SearchInput = function SearchInput(_ref) {
     rounded: true,
     onClick: handleFoldButtonClick,
     className: "k-u-hidden@m-up"
-  }, /*#__PURE__*/React.createElement(SearchIcon, null)) : /*#__PURE__*/React.createElement("button", {
+  }, /*#__PURE__*/React.createElement(SearchIcon, null), /*#__PURE__*/React.createElement("span", {
+    className: "k-u-a11y-visuallyHidden"
+  }, a11yMobileOpen)) : /*#__PURE__*/React.createElement("button", {
     className: "k-u-reset-button k-HeaderNav__searchInput__mobileFold",
     onClick: handleFoldButtonClick
   }, /*#__PURE__*/React.createElement(CrossIcon, {
     size: "big"
-  })), /*#__PURE__*/React.createElement("div", _extends({}, menuProps, {
+  }), /*#__PURE__*/React.createElement("span", {
+    className: "k-u-a11y-visuallyHidden"
+  }, a11yMobileClose)), /*#__PURE__*/React.createElement("div", _extends({}, menuProps, {
     className: classNames('k-HeaderNav__floatingDropdown', menuProps.className, {
       'k-HeaderNav__floatingDropdown--isExpanded': isDropdownExpanded
     })
@@ -167,5 +175,7 @@ SearchInput.propTypes = {
   searchInputProps: PropTypes.object,
   searchButtonProps: PropTypes.object,
   onMenuToggle: PropTypes.func,
-  closeEvents: PropTypes.array
+  closeEvents: PropTypes.array,
+  a11yMobileOpen: PropTypes.node,
+  a11yMobileClose: PropTypes.node
 };

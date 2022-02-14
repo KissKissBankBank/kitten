@@ -164,7 +164,7 @@ var DropdownMenu = function DropdownMenu(_ref) {
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "k-DropdownMenu__button__inside"
   }, button({
-    open: open
+    open: isOpen
   }))), /*#__PURE__*/_react.default.createElement(_arrowContainer.ArrowContainer, (0, _extends2.default)({
     color: _colorsConfig.default.font1,
     size: 8,

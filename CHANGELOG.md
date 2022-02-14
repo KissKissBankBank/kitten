@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [8.4.1] - 2022-02-14
+
+Fix:
+
 - Fix: `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
 - Fix: `HeroLayout`: Keep same padding for all screen sizes.
 - Fix: `DashboardMenu`: Fix `Expandable` active item.
+- Fix: `DropdownMenu`: Fix button argument.
+
+Feature:
+
 - Feature: `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
 - Feature: `Carousel`: More accessible handling of prev/next click.
-- Fix: `DropdownMenu`: Fix button argument.
 
 ## [8.3.1] - 2022-02-10
 

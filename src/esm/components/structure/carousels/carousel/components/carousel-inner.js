@@ -149,10 +149,7 @@ export var CarouselInner = function CarouselInner(_ref) {
     var isActivePage = currentPageIndex === index;
     var hasPageBeenViewed = viewedPages.has(index);
     return /*#__PURE__*/React.createElement("div", {
-      key: index,
-      role: "button",
-      "aria-label": pageClickText(index + 1),
-      onClick: handlePageClick(index),
+      key: "inner_" + index,
       className: classNames('k-Carousel__inner__pageContainer', pagesClassName, {
         'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
         'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed
@@ -166,6 +163,11 @@ export var CarouselInner = function CarouselInner(_ref) {
       goToCurrentPage: function goToCurrentPage() {
         return goToPage(index);
       }
+    }), !isActivePage && /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: handlePageClick(index),
+      className: "k-u-reset-button k-Carousel__inner__button",
+      "aria-label": pageClickText(index + 1)
     }));
   }));
 };

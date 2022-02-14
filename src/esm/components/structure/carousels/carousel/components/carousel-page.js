@@ -33,13 +33,13 @@ export var CarouselPage = function CarouselPage(_ref) {
     // If there's not enough items in the last page of the Carousel
     if (index >= pageItems.length) {
       return /*#__PURE__*/React.createElement("div", {
-        key: index,
+        key: "page_" + index,
         className: "k-Carousel__page__item"
       });
     }
 
     return /*#__PURE__*/React.createElement("div", {
-      key: index,
+      key: "page_" + index,
       className: "k-Carousel__page__item"
     }, /*#__PURE__*/React.cloneElement(pageItems[index], itemProps));
   }));
