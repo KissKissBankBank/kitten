@@ -17,7 +17,7 @@ export const DEFAULT = css`
   min-width: ${pxToRem(200)};
   min-height: ${pxToRem(50)};
   padding: ${pxToRem(10)} ${pxToRem(30)};
-  font-size: ${stepToRem(-1)};
+  font-size: ${stepToRem(0)};
 `
 
 export const NANO = css`
@@ -45,39 +45,37 @@ export const TINY = css`
 `
 
 export const BIG = css`
+  font-size: ${stepToRem(0)};
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(70)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
-    font-size: ${stepToRem(0)};
   }
 `
 
 export const HUGE = css`
   min-height: ${pxToRem(70)};
-  font-size: ${stepToRem(-1)};
+  font-size: ${stepToRem(0)};
   padding: ${pxToRem(10)} ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
     --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(80)};
-    font-size: ${stepToRem(0)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
   }
 `
 
 export const GIANT = css`
   min-height: ${pxToRem(70)};
-  font-size: ${stepToRem(-1)};
+  font-size: ${stepToRem(0)};
   padding: ${pxToRem(10)} ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
     --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
     min-height: ${pxToRem(90)};
-    font-size: ${stepToRem(0)};
     padding: ${pxToRem(10)} ${pxToRem(40)};
   }
 `

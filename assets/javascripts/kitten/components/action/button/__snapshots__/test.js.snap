@@ -22,7 +22,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -76,6 +76,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -154,7 +155,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -163,7 +163,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -172,7 +171,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -238,7 +236,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -292,6 +290,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -370,7 +369,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -379,7 +377,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -388,7 +385,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -452,7 +448,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -506,6 +502,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -584,7 +581,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -593,7 +589,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -602,7 +597,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -666,7 +660,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -720,6 +714,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -798,7 +793,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -807,7 +801,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -816,7 +809,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -880,7 +872,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -934,6 +926,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1012,7 +1005,6 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1021,7 +1013,6 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1030,7 +1021,6 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1094,7 +1084,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1148,6 +1138,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1226,7 +1217,6 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1235,7 +1225,6 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1244,7 +1233,6 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1308,7 +1296,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1362,6 +1350,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1440,7 +1429,6 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1449,7 +1437,6 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1458,7 +1445,6 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1524,7 +1510,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1578,6 +1564,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1656,7 +1643,6 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1665,7 +1651,6 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1674,7 +1659,6 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1738,7 +1722,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1792,6 +1776,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1870,7 +1855,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1879,7 +1863,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1888,7 +1871,6 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1952,7 +1934,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2006,6 +1988,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -2084,7 +2067,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2093,7 +2075,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2102,7 +2083,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2166,7 +2146,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2220,6 +2200,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -2298,7 +2279,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2307,7 +2287,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2316,7 +2295,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2380,7 +2358,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2434,6 +2412,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -2512,7 +2491,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2521,7 +2499,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2530,7 +2507,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2594,7 +2570,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2648,6 +2624,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -2726,7 +2703,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2735,7 +2711,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2744,7 +2719,6 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2808,7 +2782,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -2862,6 +2836,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -2940,7 +2915,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2949,7 +2923,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -2958,7 +2931,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -3022,7 +2994,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -3076,6 +3048,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -3154,7 +3127,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -3163,7 +3135,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -3172,7 +3143,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -3241,7 +3211,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -3295,6 +3265,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -3373,7 +3344,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -3382,7 +3352,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -3391,7 +3360,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 

@@ -22,7 +22,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -76,6 +76,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -154,7 +155,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -163,7 +163,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -172,7 +171,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -250,7 +248,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -304,6 +302,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -382,7 +381,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -391,7 +389,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -400,7 +397,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -478,7 +474,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -532,6 +528,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -610,7 +607,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -619,7 +615,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -628,7 +623,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -706,7 +700,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -760,6 +754,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -838,7 +833,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -847,7 +841,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -856,7 +849,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -934,7 +926,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -988,6 +980,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1066,7 +1059,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1075,7 +1067,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1084,7 +1075,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1162,7 +1152,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1216,6 +1206,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1294,7 +1285,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1303,7 +1293,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1312,7 +1301,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1390,7 +1378,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1444,6 +1432,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1522,7 +1511,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1531,7 +1519,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1540,7 +1527,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1618,7 +1604,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1672,6 +1658,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1750,7 +1737,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1759,7 +1745,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1768,7 +1753,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
