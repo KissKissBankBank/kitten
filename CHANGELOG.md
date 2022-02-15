@@ -6,10 +6,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `ColorSelect`: Add component.
 - Fix: `TextInputWithButton`: Fix `disabled` prop priority.
-- Fix: `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
-- Fix: `HeroLayout`: Keep same padding for all screen sizes.
-- Feature: `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
-- Feature: `Carousel`: More accessible handling of prev/next click.
+
+## [8.4.0] - 2022-02-14
+
+Features:
+
+- `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
+- `Carousel`: More accessible handling of prev/next click.
+
+Fixes:
+
+- `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
+- `HeroLayout`: Keep same padding for all screen sizes.
+- `DashboardMenu`: Fix `Expandable` active item.
+- `DropdownMenu`: Fix button argument.
 
 ## [8.3.1] - 2022-02-10
 

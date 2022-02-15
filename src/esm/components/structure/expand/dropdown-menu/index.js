@@ -142,7 +142,7 @@ export var DropdownMenu = function DropdownMenu(_ref) {
   }, /*#__PURE__*/React.createElement("span", {
     className: "k-DropdownMenu__button__inside"
   }, button({
-    open: open
+    open: isOpen
   }))), /*#__PURE__*/React.createElement(ArrowContainer, _extends({
     color: COLORS.font1,
     size: 8,
