@@ -7,7 +7,9 @@ export default {
   title: 'Form/Input/PasswordInput',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="PasswordInput" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="PasswordInput" />
+      ),
     },
   },
   decorators: [
@@ -38,6 +40,6 @@ export default {
       control: 'text',
     },
   },
-}  
+}
 
 export const Default = args => <PasswordInput {...args} />

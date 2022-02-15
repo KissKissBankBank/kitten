@@ -164,7 +164,11 @@ export const PermanentProject = args => {
     <HorizontalCrowdfundingCard
       {...args}
       noProgress
-      info={<Text weight="regular" size="micro" color="primary1">158 abonnés</Text>}
+      info={
+        <Text weight="regular" size="micro" color="primary1">
+          158 abonnés
+        </Text>
+      }
     />
   )
 }

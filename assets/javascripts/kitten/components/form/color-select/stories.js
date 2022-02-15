@@ -54,10 +54,19 @@ export const Default = ({ value, ...args }) => {
 
     setColorsObject({
       '--color-primary-100': colord({ ...currentColor, l: 95 }).toHex(),
-      '--color-primary-300': colord({ ...currentColor, l: (95 + currentColor.l) / 2 }).toHex(),
+      '--color-primary-300': colord({
+        ...currentColor,
+        l: (95 + currentColor.l) / 2,
+      }).toHex(),
       '--color-primary-500': currentValue,
-      '--color-primary-700': colord({ ...currentColor, l: (0 + currentColor.l) / 4 * 3 }).toHex(),
-      '--color-primary-900': colord({ ...currentColor, l: (0 + currentColor.l) / 2 }).toHex(),
+      '--color-primary-700': colord({
+        ...currentColor,
+        l: ((0 + currentColor.l) / 4) * 3,
+      }).toHex(),
+      '--color-primary-900': colord({
+        ...currentColor,
+        l: (0 + currentColor.l) / 2,
+      }).toHex(),
     })
   }, [currentValue])
 

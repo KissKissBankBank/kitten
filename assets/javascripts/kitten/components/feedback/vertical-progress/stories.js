@@ -8,7 +8,9 @@ export default {
   title: 'Feedback/VerticalProgress',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="VerticalProgress" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="VerticalProgress" />
+      ),
     },
   },
   decorators: [

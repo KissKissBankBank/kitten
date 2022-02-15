@@ -4,10 +4,7 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import {
-  Button,
-  buttonModifiers,
-} from '../../../action/button'
+import { Button, buttonModifiers } from '../../../action/button'
 
 export const Item = ({
   children,

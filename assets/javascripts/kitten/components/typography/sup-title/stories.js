@@ -10,13 +10,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="SupTitle" />,
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 
   args: {
     children: 'Lorem ipsum dolor sit amet…',

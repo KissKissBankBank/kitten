@@ -1,11 +1,5 @@
 import { css } from 'styled-components'
-import {
-  pxToRem,
-  stepToRem,
-  COLORS,
-  TYPOGRAPHY,
-  ScreenConfig
-} from 'kitten'
+import { pxToRem, stepToRem, COLORS, TYPOGRAPHY, ScreenConfig } from 'kitten'
 
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1

@@ -7,7 +7,9 @@ export default {
   title: 'Form/PillNumberInput',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="PillNumberInput" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="PillNumberInput" />
+      ),
     },
   },
   decorators: [

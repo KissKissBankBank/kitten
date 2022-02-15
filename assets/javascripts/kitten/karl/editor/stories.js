@@ -15,7 +15,7 @@ import {
   ImageIcon,
   VideoIcon,
   LinkIcon,
-  ButtonIcon
+  ButtonIcon,
 } from 'kitten'
 
 export default {

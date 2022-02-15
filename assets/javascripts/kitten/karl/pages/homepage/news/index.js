@@ -1,13 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NewsBlock } from './components/news-block'
-import {
-  Container,
-  Title,
-  pxToRem,
-  stepToRem,
-  ScreenConfig,
-} from 'kitten'
+import { Container, Title, pxToRem, stepToRem, ScreenConfig } from 'kitten'
 
 const StyledSection = styled.section`
   margin: ${pxToRem(50)} 0;

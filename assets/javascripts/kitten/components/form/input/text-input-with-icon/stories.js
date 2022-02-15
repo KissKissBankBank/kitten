@@ -15,7 +15,9 @@ export default {
   title: 'Form/Input/TextInputWithIcon',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="TextInputWithIcon" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="TextInputWithIcon" />
+      ),
     },
   },
   decorators: [

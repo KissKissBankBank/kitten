@@ -8,7 +8,7 @@ import {
   Button,
   Title,
   COLORS,
- } from 'kitten'
+} from 'kitten'
 
 const HeaderWithBackground = ({ backgroundImage }) => (
   <div style={{ backgroundImage }} className="PreDeposit__header">

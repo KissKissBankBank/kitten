@@ -358,7 +358,9 @@ export const StyledCarouselContainer = styled.div`
         height: 100%;
       }
 
-      &:not(.k-Carousel__inner__pageContainer--isActivePage) .k-Carousel__page__item > * {
+      &:not(.k-Carousel__inner__pageContainer--isActivePage)
+        .k-Carousel__page__item
+        > * {
         pointer-events: none;
       }
     }

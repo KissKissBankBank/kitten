@@ -7,7 +7,9 @@ export default {
   title: 'Information/StatusWithBullet',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="StatusWithBullet" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="StatusWithBullet" />
+      ),
     },
   },
   decorators: [
@@ -17,7 +19,6 @@ export default {
       </div>
     ),
   ],
-
 
   args: {
     statusMessage: 'Message',

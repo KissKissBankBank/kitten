@@ -7,16 +7,12 @@ export default {
   title: 'Layout/AdaptableGrid',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="AdaptableGrid" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="AdaptableGrid" />
+      ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 
   args: {
     gutter: 20,
