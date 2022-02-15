@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  Grid,
-  GridCol,
-  Title,
-  Triptych,
-  COLORS,
- } from 'kitten'
+import { Container, Grid, GridCol, Title, Triptych, COLORS } from 'kitten'
 import { CardWithButton } from './card-with-button'
 
 const SolutionsTriptych = () => (

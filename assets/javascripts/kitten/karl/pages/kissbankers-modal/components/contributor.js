@@ -1,12 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {
-  COLORS,
-  pxToRem,
-  TYPOGRAPHY,
-  ScreenConfig,
-} from 'kitten'
+import { COLORS, pxToRem, TYPOGRAPHY, ScreenConfig } from 'kitten'
 import { containerStyles, titleStyles } from './styles'
 import {
   AdaptableGrid as Grid,

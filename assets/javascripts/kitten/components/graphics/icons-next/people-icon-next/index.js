@@ -11,8 +11,12 @@ export const PeopleIconNext = ({ color, title, ...props }) => (
     {...props}
   >
     {title && <title>{title}</title>}
-    <path fill={color} fillRule="evenodd" d="M5 6a3 3 0 100-6 3 3 0 000 6zm0 6c2.761 0 5-.714 5-.714C10 8.919 7.761 7 5 7s-5 1.919-5 4.286c0 0 2.239.714 5 .714z" clipRule="evenodd"/>
-
+    <path
+      fill={color}
+      fillRule="evenodd"
+      d="M5 6a3 3 0 100-6 3 3 0 000 6zm0 6c2.761 0 5-.714 5-.714C10 8.919 7.761 7 5 7s-5 1.919-5 4.286c0 0 2.239.714 5 .714z"
+      clipRule="evenodd"
+    />
   </svg>
 )
 

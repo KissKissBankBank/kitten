@@ -23,6 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+/* eslint-disable */
 import _rawCountries from './rawCountries'
 import _rawTerritories from './rawTerritories'
 

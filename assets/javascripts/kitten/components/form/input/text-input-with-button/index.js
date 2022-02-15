@@ -157,7 +157,8 @@ export const TextInputWithButton = React.forwardRef(
             {
               'k-Form-TextInputWithButton__button--valid': valid,
               'k-Form-TextInputWithButton__button--error': error,
-              'k-Form-TextInputWithButton__button--disabled': disabled || buttonProps.disabled,
+              'k-Form-TextInputWithButton__button--disabled':
+                disabled || buttonProps.disabled,
             },
           )}
           disabled={disabled || buttonProps.disabled}

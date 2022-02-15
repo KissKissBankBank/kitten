@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-import {
-  pxToRem,
-  ScreenConfig,
-} from 'kitten'
+import { pxToRem, ScreenConfig } from 'kitten'
 
 const Actions = styled.div`
   display: flex;

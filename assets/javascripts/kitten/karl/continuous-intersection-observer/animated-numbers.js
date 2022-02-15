@@ -1,10 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import {
-  pxToRem,
-  stepToRem,
-  COLORS,
-} from 'kitten'
+import { pxToRem, stepToRem, COLORS } from 'kitten'
 
 const NUMBER_ANIM_DELAY = 0.05
 const MAX_DIGITS = 11

@@ -14,7 +14,10 @@ import {
   pxToRem,
   ScreenConfig,
 } from 'kitten'
-import { DEFAULT, BIG } from '../../../../components/typography/horizontal-stroke'
+import {
+  DEFAULT,
+  BIG,
+} from '../../../../components/typography/horizontal-stroke'
 import { FLUID } from '../../../../components/action/button/standalone-styles'
 import {
   CONTAINER_PADDING,

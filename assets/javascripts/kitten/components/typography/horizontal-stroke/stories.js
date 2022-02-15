@@ -8,16 +8,12 @@ export default {
   title: 'Typography/HorizontalStroke',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="HorizontalStroke" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="HorizontalStroke" />
+      ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 
   args: {
     size: 'default',

@@ -1,7 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const ColorGiftIconNext = ({ color, secondaryColor, title, ...props }) => (
+export const ColorGiftIconNext = ({
+  color,
+  secondaryColor,
+  title,
+  ...props
+}) => (
   <svg
     width="30"
     height="30"

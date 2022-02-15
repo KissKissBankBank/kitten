@@ -8,7 +8,9 @@ export default {
   title: 'Accessibility/VisuallyHidden',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="VisuallyHidden" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="VisuallyHidden" />
+      ),
     },
   },
   decorators: [

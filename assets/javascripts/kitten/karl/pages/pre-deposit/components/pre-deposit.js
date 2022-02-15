@@ -14,7 +14,7 @@ import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
   COLORS,
- } from 'kitten'
+} from 'kitten'
 
 const StyledPreDeposit = styled.div`
   .PreDeposit__header {

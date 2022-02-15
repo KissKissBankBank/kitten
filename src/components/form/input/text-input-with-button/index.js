@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.TextInputWithButton = void 0;
 
-var _extends3 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
@@ -37,8 +37,6 @@ var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
 })([".k-Form-TextInputWithButton__button{", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;}&:not(.k-Form-TextInputWithButton--insetButton){display:flex;gap:", ";}&.k-Form-TextInputWithButton--insetButton{position:relative;.k-Form-TextInputWithButton__input{padding-right:calc(var(--text-input-size) + ", ");}.k-Form-TextInputWithButton__button{display:flex;align-items:center;justify-content:center;position:absolute;top:", ";bottom:", ";right:", ";min-width:calc(var(--text-input-size) - ", " * 2);border-radius:var(--text-input-button-radius);--text-input-button-radius:var(--border-radius-s);border:none;background-color:var(--color-grey-000);transition:background-color 0.2s ease;&:hover{background-color:var(--color-grey-300);}&:active{background-color:var(--color-grey-400);}}&.k-Form-TextInputWithButton--roudedButton .k-Form-TextInputWithButton__button{--text-input-button-radius:var(--border-radius-rounded);}}&.k-Form-TextInputWithButton--tiny{--text-input-size:", ";}&.k-Form-TextInputWithButton--regular{--text-input-size:", ";}&.k-Form-TextInputWithButton--big{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton--huge{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton--giant{--text-input-size:", ";@media (min-width:", "px){--text-input-size:", ";}}&.k-Form-TextInputWithButton__button--valid{background-color:var(--color-success-500);border-color:var(--color-success-500);}&.k-Form-TextInputWithButton__button--error{cursor:not-allowed;background-color:var(--color-danger-500);border-color:var(--color-danger-500);}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(60), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90));
 
 var TextInputWithButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var _extends2;
-
   var valid = _ref.valid,
       error = _ref.error,
       disabled = _ref.disabled,
@@ -58,7 +56,7 @@ var TextInputWithButton = /*#__PURE__*/_react.default.forwardRef(function (_ref,
       'k-Form-TextInputWithButton--insetButton': inset,
       'k-Form-TextInputWithButton--roudedButton': rounded
     })
-  }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends3.default)({
+  }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
     ref: ref || null
   }, others, {
     className: (0, _classnames.default)('k-Form-TextInputWithButton__input', className),
@@ -68,18 +66,18 @@ var TextInputWithButton = /*#__PURE__*/_react.default.forwardRef(function (_ref,
     size: size,
     rounded: rounded,
     value: inputValue
-  })), /*#__PURE__*/_react.default.createElement(ButtonComponent, (0, _extends3.default)({
+  })), /*#__PURE__*/_react.default.createElement(ButtonComponent, (0, _extends2.default)({
     type: "button"
-  }, buttonProps, (_extends2 = {
+  }, buttonProps, {
     className: (0, _classnames.default)('k-Form-TextInputWithButton__button', buttonProps == null ? void 0 : buttonProps.className, {
       'k-Form-TextInputWithButton__button--valid': valid,
       'k-Form-TextInputWithButton__button--error': error,
-      'k-Form-TextInputWithButton__button--disabled': disabled
+      'k-Form-TextInputWithButton__button--disabled': disabled || buttonProps.disabled
     }),
-    disabled: disabled,
+    disabled: disabled || buttonProps.disabled,
     modifier: modifier,
     size: size
-  }, _extends2["disabled"] = disabled, _extends2)), value || buttonValue));
+  }), value || buttonValue));
 });
 
 exports.TextInputWithButton = TextInputWithButton;
@@ -102,7 +100,9 @@ TextInputWithButton.defaultProps = {
   disabled: false,
   size: 'regular',
   buttonValue: 'Button',
-  buttonProps: {},
+  buttonProps: {
+    disabled: false
+  },
   modifier: 'beryllium',
   rounded: false,
   inset: false

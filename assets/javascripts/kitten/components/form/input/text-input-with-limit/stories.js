@@ -8,7 +8,9 @@ export default {
   title: 'Form/Input/TextInputWithLimit',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="TextInputWithLimit" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="TextInputWithLimit" />
+      ),
     },
   },
   decorators: [

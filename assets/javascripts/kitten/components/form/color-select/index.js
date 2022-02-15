@@ -195,7 +195,12 @@ export const ColorSelect = ({
           {...inputProps}
           size="tiny"
           center
-          as={forwardRef((props, ref) => <HexColorInput {...props} />)}
+          as={forwardRef((
+            props,
+            ref, // eslint-disable-line no-unused-vars
+          ) => (
+            <HexColorInput {...props} />
+          ))}
           color={color}
           onKeyUp={handleInputKey}
           prefixed
