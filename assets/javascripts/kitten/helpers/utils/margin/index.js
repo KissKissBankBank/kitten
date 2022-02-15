@@ -18,6 +18,8 @@ const margin = (options, asArray = false) => {
   return result.join(' ')
 }
 
+const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1)
+
 const generateClassName = ({ attribute, mediaQuery, value }) => {
   let mediaQueryAddon = mediaQuery
   let outputValue = value
@@ -29,7 +31,11 @@ const generateClassName = ({ attribute, mediaQuery, value }) => {
   }
 
   if (typeof value === 'number') {
-    outputValue = valuesNames[Math.floor(value)]
+    outputValue = value < 0 ? 'minus' : ''
+
+    const valueName = valuesNames[Math.abs(Math.floor(value))]
+
+    outputValue += value < 0 ? capitalize(valueName) : valueName
 
     if (value % 1 > 0) {
       outputValue += 'Half'
