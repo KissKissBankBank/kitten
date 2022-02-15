@@ -229,6 +229,7 @@ export const DocumentManager = ({
   cancelButtonText = 'Upload another document',
   canReplace = false,
   disabled = false,
+  displayContent = null,
   displaySubtitle = '',
   displayTitle = '',
   documentIcon = <DocumentIconEmpty />,
@@ -388,6 +389,11 @@ export const DocumentManager = ({
           >
             {displayTitle}
           </Text>
+          {displayContent && (
+            <div className="k-DocumentManager__display__content__content k-u-margin-top-noneHalf">
+              {displayContent}
+            </div>
+          )}
           <Text
             tag="div"
             weight="light"
@@ -439,6 +445,7 @@ DocumentManager.propTypes = {
   cancelButtonText: PropTypes.string,
   canReplace: PropTypes.bool,
   disabled: PropTypes.bool,
+  displayContent: PropTypes.node,
   displaySubtitle: PropTypes.node,
   displayTitle: PropTypes.node,
   documentIcon: PropTypes.node,
