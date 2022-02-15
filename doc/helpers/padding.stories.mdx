@@ -1,0 +1,91 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Helpers/padding()" />
+
+# `padding()`
+
+The `padding()` JS helper takes an object describing the paddings of an element
+and returns class names for the [padding CSS utility](?path=/story/documentation-css-utilities-padding--page).
+
+Without Kitten CSS Utilities, this helper will not work.
+
+## Source
+
+[`assets/javascripts/kitten/helpers/utils/padding/index.js`](https://github.com/KissKissBankBank/kitten/blob/master/assets/javascripts/kitten/helpers/utils/padding/index.js)
+
+## Using
+
+### Import
+
+```
+import { padding } from '@kisskissbankbank/kitten'
+```
+
+### Usage
+
+The first argument needed for the `padding()` function to work, is an object.
+The object children are
+[the 6 directions](?id=documentation-css-utilities-padding--page&viewMode=story#direction),
+they are all optional.
+
+The children of these directions are objects, containing pairs of media query
+and value.
+The media query is in the form `fromXxs`, `fromM`, `fromXl`.
+The value can be a number that is 1/10 of the pixel value that is wanted
+(`2` will be equivalent to `20px`, `8.5` will be `85px`), or a string for the
+value of the CSS utility (`single`, `tripleHalf`, `noneHalf`, `auto`…)
+
+An optional second argument can be passed, the boolean `asArray`
+(defaults to `false`), which will make the helper return an array of strings
+instead of a single string of concatenated class names.
+
+### Examples
+
+#### Basic usage
+
+```js
+>> padding({ top: { default: 5 } })
+<- 'k-u-padding-top-quintuple'
+>> padding({ top: { default: 'quintuple' }})
+<- 'k-u-padding-top-quintuple'
+```
+
+#### Media queries
+
+```js
+>> padding({ top: { fromM: 5 } })
+<- 'k-u-padding-top-quintuple@m-up'
+>> padding({ top: { default: 3, fromS: 5, fromL: 'decuple' } })
+<- 'k-u-padding-top-triple k-u-padding-top-quintuple@s-up k-u-padding-top-decuple@l-up'
+```
+
+#### With `asArray`
+
+```js
+>> const options = {
+      top: {
+        fromXxs: 5,
+        fromL: 8.5,
+      },
+      bottom: {
+        default: 0,
+        fromXl: 'decuple',
+      },
+      vertical: {
+        fromS: 9,
+      },
+      horizontal: {
+        fromXs: 'auto',
+      },
+    }
+>> padding(options, true)
+<- Array [
+    'k-u-padding-top-quintuple',
+    'k-u-padding-top-octupleHalf@l-up',
+    'k-u-padding-bottom-none',
+    'k-u-padding-bottom-decuple@xl-up',
+    'k-u-padding-vertical-nonuple@s-up',
+    'k-u-padding-horizontal-auto@xs-up',
+  ]
+```
+
