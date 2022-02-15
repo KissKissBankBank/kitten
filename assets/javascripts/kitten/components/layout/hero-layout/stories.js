@@ -16,8 +16,8 @@ import {
   TYPOGRAPHY,
   Grid,
   GridCol,
-  HeartWithClickIconNext,
-  GiftIconNext,
+  ColorHeartWithClickIconNext,
+  ColorGiftIconNext,
   ColorCheckedShieldIconNext,
   CrossCircleIconNext,
   Separator,
@@ -304,7 +304,7 @@ export const Default = ({
               </Text>
             </GridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <HeartWithClickIconNext
+              <ColorHeartWithClickIconNext
                 color="var(--color-grey-900)"
                 secondaryColor="var(--color-primary-500)"
               />
@@ -332,7 +332,7 @@ export const Default = ({
               </Paragraph>
             </StyledGridCol>
             <StyledGridCol col="12" col-s="6" col-l="3">
-              <GiftIconNext
+              <ColorGiftIconNext
                 color="var(--color-grey-900)"
                 secondaryColor="var(--color-primary-500)"
               />
