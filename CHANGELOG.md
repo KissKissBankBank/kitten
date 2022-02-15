@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ColorSelect`: Add component.
+- Fix: `TextInputWithButton`: Fix `disabled` prop priority.
+
 ## [8.4.0] - 2022-02-14
 
 Features:
