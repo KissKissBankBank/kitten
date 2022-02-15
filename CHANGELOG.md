@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ProjectCard`: Add `lastLine` prop to `Line` subcomponent for custom bottom alignment.
+
 ## [8.4.0] - 2022-02-14
 
 Features:

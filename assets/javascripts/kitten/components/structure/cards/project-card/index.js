@@ -122,9 +122,14 @@ ProjectCard.Title = ({ children, className, ...props }) => {
   )
 }
 
-ProjectCard.Line = ({ className, ...props }) => {
+ProjectCard.Line = ({ className, lastLine, ...props }) => {
   return (
-    <div className={classNames('k-ProjectCard__line', className)} {...props} />
+    <div
+      className={classNames('k-ProjectCard__line', className, {
+        'k-ProjectCard__line--lastLine': lastLine,
+      })}
+      {...props}
+    />
   )
 }
 

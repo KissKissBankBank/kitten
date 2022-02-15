@@ -109,6 +109,10 @@ export const StyledCard = styled.div`
     flex: 0 0 auto;
   }
 
+  .k-ProjectCard__line--lastLine {
+    flex-grow: 1;
+  }
+
   .k-ProjectCard__itemsLine {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
