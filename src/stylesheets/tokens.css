@@ -13,4 +13,7 @@
 */--border-radius-xs:4px;--border-radius-s:6px;--border-radius-m:8px;--border-radius-l:10px;--border-radius-xl:16px;--border-radius-rounded:9999px;/*!
 * @tokens Borders
   @presenter Border
-*/--outline:auto;--outline-input:2px solid var(--color-grey-900);--outline-offset:0;--outline-offset-input:-2px;--transition-timing:0.2s;--transition-timing-function:ease;--transition:var(--transition-timing) var(--transition-timing-function)}
+*/--outline:auto;--outline-input:2px solid var(--color-grey-900);--outline-offset:0;--outline-offset-input:-2px;--transition-timing:0.2s;--transition-timing-function:ease;--transition:var(--transition-timing) var(--transition-timing-function);/*!
+* @tokens Spacing
+  @presenter Spacing
+*/--spacing-1:2px;--spacing-2:4px;--spacing-3:8px;--spacing-4:12px;--spacing-5:16px;--spacing-6:24px;--spacing-7:32px;--spacing-8:40px;--spacing-9:48px;--spacing-10:56px;--spacing-11:64px}
