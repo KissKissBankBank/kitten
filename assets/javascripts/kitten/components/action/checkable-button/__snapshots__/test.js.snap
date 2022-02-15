@@ -22,7 +22,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -76,6 +76,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -266,7 +267,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -275,7 +275,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -284,7 +283,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -350,7 +348,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -404,6 +402,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -594,7 +593,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -603,7 +601,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -612,7 +609,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -678,7 +674,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -732,6 +728,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -922,7 +919,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -931,7 +927,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -940,7 +935,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1006,7 +1000,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1060,6 +1054,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1250,7 +1245,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1259,7 +1253,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1268,7 +1261,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1334,7 +1326,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   gap: 0.625rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--color-grey-900,#222);
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1388,6 +1380,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
+  font-size: 0.875rem;
 }
 
 .c0.k-Button--regular {
@@ -1578,7 +1571,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1587,7 +1579,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 
@@ -1596,7 +1587,6 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
     --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
   }
 }
 

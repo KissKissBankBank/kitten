@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdvvtL gdafnu k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdvvtL iMtDta k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
@@ -53,7 +53,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdvvtL gdafnu k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdvvtL iMtDta k-Button k-BasicUploader__button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
@@ -96,7 +96,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdvvtL gdafnu k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdvvtL iMtDta k-Button k-BasicUploader__button k-Button--big k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={

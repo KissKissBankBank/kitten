@@ -64,7 +64,7 @@ const StyledButton = styled.button`
   gap: ${pxToRem(10)};
 
   ${TYPOGRAPHY.fontStyles.regular};
-  font-size: ${stepToRem(-1)};
+  font-size: ${stepToRem(0)};
   color: ${COLORS.font1};
   line-height: 1.3;
   text-decoration: none;
@@ -108,6 +108,7 @@ const StyledButton = styled.button`
     --Button-dimension: ${pxToRem(40)};
     --Button-min-width: ${pxToRem(160)};
     --Button-padding: ${pxToRem(7)} ${pxToRem(20)};
+    font-size: ${stepToRem(-1)};
   }
 
   &.k-Button--regular {
@@ -125,7 +126,6 @@ const StyledButton = styled.button`
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(70)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
-      font-size: ${stepToRem(0)};
     }
   }
 
@@ -138,7 +138,6 @@ const StyledButton = styled.button`
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(80)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
-      font-size: ${stepToRem(0)};
     }
   }
 
@@ -151,7 +150,6 @@ const StyledButton = styled.button`
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(90)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
-      font-size: ${stepToRem(0)};
     }
   }
 
