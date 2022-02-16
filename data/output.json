@@ -52,7 +52,7 @@
         "description": "White"
       }
     },
-    "green": {
+    "success": {
       "100": {
         "value": "#e4fbf4",
         "type": "color",
@@ -78,7 +78,7 @@
         "description": "Dark Green"
       }
     },
-    "blue": {
+    "primary": {
       "100": {
         "value": "#e7f1ff",
         "type": "color",
@@ -105,7 +105,7 @@
         "description": "Very Dark Blue"
       }
     },
-    "yellow": {
+    "warning": {
       "100": {
         "value": "#fff3d2",
         "type": "color",
@@ -132,7 +132,7 @@
         "description": "Very Dark Yellow"
       }
     },
-    "red": {
+    "danger": {
       "100": {
         "value": "#ffe9ef",
         "type": "color",
