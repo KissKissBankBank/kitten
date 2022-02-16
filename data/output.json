@@ -226,47 +226,47 @@
   },
   "spacing": {
     "1": {
-      "value": 2,
+      "value": "2px",
       "type": "spacing"
     },
     "2": {
-      "value": 4,
+      "value": "4px",
       "type": "spacing"
     },
     "3": {
-      "value": 8,
+      "value": "8px",
       "type": "spacing"
     },
     "4": {
-      "value": 12,
+      "value": "12px",
       "type": "spacing"
     },
     "5": {
-      "value": 16,
+      "value": "16px",
       "type": "spacing"
     },
     "6": {
-      "value": 24,
+      "value": "24px",
       "type": "spacing"
     },
     "7": {
-      "value": 32,
+      "value": "32px",
       "type": "spacing"
     },
     "8": {
-      "value": 40,
+      "value": "40px",
       "type": "spacing"
     },
     "9": {
-      "value": 48,
+      "value": "48px",
       "type": "spacing"
     },
     "10": {
-      "value": 56,
+      "value": "56px",
       "type": "spacing"
     },
     "11": {
-      "value": 64,
+      "value": "64px",
       "type": "spacing"
     }
   },
@@ -283,7 +283,7 @@
           "value": 64
         },
         "fontSize": {
-          "value": 64
+          "value": "46px"
         },
         "letterSpacing": {
           "value": -0.02
@@ -311,7 +311,7 @@
           "value": 46
         },
         "fontSize": {
-          "value": 46
+          "value": "36px"
         },
         "letterSpacing": {
           "value": -0.02
@@ -337,7 +337,7 @@
           "value": 46
         },
         "fontSize": {
-          "value": 36
+          "value": "32px"
         },
         "letterSpacing": {
           "value": -0.02
@@ -363,7 +363,7 @@
           "value": 40
         },
         "fontSize": {
-          "value": 32
+          "value": "28px"
         },
         "letterSpacing": {
           "value": -0.01
@@ -391,7 +391,7 @@
           "value": 32
         },
         "fontSize": {
-          "value": 28
+          "value": "24px"
         },
         "letterSpacing": {
           "value": -0.01
@@ -417,7 +417,7 @@
           "value": 28
         },
         "fontSize": {
-          "value": 24
+          "value": "20px"
         },
         "letterSpacing": {
           "value": -0.01
@@ -443,7 +443,7 @@
           "value": 22
         },
         "fontSize": {
-          "value": 20
+          "value": "18px"
         },
         "letterSpacing": {
           "value": -0.01
@@ -471,7 +471,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 24
+          "value": "20px"
         },
         "letterSpacing": {
           "value": 0
@@ -497,7 +497,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 20
+          "value": "18px"
         },
         "letterSpacing": {
           "value": 0
@@ -523,7 +523,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 18
+          "value": "16px"
         },
         "letterSpacing": {
           "value": 0
@@ -549,7 +549,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 16
+          "value": "14px"
         },
         "letterSpacing": {
           "value": 0
@@ -577,7 +577,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 14
+          "value": "12px"
         },
         "letterSpacing": {
           "value": 0
@@ -605,7 +605,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 12
+          "value": "11px"
         },
         "letterSpacing": {
           "value": 0
@@ -631,7 +631,7 @@
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 11
+          "value": "$fontSize.0"
         },
         "letterSpacing": {
           "value": -0.02
@@ -675,52 +675,52 @@
     }
   },
   "fontSize": {
-    "0": {
-      "value": 11,
-      "type": "fontSizes"
-    },
     "1": {
-      "value": 12,
+      "value": "11px",
       "type": "fontSizes"
     },
     "2": {
-      "value": 14,
+      "value": "12px",
       "type": "fontSizes"
     },
     "3": {
-      "value": 16,
+      "value": "14px",
       "type": "fontSizes"
     },
     "4": {
-      "value": 18,
+      "value": "16px",
       "type": "fontSizes"
     },
     "5": {
-      "value": 20,
+      "value": "18px",
       "type": "fontSizes"
     },
     "6": {
-      "value": 24,
+      "value": "20px",
       "type": "fontSizes"
     },
     "7": {
-      "value": 28,
+      "value": "24px",
       "type": "fontSizes"
     },
     "8": {
-      "value": 32,
+      "value": "28px",
       "type": "fontSizes"
     },
     "9": {
-      "value": 36,
+      "value": "32px",
       "type": "fontSizes"
     },
     "10": {
-      "value": 46,
+      "value": "36px",
       "type": "fontSizes"
     },
     "11": {
-      "value": 64,
+      "value": "46px",
+      "type": "fontSizes"
+    },
+    "12": {
+      "value": "64px",
       "type": "fontSizes"
     }
   },
