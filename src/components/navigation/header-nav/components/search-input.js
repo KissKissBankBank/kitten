@@ -27,7 +27,7 @@ var _context = require("./context");
 
 var _useDropdown2 = require("../hooks/use-dropdown");
 
-var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents"];
+var _excluded = ["children", "className", "searchInputProps", "searchButtonProps", "onMenuToggle", "closeEvents", "a11yMobileOpen", "a11yMobileClose"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -47,6 +47,10 @@ var SearchInput = function SearchInput(_ref) {
       onMenuToggle = _ref$onMenuToggle === void 0 ? function () {} : _ref$onMenuToggle,
       _ref$closeEvents = _ref.closeEvents,
       closeEvents = _ref$closeEvents === void 0 ? [] : _ref$closeEvents,
+      _ref$a11yMobileOpen = _ref.a11yMobileOpen,
+      a11yMobileOpen = _ref$a11yMobileOpen === void 0 ? 'Ouvrir la recherche' : _ref$a11yMobileOpen,
+      _ref$a11yMobileClose = _ref.a11yMobileClose,
+      a11yMobileClose = _ref$a11yMobileClose === void 0 ? 'Fermer la recherche' : _ref$a11yMobileClose,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_context.Context),
@@ -176,12 +180,16 @@ var SearchInput = function SearchInput(_ref) {
     rounded: true,
     onClick: handleFoldButtonClick,
     className: "k-u-hidden@m-up"
-  }, /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, null)) : /*#__PURE__*/_react.default.createElement("button", {
+  }, /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, null), /*#__PURE__*/_react.default.createElement("span", {
+    className: "k-u-a11y-visuallyHidden"
+  }, a11yMobileOpen)) : /*#__PURE__*/_react.default.createElement("button", {
     className: "k-u-reset-button k-HeaderNav__searchInput__mobileFold",
     onClick: handleFoldButtonClick
   }, /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
     size: "big"
-  })), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, menuProps, {
+  }), /*#__PURE__*/_react.default.createElement("span", {
+    className: "k-u-a11y-visuallyHidden"
+  }, a11yMobileClose)), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, menuProps, {
     className: (0, _classnames.default)('k-HeaderNav__floatingDropdown', menuProps.className, {
       'k-HeaderNav__floatingDropdown--isExpanded': isDropdownExpanded
     })
@@ -193,5 +201,7 @@ SearchInput.propTypes = {
   searchInputProps: _propTypes.default.object,
   searchButtonProps: _propTypes.default.object,
   onMenuToggle: _propTypes.default.func,
-  closeEvents: _propTypes.default.array
+  closeEvents: _propTypes.default.array,
+  a11yMobileOpen: _propTypes.default.node,
+  a11yMobileClose: _propTypes.default.node
 };

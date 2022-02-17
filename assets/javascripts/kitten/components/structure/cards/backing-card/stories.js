@@ -301,7 +301,9 @@ export const InACarouselComponent = () => {
         <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Contents>
             <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title truncateText={truncateTitle}>Smol titl.</BackingCard.Title>
+            <BackingCard.Title truncateText={truncateTitle}>
+              Smol titl.
+            </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
               <Tag as="li" variant="light">

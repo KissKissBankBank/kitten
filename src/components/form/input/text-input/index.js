@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.TextInput = void 0;
+exports.TextInput = exports.StyledInput = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -35,6 +35,8 @@ var StyledInput = _styledComponents.default.input.withConfig({
   displayName: "text-input__StyledInput",
   componentId: "sc-itv1lf-0"
 })(["--input-padding-horizontal:", ";--input-border-width:var(--border-width);--input-height:", ";font-size:", ";line-height:1em;", ";box-sizing:border-box;border-width:var(--input-border-width);border-style:solid;border-radius:0;width:100%;appearance:none;background-color:var(--color-grey-000);color:var(--color-grey-900);border-color:var(--color-grey-400);height:var(--input-height);min-height:var(--input-height);transition:border-color 0.2s ease;::placeholder{color:var(--color-grey-700);}&.k-Form-TextInput--tiny{--input-height:", ";}&.k-Form-TextInput--regular{--input-height:", ";}&.k-Form-TextInput--big{--input-height:", ";@media (min-width:", "px){--input-height:", ";font-size:", ";}}&.k-Form-TextInput--huge{--input-height:", ";@media (min-width:", "px){--input-height:", ";font-size:", ";}}&.k-Form-TextInput--giant{--input-height:", ";@media (min-width:", "px){--input-height:", ";font-size:", ";}}padding:", " var(--input-padding-horizontal);border-radius:var(--border-radius-s);&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--alignCenter{text-align:center;}:disabled{color:var(--color-grey-700);border-color:var(--color-grey-200);background-color:var(--color-grey-200);cursor:not-allowed;&:hover{border-color:var(--color-grey-200);}::placeholder{color:var(--color-grey-700);}}&.k-Form-TextInput--valid{color:var(--color-grey-900);border:var(--border-success);}&.k-Form-TextInput--error{color:var(--color-grey-900);border:var(--border-danger);}&:invalid{box-shadow:none;color:var(--color-grey-900);border:var(--border-danger);}&:hover{border:var(--border-hover);}&:focus{color:var(--color-grey-900);border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&.k-Form-TextInput-hasDigits{width:calc( var(--input-content-width) * 1ch + (2 * (var(--input-padding-horizontal) + var(--input-border-width))) );}&.k-Form-TextInput-hasDigits_2{text-align:center;}@media (max-width:", "px){font-size:", ";}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(50), (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(60), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(70), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(10), _screenConfig.ScreenConfig.XS.max, (0, _typography.stepToRem)(0));
+
+exports.StyledInput = StyledInput;
 
 var StyledTextareaContainer = _styledComponents.default.div.withConfig({
   displayName: "text-input__StyledTextareaContainer",

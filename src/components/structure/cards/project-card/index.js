@@ -32,7 +32,7 @@ var _gifVideo = require("../../../embed/gif-video");
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
     _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading"],
     _excluded3 = ["children", "className"],
-    _excluded4 = ["className"],
+    _excluded4 = ["className", "lastLine"],
     _excluded5 = ["className"],
     _excluded6 = ["className"],
     _excluded7 = ["className"],
@@ -118,9 +118,12 @@ ProjectCard.Title = function (_ref2) {
 
 ProjectCard.Line = function (_ref3) {
   var className = _ref3.className,
+      lastLine = _ref3.lastLine,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded4);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-ProjectCard__line', className)
+    className: (0, _classnames.default)('k-ProjectCard__line', className, {
+      'k-ProjectCard__line--lastLine': lastLine
+    })
   }, props));
 };
 

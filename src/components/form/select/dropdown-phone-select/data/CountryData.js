@@ -31,6 +31,8 @@ var _rawTerritories2 = _interopRequireDefault(require("./rawTerritories"));
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+
+/* eslint-disable */
 function getMask(prefix, dialCode, predefinedMask, defaultMask, alwaysDefaultMask) {
   if (!predefinedMask || alwaysDefaultMask) {
     return prefix + ''.padEnd(dialCode.length, '.') + ' ' + defaultMask;

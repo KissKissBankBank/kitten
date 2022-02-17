@@ -10,12 +10,7 @@ import {
   GridCol,
   ScreenConfig,
 } from 'kitten'
-import {
-  Button,
-  FLUID,
-} from '../../../../components/action/button'
-
-
+import { Button, FLUID } from '../../../../components/action/button'
 
 const StyledButton = styled(props => <Button as="a" {...props} />)`
   @media (max-width: ${ScreenConfig.XS.max}px) {

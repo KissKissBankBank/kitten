@@ -6,7 +6,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import classNames from 'classnames'
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
   --input-border-width: var(--border-width);
   --input-height: ${pxToRem(50)};

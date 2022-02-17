@@ -75,16 +75,15 @@ export default {
   title: 'Form/StandaloneRangeDatePicker',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="StandaloneRangeDatePicker" />,
+      page: () => (
+        <DocsPage
+          filepath={__filename}
+          importString="StandaloneRangeDatePicker"
+        />
+      ),
     },
   },
-  decorators: [
-    story => (
-      <div className="story-Container">
-        {story()}
-      </div>
-    ),
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
 
   args: {
     selectedDay: today,

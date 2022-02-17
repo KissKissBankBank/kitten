@@ -4,13 +4,34 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
-- Fix: `HeroLayout`: Keep same padding for all screen sizes.
-- Feature: `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
-- Feature: `Carousel`: More accessible handling of prev/next click.
-- Fix: `DropdownMenu`: Fix button argument.
 - Feature: Utilities: Add `k-utilities-flexbox-element` utility classes.
 - Fix: `DropdownMenu`: Structure fixes.
+
+## [8.5.0] - 2022-02-15
+
+Features:
+
+- `ProjectCard`: Add `lastLine` prop to `Line` subcomponent for custom bottom alignment.
+- `DocumentManager`: Add `displayContent` prop for manager states.
+- `ColorSelect`: Add component.
+
+Fix:
+
+- `TextInputWithButton`: Fix `disabled` prop priority.
+
+## [8.4.0] - 2022-02-14
+
+Features:
+
+- `HeaderNav`: Add `a11yMobileOpen` and `a11yMobileClose` props to `SearchInput`.
+- `Carousel`: More accessible handling of prev/next click.
+
+Fixes:
+
+- `DashboardMenu`: Fix `Selector` scroll on Chrome & Safari.
+- `HeroLayout`: Keep same padding for all screen sizes.
+- `DashboardMenu`: Fix `Expandable` active item.
+- `DropdownMenu`: Fix button argument.
 
 ## [8.3.1] - 2022-02-10
 

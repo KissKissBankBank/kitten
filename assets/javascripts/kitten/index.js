@@ -7,7 +7,6 @@
 
 export { VisuallyHidden } from './components/accessibility/visually-hidden'
 
-
 // Action
 // ------
 
@@ -38,12 +37,10 @@ export { TextCopy } from './components/action/text-copy'
 
 export { modifierStyles as buttonModifierStyles } from './components/action/button/helpers/modifier-styles'
 
-
 // Dev
 // -----
 
 export { DevGrid } from './components/dev/dev-grid'
-
 
 // Embed
 // -----
@@ -52,7 +49,6 @@ export { EmbedPlayer } from './components/embed/embed-player'
 export { Video } from './components/embed/video'
 export { GifVideo } from './components/embed/gif-video'
 export { ResponsiveIframeContainer } from './components/embed/responsive-iframe-container'
-
 
 // Feedback
 // --------
@@ -66,7 +62,6 @@ export { VerticalProgress } from './components/feedback/vertical-progress'
 export { VerticalStepper } from './components/feedback/vertical-stepper'
 export { CheckList } from './components/feedback/check-list'
 
-
 // Form
 // ----
 
@@ -74,6 +69,7 @@ export { Autocomplete } from './components/form/autocomplete'
 export { Checkbox } from './components/form/checkbox'
 export { CheckboxSet } from './components/form/checkbox-set'
 export { CreditCardForm } from './components/form/credit-card-form'
+export { ColorSelect } from './components/form/color-select'
 export { DatePicker } from './components/form/date-picker'
 export { Field } from './components/form/field'
 export { FormActions } from './components/form/form-actions'
@@ -101,7 +97,6 @@ export { TextInputWithUnit } from './components/form/input/text-input-with-unit'
 export { DropdownPhoneSelect } from './components/form/select/dropdown-phone-select'
 export { DropdownSelect } from './components/form/select/dropdown-select'
 export { DropdownSelectWithInput } from './components/form/select/dropdown-select-with-input'
-
 
 // Graphics
 // --------
@@ -276,7 +271,6 @@ export { MicrodonLogo } from './components/graphics/logos/microdonlogo'
 export { KkbbCoLogo } from './components/graphics/logos/kkbb-co'
 export { YouMatterLogo } from './components/graphics/logos/youmatter'
 
-
 // Information
 // -----------
 
@@ -295,7 +289,6 @@ export { DocLinkBox } from './components/information/boxes/doc-link-box'
 export { IconContainer } from './components/information/boxes/icon-container'
 export { InformationBox } from './components/information/boxes/information-box'
 export { LinkBox } from './components/information/boxes/link-box'
-
 
 // Interaction
 // -----------
@@ -321,7 +314,6 @@ export { ImageDropUploader } from './components/interaction/upload/image-drop-up
 export { DocumentsDropUploader } from './components/interaction/upload/documents-drop-uploader'
 export { DocumentsStatusBox } from './components/interaction/upload/documents-status-box'
 
-
 // Layer
 // -----
 
@@ -329,7 +321,6 @@ export { Modal } from './components/layer/modal'
 export { Modal as ModalNext } from './components/layer/modal-next'
 export { Overlay } from './components/layer/overlay'
 export { Toggletip } from './components/layer/toggletip'
-
 
 // Layout
 // ------
@@ -360,7 +351,6 @@ export { default as HeaderNav } from './components/navigation/header-nav'
 export { NavBar } from './components/navigation/nav-bar'
 export { Pagination } from './components/navigation/pagination'
 export { LinkList } from './components/navigation/link-list'
-
 
 // Structure
 // ---------
@@ -407,7 +397,6 @@ export { DoubleEntryTable } from './components/structure/tables/double-entry-tab
 export { ListTable } from './components/structure/tables/list-table'
 export { SingleEntryTable } from './components/structure/tables/single-entry-table'
 
-
 // Typography
 // ----------
 
@@ -430,7 +419,6 @@ export {
   strokeModifierStyles,
   strokeModifierStylesWithoutMargin,
 } from './components/typography/horizontal-stroke/common/stroke-modifier-styles'
-
 
 // ---------
 // CONSTANTS

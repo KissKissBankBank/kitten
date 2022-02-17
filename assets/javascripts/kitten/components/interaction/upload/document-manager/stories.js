@@ -6,6 +6,8 @@ import {
   DocumentIconHouse,
   DocumentIconPerson,
   usePrevious,
+  Text,
+  BulletList,
 } from 'kitten'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
@@ -14,7 +16,7 @@ const args = {
   id: 'DocumentManager',
   buttonProps: {},
   canCancel: true,
-  cancelButtonText: '',
+  cancelButtonText: 'Upload another document',
   disabled: false,
   documentIcon: <DocumentIconEmpty />,
   errorText: null,
@@ -144,10 +146,31 @@ StatusError.args = {
   ...args,
   buttonTitle: 'Upload a document',
   buttonSubtitle: 'Document size must be 2Mb or less.',
-  displayTitle: (
+  displayTitle: 'Extrait KBIS refusé',
+  displayContent: (
     <>
-      Extrait KBIS refusé :<br />
-      mauvaise adresse
+      <Text weight="light" size="tiny" tag="p" className="k-u-margin-none">
+        Mauvaise adresse :
+      </Text>
+      <BulletList
+        size="regular"
+        items={[
+          {
+            key: '1',
+            item: 'Etiam porta sem malesuada magna mollis euismod. ',
+          },
+          {
+            key: '2',
+            item:
+              'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. ',
+          },
+          {
+            key: '3',
+            item:
+              'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.',
+          },
+        ]}
+      />
     </>
   ),
   displaySubtitle: 'document.pdf',

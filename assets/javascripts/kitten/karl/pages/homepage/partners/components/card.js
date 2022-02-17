@@ -1,14 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {
-  pxToRem,
-  stepToRem,
-  Title,
-  Text,
-  ScreenConfig,
-  GridCol,
-} from 'kitten'
+import { pxToRem, stepToRem, Title, Text, ScreenConfig, GridCol } from 'kitten'
 import classNames from 'classnames'
 
 const StyledCard = styled.article`

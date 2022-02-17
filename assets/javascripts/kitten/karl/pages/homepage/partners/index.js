@@ -1,14 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
-import {
-  pxToRem,
-  Title,
-  Carousel,
-  mediaQueries,
-  Grid,
-  GridCol,
-} from 'kitten'
+import { pxToRem, Title, Carousel, mediaQueries, Grid, GridCol } from 'kitten'
 import classNames from 'classnames'
 
 const StyledPartners = styled.div`

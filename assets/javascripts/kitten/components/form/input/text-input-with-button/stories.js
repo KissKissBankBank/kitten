@@ -10,7 +10,9 @@ export default {
   title: 'Form/Input/TextInputWithButton',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="TextInputWithButton" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="TextInputWithButton" />
+      ),
     },
   },
   decorators: [
