@@ -1,5 +1,5 @@
 import React from 'react'
-import withLazy from '../../hoc/with-lazy'
+import { withLazy } from 'kitten'
 
 const ImgWithLazy = ({ isLazyTriggered, imgSrc, width, height }) => (
   <img

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import useLazyObserver from '../../helpers/utils/lazy-hook'
+import { useLazyObserver } from 'kitten'
 
 const LazyHook = ({ children }) => {
   const lazyComponentRef = useRef(null)
