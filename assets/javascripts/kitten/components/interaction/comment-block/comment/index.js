@@ -100,7 +100,7 @@ const CommentWrapper = styled.div`
 
     &[aria-pressed] {
       svg {
-        color: var(--color-red-500);
+        color: var(--color-danger-500);
       }
     }
 
