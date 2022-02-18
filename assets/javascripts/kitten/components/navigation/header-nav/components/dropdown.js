@@ -4,8 +4,8 @@ import isNull from 'lodash/fp/isNull'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { DropdownButton } from './dropdown-button'
-import domElementHelper from '../../../../helpers/dom/element-helper'
-import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
+import { domElementHelper } from '../../../../helpers/dom/element-helper'
+import { useWindowWidth } from '../../../../helpers/hooks/use-window-width-hook'
 import domEvents, {
   TOGGLE_DROPDOWN_EVENT,
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,

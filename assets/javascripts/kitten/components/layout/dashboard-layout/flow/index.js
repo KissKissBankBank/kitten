@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { LightbulbIllustration as Lightbulb } from '../../../graphics/illustrations/lightbulb-illustration'
 import { Loader } from '../../../graphics/animations/loader'
-import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
+import { getReactElementsWithoutType } from '../../../../helpers/react/get-react-elements'
 
 import { SideCard } from './side-card'
 import { MobileAside } from './side-modal'

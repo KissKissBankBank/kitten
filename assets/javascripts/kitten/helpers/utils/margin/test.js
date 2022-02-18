@@ -1,4 +1,4 @@
-import margin from './index'
+import { margin } from 'kitten'
 
 describe('margin()', () => {
   it('returns nothing when options are empty', () => {

@@ -98,7 +98,7 @@ import { YoutubeIcon } from './youtube-icon'
 
 import flagFile from 'icons/flags.png'
 
-import { Text, Title, pxToRem } from '../../..'
+import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
 import LinkTo from '@storybook/addon-links/react'
 

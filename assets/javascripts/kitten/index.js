@@ -495,29 +495,40 @@ export {
 // HELPERS
 // -------
 
+// DOM
 export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
-export { default as domElementHelper } from './helpers/dom/element-helper'
+export { dispatchEvent } from './helpers/dom/events'
+export { domElementHelper } from './helpers/dom/element-helper'
 export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
+
+// Hooks
+export { useContinuousIntersectionObserver } from './helpers/hooks/use-continuous-intersection-observer'
+export { useDebounce } from './helpers/hooks/use-debounce'
+export { useDeepCompareEffect } from './helpers/hooks/use-deep-compare-effect'
+export { useFocusTrap } from './helpers/hooks/use-focus-trap'
+export { useIntersectionObserver } from './helpers/hooks/use-intersection-observer'
+export { useLazyObserver } from './helpers/hooks/use-lazy-observer'
+export { useMedia } from './helpers/hooks/use-media-query'
+export { useModal } from './helpers/hooks/use-modal'
+export { usePrevious } from './helpers/hooks/use-previous'
+export { useWindowWidth } from './helpers/hooks/use-window-width'
+
+// React
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
   getReactElementsByTypeArray,
   getReactElementsWithoutTypeArray,
-} from './helpers/react/react-elements'
-export { default as useContinuousIntersectionObserver } from './helpers/utils/continuous-intersection-hook'
-export { default as useIntersectionObserver } from './helpers/utils/intersection-hook'
-export { LazyLoader } from './helpers/utils/lazy-component'
-export { default as useLazyObserver } from './helpers/utils/lazy-hook'
-export { default as LazyObserver } from './helpers/utils/lazy-observer'
-export { default as margin } from './helpers/utils/margin'
-export { parseHtml } from './helpers/utils/parser'
-export { pxToRem, stepToRem } from './helpers/utils/typography'
-export { usePrevious } from './helpers/utils/use-previous-hook'
-export { useWindowWidth } from './helpers/utils/use-window-width-hook'
-export { dispatchEvent } from './helpers/dom/events'
-export { stringUtils, upcaseFirst } from './helpers/utils/string'
+} from './helpers/react/get-react-elements'
+
+// Utils
+export { encodeSvgString } from './helpers/utils/encode-svg'
+export { cssSupports } from './helpers/utils/feature-detection'
 export { hexToRgba } from './helpers/utils/hex-to-rgba'
+export { LazyLoader } from './helpers/utils/lazy/component'
+export { LazyObserver } from './helpers/utils/lazy/observer'
+export { margin } from './helpers/utils/margin'
 export {
   getMinQuery,
   getMaxQuery,
@@ -528,13 +539,14 @@ export {
   createMatchMediaWithin,
   getScreenSizeFrom,
 } from './helpers/utils/media-queries'
-export { useMedia } from './helpers/utils/use-media-query'
-export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook'
+export { parseHtml } from './helpers/utils/parser'
 export { createRangeFromZeroTo } from './helpers/utils/range'
+export { stringUtils, upcaseFirst } from './helpers/utils/string'
+export { pxToRem, stepToRem } from './helpers/utils/typography'
 
 // ---
 // HOC
 // ---
 
 export { withMediaQueries, mediaQueries } from './hoc/media-queries'
-export { default as withLazy } from './hoc/with-lazy'
+export { withLazy } from './hoc/with-lazy'

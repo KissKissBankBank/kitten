@@ -1,4 +1,4 @@
-const margin = (options, asArray = false) => {
+export const margin = (options, asArray = false) => {
   const result = new Array()
 
   for (const [attribute, mediaQueries] of Object.entries(options)) {
@@ -52,5 +52,3 @@ const valuesNames = [
   'nonuple',
   'decuple',
 ]
-
-export default margin

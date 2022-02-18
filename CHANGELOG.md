@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Remove the following unused helpers and hocs:
+  - `numberUtils` helper
+  - `Deprecated()` and `hasDeprecatedProps` helpers
+  - `card` HOC
+  - `default-props` HOC
+  - `trigger-enhancer` HOC
+
 ## [8.5.0] - 2022-02-15
 
 Features:

@@ -5,12 +5,12 @@ import classNames from 'classnames'
 
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { useMedia } from '../../../helpers/utils/use-media-query'
+import { useMedia } from '../../../helpers/hooks/use-media-query'
 import { getMinQuery } from '../../../helpers/utils/media-queries'
 import {
   getReactElementsByType,
   getReactElementsWithoutTypeArray,
-} from '../../../helpers/react/react-elements'
+} from '../../../helpers/react/get-react-elements'
 import {
   DASHBOARD_HIDE_CONTENT_EVENT,
   DASHBOARD_SHOW_CONTENT_EVENT,
