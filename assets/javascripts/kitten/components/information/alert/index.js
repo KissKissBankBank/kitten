@@ -220,17 +220,14 @@ export const Alert = ({
     <AlertWrapper
       ref={alertRef}
       role="alert"
-      className={classNames('k-Alert',
-        className,
-        'k-u-line-height-1-4',
-      {
+      className={classNames('k-Alert', className, {
         'k-Alert--center': center,
         'k-Alert--success': success,
         'k-Alert--error': error,
         'k-Alert--warning': warning,
         'k-Alert--hasCloseButton': !!closeButton,
         'k-Alert--hasIcon': !!icon,
-        'k-Alert--shouldHide': !isMounted, 
+        'k-Alert--shouldHide': !isMounted,
       })}
       {...others}
     >

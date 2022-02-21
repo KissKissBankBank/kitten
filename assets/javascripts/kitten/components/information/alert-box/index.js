@@ -170,10 +170,9 @@ export const AlertBox = ({
         return 'tiny'
       case 'small':
         return 'micro'
-
     }
   })()
-  
+
   return (
     <AlertBoxWrapper
       role={role}
