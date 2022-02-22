@@ -24,7 +24,7 @@ describe('margin()', () => {
       },
     }
 
-    expect(margin(options)).toBe('k-u-margin-top-minusQuintuple')
+    expect(margin(options)).toBe('k-u-margin-top-negativeQuintuple')
   })
 
   it('returns default when fromXxs is used', () => {
