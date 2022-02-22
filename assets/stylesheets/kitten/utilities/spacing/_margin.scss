@@ -128,6 +128,8 @@
 ///   <div class="k-u-margin-vertical-nonupleHalf">…</div>
 ///   <div class="k-u-margin-vertical-decuple">…</div>
 ///   <div class="k-u-margin-vertical-none">…</div>
+///
+///   <div class="k-u-margin-vertical-negativeSingle">…</div>
 
 @mixin k-u-margin($position, $attributes, $slug, $size) {
   $value: k-px-to-rem($size);
@@ -166,26 +168,26 @@
     nonuple: 90px,
     nonupleHalf: 95px,
     decuple: 100px,
-    minusNoneHalf: -5px,
-    minusSingle: -10px,
-    minusSingleHalf: -15px,
-    minusDouble: -20px,
-    minusDoubleHalf: -25px,
-    minusTriple: -30px,
-    minusTripleHalf: -35px,
-    minusQuadruple: -40px,
-    minusQuadrupleHalf: -45px,
-    minusQuintuple: -50px,
-    minusQuintupleHalf: -55px,
-    minusSextuple: -60px,
-    minusSextupleHalf: -65px,
-    minusSeptuble: -70px,
-    minusSeptubleHalf: -75px,
-    minusOctuple: -80px,
-    minusOctupleHalf: -85px,
-    minusNonuple: -90px,
-    minusNonupleHalf: -95px,
-    minusDecuple: -100px,
+    negativeNoneHalf: -5px,
+    negativeSingle: -10px,
+    negativeSingleHalf: -15px,
+    negativeDouble: -20px,
+    negativeDoubleHalf: -25px,
+    negativeTriple: -30px,
+    negativeTripleHalf: -35px,
+    negativeQuadruple: -40px,
+    negativeQuadrupleHalf: -45px,
+    negativeQuintuple: -50px,
+    negativeQuintupleHalf: -55px,
+    negativeSextuple: -60px,
+    negativeSextupleHalf: -65px,
+    negativeSeptuble: -70px,
+    negativeSeptubleHalf: -75px,
+    negativeOctuple: -80px,
+    negativeOctupleHalf: -85px,
+    negativeNonuple: -90px,
+    negativeNonupleHalf: -95px,
+    negativeDecuple: -100px,
     auto: auto,
   );
 
