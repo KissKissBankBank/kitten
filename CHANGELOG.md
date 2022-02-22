@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Utilities: Add `k-u-padding*` classes.
-- Feature: Utilities: Add `k-u-margin-minus*` classes.
+- Feature: Utilities: Add `k-u-margin-negative*` classes.
 
 ## [8.4.0] - 2022-02-14
 
