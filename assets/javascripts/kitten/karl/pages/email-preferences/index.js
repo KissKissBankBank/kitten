@@ -1,12 +1,6 @@
 import React from 'react'
 import HorizontalCard from './components/horizontal-card'
-import {
-  Container,
-  Title,
-  Text,
-  ToggleSwitch,
-  COLORS,
-} from 'kitten'
+import { Container, Title, Text, ToggleSwitch, COLORS } from 'kitten'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`

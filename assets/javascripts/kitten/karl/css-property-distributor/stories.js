@@ -1,9 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
-import {
-  cssPropertyDistributor,
-  Container,
-} from 'kitten'
+import { cssPropertyDistributor, Container } from 'kitten'
 
 const StyledP = styled.p`
   margin-top: 2rem;

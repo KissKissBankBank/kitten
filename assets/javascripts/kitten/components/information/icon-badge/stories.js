@@ -34,7 +34,7 @@ export default {
     size: {
       name: 'size',
       control: 'select',
-      options: ['tiny', 'normal', 'big', 'huge'],
+      options: ['micro', 'tiny', 'normal', 'big', 'huge'],
     },
     status: {
       name: 'status',

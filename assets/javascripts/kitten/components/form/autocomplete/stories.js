@@ -128,7 +128,9 @@ export default {
   title: 'Form/Autocomplete',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="Autocomplete" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="Autocomplete" />
+      ),
     },
   },
   decorators: [
@@ -154,7 +156,7 @@ export default {
     onSelect: () => {},
     isLoading: false,
   },
-  
+
   argTypes: {
     name: {
       name: 'name',

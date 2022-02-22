@@ -1,13 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {
-  pxToRem,
-  stepToRem,
-  TYPOGRAPHY,
-  ScreenConfig,
-  COLORS,
-} from 'kitten'
+import { pxToRem, stepToRem, TYPOGRAPHY, ScreenConfig, COLORS } from 'kitten'
 
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1

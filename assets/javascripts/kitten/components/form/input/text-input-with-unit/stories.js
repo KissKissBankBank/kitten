@@ -8,7 +8,9 @@ export default {
   title: 'Form/Input/TextInputWithUnit',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="TextInputWithUnit" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="TextInputWithUnit" />
+      ),
     },
   },
   decorators: [
@@ -41,7 +43,7 @@ export default {
       description: 'props object passed to the wrapper',
       control: 'object',
     },
-  }
+  },
 }
 
 export const Default = args => <TextInputWithUnit {...args} />

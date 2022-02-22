@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { 
+import {
   Marger,
   Container,
   Grid,
@@ -8,7 +8,7 @@ import {
   Title as KittenTitle,
   ScreenConfig,
   pxToRem,
- } from 'kitten'
+} from 'kitten'
 import {
   HorizontalStroke,
   DEFAULT,

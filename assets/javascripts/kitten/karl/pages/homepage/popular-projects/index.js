@@ -4,7 +4,7 @@ import {
   Carousel,
   Container,
   mediaQueries,
-  Text
+  Text,
 } from 'kitten'
 
 const InfoComponent = () => (

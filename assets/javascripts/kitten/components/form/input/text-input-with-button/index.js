@@ -157,13 +157,13 @@ export const TextInputWithButton = React.forwardRef(
             {
               'k-Form-TextInputWithButton__button--valid': valid,
               'k-Form-TextInputWithButton__button--error': error,
-              'k-Form-TextInputWithButton__button--disabled': disabled,
+              'k-Form-TextInputWithButton__button--disabled':
+                disabled || buttonProps.disabled,
             },
           )}
-          disabled={disabled}
+          disabled={disabled || buttonProps.disabled}
           modifier={modifier}
           size={size}
-          disabled={disabled}
         >
           {value || buttonValue}
         </ButtonComponent>
@@ -192,7 +192,9 @@ TextInputWithButton.defaultProps = {
   disabled: false,
   size: 'regular',
   buttonValue: 'Button',
-  buttonProps: {},
+  buttonProps: {
+    disabled: false,
+  },
   modifier: 'beryllium',
   rounded: false,
   inset: false,

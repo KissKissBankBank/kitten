@@ -32,15 +32,15 @@ const PaymentList = ({
     >
       {subtitle}
     </Text>
-    <Text size="tiny" className="k-SubscriptionDetails__amount">{amount}</Text>
-    <Tag
-      type={typeTag}
-      size="small"
-      className="k-SubscriptionDetails__tag"
-    >
+    <Text size="tiny" className="k-SubscriptionDetails__amount">
+      {amount}
+    </Text>
+    <Tag type={typeTag} size="small" className="k-SubscriptionDetails__tag">
       {tag}
     </Tag>
-    <Text size="tiny" className="k-SubscriptionDetails__date">{date}</Text>
+    <Text size="tiny" className="k-SubscriptionDetails__date">
+      {date}
+    </Text>
   </div>
 )
 
@@ -108,7 +108,6 @@ export const ContributorPayment = () => {
         </StyledWrapper>
       </GridCol>
     </Grid>
-
   )
 }
 
@@ -117,64 +116,55 @@ export const ContributorSubscription = () => {
     <StyledWrapper>
       <div className="k-SubscriptionDetails__gridWrapper">
         <div className="k-SubscriptionDetails__imageWrapper">
-          <img
-            src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
-            alt=""
-          />
+          <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
         </div>
         <div>
-          <Text weight="regular" size="tiny">Club des lecteurs</Text>
-          <Text size="tiny" weight="light"><br />
+          <Text weight="regular" size="tiny">
+            Club des lecteurs
+          </Text>
+          <Text size="tiny" weight="light">
+            <br />
             par{' '}
             <Text weight="bold" size="regular">
               Sick Magazine
             </Text>
           </Text>
-          <List markerElement={<StatusIconNext status="success" color="var(--color-primary-500)" />}>
+          <List
+            markerElement={
+              <StatusIconNext
+                status="success"
+                color="var(--color-primary-500)"
+              />
+            }
+          >
             <Text size="tiny">Le nouveau numéro</Text>
             <Text size="tiny">Les coulisses de l'édition</Text>
             <Text size="tiny">Un poster édition limitée</Text>
             <Text size="tiny">Une surprise collector</Text>
           </List>
         </div>
-        
       </div>
 
       <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
       <div className="k-SubscriptionDetails__details">
         <div>
           <Text size="tiny">Fréquence</Text>
-          <Text
-            tag="p"
-            weight="bold"
-            size="tiny"
-            className="k-u-margin-none"
-          >
+          <Text tag="p" weight="bold" size="tiny" className="k-u-margin-none">
             Mensuel
           </Text>
         </div>
         <div>
           <Text size="tiny">Mode de livraison</Text>
-          <Text
-            tag="p"
-            weight="bold"
-            size="tiny"
-            className="k-u-margin-none"
-          >
+          <Text tag="p" weight="bold" size="tiny" className="k-u-margin-none">
             Livraison
           </Text>
         </div>
       </div>
-    
+
       <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
       <div className="k-SubscriptionDetails__option">
         <Text size="tiny">Option</Text>
-        <Text
-          tag="p"
-          weight="bold"
-          size="tiny"
-          className="k-u-margin-none"
-        >
+        <Text tag="p" weight="bold" size="tiny" className="k-u-margin-none">
           Végétarien
         </Text>
       </div>
@@ -195,14 +185,17 @@ export const ContributorReward = () => {
               />
             </div>
             <div>
-              <Text weight="regular" size="tiny">Club des lecteurs</Text>
-              <Text size="tiny" weight="light"><br />
+              <Text weight="regular" size="tiny">
+                Club des lecteurs
+              </Text>
+              <Text size="tiny" weight="light">
+                <br />
                 par{' '}
                 <Text weight="bold" size="regular">
                   Sick Magazine
                 </Text>
               </Text>
-              
+
               <Text
                 tag="p"
                 size="tiny"
@@ -211,9 +204,13 @@ export const ContributorReward = () => {
                 Édition Barkley.
               </Text>
               <List className="k-SubscriptionDetails__listItem">
-                <Text size="tiny">Le livre Les Finisseurs (signé par les auteurs).</Text>
+                <Text size="tiny">
+                  Le livre Les Finisseurs (signé par les auteurs).
+                </Text>
                 <Text size="tiny">Le coffret édition limitée.</Text>
-                <Text size="tiny">Un tirage 20 x 30 cm (signé par Alexis Berg).</Text>
+                <Text size="tiny">
+                  Un tirage 20 x 30 cm (signé par Alexis Berg).
+                </Text>
                 <Text size="tiny">Le DVD du film Les Finisseurs</Text>
               </List>
             </div>
@@ -245,7 +242,6 @@ export const ContributorReward = () => {
             </div>
           </div>
         </StyledWrapper>
-  
       </GridCol>
     </Grid>
   )

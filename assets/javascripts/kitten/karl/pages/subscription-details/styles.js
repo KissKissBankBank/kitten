@@ -7,7 +7,7 @@ export const StyledWrapper = styled.div`
   padding: ${pxToRem(30)};
   max-width: ${pxToRem(533)};
   box-sizing: border-box;
-  
+
   @media ${mq.mobile} {
     width: 100%;
   }
@@ -24,7 +24,7 @@ export const StyledWrapper = styled.div`
     align-content: flex-start;
     gap: ${pxToRem(20)};
     margin-bottom: ${pxToRem(5)};
-    
+
     @media ${mq.mobile} {
       gap: ${pxToRem(18)};
     }
@@ -48,17 +48,17 @@ export const StyledWrapper = styled.div`
     position: relative;
     overflow: hidden;
     padding-top: calc((5 / 8) * 100%); /* ratio: 16/10 */
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: stretch;
-    
+
     @media ${mq.mobile} {
       width: 100%;
       margin-bottom: ${pxToRem(15)};
     }
-    
+
     img,
     figure,
     video {
@@ -75,7 +75,7 @@ export const StyledWrapper = styled.div`
 
   .k-SubscriptionDetails__listItem {
     span::before {
-      content: "–";
+      content: '–';
       margin-right: ${pxToRem(6)};
     }
   }

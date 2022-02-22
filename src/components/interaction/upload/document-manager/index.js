@@ -41,7 +41,7 @@ var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
+var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displayContent", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -110,6 +110,8 @@ var DocumentManager = function DocumentManager(_ref2) {
       canReplace = _ref2$canReplace === void 0 ? false : _ref2$canReplace,
       _ref2$disabled = _ref2.disabled,
       disabled = _ref2$disabled === void 0 ? false : _ref2$disabled,
+      _ref2$displayContent = _ref2.displayContent,
+      displayContent = _ref2$displayContent === void 0 ? null : _ref2$displayContent,
       _ref2$displaySubtitle = _ref2.displaySubtitle,
       displaySubtitle = _ref2$displaySubtitle === void 0 ? '' : _ref2$displaySubtitle,
       _ref2$displayTitle = _ref2.displayTitle,
@@ -240,7 +242,9 @@ var DocumentManager = function DocumentManager(_ref2) {
     weight: "regular",
     size: "tiny",
     className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
-  }, displayTitle), /*#__PURE__*/_react.default.createElement(_text.Text, {
+  }, displayTitle), displayContent && /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-DocumentManager__display__content__content k-u-margin-top-noneHalf"
+  }, displayContent), /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "div",
     weight: "light",
     size: "micro",
@@ -272,6 +276,7 @@ DocumentManager.propTypes = {
   cancelButtonText: _propTypes.default.string,
   canReplace: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
+  displayContent: _propTypes.default.node,
   displaySubtitle: _propTypes.default.node,
   displayTitle: _propTypes.default.node,
   documentIcon: _propTypes.default.node,

@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
+var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displayContent", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -76,6 +76,8 @@ export var DocumentManager = function DocumentManager(_ref2) {
       canReplace = _ref2$canReplace === void 0 ? false : _ref2$canReplace,
       _ref2$disabled = _ref2.disabled,
       disabled = _ref2$disabled === void 0 ? false : _ref2$disabled,
+      _ref2$displayContent = _ref2.displayContent,
+      displayContent = _ref2$displayContent === void 0 ? null : _ref2$displayContent,
       _ref2$displaySubtitle = _ref2.displaySubtitle,
       displaySubtitle = _ref2$displaySubtitle === void 0 ? '' : _ref2$displaySubtitle,
       _ref2$displayTitle = _ref2.displayTitle,
@@ -206,7 +208,9 @@ export var DocumentManager = function DocumentManager(_ref2) {
     weight: "regular",
     size: "tiny",
     className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
-  }, displayTitle), /*#__PURE__*/React.createElement(Text, {
+  }, displayTitle), displayContent && /*#__PURE__*/React.createElement("div", {
+    className: "k-DocumentManager__display__content__content k-u-margin-top-noneHalf"
+  }, displayContent), /*#__PURE__*/React.createElement(Text, {
     tag: "div",
     weight: "light",
     size: "micro",
@@ -236,6 +240,7 @@ DocumentManager.propTypes = {
   cancelButtonText: PropTypes.string,
   canReplace: PropTypes.bool,
   disabled: PropTypes.bool,
+  displayContent: PropTypes.node,
   displaySubtitle: PropTypes.node,
   displayTitle: PropTypes.node,
   documentIcon: PropTypes.node,

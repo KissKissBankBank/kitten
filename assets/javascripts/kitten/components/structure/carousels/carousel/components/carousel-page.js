@@ -37,7 +37,9 @@ export const CarouselPage = ({
         .map((el, index) => {
           // If there's not enough items in the last page of the Carousel
           if (index >= pageItems.length) {
-            return <div key={`page_${index}`} className="k-Carousel__page__item" />
+            return (
+              <div key={`page_${index}`} className="k-Carousel__page__item" />
+            )
           }
 
           return (

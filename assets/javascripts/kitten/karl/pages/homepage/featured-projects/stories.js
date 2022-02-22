@@ -1,11 +1,6 @@
 import React from 'react'
 import { FeaturedProjects } from './index'
-import {
-  Container,
-  stepToRem,
-  pxToRem,
-  ScreenConfig
-} from 'kitten'
+import { Container, stepToRem, pxToRem, ScreenConfig } from 'kitten'
 import styled from 'styled-components'
 
 const StyledContainer = styled(Container)`

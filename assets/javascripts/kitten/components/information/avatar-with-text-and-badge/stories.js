@@ -1,6 +1,6 @@
 import React from 'react'
 import { AvatarWithTextAndBadge } from './index'
-import { Text, COLORS } from 'kitten'
+import { Text } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

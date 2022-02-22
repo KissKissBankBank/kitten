@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  Grid,
-  GridCol,
-  Container,
-  Title
-} from 'kitten'
+import { Grid, GridCol, Container, Title } from 'kitten'
 
 const PartnersSection = () => (
   <Container className="PreDeposit__partners k-u-margin-top-octuple k-u-margin-top-decuple@l-up">

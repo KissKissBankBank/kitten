@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  Marger,
-  Container,
-  Grid,
-  GridCol,
-} from 'kitten'
+import { Marger, Container, Grid, GridCol } from 'kitten'
 import LazyHook from './lazy-hook.js'
 import ImgWithLazy from './img-with-lazy.js'
 

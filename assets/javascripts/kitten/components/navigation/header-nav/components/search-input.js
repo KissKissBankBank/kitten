@@ -157,9 +157,7 @@ export const SearchInput = ({
           className="k-u-hidden@m-up"
         >
           <SearchIcon />
-          <span className="k-u-a11y-visuallyHidden">
-            {a11yMobileOpen}
-          </span>
+          <span className="k-u-a11y-visuallyHidden">{a11yMobileOpen}</span>
         </Button>
       ) : (
         <button
@@ -167,9 +165,7 @@ export const SearchInput = ({
           onClick={handleFoldButtonClick}
         >
           <CrossIcon size="big" />
-          <span className="k-u-a11y-visuallyHidden">
-            {a11yMobileClose}
-          </span>
+          <span className="k-u-a11y-visuallyHidden">{a11yMobileClose}</span>
         </button>
       )}
 

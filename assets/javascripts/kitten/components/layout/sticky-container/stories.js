@@ -7,7 +7,9 @@ export default {
   title: 'Layout/StickyContainer',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="StickyContainer" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="StickyContainer" />
+      ),
     },
   },
   decorators: [
@@ -45,7 +47,7 @@ export default {
       control: 'select',
     },
   },
-  
+
   args: {
     top: null,
     bottom: null,
@@ -135,7 +137,11 @@ NeverSticky.args = { ...Default.args, isSticky: 'never' }
 
 StickyTopOnScrollUp.decorators = Default.decorators
 StickyTopOnScrollUp.argTypes = Default.argTypes
-StickyTopOnScrollUp.args = { ...Default.args, isSticky: 'topOnScrollUp', top: 0 }
+StickyTopOnScrollUp.args = {
+  ...Default.args,
+  isSticky: 'topOnScrollUp',
+  top: 0,
+}
 
 StickyBottomOnScrollDown.decorators = Default.decorators
 StickyBottomOnScrollDown.argTypes = Default.argTypes

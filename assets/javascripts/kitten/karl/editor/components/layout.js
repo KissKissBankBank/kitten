@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  Container,
-  Grid,
-  GridCol,
-  Marger,
-} from 'kitten'
+import { Container, Grid, GridCol, Marger } from 'kitten'
 
 const Layout = ({ children }) => {
   return (
