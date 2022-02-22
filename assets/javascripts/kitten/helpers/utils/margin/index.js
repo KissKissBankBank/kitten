@@ -31,7 +31,7 @@ const generateClassName = ({ attribute, mediaQuery, value }) => {
   }
 
   if (typeof value === 'number') {
-    outputValue = value < 0 ? 'minus' : ''
+    outputValue = value < 0 ? 'negative' : ''
 
     const valueName = valuesNames[Math.abs(Math.floor(value))]
 
