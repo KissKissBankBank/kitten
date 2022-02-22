@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Tokens`: 
+- Feature: `Tokens`:
   - Add `spacing` and `fontSize` tokens.
+- Feature: `IconBadge`: Add `micro` to the size prop.
+- Fix: `AlertBox`: Improved styles.
 
 ## [8.5.0] - 2022-02-15
 
