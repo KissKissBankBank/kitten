@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `IconBadge`: Add `micro` to the size prop.
 - Fix: `AlertBox`: Improved styles.
+- Fix: `DashboardMenu`: Fix `DashboardMenu.Expandable` open state by removing useless code.
 
 ## [8.5.0] - 2022-02-15
 
