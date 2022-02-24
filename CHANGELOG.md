@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `IconBadge`: Add `micro` to the size prop.
 - Fix: `AlertBox`: Improved styles.
+- Feature: Logos: Add `LaBanquePostaleLogo` component.
 
 ## [8.5.0] - 2022-02-15
 
