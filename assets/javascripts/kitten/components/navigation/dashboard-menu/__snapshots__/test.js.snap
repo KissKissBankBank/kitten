@@ -185,7 +185,6 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
-.c0 .k-DashboardMenu__expandable--hasActiveInside .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
   color: var(--color-grey-000,#fff);
   background-color: var(--color-grey-800,#2d2d2d);
@@ -443,7 +442,6 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
     >
       <details
         className="k-DashboardMenu__expandable k-DashboardMenu__expandable--default"
-        open={null}
       >
         <summary>
           <div
