@@ -74,6 +74,11 @@ const AlertBoxWrapper = styled.div`
       font-size: ${pxToRem(12)};
       line-height: ${pxToRem(15)};
     }
+    .k-AlertBox__icon {
+      width: ${pxToRem(16)};
+      height: ${pxToRem(16)};
+      flex-basis: ${pxToRem(16)};
+    }
   }
 
   .k-u-link,
@@ -157,6 +162,17 @@ export const AlertBox = ({
     }
   })()
 
+  const iconSize = (() => {
+    switch(size) {
+      case 'big':
+        return 'normal'
+      case 'normal':
+        return 'tiny'
+      case 'small':
+        return 'micro'
+    }
+  })()
+
   return (
     <AlertBoxWrapper
       role={role}
@@ -178,7 +194,7 @@ export const AlertBox = ({
           className="k-AlertBox__icon"
           children={internalIcon}
           status={status}
-          size={size === 'big' ? 'normal' : 'tiny'}
+          size={iconSize}
         />
       )}
 
