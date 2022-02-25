@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `LocationInput`
   - `DropdownSelect`
   - `DropdownSelectWithInput`
+- Feature: `Pagination`: Modernize styles.
 - Feature: `IconBadge`: Add `micro` to the size prop.
 - Fix: `AlertBox`: Improved styles.
 
