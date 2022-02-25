@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Pagination`: Modernize styles.
 - Feature: `IconBadge`: Add `micro` to the size prop.
 - Fix: `AlertBox`: Improved styles.
 
