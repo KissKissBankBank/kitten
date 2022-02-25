@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import LazyObserver from '../../utils/lazy/observer'
+import { LazyObserver } from '../../utils/lazy/observer'
 
 export const useLazyObserver = lazyComponentRef => {
   const [withLazyObserver, setLazyObserver] = useState(false)
