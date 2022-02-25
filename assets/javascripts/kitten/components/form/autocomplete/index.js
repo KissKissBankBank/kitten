@@ -148,6 +148,12 @@ const Wrapper = styled.div`
   }
 
   &.k-Form-Autocomplete--disabled {
+    .k-Form-Autocomplete__input {
+      border: var(--color-grey-300);
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-600);
+    }
+
     .k-Form-Autocomplete__icon {
       & > svg [stroke]:not([stroke='none']) {
         stroke: ${COLORS.font2};

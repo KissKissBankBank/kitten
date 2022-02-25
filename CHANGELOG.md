@@ -10,6 +10,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `card` HOC
   - `default-props` HOC
   - `trigger-enhancer` HOC
+- Feature: Style: Change disabled styles on the following input components:
+  - `Autocomplete`
+  - `TextInput` and all inputs that depend on it
+  - `LocationInput`
+  - `DropdownSelect`
+  - `DropdownSelectWithInput`
+- Feature: `Pagination`: Modernize styles.
 - Feature: `IconBadge`: Add `micro` to the size prop.
 - Fix: `AlertBox`: Improved styles.
 
