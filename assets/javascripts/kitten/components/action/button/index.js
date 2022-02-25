@@ -30,6 +30,7 @@ export const buttonModifiers = [
   'scandium',
   'neon',
   'iron',
+  'krypton',
 ]
 
 export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']
