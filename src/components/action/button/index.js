@@ -31,7 +31,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _excluded = ["children", "modifier", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
 var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
-var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron'];
+var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron', 'krypton'];
 exports.buttonModifiers = buttonModifiers;
 var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 exports.buttonFitOptions = buttonFitOptions;
