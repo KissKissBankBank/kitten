@@ -43,6 +43,17 @@ const StyledBadge = styled.span`
     border-color: var(--color-warning-300);
   }
 
+  &.k-IconBadge--micro {
+    min-width: ${pxToRem(16)};
+    min-height: ${pxToRem(16)};
+
+    &,
+    & svg {
+      max-width: ${pxToRem(12)};
+      max-height: ${pxToRem(12)};
+    }
+  }
+
   &.k-IconBadge--tiny {
     min-width: ${pxToRem(20)};
     min-height: ${pxToRem(20)};
@@ -139,7 +150,7 @@ IconBadge.propTypes = {
   empty: PropTypes.bool,
   big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge']),
   backgroundColor: PropTypes.string,
   border: PropTypes.shape({
     width: PropTypes.number,
