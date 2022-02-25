@@ -136,7 +136,7 @@ export default {
   decorators: [
     story => (
       <div className="story-Container story-Grid story-Grid--large">
-        {story()}
+        <div>{story()}</div>
       </div>
     ),
   ],
@@ -144,6 +144,7 @@ export default {
   args: {
     name: 'autocomplete',
     items,
+    disabled: false,
     error: false,
     icon: null,
     iconPosition: 'left',
@@ -168,6 +169,10 @@ export default {
     },
     error: {
       name: 'error',
+      control: 'boolean',
+    },
+    disabled: {
+      name: 'disabled',
       control: 'boolean',
     },
     icon: {
