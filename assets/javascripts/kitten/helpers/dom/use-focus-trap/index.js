@@ -7,7 +7,7 @@ export const useFocusTrap = ({ shouldTrapFocus }) => {
 
   function handleFocus(e) {
     const focusableEls = elRef.current.querySelectorAll(
-        'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select',
+        'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, summary',
       ),
       firstFocusableEl = focusableEls[0],
       lastFocusableEl = focusableEls[focusableEls.length - 1]

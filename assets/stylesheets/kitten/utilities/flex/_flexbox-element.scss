@@ -1,0 +1,34 @@
+/// FlexBox display utility.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-flexbox-element;
+///
+/// @example html
+///
+///   <div class="k-u-flex">…</div>
+///   <div class="k-u-flex@xxs-down">…</div>
+
+@mixin k-utilities-flexbox-element {
+  .k-u-flex-grow-none {
+    flex-grow: 0 !important;
+  }
+  .k-u-flex-grow-single {
+    flex-grow: 1 !important;
+  }
+  .k-u-flex-grow-double {
+    flex-grow: 2 !important;
+  }
+
+  .k-u-flex-shrink-none {
+    flex-shrink: 0 !important;
+  }
+  .k-u-flex-shrink-single {
+    flex-shrink: 1 !important;
+  }
+  .k-u-flex-shrink-double {
+    flex-shrink: 2 !important;
+  }
+}

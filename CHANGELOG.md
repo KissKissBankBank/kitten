@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Logos: Add `LaBanquePostaleLogo` component.
+- Feature: Utilities: Add `k-utilities-flexbox-element` utility classes.
+- Feature: `DropdownMenu`: Add `positionedButton` prop.
 - Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
 
 ## [8.6.0] - 2022-02-25
