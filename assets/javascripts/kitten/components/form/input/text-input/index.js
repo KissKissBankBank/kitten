@@ -85,16 +85,16 @@ export const StyledInput = styled.input`
   // STATES
 
   :disabled {
-    color: var(--color-grey-700);
-    border-color: var(--color-grey-200);
+    color: var(--color-grey-600);
+    border-color: var(--color-grey-300);
     background-color: var(--color-grey-200);
     cursor: not-allowed;
 
     &:hover {
-      border-color: var(--color-grey-200);
+      border-color: var(--color-grey-300);
     }
     ::placeholder {
-      color: var(--color-grey-700);
+      color: var(--color-grey-600);
     }
   }
 
