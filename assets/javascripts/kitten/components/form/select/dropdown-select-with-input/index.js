@@ -194,7 +194,7 @@ const StyledDropdownSelectWithInput = styled.div`
     }
 
     &[disabled] {
-      color: ${COLORS.font2};
+      color: var(--color-grey-600);
     }
   }
 
@@ -259,21 +259,26 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
   &.k-Form-DropdownSelectWithInput--disabled {
+    cursor: not-allowed;
+
     .k-Form-DropdownSelectWithInput__container,
     .k-Form-DropdownSelectWithInput__list {
-      background-color: ${COLORS.line1};
-      border-color: ${COLORS.line2};
+      border: var(--color-grey-300);
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-600);
     }
     .k-Form-DropdownSelectWithInput__button__arrowBox svg {
-      fill: ${COLORS.font2};
+      cursor: not-allowed;
+      fill: var(--color-grey-600);
     }
     .k-Form-DropdownSelectWithInput__content,
     .k-Form-DropdownSelectWithInput__input {
-      color: ${COLORS.font2};
+      cursor: not-allowed;
+      color: var(--color-grey-600);
     }
     .k-Form-DropdownSelectWithInput__content--selectedItem {
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-600);
     }
   }
 

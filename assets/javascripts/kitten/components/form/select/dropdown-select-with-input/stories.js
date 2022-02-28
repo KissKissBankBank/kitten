@@ -31,6 +31,7 @@ export default {
     id: 'DropdownSelectWithInput',
     label: 'Select',
     hideLabel: false,
+    disabled: false,
     options: [
       {
         value: 'facebook',
@@ -84,6 +85,7 @@ export default {
   argTypes: {
     id: { control: 'string' },
     labelText: { control: 'string' },
+    disabled: { control: 'boolean' },
     hideLabel: { control: 'boolean' },
     options: { control: 'object' },
     placeholder: { control: 'string' },

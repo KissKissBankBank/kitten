@@ -65,17 +65,6 @@ const Expandable = ({
   size = 'default',
   ...props
 }) => {
-  const expandableList = useRef(null)
-  const [hasActiveInside, setActiveInside] = useState(false)
-
-  useEffect(() => {
-    setActiveInside(false)
-    const activeChild = expandableList?.current.querySelector(
-      '.k-DashboardMenu__item[aria-current="page"]',
-    )
-    setActiveInside(!!activeChild)
-  })
-
   return (
     <li className="k-DashboardMenu__expandableWrapper">
       <details
@@ -83,11 +72,7 @@ const Expandable = ({
           'k-DashboardMenu__expandable',
           className,
           `k-DashboardMenu__expandable--${size}`,
-          {
-            'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside,
-          },
         )}
-        open={hasActiveInside ? hasActiveInside : null}
         {...props}
       >
         <summary>
@@ -105,7 +90,7 @@ const Expandable = ({
             </span>
           </div>
         </summary>
-        <ul ref={expandableList} className="k-DashboardMenu__expandable__list">
+        <ul className="k-DashboardMenu__expandable__list">
           {children}
         </ul>
       </details>
