@@ -179,7 +179,7 @@ export const StyledDropdown = styled.div`
 
     .k-Form-DropdownCombobox,
     .k-Form-DropdownSelect__button {
-      border: var(--border-disabled);
+      border: var(--color-grey-300);
     }
   }
 
@@ -313,7 +313,7 @@ export const StyledDropdown = styled.div`
 
     .k-Form-DropdownCombobox__input {
       &:disabled {
-        background-color: ${COLORS.line1};
+        background-color: var(--color-grey-200);
       }
     }
 
@@ -337,7 +337,7 @@ export const StyledDropdown = styled.div`
       }
 
       &[disabled] {
-        color: ${COLORS.font2};
+        color: var(--color-grey-600);
       }
     }
 
@@ -366,19 +366,20 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list,
       .k-Form-DropdownSelect__content {
-        background-color: ${COLORS.line1};
-        border-color: var(--color-grey-400);
+        border: var(--color-grey-300);
+        background-color: var(--color-grey-200);
+        color: var(--color-grey-600);
       }
       .k-Form-DropdownCombobox__input {
-        background-color: ${COLORS.line1};
+        background-color: var(--color-grey-200);
       }
       .k-Form-DropdownCombobox__arrowButton svg,
       .k-Form-DropdownSelect__button__arrowBox svg {
-        fill: ${COLORS.font2};
+        fill: var(--color-grey-600);
       }
       .k-Form-DropdownCombobox__input,
       .k-Form-DropdownSelect__content {
-        color: ${COLORS.font2};
+        color: var(--color-grey-600);
       }
     }
   }
@@ -410,7 +411,7 @@ export const StyledDropdown = styled.div`
 
     .k-Form-DropdownCombobox__input {
       &:disabled {
-        background-color: ${COLORS.grey1};
+        background-color: var(--color-grey-200);
       }
     }
 
@@ -442,7 +443,7 @@ export const StyledDropdown = styled.div`
         background-color: ${COLORS.font1};
       }
       &[disabled] {
-        color: ${COLORS.font3};
+        color: var(--color-grey-600);
       }
     }
 
@@ -471,19 +472,20 @@ export const StyledDropdown = styled.div`
       .k-Form-DropdownSelect__button__arrowBox,
       .k-Form-Dropdown__list,
       .k-Form-DropdownSelect__content {
-        background-color: ${COLORS.grey1};
-        border-color: ${COLORS.grey1};
+        border: var(--color-grey-300);
+        background-color: var(--color-grey-200);
+        color: var(--color-grey-600);
       }
       .k-Form-DropdownCombobox__input {
-        background-color: ${COLORS.grey1};
+        background-color: var(--color-grey-200);
       }
       .k-Form-DropdownCombobox__arrowButton svg,
       .k-Form-DropdownSelect__button__arrowBox svg {
-        fill: ${COLORS.line1};
+        fill: var(--color-grey-600);
       }
       .k-Form-DropdownCombobox__input,
       .k-Form-DropdownSelect__content {
-        color: ${COLORS.line1};
+        color: var(--color-grey-600);
       }
     }
   }

@@ -38,6 +38,7 @@ export const Default = args => (
     <Pagination totalPages={1} currentPage={1} {...args} />
     <Pagination totalPages={2} currentPage={1} {...args} />
     <Pagination totalPages={2} currentPage={2} {...args} />
+    <Pagination totalPages={5} currentPage={1} {...args} />
     <Pagination totalPages={7} currentPage={1} {...args} />
     <Pagination totalPages={42} currentPage={1} {...args} />
     <Pagination totalPages={42} currentPage={2} {...args} />

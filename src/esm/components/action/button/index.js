@@ -12,7 +12,7 @@ import { modifierStyles } from './helpers/modifier-styles';
 import { ScreenConfig } from '../../../constants/screen-config';
 import classNames from 'classnames';
 var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
-export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron'];
+export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron', 'krypton'];
 export var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 export var buttonMobileFitOptions = [null].concat(buttonFitOptions);
 export var buttonSizes = ['nano', 'micro', 'tiny', 'big', 'huge', 'giant', 'regular'];

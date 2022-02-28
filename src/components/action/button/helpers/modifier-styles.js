@@ -136,6 +136,18 @@ var modifierStyles = function modifierStyles(modifier) {
       activeBgColor = 'var(--color-danger-900)';
       activeColor = _colorsConfig.default.background1;
       break;
+
+    case 'krypton':
+      borderColor = 'var(--color-success-500)';
+      backgroundColor = 'var(--color-success-500)';
+      color = _colorsConfig.default.background1;
+      hoverBorderColor = 'var(--color-success-700)';
+      hoverBgColor = 'var(--color-success-700)';
+      hoverColor = _colorsConfig.default.background1;
+      activeBorderColor = 'var(--color-success-900)';
+      activeBgColor = 'var(--color-success-900)';
+      activeColor = _colorsConfig.default.background1;
+      break;
   }
 
   return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg:not(.k-ColorSvg){&,path{fill:currentColor;transition:fill var(--transition);}}transition:background-color var(--transition),color var(--transition),border-color var(--transition);", " &:disabled,&.k-Button--disabled{border:var(--border-width) solid ", ";background-color:", ";color:", ";}"], borderSize, borderStyle, borderColor, backgroundColor, color, modifier !== 'checked' && (0, _styledComponents.css)(["&:hover{border-color:", ";background-color:", ";color:", ";}&:focus{border-color:", ";background-color:", ";color:", ";}&:active{border-color:", ";background-color:", ";color:", ";}"], hoverBorderColor, hoverBgColor, hoverColor, hoverBorderColor, backgroundColor, color, activeBorderColor, activeBgColor, activeColor), disabledBorderColor, disabledBgColor, disabledColor);
