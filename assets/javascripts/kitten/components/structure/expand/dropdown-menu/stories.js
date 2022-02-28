@@ -1,7 +1,13 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
-import { COLORS, EllipsisIcon, AvatarWithTextAndBadge, Text, ArrowIcon } from 'kitten'
+import {
+  COLORS,
+  EllipsisIcon,
+  AvatarWithTextAndBadge,
+  Text,
+  ArrowIcon,
+} from 'kitten'
 import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -116,15 +122,17 @@ export const WithAvatar = args => (
         {...args}
         menuPosition="center"
         expandButton={false}
-        button={({open}) => (
+        button={({ open }) => (
           <AvatarWithTextAndBadge>
-            <AvatarWithTextAndBadge.Image
-              alt=""
-              src="/kitten-0.jpg"
-            />
+            <AvatarWithTextAndBadge.Image alt="" src="/kitten-0.jpg" />
 
             <AvatarWithTextAndBadge.Text>
-              <Text weight="regular" className="k-u-block k-u-link k-u-link-primary1">Kitten Kitty</Text>
+              <Text
+                weight="regular"
+                className="k-u-block k-u-link k-u-link-primary1"
+              >
+                Kitten Kitty
+              </Text>
               <Text className="k-u-block">Cat City</Text>
             </AvatarWithTextAndBadge.Text>
             <ArrowIcon
@@ -145,4 +153,6 @@ export const WithAvatar = args => (
   </>
 )
 
-WithAvatar.decorators = [story => <div className="story-Container story-Grid">{story()}</div>]
+WithAvatar.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]

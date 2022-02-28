@@ -152,7 +152,6 @@ export const DropdownMenu = ({
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(open)
-  const [hasClicked, setHasClicked] = useState(false)
   const detailsElement = useFocusTrap({ shouldTrapFocus: isOpen })
 
   useEffect(() => {
@@ -294,7 +293,6 @@ DropdownMenu.defaultProps = {
   menuPosition: 'left',
   expandButton: true,
 }
-
 
 DropdownMenu.Link = ({ href = '', className, ...rest }) => (
   <a
