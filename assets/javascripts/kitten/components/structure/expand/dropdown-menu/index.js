@@ -254,7 +254,6 @@ export const DropdownMenu = ({
         className,
         `k-DropdownMenu--${menuPosition}`,
       )}
-      role="menu"
       onKeyDown={handleKeyDown}
       {...rest}
     >

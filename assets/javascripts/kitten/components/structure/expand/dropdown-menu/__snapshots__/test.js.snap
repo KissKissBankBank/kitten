@@ -261,7 +261,6 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   onKeyDown={[Function]}
   onToggle={[Function]}
   open={false}
-  role="menu"
 >
   <summary
     className="k-DropdownMenu__button"
@@ -572,7 +571,6 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
   onKeyDown={[Function]}
   onToggle={[Function]}
   open={false}
-  role="menu"
 >
   <summary
     className="k-DropdownMenu__button"
