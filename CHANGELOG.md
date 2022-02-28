@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
+
 ## [8.6.0] - 2022-02-25
 
 Features:
