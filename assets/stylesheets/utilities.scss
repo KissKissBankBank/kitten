@@ -28,6 +28,7 @@ $k-typography: (
 @include k-utilities-flex-direction;
 @include k-utilities-flex-wrap;
 @include k-utilities-flex-gap;
+@include k-utilities-flexbox-element;
 @include k-utilities-responsive;
 @include k-utilities-link;
 @include k-utilities-reset-button;

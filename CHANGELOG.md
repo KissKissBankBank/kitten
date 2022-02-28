@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Utilities: Add `k-utilities-flexbox-element` utility classes.
+- Feature: `DropdownMenu`: Add `positionedButton` prop.
 - Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
 - Feature: Utilities: Add `k-u-padding*` classes.
 - Feature: Utilities: Add `k-u-p*` and `k-u-m*` classes based on new `spacing` tokens.

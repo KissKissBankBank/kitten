@@ -1,10 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
 import { ArrowContainer } from '../../../information/boxes/arrow-container'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { useFocusTrap } from '../../../../helpers/dom/use-focus-trap'
 
 const zoomInAndOpacity = keyframes`
   0% {
@@ -67,7 +68,7 @@ const StyledDropdownMenu = styled.details`
   }
 
   .k-DropdownMenu__menu {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     z-index: 150;
 
@@ -140,29 +141,31 @@ const StyledDropdownMenu = styled.details`
 `
 
 export const DropdownMenu = ({
-  button = () => {},
-  open: openProp,
+  button,
+  open,
   onToggle,
-  menuProps = {},
-  menuPosition = 'left',
+  menuProps,
+  menuPosition,
+  positionedButton,
   children,
   className,
   ...rest
 }) => {
-  const detailsElement = useRef(null)
-  const [isOpen, setIsOpen] = useState(false)
-  const [hasClicked, setHasClicked] = useState(false)
+  const [isOpen, setIsOpen] = useState(open)
+  const detailsElement = useFocusTrap({ shouldTrapFocus: isOpen })
+
+  useEffect(() => {
+    setIsOpen(open)
+  }, [open])
 
   const onLinkClicked = () => {
     setIsOpen(false)
-    setHasClicked(true)
   }
 
-  const handleToggle = () => {
-    if (!hasClicked) {
-      return setIsOpen(!isOpen)
-    }
-    return setHasClicked(false)
+  const handleToggle = event => {
+    onToggle(event)
+
+    setIsOpen(event.target.open)
   }
 
   const arrowDistanceProps = (() => {
@@ -204,14 +207,14 @@ export const DropdownMenu = ({
 
     switch (event.key) {
       case 'Escape':
-        if (!open) return
+        if (!isOpen) break
 
         detailsElement.current?.querySelector('summary')?.click()
         event.preventDefault()
         event.stopPropagation()
         break
       case 'ArrowDown':
-        if (isSummaryFocused && !open) {
+        if (isSummaryFocused && !isOpen) {
           document.activeElement?.click()
         }
 
@@ -220,9 +223,7 @@ export const DropdownMenu = ({
         event.preventDefault()
         break
       case 'ArrowUp':
-        if (isSummaryFocused && !open) {
-          document.activeElement?.click()
-        }
+        if (!isOpen) break
 
         getSibling('prev')?.focus()
 
@@ -253,14 +254,17 @@ export const DropdownMenu = ({
         className,
         `k-DropdownMenu--${menuPosition}`,
       )}
-      role="menu"
       onKeyDown={handleKeyDown}
       {...rest}
     >
       <summary className="k-DropdownMenu__button">
-        <span className="k-DropdownMenu__button__inside">
-          {button({ open: isOpen })}
-        </span>
+        {positionedButton ? (
+          <span className="k-DropdownMenu__button__inside">
+            {button({ open: isOpen })}
+          </span>
+        ) : (
+          button({ open: isOpen })
+        )}
       </summary>
       <ArrowContainer
         color={COLORS.font1}
@@ -277,6 +281,15 @@ export const DropdownMenu = ({
       </ArrowContainer>
     </StyledDropdownMenu>
   )
+}
+
+DropdownMenu.defaultProps = {
+  button: () => {},
+  open: false,
+  onToggle: () => {},
+  menuProps: {},
+  menuPosition: 'left',
+  positionedButton: false,
 }
 
 DropdownMenu.Link = ({ href = '', className, ...rest }) => (
