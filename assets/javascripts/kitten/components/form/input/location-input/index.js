@@ -47,9 +47,9 @@ const StyledLocationInput = styled.div`
     }
 
     &:disabled {
-      border: var(--border-disabled);
-      background-color: ${COLORS.line1};
-      color: ${COLORS.font2};
+      border: var(--color-grey-300);
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-600);
 
       cursor: not-allowed;
 
