@@ -13,4 +13,10 @@
 */--border-radius-xs:4px;--border-radius-s:6px;--border-radius-m:8px;--border-radius-l:10px;--border-radius-xl:16px;--border-radius-rounded:9999px;/*!
 * @tokens Borders
   @presenter Border
-*/--outline:auto;--outline-input:2px solid var(--color-grey-900);--outline-offset:0;--outline-offset-input:-2px;--transition-timing:0.2s;--transition-timing-function:ease;--transition:var(--transition-timing) var(--transition-timing-function)}
+*/--outline:auto;--outline-input:2px solid var(--color-grey-900);--outline-offset:0;--outline-offset-input:-2px;--transition-timing:0.2s;--transition-timing-function:ease;--transition:var(--transition-timing) var(--transition-timing-function);/*!
+* @tokens Spacing
+  @presenter Spacing
+*/--spacing-1:2px;--spacing-2:4px;--spacing-3:8px;--spacing-4:12px;--spacing-5:16px;--spacing-6:20px;--spacing-7:24px;--spacing-8:32px;--spacing-9:40px;--spacing-10:48px;--spacing-11:56px;--spacing-12:64px;/*!
+* @tokens FontSize
+  @presenter FontSize
+*/--font-size-1:11px;--font-size-2:12px;--font-size-3:14px;--font-size-4:16px;--font-size-5:18px;--font-size-6:20px;--font-size-7:24px;--font-size-8:28px;--font-size-9:32px;--font-size-10:36px;--font-size-11:46px;--font-size-12:64px}

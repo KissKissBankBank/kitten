@@ -183,8 +183,6 @@ export const StyledDashboardMenu = styled.nav`
     cursor: pointer;
   }
   .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
-  .k-DashboardMenu__expandable--hasActiveInside
-    .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
     color: ${COLORS.background1};
     background-color: ${COLORS.line3};

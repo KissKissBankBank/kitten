@@ -2,7 +2,7 @@
 
 exports[`<IconBadge /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL iyNfkx k-IconBadge k-IconBadge--big k-IconBadge--success"
+  className="sc-bdvvtL gFuqpN k-IconBadge k-IconBadge--big k-IconBadge--success"
   style={
     Object {
       "--iconBadge-background-color": null,
@@ -18,7 +18,7 @@ exports[`<IconBadge /> by default matches with snapshot 1`] = `
 
 exports[`<IconBadge /> with border style matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL iyNfkx k-IconBadge k-IconBadge--tiny k-IconBadge--info"
+  className="sc-bdvvtL gFuqpN k-IconBadge k-IconBadge--tiny k-IconBadge--info"
   style={
     Object {
       "--iconBadge-background-color": null,

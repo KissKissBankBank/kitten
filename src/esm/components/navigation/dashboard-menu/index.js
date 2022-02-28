@@ -72,24 +72,10 @@ var Expandable = function Expandable(_ref4) {
       size = _ref4$size === void 0 ? 'default' : _ref4$size,
       props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
-  var expandableList = useRef(null);
-
-  var _useState = useState(false),
-      hasActiveInside = _useState[0],
-      setActiveInside = _useState[1];
-
-  useEffect(function () {
-    setActiveInside(false);
-    var activeChild = expandableList == null ? void 0 : expandableList.current.querySelector('.k-DashboardMenu__item[aria-current="page"]');
-    setActiveInside(!!activeChild);
-  });
   return /*#__PURE__*/React.createElement("li", {
     className: "k-DashboardMenu__expandableWrapper"
   }, /*#__PURE__*/React.createElement("details", _extends({
-    className: classNames('k-DashboardMenu__expandable', className, "k-DashboardMenu__expandable--" + size, {
-      'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside
-    }),
-    open: hasActiveInside ? hasActiveInside : null
+    className: classNames('k-DashboardMenu__expandable', className, "k-DashboardMenu__expandable--" + size)
   }, props), /*#__PURE__*/React.createElement("summary", null, /*#__PURE__*/React.createElement("div", {
     className: "k-DashboardMenu__expandable__title"
   }, !!icon && /*#__PURE__*/React.createElement("span", {
@@ -101,7 +87,6 @@ var Expandable = function Expandable(_ref4) {
   }, /*#__PURE__*/React.createElement(ArrowIcon, {
     direction: "bottom"
   })))), /*#__PURE__*/React.createElement("ul", {
-    ref: expandableList,
     className: "k-DashboardMenu__expandable__list"
   }, children)));
 };

@@ -4,6 +4,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
+
+## [8.6.0] - 2022-02-25
+
+Features:
+
+- Style: Change disabled styles on the following input components:
+    - `Autocomplete`
+    - `TextInput` and all inputs that depend on it
+    - `LocationInput`
+    - `DropdownSelect`
+    - `DropdownSelectWithInput`
+- `Button`: Add `krypton` modifier.
+- `Pagination`: Modernize styles.
+- `IconBadge`: Add `micro` to the size prop.
+
+Fixes:
+
+- `AlertBox`: Improve styles.
+- `DashboardMenu`: Fix `DashboardMenu.Expandable` open state by removing useless code.
+
 ## [8.5.0] - 2022-02-15
 
 Features:
