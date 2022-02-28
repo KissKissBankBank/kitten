@@ -15,7 +15,6 @@ export default {
       ),
     },
   },
-  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     open: {
       name: 'open',
@@ -107,42 +106,43 @@ export const Default = ({ menuPosition, ...args }) => {
   )
 }
 
-const StyledAvatarWrapper = styled.div`
-  display: block;
-  position: relative;
-`
+Default.decorators = [story => <div className="story-Container">{story()}</div>]
 
 export const WithAvatar = args => (
-  <StyledAvatarWrapper>
-    <DropdownMenu
-      {...args}
-      menuPosition="right"
-      button={(open) => (
-        <AvatarWithTextAndBadge>
-          <AvatarWithTextAndBadge.Image
-            alt=""
-            src="/kitten-0.jpg"
-          />
+  <>
+    <div>&nbsp;</div>
+    <div>
+      <DropdownMenu
+        {...args}
+        menuPosition="center"
+        expandButton={false}
+        button={({open}) => (
+          <AvatarWithTextAndBadge>
+            <AvatarWithTextAndBadge.Image
+              alt=""
+              src="/kitten-0.jpg"
+            />
 
-          <AvatarWithTextAndBadge.Text>
-            <div>
+            <AvatarWithTextAndBadge.Text>
               <Text weight="regular" className="k-u-block k-u-link k-u-link-primary1">Kitten Kitty</Text>
               <Text className="k-u-block">Cat City</Text>
-            </div>
-          </AvatarWithTextAndBadge.Text>
-          <ArrowIcon
-            className="k-u-flex-shrink-none"
-            direction={open ? 'top' : 'bottom'}
-          />
-        </AvatarWithTextAndBadge>
-      )}
-    >
-      <DropdownMenu.Link href="">A link</DropdownMenu.Link>
-      <DropdownMenu.Button>Click this button</DropdownMenu.Button>
-      <DropdownMenu.Link href="">
-        Another last very very very very very very very very very very long
-        link
-      </DropdownMenu.Link>
-    </DropdownMenu>
-  </StyledAvatarWrapper>
+            </AvatarWithTextAndBadge.Text>
+            <ArrowIcon
+              className="k-u-flex-shrink-none"
+              direction={open ? 'top' : 'bottom'}
+            />
+          </AvatarWithTextAndBadge>
+        )}
+      >
+        <DropdownMenu.Link href="">A link</DropdownMenu.Link>
+        <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+        <DropdownMenu.Link href="">
+          Another last very very very very very very very very very very long
+          link
+        </DropdownMenu.Link>
+      </DropdownMenu>
+    </div>
+  </>
 )
+
+WithAvatar.decorators = [story => <div className="story-Container story-Grid">{story()}</div>]
