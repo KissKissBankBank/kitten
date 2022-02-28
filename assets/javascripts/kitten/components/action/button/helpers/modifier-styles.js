@@ -129,6 +129,18 @@ export const modifierStyles = modifier => {
       activeBgColor = 'var(--color-danger-900)'
       activeColor = COLORS.background1
       break
+
+    case 'krypton':
+      borderColor = 'var(--color-success-500)'
+      backgroundColor = 'var(--color-success-500)'
+      color = COLORS.background1
+      hoverBorderColor = 'var(--color-success-700)'
+      hoverBgColor = 'var(--color-success-700)'
+      hoverColor = COLORS.background1
+      activeBorderColor = 'var(--color-success-900)'
+      activeBgColor = 'var(--color-success-900)'
+      activeColor = COLORS.background1
+      break
   }
 
   return css`

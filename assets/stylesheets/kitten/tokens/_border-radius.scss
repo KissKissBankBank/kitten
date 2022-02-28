@@ -1,13 +1,14 @@
 :root {
   /*!
   * @tokens BorderRadius
-    @presenter BorderRadius
+  * @presenter BorderRadius
+  * Automatically generated, do not edit
   */
 
-  --border-radius-xs: 4px; /* 4px */
-  --border-radius-s: 6px; /* 6px */
-  --border-radius-m: 8px; /* 8px */
-  --border-radius-l: 10px; /* 10px */
-  --border-radius-xl: 16px; /* 16px */
-  --border-radius-rounded: 9999px; /* 9999px */
+  --border-radius-xs: 0.25rem; /* 4px */
+  --border-radius-s: 0.375rem; /* 6px */
+  --border-radius-m: 0.5rem; /* 8px */
+  --border-radius-l: 0.625rem; /* 10px */
+  --border-radius-xl: 1rem; /* 16px */
+  --border-radius-rounded: 624.9375rem; /* 9999px */
 }
