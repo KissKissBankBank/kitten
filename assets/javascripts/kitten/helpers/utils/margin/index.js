@@ -1,3 +1,5 @@
+import capitalize from 'lodash/fp/capitalize'
+
 const margin = (options, asArray = false) => {
   const result = new Array()
 
@@ -17,8 +19,6 @@ const margin = (options, asArray = false) => {
 
   return result.join(' ')
 }
-
-const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1)
 
 const generateClassName = ({ attribute, mediaQuery, value }) => {
   let mediaQueryAddon = mediaQuery
