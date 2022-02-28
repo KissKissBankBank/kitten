@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Utilities: Add `k-utilities-flexbox-element` utility classes.
-- Feature: `DropdownMenu`: Add `expandButton` prop.
+- Feature: `DropdownMenu`: Add `positionedButton` prop.
 - Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
 
 ## [8.6.0] - 2022-02-25

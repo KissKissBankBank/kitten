@@ -266,6 +266,317 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   <summary
     className="k-DropdownMenu__button"
   >
+    <span>
+      Open me!
+    </span>
+  </summary>
+  <div
+    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+    onClick={[Function]}
+    style={
+      Object {
+        "--k-ArrowContainer-arrowDistance": "0.625rem",
+        "--k-ArrowContainer-arrowSize": "0.5rem",
+        "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
+        "--k-ArrowContainer-borderDistance": 0,
+        "--k-ArrowContainer-borderRadius": "0.25rem",
+        "--k-ArrowContainer-borderSize": "0.5rem",
+        "--k-ArrowContainer-borderWidth": 0,
+        "--k-ArrowContainer-color": "var(--color-grey-900, #222)",
+        "--k-ArrowContainer-padding": 0,
+      }
+    }
+  >
+    <a
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+      href=""
+      role="menuitem"
+    >
+      Content
+    </a>
+    <div
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__separator"
+    />
+    <button
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
+      role="menuitem"
+      type="button"
+    >
+      Content
+    </button>
+    <span
+      className="k-ArrowContainer__arrow"
+    />
+  </div>
+</details>
+`;
+
+exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
+.c1 {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
+  --k-ArrowContainer-arrowMainPosition: calc( var(--k-ArrowContainer-arrowSize) * -2 );
+  --k-ArrowContainer-arrowBorderMainPosition: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
+}
+
+.c1.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c1 .k-ArrowContainer__arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
+}
+
+.c1.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: var(--k-ArrowContainer-arrowMainPosition);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: var(--k-ArrowContainer-arrowBorderMainPosition);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: var(--k-ArrowContainer-arrowMainPosition);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: var(--k-ArrowContainer-arrowBorderMainPosition);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: var(--k-ArrowContainer-arrowMainPosition);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: var(--k-ArrowContainer-arrowBorderMainPosition);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: var(--k-ArrowContainer-arrowMainPosition);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: var(--k-ArrowContainer-arrowBorderMainPosition);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--k-ArrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--k-ArrowContainer-borderSize) * -1);
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c0 .k-DropdownMenu__button {
+  list-style: none;
+  touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c0 .k-DropdownMenu__button::-webkit-details-marker,
+.c0 .k-DropdownMenu__button::before {
+  display: none;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible {
+  outline-offset: -0.125rem;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible,
+.c0 .k-DropdownMenu__button:focus-visible .k-DropdownMenu__button__inside {
+  outline: auto;
+}
+
+.c0 .k-DropdownMenu__button__inside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0[open] > .k-DropdownMenu__button::before {
+  content: ' ';
+  cursor: default;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 120;
+}
+
+.c0 .k-DropdownMenu__menu {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 150;
+  position: absolute;
+  top: calc(50% + 1rem + 0.5rem);
+  left: 50%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 18.75rem;
+  height: auto;
+  padding: 0.5rem 0 0.625rem;
+  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  -webkit-transform-origin: var(--Dropdown-transform-origin);
+  -ms-transform-origin: var(--Dropdown-transform-origin);
+  transform-origin: var(--Dropdown-transform-origin);
+}
+
+.c0[open] .k-DropdownMenu__menu {
+  -webkit-animation: 0.16s ease egqQGv;
+  animation: 0.16s ease egqQGv;
+}
+
+.c0.k-DropdownMenu--left .k-DropdownMenu__menu {
+  --Dropdown-transform: calc(100% - 1.125rem);
+  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+}
+
+.c0.k-DropdownMenu--center .k-DropdownMenu__menu {
+  --Dropdown-transform: 50%;
+  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+}
+
+.c0.k-DropdownMenu--right .k-DropdownMenu__menu {
+  --Dropdown-transform: 1.125rem;
+  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+}
+
+.c0 .k-DropdownMenu__menu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-000,#fff);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+  padding: 0.4375rem 0.9375rem;
+  line-height: 1;
+  font-size: 0.875rem;
+  text-align: left;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.c0 .k-DropdownMenu__menu__item:hover {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0 .k-DropdownMenu__menu__item:active {
+  color: var(--color-primary-300,#bae8fd);
+}
+
+.c0 .k-DropdownMenu__menu__item:focus {
+  color: var(--color-primary-300,#bae8fd);
+}
+
+.c0 .k-DropdownMenu__menu__item:focus-visible {
+  outline: auto;
+}
+
+.c0 .k-DropdownMenu__menu__separator {
+  height: 0.125rem;
+  background: var(--color-grey-700,#636363);
+  padding: 0;
+  margin: 0.3125rem 0;
+}
+
+<details
+  className="c0 k-DropdownMenu k-DropdownMenu--right"
+  onKeyDown={[Function]}
+  onToggle={[Function]}
+  open={false}
+  role="menu"
+>
+  <summary
+    className="k-DropdownMenu__button"
+  >
     <span
       className="k-DropdownMenu__button__inside"
     >
@@ -275,7 +586,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
     </span>
   </summary>
   <div
-    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top"
     onClick={[Function]}
     style={
       Object {

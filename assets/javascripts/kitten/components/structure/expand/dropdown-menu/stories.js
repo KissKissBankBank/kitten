@@ -43,6 +43,10 @@ export default {
       name: 'onToggle',
       control: null,
     },
+    positionedButton: {
+      name: 'positionedButton',
+      control: 'boolean',
+    },
   },
   args: {
     open: false,
@@ -56,6 +60,7 @@ export default {
       </>
     ),
     onToggle: action('on Toggle'),
+    positionedButton: false,
   },
 }
 
@@ -77,7 +82,11 @@ export const Default = ({ menuPosition, ...args }) => {
   return (
     <StyledWrapper>
       <div>
-        <DropdownMenu {...args} menuPosition={menuPosition || 'right'}>
+        <DropdownMenu
+          {...args}
+          positionedButton
+          menuPosition={menuPosition || 'right'}
+        >
           <DropdownMenu.Link href="">A link</DropdownMenu.Link>
           <DropdownMenu.Button>Click this button</DropdownMenu.Button>
           <DropdownMenu.Link href="">
@@ -89,6 +98,7 @@ export const Default = ({ menuPosition, ...args }) => {
       <div className="k-u-flex-justifyContent-center">
         <DropdownMenu
           {...args}
+          positionedButton
           menuPosition={menuPosition || 'center'}
           button={({ open }) => (
             <span className="k-u-link k-u-link-primary1 k-u-small">
@@ -102,7 +112,11 @@ export const Default = ({ menuPosition, ...args }) => {
         </DropdownMenu>
       </div>
       <div className="k-u-flex-justifyContent-end">
-        <DropdownMenu {...args} menuPosition={menuPosition || 'left'}>
+        <DropdownMenu
+          {...args}
+          positionedButton
+          menuPosition={menuPosition || 'left'}
+        >
           <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
           <DropdownMenu.Button>Click this button</DropdownMenu.Button>
           <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
@@ -121,7 +135,6 @@ export const WithAvatar = args => (
       <DropdownMenu
         {...args}
         menuPosition="center"
-        expandButton={false}
         button={({ open }) => (
           <AvatarWithTextAndBadge>
             <AvatarWithTextAndBadge.Image alt="" src="/kitten-0.jpg" />

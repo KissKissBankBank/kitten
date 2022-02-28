@@ -146,7 +146,7 @@ export const DropdownMenu = ({
   onToggle,
   menuProps,
   menuPosition,
-  expandButton,
+  positionedButton,
   children,
   className,
   ...rest
@@ -259,7 +259,7 @@ export const DropdownMenu = ({
       {...rest}
     >
       <summary className="k-DropdownMenu__button">
-        {expandButton ? (
+        {positionedButton ? (
           <span className="k-DropdownMenu__button__inside">
             {button({ open: isOpen })}
           </span>
@@ -290,7 +290,7 @@ DropdownMenu.defaultProps = {
   onToggle: () => {},
   menuProps: {},
   menuPosition: 'left',
-  expandButton: true,
+  positionedButton: false,
 }
 
 DropdownMenu.Link = ({ href = '', className, ...rest }) => (
