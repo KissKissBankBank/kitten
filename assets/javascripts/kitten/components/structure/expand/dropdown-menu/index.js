@@ -156,7 +156,6 @@ export const DropdownMenu = ({
 
   useEffect(() => {
     setIsOpen(open)
-    setHasClicked(true)
   }, [open])
 
   const onLinkClicked = () => {
