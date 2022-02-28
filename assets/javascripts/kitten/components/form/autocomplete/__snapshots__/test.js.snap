@@ -175,17 +175,17 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   <input
     aria-activedescendant=""
     aria-autocomplete="both"
-    aria-expanded={false}
+    aria-expanded={null}
     aria-owns="autocomplete-results"
     autoComplete="off"
     className="k-Form-Autocomplete__input"
-    error={false}
     id="autocomplete"
     name="autocomplete"
     onBlur={[Function]}
     onChange={[Function]}
     onKeyDown={[Function]}
     placeholder="Search a kitten…"
+    role="combobox"
     type="text"
   />
 </div>
@@ -366,17 +366,17 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   <input
     aria-activedescendant=""
     aria-autocomplete="both"
-    aria-expanded={false}
+    aria-expanded={null}
     aria-owns="autocomplete-results"
     autoComplete="off"
     className="k-Form-Autocomplete__input"
-    error={false}
     id="autocomplete"
     name="autocomplete"
     onBlur={[Function]}
     onChange={[Function]}
     onKeyDown={[Function]}
     placeholder="Search a kitten…"
+    role="combobox"
     type="text"
   />
   <span
@@ -609,17 +609,17 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   <input
     aria-activedescendant=""
     aria-autocomplete="both"
-    aria-expanded={false}
+    aria-expanded={null}
     aria-owns="autocomplete-results"
     autoComplete="off"
     className="k-Form-Autocomplete__input"
-    error={false}
     id="autocomplete"
     name="autocomplete"
     onBlur={[Function]}
     onChange={[Function]}
     onKeyDown={[Function]}
     placeholder="Search a kitten…"
+    role="combobox"
     type="text"
   />
   <div
