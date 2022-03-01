@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
+
 ## [8.7.0] - 2022-03-01
 
 Features:
