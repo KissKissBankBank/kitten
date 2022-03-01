@@ -12,7 +12,7 @@ var useFocusTrap = function useFocusTrap(_ref) {
   var elRef = (0, _react.useRef)(null);
 
   function handleFocus(e) {
-    var focusableEls = elRef.current.querySelectorAll('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'),
+    var focusableEls = elRef.current.querySelectorAll('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, summary'),
         firstFocusableEl = focusableEls[0],
         lastFocusableEl = focusableEls[focusableEls.length - 1];
     var isTabPressed = e.key === 'Tab' || e.keyCode === KEYCODE_TAB;

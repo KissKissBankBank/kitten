@@ -4,15 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Logos: Add `LaBanquePostaleLogo` component.
-- Feature: Utilities: Add `k-utilities-flexbox-element` utility classes.
-- Feature: `DropdownMenu`: Add `positionedButton` prop.
-- Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
-- Feature: Utilities: Add `k-u-padding*` classes.
-- Feature: Utilities: Add `k-u-p*` and `k-u-m*` classes based on new `spacing` tokens.
-- Feature: Utilities: Add `k-u-margin-negative*` classes.
-- Fix: `Pagination`: Remove non-valid aria attributes.
-- Fix: `Autocomplete`: Remove non-valid attributes.
+## [8.7.0] - 2022-03-01
+
+Features:
+
+- Logos: Add `LaBanquePostaleLogo` component.
+- Tokens: Add `spacing` and `fontSize` tokens.
+- Utilities: Add `k-utilities-flexbox-element` utility classes.
+- Utilities: Add `k-u-padding*` classes.
+- Utilities: Add `k-u-p*` and `k-u-m*` classes based on new `spacing` tokens.
+- Utilities: Add `k-u-margin-negative*` classes.
+- `DropdownMenu`: Add `positionedButton` prop.
+
+Fixes:
+
+- `Pagination`: Remove non-valid aria attributes.
+- `Autocomplete`: Remove non-valid attributes.
 
 ## [8.6.0] - 2022-02-25
 
