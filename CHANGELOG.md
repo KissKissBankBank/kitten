@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `LaBanquePostaleLogo`: Fix dimensions and default props.
+
 ## [8.7.0] - 2022-03-01
 
 Features:
