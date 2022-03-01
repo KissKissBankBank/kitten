@@ -35,17 +35,17 @@ Array [
       <input
         aria-activedescendant=""
         aria-autocomplete="both"
-        aria-expanded={false}
+        aria-expanded={null}
         aria-owns="field-results"
         autoComplete="off"
         className="k-Form-Autocomplete__input"
-        error={false}
         id="autocomplete"
         name="field"
         onBlur={[Function]}
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Select…"
+        role="combobox"
         type="text"
       />
     </div>
