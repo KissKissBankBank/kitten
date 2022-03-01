@@ -1,3 +1,5 @@
+import capitalize from 'lodash/fp/capitalize';
+
 var margin = function margin(options, asArray) {
   if (asArray === void 0) {
     asArray = false;
@@ -41,7 +43,9 @@ var generateClassName = function generateClassName(_ref) {
   }
 
   if (typeof value === 'number') {
-    outputValue = valuesNames[Math.floor(value)];
+    outputValue = value < 0 ? 'negative' : '';
+    var valueName = valuesNames[Math.abs(Math.floor(value))];
+    outputValue += value < 0 ? capitalize(valueName) : valueName;
 
     if (value % 1 > 0) {
       outputValue += 'Half';

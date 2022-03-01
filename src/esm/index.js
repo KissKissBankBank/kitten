@@ -229,6 +229,7 @@ export { RocketIllustration } from './components/graphics/illustrations/rocket-i
 export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'; // Graphics/Logos
 
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo';
+export { LaBanquePostaleLogo } from './components/graphics/logos/la-banque-postale';
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo';
 export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark';
 export { LendopolisLogoVerticalOnDark } from './components/graphics/logos/lendopolis-logo/vertical-on-dark';

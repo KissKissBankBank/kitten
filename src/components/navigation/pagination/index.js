@@ -121,8 +121,8 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
       buttonProps = {
         modifier: 'lithium',
         tag: 'span',
-        'aria-current': 'page',
-        'aria-label': currentPageLabel(number)
+        title: currentPageLabel(number),
+        'aria-current': 'page'
       };
     }
 
@@ -150,9 +150,8 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
       className: "k-Pagination__Link",
       tag: isDisabled ? 'span' : 'a',
       href: goToPageHref(number),
-      "aria-label": buttonLabel,
-      "aria-disabled": isDisabled,
       title: buttonLabel,
+      "aria-disabled": isDisabled || null,
       tabIndex: 0,
       onClick: isDisabled ? null : pageClickHandler(number),
       disabled: isDisabled,
@@ -210,5 +209,6 @@ Pagination.defaultProps = {
   currentPage: 1,
   totalPages: 1,
   'aria-label': 'Navigation dans la pagination',
-  margin: true
+  margin: true,
+  align: 'center'
 };
