@@ -302,12 +302,6 @@ export const Button = ({
 Button.propTypes = {
   tag: PropTypes.string,
   borderRadius: PropTypes.number,
-  nano: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  micro: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  tiny: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  giant: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
   rounded: PropTypes.bool,
