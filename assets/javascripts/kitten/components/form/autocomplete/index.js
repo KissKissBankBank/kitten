@@ -296,19 +296,20 @@ export const Autocomplete = ({
       className={classNames('k-Form-Autocomplete', className, {
         [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
         'k-Form-Autocomplete--disabled': props.disabled,
+        'k-Form-Autocomplete--error': error,
       })}
     >
       <input
         {...props}
-        error={error}
         ref={inputEl}
         type="text"
+        role="combobox"
         autoComplete="off"
         onChange={handleChange}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
         aria-owns={`${props.name}-results`}
-        aria-expanded={showSuggestions && items.length > 0}
+        aria-expanded={showSuggestions ? items.length > 0 : null}
         aria-autocomplete="both"
         aria-activedescendant={
           items[selectedItemIndex]

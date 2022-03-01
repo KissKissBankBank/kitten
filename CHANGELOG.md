@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Utilities: Add `k-utilities-flexbox-element` utility classes.
 - Feature: `DropdownMenu`: Add `positionedButton` prop.
 - Feature: `Tokens`: Add `spacing` and `fontSize` tokens.
+- Fix: `Pagination`: Remove non-valid aria attributes.
+- Fix: `Autocomplete`: Remove non-valid attributes.
 
 ## [8.6.0] - 2022-02-25
 
