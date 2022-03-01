@@ -1,3 +1,5 @@
+import capitalize from 'lodash/fp/capitalize'
+
 const margin = (options, asArray = false) => {
   const result = new Array()
 
@@ -29,7 +31,11 @@ const generateClassName = ({ attribute, mediaQuery, value }) => {
   }
 
   if (typeof value === 'number') {
-    outputValue = valuesNames[Math.floor(value)]
+    outputValue = value < 0 ? 'negative' : ''
+
+    const valueName = valuesNames[Math.abs(Math.floor(value))]
+
+    outputValue += value < 0 ? capitalize(valueName) : valueName
 
     if (value % 1 > 0) {
       outputValue += 'Half'
