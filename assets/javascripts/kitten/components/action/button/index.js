@@ -234,11 +234,11 @@ export const Button = ({
 
   const buttonSizes = size
 
-  const buttonFitOptions = fit
-  
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag
+
+  const buttonFitOptions = fit
 
   return (
     <StyledButton
