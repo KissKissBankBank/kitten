@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithLimit`: Improve styles.
 - Fix: `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01
@@ -39,7 +40,7 @@ Features:
 
 Fixes:
 
-- `AlertBox`: Improve styles.
+- `AlertBox`: ss.
 - `DashboardMenu`: Fix `DashboardMenu.Expandable` open state by removing useless code.
 
 ## [8.5.0] - 2022-02-15
@@ -88,7 +89,7 @@ Fixes:
   - `KkbbFlashIllustration`
 - `DashboardLayout`: Fix main wrapper focus style.
 - `DocumentsManager`: Fix markup.
-- `TextButton`: Improve styles.
+- `TextButton`: ss.
 
 ## [8.2.0] - 2022-02-09
 
@@ -149,7 +150,7 @@ Features:
 
 Fixes:
 
-- `AlertBox`: Improve styles.
+- `AlertBox`: ss.
 - `HeroLayout`: Fix Hero sizing on large screens.
 - `HeroLayout`: Fix sticky columns position on desktop.
 
