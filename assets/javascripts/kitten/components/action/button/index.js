@@ -215,8 +215,6 @@ export const Button = ({
   size,
   className,
   rounded,
-  fluid,
-  icon,
   borderRadius,
   disabled,
   tag,
@@ -234,50 +232,22 @@ export const Button = ({
     )
   }
 
-  const actualSize = (() => {
-    switch (true) {
-      case !!size:
-        return size
-      case props.nano:
-        return 'nano'
-      case props.micro:
-        return 'micro'
-      case props.tiny:
-        return 'tiny'
-      case props.big:
-        return 'big'
-      case props.huge:
-        return 'huge'
-      case props.giant:
-        return 'giant'
-      default:
-        return 'regular'
-    }
-  })()
+  const buttonSizes = size
 
+  const buttonFitOptions = fit
+  
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag
-
-  const fitClass = (() => {
-    switch (true) {
-      case fluid && !icon:
-        return 'fluid'
-      case icon && !fluid:
-        return 'icon'
-      default:
-        return fit
-    }
-  })()
 
   return (
     <StyledButton
       className={classNames(
         'k-Button',
         className,
-        `k-Button--${actualSize}`,
+        `k-Button--${buttonSizes}`,
         `k-Button--${internalModifier}`,
-        `k-Button--fit-${fitClass}`,
+        `k-Button--fit-${buttonFitOptions}`,
         {
           [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
@@ -302,8 +272,8 @@ export const Button = ({
 Button.propTypes = {
   tag: PropTypes.string,
   borderRadius: PropTypes.number,
-  fluid: PropTypes.bool,
-  icon: PropTypes.bool,
+  fluid: deprecated(PropTypes.bool, 'Use `fit` prop instead.'),
+  icon: deprecated(PropTypes.bool, 'Use `fit` prop instead.'),
   rounded: PropTypes.bool,
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
@@ -313,8 +283,6 @@ Button.propTypes = {
 }
 Button.defaultProps = {
   tag: 'button',
-  fluid: false,
-  icon: false,
   rounded: false,
   borderRadius: null,
   size: 'regular',
