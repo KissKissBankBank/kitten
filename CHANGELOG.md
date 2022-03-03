@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
+- Fix: `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
+- Fix: `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01
 
