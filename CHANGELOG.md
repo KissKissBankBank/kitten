@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Deprecation/Change: `scrollableContainerStyle`: Deprecate component.
 - Feature: `ScrollableContainer`: Modernize component.
+- Feature: `GridTable`: Add component.
 - Fix: `TextInputWithLimit`: Improve styles.
 - Fix: `Button`: Remove old size props.
 
