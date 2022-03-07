@@ -272,8 +272,6 @@ export const Button = ({
 Button.propTypes = {
   tag: PropTypes.string,
   borderRadius: PropTypes.number,
-  fluid: deprecated(PropTypes.bool, 'Use `fit` prop instead.'),
-  icon: deprecated(PropTypes.bool, 'Use `fit` prop instead.'),
   rounded: PropTypes.bool,
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
