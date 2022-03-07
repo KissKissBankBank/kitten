@@ -40,7 +40,7 @@ Features:
 
 Fixes:
 
-- `AlertBox`: ss.
+- `AlertBox`: Improve styles.
 - `DashboardMenu`: Fix `DashboardMenu.Expandable` open state by removing useless code.
 
 ## [8.5.0] - 2022-02-15
@@ -89,7 +89,7 @@ Fixes:
   - `KkbbFlashIllustration`
 - `DashboardLayout`: Fix main wrapper focus style.
 - `DocumentsManager`: Fix markup.
-- `TextButton`: ss.
+- `TextButton`: Improve styles.
 
 ## [8.2.0] - 2022-02-09
 
@@ -150,7 +150,7 @@ Features:
 
 Fixes:
 
-- `AlertBox`: ss.
+- `AlertBox`: Improve styles.
 - `HeroLayout`: Fix Hero sizing on large screens.
 - `HeroLayout`: Fix sticky columns position on desktop.
 
