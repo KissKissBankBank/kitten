@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Deprecations/Changes:`ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
 - Fix: `TextInputWithLimit`: Improve styles.
 - Fix: `Button`: Remove old size props.
 

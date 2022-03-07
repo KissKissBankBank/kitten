@@ -15,7 +15,7 @@ import {
   ImageIcon,
   VideoIcon,
   LinkIcon,
-  ButtonIcon,
+  Button as ButtonEditor,
 } from 'kitten'
 
 export default {
@@ -80,7 +80,7 @@ export const Example = () => {
 
         <Actions>
           <Button style={{ width: 80 }} title="Ajouter un bouton">
-            <ButtonIcon />
+            <ButtonEditor fit="icon" />
           </Button>
         </Actions>
       </Toolbar>

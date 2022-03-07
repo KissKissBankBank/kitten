@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../../helpers/utils/typography'
-import { ButtonIcon } from '../../../../action/button-icon'
+import { Button } from '../../../../action/button'
 import { LinkedinIcon } from '../../../../graphics/icons/linkedin-icon'
 import { TwitterIcon } from '../../../../graphics/icons/twitter-icon'
 import { EmailIcon } from '../../../../graphics/icons/email-icon'
@@ -37,23 +37,22 @@ export const TeamCardIcons = ({
   return (
     <StyledTeamCardIcons>
       {email && (
-        <ButtonIcon
+        <Button
           size="tiny"
+          fit="icon"
           tag="a"
           href={`mailto:${email}`}
           modifier="hydrogen"
-          className="k-ButtonIcon--phone k-TeamCardIcons__buttonIcon"
           aria-label="E-mail"
         >
-          <EmailIcon aria-hidden className="k-ButtonIcon__svg" />
-        </ButtonIcon>
+          <EmailIcon aria-hidden />
+        </Button>
       )}
 
       {phoneNumber && (
         <TeamCardPhoneIcon
           {...props}
           phoneNumber={phoneNumber}
-          className="k-TeamCardIcons__buttonIcon"
         />
       )}
 
@@ -68,24 +67,24 @@ const SocialLinks = ({ links = [] }) => (
       if (!link.href) return
 
       return (
-        <ButtonIcon
+        <Button
           tag="a"
+          fit="icon"
           key={link.name}
           aria-label={link.name}
           href={link.href}
           modifier="hydrogen"
           target="_blank"
           rel="noopener"
-          className="k-TeamCardIcons__buttonIcon"
           size="tiny"
         >
           {link.name === 'linkedin' && (
-            <LinkedinIcon aria-hidden className="k-ButtonIcon__svg" />
+            <LinkedinIcon aria-hidden />
           )}
           {link.name === 'twitter' && (
-            <TwitterIcon aria-hidden className="k-ButtonIcon__svg" />
+            <TwitterIcon aria-hidden />
           )}
-        </ButtonIcon>
+        </Button>
       )
     })}
   </>
