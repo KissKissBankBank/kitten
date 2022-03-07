@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Deprecations/Changes:`Button`: Deprecate `fluid` and `icon` props.
+- Fix: `TextInputWithLimit`: Improve styles.
 - Fix: `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01

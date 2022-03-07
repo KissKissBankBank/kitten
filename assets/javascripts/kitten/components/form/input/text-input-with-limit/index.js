@@ -29,7 +29,7 @@ const StyledTextInputWithLimit = styled.div`
       -${pxToRem(1)} ${pxToRem(1)} 0 var(--color-grey-000);
     pointer-events: none;
 
-    .k-Form-TextInputWithLimit__limitNumber--disabled {
+    &.k-Form-TextInputWithLimit__limitNumber--disabled {
       text-shadow: none;
     }
   }
