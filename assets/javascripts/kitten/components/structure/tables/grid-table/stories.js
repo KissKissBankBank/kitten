@@ -24,6 +24,7 @@ export default {
 }
 
 const StyledGridTable = styled(GridTable)`
+  --col-number: 7;
   width: 100%;
 
   .k-GridTable {
@@ -128,12 +129,12 @@ export const Default = () => (
         className="customHeaderClass k-u-weight-regular"
         listProps={{ className: 'customListClass' }}
       >
-        <GridTable.Col className="customCol_1">
+        <GridTable.Col className="customCol_0">
           <VisuallyHidden>Sélection</VisuallyHidden>
           <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
         </GridTable.Col>
 
-        <GridTable.Col className="customCol_2">
+        <GridTable.Col className="customCol_1">
           <Text
             weight="regular"
             size="tiny"
@@ -146,31 +147,31 @@ export const Default = () => (
           </Text>
         </GridTable.Col>
 
-        <GridTable.Col className="customCol_3">
+        <GridTable.Col className="customCol_2">
           <Text weight="regular" size="tiny">
             Contributeur
           </Text>
         </GridTable.Col>
 
-        <GridTable.Col className="customCol_4">
+        <GridTable.Col className="customCol_3">
           <Text weight="regular" size="tiny">
             Montant
           </Text>
         </GridTable.Col>
 
-        <GridTable.Col className="customCol_5">
+        <GridTable.Col className="customCol_4">
           <Text weight="regular" size="tiny">
             Statut
           </Text>
         </GridTable.Col>
 
-        <GridTable.Col className="customCol_6">
+        <GridTable.Col className="customCol_5">
           <Text weight="regular" size="tiny">
             Mode de livraison
           </Text>
         </GridTable.Col>
 
-        <GridTable.Col className="customCol_7">
+        <GridTable.Col className="customCol_6">
           <Text weight="regular" size="tiny">
             Statut livraison
           </Text>
@@ -179,7 +180,7 @@ export const Default = () => (
 
       <GridTable.Body>
         <GridTable.Row isHighlighted>
-          <GridTable.Col className="customCol_1">
+          <GridTable.Col className="customCol_0">
             <VisuallyHidden>
               <h2>Contribution #888888 par Prénom NOM le 12 septembre 2019</h2>
               <button>Voir plus d'informations sur cette contribution</button>
@@ -187,7 +188,7 @@ export const Default = () => (
             <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_2">
+          <GridTable.Col className="customCol_1">
             <div>
               <Text size="tiny" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
@@ -213,7 +214,7 @@ export const Default = () => (
             </div>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_3">
+          <GridTable.Col className="customCol_2">
             <div>
               <Text weight="bold">Prénom Nom</Text>
               <br />
@@ -223,23 +224,23 @@ export const Default = () => (
             </div>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_4">
+          <GridTable.Col className="customCol_3">
             <Text size="tiny" weight="regular">
               72&nbsp;€
             </Text>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_5">
+          <GridTable.Col className="customCol_4">
             <StatusWithBullet statusType="success">Valid</StatusWithBullet>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_6">
+          <GridTable.Col className="customCol_5">
             <Text size="tiny" weight="regular">
               Livraison
             </Text>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_7">
+          <GridTable.Col className="customCol_6">
             <DropdownSelect
               size="micro"
               id="DropdownSelect_1"
@@ -257,7 +258,7 @@ export const Default = () => (
           className="customRowClass"
           listProps={{ className: 'customListClass' }}
         >
-          <GridTable.Col className="customCol_1">
+          <GridTable.Col className="customCol_0">
             <VisuallyHidden>
               <h2>Contribution #44654 par Prénom NOM le 12 septembre 2019</h2>
               <button>Voir plus d'informations sur cette contribution</button>
@@ -265,7 +266,7 @@ export const Default = () => (
             <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_2">
+          <GridTable.Col className="customCol_1">
             <div>
               <Text size="tiny" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
@@ -291,7 +292,7 @@ export const Default = () => (
             </div>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_3">
+          <GridTable.Col className="customCol_2">
             <div>
               <Text weight="bold">Prénom Nom</Text>
               <br />
@@ -299,23 +300,23 @@ export const Default = () => (
             </div>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_4">
+          <GridTable.Col className="customCol_3">
             <Text size="tiny" weight="regular">
               72&nbsp;€
             </Text>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_5">
+          <GridTable.Col className="customCol_4">
             <StatusWithBullet statusType="warning">Invalid</StatusWithBullet>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_6">
+          <GridTable.Col className="customCol_5">
             <Text size="tiny" weight="regular">
               Livraison
             </Text>
           </GridTable.Col>
 
-          <GridTable.Col className="customCol_7">
+          <GridTable.Col className="customCol_6">
             <DropdownSelect
               size="micro"
               id="DropdownSelect_2"

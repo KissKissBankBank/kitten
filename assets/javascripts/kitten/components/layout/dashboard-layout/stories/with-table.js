@@ -200,7 +200,7 @@ const Row = ({ hasExtraColumn }) => {
             { label: 'À expédier', value: 1 },
             { label: 'Expédié', value: 2 },
           ]}
-          size="tiny"
+          size="micro"
         />
       </GridTable.Col>
 
