@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInputWithLimit`: Improve styles.
 - Fix: `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01
