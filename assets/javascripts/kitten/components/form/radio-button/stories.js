@@ -29,6 +29,8 @@ export default {
     variant: 'orion',
     design: 'disc',
     children: null,
+    fontWeight: 'regular',
+    paragraphStyle: false,
   },
   argTypes: {
     error: {
@@ -69,6 +71,15 @@ export default {
     children: {
       name: 'children',
       control: 'text',
+    },
+    fontWeight: {
+      name: 'fontWeight',
+      options: ['light', 'regular', 'bold'],
+      control: 'inline-radio',
+    },
+    paragraphStyle: {
+      name: 'paragrapHStyle',
+      control: 'boolean',
     },
   },
 }

@@ -225,16 +225,49 @@ const StyledRadioButton = styled.div`
       }
     }
 
+
     &.k-Form-RadioButton--error {
       .k-Form-RadioButton__input:not(:disabled) + .k-Form-RadioButton__label {
         border-color: ${COLORS.error3};
       }
     }
 
-    .k-Form-RadioButton__labelText {
-      ${TYPOGRAPHY.fontStyles.regular};
-      line-height: ${pxToRem(20)};
-      font-size: ${stepToRem(-1)};
+    /* PARAGRAPH STYLES */
+
+    &.k-Form-RadioButton--paragraphStyle {
+      .k-Form-RadioButton__label {
+        align-items: center;
+      }
+
+      .k-Form-RadioButton__label::before {
+        margin-right: ${pxToRem(15)};
+      }
+
+      .k-Form-RadioButton__labelText {
+        flex: 1 0 calc(100% - ${pxToRem(20 + 15)});
+      }
+    }
+
+    /* FONT STYLES */
+
+    &.k-Form-RadioButton--regular {
+      .k-Form-RadioButton__labelText {
+        ${TYPOGRAPHY.fontStyles.regular};
+        line-height: ${pxToRem(20)};
+        font-size: ${stepToRem(-1)};
+      }
+    }
+
+    &.k-Form-RadioButton--light {
+      .k-Form-RadioButton__labelText {
+        ${TYPOGRAPHY.fontStyles.light};
+      }
+    }
+
+    &.k-Form-RadioButton--bold {
+      .k-Form-RadioButton__labelText {
+        ${TYPOGRAPHY.fontStyles.bold};
+      }
     }
 
     &.k-Form-RadioButton--small {
@@ -329,6 +362,8 @@ export const RadioButton = ({
   disabled,
   variant,
   design,
+  fontWeight,
+  paragraphStyle,
   ...inputProps
 }) => {
   return (
@@ -339,10 +374,12 @@ export const RadioButton = ({
         `k-Form-RadioButton--${variant}`,
         `k-Form-RadioButton--${design}`,
         `k-Form-RadioButton--${size}`,
+        `k-Form-RadioButton--${fontWeight}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,
           'k-Form-RadioButton--largeContent': largeContent,
+          'k-Form-RadioButton--paragraphStyle': paragraphStyle,
         },
       )}
     >
@@ -380,6 +417,8 @@ RadioButton.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'regular', 'big']),
+  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  paragraphStyle: PropTypes.bool,
 }
 
 RadioButton.defaultProps = {
@@ -390,4 +429,6 @@ RadioButton.defaultProps = {
   variant: 'orion',
   design: 'disc',
   size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false,
 }
