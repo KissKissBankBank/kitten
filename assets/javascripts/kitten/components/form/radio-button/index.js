@@ -225,14 +225,13 @@ const StyledRadioButton = styled.div`
       }
     }
 
-
     &.k-Form-RadioButton--error {
       .k-Form-RadioButton__input:not(:disabled) + .k-Form-RadioButton__label {
         border-color: ${COLORS.error3};
       }
     }
 
-    /* PARAGRAPH STYLES */
+    /* PARAGRAPH STYLE */
 
     &.k-Form-RadioButton--paragraphStyle {
       .k-Form-RadioButton__label {
