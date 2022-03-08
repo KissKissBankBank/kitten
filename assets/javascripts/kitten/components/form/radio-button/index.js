@@ -250,7 +250,7 @@ const StyledRadioButton = styled.div`
 
     /* FONT STYLES */
 
-    &.k-Form-RadioButton--regular {
+    &.k-Form-RadioButton__labelText--regular {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.regular};
         line-height: ${pxToRem(20)};
@@ -258,13 +258,13 @@ const StyledRadioButton = styled.div`
       }
     }
 
-    &.k-Form-RadioButton--light {
+    &.k-Form-RadioButton__labelText--light {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.light};
       }
     }
 
-    &.k-Form-RadioButton--bold {
+    &.k-Form-RadioButton__labelText--bold {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.bold};
       }
@@ -374,7 +374,7 @@ export const RadioButton = ({
         `k-Form-RadioButton--${variant}`,
         `k-Form-RadioButton--${design}`,
         `k-Form-RadioButton--${size}`,
-        `k-Form-RadioButton--${fontWeight}`,
+        `k-Form-RadioButton__labelText--${fontWeight}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RadioButton`: Add `paragraphStyle` and `fontWeight` props. 
+
 ## [8.8.0] - 2022-03-08
 
 Deprecation/Change:
