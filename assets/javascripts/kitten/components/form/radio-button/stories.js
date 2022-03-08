@@ -78,16 +78,39 @@ export default {
       control: 'inline-radio',
     },
     paragraphStyle: {
-      name: 'paragrapHStyle',
+      name: 'paragraphStyle',
       control: 'boolean',
     },
   },
 }
 
-export const RadioButtonSet = args => (
+export const Default = args => (
   <div>
     <RadioButton name="test" {...args} id="test_1" />
     <RadioButton name="test" {...args} id="test_2" />
     <RadioButton name="test" {...args} id="test_3" />
   </div>
 )
+
+export const RadioButtonsWithParagraph = args => (
+  <div>
+    <RadioButton name="test" {...args} id="test_1" />
+    <RadioButton name="test" {...args} id="test_2" />
+    <RadioButton name="test" {...args} id="test_3" />
+  </div>
+) 
+
+RadioButtonsWithParagraph.args = {
+  onChange: action('change'),
+  error: false,
+  disabled: false,
+  large: false,
+  largeContent: false,
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 'big',
+  variant: 'orion',
+  design: 'disc',
+  children: null,
+  fontWeight: 'light',
+  paragraphStyle: true,
+}

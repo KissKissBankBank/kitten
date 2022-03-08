@@ -106,12 +106,12 @@ Default.args = {
   ...defaultArgs,
   items: [
     {
-      text: 'Faire de cette contrepartie ma contrepartie star et lafficher en première position',
+      text: 'Option A',
       id: 'option-a',
       defaultChecked: true,
     },
     {
-      text: 'Faire de cette contrepartie ma contrepartie star et lafficher en première position',
+      text: 'Option B',
       id: 'option-b',
     },
   ],
