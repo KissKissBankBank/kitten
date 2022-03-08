@@ -395,6 +395,7 @@ export { BulletList } from './components/structure/bullet-list'
 
 // Structure/Tables
 export { DoubleEntryTable } from './components/structure/tables/double-entry-table'
+export { GridTable } from './components/structure/tables/grid-table'
 export { ListTable } from './components/structure/tables/list-table'
 export { SingleEntryTable } from './components/structure/tables/single-entry-table'
 
