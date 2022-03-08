@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
 - Fix: `LaBanquePostaleLogo`: Fix dimensions and default props.
 - Deprecation/Change: `scrollableContainerStyle`: Deprecate component.
 - Feature: `ScrollableContainer`: Modernize component.

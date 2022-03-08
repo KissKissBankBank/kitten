@@ -185,7 +185,7 @@ export const DropdownMenu = ({
   const getSibling = direction => {
     const options = [
       ...detailsElement.current.querySelectorAll(
-        '[role^="menuitem"]:not([hidden]):not([disabled]):not([aria-disabled="true"])',
+        'a:not([hidden]):not([disabled]):not([aria-disabled="true"]), button:not([hidden]):not([disabled]):not([aria-disabled="true"])',
       ),
     ]
 
@@ -234,7 +234,7 @@ export const DropdownMenu = ({
         const activeElement = document.activeElement
 
         if (!activeElement instanceof HTMLElement) return
-        if (activeElement.role !== 'menuitem') return
+        if (!['A', 'BUTTON'].includes(activeElement.tagName)) return
         if (activeElement.closest('details') !== detailsElement.current) return
 
         event.preventDefault()
@@ -295,7 +295,6 @@ DropdownMenu.defaultProps = {
 DropdownMenu.Link = ({ href = '', className, ...rest }) => (
   <a
     href={href}
-    role="menuitem"
     className={classNames(
       'k-DropdownMenu__menu__item',
       'k-DropdownMenu__menu__link',
@@ -308,7 +307,6 @@ DropdownMenu.Link = ({ href = '', className, ...rest }) => (
 DropdownMenu.Button = ({ type = 'button', className, ...rest }) => (
   <button
     type={type}
-    role="menuitem"
     className={classNames(
       'k-DropdownMenu__menu__item',
       'k-DropdownMenu__menu__button',
