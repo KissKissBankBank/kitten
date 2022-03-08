@@ -30,7 +30,7 @@ export const StyledGridTable = styled.section`
   }
 
   .k-GridTable__Row .k-GridTable__Col {
-    height: ${pxToRem(80)};
+    min-height: ${pxToRem(80)};
     border-bottom: var(--border);
     background-color: var(--color-grey-000);
     transition: background-color var(--transition);
