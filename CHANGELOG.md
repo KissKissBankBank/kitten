@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `RadioButton`: Add `paragraphStyle` and `fontWeight` props. 
+- Feature: `Tag`: Add `flex` prop, to behave as flexbox container.
+- Feature: `ProjectCard`: Add `topLine` prop, accepts React node.
+- Feature: `ProjectCard`: Add `Avatar` subcomponent, accepts `imageProps` prop.
+- Feature: `ProjectCard`: Add `noMargin` prop to `ItemsLine` subcomponent.
 
 ## [8.8.0] - 2022-03-08
 

@@ -21,6 +21,8 @@ export const ProjectCard = ({
   videoProps,
   stretch,
   loading,
+  topLine,
+  topLineAlign,
   ...props
 }) => {
   return (
@@ -68,6 +70,17 @@ export const ProjectCard = ({
         )}
       </div>
 
+      {topLine && (
+        <div
+          className={classNames(
+            'k-ProjectCard__topLine',
+            `k-ProjectCard__topLine--${topLineAlign}`,
+          )}
+        >
+          {topLine}
+        </div>
+      )}
+
       <div className="k-ProjectCard__content">
         {sticker && (
           <div className="k-ProjectCard__sticker k-u-ellipsis">{sticker}</div>
@@ -88,6 +101,8 @@ ProjectCard.defaultProps = {
   videoSources: [],
   stretch: false,
   loading: false,
+  topLine: null,
+  topLineAlign: 'right',
 }
 
 ProjectCard.propTypes = {
@@ -107,6 +122,8 @@ ProjectCard.propTypes = {
   videoSources: PropTypes.array,
   stretch: PropTypes.bool,
   loading: PropTypes.bool,
+  topLine: PropTypes.node,
+  topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
 }
 
 ProjectCard.Title = ({ children, className, ...props }) => {
@@ -133,10 +150,12 @@ ProjectCard.Line = ({ className, lastLine, ...props }) => {
   )
 }
 
-ProjectCard.ItemsLine = ({ className, ...props }) => {
+ProjectCard.ItemsLine = ({ className, noMargin = false, ...props }) => {
   return (
     <div
-      className={classNames('k-ProjectCard__itemsLine', className)}
+      className={classNames('k-ProjectCard__itemsLine', className, {
+        'k-ProjectCard__itemsLine--noMargin': noMargin,
+      })}
       {...props}
     />
   )
@@ -154,6 +173,14 @@ ProjectCard.Sticker = ({ className, ...props }) => {
       className={classNames('k-ProjectCard__sticker k-u-ellipsis', className)}
       {...props}
     />
+  )
+}
+
+ProjectCard.Avatar = ({ className, imageProps, ...props }) => {
+  return (
+    <div className={classNames('k-ProjectCard__avatar', className)} {...props}>
+      <img alt="" {...imageProps} />
+    </div>
   )
 }
 
