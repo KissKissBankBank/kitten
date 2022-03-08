@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `LaBanquePostaleLogo`: Fix dimensions and default props.
+- Deprecation/Change: `scrollableContainerStyle`: Deprecate component.
+- Feature: `ScrollableContainer`: Modernize component.
+- Feature: `GridTable`: Add component.
+- Fix: `TextInputWithLimit`: Improve styles.
+- Fix: `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01
 
