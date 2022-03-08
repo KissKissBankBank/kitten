@@ -4,8 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `TextInputWithLimit`: Improve styles.
-- Fix: `Button`: Remove old size props.
+## [8.8.0] - 2022-03-08
+
+Deprecation/Change:
+
+- `scrollableContainerStyle`: Deprecate component.
+
+Features:
+
+- `ScrollableContainer`: Modernize component.
+- `GridTable`: Add component.
+
+Fixes:
+
+- `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
+- `LaBanquePostaleLogo`: Fix dimensions and default props.
+- `TextInputWithLimit`: Improve styles.
+- `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01
 

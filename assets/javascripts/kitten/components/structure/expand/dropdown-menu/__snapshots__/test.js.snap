@@ -289,7 +289,6 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
     <a
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
       href=""
-      role="menuitem"
     >
       Content
     </a>
@@ -298,7 +297,6 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
     />
     <button
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
-      role="menuitem"
       type="button"
     >
       Content
@@ -603,7 +601,6 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
     <a
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
       href=""
-      role="menuitem"
     >
       Content
     </a>
@@ -612,7 +609,6 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
     />
     <button
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
-      role="menuitem"
       type="button"
     >
       Content
