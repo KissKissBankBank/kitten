@@ -24,10 +24,55 @@ describe('<ProjectCard />', () => {
             </ProjectCard.Title>
             <ProjectCard.Line>
               <span>
-                par{' '}
-                <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
-                  Bidules
-                </a>
+                par <strong>Bidules</strong>
+              </span>
+            </ProjectCard.Line>
+            <ProjectCard.Item>
+              <span>134</span>
+              <span>contributeurs</span>
+            </ProjectCard.Item>
+            <ProjectCard.Item>
+              <span>7 jours</span>
+              <span>restants</span>
+            </ProjectCard.Item>
+            <ProjectCard.Item>
+              <span>9 930 €</span>
+              <span>sur 12 000 €</span>
+            </ProjectCard.Item>
+            <ProjectCard.Progress
+              aria-label="Progrès de la campagne"
+              value={55}
+            />
+          </ProjectCard>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('lendopoils', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ProjectCard
+            status="normal"
+            imageProps={{
+              src: 'kitten.jpg',
+              alt: 'image alt',
+            }}
+            topLineAlign="center"
+            topLine={<span>TopLine content</span>}
+          >
+            <ProjectCard.Avatar imageProps={{ src: 'kitten.jpg' }} />
+            <ProjectCard.Title>
+              The Office, la série culte décortiquée par S!CK
+            </ProjectCard.Title>
+            <ProjectCard.Line>
+              <span>
+                par <strong>Bidules</strong>
               </span>
             </ProjectCard.Line>
             <ProjectCard.Item>
@@ -73,10 +118,7 @@ describe('<ProjectCard />', () => {
             </ProjectCard.Title>
             <ProjectCard.Line>
               <span>
-                par{' '}
-                <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
-                  Bidules
-                </a>
+                par <strong>Bidules</strong>
               </span>
             </ProjectCard.Line>
             <ProjectCard.Item>
