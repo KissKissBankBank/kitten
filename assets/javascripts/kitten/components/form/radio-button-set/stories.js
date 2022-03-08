@@ -77,6 +77,15 @@ export default {
       options: ['disc', 'check'],
       control: 'inline-radio',
     },
+    fontWeight: {
+      name: 'fontWeight',
+      options: ['light', 'regular', 'bold'],
+      control: 'inline-radio',
+    },
+    paragraphStyle: {
+      name: 'paragraphStyle',
+      control: 'boolean',
+    },
   },
 }
 
@@ -87,6 +96,8 @@ const defaultArgs = {
   variant: 'orion',
   design: 'disc',
   size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false,
 }
 
 export const Default = args => <RadioButtonSet {...args} />
@@ -102,10 +113,6 @@ Default.args = {
     {
       text: 'Option B',
       id: 'option-b',
-    },
-    {
-      text: 'Option C',
-      id: 'option-c',
     },
   ],
 }

@@ -42,6 +42,8 @@ export const RadioButtonSet = ({
   label,
   children,
   size,
+  fontWeight,
+  paragraphStyle,
   labelProps,
   ...props
 }) => (
@@ -75,6 +77,8 @@ export const RadioButtonSet = ({
           design={design}
           error={error}
           size={size}
+          fontWeight={fontWeight}
+          paragraphStyle={paragraphStyle}
           name={name}
           key={id}
           {...itemProps}
@@ -104,6 +108,8 @@ RadioButtonSet.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
+  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  paragraphStyle: false,
 }
 
 RadioButtonSet.defaultProps = {
@@ -123,4 +129,6 @@ RadioButtonSet.defaultProps = {
   disabled: false,
   labelProps: {},
   size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false,
 }
