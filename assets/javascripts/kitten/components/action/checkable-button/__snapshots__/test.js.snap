@@ -250,7 +250,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.3125rem;
+  --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
@@ -582,7 +582,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.3125rem;
+  --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
@@ -914,7 +914,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.3125rem;
+  --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
@@ -1246,7 +1246,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.3125rem;
+  --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
@@ -1578,7 +1578,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.3125rem;
+  --CheckableButton-checkMargin: 0.625rem;
 }
 
 .c1.k-Button--regular {
