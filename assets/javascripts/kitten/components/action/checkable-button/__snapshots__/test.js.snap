@@ -149,6 +149,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -246,7 +250,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.625rem;
+  --CheckableButton-checkMargin: 0.3125rem;
 }
 
 .c1.k-Button--regular {
@@ -477,6 +481,10 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -574,7 +582,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.625rem;
+  --CheckableButton-checkMargin: 0.3125rem;
 }
 
 .c1.k-Button--regular {
@@ -805,6 +813,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -902,7 +914,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.625rem;
+  --CheckableButton-checkMargin: 0.3125rem;
 }
 
 .c1.k-Button--regular {
@@ -1133,6 +1145,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1230,7 +1246,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.625rem;
+  --CheckableButton-checkMargin: 0.3125rem;
 }
 
 .c1.k-Button--regular {
@@ -1461,6 +1477,10 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1558,7 +1578,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c1.k-Button--micro,
 .c1.k-Button--tiny {
   --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.625rem;
+  --CheckableButton-checkMargin: 0.3125rem;
 }
 
 .c1.k-Button--regular {

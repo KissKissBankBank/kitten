@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `CheckableButton`: Improve style.
+
 ## [8.9.0] - 2022-03-09
 
 Features:
