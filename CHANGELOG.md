@@ -4,9 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:
+Fixes:
 
-- `ContentCard`: Update padding for mobile view.
+  - `CheckableButton`: Improve style.
+  - `ContentCard`: Update padding for mobile view.
 
 ## [8.9.0] - 2022-03-09
 
