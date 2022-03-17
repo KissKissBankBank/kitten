@@ -4,8 +4,9 @@ import styled from 'styled-components'
 import { ColorSelect } from './index'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
-import { Text, Button } from 'kitten'
+import { Text, Button, Field } from 'kitten'
 import { colord } from 'colord'
+import uniq from 'lodash/fp/uniq'
 
 export default {
   title: 'Form/ColorSelect',
@@ -384,23 +385,49 @@ const StyledViz = styled.div`
 `
 
 export const Visualizer = () => {
-  return (
-    <StyledViz>
-      {ALL_COLORS.map((color) => {
-        const colorHSL = colord(color).toHsl()
+  const [inputValue, setInputValue] = useState(ALL_COLORS.join('\n'))
 
-        return (
-          <div
-            key={color}
-            title={color}
-            className={classNames('colorButton', { 'hueless': colorHSL.s < 10 })}
-            style={{
-              '--hue': colorHSL.h,
-              '--light': colorHSL.l,
-              '--color': color,
-            }}
-          />)
-      })}
-    </StyledViz>
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value)
+  }
+
+  return (
+    <>
+      <StyledViz>
+        {uniq(inputValue.split('\n')).map((color) => {
+          const colorHSL = colord(color).toHsl()
+
+          return (
+            <div
+              key={color}
+              title={color}
+              className={classNames('colorButton', { 'hueless': colorHSL.s < 10 })}
+              style={{
+                '--hue': colorHSL.h,
+                '--light': colorHSL.l,
+                '--color': color,
+              }}
+            />)
+        })}
+      </StyledViz>
+      <div>
+        <Field.Label labelProps={{ htmlFor: 'input' }}>
+          Couleurs (une valeur par ligne)
+        </Field.Label>
+        <Field.Input
+          id="input"
+          rows="4"
+          tag="textarea"
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+        <Text size="nano">
+          <span>Fonctionne avec la commande : </span>
+          <code>
+            {`Project.where.not(page_colors: nil).select{|p| p.primary_100 != '#e6f7fe' && p.visible?}.each{|n| puts n.primary_500};0`}
+          </code>
+        </Text>
+      </div>
+    </>
   )
 }
