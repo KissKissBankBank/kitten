@@ -8,6 +8,7 @@ import { HEADER_HEIGHT } from './config'
 export const StyledHeader = styled.header`
   position: relative;
   z-index: var(--HeaderNav-zIndex);
+  overflow: hidden;
 
   .k-HeaderNav__stickyContainer {
     width: 100%;
@@ -154,9 +155,9 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__right {
+    gap: ${pxToRem(10)};
     justify-content: flex-end;
     flex-grow: 1;
-    gap: ${pxToRem(10)};
     margin-right: ${pxToRem(20)};
 
     @media ${mq.desktop} {
@@ -213,7 +214,7 @@ export const StyledHeader = styled.header`
       ${COLORS.background3}
     );
 
-    padding-right: ${pxToRem(50)};
+    margin-right: ${pxToRem(50)};
 
     &.k-Dropdown__button,
     &.k-HeaderNav__Button {
