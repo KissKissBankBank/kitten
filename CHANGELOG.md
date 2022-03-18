@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Utilities: Add `k-u-clamp` util class, with optional `--line-clamp` custom variable.
+
 ## [8.9.1] - 2022-03-16
 
 Fixes:
