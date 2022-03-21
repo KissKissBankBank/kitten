@@ -67,7 +67,6 @@ export const TeamCardButtonWithTooltip = ({
     </span>
 
     <Button
-      tag="a"
       fit="icon"
       size="tiny"
       modifier="hydrogen"
