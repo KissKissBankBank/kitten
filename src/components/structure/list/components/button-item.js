@@ -113,7 +113,7 @@ var ButtonItem = function ButtonItem(_ref2) {
     className: "k-List__button__arrow",
     "aria-hidden": true
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    className: "k-Button__icon k-List__button__arrowIcon"
+    className: "k-List__button__arrowIcon"
   })));
 };
 

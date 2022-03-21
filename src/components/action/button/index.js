@@ -29,7 +29,7 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["children", "modifier", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
+var _excluded = ["children", "modifier", "size", "className", "rounded", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
 var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
 var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron', 'krypton'];
 exports.buttonModifiers = buttonModifiers;
@@ -59,8 +59,6 @@ var Button = function Button(_ref2) {
       size = _ref2.size,
       className = _ref2.className,
       rounded = _ref2.rounded,
-      fluid = _ref2.fluid,
-      icon = _ref2.icon,
       borderRadius = _ref2.borderRadius,
       disabled = _ref2.disabled,
       tag = _ref2.tag,
@@ -74,52 +72,10 @@ var Button = function Button(_ref2) {
     console.warn("The modifier " + modifier + " has been deprecated. Please use one for the following: " + buttonModifiers.join(', ') + ".");
   }
 
-  var actualSize = function () {
-    switch (true) {
-      case !!size:
-        return size;
-
-      case props.nano:
-        return 'nano';
-
-      case props.micro:
-        return 'micro';
-
-      case props.tiny:
-        return 'tiny';
-
-      case props.big:
-        return 'big';
-
-      case props.huge:
-        return 'huge';
-
-      case props.giant:
-        return 'giant';
-
-      default:
-        return 'regular';
-    }
-  }();
-
   var internalModifier = active ? 'lithium' : modifier;
   var internalTag = as || tag;
-
-  var fitClass = function () {
-    switch (true) {
-      case fluid && !icon:
-        return 'fluid';
-
-      case icon && !fluid:
-        return 'icon';
-
-      default:
-        return fit;
-    }
-  }();
-
   return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Button', className, "k-Button--" + actualSize, "k-Button--" + internalModifier, "k-Button--fit-" + fitClass, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
+    className: (0, _classnames.default)('k-Button', className, "k-Button--" + size, "k-Button--" + internalModifier, "k-Button--fit-" + fit, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
     modifier: internalModifier,
     style: {
       '--Button-border-radius': borderRadius != null ? (0, _typography.pxToRem)(borderRadius) : null
@@ -134,8 +90,6 @@ exports.Button = Button;
 Button.propTypes = {
   tag: _propTypes.default.string,
   borderRadius: _propTypes.default.number,
-  fluid: _propTypes.default.bool,
-  icon: _propTypes.default.bool,
   rounded: _propTypes.default.bool,
   size: _propTypes.default.oneOf(buttonSizes),
   fit: _propTypes.default.oneOf(buttonFitOptions),
@@ -145,8 +99,6 @@ Button.propTypes = {
 };
 Button.defaultProps = {
   tag: 'button',
-  fluid: false,
-  icon: false,
   rounded: false,
   borderRadius: null,
   size: 'regular',

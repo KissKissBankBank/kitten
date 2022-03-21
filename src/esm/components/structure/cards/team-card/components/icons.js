@@ -5,7 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../../../helpers/utils/typography';
-import { ButtonIcon } from '../../../../action/button-icon';
+import { Button } from '../../../../action/button';
 import { LinkedinIcon } from '../../../../graphics/icons/linkedin-icon';
 import { TwitterIcon } from '../../../../graphics/icons/twitter-icon';
 import { EmailIcon } from '../../../../graphics/icons/email-icon';
@@ -31,19 +31,17 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
     }];
   };
 
-  return /*#__PURE__*/React.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/React.createElement(ButtonIcon, {
+  return /*#__PURE__*/React.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/React.createElement(Button, {
     size: "tiny",
+    fit: "icon",
     tag: "a",
     href: "mailto:" + email,
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon",
     "aria-label": "E-mail"
   }, /*#__PURE__*/React.createElement(EmailIcon, {
-    "aria-hidden": true,
-    className: "k-ButtonIcon__svg"
+    "aria-hidden": true
   })), phoneNumber && /*#__PURE__*/React.createElement(TeamCardPhoneIcon, _extends({}, props, {
-    phoneNumber: phoneNumber,
-    className: "k-TeamCardIcons__buttonIcon"
+    phoneNumber: phoneNumber
   })), /*#__PURE__*/React.createElement(SocialLinks, {
     links: getSocialLinks()
   }));
@@ -54,22 +52,20 @@ var SocialLinks = function SocialLinks(_ref2) {
       links = _ref2$links === void 0 ? [] : _ref2$links;
   return /*#__PURE__*/React.createElement(React.Fragment, null, links.map(function (link) {
     if (!link.href) return;
-    return /*#__PURE__*/React.createElement(ButtonIcon, {
+    return /*#__PURE__*/React.createElement(Button, {
       tag: "a",
+      fit: "icon",
       key: link.name,
       "aria-label": link.name,
       href: link.href,
       modifier: "hydrogen",
       target: "_blank",
       rel: "noopener",
-      className: "k-TeamCardIcons__buttonIcon",
       size: "tiny"
     }, link.name === 'linkedin' && /*#__PURE__*/React.createElement(LinkedinIcon, {
-      "aria-hidden": true,
-      className: "k-ButtonIcon__svg"
+      "aria-hidden": true
     }), link.name === 'twitter' && /*#__PURE__*/React.createElement(TwitterIcon, {
-      "aria-hidden": true,
-      className: "k-ButtonIcon__svg"
+      "aria-hidden": true
     }));
   }));
 };

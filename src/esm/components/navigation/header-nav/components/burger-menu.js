@@ -37,11 +37,10 @@ export var BurgerMenu = function BurgerMenu(_ref) {
   return /*#__PURE__*/React.createElement("div", _extends({}, dropdownProps, props, {
     className: classNames(className, dropdownProps.className)
   }), /*#__PURE__*/React.createElement(DropdownButton, _extends({}, buttonProps, {
-    className: classNames(buttonProps.className, 'k-HeaderNav__BurgerMenu__button', 'k-ButtonIcon', 'k-ButtonIcon--tiny')
+    className: classNames(buttonProps.className, 'k-HeaderNav__BurgerMenu__button')
   }), /*#__PURE__*/React.createElement(BurgerIcon, {
     isActive: isDropdownExpanded,
     hoverColor: COLORS.font1,
-    className: "k-ButtonIcon__svg",
     "aria-hidden": "true"
   }), /*#__PURE__*/React.createElement(VisuallyHidden, null, "Menu")), /*#__PURE__*/React.createElement("div", menuProps, children));
 };
