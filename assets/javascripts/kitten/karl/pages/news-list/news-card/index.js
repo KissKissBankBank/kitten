@@ -5,7 +5,6 @@ import {
   COLORS,
   GarbageIcon,
   EditIcon,
-  ButtonIcon,
   Title,
   Text,
   Button,
@@ -22,7 +21,7 @@ const Wrapper = styled.div`
   padding: ${pxToRem(wrapperPadding)};
 `
 
-const GarbageButton = styled(ButtonIcon)`
+const GarbageButton = styled(Button)`
   position: absolute;
   top: -${pxToRem(borderWidth)};
   right: -${pxToRem(borderWidth)};
@@ -57,12 +56,13 @@ const NewsCard = ({ title, children, publishedAt }) => {
     <Wrapper>
       <GarbageButton
         type="button"
+        fit="icon"
         title="Garbage Button"
         aria-label="Supprimer cet item"
         modifier="beryllium"
         size="tiny"
       >
-        <GarbageIcon className="k-ButtonIcon__svg" />
+        <GarbageIcon />
       </GarbageButton>
       {publishedAt && (
         <Publication>
@@ -90,9 +90,9 @@ const NewsCard = ({ title, children, publishedAt }) => {
           </ShowMoreLink>
         </div>
         <Actions>
-          <ButtonIcon modifier="hydrogen">
-            <EditIcon className="k-ButtonIcon__svg" aria-label="Éditer" />
-          </ButtonIcon>
+          <Button fit="icon" modifier="hydrogen">
+            <EditIcon aria-label="Éditer" />
+          </Button>
           <Button modifier="helium" className="k-u-margin-left-double">
             Publier
           </Button>

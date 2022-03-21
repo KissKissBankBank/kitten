@@ -11,7 +11,6 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // ------
 
 export { Button } from './components/action/button'
-export { ButtonIcon } from './components/action/button-icon'
 export { ButtonGroup } from './components/action/button-group'
 export { ButtonImage } from './components/action/button-image'
 export { ButtonQuestionMarkIcon } from './components/action/button-question-mark-icon'

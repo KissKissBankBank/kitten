@@ -2,13 +2,13 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-jRQBWg jgWqoe"
+  className="sc-eCImPb bMrMMF"
 >
   
   
   <a
     aria-label="linkedin"
-    className="sc-dkPtRN HfRgz k-Button sc-hKwDye hDDklb k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+    className="sc-dkPtRN HfRgz k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     href="https://www.linkedin.com"
     rel="noopener"
@@ -22,9 +22,10 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
   >
     <svg
       aria-hidden={true}
-      className="k-ButtonIcon__svg"
       fill="#222"
+      height="14"
       viewBox="0 0 14 14"
+      width="14"
       xmlns="http://www.w3.org/2000/svg"
     >
       
@@ -58,11 +59,11 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-jRQBWg jgWqoe"
+    className="sc-eCImPb bMrMMF"
   >
     <a
       aria-label="E-mail"
-      className="sc-dkPtRN HfRgz k-Button sc-hKwDye hDDklb k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN HfRgz k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="mailto:example@kisskissbankbank.com"
       style={
@@ -74,7 +75,6 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="k-ButtonIcon__svg"
         fill="#222"
         height="12"
         viewBox="0 0 19 12"
@@ -89,7 +89,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-dkPtRN HfRgz k-Button sc-hKwDye hDDklb k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN HfRgz k-Button k-u-hidden@s-up k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="tel:06 00 00 00 00"
       style={
@@ -101,9 +101,10 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="k-ButtonIcon__svg"
         fill="#222"
+        height="18"
         viewBox="0 0 16 18"
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         
@@ -114,7 +115,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-eCImPb juNJHD k-u-hidden@xs-down k-TeamCardIcons__buttonIcon"
+      className="sc-hKwDye fNEgRH k-u-hidden@xs-down"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -127,7 +128,7 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-dkPtRN HfRgz k-Button sc-hKwDye hDDklb k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+        className="sc-dkPtRN HfRgz k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         style={
           Object {
@@ -137,9 +138,10 @@ Array [
         type="button"
       >
         <svg
-          className="k-ButtonIcon__svg"
           fill="#222"
+          height="18"
           viewBox="0 0 16 18"
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           
@@ -151,7 +153,7 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-dkPtRN HfRgz k-Button sc-hKwDye hDDklb k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN HfRgz k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.linkedin.com"
       rel="noopener"
@@ -165,9 +167,10 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="k-ButtonIcon__svg"
         fill="#222"
+        height="14"
         viewBox="0 0 14 14"
+        width="14"
         xmlns="http://www.w3.org/2000/svg"
       >
         
@@ -178,7 +181,7 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-dkPtRN HfRgz k-Button sc-hKwDye hDDklb k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--tiny k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN HfRgz k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.twitter.com"
       rel="noopener"
@@ -192,9 +195,10 @@ Array [
     >
       <svg
         aria-hidden={true}
-        className="k-ButtonIcon__svg"
         fill="#222"
+        height="14"
         viewBox="0 0 15 14"
+        width="15"
         xmlns="http://www.w3.org/2000/svg"
       >
         
