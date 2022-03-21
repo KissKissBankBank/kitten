@@ -232,22 +232,18 @@ export const Button = ({
     )
   }
 
-  const buttonSizes = size
-
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag
-
-  const buttonFitOptions = fit
 
   return (
     <StyledButton
       className={classNames(
         'k-Button',
         className,
-        `k-Button--${buttonSizes}`,
+        `k-Button--${size}`,
         `k-Button--${internalModifier}`,
-        `k-Button--fit-${buttonFitOptions}`,
+        `k-Button--fit-${fit}`,
         {
           [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
