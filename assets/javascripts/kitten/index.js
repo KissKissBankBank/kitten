@@ -261,6 +261,7 @@ export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
+export { LaBanquePostaleLogo } from './components/graphics/logos/la-banque-postale'
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
 export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark'
 export { LendopolisLogoVerticalOnDark } from './components/graphics/logos/lendopolis-logo/vertical-on-dark'
@@ -394,6 +395,7 @@ export { BulletList } from './components/structure/bullet-list'
 
 // Structure/Tables
 export { DoubleEntryTable } from './components/structure/tables/double-entry-table'
+export { GridTable } from './components/structure/tables/grid-table'
 export { ListTable } from './components/structure/tables/list-table'
 export { SingleEntryTable } from './components/structure/tables/single-entry-table'
 

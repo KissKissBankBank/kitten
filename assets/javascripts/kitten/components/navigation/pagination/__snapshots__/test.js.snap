@@ -3,7 +3,7 @@
 exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <nav
   aria-label="Navigation dans la pagination"
-  className="sc-gsDKAQ dayGdb k-Pagination k-Pagination--undefined"
+  className="sc-gsDKAQ dayGdb k-Pagination k-Pagination--center"
   role="navigation"
 >
   <ul
@@ -13,8 +13,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       className="k-Pagination__ListItem k-Pagination__ListItem__Arrow"
     >
       <a
-        aria-disabled={false}
-        aria-label="Page précédente"
+        aria-disabled={null}
         className="sc-bdvvtL gdafnu k-Button k-Pagination__Link k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#9"
@@ -84,7 +83,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <span
         aria-current="page"
-        aria-label="Page 10, il s’agit de la page actuelle"
         className="sc-bdvvtL jljOtN k-Button k-Pagination__Link k-Button--tiny k-Button--lithium k-Button--fit-icon"
         disabled={null}
         style={
@@ -93,6 +91,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           }
         }
         tabIndex="0"
+        title="Page 10, il s’agit de la page actuelle"
         type="button"
       >
         10
@@ -132,8 +131,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       className="k-Pagination__ListItem k-Pagination__ListItem__Arrow"
     >
       <a
-        aria-disabled={false}
-        aria-label="Page suivante"
+        aria-disabled={null}
         className="sc-bdvvtL gdafnu k-Button k-Pagination__Link k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#11"

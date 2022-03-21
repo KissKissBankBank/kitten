@@ -35,17 +35,17 @@ Array [
       <input
         aria-activedescendant=""
         aria-autocomplete="both"
-        aria-expanded={false}
+        aria-expanded={null}
         aria-owns="field-results"
         autoComplete="off"
         className="k-Form-Autocomplete__input"
-        error={false}
         id="autocomplete"
         name="field"
         onBlur={[Function]}
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Select…"
+        role="combobox"
         type="text"
       />
     </div>
@@ -312,7 +312,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <div
-      className="sc-jRQBWg bDHtvC k-Form-TextInputWithLimit"
+      className="sc-jRQBWg hqMbYE k-Form-TextInputWithLimit"
     >
       <input
         className="sc-hKwDye gAFncS k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--regular"
@@ -707,7 +707,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-iCfMLu gKiPgY k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-iCfMLu xVWUq k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -729,7 +729,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-iCfMLu gKiPgY k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-iCfMLu xVWUq k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -750,7 +750,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-iCfMLu gKiPgY k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular"
+          className="sc-iCfMLu xVWUq k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"

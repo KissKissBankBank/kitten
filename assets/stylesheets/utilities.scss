@@ -28,10 +28,14 @@ $k-typography: (
 @include k-utilities-flex-direction;
 @include k-utilities-flex-wrap;
 @include k-utilities-flex-gap;
+@include k-utilities-flexbox-element;
 @include k-utilities-responsive;
 @include k-utilities-link;
 @include k-utilities-reset-button;
+@include k-utilities-m;
 @include k-utilities-margin;
+@include k-utilities-p;
+@include k-utilities-padding;
 @include k-utilities-active;
 @include k-utilities-align;
 @include k-utilities-aliasing;

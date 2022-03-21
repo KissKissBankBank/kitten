@@ -20,6 +20,8 @@ describe('<RadiButton />', () => {
             text="RadioButton Label"
             size="regular"
             design="disc"
+            paragraphStyle={false}
+            fontWeight="regular"
           >
             Children
           </RadioButton>,

@@ -6,9 +6,9 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledTag = styled.span`
+  display: inline-block;
   height: ${pxToRem(24)};
   box-sizing: border-box;
-  display: inline-block;
   padding: 0 ${pxToRem(10)};
   white-space: nowrap;
   line-height: ${pxToRem(24)};
@@ -17,6 +17,12 @@ const StyledTag = styled.span`
   border-radius: var(--border-radius-rounded);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+
+  &.k-Tag--flex {
+    display: inline-flex;
+    align-items: center;
+    gap: ${pxToRem(8)};
+  }
 
   &.k-Tag--light.k-Tag--info {
     background-color: var(--color-primary-100);
@@ -77,11 +83,12 @@ const StyledTag = styled.span`
     color: var(--color-grey-000);
   }
   &.k-Tag--dark.k-Tag--disabled {
-    background-color: var(--color-grey-900);
+    background-color: var(--color-grey-800);
     color: var(--color-grey-000);
   }
 
   &.k-Tag--small {
+    gap: ${pxToRem(5)};
     height: ${pxToRem(18)};
     padding: 0 ${pxToRem(5)};
     font-size: ${pxToRem(8)};
@@ -89,7 +96,7 @@ const StyledTag = styled.span`
   }
 `
 
-export const Tag = ({ type, size, variant, className, ...props }) => (
+export const Tag = ({ type, size, variant, className, flex, ...props }) => (
   <StyledTag
     className={classNames(
       'k-Tag',
@@ -97,6 +104,9 @@ export const Tag = ({ type, size, variant, className, ...props }) => (
       `k-Tag--${type}`,
       `k-Tag--${size}`,
       `k-Tag--${variant}`,
+      {
+        'k-Tag--flex': flex,
+      },
     )}
     {...props}
   />
@@ -106,10 +116,12 @@ Tag.propTypes = {
   type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
   size: PropTypes.oneOf(['regular', 'small']),
   variant: PropTypes.oneOf(['light', 'status', 'dark']),
+  flex: PropTypes.bool,
 }
 
 Tag.defaultProps = {
   type: 'info',
   size: 'regular',
   variant: 'status',
+  flex: false,
 }

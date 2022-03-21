@@ -1,0 +1,61 @@
+import { Meta, Canvas } from '@storybook/addon-docs'
+
+<Meta title="Documentation/CSS Utilities/P" />
+
+# P
+
+Padding utilities based on `spacing` tokens.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/spacing/_p.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/spacing/_p.scss)
+
+## Usage
+
+The reset padding utility is `k-u-p-0`.
+
+The basic structure of a padding utility class is
+`k-u-p-(direction)-(value)[@(media query)]`.
+Here are some examples:
+
+```
+<div class="k-u-p-t-8">…</div>
+<div class="k-u-p-v-2@l-up">…</div>
+<div class="k-u-p-h-12@xxs-down">…</div>
+```
+
+### `direction`
+
+`direction` can have one of these six values
+
+- `t` as a shortcut of **top**
+- `b` as a shortcut of **bottom**
+- `l` as a shortcut of **left**
+- `r` as a shortcut of **right**
+- `h` as a shortcut of **horizontal**
+  (applies to both *top* and *bottom*)
+- `v` as a shortcut of **vertical**
+  (applies to both *left* and *right*)
+
+### `value`
+
+`value` can be one of these 13 values
+
+- `0` will be equivalent to `var(--spacing-0)`, with a value of `0px`
+- `1` will be equivalent to `var(--spacing-1)`, with a value of `2px`
+- `2` will be equivalent to `var(--spacing-2)`, with a value of `4px`
+- `3` will be equivalent to `var(--spacing-3)`, with a value of `8px`
+- `4` will be equivalent to `var(--spacing-4)`, with a value of `12px`
+- `5` will be equivalent to `var(--spacing-5)`, with a value of `16px`
+- `6` will be equivalent to `var(--spacing-6)`, with a value of `20px`
+- `7` will be equivalent to `var(--spacing-7)`, with a value of `24px`
+- `8` will be equivalent to `var(--spacing-8)`, with a value of `32px`
+- `9` will be equivalent to `var(--spacing-9)`, with a value of `40px`
+- `10` will be equivalent to `var(--spacing-10)`, with a value of `48px`
+- `11` will be equivalent to `var(--spacing-11)`, with a value of `56px`
+- `12` will be equivalent to `var(--spacing-12)`, with a value of `64px`
+
+### `media query`
+
+`media query` is optional and follows the general scheme described in
+[Using Utilities: Media Queries](?path=/story/documentation-usage-using-utilities--page#media-queries)

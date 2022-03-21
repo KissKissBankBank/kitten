@@ -30,6 +30,7 @@
 @import './utilities/flex/flex-direction';
 @import './utilities/flex/flex-wrap';
 @import './utilities/flex/gap';
+@import './utilities/flex/flexbox-element';
 
 // Image
 @import './utilities/image/responsive';
@@ -41,7 +42,10 @@
 @import './utilities/reset/button';
 
 // Spacing
+@import './utilities/spacing/m';
 @import './utilities/spacing/margin';
+@import './utilities/spacing/p';
+@import './utilities/spacing/padding';
 
 // Text
 @import './utilities/text/active';

@@ -134,12 +134,6 @@ exports.Button = Button;
 Button.propTypes = {
   tag: _propTypes.default.string,
   borderRadius: _propTypes.default.number,
-  nano: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
-  micro: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
-  tiny: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
-  big: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
-  huge: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
-  giant: (0, _deprecated.default)(_propTypes.default.bool, 'Use `size` prop instead.'),
   fluid: _propTypes.default.bool,
   icon: _propTypes.default.bool,
   rounded: _propTypes.default.bool,

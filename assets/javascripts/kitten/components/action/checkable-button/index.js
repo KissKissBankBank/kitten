@@ -17,6 +17,8 @@ const getCircleIcon = color =>
   )
 
 const StyledCheckableButton = styled(Button)`
+  gap: 0;
+  
   &::after {
     flex-shrink: 0;
     content: '';

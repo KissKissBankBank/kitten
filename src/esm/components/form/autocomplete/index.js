@@ -153,17 +153,17 @@ export var Autocomplete = function Autocomplete(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(Wrapper, {
-    className: classNames('k-Form-Autocomplete', className, (_classNames = {}, _classNames["k-Form-Autocomplete--hasIcon-" + iconPosition] = !!icon, _classNames['k-Form-Autocomplete--disabled'] = props.disabled, _classNames))
+    className: classNames('k-Form-Autocomplete', className, (_classNames = {}, _classNames["k-Form-Autocomplete--hasIcon-" + iconPosition] = !!icon, _classNames['k-Form-Autocomplete--disabled'] = props.disabled, _classNames['k-Form-Autocomplete--error'] = error, _classNames))
   }, /*#__PURE__*/React.createElement("input", _extends({}, props, {
-    error: error,
     ref: inputEl,
     type: "text",
+    role: "combobox",
     autoComplete: "off",
     onChange: handleChange,
     onBlur: handleBlur,
     onKeyDown: handleKeyDown,
     "aria-owns": props.name + "-results",
-    "aria-expanded": showSuggestions && items.length > 0,
+    "aria-expanded": showSuggestions ? items.length > 0 : null,
     "aria-autocomplete": "both",
     "aria-activedescendant": items[selectedItemIndex] ? slugify(items[selectedItemIndex] + "-" + selectedItemIndex) : '',
     className: "k-Form-Autocomplete__input"
