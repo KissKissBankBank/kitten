@@ -69,7 +69,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="k-List__button__arrow"
       >
         <svg
-          className="k-Button__icon k-List__button__arrowIcon"
+          className="k-List__button__arrowIcon"
           fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
@@ -114,7 +114,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="k-List__button__arrow"
       >
         <svg
-          className="k-Button__icon k-List__button__arrowIcon"
+          className="k-List__button__arrowIcon"
           fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
@@ -194,7 +194,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="k-List__button__arrow"
       >
         <svg
-          className="k-Button__icon k-List__button__arrowIcon"
+          className="k-List__button__arrowIcon"
           fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
@@ -239,7 +239,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="k-List__button__arrow"
       >
         <svg
-          className="k-Button__icon k-List__button__arrowIcon"
+          className="k-List__button__arrowIcon"
           fill="var(--color-grey-900, #222)"
           height="5.64"
           style={
@@ -284,7 +284,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="k-List__button__arrow"
       >
         <svg
-          className="k-Button__icon k-List__button__arrowIcon"
+          className="k-List__button__arrowIcon"
           fill="var(--color-grey-900, #222)"
           height="5.64"
           style={

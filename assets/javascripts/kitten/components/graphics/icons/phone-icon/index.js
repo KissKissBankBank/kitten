@@ -5,6 +5,8 @@ export const PhoneIcon = ({ color, title, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 18"
+    width="16"
+    height="18"
     fill={color}
     {...props}
   >

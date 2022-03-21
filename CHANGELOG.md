@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Utilities: Add `k-u-clamp` util class, with optional `--line-clamp` custom variable.
+- Fix: `HeaderNav`: Fix horizontal scroll.
+- Deprecations/Changes:`ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
+- Deprecations/Changes: `Button`: Deprecate `fluid` and `icon` props.
+- Breaking changes: `Tokens`: Update token color with semantic color.
+- Fix: `SummaryCard`: Improve `contributorSubscription` columns.
 
 ## [8.9.1] - 2022-03-16
 

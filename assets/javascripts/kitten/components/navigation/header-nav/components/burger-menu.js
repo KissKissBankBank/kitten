@@ -43,14 +43,11 @@ export const BurgerMenu = ({
         className={classNames(
           buttonProps.className,
           'k-HeaderNav__BurgerMenu__button',
-          'k-ButtonIcon',
-          'k-ButtonIcon--tiny',
         )}
       >
         <BurgerIcon
           isActive={isDropdownExpanded}
           hoverColor={COLORS.font1}
-          className="k-ButtonIcon__svg"
           aria-hidden="true"
         />
         <VisuallyHidden>Menu</VisuallyHidden>

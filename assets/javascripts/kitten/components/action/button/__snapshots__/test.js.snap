@@ -846,7 +846,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,

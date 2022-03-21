@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from '../../../../action/button-icon'
+import { Button } from '../../../../action/button'
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon'
 import { TeamCardButtonWithTooltip } from './button-with-tooltip'
 import COLORS from '../../../../../constants/colors-config'
@@ -15,20 +15,17 @@ export const TeamCardPhoneIcon = ({
 }) => {
   return (
     <>
-      <ButtonIcon
+      <Button
         tag="a"
+        fit="icon"
         href={`tel:${phoneNumber}`}
         modifier="hydrogen"
         size="tiny"
-        className={classNames(
-          'k-ButtonIcon--phone',
-          'k-u-hidden@s-up',
-          className,
-        )}
+        className={classNames('k-u-hidden@s-up', className)}
         aria-label={buttonLabel}
       >
-        <PhoneIcon aria-hidden className="k-ButtonIcon__svg" />
-      </ButtonIcon>
+        <PhoneIcon aria-hidden />
+      </Button>
 
       <TeamCardButtonWithTooltip
         phoneNumber={phoneNumber}

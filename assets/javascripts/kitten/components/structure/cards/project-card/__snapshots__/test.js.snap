@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-jlsrNB dbJfdP k-ProjectCard k-ProjectCard--normal"
+  className="sc-edERGn cNMjT k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -18,7 +18,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <h1
-      className="sc-fvxzrP jsCCMa k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-jQrDum qeylb k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -94,7 +94,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={0}
-        className="sc-dlVxhl kcqGfL k-Meters-Progress"
+        className="sc-hGPBjI jCetTb k-Meters-Progress"
         role="progressbar"
         style={
           Object {
@@ -120,7 +120,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-jlsrNB dbJfdP k-ProjectCard k-ProjectCard--normal"
+  className="sc-edERGn cNMjT k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -140,7 +140,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       Prolongation
     </div>
     <h1
-      className="sc-fvxzrP jsCCMa k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-jQrDum qeylb k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -216,7 +216,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={0}
-        className="sc-dlVxhl kcqGfL k-Meters-Progress"
+        className="sc-hGPBjI jCetTb k-Meters-Progress"
         role="progressbar"
         style={
           Object {
@@ -242,7 +242,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
 <div
-  className="sc-jlsrNB dbJfdP k-ProjectCard k-ProjectCard--normal"
+  className="sc-edERGn cNMjT k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -272,7 +272,7 @@ exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
       />
     </div>
     <h1
-      className="sc-fvxzrP jsCCMa k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-jQrDum qeylb k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -348,7 +348,7 @@ exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={55}
-        className="sc-dlVxhl kcqGfL k-Meters-Progress"
+        className="sc-hGPBjI jCetTb k-Meters-Progress"
         role="progressbar"
         style={
           Object {

@@ -147,8 +147,8 @@ const contributorSubscriptionStyles = css`
       grid-template-columns:
         minmax(${pxToRem(100)}, 3fr)
         minmax(${pxToRem(80)}, 2fr)
-        ${pxToRem(80)}
         ${pxToRem(120)}
+        ${pxToRem(110)}
         ${pxToRem(80)}
         ${pxToRem(110)}
         ${pxToRem(40)};
@@ -161,10 +161,10 @@ const contributorSubscriptionStyles = css`
         grid-template-columns:
           minmax(${pxToRem(100)}, 3fr)
           minmax(${pxToRem(80)}, 2fr)
-          ${pxToRem(80)}
+          ${pxToRem(100)}
           ${pxToRem(80)}
           ${pxToRem(70)}
-          ${pxToRem(90)}
+          ${pxToRem(100)}
           ${pxToRem(40)};
         grid-template-areas: 'title description amount payment status shipping last';
       }
