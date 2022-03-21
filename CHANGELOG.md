@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `HeaderNav`: Fix horizontal scroll.
+- Fix: `SummaryCard`: Improve `contributorSubscription` columns.
 
 ## [8.9.1] - 2022-03-16
 
