@@ -70,7 +70,7 @@ export var DropdownMenu = function DropdownMenu(_ref) {
   }();
 
   var getSibling = function getSibling(direction) {
-    var options = [].concat(detailsElement.current.querySelectorAll('[role^="menuitem"]:not([hidden]):not([disabled]):not([aria-disabled="true"])'));
+    var options = [].concat(detailsElement.current.querySelectorAll('a:not([hidden]):not([disabled]):not([aria-disabled="true"]), button:not([hidden]):not([disabled]):not([aria-disabled="true"])'));
     var index = document.activeElement instanceof HTMLElement ? options.indexOf(document.activeElement) : -1;
     var sibling = direction === 'next' ? options[index + 1] : options[index - 1];
     var opposite = direction === 'next' ? options[0] : options[options.length - 1];
@@ -112,7 +112,7 @@ export var DropdownMenu = function DropdownMenu(_ref) {
         {
           var activeElement = document.activeElement;
           if (!activeElement instanceof HTMLElement) return;
-          if (activeElement.role !== 'menuitem') return;
+          if (!['A', 'BUTTON'].includes(activeElement.tagName)) return;
           if (activeElement.closest('details') !== detailsElement.current) return;
           event.preventDefault();
           event.stopPropagation();
@@ -163,7 +163,6 @@ DropdownMenu.Link = function (_ref2) {
 
   return /*#__PURE__*/React.createElement("a", _extends({
     href: href,
-    role: "menuitem",
     className: classNames('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__link', className)
   }, rest));
 };
@@ -176,7 +175,6 @@ DropdownMenu.Button = function (_ref3) {
 
   return /*#__PURE__*/React.createElement("button", _extends({
     type: type,
-    role: "menuitem",
     className: classNames('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__button', 'k-u-reset-button', className)
   }, rest));
 };

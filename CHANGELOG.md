@@ -4,9 +4,43 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Deprecations/Changes:`Button`: Deprecate `fluid` and `icon` props.
-- Fix: `TextInputWithLimit`: Improve styles.
-- Fix: `Button`: Remove old size props.
+- Deprecations/Changes: `Button`: Deprecate `fluid` and `icon` props.
+- Fix: `SummaryCard`: Improve `contributorSubscription` columns.
+
+## [8.9.1] - 2022-03-16
+
+Fixes:
+
+  - `CheckableButton`: Improve style.
+  - `ContentCard`: Update padding for mobile view.
+
+## [8.9.0] - 2022-03-09
+
+Features:
+
+  - `RadioButton`: Add `paragraphStyle` and `fontWeight` props. 
+  - `Tag`: Add `flex` prop, to behave as flexbox container.
+  - `ProjectCard`: Add `topLine` prop, accepts React node.
+  - `ProjectCard`: Add `Avatar` subcomponent, accepts `imageProps` prop.
+  - `ProjectCard`: Add `noMargin` prop to `ItemsLine` subcomponent.
+
+## [8.8.0] - 2022-03-08
+
+Deprecation/Change:
+
+- `scrollableContainerStyle`: Deprecate component.
+
+Features:
+
+- `ScrollableContainer`: Modernize component.
+- `GridTable`: Add component.
+
+Fixes:
+
+- `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
+- `LaBanquePostaleLogo`: Fix dimensions and default props.
+- `TextInputWithLimit`: Improve styles.
+- `Button`: Remove old size props.
 
 ## [8.7.0] - 2022-03-01
 

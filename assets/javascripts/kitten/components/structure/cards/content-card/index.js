@@ -9,7 +9,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Title } from '../../../typography/title'
 
 const StyledCard = styled.article`
-  padding: ${pxToRem(30)} ${pxToRem(30)} ${pxToRem(20)};
+  padding: ${pxToRem(20)};
   border: var(--border);
   border-radius: var(--border-radius-m);
   width: 100%;

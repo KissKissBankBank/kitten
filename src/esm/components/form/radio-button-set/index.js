@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"],
+var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "fontWeight", "paragraphStyle", "labelProps"],
     _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -24,6 +24,8 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       label = _ref.label,
       children = _ref.children,
       size = _ref.size,
+      fontWeight = _ref.fontWeight,
+      paragraphStyle = _ref.paragraphStyle,
       labelProps = _ref.labelProps,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
@@ -47,6 +49,8 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       design: design,
       error: error,
       size: size,
+      fontWeight: fontWeight,
+      paragraphStyle: paragraphStyle,
       name: name,
       key: id
     }, itemProps, {
@@ -67,7 +71,9 @@ RadioButtonSet.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
-  labelProps: PropTypes.object
+  labelProps: PropTypes.object,
+  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  paragraphStyle: false
 };
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
@@ -84,5 +90,7 @@ RadioButtonSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  size: 'regular'
+  size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false
 };
