@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `HeaderNav`: Fix horizontal scroll.
+- Deprecations/Changes: `Button`: Deprecate `fluid` and `icon` props.
 - Breaking changes: `Tokens`: Update token color with semantic color.
 - Fix: `SummaryCard`: Improve `contributorSubscription` columns.
 
