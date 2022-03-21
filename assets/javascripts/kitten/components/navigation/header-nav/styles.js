@@ -214,7 +214,7 @@ export const StyledHeader = styled.header`
       ${COLORS.background3}
     );
 
-    margin-right: ${pxToRem(50)};
+    padding-right: ${pxToRem(50)};
 
     &.k-Dropdown__button,
     &.k-HeaderNav__Button {
