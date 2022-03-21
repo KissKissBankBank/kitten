@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from '../../../../action/button-icon'
+import { Button } from '../../../../action/button'
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon'
 import COLORS from '../../../../../constants/colors-config'
 import styled from 'styled-components'
@@ -66,15 +66,15 @@ export const TeamCardButtonWithTooltip = ({
       <span className="k-TeamCardButtonWithTooltip__tooltipArrow" />
     </span>
 
-    <ButtonIcon
+    <Button
+      fit="icon"
       size="tiny"
       modifier="hydrogen"
-      className="k-ButtonIcon--phone"
       tag="span"
       aria-label={phoneNumber}
     >
-      <PhoneIcon className="k-ButtonIcon__svg" />
-    </ButtonIcon>
+      <PhoneIcon />
+    </Button>
   </StyledTeamCardButtonWithTooltip>
 )
 
