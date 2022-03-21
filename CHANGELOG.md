@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Utilities: Add `k-u-clamp` util class, with optional `--line-clamp` custom variable.
 - Fix: `HeaderNav`: Fix horizontal scroll.
 - Deprecations/Changes:`ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
 - Deprecations/Changes: `Button`: Deprecate `fluid` and `icon` props.

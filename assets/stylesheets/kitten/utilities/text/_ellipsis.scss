@@ -8,12 +8,23 @@
 ///
 /// @example html
 ///
-///     <p class="k-u-ellipsis-underline">…</p>
+///     <p class="k-u-ellipsis">…</p>
+///     <p class="k-u-clamp">…</p>
 
 @mixin k-utilities-ellipsis {
   .k-u-ellipsis {
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
     overflow: hidden !important;
+  }
+
+  .k-u-clamp {
+    /* https://css-tricks.com/line-clampin/#weird-webkit-flexbox-way */
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    overflow-wrap: anywhere !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: var(--line-clamp, 3) !important;
+    -webkit-box-orient: vertical !important;
   }
 }
