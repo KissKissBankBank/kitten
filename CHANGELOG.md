@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking changes: `Tokens`: Update token color with semantic color.
 - Fix: `SummaryCard`: Improve `contributorSubscription` columns.
 
 ## [8.9.1] - 2022-03-16
