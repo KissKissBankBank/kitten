@@ -149,6 +149,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -475,6 +479,10 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {
@@ -805,6 +813,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1133,6 +1145,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1 {
+  gap: 0;
+}
+
 .c1::after {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1459,6 +1475,10 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {
