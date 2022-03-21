@@ -23,7 +23,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../form/label");
 
-var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "labelProps"],
+var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "fontWeight", "paragraphStyle", "labelProps"],
     _excluded2 = ["id", "className"];
 
 var StyledRadioButtonSet = _styledComponents.default.fieldset.withConfig({
@@ -42,6 +42,8 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       label = _ref.label,
       children = _ref.children,
       size = _ref.size,
+      fontWeight = _ref.fontWeight,
+      paragraphStyle = _ref.paragraphStyle,
       labelProps = _ref.labelProps,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButtonSet, (0, _extends2.default)({
@@ -63,6 +65,8 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
       design: design,
       error: error,
       size: size,
+      fontWeight: fontWeight,
+      paragraphStyle: paragraphStyle,
       name: name,
       key: id
     }, itemProps, {
@@ -85,7 +89,9 @@ RadioButtonSet.propTypes = {
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   design: _propTypes.default.oneOf(['disc', 'check']),
   disabled: _propTypes.default.bool,
-  labelProps: _propTypes.default.object
+  labelProps: _propTypes.default.object,
+  fontWeight: _propTypes.default.oneOf(['light', 'regular', 'bold']),
+  paragraphStyle: false
 };
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
@@ -102,5 +108,7 @@ RadioButtonSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  size: 'regular'
+  size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false
 };

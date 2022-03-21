@@ -50,14 +50,10 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
       className="k-ProjectCard__line"
     >
       <span>
-        par
-         
-        <a
-          className="k-u-link k-u-link-font1 k-u-weight-bold"
-          href="#"
-        >
+        par 
+        <strong>
           Bidules
-        </a>
+        </strong>
       </span>
     </div>
     <div
@@ -103,7 +99,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         style={
           Object {
             "--progress-color": "var(--color-primary-500, #19b4fa)",
-            "--progress-value": "55%",
+            "--progress-value": "0%",
           }
         }
       >
@@ -176,14 +172,10 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       className="k-ProjectCard__line"
     >
       <span>
-        par
-         
-        <a
-          className="k-u-link k-u-link-font1 k-u-weight-bold"
-          href="#"
-        >
+        par 
+        <strong>
           Bidules
-        </a>
+        </strong>
       </span>
     </div>
     <div
@@ -230,6 +222,138 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
           Object {
             "--progress-color": "var(--color-primary-500, #19b4fa)",
             "--progress-value": "0%",
+          }
+        }
+      >
+        <div
+          className="k-Meters-Progress__ramp"
+        />
+      </div>
+      <span
+        className="k-u-line-height-1 k-u-size-tiny k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+      >
+        55
+         %
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
+<div
+  className="sc-jlsrNB dbJfdP k-ProjectCard k-ProjectCard--normal"
+>
+  <div
+    className="k-ProjectCard__image"
+  >
+    <img
+      alt="image alt"
+      className="k-ProjectCard__image__image"
+      src="kitten.jpg"
+    />
+  </div>
+  <div
+    className="k-ProjectCard__topLine k-ProjectCard__topLine--center"
+  >
+    <span>
+      TopLine content
+    </span>
+  </div>
+  <div
+    className="k-ProjectCard__content"
+  >
+    <div
+      className="k-ProjectCard__avatar"
+    >
+      <img
+        alt=""
+        src="kitten.jpg"
+      />
+    </div>
+    <h1
+      className="sc-fvxzrP jsCCMa k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      style={
+        Object {
+          "--Title-css-color": null,
+        }
+      }
+    >
+      <span
+        width={0}
+      >
+        <span />
+        <span>
+          The Office, la série culte décortiquée par S!CK
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          …
+        </span>
+      </span>
+    </h1>
+    <div
+      className="k-ProjectCard__line"
+    >
+      <span>
+        par 
+        <strong>
+          Bidules
+        </strong>
+      </span>
+    </div>
+    <div
+      className="k-ProjectCard__item"
+    >
+      <span>
+        134
+      </span>
+      <span>
+        contributeurs
+      </span>
+    </div>
+    <div
+      className="k-ProjectCard__item"
+    >
+      <span>
+        7 jours
+      </span>
+      <span>
+        restants
+      </span>
+    </div>
+    <div
+      className="k-ProjectCard__item"
+    >
+      <span>
+        9 930 €
+      </span>
+      <span>
+        sur 12 000 €
+      </span>
+    </div>
+    <div
+      className="k-ProjectCard__progress"
+    >
+      <div
+        aria-label="Progrès de la campagne"
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={55}
+        className="sc-dlVxhl kcqGfL k-Meters-Progress"
+        role="progressbar"
+        style={
+          Object {
+            "--progress-color": "var(--color-primary-500, #19b4fa)",
+            "--progress-value": "55%",
           }
         }
       >

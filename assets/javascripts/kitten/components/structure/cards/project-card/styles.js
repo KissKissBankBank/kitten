@@ -8,13 +8,13 @@ const loadingKeyframes = keyframes`
 `
 
 export const StyledCard = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 
   border: var(--border);
   border-radius: var(--border-radius-m);
-  overflow: hidden;
   color: var(--color-grey-900);
   text-decoration: none;
   transition: border var(--transition);
@@ -52,6 +52,8 @@ export const StyledCard = styled.div`
     position: relative;
     overflow: hidden;
     flex: 0 0 auto;
+    border-top-left-radius: calc(var(--border-radius-m) - 1px);
+    border-top-right-radius: calc(var(--border-radius-m) - 1px);
 
     .k-ProjectCard__image__image {
       display: block;
@@ -72,6 +74,27 @@ export const StyledCard = styled.div`
         width: 100%;
         height: 100%;
       }
+    }
+  }
+
+  .k-ProjectCard__topLine {
+    position: absolute;
+    top: 0;
+    left: ${pxToRem(15)};
+    right: ${pxToRem(15)};
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+
+    &.k-ProjectCard__topLine--left {
+      justify-content: flex-start;
+    }
+    &.k-ProjectCard__topLine--center {
+      justify-content: center;
+    }
+    &.k-ProjectCard__topLine--right {
+      justify-content: flex-end;
     }
   }
 
@@ -102,6 +125,31 @@ export const StyledCard = styled.div`
     font-size: ${pxToRem(12)};
   }
 
+  .k-ProjectCard__avatar {
+    position: absolute;
+    height: ${pxToRem(75)};
+    width: ${pxToRem(75)};
+    box-sizing: border-box;
+    top: ${pxToRem(-50)};
+    left: ${pxToRem(15)};
+    background-color: var(--color-grey-000);
+    border-radius: var(--border-radius-m);
+    border: var(--border-width) solid var(--color-grey-300);
+    padding: ${pxToRem(10)};
+    box-shadow: 0px 0px ${pxToRem(20)} rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .k-ProjectCard__avatar + .k-ProjectCard__title {
+    margin-top: ${pxToRem(10)};
+  }
+
   .k-ProjectCard__title,
   .k-ProjectCard__line,
   .k-ProjectCard__itemsLine,
@@ -118,8 +166,11 @@ export const StyledCard = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: ${pxToRem(10)};
     flex: 1 0 auto;
-    margin-top: ${pxToRem(20)};
     align-items: end;
+
+    &:not(.k-ProjectCard__itemsLine--noMargin) {
+      margin-top: ${pxToRem(20)};
+    }
   }
 
   .k-ProjectCard__item > * {
