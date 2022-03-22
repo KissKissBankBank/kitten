@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [9.0.0] - 2022-03-21
 
-Deprecations/Changes:
+Breaking Changes:
 
   - `ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
   - `Button`: Deprecate `fluid` and `icon` props.
