@@ -17,7 +17,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../../../helpers/utils/typography");
 
-var _buttonIcon = require("../../../../action/button-icon");
+var _button = require("../../../../action/button");
 
 var _linkedinIcon = require("../../../../graphics/icons/linkedin-icon");
 
@@ -52,19 +52,17 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
     }];
   };
 
-  return /*#__PURE__*/_react.default.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+  return /*#__PURE__*/_react.default.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/_react.default.createElement(_button.Button, {
     size: "tiny",
+    fit: "icon",
     tag: "a",
     href: "mailto:" + email,
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon",
     "aria-label": "E-mail"
   }, /*#__PURE__*/_react.default.createElement(_emailIcon.EmailIcon, {
-    "aria-hidden": true,
-    className: "k-ButtonIcon__svg"
+    "aria-hidden": true
   })), phoneNumber && /*#__PURE__*/_react.default.createElement(_phoneIcon.TeamCardPhoneIcon, (0, _extends2.default)({}, props, {
-    phoneNumber: phoneNumber,
-    className: "k-TeamCardIcons__buttonIcon"
+    phoneNumber: phoneNumber
   })), /*#__PURE__*/_react.default.createElement(SocialLinks, {
     links: getSocialLinks()
   }));
@@ -77,22 +75,20 @@ var SocialLinks = function SocialLinks(_ref2) {
       links = _ref2$links === void 0 ? [] : _ref2$links;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, links.map(function (link) {
     if (!link.href) return;
-    return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+    return /*#__PURE__*/_react.default.createElement(_button.Button, {
       tag: "a",
+      fit: "icon",
       key: link.name,
       "aria-label": link.name,
       href: link.href,
       modifier: "hydrogen",
       target: "_blank",
       rel: "noopener",
-      className: "k-TeamCardIcons__buttonIcon",
       size: "tiny"
     }, link.name === 'linkedin' && /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
-      "aria-hidden": true,
-      className: "k-ButtonIcon__svg"
+      "aria-hidden": true
     }), link.name === 'twitter' && /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
-      "aria-hidden": true,
-      className: "k-ButtonIcon__svg"
+      "aria-hidden": true
     }));
   }));
 };

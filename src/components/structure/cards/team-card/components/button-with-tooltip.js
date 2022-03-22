@@ -13,7 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _buttonIcon = require("../../../../action/button-icon");
+var _button = require("../../../../action/button");
 
 var _phoneIcon = require("../../../../graphics/icons/phone-icon");
 
@@ -50,15 +50,13 @@ var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
     className: "k-TeamCardButtonWithTooltip__tooltip"
   }, phoneNumber, /*#__PURE__*/_react.default.createElement("span", {
     className: "k-TeamCardButtonWithTooltip__tooltipArrow"
-  })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+  })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+    fit: "icon",
     size: "tiny",
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone",
     tag: "span",
     "aria-label": phoneNumber
-  }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
-    className: "k-ButtonIcon__svg"
-  })));
+  }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, null)));
 };
 
 exports.TeamCardButtonWithTooltip = TeamCardButtonWithTooltip;

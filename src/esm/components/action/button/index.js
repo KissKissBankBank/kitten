@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "modifier", "size", "className", "rounded", "fluid", "icon", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
+var _excluded = ["children", "modifier", "size", "className", "rounded", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -34,8 +34,6 @@ export var Button = function Button(_ref2) {
       size = _ref2.size,
       className = _ref2.className,
       rounded = _ref2.rounded,
-      fluid = _ref2.fluid,
-      icon = _ref2.icon,
       borderRadius = _ref2.borderRadius,
       disabled = _ref2.disabled,
       tag = _ref2.tag,
@@ -49,52 +47,10 @@ export var Button = function Button(_ref2) {
     console.warn("The modifier " + modifier + " has been deprecated. Please use one for the following: " + buttonModifiers.join(', ') + ".");
   }
 
-  var actualSize = function () {
-    switch (true) {
-      case !!size:
-        return size;
-
-      case props.nano:
-        return 'nano';
-
-      case props.micro:
-        return 'micro';
-
-      case props.tiny:
-        return 'tiny';
-
-      case props.big:
-        return 'big';
-
-      case props.huge:
-        return 'huge';
-
-      case props.giant:
-        return 'giant';
-
-      default:
-        return 'regular';
-    }
-  }();
-
   var internalModifier = active ? 'lithium' : modifier;
   var internalTag = as || tag;
-
-  var fitClass = function () {
-    switch (true) {
-      case fluid && !icon:
-        return 'fluid';
-
-      case icon && !fluid:
-        return 'icon';
-
-      default:
-        return fit;
-    }
-  }();
-
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
-    className: classNames('k-Button', className, "k-Button--" + actualSize, "k-Button--" + internalModifier, "k-Button--fit-" + fitClass, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
+    className: classNames('k-Button', className, "k-Button--" + size, "k-Button--" + internalModifier, "k-Button--fit-" + fit, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
     modifier: internalModifier,
     style: {
       '--Button-border-radius': borderRadius != null ? pxToRem(borderRadius) : null
@@ -107,8 +63,6 @@ export var Button = function Button(_ref2) {
 Button.propTypes = {
   tag: PropTypes.string,
   borderRadius: PropTypes.number,
-  fluid: PropTypes.bool,
-  icon: PropTypes.bool,
   rounded: PropTypes.bool,
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
@@ -118,8 +72,6 @@ Button.propTypes = {
 };
 Button.defaultProps = {
   tag: 'button',
-  fluid: false,
-  icon: false,
   rounded: false,
   borderRadius: null,
   size: 'regular',
