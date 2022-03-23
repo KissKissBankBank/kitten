@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Alert`: Improve styles.
+
 ## [9.0.0] - 2022-03-21
 
 Breaking Changes:
