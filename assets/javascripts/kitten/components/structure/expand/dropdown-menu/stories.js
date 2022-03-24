@@ -7,6 +7,8 @@ import {
   AvatarWithTextAndBadge,
   Text,
   ArrowIcon,
+  BubbleIconNext,
+  FacebookIconNext,
 } from 'kitten'
 import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
@@ -116,11 +118,16 @@ export const Default = ({ menuPosition, ...args }) => {
       <div className="k-u-flex-justifyContent-end">
         <DropdownMenu
           {...args}
+          open
           positionedButton
           menuPosition={menuPosition || 'left'}
         >
-          <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-          <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+          <DropdownMenu.Link href="#" icon={<BubbleIconNext />}>
+            A link
+          </DropdownMenu.Link>
+          <DropdownMenu.Button icon={<FacebookIconNext />}>
+            Click this button
+          </DropdownMenu.Button>
           <DropdownMenu.Separator />
           <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
         </DropdownMenu>

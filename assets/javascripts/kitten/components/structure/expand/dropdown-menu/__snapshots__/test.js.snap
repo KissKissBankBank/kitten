@@ -173,13 +173,14 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 0.0625rem;
   z-index: 150;
   position: absolute;
   top: calc(50% + 1rem + 0.5rem);
@@ -199,8 +200,8 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0[open] .k-DropdownMenu__menu {
-  -webkit-animation: 0.16s ease egqQGv;
-  animation: 0.16s ease egqQGv;
+  -webkit-animation: var(--transition) egqQGv;
+  animation: var(--transition) egqQGv;
 }
 
 .c0.k-DropdownMenu--left .k-DropdownMenu__menu {
@@ -221,39 +222,65 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DropdownMenu__menu__item {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: var(--color-grey-000,#fff);
+  color: var(--color-grey-000);
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   padding: 0.4375rem 0.9375rem;
-  line-height: 1;
+  line-height: 1rem;
   font-size: 0.875rem;
   text-align: left;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 
+.c0 .k-DropdownMenu__menu__item svg,
+.c0 .k-DropdownMenu__menu__item svg path {
+  fill: currentColor;
+}
+
 .c0 .k-DropdownMenu__menu__item:hover {
-  color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-100);
 }
 
-.c0 .k-DropdownMenu__menu__item:active {
-  color: var(--color-primary-300,#bae8fd);
-}
-
+.c0 .k-DropdownMenu__menu__item:active,
 .c0 .k-DropdownMenu__menu__item:focus {
-  color: var(--color-primary-300,#bae8fd);
+  color: var(--color-primary-300);
 }
 
 .c0 .k-DropdownMenu__menu__item:focus-visible {
   outline: auto;
 }
 
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper {
+  height: 1rem;
+  width: 1rem;
+  -webkit-flex: 0 0 NaNrem;
+  -ms-flex: 0 0 NaNrem;
+  flex: 0 0 NaNrem;
+}
+
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .c0 .k-DropdownMenu__menu__separator {
   height: 0.125rem;
-  background: var(--color-grey-700,#636363);
+  background: var(--color-grey-700);
   padding: 0;
-  margin: 0.3125rem 0;
+  margin: 0.4375rem 0.9375rem;
 }
 
 <details
@@ -278,10 +305,10 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
         "--k-ArrowContainer-arrowSize": "0.5rem",
         "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
         "--k-ArrowContainer-borderDistance": 0,
-        "--k-ArrowContainer-borderRadius": "0.25rem",
+        "--k-ArrowContainer-borderRadius": "0.5rem",
         "--k-ArrowContainer-borderSize": "0.5rem",
         "--k-ArrowContainer-borderWidth": 0,
-        "--k-ArrowContainer-color": "var(--color-grey-900, #222)",
+        "--k-ArrowContainer-color": "var(--color-grey-900)",
         "--k-ArrowContainer-padding": 0,
       }
     }
@@ -290,7 +317,9 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
       href=""
     >
-      Content
+      <span>
+        Content
+      </span>
     </a>
     <div
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__separator"
@@ -299,7 +328,14 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
       type="button"
     >
-      Content
+      <span
+        className="k-DropdownMenu__menu__item__iconWrapper"
+      >
+        <svg />
+      </span>
+      <span>
+        Content
+      </span>
     </button>
     <span
       className="k-ArrowContainer__arrow"
@@ -481,13 +517,14 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  gap: 0.0625rem;
   z-index: 150;
   position: absolute;
   top: calc(50% + 1rem + 0.5rem);
@@ -507,8 +544,8 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 }
 
 .c0[open] .k-DropdownMenu__menu {
-  -webkit-animation: 0.16s ease egqQGv;
-  animation: 0.16s ease egqQGv;
+  -webkit-animation: var(--transition) egqQGv;
+  animation: var(--transition) egqQGv;
 }
 
 .c0.k-DropdownMenu--left .k-DropdownMenu__menu {
@@ -529,39 +566,65 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 .c0 .k-DropdownMenu__menu__item {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: var(--color-grey-000,#fff);
+  color: var(--color-grey-000);
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
   padding: 0.4375rem 0.9375rem;
-  line-height: 1;
+  line-height: 1rem;
   font-size: 0.875rem;
   text-align: left;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 
+.c0 .k-DropdownMenu__menu__item svg,
+.c0 .k-DropdownMenu__menu__item svg path {
+  fill: currentColor;
+}
+
 .c0 .k-DropdownMenu__menu__item:hover {
-  color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-100);
 }
 
-.c0 .k-DropdownMenu__menu__item:active {
-  color: var(--color-primary-300,#bae8fd);
-}
-
+.c0 .k-DropdownMenu__menu__item:active,
 .c0 .k-DropdownMenu__menu__item:focus {
-  color: var(--color-primary-300,#bae8fd);
+  color: var(--color-primary-300);
 }
 
 .c0 .k-DropdownMenu__menu__item:focus-visible {
   outline: auto;
 }
 
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper {
+  height: 1rem;
+  width: 1rem;
+  -webkit-flex: 0 0 NaNrem;
+  -ms-flex: 0 0 NaNrem;
+  flex: 0 0 NaNrem;
+}
+
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 .c0 .k-DropdownMenu__menu__separator {
   height: 0.125rem;
-  background: var(--color-grey-700,#636363);
+  background: var(--color-grey-700);
   padding: 0;
-  margin: 0.3125rem 0;
+  margin: 0.4375rem 0.9375rem;
 }
 
 <details
@@ -590,10 +653,10 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
         "--k-ArrowContainer-arrowSize": "0.5rem",
         "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
         "--k-ArrowContainer-borderDistance": 0,
-        "--k-ArrowContainer-borderRadius": "0.25rem",
+        "--k-ArrowContainer-borderRadius": "0.5rem",
         "--k-ArrowContainer-borderSize": "0.5rem",
         "--k-ArrowContainer-borderWidth": 0,
-        "--k-ArrowContainer-color": "var(--color-grey-900, #222)",
+        "--k-ArrowContainer-color": "var(--color-grey-900)",
         "--k-ArrowContainer-padding": 0,
       }
     }
@@ -602,7 +665,14 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
       href=""
     >
-      Content
+      <span
+        className="k-DropdownMenu__menu__item__iconWrapper"
+      >
+        <svg />
+      </span>
+      <span>
+        Content
+      </span>
     </a>
     <div
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__separator"
@@ -611,7 +681,9 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
       type="button"
     >
-      Content
+      <span>
+        Content
+      </span>
     </button>
     <span
       className="k-ArrowContainer__arrow"
