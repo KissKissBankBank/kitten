@@ -275,6 +275,7 @@ Button.propTypes = {
   modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
   active: PropTypes.bool,
 }
+
 Button.defaultProps = {
   tag: 'button',
   rounded: false,
