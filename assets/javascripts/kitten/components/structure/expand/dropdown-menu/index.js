@@ -142,14 +142,14 @@ const StyledDropdownMenu = styled.details`
       flex: 0 0 ${pxToRem(16)};
 
       svg {
-        width: ${pxToRem(16)};
-        height: ${pxToRem(16)};
+        max-width: ${pxToRem(16)};
+        max-height: ${pxToRem(16)};
       }
     }
   }
 
   .k-DropdownMenu__menu__separator {
-    height: ${pxToRem(2)};
+    height: ${pxToRem(1)};
     background: var(--color-grey-700);
     padding: 0;
     margin: ${pxToRem(7)} ${pxToRem(15)};

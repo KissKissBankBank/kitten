@@ -272,12 +272,12 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
-  width: 1rem;
-  height: 1rem;
+  max-width: 1rem;
+  max-height: 1rem;
 }
 
 .c0 .k-DropdownMenu__menu__separator {
-  height: 0.125rem;
+  height: 0.0625rem;
   background: var(--color-grey-700);
   padding: 0;
   margin: 0.4375rem 0.9375rem;
@@ -616,12 +616,12 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
-  width: 1rem;
-  height: 1rem;
+  max-width: 1rem;
+  max-height: 1rem;
 }
 
 .c0 .k-DropdownMenu__menu__separator {
-  height: 0.125rem;
+  height: 0.0625rem;
   background: var(--color-grey-700);
   padding: 0;
   margin: 0.4375rem 0.9375rem;

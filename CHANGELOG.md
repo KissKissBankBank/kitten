@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `MessengerIconNext`
   - `TwitterIconNext`
   - `WhatsappIconNext`
+- Feature: Add the following icon components:
+  - `EmbedIconNext`
+  - `LinkIconNext`
 
 ## [9.0.0] - 2022-03-21
 
