@@ -241,9 +241,9 @@ export const Button = ({
       className={classNames(
         'k-Button',
         className,
-        `k-Button--${size}`,
-        `k-Button--${internalModifier}`,
-        `k-Button--fit-${fit}`,
+        `k-Button--${size || 'regular'}`,
+        `k-Button--${internalModifier || 'hydrogen'}`,
+        `k-Button--fit-${fit || 'min-width'}`,
         {
           [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
@@ -275,6 +275,7 @@ Button.propTypes = {
   modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
   active: PropTypes.bool,
 }
+
 Button.defaultProps = {
   tag: 'button',
   rounded: false,
