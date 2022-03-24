@@ -139,7 +139,7 @@ const StyledDropdownMenu = styled.details`
     .k-DropdownMenu__menu__item__iconWrapper {
       height: ${pxToRem(16)};
       width: ${pxToRem(16)};
-      flex: 0 0 ${pxToRem(pxToRem(16))};
+      flex: 0 0 ${pxToRem(16)};
 
       svg {
         width: ${pxToRem(16)};

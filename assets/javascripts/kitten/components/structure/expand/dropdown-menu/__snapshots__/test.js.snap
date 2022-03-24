@@ -266,9 +266,9 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper {
   height: 1rem;
   width: 1rem;
-  -webkit-flex: 0 0 NaNrem;
-  -ms-flex: 0 0 NaNrem;
-  flex: 0 0 NaNrem;
+  -webkit-flex: 0 0 1rem;
+  -ms-flex: 0 0 1rem;
+  flex: 0 0 1rem;
 }
 
 .c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
@@ -610,9 +610,9 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 .c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper {
   height: 1rem;
   width: 1rem;
-  -webkit-flex: 0 0 NaNrem;
-  -ms-flex: 0 0 NaNrem;
-  flex: 0 0 NaNrem;
+  -webkit-flex: 0 0 1rem;
+  -ms-flex: 0 0 1rem;
+  flex: 0 0 1rem;
 }
 
 .c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
