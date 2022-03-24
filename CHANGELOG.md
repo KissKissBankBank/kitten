@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Alert`: Improve styles.
 - Fix: `Button`: Force default values for props.
 - Fix: `DashboardLayout`: Fix alerts fade on mobile menu open.
 
