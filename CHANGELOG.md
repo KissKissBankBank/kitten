@@ -17,6 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `LinkIconNext`
 - Fix: `Alert`: Improve styles.
 - Fix: `Button`: Force default values for props.
+- Fix: `DashboardLayout`: Fix alerts fade on mobile menu open.
 
 ## [9.0.0] - 2022-03-21
 

@@ -150,10 +150,15 @@ export const StyledDashboard = styled.div`
         left: 0;
         transition: left 0.3s ease-in-out;
 
-        .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
-          opacity: 0.8;
-          background-color: ${COLORS.font1};
-          pointer-events: all;
+        .k-DashboardLayout__mainWrapper {
+          .k-DashboardLayout__main,
+          .k-DashboardLayout__alerts {
+            &::before {
+              opacity: 0.8;
+              background-color: ${COLORS.font1};
+              pointer-events: all;
+            }
+          }
         }
 
         .k-DashboardLayout__toaster__wrapper {
@@ -214,10 +219,9 @@ export const StyledDashboard = styled.div`
           padding: ${pxToRem(12)};
         }
 
+        .k-DashboardLayout__alerts,
         .k-DashboardLayout__main {
           position: relative;
-          margin-left: ${pxToRem(2)};
-          flex: 1 0 auto;
 
           &::before {
             content: '';
@@ -233,6 +237,11 @@ export const StyledDashboard = styled.div`
             transition: background-color 0.2s ease-in-out,
               opacity 0.2s ease-in-out;
           }
+        }
+
+        .k-DashboardLayout__main {
+          margin-left: ${pxToRem(2)};
+          flex: 1 0 auto;
 
           &:not(.k-DashboardLayout__main--fullHeight) {
             padding-top: ${pxToRem(80)};
