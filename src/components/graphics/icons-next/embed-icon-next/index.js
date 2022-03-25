@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.FacebookIconNext = void 0;
+exports.EmbedIconNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -15,27 +15,28 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _excluded = ["color", "title"];
 
-var FacebookIconNext = function FacebookIconNext(_ref) {
+var EmbedIconNext = function EmbedIconNext(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
-    width: "13",
-    height: "26",
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 13 26"
+    fill: "none"
   }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
-    d: "M8.445 26V14.16h3.85l.573-4.636H8.445V6.57c0-1.338.36-2.254 2.21-2.254H13V.184A29.988 29.988 0 0 0 9.565 0c-3.403 0-5.74 2.156-5.74 6.113v3.402H0v4.636h3.833V26h4.612Z",
-    fill: color
+    fill: color,
+    d: "M10.17 3.6c.15-.53-.09-1.05-.51-1.16-.43-.12-.89.21-1.03.74l-2.8 10.46c-.15.53.09 1.05.51 1.16.43.11.89-.22 1.03-.74l2.8-10.47Zm1.26 8.38a.8.8 0 0 1 0-1.13l1.84-1.83-1.84-1.84a.8.8 0 1 1 1.14-1.13l2.96 2.97-2.96 2.96a.8.8 0 0 1-1.14 0ZM4.57 6.05a.8.8 0 0 1 0 1.13L2.73 9.02l1.84 1.83a.8.8 0 0 1-1.14 1.13L.47 9.02l2.96-2.97a.8.8 0 0 1 1.14 0Z"
   }));
 };
 
-exports.FacebookIconNext = FacebookIconNext;
-FacebookIconNext.propTypes = {
+exports.EmbedIconNext = EmbedIconNext;
+EmbedIconNext.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string
 };
-FacebookIconNext.defaultProps = {
-  color: '#fff',
-  title: null
+EmbedIconNext.defaultProps = {
+  color: '#222',
+  title: ''
 };

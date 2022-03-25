@@ -191,6 +191,7 @@ export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
 export { CrossCircleIconNext } from './components/graphics/icons-next/cross-circle-icon-next';
 export { CubeIconNext } from './components/graphics/icons-next/cube-icon-next';
 export { EditIconNext } from './components/graphics/icons-next/edit-icon-next';
+export { EmbedIconNext } from './components/graphics/icons-next/embed-icon-next';
 export { EnvelopeIconNext } from './components/graphics/icons-next/envelope-icon-next';
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next';
 export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next';
@@ -201,6 +202,7 @@ export { HomeIconNext } from './components/graphics/icons-next/home-icon-next';
 export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next';
 export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next';
 export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next';
+export { LinkIconNext } from './components/graphics/icons-next/link-icon-next';
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next';
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon';
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next';

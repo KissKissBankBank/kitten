@@ -4,20 +4,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `DropdownMenu`: Add `icon` prop to `Button` and `Link` subcomponents, accepts icon React component.
-- Fix: Icons: Add missing `viewBox` attribute to the following components:
+## [9.1.0] - 2022-03-25
+
+Features:
+
+- Icons: Add the following icon components:
+  - `EmbedIconNext`
+  - `LinkIconNext`
+- `DropdownMenu`: Add `icon` prop to `Button` and `Link` subcomponents, accepts icon React component.
+
+Fixes:
+
+- Icons: Add missing `viewBox` attribute to the following components:
   - `FacebookIconNext`
   - `InstagramIconNext`
   - `LinkedinIconNext`
   - `MessengerIconNext`
   - `TwitterIconNext`
   - `WhatsappIconNext`
-- Feature: Add the following icon components:
-  - `EmbedIconNext`
-  - `LinkIconNext`
-- Fix: `Alert`: Improve styles.
-- Fix: `Button`: Force default values for props.
-- Fix: `DashboardLayout`: Fix alerts fade on mobile menu open.
+- `Alert`: Improve styles.
+- `Button`: Force default values for props.
+- `DashboardLayout`: Fix alerts fade on mobile menu open.
 
 ## [9.0.0] - 2022-03-21
 
