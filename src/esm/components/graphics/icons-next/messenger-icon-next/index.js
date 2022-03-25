@@ -11,6 +11,7 @@ export var MessengerIconNext = function MessengerIconNext(_ref) {
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "27",
     height: "27",
+    viewBox: "0 0 27 27",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, props), title && /*#__PURE__*/React.createElement("title", null, title), /*#__PURE__*/React.createElement("path", {

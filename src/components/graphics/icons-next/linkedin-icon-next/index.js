@@ -22,6 +22,7 @@ var LinkedinIconNext = function LinkedinIconNext(_ref) {
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "22",
     height: "22",
+    viewBox: "0 0 22 22",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
   }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {

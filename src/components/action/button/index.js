@@ -75,7 +75,7 @@ var Button = function Button(_ref2) {
   var internalModifier = active ? 'lithium' : modifier;
   var internalTag = as || tag;
   return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Button', className, "k-Button--" + size, "k-Button--" + internalModifier, "k-Button--fit-" + fit, (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
+    className: (0, _classnames.default)('k-Button', className, "k-Button--" + (size || 'regular'), "k-Button--" + (internalModifier || 'hydrogen'), "k-Button--fit-" + (fit || 'min-width'), (_classNames = {}, _classNames["k-Button--mobile-fit-" + mobileFit] = !!mobileFit, _classNames['k-Button--disabled'] = disabled, _classNames['k-Button--rounded'] = rounded, _classNames)),
     modifier: internalModifier,
     style: {
       '--Button-border-radius': borderRadius != null ? (0, _typography.pxToRem)(borderRadius) : null
