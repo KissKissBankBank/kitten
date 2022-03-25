@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Change/Deprecation: Deprecate the `variant` prop on the following components:
+  - `RadioButton`
+  - `RadioButtonSet`
+- Feature: `Radio`: Add component.
+- Feature: `RadioSet`: Add component.
+- Feature: `Field`: Add `RadioSet` subcomponent.
+
 ## [9.1.0] - 2022-03-25
 
 Features:
@@ -191,15 +198,15 @@ Fixes:
 
 Breaking changes:
 
-  - Move component files for a better organization.
-  - `Icons`: Add the following components:
-    - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
-    - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
-    - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
+- Move component files for a better organization.
+- `Icons`: Add the following components:
+  - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
+  - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
+  - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
 
 Feature:
 
-  - `Icons`: Add `CrossCircleIconNext` component.
+- `Icons`: Add `CrossCircleIconNext` component.
 
 ## [7.3.0] - 2022-02-07
 

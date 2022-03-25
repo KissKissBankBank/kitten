@@ -67,11 +67,6 @@ export default {
       options: ['small', 'regular', 'big'],
       control: 'inline-radio',
     },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
-    },
     design: {
       name: 'design',
       options: ['disc', 'check'],
@@ -93,7 +88,6 @@ const defaultArgs = {
   id: 'story-radio-button-set',
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
   fontWeight: 'regular',
