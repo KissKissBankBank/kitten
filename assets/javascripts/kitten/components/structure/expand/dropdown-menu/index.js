@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
 import { ArrowContainer } from '../../../information/boxes/arrow-container'
-import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { useFocusTrap } from '../../../../helpers/dom/use-focus-trap'
@@ -68,8 +67,9 @@ const StyledDropdownMenu = styled.details`
   }
 
   .k-DropdownMenu__menu {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
+    gap: ${pxToRem(1)};
     z-index: 150;
 
     position: absolute;
@@ -86,7 +86,7 @@ const StyledDropdownMenu = styled.details`
   }
 
   &[open] .k-DropdownMenu__menu {
-    animation: 0.16s ease ${zoomInAndOpacity};
+    animation: var(--transition) ${zoomInAndOpacity};
   }
 
   &.k-DropdownMenu--left .k-DropdownMenu__menu {
@@ -106,37 +106,53 @@ const StyledDropdownMenu = styled.details`
 
   .k-DropdownMenu__menu__item {
     ${TYPOGRAPHY.fontStyles.regular}
-    color: ${COLORS.background1};
+    color: var(--color-grey-000);
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: ${pxToRem(10)};
     padding: ${pxToRem(7)} ${pxToRem(15)};
-    line-height: 1;
+    line-height: ${pxToRem(16)};
     font-size: ${stepToRem(-1)};
     text-align: left;
     transition: color 0.2s ease;
 
+    & svg,
+    & svg path {
+      fill: currentColor;
+    }
+
     &:hover {
-      color: ${COLORS.primary1};
+      color: var(--color-primary-100);
     }
 
-    &:active {
-      color: ${COLORS.primary4};
-    }
-
+    &:active,
     &:focus {
-      color: ${COLORS.primary4};
+      color: var(--color-primary-300);
     }
 
     &:focus-visible {
       outline: auto;
     }
+
+    .k-DropdownMenu__menu__item__iconWrapper {
+      height: ${pxToRem(16)};
+      width: ${pxToRem(16)};
+      flex: 0 0 ${pxToRem(16)};
+
+      svg {
+        max-width: ${pxToRem(16)};
+        max-height: ${pxToRem(16)};
+      }
+    }
   }
 
   .k-DropdownMenu__menu__separator {
-    height: ${pxToRem(2)};
-    background: ${COLORS.grey1};
+    height: ${pxToRem(1)};
+    background: var(--color-grey-700);
     padding: 0;
-    margin: ${pxToRem(5)} 0;
+    margin: ${pxToRem(7)} ${pxToRem(15)};
   }
 `
 
@@ -267,10 +283,10 @@ export const DropdownMenu = ({
         )}
       </summary>
       <ArrowContainer
-        color={COLORS.font1}
+        color="var(--color-grey-900)"
         size={8}
         padding={0}
-        borderRadius={4}
+        borderRadius={8}
         position="top"
         {...arrowDistanceProps}
         {...menuProps}
@@ -292,7 +308,7 @@ DropdownMenu.defaultProps = {
   positionedButton: false,
 }
 
-DropdownMenu.Link = ({ href = '', className, ...rest }) => (
+DropdownMenu.Link = ({ href = '', className, icon, children, ...rest }) => (
   <a
     href={href}
     className={classNames(
@@ -301,10 +317,19 @@ DropdownMenu.Link = ({ href = '', className, ...rest }) => (
       className,
     )}
     {...rest}
-  />
+  >
+    <IconWrapper icon={icon} />
+    <span>{children}</span>
+  </a>
 )
 
-DropdownMenu.Button = ({ type = 'button', className, ...rest }) => (
+DropdownMenu.Button = ({
+  type = 'button',
+  className,
+  icon,
+  children,
+  ...rest
+}) => (
   <button
     type={type}
     className={classNames(
@@ -314,7 +339,10 @@ DropdownMenu.Button = ({ type = 'button', className, ...rest }) => (
       className,
     )}
     {...rest}
-  />
+  >
+    <IconWrapper icon={icon} />
+    <span>{children}</span>
+  </button>
 )
 
 DropdownMenu.Separator = ({ className, ...rest }) => (
@@ -327,3 +355,9 @@ DropdownMenu.Separator = ({ className, ...rest }) => (
     {...rest}
   />
 )
+
+const IconWrapper = ({ icon }) => {
+  if (!icon) return null
+
+  return <span className="k-DropdownMenu__menu__item__iconWrapper">{icon}</span>
+}

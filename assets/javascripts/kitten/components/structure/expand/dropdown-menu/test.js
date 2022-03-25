@@ -13,7 +13,7 @@ describe('<DropdownMenu />', () => {
           <DropdownMenu button={() => <span>Open me!</span>}>
             <DropdownMenu.Link>Content</DropdownMenu.Link>
             <DropdownMenu.Separator />
-            <DropdownMenu.Button>Content</DropdownMenu.Button>
+            <DropdownMenu.Button icon={<svg />}>Content</DropdownMenu.Button>
           </DropdownMenu>,
         )
         .toJSON()
@@ -33,7 +33,7 @@ describe('<DropdownMenu />', () => {
             menuPosition="right"
             button={() => <span>Open me!</span>}
           >
-            <DropdownMenu.Link>Content</DropdownMenu.Link>
+            <DropdownMenu.Link icon={<svg />}>Content</DropdownMenu.Link>
             <DropdownMenu.Separator />
             <DropdownMenu.Button>Content</DropdownMenu.Button>
           </DropdownMenu>,

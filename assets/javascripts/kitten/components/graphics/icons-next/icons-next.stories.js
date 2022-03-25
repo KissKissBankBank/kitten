@@ -14,6 +14,7 @@ import {
   CrossCircleIconNext,
   CubeIconNext,
   EditIconNext,
+  EmbedIconNext,
   EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
@@ -24,6 +25,7 @@ import {
   InfiniteIconNext,
   InstagramIconNext,
   LargeArrowIconNext,
+  LinkIconNext,
   LinkedinIconNext,
   LockOutlineIcon,
   MessengerIconNext,
@@ -210,9 +212,15 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
         </IconContainer>
+        <IconContainer>
+          <LinkIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <EmbedIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
       </Group>
 
-      <Group title="Icônes remplis">
+      <Group title="Icônes remplies">
         <IconContainer suffix="bgColor">
           <HeartIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>

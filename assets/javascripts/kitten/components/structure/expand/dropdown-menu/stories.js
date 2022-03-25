@@ -7,6 +7,14 @@ import {
   AvatarWithTextAndBadge,
   Text,
   ArrowIcon,
+  LinkIconNext,
+  FacebookIconNext,
+  TwitterIconNext,
+  InstagramIconNext,
+  MessengerIconNext,
+  WhatsappIconNext,
+  LinkedinIconNext,
+  EmbedIconNext,
 } from 'kitten'
 import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
@@ -116,13 +124,38 @@ export const Default = ({ menuPosition, ...args }) => {
       <div className="k-u-flex-justifyContent-end">
         <DropdownMenu
           {...args}
+          open
           positionedButton
           menuPosition={menuPosition || 'left'}
         >
-          <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
-          <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+          <DropdownMenu.Link href="#" icon={<LinkIconNext />}>
+            Copier le lien
+          </DropdownMenu.Link>
           <DropdownMenu.Separator />
-          <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
+          <DropdownMenu.Button icon={<FacebookIconNext />}>
+            Facebook
+          </DropdownMenu.Button>
+          <DropdownMenu.Button icon={<TwitterIconNext />}>
+            Twitter
+          </DropdownMenu.Button>
+          <DropdownMenu.Button icon={<InstagramIconNext />}>
+            Instagram
+          </DropdownMenu.Button>
+          <DropdownMenu.Button icon={<MessengerIconNext />}>
+            Messenger
+          </DropdownMenu.Button>
+          <DropdownMenu.Button icon={<WhatsappIconNext />}>
+            WhatsApp
+          </DropdownMenu.Button>
+          <DropdownMenu.Button
+            icon={<LinkedinIconNext width={13} heigh={13} />}
+          >
+            LinkedIn
+          </DropdownMenu.Button>
+          <DropdownMenu.Separator />
+          <DropdownMenu.Button icon={<EmbedIconNext />}>
+            Widget
+          </DropdownMenu.Button>
         </DropdownMenu>
       </div>
     </StyledWrapper>

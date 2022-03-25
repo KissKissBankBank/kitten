@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownMenu`: Add `icon` prop to `Button` and `Link` subcomponents, accepts icon React component.
+- Fix: Icons: Add missing `viewBox` attribute to the following components:
+  - `FacebookIconNext`
+  - `InstagramIconNext`
+  - `LinkedinIconNext`
+  - `MessengerIconNext`
+  - `TwitterIconNext`
+  - `WhatsappIconNext`
+- Feature: Add the following icon components:
+  - `EmbedIconNext`
+  - `LinkIconNext`
 - Fix: `Alert`: Improve styles.
 - Fix: `Button`: Force default values for props.
 
@@ -11,35 +22,35 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking Changes:
 
-  - `ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
-  - `Button`: Deprecate `fluid` and `icon` props.
-  - `Tokens`: Update token color with semantic color.
+- `ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
+- `Button`: Deprecate `fluid` and `icon` props.
+- Tokens: Update token color with semantic color.
 
 Feature:
 
-  - Utilities: Add `k-u-clamp` util class, with optional `--line-clamp` custom variable.
+- Utilities: Add `k-u-clamp` util class, with optional `--line-clamp` custom variable.
 
 Fixes:
 
-  - `HeaderNav`: Fix horizontal scroll.
-  - `SummaryCard`: Improve `contributorSubscription` columns.
+- `HeaderNav`: Fix horizontal scroll.
+- `SummaryCard`: Improve `contributorSubscription` columns.
 
 ## [8.9.1] - 2022-03-16
 
 Fixes:
 
-  - `CheckableButton`: Improve style.
-  - `ContentCard`: Update padding for mobile view.
+- `CheckableButton`: Improve style.
+- `ContentCard`: Update padding for mobile view.
 
 ## [8.9.0] - 2022-03-09
 
 Features:
 
-  - `RadioButton`: Add `paragraphStyle` and `fontWeight` props. 
-  - `Tag`: Add `flex` prop, to behave as flexbox container.
-  - `ProjectCard`: Add `topLine` prop, accepts React node.
-  - `ProjectCard`: Add `Avatar` subcomponent, accepts `imageProps` prop.
-  - `ProjectCard`: Add `noMargin` prop to `ItemsLine` subcomponent.
+- `RadioButton`: Add `paragraphStyle` and `fontWeight` props.
+- `Tag`: Add `flex` prop, to behave as flexbox container.
+- `ProjectCard`: Add `topLine` prop, accepts React node.
+- `ProjectCard`: Add `Avatar` subcomponent, accepts `imageProps` prop.
+- `ProjectCard`: Add `noMargin` prop to `ItemsLine` subcomponent.
 
 ## [8.8.0] - 2022-03-08
 
@@ -278,7 +289,7 @@ Fixes:
 Features:
 
 - `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
-- `Tokens`: Update colors token in `tokens.json`.
+- Tokens: Update colors token in `tokens.json`.
 
 Fixes:
 
@@ -291,7 +302,7 @@ Fixes:
 
 Feature:
 
-- `Tokens`: Update yellow colors.
+- Tokens: Update yellow colors.
 
 Fixes:
 
