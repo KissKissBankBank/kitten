@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RadiButton /> default matches with snapshot 1`] = `
-.c0 {
-  margin: 0.625rem 0;
-}
-
-.c0,
-.c0 * {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.c0 .k-Form-RadioButton__label {
+exports[`<Radio /> default matches with snapshot 1`] = `
+.c0 .k-Form-Radio__label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,9 +17,11 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   cursor: pointer;
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
 }
 
-.c0 .k-Form-RadioButton__label::before {
+.c0 .k-Form-Radio__label::before {
   box-sizing: border-box;
   display: block;
   -webkit-flex-shrink: 0;
@@ -41,63 +33,37 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   content: '';
   background-position: center;
   background-repeat: no-repeat;
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
   border: var(--border);
   border-radius: var(--border-radius-rounded);
-  -webkit-transition: border 0.2s,background 0.2s;
-  transition: border 0.2s,background 0.2s;
+  -webkit-transition: border var(--transition),background var(--transition);
+  transition: border var(--transition),background var(--transition);
 }
 
-.c0 .k-Form-RadioButton__input {
+.c0 .k-Form-Radio__input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.c0 .k-Form-RadioButton__input:focus + .k-Form-RadioButton__label::before {
-  border-color: var(--color-primary-500,#19b4fa);
+.c0 .k-Form-Radio__input:focus + .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
   outline-style: auto;
 }
 
-.c0 .k-Form-RadioButton__input:focus:not(:focus-visible) + .k-Form-RadioButton__label::before {
+.c0 .k-Form-Radio__input:focus:not(:focus-visible) + .k-Form-Radio__label::before {
   outline-color: transparent;
 }
 
-.c0 .k-Form-RadioButton__input:focus-visible + .k-Form-RadioButton__label::before {
+.c0 .k-Form-Radio__input:focus-visible + .k-Form-Radio__label::before {
   outline-style: auto;
 }
 
-.c0 .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
-  border: 0.3125rem solid var(--color-primary-500,#19b4fa);
+.c0 .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
+  border: 0.3125rem solid var(--color-primary-500);
 }
 
-.c0.k-Form-RadioButton--error .k-Form-RadioButton__label::before {
-  border-color: var(--color-danger-300,#ffb2c7);
-}
-
-.c0.k-Form-RadioButton--error .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
-  border-color: var(--color-danger-500,#ff0046);
-}
-
-.c0 .k-Form-RadioButton__input:disabled {
-  cursor: not-allowed;
-}
-
-.c0 .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label {
-  border-color: var(--color-grey-400,#d8d8d8);
-}
-
-.c0 .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label::before {
-  background-color: var(--color-grey-300,#eee);
-  border-color: var(--color-grey-400,#d8d8d8);
-}
-
-.c0 .k-Form-RadioButton__input:disabled:checked + .k-Form-RadioButton__label::before {
-  background-color: var(--color-grey-000,#fff);
-  border-color: var(--color-grey-400,#d8d8d8);
-}
-
-.c0 .k-Form-RadioButton__labelText {
+.c0 .k-Form-Radio__labelText {
   -webkit-flex: 1 0 calc(100% - 1.625rem);
   -ms-flex: 1 0 calc(100% - 1.625rem);
   flex: 1 0 calc(100% - 1.625rem);
@@ -107,27 +73,45 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   line-height: 1.5;
 }
 
-.c0:active .k-Form-RadioButton__labelText,
-.c0 .k-Form-RadioButton__input:active + .k-Form-RadioButton__labelText {
-  color: var(--color-primary-900,#0496cc);
+.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--regular {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
 }
 
-.c0.k-Form-RadioButton--largeLabel .k-Form-RadioButton__label::before {
+.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--light {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--bold {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  -webkit-letter-spacing: .01rem;
+  -moz-letter-spacing: .01rem;
+  -ms-letter-spacing: .01rem;
+  letter-spacing: .01rem;
+  font-weight: 600;
+}
+
+.c0 .k-Form-Radio__input:active + .k-Form-Radio__labelText {
+  color: var(--color-primary-500);
+}
+
+.c0.k-Form-Radio--largeLabel .k-Form-Radio__label::before {
   margin-top: 0.5rem;
 }
 
-.c0.k-Form-RadioButton--largeLabel .k-Form-RadioButton__labelText {
+.c0.k-Form-Radio--largeLabel .k-Form-Radio__labelText {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
 }
 
-.c0 .k-Form-RadioButton__labelText--withContents {
+.c0 .k-Form-Radio__labelText--withContents {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
-.c0 .k-Form-RadioButton__labelContents {
+.c0 .k-Form-Radio__labelContents {
   margin-top: 0.25rem;
   margin-left: 1.625rem;
   -webkit-flex: 1 0 calc(100% - 2.25rem);
@@ -139,215 +123,102 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   line-height: 1.1875rem;
 }
 
-.c0 .k-Form-RadioButton__labelContents:empty {
+.c0 .k-Form-Radio__labelContents:empty {
   display: none;
 }
 
-.c0.k-Form-RadioButton--largeContent .k-Form-RadioButton__labelContents {
+.c0.k-Form-Radio--largeContent .k-Form-Radio__labelContents {
   font-size: 0.875rem;
 }
 
-.c0.k-Form-RadioButton--orion {
-  margin: 0.9375rem 0;
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__label::before {
-  width: 1rem;
-  height: 1rem;
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__label {
-  box-sizing: border-box;
-  min-height: 4.375rem;
-  border-radius: var(--border-radius-xs);
-  border: var(--border);
-  padding: 1.5rem 0.9375rem;
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__label::before {
-  margin-top: 0.1875rem;
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:hover:not(:disabled) + .k-Form-RadioButton__label {
-  border-color: var(--color-primary-300,#bae8fd);
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:focus:not(:disabled) + .k-Form-RadioButton__label {
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:active:not(:disabled) + .k-Form-RadioButton__label {
-  border-color: var(--color-primary-500,#19b4fa);
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label {
-  border-color: var(--color-primary-500,#19b4fa);
-  background-color: var(--color-primary-100,#e8f7fe);
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label {
-  border-color: var(--color-grey-300,#eee);
-  color: var(--color-grey-500,#b8b8b8);
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:checked:disabled + .k-Form-RadioButton__label {
-  border-color: var(--color-grey-500,#b8b8b8);
-  color: var(--color-grey-700,#636363);
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:checked:disabled + .k-Form-RadioButton__label::before {
-  border-color: var(--color-grey-500,#b8b8b8);
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--error .k-Form-RadioButton__input:not(:disabled) + .k-Form-RadioButton__label {
-  border-color: var(--color-danger-300,#ffb2c7);
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--paragraphStyle .k-Form-RadioButton__label {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--paragraphStyle .k-Form-RadioButton__label::before {
-  margin-right: 0.9375rem;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--paragraphStyle .k-Form-RadioButton__labelText {
-  -webkit-flex: 1 0 calc(100% - 2.1875rem);
-  -ms-flex: 1 0 calc(100% - 2.1875rem);
-  flex: 1 0 calc(100% - 2.1875rem);
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton__labelText--regular .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton__labelText--light .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton__labelText--bold .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  -webkit-letter-spacing: .01rem;
-  -moz-letter-spacing: .01rem;
-  -ms-letter-spacing: .01rem;
-  letter-spacing: .01rem;
-  font-weight: 600;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--small {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--small .k-Form-RadioButton__label {
-  padding: 0.625rem 0.9375rem;
-  min-height: 0;
-}
-
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label {
-  min-height: 3.75rem;
-  padding: 1.125rem 0.9375rem;
-}
-
-.c0.k-Form-RadioButton--check .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
+.c0.k-Form-Radio--check .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
   border-width: 0.125rem;
-  background-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' width='11' height='8' fill='%23fff' %3E%3Cpath d='M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z' /%3E%3C/svg%3E");
 }
 
-.c0.k-Form-RadioButton--check.k-Form-RadioButton--error .k-Form-RadioButton__input:checked:not(:disabled) + .k-Form-RadioButton__label::before {
+.c0.k-Form-Radio--check.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
   background-color: var(--color-danger-500,#ff0046);
 }
 
-.c0.k-Form-RadioButton--check .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label::before {
-  background-color: var(--color-grey-400,#d8d8d8);
+.c0.k-Form-Radio--check .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
+  background-color: var(--color-grey-500);
+}
+
+.c0:hover .k-Form-Radio__label::before {
+  border-color: var(--color-primary-300);
+}
+
+.c0:hover .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+}
+
+.c0:active .k-Form-Radio__label::before,
+.c0:focus .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+}
+
+.c0:active .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before,
+.c0:focus .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+}
+
+.c0.k-Form-Radio--error .k-Form-Radio__label::before {
+  border-color: var(--color-danger-300);
+}
+
+.c0.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  border-color: var(--color-danger-500);
+}
+
+.c0 .k-Form-Radio__input:disabled {
+  cursor: not-allowed;
+}
+
+.c0 .k-Form-Radio__input:disabled + .k-Form-Radio__label {
+  color: var(--color-grey-600);
+  cursor: not-allowed;
+}
+
+.c0 .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
+  background-color: var(--color-grey-000);
+  border-color: var(--color-grey-400);
+}
+
+.c0 .k-Form-Radio__input:disabled:checked + .k-Form-Radio__label::before {
+  background-color: var(--color-grey-000);
+  border-color: var(--color-grey-500);
 }
 
 @media (min-width:640px) {
-  .c0 .k-Form-RadioButton__labelContents {
+  .c0 .k-Form-Radio__labelContents {
     margin-top: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:640px) {
-  .c0.k-Form-RadioButton--orion {
-    margin: 1.25rem 0;
-  }
-
-  .c0.k-Form-RadioButton--orion .k-Form-RadioButton__label::before {
-    margin-top: 0.25rem;
-  }
-
-  .c0.k-Form-RadioButton--orion .k-Form-RadioButton__labelText {
-    -webkit-flex: 1 0 calc(100% - 1.875rem);
-    -ms-flex: 1 0 calc(100% - 1.875rem);
-    flex: 1 0 calc(100% - 1.875rem);
-    line-height: 1.375rem;
-  }
-
-  .c0.k-Form-RadioButton--orion .k-Form-RadioButton__labelContents {
-    margin-left: 1.875rem;
-    -webkit-flex: 1 0 calc(100% - 2.5rem);
-    -ms-flex: 1 0 calc(100% - 2.5rem);
-    flex: 1 0 calc(100% - 2.5rem);
-  }
-
-  .c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
-    border-width: 0.375rem;
-  }
-
-  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label {
-    min-height: 5rem;
-    padding: 1.75rem 0.9375rem;
-  }
-
-  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label::before {
-    margin: 0.125rem 1.25rem 0 0;
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
-  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__labelText {
-    -webkit-flex: 1 0 calc(100% - 2.5rem);
-    -ms-flex: 1 0 calc(100% - 2.5rem);
-    flex: 1 0 calc(100% - 2.5rem);
-    font-size: 1rem;
-  }
-}
-
 <div
-  className="c0 k-Form-RadioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+  className="c0 k-Form-Radio k-Form-Radio--disc k-Form-Radio--undefined"
 >
   <input
-    className="k-Form-RadioButton__input"
+    className="k-Form-Radio__input"
     disabled={false}
     id="test_1"
     name="test"
     type="radio"
   />
   <label
-    className="k-Form-RadioButton__label"
+    className="k-Form-Radio__label"
     htmlFor="test_1"
   >
     <span
-      className="k-Form-RadioButton__labelText k-Form-RadioButton__labelText--withContents"
+      className="k-Form-Radio__labelText k-Form-Radio__labelText--regular k-Form-Radio__labelText--withContents"
     >
-      RadioButton Label
+      Radio Label
     </span>
     <div
-      className="k-Form-RadioButton__labelContents"
+      className="k-Form-Radio__labelContents"
     >
       Children
     </div>

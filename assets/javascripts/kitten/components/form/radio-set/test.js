@@ -1,5 +1,5 @@
 import React from 'react'
-import { RadioSet } from '../../form/radio-button-set'
+import { RadioSet } from '../../form/radio-set'
 import renderer from 'react-test-renderer'
 
 describe('<RadioSet />', () => {
@@ -9,7 +9,7 @@ describe('<RadioSet />', () => {
       component = renderer
         .create(
           <RadioSet
-            name="test-radio-button-set"
+            name="test-radio-set"
             label="Label"
             items={[
               {
@@ -42,7 +42,7 @@ describe('<RadioSet />', () => {
       component = renderer
         .create(
           <RadioSet
-            name="test-radio-button-set"
+            name="test-radio-set"
             items={[
               {
                 text: 'Option A',
@@ -75,7 +75,7 @@ describe('<RadioSet />', () => {
       component = renderer
         .create(
           <RadioSet
-            name="test-radio-button-set"
+            name="test-radio-set"
             label="Label test"
             labelProps={{ 'data-test': true, className: 'customClass' }}
             items={[
