@@ -73,7 +73,7 @@ const StyledRadio = styled.div`
     font-size: ${stepToRem(-1)};
     line-height: 1.5;
 
-    &.k-Form-Radio__labelText--regular {
+    &.k-Form-Radio__labelText--normal {
       ${TYPOGRAPHY.fontStyles.regular};
     }
     &.k-Form-Radio__labelText--light {
@@ -227,7 +227,6 @@ export const Radio = ({
         'k-Form-Radio',
         className,
         `k-Form-Radio--${design}`,
-        `k-Form-Radio--${size}`,
         {
           'k-Form-Radio--error': error,
         },
@@ -267,12 +266,12 @@ Radio.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   design: PropTypes.oneOf(['disc', 'check']),
-  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  fontWeight: PropTypes.oneOf(['light', 'normal', 'bold']),
 }
 
 Radio.defaultProps = {
   error: false,
   disabled: false,
   design: 'disc',
-  fontWeight: 'regular',
+  fontWeight: 'normal',
 }

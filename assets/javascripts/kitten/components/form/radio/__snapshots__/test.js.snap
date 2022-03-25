@@ -73,7 +73,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   line-height: 1.5;
 }
 
-.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--regular {
+.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--normal {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
@@ -199,7 +199,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-Radio k-Form-Radio--disc k-Form-Radio--undefined"
+  className="c0 k-Form-Radio k-Form-Radio--disc"
 >
   <input
     className="k-Form-Radio__input"
@@ -213,7 +213,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
     htmlFor="test_1"
   >
     <span
-      className="k-Form-Radio__labelText k-Form-Radio__labelText--regular k-Form-Radio__labelText--withContents"
+      className="k-Form-Radio__labelText k-Form-Radio__labelText--normal k-Form-Radio__labelText--withContents"
     >
       Radio Label
     </span>

@@ -429,7 +429,6 @@ RadioButton.defaultProps = {
   largeContent: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
   fontWeight: 'regular',

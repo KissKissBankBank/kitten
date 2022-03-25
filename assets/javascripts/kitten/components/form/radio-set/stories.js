@@ -46,7 +46,7 @@ export default {
     },
     fontWeight: {
       name: 'fontWeight',
-      options: ['light', 'regular', 'bold'],
+      options: ['light', 'normal', 'bold'],
       control: 'inline-radio',
     },
   },
@@ -57,7 +57,7 @@ const defaultArgs = {
   error: false,
   disabled: false,
   design: 'disc',
-  fontWeight: 'regular',
+  fontWeight: 'normal',
 }
 
 export const Default = args => <RadioSet {...args} />

@@ -121,7 +121,6 @@ RadioButtonSet.defaultProps = {
   error: false,
   label: null,
   items: [],
-  variant: 'orion',
   design: 'disc',
   disabled: false,
   labelProps: {},

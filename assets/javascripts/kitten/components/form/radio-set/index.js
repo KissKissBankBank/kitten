@@ -87,7 +87,7 @@ RadioSet.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
-  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  fontWeight: PropTypes.oneOf(['light', 'normal', 'bold']),
 }
 
 RadioSet.defaultProps = {
@@ -98,5 +98,5 @@ RadioSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  fontWeight: 'regular',
+  fontWeight: 'normal',
 }

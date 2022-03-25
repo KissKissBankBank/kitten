@@ -35,7 +35,7 @@ Default.args = {
   text: 'Radio label',
   design: 'disc',
   children: null,
-  fontWeight: 'regular',
+  fontWeight: 'normal',
 }
 
 Default.argTypes = {
@@ -62,7 +62,7 @@ Default.argTypes = {
   },
   fontWeight: {
     name: 'fontWeight',
-    options: ['light', 'regular', 'bold'],
+    options: ['light', 'normal', 'bold'],
     control: 'inline-radio',
   },
 }
