@@ -62,6 +62,7 @@ const AlertWrapper = styled.div`
     flex: 1 0
       calc(100% - var(--alert-close-width, 0px) - var(--alert-icon-width, 0px));
     font-size: ${stepToRem(-1)};
+    line-height: ${pxToRem(18)};
   }
 
   .k-Alert__icon {
