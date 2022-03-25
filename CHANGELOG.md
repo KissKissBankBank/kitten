@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix overflow bug with `ButtonWithTooltip`.
+
 ## [9.1.0] - 2022-03-25
 
 Features:
