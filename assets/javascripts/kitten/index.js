@@ -536,6 +536,7 @@ export {
 export { useMedia } from './helpers/utils/use-media-query'
 export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook'
 export { createRangeFromZeroTo } from './helpers/utils/range'
+export { checkDeprecatedSizes} from './helpers/utils/deprecated'
 
 // ---
 // HOC
