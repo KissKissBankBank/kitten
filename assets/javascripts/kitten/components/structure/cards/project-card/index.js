@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import Truncate from 'react-truncate'
 
 import { StyledCard } from './styles'
 import { Text } from '../../../typography/text'
@@ -126,16 +125,14 @@ ProjectCard.propTypes = {
   topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
 }
 
-ProjectCard.Title = ({ children, className, ...props }) => {
+ProjectCard.Title = ({ className, style, ...props }) => {
   return (
     <Title
       modifier="septenary"
       noMargin
-      className={classNames('k-ProjectCard__title', className)}
+      className={classNames('k-ProjectCard__title', 'k-u-clamp-2', className)}
       {...props}
-    >
-      <Truncate lines={2}>{children}</Truncate>
-    </Title>
+    />
   )
 }
 

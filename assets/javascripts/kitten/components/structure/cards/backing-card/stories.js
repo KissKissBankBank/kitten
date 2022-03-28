@@ -219,7 +219,7 @@ Video.decorators = [
 Video.argTypes = argTypes
 Video.args = args
 
-export const InACarouselComponent = () => {
+export const InACarouselComponent = ({ truncateTitle, truncateText }) => {
   const itemMinWidth = useMedia({
     queries: [getMinQuery(ScreenConfig.M.min)],
     values: [280],
@@ -260,7 +260,7 @@ export const InACarouselComponent = () => {
           <BackingCard.Contents>
             <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
             <BackingCard.Title truncateText={truncateTitle}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor, sit amet adipiscing.
             </BackingCard.Title>
             <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
             <BackingCard.TagList>
