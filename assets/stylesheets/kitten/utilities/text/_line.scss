@@ -1,23 +1,17 @@
-/// Text ellipsis utilities.
+/// Text line utilities.
 ///
 /// @group text
 ///
 /// @example scss - Usage
 ///
-///     @include k-utilities-ellipsis;
+///     @include k-utilities-line;
 ///
 /// @example html
 ///
-///     <p class="k-u-ellipsis">…</p>
 ///     <p class="k-u-clamp">…</p>
+///     <p class="k-u-ellipsis">…</p>
 
-@mixin k-utilities-ellipsis {
-  .k-u-ellipsis {
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-  }
-
+@mixin k-utilities-line {
   .k-u-clamp {
     /* https://css-tricks.com/line-clampin/#weird-webkit-flexbox-way */
     text-overflow: ellipsis !important;
@@ -26,5 +20,11 @@
     display: -webkit-box !important;
     -webkit-line-clamp: var(--line-clamp, 3) !important;
     -webkit-box-orient: vertical !important;
+  }
+
+  .k-u-ellipsis {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
   }
 }
