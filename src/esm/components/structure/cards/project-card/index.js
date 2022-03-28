@@ -2,7 +2,7 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
     _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign"],
-    _excluded3 = ["children", "className"],
+    _excluded3 = ["className", "style"],
     _excluded4 = ["className", "lastLine"],
     _excluded5 = ["className", "noMargin"],
     _excluded6 = ["className"],
@@ -13,7 +13,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deprecated from 'prop-types-extra/lib/deprecated';
-import Truncate from 'react-truncate';
 import { StyledCard } from './styles';
 import { Text } from '../../../typography/text';
 import { Title } from '../../../typography/title';
@@ -92,17 +91,15 @@ ProjectCard.propTypes = {
 };
 
 ProjectCard.Title = function (_ref2) {
-  var children = _ref2.children,
-      className = _ref2.className,
+  var className = _ref2.className,
+      style = _ref2.style,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
     modifier: "septenary",
     noMargin: true,
-    className: classNames('k-ProjectCard__title', className)
-  }, props), /*#__PURE__*/React.createElement(Truncate, {
-    lines: 2
-  }, children));
+    className: classNames('k-ProjectCard__title', 'k-u-clamp-2', className)
+  }, props));
 };
 
 ProjectCard.Line = function (_ref3) {

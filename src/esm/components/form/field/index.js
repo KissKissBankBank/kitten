@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { FieldLabel } from './components/label';
 import { FieldInput } from './components/input';
 import { FieldError } from './components/error';
+import { FieldRadioSet } from './components/radio-set';
 import { FieldRadioButtonSet } from './components/radio-button-set';
 import { FieldCheckbox } from './components/checkbox';
 import { FieldPassword } from './components/password';
@@ -30,6 +31,7 @@ export var Field = /*#__PURE__*/function (_Component) {
 }(Component);
 Field.Label = FieldLabel;
 Field.Input = FieldInput;
+Field.RadioSet = FieldRadioSet;
 Field.RadioButtonSet = FieldRadioButtonSet;
 Field.Checkbox = FieldCheckbox;
 Field.ErrorMessage = FieldError;

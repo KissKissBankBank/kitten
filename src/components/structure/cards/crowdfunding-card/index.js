@@ -72,6 +72,7 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
       forceVersion = _ref.forceVersion,
       progressLabel = _ref.progressLabel,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  console.warn('This component is deprecated. Please use `ProjectCard` instead.');
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
