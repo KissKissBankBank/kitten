@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-edERGn cNMjT k-ProjectCard k-ProjectCard--normal"
+  className="sc-iWBNLc jYSIth k-ProjectCard k-ProjectCard--normal"
   href="//hello.world"
 >
   <div
@@ -18,7 +18,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <h1
-      className="sc-jQrDum qeylb k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -101,7 +101,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-edERGn cNMjT k-ProjectCard k-ProjectCard--normal"
+  className="sc-iWBNLc jYSIth k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -121,7 +121,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       Prolongation
     </div>
     <h1
-      className="sc-jQrDum qeylb k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -204,7 +204,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
 <div
-  className="sc-edERGn cNMjT k-ProjectCard k-ProjectCard--normal"
+  className="sc-iWBNLc jYSIth k-ProjectCard k-ProjectCard--normal"
 >
   <div
     className="k-ProjectCard__image"
@@ -234,7 +234,7 @@ exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
       />
     </div>
     <h1
-      className="sc-jQrDum qeylb k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
