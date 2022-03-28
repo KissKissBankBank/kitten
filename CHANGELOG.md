@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Deprecation/Change: `CrowdfundingCard`: Deprecate component.
+- Feature: Utilities: Add the following line utility classes:
+  - `k-u-clamp-1`
+  - `k-u-clamp-2`
+  - `k-u-clamp-3`
+  - `k-u-nowrap`
+- Fix: Cards: Remove `react-truncate` from the following components:
+  - `BackingCard`
+  - `CrowdfundingCard`
+  - `ProjectCard`
 - Fix: `HeaderNav`: Fix overflow bug with `ButtonWithTooltip`.
 
 ## [9.1.0] - 2022-03-25
