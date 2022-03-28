@@ -32,7 +32,7 @@ export var RadioButton = function RadioButton(_ref) {
       inputProps = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRadioButton, {
-    className: classNames('k-Form-RadioButton', className, "k-Form-RadioButton--" + variant, "k-Form-RadioButton--" + design, "k-Form-RadioButton--" + size, "k-Form-RadioButton__labelText--" + fontWeight, {
+    className: classNames('k-Form-RadioButton', className, "k-Form-RadioButton--" + (variant || 'orion'), "k-Form-RadioButton--" + design, "k-Form-RadioButton--" + size, "k-Form-RadioButton__labelText--" + fontWeight, {
       'k-Form-RadioButton--error': error,
       'k-Form-RadioButton--largeLabel': large,
       'k-Form-RadioButton--largeContent': largeContent,
