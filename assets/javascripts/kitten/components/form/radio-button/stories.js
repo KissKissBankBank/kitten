@@ -98,7 +98,7 @@ export const RadioButtonsWithParagraph = args => (
     <RadioButton name="test" {...args} id="test_2" />
     <RadioButton name="test" {...args} id="test_3" />
   </div>
-) 
+)
 
 RadioButtonsWithParagraph.args = {
   onChange: action('change'),
