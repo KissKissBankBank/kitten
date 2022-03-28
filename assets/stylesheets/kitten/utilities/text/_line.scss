@@ -10,8 +10,12 @@
 ///
 ///     <p class="k-u-clamp">…</p>
 ///     <p class="k-u-ellipsis">…</p>
+///     <p class="k-u-nowrap">…</p>
 
 @mixin k-utilities-line {
+  .k-u-clamp-1,
+  .k-u-clamp-2,
+  .k-u-clamp-3,
   .k-u-clamp {
     /* https://css-tricks.com/line-clampin/#weird-webkit-flexbox-way */
     text-overflow: ellipsis !important;
@@ -22,9 +26,23 @@
     -webkit-box-orient: vertical !important;
   }
 
+  .k-u-clamp-1 {
+    --line-clamp: 1;
+  }
+  .k-u-clamp-2 {
+    --line-clamp: 2;
+  }
+  .k-u-clamp-3 {
+    --line-clamp: 3;
+  }
+
   .k-u-ellipsis {
     text-overflow: ellipsis !important;
     overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  .k-u-nowrap {
     white-space: nowrap !important;
   }
 }
