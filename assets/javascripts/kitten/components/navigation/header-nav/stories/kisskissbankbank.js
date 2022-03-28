@@ -271,6 +271,7 @@ export const KissKissBankBankHeaderNavStory = ({
               size: 'tiny',
               rounded: true,
               modifier: 'hydrogen',
+              fit: 'icon',
             }}
             className="k-u-hidden@m-down"
           >

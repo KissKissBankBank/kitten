@@ -8,7 +8,10 @@ import { HEADER_HEIGHT } from './config'
 export const StyledHeader = styled.header`
   position: relative;
   z-index: var(--HeaderNav-zIndex);
-  overflow: hidden;
+
+  @media ${mq.mobileAndTablet} {
+    overflow: hidden;
+  }
 
   .k-HeaderNav__stickyContainer {
     width: 100%;
@@ -61,7 +64,7 @@ export const StyledHeader = styled.header`
     padding: 0;
     height: 100%;
 
-    @media (min-width: ${ScreenConfig.S.min}px) {
+    @media ${mq.tabletAndDesktop} {
       padding: 0 ${pxToRem(10)} 0 ${pxToRem(20)};
     }
   }
@@ -155,9 +158,9 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__right {
-    gap: ${pxToRem(10)};
     justify-content: flex-end;
     flex-grow: 1;
+    gap: ${pxToRem(10)};
     margin-right: ${pxToRem(20)};
 
     @media ${mq.desktop} {
@@ -363,7 +366,7 @@ export const StyledHeader = styled.header`
     max-height: calc(100vh - 100%);
     box-shadow: 0 ${pxToRem(3)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
 
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media ${mq.mobile} {
       min-width: 0;
       width: 100% !important;
       left: 0 !important;
@@ -398,7 +401,7 @@ export const StyledHeader = styled.header`
       opacity: 0;
     }
 
-    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    @media ${mq.mobile} {
       .k-HeaderNavDropdown__menu {
         min-width: 100vw;
         max-width: 100vw;
@@ -407,7 +410,7 @@ export const StyledHeader = styled.header`
       }
     }
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media ${mq.tabletAndDesktop} {
       position: relative;
 
       .k-HeaderNavDropdown__menu {
@@ -432,7 +435,7 @@ export const StyledHeader = styled.header`
     }
   }
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media ${mq.tabletAndDesktop} {
     .k-HeaderNav__right--padded .k-HeaderNavDropdown__menu {
       margin-left: ${pxToRem(-15)};
       margin-right: ${pxToRem(-15)};
