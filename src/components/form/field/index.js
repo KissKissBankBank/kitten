@@ -15,6 +15,8 @@ var _input = require("./components/input");
 
 var _error = require("./components/error");
 
+var _radioSet = require("./components/radio-set");
+
 var _radioButtonSet = require("./components/radio-button-set");
 
 var _checkbox = require("./components/checkbox");
@@ -48,6 +50,7 @@ var Field = /*#__PURE__*/function (_Component) {
 exports.Field = Field;
 Field.Label = _label.FieldLabel;
 Field.Input = _input.FieldInput;
+Field.RadioSet = _radioSet.FieldRadioSet;
 Field.RadioButtonSet = _radioButtonSet.FieldRadioButtonSet;
 Field.Checkbox = _checkbox.FieldCheckbox;
 Field.ErrorMessage = _error.FieldError;

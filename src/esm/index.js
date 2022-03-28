@@ -50,8 +50,10 @@ export { Field } from './components/form/field';
 export { FormActions } from './components/form/form-actions';
 export { Label } from './components/form/label';
 export { PillNumberInput } from './components/form/pill-number-input';
+export { Radio } from './components/form/radio';
 export { RadioButton } from './components/form/radio-button';
 export { RadioButtonSet } from './components/form/radio-button-set';
+export { RadioSet } from './components/form/radio-set';
 export { RangeSlider } from './components/form/range-slider';
 export { ToggleSwitch } from './components/form/toggle-switch';
 export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'; // Form/Input

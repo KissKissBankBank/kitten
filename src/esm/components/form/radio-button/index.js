@@ -3,6 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["className", "id", "children", "inputClassName", "large", "largeContent", "size", "text", "error", "disabled", "variant", "design", "fontWeight", "paragraphStyle"];
 import React from 'react';
 import PropTypes from 'prop-types';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import styled from 'styled-components';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
@@ -60,7 +61,7 @@ RadioButton.propTypes = {
   largeContent: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  variant: deprecated(PropTypes.oneOf(['andromeda', 'orion']), 'Please use the Radio component instead'),
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'regular', 'big']),
   fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
@@ -71,7 +72,6 @@ RadioButton.defaultProps = {
   largeContent: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
   fontWeight: 'regular',

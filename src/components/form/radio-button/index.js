@@ -13,6 +13,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -80,7 +82,7 @@ RadioButton.propTypes = {
   largeContent: _propTypes.default.bool,
   error: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
-  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
+  variant: (0, _deprecated.default)(_propTypes.default.oneOf(['andromeda', 'orion']), 'Please use the Radio component instead'),
   design: _propTypes.default.oneOf(['disc', 'check']),
   size: _propTypes.default.oneOf(['small', 'regular', 'big']),
   fontWeight: _propTypes.default.oneOf(['light', 'regular', 'bold']),
@@ -91,7 +93,6 @@ RadioButton.defaultProps = {
   largeContent: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
   fontWeight: 'regular',
