@@ -371,7 +371,7 @@ export const RadioButton = ({
       className={classNames(
         'k-Form-RadioButton',
         className,
-        `k-Form-RadioButton--${variant}`,
+        `k-Form-RadioButton--${variant || 'orion'}`,
         `k-Form-RadioButton--${design}`,
         `k-Form-RadioButton--${size}`,
         `k-Form-RadioButton__labelText--${fontWeight}`,
