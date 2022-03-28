@@ -52,7 +52,7 @@ export const RadioButtonSet = ({
     className={classNames(
       'k-Form-RadioButtonSet',
       className,
-      `k-Form-RadioButtonSet--${variant}`,
+      `k-Form-RadioButtonSet--${variant || 'orion'}`,
     )}
     disabled={disabled}
     {...props}
@@ -74,7 +74,7 @@ export const RadioButtonSet = ({
       {items.map(({ id, className, ...itemProps }) => (
         <RadioButton
           id={id}
-          variant={variant}
+          variant={variant || 'orion'}
           design={design}
           error={error}
           size={size}

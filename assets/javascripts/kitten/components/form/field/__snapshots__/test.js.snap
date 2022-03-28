@@ -700,14 +700,14 @@ Array [
     className="k-u-margin-top-single"
   >
     <fieldset
-      className="sc-jrQzAO biFKFO k-Form-RadioButtonSet k-Form-RadioButtonSet--undefined"
+      className="sc-jrQzAO biFKFO k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--undefined k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -729,7 +729,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--undefined k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -750,7 +750,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--undefined k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -765,6 +765,112 @@ Array [
           >
             <span
               className="k-Form-RadioButton__labelText"
+            >
+              Option C
+            </span>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>,
+]
+`;
+
+exports[`<Field /> with <Field.RadioSet /> matches with snapshot 1`] = `
+Array [
+  <div
+    className="k-u-margin-bottom-single"
+  >
+    <div
+      className="sc-dkPtRN eyQLwJ k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          htmlFor="option-a"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="k-u-margin-top-single"
+  >
+    <fieldset
+      className="sc-furwcr kuuqOf k-Form-RadioSet"
+      disabled={false}
+    >
+      <div
+        className="k-Form-RadioSet__radioContainer"
+      >
+        <div
+          className="sc-iCfMLu dePJZs k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+        >
+          <input
+            className="k-Form-Radio__input"
+            defaultChecked={true}
+            disabled={false}
+            id="option-a"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-Radio__label"
+            htmlFor="option-a"
+          >
+            <span
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+            >
+              Option A
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-iCfMLu dePJZs k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+        >
+          <input
+            className="k-Form-Radio__input"
+            disabled={false}
+            id="option-b"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-Radio__label"
+            htmlFor="option-b"
+          >
+            <span
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+            >
+              Option B
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-iCfMLu dePJZs k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+        >
+          <input
+            className="k-Form-Radio__input"
+            disabled={false}
+            id="option-c"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-Radio__label"
+            htmlFor="option-c"
+          >
+            <span
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
             >
               Option C
             </span>
