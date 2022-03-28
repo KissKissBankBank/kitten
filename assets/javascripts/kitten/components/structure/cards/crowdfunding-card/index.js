@@ -44,6 +44,10 @@ export const CrowdfundingCard = ({
   progressLabel,
   ...others
 }) => {
+  console.warn(
+    'This component is deprecated. Please use `ProjectCard` instead.',
+  )
+
   const removeCurrentFocus = () => {
     document.activeElement.blur()
   }
