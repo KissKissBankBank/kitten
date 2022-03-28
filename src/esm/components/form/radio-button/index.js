@@ -3,6 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["className", "id", "children", "inputClassName", "large", "largeContent", "size", "text", "error", "disabled", "variant", "design", "fontWeight", "paragraphStyle"];
 import React from 'react';
 import PropTypes from 'prop-types';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import styled from 'styled-components';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
@@ -31,7 +32,7 @@ export var RadioButton = function RadioButton(_ref) {
       inputProps = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRadioButton, {
-    className: classNames('k-Form-RadioButton', className, "k-Form-RadioButton--" + variant, "k-Form-RadioButton--" + design, "k-Form-RadioButton--" + size, "k-Form-RadioButton__labelText--" + fontWeight, {
+    className: classNames('k-Form-RadioButton', className, "k-Form-RadioButton--" + (variant || 'orion'), "k-Form-RadioButton--" + design, "k-Form-RadioButton--" + size, "k-Form-RadioButton__labelText--" + fontWeight, {
       'k-Form-RadioButton--error': error,
       'k-Form-RadioButton--largeLabel': large,
       'k-Form-RadioButton--largeContent': largeContent,
@@ -60,7 +61,7 @@ RadioButton.propTypes = {
   largeContent: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  variant: deprecated(PropTypes.oneOf(['andromeda', 'orion']), 'Please use the Radio component instead'),
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'regular', 'big']),
   fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
@@ -71,7 +72,6 @@ RadioButton.defaultProps = {
   largeContent: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
   fontWeight: 'regular',

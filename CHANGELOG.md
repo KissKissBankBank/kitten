@@ -4,23 +4,45 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Deprecation/Change: `CrowdfundingCard`: Deprecate component.
-- Feature: Utilities: Add the following line utility classes:
+## [9.2.2] - 2022-03-28
+
+Fix:
+
+- `RadioButton`: Hardcode default variant value.
+
+## [9.2.1] - 2022-03-28
+
+Fix:
+
+- `Field`: Fix `Field.RadioSet` import error.
+
+## [9.2.0] - 2022-03-28
+
+Deprecations/Changes:
+
+- `CrowdfundingCard`: Deprecate component.
+- Deprecate the `variant` prop on the following components:
+  - `RadioButton`
+  - `RadioButtonSet`
+
+Features:
+
+- Utilities: Add the following line utility classes:
   - `k-u-clamp-1`
   - `k-u-clamp-2`
   - `k-u-clamp-3`
   - `k-u-nowrap`
-- Fix: Cards: Remove `react-truncate` from the following components:
+- `Radio`: Add component.
+- `RadioSet`: Add component.
+- `Field`: Add `RadioSet` subcomponent.
+
+Fixes:
+
+- Cards: Replace `react-truncate` with `k-u-clamp` on the following components:
   - `BackingCard`
   - `CrowdfundingCard`
   - `ProjectCard`
-- Change/Deprecation: Deprecate the `variant` prop on the following components:
-  - `RadioButton`
-  - `RadioButtonSet`
-- Feature: `Radio`: Add component.
-- Feature: `RadioSet`: Add component.
-- Feature: `Field`: Add `RadioSet` subcomponent.
-- Fix: `HeaderNav`: Fix overflow bug with `ButtonWithTooltip`.
+- `HeaderNav`: Fix overflow bug with `ButtonWithTooltip`.
 
 ## [9.1.0] - 2022-03-25
 

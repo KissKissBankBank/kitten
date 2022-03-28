@@ -2,9 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Text } from '../../../../typography/text';
 import { Title } from '../../../../typography/title';
-import Truncate from 'react-truncate';
 
 var TitleComponent = /*#__PURE__*/function (_PureComponent) {
   _inheritsLoose(TitleComponent, _PureComponent);
@@ -33,14 +33,10 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
     }, !loading && /*#__PURE__*/React.createElement(Title, _extends({
       tag: "p",
       noMargin: true,
-      className: "k-CrowdfundingCard__title__title"
-    }, titleProps), titleTruncate && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Truncate, {
-      lines: 2,
-      className: "k-CrowdfundingCard__noWrap k-u-hidden@s-down"
-    }, title), /*#__PURE__*/React.createElement(Truncate, {
-      lines: 3,
-      className: "k-CrowdfundingCard__noWrap k-u-hidden@m-up"
-    }, title)), !titleTruncate && title), loading && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
+      className: classNames('k-CrowdfundingCard__title__title', {
+        'k-u-clamp': titleTruncate
+      })
+    }, titleProps), title), loading && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
       className: "k-CrowdfundingCard__title__loadingElement"
     }), /*#__PURE__*/React.createElement("span", {
       className: "k-CrowdfundingCard__title__loadingElement"

@@ -4,6 +4,7 @@ var _excluded = ["items", "disabled", "className", "name", "error", "variant", "
     _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import { RadioButton } from '../../form/radio-button';
@@ -30,7 +31,7 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
-    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + variant),
+    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + (variant || 'orion')),
     disabled: disabled
   }, props), label && /*#__PURE__*/React.createElement(Label, _extends({
     tag: "legend"
@@ -45,7 +46,7 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
 
     return /*#__PURE__*/React.createElement(RadioButton, _extends({
       id: id,
-      variant: variant,
+      variant: variant || 'orion',
       design: design,
       error: error,
       size: size,
@@ -68,25 +69,18 @@ RadioButtonSet.propTypes = {
     defaultChecked: PropTypes.bool
   })),
   size: PropTypes.oneOf(['small', 'regular', 'big']),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  variant: deprecated(PropTypes.oneOf(['andromeda', 'orion']), 'Please use the RadioSet component instead'),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
   fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
-  paragraphStyle: false
+  paragraphStyle: PropTypes.bool
 };
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
   error: false,
   label: null,
-  items: [{
-    text: 'filter 1',
-    children: 'lorem ipsum dolor',
-    defaultChecked: true,
-    id: 'myRadioButton' // Replace by a real value
-
-  }],
-  variant: 'orion',
+  items: [],
   design: 'disc',
   disabled: false,
   labelProps: {},
