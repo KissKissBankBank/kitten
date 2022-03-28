@@ -22,7 +22,7 @@ const argTypes = {
   status: { control: 'select' },
   progressProps: {
     name: 'Story component: progressProps',
-    control: 'object'
+    control: 'object',
   },
 }
 

@@ -43,7 +43,9 @@ class TitleComponent extends PureComponent {
           <Title
             tag="p"
             noMargin
-            className={classNames("k-CrowdfundingCard__title__title", {'k-u-clamp': titleTruncate})}
+            className={classNames('k-CrowdfundingCard__title__title', {
+              'k-u-clamp': titleTruncate,
+            })}
             {...titleProps}
           >
             {title}

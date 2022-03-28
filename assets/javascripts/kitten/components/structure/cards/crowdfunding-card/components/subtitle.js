@@ -76,7 +76,8 @@ class Subtitle extends PureComponent {
         {widgetSubtitle && !loading && (
           <Text
             className={classNames(
-              'k-u-margin-top-noneHalf', 'k-u-margin-bottom-double',
+              'k-u-margin-top-noneHalf',
+              'k-u-margin-bottom-double',
               { 'k-u-clamp': subTitleTruncate },
             )}
             tag="p"
