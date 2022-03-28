@@ -31,7 +31,7 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
-    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + variant),
+    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + (variant || 'orion')),
     disabled: disabled
   }, props), label && /*#__PURE__*/React.createElement(Label, _extends({
     tag: "legend"
@@ -46,7 +46,7 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
 
     return /*#__PURE__*/React.createElement(RadioButton, _extends({
       id: id,
-      variant: variant,
+      variant: variant || 'orion',
       design: design,
       error: error,
       size: size,

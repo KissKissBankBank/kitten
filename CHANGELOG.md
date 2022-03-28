@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `RadioButton`: Hardcode default variant value.
+## [9.2.2] - 2022-03-28
+
+Fix:
+
+- `RadioButton`: Hardcode default variant value.
 
 ## [9.2.1] - 2022-03-28
 

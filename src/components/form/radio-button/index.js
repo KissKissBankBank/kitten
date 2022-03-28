@@ -51,7 +51,7 @@ var RadioButton = function RadioButton(_ref) {
       paragraphStyle = _ref.paragraphStyle,
       inputProps = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButton, {
-    className: (0, _classnames.default)('k-Form-RadioButton', className, "k-Form-RadioButton--" + variant, "k-Form-RadioButton--" + design, "k-Form-RadioButton--" + size, "k-Form-RadioButton__labelText--" + fontWeight, {
+    className: (0, _classnames.default)('k-Form-RadioButton', className, "k-Form-RadioButton--" + (variant || 'orion'), "k-Form-RadioButton--" + design, "k-Form-RadioButton--" + size, "k-Form-RadioButton__labelText--" + fontWeight, {
       'k-Form-RadioButton--error': error,
       'k-Form-RadioButton--largeLabel': large,
       'k-Form-RadioButton--largeContent': largeContent,
