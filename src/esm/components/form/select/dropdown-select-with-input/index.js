@@ -178,9 +178,9 @@ export var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
     id: id + "_element-input",
     "aria-labelledby": id + "_element-label " + id,
     onChange: handleInputChange
-  }, inputProps))), /*#__PURE__*/React.createElement("ul", _extends({
+  }, inputProps))), isOpen && /*#__PURE__*/React.createElement("ul", _extends({
     className: "k-Form-DropdownSelectWithInput__list"
-  }, getMenuProps()), isOpen && !deactivateDropdown && options.map(function (item, index) {
+  }, getMenuProps()), !deactivateDropdown && options.map(function (item, index) {
     if (item.separator) return /*#__PURE__*/React.createElement("li", _extends({
       key: "separator" + index,
       className: "k-Form-DropdownSelectWithInput__separator",

@@ -25,7 +25,7 @@ export var Badge = function Badge(_ref) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, Icon ? /*#__PURE__*/React.createElement("div", {
     className: "k-Badge__wrapper k-u-flex k-u-flex-alignItems-center"
   }, /*#__PURE__*/React.createElement(Icon, null), /*#__PURE__*/React.createElement(StyledBadge, _extends({
-    "aria-label": a11yText,
+    title: a11yText,
     className: classNames('k-Badge', 'k-Badge--hasIcon', className, {
       'k-Badge--spaced': spaced,
       'k-Badge--no-border': !withBorder
@@ -34,7 +34,7 @@ export var Badge = function Badge(_ref) {
       '--Badge-background-color': color
     }, style)
   }, others))) : /*#__PURE__*/React.createElement(StyledBadge, _extends({
-    "aria-label": a11yText,
+    title: a11yText,
     className: classNames('k-Badge', className, {
       'k-Badge--spaced': spaced,
       'k-Badge--no-border': !withBorder

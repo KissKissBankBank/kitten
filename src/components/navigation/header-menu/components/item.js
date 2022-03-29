@@ -35,9 +35,7 @@ var Item = function Item(_ref) {
       tag = _ref.tag,
       other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var Component = as || tag;
-  return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
-    role: "menuitem"
-  }, liProps, {
+  return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({}, liProps, {
     className: (0, _classnames.default)('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
       'k-HeaderMenu__item--external': external,
       'k-HeaderMenu__item--isSelected': isSelected,
