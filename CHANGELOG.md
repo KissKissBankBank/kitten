@@ -5,7 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Helpers: Add `checkDeprecatedSizes` utility.
-- Fix: Revert: Accessibility: Fix a11y warning related to roles on components.
+
+## [9.3.1] - 2022-03-29
+
+Fix:
+
+- Revert: Accessibility: Fix a11y warning related to roles on components.
 
 ## [9.3.0] - 2022-03-29
 
