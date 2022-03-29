@@ -19,20 +19,23 @@
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{2})) !important;
   }
 
-  .k-u-size-big {
+  .k-u-size-big,
+  .k-u-size-large {
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{1})) !important;
   }
 
-  .k-u-size-default {
+  .k-u-size-default,
+  .k-U-size-medium {
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{0})) !important;
   }
 
-  .k-u-size-tiny {
+  .k-u-size-tiny,
+  .k-u-size-small {
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{-1})) !important;
   }
 
   .k-u-size-micro,
-  .k-u-small {
+  .k-u-size-small {
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{-2})) !important;
   }
 
