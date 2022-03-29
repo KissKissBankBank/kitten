@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Accessibility: Fix a11y warning related to roles on the following components:
+  - `DropdownSelect` (normal and `combobox`)
+  - `DropdownSelectWithInput`
+
 ## [9.2.2] - 2022-03-28
 
 Fix:

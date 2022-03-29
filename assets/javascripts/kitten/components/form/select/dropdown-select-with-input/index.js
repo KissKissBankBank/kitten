@@ -623,45 +623,52 @@ export const DropdownSelectWithInput = ({
           {...inputProps}
         />
       </div>
-      <ul className="k-Form-DropdownSelectWithInput__list" {...getMenuProps()}>
-        {isOpen &&
-          !deactivateDropdown &&
-          options.map((item, index) => {
-            if (item.separator)
+      {isOpen && (
+        <ul
+          className="k-Form-DropdownSelectWithInput__list"
+          {...getMenuProps()}
+        >
+          {!deactivateDropdown &&
+            options.map((item, index) => {
+              if (item.separator)
+                return (
+                  <li
+                    key={`separator${index}`}
+                    className="k-Form-DropdownSelectWithInput__separator"
+                    aria-hidden
+                    {...getItemProps({ item, index, disabled: true })}
+                  />
+                )
+
               return (
                 <li
-                  key={`separator${index}`}
-                  className="k-Form-DropdownSelectWithInput__separator"
-                  aria-hidden
-                  {...getItemProps({ item, index, disabled: true })}
-                />
+                  className={classNames(
+                    'k-Form-DropdownSelectWithInput__item',
+                    {
+                      'k-Form-DropdownSelectWithInput__item--separator':
+                        item.separator,
+                      'k-Form-DropdownSelectWithInput__item--higlighted':
+                        highlightedIndex === index,
+                    },
+                  )}
+                  key={`${item.value}${index}`}
+                  disabled={item.disabled}
+                  {...getItemProps({ item, index, disabled: item.disabled })}
+                >
+                  {item.icon && (
+                    <span
+                      className="k-Form-DropdownSelectWithInput__item__icon"
+                      aria-hidden
+                    >
+                      {item.icon}
+                    </span>
+                  )}
+                  {item.labelInList || item.label}
+                </li>
               )
-
-            return (
-              <li
-                className={classNames('k-Form-DropdownSelectWithInput__item', {
-                  'k-Form-DropdownSelectWithInput__item--separator':
-                    item.separator,
-                  'k-Form-DropdownSelectWithInput__item--higlighted':
-                    highlightedIndex === index,
-                })}
-                key={`${item.value}${index}`}
-                disabled={item.disabled}
-                {...getItemProps({ item, index, disabled: item.disabled })}
-              >
-                {item.icon && (
-                  <span
-                    className="k-Form-DropdownSelectWithInput__item__icon"
-                    aria-hidden
-                  >
-                    {item.icon}
-                  </span>
-                )}
-                {item.labelInList || item.label}
-              </li>
-            )
-          })}
-      </ul>
+            })}
+        </ul>
+      )}
     </StyledDropdownSelectWithInput>
   )
 }
