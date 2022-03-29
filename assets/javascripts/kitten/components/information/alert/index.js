@@ -249,11 +249,13 @@ export const Alert = ({
       <div className="k-Alert__text">{children}</div>
 
       {closeButton && (
-        <button className="k-Alert__closeButton k-u-reset-button">
-          <CrossIconNext
-            onClick={() => setMounted(false)}
-            title={closeButtonLabel}
-          />
+        <button
+          onClick={() => setMounted(false)}
+          className="k-Alert__closeButton k-u-reset-button"
+          title={closeButtonLabel}
+          aria-label={closeButtonLabel}
+        >
+          <CrossIconNext />
         </button>
       )}
     </AlertWrapper>
