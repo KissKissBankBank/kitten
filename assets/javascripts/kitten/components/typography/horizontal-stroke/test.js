@@ -16,9 +16,9 @@ describe('<HorizontalStroke />', () => {
     })
   })
 
-  describe('with `tiny` size', () => {
+  describe('with `medium` size', () => {
     beforeEach(() => {
-      component = renderer.create(<HorizontalStroke size="tiny" />).toJSON()
+      component = renderer.create(<HorizontalStroke size="medium" />).toJSON()
     })
 
     it('matches with snapshot', () => {

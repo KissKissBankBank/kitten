@@ -11,17 +11,35 @@ export const MICRO = css`
   height: ${pxToRem(2)};
 `
 
+// DEPRECATED
 export const TINY = css`
   width: ${pxToRem(20)};
   height: ${pxToRem(2)};
 `
 
+export const SMALL = css`
+  width: ${pxToRem(20)};
+  height: ${pxToRem(2)};
+`
+
+// DEPRECATED
 export const DEFAULT = css`
   width: ${pxToRem(30)};
   height: ${pxToRem(4)};
 `
 
+export const MEDIUM = css`
+  width: ${pxToRem(30)};
+  height: ${pxToRem(4)};
+`
+
+// DEPRECATED
 export const BIG = css`
+  width: ${pxToRem(50)};
+  height: ${pxToRem(4)};
+`
+
+export const LARGE = css`
   width: ${pxToRem(50)};
   height: ${pxToRem(4)};
 `
@@ -42,13 +60,22 @@ export const StyledHorizontalStroke = styled.div`
   &.k-HorizontalStroke--size--tiny {
     ${TINY}
   }
+  &.k-HorizontalStroke--size--small {
+    ${SMALL}
+  }
 
   &.k-HorizontalStroke--size--default {
     ${DEFAULT}
   }
+  &.k-HorizontalStroke--size--medium {
+    ${MEDIUM}
+  }
 
   &.k-HorizontalStroke--size--big {
     ${BIG}
+  }
+  &.k-HorizontalStroke--size--large {
+    ${LARGE}
   }
 
   &.k-HorizontalStroke--size--huge {
@@ -96,7 +123,7 @@ export const HorizontalStroke = ({
 }
 
 HorizontalStroke.propTypes = {
-  size: PropTypes.oneOf(['micro', 'tiny', 'default', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
   modifier: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -114,7 +141,7 @@ HorizontalStroke.propTypes = {
 }
 
 HorizontalStroke.defaultProps = {
-  size: 'default',
+  size: 'medium',
   customSize: {
     width: null,
     height: null,
