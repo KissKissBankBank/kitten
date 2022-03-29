@@ -18,33 +18,14 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
     className="k-ProjectCard__content"
   >
     <h1
-      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      <span
-        width={0}
-      >
-        <span />
-        <span>
-          The Office, la série culte décortiquée par S!CK
-        </span>
-        <span
-          style={
-            Object {
-              "left": 0,
-              "position": "fixed",
-              "top": 0,
-              "visibility": "hidden",
-            }
-          }
-        >
-          …
-        </span>
-      </span>
+      The Office, la série culte décortiquée par S!CK
     </h1>
     <div
       className="k-ProjectCard__line"
@@ -140,33 +121,14 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
       Prolongation
     </div>
     <h1
-      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      <span
-        width={0}
-      >
-        <span />
-        <span>
-          The Office, la série culte décortiquée par S!CK
-        </span>
-        <span
-          style={
-            Object {
-              "left": 0,
-              "position": "fixed",
-              "top": 0,
-              "visibility": "hidden",
-            }
-          }
-        >
-          …
-        </span>
-      </span>
+      The Office, la série culte décortiquée par S!CK
     </h1>
     <div
       className="k-ProjectCard__line"
@@ -272,33 +234,14 @@ exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
       />
     </div>
     <h1
-      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-Title--septenary k-Title--noMargin"
+      className="sc-fbyfCU biYpwD k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
         }
       }
     >
-      <span
-        width={0}
-      >
-        <span />
-        <span>
-          The Office, la série culte décortiquée par S!CK
-        </span>
-        <span
-          style={
-            Object {
-              "left": 0,
-              "position": "fixed",
-              "top": 0,
-              "visibility": "hidden",
-            }
-          }
-        >
-          …
-        </span>
-      </span>
+      The Office, la série culte décortiquée par S!CK
     </h1>
     <div
       className="k-ProjectCard__line"

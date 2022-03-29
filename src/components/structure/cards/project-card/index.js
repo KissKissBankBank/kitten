@@ -17,8 +17,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _reactTruncate = _interopRequireDefault(require("react-truncate"));
-
 var _styles = require("./styles");
 
 var _text = require("../../../typography/text");
@@ -31,7 +29,7 @@ var _gifVideo = require("../../../embed/gif-video");
 
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
     _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign"],
-    _excluded3 = ["children", "className"],
+    _excluded3 = ["className", "style"],
     _excluded4 = ["className", "lastLine"],
     _excluded5 = ["className", "noMargin"],
     _excluded6 = ["className"],
@@ -113,16 +111,14 @@ ProjectCard.propTypes = {
 };
 
 ProjectCard.Title = function (_ref2) {
-  var children = _ref2.children,
-      className = _ref2.className,
+  var className = _ref2.className,
+      style = _ref2.style,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded3);
   return /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
     modifier: "septenary",
     noMargin: true,
-    className: (0, _classnames.default)('k-ProjectCard__title', className)
-  }, props), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
-    lines: 2
-  }, children));
+    className: (0, _classnames.default)('k-ProjectCard__title', 'k-u-clamp-2', className)
+  }, props));
 };
 
 ProjectCard.Line = function (_ref3) {

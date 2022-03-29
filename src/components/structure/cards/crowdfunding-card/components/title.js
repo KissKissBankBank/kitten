@@ -13,11 +13,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _text = require("../../../../typography/text");
 
 var _title = require("../../../../typography/title");
-
-var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -50,14 +50,10 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
     }, !loading && /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
       tag: "p",
       noMargin: true,
-      className: "k-CrowdfundingCard__title__title"
-    }, titleProps), titleTruncate && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
-      lines: 2,
-      className: "k-CrowdfundingCard__noWrap k-u-hidden@s-down"
-    }, title), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
-      lines: 3,
-      className: "k-CrowdfundingCard__noWrap k-u-hidden@m-up"
-    }, title)), !titleTruncate && title), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
+      className: (0, _classnames.default)('k-CrowdfundingCard__title__title', {
+        'k-u-clamp': titleTruncate
+      })
+    }, titleProps), title), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("span", {
       className: "k-CrowdfundingCard__title__loadingElement"
     }), /*#__PURE__*/_react.default.createElement("span", {
       className: "k-CrowdfundingCard__title__loadingElement"
@@ -81,7 +77,7 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
       weight: "bold",
       lineHeight: "normal",
       className: "k-Card__title"
-    }, titleTruncate && /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
+    }, titleTruncate && /*#__PURE__*/_react.default.createElement(Truncate, {
       lines: 2
     }, widgetTitle), !titleTruncate && widgetTitle)), !loading && /*#__PURE__*/_react.default.createElement("div", {
       className: "k-CrowdfundingCard__title__dayCounter"

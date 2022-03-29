@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = exports.FieldAutocompleteExample = void 0;
+exports.FieldRadioSetExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = exports.FieldAutocompleteExample = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -122,17 +122,45 @@ var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
 
 exports.FieldRadioButtonSetExample = FieldRadioButtonSetExample;
 
-var FieldAutocompleteExample = function FieldAutocompleteExample(_ref5) {
+var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
   var id = _ref5.id,
       label = _ref5.label,
       tooltip = _ref5.tooltip,
       tooltipId = _ref5.tooltipId,
       tooltipProps = _ref5.tooltipProps,
-      placeholder = _ref5.placeholder,
+      items = _ref5.items,
       error = _ref5.error,
       errorMessage = _ref5.errorMessage,
-      items = _ref5.items,
-      size = _ref5.size;
+      variant = _ref5.variant;
+  return /*#__PURE__*/_react.default.createElement(FieldBase, {
+    id: id,
+    label: label,
+    tooltip: tooltip,
+    tooltipProps: tooltipProps,
+    tooltipId: tooltipId,
+    error: error,
+    errorMessage: errorMessage
+  }, /*#__PURE__*/_react.default.createElement(_.Field.RadioSet, {
+    name: "radio",
+    items: items,
+    error: error,
+    variant: variant
+  }));
+};
+
+exports.FieldRadioSetExample = FieldRadioSetExample;
+
+var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
+  var id = _ref6.id,
+      label = _ref6.label,
+      tooltip = _ref6.tooltip,
+      tooltipId = _ref6.tooltipId,
+      tooltipProps = _ref6.tooltipProps,
+      placeholder = _ref6.placeholder,
+      error = _ref6.error,
+      errorMessage = _ref6.errorMessage,
+      items = _ref6.items,
+      size = _ref6.size;
   return /*#__PURE__*/_react.default.createElement(FieldBase, {
     id: id,
     label: label,

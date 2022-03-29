@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '../../../../typography/text'
 import { HorizontalStroke } from '../../../../typography/horizontal-stroke'
-import Truncate from 'react-truncate'
 import classNames from 'classnames'
 
 class Subtitle extends PureComponent {
@@ -34,7 +33,7 @@ class Subtitle extends PureComponent {
   }
 
   renderSubtitle() {
-    const { loading, subTitle, subTitleTruncate } = this.props
+    const { loading, subTitle, subTitleTruncate, style } = this.props
 
     return (
       <div className="k-CrowdfundingCard__subtitle__container">
@@ -49,21 +48,16 @@ class Subtitle extends PureComponent {
               'k-CrowdfundingCard__subtitle__subtitleText',
               'k-u-margin-none',
               {
-                'k-CrowdfundingCard__subtitle__subtitleText--truncated': subTitleTruncate,
+                'k-u-clamp': subTitleTruncate,
               },
             )}
             size="micro"
             weight="regular"
             tag="p"
             color="font1"
+            style={{ '--line-clamp': 1, ...style }}
           >
-            {subTitleTruncate && (
-              <Truncate className="k-CrowdfundingCard__noWrap">
-                {subTitle}
-              </Truncate>
-            )}
-
-            {!subTitleTruncate && subTitle}
+            {subTitle}
           </Text>
         )}
 
@@ -75,24 +69,25 @@ class Subtitle extends PureComponent {
   }
 
   renderWidgetSubtitle() {
-    const { widgetSubtitle, subTitleTruncate, loading } = this.props
+    const { widgetSubtitle, subTitleTruncate, loading, style } = this.props
 
     return (
       <>
         {widgetSubtitle && !loading && (
           <Text
-            className="k-u-margin-top-noneHalf k-u-margin-bottom-double"
+            className={classNames(
+              'k-u-margin-top-noneHalf',
+              'k-u-margin-bottom-double',
+              { 'k-u-clamp': subTitleTruncate },
+            )}
             tag="p"
             size="micro"
             color="font1"
             lineHeight="normal"
             weight="light"
+            style={{ '--line-clamp': 1, ...style }}
           >
-            {subTitleTruncate && (
-              <Truncate lines={3}>{widgetSubtitle}</Truncate>
-            )}
-
-            {!subTitleTruncate && widgetSubtitle}
+            {widgetSubtitle}
           </Text>
         )}
 
