@@ -67,7 +67,7 @@ export default {
     size: {
       name: 'size',
       description: 'Sets the size from a list.',
-      options: ['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano'],
+      options: ['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano'],
       control: 'select',
     },
     weight: {
