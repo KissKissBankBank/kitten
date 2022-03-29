@@ -11,12 +11,14 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
     Alert !
   </div>
   <button
+    aria-label="Close"
     className="k-Alert__closeButton k-u-reset-button"
+    onClick={[Function]}
+    title="Close"
   >
     <svg
       fill="none"
       height="18"
-      onClick={[Function]}
       viewBox="0 0 17 18"
       width="17"
       xmlns="http://www.w3.org/2000/svg"

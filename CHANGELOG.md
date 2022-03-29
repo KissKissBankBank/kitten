@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Alert`: Close button accessibility fixes.
+
 ## [9.2.2] - 2022-03-28
 
 Fix:
