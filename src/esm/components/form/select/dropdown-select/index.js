@@ -160,16 +160,17 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     color: COLORS.background1,
     bgColor: COLORS.valid,
     "aria-label": a11yStatusValid
-  }))), isOpen && /*#__PURE__*/React.createElement("ul", _extends({
+  }))), /*#__PURE__*/React.createElement("ul", _extends({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), flattenedOptions.map(function (item, index) {
+  }, getMenuProps(), {
+    role: isOpen ? 'listbox' : null
+  }), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/React.createElement("li", _extends({
       className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
       }),
       key: "" + item.value + index,
-      disabled: item.disabled,
-      role: "option"
+      disabled: item.disabled
     }, getItemProps({
       item: item,
       index: index,
