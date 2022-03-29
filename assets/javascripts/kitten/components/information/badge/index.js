@@ -62,7 +62,7 @@ export const Badge = ({
         <div className="k-Badge__wrapper k-u-flex k-u-flex-alignItems-center">
           <Icon />
           <StyledBadge
-            aria-label={a11yText}
+            title={a11yText}
             className={classNames('k-Badge', 'k-Badge--hasIcon', className, {
               'k-Badge--spaced': spaced,
               'k-Badge--no-border': !withBorder,
@@ -76,7 +76,7 @@ export const Badge = ({
         </div>
       ) : (
         <StyledBadge
-          aria-label={a11yText}
+          title={a11yText}
           className={classNames('k-Badge', className, {
             'k-Badge--spaced': spaced,
             'k-Badge--no-border': !withBorder,

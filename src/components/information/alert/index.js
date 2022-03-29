@@ -106,13 +106,13 @@ var Alert = function Alert(_ref) {
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Alert__text"
   }, children), closeButton && /*#__PURE__*/_react.default.createElement("button", {
-    className: "k-Alert__closeButton k-u-reset-button"
-  }, /*#__PURE__*/_react.default.createElement(_crossIconNext.CrossIconNext, {
     onClick: function onClick() {
       return setMounted(false);
     },
-    title: closeButtonLabel
-  })));
+    className: "k-Alert__closeButton k-u-reset-button",
+    title: closeButtonLabel,
+    "aria-label": closeButtonLabel
+  }, /*#__PURE__*/_react.default.createElement(_crossIconNext.CrossIconNext, null)));
 };
 
 exports.Alert = Alert;

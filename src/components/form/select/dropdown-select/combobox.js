@@ -245,7 +245,9 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
     "aria-label": a11yStatusValid
   }))), /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), isOpen && (filteredOptions.length > 0 ? filteredOptions.map(function (item, index) {
+  }, getMenuProps(), {
+    role: isOpen ? 'listbox' : null
+  }), isOpen && (filteredOptions.length > 0 ? filteredOptions.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index

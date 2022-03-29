@@ -207,7 +207,9 @@ var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
     onChange: handleInputChange
   }, inputProps))), /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: "k-Form-DropdownSelectWithInput__list"
-  }, getMenuProps()), isOpen && !deactivateDropdown && options.map(function (item, index) {
+  }, getMenuProps(), {
+    role: isOpen ? 'listbox' : null
+  }), isOpen && !deactivateDropdown && options.map(function (item, index) {
     if (item.separator) return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       key: "separator" + index,
       className: "k-Form-DropdownSelectWithInput__separator",

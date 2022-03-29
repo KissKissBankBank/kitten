@@ -4,6 +4,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [9.3.1] - 2022-03-29
+
+Fix:
+
+- Revert: Accessibility: Fix a11y warning related to roles on components.
+
+## [9.3.0] - 2022-03-29
+
+Feature:
+
+- `HorizontalCrowdfundingCard`: Add `progressLabel` prop, accepts string.
+
+Fixes:
+
+- Accessibility: Fix a11y warning related to roles on the following components:
+  - `DropdownSelect` (normal and `combobox`)
+  - `DropdownSelectWithInput`
+- `Alert`: Close button accessibility fixes.
+- `HeaderMenu`: Fix accessibility error on menu item.
+- `Badge`: Fix accessibility warning related to ARIA attributes.
+
 ## [9.2.2] - 2022-03-28
 
 Fix:
