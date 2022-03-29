@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
+import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize'
 import classNames from 'classnames'
 
 export const StyledInput = styled.input`
@@ -162,7 +163,7 @@ const StyledTextareaContainer = styled.div`
   textarea.k-Form-TextInput {
     height: initial;
     resize: vertical;
-    line-height: 1.3;
+    line-height: ${pxToRem(18)};
 
     &:disabled {
       resize: none;
@@ -251,7 +252,7 @@ const StyledTextareaContainer = styled.div`
 
 export class TextInput extends PureComponent {
   static propTypes = {
-    tag: PropTypes.string,
+    tag: PropTypes.oneOf(['input', 'textarea', 'autoresize']),
     valid: PropTypes.bool,
     error: PropTypes.bool,
     size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
@@ -264,7 +265,7 @@ export class TextInput extends PureComponent {
   }
 
   static defaultProps = {
-    tag: 'input', // or 'textarea'
+    tag: 'input',
     valid: false,
     error: false,
     size: 'regular',
@@ -297,20 +298,21 @@ export class TextInput extends PureComponent {
       ? `k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_${digits}`
       : null
 
-    if (tag === 'textarea') {
+    if (['textarea', 'autoresize'].includes(tag)) {
       return (
         <StyledTextareaContainer
           className={classNames('k-Form-TextInput__textareaContainer')}
         >
           <StyledInput
             ref={input => (this.input = input)}
-            as="textarea"
+            as={tag === 'textarea' ? tag : TextareaAutoResize}
             disabled={disabled}
             name={name}
             className={classNames(
               'k-Form-TextInput',
               className,
               digitsClass,
+              `k-Form-TextInput--${tag}`,
               `k-Form-TextInput--${size}`,
               {
                 'k-Form-TextInput--valid': valid,

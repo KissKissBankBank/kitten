@@ -37,7 +37,7 @@ Default.args = {
 Default.argTypes = {
   tag: {
     name: 'tag',
-    options: ['input', 'textarea'],
+    options: ['input', 'textarea', 'autoresize'],
     control: 'inline-radio',
   },
   valid: {
@@ -91,3 +91,12 @@ AsTextarea.args = {
 }
 
 AsTextarea.argTypes = Default.args
+
+export const AsTextareaAutoResize = args => <TextInput {...args} />
+
+AsTextareaAutoResize.args = {
+  ...Default.args,
+  tag: 'autoresize',
+}
+
+AsTextareaAutoResize.argTypes = Default.args

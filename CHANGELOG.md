@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `TextInput`: Add `autoresize` value to `tag` prop.
+
 ## [9.3.1] - 2022-03-29
 
 Fix:
