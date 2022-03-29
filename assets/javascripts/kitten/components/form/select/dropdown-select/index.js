@@ -180,9 +180,9 @@ export const DropdownSelect = ({ combobox, ...props }) => {
           )}
         </span>
       </button>
-      <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
-        {isOpen &&
-          flattenedOptions.map((item, index) => (
+      {isOpen && (
+        <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
+          {flattenedOptions.map((item, index) => (
             <li
               className={classNames(
                 'k-Form-Dropdown__item',
@@ -194,12 +194,14 @@ export const DropdownSelect = ({ combobox, ...props }) => {
               )}
               key={`${item.value}${index}`}
               disabled={item.disabled}
+              role="option"
               {...getItemProps({ item, index, disabled: item.disabled })}
             >
               {item.label}
             </li>
           ))}
-      </ul>
+        </ul>
+      )}
     </StyledDropdown>
   )
 }
