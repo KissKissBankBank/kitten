@@ -2,13 +2,13 @@
 
 exports[`<Badge /> default should match the snapshot 1`] = `
 <span
-  aria-label={null}
   className="sc-bdvvtL ezVxdb k-Badge"
   style={
     Object {
       "--Badge-background-color": null,
     }
   }
+  title={null}
 >
   2
 </span>
@@ -29,13 +29,13 @@ exports[`<Badge /> with icon should match the snapshot 1`] = `
     />
   </svg>
   <span
-    aria-label={null}
     className="sc-bdvvtL ezVxdb k-Badge k-Badge--hasIcon"
     style={
       Object {
         "--Badge-background-color": "red",
       }
     }
+    title={null}
   />
 </div>
 `;
