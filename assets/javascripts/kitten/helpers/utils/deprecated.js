@@ -23,10 +23,10 @@ export const hasDeprecatedProps = deprecatedKeys => props =>
   flow(keys, intersection(deprecatedKeys))(props).length > 0
 
 
-export const checkDeprecatedSizes = ({ size, deprecatedSizes }) => {
-  deprecatedSizes = ['tiny', 'regular', 'default', 'normal', 'big']
+export const checkDeprecatedSizes = size => {
+  const deprecatedSizes = ['tiny', 'regular', 'default', 'normal', 'big']
   if(deprecatedSizes.includes(size)) {
-    console.warm(
+    console.warn(
       `The value ${size} for prop size is deprecated. Please use 'small', 'medium' or 'large' instead.`
     )
   }

@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `checkDeprecatedSizes` utils.
+- Fix: Helpers: Add `checkDeprecatedSizes` utility.
 
 ## [9.2.2] - 2022-03-28
 

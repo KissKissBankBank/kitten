@@ -3,16 +3,6 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
-export const textSizes = [
-  'giant',
-  'huge',
-  'large',
-  'medium',
-  'small',
-  'micro',
-  'nano',
-]
-
 export const Text = ({
   className,
   color,
@@ -31,7 +21,7 @@ export const Text = ({
   ...others
 }) => {
   
-  const checkDeprecatedSizes
+  checkDeprecatedSizes(size)
   
   const Tag = as || tag
 
@@ -111,7 +101,15 @@ Text.propTypes = {
   decoration: PropTypes.oneOf(['underline', 'none']),
   setting: PropTypes.oneOf(['tnum']),
   lineHeight: PropTypes.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
-  size: PropTypes.oneOf([...textSizes, ...checkDeprecatedSizes]),
+  size: PropTypes.oneOf([
+    'giant',
+    'huge',
+    'large',
+    'medium',
+    'small',
+    'micro',
+    'nano',
+  ]),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),

@@ -25,7 +25,7 @@
   }
 
   .k-u-size-default,
-  .k-U-size-medium {
+  .k-u-size-medium {
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{0})) !important;
   }
 
@@ -35,7 +35,7 @@
   }
 
   .k-u-size-micro,
-  .k-u-size-small {
+  .k-u-small {
     font-size: k-px-to-rem(k-map-fetch($k-typography-scale, #{-2})) !important;
   }
 
