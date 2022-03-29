@@ -235,9 +235,13 @@ export const DropdownCombobox = ({
           )}
         </span>
       </div>
-      {isOpen && (
-        <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
-          {filteredOptions.length > 0 ? (
+      <ul
+        className="k-Form-Dropdown__list"
+        {...getMenuProps()}
+        role={isOpen ? 'listbox' : null}
+      >
+        {isOpen &&
+          (filteredOptions.length > 0 ? (
             filteredOptions.map((item, index) => (
               <li
                 className={classNames(
@@ -259,9 +263,8 @@ export const DropdownCombobox = ({
             <li className="k-Form-Dropdown__item" disabled>
               {noResultText || 'No result'}
             </li>
-          )}
-        </ul>
-      )}
+          ))}
+      </ul>
     </StyledDropdown>
   )
 }
