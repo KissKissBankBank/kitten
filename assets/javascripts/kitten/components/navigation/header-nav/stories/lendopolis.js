@@ -194,7 +194,7 @@ const LoggedInMenu = () => (
         colorActive={COLORS.font1}
       >
         <AvatarWithTextAndBadge>
-          <AvatarWithTextAndBadge.Image text="JR" src="/kitten.jpg">
+          <AvatarWithTextAndBadge.Image text="JR" src="/kitten.jpg" alt="">
             <AvatarWithTextAndBadge.Badge a11yText="1 notification">
               1
             </AvatarWithTextAndBadge.Badge>
