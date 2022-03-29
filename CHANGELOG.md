@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `DropdownSelectWithInput`
 - Feature: `HorizontalCrowdfundingCard`: Add `progressLabel` prop, accepts string.
 - Fix: `Alert`: Close button accessibility fixes.
+- Fix: `HeaderMenu`: Fix accessibility error on menu item.
+- Fix: `Badge`: Fix accessibility warning related to ARIA attributes.
 
 ## [9.2.2] - 2022-03-28
 
