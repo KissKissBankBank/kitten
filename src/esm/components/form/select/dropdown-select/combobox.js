@@ -216,9 +216,11 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     color: COLORS.background1,
     bgColor: COLORS.valid,
     "aria-label": a11yStatusValid
-  }))), isOpen && /*#__PURE__*/React.createElement("ul", _extends({
+  }))), /*#__PURE__*/React.createElement("ul", _extends({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), filteredOptions.length > 0 ? filteredOptions.map(function (item, index) {
+  }, getMenuProps(), {
+    role: isOpen ? 'listbox' : null
+  }), isOpen && (filteredOptions.length > 0 ? filteredOptions.map(function (item, index) {
     return /*#__PURE__*/React.createElement("li", _extends({
       className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
@@ -233,7 +235,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   }) : /*#__PURE__*/React.createElement("li", {
     className: "k-Form-Dropdown__item",
     disabled: true
-  }, noResultText || 'No result')));
+  }, noResultText || 'No result'))));
 };
 DropdownCombobox.defaultProps = {
   hideLabel: false,

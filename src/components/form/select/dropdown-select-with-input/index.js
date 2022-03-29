@@ -205,9 +205,11 @@ var DropdownSelectWithInput = function DropdownSelectWithInput(_ref) {
     id: id + "_element-input",
     "aria-labelledby": id + "_element-label " + id,
     onChange: handleInputChange
-  }, inputProps))), isOpen && /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
+  }, inputProps))), /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: "k-Form-DropdownSelectWithInput__list"
-  }, getMenuProps()), !deactivateDropdown && options.map(function (item, index) {
+  }, getMenuProps(), {
+    role: isOpen ? 'listbox' : null
+  }), isOpen && !deactivateDropdown && options.map(function (item, index) {
     if (item.separator) return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       key: "separator" + index,
       className: "k-Form-DropdownSelectWithInput__separator",
