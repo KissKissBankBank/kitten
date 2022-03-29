@@ -125,6 +125,7 @@ export const HorizontalCrowdfundingCard = ({
   className,
   noProgressOnMobile = false,
   noProgress = false,
+  progressLabel = 'progression',
   ...props
 }) => {
   return (
@@ -158,6 +159,7 @@ export const HorizontalCrowdfundingCard = ({
       {!noProgress && (
         <div className="k-HorizontalCrowdfundingCard__progress">
           <Progress
+            aria-label={progressLabel}
             value={progress}
             color={progressColor}
             rampProps={{ style: { height: 4 } }}
@@ -185,6 +187,7 @@ HorizontalCrowdfundingCard.propTypes = {
   info: PropTypes.node,
   progress: PropTypes.number,
   progressColor: PropTypes.string,
+  progressLabel: PropTypes.string,
   noProgress: PropTypes.bool,
   noProgressOnMobile: PropTypes.bool,
 }
