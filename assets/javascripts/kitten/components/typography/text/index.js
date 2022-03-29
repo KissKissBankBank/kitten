@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 export const Text = ({
   className,
@@ -19,6 +20,9 @@ export const Text = ({
   letterSpacing,
   ...others
 }) => {
+  
+  checkDeprecatedSizes(size)
+  
   const Tag = as || tag
 
   const textClassName = classNames(
@@ -100,11 +104,8 @@ Text.propTypes = {
   size: PropTypes.oneOf([
     'giant',
     'huge',
-    'big',
     'large',
-    'default',
     'medium',
-    'tiny',
     'small',
     'micro',
     'nano',
