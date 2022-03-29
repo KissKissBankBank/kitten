@@ -80,13 +80,13 @@ export var Alert = function Alert(_ref) {
   })), /*#__PURE__*/React.createElement("div", {
     className: "k-Alert__text"
   }, children), closeButton && /*#__PURE__*/React.createElement("button", {
-    className: "k-Alert__closeButton k-u-reset-button"
-  }, /*#__PURE__*/React.createElement(CrossIconNext, {
     onClick: function onClick() {
       return setMounted(false);
     },
-    title: closeButtonLabel
-  })));
+    className: "k-Alert__closeButton k-u-reset-button",
+    title: closeButtonLabel,
+    "aria-label": closeButtonLabel
+  }, /*#__PURE__*/React.createElement(CrossIconNext, null)));
 };
 Alert.propTypes = {
   show: PropTypes.bool,

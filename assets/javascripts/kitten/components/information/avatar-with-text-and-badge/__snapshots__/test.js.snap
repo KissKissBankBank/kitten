@@ -25,13 +25,13 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
       />
     </span>
     <span
-      aria-label="2 notifications"
       className="sc-bdvvtL ezVxdb k-Badge k-Avatar__badge"
       style={
         Object {
           "--Badge-background-color": "var(--color-primary-500, #19b4fa)",
         }
       }
+      title="2 notifications"
     >
       2
     </span>

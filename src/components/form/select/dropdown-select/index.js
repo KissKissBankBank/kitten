@@ -185,15 +185,16 @@ var DropdownSelect = function DropdownSelect(_ref) {
     color: _colorsConfig.default.background1,
     bgColor: _colorsConfig.default.valid,
     "aria-label": a11yStatusValid
-  }))), /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
+  }))), isOpen && /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
+  }, getMenuProps()), flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       className: (0, _classnames.default)('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index
       }),
       key: "" + item.value + index,
-      disabled: item.disabled
+      disabled: item.disabled,
+      role: "option"
     }, getItemProps({
       item: item,
       index: index,
