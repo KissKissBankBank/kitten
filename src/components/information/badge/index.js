@@ -42,7 +42,7 @@ var Badge = function Badge(_ref) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, Icon ? /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Badge__wrapper k-u-flex k-u-flex-alignItems-center"
   }, /*#__PURE__*/_react.default.createElement(Icon, null), /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
-    "aria-label": a11yText,
+    title: a11yText,
     className: (0, _classnames.default)('k-Badge', 'k-Badge--hasIcon', className, {
       'k-Badge--spaced': spaced,
       'k-Badge--no-border': !withBorder
@@ -51,7 +51,7 @@ var Badge = function Badge(_ref) {
       '--Badge-background-color': color
     }, style)
   }, others))) : /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
-    "aria-label": a11yText,
+    title: a11yText,
     className: (0, _classnames.default)('k-Badge', className, {
       'k-Badge--spaced': spaced,
       'k-Badge--no-border': !withBorder
