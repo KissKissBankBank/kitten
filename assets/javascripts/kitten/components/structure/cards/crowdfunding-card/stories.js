@@ -141,7 +141,7 @@ const Info = ({ label, text }) => (
     >
       {parseHtml(text)}
     </Text>
-    <Text weight="light" size="tiny">
+    <Text weight="light" size="small">
       {parseHtml(label)}
     </Text>
   </span>
