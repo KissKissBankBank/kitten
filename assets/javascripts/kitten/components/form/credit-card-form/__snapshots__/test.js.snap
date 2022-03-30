@@ -20,7 +20,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-gsDKAQ iNDdNd k-Label k-Label--normal"
+            className="sc-gsDKAQ fFPnSK k-Label k-Label--medium"
             htmlFor="frmCCNum"
             onClick={[Function]}
           >
@@ -34,7 +34,7 @@ Array [
     >
       <input
         autoComplete="cc-number"
-        className="sc-eCImPb fQJdGO k-Form-TextInput k-Form-TextInput--regular"
+        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium"
         disabled={false}
         id="frmCCNum"
         inputMode="numeric"
@@ -68,7 +68,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-gsDKAQ iNDdNd k-Label k-Label--normal"
+            className="sc-gsDKAQ fFPnSK k-Label k-Label--medium"
             htmlFor="frmCCExp"
             onClick={[Function]}
           >
@@ -82,7 +82,7 @@ Array [
     >
       <input
         autoComplete="cc-exp"
-        className="sc-eCImPb fQJdGO k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--regular"
+        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--medium"
         disabled={false}
         id="frmCCExp"
         inputMode="numeric"
@@ -121,7 +121,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-gsDKAQ iNDdNd k-Label k-Label--normal"
+            className="sc-gsDKAQ fFPnSK k-Label k-Label--medium"
             htmlFor="frmCCCVC"
             onClick={[Function]}
           >
@@ -135,7 +135,7 @@ Array [
     >
       <input
         autoComplete="cc-csc"
-        className="sc-eCImPb fQJdGO k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--regular"
+        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--medium"
         disabled={false}
         id="frmCCCVC"
         inputMode="numeric"

@@ -5,6 +5,7 @@ import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import classNames from 'classnames'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
@@ -34,15 +35,18 @@ export const StyledInput = styled.input`
 
   // SIZES
 
-  &.k-Form-TextInput--tiny {
+  &.k-Form-TextInput--tiny,
+  &.k-Form-TextInput--small {
     --input-height: ${pxToRem(40)};
   }
 
-  &.k-Form-TextInput--regular {
+  &.k-Form-TextInput--regular,
+  &.k-Form-TextInput--medium {
     --input-height: ${pxToRem(50)};
   }
 
-  &.k-Form-TextInput--big {
+  &.k-Form-TextInput--big,
+  &.k-Form-TextInput--large {
     --input-height: ${pxToRem(60)};
 
     @media (min-width: ${ScreenConfig.M.min}px) {
@@ -170,17 +174,20 @@ const StyledTextareaContainer = styled.div`
 
     padding-bottom: 0;
 
-    &.k-Form-TextInput--tiny {
+    &.k-Form-TextInput--tiny,
+    &.k-Form-TextInput--small {
       padding-top: ${pxToRem(9)};
       padding-bottom: ${pxToRem(9)};
     }
 
-    &.k-Form-TextInput--regular {
+    &.k-Form-TextInput--regular,
+    &.k-Form-TextInput--medium {
       padding-top: ${pxToRem(14)};
       padding-bottom: ${pxToRem(14)};
     }
 
-    &.k-Form-TextInput--big {
+    &.k-Form-TextInput--big,
+    &.k-Form-TextInput--large {
       padding-top: ${pxToRem(18)};
       padding-bottom: ${pxToRem(18)};
 
@@ -254,7 +261,7 @@ export class TextInput extends PureComponent {
     tag: PropTypes.string,
     valid: PropTypes.bool,
     error: PropTypes.bool,
-    size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
     center: PropTypes.bool,
     disabled: PropTypes.bool,
     name: PropTypes.string,
@@ -267,7 +274,7 @@ export class TextInput extends PureComponent {
     tag: 'input', // or 'textarea'
     valid: false,
     error: false,
-    size: 'regular',
+    size: 'medium',
     center: false,
     disabled: false,
     name: 'text',
@@ -297,6 +304,8 @@ export class TextInput extends PureComponent {
       ? `k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_${digits}`
       : null
 
+    checkDeprecatedSizes(size)
+    
     if (tag === 'textarea') {
       return (
         <StyledTextareaContainer

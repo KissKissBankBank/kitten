@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -70,7 +70,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -128,7 +128,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-hKwDye gAFncS k-Form-TextInput k-Form-TextInput--regular k-Form-TextInput--error"
+      className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -169,7 +169,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -227,7 +227,7 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <input
-      className="sc-hKwDye gAFncS k-Form-TextInput k-Form-TextInput--regular"
+      className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-TextInput--medium"
       disabled={false}
       id="input"
       name="field"
@@ -254,7 +254,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -315,7 +315,7 @@ Array [
       className="sc-jRQBWg hqMbYE k-Form-TextInputWithLimit"
     >
       <input
-        className="sc-hKwDye gAFncS k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--regular"
+        className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
         defaultValue=""
         disabled={false}
         id="input"
@@ -350,7 +350,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -408,10 +408,10 @@ Array [
     className="k-FieldInput k-u-margin-top-single"
   >
     <div
-      className="sc-gKclnd ekSZIR k-Form-TextInputWithUnit"
+      className="sc-gKclnd hgFXoe k-Form-TextInputWithUnit"
     >
       <input
-        className="sc-hKwDye gAFncS k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--regular"
+        className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--medium"
         disabled={false}
         id="input"
         name="field"
@@ -419,7 +419,7 @@ Array [
         type="number"
       />
       <span
-        className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--regular"
+        className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--medium"
       >
         €
       </span>
@@ -445,7 +445,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -506,7 +506,7 @@ Array [
       className="sc-iqseJM dSBAGr k-Form-PasswordInput"
     >
       <input
-        className="sc-hKwDye gAFncS k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--regular k-Form-TextInput--error"
+        className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -573,7 +573,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -634,7 +634,7 @@ Array [
       className="sc-iqseJM dSBAGr k-Form-PasswordInput"
     >
       <input
-        className="sc-hKwDye gAFncS k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--regular"
+        className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium"
         disabled={false}
         id="input"
         name="field"
@@ -687,7 +687,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -707,7 +707,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+          className="sc-pVTFL kCbfUa k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -729,7 +729,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+          className="sc-pVTFL kCbfUa k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -750,7 +750,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-pVTFL gNlJhS k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+          className="sc-pVTFL kCbfUa k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -793,7 +793,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL fWELXT k-Label k-Label--medium"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -813,7 +813,7 @@ Array [
         className="k-Form-RadioSet__radioContainer"
       >
         <div
-          className="sc-iCfMLu dePJZs k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-iCfMLu kYZavq k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -835,7 +835,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-iCfMLu dePJZs k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-iCfMLu kYZavq k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -856,7 +856,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-iCfMLu dePJZs k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-iCfMLu kYZavq k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"

@@ -104,7 +104,7 @@ RadioButtonSet.propTypes = {
       defaultChecked: PropTypes.bool,
     }),
   ),
-  size: PropTypes.oneOf(['small', 'regular', 'big']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: deprecated(
     PropTypes.oneOf(['andromeda', 'orion']),
     'Please use the RadioSet component instead',
@@ -124,7 +124,7 @@ RadioButtonSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  size: 'regular',
+  size: 'medium',
   fontWeight: 'regular',
   paragraphStyle: false,
 }

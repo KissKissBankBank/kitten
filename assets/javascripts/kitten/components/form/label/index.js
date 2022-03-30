@@ -6,6 +6,7 @@ import isEmpty from 'lodash/fp/isEmpty'
 import domElementHelper from '../../../helpers/dom/element-helper'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledLabel = styled.label`
@@ -18,7 +19,8 @@ const StyledLabel = styled.label`
     font-size: ${stepToRem(0)};
   }
 
-  &.k-Label--tiny {
+  &.k-Label--tiny,
+  &.k-Label--small {
     line-height: 1.3;
     font-size: ${stepToRem(0)};
   }
@@ -55,6 +57,8 @@ export const Label = ({
   style,
   ...other
 }) => {
+  checkDeprecatedSizes(size)
+
   const handleClick = e => {
     if (domElementHelper.canUseDom() && focusId) {
       e.preventDefault()
@@ -93,14 +97,14 @@ export const Label = ({
 Label.defaultProps = {
   children: 'Label',
   focusId: null,
-  size: 'normal',
+  size: 'medium',
   withoutPointerEvents: false,
   dot: {},
 }
 
 Label.propTypes = {
   focusId: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  size: PropTypes.oneOf([null, undefined, 'normal', 'tiny', 'micro']),
+  size: PropTypes.oneOf([null, undefined, 'micro', 'small', 'medium']),
   withoutPointerEvents: PropTypes.bool,
   dot: PropTypes.shape({
     width: PropTypes.number,

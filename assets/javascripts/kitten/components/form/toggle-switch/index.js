@@ -116,7 +116,7 @@ const SwitchWrapper = styled.div`
       background: transparent;
     }
   }
-  .k-ToggleSwitch--big .k-ToggleSwitch__label {
+  &.k-ToggleSwitch--big .k-ToggleSwitch__label {
     font-size: ${stepToRem(3)};
   }
 

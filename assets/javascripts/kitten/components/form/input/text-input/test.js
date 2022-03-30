@@ -37,7 +37,7 @@ describe('<TextInput />', () => {
 
   describe('with `size` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput size="regular" />).toJSON()
+      component = renderer.create(<TextInput size="medium" />).toJSON()
     })
 
     it('matches with snapshot', () => {
