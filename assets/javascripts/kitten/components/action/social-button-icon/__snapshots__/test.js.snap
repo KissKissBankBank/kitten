@@ -72,19 +72,22 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -150,7 +153,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -202,7 +206,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -297,19 +301,22 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -375,7 +382,8 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -427,7 +435,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -522,19 +530,22 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -600,7 +611,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -652,7 +664,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -747,19 +759,22 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -825,7 +840,8 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -877,7 +893,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -972,19 +988,22 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1050,7 +1069,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1102,7 +1122,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1197,19 +1217,22 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1275,7 +1298,8 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1327,7 +1351,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1422,19 +1446,22 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1500,7 +1527,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1552,7 +1580,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1647,19 +1675,22 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1725,7 +1756,8 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1777,7 +1809,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1872,19 +1904,22 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1950,7 +1985,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2002,7 +2038,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2097,19 +2133,22 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2175,7 +2214,8 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2227,7 +2267,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--beryllium k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--beryllium k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,

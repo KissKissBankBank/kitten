@@ -535,7 +535,7 @@ const Actions = ({
 
 const ModalButton = props => (
   <Button
-    size="big"
+    size="large"
     fit="fluid"
     {...props}
     className={classNames('k-ModalNext__buttons', props.className)}

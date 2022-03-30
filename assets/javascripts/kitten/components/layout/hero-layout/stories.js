@@ -386,16 +386,16 @@ export const Default = ({
               </Text>
               <FlexWrapper direction="row" gap={10}>
                 <a href="#">
-                  <FacebookButtonIcon rounded size="tiny" />
+                  <FacebookButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <TwitterButtonIcon rounded size="tiny" />
+                  <TwitterButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <InstagramButtonIcon rounded size="tiny" />
+                  <InstagramButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <YoutubeButtonIcon rounded size="tiny" />
+                  <YoutubeButtonIcon rounded size="small" />
                 </a>
               </FlexWrapper>
             </div>
@@ -426,7 +426,7 @@ export const Default = ({
                 Contact
               </Text>
               <div>
-                <Button fit="content" rounded size="tiny">
+                <Button fit="content" rounded size="small">
                   <EnvelopeIcon />
                   <span>Nous écrire</span>
                 </Button>

@@ -60,7 +60,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
         title="Garbage Button"
         aria-label="Supprimer cet item"
         modifier="beryllium"
-        size="tiny"
+        size="small"
       >
         <GarbageIcon />
       </GarbageButton>

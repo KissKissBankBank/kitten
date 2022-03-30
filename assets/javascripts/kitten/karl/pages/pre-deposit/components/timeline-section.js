@@ -12,7 +12,7 @@ import {
 
 const ButtonComponent = () => (
   <div className="k-u-margin-top-quadruple">
-    <Button modifier="helium" size="big">
+    <Button modifier="helium" size="large">
       Je lance mon projet
     </Button>
   </div>

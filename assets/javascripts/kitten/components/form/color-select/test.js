@@ -45,7 +45,7 @@ describe('<ColorSelect />', () => {
             <Button
               modifier="helium"
               rounded
-              size="tiny"
+              size="small"
               fit="content"
               type="button"
             >

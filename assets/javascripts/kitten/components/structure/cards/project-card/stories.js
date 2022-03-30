@@ -191,7 +191,7 @@ export const WithButton = ({ progressProps, ...args }) => (
     </ProjectCard.ItemsLine>
     <ProjectCard.Progress {...progressProps} />
     <ProjectCard.Line>
-      <Button fit="fluid" modifier="helium" size="tiny">
+      <Button fit="fluid" modifier="helium" size="small">
         Participer
       </Button>
     </ProjectCard.Line>

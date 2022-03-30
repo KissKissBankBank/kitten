@@ -175,7 +175,7 @@ const ModalEditProject = () => {
                       as="span"
                       modifier="helium"
                       fit="content"
-                      size="tiny"
+                      size="small"
                       className="k-ModalEditProject--button"
                     >
                       Créer
@@ -293,7 +293,7 @@ const ModalEditProject = () => {
                       as="span"
                       modifier="helium"
                       fit="content"
-                      size="tiny"
+                      size="small"
                       className="k-ModalEditProject--button"
                     >
                       Créer

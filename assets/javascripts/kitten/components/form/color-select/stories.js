@@ -91,7 +91,7 @@ export const Default = ({ value, ...args }) => {
           <Button
             modifier="helium"
             rounded
-            size="tiny"
+            size="small"
             fit="content"
             type="button"
           >
