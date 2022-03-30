@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Helpers: Add `checkDeprecatedSizes` utility.
+- Fix: `DashboardMenu.Selector`: Fix no active item case.
 
 ## [9.3.1] - 2022-03-29
 

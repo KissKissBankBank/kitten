@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import find from 'lodash/fp/find'
@@ -90,9 +90,7 @@ const Expandable = ({
             </span>
           </div>
         </summary>
-        <ul className="k-DashboardMenu__expandable__list">
-          {children}
-        </ul>
+        <ul className="k-DashboardMenu__expandable__list">{children}</ul>
       </details>
     </li>
   )
@@ -173,11 +171,12 @@ const Selector = ({ data, className, ...props }) => {
     )
   }
 
+  const activeItem = find(item => item.isActive)(data)
   const {
     className: activeClassName,
     icon: activeIcon,
     children: activeChildren,
-  } = find(item => item.isActive === true)(data)
+  } = activeItem || {}
 
   return (
     <details
