@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Location`: Add `inputValue` prop to display custom value.
-- Fix: Helpers: Add `checkDeprecatedSizes` utility.
-- Fix: `DashboardMenu.Selector`: Fix no active item case.
+## [9.4.0] - 2022-03-30
+
+Feature:
+
+- `Location`: Add `customInputValue` prop to display custom value.
+
+Fixes:
+
+- Helpers: Add `checkDeprecatedSizes` utility.
+- `DashboardMenu.Selector`: Fix no active item case.
 
 ## [9.3.1] - 2022-03-29
 

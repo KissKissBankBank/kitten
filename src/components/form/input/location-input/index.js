@@ -27,7 +27,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
-var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText"];
+var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "customInputValue"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -48,6 +48,7 @@ var LocationInput = function LocationInput(_ref) {
       inputProps = _ref.inputProps,
       name = _ref.name,
       loadingText = _ref.loadingText,
+      customInputValue = _ref.customInputValue,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(defaultValue),
@@ -78,7 +79,7 @@ var LocationInput = function LocationInput(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(_reactPlacesAutocomplete.default, (0, _extends2.default)({
-    value: address,
+    value: customInputValue || address,
     onSelect: handleSelect,
     onChange: handleChange
   }, others), function (_ref2) {
@@ -118,7 +119,8 @@ LocationInput.defaultProps = {
   defaultValue: '',
   inputProps: {},
   name: 'location-input',
-  loadingText: 'Loading...'
+  loadingText: 'Loading...',
+  customInputValue: ''
 };
 LocationInput.propTypes = {
   onChange: _propTypes.default.func,
@@ -126,5 +128,6 @@ LocationInput.propTypes = {
   defaultValue: _propTypes.default.string,
   inputProps: _propTypes.default.object,
   name: _propTypes.default.string,
-  loadingText: _propTypes.default.string
+  loadingText: _propTypes.default.string,
+  customInputValue: _propTypes.default.string
 };

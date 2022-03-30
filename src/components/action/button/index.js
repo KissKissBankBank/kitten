@@ -13,8 +13,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
-
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typography = require("../../../helpers/utils/typography");

@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText"];
+var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "customInputValue"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -24,6 +24,7 @@ export var LocationInput = function LocationInput(_ref) {
       inputProps = _ref.inputProps,
       name = _ref.name,
       loadingText = _ref.loadingText,
+      customInputValue = _ref.customInputValue,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(defaultValue),
@@ -54,7 +55,7 @@ export var LocationInput = function LocationInput(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(PlacesAutocomplete, _extends({
-    value: address,
+    value: customInputValue || address,
     onSelect: handleSelect,
     onChange: handleChange
   }, others), function (_ref2) {
@@ -92,7 +93,8 @@ LocationInput.defaultProps = {
   defaultValue: '',
   inputProps: {},
   name: 'location-input',
-  loadingText: 'Loading...'
+  loadingText: 'Loading...',
+  customInputValue: ''
 };
 LocationInput.propTypes = {
   onChange: PropTypes.func,
@@ -100,5 +102,6 @@ LocationInput.propTypes = {
   defaultValue: PropTypes.string,
   inputProps: PropTypes.object,
   name: PropTypes.string,
-  loadingText: PropTypes.string
+  loadingText: PropTypes.string,
+  customInputValue: PropTypes.string
 };
