@@ -33,6 +33,10 @@ export default {
       name: 'gPlaceApiKey (story prop)',
       control: 'text',
     },
+    customInputValue: {
+      name: 'customInputValue',
+      control: 'text',
+    },
   },
   args: {
     onChange: e => console.warn(e),
@@ -41,6 +45,7 @@ export default {
     inputProps: {},
     name: 'location-input',
     loadingText: 'Loading',
+    customInputValue: '',
     gPlaceApiKey: 'YOUR KEY',
   },
   parameters: {

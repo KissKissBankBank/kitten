@@ -126,6 +126,7 @@ export const LocationInput = ({
   inputProps,
   name,
   loadingText,
+  customInputValue,
   ...others
 }) => {
   const [address, updateAddress] = useState(defaultValue)
@@ -148,7 +149,7 @@ export const LocationInput = ({
 
   return (
     <PlacesAutocomplete
-      value={inputProps?.inputValue || address}
+      value={customInputValue || address}
       onSelect={handleSelect}
       onChange={handleChange}
       {...others}
@@ -209,6 +210,7 @@ LocationInput.defaultProps = {
   inputProps: {},
   name: 'location-input',
   loadingText: 'Loading...',
+  customInputValue: '',
 }
 
 LocationInput.propTypes = {
@@ -218,4 +220,5 @@ LocationInput.propTypes = {
   inputProps: PropTypes.object,
   name: PropTypes.string,
   loadingText: PropTypes.string,
+  customInputValue: PropTypes.string,
 }
