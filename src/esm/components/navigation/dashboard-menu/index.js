@@ -8,7 +8,7 @@ var _excluded = ["className"],
     _excluded6 = ["data", "className"],
     _excluded7 = ["children", "icon", "isActive"],
     _excluded8 = ["icon", "children", "isActive"];
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import find from 'lodash/fp/find';
@@ -158,12 +158,14 @@ var Selector = function Selector(_ref6) {
     }, children));
   }
 
-  var _find = find(function (item) {
-    return item.isActive === true;
-  })(data),
-      activeClassName = _find.className,
-      activeIcon = _find.icon,
-      activeChildren = _find.children;
+  var activeItem = find(function (item) {
+    return item.isActive;
+  })(data);
+
+  var _ref7 = activeItem || {},
+      activeClassName = _ref7.className,
+      activeIcon = _ref7.icon,
+      activeChildren = _ref7.children;
 
   return /*#__PURE__*/React.createElement("details", _extends({
     ref: detailsElement,
@@ -184,11 +186,11 @@ var Selector = function Selector(_ref6) {
     color: "currentColor"
   })))), /*#__PURE__*/React.createElement("div", {
     className: "k-DashboardMenu__selectorList"
-  }, data.map(function (_ref7, index) {
-    var icon = _ref7.icon,
-        children = _ref7.children,
-        isActive = _ref7.isActive,
-        itemProps = _objectWithoutPropertiesLoose(_ref7, _excluded8);
+  }, data.map(function (_ref8, index) {
+    var icon = _ref8.icon,
+        children = _ref8.children,
+        isActive = _ref8.isActive,
+        itemProps = _objectWithoutPropertiesLoose(_ref8, _excluded8);
 
     if (isActive) return;
     return /*#__PURE__*/React.createElement("a", _extends({

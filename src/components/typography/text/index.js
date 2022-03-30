@@ -15,6 +15,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _deprecated = require("../../../helpers/utils/deprecated");
+
 var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style", "letterSpacing"];
 
 var Text = function Text(_ref) {
@@ -33,6 +35,7 @@ var Text = function Text(_ref) {
       style = _ref.style,
       letterSpacing = _ref.letterSpacing,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  (0, _deprecated.checkDeprecatedSizes)(size);
   var Tag = as || tag;
   var textClassName = (0, _classnames.default)({
     // Color.
@@ -60,8 +63,14 @@ var Text = function Text(_ref) {
     'k-u-size-giant': size == 'giant',
     'k-u-size-huge': size == 'huge',
     'k-u-size-big': size == 'big',
+    // Deprecated
+    'k-u-size-large': size == 'large',
     'k-u-size-default': size == 'default',
+    // Deprecated
+    'k-u-size-medium': size == 'medium',
     'k-u-size-tiny': size == 'tiny',
+    // Deprecated
+    'k-u-size-small': size == 'small',
     'k-u-size-micro': size == 'micro',
     'k-u-size-nano': size == 'nano',
     // Style.
@@ -89,7 +98,7 @@ Text.propTypes = {
   decoration: _propTypes.default.oneOf(['underline', 'none']),
   setting: _propTypes.default.oneOf(['tnum']),
   lineHeight: _propTypes.default.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
-  size: _propTypes.default.oneOf(['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  size: _propTypes.default.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
   transform: _propTypes.default.oneOf(['uppercase']),
   weight: _propTypes.default.oneOf(['light', 'regular', 'bold']),

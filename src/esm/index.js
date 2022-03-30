@@ -393,7 +393,8 @@ export { hexToRgba } from './helpers/utils/hex-to-rgba';
 export { getMinQuery, getMaxQuery, getJoinedQueries, createMatchMedia, createMatchMediaMin, createMatchMediaMax, createMatchMediaWithin, getScreenSizeFrom } from './helpers/utils/media-queries';
 export { useMedia } from './helpers/utils/use-media-query';
 export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook';
-export { createRangeFromZeroTo } from './helpers/utils/range'; // ---
+export { createRangeFromZeroTo } from './helpers/utils/range';
+export { checkDeprecatedSizes } from './helpers/utils/deprecated'; // ---
 // HOC
 // ---
 
