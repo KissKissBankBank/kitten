@@ -136,7 +136,7 @@ const Info = ({ label, text }) => (
     <Text
       tag="strong"
       weight="bold"
-      size="tiny"
+      size="small"
       className="k-u-inlineFlex@s-down"
     >
       {parseHtml(text)}

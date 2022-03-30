@@ -73,7 +73,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       className="k-Pagination__ListItem k-Pagination__ListItem__Ellipsis"
     >
       <span
-        className="k-u-size-tiny k-u-weight-regular"
+        className="k-u-size-small k-u-weight-regular"
       >
         …
       </span>
@@ -102,7 +102,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       className="k-Pagination__ListItem k-Pagination__ListItem__Ellipsis"
     >
       <span
-        className="k-u-size-tiny k-u-weight-regular"
+        className="k-u-size-small k-u-weight-regular"
       >
         …
       </span>

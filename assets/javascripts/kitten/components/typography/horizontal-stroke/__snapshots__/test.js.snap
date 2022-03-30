@@ -16,154 +16,7 @@ exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
   height: 0.125rem;
 }
 
-.c0.k-HorizontalStroke--size--default {
-  width: 1.875rem;
-  height: 0.25rem;
-}
-
-.c0.k-HorizontalStroke--size--big {
-  width: 3.125rem;
-  height: 0.25rem;
-}
-
-.c0.k-HorizontalStroke--size--huge {
-  width: 6.25rem;
-  height: 0.375rem;
-}
-
-.c0.k-HorizontalStroke--modifier--primary {
-  width: 2.5rem;
-  height: 0.375rem;
-}
-
-.c0.k-HorizontalStroke--modifier--secondary {
-  width: 1.875rem;
-  height: 0.25rem;
-}
-
-.c0.k-HorizontalStroke--modifier--tertiary {
-  width: 1.875rem;
-  height: 0.25rem;
-}
-
-.c0.k-HorizontalStroke--modifier--quaternary {
-  width: 1.875rem;
-  height: 0.25rem;
-}
-
-.c0.k-HorizontalStroke--modifier--quinary {
-  width: 1.875rem;
-  height: 0.25rem;
-}
-
-.c0.k-HorizontalStroke--modifier--senary {
-  width: 0;
-  height: 0;
-}
-
-.c0.k-HorizontalStroke--modifier--septenary {
-  width: 0;
-  height: 0;
-}
-
-@media (min-width:40rem) {
-  .c0.k-HorizontalStroke--modifier--primary {
-    width: 3.125rem;
-    height: 0.375rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--secondary {
-    width: 2.5rem;
-    height: 0.375rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--tertiary {
-    width: 1.875rem;
-    height: 0.25rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--quaternary {
-    width: 1.875rem;
-    height: 0.25rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--quinary {
-    width: 1.875rem;
-    height: 0.25rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--senary {
-    width: 0;
-    height: 0;
-  }
-
-  .c0.k-HorizontalStroke--modifier--septenary {
-    width: 0;
-    height: 0;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c0.k-HorizontalStroke--modifier--primary {
-    width: 3.125rem;
-    height: 0.375rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--secondary {
-    width: 3.125rem;
-    height: 0.375rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--tertiary {
-    width: 2.5rem;
-    height: 0.375rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--quaternary {
-    width: 1.875rem;
-    height: 0.25rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--quinary {
-    width: 0;
-    height: 0;
-  }
-
-  .c0.k-HorizontalStroke--modifier--senary {
-    width: 1.875rem;
-    height: 0.25rem;
-  }
-
-  .c0.k-HorizontalStroke--modifier--septenary {
-    width: 0;
-    height: 0;
-  }
-}
-
-<div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="var(--color-grey-900, #222)"
-  style={
-    Object {
-      "height": null,
-      "width": null,
-    }
-  }
-/>
-`;
-
-exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
-.c0 {
-  border: none;
-  background: var(--color-grey-900,#222);
-}
-
-.c0.k-HorizontalStroke--size--micro {
-  width: 0.9375rem;
-  height: 0.125rem;
-}
-
-.c0.k-HorizontalStroke--size--tiny {
+.c0.k-HorizontalStroke--size--small {
   width: 1.25rem;
   height: 0.125rem;
 }
@@ -173,7 +26,17 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -293,7 +156,7 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--big"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -320,12 +183,27 @@ exports[`<HorizontalStroke /> with \`height via \`customSize\` and width via \`s
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -445,7 +323,7 @@ exports[`<HorizontalStroke /> with \`height via \`customSize\` and width via \`s
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -472,12 +350,27 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -608,6 +501,173 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
 />
 `;
 
+exports[`<HorizontalStroke /> with \`large\` size matches with snapshot 1`] = `
+.c0 {
+  border: none;
+  background: var(--color-grey-900,#222);
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
+.c0.k-HorizontalStroke--size--tiny {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+.c0.k-HorizontalStroke--size--default {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--huge {
+  width: 6.25rem;
+  height: 0.375rem;
+}
+
+.c0.k-HorizontalStroke--modifier--primary {
+  width: 2.5rem;
+  height: 0.375rem;
+}
+
+.c0.k-HorizontalStroke--modifier--secondary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--tertiary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--quaternary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--quinary {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--modifier--senary {
+  width: 0;
+  height: 0;
+}
+
+.c0.k-HorizontalStroke--modifier--septenary {
+  width: 0;
+  height: 0;
+}
+
+@media (min-width:40rem) {
+  .c0.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--secondary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--tertiary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quinary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--senary {
+    width: 0;
+    height: 0;
+  }
+
+  .c0.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (min-width:67.5rem) {
+  .c0.k-HorizontalStroke--modifier--primary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--secondary {
+    width: 3.125rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--tertiary {
+    width: 2.5rem;
+    height: 0.375rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quaternary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--quinary {
+    width: 0;
+    height: 0;
+  }
+
+  .c0.k-HorizontalStroke--modifier--senary {
+    width: 1.875rem;
+    height: 0.25rem;
+  }
+
+  .c0.k-HorizontalStroke--modifier--septenary {
+    width: 0;
+    height: 0;
+  }
+}
+
+<div
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--large"
+  color="var(--color-grey-900, #222)"
+  style={
+    Object {
+      "height": null,
+      "width": null,
+    }
+  }
+/>
+`;
+
 exports[`<HorizontalStroke /> with \`primary\` modifier and \`huge\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
@@ -624,12 +684,27 @@ exports[`<HorizontalStroke /> with \`primary\` modifier and \`huge\` size matche
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -776,12 +851,27 @@ exports[`<HorizontalStroke /> with \`primary\` modifier matches with snapshot 1`
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -912,7 +1002,7 @@ exports[`<HorizontalStroke /> with \`primary\` modifier matches with snapshot 1`
 />
 `;
 
-exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
+exports[`<HorizontalStroke /> with \`small\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
   background: var(--color-grey-900,#222);
@@ -928,12 +1018,27 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1053,7 +1158,7 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--tiny"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--small"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -1080,12 +1185,27 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1205,7 +1325,7 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -1233,12 +1353,27 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1358,7 +1493,7 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -1385,12 +1520,27 @@ exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapsh
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1510,7 +1660,7 @@ exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapsh
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -1537,12 +1687,27 @@ exports[`<HorizontalStroke /> with string type width via \`customSize\` matches 
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1662,7 +1827,7 @@ exports[`<HorizontalStroke /> with string type width via \`customSize\` matches 
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -1689,12 +1854,27 @@ exports[`<HorizontalStroke /> with width and height via \`customSize\` matches w
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1814,7 +1994,7 @@ exports[`<HorizontalStroke /> with width and height via \`customSize\` matches w
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {
@@ -1841,12 +2021,27 @@ exports[`<HorizontalStroke /> with width via \`customSize\` matches with snapsho
   height: 0.125rem;
 }
 
+.c0.k-HorizontalStroke--size--small {
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--default {
   width: 1.875rem;
   height: 0.25rem;
 }
 
+.c0.k-HorizontalStroke--size--medium {
+  width: 1.875rem;
+  height: 0.25rem;
+}
+
 .c0.k-HorizontalStroke--size--big {
+  width: 3.125rem;
+  height: 0.25rem;
+}
+
+.c0.k-HorizontalStroke--size--large {
   width: 3.125rem;
   height: 0.25rem;
 }
@@ -1966,7 +2161,7 @@ exports[`<HorizontalStroke /> with width via \`customSize\` matches with snapsho
 }
 
 <div
-  className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
+  className="c0 k-HorizontalStroke k-HorizontalStroke--size--medium"
   color="var(--color-grey-900, #222)"
   style={
     Object {

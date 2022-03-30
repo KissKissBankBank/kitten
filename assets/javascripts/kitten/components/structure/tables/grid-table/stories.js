@@ -137,42 +137,42 @@ export const Default = () => (
         <GridTable.Col className="customCol_1">
           <Text
             weight="regular"
-            size="tiny"
+            size="small"
             className="k-u-hidden@s-down k-u-hidden@m"
           >
             Date
           </Text>
-          <Text weight="regular" size="tiny" className="k-u-hidden@l-up">
+          <Text weight="regular" size="small" className="k-u-hidden@l-up">
             Contributeur
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_2">
-          <Text weight="regular" size="tiny">
+          <Text weight="regular" size="small">
             Contributeur
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_3">
-          <Text weight="regular" size="tiny">
+          <Text weight="regular" size="small">
             Montant
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_4">
-          <Text weight="regular" size="tiny">
+          <Text weight="regular" size="small">
             Statut
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_5">
-          <Text weight="regular" size="tiny">
+          <Text weight="regular" size="small">
             Mode de livraison
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_6">
-          <Text weight="regular" size="tiny">
+          <Text weight="regular" size="small">
             Statut livraison
           </Text>
         </GridTable.Col>
@@ -190,7 +190,7 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_1">
             <div>
-              <Text size="tiny" weight="regular">
+              <Text size="small" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
@@ -225,7 +225,7 @@ export const Default = () => (
           </GridTable.Col>
 
           <GridTable.Col className="customCol_3">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               72&nbsp;€
             </Text>
           </GridTable.Col>
@@ -235,7 +235,7 @@ export const Default = () => (
           </GridTable.Col>
 
           <GridTable.Col className="customCol_5">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               Livraison
             </Text>
           </GridTable.Col>
@@ -268,7 +268,7 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_1">
             <div>
-              <Text size="tiny" weight="regular">
+              <Text size="small" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
@@ -301,7 +301,7 @@ export const Default = () => (
           </GridTable.Col>
 
           <GridTable.Col className="customCol_3">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               72&nbsp;€
             </Text>
           </GridTable.Col>
@@ -311,7 +311,7 @@ export const Default = () => (
           </GridTable.Col>
 
           <GridTable.Col className="customCol_5">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               Livraison
             </Text>
           </GridTable.Col>

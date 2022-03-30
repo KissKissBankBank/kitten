@@ -4,8 +4,12 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 export const VerticalStroke = styled(({ className, size, ...others }) => {
+  
+  checkDeprecatedSizes(size)
+  
   const verticalStrokeClassName = classNames(
     'k-VerticalStroke',
     {
@@ -14,6 +18,7 @@ export const VerticalStroke = styled(({ className, size, ...others }) => {
       'k-VerticalStroke--default': size === 'default', // Deprecated
       'k-VerticalStroke--medium': size === 'medium',
       'k-VerticalStroke--big': size === 'big', // Deprecated
+      'k-VerticalStroke--large': size === 'large',
       'k-VerticalStroke--huge': size === 'huge',
     },
     className,
