@@ -148,7 +148,7 @@ export const LocationInput = ({
 
   return (
     <PlacesAutocomplete
-      value={address}
+      value={inputProps?.inputValue || address}
       onSelect={handleSelect}
       onChange={handleChange}
       {...others}
