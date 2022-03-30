@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import classNames from 'classnames'
 import { strokeModifierStylesWithoutMargin } from './common/stroke-modifier-styles'
 
@@ -94,6 +95,8 @@ export const HorizontalStroke = ({
   color,
   ...props
 }) => {
+  checkDeprecatedSizes(size)
+
   const modifierClassName = () => {
     if (!modifier) return `k-HorizontalStroke--size--${size}`
 
