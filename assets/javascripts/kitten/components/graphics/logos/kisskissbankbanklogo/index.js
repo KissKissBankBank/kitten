@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { computeFromRatio } from '../../../../helpers/utils/ratio'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 export const KissKissBankBankLogo = ({
   color,
   width,
   height,
   tiny,
+  small,
   ...props
 }) => {
   const DEFAULT_WIDTH = 134
@@ -51,12 +53,13 @@ KissKissBankBankLogo.propTypes = {
   color: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  tiny: PropTypes.bool,
+  tiny: deprecated(PropTypes.bool, 'Please use `small` instead'),
+  small: PropTypes.bool,
 }
 
 KissKissBankBankLogo.defaultProps = {
   color: '#000',
   width: null,
   height: null,
-  tiny: false,
+  small: false,
 }
