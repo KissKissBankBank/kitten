@@ -11,7 +11,7 @@ describe('<Tag />', () => {
   it('should match its snapshot with props', () => {
     const tree = renderer
       .create(
-        <Tag type="info" size="regular">
+        <Tag type="info" size="medium">
           <strong>5</strong> kittens
         </Tag>,
       )

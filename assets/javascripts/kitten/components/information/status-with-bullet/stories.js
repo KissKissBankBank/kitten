@@ -23,7 +23,7 @@ export default {
   args: {
     statusMessage: 'Message',
     statusType: 'success',
-    size: 'tiny',
+    size: 'small',
     weight: 'regular',
     bulletProps: {},
   },
@@ -40,7 +40,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['normal', 'tiny', 'micro'],
+      options: ['micro', 'small', 'medium'],
       control: 'select',
     },
     weight: {
