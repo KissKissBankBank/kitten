@@ -54,7 +54,7 @@ describe('<AvatarWithTextAndBadge />', () => {
           <AvatarWithTextAndBadge>
             <AvatarWithTextAndBadge.Image
               alt="Alt text"
-              size="big"
+              size="large"
               src="/kitten.jg"
               text="LT"
               textColor="white"

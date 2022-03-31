@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: `Information`: 
+  - Remplace `tiny, regular, default, big` by `small, medium, large` prop size values.
 - Feature: `TextInput`: Add `autoresize` value to `tag` prop.
 - Fix: `*EntryTable`: Fix column value for attribute `scope`.
 

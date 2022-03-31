@@ -34,7 +34,7 @@ export default {
     size: {
       name: 'size',
       control: 'select',
-      options: ['micro', 'tiny', 'normal', 'big', 'huge'],
+      options: ['micro', 'small', 'medium', 'large', 'huge'],
     },
     status: {
       name: 'status',
@@ -50,7 +50,7 @@ export default {
 
 const args = {
   empty: false,
-  size: 'normal',
+  size: 'medium',
   backgroundColor: null,
   children: <StarIcon color={COLORS.background1} />,
   status: 'info',
@@ -65,7 +65,7 @@ export const WithBorderStyles = args => <IconBadge {...args} />
 
 WithBorderStyles.args = {
   ...args,
-  size: 'tiny',
+  size: 'small',
   border: {
     width: 2,
     style: 'solid',
