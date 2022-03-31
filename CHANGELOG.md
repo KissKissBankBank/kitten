@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `Button`: Fix SVG shrink property.
 - Feature: `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
+- Feature: `TextInput`: Add `autoresize` value to `tag` prop.
+- Fix: `*EntryTable`: Fix column value for attribute `scope`.
 
 ## [9.4.0] - 2022-03-30
 
