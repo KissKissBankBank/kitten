@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking changes: `BulletList`: Deprecate size prop values.
+- Fix: `Structure`: 
+  - Remplace `tiny, regular, default, big` by `small, medium, large` prop size values.
 - Deprecation/Changes: `ToggleSwitch` : Remove `big` prop.
 - Fix: `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
 - Feature: `TextInput`: Add `autoresize` value to `tag` prop.
