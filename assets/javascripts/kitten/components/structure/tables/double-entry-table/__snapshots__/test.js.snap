@@ -17,19 +17,19 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
         <tr>
           <th
             className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 1
           </th>
           <th
             className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 2
           </th>
           <th
             className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol customHeaderColClass"
-            scope="column"
+            scope="col"
           >
             Header 3
           </th>
