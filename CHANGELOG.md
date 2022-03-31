@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ToggleSwitch` : Remove `big` prop.
+- Breaking change: `ToggleSwitch` : Remove `big` prop.
 
 ## [9.4.0] - 2022-03-30
 
