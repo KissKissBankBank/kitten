@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
+
 ## [9.4.0] - 2022-03-30
 
 Feature:
