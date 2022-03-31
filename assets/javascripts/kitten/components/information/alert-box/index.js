@@ -6,6 +6,7 @@ import { IconBadge } from '../../information/icon-badge'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import classNames from 'classnames'
 
 const AlertBoxWrapper = styled.div`
@@ -44,7 +45,8 @@ const AlertBoxWrapper = styled.div`
     line-height: ${pxToRem(18)};
   }
 
-  &.k-AlertBox--normal {
+  &.k-AlertBox--normal,
+  &.k-AlertBox--medium {
     gap: ${pxToRem(15)};
     padding: ${pxToRem(10)};
 
@@ -55,7 +57,8 @@ const AlertBoxWrapper = styled.div`
     }
   }
 
-  &.k-AlertBox--big {
+  &.k-AlertBox--big,
+  &.k-AlertBox--large {
     gap: ${pxToRem(20)};
     padding: ${pxToRem(20)};
 
@@ -144,6 +147,8 @@ export const AlertBox = ({
   fit,
   ...others
 }) => {
+  checkDeprecatedSizes(size)
+
   const internalIcon = (() => {
     if (icon) return icon
 
@@ -164,10 +169,10 @@ export const AlertBox = ({
 
   const iconSize = (() => {
     switch(size) {
-      case 'big':
-        return 'normal'
-      case 'normal':
-        return 'tiny'
+      case 'large' || 'big':
+        return 'medium' || 'normal'
+      case 'medium' || 'normal':
+        return 'small' || 'tiny'
       case 'small':
         return 'micro'
     }
@@ -208,7 +213,7 @@ AlertBox.propTypes = {
   displayIcon: PropTypes.bool,
   iconPosition: PropTypes.oneOf(['start', 'center']),
   icon: PropTypes.node,
-  size: PropTypes.oneOf(['normal', 'big', 'small']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   fit: PropTypes.oneOf(['content', 'fluid']),
 }
 
@@ -216,7 +221,7 @@ AlertBox.defaultProps = {
   status: 'info',
   displayIcon: true,
   icon: null,
-  size: 'normal',
+  size: 'medium',
   fit: 'fluid',
   iconPosition: 'start',
 }

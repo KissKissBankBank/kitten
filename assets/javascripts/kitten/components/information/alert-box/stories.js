@@ -27,7 +27,7 @@ Default.args = {
   icon: null,
   status: 'info',
   displayIcon: true,
-  size: 'normal',
+  size: 'medium',
   fit: 'fluid',
   iconPosition: 'start',
 }
@@ -46,7 +46,7 @@ Default.argTypes = {
   },
   displayIcon: { control: 'boolean' },
   iconPosition: { control: 'radio', options: ['start', 'center'] },
-  size: { control: 'radio', options: ['normal', 'big', 'small'] },
+  size: { control: 'radio', options: [ 'small', 'medium', 'large'] },
   fit: { control: 'radio', options: ['content', 'fluid'] },
 }
 
@@ -76,7 +76,7 @@ export const WithCustomIcon = args => <AlertBox {...args} />
 
 WithCustomIcon.args = {
   ...Default.args,
-  size: 'big',
+  size: 'large',
   iconPosition: 'center',
   children:
     'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.',

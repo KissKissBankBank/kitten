@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledBadge = styled.span`
   box-sizing: border-box;
@@ -54,7 +55,8 @@ const StyledBadge = styled.span`
     }
   }
 
-  &.k-IconBadge--tiny {
+  &.k-IconBadge--tiny,
+  &.k-IconBadge--small {
     min-width: ${pxToRem(20)};
     min-height: ${pxToRem(20)};
 
@@ -64,7 +66,8 @@ const StyledBadge = styled.span`
     }
   }
 
-  &.k-IconBadge--big {
+  &.k-IconBadge--big,
+  &.k-IconBadge--large {
     min-width: ${pxToRem(40)};
     min-height: ${pxToRem(40)};
   }
@@ -105,8 +108,11 @@ export const IconBadge = ({
   status,
   hasBorder,
   ...others
-}) => (
-  <StyledBadge
+}) => { 
+  checkDeprecatedSizes(size)
+
+  return (
+    <StyledBadge
     className={classNames(
       'k-IconBadge',
       className,
@@ -133,11 +139,12 @@ export const IconBadge = ({
   >
     {children}
   </StyledBadge>
-)
+  )
+}
 
 IconBadge.defaultProps = {
   empty: false,
-  size: 'normal',
+  size: 'medium',
   border: {},
   backgroundColor: null,
   status: 'info',
@@ -150,7 +157,7 @@ IconBadge.propTypes = {
   empty: PropTypes.bool,
   big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
   backgroundColor: PropTypes.string,
   border: PropTypes.shape({
     width: PropTypes.number,
