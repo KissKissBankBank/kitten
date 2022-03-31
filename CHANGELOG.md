@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `TextInput`: Add `autoresize` value to `tag` prop.
 - Fix: `*EntryTable`: Fix column value for attribute `scope`.
 
 ## [9.4.0] - 2022-03-30
