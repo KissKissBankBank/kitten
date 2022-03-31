@@ -39,18 +39,6 @@ describe('<ToggleSwitch />', () => {
     })
   })
 
-  describe('with `big` prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<ToggleSwitch id="toggle-switch" big />)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with `disabled` prop', () => {
     beforeEach(() => {
       component = renderer
