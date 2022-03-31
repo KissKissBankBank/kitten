@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: `Graphics`: 
+  - Remplace `tiny` by `small` prop size value.
+
 ## [9.4.0] - 2022-03-30
 
 Feature:
