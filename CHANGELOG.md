@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `TextInput`: Add `autoresize` value to `tag` prop.
+- Fix: `*EntryTable`: Fix column value for attribute `scope`.
+
+## [9.4.0] - 2022-03-30
+
+Feature:
+
+- `Location`: Add `customInputValue` prop to display custom value.
+
+Fixes:
+
+- Helpers: Add `checkDeprecatedSizes` utility.
+- `DashboardMenu.Selector`: Fix no active item case.
 
 ## [9.3.1] - 2022-03-29
 

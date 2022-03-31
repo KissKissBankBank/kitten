@@ -4,6 +4,7 @@ var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
 export var Text = function Text(_ref) {
   var className = _ref.className,
       color = _ref.color,
@@ -21,6 +22,7 @@ export var Text = function Text(_ref) {
       letterSpacing = _ref.letterSpacing,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  checkDeprecatedSizes(size);
   var Tag = as || tag;
   var textClassName = classNames({
     // Color.
@@ -48,8 +50,14 @@ export var Text = function Text(_ref) {
     'k-u-size-giant': size == 'giant',
     'k-u-size-huge': size == 'huge',
     'k-u-size-big': size == 'big',
+    // Deprecated
+    'k-u-size-large': size == 'large',
     'k-u-size-default': size == 'default',
+    // Deprecated
+    'k-u-size-medium': size == 'medium',
     'k-u-size-tiny': size == 'tiny',
+    // Deprecated
+    'k-u-size-small': size == 'small',
     'k-u-size-micro': size == 'micro',
     'k-u-size-nano': size == 'nano',
     // Style.
@@ -75,7 +83,7 @@ Text.propTypes = {
   decoration: PropTypes.oneOf(['underline', 'none']),
   setting: PropTypes.oneOf(['tnum']),
   lineHeight: PropTypes.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
-  size: PropTypes.oneOf(['giant', 'huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  size: PropTypes.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),

@@ -3,7 +3,6 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["children", "modifier", "size", "className", "rounded", "borderRadius", "disabled", "tag", "as", "fit", "mobileFit", "active"];
 import React from 'react';
 import PropTypes from 'prop-types';
-import deprecated from 'prop-types-extra/lib/deprecated';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';

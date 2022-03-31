@@ -15,7 +15,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _find2 = _interopRequireDefault(require("lodash/fp/find"));
+var _find = _interopRequireDefault(require("lodash/fp/find"));
 
 var _arrowIcon = require("../../graphics/icons/arrow-icon");
 
@@ -175,12 +175,14 @@ var Selector = function Selector(_ref6) {
     }, children));
   }
 
-  var _find = (0, _find2.default)(function (item) {
-    return item.isActive === true;
-  })(data),
-      activeClassName = _find.className,
-      activeIcon = _find.icon,
-      activeChildren = _find.children;
+  var activeItem = (0, _find.default)(function (item) {
+    return item.isActive;
+  })(data);
+
+  var _ref7 = activeItem || {},
+      activeClassName = _ref7.className,
+      activeIcon = _ref7.icon,
+      activeChildren = _ref7.children;
 
   return /*#__PURE__*/_react.default.createElement("details", (0, _extends2.default)({
     ref: detailsElement,
@@ -201,11 +203,11 @@ var Selector = function Selector(_ref6) {
     color: "currentColor"
   })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DashboardMenu__selectorList"
-  }, data.map(function (_ref7, index) {
-    var icon = _ref7.icon,
-        children = _ref7.children,
-        isActive = _ref7.isActive,
-        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded8);
+  }, data.map(function (_ref8, index) {
+    var icon = _ref8.icon,
+        children = _ref8.children,
+        isActive = _ref8.isActive,
+        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref8, _excluded8);
     if (isActive) return;
     return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
       key: children + index
