@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: `ToggleSwitch` : Remove `big` prop.
+- Fix: `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
+- Feature: `TextInput`: Add `autoresize` value to `tag` prop.
+- Fix: `*EntryTable`: Fix column value for attribute `scope`.
 
 ## [9.4.0] - 2022-03-30
 
