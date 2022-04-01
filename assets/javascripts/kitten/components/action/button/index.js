@@ -76,6 +76,10 @@ const StyledButton = styled.button`
   border-radius: var(--Button-border-radius, 0);
   min-width: 0;
 
+  svg {
+    flex: 0 0 auto;
+  }
+
   &:disabled,
   &.k-Button--disabled {
     cursor: not-allowed;

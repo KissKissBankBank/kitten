@@ -6,7 +6,43 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `Action`: 
   - Remplace `tiny, regular, default, big` by `small, medium, large` prop size values.
-- Fix: Helpers: Add `checkDeprecatedSizes` utility.
+
+## [9.5.0] - 2022-04-01
+
+Deprecation/Change:
+
+- `ToggleSwitch` : Remove `big` prop.
+
+Features:
+
+- `ManagerCard`: Add component.
+- Utilities: Add responsive classes for `text/line` utilities.
+- Utilities: Add `k-u-color-*` utilities based on the new tokens.
+- `Text`: Add new token-based values to `color` prop.
+- Add new `pending` status to the following components:
+  - `AlertBox`
+  - `IconBadge`
+  - `StatusIconNext`
+- `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
+- `TextInput`: Add `autoresize` value to `tag` prop.
+
+Fixes:
+
+- `SummaryCard`: Fix stories and tests.
+- `Button`: Fix SVG shrink property.
+- `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
+- `*EntryTable`: Fix column value for attribute `scope`.
+
+## [9.4.0] - 2022-03-30
+
+Feature:
+
+- `Location`: Add `customInputValue` prop to display custom value.
+
+Fixes:
+
+- Helpers: Add `checkDeprecatedSizes` utility.
+- `DashboardMenu.Selector`: Fix no active item case.
 
 ## [9.3.1] - 2022-03-29
 

@@ -23,6 +23,9 @@ export var StatusIconNext = function StatusIconNext(_ref) {
     case 'danger':
       return /*#__PURE__*/React.createElement(StatusIconNext.Danger, props);
 
+    case 'pending':
+      return /*#__PURE__*/React.createElement(StatusIconNext.Pending, props);
+
     default:
       return /*#__PURE__*/React.createElement(StatusIconNext.Info, props);
   }
@@ -107,6 +110,7 @@ StatusIconNext.Success = function (_ref5) {
   }));
 };
 
+StatusIconNext.Pending = StatusIconNext.Success;
 StatusIconNext.defaultProps = {
   status: 'info',
   color: 'var(--color-grey-900)'

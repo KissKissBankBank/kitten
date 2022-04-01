@@ -44,6 +44,12 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c1 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c1:disabled,
 .c1.k-Button--disabled {
   cursor: not-allowed;
@@ -193,6 +199,12 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c2.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c2 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c2:disabled,

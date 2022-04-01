@@ -743,6 +743,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c2 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c2:disabled,
 .c2.k-Button--disabled {
   cursor: not-allowed;
@@ -1516,6 +1522,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c2 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c2:disabled,
 .c2.k-Button--disabled {
   cursor: not-allowed;
@@ -2287,6 +2299,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c3.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c3 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c3:disabled,
