@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../../constants/typography-config';
 import { ScreenConfig } from '../../../../constants/screen-config';
+import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize';
 import classNames from 'classnames';
 export var StyledInput = styled.input.withConfig({
   displayName: "text-input__StyledInput",
@@ -16,7 +17,7 @@ export var StyledInput = styled.input.withConfig({
 var StyledTextareaContainer = styled.div.withConfig({
   displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-itv1lf-1"
-})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--tiny{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--regular{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--big{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--huge{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--giant{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}}&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}.k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient{bottom:", ";}"], pxToRem(9), pxToRem(9), pxToRem(14), pxToRem(14), pxToRem(18), pxToRem(18), ScreenConfig.M.min, pxToRem(21), pxToRem(21), pxToRem(21), pxToRem(21), ScreenConfig.M.min, pxToRem(27), pxToRem(27), pxToRem(21), pxToRem(21), ScreenConfig.M.min, pxToRem(32), pxToRem(32), pxToRem(10), pxToRem(2), pxToRem(2), pxToRem(10), pxToRem(3));
+})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:", ";&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--tiny{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--regular{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--big{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--huge{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--giant{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}}&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}.k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient{bottom:", ";}"], pxToRem(18), pxToRem(9), pxToRem(9), pxToRem(14), pxToRem(14), pxToRem(18), pxToRem(18), ScreenConfig.M.min, pxToRem(21), pxToRem(21), pxToRem(21), pxToRem(21), ScreenConfig.M.min, pxToRem(27), pxToRem(27), pxToRem(21), pxToRem(21), ScreenConfig.M.min, pxToRem(32), pxToRem(32), pxToRem(10), pxToRem(2), pxToRem(2), pxToRem(10), pxToRem(3));
 export var TextInput = /*#__PURE__*/function (_PureComponent) {
   _inheritsLoose(TextInput, _PureComponent);
 
@@ -46,17 +47,17 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
 
     var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_" + digits : null;
 
-    if (tag === 'textarea') {
+    if (['textarea', 'autoresize'].includes(tag)) {
       return /*#__PURE__*/React.createElement(StyledTextareaContainer, {
         className: classNames('k-Form-TextInput__textareaContainer')
       }, /*#__PURE__*/React.createElement(StyledInput, _extends({
         ref: function ref(input) {
           return _this.input = input;
         },
-        as: "textarea",
+        as: tag === 'textarea' ? tag : TextareaAutoResize,
         disabled: disabled,
         name: name,
-        className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + size, {
+        className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + tag, "k-Form-TextInput--" + size, {
           'k-Form-TextInput--valid': valid,
           'k-Form-TextInput--error': error,
           'k-Form-TextInput--disabled': disabled,
@@ -95,7 +96,7 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
   return TextInput;
 }(PureComponent);
 TextInput.propTypes = {
-  tag: PropTypes.string,
+  tag: PropTypes.oneOf(['input', 'textarea', 'autoresize']),
   valid: PropTypes.bool,
   error: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
@@ -108,7 +109,6 @@ TextInput.propTypes = {
 };
 TextInput.defaultProps = {
   tag: 'input',
-  // or 'textarea'
   valid: false,
   error: false,
   size: 'regular',

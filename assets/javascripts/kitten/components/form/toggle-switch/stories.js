@@ -16,7 +16,6 @@ export default {
   args: {
     id: 'toggle-switch',
     disabled: false,
-    big: false,
     label: 'ToggleSwitch label',
     isLabelVisible: true,
     reverseOrder: false,
@@ -30,10 +29,6 @@ export default {
     },
     disabled: {
       name: 'disabled',
-      control: 'boolean',
-    },
-    big: {
-      name: 'big',
       control: 'boolean',
     },
     label: {

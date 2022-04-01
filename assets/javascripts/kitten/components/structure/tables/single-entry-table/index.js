@@ -47,7 +47,7 @@ SingleEntryTable.HeaderCol = ({ className, ...props }) => (
       'SingleEntryTable__Column SingleEntryTable__Column--HeaderCol',
       className,
     )}
-    scope="column"
+    scope="col"
     {...props}
   />
 )

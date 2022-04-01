@@ -287,6 +287,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         <IconContainer suffix="status=danger">
           <StatusIconNext status="danger" color={colorInput} />
         </IconContainer>
+        <IconContainer suffix="status=pending">
+          <StatusIconNext status="pending" color={colorInput} />
+        </IconContainer>
       </Group>
 
       <Group title="Icônes réseaux sociaux">

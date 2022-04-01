@@ -45,4 +45,82 @@
   .k-u-nowrap {
     white-space: nowrap !important;
   }
+
+  @each $name, $query in reverse($k-media-queries) {
+    @if $name != "xl" {
+      @include k-media-max($name) {
+        .k-u-clamp-1\@#{$name}-down,
+        .k-u-clamp-2\@#{$name}-down,
+        .k-u-clamp-3\@#{$name}-down,
+        .k-u-clamp\@#{$name}-down {
+          /* https://css-tricks.com/line-clampin/#weird-webkit-flexbox-way */
+          text-overflow: ellipsis !important;
+          overflow: hidden !important;
+          overflow-wrap: anywhere !important;
+          display: -webkit-box !important;
+          -webkit-line-clamp: var(--line-clamp, 3) !important;
+          -webkit-box-orient: vertical !important;
+        }
+
+        .k-u-clamp-1\@#{$name}-down {
+          --line-clamp: 1;
+        }
+        .k-u-clamp-2\@#{$name}-down {
+          --line-clamp: 2;
+        }
+        .k-u-clamp-3\@#{$name}-down {
+          --line-clamp: 3;
+        }
+
+        .k-u-ellipsis\@#{$name}-down {
+          text-overflow: ellipsis !important;
+          overflow: hidden !important;
+          white-space: nowrap !important;
+        }
+
+        .k-u-nowrap\@#{$name}-down {
+          white-space: nowrap !important;
+        }
+      }
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xxs" {
+      @include k-media-min($name) {
+        .k-u-clamp-1\@#{$name}-up,
+        .k-u-clamp-2\@#{$name}-up,
+        .k-u-clamp-3\@#{$name}-up,
+        .k-u-clamp\@#{$name}-up {
+          /* https://css-tricks.com/line-clampin/#weird-webkit-flexbox-way */
+          text-overflow: ellipsis !important;
+          overflow: hidden !important;
+          overflow-wrap: anywhere !important;
+          display: -webkit-box !important;
+          -webkit-line-clamp: var(--line-clamp, 3) !important;
+          -webkit-box-orient: vertical !important;
+        }
+
+        .k-u-clamp-1\@#{$name}-up {
+          --line-clamp: 1;
+        }
+        .k-u-clamp-2\@#{$name}-up {
+          --line-clamp: 2;
+        }
+        .k-u-clamp-3\@#{$name}-up {
+          --line-clamp: 3;
+        }
+
+        .k-u-ellipsis\@#{$name}-up {
+          text-overflow: ellipsis !important;
+          overflow: hidden !important;
+          white-space: nowrap !important;
+        }
+
+        .k-u-nowrap\@#{$name}-up {
+          white-space: nowrap !important;
+        }
+      }
+    }
+  }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
 import {
+  pxToRem,
   COLORS,
   EllipsisIcon,
   AvatarWithTextAndBadge,
@@ -15,6 +16,8 @@ import {
   WhatsappIconNext,
   LinkedinIconNext,
   EmbedIconNext,
+  Button,
+  AirplaneIconNext,
 } from 'kitten'
 import styled from 'styled-components'
 import { DocsPage } from 'storybook/docs-page'
@@ -128,34 +131,10 @@ export const Default = ({ menuPosition, ...args }) => {
           positionedButton
           menuPosition={menuPosition || 'left'}
         >
-          <DropdownMenu.Link href="#" icon={<LinkIconNext />}>
-            Copier le lien
-          </DropdownMenu.Link>
+          <DropdownMenu.Link href="#">A link</DropdownMenu.Link>
+          <DropdownMenu.Button>Click this button</DropdownMenu.Button>
           <DropdownMenu.Separator />
-          <DropdownMenu.Button icon={<FacebookIconNext />}>
-            Facebook
-          </DropdownMenu.Button>
-          <DropdownMenu.Button icon={<TwitterIconNext />}>
-            Twitter
-          </DropdownMenu.Button>
-          <DropdownMenu.Button icon={<InstagramIconNext />}>
-            Instagram
-          </DropdownMenu.Button>
-          <DropdownMenu.Button icon={<MessengerIconNext />}>
-            Messenger
-          </DropdownMenu.Button>
-          <DropdownMenu.Button icon={<WhatsappIconNext />}>
-            WhatsApp
-          </DropdownMenu.Button>
-          <DropdownMenu.Button
-            icon={<LinkedinIconNext width={13} heigh={13} />}
-          >
-            LinkedIn
-          </DropdownMenu.Button>
-          <DropdownMenu.Separator />
-          <DropdownMenu.Button icon={<EmbedIconNext />}>
-            Widget
-          </DropdownMenu.Button>
+          <DropdownMenu.Link href="#">Another last link</DropdownMenu.Link>
         </DropdownMenu>
       </div>
     </StyledWrapper>
@@ -204,4 +183,108 @@ export const WithAvatar = args => (
 
 WithAvatar.decorators = [
   story => <div className="story-Container story-Grid">{story()}</div>,
+]
+
+export const WithButton = args => (
+  <>
+    <div>&nbsp;</div>
+    <div>
+      <DropdownMenu
+        {...args}
+        menuPosition="center"
+        open
+        button={({ open }) => (
+          <Button active={open} rounded fit="content" as="span">
+            <AirplaneIconNext />
+            <span>Partager</span>
+          </Button>
+        )}
+        top={pxToRem(10)}
+      >
+        <DropdownMenu.Link href="#" icon={<LinkIconNext />}>
+          Copier le lien
+        </DropdownMenu.Link>
+        <DropdownMenu.Separator />
+        <DropdownMenu.Button icon={<FacebookIconNext />}>
+          Facebook
+        </DropdownMenu.Button>
+        <DropdownMenu.Button icon={<TwitterIconNext />}>
+          Twitter
+        </DropdownMenu.Button>
+        <DropdownMenu.Button icon={<InstagramIconNext />}>
+          Instagram
+        </DropdownMenu.Button>
+        <DropdownMenu.Button icon={<MessengerIconNext />}>
+          Messenger
+        </DropdownMenu.Button>
+        <DropdownMenu.Button icon={<WhatsappIconNext />}>
+          WhatsApp
+        </DropdownMenu.Button>
+        <DropdownMenu.Button icon={<LinkedinIconNext width={13} heigh={13} />}>
+          LinkedIn
+        </DropdownMenu.Button>
+        <DropdownMenu.Separator />
+        <DropdownMenu.Button icon={<EmbedIconNext />}>
+          Widget
+        </DropdownMenu.Button>
+      </DropdownMenu>
+    </div>
+  </>
+)
+
+WithButton.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]
+
+const StyledImageWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+
+  img {
+    display: inline;
+    max-width: ${pxToRem(600)};
+    max-height: ${pxToRem(400)};
+  }
+
+  .image-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+  }
+`
+
+export const WithImage = args => (
+  <>
+    <div>&nbsp;</div>
+    <div>
+      <StyledImageWrapper>
+        <img
+          src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+          alt="image insérée dans le texte avec le texte alternatif 'Ceci est un texte alternatif'"
+        />
+        <DropdownMenu
+          {...args}
+          className="image-menu"
+          menuPosition="center"
+          positionedButton
+          top="-8px - 1rem"
+          button={() => (
+            <span className="k-u-a11y-visuallyHidden">
+              Menu d’édition d’image
+            </span>
+          )}
+        >
+          <DropdownMenu.Button onClick={action('Modifier l’image')}>
+            Modifier l’image
+          </DropdownMenu.Button>
+        </DropdownMenu>
+      </StyledImageWrapper>
+    </div>
+  </>
+)
+
+WithImage.decorators = [
+  story => <div className="story-Container">{story()}</div>,
 ]
