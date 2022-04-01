@@ -2,11 +2,11 @@
 
 exports[`<AlertBox /> should matches with custom fit snapshot 1`] = `
 <div
-  className="sc-gsDKAQ jLKBeR k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--content k-AlertBox--icon-start k-AlertBox--hasIcon"
+  className="sc-gsDKAQ hsdjlq k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--content k-AlertBox--icon-start k-AlertBox--hasIcon"
   role={null}
 >
   <span
-    className="sc-bdvvtL kWfmkP k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
+    className="sc-bdvvtL hWhGiK k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -49,11 +49,11 @@ exports[`<AlertBox /> should matches with custom fit snapshot 1`] = `
 
 exports[`<AlertBox /> should matches with custom icon snapshot 1`] = `
 <div
-  className="sc-gsDKAQ jLKBeR k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
+  className="sc-gsDKAQ hsdjlq k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
   role={null}
 >
   <span
-    className="sc-bdvvtL kWfmkP k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
+    className="sc-bdvvtL hWhGiK k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -86,11 +86,11 @@ exports[`<AlertBox /> should matches with custom icon snapshot 1`] = `
 
 exports[`<AlertBox /> should matches with custom iconPosition snapshot 1`] = `
 <div
-  className="sc-gsDKAQ jLKBeR k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-center k-AlertBox--hasIcon"
+  className="sc-gsDKAQ hsdjlq k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-center k-AlertBox--hasIcon"
   role={null}
 >
   <span
-    className="sc-bdvvtL kWfmkP k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
+    className="sc-bdvvtL hWhGiK k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -133,11 +133,11 @@ exports[`<AlertBox /> should matches with custom iconPosition snapshot 1`] = `
 
 exports[`<AlertBox /> should matches with custom status snapshot 1`] = `
 <div
-  className="sc-gsDKAQ jLKBeR k-AlertBox k-AlertBox--danger k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
+  className="sc-gsDKAQ hsdjlq k-AlertBox k-AlertBox--danger k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
   role="alert"
 >
   <span
-    className="sc-bdvvtL kWfmkP k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--danger"
+    className="sc-bdvvtL hWhGiK k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--danger"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -169,11 +169,11 @@ exports[`<AlertBox /> should matches with custom status snapshot 1`] = `
 
 exports[`<AlertBox /> should matches with default snapshot 1`] = `
 <div
-  className="sc-gsDKAQ jLKBeR k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
+  className="sc-gsDKAQ hsdjlq k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start k-AlertBox--hasIcon"
   role={null}
 >
   <span
-    className="sc-bdvvtL kWfmkP k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
+    className="sc-bdvvtL hWhGiK k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -216,7 +216,7 @@ exports[`<AlertBox /> should matches with default snapshot 1`] = `
 
 exports[`<AlertBox /> should matches with no icon snapshot 1`] = `
 <div
-  className="sc-gsDKAQ jLKBeR k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start"
+  className="sc-gsDKAQ hsdjlq k-AlertBox k-AlertBox--info k-AlertBox--medium k-AlertBox--fluid k-AlertBox--icon-start"
   role={null}
 >
   <div
