@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import { mq } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledMessagesMenu = styled.ul`
@@ -31,7 +30,8 @@ const StyledMessagesMenu = styled.ul`
     background-color: var(--color-grey-300);
   }
 
-  .k-MessagesMenu__message__button:hover, .k-MessagesMenu__message__button:active {
+  .k-MessagesMenu__message__button:hover,
+  .k-MessagesMenu__message__button:active {
     background-color: var(--color-grey-200);
   }
 
@@ -98,8 +98,9 @@ MessagesMenu.Message = ({
         `k-MessagesMenu__message--${status}`,
         {
           'k-MessagesMenu__message--active': active,
-        }
+        },
       )}
+      {...props}
     >
       <button
         type="button"

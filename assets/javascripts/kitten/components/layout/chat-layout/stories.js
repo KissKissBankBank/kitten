@@ -227,10 +227,10 @@ export const Default = args => {
             <MessagesMenu>
               {discussions.map((item, index) => (
                 <MessagesMenu.Message
-                  key={"message_" + index}
+                  key={'message_' + index}
                   status={item.status}
                   active={activeDiscussion === item}
-                  onClick={(event) => {
+                  onClick={() => {
                     setActiveColumn('chat')
                     setActiveDiscussion(item)
                   }}
@@ -265,8 +265,8 @@ export const Default = args => {
                     Cras justo odio, dapibus ac facilisis in, egestas eget quam.
                     Donec ullamcorper nulla non metus auctor fringilla. Nulla
                     vitae elit libero, a pharetra augue. Nullam quis risus eget
-                    urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
-                    magnis dis parturient montes, nascetur ridiculus mus.
+                    urna mollis ornare vel eu leo. Cum sociis natoque penatibus
+                    et magnis dis parturient montes, nascetur ridiculus mus.
                   </Text>
                 </MessagesMenu.Message>
               ))}
