@@ -42,7 +42,7 @@ Default.argTypes = {
   },
   status: {
     control: 'select',
-    options: ['info', 'success', 'danger', 'warning', 'disabled'],
+    options: ['info', 'success', 'danger', 'warning', 'disabled', 'pending'],
   },
   displayIcon: { control: 'boolean' },
   iconPosition: { control: 'radio', options: ['start', 'center'] },

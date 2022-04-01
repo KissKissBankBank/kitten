@@ -106,4 +106,14 @@ describe('<TextInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `autoresize` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput tag="autoresize" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

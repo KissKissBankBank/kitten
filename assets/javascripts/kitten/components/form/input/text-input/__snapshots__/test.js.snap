@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<TextInput /> with \`autoresize\` prop matches with snapshot 1`] = `
+<div
+  className="sc-gsDKAQ dTVKjq k-Form-TextInput__textareaContainer"
+>
+  <textarea
+    className="sc-bdvvtL huvuwE k-Form-TextInput k-Form-TextInput--autoresize k-Form-TextInput--regular"
+    disabled={false}
+    name="text"
+    onChange={[Function]}
+    rows={1}
+    style={
+      Object {
+        "lineHeight": "1.125rem",
+      }
+    }
+  />
+  <div
+    className="k-Form-TextInput__textareaGradient"
+  />
+</div>
+`;
+
 exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 <input
   className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--alignCenter"
