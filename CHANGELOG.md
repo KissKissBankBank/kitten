@@ -8,6 +8,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `SummaryCard`: Fix stories and tests.
 - Feature: Utilities: Add `k-u-color-*` utilities based on the new tokens.
 - Feature: `Text`: Add new token-based values to `color` prop.
+- Feature: Utilities: Add responsive classes for `text/line` utilities.
+
 - Fix: `Button`: Fix SVG shrink property.
 - Feature: `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
 - Deprecation/Changes: `ToggleSwitch` : Remove `big` prop.
