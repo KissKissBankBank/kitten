@@ -13,6 +13,7 @@ const StyledLabel = styled.label`
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
   font-size: ${stepToRem(-1)};
+
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
   }
