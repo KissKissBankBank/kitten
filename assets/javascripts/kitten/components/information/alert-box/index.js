@@ -123,12 +123,21 @@ const AlertBoxWrapper = styled.div`
     }
   }
 
+  &.k-AlertBox--pending {
+    background-color: var(--color-grey-300);
+
+    .k-u-link,
+    a {
+      color: var(--color-warning-500);
+    }
+  }
+
   &.k-AlertBox--disabled {
     background-color: var(--color-grey-200);
 
     .k-u-link,
     a {
-      color: var(--color-grey-600);
+      color: var(--color-primary-500);
     }
   }
 `
@@ -204,7 +213,14 @@ export const AlertBox = ({
 }
 
 AlertBox.propTypes = {
-  status: PropTypes.oneOf(['info', 'success', 'danger', 'warning', 'disabled']),
+  status: PropTypes.oneOf([
+    'info',
+    'success',
+    'danger',
+    'warning',
+    'disabled',
+    'pending',
+  ]),
   displayIcon: PropTypes.bool,
   iconPosition: PropTypes.oneOf(['start', 'center']),
   icon: PropTypes.node,

@@ -10,6 +10,8 @@ export const StatusIconNext = ({ status, ...props }) => {
       return <StatusIconNext.Success {...props} />
     case 'danger':
       return <StatusIconNext.Danger {...props} />
+    case 'pending':
+      return <StatusIconNext.Pending {...props} />
     default:
       return <StatusIconNext.Info {...props} />
   }
@@ -74,6 +76,24 @@ StatusIconNext.Success = ({ color, ...props }) => (
     {...props}
   >
     <path d="m2.134 6.553 1.767 1.768L5.67 6.553l4.42-4.419A1.25 1.25 0 0 0 8.321.366l-4.42 4.42-1.767-1.768A1.25 1.25 0 0 0 .366 4.785l1.768 1.768Z" />
+  </svg>
+)
+
+StatusIconNext.Pending = ({ color, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 12 12"
+    width="12"
+    height="12"
+    fill="none"
+    {...props}
+  >
+    <path 
+      fill={color} 
+      fillRule="evenodd"
+      d="M2.652 7.723L4.419 9.49l1.768-1.767 4.42-4.42a1.25 1.25 0 10-1.768-1.767l-4.42 4.419-1.767-1.768A1.25 1.25 0 10.884 5.955l1.768 1.768z"
+      clipRule="evenodd"
+    />
   </svg>
 )
 

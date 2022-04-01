@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `AlertBox`, `IconBadge`, `StatusIconNext`:
+  - Add `pending` new status.
 - Fix: `Button`: Fix SVG shrink property.
 - Feature: `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
 - Deprecation/Changes: `ToggleSwitch` : Remove `big` prop.
