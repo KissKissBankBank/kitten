@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ManagerCard /> default matches with snapshot 1`] = `
+<article
+  className="sc-bdvvtL huGWEp k-ManagerCard k-ManagerCard--hasAction"
+>
+  <a
+    aria-label="Click to show item"
+    className="k-ManagerCard__action"
+    href="https://css-tricks.com"
+    onClick={[Function]}
+  />
+  <div
+    className="k-ManagerCard__cell"
+  >
+    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+  </div>
+  <div
+    className="k-ManagerCard__lastCell"
+  >
+    •••
+  </div>
+</article>
+`;

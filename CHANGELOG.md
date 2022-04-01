@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ManagerCard`: Add component.
+- Fix: `SummaryCard`: Fix stories and tests.
+- Feature: Utilities: Add `k-u-color-*` utilities based on the new tokens.
+- Feature: `Text`: Add new token-based values to `color` prop.
+- Feature: Utilities: Add responsive classes for `text/line` utilities.
 - Feature: `AlertBox`, `IconBadge`, `StatusIconNext`:
   - Add `pending` new status.
 - Fix: `Button`: Fix SVG shrink property.
