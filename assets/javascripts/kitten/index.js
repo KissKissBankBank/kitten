@@ -238,6 +238,7 @@ export { LinkIconNext } from './components/graphics/icons-next/link-icon-next'
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next'
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon'
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next'
+export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-icon-next'
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { RefundIcon } from './components/graphics/icons-next/refund-icon'
@@ -369,6 +370,7 @@ export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card
 export { EngagementCard } from './components/structure/cards/engagement-card'
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image'
 export { HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-crowdfunding-card'
+export { ManagerCard } from './components/structure/cards/manager-card'
 export { ProjectCard } from './components/structure/cards/project-card'
 export {
   SummaryCard,

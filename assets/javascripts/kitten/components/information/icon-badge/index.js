@@ -42,6 +42,11 @@ const StyledBadge = styled.span`
     border-color: var(--color-warning-300);
   }
 
+  &.k-IconBadge--pending {
+    background-color: var(--color-grey-900);
+    border-color: var(--color-grey-700);
+  }
+
   &.k-IconBadge--micro {
     min-width: ${pxToRem(16)};
     min-height: ${pxToRem(16)};
@@ -144,6 +149,13 @@ IconBadge.propTypes = {
     color: PropTypes.node,
     style: PropTypes.string,
   }),
-  status: PropTypes.oneOf(['info', 'success', 'danger', 'warning', 'disabled']),
+  status: PropTypes.oneOf([
+    'info',
+    'success',
+    'danger',
+    'warning',
+    'disabled',
+    'pending',
+  ]),
   hasBorder: PropTypes.bool,
 }
