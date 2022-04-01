@@ -10,7 +10,7 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-gsDKAQ fFPnSK k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--medium"
+    className="sc-gsDKAQ iNDdNd k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--normal"
     htmlFor="dropdown-phone-select-test"
     id="dropdown-phone-select-test_element-label"
     onClick={[Function]}
