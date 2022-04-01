@@ -55,6 +55,6 @@ SingleEntryTable.HeaderCol = function (_ref4) {
 
   return /*#__PURE__*/React.createElement("th", _extends({
     className: classNames('SingleEntryTable__Column SingleEntryTable__Column--HeaderCol', className),
-    scope: "column"
+    scope: "col"
   }, props));
 };

@@ -101,6 +101,14 @@ describe('<Text />', () => {
     })
   })
 
+  describe('with new color prop', () => {
+    const component = shallow(<Text color="grey-700" />)
+
+    it('has a good utility class', () => {
+      expect(component.hasClass('k-u-color-grey-700')).toBe(true)
+    })
+  })
+
   describe('with style prop', () => {
     const component = shallow(<Text fontStyle="italic" />)
 

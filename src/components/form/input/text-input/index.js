@@ -23,6 +23,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _screenConfig = require("../../../../constants/screen-config");
 
+var _textareaAutoResize = require("../../../form/input/textarea-auto-resize");
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _excluded = ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "className", "style", "rounded", "darkBackground"];
@@ -41,7 +43,7 @@ exports.StyledInput = StyledInput;
 var StyledTextareaContainer = _styledComponents.default.div.withConfig({
   displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-itv1lf-1"
-})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--tiny{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--regular{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--big{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--huge{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--giant{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}}&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}.k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient{bottom:", ";}"], (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(27), (0, _typography.pxToRem)(27), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(3));
+})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:", ";&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--tiny{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--regular{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--big{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--huge{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--giant{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}}&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}.k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient{bottom:", ";}"], (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(27), (0, _typography.pxToRem)(27), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(21), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(3));
 
 var TextInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inheritsLoose2.default)(TextInput, _PureComponent);
@@ -71,17 +73,17 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
         others = (0, _objectWithoutPropertiesLoose2.default)(_this$props, _excluded);
     var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_" + digits : null;
 
-    if (tag === 'textarea') {
+    if (['textarea', 'autoresize'].includes(tag)) {
       return /*#__PURE__*/_react.default.createElement(StyledTextareaContainer, {
         className: (0, _classnames.default)('k-Form-TextInput__textareaContainer')
       }, /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
         ref: function ref(input) {
           return _this.input = input;
         },
-        as: "textarea",
+        as: tag === 'textarea' ? tag : _textareaAutoResize.TextareaAutoResize,
         disabled: disabled,
         name: name,
-        className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + size, {
+        className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + tag, "k-Form-TextInput--" + size, {
           'k-Form-TextInput--valid': valid,
           'k-Form-TextInput--error': error,
           'k-Form-TextInput--disabled': disabled,
@@ -122,7 +124,7 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
 
 exports.TextInput = TextInput;
 TextInput.propTypes = {
-  tag: _propTypes.default.string,
+  tag: _propTypes.default.oneOf(['input', 'textarea', 'autoresize']),
   valid: _propTypes.default.bool,
   error: _propTypes.default.bool,
   size: _propTypes.default.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
@@ -135,7 +137,6 @@ TextInput.propTypes = {
 };
 TextInput.defaultProps = {
   tag: 'input',
-  // or 'textarea'
   valid: false,
   error: false,
   size: 'regular',

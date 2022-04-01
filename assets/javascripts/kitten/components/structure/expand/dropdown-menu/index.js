@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
+import PropTypes from 'prop-types'
 import { ArrowContainer } from '../../../information/boxes/arrow-container'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
@@ -8,12 +9,12 @@ import { useFocusTrap } from '../../../../helpers/dom/use-focus-trap'
 
 const zoomInAndOpacity = keyframes`
   0% {
-    transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(.66);
+    transform: translateX(calc(-1 * var(--Dropdown-transform-x))) scale(.66);
     opacity: 0;
   }
   to
   {
-    transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(1);
+    transform: translateX(calc(-1 * var(--Dropdown-transform-x))) scale(1);
     opacity: 1;
   }
 `
@@ -73,7 +74,7 @@ const StyledDropdownMenu = styled.details`
     z-index: 150;
 
     position: absolute;
-    top: calc(50% + 1rem + ${pxToRem(8)});
+    top: calc(50% + 1rem + ${pxToRem(8)} + (var(--dropdownMenu-top)));
     left: 50%;
     width: max-content;
     max-width: ${pxToRem(300)};
@@ -81,7 +82,7 @@ const StyledDropdownMenu = styled.details`
 
     padding: ${pxToRem(8)} 0 ${pxToRem(10)};
 
-    transform: translateX(calc(-1 * var(--Dropdown-transform)));
+    transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
     transform-origin: var(--Dropdown-transform-origin);
   }
 
@@ -89,19 +90,19 @@ const StyledDropdownMenu = styled.details`
     animation: var(--transition) ${zoomInAndOpacity};
   }
 
-  &.k-DropdownMenu--left .k-DropdownMenu__menu {
-    --Dropdown-transform: calc(100% - ${pxToRem(10 + 8)});
-    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
+  &.k-DropdownMenu--h-left .k-DropdownMenu__menu {
+    --Dropdown-transform-x: calc(100% - ${pxToRem(10 + 8)});
+    --Dropdown-transform-origin: var(--Dropdown-transform-x) ${pxToRem(-8)};
   }
 
-  &.k-DropdownMenu--center .k-DropdownMenu__menu {
-    --Dropdown-transform: 50%;
-    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
+  &.k-DropdownMenu--h-center .k-DropdownMenu__menu {
+    --Dropdown-transform-x: 50%;
+    --Dropdown-transform-origin: var(--Dropdown-transform-x) ${pxToRem(-8)};
   }
 
-  &.k-DropdownMenu--right .k-DropdownMenu__menu {
-    --Dropdown-transform: ${pxToRem(10 + 8)};
-    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
+  &.k-DropdownMenu--h-right .k-DropdownMenu__menu {
+    --Dropdown-transform-x: ${pxToRem(10 + 8)};
+    --Dropdown-transform-origin: var(--Dropdown-transform-x) ${pxToRem(-8)};
   }
 
   .k-DropdownMenu__menu__item {
@@ -165,6 +166,8 @@ export const DropdownMenu = ({
   positionedButton,
   children,
   className,
+  top,
+  style,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(open)
@@ -268,9 +271,10 @@ export const DropdownMenu = ({
       className={classNames(
         'k-DropdownMenu',
         className,
-        `k-DropdownMenu--${menuPosition}`,
+        `k-DropdownMenu--h-${menuPosition}`,
       )}
       onKeyDown={handleKeyDown}
+      style={{ ...style, '--dropdownMenu-top': top }}
       {...rest}
     >
       <summary className="k-DropdownMenu__button">
@@ -306,6 +310,17 @@ DropdownMenu.defaultProps = {
   menuProps: {},
   menuPosition: 'left',
   positionedButton: false,
+  top: '0px',
+}
+
+DropdownMenu.propTypes = {
+  button: PropTypes.func,
+  open: PropTypes.bool,
+  onToggle: PropTypes.func,
+  menuProps: PropTypes.object,
+  menuPosition: PropTypes.oneOf(['left', 'center', 'right']),
+  positionedButton: PropTypes.bool,
+  top: PropTypes.string,
 }
 
 DropdownMenu.Link = ({ href = '', className, icon, children, ...rest }) => (

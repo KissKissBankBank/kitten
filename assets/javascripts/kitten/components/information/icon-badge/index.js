@@ -2,7 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
@@ -42,6 +41,11 @@ const StyledBadge = styled.span`
   &.k-IconBadge--warning {
     background-color: var(--color-warning-500);
     border-color: var(--color-warning-300);
+  }
+
+  &.k-IconBadge--pending {
+    background-color: var(--color-grey-900);
+    border-color: var(--color-grey-700);
   }
 
   &.k-IconBadge--micro {
@@ -97,11 +101,7 @@ const StyledBadge = styled.span`
 export const IconBadge = ({
   className,
   children,
-  disabled,
-  valid,
   empty,
-  big,
-  huge,
   size,
   border,
   backgroundColor,
@@ -119,11 +119,7 @@ export const IconBadge = ({
       `k-IconBadge--${size}`,
       `k-IconBadge--${status}`,
       {
-        'k-IconBadge--disabled': disabled && status === 'info', // if default prop
-        'k-IconBadge--valid': valid && status === 'info', // if default prop
         'k-IconBadge--empty': empty,
-        'k-IconBadge--big': big,
-        'k-IconBadge--huge': huge,
         'k-IconBadge--hasBorderStyles': border.length > 0,
         'k-IconBadge--hasBorder': hasBorder,
       },
@@ -152,11 +148,7 @@ IconBadge.defaultProps = {
 }
 
 IconBadge.propTypes = {
-  disabled: deprecated(PropTypes.bool, 'Use status="disabled" instead'),
-  valid: deprecated(PropTypes.bool, 'Use status="success" instead'),
   empty: PropTypes.bool,
-  big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
   size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
   backgroundColor: PropTypes.string,
   border: PropTypes.shape({
@@ -164,6 +156,13 @@ IconBadge.propTypes = {
     color: PropTypes.node,
     style: PropTypes.string,
   }),
-  status: PropTypes.oneOf(['info', 'success', 'danger', 'warning', 'disabled']),
+  status: PropTypes.oneOf([
+    'info',
+    'success',
+    'danger',
+    'warning',
+    'disabled',
+    'pending',
+  ]),
   hasBorder: PropTypes.bool,
 }
