@@ -39,7 +39,14 @@ export default {
     status: {
       name: 'status',
       control: 'select',
-      options: ['info', 'success', 'danger', 'warning', 'disabled'],
+      options: [
+        'info',
+        'success',
+        'danger',
+        'warning',
+        'disabled',
+        'pending',
+      ],
     },
     hasBorder: {
       name: 'hasBorder',

@@ -183,7 +183,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   gap: 0.0625rem;
   z-index: 150;
   position: absolute;
-  top: calc(50% + 1rem + 0.5rem);
+  top: calc(50% + 1rem + 0.5rem + (var(--dropdownMenu-top)));
   left: 50%;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -191,32 +191,32 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
   max-width: 18.75rem;
   height: auto;
   padding: 0.5rem 0 0.625rem;
-  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform)));
-  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform)));
-  transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
   -webkit-transform-origin: var(--Dropdown-transform-origin);
   -ms-transform-origin: var(--Dropdown-transform-origin);
   transform-origin: var(--Dropdown-transform-origin);
 }
 
 .c0[open] .k-DropdownMenu__menu {
-  -webkit-animation: var(--transition) egqQGv;
-  animation: var(--transition) egqQGv;
+  -webkit-animation: var(--transition) iNIDnb;
+  animation: var(--transition) iNIDnb;
 }
 
-.c0.k-DropdownMenu--left .k-DropdownMenu__menu {
-  --Dropdown-transform: calc(100% - 1.125rem);
-  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+.c0.k-DropdownMenu--h-left .k-DropdownMenu__menu {
+  --Dropdown-transform-x: calc(100% - 1.125rem);
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
 }
 
-.c0.k-DropdownMenu--center .k-DropdownMenu__menu {
-  --Dropdown-transform: 50%;
-  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+.c0.k-DropdownMenu--h-center .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 50%;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
 }
 
-.c0.k-DropdownMenu--right .k-DropdownMenu__menu {
-  --Dropdown-transform: 1.125rem;
-  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+.c0.k-DropdownMenu--h-right .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 1.125rem;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
 }
 
 .c0 .k-DropdownMenu__menu__item {
@@ -284,10 +284,15 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 <details
-  className="c0 k-DropdownMenu k-DropdownMenu--left"
+  className="c0 k-DropdownMenu k-DropdownMenu--h-left"
   onKeyDown={[Function]}
   onToggle={[Function]}
   open={false}
+  style={
+    Object {
+      "--dropdownMenu-top": "0px",
+    }
+  }
 >
   <summary
     className="k-DropdownMenu__button"
@@ -527,7 +532,7 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
   gap: 0.0625rem;
   z-index: 150;
   position: absolute;
-  top: calc(50% + 1rem + 0.5rem);
+  top: calc(50% + 1rem + 0.5rem + (var(--dropdownMenu-top)));
   left: 50%;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -535,32 +540,32 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
   max-width: 18.75rem;
   height: auto;
   padding: 0.5rem 0 0.625rem;
-  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform)));
-  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform)));
-  transform: translateX(calc(-1 * var(--Dropdown-transform)));
+  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
   -webkit-transform-origin: var(--Dropdown-transform-origin);
   -ms-transform-origin: var(--Dropdown-transform-origin);
   transform-origin: var(--Dropdown-transform-origin);
 }
 
 .c0[open] .k-DropdownMenu__menu {
-  -webkit-animation: var(--transition) egqQGv;
-  animation: var(--transition) egqQGv;
+  -webkit-animation: var(--transition) iNIDnb;
+  animation: var(--transition) iNIDnb;
 }
 
-.c0.k-DropdownMenu--left .k-DropdownMenu__menu {
-  --Dropdown-transform: calc(100% - 1.125rem);
-  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+.c0.k-DropdownMenu--h-left .k-DropdownMenu__menu {
+  --Dropdown-transform-x: calc(100% - 1.125rem);
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
 }
 
-.c0.k-DropdownMenu--center .k-DropdownMenu__menu {
-  --Dropdown-transform: 50%;
-  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+.c0.k-DropdownMenu--h-center .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 50%;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
 }
 
-.c0.k-DropdownMenu--right .k-DropdownMenu__menu {
-  --Dropdown-transform: 1.125rem;
-  --Dropdown-transform-origin: var(--Dropdown-transform) -0.5rem;
+.c0.k-DropdownMenu--h-right .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 1.125rem;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
 }
 
 .c0 .k-DropdownMenu__menu__item {
@@ -628,10 +633,15 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 }
 
 <details
-  className="c0 k-DropdownMenu k-DropdownMenu--right"
+  className="c0 k-DropdownMenu k-DropdownMenu--h-right"
   onKeyDown={[Function]}
   onToggle={[Function]}
   open={false}
+  style={
+    Object {
+      "--dropdownMenu-top": "0px",
+    }
+  }
 >
   <summary
     className="k-DropdownMenu__button"

@@ -67,7 +67,7 @@ DoubleEntryTable.HeaderCol = function (_ref4) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded4);
   return /*#__PURE__*/_react.default.createElement("th", (0, _extends2.default)({
     className: (0, _classnames.default)('DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol', className),
-    scope: "column"
+    scope: "col"
   }, props));
 };
 

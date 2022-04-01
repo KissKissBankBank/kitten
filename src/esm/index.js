@@ -314,6 +314,7 @@ export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card
 export { EngagementCard } from './components/structure/cards/engagement-card';
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image';
 export { HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-crowdfunding-card';
+export { ManagerCard } from './components/structure/cards/manager-card';
 export { ProjectCard } from './components/structure/cards/project-card';
 export { SummaryCard, useSummaryCardResizeObserver } from './components/structure/cards/summary-card';
 export { SimpleCard } from './components/structure/cards/simple-card';
