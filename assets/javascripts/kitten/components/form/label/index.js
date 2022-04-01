@@ -13,18 +13,21 @@ const StyledLabel = styled.label`
   display: block;
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
-  font-size: ${stepToRem(-1)};
   line-height: 1.3;
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
+  }
+
+  &.k-Label--nano {
+    font-size: ${stepToRem(-3)};
   }
 
   &.k-Label--micro {
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Label--nano {
-    font-size: ${stepToRem(-3)};
+  &.k-Label--small {
+    font-size: ${stepToRem(-1)};
   }
 
   &.k-Label--medium {
