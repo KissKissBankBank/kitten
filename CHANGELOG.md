@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ManagerCard`: Add component.
 - Fix: `Button`: Fix SVG shrink property.
 - Feature: `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
 - Deprecation/Changes: `ToggleSwitch` : Remove `big` prop.
