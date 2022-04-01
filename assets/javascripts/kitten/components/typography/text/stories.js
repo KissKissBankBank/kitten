@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from './index'
+import { Text, allowedColorStrings } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export const Default = props => <Text {...props} />
@@ -32,7 +32,7 @@ export default {
     color: {
       name: 'color',
       description: 'Sets the color, from a list.',
-      options: ['font1', 'font2', 'primary1', 'background1', 'error', 'valid'],
+      options: allowedColorStrings,
       control: 'select',
     },
     cssColor: {

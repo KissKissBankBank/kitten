@@ -314,6 +314,7 @@ export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card
 export { EngagementCard } from './components/structure/cards/engagement-card';
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image';
 export { HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-crowdfunding-card';
+export { ManagerCard } from './components/structure/cards/manager-card';
 export { ProjectCard } from './components/structure/cards/project-card';
 export { SummaryCard, useSummaryCardResizeObserver } from './components/structure/cards/summary-card';
 export { SimpleCard } from './components/structure/cards/simple-card';
@@ -393,7 +394,8 @@ export { hexToRgba } from './helpers/utils/hex-to-rgba';
 export { getMinQuery, getMaxQuery, getJoinedQueries, createMatchMedia, createMatchMediaMin, createMatchMediaMax, createMatchMediaWithin, getScreenSizeFrom } from './helpers/utils/media-queries';
 export { useMedia } from './helpers/utils/use-media-query';
 export { useDeepCompareEffect } from './helpers/utils/use-deep-compare-effect-hook';
-export { createRangeFromZeroTo } from './helpers/utils/range'; // ---
+export { createRangeFromZeroTo } from './helpers/utils/range';
+export { checkDeprecatedSizes } from './helpers/utils/deprecated'; // ---
 // HOC
 // ---
 

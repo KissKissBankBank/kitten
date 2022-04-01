@@ -2,8 +2,14 @@
 
 exports[`<SummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL fgEEwc k-SummaryCard k-SummaryCard-Wrapper--large"
+  className="sc-bdvvtL fgEEwc k-SummaryCard k-SummaryCard-Wrapper--large k-SummaryCard--hasAction"
 >
+  <a
+    aria-label="Click to show item"
+    className="k-SummaryCard__action"
+    href="https://css-tricks.com"
+    onClick={[Function]}
+  />
   <div
     className="k-SummaryCard__imageWrapper k-SummaryCard-Wrapper__imageWrapper"
   >

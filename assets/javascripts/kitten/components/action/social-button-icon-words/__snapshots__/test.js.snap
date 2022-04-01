@@ -44,6 +44,12 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -270,6 +276,12 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -500,6 +512,12 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -726,6 +744,12 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -956,6 +980,12 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1182,6 +1212,12 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -1412,6 +1448,12 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1638,6 +1680,12 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,

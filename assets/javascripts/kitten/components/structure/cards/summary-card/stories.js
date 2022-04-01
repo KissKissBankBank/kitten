@@ -153,6 +153,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
             <SummaryCard.Cell name="last-stretch">
               <DropdownMenu
                 menuPosition="left"
+                positionedButton
                 button={({ open }) => (
                   <>
                     <EllipsisIcon color="var(--color-grey-900)" />
@@ -250,6 +251,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
             <SummaryCard.Cell name="last-stretch">
               <DropdownMenu
                 menuPosition="left"
+                positionedButton
                 button={({ open }) => (
                   <>
                     <EllipsisIcon color="var(--color-grey-900)" />
