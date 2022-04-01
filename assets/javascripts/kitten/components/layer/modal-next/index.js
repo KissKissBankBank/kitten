@@ -705,7 +705,7 @@ const InnerModal = ({
                   <CloseButton
                     modifier="hydrogen"
                     onClick={close}
-                    size="regular"
+                    size="medium"
                     closeButtonLabel={closeButtonLabel}
                     aria-labelledby={
                       !!headerMessage ? 'ModalHeaderMessage' : null

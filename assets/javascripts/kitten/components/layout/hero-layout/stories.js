@@ -226,11 +226,11 @@ export const Default = ({
                 </Button>
               </FlexWrapper>
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="regular" rounded>
+                <Button fit="content" size="medium" rounded>
                   <StarIconNext />
                   <span>Ajouter aux favoris</span>
                 </Button>
-                <Button fit="content" size="regular" modifier="helium" rounded>
+                <Button fit="content" size="medium" modifier="helium" rounded>
                   S’abonner
                 </Button>
               </FlexWrapper>

@@ -58,7 +58,7 @@ const InnerBurgerMenu = ({ isLogged }) => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       external
-      size="tiny"
+      size="small"
       href="#EXTERNAL_KISSKISSBANKBANK"
       target="_blank"
       rel="noopener"
@@ -67,7 +67,7 @@ const InnerBurgerMenu = ({ isLogged }) => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       external
-      size="tiny"
+      size="small"
       href="#EXTERNAL_MICRODON"
       target="_blank"
       rel="noopener"
@@ -76,7 +76,7 @@ const InnerBurgerMenu = ({ isLogged }) => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       external
-      size="tiny"
+      size="small"
       href="#EXTERNAL_GOODEED"
       target="_blank"
       rel="noopener"

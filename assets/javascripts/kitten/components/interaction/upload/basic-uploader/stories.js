@@ -150,7 +150,7 @@ StatusLoading.args = {
   ...args,
   status: 'loading',
   buttonProps: {
-    size: 'big',
+    size: 'large',
     modifier: 'helium',
   },
 }
