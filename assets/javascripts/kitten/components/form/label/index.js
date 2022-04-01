@@ -16,17 +16,21 @@ const StyledLabel = styled.label`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
   }
+
   &.k-Label--tiny {
     line-height: 1.3;
     font-size: ${stepToRem(0)};
   }
+
   &.k-Label--micro {
     line-height: 1.3;
     font-size: ${stepToRem(-1)};
   }
+
   &.k-Label--withoutPointerEvents {
     pointer-events: none;
   }
+
   .k-Label--dot {
     margin: 0 0 0 ${pxToRem(10)};
     width: var(--dot-width);
