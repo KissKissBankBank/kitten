@@ -128,7 +128,7 @@ const AlertBoxWrapper = styled.div`
 
     .k-u-link,
     a {
-      color: var(--color-warning-500);
+      color: var(--color-primary-500);
     }
   }
 
@@ -137,7 +137,7 @@ const AlertBoxWrapper = styled.div`
 
     .k-u-link,
     a {
-      color: var(--color-primary-500);
+      color: var(--color-grey-600);
     }
   }
 `
