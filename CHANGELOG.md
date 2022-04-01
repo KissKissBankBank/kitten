@@ -4,19 +4,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `ManagerCard`: Add component.
-- Fix: `SummaryCard`: Fix stories and tests.
-- Feature: Utilities: Add `k-u-color-*` utilities based on the new tokens.
-- Feature: `Text`: Add new token-based values to `color` prop.
-- Feature: Utilities: Add responsive classes for `text/line` utilities.
-- Feature: `AlertBox`, `IconBadge`, `StatusIconNext`:
-  - Add `pending` new status.
-- Fix: `Button`: Fix SVG shrink property.
-- Feature: `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
-- Deprecation/Changes: `ToggleSwitch` : Remove `big` prop.
-- Fix: `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
-- Feature: `TextInput`: Add `autoresize` value to `tag` prop.
-- Fix: `*EntryTable`: Fix column value for attribute `scope`.
+## [9.5.0] - 2022-04-01
+
+Deprecation/Change:
+
+- `ToggleSwitch` : Remove `big` prop.
+
+Features:
+
+- `ManagerCard`: Add component.
+- Utilities: Add responsive classes for `text/line` utilities.
+- Utilities: Add `k-u-color-*` utilities based on the new tokens.
+- `Text`: Add new token-based values to `color` prop.
+- Add new `pending` status to the following components:
+  - `AlertBox`
+  - `IconBadge`
+  - `StatusIconNext`
+- `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
+- `TextInput`: Add `autoresize` value to `tag` prop.
+
+Fixes:
+
+- `SummaryCard`: Fix stories and tests.
+- `Button`: Fix SVG shrink property.
+- `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
+- `*EntryTable`: Fix column value for attribute `scope`.
 
 ## [9.4.0] - 2022-03-30
 
