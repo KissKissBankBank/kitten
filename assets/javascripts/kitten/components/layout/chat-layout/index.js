@@ -2,25 +2,31 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { StyledChatLayout } from './styles'
 import { Text } from '../../../components/typography/text'
+import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const ChatLayoutContext = createContext({})
 
 export const ChatLayout = ({ className, children, style, ...props }) => {
   const [activeCol, setActiveColumn] = useState(null)
   const [activeColOffset, setActiveColOffset] = useState(0)
+  const windowWidth = useWindowWidth()
 
   useEffect(() => {
     if (!activeCol) return
-
-    const activeColEl = document.querySelector(
-      `.k-ChatLayout__col-${activeCol}`,
-    )
-
-    setActiveColOffset(activeColEl.offsetLeft)
-
-    // activeColEl.scrollIntoView({ behavior: 'smooth', inline: 'center' })
-
+    handlePagePosition()
   }, [activeCol])
+
+  useEffect(() => {
+    if (!activeCol) return
+    if (windowWidth >= ScreenConfig.L.min) return
+    handlePagePosition()
+  }, [windowWidth])
+
+  const handlePagePosition = () => {
+    const activeColEl = document.getElementById(activeCol)
+    setActiveColOffset(activeColEl.offsetLeft)
+  }
 
   return (
     <ChatLayoutContext.Provider value={{ setActiveColumn }}>

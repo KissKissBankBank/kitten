@@ -54,6 +54,10 @@ const StyledInfoBlock = styled.div`
     border: var(--border-width) solid var(--color-grey-300);
   }
 
+  @media ${mq.mobileAndTablet} {
+    margin-top: ${pxToRem(20)};
+  }
+
   @media ${mq.desktop} {
     border-radius: var(--border-radius-l);
     border: var(--border-width) solid var(--color-grey-300);
@@ -83,107 +87,107 @@ const BackElement = ({ title }) => (
 
 const discussions = [
   {
-    name: 'alex',
-    email: 'alex@kisskissbankbank.com',
-    longName: 'Alex V.',
+    name: 'Nikia',
+    email: 'nikia@kisskissbankbank.com',
+    longName: 'Nikia Smyntek',
     avatar: '/kitten-1.jpg',
     status: 'unread',
   },
   {
-    name: 'claude',
-    email: 'claude@kisskissbankbank.com',
-    longName: 'Claude A.',
+    name: 'Karima',
+    email: 'karima@kisskissbankbank.com',
+    longName: 'Karima Ricci',
     avatar: '/kitten-2.jpg',
     status: 'unread',
   },
   {
-    name: 'dominique',
-    email: 'dominique@kisskissbankbank.com',
-    longName: 'Dominique C.',
+    name: 'Wade',
+    email: 'wade@kisskissbankbank.com',
+    longName: 'Wade Marani',
     avatar: '/kitten-3.jpg',
     status: 'read',
   },
   {
-    name: 'alex',
-    email: 'alex@kisskissbankbank.com',
-    longName: 'Alex V.',
+    name: 'Kasie',
+    email: 'kasie@kisskissbankbank.com',
+    longName: 'Kasie Sornsen',
     avatar: '/kitten-4.jpg',
     status: 'read',
   },
   {
-    name: 'claude',
-    email: 'claude@kisskissbankbank.com',
-    longName: 'Claude A.',
+    name: 'Angelique',
+    email: 'angelique@kisskissbankbank.com',
+    longName: 'Angelique Mannis',
     avatar: '/kitten-5.jpg',
     status: 'read',
   },
   {
-    name: 'dominique',
-    email: 'dominique@kisskissbankbank.com',
-    longName: 'Dominique C.',
+    name: 'Kathyrn',
+    email: 'kathyrn@kisskissbankbank.com',
+    longName: 'Kathyrn Scarlet',
     avatar: '/kitten-6.jpg',
     status: 'read',
   },
   {
-    name: 'alex',
-    email: 'alex@kisskissbankbank.com',
-    longName: 'Alex V.',
+    name: 'Twyla',
+    email: 'twyla@kisskissbankbank.com',
+    longName: 'Twyla Lie',
     avatar: '/kitten-7.jpg',
     status: 'read',
   },
   {
-    name: 'claude',
-    email: 'claude@kisskissbankbank.com',
-    longName: 'Claude A.',
+    name: 'Jina',
+    email: 'jina@kisskissbankbank.com',
+    longName: 'Jina Wharry',
     avatar: '/kitten-8.jpg',
     status: 'read',
   },
   {
-    name: 'dominique',
-    email: 'dominique@kisskissbankbank.com',
-    longName: 'Dominique C.',
+    name: 'Alta',
+    email: 'alta@kisskissbankbank.com',
+    longName: 'Alta Cantey',
     avatar: '/kitten-9.jpg',
     status: 'read',
   },
   {
-    name: 'alex',
-    email: 'alex@kisskissbankbank.com',
-    longName: 'Alex V.',
+    name: 'Zella',
+    email: 'zella@kisskissbankbank.com',
+    longName: 'Zella Firpo',
     avatar: '/kitten-0.jpg',
     status: 'read',
   },
   {
-    name: 'claude',
-    email: 'claude@kisskissbankbank.com',
-    longName: 'Claude A.',
+    name: 'Arlyne',
+    email: 'arlyne@kisskissbankbank.com',
+    longName: 'Arlyne Lasley',
     avatar: '/kitten-1.jpg',
     status: 'read',
   },
   {
-    name: 'dominique',
-    email: 'dominique@kisskissbankbank.com',
-    longName: 'Dominique C.',
+    name: 'Martina',
+    email: 'martina@kisskissbankbank.com',
+    longName: 'Martina Mondello',
     avatar: '/kitten-2.jpg',
     status: 'read',
   },
   {
-    name: 'alex',
-    email: 'alex@kisskissbankbank.com',
-    longName: 'Alex V.',
+    name: 'Kiera',
+    email: 'kiera@kisskissbankbank.com',
+    longName: 'Kiera Lammy',
     avatar: '/kitten-3.jpg',
     status: 'read',
   },
   {
-    name: 'claude',
-    email: 'claude@kisskissbankbank.com',
-    longName: 'Claude A.',
+    name: 'Evia',
+    email: 'evia@kisskissbankbank.com',
+    longName: 'Evia Schlepphorst',
     avatar: '/kitten-4.jpg',
     status: 'read',
   },
   {
-    name: 'dominique',
-    email: 'dominique@kisskissbankbank.com',
-    longName: 'Dominique C.',
+    name: 'Marshall',
+    email: 'marshall@kisskissbankbank.com',
+    longName: 'Marshall Kudley',
     avatar: '/kitten-15.jpg',
     status: 'read',
   },
@@ -226,7 +230,7 @@ export const Default = args => {
                   key={"message_" + index}
                   status={item.status}
                   active={activeDiscussion === item}
-                  onClick={() => {
+                  onClick={(event) => {
                     setActiveColumn('chat')
                     setActiveDiscussion(item)
                   }}

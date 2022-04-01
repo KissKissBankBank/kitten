@@ -79,7 +79,7 @@ export const StyledChatLayout = styled.div`
       height: calc(100% - ${pxToRem(56)});
     }
 
-    .k-ChatLayout__column__content.k-ChatLayout__column--isPrimaryColumn {
+    .k-ChatLayout__column--isPrimaryColumn .k-ChatLayout__column__content {
       height: calc(100% - ${pxToRem(100)});
     }
 
