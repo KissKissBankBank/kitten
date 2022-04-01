@@ -20,7 +20,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: [null, undefined, 'normal', 'tiny', 'micro'],
+      options: ['nano', 'micro', 'small', 'medium'],
       control: 'select',
     },
     withoutPointerEvents: {
@@ -37,7 +37,7 @@ export default {
 const args = {
   children: 'Label',
   focusId: null,
-  size: 'normal',
+  size: 'small',
   withoutPointerEvents: false,
 }
 

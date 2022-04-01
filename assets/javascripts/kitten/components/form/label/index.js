@@ -7,25 +7,28 @@ import domElementHelper from '../../../helpers/dom/element-helper'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledLabel = styled.label`
   display: block;
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
   font-size: ${stepToRem(-1)};
-
+  line-height: 1.3;
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
   }
 
-  &.k-Label--tiny {
-    line-height: 1.3;
-    font-size: ${stepToRem(0)};
+  &.k-Label--micro {
+    font-size: ${stepToRem(-2)};
   }
 
-  &.k-Label--micro {
-    line-height: 1.3;
-    font-size: ${stepToRem(-1)};
+  &.k-Label--nano {
+    font-size: ${stepToRem(-3)};
+  }
+
+  &.k-Label--medium {
+    font-size: ${stepToRem(0)};
   }
 
   &.k-Label--withoutPointerEvents {
@@ -55,6 +58,8 @@ export const Label = ({
   style,
   ...other
 }) => {
+  checkDeprecatedSizes(size)
+
   const handleClick = e => {
     if (domElementHelper.canUseDom() && focusId) {
       e.preventDefault()
@@ -93,14 +98,14 @@ export const Label = ({
 Label.defaultProps = {
   children: 'Label',
   focusId: null,
-  size: 'normal',
+  size: 'small',
   withoutPointerEvents: false,
   dot: {},
 }
 
 Label.propTypes = {
   focusId: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  size: PropTypes.oneOf([null, undefined, 'normal', 'tiny', 'micro']),
+  size: PropTypes.oneOf([ 'nano', 'micro', 'small', 'medium']),
   withoutPointerEvents: PropTypes.bool,
   dot: PropTypes.shape({
     width: PropTypes.number,

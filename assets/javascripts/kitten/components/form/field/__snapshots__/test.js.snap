@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -70,7 +70,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -169,7 +169,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -254,7 +254,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -350,7 +350,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -445,7 +445,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -573,7 +573,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -687,7 +687,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -793,7 +793,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL cmZlKQ k-Label k-Label--normal"
+          className="sc-bdvvtL hHTDax k-Label k-Label--small"
           htmlFor="option-a"
           onClick={[Function]}
         >
