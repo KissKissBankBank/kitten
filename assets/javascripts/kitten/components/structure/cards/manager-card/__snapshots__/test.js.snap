@@ -5,6 +5,7 @@ exports[`<ManagerCard /> default matches with snapshot 1`] = `
   className="sc-bdvvtL huGWEp k-ManagerCard k-ManagerCard--hasAction"
 >
   <a
+    aria-label="Click to show item"
     className="k-ManagerCard__action"
     href="https://css-tricks.com"
     onClick={[Function]}
