@@ -33,7 +33,7 @@ export const LendopolisLogo = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBox.x} ${viewBox.y}`}
       width={computed.width}
-      height={small || tiny ? computed.width : computed.height}
+      height={(small || tiny) ? computed.width : computed.height}
       {...props}
     >
       <title>Lendopolis</title>
