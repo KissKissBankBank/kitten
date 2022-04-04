@@ -165,7 +165,7 @@ export const Comment = React.forwardRef(
 
       <div className="k-Comment__content">
         {!!text && (
-          <Text color="font1" weight="light" size="tiny">
+          <Text color="font1" weight="light" size="small">
             {text}
           </Text>
         )}

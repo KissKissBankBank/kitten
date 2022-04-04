@@ -204,7 +204,7 @@ const CardComponent = ({ item }) => (
 
     <ProjectCard.ItemsLine>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           134
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -212,7 +212,7 @@ const CardComponent = ({ item }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           7 jours
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -220,7 +220,7 @@ const CardComponent = ({ item }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           9 930 €
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -253,7 +253,7 @@ const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
 
     <ProjectCard.ItemsLine>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           134
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -261,7 +261,7 @@ const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           7 jours
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -269,7 +269,7 @@ const ViewedCardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           9 930 €
         </Text>
         <Text className="k-u-ellipsis" size="micro">

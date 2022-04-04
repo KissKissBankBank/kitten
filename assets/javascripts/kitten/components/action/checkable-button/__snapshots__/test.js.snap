@@ -78,19 +78,22 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -254,17 +257,20 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny {
+.c1.k-Button--tiny,
+.c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular {
+.c1.k-Button--regular,
+.c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
+.c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
@@ -272,7 +278,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -325,345 +332,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 <button
   aria-checked={null}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
-  disabled={false}
-  style={
-    Object {
-      "--Button-border-radius": null,
-    }
-  }
-  type="button"
->
-  MyCheckableButton
-</button>
-`;
-
-exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
-.c0 {
-  --Button-border-radius: var(--border-radius-s);
-  position: relative;
-  box-sizing: border-box;
-  min-height: var(--Button-dimension);
-  padding: var(--Button-padding);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-grey-900,#222);
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  border-radius: var(--Button-border-radius,0);
-  min-width: 0;
-  border: var(--border-width) solid var(--color-primary-500);
-  background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
-  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
-.c0 svg {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c0:disabled,
-.c0.k-Button--disabled {
-  cursor: not-allowed;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0:focus-visible {
-  outline: auto;
-}
-
-.c0.k-Button--nano {
-  --Button-dimension: 1.25rem;
-  --Button-min-width: 6.25rem;
-  --Button-padding: 0 0.375rem;
-  font-size: 0.75rem;
-}
-
-.c0.k-Button--micro {
-  --Button-dimension: 1.875rem;
-  --Button-min-width: 8.125rem;
-  --Button-padding: 0.3125rem 0.625rem;
-  font-size: 0.75rem;
-}
-
-.c0.k-Button--tiny {
-  --Button-dimension: 2.5rem;
-  --Button-min-width: 10rem;
-  --Button-padding: 0.4375rem 1.25rem;
-}
-
-.c0.k-Button--regular {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c0.k-Button--big {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c0.k-Button--huge {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c0.k-Button--giant {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c0.k-Button--fit-min-width {
-  min-width: var(--Button-min-width);
-}
-
-.c0.k-Button--fit-icon {
-  padding: 0;
-  overflow: hidden;
-  width: var(--Button-dimension);
-  height: var(--Button-dimension);
-}
-
-.c0.k-Button--fit-fluid {
-  width: 100%;
-}
-
-.c0 svg:not(.k-ColorSvg),
-.c0 svg:not(.k-ColorSvg) path {
-  fill: currentColor;
-  -webkit-transition: fill var(--transition);
-  transition: fill var(--transition);
-}
-
-.c0:hover {
-  border-color: var(--color-primary-700);
-  background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
-}
-
-.c0:focus {
-  border-color: var(--color-primary-700);
-  background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
-}
-
-.c0:active {
-  border-color: var(--color-primary-900);
-  background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
-}
-
-.c0:disabled,
-.c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-600);
-  background-color: var(--color-grey-300);
-  color: var(--color-grey-600);
-}
-
-.c1 {
-  gap: 0;
-}
-
-.c1::after {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  content: '';
-  box-sizing: border-box;
-  border-radius: var(--border-radius-rounded);
-  width: var(--CheckableButton-dimension);
-  height: var(--CheckableButton-dimension);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
-}
-
-.c1.k-CheckableButton--bottom::after,
-.c1.k-CheckableButton--left[aria-checked]::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
-}
-
-.c1.k-CheckableButton--bottom.k-Button--copper::after,
-.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
-}
-
-.c1.k-CheckableButton--bottom:disabled::after,
-.c1.k-CheckableButton--left[aria-checked]:disabled::after {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
-}
-
-.c1.k-CheckableButton--bottom::after {
-  position: absolute;
-  bottom: -0.6875rem;
-  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
-  opacity: 0;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
-  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.c1.k-CheckableButton--bottom[aria-checked]::after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
-  transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
-}
-
-.c1.k-CheckableButton--left {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding-left: 0;
-  text-align: left;
-}
-
-.c1.k-CheckableButton--left::after {
-  margin: 0 0.9375rem;
-  margin: 0 var(--CheckableButton-checkMargin);
-  border: var(--border);
-  background-color: var(--color-grey-000,#fff);
-  -webkit-transition: border-color var(--transition),background-color var(--transition);
-  transition: border-color var(--transition),background-color var(--transition);
-}
-
-.c1.k-CheckableButton--left[aria-checked]::after {
-  border-color: var(--color-primary-500,#19b4fa);
-  background-color: var(--color-primary-500,#19b4fa);
-}
-
-.c1.k-CheckableButton--left.k-Button--copper::after {
-  border-color: var(--color-danger-500,#ff0046);
-  background-color: var(--color-grey-000,#fff);
-}
-
-.c1.k-CheckableButton--left:disabled::after {
-  border-color: var(--color-grey-000,#fff);
-  background-color: var(--color-grey-400,#d8d8d8);
-}
-
-.c1.k-Button--micro,
-.c1.k-Button--tiny {
-  --CheckableButton-dimension: 0.9375rem;
-  --CheckableButton-checkMargin: 0.625rem;
-}
-
-.c1.k-Button--regular {
-  --CheckableButton-dimension: 1.25rem;
-  --CheckableButton-checkMargin: 0.9375rem;
-}
-
-.c1.k-Button--big,
-.c1.k-Button--huge,
-.c1.k-Button--giant {
-  --CheckableButton-dimension: 1.5rem;
-  --CheckableButton-checkMargin: 1.25rem;
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--big {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 4.375rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--huge {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--giant {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5.625rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit'] {
-    min-width: initial !important;
-    padding: var(--Button-padding);
-    width: initial;
-    height: initial;
-    width: initial;
-  }
-
-  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
-    min-width: var(--Button-min-width) !important;
-  }
-
-  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
-    padding: 0;
-    overflow: hidden;
-    width: var(--Button-dimension);
-    height: var(--Button-dimension);
-  }
-
-  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
-    width: 100%;
-  }
-}
-
-<button
-  aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--big k-Button--lithium k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   disabled={false}
   style={
     Object {
@@ -754,19 +423,22 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -930,17 +602,20 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny {
+.c1.k-Button--tiny,
+.c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular {
+.c1.k-Button--regular,
+.c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
+.c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
@@ -948,7 +623,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1001,7 +677,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--lithium k-Button--fit-min-width k-Button--disabled"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--lithium k-Button--fit-min-width k-Button--disabled"
   disabled={true}
   style={
     Object {
@@ -1092,19 +768,22 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1268,17 +947,20 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny {
+.c1.k-Button--tiny,
+.c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular {
+.c1.k-Button--regular,
+.c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
+.c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
@@ -1286,7 +968,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1339,7 +1022,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--regular k-Button--copper k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--copper k-Button--fit-min-width"
   disabled={false}
   style={
     Object {
@@ -1352,7 +1035,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
+exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
 .c0 {
   --Button-border-radius: var(--border-radius-s);
   position: relative;
@@ -1430,19 +1113,22 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1606,17 +1292,20 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny {
+.c1.k-Button--tiny,
+.c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular {
+.c1.k-Button--regular,
+.c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
 .c1.k-Button--big,
+.c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
   --CheckableButton-dimension: 1.5rem;
@@ -1624,7 +1313,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1677,7 +1367,352 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   aria-checked={true}
-  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--tiny k-Button--lithium k-Button--fit-min-width"
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--large k-Button--lithium k-Button--fit-min-width"
+  disabled={false}
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  MyCheckableButton
+</button>
+`;
+
+exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
+.c0 {
+  --Button-border-radius: var(--border-radius-s);
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-grey-900,#222);
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
+  border: var(--border-width) solid var(--color-primary-500);
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900,#222);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c0:disabled,
+.c0.k-Button--disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:focus-visible {
+  outline: auto;
+}
+
+.c0.k-Button--nano {
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
+}
+
+.c0.k-Button--micro {
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.c0.k-Button--tiny,
+.c0.k-Button--small {
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular,
+.c0.k-Button--medium {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big,
+.c0.k-Button--large {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--huge {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c0.k-Button--giant {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
+  padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
+}
+
+.c0.k-Button--fit-fluid {
+  width: 100%;
+}
+
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
+}
+
+.c0:hover {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:focus {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:active {
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-300);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:disabled,
+.c0.k-Button--disabled {
+  border: var(--border-width) solid var(--color-grey-600);
+  background-color: var(--color-grey-300);
+  color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
+}
+
+.c1::after {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  content: '';
+  box-sizing: border-box;
+  border-radius: var(--border-radius-rounded);
+  width: var(--CheckableButton-dimension);
+  height: var(--CheckableButton-dimension);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: var(--CheckableButton-dimension) var(--CheckableButton-dimension);
+}
+
+.c1.k-CheckableButton--bottom::after,
+.c1.k-CheckableButton--left[aria-checked]::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5LTUwMCwgIzE5YjRmYSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+}
+
+.c1.k-CheckableButton--bottom.k-Button--copper::after,
+.c1.k-CheckableButton--left[aria-checked].k-Button--copper::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1kYW5nZXItNTAwLCAjZmYwMDQ2KSIgY3g9IjEwIiBjeT0iMTAiIHI9IjEwIiAvPjxwYXRoIGZpbGw9InZhcigtLWNvbG9yLWdyZXktMDAwLCAjZmZmKSIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+}
+
+.c1.k-CheckableButton--bottom:disabled::after,
+.c1.k-CheckableButton--left[aria-checked]:disabled::after {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTYwMCwgIzk0OTQ5NCkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1ncmV5LTAwMCwgI2ZmZikiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
+}
+
+.c1.k-CheckableButton--bottom::after {
+  position: absolute;
+  bottom: -0.6875rem;
+  bottom: calc((var(--CheckableButton-dimension) / 2 + 0.0625rem) * -1);
+  opacity: 0;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: opacity var(--transition),-webkit-transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity var(--transition),transform var(--transition-duration) cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.c1.k-CheckableButton--bottom[aria-checked]::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+  transition-timing-function: ease,cubic-bezier(0.2,2,0.7,1);
+}
+
+.c1.k-CheckableButton--left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 0;
+  text-align: left;
+}
+
+.c1.k-CheckableButton--left::after {
+  margin: 0 0.9375rem;
+  margin: 0 var(--CheckableButton-checkMargin);
+  border: var(--border);
+  background-color: var(--color-grey-000,#fff);
+  -webkit-transition: border-color var(--transition),background-color var(--transition);
+  transition: border-color var(--transition),background-color var(--transition);
+}
+
+.c1.k-CheckableButton--left[aria-checked]::after {
+  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c1.k-CheckableButton--left.k-Button--copper::after {
+  border-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c1.k-CheckableButton--left:disabled::after {
+  border-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-400,#d8d8d8);
+}
+
+.c1.k-Button--micro,
+.c1.k-Button--tiny,
+.c1.k-Button--small {
+  --CheckableButton-dimension: 0.9375rem;
+  --CheckableButton-checkMargin: 0.625rem;
+}
+
+.c1.k-Button--regular,
+.c1.k-Button--medium {
+  --CheckableButton-dimension: 1.25rem;
+  --CheckableButton-checkMargin: 0.9375rem;
+}
+
+.c1.k-Button--big,
+.c1.k-Button--large,
+.c1.k-Button--huge,
+.c1.k-Button--giant {
+  --CheckableButton-dimension: 1.5rem;
+  --CheckableButton-checkMargin: 1.25rem;
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--huge {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
+  }
+}
+
+<button
+  aria-checked={true}
+  className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--small k-Button--lithium k-Button--fit-min-width"
   disabled={false}
   style={
     Object {

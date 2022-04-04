@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Change/Deprecation: `Structure`: 
-  - Replace `tiny, regular, default, big` by `small, medium, large` prop size values.
+- Change/Deprecation: 
+  - Replace `tiny, regular, default, big` by `small, medium, large` 
+    prop size values to the following folders:
+  - `Action`,
+  - `Typography`,
+  - `Form`,
+  - `Graphics`,
+  - `Information`,
+  - `Structure`
 
 ## [9.6.0] - 2022-04-04
 

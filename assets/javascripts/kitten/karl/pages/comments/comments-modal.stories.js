@@ -252,7 +252,7 @@ export const AsAdmin = () => {
                     direction="row"
                     className="k-u-flex-alignItems-baseline"
                   >
-                    <Text size="tiny">
+                    <Text size="small">
                       {replyText.isEdit ? (
                         <>Modification de votre réponse</>
                       ) : (

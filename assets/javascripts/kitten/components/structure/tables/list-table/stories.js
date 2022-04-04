@@ -135,7 +135,7 @@ export const Default = () => (
           <Text
             weight="regular"
             color="font1"
-            size="tiny"
+            size="small"
             className="k-u-hidden@s-down k-u-hidden@m"
           >
             Date
@@ -143,7 +143,7 @@ export const Default = () => (
           <Text
             weight="regular"
             color="font1"
-            size="tiny"
+            size="small"
             className="k-u-hidden@l-up"
           >
             Contributeur
@@ -151,31 +151,31 @@ export const Default = () => (
         </ListTable.Col>
 
         <ListTable.Col className="customCol_3">
-          <Text weight="regular" color="font1" size="tiny">
+          <Text weight="regular" color="font1" size="small">
             Contributeur
           </Text>
         </ListTable.Col>
 
         <ListTable.Col className="customCol_4">
-          <Text weight="regular" color="font1" size="tiny">
+          <Text weight="regular" color="font1" size="small">
             Montant
           </Text>
         </ListTable.Col>
 
         <ListTable.Col className="customCol_5">
-          <Text weight="regular" color="font1" size="tiny">
+          <Text weight="regular" color="font1" size="small">
             Statut
           </Text>
         </ListTable.Col>
 
         <ListTable.Col className="customCol_6">
-          <Text weight="regular" color="font1" size="tiny">
+          <Text weight="regular" color="font1" size="small">
             Mode de livraison
           </Text>
         </ListTable.Col>
 
         <ListTable.Col className="customCol_7">
-          <Text weight="regular" color="font1" size="tiny">
+          <Text weight="regular" color="font1" size="small">
             Statut livraison
           </Text>
         </ListTable.Col>
@@ -193,7 +193,7 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_2">
             <div>
-              <Text size="tiny" weight="regular">
+              <Text size="small" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
@@ -228,7 +228,7 @@ export const Default = () => (
           </ListTable.Col>
 
           <ListTable.Col className="customCol_4">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               72&nbsp;€
             </Text>
           </ListTable.Col>
@@ -238,7 +238,7 @@ export const Default = () => (
           </ListTable.Col>
 
           <ListTable.Col className="customCol_6">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               Livraison
             </Text>
           </ListTable.Col>
@@ -270,7 +270,7 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_2">
             <div>
-              <Text size="tiny" weight="regular">
+              <Text size="small" weight="regular">
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
@@ -303,7 +303,7 @@ export const Default = () => (
           </ListTable.Col>
 
           <ListTable.Col className="customCol_4">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               72&nbsp;€
             </Text>
           </ListTable.Col>
@@ -313,7 +313,7 @@ export const Default = () => (
           </ListTable.Col>
 
           <ListTable.Col className="customCol_6">
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               Livraison
             </Text>
           </ListTable.Col>

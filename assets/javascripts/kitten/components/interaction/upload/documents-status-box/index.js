@@ -92,7 +92,7 @@ export const DocumentsStatusBox = ({
           as="p"
           className="k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
           weight="regular"
-          size="tiny"
+          size="small"
           lineHeight="1"
         >
           {title}
