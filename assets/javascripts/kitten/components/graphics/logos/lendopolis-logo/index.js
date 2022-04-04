@@ -22,7 +22,7 @@ export const LendopolisLogo = ({
   })
 
   const viewBox = {
-    x: small || tiny ? DEFAULT_HEIGHT : DEFAULT_WIDTH,
+    x: (small || tiny) ? DEFAULT_HEIGHT : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT,
   }
 
