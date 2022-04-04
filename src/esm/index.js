@@ -208,6 +208,7 @@ export { LinkIconNext } from './components/graphics/icons-next/link-icon-next';
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next';
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon';
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next';
+export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-icon-next';
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next';
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next';
 export { RefundIcon } from './components/graphics/icons-next/refund-icon';
