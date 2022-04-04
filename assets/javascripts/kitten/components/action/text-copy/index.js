@@ -99,6 +99,7 @@ export const TextCopy = ({
   buttonText,
   buttonModifier,
   size,
+  className,
 }) => {
   const [isMessageVisible, setMessageVisibility] = useState(false)
   const textElement = useRef(null)
@@ -131,7 +132,7 @@ export const TextCopy = ({
 
   return (
     <Wrapper
-      className={classNames('k-TextCopy', 'k-u-reset-button')}
+      className={classNames('k-TextCopy', 'k-u-reset-button', className)}
       type="button"
       onClick={copyText}
     >
