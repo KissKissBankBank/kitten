@@ -51,7 +51,7 @@ describe('<Button />', () => {
   describe('with `size` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<Button size="tiny">MyButton</Button>)
+        .create(<Button size="small">MyButton</Button>)
         .toJSON()
     })
 
@@ -149,11 +149,11 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with icon and tiny', () => {
+  describe('with icon and small', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button fit="icon" size="tiny">
+          <Button fit="icon" size="small">
             !
           </Button>,
         )
@@ -165,11 +165,11 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with icon and big', () => {
+  describe('with icon and large', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button fit="icon" size="big">
+          <Button fit="icon" size="large">
             !
           </Button>,
         )

@@ -19,12 +19,12 @@ export default {
     ),
   ],
   argTypes: {
-    size: { control: 'radio', options: ['tiny', 'regular', 'big', 'huge'] },
+    size: { control: 'radio', options: ['small', 'medium', 'large', 'huge'] },
     active: { control: 'boolean' },
     children: { control: 'text' },
   },
   args: {
-    size: 'regular',
+    size: 'medium',
     active: false,
     children: 'My Tag',
   },
@@ -33,7 +33,7 @@ export default {
 export const Default = args => <TagButton {...args} />
 
 export const WithIcon = args => (
-  <TagButton {...args} icon>
+  <TagButton {...args} fit="icon">
     <VisaIcon />
   </TagButton>
 )

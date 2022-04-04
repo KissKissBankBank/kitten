@@ -24,7 +24,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   opacity: 0.8;
 }
 
-.c1.k-ButtonImage--tiny {
+.c1.k-ButtonImage--tiny,
+.c1.k-ButtonImage--small {
   width: 1.875rem;
   height: 1.875rem;
 }
@@ -416,7 +417,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:640px) {
-  .c1.k-ButtonImage--big {
+  .c1.k-ButtonImage--big,
+  .c1.k-ButtonImage--large {
     width: 3.125rem;
     height: 3.125rem;
   }
@@ -536,7 +538,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         className="k-u-margin-top-single"
       >
         <span
-          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c1 k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -669,7 +671,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   opacity: 0.8;
 }
 
-.c1.k-ButtonImage--tiny {
+.c1.k-ButtonImage--tiny,
+.c1.k-ButtonImage--small {
   width: 1.875rem;
   height: 1.875rem;
 }
@@ -774,19 +777,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   font-size: 0.75rem;
 }
 
-.c2.k-Button--tiny {
+.c2.k-Button--tiny,
+.c2.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c2.k-Button--regular {
+.c2.k-Button--regular,
+.c2.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c2.k-Button--big {
+.c2.k-Button--big,
+.c2.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1185,14 +1191,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 @media (min-width:640px) {
-  .c1.k-ButtonImage--big {
+  .c1.k-ButtonImage--big,
+  .c1.k-ButtonImage--large {
     width: 3.125rem;
     height: 3.125rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c2.k-Button--big {
+  .c2.k-Button--big,
+  .c2.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1357,7 +1365,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
         className="k-u-margin-top-single"
       >
         <span
-          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c1 k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -1394,7 +1402,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--fit-fluid"
+      className="c2 k-Button k-Button--medium k-Button--helium k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,
@@ -1442,7 +1450,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   opacity: 0.8;
 }
 
-.c1.k-ButtonImage--tiny {
+.c1.k-ButtonImage--tiny,
+.c1.k-ButtonImage--small {
   width: 1.875rem;
   height: 1.875rem;
 }
@@ -1547,19 +1556,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   font-size: 0.75rem;
 }
 
-.c2.k-Button--tiny {
+.c2.k-Button--tiny,
+.c2.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c2.k-Button--regular {
+.c2.k-Button--regular,
+.c2.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c2.k-Button--big {
+.c2.k-Button--big,
+.c2.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2037,14 +2049,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 @media (min-width:640px) {
-  .c1.k-ButtonImage--big {
+  .c1.k-ButtonImage--big,
+  .c1.k-ButtonImage--large {
     width: 3.125rem;
     height: 3.125rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c2.k-Button--big {
+  .c2.k-Button--big,
+  .c2.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2126,7 +2140,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
         className="k-u-margin-top-single"
       >
         <span
-          className="c1 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c1 k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -2163,7 +2177,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c2 k-Button k-Button--regular k-Button--helium k-Button--fit-fluid"
+      className="c2 k-Button k-Button--medium k-Button--helium k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,
@@ -2211,7 +2225,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   opacity: 0.8;
 }
 
-.c2.k-ButtonImage--tiny {
+.c2.k-ButtonImage--tiny,
+.c2.k-ButtonImage--small {
   width: 1.875rem;
   height: 1.875rem;
 }
@@ -2320,19 +2335,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   font-size: 0.75rem;
 }
 
-.c3.k-Button--tiny {
+.c3.k-Button--tiny,
+.c3.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c3.k-Button--regular {
+.c3.k-Button--regular,
+.c3.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c3.k-Button--big {
+.c3.k-Button--big,
+.c3.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2731,14 +2749,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 @media (min-width:640px) {
-  .c2.k-ButtonImage--big {
+  .c2.k-ButtonImage--big,
+  .c2.k-ButtonImage--large {
     width: 3.125rem;
     height: 3.125rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c3.k-Button--big {
+  .c3.k-Button--big,
+  .c3.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2915,7 +2935,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         className="k-u-margin-top-single"
       >
         <span
-          className="c2 k-ButtonImage k-ButtonImage--regular k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="c2 k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -2952,7 +2972,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c3 k-Button k-Button--regular k-Button--helium k-Button--fit-fluid"
+      className="c3 k-Button k-Button--medium k-Button--helium k-Button--fit-fluid"
       style={
         Object {
           "--Button-border-radius": null,

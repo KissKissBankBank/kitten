@@ -26,7 +26,7 @@ describe('SocialButtonIconWords', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <FacebookButtonIconWords size="big" fit="fluid">
+          <FacebookButtonIconWords size="large" fit="fluid">
             Facebook
           </FacebookButtonIconWords>,
         )
@@ -53,7 +53,7 @@ describe('SocialButtonIconWords', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <TwitterButtonIconWords size="big" fit="fluid">
+          <TwitterButtonIconWords size="large" fit="fluid">
             Twitter
           </TwitterButtonIconWords>,
         )
@@ -80,7 +80,7 @@ describe('SocialButtonIconWords', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <LinkedinButtonIconWords size="big" fit="fluid">
+          <LinkedinButtonIconWords size="large" fit="fluid">
             Linkedin
           </LinkedinButtonIconWords>,
         )
@@ -107,7 +107,7 @@ describe('SocialButtonIconWords', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <InstagramButtonIconWords size="big" fit="fluid">
+          <InstagramButtonIconWords size="large" fit="fluid">
             Instagram
           </InstagramButtonIconWords>,
         )

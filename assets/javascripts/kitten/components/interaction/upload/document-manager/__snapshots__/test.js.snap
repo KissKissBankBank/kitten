@@ -224,7 +224,7 @@ exports[`<DocumentManager /> should match snapshot with ready state props 1`] = 
     type="file"
   />
   <label
-    className="sc-bdvvtL dXCQCL k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdvvtL ipSHQg k-Button k-DocumentManager__uploader__button k-Button--big k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={

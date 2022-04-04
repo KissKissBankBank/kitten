@@ -22,7 +22,7 @@ describe('<ButtonImage />', () => {
       .create(
         <ButtonImage
           tag={'button'}
-          tiny={true}
+          size="small"
           withoutPointerEvents={true}
           withBorder={true}
           img={{

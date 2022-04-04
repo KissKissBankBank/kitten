@@ -118,7 +118,7 @@ const Login = props => (
             <Checkbox id="remember-me">Se souvenir de moi</Checkbox>
           </Marger>
           <Marger top="4" bottom="2">
-            <Button size="big" fit="fluid" modifier="helium">
+            <Button size="large" fit="fluid" modifier="helium">
               Se connecter
             </Button>
           </Marger>

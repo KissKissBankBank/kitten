@@ -199,7 +199,7 @@ const SearchInput = () => {
       </FlexWrapper>
 
       <Button
-        size="tiny"
+        size="small"
         type="submit"
         fit="fluid"
         className="k-u-margin-bottom-double k-u-margin-horizontal-double"
@@ -268,7 +268,7 @@ export const KissKissBankBankHeaderNavStory = ({
               as: 'a',
               href: '#card',
               icon: true,
-              size: 'tiny',
+              size: 'small',
               rounded: true,
               modifier: 'hydrogen',
               fit: 'icon',
@@ -285,7 +285,7 @@ export const KissKissBankBankHeaderNavStory = ({
                 as: 'a',
                 href: '#hello',
                 icon: true,
-                size: 'tiny',
+                size: 'small',
                 rounded: true,
                 modifier: 'hydrogen',
                 fit: 'icon',
@@ -297,7 +297,7 @@ export const KissKissBankBankHeaderNavStory = ({
             {hasMentorEditButton && (
               <Button
                 as="a"
-                size="tiny"
+                size="small"
                 modifier="helium"
                 borderRadius={100}
                 className="k-u-hidden@m-down"
@@ -353,7 +353,7 @@ export const KissKissBankBankHeaderNavStory = ({
 
             <Button
               as="a"
-              size="tiny"
+              size="small"
               modifier="helium"
               borderRadius={100}
               className="k-u-hidden@m-down"

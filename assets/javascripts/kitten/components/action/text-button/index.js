@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { mq } from '../../../constants/screen-config'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledButton = styled.button`
   ${TYPOGRAPHY.fontStyles.regular}
@@ -37,7 +38,8 @@ const StyledButton = styled.button`
     fill: currentColor;
   }
 
-  &.k-TextButton--normal {
+  &.k-TextButton--normal,
+  &.k-TextButton--medium {
     font-size: ${pxToRem(14)};
 
     @media ${mq.tabletAndDesktop} {
@@ -45,7 +47,8 @@ const StyledButton = styled.button`
     }
   }
 
-  &.k-TextButton--big {
+  &.k-TextButton--big,
+  &.k-TextButton--large {
     font-size: ${pxToRem(16)};
 
     @media ${mq.tabletAndDesktop} {
@@ -54,23 +57,27 @@ const StyledButton = styled.button`
   }
 `
 
-export const TextButton = ({ className, size, ...props }) => (
-  <StyledButton
-    type="button"
-    className={classNames(
-      'k-TextButton',
-      'k-u-reset-button',
-      className,
-      `k-TextButton--${size}`,
-    )}
-    {...props}
-  />
-)
+export const TextButton = ({ className, size, ...props }) => {
+  checkDeprecatedSizes(size)
+  
+  return (
+    <StyledButton
+      type="button"
+      className={classNames(
+        'k-TextButton',
+        'k-u-reset-button',
+        className,
+        `k-TextButton--${size}`,
+      )}
+      {...props}
+    />
+  )
+}
 
 TextButton.defaultProps = {
-  size: 'normal',
+  size: 'medium',
 }
 
 TextButton.propTypes = {
-  size: PropTypes.oneOf(['normal', 'big']),
+  size: PropTypes.oneOf(['medium', 'large']),
 }

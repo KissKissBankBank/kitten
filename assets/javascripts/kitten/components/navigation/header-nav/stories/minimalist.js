@@ -62,7 +62,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
         modifier="helium"
         fit="content"
         mobileFit="icon"
-        size="tiny"
+        size="small"
       >
         <UsersIconNext />
         <span className="k-u-hidden@s-up k-u-a11y-visuallyHidden">
