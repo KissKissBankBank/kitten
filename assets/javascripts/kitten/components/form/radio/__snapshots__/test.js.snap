@@ -96,16 +96,6 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   color: var(--color-primary-500);
 }
 
-.c0.k-Form-Radio--largeLabel .k-Form-Radio__label::before {
-  margin-top: 0.5rem;
-}
-
-.c0.k-Form-Radio--largeLabel .k-Form-Radio__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 1.25rem;
-}
-
 .c0 .k-Form-Radio__labelText--withContents {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -125,10 +115,6 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 
 .c0 .k-Form-Radio__labelContents:empty {
   display: none;
-}
-
-.c0.k-Form-Radio--largeContent .k-Form-Radio__labelContents {
-  font-size: 0.875rem;
 }
 
 .c0.k-Form-Radio--check .k-Form-Radio__input:checked + .k-Form-Radio__label::before {

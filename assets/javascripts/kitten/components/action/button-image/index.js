@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledButtonImage = styled.button`
   width: ${pxToRem(40)};
@@ -24,12 +25,14 @@ const StyledButtonImage = styled.button`
     opacity: 0.8;
   }
 
-  &.k-ButtonImage--tiny {
+  &.k-ButtonImage--tiny, 
+  &.k-ButtonImage--small {
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};
   }
 
-  &.k-ButtonImage--big {
+  &.k-ButtonImage--big,
+  &.k-ButtonImage--large {
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
       height: ${pxToRem(50)};
@@ -69,6 +72,9 @@ export const ButtonImage = ({
   img,
   ...others
 }) => {
+  
+  checkDeprecatedSizes(size)
+
   return (
     <StyledButtonImage
       as={tag}
@@ -96,7 +102,7 @@ export const ButtonImage = ({
 
 ButtonImage.defaultProps = {
   tag: 'button',
-  size: 'regular',
+  size: 'medium',
   withoutPointerEvents: false,
   withBorder: false,
   img: {},
@@ -104,7 +110,7 @@ ButtonImage.defaultProps = {
 
 ButtonImage.propTypes = {
   tag: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   withoutPointerEvents: PropTypes.bool,
   withBorder: PropTypes.bool,
   img: PropTypes.object,

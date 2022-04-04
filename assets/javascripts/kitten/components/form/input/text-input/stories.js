@@ -26,7 +26,7 @@ Default.args = {
   valid: false,
   error: false,
   disabled: false,
-  size: 'regular',
+  size: 'medium',
   center: false,
   rounded: false,
   placeholder: 'Les props sont transmises',
@@ -54,7 +54,7 @@ Default.argTypes = {
   },
   size: {
     name: 'size',
-    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+    options: ['small', 'medium', 'large', 'huge', 'giant'],
     control: 'select',
   },
   center: {

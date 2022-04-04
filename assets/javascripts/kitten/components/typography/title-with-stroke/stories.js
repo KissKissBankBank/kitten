@@ -210,7 +210,7 @@ export const ModifierMetrics = () => (
       <Marger top="1">
         <Text size="micro">• Mobile version - 18px</Text>
         <br />
-        <Text size="big" weight="bold">
+        <Text size="large" weight="bold">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
@@ -227,14 +227,14 @@ export const ModifierMetrics = () => (
       <Marger top="1">
         <Text size="micro">• Tablet version - 18px</Text>
         <br />
-        <Text size="big" weight="bold">
+        <Text size="large" weight="bold">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
       <Marger top="1">
         <Text size="micro">• Mobile version - 16px</Text>
         <br />
-        <Text size="default" weight="bold">
+        <Text size="medium" weight="bold">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>

@@ -88,17 +88,6 @@ const StyledRadio = styled.div`
     color: var(--color-primary-500);
   }
 
-  &.k-Form-Radio--largeLabel {
-    .k-Form-Radio__label::before {
-      margin-top: ${pxToRem(8)};
-    }
-
-    .k-Form-Radio__labelText {
-      ${TYPOGRAPHY.fontStyles.regular}
-      font-size: ${stepToRem(2)};
-    }
-  }
-
   .k-Form-Radio__labelText--withContents {
     ${TYPOGRAPHY.fontStyles.regular}
   }
@@ -115,10 +104,6 @@ const StyledRadio = styled.div`
     &:empty {
       display: none;
     }
-  }
-
-  &.k-Form-Radio--largeContent .k-Form-Radio__labelContents {
-    font-size: ${stepToRem(-1)};
   }
 
   @media ${mq.tabletAndDesktop} {
@@ -210,15 +195,11 @@ export const Radio = ({
   id,
   children,
   inputClassName,
-  large,
-  largeContent,
-  size,
   text,
   error,
   disabled,
   design,
   fontWeight,
-  paragraphStyle,
   ...inputProps
 }) => {
   return (

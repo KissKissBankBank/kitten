@@ -11,8 +11,15 @@ export const FLUID = css`
 export const ROUNDED = css`
   border-radius: var(--border-radius-rounded);
 `
-
+// Deprecated
 export const DEFAULT = css`
+  --Button-min-width: ${pxToRem(200)};
+  min-width: ${pxToRem(200)};
+  min-height: ${pxToRem(50)};
+  padding: ${pxToRem(10)} ${pxToRem(30)};
+  font-size: ${stepToRem(-1)};
+`
+export const MEDIUM = css`
   --Button-min-width: ${pxToRem(200)};
   min-width: ${pxToRem(200)};
   min-height: ${pxToRem(50)};
@@ -36,6 +43,7 @@ export const MICRO = css`
   font-size: ${stepToRem(-2)};
 `
 
+// Deprecated
 export const TINY = css`
   --Button-min-width: ${pxToRem(160)};
   min-width: ${pxToRem(160)};
@@ -44,7 +52,25 @@ export const TINY = css`
   font-size: ${stepToRem(-1)};
 `
 
+export const SMALL = css`
+  --Button-min-width: ${pxToRem(160)};
+  min-width: ${pxToRem(160)};
+  min-height: ${pxToRem(40)};
+  padding: ${pxToRem(7)} ${pxToRem(20)};
+  font-size: ${stepToRem(-1)};
+`
+
+// Deprecated
 export const BIG = css`
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    --Button-min-width: ${pxToRem(220)};
+    min-width: ${pxToRem(220)};
+    min-height: ${pxToRem(70)};
+    padding: ${pxToRem(10)} ${pxToRem(40)};
+    font-size: ${stepToRem(0)};
+  }
+`
+export const LARGE = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     --Button-min-width: ${pxToRem(220)};
     min-width: ${pxToRem(220)};
@@ -101,12 +127,28 @@ export const ICON_MICRO = css`
   height: ${pxToRem(30)};
 `
 
+// Deprecated
 export const ICON_TINY = css`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
 `
+export const ICON_SMALL = css`
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+`
 
+// Deprecated
 export const ICON_BIG = css`
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    --Button-min-width: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: ${pxToRem(70)};
+    height: ${pxToRem(70)};
+  }
+`
+export const ICON_LARGE = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     --Button-min-width: 0;
     min-width: 0;

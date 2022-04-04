@@ -60,8 +60,8 @@ export default {
       name: 'size',
       description: 'Button and input size',
       control: 'select',
-      default: 'regular',
-      options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+      default: 'medium',
+      options: ['small', 'medium', 'large', 'huge', 'giant'],
     },
   },
 }

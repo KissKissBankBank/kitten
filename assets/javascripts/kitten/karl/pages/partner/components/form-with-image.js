@@ -151,7 +151,7 @@ const FormWithImage = () => (
             </Field>
           </Marger>
 
-          <Button size="big" fit="fluid" modifier="helium">
+          <Button size="large" fit="fluid" modifier="helium">
             Envoyer
           </Button>
 

@@ -153,7 +153,7 @@ export const Default = ({
       {textHasSecondLine && (
         <>
           <br />
-          <Text weight="light" size="tiny">
+          <Text weight="light" size="small">
             <span className="k-u-hidden@xs-down">Solde&nbsp;:</span>{' '}
             24&nbsp;093,39&nbsp;€
           </Text>

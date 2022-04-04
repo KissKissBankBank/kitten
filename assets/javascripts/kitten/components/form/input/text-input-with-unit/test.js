@@ -59,7 +59,7 @@ describe('<TextInputWithUnit />', () => {
 
   describe('with size prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit size="big" />).toJSON()
+      component = renderer.create(<TextInputWithUnit size="large" />).toJSON()
     })
 
     it('matches with snapshot', () => {
