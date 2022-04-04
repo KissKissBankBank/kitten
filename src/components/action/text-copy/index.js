@@ -50,7 +50,8 @@ var TextCopy = function TextCopy(_ref) {
       forceOneLine = _ref.forceOneLine,
       buttonText = _ref.buttonText,
       buttonModifier = _ref.buttonModifier,
-      size = _ref.size;
+      size = _ref.size,
+      className = _ref.className;
 
   var _useState = (0, _react.useState)(false),
       isMessageVisible = _useState[0],
@@ -90,7 +91,7 @@ var TextCopy = function TextCopy(_ref) {
     window.getSelection().addRange(range);
   });
   return /*#__PURE__*/_react.default.createElement(Wrapper, {
-    className: (0, _classnames.default)('k-TextCopy', 'k-u-reset-button'),
+    className: (0, _classnames.default)('k-TextCopy', 'k-u-reset-button', className),
     type: "button",
     onClick: copyText
   }, description && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, {
