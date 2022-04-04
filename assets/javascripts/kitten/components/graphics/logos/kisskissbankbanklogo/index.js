@@ -22,7 +22,7 @@ export const KissKissBankBankLogo = ({
   })
 
   const viewBox = {
-    x: small || tiny ? SMALL_WIDTH : DEFAULT_WIDTH,
+    x: (small || tiny) ? SMALL_WIDTH : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT,
   }
 
