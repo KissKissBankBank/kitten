@@ -1,5 +1,5 @@
 import React from 'react'
-import { HorizontalCrowdfundingCard } from 'kitten'
+import { HorizontalProjectCard } from 'kitten'
 import { FlexWrapper } from './index.js'
 import { DocsPage } from 'storybook/docs-page'
 
@@ -35,10 +35,10 @@ export default {
 export const Default = args => {
   return (
     <FlexWrapper {...args}>
-      <HorizontalCrowdfundingCard />
-      <HorizontalCrowdfundingCard />
-      <HorizontalCrowdfundingCard />
-      <HorizontalCrowdfundingCard />
+      <HorizontalProjectCard />
+      <HorizontalProjectCard />
+      <HorizontalProjectCard />
+      <HorizontalProjectCard />
     </FlexWrapper>
   )
 }

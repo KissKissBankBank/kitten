@@ -1,15 +1,15 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { HorizontalCrowdfundingCard } from './index'
+import { HorizontalProjectCard } from './index'
 
-describe('<HorizontalCrowdfundingCard />', () => {
+describe('<HorizontalProjectCard />', () => {
   let component
 
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <HorizontalCrowdfundingCard
+          <HorizontalProjectCard
             title="Custom title"
             description="Custom description"
             href="#"
@@ -32,7 +32,7 @@ describe('<HorizontalCrowdfundingCard />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <HorizontalCrowdfundingCard
+          <HorizontalProjectCard
             title="Custom title"
             description="Custom description"
             href="#"

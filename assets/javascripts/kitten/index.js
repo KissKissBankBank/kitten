@@ -369,7 +369,8 @@ export { ContributionCard } from './components/structure/cards/contribution-card
 export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card'
 export { EngagementCard } from './components/structure/cards/engagement-card'
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image'
-export { HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-crowdfunding-card'
+export { HorizontalProjectCard } from './components/structure/cards/horizontal-project-card'
+export { HorizontalProjectCard as HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-project-card'
 export { ManagerCard } from './components/structure/cards/manager-card'
 export { ProjectCard } from './components/structure/cards/project-card'
 export {

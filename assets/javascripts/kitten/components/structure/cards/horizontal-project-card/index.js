@@ -42,7 +42,7 @@ const StyledCard = styled.a`
     outline: auto;
   }
 
-  .k-HorizontalCrowdfundingCard__imageWrapper {
+  .k-HorizontalProjectCard__imageWrapper {
     grid-column: 1 / span 1;
     grid-row: 1 / span 3;
 
@@ -54,7 +54,7 @@ const StyledCard = styled.a`
       border-radius: var(--border-radius-xs);
     }
   }
-  .k-HorizontalCrowdfundingCard__title {
+  .k-HorizontalProjectCard__title {
     grid-column: 2 / span 2;
     grid-row: 1 / 2;
     margin: 0;
@@ -63,7 +63,7 @@ const StyledCard = styled.a`
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .k-HorizontalCrowdfundingCard__description {
+  .k-HorizontalProjectCard__description {
     grid-column: 2 / span 2;
     grid-row: 2 / 3;
     margin: 0;
@@ -72,11 +72,11 @@ const StyledCard = styled.a`
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .k-HorizontalCrowdfundingCard__info {
+  .k-HorizontalProjectCard__info {
     grid-column: 2 / span 1;
     grid-row: 3 / 4;
   }
-  .k-HorizontalCrowdfundingCard__progress {
+  .k-HorizontalProjectCard__progress {
     grid-column: 3 / span 1;
     grid-row: 3 / 4;
     place-self: center stretch;
@@ -85,10 +85,10 @@ const StyledCard = styled.a`
     gap: ${pxToRem(5)};
     align-items: center;
 
-    .k-HorizontalCrowdfundingCard__progress__ramp {
+    .k-HorizontalProjectCard__progress__ramp {
       flex: 1 0 calc(100% - ${pxToRem(5 + 46)});
     }
-    .k-HorizontalCrowdfundingCard__progress__value {
+    .k-HorizontalProjectCard__progress__value {
       flex: 0 0 ${pxToRem(46)};
       width: ${pxToRem(46)};
     }
@@ -99,18 +99,18 @@ const StyledCard = styled.a`
   }
 
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    &.k-HorizontalCrowdfundingCard--noProgressOnMobile {
-      .k-HorizontalCrowdfundingCard__progress {
+    &.k-HorizontalProjectCard--noProgressOnMobile {
+      .k-HorizontalProjectCard__progress {
         display: none;
       }
-      .k-HorizontalCrowdfundingCard__info {
+      .k-HorizontalProjectCard__info {
         grid-column: 2 / span 2;
       }
     }
   }
 `
 
-export const HorizontalCrowdfundingCard = ({
+export const HorizontalProjectCard = ({
   href = '#',
   imageProps = {
     src: '',
@@ -131,19 +131,19 @@ export const HorizontalCrowdfundingCard = ({
   return (
     <StyledCard
       href={href}
-      className={classNames('k-HorizontalCrowdfundingCard', className, {
-        'k-HorizontalCrowdfundingCard--noProgressOnMobile': noProgressOnMobile,
+      className={classNames('k-HorizontalProjectCard', className, {
+        'k-HorizontalProjectCard--noProgressOnMobile': noProgressOnMobile,
       })}
       {...props}
     >
-      <div className="k-HorizontalCrowdfundingCard__imageWrapper">
+      <div className="k-HorizontalProjectCard__imageWrapper">
         <img {...imageProps} alt={imageProps.alt || ''} />
       </div>
       <Text
         weight="regular"
         size="tiny"
         as={titleTag}
-        className="k-HorizontalCrowdfundingCard__title"
+        className="k-HorizontalProjectCard__title"
       >
         {title}
       </Text>
@@ -151,24 +151,24 @@ export const HorizontalCrowdfundingCard = ({
         as="p"
         weight="light"
         size="micro"
-        className="k-HorizontalCrowdfundingCard__description"
+        className="k-HorizontalProjectCard__description"
       >
         {description}
       </Text>
-      <div className="k-HorizontalCrowdfundingCard__info">{info}</div>
+      <div className="k-HorizontalProjectCard__info">{info}</div>
       {!noProgress && (
-        <div className="k-HorizontalCrowdfundingCard__progress">
+        <div className="k-HorizontalProjectCard__progress">
           <Progress
             aria-label={progressLabel}
             value={progress}
             color={progressColor}
             rampProps={{ style: { height: 4 } }}
-            className="k-HorizontalCrowdfundingCard__progress__ramp"
+            className="k-HorizontalProjectCard__progress__ramp"
           />
           <Text
             weight="light"
             size="micro"
-            className="k-HorizontalCrowdfundingCard__progress__value"
+            className="k-HorizontalProjectCard__progress__value"
           >
             {progress}&nbsp;%
           </Text>
@@ -178,7 +178,7 @@ export const HorizontalCrowdfundingCard = ({
   )
 }
 
-HorizontalCrowdfundingCard.propTypes = {
+HorizontalProjectCard.propTypes = {
   href: PropTypes.string,
   imageProps: PropTypes.object,
   title: PropTypes.string,

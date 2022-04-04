@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Deprecation/Change: `HorizontalProjectCard`: Migrate from `HorizontalCrowdfundingCard`.
+
 ## [9.6.0] - 2022-04-04
 
 Features:
