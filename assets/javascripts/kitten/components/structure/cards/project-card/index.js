@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import Truncate from 'react-truncate'
 
 import { StyledCard } from './styles'
 import { Text } from '../../../typography/text'
@@ -21,6 +20,8 @@ export const ProjectCard = ({
   videoProps,
   stretch,
   loading,
+  topLine,
+  topLineAlign,
   ...props
 }) => {
   return (
@@ -68,6 +69,17 @@ export const ProjectCard = ({
         )}
       </div>
 
+      {topLine && (
+        <div
+          className={classNames(
+            'k-ProjectCard__topLine',
+            `k-ProjectCard__topLine--${topLineAlign}`,
+          )}
+        >
+          {topLine}
+        </div>
+      )}
+
       <div className="k-ProjectCard__content">
         {sticker && (
           <div className="k-ProjectCard__sticker k-u-ellipsis">{sticker}</div>
@@ -88,6 +100,8 @@ ProjectCard.defaultProps = {
   videoSources: [],
   stretch: false,
   loading: false,
+  topLine: null,
+  topLineAlign: 'right',
 }
 
 ProjectCard.propTypes = {
@@ -107,18 +121,18 @@ ProjectCard.propTypes = {
   videoSources: PropTypes.array,
   stretch: PropTypes.bool,
   loading: PropTypes.bool,
+  topLine: PropTypes.node,
+  topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
 }
 
-ProjectCard.Title = ({ children, className, ...props }) => {
+ProjectCard.Title = ({ className, style, ...props }) => {
   return (
     <Title
       modifier="septenary"
       noMargin
-      className={classNames('k-ProjectCard__title', className)}
+      className={classNames('k-ProjectCard__title', 'k-u-clamp-2', className)}
       {...props}
-    >
-      <Truncate lines={2}>{children}</Truncate>
-    </Title>
+    />
   )
 }
 
@@ -133,10 +147,12 @@ ProjectCard.Line = ({ className, lastLine, ...props }) => {
   )
 }
 
-ProjectCard.ItemsLine = ({ className, ...props }) => {
+ProjectCard.ItemsLine = ({ className, noMargin = false, ...props }) => {
   return (
     <div
-      className={classNames('k-ProjectCard__itemsLine', className)}
+      className={classNames('k-ProjectCard__itemsLine', className, {
+        'k-ProjectCard__itemsLine--noMargin': noMargin,
+      })}
       {...props}
     />
   )
@@ -154,6 +170,14 @@ ProjectCard.Sticker = ({ className, ...props }) => {
       className={classNames('k-ProjectCard__sticker k-u-ellipsis', className)}
       {...props}
     />
+  )
+}
+
+ProjectCard.Avatar = ({ className, imageProps, ...props }) => {
+  return (
+    <div className={classNames('k-ProjectCard__avatar', className)} {...props}>
+      <img alt="" {...imageProps} />
+    </div>
   )
 }
 

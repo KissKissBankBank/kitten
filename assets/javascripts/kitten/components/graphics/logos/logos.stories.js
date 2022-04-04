@@ -12,6 +12,7 @@ import { LendopolisLogoOnDark } from './lendopolis-logo/on-dark'
 import { LendopolisLogoVerticalOnDark } from './lendopolis-logo/vertical-on-dark'
 import { KkbbCoLogo } from './kkbb-co'
 import { YouMatterLogo } from './youmatter'
+import { LaBanquePostaleLogo } from './la-banque-postale'
 
 const Container = styled.div`
   padding: ${pxToRem(40)};
@@ -47,6 +48,7 @@ const LogoContainer = styled(({ className, children, name }) => {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: ${pxToRem(10)};
   }
 
   svg {
@@ -104,6 +106,24 @@ export const AllLogos = () => {
 
       <Group title="YouMatter">
         <LogoContainer children={<YouMatterLogo />} />
+      </Group>
+
+      <Group title="La Banque Postale">
+        <LogoContainer name="variant = on-light">
+          <LaBanquePostaleLogo variant="on-light" />
+        </LogoContainer>
+        <LogoContainer name="variant = on-dark">
+          <LaBanquePostaleLogo variant="on-dark" />
+        </LogoContainer>
+        <LogoContainer name="variant = mono-blue">
+          <LaBanquePostaleLogo variant="mono-blue" />
+        </LogoContainer>
+        <LogoContainer name="variant = mono-black">
+          <LaBanquePostaleLogo variant="mono-black" />
+        </LogoContainer>
+        <LogoContainer name="variant = mono-white">
+          <LaBanquePostaleLogo variant="mono-white" />
+        </LogoContainer>
       </Group>
     </Container>
   )

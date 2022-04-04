@@ -43,6 +43,8 @@ CSS Utilities are classe that can be used for very basic styling. These utility 
 
 [Look at the doc to know if/when to use it.](https://kitten.vercel.app/?path=/story/documentation-usage-using-utilities--page)
 
+It is recommended that you use an utility like `Purge CSS` at build time, to remove all the unused CSS utilities (be sure to include the path of your Kitten dependency so it's taken into account).
+
 ### React components
 
 You can render React components directly in your js bundle:

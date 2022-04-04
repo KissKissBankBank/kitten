@@ -22,7 +22,6 @@ export const Item = ({
 
   return (
     <li
-      role="menuitem"
       {...liProps}
       className={classNames(
         'k-HeaderMenu__item',

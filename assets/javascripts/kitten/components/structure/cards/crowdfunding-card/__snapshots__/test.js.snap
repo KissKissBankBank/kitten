@@ -175,6 +175,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c0 .k-CrowdfundingCard__title__title {
+  --line-clamp: 2;
   font-size: 0.875rem;
 }
 
@@ -438,6 +439,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   }
 
   .c0 .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
     font-size: 1.25rem;
   }
 
@@ -498,7 +500,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:67.5rem) {
-
+  .c0 .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
+  }
 }
 
 <div
@@ -736,6 +740,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c2 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c2:disabled,
 .c2.k-Button--disabled {
   cursor: not-allowed;
@@ -934,6 +944,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 .c0 .k-CrowdfundingCard__title__title {
+  --line-clamp: 2;
   font-size: 0.875rem;
 }
 
@@ -1249,6 +1260,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   }
 
   .c0 .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
     font-size: 1.25rem;
   }
 
@@ -1309,7 +1321,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 @media (min-width:67.5rem) {
-
+  .c0 .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
+  }
 }
 
 <div
@@ -1497,6 +1511,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 
 .c2.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c2 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c2:disabled,
@@ -1697,6 +1717,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c0 .k-CrowdfundingCard__title__title {
+  --line-clamp: 2;
   font-size: 0.875rem;
 }
 
@@ -1952,6 +1973,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c0 .k-CrowdfundingCard__title__title {
+  --line-clamp: 3;
   font-size: 1.25rem;
 }
 
@@ -2008,6 +2030,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c0 .k-CrowdfundingCard__title__title {
+  --line-clamp: 3;
 }
 
 @media (min-width:640px) {
@@ -2260,6 +2286,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c3 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c3:disabled,
 .c3.k-Button--disabled {
   cursor: not-allowed;
@@ -2458,6 +2490,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 .c0 .k-CrowdfundingCard__title__title {
+  --line-clamp: 2;
   font-size: 0.875rem;
 }
 
@@ -2773,6 +2806,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   }
 
   .c0 .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
     font-size: 1.25rem;
   }
 
@@ -2833,7 +2867,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 @media (min-width:67.5rem) {
-
+  .c0 .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
+  }
 }
 
 <div

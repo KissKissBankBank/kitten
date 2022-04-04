@@ -105,7 +105,6 @@ export const ProjectsCarousel = ({
     >
       {buttonLabel}
       <ArrowIcon
-        className="k-Button__icon k-ButtonIcon__svg"
         style={{ width: 6 }}
       />
     </Button>

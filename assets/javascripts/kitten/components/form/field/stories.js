@@ -22,6 +22,7 @@ export default {
             'components/input.js',
             'components/label.js',
             'components/password.js',
+            'components/radio-set.js',
             'components/radio-button-set.js',
           ]}
           importString="Field"
@@ -128,6 +129,46 @@ WithRadioButtons.args = {
   errorMessage: 'Error message…',
 }
 WithRadioButtons.argTypes = {
+  id: { control: 'text' },
+  size: { control: 'boolean' },
+  label: { control: 'text' },
+  tooltip: { control: 'text' },
+  tooltipProps: { control: 'object' },
+  tooltipId: { control: 'text' },
+  items: { control: 'object' },
+  error: { control: 'boolean' },
+  errorMessage: { control: 'text' },
+}
+
+export const WithRadio = args => {
+  return <FieldRadioSetExample {...args} />
+}
+WithRadio.args = {
+  id: 'option-a',
+  size: null,
+  label: 'Label',
+  tooltip: null,
+  tooltipProps: { actionLabel: 'Learn more' },
+  tooltipId: 'tooltip',
+  items: [
+    {
+      text: 'Option A',
+      id: 'option-a',
+      defaultChecked: true,
+    },
+    {
+      text: 'Option B',
+      id: 'option-b',
+    },
+    {
+      text: 'Option C',
+      id: 'option-c',
+    },
+  ],
+  error: false,
+  errorMessage: 'Error message…',
+}
+WithRadio.argTypes = {
   id: { control: 'text' },
   size: { control: 'boolean' },
   label: { control: 'text' },

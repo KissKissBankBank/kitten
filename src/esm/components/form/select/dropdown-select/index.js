@@ -162,7 +162,9 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     "aria-label": a11yStatusValid
   }))), /*#__PURE__*/React.createElement("ul", _extends({
     className: "k-Form-Dropdown__list"
-  }, getMenuProps()), isOpen && flattenedOptions.map(function (item, index) {
+  }, getMenuProps(), {
+    role: isOpen ? 'listbox' : null
+  }), isOpen && flattenedOptions.map(function (item, index) {
     return /*#__PURE__*/React.createElement("li", _extends({
       className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
         'k-Form-Dropdown__item--higlighted': highlightedIndex === index

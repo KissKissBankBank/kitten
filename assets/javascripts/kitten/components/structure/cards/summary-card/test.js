@@ -8,7 +8,14 @@ describe('<SummaryCard />', () => {
   describe('default', () => {
     component = renderer
       .create(
-        <SummaryCard>
+        <SummaryCard
+          actionProps={{
+            'aria-label': 'Click to show item',
+            as: 'a',
+            href: 'https://css-tricks.com',
+            onClick: () => {}
+          }}
+        >
           <SummaryCard.Image>
             <img src="/kitten.jpg" alt="" />
           </SummaryCard.Image>

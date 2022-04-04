@@ -11,7 +11,6 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // ------
 
 export { Button } from './components/action/button'
-export { ButtonIcon } from './components/action/button-icon'
 export { ButtonGroup } from './components/action/button-group'
 export { ButtonImage } from './components/action/button-image'
 export { ButtonQuestionMarkIcon } from './components/action/button-question-mark-icon'
@@ -75,8 +74,10 @@ export { Field } from './components/form/field'
 export { FormActions } from './components/form/form-actions'
 export { Label } from './components/form/label'
 export { PillNumberInput } from './components/form/pill-number-input'
+export { Radio } from './components/form/radio'
 export { RadioButton } from './components/form/radio-button'
 export { RadioButtonSet } from './components/form/radio-button-set'
+export { RadioSet } from './components/form/radio-set'
 export { RangeSlider } from './components/form/range-slider'
 export { ToggleSwitch } from './components/form/toggle-switch'
 export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'
@@ -222,6 +223,7 @@ export { CrossIconNext } from './components/graphics/icons-next/cross-icon-next'
 export { CrossCircleIconNext } from './components/graphics/icons-next/cross-circle-icon-next'
 export { CubeIconNext } from './components/graphics/icons-next/cube-icon-next'
 export { EditIconNext } from './components/graphics/icons-next/edit-icon-next'
+export { EmbedIconNext } from './components/graphics/icons-next/embed-icon-next'
 export { EnvelopeIconNext } from './components/graphics/icons-next/envelope-icon-next'
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next'
 export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next'
@@ -232,9 +234,11 @@ export { HomeIconNext } from './components/graphics/icons-next/home-icon-next'
 export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next'
 export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next'
 export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next'
+export { LinkIconNext } from './components/graphics/icons-next/link-icon-next'
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next'
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon'
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next'
+export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-icon-next'
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { RefundIcon } from './components/graphics/icons-next/refund-icon'
@@ -261,6 +265,7 @@ export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'
+export { LaBanquePostaleLogo } from './components/graphics/logos/la-banque-postale'
 export { LendopolisLogo } from './components/graphics/logos/lendopolis-logo'
 export { LendopolisLogoOnDark } from './components/graphics/logos/lendopolis-logo/on-dark'
 export { LendopolisLogoVerticalOnDark } from './components/graphics/logos/lendopolis-logo/vertical-on-dark'
@@ -365,6 +370,7 @@ export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card
 export { EngagementCard } from './components/structure/cards/engagement-card'
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image'
 export { HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-crowdfunding-card'
+export { ManagerCard } from './components/structure/cards/manager-card'
 export { ProjectCard } from './components/structure/cards/project-card'
 export {
   SummaryCard,
@@ -394,6 +400,7 @@ export { BulletList } from './components/structure/bullet-list'
 
 // Structure/Tables
 export { DoubleEntryTable } from './components/structure/tables/double-entry-table'
+export { GridTable } from './components/structure/tables/grid-table'
 export { ListTable } from './components/structure/tables/list-table'
 export { SingleEntryTable } from './components/structure/tables/single-entry-table'
 
@@ -543,6 +550,7 @@ export { parseHtml } from './helpers/utils/parser'
 export { createRangeFromZeroTo } from './helpers/utils/range'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
+export { checkDeprecatedSizes} from './helpers/utils/deprecated'
 
 // ---
 // HOC

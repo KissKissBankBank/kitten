@@ -116,9 +116,6 @@ const SwitchWrapper = styled.div`
       background: transparent;
     }
   }
-  .k-ToggleSwitch--big .k-ToggleSwitch__label {
-    font-size: ${stepToRem(3)};
-  }
 
   &:hover .k-ToggleSwitch__label {
     color: ${COLORS.primary1};
@@ -135,7 +132,6 @@ const SwitchWrapper = styled.div`
 
 export const ToggleSwitch = ({
   activeColor,
-  big,
   checkedColor,
   defaultColor,
   disabled,
@@ -165,7 +161,6 @@ export const ToggleSwitch = ({
         'k-ToggleSwitch--disabled': disabled || locked,
         'k-ToggleSwitch--reverseOrder': reverseOrder,
         'k-ToggleSwitch--locked': locked,
-        'k-ToggleSwitch--big': big,
       })}
       style={{
         '--toggleSwitch-activeColor': activeColor,
@@ -208,7 +203,6 @@ export const ToggleSwitch = ({
 
 ToggleSwitch.defaultProps = {
   activeColor: COLORS.primary3,
-  big: false,
   checkedColor: COLORS.primary1,
   defaultColor: COLORS.line1,
   disabled: false,
@@ -223,7 +217,6 @@ ToggleSwitch.defaultProps = {
 
 ToggleSwitch.propTypes = {
   activeColor: PropTypes.string,
-  big: PropTypes.bool,
   checkedColor: PropTypes.string,
   defaultColor: PropTypes.string,
   disabled: PropTypes.bool,

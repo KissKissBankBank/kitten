@@ -10,15 +10,228 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `card` HOC
   - `default-props` HOC
   - `trigger-enhancer` HOC
-- Feature: Style: Change disabled styles on the following input components:
-  - `Autocomplete`
-  - `TextInput` and all inputs that depend on it
-  - `LocationInput`
-  - `DropdownSelect`
+
+## [9.6.0] - 2022-04-04
+
+Features:
+
+- `OpenLockIconNext`: New component.
+- `DashboardLayout`: Add the following subcomponents to `DashboardLayout.Flow`:
+  - `Title`
+  - `TitleAside`
+
+Fixes:
+
+- `LightbulbIllustration`: Fix colors.
+- `TextCopy`: Enhance className propagation.
+
+## [9.5.0] - 2022-04-01
+
+Deprecation/Change:
+
+- `ToggleSwitch` : Remove `big` prop.
+
+Features:
+
+- `ManagerCard`: Add component.
+- Utilities: Add responsive classes for `text/line` utilities.
+- Utilities: Add `k-u-color-*` utilities based on the new tokens.
+- `Text`: Add new token-based values to `color` prop.
+- Add new `pending` status to the following components:
+  - `AlertBox`
+  - `IconBadge`
+  - `StatusIconNext`
+- `DropdownMenu`: Add `top` prop, accepts CSS a length string as value.
+- `TextInput`: Add `autoresize` value to `tag` prop.
+
+Fixes:
+
+- `SummaryCard`: Fix stories and tests.
+- `Button`: Fix SVG shrink property.
+- `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
+- `*EntryTable`: Fix column value for attribute `scope`.
+
+## [9.4.0] - 2022-03-30
+
+Feature:
+
+- `Location`: Add `customInputValue` prop to display custom value.
+
+Fixes:
+
+- Helpers: Add `checkDeprecatedSizes` utility.
+- `DashboardMenu.Selector`: Fix no active item case.
+
+## [9.3.1] - 2022-03-29
+
+Fix:
+
+- Revert: Accessibility: Fix a11y warning related to roles on components.
+
+## [9.3.0] - 2022-03-29
+
+Feature:
+
+- `HorizontalCrowdfundingCard`: Add `progressLabel` prop, accepts string.
+
+Fixes:
+
+- Accessibility: Fix a11y warning related to roles on the following components:
+  - `DropdownSelect` (normal and `combobox`)
   - `DropdownSelectWithInput`
-- Feature: `Pagination`: Modernize styles.
-- Feature: `IconBadge`: Add `micro` to the size prop.
-- Fix: `AlertBox`: Improved styles.
+- `Alert`: Close button accessibility fixes.
+- `HeaderMenu`: Fix accessibility error on menu item.
+- `Badge`: Fix accessibility warning related to ARIA attributes.
+
+## [9.2.2] - 2022-03-28
+
+Fix:
+
+- `RadioButton`: Hardcode default variant value.
+
+## [9.2.1] - 2022-03-28
+
+Fix:
+
+- `Field`: Fix `Field.RadioSet` import error.
+
+## [9.2.0] - 2022-03-28
+
+Deprecations/Changes:
+
+- `CrowdfundingCard`: Deprecate component.
+- Deprecate the `variant` prop on the following components:
+  - `RadioButton`
+  - `RadioButtonSet`
+
+Features:
+
+- Utilities: Add the following line utility classes:
+  - `k-u-clamp-1`
+  - `k-u-clamp-2`
+  - `k-u-clamp-3`
+  - `k-u-nowrap`
+- `Radio`: Add component.
+- `RadioSet`: Add component.
+- `Field`: Add `RadioSet` subcomponent.
+
+Fixes:
+
+- Cards: Replace `react-truncate` with `k-u-clamp` on the following components:
+  - `BackingCard`
+  - `CrowdfundingCard`
+  - `ProjectCard`
+- `HeaderNav`: Fix overflow bug with `ButtonWithTooltip`.
+
+## [9.1.0] - 2022-03-25
+
+Features:
+
+- Icons: Add the following icon components:
+  - `EmbedIconNext`
+  - `LinkIconNext`
+- `DropdownMenu`: Add `icon` prop to `Button` and `Link` subcomponents, accepts icon React component.
+
+Fixes:
+
+- Icons: Add missing `viewBox` attribute to the following components:
+  - `FacebookIconNext`
+  - `InstagramIconNext`
+  - `LinkedinIconNext`
+  - `MessengerIconNext`
+  - `TwitterIconNext`
+  - `WhatsappIconNext`
+- `Alert`: Improve styles.
+- `Button`: Force default values for props.
+- `DashboardLayout`: Fix alerts fade on mobile menu open.
+
+## [9.0.0] - 2022-03-21
+
+Breaking Changes:
+
+- `ButtonIcon`: Deprecate component, `Button fit="icon"` benefit.
+- `Button`: Deprecate `fluid` and `icon` props.
+- Tokens: Update token color with semantic color.
+
+Feature:
+
+- Utilities: Add `k-u-clamp` util class, with optional `--line-clamp` custom variable.
+
+Fixes:
+
+- `HeaderNav`: Fix horizontal scroll.
+- `SummaryCard`: Improve `contributorSubscription` columns.
+
+## [8.9.1] - 2022-03-16
+
+Fixes:
+
+- `CheckableButton`: Improve style.
+- `ContentCard`: Update padding for mobile view.
+
+## [8.9.0] - 2022-03-09
+
+Features:
+
+- `RadioButton`: Add `paragraphStyle` and `fontWeight` props.
+- `Tag`: Add `flex` prop, to behave as flexbox container.
+- `ProjectCard`: Add `topLine` prop, accepts React node.
+- `ProjectCard`: Add `Avatar` subcomponent, accepts `imageProps` prop.
+- `ProjectCard`: Add `noMargin` prop to `ItemsLine` subcomponent.
+
+## [8.8.0] - 2022-03-08
+
+Deprecation/Change:
+
+- `scrollableContainerStyle`: Deprecate component.
+
+Features:
+
+- `ScrollableContainer`: Modernize component.
+- `GridTable`: Add component.
+
+Fixes:
+
+- `DropdownMenu`: Remove wrong use of `menuitem` ARIA role.
+- `LaBanquePostaleLogo`: Fix dimensions and default props.
+- `TextInputWithLimit`: Improve styles.
+- `Button`: Remove old size props.
+
+## [8.7.0] - 2022-03-01
+
+Features:
+
+- Logos: Add `LaBanquePostaleLogo` component.
+- Tokens: Add `spacing` and `fontSize` tokens.
+- Utilities: Add `k-utilities-flexbox-element` utility classes.
+- Utilities: Add `k-u-padding*` classes.
+- Utilities: Add `k-u-p*` and `k-u-m*` classes based on new `spacing` tokens.
+- Utilities: Add `k-u-margin-negative*` classes.
+- `DropdownMenu`: Add `positionedButton` prop.
+
+Fixes:
+
+- `Pagination`: Remove non-valid aria attributes.
+- `Autocomplete`: Remove non-valid attributes.
+
+## [8.6.0] - 2022-02-25
+
+Features:
+
+- Style: Change disabled styles on the following input components:
+    - `Autocomplete`
+    - `TextInput` and all inputs that depend on it
+    - `LocationInput`
+    - `DropdownSelect`
+    - `DropdownSelectWithInput`
+- `Button`: Add `krypton` modifier.
+- `Pagination`: Modernize styles.
+- `IconBadge`: Add `micro` to the size prop.
+
+Fixes:
+
+- `AlertBox`: Improve styles.
+- `DashboardMenu`: Fix `DashboardMenu.Expandable` open state by removing useless code.
 
 ## [8.5.0] - 2022-02-15
 
@@ -97,15 +310,15 @@ Fixes:
 
 Breaking changes:
 
-  - Move component files for a better organization.
-  - `Icons`: Add the following components:
-    - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
-    - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
-    - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
+- Move component files for a better organization.
+- `Icons`: Add the following components:
+  - `GiftIconNext`: Remplaced by `ColorGiftIconNext`.
+  - `CrossCircleIconNext`: Remplaced by `ColorCrossCircleIconNext`.
+  - `HeartWithClickIconNext`: Remplaced by `ColorHeartWithClickIconNext`.
 
 Feature:
 
-  - `Icons`: Add `CrossCircleIconNext` component.
+- `Icons`: Add `CrossCircleIconNext` component.
 
 ## [7.3.0] - 2022-02-07
 
@@ -203,7 +416,7 @@ Fixes:
 Features:
 
 - `HeaderNav`: Add arrows navigation to `HeaderNav.SearchInput` results.
-- `Tokens`: Update colors token in `tokens.json`.
+- Tokens: Update colors token in `tokens.json`.
 
 Fixes:
 
@@ -216,7 +429,7 @@ Fixes:
 
 Feature:
 
-- `Tokens`: Update yellow colors.
+- Tokens: Update yellow colors.
 
 Fixes:
 

@@ -73,6 +73,7 @@ export default {
 export const Lendopolis = ({ whiteBg, stickyProps, ...args }) => (
   <Container whiteBg={whiteBg}>
     <LendopolisHeaderNavStory {...args} stickyProps={stickyProps ? null : {}} />
+    <div id="view" />
   </Container>
 )
 Lendopolis.args = {
@@ -89,6 +90,7 @@ Lendopolis.argTypes = {
 export const KissKissBankBank = ({ whiteBg, ...args }) => (
   <Container whiteBg={whiteBg}>
     <KissKissBankBankHeaderNavStory {...args} />
+    <div id="mainContent" />
   </Container>
 )
 KissKissBankBank.args = {
@@ -103,6 +105,7 @@ KissKissBankBank.argTypes = {
 export const Minimalist = ({ whiteBg, text, subText, ...args }) => (
   <Container whiteBg={whiteBg}>
     <MinimalistHeaderNavStory {...args} text={text} subText={subText} />
+    <div id="mainContent" />
   </Container>
 )
 Minimalist.args = {

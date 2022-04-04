@@ -1,6 +1,46 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
+
+export const allowedColorStrings = [
+  'font1',
+  'font2',
+  'primary1',
+  'background1',
+  'error',
+  'valid',
+  'grey-000',
+  'grey-100',
+  'grey-200',
+  'grey-300',
+  'grey-400',
+  'grey-500',
+  'grey-600',
+  'grey-700',
+  'grey-800',
+  'grey-900',
+  'primary-100',
+  'primary-300',
+  'primary-500',
+  'primary-700',
+  'primary-900',
+  'danger-100',
+  'danger-300',
+  'danger-500',
+  'danger-700',
+  'danger-900',
+  'success-100',
+  'success-300',
+  'success-500',
+  'success-700',
+  'success-900',
+  'warning-100',
+  'warning-300',
+  'warning-500',
+  'warning-700',
+  'warning-900',
+]
 
 export const Text = ({
   className,
@@ -19,17 +59,15 @@ export const Text = ({
   letterSpacing,
   ...others
 }) => {
+  
+  checkDeprecatedSizes(size)
+  
   const Tag = as || tag
 
   const textClassName = classNames(
     {
       // Color.
-      'k-u-color-font1': color == 'font1',
-      'k-u-color-font2': color == 'font2',
-      'k-u-color-primary1': color == 'primary1',
-      'k-u-color-background1': color == 'background1',
-      'k-u-color-error': color == 'error',
-      'k-u-color-valid': color == 'valid',
+      [`k-u-color-${color}`]: allowedColorStrings.includes(color),
 
       // Decoration.
       'k-u-decoration-underline': decoration == 'underline',
@@ -51,9 +89,12 @@ export const Text = ({
       // Size.
       'k-u-size-giant': size == 'giant',
       'k-u-size-huge': size == 'huge',
-      'k-u-size-big': size == 'big',
-      'k-u-size-default': size == 'default',
-      'k-u-size-tiny': size == 'tiny',
+      'k-u-size-big': size == 'big', // Deprecated
+      'k-u-size-large': size == 'large',
+      'k-u-size-default': size == 'default', // Deprecated
+      'k-u-size-medium': size == 'medium',
+      'k-u-size-tiny': size == 'tiny', // Deprecated
+      'k-u-size-small': size == 'small',
       'k-u-size-micro': size == 'micro',
       'k-u-size-nano': size == 'nano',
 
@@ -82,14 +123,7 @@ export const Text = ({
 }
 
 Text.propTypes = {
-  color: PropTypes.oneOf([
-    'font1',
-    'font2',
-    'primary1',
-    'background1',
-    'error',
-    'valid',
-  ]),
+  color: PropTypes.oneOf(allowedColorStrings),
   cssColor: PropTypes.string,
   decoration: PropTypes.oneOf(['underline', 'none']),
   setting: PropTypes.oneOf(['tnum']),
@@ -97,9 +131,9 @@ Text.propTypes = {
   size: PropTypes.oneOf([
     'giant',
     'huge',
-    'big',
-    'default',
-    'tiny',
+    'large',
+    'medium',
+    'small',
     'micro',
     'nano',
   ]),

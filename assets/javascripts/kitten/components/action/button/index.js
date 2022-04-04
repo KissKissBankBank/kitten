@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -30,6 +29,7 @@ export const buttonModifiers = [
   'scandium',
   'neon',
   'iron',
+  'krypton',
 ]
 
 export const buttonFitOptions = ['icon', 'min-width', 'content', 'fluid']
@@ -74,6 +74,10 @@ const StyledButton = styled.button`
 
   border-radius: var(--Button-border-radius, 0);
   min-width: 0;
+
+  svg {
+    flex: 0 0 auto;
+  }
 
   &:disabled,
   &.k-Button--disabled {
@@ -214,8 +218,6 @@ export const Button = ({
   size,
   className,
   rounded,
-  fluid,
-  icon,
   borderRadius,
   disabled,
   tag,
@@ -233,50 +235,18 @@ export const Button = ({
     )
   }
 
-  const actualSize = (() => {
-    switch (true) {
-      case !!size:
-        return size
-      case props.nano:
-        return 'nano'
-      case props.micro:
-        return 'micro'
-      case props.tiny:
-        return 'tiny'
-      case props.big:
-        return 'big'
-      case props.huge:
-        return 'huge'
-      case props.giant:
-        return 'giant'
-      default:
-        return 'regular'
-    }
-  })()
-
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag
-
-  const fitClass = (() => {
-    switch (true) {
-      case fluid && !icon:
-        return 'fluid'
-      case icon && !fluid:
-        return 'icon'
-      default:
-        return fit
-    }
-  })()
 
   return (
     <StyledButton
       className={classNames(
         'k-Button',
         className,
-        `k-Button--${actualSize}`,
-        `k-Button--${internalModifier}`,
-        `k-Button--fit-${fitClass}`,
+        `k-Button--${size || 'regular'}`,
+        `k-Button--${internalModifier || 'hydrogen'}`,
+        `k-Button--fit-${fit || 'min-width'}`,
         {
           [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
@@ -301,14 +271,6 @@ export const Button = ({
 Button.propTypes = {
   tag: PropTypes.string,
   borderRadius: PropTypes.number,
-  nano: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  micro: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  tiny: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  big: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  huge: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  giant: deprecated(PropTypes.bool, 'Use `size` prop instead.'),
-  fluid: PropTypes.bool,
-  icon: PropTypes.bool,
   rounded: PropTypes.bool,
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
@@ -316,10 +278,9 @@ Button.propTypes = {
   modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
   active: PropTypes.bool,
 }
+
 Button.defaultProps = {
   tag: 'button',
-  fluid: false,
-  icon: false,
   rounded: false,
   borderRadius: null,
   size: 'regular',

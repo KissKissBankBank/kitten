@@ -1,13 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
-import Truncate from 'react-truncate'
 import { Text } from '../../../../typography/text'
 
 export const Title = ({
   className,
   textSize,
-  children,
   truncateText,
+  style,
   ...props
 }) => {
   return (
@@ -28,16 +27,17 @@ export const Title = ({
           'k-u-margin-none',
           'k-u-align-center',
           className,
+          {
+            'k-u-clamp': truncateText,
+          },
         )}
         size={textSize}
+        style={{
+          '--line-clamp': 2,
+          ...style,
+        }}
         {...props}
-      >
-        {truncateText ? (
-          <Truncate lines={2}>{children}</Truncate>
-        ) : (
-          <>{children}</>
-        )}
-      </Text>
+      />
     </div>
   )
 }

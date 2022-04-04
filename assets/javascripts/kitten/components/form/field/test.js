@@ -4,6 +4,7 @@ import {
   FieldInputExample,
   FieldPasswordExample,
   FieldRadioButtonSetExample,
+  FieldRadioSetExample,
   FieldAutocompleteExample,
 } from './examples'
 
@@ -153,7 +154,38 @@ describe('<Field />', () => {
         .create(
           <FieldRadioButtonSetExample
             id="option-a"
-            tiny={false}
+            label="Label"
+            items={[
+              {
+                text: 'Option A',
+                id: 'option-a',
+                defaultChecked: true,
+              },
+              {
+                text: 'Option B',
+                id: 'option-b',
+              },
+              {
+                text: 'Option C',
+                id: 'option-c',
+              },
+            ]}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.RadioSet />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldRadioSetExample
+            id="option-a"
             label="Label"
             items={[
               {

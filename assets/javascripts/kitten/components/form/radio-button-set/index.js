@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import { RadioButton } from '../../form/radio-button'
@@ -42,6 +43,8 @@ export const RadioButtonSet = ({
   label,
   children,
   size,
+  fontWeight,
+  paragraphStyle,
   labelProps,
   ...props
 }) => (
@@ -49,7 +52,7 @@ export const RadioButtonSet = ({
     className={classNames(
       'k-Form-RadioButtonSet',
       className,
-      `k-Form-RadioButtonSet--${variant}`,
+      `k-Form-RadioButtonSet--${variant || 'orion'}`,
     )}
     disabled={disabled}
     {...props}
@@ -71,10 +74,12 @@ export const RadioButtonSet = ({
       {items.map(({ id, className, ...itemProps }) => (
         <RadioButton
           id={id}
-          variant={variant}
+          variant={variant || 'orion'}
           design={design}
           error={error}
           size={size}
+          fontWeight={fontWeight}
+          paragraphStyle={paragraphStyle}
           name={name}
           key={id}
           {...itemProps}
@@ -100,27 +105,26 @@ RadioButtonSet.propTypes = {
     }),
   ),
   size: PropTypes.oneOf(['small', 'regular', 'big']),
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  variant: deprecated(
+    PropTypes.oneOf(['andromeda', 'orion']),
+    'Please use the RadioSet component instead',
+  ),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
+  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  paragraphStyle: PropTypes.bool,
 }
 
 RadioButtonSet.defaultProps = {
   name: 'radioButtonSet',
   error: false,
   label: null,
-  items: [
-    {
-      text: 'filter 1',
-      children: 'lorem ipsum dolor',
-      defaultChecked: true,
-      id: 'myRadioButton', // Replace by a real value
-    },
-  ],
-  variant: 'orion',
+  items: [],
   design: 'disc',
   disabled: false,
   labelProps: {},
   size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false,
 }

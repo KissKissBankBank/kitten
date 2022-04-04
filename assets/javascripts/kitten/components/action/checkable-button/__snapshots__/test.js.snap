@@ -44,6 +44,12 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -147,6 +153,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {
@@ -372,6 +382,12 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -475,6 +491,10 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {
@@ -700,6 +720,12 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -803,6 +829,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {
@@ -1028,6 +1058,12 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1131,6 +1167,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {
@@ -1356,6 +1396,12 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1459,6 +1505,10 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c1 {
+  gap: 0;
 }
 
 .c1::after {

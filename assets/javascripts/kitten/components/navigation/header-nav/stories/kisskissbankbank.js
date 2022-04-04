@@ -271,6 +271,7 @@ export const KissKissBankBankHeaderNavStory = ({
               size: 'tiny',
               rounded: true,
               modifier: 'hydrogen',
+              fit: 'icon',
             }}
             className="k-u-hidden@m-down"
           >
@@ -287,6 +288,7 @@ export const KissKissBankBankHeaderNavStory = ({
                 size: 'tiny',
                 rounded: true,
                 modifier: 'hydrogen',
+                fit: 'icon',
               }}
               className="k-u-hidden@m-down"
               children={<EnvelopeIcon />}
@@ -316,7 +318,7 @@ export const KissKissBankBankHeaderNavStory = ({
                 colorActive={COLORS.font1}
               >
                 <AvatarWithTextAndBadge>
-                  <AvatarWithTextAndBadge.Image src="/kitten.jpg">
+                  <AvatarWithTextAndBadge.Image src="/kitten.jpg" alt="">
                     <AvatarWithTextAndBadge.Badge>
                       2
                     </AvatarWithTextAndBadge.Badge>

@@ -17,6 +17,16 @@ describe('margin()', () => {
     expect(margin(options)).toBe('k-u-margin-top-quintuple')
   })
 
+  it('returns negative value', () => {
+    const options = {
+      top: {
+        default: -5,
+      },
+    }
+
+    expect(margin(options)).toBe('k-u-margin-top-negativeQuintuple')
+  })
+
   it('returns default when fromXxs is used', () => {
     const options = {
       top: {

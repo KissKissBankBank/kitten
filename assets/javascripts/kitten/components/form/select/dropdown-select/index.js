@@ -180,7 +180,11 @@ export const DropdownSelect = ({ combobox, ...props }) => {
           )}
         </span>
       </button>
-      <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
+      <ul
+        className="k-Form-Dropdown__list"
+        {...getMenuProps()}
+        role={isOpen ? 'listbox' : null}
+      >
         {isOpen &&
           flattenedOptions.map((item, index) => (
             <li

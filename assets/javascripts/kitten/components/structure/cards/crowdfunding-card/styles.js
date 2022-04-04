@@ -96,6 +96,7 @@ const mobileStyles = css`
   }
 
   .k-CrowdfundingCard__title__title {
+    --line-clamp: 2;
     font-size: ${stepToRem(-1)};
   }
 
@@ -316,6 +317,7 @@ const tabletStyles = css`
   }
 
   .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
     font-size: ${stepToRem(2)};
   }
 
@@ -363,7 +365,11 @@ const tabletStyles = css`
   }
 `
 
-const desktopStyles = css``
+const desktopStyles = css`
+  .k-CrowdfundingCard__title__title {
+    --line-clamp: 3;
+  }
+`
 
 export const StyledCrowdfundingCard = styled(({ forceVersion, ...props }) => (
   <div {...props} />

@@ -1,8 +1,7 @@
 import React from 'react'
 import { ProjectCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import { Text, Button } from 'kitten'
-import Truncate from 'react-truncate'
+import { Text, Button, Tag, FlexWrapper, LockOutlineIcon } from 'kitten'
 
 export default {
   title: 'Structure/Cards/ProjectCard',
@@ -21,7 +20,10 @@ export default {
 
 const argTypes = {
   status: { control: 'select' },
-  progressProps: { control: 'object' },
+  progressProps: {
+    name: 'Story component: progressProps',
+    control: 'object',
+  },
 }
 
 const args = {
@@ -48,13 +50,74 @@ export const Default = ({ progressProps, ...args }) => (
     </ProjectCard.Title>
     <ProjectCard.Line>
       <Text size="micro">
-        par{' '}
-        <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
-          Bidules
-        </a>
+        par <strong className="k-u-weight-bold">Bidules</strong>
       </Text>
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          134
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          contributeurs
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+          7 jours
+        </Text>
+        <Text className="k-u-ellipsis" size="micro">
+          restants
+        </Text>
+      </ProjectCard.Item>
+      <ProjectCard.Item>
+        <Text className="k-u-nowrap" weight="bold" size="tiny">
+          9 930 €
+        </Text>
+        <Text className="k-u-nowrap" size="micro">
+          sur 12 000 €
+        </Text>
+      </ProjectCard.Item>
+    </ProjectCard.ItemsLine>
+    <ProjectCard.Progress {...progressProps} />
+  </ProjectCard>
+)
+
+Default.args = args
+Default.argTypes = argTypes
+
+export const Lendopolis = ({ progressProps, ...args }) => (
+  <ProjectCard
+    {...args}
+    topLineAlign="right"
+    topLine={
+      <Tag variant="dark" type="disabled" flex>
+        <LockOutlineIcon color="currentColor" height="10" width="9" />
+        <span>Prolongation</span>
+      </Tag>
+    }
+  >
+    <ProjectCard.Avatar
+      imageProps={{
+        src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+        alt: '',
+      }}
+    />
+    <ProjectCard.Title>
+      The Office, la série culte décortiquée par S!CK
+    </ProjectCard.Title>
+    <ProjectCard.Line>
+      <Text size="micro">
+        par <strong className="k-u-weight-bold">Bidules</strong>
+      </Text>
+    </ProjectCard.Line>
+    <ProjectCard.Line>
+      <FlexWrapper gap={5} direction="row" className="k-u-flex-wrap-wrap">
+        <Tag>Premier tag</Tag>
+        <Tag type="disabled">Deuxième tag</Tag>
+      </FlexWrapper>
+    </ProjectCard.Line>
+    <ProjectCard.ItemsLine noMargin>
       <ProjectCard.Item>
         <Text className="k-u-ellipsis" weight="bold" size="tiny">
           134
@@ -84,8 +147,8 @@ export const Default = ({ progressProps, ...args }) => (
   </ProjectCard>
 )
 
-Default.args = args
-Default.argTypes = argTypes
+Lendopolis.args = args
+Lendopolis.argTypes = argTypes
 
 export const WithButton = ({ progressProps, ...args }) => (
   <ProjectCard {...args}>
@@ -97,10 +160,7 @@ export const WithButton = ({ progressProps, ...args }) => (
     </ProjectCard.Title>
     <ProjectCard.Line>
       <Text size="micro">
-        par{' '}
-        <a href="#" className="k-u-link k-u-link-font1 k-u-weight-bold">
-          Bidules
-        </a>
+        par <strong className="k-u-weight-bold">Bidules</strong>
       </Text>
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>
@@ -181,12 +241,10 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
         The Office, la série culte décortiquée par S!CK
       </ProjectCard.Title>
       <ProjectCard.Line>
-        <Text size="micro">
-          <Truncate lines={2}>
-            Ne laisser personne pour compte : plus qu’une devise. Un objectif et
-            une valeur de Un objectif et une valeur de Un objectif et une valeur
-            de
-          </Truncate>
+        <Text size="micro" className="k-u-clamp-2">
+          Ne laisser personne pour compte : plus qu’une devise. Un objectif et
+          une valeur de Un objectif et une valeur de Un objectif et une valeur
+          de
         </Text>
       </ProjectCard.Line>
       <ProjectCard.Line>

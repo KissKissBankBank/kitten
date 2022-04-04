@@ -235,7 +235,11 @@ export const DropdownCombobox = ({
           )}
         </span>
       </div>
-      <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
+      <ul
+        className="k-Form-Dropdown__list"
+        {...getMenuProps()}
+        role={isOpen ? 'listbox' : null}
+      >
         {isOpen &&
           (filteredOptions.length > 0 ? (
             filteredOptions.map((item, index) => (

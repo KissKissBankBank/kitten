@@ -15,19 +15,19 @@ exports[`<SingleEntryTable /> with \`isSliding\` prop matches with snapshot 1`] 
         <tr>
           <th
             className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 1
           </th>
           <th
             className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 2
           </th>
           <th
             className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 3
           </th>
@@ -91,19 +91,19 @@ exports[`<SingleEntryTable /> with a complete structure and custom classes match
         <tr>
           <th
             className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol customHeaderColClass"
-            scope="column"
+            scope="col"
           >
             Header 1
           </th>
           <th
             className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 2
           </th>
           <th
             className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
-            scope="column"
+            scope="col"
           >
             Header 3
           </th>

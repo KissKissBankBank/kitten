@@ -141,8 +141,8 @@ export const Pagination = forwardRef(
         buttonProps = {
           modifier: 'lithium',
           tag: 'span',
+          title: currentPageLabel(number),
           'aria-current': 'page',
-          'aria-label': currentPageLabel(number),
         }
       }
 
@@ -195,11 +195,10 @@ export const Pagination = forwardRef(
             className="k-Pagination__Link"
             tag={isDisabled ? 'span' : 'a'}
             href={goToPageHref(number)}
-            aria-label={buttonLabel}
-            aria-disabled={isDisabled}
             title={buttonLabel}
+            aria-disabled={isDisabled || null}
             tabIndex={0}
-            onClick={!isDisabled && pageClickHandler(number)}
+            onClick={isDisabled ? null : pageClickHandler(number)}
             disabled={isDisabled}
             size="tiny"
             fit="icon"
@@ -263,4 +262,5 @@ Pagination.defaultProps = {
   totalPages: 1,
   'aria-label': 'Navigation dans la pagination',
   margin: true,
+  align: 'center',
 }

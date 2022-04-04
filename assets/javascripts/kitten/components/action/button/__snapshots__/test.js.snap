@@ -44,6 +44,12 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -260,6 +266,12 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -472,6 +484,12 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -688,6 +706,12 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -846,7 +870,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
+  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -900,6 +924,12 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -1116,6 +1146,12 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1328,6 +1364,12 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -1546,6 +1588,12 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -1758,6 +1806,12 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -1974,6 +2028,12 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -2186,6 +2246,12 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -2402,6 +2468,12 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -2614,6 +2686,12 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -2830,6 +2908,12 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   --Button-border-radius: var(--border-radius-rounded);
 }
 
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .c0:disabled,
 .c0.k-Button--disabled {
   cursor: not-allowed;
@@ -3042,6 +3126,12 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,
@@ -3261,6 +3351,12 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0.k-Button--rounded {
   --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .c0:disabled,

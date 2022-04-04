@@ -8,7 +8,7 @@ var _excluded = ["className"],
     _excluded6 = ["data", "className"],
     _excluded7 = ["children", "icon", "isActive"],
     _excluded8 = ["icon", "children", "isActive"];
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import find from 'lodash/fp/find';
@@ -72,24 +72,10 @@ var Expandable = function Expandable(_ref4) {
       size = _ref4$size === void 0 ? 'default' : _ref4$size,
       props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
-  var expandableList = useRef(null);
-
-  var _useState = useState(false),
-      hasActiveInside = _useState[0],
-      setActiveInside = _useState[1];
-
-  useEffect(function () {
-    setActiveInside(false);
-    var activeChild = expandableList == null ? void 0 : expandableList.current.querySelector('.k-DashboardMenu__item[aria-current="page"]');
-    setActiveInside(!!activeChild);
-  });
   return /*#__PURE__*/React.createElement("li", {
     className: "k-DashboardMenu__expandableWrapper"
   }, /*#__PURE__*/React.createElement("details", _extends({
-    className: classNames('k-DashboardMenu__expandable', className, "k-DashboardMenu__expandable--" + size, {
-      'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside
-    }),
-    open: hasActiveInside ? hasActiveInside : null
+    className: classNames('k-DashboardMenu__expandable', className, "k-DashboardMenu__expandable--" + size)
   }, props), /*#__PURE__*/React.createElement("summary", null, /*#__PURE__*/React.createElement("div", {
     className: "k-DashboardMenu__expandable__title"
   }, !!icon && /*#__PURE__*/React.createElement("span", {
@@ -101,7 +87,6 @@ var Expandable = function Expandable(_ref4) {
   }, /*#__PURE__*/React.createElement(ArrowIcon, {
     direction: "bottom"
   })))), /*#__PURE__*/React.createElement("ul", {
-    ref: expandableList,
     className: "k-DashboardMenu__expandable__list"
   }, children)));
 };
@@ -173,12 +158,14 @@ var Selector = function Selector(_ref6) {
     }, children));
   }
 
-  var _find = find(function (item) {
-    return item.isActive === true;
-  })(data),
-      activeClassName = _find.className,
-      activeIcon = _find.icon,
-      activeChildren = _find.children;
+  var activeItem = find(function (item) {
+    return item.isActive;
+  })(data);
+
+  var _ref7 = activeItem || {},
+      activeClassName = _ref7.className,
+      activeIcon = _ref7.icon,
+      activeChildren = _ref7.children;
 
   return /*#__PURE__*/React.createElement("details", _extends({
     ref: detailsElement,
@@ -199,11 +186,11 @@ var Selector = function Selector(_ref6) {
     color: "currentColor"
   })))), /*#__PURE__*/React.createElement("div", {
     className: "k-DashboardMenu__selectorList"
-  }, data.map(function (_ref7, index) {
-    var icon = _ref7.icon,
-        children = _ref7.children,
-        isActive = _ref7.isActive,
-        itemProps = _objectWithoutPropertiesLoose(_ref7, _excluded8);
+  }, data.map(function (_ref8, index) {
+    var icon = _ref8.icon,
+        children = _ref8.children,
+        isActive = _ref8.isActive,
+        itemProps = _objectWithoutPropertiesLoose(_ref8, _excluded8);
 
     if (isActive) return;
     return /*#__PURE__*/React.createElement("a", _extends({

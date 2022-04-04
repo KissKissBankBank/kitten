@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -231,10 +232,42 @@ const StyledRadioButton = styled.div`
       }
     }
 
-    .k-Form-RadioButton__labelText {
-      ${TYPOGRAPHY.fontStyles.regular};
-      line-height: ${pxToRem(20)};
-      font-size: ${stepToRem(-1)};
+    /* PARAGRAPH STYLE */
+
+    &.k-Form-RadioButton--paragraphStyle {
+      .k-Form-RadioButton__label {
+        align-items: center;
+      }
+
+      .k-Form-RadioButton__label::before {
+        margin-right: ${pxToRem(15)};
+      }
+
+      .k-Form-RadioButton__labelText {
+        flex: 1 0 calc(100% - ${pxToRem(20 + 15)});
+      }
+    }
+
+    /* FONT STYLES */
+
+    &.k-Form-RadioButton__labelText--regular {
+      .k-Form-RadioButton__labelText {
+        ${TYPOGRAPHY.fontStyles.regular};
+        line-height: ${pxToRem(20)};
+        font-size: ${stepToRem(-1)};
+      }
+    }
+
+    &.k-Form-RadioButton__labelText--light {
+      .k-Form-RadioButton__labelText {
+        ${TYPOGRAPHY.fontStyles.light};
+      }
+    }
+
+    &.k-Form-RadioButton__labelText--bold {
+      .k-Form-RadioButton__labelText {
+        ${TYPOGRAPHY.fontStyles.bold};
+      }
     }
 
     &.k-Form-RadioButton--small {
@@ -329,6 +362,8 @@ export const RadioButton = ({
   disabled,
   variant,
   design,
+  fontWeight,
+  paragraphStyle,
   ...inputProps
 }) => {
   return (
@@ -336,13 +371,15 @@ export const RadioButton = ({
       className={classNames(
         'k-Form-RadioButton',
         className,
-        `k-Form-RadioButton--${variant}`,
+        `k-Form-RadioButton--${variant || 'orion'}`,
         `k-Form-RadioButton--${design}`,
         `k-Form-RadioButton--${size}`,
+        `k-Form-RadioButton__labelText--${fontWeight}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,
           'k-Form-RadioButton--largeContent': largeContent,
+          'k-Form-RadioButton--paragraphStyle': paragraphStyle,
         },
       )}
     >
@@ -377,9 +414,14 @@ RadioButton.propTypes = {
   largeContent: PropTypes.bool,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
-  variant: PropTypes.oneOf(['andromeda', 'orion']),
+  variant: deprecated(
+    PropTypes.oneOf(['andromeda', 'orion']),
+    'Please use the Radio component instead',
+  ),
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'regular', 'big']),
+  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  paragraphStyle: PropTypes.bool,
 }
 
 RadioButton.defaultProps = {
@@ -387,7 +429,8 @@ RadioButton.defaultProps = {
   largeContent: false,
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false,
 }

@@ -1,18 +1,18 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading"],
-    _excluded3 = ["children", "className"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign"],
+    _excluded3 = ["className", "style"],
     _excluded4 = ["className", "lastLine"],
-    _excluded5 = ["className"],
+    _excluded5 = ["className", "noMargin"],
     _excluded6 = ["className"],
     _excluded7 = ["className"],
-    _excluded8 = ["className", "value"];
+    _excluded8 = ["className", "imageProps"],
+    _excluded9 = ["className", "value"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import deprecated from 'prop-types-extra/lib/deprecated';
-import Truncate from 'react-truncate';
 import { StyledCard } from './styles';
 import { Text } from '../../../typography/text';
 import { Title } from '../../../typography/title';
@@ -33,6 +33,8 @@ export var ProjectCard = function ProjectCard(_ref) {
       videoProps = _ref.videoProps,
       stretch = _ref.stretch,
       loading = _ref.loading,
+      topLine = _ref.topLine,
+      topLineAlign = _ref.topLineAlign,
       props = _objectWithoutPropertiesLoose(_ref, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
@@ -55,7 +57,9 @@ export var ProjectCard = function ProjectCard(_ref) {
     return /*#__PURE__*/React.createElement("source", _extends({
       key: "video_source_" + sourceProps.src
     }, sourceProps));
-  }))), /*#__PURE__*/React.createElement("div", {
+  }))), topLine && /*#__PURE__*/React.createElement("div", {
+    className: classNames('k-ProjectCard__topLine', "k-ProjectCard__topLine--" + topLineAlign)
+  }, topLine), /*#__PURE__*/React.createElement("div", {
     className: "k-ProjectCard__content"
   }, sticker && /*#__PURE__*/React.createElement("div", {
     className: "k-ProjectCard__sticker k-u-ellipsis"
@@ -70,7 +74,9 @@ ProjectCard.defaultProps = {
   videoProps: {},
   videoSources: [],
   stretch: false,
-  loading: false
+  loading: false,
+  topLine: null,
+  topLineAlign: 'right'
 };
 ProjectCard.propTypes = {
   sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
@@ -79,21 +85,21 @@ ProjectCard.propTypes = {
   videoProps: PropTypes.object,
   videoSources: PropTypes.array,
   stretch: PropTypes.bool,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  topLine: PropTypes.node,
+  topLineAlign: PropTypes.oneOf(['left', 'center', 'right'])
 };
 
 ProjectCard.Title = function (_ref2) {
-  var children = _ref2.children,
-      className = _ref2.className,
+  var className = _ref2.className,
+      style = _ref2.style,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
     modifier: "septenary",
     noMargin: true,
-    className: classNames('k-ProjectCard__title', className)
-  }, props), /*#__PURE__*/React.createElement(Truncate, {
-    lines: 2
-  }, children));
+    className: classNames('k-ProjectCard__title', 'k-u-clamp-2', className)
+  }, props));
 };
 
 ProjectCard.Line = function (_ref3) {
@@ -110,10 +116,14 @@ ProjectCard.Line = function (_ref3) {
 
 ProjectCard.ItemsLine = function (_ref4) {
   var className = _ref4.className,
+      _ref4$noMargin = _ref4.noMargin,
+      noMargin = _ref4$noMargin === void 0 ? false : _ref4$noMargin,
       props = _objectWithoutPropertiesLoose(_ref4, _excluded5);
 
   return /*#__PURE__*/React.createElement("div", _extends({
-    className: classNames('k-ProjectCard__itemsLine', className)
+    className: classNames('k-ProjectCard__itemsLine', className, {
+      'k-ProjectCard__itemsLine--noMargin': noMargin
+    })
   }, props));
 };
 
@@ -135,10 +145,22 @@ ProjectCard.Sticker = function (_ref6) {
   }, props));
 };
 
-ProjectCard.Progress = function (_ref7) {
+ProjectCard.Avatar = function (_ref7) {
   var className = _ref7.className,
-      value = _ref7.value,
+      imageProps = _ref7.imageProps,
       props = _objectWithoutPropertiesLoose(_ref7, _excluded8);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-ProjectCard__avatar', className)
+  }, props), /*#__PURE__*/React.createElement("img", _extends({
+    alt: ""
+  }, imageProps)));
+};
+
+ProjectCard.Progress = function (_ref8) {
+  var className = _ref8.className,
+      value = _ref8.value,
+      props = _objectWithoutPropertiesLoose(_ref8, _excluded9);
 
   return /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ProjectCard__progress', className)

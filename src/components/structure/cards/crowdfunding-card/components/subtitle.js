@@ -5,6 +5,8 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.default = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -14,8 +16,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _text = require("../../../../typography/text");
 
 var _horizontalStroke = require("../../../../typography/horizontal-stroke");
-
-var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -43,7 +43,8 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
     var _this$props2 = this.props,
         loading = _this$props2.loading,
         subTitle = _this$props2.subTitle,
-        subTitleTruncate = _this$props2.subTitleTruncate;
+        subTitleTruncate = _this$props2.subTitleTruncate,
+        style = _this$props2.style;
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "k-CrowdfundingCard__subtitle__container"
     }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
@@ -51,15 +52,16 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
       size: "micro"
     }), subTitle && !loading && /*#__PURE__*/_react.default.createElement(_text.Text, {
       className: (0, _classnames.default)('k-CrowdfundingCard__subtitle__subtitleText', 'k-u-margin-none', {
-        'k-CrowdfundingCard__subtitle__subtitleText--truncated': subTitleTruncate
+        'k-u-clamp': subTitleTruncate
       }),
       size: "micro",
       weight: "regular",
       tag: "p",
-      color: "font1"
-    }, subTitleTruncate && /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
-      className: "k-CrowdfundingCard__noWrap"
-    }, subTitle), !subTitleTruncate && subTitle), loading && /*#__PURE__*/_react.default.createElement("span", {
+      color: "font1",
+      style: (0, _extends2.default)({
+        '--line-clamp': 1
+      }, style)
+    }, subTitle), loading && /*#__PURE__*/_react.default.createElement("span", {
       className: "k-CrowdfundingCard__subtitle__loadingElement"
     }));
   };
@@ -68,17 +70,21 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
     var _this$props3 = this.props,
         widgetSubtitle = _this$props3.widgetSubtitle,
         subTitleTruncate = _this$props3.subTitleTruncate,
-        loading = _this$props3.loading;
+        loading = _this$props3.loading,
+        style = _this$props3.style;
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, widgetSubtitle && !loading && /*#__PURE__*/_react.default.createElement(_text.Text, {
-      className: "k-u-margin-top-noneHalf k-u-margin-bottom-double",
+      className: (0, _classnames.default)('k-u-margin-top-noneHalf', 'k-u-margin-bottom-double', {
+        'k-u-clamp': subTitleTruncate
+      }),
       tag: "p",
       size: "micro",
       color: "font1",
       lineHeight: "normal",
-      weight: "light"
-    }, subTitleTruncate && /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
-      lines: 3
-    }, widgetSubtitle), !subTitleTruncate && widgetSubtitle), loading && /*#__PURE__*/_react.default.createElement("span", {
+      weight: "light",
+      style: (0, _extends2.default)({
+        '--line-clamp': 1
+      }, style)
+    }, widgetSubtitle), loading && /*#__PURE__*/_react.default.createElement("span", {
       className: "k-CrowdfundingCard__subtitle__loadingElement"
     }));
   };

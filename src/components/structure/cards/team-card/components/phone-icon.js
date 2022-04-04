@@ -13,7 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _buttonIcon = require("../../../../action/button-icon");
+var _button = require("../../../../action/button");
 
 var _phoneIcon = require("../../../../graphics/icons/phone-icon");
 
@@ -31,16 +31,16 @@ var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
       className = _ref.className,
       buttonLabel = _ref.buttonLabel,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_button.Button, {
     tag: "a",
+    fit: "icon",
     href: "tel:" + phoneNumber,
     modifier: "hydrogen",
     size: "tiny",
-    className: (0, _classnames.default)('k-ButtonIcon--phone', 'k-u-hidden@s-up', className),
+    className: (0, _classnames.default)('k-u-hidden@s-up', className),
     "aria-label": buttonLabel
   }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
-    "aria-hidden": true,
-    className: "k-ButtonIcon__svg"
+    "aria-hidden": true
   })), /*#__PURE__*/_react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({
     phoneNumber: phoneNumber,
     tooltipColor: tooltipColor,

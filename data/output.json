@@ -52,7 +52,7 @@
         "description": "White"
       }
     },
-    "green": {
+    "success": {
       "100": {
         "value": "#e4fbf4",
         "type": "color",
@@ -78,7 +78,7 @@
         "description": "Dark Green"
       }
     },
-    "blue": {
+    "primary": {
       "100": {
         "value": "#e7f1ff",
         "type": "color",
@@ -105,7 +105,7 @@
         "description": "Very Dark Blue"
       }
     },
-    "yellow": {
+    "warning": {
       "100": {
         "value": "#fff3d2",
         "type": "color",
@@ -132,7 +132,7 @@
         "description": "Very Dark Yellow"
       }
     },
-    "red": {
+    "danger": {
       "100": {
         "value": "#ffe9ef",
         "type": "color",
@@ -199,35 +199,83 @@
     }
   },
   "borderRadius": {
-    "s": {
+    "xs": {
       "value": "4px",
       "type": "borderRadius"
     },
-    "m": {
+    "s": {
       "value": "6px",
       "type": "borderRadius"
     },
-    "l": {
+    "m": {
       "value": "8px",
       "type": "borderRadius"
     },
-    "xxl": {
-      "value": "100px",
+    "l": {
+      "value": "10px",
+      "type": "borderRadius"
+    },
+    "xl": {
+      "value": "16px",
+      "type": "borderRadius"
+    },
+    "rounded": {
+      "value": "9999px",
       "type": "borderRadius"
     }
   },
-  "--spacing-xs": {
-    "value": 5,
-    "type": "spacing"
-  },
-  "--spacing-s": {
-    "value": 10,
-    "type": "spacing"
-  },
-  "paragraphSpacing": {
+  "spacing": {
     "0": {
-      "value": 0,
-      "type": "paragraphSpacing"
+      "value": "0px",
+      "type": "spacing"
+    },
+    "1": {
+      "value": "2px",
+      "type": "spacing"
+    },
+    "2": {
+      "value": "4px",
+      "type": "spacing"
+    },
+    "3": {
+      "value": "8px",
+      "type": "spacing"
+    },
+    "4": {
+      "value": "12px",
+      "type": "spacing"
+    },
+    "5": {
+      "value": "16px",
+      "type": "spacing"
+    },
+    "6": {
+      "value": "20px",
+      "type": "spacing"
+    },
+    "7": {
+      "value": "24px",
+      "type": "spacing"
+    },
+    "8": {
+      "value": "32px",
+      "type": "spacing"
+    },
+    "9": {
+      "value": "40px",
+      "type": "spacing"
+    },
+    "10": {
+      "value": "48px",
+      "type": "spacing"
+    },
+    "11": {
+      "value": "56px",
+      "type": "spacing"
+    },
+    "12": {
+      "value": "64px",
+      "type": "spacing"
     }
   },
   "typography": {
@@ -237,19 +285,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 64
         },
         "fontSize": {
-          "value": 64
+          "value": "64px"
         },
         "letterSpacing": {
           "value": -0.02
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -265,19 +313,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 46
         },
         "fontSize": {
-          "value": 46
+          "value": "46px"
         },
         "letterSpacing": {
           "value": -0.02
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -291,19 +339,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 46
         },
         "fontSize": {
-          "value": 36
+          "value": "36px"
         },
         "letterSpacing": {
           "value": -0.02
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -317,19 +365,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 40
         },
         "fontSize": {
-          "value": 32
+          "value": "32px"
         },
         "letterSpacing": {
           "value": -0.01
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -345,19 +393,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 32
         },
         "fontSize": {
-          "value": 28
+          "value": "28px"
         },
         "letterSpacing": {
           "value": -0.01
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -371,19 +419,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 28
         },
         "fontSize": {
-          "value": 24
+          "value": "24px"
         },
         "letterSpacing": {
           "value": -0.01
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -397,19 +445,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Bold"
+          "value": "$fontWeights.maax-0"
         },
         "lineHeight": {
           "value": 22
         },
         "fontSize": {
-          "value": 20
+          "value": "20px"
         },
         "letterSpacing": {
           "value": -0.01
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -425,19 +473,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": "$fontWeights.maax-1"
         },
         "lineHeight": {
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 24
+          "value": "24px"
         },
         "letterSpacing": {
           "value": 0
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -451,19 +499,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": "$fontWeights.maax-1"
         },
         "lineHeight": {
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 20
+          "value": "20px"
         },
         "letterSpacing": {
           "value": 0
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -474,28 +522,22 @@
       },
       "medium": {
         "fontFamily": {
-          "value": "Maax"
+          "value": "Roboto"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": 600
         },
         "lineHeight": {
-          "value": "AUTO"
+          "value": 64
         },
         "fontSize": {
-          "value": 18
+          "value": "18px"
         },
         "letterSpacing": {
-          "value": 0
+          "value": -0.02
         },
         "paragraphSpacing": {
-          "value": 0
-        },
-        "textCase": {
-          "value": "none"
-        },
-        "textDecoration": {
-          "value": "none"
+          "value": "$paragraphSpacing.0"
         }
       },
       "small": {
@@ -503,19 +545,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": "$fontWeights.maax-1"
         },
         "lineHeight": {
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 16
+          "value": "16px"
         },
         "letterSpacing": {
           "value": 0
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -531,19 +573,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": "$fontWeights.maax-1"
         },
         "lineHeight": {
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 14
+          "value": "14px"
         },
         "letterSpacing": {
           "value": 0
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -559,19 +601,19 @@
           "value": "Roboto"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": "$fontWeights.roboto-2"
         },
         "lineHeight": {
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 12
+          "value": "12px"
         },
         "letterSpacing": {
           "value": 0
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -585,19 +627,19 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "Regular"
+          "value": "$fontWeights.maax-1"
         },
         "lineHeight": {
           "value": "AUTO"
         },
         "fontSize": {
-          "value": 11
+          "value": "11px"
         },
         "letterSpacing": {
           "value": -0.02
         },
         "paragraphSpacing": {
-          "value": 0
+          "value": "$paragraphSpacing.0"
         },
         "textCase": {
           "value": "none"
@@ -620,67 +662,55 @@
     "bold": {
       "value": 600,
       "type": "fontWeights"
-    },
-    "maax-0": {
-      "value": "Bold",
-      "type": "fontWeights"
-    },
-    "maax-1": {
-      "value": "Regular",
-      "type": "fontWeights"
-    },
-    "roboto-2": {
-      "value": "Regular",
-      "type": "fontWeights"
     }
   },
   "fontSize": {
-    "0": {
-      "value": 11,
-      "type": "fontSizes"
-    },
     "1": {
-      "value": 12,
+      "value": "11px",
       "type": "fontSizes"
     },
     "2": {
-      "value": 14,
+      "value": "12px",
       "type": "fontSizes"
     },
     "3": {
-      "value": 16,
+      "value": "14px",
       "type": "fontSizes"
     },
     "4": {
-      "value": 18,
+      "value": "16px",
       "type": "fontSizes"
     },
     "5": {
-      "value": 20,
+      "value": "18px",
       "type": "fontSizes"
     },
     "6": {
-      "value": 24,
+      "value": "20px",
       "type": "fontSizes"
     },
     "7": {
-      "value": 28,
+      "value": "24px",
       "type": "fontSizes"
     },
     "8": {
-      "value": 32,
+      "value": "28px",
       "type": "fontSizes"
     },
     "9": {
-      "value": 36,
+      "value": "32px",
       "type": "fontSizes"
     },
     "10": {
-      "value": 46,
+      "value": "36px",
       "type": "fontSizes"
     },
     "11": {
-      "value": 64,
+      "value": "46px",
+      "type": "fontSizes"
+    },
+    "12": {
+      "value": "64px",
       "type": "fontSizes"
     }
   },

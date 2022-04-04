@@ -3,7 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["phoneNumber", "tooltipColor"];
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonIcon } from '../../../../action/button-icon';
+import { Button } from '../../../../action/button';
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon';
 import COLORS from '../../../../../constants/colors-config';
 import styled from 'styled-components';
@@ -33,15 +33,13 @@ export var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4)
     className: "k-TeamCardButtonWithTooltip__tooltip"
   }, phoneNumber, /*#__PURE__*/React.createElement("span", {
     className: "k-TeamCardButtonWithTooltip__tooltipArrow"
-  })), /*#__PURE__*/React.createElement(ButtonIcon, {
+  })), /*#__PURE__*/React.createElement(Button, {
+    fit: "icon",
     size: "tiny",
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone",
     tag: "span",
     "aria-label": phoneNumber
-  }, /*#__PURE__*/React.createElement(PhoneIcon, {
-    className: "k-ButtonIcon__svg"
-  })));
+  }, /*#__PURE__*/React.createElement(PhoneIcon, null)));
 };
 TeamCardButtonWithTooltip.propTypes = {
   phoneNumber: PropTypes.string.isRequired

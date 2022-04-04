@@ -62,6 +62,7 @@ const AlertWrapper = styled.div`
     flex: 1 0
       calc(100% - var(--alert-close-width, 0px) - var(--alert-icon-width, 0px));
     font-size: ${stepToRem(-1)};
+    line-height: ${pxToRem(18)};
   }
 
   .k-Alert__icon {
@@ -248,11 +249,13 @@ export const Alert = ({
       <div className="k-Alert__text">{children}</div>
 
       {closeButton && (
-        <button className="k-Alert__closeButton k-u-reset-button">
-          <CrossIconNext
-            onClick={() => setMounted(false)}
-            title={closeButtonLabel}
-          />
+        <button
+          onClick={() => setMounted(false)}
+          className="k-Alert__closeButton k-u-reset-button"
+          title={closeButtonLabel}
+          aria-label={closeButtonLabel}
+        >
+          <CrossIconNext />
         </button>
       )}
     </AlertWrapper>

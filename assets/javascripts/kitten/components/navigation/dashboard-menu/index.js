@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import find from 'lodash/fp/find'
@@ -65,17 +65,6 @@ const Expandable = ({
   size = 'default',
   ...props
 }) => {
-  const expandableList = useRef(null)
-  const [hasActiveInside, setActiveInside] = useState(false)
-
-  useEffect(() => {
-    setActiveInside(false)
-    const activeChild = expandableList?.current.querySelector(
-      '.k-DashboardMenu__item[aria-current="page"]',
-    )
-    setActiveInside(!!activeChild)
-  })
-
   return (
     <li className="k-DashboardMenu__expandableWrapper">
       <details
@@ -83,11 +72,7 @@ const Expandable = ({
           'k-DashboardMenu__expandable',
           className,
           `k-DashboardMenu__expandable--${size}`,
-          {
-            'k-DashboardMenu__expandable--hasActiveInside': hasActiveInside,
-          },
         )}
-        open={hasActiveInside ? hasActiveInside : null}
         {...props}
       >
         <summary>
@@ -105,9 +90,7 @@ const Expandable = ({
             </span>
           </div>
         </summary>
-        <ul ref={expandableList} className="k-DashboardMenu__expandable__list">
-          {children}
-        </ul>
+        <ul className="k-DashboardMenu__expandable__list">{children}</ul>
       </details>
     </li>
   )
@@ -188,11 +171,12 @@ const Selector = ({ data, className, ...props }) => {
     )
   }
 
+  const activeItem = find(item => item.isActive)(data)
   const {
     className: activeClassName,
     icon: activeIcon,
     children: activeChildren,
-  } = find(item => item.isActive === true)(data)
+  } = activeItem || {}
 
   return (
     <details

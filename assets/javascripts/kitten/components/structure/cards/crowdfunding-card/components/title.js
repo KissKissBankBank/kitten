@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { Text } from '../../../../typography/text'
 import { Title } from '../../../../typography/title'
-import Truncate from 'react-truncate'
 
 class TitleComponent extends PureComponent {
   static propTypes = {
@@ -43,27 +43,12 @@ class TitleComponent extends PureComponent {
           <Title
             tag="p"
             noMargin
-            className="k-CrowdfundingCard__title__title"
+            className={classNames('k-CrowdfundingCard__title__title', {
+              'k-u-clamp': titleTruncate,
+            })}
             {...titleProps}
           >
-            {titleTruncate && (
-              <>
-                <Truncate
-                  lines={2}
-                  className="k-CrowdfundingCard__noWrap k-u-hidden@s-down"
-                >
-                  {title}
-                </Truncate>
-                <Truncate
-                  lines={3}
-                  className="k-CrowdfundingCard__noWrap k-u-hidden@m-up"
-                >
-                  {title}
-                </Truncate>
-              </>
-            )}
-
-            {!titleTruncate && title}
+            {title}
           </Title>
         )}
 

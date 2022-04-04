@@ -36,7 +36,7 @@ DoubleEntryTable.HeaderCol = ({ className, ...props }) => (
       'DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol',
       className,
     )}
-    scope="column"
+    scope="col"
     {...props}
   />
 )

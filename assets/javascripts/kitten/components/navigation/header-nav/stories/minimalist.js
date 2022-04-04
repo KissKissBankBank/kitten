@@ -57,7 +57,13 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
         href="#"
         hiddenText={{ max: 'xs' }}
       />
-      <Button rounded modifier="helium" fit="content" mobileFit="icon">
+      <Button
+        rounded
+        modifier="helium"
+        fit="content"
+        mobileFit="icon"
+        size="tiny"
+      >
         <UsersIconNext />
         <span className="k-u-hidden@s-up k-u-a11y-visuallyHidden">
           Hello world

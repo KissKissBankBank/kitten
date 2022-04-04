@@ -14,6 +14,7 @@ import {
   CrossCircleIconNext,
   CubeIconNext,
   EditIconNext,
+  EmbedIconNext,
   EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
@@ -24,9 +25,11 @@ import {
   InfiniteIconNext,
   InstagramIconNext,
   LargeArrowIconNext,
+  LinkIconNext,
   LinkedinIconNext,
   LockOutlineIcon,
   MessengerIconNext,
+  OpenLockIconNext,
   PeopleIconNext,
   PlusIconNext,
   RefundIcon,
@@ -178,6 +181,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <LockOutlineIcon color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <OpenLockIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <PeopleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
@@ -210,9 +216,15 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         <IconContainer>
           <WindowEditIconNext color={colorInput} />
         </IconContainer>
+        <IconContainer>
+          <LinkIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <EmbedIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
       </Group>
 
-      <Group title="Icônes remplis">
+      <Group title="Icônes remplies">
         <IconContainer suffix="bgColor">
           <HeartIconNext color={colorInput} bgColor={bgColorInput} />
         </IconContainer>
@@ -278,6 +290,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer suffix="status=danger">
           <StatusIconNext status="danger" color={colorInput} />
+        </IconContainer>
+        <IconContainer suffix="status=pending">
+          <StatusIconNext status="pending" color={colorInput} />
         </IconContainer>
       </Group>
 

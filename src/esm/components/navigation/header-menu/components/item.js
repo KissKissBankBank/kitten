@@ -20,9 +20,7 @@ export var Item = function Item(_ref) {
       other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var Component = as || tag;
-  return /*#__PURE__*/React.createElement("li", _extends({
-    role: "menuitem"
-  }, liProps, {
+  return /*#__PURE__*/React.createElement("li", _extends({}, liProps, {
     className: classNames('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
       'k-HeaderMenu__item--external': external,
       'k-HeaderMenu__item--isSelected': isSelected,

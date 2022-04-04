@@ -3,7 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["phoneNumber", "tooltipColor", "className", "buttonLabel"];
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonIcon } from '../../../../action/button-icon';
+import { Button } from '../../../../action/button';
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon';
 import { TeamCardButtonWithTooltip } from './button-with-tooltip';
 import COLORS from '../../../../../constants/colors-config';
@@ -15,16 +15,16 @@ export var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
       buttonLabel = _ref.buttonLabel,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ButtonIcon, {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button, {
     tag: "a",
+    fit: "icon",
     href: "tel:" + phoneNumber,
     modifier: "hydrogen",
     size: "tiny",
-    className: classNames('k-ButtonIcon--phone', 'k-u-hidden@s-up', className),
+    className: classNames('k-u-hidden@s-up', className),
     "aria-label": buttonLabel
   }, /*#__PURE__*/React.createElement(PhoneIcon, {
-    "aria-hidden": true,
-    className: "k-ButtonIcon__svg"
+    "aria-hidden": true
   })), /*#__PURE__*/React.createElement(TeamCardButtonWithTooltip, _extends({
     phoneNumber: phoneNumber,
     tooltipColor: tooltipColor,

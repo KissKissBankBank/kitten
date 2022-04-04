@@ -623,7 +623,11 @@ export const DropdownSelectWithInput = ({
           {...inputProps}
         />
       </div>
-      <ul className="k-Form-DropdownSelectWithInput__list" {...getMenuProps()}>
+      <ul
+        className="k-Form-DropdownSelectWithInput__list"
+        {...getMenuProps()}
+        role={isOpen ? 'listbox' : null}
+      >
         {isOpen &&
           !deactivateDropdown &&
           options.map((item, index) => {

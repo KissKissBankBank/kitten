@@ -67,15 +67,19 @@ export default {
       options: ['small', 'regular', 'big'],
       control: 'inline-radio',
     },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
-      control: 'inline-radio',
-    },
     design: {
       name: 'design',
       options: ['disc', 'check'],
       control: 'inline-radio',
+    },
+    fontWeight: {
+      name: 'fontWeight',
+      options: ['light', 'regular', 'bold'],
+      control: 'inline-radio',
+    },
+    paragraphStyle: {
+      name: 'paragraphStyle',
+      control: 'boolean',
     },
   },
 }
@@ -84,9 +88,10 @@ const defaultArgs = {
   id: 'story-radio-button-set',
   error: false,
   disabled: false,
-  variant: 'orion',
   design: 'disc',
   size: 'regular',
+  fontWeight: 'regular',
+  paragraphStyle: false,
 }
 
 export const Default = args => <RadioButtonSet {...args} />
@@ -102,10 +107,6 @@ Default.args = {
     {
       text: 'Option B',
       id: 'option-b',
-    },
-    {
-      text: 'Option C',
-      id: 'option-c',
     },
   ],
 }

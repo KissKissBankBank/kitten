@@ -10,7 +10,7 @@ export var StyledContainer = styled(Container).withConfig({
 export var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   _objectDestructuringEmpty(_ref);
 
-  return css(["display:flex;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
+  return css(["display:flex;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;z-index:5;}", " ", ""], function (_ref2) {
     var displayLeftGradient = _ref2.displayLeftGradient,
         shadowColor = _ref2.shadowColor;
     return displayLeftGradient && css(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",transparent );}"], pxToRem(gradientWidth), shadowColor);
@@ -23,6 +23,4 @@ export var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
 export var StyledScrollableContainer = styled.div.withConfig({
   displayName: "styled__StyledScrollableContainer",
   componentId: "sc-ecvjg4-1"
-})(["", ""], function (props) {
-  return scrollableContainerStyle(props);
-});
+})(["display:flex;white-space:nowrap;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}scrollbar-width:none;&::before,&::after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;z-index:5;width:", ";opacity:0;transition:opacity var(--transition);}&::before{left:0;background-image:linear-gradient( to right,var(--scrollableContainer-gradient),transparent );}&::after{right:0;background-image:linear-gradient( to left,var(--scrollableContainer-gradient),transparent );}&.k-ScrollableContainer--hasLeftGradient::before,&.k-ScrollableContainer--hasRightGradient::after{opacity:1;}"], pxToRem(gradientWidth));

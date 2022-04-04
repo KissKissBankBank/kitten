@@ -1,19 +1,20 @@
-import React, { useRef, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import styled, { keyframes } from 'styled-components'
+import PropTypes from 'prop-types'
 import { ArrowContainer } from '../../../information/boxes/arrow-container'
-import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { useFocusTrap } from '../../../../helpers/dom/use-focus-trap'
 
 const zoomInAndOpacity = keyframes`
   0% {
-    transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(.66);
+    transform: translateX(calc(-1 * var(--Dropdown-transform-x))) scale(.66);
     opacity: 0;
   }
   to
   {
-    transform: translateX(calc(-1 * var(--Dropdown-transform))) scale(1);
+    transform: translateX(calc(-1 * var(--Dropdown-transform-x))) scale(1);
     opacity: 1;
   }
 `
@@ -69,10 +70,11 @@ const StyledDropdownMenu = styled.details`
   .k-DropdownMenu__menu {
     display: flex;
     flex-direction: column;
+    gap: ${pxToRem(1)};
     z-index: 150;
 
     position: absolute;
-    top: calc(50% + 1rem + ${pxToRem(8)});
+    top: calc(50% + 1rem + ${pxToRem(8)} + (var(--dropdownMenu-top)));
     left: 50%;
     width: max-content;
     max-width: ${pxToRem(300)};
@@ -80,89 +82,109 @@ const StyledDropdownMenu = styled.details`
 
     padding: ${pxToRem(8)} 0 ${pxToRem(10)};
 
-    transform: translateX(calc(-1 * var(--Dropdown-transform)));
+    transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
     transform-origin: var(--Dropdown-transform-origin);
   }
 
   &[open] .k-DropdownMenu__menu {
-    animation: 0.16s ease ${zoomInAndOpacity};
+    animation: var(--transition) ${zoomInAndOpacity};
   }
 
-  &.k-DropdownMenu--left .k-DropdownMenu__menu {
-    --Dropdown-transform: calc(100% - ${pxToRem(10 + 8)});
-    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
+  &.k-DropdownMenu--h-left .k-DropdownMenu__menu {
+    --Dropdown-transform-x: calc(100% - ${pxToRem(10 + 8)});
+    --Dropdown-transform-origin: var(--Dropdown-transform-x) ${pxToRem(-8)};
   }
 
-  &.k-DropdownMenu--center .k-DropdownMenu__menu {
-    --Dropdown-transform: 50%;
-    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
+  &.k-DropdownMenu--h-center .k-DropdownMenu__menu {
+    --Dropdown-transform-x: 50%;
+    --Dropdown-transform-origin: var(--Dropdown-transform-x) ${pxToRem(-8)};
   }
 
-  &.k-DropdownMenu--right .k-DropdownMenu__menu {
-    --Dropdown-transform: ${pxToRem(10 + 8)};
-    --Dropdown-transform-origin: var(--Dropdown-transform) ${pxToRem(-8)};
+  &.k-DropdownMenu--h-right .k-DropdownMenu__menu {
+    --Dropdown-transform-x: ${pxToRem(10 + 8)};
+    --Dropdown-transform-origin: var(--Dropdown-transform-x) ${pxToRem(-8)};
   }
 
   .k-DropdownMenu__menu__item {
     ${TYPOGRAPHY.fontStyles.regular}
-    color: ${COLORS.background1};
+    color: var(--color-grey-000);
     text-decoration: none;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: ${pxToRem(10)};
     padding: ${pxToRem(7)} ${pxToRem(15)};
-    line-height: 1;
+    line-height: ${pxToRem(16)};
     font-size: ${stepToRem(-1)};
     text-align: left;
     transition: color 0.2s ease;
 
+    & svg,
+    & svg path {
+      fill: currentColor;
+    }
+
     &:hover {
-      color: ${COLORS.primary1};
+      color: var(--color-primary-100);
     }
 
-    &:active {
-      color: ${COLORS.primary4};
-    }
-
+    &:active,
     &:focus {
-      color: ${COLORS.primary4};
+      color: var(--color-primary-300);
     }
 
     &:focus-visible {
       outline: auto;
     }
+
+    .k-DropdownMenu__menu__item__iconWrapper {
+      height: ${pxToRem(16)};
+      width: ${pxToRem(16)};
+      flex: 0 0 ${pxToRem(16)};
+
+      svg {
+        max-width: ${pxToRem(16)};
+        max-height: ${pxToRem(16)};
+      }
+    }
   }
 
   .k-DropdownMenu__menu__separator {
-    height: ${pxToRem(2)};
-    background: ${COLORS.grey1};
+    height: ${pxToRem(1)};
+    background: var(--color-grey-700);
     padding: 0;
-    margin: ${pxToRem(5)} 0;
+    margin: ${pxToRem(7)} ${pxToRem(15)};
   }
 `
 
 export const DropdownMenu = ({
-  button = () => {},
-  open: openProp,
+  button,
+  open,
   onToggle,
-  menuProps = {},
-  menuPosition = 'left',
+  menuProps,
+  menuPosition,
+  positionedButton,
   children,
   className,
+  top,
+  style,
   ...rest
 }) => {
-  const detailsElement = useRef(null)
-  const [isOpen, setIsOpen] = useState(false)
-  const [hasClicked, setHasClicked] = useState(false)
+  const [isOpen, setIsOpen] = useState(open)
+  const detailsElement = useFocusTrap({ shouldTrapFocus: isOpen })
+
+  useEffect(() => {
+    setIsOpen(open)
+  }, [open])
 
   const onLinkClicked = () => {
     setIsOpen(false)
-    setHasClicked(true)
   }
 
-  const handleToggle = () => {
-    if (!hasClicked) {
-      return setIsOpen(!isOpen)
-    }
-    return setHasClicked(false)
+  const handleToggle = event => {
+    onToggle(event)
+
+    setIsOpen(event.target.open)
   }
 
   const arrowDistanceProps = (() => {
@@ -182,7 +204,7 @@ export const DropdownMenu = ({
   const getSibling = direction => {
     const options = [
       ...detailsElement.current.querySelectorAll(
-        '[role^="menuitem"]:not([hidden]):not([disabled]):not([aria-disabled="true"])',
+        'a:not([hidden]):not([disabled]):not([aria-disabled="true"]), button:not([hidden]):not([disabled]):not([aria-disabled="true"])',
       ),
     ]
 
@@ -204,14 +226,14 @@ export const DropdownMenu = ({
 
     switch (event.key) {
       case 'Escape':
-        if (!open) return
+        if (!isOpen) break
 
         detailsElement.current?.querySelector('summary')?.click()
         event.preventDefault()
         event.stopPropagation()
         break
       case 'ArrowDown':
-        if (isSummaryFocused && !open) {
+        if (isSummaryFocused && !isOpen) {
           document.activeElement?.click()
         }
 
@@ -220,9 +242,7 @@ export const DropdownMenu = ({
         event.preventDefault()
         break
       case 'ArrowUp':
-        if (isSummaryFocused && !open) {
-          document.activeElement?.click()
-        }
+        if (!isOpen) break
 
         getSibling('prev')?.focus()
 
@@ -233,7 +253,7 @@ export const DropdownMenu = ({
         const activeElement = document.activeElement
 
         if (!activeElement instanceof HTMLElement) return
-        if (activeElement.role !== 'menuitem') return
+        if (!['A', 'BUTTON'].includes(activeElement.tagName)) return
         if (activeElement.closest('details') !== detailsElement.current) return
 
         event.preventDefault()
@@ -251,22 +271,26 @@ export const DropdownMenu = ({
       className={classNames(
         'k-DropdownMenu',
         className,
-        `k-DropdownMenu--${menuPosition}`,
+        `k-DropdownMenu--h-${menuPosition}`,
       )}
-      role="menu"
       onKeyDown={handleKeyDown}
+      style={{ ...style, '--dropdownMenu-top': top }}
       {...rest}
     >
       <summary className="k-DropdownMenu__button">
-        <span className="k-DropdownMenu__button__inside">
-          {button({ open: isOpen })}
-        </span>
+        {positionedButton ? (
+          <span className="k-DropdownMenu__button__inside">
+            {button({ open: isOpen })}
+          </span>
+        ) : (
+          button({ open: isOpen })
+        )}
       </summary>
       <ArrowContainer
-        color={COLORS.font1}
+        color="var(--color-grey-900)"
         size={8}
         padding={0}
-        borderRadius={4}
+        borderRadius={8}
         position="top"
         {...arrowDistanceProps}
         {...menuProps}
@@ -279,23 +303,50 @@ export const DropdownMenu = ({
   )
 }
 
-DropdownMenu.Link = ({ href = '', className, ...rest }) => (
+DropdownMenu.defaultProps = {
+  button: () => {},
+  open: false,
+  onToggle: () => {},
+  menuProps: {},
+  menuPosition: 'left',
+  positionedButton: false,
+  top: '0px',
+}
+
+DropdownMenu.propTypes = {
+  button: PropTypes.func,
+  open: PropTypes.bool,
+  onToggle: PropTypes.func,
+  menuProps: PropTypes.object,
+  menuPosition: PropTypes.oneOf(['left', 'center', 'right']),
+  positionedButton: PropTypes.bool,
+  top: PropTypes.string,
+}
+
+DropdownMenu.Link = ({ href = '', className, icon, children, ...rest }) => (
   <a
     href={href}
-    role="menuitem"
     className={classNames(
       'k-DropdownMenu__menu__item',
       'k-DropdownMenu__menu__link',
       className,
     )}
     {...rest}
-  />
+  >
+    <IconWrapper icon={icon} />
+    <span>{children}</span>
+  </a>
 )
 
-DropdownMenu.Button = ({ type = 'button', className, ...rest }) => (
+DropdownMenu.Button = ({
+  type = 'button',
+  className,
+  icon,
+  children,
+  ...rest
+}) => (
   <button
     type={type}
-    role="menuitem"
     className={classNames(
       'k-DropdownMenu__menu__item',
       'k-DropdownMenu__menu__button',
@@ -303,7 +354,10 @@ DropdownMenu.Button = ({ type = 'button', className, ...rest }) => (
       className,
     )}
     {...rest}
-  />
+  >
+    <IconWrapper icon={icon} />
+    <span>{children}</span>
+  </button>
 )
 
 DropdownMenu.Separator = ({ className, ...rest }) => (
@@ -316,3 +370,9 @@ DropdownMenu.Separator = ({ className, ...rest }) => (
     {...rest}
   />
 )
+
+const IconWrapper = ({ icon }) => {
+  if (!icon) return null
+
+  return <span className="k-DropdownMenu__menu__item__iconWrapper">{icon}</span>
+}

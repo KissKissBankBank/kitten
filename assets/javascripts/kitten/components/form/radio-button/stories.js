@@ -29,6 +29,8 @@ export default {
     variant: 'orion',
     design: 'disc',
     children: null,
+    fontWeight: 'regular',
+    paragraphStyle: false,
   },
   argTypes: {
     error: {
@@ -70,13 +72,45 @@ export default {
       name: 'children',
       control: 'text',
     },
+    fontWeight: {
+      name: 'fontWeight',
+      options: ['light', 'regular', 'bold'],
+      control: 'inline-radio',
+    },
+    paragraphStyle: {
+      name: 'paragraphStyle',
+      control: 'boolean',
+    },
   },
 }
 
-export const RadioButtonSet = args => (
+export const Default = args => (
   <div>
     <RadioButton name="test" {...args} id="test_1" />
     <RadioButton name="test" {...args} id="test_2" />
     <RadioButton name="test" {...args} id="test_3" />
   </div>
 )
+
+export const RadioButtonsWithParagraph = args => (
+  <div>
+    <RadioButton name="test" {...args} id="test_1" />
+    <RadioButton name="test" {...args} id="test_2" />
+    <RadioButton name="test" {...args} id="test_3" />
+  </div>
+)
+
+RadioButtonsWithParagraph.args = {
+  onChange: action('change'),
+  error: false,
+  disabled: false,
+  large: false,
+  largeContent: false,
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  size: 'big',
+  variant: 'orion',
+  design: 'disc',
+  children: null,
+  fontWeight: 'light',
+  paragraphStyle: true,
+}

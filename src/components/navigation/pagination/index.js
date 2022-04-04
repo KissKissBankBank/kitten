@@ -6,27 +6,31 @@ exports.__esModule = true;
 exports.Pagination = void 0;
 exports.pages = pages;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _text = require("../../typography/text");
+
+var _button = require("../../action/button");
 
 var _arrowIcon = require("../../graphics/icons/arrow-icon");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _parser = require("../../../helpers/utils/parser");
-
-var _mediaQueries = require("../../../hoc/media-queries");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _useMediaQuery = require("../../../helpers/utils/use-media-query");
+
+var _mediaQueries = require("../../../helpers/utils/media-queries");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -35,7 +39,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var StyledNav = _styledComponents.default.nav.withConfig({
   displayName: "pagination__StyledNav",
   componentId: "sc-19bydjm-0"
-})([".Pagination__List{padding:0;display:inline-flex;}li{list-style:none;}.Pagination__ListItem{margin-right:0;@media (min-width:", "px){margin:", " ", ";}}.Pagination__ListItem__Points{text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}}.Pagination__ListItem__Points{text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}}.Pagination__ListItem__Arrow--direction-left{margin-right:", ";@media (min-width:", "px){margin-right:", ";}}.Pagination__ListItem__Arrow--direction-right{margin-left:", ";@media (min-width:", "px){margin-left:", ";}}.Pagination__Link{display:flex;justify-content:center;align-items:center;box-sizing:border-box;cursor:pointer;width:", ";height:", ";border-radius:0;border-width:0;border-style:solid;color:", ";border-color:var(--color-grey-400);background-color:", ";transition:background-color 0.2s ease,border-color 0.2s ease,color 0.2s ease;@media (min-width:", "px){width:", ";height:", ";border-width:var(--border-width);}&:hover,&:focus{color:", ";border-color:", ";background-color:", ";text-decoration:none;}&:active{color:", ";border-color:", ";background-color:", ";text-decoration:none;}&[aria-current='page']{cursor:auto;color:", ";border-color:", ";background-color:", ";&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}&[aria-disabled='true']{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}}.Pagination__ArrowIcon{align-self:center;margin:0;padding:0;pointer-events:none;color:inherit;fill:currentColor;}&.Pagination--noMargin .Pagination__List{margin:0;}&.Pagination--isAligned-left .Pagination__List{display:flex;justify-content:flex-start;}&.Pagination--isAligned-center .Pagination__List{display:flex;justify-content:center;}&.Pagination--isAligned-right .Pagination__List{display:flex;justify-content:flex-end;}"], _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), _colorsConfig.default.font1, _colorsConfig.default.background1, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2); // Returns an array with the given bounds
+})([".k-Pagination__List{padding:0;display:flex;gap:", ";}.k-Pagination__ListItem{list-style:none;flex-shrink:0;}.k-Pagination__ListItem__Ellipsis{text-align:center;align-self:center;width:", ";}.k-Pagination__ListItem__Arrow:first-child{margin-right:", ";}.k-Pagination__ListItem__Arrow:last-child{margin-left:", ";}&.k-Pagination--noMargin .k-Pagination__List{margin:0;}&.k-Pagination--left .k-Pagination__List{justify-content:flex-start;}&.k-Pagination--center .k-Pagination__List{justify-content:center;}&.k-Pagination--right .k-Pagination__List{justify-content:flex-end;}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(5)); // Returns an array with the given bounds
 
 
 var range = function range(start, end) {
@@ -67,7 +71,7 @@ function pages(min, max, currentPage, availableSlots) {
   return [min, null].concat(range(currentPage - sides, currentPage + sides), [null, max]);
 }
 
-var PaginationBase = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
+var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
   var prevButtonLabel = _ref2.prevButtonLabel,
       nextButtonLabel = _ref2.nextButtonLabel,
       goToPageLabel = _ref2.goToPageLabel,
@@ -77,16 +81,15 @@ var PaginationBase = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) 
       currentPage = _ref2.currentPage,
       totalPages = _ref2.totalPages,
       ariaLabelProp = _ref2['aria-label'],
-      viewportIsMOrLess = _ref2.viewportIsMOrLess,
       margin = _ref2.margin,
       align = _ref2.align,
       className = _ref2.className;
-  var size = viewportIsMOrLess ? 5 : 7;
+  var size = (0, _useMediaQuery.useMedia)({
+    queries: [(0, _mediaQueries.getMinQuery)(_screenConfig.ScreenConfig.L.min)],
+    values: [7],
+    defaultValue: 5
+  });
   var pageNumbers = pages(1, totalPages, currentPage, size);
-
-  var preventClickDefault = function preventClickDefault(e) {
-    return e.preventDefault();
-  };
 
   var pageClickHandler = function pageClickHandler(number) {
     return function (event) {
@@ -95,55 +98,67 @@ var PaginationBase = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) 
   };
 
   var renderPage = function renderPage(number, index) {
-    if (!number) return renderSpacer(index);
-    var isActive = number === currentPage;
-    var tag = isActive ? 'span' : 'a';
-    var href = isActive ? null : goToPageHref(number);
-    var ariaLabel = isActive ? currentPageLabel(number) : goToPageLabel(number);
+    if (!number) {
+      return /*#__PURE__*/_react.default.createElement("li", {
+        key: "ellipsis-" + index,
+        className: "k-Pagination__ListItem k-Pagination__ListItem__Ellipsis",
+        "aria-hidden": "true"
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+        size: "tiny",
+        weight: "regular"
+      }, "\u2026"));
+    }
+
+    var buttonProps = {
+      modifier: 'hydrogen',
+      tag: 'a',
+      href: goToPageHref(number),
+      'aria-label': goToPageLabel(number),
+      onClick: pageClickHandler(number)
+    };
+
+    if (number === currentPage) {
+      buttonProps = {
+        modifier: 'lithium',
+        tag: 'span',
+        title: currentPageLabel(number),
+        'aria-current': 'page'
+      };
+    }
+
     return /*#__PURE__*/_react.default.createElement("li", {
-      className: "Pagination__ListItem",
+      className: "k-Pagination__ListItem k-Pagination__ListItem__Link",
       key: "page-" + number
-    }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-      className: "Pagination__Link",
-      tag: tag,
-      href: href,
+    }, /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
       key: "link-" + number,
-      weight: "regular",
-      decoration: "none",
+      className: "k-Pagination__Link",
+      tabIndex: "0",
       size: "tiny",
-      "aria-current": isActive && 'page',
-      "aria-label": ariaLabel,
-      onClick: isActive ? null : pageClickHandler(number),
-      tabIndex: "0"
-    }, number));
+      fit: "icon"
+    }, buttonProps), number));
   };
 
-  var renderSpacer = function renderSpacer(index) {
-    return /*#__PURE__*/_react.default.createElement("li", {
-      key: "spacer-" + index,
-      className: "Pagination__ListItem__Points",
-      "aria-hidden": "true"
-    }, '…');
-  };
-
-  var renderArrowButton = function renderArrowButton(direction) {
+  var ArrowButton = function ArrowButton(_ref3) {
+    var direction = _ref3.direction;
     var buttonLabel = direction == 'left' ? (0, _parser.parseHtml)(prevButtonLabel) : (0, _parser.parseHtml)(nextButtonLabel);
     var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
     var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
     return /*#__PURE__*/_react.default.createElement("li", {
-      className: (0, _classnames.default)('Pagination__ListItem__Arrow', "Pagination__ListItem__Arrow--direction-" + direction)
-    }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-      className: "Pagination__Link",
-      tag: "a",
-      href: goToPageHref(number),
+      className: (0, _classnames.default)('k-Pagination__ListItem', 'k-Pagination__ListItem__Arrow')
+    }, /*#__PURE__*/_react.default.createElement(_button.Button, {
       key: "link-" + direction,
-      "aria-label": buttonLabel,
-      "aria-disabled": isDisabled,
+      className: "k-Pagination__Link",
+      tag: isDisabled ? 'span' : 'a',
+      href: goToPageHref(number),
       title: buttonLabel,
-      tabIndex: isDisabled ? -1 : null,
-      onClick: isDisabled ? preventClickDefault : pageClickHandler(number)
+      "aria-disabled": isDisabled || null,
+      tabIndex: 0,
+      onClick: isDisabled ? null : pageClickHandler(number),
+      disabled: isDisabled,
+      size: "tiny",
+      fit: "icon"
     }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-      className: "Pagination__ArrowIcon",
+      className: "k-Pagination__ArrowIcon",
       direction: direction,
       disabled: isDisabled,
       "aria-hidden": "true"
@@ -153,14 +168,19 @@ var PaginationBase = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) 
   return /*#__PURE__*/_react.default.createElement(StyledNav, {
     role: "navigation",
     "aria-label": ariaLabelProp,
-    className: (0, _classnames.default)('Pagination', className, "Pagination--isAligned-" + align, {
-      'Pagination--noMargin': !margin
+    className: (0, _classnames.default)('k-Pagination', className, "k-Pagination--" + align, {
+      'k-Pagination--noMargin': !margin
     })
   }, /*#__PURE__*/_react.default.createElement("ul", {
-    className: "Pagination__List"
-  }, renderArrowButton('left'), pageNumbers.map(renderPage), renderArrowButton('right')));
+    className: "k-Pagination__List"
+  }, /*#__PURE__*/_react.default.createElement(ArrowButton, {
+    direction: "left"
+  }), pageNumbers.map(renderPage), /*#__PURE__*/_react.default.createElement(ArrowButton, {
+    direction: "right"
+  })));
 });
-PaginationBase.propTypes = {
+exports.Pagination = Pagination;
+Pagination.propTypes = {
   prevButtonLabel: _propTypes.default.string,
   nextButtonLabel: _propTypes.default.string,
   goToPageLabel: _propTypes.default.func,
@@ -173,25 +193,22 @@ PaginationBase.propTypes = {
   margin: _propTypes.default.bool,
   align: _propTypes.default.oneOf([null, 'left', 'center', 'right'])
 };
-PaginationBase.defaultProps = {
-  prevButtonLabel: 'Previous page',
-  nextButtonLabel: 'Next page',
+Pagination.defaultProps = {
+  prevButtonLabel: 'Page précédente',
+  nextButtonLabel: 'Page suivante',
   goToPageLabel: function goToPageLabel(n) {
-    return "Go to page " + n;
+    return "Aller \xE0 la page " + n;
   },
   goToPageHref: function goToPageHref(n) {
     return "#" + n;
   },
   onPageClick: function onPageClick() {},
   currentPageLabel: function currentPageLabel(n) {
-    return "Page " + n + ", this is the current page";
+    return "Page " + n + ", il s\u2019agit de la page actuelle";
   },
   currentPage: 1,
   totalPages: 1,
-  'aria-label': 'Pagination navigation',
-  margin: true
+  'aria-label': 'Navigation dans la pagination',
+  margin: true,
+  align: 'center'
 };
-var Pagination = (0, _mediaQueries.mediaQueries)(PaginationBase, {
-  viewportIsMOrLess: true
-});
-exports.Pagination = Pagination;

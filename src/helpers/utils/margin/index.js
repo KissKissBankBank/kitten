@@ -1,7 +1,11 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 exports.__esModule = true;
 exports.default = void 0;
+
+var _capitalize = _interopRequireDefault(require("lodash/fp/capitalize"));
 
 var margin = function margin(options, asArray) {
   if (asArray === void 0) {
@@ -46,7 +50,9 @@ var generateClassName = function generateClassName(_ref) {
   }
 
   if (typeof value === 'number') {
-    outputValue = valuesNames[Math.floor(value)];
+    outputValue = value < 0 ? 'negative' : '';
+    var valueName = valuesNames[Math.abs(Math.floor(value))];
+    outputValue += value < 0 ? (0, _capitalize.default)(valueName) : valueName;
 
     if (value % 1 > 0) {
       outputValue += 'Half';
