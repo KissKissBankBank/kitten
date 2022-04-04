@@ -25,7 +25,7 @@ const StyledFlow = styled.div`
   @media ${mq.desktop} {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 35vw 20vw;
     gap: ${pxToRem(30)} 5vw;
   }
