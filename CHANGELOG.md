@@ -8,6 +8,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Replace `small` prop size default value.
   - Remove `nano` prop size value.
  
+## [9.6.0] - 2022-04-04
+
+Features:
+
+- `OpenLockIconNext`: New component.
+- `DashboardLayout`: Add the following subcomponents to `DashboardLayout.Flow`:
+  - `Title`
+  - `TitleAside`
+
+Fixes:
+
+- `LightbulbIllustration`: Fix colors.
+- `TextCopy`: Enhance className propagation.
+
 ## [9.5.0] - 2022-04-01
 
 Deprecation/Change:
