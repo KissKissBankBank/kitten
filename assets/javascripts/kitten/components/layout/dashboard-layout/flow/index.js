@@ -58,15 +58,17 @@ const StyledFlow = styled.div`
     }
   }
 
-  .k-DashboardLayout__flow__title {
-    grid-column: 1 / span 1;
-    align-self: center;
-  }
+  @media ${mq.desktop} {
+    .k-DashboardLayout__flow__title {
+      grid-column: 1 / span 1;
+      align-self: center;
+    }
 
-  .k-DashboardLayout__flow__titleAside {
-    grid-column: 2 / span 1;
-    align-self: center;
-    justify-self: end;
+    .k-DashboardLayout__flow__titleAside {
+      grid-column: 2 / span 1;
+      align-self: center;
+      justify-self: end;
+    }
   }
 
   .k-DashboardLayout__flow__nav {

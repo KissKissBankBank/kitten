@@ -92,21 +92,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   padding-bottom: 1.875rem;
 }
 
-.c0 .k-DashboardLayout__flow__title {
-  grid-column: 1 / span 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c0 .k-DashboardLayout__flow__titleAside {
-  grid-column: 2 / span 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  justify-self: end;
-}
-
 .c0 .k-DashboardLayout__flow__nav {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -198,6 +183,23 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   .c0 .k-DashboardLayout__flow__content {
     grid-column: 1 / 2;
     padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__title {
+    grid-column: 1 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .c0 .k-DashboardLayout__flow__titleAside {
+    grid-column: 2 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: end;
   }
 }
 
@@ -455,21 +457,6 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   padding-bottom: 1.875rem;
 }
 
-.c0 .k-DashboardLayout__flow__title {
-  grid-column: 1 / span 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.c0 .k-DashboardLayout__flow__titleAside {
-  grid-column: 2 / span 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  justify-self: end;
-}
-
 .c0 .k-DashboardLayout__flow__nav {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -561,6 +548,23 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   .c0 .k-DashboardLayout__flow__content {
     grid-column: 1 / 2;
     padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__title {
+    grid-column: 1 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .c0 .k-DashboardLayout__flow__titleAside {
+    grid-column: 2 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: end;
   }
 }
 
