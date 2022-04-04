@@ -29,6 +29,7 @@ import {
   LinkedinIconNext,
   LockOutlineIcon,
   MessengerIconNext,
+  OpenLockIconNext,
   PeopleIconNext,
   PlusIconNext,
   RefundIcon,
@@ -178,6 +179,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <LockOutlineIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <OpenLockIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <PeopleIconNext color={colorInput} />

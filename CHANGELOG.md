@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Fix: `Graphics`: 
   - Remplace `tiny` by `small` prop size value.
+- Feature: `OpenLockIconNext`: New component.
 
 ## [9.5.0] - 2022-04-01
 
