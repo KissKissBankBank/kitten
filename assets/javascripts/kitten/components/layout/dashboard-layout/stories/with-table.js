@@ -341,10 +341,10 @@ export const StoryWithTable = () => {
                 Text
               </Text>
             </div>
-            <Button modifier="boron" size="tiny" className="k-u-hidden@m-down">
+            <Button modifier="boron" size="small" className="k-u-hidden@m-down">
               Hello
             </Button>
-            <Button modifier="helium" size="tiny">
+            <Button modifier="helium" size="small">
               Hello
             </Button>
           </FlexWrapper>

@@ -78,19 +78,22 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -156,7 +159,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -208,7 +212,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   disabled={null}
   href="#helloWorld"
   style={
@@ -300,19 +304,22 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -378,7 +385,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -430,7 +438,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 }
 
 <input
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   disabled={null}
   style={
     Object {
@@ -520,19 +528,22 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -598,7 +609,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -650,7 +662,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": "0.25rem",
@@ -740,19 +752,22 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -818,7 +833,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -870,7 +886,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -960,19 +976,22 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1038,7 +1057,8 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1090,7 +1110,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--scandium k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--scandium k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1180,19 +1200,22 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1258,7 +1281,8 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1310,7 +1334,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--small k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1400,19 +1424,22 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1478,7 +1505,8 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1530,7 +1558,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 <a
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   disabled={null}
   href="#helloWorld"
   style={
@@ -1622,19 +1650,22 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -1700,7 +1731,8 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -1752,227 +1784,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-fluid"
-  style={
-    Object {
-      "--Button-border-radius": null,
-    }
-  }
-  type="button"
->
-  !
-</button>
-`;
-
-exports[`<Button /> with icon and big matches with snapshot 1`] = `
-.c0 {
-  --Button-border-radius: var(--border-radius-s);
-  position: relative;
-  box-sizing: border-box;
-  min-height: var(--Button-dimension);
-  padding: var(--Button-padding);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-grey-900,#222);
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  border-radius: var(--Button-border-radius,0);
-  min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
-}
-
-.c0.k-Button--rounded {
-  --Button-border-radius: var(--border-radius-rounded);
-}
-
-.c0 svg {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.c0:disabled,
-.c0.k-Button--disabled {
-  cursor: not-allowed;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0:focus-visible {
-  outline: auto;
-}
-
-.c0.k-Button--nano {
-  --Button-dimension: 1.25rem;
-  --Button-min-width: 6.25rem;
-  --Button-padding: 0 0.375rem;
-  font-size: 0.75rem;
-}
-
-.c0.k-Button--micro {
-  --Button-dimension: 1.875rem;
-  --Button-min-width: 8.125rem;
-  --Button-padding: 0.3125rem 0.625rem;
-  font-size: 0.75rem;
-}
-
-.c0.k-Button--tiny {
-  --Button-dimension: 2.5rem;
-  --Button-min-width: 10rem;
-  --Button-padding: 0.4375rem 1.25rem;
-}
-
-.c0.k-Button--regular {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c0.k-Button--big {
-  --Button-dimension: 3.125rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 1.875rem;
-}
-
-.c0.k-Button--huge {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c0.k-Button--giant {
-  --Button-dimension: 4.375rem;
-  --Button-min-width: 12.5rem;
-  --Button-padding: 0.625rem 0.625rem;
-}
-
-.c0.k-Button--fit-min-width {
-  min-width: var(--Button-min-width);
-}
-
-.c0.k-Button--fit-icon {
-  padding: 0;
-  overflow: hidden;
-  width: var(--Button-dimension);
-  height: var(--Button-dimension);
-}
-
-.c0.k-Button--fit-fluid {
-  width: 100%;
-}
-
-.c0 svg:not(.k-ColorSvg),
-.c0 svg:not(.k-ColorSvg) path {
-  fill: currentColor;
-  -webkit-transition: fill var(--transition);
-  transition: fill var(--transition);
-}
-
-.c0:hover {
-  border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c0:focus {
-  border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c0:active {
-  border-color: var(--color-primary-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
-}
-
-.c0:disabled,
-.c0.k-Button--disabled {
-  border: var(--border-width) solid var(--color-grey-400);
-  background-color: var(--color-grey-000);
-  color: var(--color-grey-600);
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--big {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 4.375rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--huge {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0.k-Button--giant {
-    --Button-min-width: 13.75rem;
-    --Button-dimension: 5.625rem;
-    --Button-padding: 0.625rem 2.5rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width:39.9375rem) {
-  .c0[class*='k-Button--mobile-fit'] {
-    min-width: initial !important;
-    padding: var(--Button-padding);
-    width: initial;
-    height: initial;
-    width: initial;
-  }
-
-  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
-    min-width: var(--Button-min-width) !important;
-  }
-
-  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
-    padding: 0;
-    overflow: hidden;
-    width: var(--Button-dimension);
-    height: var(--Button-dimension);
-  }
-
-  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
-    width: 100%;
-  }
-}
-
-<button
-  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2062,19 +1874,22 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2140,7 +1955,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2282,19 +2098,22 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2360,7 +2179,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2413,6 +2233,230 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 <button
   className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--fit-icon"
+  style={
+    Object {
+      "--Button-border-radius": null,
+    }
+  }
+  type="button"
+>
+  !
+</button>
+`;
+
+exports[`<Button /> with icon and large matches with snapshot 1`] = `
+.c0 {
+  --Button-border-radius: var(--border-radius-s);
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-grey-900,#222);
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c0.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c0 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c0:disabled,
+.c0.k-Button--disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:focus-visible {
+  outline: auto;
+}
+
+.c0.k-Button--nano {
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
+}
+
+.c0.k-Button--micro {
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.c0.k-Button--tiny,
+.c0.k-Button--small {
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c0.k-Button--regular,
+.c0.k-Button--medium {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--big,
+.c0.k-Button--large {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c0.k-Button--huge {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c0.k-Button--giant {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c0.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c0.k-Button--fit-icon {
+  padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
+}
+
+.c0.k-Button--fit-fluid {
+  width: 100%;
+}
+
+.c0 svg:not(.k-ColorSvg),
+.c0 svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
+}
+
+.c0:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:focus {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:active {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
+.c0:disabled,
+.c0.k-Button--disabled {
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--huge {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:39.9375rem) {
+  .c0[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
+  }
+}
+
+<button
+  className="c0 k-Button k-Button--large k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2502,19 +2546,22 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2580,7 +2627,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2644,7 +2692,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
+exports[`<Button /> with icon and small matches with snapshot 1`] = `
 .c0 {
   --Button-border-radius: var(--border-radius-s);
   position: relative;
@@ -2722,19 +2770,22 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -2800,7 +2851,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -2852,7 +2904,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -2942,19 +2994,22 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -3020,7 +3075,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -3072,7 +3128,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": null,
@@ -3162,19 +3218,22 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -3240,7 +3299,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -3292,7 +3352,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,
@@ -3387,19 +3447,22 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny {
+.c0.k-Button--tiny,
+.c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular {
+.c0.k-Button--regular,
+.c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big {
+.c0.k-Button--big,
+.c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -3465,7 +3528,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big {
+  .c0.k-Button--big,
+  .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -3517,7 +3581,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   style={
     Object {
       "--Button-border-radius": null,

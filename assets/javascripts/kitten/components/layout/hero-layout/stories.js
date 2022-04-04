@@ -226,11 +226,11 @@ export const Default = ({
                 </Button>
               </FlexWrapper>
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="regular" rounded>
+                <Button fit="content" size="medium" rounded>
                   <StarIconNext />
                   <span>Ajouter aux favoris</span>
                 </Button>
-                <Button fit="content" size="regular" modifier="helium" rounded>
+                <Button fit="content" size="medium" modifier="helium" rounded>
                   S’abonner
                 </Button>
               </FlexWrapper>
@@ -386,16 +386,16 @@ export const Default = ({
               </Text>
               <FlexWrapper direction="row" gap={10}>
                 <a href="#">
-                  <FacebookButtonIcon rounded size="tiny" />
+                  <FacebookButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <TwitterButtonIcon rounded size="tiny" />
+                  <TwitterButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <InstagramButtonIcon rounded size="tiny" />
+                  <InstagramButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <YoutubeButtonIcon rounded size="tiny" />
+                  <YoutubeButtonIcon rounded size="small" />
                 </a>
               </FlexWrapper>
             </div>
@@ -426,7 +426,7 @@ export const Default = ({
                 Contact
               </Text>
               <div>
-                <Button fit="content" rounded size="tiny">
+                <Button fit="content" rounded size="small">
                   <EnvelopeIcon />
                   <span>Nous écrire</span>
                 </Button>
