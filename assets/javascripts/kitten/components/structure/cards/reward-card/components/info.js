@@ -14,19 +14,19 @@ export const Info = ({
   return (
     <p
       className={classNames(
-        'k-BackingCard__info',
+        'k-RewardCard__info',
         'k-u-size-tiny',
         'k-u-line-height-normal',
         className,
         {
-          'k-BackingCard__halfDrawer': !fullWidth,
-          'k-BackingCard__drawer': fullWidth,
+          'k-RewardCard__halfDrawer': !fullWidth,
+          'k-RewardCard__drawer': fullWidth,
         },
       )}
       {...props}
     >
       <Text
-        className="k-BackingCard__info__legend"
+        className="k-RewardCard__info__legend"
         weight="regular"
         size="tiny"
         lineHeight="normal"
@@ -34,7 +34,7 @@ export const Info = ({
         {legend}
       </Text>{' '}
       <Text
-        className="k-BackingCard__info__value"
+        className="k-RewardCard__info__value"
         weight="light"
         size="tiny"
         lineHeight="normal"

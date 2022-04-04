@@ -5,8 +5,8 @@ export const TagList = ({ className, ...props }) => {
   return (
     <ul
       className={classNames(
-        'k-BackingCard__tagList',
-        'k-BackingCard__drawer',
+        'k-RewardCard__tagList',
+        'k-RewardCard__drawer',
         className,
       )}
       {...props}
