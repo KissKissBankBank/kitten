@@ -14,7 +14,7 @@ exports[`<HorizontalCrowdfundingCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <h3
-    className="k-u-size-tiny k-u-weight-regular k-HorizontalCrowdfundingCard__title"
+    className="k-u-size-small k-u-weight-regular k-HorizontalCrowdfundingCard__title"
   >
     Custom title
   </h3>
@@ -80,7 +80,7 @@ exports[`<HorizontalCrowdfundingCard /> with noProgress prop matches with snapsh
     />
   </div>
   <h3
-    className="k-u-size-tiny k-u-weight-regular k-HorizontalCrowdfundingCard__title"
+    className="k-u-size-small k-u-weight-regular k-HorizontalCrowdfundingCard__title"
   >
     Custom title
   </h3>

@@ -407,7 +407,7 @@ export const DocumentsDropUploader = ({
             <Text
               tag="label"
               htmlFor={id}
-              size="tiny"
+              size="small"
               weight="regular"
               className="k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
             >
