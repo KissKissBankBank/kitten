@@ -251,7 +251,7 @@ export const InACarouselComponent = ({ truncateTitle }) => {
         hidePagination
         showOtherPages
         loop
-        tinyButtons
+        smallButtons
       >
         <BackingCard stretch as="button" className="k-u-reset-button">
           <BackingCard.Image id="one_such_ID" className="hellowORLD">
