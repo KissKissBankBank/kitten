@@ -6,12 +6,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Change/Deprecation: `Typography`: 
   - Replace `tiny, regular, default, big` by `small, medium, large` prop size values.
-- Feature: `OpenLockIconNext`: New component.
-- Feature: `DashboardLayout`: Add the following subcomponents to `DashboardLayout.Flow`:
+
+## [9.6.0] - 2022-04-04
+
+Features:
+
+- `OpenLockIconNext`: New component.
+- `DashboardLayout`: Add the following subcomponents to `DashboardLayout.Flow`:
   - `Title`
   - `TitleAside`
-- Fix: `LightbulbIllustration`: Fix colors.
-- Fix: `TextCopy`: Better className propagation.
+
+Fixes:
+
+- `LightbulbIllustration`: Fix colors.
+- `TextCopy`: Enhance className propagation.
 
 ## [9.5.0] - 2022-04-01
 
