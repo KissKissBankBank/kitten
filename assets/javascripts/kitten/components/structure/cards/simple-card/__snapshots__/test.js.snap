@@ -69,7 +69,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
       }
     >
       <span
-        className="k-u-color-background1 k-u-size-default k-u-weight-regular"
+        className="k-u-color-background1 k-u-size-medium k-u-weight-regular"
       >
         ►
       </span>

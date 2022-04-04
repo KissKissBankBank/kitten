@@ -141,7 +141,7 @@ export const HorizontalCrowdfundingCard = ({
       </div>
       <Text
         weight="regular"
-        size="tiny"
+        size="small"
         as={titleTag}
         className="k-HorizontalCrowdfundingCard__title"
       >

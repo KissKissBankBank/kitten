@@ -323,7 +323,7 @@ export const Toggletip = ({
             className={classNames(
               'k-Toggletip__bubble',
               'k-u-weight-light',
-              'k-u-size-tiny',
+              'k-u-size-small',
               'k-u-line-height-1-3',
               bubbleClassName,
               {

@@ -8,7 +8,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     className="sc-bdvvtL bFaRXD"
   >
     <span
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-regular"
     >
       Backer name
     </span>
@@ -46,7 +46,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     className="sc-bdvvtL bFaRXD"
   >
     <span
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-regular"
     >
       Backer name
       <span

@@ -16,7 +16,7 @@ export default {
   decorators: [story => <div className="story-Container">{story()}</div>],
 
   args: {
-    size: 'default',
+    size: 'medium',
     modifier: null,
     customSize: null,
     color: COLORS.font1,
@@ -25,7 +25,7 @@ export default {
   argTypes: {
     size: {
       name: 'size',
-      options: ['micro', 'tiny', 'default', 'big', 'huge'],
+      options: ['micro', 'small', 'medium', 'large', 'huge'],
       control: 'select',
     },
     modifier: {

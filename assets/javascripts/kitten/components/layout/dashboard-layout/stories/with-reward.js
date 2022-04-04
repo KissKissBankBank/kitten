@@ -47,7 +47,7 @@ const RewardCardComponent = ({
       <img alt="" {...imageProps} />
     </SummaryCard.Image>
     <SummaryCard.Cell name="title" aria-describedby="RewardSummaryList-title">
-      <Text weight="bold" size="tiny">
+      <Text weight="bold" size="small">
         {title}
       </Text>
       {!!star && <SummaryCard.TitleTag text="Contrepartie star" />}
@@ -56,20 +56,20 @@ const RewardCardComponent = ({
       name="amount"
       aria-describedby="SummaryList-ownerContribution-amount"
     >
-      <Text size="tiny">{amount}</Text>
+      <Text size="small">{amount}</Text>
     </SummaryCard.Cell>
     <SummaryCard.Cell
       name="contribution"
       aria-describedby="SummaryList-ownerContribution-contribution"
     >
-      <Text size="tiny">{contribution}</Text>
+      <Text size="small">{contribution}</Text>
     </SummaryCard.Cell>
     <SummaryCard.Cell
       className="k-u-hidden@xs-down"
       name="availability"
       aria-describedby="SummaryList-ownerContribution-availability"
     >
-      <Text size="tiny">{availability}</Text>
+      <Text size="small">{availability}</Text>
     </SummaryCard.Cell>
     <SummaryCard.Cell name="last-stretch">
       <DropdownMenu

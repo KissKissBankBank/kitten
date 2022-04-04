@@ -43,7 +43,7 @@ const StyledSideCard = styled.div`
 const Title = ({ className, ...props }) => {
   return (
     <Text
-      size="tiny"
+      size="small"
       tag="h3"
       weight="bold"
       color="font1"
