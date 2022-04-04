@@ -26,7 +26,7 @@ describe('SocialButtonIcon', () => {
   describe('<FacebookButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<FacebookButtonIcon size="tiny">Facebook</FacebookButtonIcon>)
+        .create(<FacebookButtonIcon size="small">Facebook</FacebookButtonIcon>)
         .toJSON()
     })
 
@@ -49,7 +49,7 @@ describe('SocialButtonIcon', () => {
   describe('<TwitterButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TwitterButtonIcon size="tiny">Twitter</TwitterButtonIcon>)
+        .create(<TwitterButtonIcon size="small">Twitter</TwitterButtonIcon>)
         .toJSON()
     })
 
@@ -72,7 +72,7 @@ describe('SocialButtonIcon', () => {
   describe('<LinkedinButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<LinkedinButtonIcon size="tiny">Linkedin</LinkedinButtonIcon>)
+        .create(<LinkedinButtonIcon size="small">Linkedin</LinkedinButtonIcon>)
         .toJSON()
     })
 
@@ -96,7 +96,7 @@ describe('SocialButtonIcon', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <InstagramButtonIcon size="tiny">Instagram</InstagramButtonIcon>,
+          <InstagramButtonIcon size="small">Instagram</InstagramButtonIcon>,
         )
         .toJSON()
     })
@@ -120,7 +120,7 @@ describe('SocialButtonIcon', () => {
   describe('<YoutubeButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<YoutubeButtonIcon size="tiny">Youtube</YoutubeButtonIcon>)
+        .create(<YoutubeButtonIcon size="small">Youtube</YoutubeButtonIcon>)
         .toJSON()
     })
 

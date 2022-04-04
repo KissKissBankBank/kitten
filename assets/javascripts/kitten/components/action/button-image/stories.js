@@ -19,14 +19,14 @@ export default {
   ],
   argTypes: {
     tag: { control: 'text' },
-    size: { control: 'radio', options: ['tiny', 'regular', 'big', 'huge'] },
+    size: { control: 'radio', options: ['small', 'medium', 'large', 'huge'] },
     withoutPointerEvents: { control: 'boolean' },
     withBorder: { control: 'boolean' },
     img: { control: 'object' },
   },
   args: {
     tag: 'button',
-    size: 'regular',
+    size: 'medium',
     withoutPointerEvents: false,
     withBorder: false,
     img: {

@@ -12,6 +12,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `trigger-enhancer` HOC
 - Change/Deprecation: `Typography`:
   - Replace `tiny, regular, default, big` by `small, medium, large` prop size values.
+- Change/Deprecation: 
+  - Replace `tiny, regular, default, big` by `small, medium, large` 
+    prop size values to the following components:
+  - `Action`,
+  - `Typography`,
+  - `Form`
 
 ## [9.6.0] - 2022-04-04
 

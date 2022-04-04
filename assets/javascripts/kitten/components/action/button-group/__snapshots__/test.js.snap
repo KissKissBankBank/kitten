@@ -78,19 +78,22 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c1.k-Button--tiny {
+.c1.k-Button--tiny,
+.c1.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c1.k-Button--regular {
+.c1.k-Button--regular,
+.c1.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c1.k-Button--big {
+.c1.k-Button--big,
+.c1.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -232,19 +235,22 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c2.k-Button--tiny {
+.c2.k-Button--tiny,
+.c2.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c2.k-Button--regular {
+.c2.k-Button--regular,
+.c2.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c2.k-Button--big {
+.c2.k-Button--big,
+.c2.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
@@ -356,7 +362,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c1.k-Button--big {
+  .c1.k-Button--big,
+  .c1.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -408,7 +415,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c2.k-Button--big {
+  .c2.k-Button--big,
+  .c2.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
     --Button-padding: 0.625rem 2.5rem;
@@ -464,7 +472,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonGroup__button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -475,7 +483,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--regular k-Button--lithium k-Button--fit-min-width"
+    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--medium k-Button--lithium k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,
@@ -486,7 +494,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--regular k-Button--hydrogen k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonGroup__button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,

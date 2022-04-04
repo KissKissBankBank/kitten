@@ -157,7 +157,7 @@ const TextWithImages = () => (
           </StyledGrid>
 
           <Marger top="4" className="k-u-hidden@s-up">
-            <Button as="a" href="#" modifier="helium" size="big" fit="fluid">
+            <Button as="a" href="#" modifier="helium" size="large" fit="fluid">
               Vous aussi, rejoignez-nous
             </Button>
           </Marger>

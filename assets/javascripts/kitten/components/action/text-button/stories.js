@@ -20,11 +20,11 @@ export default {
   ],
   argTypes: {
     children: { control: 'text' },
-    size: { control: 'radio', options: ['normal', 'big'] },
+    size: { control: 'radio', options: ['medium', 'large'] },
   },
   args: {
     children: 'Hello world',
-    size: 'normal',
+    size: 'medium',
   },
 }
 
