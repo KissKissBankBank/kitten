@@ -226,7 +226,7 @@ export const BasicUploader = ({
               tag="p"
               weight="regular"
               color={internalStatus === 'error' ? 'error' : 'font1'}
-              size="tiny"
+              size="small"
               lineHeight="normal"
               className="k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
             >

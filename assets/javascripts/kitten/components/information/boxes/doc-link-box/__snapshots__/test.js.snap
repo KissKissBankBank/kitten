@@ -67,7 +67,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
       className="k-LinkBox__textContainer"
     >
       <span
-        className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        className="k-u-line-height-normal k-u-size-small k-u-weight-regular"
       />
       <span
         className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -168,7 +168,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
       className="k-LinkBox__textContainer"
     >
       <span
-        className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        className="k-u-line-height-normal k-u-size-small k-u-weight-regular"
       >
         title
       </span>

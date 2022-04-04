@@ -108,7 +108,7 @@ const TextWithImage = ({ imagePosition }) => (
                 tag="p"
                 weight="regular"
                 fontStyle="italic"
-                size="tiny"
+                size="small"
                 lineHeight="normal"
                 style={{ margin: '0 0 0 15px' }}
               >

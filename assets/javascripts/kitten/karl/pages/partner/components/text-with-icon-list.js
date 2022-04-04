@@ -44,7 +44,7 @@ const TextWithIconList = () => (
           </Marger>
 
           <Marger bottom="4" className="k-u-hidden@m-down">
-            <HorizontalStroke size="big" customSize={{ height: 6 }} />
+            <HorizontalStroke size="large" customSize={{ height: 6 }} />
           </Marger>
 
           <Marger top="4" className="k-u-hidden@m-down">
