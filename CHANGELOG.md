@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add the following components:
+  - `ChatLayout`
+  - `Discussion`
+  - `MessagesMenu`
+
 ## [9.5.0] - 2022-04-01
 
 Deprecation/Change:

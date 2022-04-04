@@ -44,6 +44,8 @@ const StyledMessagesMenu = styled.ul`
     padding-inline: ${pxToRem(15)} ${pxToRem(10)};
     transition: background-color var(--transition);
     border-radius: var(--border-radius-m);
+
+    outline-offset: ${pxToRem(-2)};
   }
 
   .k-MessagesMenu__message__avatar {

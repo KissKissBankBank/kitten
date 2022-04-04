@@ -301,7 +301,7 @@ export { LinkBox } from './components/information/boxes/link-box'
 export { CommentAvatar } from './components/interaction/comment-block/comment-avatar'
 export { CommentForm } from './components/interaction/comment-block/comment-form'
 export { Comment } from './components/interaction/comment-block/comment'
-
+export { Discussion } from './components/interaction/discussion'
 export { DragAndDropList } from './components/interaction/drag-and-drop-list'
 export {
   StepperIcon,

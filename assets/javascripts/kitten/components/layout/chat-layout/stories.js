@@ -1,28 +1,45 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 import { ChatLayout } from './index'
 import {
+  // Layout-specific components
+  MessagesMenu,
+  Discussion,
+  // Other components
+  ArrowIcon,
+  FlexWrapper,
   HeaderNav,
   KissKissBankBankLogo,
-  pxToRem,
-  FlexWrapper,
-  Text,
-  ArrowIcon,
   mq,
-  MessagesMenu,
+  pxToRem,
+  Separator,
+  Text,
 } from 'kitten'
 
 const StyledChatBox = styled.div`
   background-color: var(--color-grey-000);
-  border: var(--border-width) solid var(--color-grey-300);
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border-radius: var(--border-radius-l);
+  padding: ${pxToRem(20)};
 
   display: flex;
-  align-items: center;
+  gap: ${pxToRem(20)};
+  flex-direction: column;
   justify-content: center;
+
+  @media ${mq.desktop} {
+    padding: ${pxToRem(20)} ${pxToRem(25)} ${pxToRem(25)};
+    border: var(--border-width) solid var(--color-grey-300);
+    border-radius: var(--border-radius-l);
+  }
+
+  .k-Discussion {
+    flex: 1 0 calc(100% - ${pxToRem(32 + 20 + 1 + 20)});
+    max-height: calc(100% - ${pxToRem(32 + 20 + 1 + 20)});
+  }
 `
 
 const StyledImg = styled.img`
@@ -36,6 +53,7 @@ const StyledImg = styled.img`
 
 const StyledInfoBlock = styled.div`
   display: block;
+  box-sizing: border-box;
   width: 100%;
   background-color: var(--color-grey-000);
   display: flex;
@@ -195,6 +213,7 @@ const discussions = [
 
 export const Default = args => {
   const [activeDiscussion, setActiveDiscussion] = useState(discussions[1])
+  const [inputValue, setInputValue] = useState('')
 
   return (
     <>
@@ -294,10 +313,116 @@ export const Default = args => {
           }
         >
           <StyledChatBox>
-            <div className="k-u-hidden@m-down">
-              {<DiscussionTitleElement {...activeDiscussion} />}
-            </div>
-            Discussion avec {activeDiscussion.longName}
+            <DiscussionTitleElement
+              {...activeDiscussion}
+              className="k-u-hidden@m-down"
+            />
+
+            <Separator className="k-u-hidden@m-down" />
+
+            <Discussion>
+              <p className="k-u-a11y-visuallyHidden">
+                Les messages de la discussion sont dans l’ordre
+                antéchronologique : le premier message de la liste est le plus
+                récent.
+              </p>
+              <Discussion.List>
+                <Discussion.Message>
+                  <Discussion.Message.Avatar src={activeDiscussion.avatar} />
+                  <Discussion.Message.Header>
+                    <Text weight="regular" lineHeight="1">
+                      {activeDiscussion.longName}
+                    </Text>
+                    <Text
+                      weight="light"
+                      lineHeight="1"
+                      size="micro"
+                      color="grey-600"
+                    >
+                      &nbsp;•&nbsp;Hier{' '}
+                      <span className="k-u-a11y-visuallyHidden">à </span>18:30
+                    </Text>
+                  </Discussion.Message.Header>
+                  <Discussion.Message.Content>
+                    Donec sed odio dui. Nullam id dolor id nibh ultricies
+                    vehicula ut id elit. Maecenas faucibus mollis interdum.
+                    Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi
+                    leo risus, porta ac consectetur ac, vestibulum at eros. Sed
+                    posuere consectetur est at lobortis.
+                  </Discussion.Message.Content>
+                </Discussion.Message>
+                <Discussion.Message>
+                  <Discussion.Message.Avatar src="/kitten-0.jpg" />
+                  <Discussion.Message.Header>
+                    <Text weight="regular" lineHeight="1">
+                      Moi
+                    </Text>
+                    <Text
+                      weight="light"
+                      lineHeight="1"
+                      size="micro"
+                      color="grey-600"
+                    >
+                      &nbsp;•&nbsp;Hier{' '}
+                      <span className="k-u-a11y-visuallyHidden">à </span>10:00
+                    </Text>
+                  </Discussion.Message.Header>
+                  <Discussion.Message.Content>
+                    Nullam quis risus eget urna mollis ornare vel eu leo. Nulla
+                    vitae elit libero, a pharetra augue.
+                  </Discussion.Message.Content>
+                </Discussion.Message>
+                <Discussion.Message>
+                  <Discussion.Message.Avatar src={activeDiscussion.avatar} />
+                  <Discussion.Message.Header>
+                    <Text weight="regular" lineHeight="1">
+                      {activeDiscussion.longName}
+                    </Text>
+                    <Text
+                      weight="light"
+                      lineHeight="1"
+                      size="micro"
+                      color="grey-600"
+                    >
+                      &nbsp;•&nbsp;Avant-Hier{' '}
+                      <span className="k-u-a11y-visuallyHidden">à </span>19:30
+                    </Text>
+                  </Discussion.Message.Header>
+                  <Discussion.Message.Content>
+                    Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                    mattis consectetur purus sit amet fermentum. Integer posuere
+                    erat a ante venenatis dapibus posuere velit aliquet.
+                    Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Integer posuere erat a ante venenatis
+                    dapibus posuere velit aliquet. Vestibulum id ligula porta
+                    felis euismod semper. Vestibulum id ligula porta felis
+                    euismod semper.
+                  </Discussion.Message.Content>
+                </Discussion.Message>
+              </Discussion.List>
+              <Discussion.Form
+                onSubmit={e => {
+                  e.preventDefault()
+                  action('Form submit')(e)
+                }}
+                inputProps={{
+                  'aria-label': 'Texte à envoyer',
+                  placeholder: 'Envoyer un message',
+                  value: inputValue,
+                  onChange: e => {
+                    setInputValue(e.target.value)
+                  },
+                }}
+                buttonProps={{
+                  'aria-label': 'Envoyer',
+                  onClick: e => {
+                    action('Click envoyer')(e)
+                    setInputValue('')
+                  },
+                  disabled: inputValue.length < 1,
+                }}
+              />
+            </Discussion>
           </StyledChatBox>
         </ChatLayout.Column>
         <ChatLayout.Column

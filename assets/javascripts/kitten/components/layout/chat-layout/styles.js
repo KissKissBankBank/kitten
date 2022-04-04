@@ -112,9 +112,8 @@ export const StyledChatLayout = styled.div`
         height: calc(100% - ${pxToRem(100)});
       }
 
-      .k-ChatLayout__column:not(.k-ChatLayout__column--isPrimaryColumn)
-        .k-ChatLayout__column__content {
-        padding-top: ${pxToRem(100)};
+      .k-ChatLayout__column:not(.k-ChatLayout__column--isPrimaryColumn) {
+        margin-top: ${pxToRem(100)};
       }
     }
   }

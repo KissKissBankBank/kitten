@@ -72,6 +72,7 @@ ChatLayout.Column = ({
           'k-ChatLayout__column--hasMobileHeader': hasMobileHeader,
         },
       )}
+      tabIndex="-1"
       {...props}
     >
       {isPrimaryColumn && (
