@@ -4,11 +4,12 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 
 import COLORS from '../../../../constants/colors-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { mq } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { LightbulbIllustration as Lightbulb } from '../../../graphics/illustrations/lightbulb-illustration'
 import { Loader } from '../../../graphics/animations/loader'
 import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
+import { Title as KittenTitle } from '../../../typography/title'
 
 import { SideCard } from './side-card'
 import { MobileAside } from './side-modal'
@@ -19,13 +20,14 @@ const StyledFlow = styled.div`
   flex-direction: column;
   align-items: stretch;
   min-height: 100%;
+  gap: ${pxToRem(20)};
 
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+  @media ${mq.desktop} {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 35vw 20vw;
-    gap: 0 5vw;
+    gap: ${pxToRem(30)} 5vw;
   }
 
   &:not(.k-DashboardLayout__flow--isLoading) {
@@ -44,17 +46,27 @@ const StyledFlow = styled.div`
   .k-DashboardLayout__flow__content {
     flex: 1 0 100%;
     background-color: ${COLORS.background1};
-    padding-top: ${pxToRem(50)};
-    padding-bottom: ${pxToRem(50)};
+    padding-bottom: ${pxToRem(30)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding-top: ${pxToRem(80)};
+    @media ${mq.tabletAndDesktop} {
+      padding-top: 0;
     }
 
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    @media ${mq.desktop} {
       grid-column: 1 / 2;
       padding-bottom: ${pxToRem(20)};
     }
+  }
+
+  .k-DashboardLayout__flow__title {
+    grid-column: 1 / span 1;
+    align-self: center;
+  }
+
+  .k-DashboardLayout__flow__titleAside {
+    grid-column: 2 / span 1;
+    align-self: center;
+    justify-self: end;
   }
 
   .k-DashboardLayout__flow__nav {
@@ -62,7 +74,7 @@ const StyledFlow = styled.div`
     background-color: ${COLORS.background1};
     width: 100%;
 
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    @media ${mq.desktop} {
       grid-column: 1 / 2;
       bottom: 0;
       position: sticky;
@@ -90,7 +102,7 @@ const StyledFlow = styled.div`
     gap: ${pxToRem(20)};
     margin: ${pxToRem(20)} 0;
 
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    @media ${mq.desktop} {
       gap: ${pxToRem(40)};
       margin: ${pxToRem(20)} 0 ${pxToRem(30)};
     }
@@ -112,7 +124,7 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__nav:not(.k-DashboardLayout__flow__nav--twoButtons) {
     .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
-      @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      @media ${mq.mobile} {
         grid-column: 1 / span 2;
         justify-self: stretch;
         max-width: 100%;
@@ -121,7 +133,7 @@ const StyledFlow = styled.div`
   }
 
   .k-DashboardLayout__flow__aside {
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    @media ${mq.desktop} {
       grid-column: 2 / 3;
     }
   }
@@ -135,7 +147,7 @@ const StyledFlow = styled.div`
       margin-bottom: ${pxToRem(20)};
     }
 
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    @media ${mq.mobileAndTablet} {
       display: none;
     }
   }
@@ -152,6 +164,25 @@ const Content = ({ className, ...props }) => {
     <section
       {...props}
       className={classNames('k-DashboardLayout__flow__content', className)}
+    />
+  )
+}
+
+const Title = ({ className, ...props }) => {
+  return (
+    <KittenTitle
+      noMargin
+      {...props}
+      className={classNames('k-DashboardLayout__flow__title', className)}
+    />
+  )
+}
+
+const TitleAside = ({ className, ...props }) => {
+  return (
+    <div
+      {...props}
+      className={classNames('k-DashboardLayout__flow__titleAside', className)}
     />
   )
 }
@@ -232,6 +263,8 @@ Flow.propTypes = {
   loaderComponent: PropTypes.node,
 }
 
+Flow.Title = Title
+Flow.TitleAside = TitleAside
 Flow.Content = Content
 Flow.Nav = Nav
 Flow.Aside = Aside
