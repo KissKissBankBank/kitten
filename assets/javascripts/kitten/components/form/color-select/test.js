@@ -41,7 +41,7 @@ describe('<ColorSelect />', () => {
               '--color-primary-900': '#003885',
             }}
           >
-            <Text size="tiny">Rendu&nbsp;:</Text>
+            <Text size="small">Rendu&nbsp;:</Text>
             <Button
               modifier="helium"
               rounded

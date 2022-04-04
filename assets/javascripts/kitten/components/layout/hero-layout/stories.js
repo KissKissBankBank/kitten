@@ -261,7 +261,7 @@ export const Default = ({
                 tag="h3"
                 weight="bold"
                 transform="uppercase"
-                size="tiny"
+                size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
               >
                 Pourquoi s’abonner&nbsp;?
@@ -275,13 +275,13 @@ export const Default = ({
                   />
                 }
               >
-                <Text size="default" className="k-u-line-height-1-25">
+                <Text size="medium" className="k-u-line-height-1-25">
                   Contribuez à faire vivre ce projet
                 </Text>
-                <Text size="default" className="k-u-line-height-1-25">
+                <Text size="medium" className="k-u-line-height-1-25">
                   Recevez un contenu exclusif
                 </Text>
-                <Text size="default" className="k-u-line-height-1-25">
+                <Text size="medium" className="k-u-line-height-1-25">
                   Faites partie du cercle privilégié d’abonnés
                 </Text>
               </List>
@@ -297,7 +297,7 @@ export const Default = ({
                 tag="h3"
                 weight="bold"
                 transform="uppercase"
-                size="tiny"
+                size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
               >
                 Comment ça marche&nbsp;?

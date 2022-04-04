@@ -255,7 +255,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
         }
       >
         <span
-          className="k-u-size-tiny k-u-weight-light"
+          className="k-u-size-small k-u-weight-light"
         >
           Rendu :
         </span>

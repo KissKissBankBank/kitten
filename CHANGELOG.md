@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Change/Deprecation: `Action`: 
-  - Replace `tiny, regular, default, big` by `small, medium, large` prop size values.
+- Change/Deprecation: 
+  - Replace `tiny, regular, default, big` by `small, medium, large` 
+    prop size values to the following components:
+  - `Action`
+  - `Typography`
 
 ## [9.6.0] - 2022-04-04
 

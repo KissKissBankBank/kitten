@@ -122,7 +122,7 @@ export const Pagination = forwardRef(
             className="k-Pagination__ListItem k-Pagination__ListItem__Ellipsis"
             aria-hidden="true"
           >
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               …
             </Text>
           </li>

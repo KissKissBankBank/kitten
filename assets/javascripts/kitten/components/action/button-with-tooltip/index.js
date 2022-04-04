@@ -118,7 +118,7 @@ export const ButtonWithTooltip = ({
           tooltipProps?.className,
         )}
       >
-        <Text size="tiny" color="font1" weight="regular">
+        <Text size="small" color="font1" weight="regular">
           {tooltipText}
         </Text>
       </ArrowContainer>

@@ -79,7 +79,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
         <div>
           <Text
             weight="light"
-            size="default"
+            size="medium"
             tag="div"
             className="k-u-margin-top-single k-u-margin-right-double"
           >
