@@ -44,7 +44,7 @@ export const WithInput = args => {
 }
 WithInput.args = {
   id: 'input',
-  size: 'regular',
+  size: 'medium',
   label: 'Label',
   tooltip: null,
   tooltipProps: { actionLabel: 'Learn more' },
@@ -60,7 +60,7 @@ WithInput.argTypes = {
   id: { control: 'text' },
   size: {
     control: 'select',
-    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+    options: ['small', 'medium', 'large', 'huge', 'giant'],
   },
   label: { control: 'text' },
   tooltip: { control: 'text' },
