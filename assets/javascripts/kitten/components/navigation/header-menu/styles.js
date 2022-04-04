@@ -148,7 +148,8 @@ export const StyledList = styled.ul`
     }
   }
 
-  .k-HeaderMenu__item--tiny {
+  .k-HeaderMenu__item--tiny,
+  .k-HeaderMenu__item--small {
     .k-HeaderMenu__item__link {
       height: auto;
       padding-top: 0;
@@ -173,7 +174,8 @@ export const StyledList = styled.ul`
     }
   }
 
-  .k-HeaderMenu__item--big {
+  .k-HeaderMenu__item--big,
+  .k-HeaderMenu__item--large {
     .k-HeaderMenu__item__link {
       height: ${pxToRem(70)};
       padding: ${pxToRem(28)} ${pxToRem(21)} ${pxToRem(28)} ${pxToRem(40)};

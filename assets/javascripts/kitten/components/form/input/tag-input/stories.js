@@ -50,7 +50,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+      options: ['small', 'medium', 'large', 'huge', 'giant'],
       control: 'select',
     },
     addEventKeys: {

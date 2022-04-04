@@ -2,11 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
 import { computeFromRatio } from '../../../../helpers/utils/ratio'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 const DEFAULT_WIDTH = 8
 const DEFAULT_HEIGHT = 8
 
 export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
+  checkDeprecatedSizes(size)
+  
   const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
@@ -14,7 +17,7 @@ export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
     height,
   })
 
-  if (size === 'big') {
+  if (size === 'large') {
     return (
       <svg
         width="24"
@@ -60,10 +63,10 @@ CrossIcon.prototype = {
   title: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  size: PropTypes.oneOf(['normal', 'big']),
+  size: PropTypes.oneOf(['medium', 'large']),
 }
 
 CrossIcon.defaultProps = {
   color: COLORS.font1,
-  size: 'normal',
+  size: 'medium',
 }

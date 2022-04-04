@@ -80,7 +80,7 @@ export default {
     deactivateDropdown: false,
     menuZIndex: 1000,
     hideIconOnMobile: false,
-    size: 'normal',
+    size: 'medium',
   },
   argTypes: {
     id: { control: 'string' },
@@ -106,7 +106,7 @@ export default {
     hideIconOnMobile: { control: 'boolean' },
     size: {
       control: 'select',
-      options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+      options: ['small', 'medium', 'large', 'huge', 'giant'],
     },
   },
 }

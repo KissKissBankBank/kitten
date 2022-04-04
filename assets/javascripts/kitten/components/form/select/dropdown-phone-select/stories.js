@@ -56,7 +56,7 @@ export default {
     },
     locale: 'fr',
     flagsUrl: flagFile,
-    size: 'normal',
+    size: 'medium',
     defaultCountry: '',
     value: '',
     inputProps: {},
@@ -114,7 +114,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['tiny', 'normal', 'big', 'huge', 'giant'],
+      options: ['small', 'medium', 'large', 'huge', 'giant'],
       control: 'select',
     },
     defaultCountry: {

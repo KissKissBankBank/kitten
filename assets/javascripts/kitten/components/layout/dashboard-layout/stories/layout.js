@@ -165,7 +165,7 @@ export const StoryLayout = ({
             className="k-u-hidden@m-down"
             src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
             alt=""
-            size="big"
+            size="large"
           />
 
           <AvatarWithTextAndBadge.Text
