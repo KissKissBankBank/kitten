@@ -19,7 +19,7 @@ describe('<CloseButton />', () => {
   describe('with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<CloseButton size="tiny" aria-label="close" />)
+        .create(<CloseButton size="small" aria-label="close" />)
         .toJSON()
     })
 

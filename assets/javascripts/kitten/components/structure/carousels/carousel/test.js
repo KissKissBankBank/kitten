@@ -76,7 +76,7 @@ describe('<Carousel />', () => {
         <Carousel
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
-          tinyButtons={false}
+          smallButtons={false}
         >
           {data.map((item, index) => (
             <CrowdfundingCard {...item} key={index} />

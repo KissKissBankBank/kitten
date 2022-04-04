@@ -20,12 +20,12 @@ export default {
     ),
   ],
   args: {
-    size: 'default',
+    size: 'medium',
   },
   argTypes: {
     size: {
       name: 'size',
-      options: ['tiny', 'default', 'big', 'huge'],
+      options: ['small', 'medium', 'large', 'huge'],
       control: 'radio',
     },
   },

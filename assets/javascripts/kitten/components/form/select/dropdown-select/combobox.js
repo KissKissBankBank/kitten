@@ -7,6 +7,7 @@ import classNames from 'classnames'
 import { WarningCircleIcon } from '../../../graphics/icons/warning-circle-icon'
 import { CheckedCircleIcon } from '../../../graphics/icons/checked-circle-icon'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import find from 'lodash/fp/find'
 import flow from 'lodash/fp/flow'
 import uniqBy from 'lodash/fp/uniqBy'
@@ -56,6 +57,7 @@ export const DropdownCombobox = ({
   labelProps,
   inputProps,
 }) => {
+  checkDeprecatedSizes(size)
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
 
@@ -275,7 +277,7 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
-  size: 'normal',
+  size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: item => `${item} is now selected.`,
@@ -302,7 +304,7 @@ DropdownCombobox.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
-  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,

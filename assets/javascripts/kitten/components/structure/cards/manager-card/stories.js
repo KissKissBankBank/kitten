@@ -75,7 +75,7 @@ export const Default = args => (
         <Text
           tag="p"
           weight="bold"
-          size="big"
+          size="large"
           className="k-u-line-height-1 k-u-margin-none k-u-clamp-1 k-u-clamp-2@xs-down"
         >
           Owner Contribution vel augue laoreet rutrum faucibus dolor auctor.

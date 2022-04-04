@@ -537,7 +537,7 @@ const Actions = ({
 
 const ModalButton = props => (
   <Button
-    size="big"
+    size="large"
     fit="fluid"
     {...props}
     className={classNames('k-ModalNext__buttons', props.className)}
@@ -709,7 +709,7 @@ const InnerModal = ({
                   <CloseButton
                     modifier="hydrogen"
                     onClick={close}
-                    size="regular"
+                    size="medium"
                     closeButtonLabel={closeButtonLabel}
                     aria-labelledby={
                       !!headerMessage ? 'ModalHeaderMessage' : null
@@ -722,7 +722,7 @@ const InnerModal = ({
                 {headerTitle ? (
                   headerTitle
                 ) : (
-                  <Text size="tiny" color="font1" weight="regular">
+                  <Text size="small" color="font1" weight="regular">
                     {fullSizeTitle}
                   </Text>
                 )}

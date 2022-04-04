@@ -31,7 +31,7 @@ export const Default = () => {
         statusProps={{ title: 'Étape validée' }}
       >
         <VerticalStepper.Title>ÉTAPE 1</VerticalStepper.Title>
-        <Text weight="light" size="tiny" lineHeight="normal">
+        <Text weight="light" size="small" lineHeight="normal">
           Décrivez-nous votre projet
           <VerticalStepper.Link>Modifier</VerticalStepper.Link>
         </Text>
@@ -43,7 +43,7 @@ export const Default = () => {
         statusProps={{ title: 'Étape complétée' }}
       >
         <VerticalStepper.Title>ÉTAPE 2</VerticalStepper.Title>
-        <Text weight="light" size="tiny" lineHeight="normal">
+        <Text weight="light" size="small" lineHeight="normal">
           Créez votre projet (nom, durée, ...)
         </Text>
       </VerticalStepper.Step>
@@ -52,7 +52,7 @@ export const Default = () => {
 
       <VerticalStepper.Step error statusProps={{ title: 'Étape à commencer' }}>
         <VerticalStepper.Title>ÉTAPE 3</VerticalStepper.Title>
-        <Text weight="light" size="tiny" lineHeight="normal">
+        <Text weight="light" size="small" lineHeight="normal">
           Préparez votre campagne (contenu de votre page, contreparties...)
         </Text>
       </VerticalStepper.Step>
@@ -64,7 +64,7 @@ export const Default = () => {
       >
         <VerticalStepper.Title>ÉTAPE 4</VerticalStepper.Title>
 
-        <Text weight="light" size="tiny" lineHeight="normal">
+        <Text weight="light" size="small" lineHeight="normal">
           Soumettez votre projet (votre coach vérifie votre projet et vous
           conseille)
         </Text>

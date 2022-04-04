@@ -33,7 +33,7 @@ const Item = ({ numItem }) => (
       </Marger>
 
       <Marger top="2" bottom="3">
-        <HorizontalStroke size="big" style={{ background: '#FFF' }} />
+        <HorizontalStroke size="large" style={{ background: '#FFF' }} />
       </Marger>
 
       <Marger top="3" bottom="3">
