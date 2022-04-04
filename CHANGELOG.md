@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: `Form`: 
-  - Remplace `tiny, regular, default, big` by `small, medium, large` prop size values.
+Change/Deprecation: `Form`: 
+  - Replace `tiny, regular, default, big` by `small, medium, large` prop size values.
 
 ## [9.5.0] - 2022-04-01
 
