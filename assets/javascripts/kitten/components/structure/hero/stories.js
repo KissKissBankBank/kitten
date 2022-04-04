@@ -17,8 +17,8 @@ const argTypes = {
     options: ['left', 'right'],
     control: 'select',
   },
-  tiny: {
-    name: 'tiny',
+  small: {
+    name: 'small',
     control: 'boolean',
   },
   imageSrc: {

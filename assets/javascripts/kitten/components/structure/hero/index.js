@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import { Container } from '../../layout/container'
 import { Grid, GridCol } from '../../layout/grid'
 import { mq } from '../../../constants/screen-config'
@@ -124,7 +125,8 @@ const StyledHero = styled(
     }
   }
 
-  &.k-Hero--tiny {
+  &.k-Hero--tiny,
+  &.k-Hero--small {
     @media ${mq.desktop} {
       .k-Hero__contentGridCol {
         padding-bottom: ${(1 / 2 / NUM_COLUMNS) * 100 + 'vw'};
@@ -140,6 +142,7 @@ const StyledHero = styled(
 export const Hero = ({
   direction,
   tiny,
+  small,
   imageSrc,
   contentBackgroundColor,
   contentColor,
@@ -154,6 +157,7 @@ export const Hero = ({
       `k-Hero--direction-${direction}`,
       {
         'k-Hero--tiny': tiny,
+        'k-Hero--small': small,
       },
     )}
     backgroundColor={contentBackgroundColor}
@@ -174,7 +178,8 @@ export const Hero = ({
 
 Hero.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
-  tiny: PropTypes.bool,
+  tiny: deprecated(PropTypes.bool, 'Please use `small` instead'),
+  small: PropTypes.bool,
   imageSrc: PropTypes.string,
   contentBackgroundColor: PropTypes.string,
   contentColor: PropTypes.string,
@@ -182,7 +187,7 @@ Hero.propTypes = {
 
 Hero.defaultProps = {
   direction: 'left',
-  tiny: false,
+  small: false,
   imageSrc: '',
   contentBackgroundColor: COLORS.font1,
   contentColor: COLORS.background1,

@@ -39,7 +39,7 @@ const HeaderWithBackground = ({ backgroundImage }) => (
             <Marger className="k-u-align-center k-u-margin-top-quadruple">
               <Button
                 tag="a"
-                size="big"
+                size="large"
                 modifier="helium"
                 href="#"
                 target="_blank"

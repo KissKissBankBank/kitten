@@ -187,7 +187,7 @@ ProjectCard.Progress = ({ className, value, ...props }) => {
       <Progress value={value} {...props} />
       <Text
         weight="bold"
-        size="tiny"
+        size="small"
         lineHeight="1"
         className="k-u-hidden@xs-down k-ProjectCard__progress__text"
       >

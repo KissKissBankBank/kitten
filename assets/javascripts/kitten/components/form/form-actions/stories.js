@@ -18,10 +18,10 @@ export const Default = () => {
   return (
     <FormActions>
       <FormActions.Item>
-        <Button size="big">Cancel</Button>
+        <Button size="large">Cancel</Button>
       </FormActions.Item>
       <FormActions.Item>
-        <Button size="big" modifier="helium">
+        <Button size="large" modifier="helium">
           Confirm
         </Button>
       </FormActions.Item>

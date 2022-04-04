@@ -22,6 +22,7 @@ import {
   CONTAINER_MAX_WIDTH,
 } from '../../../constants/grid-config'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 
@@ -85,7 +86,8 @@ const GlobalStyle = createGlobalStyle`
       --Modal-wrapperMaxWidth: ${pxToRem(CONTAINER_MAX_WIDTH)};
     }
 
-    &.k-ModalNext__content--big {
+    &.k-ModalNext__content--big,
+    &.k-ModalNext__content--large {
       --Modal-colNumber: 8;
 
       @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
@@ -535,7 +537,7 @@ const Actions = ({
 
 const ModalButton = props => (
   <Button
-    size="big"
+    size="large"
     fit="fluid"
     {...props}
     className={classNames('k-ModalNext__buttons', props.className)}
@@ -621,6 +623,8 @@ const InnerModal = ({
   headerZIndex,
   ...others
 }) => {
+  checkDeprecatedSizes(size)
+  
   const [{ show }, dispatch] = useContext(ModalContext)
   const close = () => {
     dispatch(updateState(false))
@@ -705,7 +709,7 @@ const InnerModal = ({
                   <CloseButton
                     modifier="hydrogen"
                     onClick={close}
-                    size="regular"
+                    size="medium"
                     closeButtonLabel={closeButtonLabel}
                     aria-labelledby={
                       !!headerMessage ? 'ModalHeaderMessage' : null
@@ -718,7 +722,7 @@ const InnerModal = ({
                 {headerTitle ? (
                   headerTitle
                 ) : (
-                  <Text size="tiny" color="font1" weight="regular">
+                  <Text size="small" color="font1" weight="regular">
                     {fullSizeTitle}
                   </Text>
                 )}
@@ -810,7 +814,7 @@ Modal.propTypes = {
   fullSizeOnMobile: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
-  size: PropTypes.oneOf(['regular', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['medium', 'large', 'huge', 'giant']),
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   fullSizeTitle: deprecated(PropTypes.string, 'Please use `headerTitle`.'),
@@ -830,7 +834,7 @@ Modal.defaultProps = {
   fullSizeOnMobile: false,
   modalProps: {},
   hasCloseButton: true,
-  size: 'regular',
+  size: 'medium',
   isOpen: false,
   zIndex: 110,
   headerTitle: null,

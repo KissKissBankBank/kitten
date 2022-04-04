@@ -115,7 +115,7 @@ const ModalEditProject = () => {
                       <div className="k-u-align-left">
                         <Text
                           tag="p"
-                          size="tiny"
+                          size="small"
                           color="font1"
                           lineHeight="normal"
                           className="k-u-margin-none"
@@ -132,7 +132,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="tiny" color="font1">
+                            <Text weight="bold" size="small" color="font1">
                               Don libre récurrent
                               <Text
                                 tag="p"
@@ -155,7 +155,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="tiny" color="font1">
+                            <Text weight="bold" size="small" color="font1">
                               Abonnement contre contrepartie
                               <Text
                                 tag="p"
@@ -175,7 +175,7 @@ const ModalEditProject = () => {
                       as="span"
                       modifier="helium"
                       fit="content"
-                      size="tiny"
+                      size="small"
                       className="k-ModalEditProject--button"
                     >
                       Créer
@@ -211,7 +211,7 @@ const ModalEditProject = () => {
                       <div className="k-u-align-left">
                         <Text
                           tag="p"
-                          size="tiny"
+                          size="small"
                           color="font1"
                           lineHeight="normal"
                           className="k-u-margin-none"
@@ -227,7 +227,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="tiny" color="font1">
+                            <Text weight="bold" size="small" color="font1">
                               Don libre
                               <Text
                                 tag="p"
@@ -250,7 +250,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="tiny" color="font1">
+                            <Text weight="bold" size="small" color="font1">
                               Don contre contrepartie
                               <Text
                                 tag="p"
@@ -273,7 +273,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="tiny" color="font1">
+                            <Text weight="bold" size="small" color="font1">
                               Précommande
                               <Text
                                 tag="p"
@@ -293,7 +293,7 @@ const ModalEditProject = () => {
                       as="span"
                       modifier="helium"
                       fit="content"
-                      size="tiny"
+                      size="small"
                       className="k-ModalEditProject--button"
                     >
                       Créer

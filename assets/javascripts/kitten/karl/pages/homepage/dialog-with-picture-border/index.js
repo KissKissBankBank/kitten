@@ -152,7 +152,7 @@ export const DialogWithPictureBorder = () => {
               className="DialogWithPictureBorder__buttonWidthSetter"
               ref={button_1}
             >
-              <Button modifier="hydrogen" size="big" fit="fluid">
+              <Button modifier="hydrogen" size="large" fit="fluid">
                 Lancez votre projet
               </Button>
             </span>
@@ -160,7 +160,7 @@ export const DialogWithPictureBorder = () => {
               className="DialogWithPictureBorder__buttonWidthSetter"
               ref={button_2}
             >
-              <Button modifier="helium" size="big" fit="fluid">
+              <Button modifier="helium" size="large" fit="fluid">
                 Découvrez nos valeurs
               </Button>
             </span>

@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = `
 <div
-  className="sc-gsDKAQ gDTtCf k-Form-Dropdown k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--normal k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
+  className="sc-gsDKAQ bxuBfX k-Form-Dropdown k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--medium k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -10,7 +10,7 @@ exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = 
   }
 >
   <label
-    className="sc-bdvvtL cmZlKQ k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--normal"
+    className="sc-bdvvtL ikmzYA k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-Label--small"
     htmlFor="dropdown-select-test_2"
     id="dropdown-select-test_2_element-label"
     onClick={[Function]}

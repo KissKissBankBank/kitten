@@ -122,7 +122,7 @@ export const Pagination = forwardRef(
             className="k-Pagination__ListItem k-Pagination__ListItem__Ellipsis"
             aria-hidden="true"
           >
-            <Text size="tiny" weight="regular">
+            <Text size="small" weight="regular">
               …
             </Text>
           </li>
@@ -155,7 +155,7 @@ export const Pagination = forwardRef(
             key={`link-${number}`}
             className="k-Pagination__Link"
             tabIndex="0"
-            size="tiny"
+            size="small"
             fit="icon"
             {...buttonProps}
           >
@@ -200,7 +200,7 @@ export const Pagination = forwardRef(
             tabIndex={0}
             onClick={isDisabled ? null : pageClickHandler(number)}
             disabled={isDisabled}
-            size="tiny"
+            size="small"
             fit="icon"
           >
             <ArrowIcon

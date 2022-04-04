@@ -193,7 +193,7 @@ export const ColorSelect = ({
         />
         <TextInput
           {...inputProps}
-          size="tiny"
+          size="small"
           center
           as={forwardRef((
             props,

@@ -13,7 +13,7 @@ export default {
   ],
   args: {
     type: 'info',
-    size: 'regular',
+    size: 'medium',
     variant: 'light',
     children: '5 contributors',
   },
@@ -25,7 +25,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['regular', 'small'],
+      options: ['small', 'medium'],
       control: 'radio',
     },
     variant: {
@@ -44,77 +44,77 @@ export const AllVariants = () => {
   return (
     <>
       <div>
-        <Tag variant="status" type="info" size="regular">
+        <Tag variant="status" type="info" size="medium">
           Abonnement
         </Tag>
       </div>
       <div>
-        <Tag variant="light" type="info" size="regular">
+        <Tag variant="light" type="info" size="medium">
           Abonnement
         </Tag>
       </div>
       <div>
-        <Tag variant="dark" type="info" size="regular">
+        <Tag variant="dark" type="info" size="medium">
           Abonnement
         </Tag>
       </div>
       <div>
-        <Tag variant="status" type="success" size="regular">
+        <Tag variant="status" type="success" size="medium">
           Validée
         </Tag>
       </div>
       <div>
-        <Tag variant="light" type="success" size="regular">
+        <Tag variant="light" type="success" size="medium">
           Validée
         </Tag>
       </div>
       <div>
-        <Tag variant="dark" type="success" size="regular">
+        <Tag variant="dark" type="success" size="medium">
           Validée
         </Tag>
       </div>
       <div>
-        <Tag variant="status" type="error" size="regular">
+        <Tag variant="status" type="error" size="medium">
           Échoué
         </Tag>
       </div>
       <div>
-        <Tag variant="light" type="error" size="regular">
+        <Tag variant="light" type="error" size="medium">
           Échoué
         </Tag>
       </div>
       <div>
-        <Tag variant="dark" type="error" size="regular">
+        <Tag variant="dark" type="error" size="medium">
           Échoué
         </Tag>
       </div>
       <div>
-        <Tag variant="status" type="warning" size="regular">
+        <Tag variant="status" type="warning" size="medium">
           En pause
         </Tag>
       </div>
       <div>
-        <Tag variant="light" type="warning" size="regular">
+        <Tag variant="light" type="warning" size="medium">
           En pause
         </Tag>
       </div>
       <div>
-        <Tag variant="dark" type="warning" size="regular">
+        <Tag variant="dark" type="warning" size="medium">
           En pause
         </Tag>
       </div>
       <div>
-        <Tag variant="status" type="disabled" size="regular">
+        <Tag variant="status" type="disabled" size="medium">
           Don libre
         </Tag>
       </div>
       <div>
-        <Tag variant="light" type="disabled" size="regular">
+        <Tag variant="light" type="disabled" size="medium">
           Don libre
         </Tag>
       </div>
       <div>
-        <Tag variant="dark" type="disabled" size="regular">
+        <Tag variant="dark" type="disabled" size="medium">
           Don libre
         </Tag>
       </div>

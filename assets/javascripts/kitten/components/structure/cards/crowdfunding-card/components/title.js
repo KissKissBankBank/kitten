@@ -73,7 +73,7 @@ class TitleComponent extends PureComponent {
               <Text
                 tag="span"
                 color="font1"
-                size="default"
+                size="medium"
                 weight="bold"
                 lineHeight="normal"
                 className="k-Card__title"
@@ -88,7 +88,7 @@ class TitleComponent extends PureComponent {
           {!loading && (
             <div className="k-CrowdfundingCard__title__dayCounter">
               <Text
-                size="tiny"
+                size="small"
                 color="font1"
                 weight="regular"
                 lineHeight="normal"

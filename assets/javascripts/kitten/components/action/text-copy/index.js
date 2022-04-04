@@ -99,6 +99,7 @@ export const TextCopy = ({
   buttonText,
   buttonModifier,
   size,
+  className,
 }) => {
   const [isMessageVisible, setMessageVisibility] = useState(false)
   const textElement = useRef(null)
@@ -131,7 +132,7 @@ export const TextCopy = ({
 
   return (
     <Wrapper
-      className={classNames('k-TextCopy', 'k-u-reset-button')}
+      className={classNames('k-TextCopy', 'k-u-reset-button', className)}
       type="button"
       onClick={copyText}
     >
@@ -181,7 +182,7 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
 }
 
 TextCopy.defaultProps = {
@@ -191,5 +192,5 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
-  size: 'regular',
+  size: 'medium',
 }
