@@ -88,7 +88,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     className="k-BackingCard__gridWrapper"
   >
     <span
-      className="sc-dkPtRN gHrgjH k-Tag k-BackingCard__headingTag k-Tag--info k-Tag--regular k-Tag--dark"
+      className="sc-dkPtRN gHrgjH k-Tag k-BackingCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
     >
       <svg
         height="13"
@@ -169,7 +169,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__tagList k-BackingCard__drawer"
     >
       <li
-        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--regular k-Tag--status"
+        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-regular"
@@ -180,7 +180,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
         contributeurs
       </li>
       <li
-        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--regular k-Tag--status"
+        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-regular"
@@ -193,7 +193,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-gsDKAQ itJLEU k-Button k-BackingCard__button k-BackingCard__drawer k-Button--regular k-Button--helium k-Button--fit-content k-Button--disabled"
+    className="sc-gsDKAQ dcifNb k-Button k-BackingCard__button k-BackingCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {

@@ -27,7 +27,7 @@ export const Default = () => {
     <VerticalProgress withoutBorder>
       <VerticalProgress.Step statusType="actions" progressTitle="Brouillon">
         <div className="k-u-margin-top-singleHalf k-u-margin-bottom-double">
-          <Text weight="light" size="tiny" lineHeight="normal">
+          <Text weight="light" size="small" lineHeight="normal">
             Une fois les informations suivantes renseignées, vous pourrez
             envoyer votre projet à un coach qui vous conseillera sur les
             amélioration à apporter à votre campagne.
@@ -41,7 +41,7 @@ export const Default = () => {
           href="#"
         >
           <LinkBox.Text>
-            <Text size="tiny" weight="light" lineHeight="normal">
+            <Text size="small" weight="light" lineHeight="normal">
               <strong>Paramètres - </strong>Titre du projet, Catégorie
               principale, Montant de l’objectif, Type d’objectif …
             </Text>
@@ -55,7 +55,7 @@ export const Default = () => {
           href="#"
         >
           <LinkBox.Text>
-            <Text size="tiny" weight="light" lineHeight="normal">
+            <Text size="small" weight="light" lineHeight="normal">
               <strong>Page projet - </strong>Slogan de votre projet
             </Text>
           </LinkBox.Text>
@@ -63,7 +63,7 @@ export const Default = () => {
 
         <LinkBox backgroundColor="#fef1e7" textColor="#222" href="#">
           <LinkBox.Text>
-            <Text size="tiny" weight="light" lineHeight="normal">
+            <Text size="small" weight="light" lineHeight="normal">
               <strong>Admin - </strong>Lieu de naissance
             </Text>
           </LinkBox.Text>
@@ -80,7 +80,7 @@ export const Default = () => {
         progressTitle="En cours de vérification"
       >
         <div className="k-u-margin-top-singleHalf">
-          <Text weight="light" size="tiny" lineHeight="normal">
+          <Text weight="light" size="small" lineHeight="normal">
             Votre coach est en train de parcourir votre projet. Il le validera
             ou vous enverra ses suggestions d'améliorations par mail sous 2
             jours ouvrés maximum.
@@ -93,7 +93,7 @@ export const Default = () => {
         progressTitle="Prêt à être partagé"
       >
         <div className="k-u-margin-top-singleHalf">
-          <Text weight="light" size="tiny" lineHeight="normal">
+          <Text weight="light" size="small" lineHeight="normal">
             Partagez au plus vite votre projet à un coach pour recevoir des
             conseils pour améliorer votre campagne par mail.
           </Text>

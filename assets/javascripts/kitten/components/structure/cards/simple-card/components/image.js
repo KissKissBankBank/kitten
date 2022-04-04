@@ -35,7 +35,7 @@ export const Image = ({
           }}
         >
           <Text
-            size="default"
+            size="medium"
             weight="regular"
             color={arrowColor}
             aria-label={ariaLabel}

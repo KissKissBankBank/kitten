@@ -68,7 +68,7 @@ export const TeamCardButtonWithTooltip = ({
 
     <Button
       fit="icon"
-      size="tiny"
+      size="small"
       modifier="hydrogen"
       tag="span"
       aria-label={phoneNumber}

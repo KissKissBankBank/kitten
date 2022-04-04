@@ -14,7 +14,7 @@ const args = {
   modifier: 'hydrogen',
   rounded: false,
   disabled: false,
-  size: 'regular',
+  size: 'medium',
   tag: undefined,
   children: 'My Button',
   fit: 'min-width',

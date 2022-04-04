@@ -63,14 +63,16 @@ exports[`<TagButton /> with \`active\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
 }
 
-.c0.k-Buttons__tagButton--tiny {
+.c0.k-Buttons__tagButton--tiny,
+.c0.k-Buttons__tagButton--small {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.75rem;
 }
 
-.c0.k-Buttons__tagButton--big {
+.c0.k-Buttons__tagButton--big,
+.c0.k-Buttons__tagButton--large {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
@@ -104,7 +106,7 @@ exports[`<TagButton /> with \`active\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--regular k-Buttons__tagButton--active"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--medium k-Buttons__tagButton--active"
   type="button"
 >
   MyButton
@@ -174,14 +176,16 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
 }
 
-.c0.k-Buttons__tagButton--tiny {
+.c0.k-Buttons__tagButton--tiny,
+.c0.k-Buttons__tagButton--small {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.75rem;
 }
 
-.c0.k-Buttons__tagButton--big {
+.c0.k-Buttons__tagButton--big,
+.c0.k-Buttons__tagButton--large {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
@@ -285,14 +289,16 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   color: var(--color-grey-900,#222);
 }
 
-.c0.k-Buttons__tagButton--tiny {
+.c0.k-Buttons__tagButton--tiny,
+.c0.k-Buttons__tagButton--small {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.75rem;
 }
 
-.c0.k-Buttons__tagButton--big {
+.c0.k-Buttons__tagButton--big,
+.c0.k-Buttons__tagButton--large {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
@@ -326,7 +332,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--regular"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--medium"
   type="button"
 >
   MyButton

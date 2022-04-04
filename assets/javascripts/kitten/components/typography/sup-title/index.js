@@ -3,7 +3,7 @@ import { Text } from '../../typography/text'
 
 export const SupTitle = props => (
   <Text
-    size="tiny"
+    size="small"
     lineHeight="normal"
     transform="uppercase"
     weight="bold"

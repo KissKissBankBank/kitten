@@ -18,11 +18,11 @@ describe('<CheckableButton />', () => {
     })
   })
 
-  describe('with `tiny` prop', () => {
+  describe('with `small` prop', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <CheckableButton isChecked size="tiny">
+          <CheckableButton isChecked size="small">
             MyCheckableButton
           </CheckableButton>,
         )
@@ -34,11 +34,11 @@ describe('<CheckableButton />', () => {
     })
   })
 
-  describe('with `big` prop', () => {
+  describe('with `large` prop', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <CheckableButton isChecked size="big">
+          <CheckableButton isChecked size="large">
             MyCheckableButton
           </CheckableButton>,
         )

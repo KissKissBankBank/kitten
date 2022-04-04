@@ -182,7 +182,7 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
 }
 
 TextCopy.defaultProps = {
@@ -192,5 +192,5 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
-  size: 'regular',
+  size: 'medium',
 }

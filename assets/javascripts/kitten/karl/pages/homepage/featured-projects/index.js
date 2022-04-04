@@ -111,7 +111,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess }) => (
         itemMinWidth={viewportIsXSOrLess ? 250 : 490}
         baseItemMarginBetween={10}
         paginationPosition={{ default: 'bottom' }}
-        tinyButtons
+        smallButtons
         showPageSquares
         preferCompletePaginationOnMobile
         loop

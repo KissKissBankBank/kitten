@@ -174,7 +174,7 @@ export const StoryWithFlow = ({
         <Text
           weight="light"
           cssColor={COLORS.font3}
-          size="tiny"
+          size="small"
           className="k-u-hidden@xs-down"
           style={{ alignSelf: 'center' }}
         >

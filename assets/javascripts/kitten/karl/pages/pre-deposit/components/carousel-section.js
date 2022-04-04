@@ -91,7 +91,7 @@ const CarouselSection = () => (
               )}
             >
               <HorizontalStroke
-                size="default"
+                size="medium"
                 className="PreDeposit__carousel__stroke"
               />
               <Title
