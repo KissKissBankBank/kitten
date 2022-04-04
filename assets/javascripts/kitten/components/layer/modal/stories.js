@@ -47,7 +47,7 @@ const StoryContent = ({ content }) => (
     </Marger>
 
     <Marger top="4" bottom="10">
-      <Button modifier="helium" size="big">
+      <Button modifier="helium" size="large">
         Action 1 Button
       </Button>
     </Marger>

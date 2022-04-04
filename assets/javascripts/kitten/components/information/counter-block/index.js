@@ -92,7 +92,7 @@ export const CounterBlock = ({
       )}
       <FlexContainer>
         <StrokeContainer className="k-u-hidden@m-down">
-          <HorizontalStroke className="styledStroke" size="big" />
+          <HorizontalStroke className="styledStroke" size="large" />
         </StrokeContainer>
         {isString(counter) ? (
           <Text
@@ -109,7 +109,7 @@ export const CounterBlock = ({
         )}
 
         <StrokeContainer className="k-u-hidden@m-down">
-          <HorizontalStroke className="styledStroke" size="big" />
+          <HorizontalStroke className="styledStroke" size="large" />
         </StrokeContainer>
       </FlexContainer>
       {isString(subTitle) ? (

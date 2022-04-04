@@ -72,7 +72,7 @@ const KeySection = () => (
           ]}
         />
         <Marger className="PreDeposit__keySection__button k-u-margin-top-quadruple">
-          <Button modifier="helium" size="big">
+          <Button modifier="helium" size="large">
             Je lance mon projet
           </Button>
         </Marger>

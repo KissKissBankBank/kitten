@@ -34,7 +34,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
           <Text
             style={{ margin: 0 }}
             tag="h1"
-            size="tiny"
+            size="small"
             weight="bold"
             transform="uppercase"
             lineHeight="normal"
@@ -43,7 +43,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
           </Text>
         )}
         {subText && (
-          <Text weight="light" size="tiny" lineHeight="normal">
+          <Text weight="light" size="small" lineHeight="normal">
             {parseHtml(subText)}
           </Text>
         )}
@@ -62,7 +62,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
         modifier="helium"
         fit="content"
         mobileFit="icon"
-        size="tiny"
+        size="small"
       >
         <UsersIconNext />
         <span className="k-u-hidden@s-up k-u-a11y-visuallyHidden">

@@ -6,6 +6,7 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
@@ -56,14 +57,16 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
   }
 
-  &.k-Buttons__tagButton--tiny {
+  &.k-Buttons__tagButton--tiny,
+  &.k-Buttons__tagButton--small {
     min-height: ${pxToRem(30)};
     min-width: ${pxToRem(60)};
     padding: 0 ${pxToRem(20)};
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Buttons__tagButton--big {
+  &.k-Buttons__tagButton--big,
+  &.k-Buttons__tagButton--large {
     min-height: ${pxToRem(50)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
@@ -101,9 +104,6 @@ export const TagButton = ({
   children,
   selected,
   active,
-  tiny,
-  big,
-  huge,
   className,
   size,
   tag,
@@ -111,6 +111,8 @@ export const TagButton = ({
   ...props
 }) => {
   const others = (({ modifier, icon, ...rest }) => rest)(props)
+  
+  checkDeprecatedSizes(size)
 
   return (
     <StyledTagButton
@@ -132,7 +134,7 @@ export const TagButton = ({
 }
 
 TagButton.propTypes = {
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   active: PropTypes.bool,
   icon: deprecated(PropTypes.bool, 'Icon is not implemented anymore.'),
   modifier: deprecated(
@@ -144,6 +146,6 @@ TagButton.propTypes = {
 
 TagButton.defaultProps = {
   children: 'Tag',
-  size: 'regular',
+  size: 'medium',
   active: false,
 }
