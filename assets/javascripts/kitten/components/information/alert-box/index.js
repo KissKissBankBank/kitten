@@ -178,10 +178,12 @@ export const AlertBox = ({
 
   const iconSize = (() => {
     switch(size) {
-      case 'large' || 'big':
-        return 'medium' || 'normal'
-      case 'medium' || 'normal':
-        return 'small' || 'tiny'
+      case 'large':
+      case 'big':
+        return 'medium'
+      case 'medium':
+      case 'normal':
+        return 'small'
       case 'small':
         return 'micro'
     }
