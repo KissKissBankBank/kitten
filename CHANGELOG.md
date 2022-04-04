@@ -10,7 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Action`,
   - `Typography`,
   - `Form`,
-  - `Graphics`
+  - `Graphics`,
+  - `Information`
 
 ## [9.6.0] - 2022-04-04
 
