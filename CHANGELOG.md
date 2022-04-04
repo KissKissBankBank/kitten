@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `Label`: 
+  - Replace `small` prop size default value.
+  - Remove `nano` prop size value.
 - Change/Deprecation: 
   - Replace `tiny, regular, default, big` by `small, medium, large` 
     prop size values to the following folders:
