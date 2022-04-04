@@ -30,24 +30,24 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
   content: '';
 }
 
-.c0.k-BulletList--tiny .k-BulletList__item {
+.c0.k-BulletList--micro .k-BulletList__item {
   font-size: 0.75rem;
 }
 
-.c0.k-BulletList--tiny .k-BulletList__item:before {
+.c0.k-BulletList--micro .k-BulletList__item:before {
   width: 0.25rem;
   height: 0.25rem;
 }
 
-.c0.k-BulletList--regular .k-BulletList__item {
+.c0.k-BulletList--small .k-BulletList__item {
   font-size: 0.875rem;
 }
 
-.c0.k-BulletList--large .k-BulletList__item {
+.c0.k-BulletList--medium .k-BulletList__item {
   font-size: 1rem;
 }
 
-.c0.k-BulletList--big .k-BulletList__item {
+.c0.k-BulletList--large .k-BulletList__item {
   font-size: 1.125rem;
   margin: 0.625rem 0;
 }
@@ -58,7 +58,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 }
 
 <ul
-  className="c0 k-BulletList k-BulletList--regular customListClass"
+  className="c0 k-BulletList k-BulletList--medium customListClass"
 >
   <li
     className="k-BulletList__item"

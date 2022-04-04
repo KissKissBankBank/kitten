@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `BulletList`: Remplace old prop size values by:
+  `micro, small, medium, large, huge`.
 - Breaking change: `Label`: 
   - Replace `small` prop size default value.
   - Remove `nano` prop size value.

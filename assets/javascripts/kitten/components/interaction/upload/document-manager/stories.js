@@ -153,7 +153,7 @@ StatusError.args = {
         Mauvaise adresse :
       </Text>
       <BulletList
-        size="regular"
+        size="small"
         items={[
           {
             key: '1',
