@@ -8,7 +8,7 @@ import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { useMedia } from '../../../helpers/utils/use-media-query'
+import { useMedia } from '../../../helpers/hooks/use-media-query'
 import { getMinQuery } from '../../../helpers/utils/media-queries'
 
 const StyledNav = styled.nav`
