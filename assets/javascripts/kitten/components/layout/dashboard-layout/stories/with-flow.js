@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   DashboardLayout,
-  Title,
   DropdownSelectWithInput,
   TextCopy,
   Button,
@@ -54,15 +53,18 @@ export const StoryWithFlow = ({
   flowShowUnsavedText,
 }) => (
   <DashboardLayout.Flow loading={flowLoading}>
+    <DashboardLayout.Flow.Title modifier="quinary">
+      Ridiculus sociis natoque penatibus
+    </DashboardLayout.Flow.Title>
+    <DashboardLayout.Flow.TitleAside>
+      <Button mobileFit="fluid" fit="content" modifier="helium">
+        <span>
+          <span aria-hidden>+</span> Ajouter un item
+        </span>
+      </Button>
+    </DashboardLayout.Flow.TitleAside>
     <DashboardLayout.Flow.Content>
-      <Title
-        modifier="quinary"
-        className="k-u-margin-none k-u-margin-bottom-triple"
-      >
-        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus.
-      </Title>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
@@ -78,7 +80,7 @@ export const StoryWithFlow = ({
         deactivateDropdown
         className="k-u-margin-bottom-triple"
       />
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit. Sed posuere consectetur est at lobortis. Lorem ipsum dolor
@@ -89,10 +91,11 @@ export const StoryWithFlow = ({
       <TextCopy
         buttonText="Copier l’URL"
         textToCopy="https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6"
+        className="k-u-margin-top-none k-u-margin-bottom-triple"
       >
         https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6
       </TextCopy>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -101,14 +104,14 @@ export const StoryWithFlow = ({
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -117,7 +120,7 @@ export const StoryWithFlow = ({
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit.
       </p>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -126,14 +129,14 @@ export const StoryWithFlow = ({
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p className="k-u-weight-light">
+      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
