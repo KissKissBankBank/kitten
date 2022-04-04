@@ -20,7 +20,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['nano', 'micro', 'small', 'medium'],
+      options: ['micro', 'small', 'medium'],
       control: 'select',
     },
     withoutPointerEvents: {

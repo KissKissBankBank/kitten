@@ -2,7 +2,7 @@
 
 exports[`<Label /> should match its empty snapshot 1`] = `
 <label
-  className="sc-bdvvtL ibSUYo k-Label k-Label--small"
+  className="sc-bdvvtL ikmzYA k-Label k-Label--small"
   onClick={[Function]}
 >
   Label
@@ -11,7 +11,7 @@ exports[`<Label /> should match its empty snapshot 1`] = `
 
 exports[`<Label /> should match its propped snapshot 1`] = `
 <span
-  className="sc-bdvvtL ibSUYo k-Label k-Label--small k-Label--withoutPointerEvents"
+  className="sc-bdvvtL ikmzYA k-Label k-Label--small k-Label--withoutPointerEvents"
   htmlFor="customId"
   onClick={[Function]}
 >

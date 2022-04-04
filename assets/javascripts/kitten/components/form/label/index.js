@@ -14,13 +14,6 @@ const StyledLabel = styled.label`
   ${TYPOGRAPHY.fontStyles.regular}
   cursor: pointer;
   line-height: 1.3;
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    font-size: ${stepToRem(0)};
-  }
-
-  &.k-Label--nano {
-    font-size: ${stepToRem(-3)};
-  }
 
   &.k-Label--micro {
     font-size: ${stepToRem(-2)};
@@ -108,7 +101,7 @@ Label.defaultProps = {
 
 Label.propTypes = {
   focusId: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  size: PropTypes.oneOf([ 'nano', 'micro', 'small', 'medium']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium']),
   withoutPointerEvents: PropTypes.bool,
   dot: PropTypes.shape({
     width: PropTypes.number,

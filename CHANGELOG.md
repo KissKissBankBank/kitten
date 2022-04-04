@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: `Label`: Remplace `small` prop size default value.
-
+- Breaking change: `Label`: 
+  - Replace `small` prop size default value.
+  - Remove `nano` prop size value.
+ 
 ## [9.5.0] - 2022-04-01
 
 Deprecation/Change:

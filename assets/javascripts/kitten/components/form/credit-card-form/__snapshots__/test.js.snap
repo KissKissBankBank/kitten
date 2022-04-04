@@ -20,7 +20,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-gsDKAQ fwyTLp k-Label k-Label--small"
+            className="sc-gsDKAQ gDfswp k-Label k-Label--small"
             htmlFor="frmCCNum"
             onClick={[Function]}
           >
@@ -68,7 +68,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-gsDKAQ fwyTLp k-Label k-Label--small"
+            className="sc-gsDKAQ gDfswp k-Label k-Label--small"
             htmlFor="frmCCExp"
             onClick={[Function]}
           >
@@ -121,7 +121,7 @@ Array [
           className="k-Line__item"
         >
           <label
-            className="sc-gsDKAQ fwyTLp k-Label k-Label--small"
+            className="sc-gsDKAQ gDfswp k-Label k-Label--small"
             htmlFor="frmCCCVC"
             onClick={[Function]}
           >
