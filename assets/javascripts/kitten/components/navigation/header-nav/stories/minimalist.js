@@ -25,7 +25,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
       href="#"
       className="k-u-margin-left-double k-u-margin-left-quadruple@s-up"
     >
-      <KissKissBankBankLogo tiny height={6} />
+      <KissKissBankBankLogo small height={6} />
     </HeaderNav.Logo>
 
     <HeaderNav.Centered display="column">

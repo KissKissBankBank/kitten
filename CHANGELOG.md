@@ -9,7 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     prop size values to the following components:
   - `Action`,
   - `Typography`,
-  - `Form`
+  - `Form`,
+  - `Graphics`
 
 ## [9.6.0] - 2022-04-04
 
