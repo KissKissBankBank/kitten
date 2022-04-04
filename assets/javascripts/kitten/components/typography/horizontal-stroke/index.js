@@ -12,31 +12,13 @@ export const MICRO = css`
   height: ${pxToRem(2)};
 `
 
-// DEPRECATED
-export const TINY = css`
-  width: ${pxToRem(20)};
-  height: ${pxToRem(2)};
-`
-
 export const SMALL = css`
   width: ${pxToRem(20)};
   height: ${pxToRem(2)};
 `
 
-// DEPRECATED
-export const DEFAULT = css`
-  width: ${pxToRem(30)};
-  height: ${pxToRem(4)};
-`
-
 export const MEDIUM = css`
   width: ${pxToRem(30)};
-  height: ${pxToRem(4)};
-`
-
-// DEPRECATED
-export const BIG = css`
-  width: ${pxToRem(50)};
   height: ${pxToRem(4)};
 `
 
@@ -45,6 +27,10 @@ export const LARGE = css`
   height: ${pxToRem(4)};
 `
 
+/* DEPRECATED EXPORTS */
+export const TINY = SMALL
+export const DEFAULT = MEDIUM
+export const BIG = LARGE
 export const HUGE = css`
   width: ${pxToRem(100)};
   height: ${pxToRem(6)};
