@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `ScrollableContainer`: Remove `scrollableContainerStyle` export.
+
 ## [9.6.0] - 2022-04-04
 
 Features:
