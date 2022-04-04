@@ -12,7 +12,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Form`,
   - `Graphics`,
   - `Information`,
-  - `Structure`
+  - `Structure`,
+  - `Layer`
 
 ## [9.6.0] - 2022-04-04
 
