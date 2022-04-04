@@ -134,7 +134,7 @@ export const Default = args => {
   const [activeDiscussion, setActiveDiscussion] = useState(discussions[1])
 
   return (
-    <MessagesMenu {...args}>
+    <MessagesMenu>
       {discussions.map((item, index) => (
         <MessagesMenu.Message
           key={'message_' + index}

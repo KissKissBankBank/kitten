@@ -12,7 +12,7 @@ import { LargeArrowIconNext } from '../../../components/graphics/icons-next/larg
 const DiscussionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${pxToRem(20)};
+  gap: ${pxToRem(10)};
   justify-content: space-between;
 
   .k-Discussion__list {
@@ -162,4 +162,14 @@ Discussion.Form = ({ className, inputProps, buttonProps, ...props }) => {
       </Button>
     </form>
   )
+}
+
+Discussion.Form.defaultProps = {
+  inputProps: {},
+  buttonProps: {},
+}
+
+Discussion.Form.propTypes = {
+  inputProps: PropTypes.object,
+  buttonProps: PropTypes.object,
 }

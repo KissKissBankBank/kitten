@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import classNames from 'classnames'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
 import { ChatLayout } from './index'
@@ -30,15 +31,20 @@ const StyledChatBox = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  .k-Discussion {
+    flex: 1 0 100%;
+    max-height: 100%;
+  }
+
   @media ${mq.desktop} {
     padding: ${pxToRem(20)} ${pxToRem(25)} ${pxToRem(25)};
     border: var(--border-width) solid var(--color-grey-300);
     border-radius: var(--border-radius-l);
-  }
 
-  .k-Discussion {
-    flex: 1 0 calc(100% - ${pxToRem(32 + 20 + 1 + 20)});
-    max-height: calc(100% - ${pxToRem(32 + 20 + 1 + 20)});
+    .k-Discussion {
+      flex: 1 0 calc(100% - ${pxToRem(32 + 20 + 1 + 20)});
+      max-height: calc(100% - ${pxToRem(32 + 20 + 1 + 20)});
+    }
   }
 `
 
@@ -87,10 +93,18 @@ const StyledInfoBlock = styled.div`
   }
 `
 
-const DiscussionTitleElement = ({ name, avatar }) => (
-  <div className="k-u-flex k-u-flex-gap-single k-u-flex-alignItems-center">
+const DiscussionTitleElement = ({ name, avatar, className }) => (
+  <div
+    className={classNames(
+      'k-u-flex',
+      'k-u-flex-gap-single',
+      'k-u-flex-alignItems-center',
+      className,
+    )}
+  >
     <StyledImg src={avatar} alt="" />
-    <Text weight="regular" size="small">
+    <span className="k-u-a11y-visuallyHidden">Discussion avec</span>
+    <Text weight="regular" size="small" tag="h2" className="k-u-margin-none">
       {name}
     </Text>
   </div>
@@ -222,7 +236,7 @@ export const Default = args => {
         isLogged={false}
         isFixed={true}
         quickAccessProps={{
-          href: '#mainContent',
+          href: '#main',
           text: 'Aller au contenu principal',
           zIndex: 300,
         }}
@@ -252,6 +266,7 @@ export const Default = args => {
                   onClick={() => {
                     setActiveColumn('chat')
                     setActiveDiscussion(item)
+                    // document.getElementById('chat')?.focus()
                   }}
                   avatarProps={{
                     src: item.avatar,
@@ -297,11 +312,17 @@ export const Default = args => {
           hasMobileHeader
           fullWidthContent
           title={<DiscussionTitleElement {...activeDiscussion} />}
-          backAction={({ setActiveColumn }) => setActiveColumn('list')}
+          backAction={({ setActiveColumn }) => {
+            setActiveColumn('list')
+            // document.getElementById('list')?.focus()
+          }}
           backActionText={
             <BackElement title="Retour à la liste des messages" />
           }
-          nextAction={({ setActiveColumn }) => setActiveColumn('info')}
+          nextAction={({ setActiveColumn }) => {
+            setActiveColumn('info')
+            // document.getElementById('info')?.focus()
+          }}
           nextActionText={
             <Text
               weight="regular"
@@ -337,7 +358,7 @@ export const Default = args => {
                       weight="light"
                       lineHeight="1"
                       size="micro"
-                      color="grey-600"
+                      color="grey-700"
                     >
                       &nbsp;•&nbsp;Hier{' '}
                       <span className="k-u-a11y-visuallyHidden">à </span>18:30
@@ -361,7 +382,7 @@ export const Default = args => {
                       weight="light"
                       lineHeight="1"
                       size="micro"
-                      color="grey-600"
+                      color="grey-700"
                     >
                       &nbsp;•&nbsp;Hier{' '}
                       <span className="k-u-a11y-visuallyHidden">à </span>10:00
@@ -382,7 +403,8 @@ export const Default = args => {
                       weight="light"
                       lineHeight="1"
                       size="micro"
-                      color="grey-600"
+                      activeColEl
+                      color="grey-700"
                     >
                       &nbsp;•&nbsp;Avant-Hier{' '}
                       <span className="k-u-a11y-visuallyHidden">à </span>19:30
@@ -429,12 +451,20 @@ export const Default = args => {
           name="info"
           hasMobileHeader
           title={
-            <Text weight="regular" size="small">
+            <Text
+              weight="regular"
+              size="small"
+              tag="h2"
+              className="k-u-margin-none"
+            >
               Détails de {activeDiscussion.longName}
             </Text>
           }
           centeredHeader
-          backAction={({ setActiveColumn }) => setActiveColumn('chat')}
+          backAction={({ setActiveColumn }) => {
+            setActiveColumn('chat')
+            // document.getElementById('chat')?.focus()
+          }}
           backActionText={<BackElement title="Retour à la discussion" />}
         >
           <StyledInfoBlock>
