@@ -61,20 +61,17 @@ export const StyledHorizontalStroke = styled.div`
   &.k-HorizontalStroke--size--tiny {
     ${TINY}
   }
+  &.k-HorizontalStroke--size--tiny, /* DEPRECATED */
   &.k-HorizontalStroke--size--small {
     ${SMALL}
   }
 
-  &.k-HorizontalStroke--size--default {
-    ${DEFAULT}
-  }
+  &.k-HorizontalStroke--size--default, /* DEPRECATED */
   &.k-HorizontalStroke--size--medium {
     ${MEDIUM}
   }
 
-  &.k-HorizontalStroke--size--big {
-    ${BIG}
-  }
+  &.k-HorizontalStroke--size--big, /* DEPRECATED */
   &.k-HorizontalStroke--size--large {
     ${LARGE}
   }
