@@ -33,7 +33,7 @@ const StyledBulletList = styled.ul`
     }
   }
 
-  &.k-BulletList--tiny .k-BulletList__item {
+  &.k-BulletList--micro .k-BulletList__item {
     font-size: ${stepToRem(-2)};
 
     &:before {
@@ -42,15 +42,15 @@ const StyledBulletList = styled.ul`
     }
   }
 
-  &.k-BulletList--regular .k-BulletList__item {
+  &.k-BulletList--small .k-BulletList__item {
     font-size: ${stepToRem(-1)};
   }
 
-  &.k-BulletList--large .k-BulletList__item {
+  &.k-BulletList--medium .k-BulletList__item {
     font-size: ${stepToRem(0)};
   }
 
-  &.k-BulletList--big .k-BulletList__item {
+  &.k-BulletList--large .k-BulletList__item {
     font-size: ${stepToRem(1)};
     margin: ${pxToRem(10)} 0;
   }
@@ -81,11 +81,11 @@ export const BulletList = ({ items, size, className, ...others }) => {
 }
 
 BulletList.propTypes = {
-  size: PropTypes.oneOf(['tiny', 'regular', 'large', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
   items: PropTypes.array,
 }
 
 BulletList.defaultProps = {
-  size: 'regular',
+  size: 'small',
   items: [],
 }

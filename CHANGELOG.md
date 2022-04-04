@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `BulletList`: Remplace old prop size values by:
+  `micro, small, medium, large, huge`.
 - Feature: `OpenLockIconNext`: New component.
 
 ## [9.5.0] - 2022-04-01
