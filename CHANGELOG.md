@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `Structure`: 
-  - Remplace `tiny, regular, default, big` by `small, medium, large` prop size values.
+- Change/Deprecation: `Structure`: 
+  - Replace `tiny, regular, default, big` by `small, medium, large` prop size values.
 - Feature: `OpenLockIconNext`: New component.
 
 ## [9.5.0] - 2022-04-01
