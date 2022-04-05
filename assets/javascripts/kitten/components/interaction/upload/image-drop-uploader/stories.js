@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ImageDropUploader } from './index'
-import { BackingCard, Grid, GridCol, Tag } from 'kitten'
+import { RewardCard, Grid, GridCol, Tag } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -199,30 +199,30 @@ export const WithDistantImage = args => {
         <ImageDropUploader {...args} onChange={handleChange} />
       </GridCol>
       <GridCol col-l="3" offset-l="2">
-        <BackingCard>
+        <RewardCard>
           {imageUrl && (
-            <BackingCard.Image>
+            <RewardCard.Image>
               <img
                 src={imageUrl}
                 alt=""
                 style={{ objectPosition: imagePosition }}
               />
-            </BackingCard.Image>
+            </RewardCard.Image>
           )}
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
-          <BackingCard.Title>
+          <RewardCard.HeadingTag icon="star" text="Star reward" />
+          <RewardCard.Title>
             Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-          </BackingCard.Title>
-          <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-          <BackingCard.Info
+          </RewardCard.Title>
+          <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+          <RewardCard.Info
             legend="Prix de livraison&nbsp;:"
             value="5&nbsp;€ (en France)"
           />
-          <BackingCard.Info
+          <RewardCard.Info
             legend="Livraison estimée&nbsp;:"
             value="Janvier 2022"
           />
-          <BackingCard.Description moreButtonText="See more…" truncateText>
+          <RewardCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
               <strong className="k-u-weight-regular">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -244,16 +244,16 @@ export const WithDistantImage = args => {
               enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
               tell
             </p>
-          </BackingCard.Description>
-          <BackingCard.TagList>
+          </RewardCard.Description>
+          <RewardCard.TagList>
             <Tag as="li">
               <strong className="k-u-weight-regular">5</strong> contributeurs
             </Tag>
             <Tag as="li">
               <strong className="k-u-weight-regular">2/6</strong> disponibles
             </Tag>
-          </BackingCard.TagList>
-        </BackingCard>
+          </RewardCard.TagList>
+        </RewardCard>
       </GridCol>
     </Grid>
   )

@@ -85,11 +85,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
 .c0 .k-DashboardLayout__flow__loading,
 .c0 .k-DashboardLayout__flow__content {
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
   background-color: var(--color-grey-000,#fff);
-  padding-bottom: 1.875rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav {
@@ -133,6 +129,9 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 }
 
 .c0 .k-DashboardLayout__flow__loading {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,13 +160,20 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   }
 }
 
+@media (max-width:1079px) {
+  .c0 {
+    margin-top: 3.125rem;
+  }
+}
+
 @media (min-width:1080px) {
   .c0 {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 35vw 20vw;
     gap: 1.875rem 5vw;
+    margin-top: 5rem;
   }
 }
 
@@ -182,6 +188,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   .c0 .k-DashboardLayout__flow__loading,
   .c0 .k-DashboardLayout__flow__content {
     grid-column: 1 / 2;
+    grid-row: 2 / span 1;
     padding-bottom: 1.25rem;
   }
 }
@@ -189,6 +196,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout__flow__title {
     grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -196,6 +204,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 
   .c0 .k-DashboardLayout__flow__titleAside {
     grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -206,6 +215,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout__flow__nav {
     grid-column: 1 / 2;
+    grid-row: 3 / span 1;
     bottom: 0;
     position: -webkit-sticky;
     position: sticky;
@@ -241,6 +251,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout__flow__aside {
     grid-column: 2 / 3;
+    grid-row: 2 / span 1;
   }
 }
 
@@ -450,11 +461,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
 .c0 .k-DashboardLayout__flow__loading,
 .c0 .k-DashboardLayout__flow__content {
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
   background-color: var(--color-grey-000,#fff);
-  padding-bottom: 1.875rem;
 }
 
 .c0 .k-DashboardLayout__flow__nav {
@@ -498,6 +505,9 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 }
 
 .c0 .k-DashboardLayout__flow__loading {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -526,13 +536,20 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   }
 }
 
+@media (max-width:1079px) {
+  .c0 {
+    margin-top: 3.125rem;
+  }
+}
+
 @media (min-width:1080px) {
   .c0 {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 35vw 20vw;
     gap: 1.875rem 5vw;
+    margin-top: 5rem;
   }
 }
 
@@ -547,6 +564,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   .c0 .k-DashboardLayout__flow__loading,
   .c0 .k-DashboardLayout__flow__content {
     grid-column: 1 / 2;
+    grid-row: 2 / span 1;
     padding-bottom: 1.25rem;
   }
 }
@@ -554,6 +572,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout__flow__title {
     grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -561,6 +580,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 
   .c0 .k-DashboardLayout__flow__titleAside {
     grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -571,6 +591,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout__flow__nav {
     grid-column: 1 / 2;
+    grid-row: 3 / span 1;
     bottom: 0;
     position: -webkit-sticky;
     position: sticky;
@@ -606,6 +627,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout__flow__aside {
     grid-column: 2 / 3;
+    grid-row: 2 / span 1;
   }
 }
 

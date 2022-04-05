@@ -4,7 +4,7 @@ import { Prev } from './components/prev'
 import { Next } from './components/next'
 import { Pagination } from './components/pagination'
 import COLORS from '../../../../constants/colors-config'
-import { getReactElementsByType } from '../../../../helpers/react/react-elements'
+import { getReactElementsByType } from '../../../../helpers/react/get-react-elements'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import {
   LeftEmptyContainer,

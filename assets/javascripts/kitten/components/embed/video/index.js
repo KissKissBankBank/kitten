@@ -5,7 +5,7 @@ import COLORS from '../../../constants/colors-config'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
-} from '../../../helpers/react/react-elements'
+} from '../../../helpers/react/get-react-elements'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
 
