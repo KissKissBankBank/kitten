@@ -48,7 +48,6 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__loading,
   .k-DashboardLayout__flow__content {
-    /* flex: 1 0 auto; */
     background-color: ${COLORS.background1};
 
     @media ${mq.tabletAndDesktop} {
@@ -163,6 +162,7 @@ const StyledFlow = styled.div`
   }
 
   .k-DashboardLayout__flow__loading {
+    flex: 1 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
