@@ -112,7 +112,7 @@ const argTypes = {
   },
   size: {
     name: 'size',
-    options: ['regular', 'big', 'huge', 'giant'],
+    options: ['medium', 'large', 'huge', 'giant'],
     control: 'select',
   },
   isOpen: {
@@ -285,7 +285,7 @@ FullSize.args = {
   ...args,
   fullSize: true,
   headerTitle: (
-    <Text size="tiny" color="font1" weight="regular">
+    <Text size="small" color="font1" weight="regular">
       Lorem ipsum dolor sit consectetuer
     </Text>
   ),

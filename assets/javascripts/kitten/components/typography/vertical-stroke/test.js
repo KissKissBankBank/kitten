@@ -28,9 +28,9 @@ describe('<VerticalStroke />', () => {
     })
   })
 
-  describe('with size="tiny" prop', () => {
+  describe('with size="small" prop', () => {
     beforeEach(() => {
-      component = renderer.create(<VerticalStroke size="tiny" />).toJSON()
+      component = renderer.create(<VerticalStroke size="small" />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -38,9 +38,9 @@ describe('<VerticalStroke />', () => {
     })
   })
 
-  describe('with size="default" prop', () => {
+  describe('with size="medium" prop', () => {
     beforeEach(() => {
-      component = renderer.create(<VerticalStroke size="default" />).toJSON()
+      component = renderer.create(<VerticalStroke size="medium" />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -48,9 +48,9 @@ describe('<VerticalStroke />', () => {
     })
   })
 
-  describe('with size="big" prop', () => {
+  describe('with size="large" prop', () => {
     beforeEach(() => {
-      component = renderer.create(<VerticalStroke size="big" />).toJSON()
+      component = renderer.create(<VerticalStroke size="large" />).toJSON()
     })
 
     it('matches with snapshot', () => {

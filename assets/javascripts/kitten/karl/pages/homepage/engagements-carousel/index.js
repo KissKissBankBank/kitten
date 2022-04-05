@@ -122,7 +122,7 @@ const EngagementsCarouselBase = ({ viewportIsXSOrLess }) => (
       paginationPosition={{ default: 'right' }}
       showOtherPages={viewportIsXSOrLess}
       loop
-      tinyButtons
+      smallButtons
     >
       {engagementsData.map(({ bgImage, children }) => {
         return (

@@ -16,7 +16,7 @@ export const Paragraph = ({ paragraph }) => {
       >
         {parseHtml(paragraph)}
       </Text>
-      <HorizontalStroke size="tiny" className="k-u-margin-top-singleHalf" />
+      <HorizontalStroke size="small" className="k-u-margin-top-singleHalf" />
     </div>
   )
 }

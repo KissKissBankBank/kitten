@@ -5,7 +5,7 @@ import classNames from 'classnames'
 
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { getReactElementsByType } from '../../../helpers/react/react-elements'
+import { getReactElementsByType } from '../../../helpers/react/get-react-elements'
 
 const StyledDeskMenu = styled.nav`
   --deskMenu-padding: ${pxToRem(15)};

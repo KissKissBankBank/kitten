@@ -56,7 +56,7 @@ const argTypes = {
   },
   size: {
     name: 'size',
-    options: ['micro', 'tiny', 'normal', 'big', 'huge', 'giant'],
+    options: ['micro', 'small', 'medium', 'large', 'huge', 'giant'],
     control: 'select',
   },
   a11yStatusError: {
@@ -127,7 +127,7 @@ const args = {
   combobox: false,
   labelText: 'label',
   options: options,
-  size: 'normal',
+  size: 'medium',
   comboboxButtonLabelText: 'label',
   noResultText: 'No results',
   menuZIndex: 1000,

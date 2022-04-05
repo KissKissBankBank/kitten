@@ -309,7 +309,7 @@ export const DocumentManager = ({
               <Text
                 tag="div"
                 weight="regular"
-                size="tiny"
+                size="small"
                 lineHeight="normal"
                 className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
               >
@@ -384,7 +384,7 @@ export const DocumentManager = ({
           <Text
             tag="div"
             weight="regular"
-            size="tiny"
+            size="small"
             className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
           >
             {displayTitle}
@@ -409,7 +409,7 @@ export const DocumentManager = ({
             >
               <Text
                 weight="regular"
-                size="tiny"
+                size="small"
                 className="k-DocumentManager__actionButton__text"
               >
                 {cancelButtonText}
@@ -423,7 +423,7 @@ export const DocumentManager = ({
             >
               <Text
                 weight="regular"
-                size="tiny"
+                size="small"
                 className="k-DocumentManager__actionButton__text"
               >
                 {replaceButtonText}

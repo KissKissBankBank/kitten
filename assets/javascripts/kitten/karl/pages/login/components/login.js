@@ -78,7 +78,7 @@ const Login = props => (
             </Title>
           </Marger>
           <Marger top="1.5" bottom="3">
-            <HorizontalStroke size="big" />
+            <HorizontalStroke size="large" />
           </Marger>
           <Marger top="3" bottom="4">
             <Field>
@@ -96,7 +96,7 @@ const Login = props => (
             <Field>
               <StyledLabel
                 link={
-                  <StyledLink tag="a" href="#" weight="regular" size="tiny">
+                  <StyledLink tag="a" href="#" weight="regular" size="small">
                     Mot de passe oublié ?
                   </StyledLink>
                 }
@@ -118,16 +118,16 @@ const Login = props => (
             <Checkbox id="remember-me">Se souvenir de moi</Checkbox>
           </Marger>
           <Marger top="4" bottom="2">
-            <Button size="big" fit="fluid" modifier="helium">
+            <Button size="large" fit="fluid" modifier="helium">
               Se connecter
             </Button>
           </Marger>
           <Marger top="2" bottom="2">
-            <Text tag="p" size="tiny" className="k-u-align-center">
+            <Text tag="p" size="small" className="k-u-align-center">
               Créez votre compte en quelques minutes seulement et commencez à
               investir.
               <br />
-              <StyledLink tag="a" href="#" weight="regular" size="tiny">
+              <StyledLink tag="a" href="#" weight="regular" size="small">
                 Inscrivez-vous
               </StyledLink>
             </Text>

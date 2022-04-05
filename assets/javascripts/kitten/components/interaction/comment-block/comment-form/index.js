@@ -226,7 +226,7 @@ export const CommentForm = React.forwardRef(
             <div className="k-u-flex k-u-flex-justifyContent-end k-u-flex-gap-single">
               <Button
                 type="button"
-                size="tiny"
+                size="small"
                 fit="content"
                 disabled={disabled}
                 onClick={onClose}
@@ -236,7 +236,7 @@ export const CommentForm = React.forwardRef(
               <Button
                 type="button"
                 modifier="beryllium"
-                size="tiny"
+                size="small"
                 fit="content"
                 disabled={disabled}
                 onClick={handleSubmit}
@@ -249,7 +249,7 @@ export const CommentForm = React.forwardRef(
               <Button
                 type="button"
                 modifier="beryllium"
-                size="tiny"
+                size="small"
                 fit="content"
                 disabled={disabled}
                 className={classNames('k-CommentForm__submit', {

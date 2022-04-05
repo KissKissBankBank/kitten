@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
-import useLazyObserver from '../helpers/utils/lazy-hook'
+import { useLazyObserver } from '../helpers/hooks/use-lazy-observer'
 
-const withLazy = WrappedComponent => props => {
+export const withLazy = WrappedComponent => props => {
   const lazyComponentRef = useRef(null)
   const isLazyTriggered = useLazyObserver(lazyComponentRef)
 
@@ -12,5 +12,3 @@ const withLazy = WrappedComponent => props => {
     </>
   )
 }
-
-export default withLazy

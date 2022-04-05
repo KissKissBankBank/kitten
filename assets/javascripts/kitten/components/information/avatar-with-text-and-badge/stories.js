@@ -23,7 +23,7 @@ export default {
   args: {
     hoverable: true,
     imageAlt: 'Image alt',
-    imageSize: 'regular',
+    imageSize: 'medium',
     imageIsDisplayed: true,
     imageText: 'JC',
     imageBackgroundColor: '#002e7d',
@@ -48,7 +48,7 @@ export default {
     imageSize: {
       name: 'Image Size (story prop)',
       description: 'Prop `size` on subcomponent `AvatarWithTextAndBadge.Image`',
-      options: ['regular', 'big'],
+      options: ['medium', 'large'],
       control: 'inline-radio',
     },
     imageIsDisplayed: {
@@ -153,7 +153,7 @@ export const Default = ({
       {textHasSecondLine && (
         <>
           <br />
-          <Text weight="light" size="tiny">
+          <Text weight="light" size="small">
             <span className="k-u-hidden@xs-down">Solde&nbsp;:</span>{' '}
             24&nbsp;093,39&nbsp;€
           </Text>

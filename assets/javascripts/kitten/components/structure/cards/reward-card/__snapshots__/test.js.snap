@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RewardCard /> default matches with snapshot 1`] = `
+<article
+  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--hasBorder"
+>
+  <div
+    className="k-RewardCard__gridWrapper"
+  >
+    <div
+      className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
+    >
+      <h3
+        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        style={
+          Object {
+            "--line-clamp": 2,
+          }
+        }
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </h3>
+    </div>
+    <div
+      className="k-RewardCard__descriptionWrapper k-RewardCard__drawer k-RewardCard__drawer--extensible"
+    >
+      <div
+        className="k-RewardCard__description"
+      >
+        <div>
+          Custom description
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
+<article
+  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--hasBorder"
+>
+  <div
+    className="k-RewardCard__gridWrapper"
+  >
+    <div
+      className="k-RewardCard__titleWrapper k-RewardCard__drawer"
+    >
+      <h3
+        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center"
+        style={
+          Object {
+            "--line-clamp": 2,
+          }
+        }
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </h3>
+    </div>
+    <div
+      className="k-RewardCard__descriptionWrapper k-RewardCard__drawer k-RewardCard__drawer--extensible"
+    >
+      <div
+        className="k-RewardCard__description"
+      >
+        <div>
+          Custom description
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+<article
+  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--disabled"
+>
+  <div
+    className="k-RewardCard__imageWrapper"
+  >
+    <img
+      alt=""
+      src="/kitten.jpg"
+    />
+  </div>
+  <div
+    className="k-RewardCard__gridWrapper"
+  >
+    <span
+      className="sc-dkPtRN gHrgjH k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
+    >
+      <svg
+        height="13"
+        viewBox="0 0 20 18"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m12.36 5.52.23.5.55.07 4.52.54c.43.05.6.57.28.86l-3.34 3.1-.4.39.1.54.88 4.48a.5.5 0 0 1-.73.53l-3.96-2.22-.49-.28-.49.28-3.96 2.22a.5.5 0 0 1-.73-.53l.88-4.47.1-.55-.4-.38-3.34-3.1a.5.5 0 0 1 .28-.87l4.52-.54.55-.06.23-.51 1.9-4.14a.5.5 0 0 1 .91 0l1.9 4.14Z"
+          fill="transparent"
+        />
+        <path
+          d="m6.74 5.1-4.52.54a1.5 1.5 0 0 0-.84 2.59l3.34 3.1-.89 4.48a1.5 1.5 0 0 0 2.21 1.6L10 15.18l3.96 2.23a1.5 1.5 0 0 0 2.2-1.6l-.88-4.48 3.34-3.1a1.5 1.5 0 0 0-.84-2.6l-4.52-.53-1.9-4.13a1.5 1.5 0 0 0-2.72 0L6.74 5.1Zm1.35 1.85L10 2.8l1.45 3.15.46 1.01 4.56.55-3.37 3.12.9 4.51-4-2.24-4 2.24.9-4.5L3.53 7.5l4.56-.55Z"
+          fill="#222"
+        />
+      </svg>
+      Star reward
+    </span>
+    <div
+      className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
+    >
+      <h3
+        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        style={
+          Object {
+            "--line-clamp": 2,
+          }
+        }
+      >
+        Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
+      </h3>
+    </div>
+    <p
+      className="k-RewardCard__drawer k-RewardCard__amount__wrapper k-u-align-center"
+    >
+      <span
+        className="k-u-weight-bold k-RewardCard__amount k-u-block"
+      >
+        65 €
+      </span>
+      <span
+        className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-regular k-RewardCard__amount__suffix k-u-block"
+      >
+        Etiam Consectetur Venenatis
+      </span>
+    </p>
+    <div
+      className="k-RewardCard__descriptionWrapper k-RewardCard__drawer k-RewardCard__drawer--extensible"
+    >
+      <div
+        className="k-RewardCard__description k-RewardCard__description--truncateText"
+      >
+        <div>
+          <p
+            className="k-u-margin-none"
+          >
+            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+          </p>
+          <p
+            className="k-u-margin-none"
+          >
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p
+            className="k-u-margin-none"
+          >
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+          <p
+            className="k-u-margin-none"
+          >
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
+          </p>
+        </div>
+      </div>
+    </div>
+    <ul
+      className="k-RewardCard__tagList k-RewardCard__drawer"
+    >
+      <li
+        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+      >
+        <strong
+          className="k-u-weight-regular"
+        >
+          5
+        </strong>
+         
+        contributeurs
+      </li>
+      <li
+        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+      >
+        <strong
+          className="k-u-weight-regular"
+        >
+          2/6
+        </strong>
+         
+        disponibles
+      </li>
+    </ul>
+  </div>
+  <button
+    className="sc-gsDKAQ dcifNb k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+    disabled={true}
+    style={
+      Object {
+        "--Button-border-radius": null,
+      }
+    }
+    type="button"
+  >
+    Je soutiens
+  </button>
+</article>
+`;

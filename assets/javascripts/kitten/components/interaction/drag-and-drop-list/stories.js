@@ -44,25 +44,25 @@ const CardComponent = ({
       <img alt="" {...imageProps} />
     </SummaryCard.Image>
     <SummaryCard.Cell name="title" aria-describedby="SummaryList-title">
-      <Text weight="bold" size="tiny">
+      <Text weight="bold" size="small">
         {title}
       </Text>
       {!!star && <SummaryCard.TitleTag text="Contrepartie star" />}
     </SummaryCard.Cell>
     <SummaryCard.Cell name="amount" aria-describedby="SummaryList-amount">
-      <Text size="tiny">{amount}</Text>
+      <Text size="small">{amount}</Text>
     </SummaryCard.Cell>
     <SummaryCard.Cell
       name="contribution"
       aria-describedby="SummaryList-contribution"
     >
-      <Text size="tiny">{contribution}</Text>
+      <Text size="small">{contribution}</Text>
     </SummaryCard.Cell>
     <SummaryCard.Cell
       name="availability"
       aria-describedby="SummaryList-availability"
     >
-      <Text size="tiny">{availability}</Text>
+      <Text size="small">{availability}</Text>
     </SummaryCard.Cell>
     <SummaryCard.Cell name="last-stretch">
       <DropdownMenu

@@ -108,7 +108,7 @@ export const Timeline = ({ children, itemHeight, ...props }) => {
         {React.Children.map(children, (child, index) => (
           <li className="k-Timeline__listItem">
             <Text
-              size="tiny"
+              size="small"
               className="k-Timeline__listItem__bullet"
               aria-hidden
             >

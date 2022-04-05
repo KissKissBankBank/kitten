@@ -5,6 +5,28 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Breaking change: `ScrollableContainer`: Remove `scrollableContainerStyle` export.
+- Deprecation/Change: `ProjectCard`: Migrate from `BackingCard`.
+- Breaking Change: Remove the following unused helpers and hocs:
+  - `numberUtils` helper
+  - `Deprecated()` and `hasDeprecatedProps` helpers
+  - `card` HOC
+  - `default-props` HOC
+  - `trigger-enhancer` HOC
+- Breaking change: `BulletList`: Remplace old prop size values by:
+  `micro, small, medium, large, huge`.
+- Breaking change: `Label`:
+  - Replace `small` prop size default value.
+  - Remove `nano` prop size value.
+- Change/Deprecation:
+  - Replace `tiny, regular, default, big` by `small, medium, large`
+    prop size values to the following folders:
+  - `Action`,
+  - `Typography`,
+  - `Form`,
+  - `Graphics`,
+  - `Information`,
+  - `Structure`,
+  - `Layer`
 
 ## [9.6.0] - 2022-04-04
 
