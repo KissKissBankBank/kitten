@@ -100,7 +100,8 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   height: 4.0625rem;
 }
 
-.c0.k-NavBar--big .k-NavBar__link {
+.c0.k-NavBar--big .k-NavBar__link,
+.c0.k-NavBar--large .k-NavBar__link {
   height: 5rem;
 }
 
@@ -123,13 +124,14 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-NavBar--big .k-NavBar__link {
+  .c0.k-NavBar--big .k-NavBar__link,
+  .c0.k-NavBar--large .k-NavBar__link {
     height: 6.25rem;
   }
 }
 
 <div
-  className="c0 k-NavBar k-NavBar--regular customClass"
+  className="c0 k-NavBar k-NavBar--medium customClass"
 >
   <nav
     className="k-NavBar__nav customNavClass"
@@ -286,7 +288,8 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   height: 4.0625rem;
 }
 
-.c0.k-NavBar--big .k-NavBar__link {
+.c0.k-NavBar--big .k-NavBar__link,
+.c0.k-NavBar--large .k-NavBar__link {
   height: 5rem;
 }
 
@@ -309,13 +312,14 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-NavBar--big .k-NavBar__link {
+  .c0.k-NavBar--big .k-NavBar__link,
+  .c0.k-NavBar--large .k-NavBar__link {
     height: 6.25rem;
   }
 }
 
 <div
-  className="c0 k-NavBar k-NavBar--big customClass"
+  className="c0 k-NavBar k-NavBar--large customClass"
 >
   <nav
     className="k-NavBar__nav customNavClass"
@@ -472,7 +476,8 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   height: 4.0625rem;
 }
 
-.c0.k-NavBar--big .k-NavBar__link {
+.c0.k-NavBar--big .k-NavBar__link,
+.c0.k-NavBar--large .k-NavBar__link {
   height: 5rem;
 }
 
@@ -495,13 +500,14 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-NavBar--big .k-NavBar__link {
+  .c0.k-NavBar--big .k-NavBar__link,
+  .c0.k-NavBar--large .k-NavBar__link {
     height: 6.25rem;
   }
 }
 
 <div
-  className="c0 k-NavBar k-NavBar--regular customClass"
+  className="c0 k-NavBar k-NavBar--medium customClass"
 >
   <nav
     className="k-NavBar__nav customNavClass"

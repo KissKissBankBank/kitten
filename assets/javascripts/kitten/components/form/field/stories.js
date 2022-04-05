@@ -3,6 +3,7 @@ import {
   FieldInputExample,
   FieldPasswordExample,
   FieldRadioButtonSetExample,
+  FieldRadioSetExample,
   FieldAutocompleteExample,
 } from './examples'
 import { DocsPage } from 'storybook/docs-page'
@@ -44,7 +45,7 @@ export const WithInput = args => {
 }
 WithInput.args = {
   id: 'input',
-  size: 'regular',
+  size: 'medium',
   label: 'Label',
   tooltip: null,
   tooltipProps: { actionLabel: 'Learn more' },
@@ -60,7 +61,7 @@ WithInput.argTypes = {
   id: { control: 'text' },
   size: {
     control: 'select',
-    options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+    options: ['small', 'medium', 'large', 'huge', 'giant'],
   },
   label: { control: 'text' },
   tooltip: { control: 'text' },
@@ -79,7 +80,7 @@ export const WithPassword = args => {
 }
 WithPassword.args = {
   id: 'input',
-  size: null,
+  size: 'medium',
   label: 'Label',
   tooltip: null,
   tooltipProps: { actionLabel: 'Learn more' },
@@ -90,7 +91,10 @@ WithPassword.args = {
 }
 WithPassword.argTypes = {
   id: { control: 'text' },
-  size: { control: 'boolean' },
+  size: {
+    control: 'select',
+    options: ['small', 'medium', 'large', 'huge', 'giant'],
+  },
   label: { control: 'text' },
   tooltip: { control: 'text' },
   tooltipProps: { control: 'object' },
@@ -105,7 +109,7 @@ export const WithRadioButtons = args => {
 }
 WithRadioButtons.args = {
   id: 'option-a',
-  size: null,
+  size: 'medium',
   label: 'Label',
   tooltip: null,
   tooltipProps: { actionLabel: 'Learn more' },
@@ -130,7 +134,10 @@ WithRadioButtons.args = {
 }
 WithRadioButtons.argTypes = {
   id: { control: 'text' },
-  size: { control: 'boolean' },
+  size: {
+    control: 'select',
+    options: ['small', 'medium', 'large'],
+  },
   label: { control: 'text' },
   tooltip: { control: 'text' },
   tooltipProps: { control: 'object' },
@@ -145,7 +152,6 @@ export const WithRadio = args => {
 }
 WithRadio.args = {
   id: 'option-a',
-  size: null,
   label: 'Label',
   tooltip: null,
   tooltipProps: { actionLabel: 'Learn more' },
@@ -170,7 +176,6 @@ WithRadio.args = {
 }
 WithRadio.argTypes = {
   id: { control: 'text' },
-  size: { control: 'boolean' },
   label: { control: 'text' },
   tooltip: { control: 'text' },
   tooltipProps: { control: 'object' },
@@ -185,7 +190,7 @@ export const WithAutocomplete = args => {
 }
 WithAutocomplete.args = {
   id: 'select',
-  size: null,
+  size: 'medium',
   label: 'Label',
   tooltip: null,
   tooltipProps: { actionLabel: 'Learn more' },
@@ -208,7 +213,10 @@ WithAutocomplete.args = {
 }
 WithAutocomplete.argTypes = {
   id: { control: 'text' },
-  size: { control: 'boolean' },
+  size: {
+    control: 'select',
+    options: ['small', 'medium', 'large', 'huge', 'giant'],
+  },
   label: { control: 'text' },
   tooltip: { control: 'text' },
   tooltipProps: { control: 'object' },

@@ -35,7 +35,7 @@ export var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4)
     className: "k-TeamCardButtonWithTooltip__tooltipArrow"
   })), /*#__PURE__*/React.createElement(Button, {
     fit: "icon",
-    size: "tiny",
+    size: "small",
     modifier: "hydrogen",
     tag: "span",
     "aria-label": phoneNumber

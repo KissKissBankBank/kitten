@@ -33,6 +33,8 @@ var _styles = require("./styles");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var _deprecated = require("../../../../helpers/utils/deprecated");
+
 var _excluded = ["combobox"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -71,6 +73,7 @@ var DropdownSelect = function DropdownSelect(_ref) {
       direction = props.direction,
       arrowPosition = props.arrowPosition,
       labelProps = props.labelProps;
+  (0, _deprecated.checkDeprecatedSizes)(size);
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -212,7 +215,7 @@ DropdownSelect.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  size: 'normal',
+  size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
@@ -239,7 +242,7 @@ DropdownSelect.propTypes = {
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,
-  size: _propTypes.default.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
+  size: _propTypes.default.oneOf(['micro', 'small', 'medium', 'large', 'huge', 'giant']),
   a11yStatusError: _propTypes.default.string,
   a11yStatusValid: _propTypes.default.string,
   a11ySelectionMessageDisplayer: _propTypes.default.func,

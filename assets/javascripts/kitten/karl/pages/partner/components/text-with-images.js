@@ -64,7 +64,7 @@ const TextWithImages = () => (
               </StyledTitle>
 
               <Marger top="4" className="k-u-hidden@xs-down">
-                <Button as="a" href="#" modifier="helium" big>
+                <Button as="a" href="#" modifier="helium" size="large">
                   Rejoignez-nous
                 </Button>
               </Marger>
@@ -81,7 +81,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="regular" color="font1">
                   Marque ou entreprise
                 </Text>
               </Marger>
@@ -98,7 +98,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="regular" color="font1">
                   Collectivité territoriale ou réseau
                 </Text>
               </Marger>
@@ -115,7 +115,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="regular" color="font1">
                   Média ou agence
                 </Text>
               </Marger>
@@ -132,7 +132,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="regular" color="font1">
                   Marque ou Association ou fondation
                 </Text>
               </Marger>
@@ -149,7 +149,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="regular" color="font1">
                   École ou incubateur
                 </Text>
               </Marger>
@@ -157,7 +157,7 @@ const TextWithImages = () => (
           </StyledGrid>
 
           <Marger top="4" className="k-u-hidden@s-up">
-            <Button as="a" href="#" modifier="helium" size="big" fit="fluid">
+            <Button as="a" href="#" modifier="helium" size="large" fit="fluid">
               Vous aussi, rejoignez-nous
             </Button>
           </Marger>

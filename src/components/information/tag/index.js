@@ -21,6 +21,8 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _deprecated = require("../../../helpers/utils/deprecated");
+
 var _excluded = ["type", "size", "variant", "className", "flex"];
 
 var StyledTag = _styledComponents.default.span.withConfig({
@@ -35,6 +37,7 @@ var Tag = function Tag(_ref) {
       className = _ref.className,
       flex = _ref.flex,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  (0, _deprecated.checkDeprecatedSizes)(size);
   return /*#__PURE__*/_react.default.createElement(StyledTag, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Tag', className, "k-Tag--" + type, "k-Tag--" + size, "k-Tag--" + variant, {
       'k-Tag--flex': flex
@@ -45,13 +48,13 @@ var Tag = function Tag(_ref) {
 exports.Tag = Tag;
 Tag.propTypes = {
   type: _propTypes.default.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
-  size: _propTypes.default.oneOf(['regular', 'small']),
+  size: _propTypes.default.oneOf(['small', 'medium']),
   variant: _propTypes.default.oneOf(['light', 'status', 'dark']),
   flex: _propTypes.default.bool
 };
 Tag.defaultProps = {
   type: 'info',
-  size: 'regular',
+  size: 'medium',
   variant: 'status',
   flex: false
 };

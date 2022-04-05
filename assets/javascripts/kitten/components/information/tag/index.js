@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledTag = styled.span`
   display: inline-block;
@@ -96,32 +97,36 @@ const StyledTag = styled.span`
   }
 `
 
-export const Tag = ({ type, size, variant, className, flex, ...props }) => (
-  <StyledTag
-    className={classNames(
-      'k-Tag',
-      className,
-      `k-Tag--${type}`,
-      `k-Tag--${size}`,
-      `k-Tag--${variant}`,
-      {
-        'k-Tag--flex': flex,
-      },
-    )}
-    {...props}
-  />
-)
+export const Tag = ({ type, size, variant, className, flex, ...props }) => {
+  checkDeprecatedSizes(size)
+
+  return (
+    <StyledTag
+      className={classNames(
+        'k-Tag',
+        className,
+        `k-Tag--${type}`,
+        `k-Tag--${size}`,
+        `k-Tag--${variant}`,
+        {
+          'k-Tag--flex': flex,
+        },
+      )}
+      {...props}
+    />
+  )
+}
 
 Tag.propTypes = {
   type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
-  size: PropTypes.oneOf(['regular', 'small']),
+  size: PropTypes.oneOf(['small', 'medium']),
   variant: PropTypes.oneOf(['light', 'status', 'dark']),
   flex: PropTypes.bool,
 }
 
 Tag.defaultProps = {
   type: 'info',
-  size: 'regular',
+  size: 'medium',
   variant: 'status',
   flex: false,
 }

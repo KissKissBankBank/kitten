@@ -104,9 +104,7 @@ export const ProjectsCarousel = ({
       className="ProjectsCarousel__button"
     >
       {buttonLabel}
-      <ArrowIcon
-        style={{ width: 6 }}
-      />
+      <ArrowIcon style={{ width: 6 }} />
     </Button>
   )
 
@@ -133,7 +131,7 @@ export const ProjectsCarousel = ({
 
                 {!!description && (
                   <Marger top=".5">
-                    <Text size="tiny" color="font1" weight="light">
+                    <Text size="small" color="font1" weight="light">
                       {description}
                     </Text>
                   </Marger>

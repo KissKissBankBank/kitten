@@ -75,16 +75,16 @@ export const Default = ({ contentFixedHeight, ...args }) => (
           gap={30}
           direction="row"
         >
-          <TextButton size="big">
+          <TextButton size="large">
             <HeartIconNext />
             144
           </TextButton>
-          <TextButton size="big">
+          <TextButton size="large">
             <BubbleIconNext />
             33
           </TextButton>
         </FlexWrapper>
-        <TextButton size="big">
+        <TextButton size="large">
           <AirplaneIconNext />
           <span className="k-u-hidden@s-down">Partager</span>
         </TextButton>

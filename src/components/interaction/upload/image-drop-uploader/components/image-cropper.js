@@ -15,7 +15,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _useDrag2 = require("../hooks/use-drag");
 
-var _usePreviousHook = require("../../../../../helpers/utils/use-previous-hook");
+var _usePrevious = require("../../../../../helpers/hooks/use-previous");
 
 var _excluded = ["src", "onChange", "className", "initialCrop", "disabled"];
 
@@ -57,7 +57,7 @@ var ImageCropper = function ImageCropper(_ref) {
       liveImagePosition = _useDrag.liveImagePosition,
       isDragging = _useDrag.isDragging;
 
-  var previousImagePosition = (0, _usePreviousHook.usePrevious)(imagePosition);
+  var previousImagePosition = (0, _usePrevious.usePrevious)(imagePosition);
   (0, _react.useEffect)(function () {
     if (!imageDimensions) return;
     if ((previousImagePosition == null ? void 0 : previousImagePosition.x) === imagePosition.x && (previousImagePosition == null ? void 0 : previousImagePosition.y) === imagePosition.y) return;

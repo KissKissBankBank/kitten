@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 export const KkbbFlashIllustration = ({ size, ...props }) => {
+  checkDeprecatedSizes(size)
+
   if (size === 'small') {
     return (
       <svg
@@ -74,5 +77,5 @@ export const KkbbFlashIllustration = ({ size, ...props }) => {
 }
 
 KkbbFlashIllustration.propTypes = {
-  size: PropTypes.oneOf(['small', 'normal', null, undefined]),
+  size: PropTypes.oneOf(['small', 'medium', null, undefined]),
 }

@@ -15,8 +15,8 @@ import {
   ScreenConfig,
 } from 'kitten'
 import {
-  DEFAULT,
-  BIG,
+  MEDIUM,
+  LARGE,
 } from '../../../../components/typography/horizontal-stroke'
 import { FLUID } from '../../../../components/action/button/standalone-styles'
 import {
@@ -47,11 +47,11 @@ const StyledVideo = styled.div`
 `
 
 const StyledHorizontalStroke = styled(HorizontalStroke)`
-  ${DEFAULT}
+  ${MEDIUM}
   width: ${pxToRem(40)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    ${BIG}
+    ${LARGE}
     height: ${pxToRem(6)};
   }
 `
@@ -102,7 +102,7 @@ const TextWithVideo = () => (
           </Marger>
 
           <Marger top="4">
-            <StyledButton href="#" modifier="helium" big>
+            <StyledButton href="#" modifier="helium" size="large">
               Devenir partenaire
             </StyledButton>
           </Marger>

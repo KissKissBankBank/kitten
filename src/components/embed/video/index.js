@@ -17,7 +17,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _reactElements = require("../../../helpers/react/react-elements");
+var _getReactElements = require("../../../helpers/react/get-react-elements");
 
 var _screenConfig = require("../../../constants/screen-config");
 
@@ -52,11 +52,11 @@ var Video = function Video(_ref) {
       isPlayerVisible = _useState[0],
       setPlayerVisibility = _useState[1];
 
-  var loader = (0, _reactElements.getReactElementsByType)({
+  var loader = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Video.Loader
   });
-  var childrenWithoutLoader = (0, _reactElements.getReactElementsWithoutType)({
+  var childrenWithoutLoader = (0, _getReactElements.getReactElementsWithoutType)({
     children: children,
     type: Video.Loader
   });

@@ -22,7 +22,7 @@ var Title = function Title(_ref) {
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(Text, _extends({
-    size: "tiny",
+    size: "small",
     tag: "h3",
     weight: "bold",
     color: "font1",

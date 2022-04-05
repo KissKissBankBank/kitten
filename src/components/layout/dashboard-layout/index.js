@@ -21,11 +21,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _useMediaQuery = require("../../../helpers/utils/use-media-query");
+var _useMediaQuery = require("../../../helpers/hooks/use-media-query");
 
 var _mediaQueries = require("../../../helpers/utils/media-queries");
 
-var _reactElements = require("../../../helpers/react/react-elements");
+var _getReactElements = require("../../../helpers/react/get-react-elements");
 
 var _events = require("../../../helpers/dom/events");
 
@@ -184,7 +184,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
 
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDashboard, {
     className: "k-DashboardLayout__wrapper"
-  }, renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
+  }, renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: SiteHeader
   })), /*#__PURE__*/_react.default.createElement("a", {
@@ -210,20 +210,20 @@ var DashboardLayout = function DashboardLayout(_ref) {
     color: _colorsConfig.default.background1
   }), /*#__PURE__*/_react.default.createElement("span", {
     className: "k-DashboardLayout__backLink__text"
-  }, backLinkProps.children)), renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
+  }, backLinkProps.children)), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Header
-  })), renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
+  })), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: SideContent
-  })), renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
+  })), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: SideFooter
   }))), /*#__PURE__*/_react.default.createElement("div", {
     ref: contentElement,
     tabIndex: -1,
     className: "k-DashboardLayout__mainWrapper"
-  }, renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
+  }, renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Header
   }), {
@@ -233,7 +233,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
       onClick: handleButtonClick,
       'aria-expanded': isOpen ? isOpen : null
     })
-  }), renderComponentChildrenArray((0, _reactElements.getReactElementsByType)({
+  }), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Alerts
   })), /*#__PURE__*/_react.default.createElement("main", {
@@ -241,7 +241,7 @@ var DashboardLayout = function DashboardLayout(_ref) {
       'k-DashboardLayout__main--fullHeight': fullHeightContent
     }),
     id: "main"
-  }, renderComponentArray((0, _reactElements.getReactElementsWithoutTypeArray)({
+  }, renderComponentArray((0, _getReactElements.getReactElementsWithoutTypeArray)({
     children: children,
     typeArray: [SiteHeader, Header, SideContent, SideFooter, Alerts]
   }))))));

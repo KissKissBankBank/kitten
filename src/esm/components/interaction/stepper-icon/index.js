@@ -27,20 +27,20 @@ export var StepperIcon = function StepperIcon(_ref) {
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/React.createElement(IconBadge, _extends({
-      size: "tiny",
+      size: "small",
       status: "info"
     }, props), /*#__PURE__*/React.createElement(ArrowIcon, null));
   }
 
   if (state === 'validated' || state === 'valid') {
     return /*#__PURE__*/React.createElement(IconBadge, _extends({
-      size: "tiny",
+      size: "small",
       status: "success"
     }, props), /*#__PURE__*/React.createElement(CheckedIcon, null));
   }
 
   return /*#__PURE__*/React.createElement(IconBadge, _extends({
-    size: "tiny",
+    size: "small",
     empty: true
   }, props));
 };

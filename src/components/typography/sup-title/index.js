@@ -13,7 +13,7 @@ var _text = require("../../typography/text");
 
 var SupTitle = function SupTitle(props) {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
-    size: "tiny",
+    size: "small",
     lineHeight: "normal",
     transform: "uppercase",
     weight: "bold"

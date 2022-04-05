@@ -55,7 +55,7 @@ export const Default = ({ progressProps, ...args }) => (
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           134
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -63,7 +63,7 @@ export const Default = ({ progressProps, ...args }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           7 jours
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -71,7 +71,7 @@ export const Default = ({ progressProps, ...args }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-nowrap" weight="bold" size="tiny">
+        <Text className="k-u-nowrap" weight="bold" size="small">
           9 930 €
         </Text>
         <Text className="k-u-nowrap" size="micro">
@@ -119,7 +119,7 @@ export const Lendopolis = ({ progressProps, ...args }) => (
     </ProjectCard.Line>
     <ProjectCard.ItemsLine noMargin>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           134
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -127,7 +127,7 @@ export const Lendopolis = ({ progressProps, ...args }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           7 jours
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -135,7 +135,7 @@ export const Lendopolis = ({ progressProps, ...args }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           9 930 €
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -165,7 +165,7 @@ export const WithButton = ({ progressProps, ...args }) => (
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           134
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -173,7 +173,7 @@ export const WithButton = ({ progressProps, ...args }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           7 jours
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -181,7 +181,7 @@ export const WithButton = ({ progressProps, ...args }) => (
         </Text>
       </ProjectCard.Item>
       <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="bold" size="tiny">
+        <Text className="k-u-ellipsis" weight="bold" size="small">
           9 930 €
         </Text>
         <Text className="k-u-ellipsis" size="micro">
@@ -191,7 +191,7 @@ export const WithButton = ({ progressProps, ...args }) => (
     </ProjectCard.ItemsLine>
     <ProjectCard.Progress {...progressProps} />
     <ProjectCard.Line>
-      <Button fit="fluid" modifier="helium" size="tiny">
+      <Button fit="fluid" modifier="helium" size="small">
         Participer
       </Button>
     </ProjectCard.Line>
@@ -254,13 +254,13 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
       </ProjectCard.Line>
       <ProjectCard.Line className="k-u-flex k-u-flex-justifyContent-sb k-u-flex-alignItems-baseline">
         <div>
-          <Text size="big" weight="bold">
+          <Text size="large" weight="bold">
             172
           </Text>
-          <Text size="tiny"> abonnés</Text>
+          <Text size="small"> abonnés</Text>
         </div>
         <Text
-          size="tiny"
+          size="small"
           weight="regular"
           className="k-u-link k-u-link-primary1"
         >
@@ -287,13 +287,13 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
         className="k-u-flex k-u-flex-justifyContent-sb k-u-flex-alignItems-end"
       >
         <div>
-          <Text size="big" weight="bold">
+          <Text size="large" weight="bold">
             172
           </Text>
-          <Text size="tiny"> abonnés</Text>
+          <Text size="small"> abonnés</Text>
         </div>
         <Text
-          size="tiny"
+          size="small"
           weight="regular"
           className="k-u-link k-u-link-primary1"
         >

@@ -1,14 +1,12 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 exports.__esModule = true;
 exports.nativeInputValueSetter = void 0;
 
-var _elementHelper = _interopRequireDefault(require("../element-helper"));
+var _elementHelper = require("../element-helper");
 
 var nativeInputValueSetter = function () {
-  if (!_elementHelper.default.canUseDom()) return false;
+  if (!_elementHelper.domElementHelper.canUseDom()) return false;
   var valueDescriptor = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value');
   return valueDescriptor.set;
 }();

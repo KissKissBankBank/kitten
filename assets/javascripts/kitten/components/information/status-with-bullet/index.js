@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledStatus = styled.span`
   color: currentColor;
@@ -36,7 +37,8 @@ const StyledStatus = styled.span`
     color: ${COLORS.primary1};
   }
 
-  &.k-StatusWithBullet--normal {
+  &.k-StatusWithBullet--normal,
+  &.k-StatusWithBullet--medium {
     font-size: ${stepToRem(0)};
 
     .k-StatusWithBullet__bullet {
@@ -46,7 +48,8 @@ const StyledStatus = styled.span`
     }
   }
 
-  &.k-StatusWithBullet--tiny {
+  &.k-StatusWithBullet--tiny,
+  &.k-StatusWithBullet--small {
     font-size: ${stepToRem(-1)};
 
     .k-StatusWithBullet__bullet {
@@ -87,6 +90,8 @@ export const StatusWithBullet = ({
   weight,
   ...props
 }) => {
+  checkDeprecatedSizes(size)
+
   return (
     <StyledStatus
       className={classNames(
@@ -122,14 +127,14 @@ StatusWithBullet.propTypes = {
     'neutral',
     'none',
   ]),
-  size: PropTypes.oneOf(['normal', 'tiny', 'micro']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium']),
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
   bulletProps: PropTypes.object,
 }
 
 StatusWithBullet.defaultProps = {
   statusType: 'success',
-  size: 'tiny',
+  size: 'small',
   weight: 'regular',
   bulletProps: {},
 }

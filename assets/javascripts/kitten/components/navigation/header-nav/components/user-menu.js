@@ -1,7 +1,7 @@
 import React, { cloneElement, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Context } from './context'
-import { getReactElementsByType } from '../../../../helpers/react/react-elements'
+import { getReactElementsByType } from '../../../../helpers/react/get-react-elements'
 import classNames from 'classnames'
 import { DropdownButton } from './dropdown-button'
 import { useDropdown } from '../hooks/use-dropdown'

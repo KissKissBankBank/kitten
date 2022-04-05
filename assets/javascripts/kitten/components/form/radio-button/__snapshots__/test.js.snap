@@ -159,7 +159,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 .c0.k-Form-RadioButton--orion .k-Form-RadioButton__label {
   box-sizing: border-box;
   min-height: 4.375rem;
-  border-radius: var(--border-radius-xs);
+  border-radius: var(--border-radius-s);
   border: var(--border);
   padding: 1.5rem 0.9375rem;
 }
@@ -254,7 +254,8 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   min-height: 0;
 }
 
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label {
+.c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label,
+.c0.k-Form-RadioButton--orion.k-Form-RadioButton--large .k-Form-RadioButton__label {
   min-height: 3.75rem;
   padding: 1.125rem 0.9375rem;
 }
@@ -308,18 +309,21 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
     border-width: 0.375rem;
   }
 
-  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label {
+  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label,
+  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--large .k-Form-RadioButton__label {
     min-height: 5rem;
     padding: 1.75rem 0.9375rem;
   }
 
-  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label::before {
+  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label::before,
+  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--large .k-Form-RadioButton__label::before {
     margin: 0.125rem 1.25rem 0 0;
     width: 1.25rem;
     height: 1.25rem;
   }
 
-  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__labelText {
+  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__labelText,
+  .c0.k-Form-RadioButton--orion.k-Form-RadioButton--large .k-Form-RadioButton__labelText {
     -webkit-flex: 1 0 calc(100% - 2.5rem);
     -ms-flex: 1 0 calc(100% - 2.5rem);
     flex: 1 0 calc(100% - 2.5rem);
@@ -328,7 +332,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-RadioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--regular k-Form-RadioButton__labelText--regular"
+  className="c0 k-Form-RadioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
 >
   <input
     className="k-Form-RadioButton__input"

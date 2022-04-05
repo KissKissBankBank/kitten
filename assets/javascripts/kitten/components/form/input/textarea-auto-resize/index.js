@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
-export const TextareaAutoResize = ({
+export const TextareaAutoResize = forwardRef(({
   minRows,
   maxRows,
   rows,
@@ -11,7 +11,7 @@ export const TextareaAutoResize = ({
   lineHeight,
   style,
   ...others
-}) => {
+}, ref) => {
   const [innerRows, setInnerRows] = useState(rows)
   const [innerValue, setInnerValue] = useState(value)
 
@@ -45,6 +45,7 @@ export const TextareaAutoResize = ({
 
   return (
     <textarea
+      ref={ref || null}
       rows={innerRows}
       value={innerValue}
       onChange={handleChange}
@@ -55,7 +56,7 @@ export const TextareaAutoResize = ({
       {...others}
     />
   )
-}
+})
 
 TextareaAutoResize.defaultProps = {
   minRows: 1,

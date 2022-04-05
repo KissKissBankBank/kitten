@@ -139,7 +139,7 @@ export var SearchInput = function SearchInput(_ref) {
     }),
     onKeyDown: handleKeyDown
   }), /*#__PURE__*/React.createElement(TextInputWithButton, _extends({
-    size: "tiny",
+    size: "small",
     rounded: true,
     buttonValue: /*#__PURE__*/React.createElement(SearchIcon, null),
     buttonProps: _extends({}, searchButtonProps, {
@@ -152,7 +152,7 @@ export var SearchInput = function SearchInput(_ref) {
     className: classNames('k-HeaderNav__searchInput__input', searchInputProps.className)
   })), isMobileInvisible ? /*#__PURE__*/React.createElement(Button, {
     fit: "icon",
-    size: "tiny",
+    size: "small",
     rounded: true,
     onClick: handleFoldButtonClick,
     className: "k-u-hidden@m-up"
@@ -162,7 +162,7 @@ export var SearchInput = function SearchInput(_ref) {
     className: "k-u-reset-button k-HeaderNav__searchInput__mobileFold",
     onClick: handleFoldButtonClick
   }, /*#__PURE__*/React.createElement(CrossIcon, {
-    size: "big"
+    size: "large"
   }), /*#__PURE__*/React.createElement("span", {
     className: "k-u-a11y-visuallyHidden"
   }, a11yMobileClose)), /*#__PURE__*/React.createElement("div", _extends({}, menuProps, {

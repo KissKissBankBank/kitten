@@ -163,7 +163,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
     }, /*#__PURE__*/React.createElement(Text, {
       tag: "div",
       weight: "regular",
-      size: "tiny",
+      size: "small",
       lineHeight: "normal",
       className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
     }, internalStatus === 'file-selected' ? internalFileName : buttonTitle), internalStatus === 'ready' && /*#__PURE__*/React.createElement(Text, {
@@ -206,7 +206,7 @@ export var DocumentManager = function DocumentManager(_ref2) {
   }, /*#__PURE__*/React.createElement(Text, {
     tag: "div",
     weight: "regular",
-    size: "tiny",
+    size: "small",
     className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
   }, displayTitle), displayContent && /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentManager__display__content__content k-u-margin-top-noneHalf"
@@ -220,14 +220,14 @@ export var DocumentManager = function DocumentManager(_ref2) {
     onClick: handleCancelClick
   }, /*#__PURE__*/React.createElement(Text, {
     weight: "regular",
-    size: "tiny",
+    size: "small",
     className: "k-DocumentManager__actionButton__text"
   }, cancelButtonText)), canReplace && /*#__PURE__*/React.createElement("button", {
     className: "k-DocumentManager__actionButton k-u-reset-button",
     onClick: handleReplaceClick
   }, /*#__PURE__*/React.createElement(Text, {
     weight: "regular",
-    size: "tiny",
+    size: "small",
     className: "k-DocumentManager__actionButton__text"
   }, replaceButtonText)))));
 };

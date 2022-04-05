@@ -26,7 +26,7 @@ var Paragraph = function Paragraph(_ref) {
     tag: "p",
     className: "k-u-margin-bottom-singleHalf"
   }, (0, _parser.parseHtml)(paragraph)), /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
-    size: "tiny",
+    size: "small",
     className: "k-u-margin-top-singleHalf"
   }));
 };

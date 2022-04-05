@@ -15,7 +15,7 @@ var _carouselPage = require("./carousel-page");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _usePreviousHook = require("../../../../../helpers/utils/use-previous-hook");
+var _usePrevious = require("../../../../../helpers/hooks/use-previous");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -74,7 +74,7 @@ var CarouselInner = function CarouselInner(_ref) {
       viewedPages = _ref.viewedPages,
       pageClickText = _ref.pageClickText;
   var carouselInner = (0, _react.useRef)(null);
-  var previousIndexPageVisible = (0, _usePreviousHook.usePrevious)(currentPageIndex);
+  var previousIndexPageVisible = (0, _usePrevious.usePrevious)(currentPageIndex);
   var resizeObserver;
 
   var onResizeObserve = function onResizeObserve(_ref2) {

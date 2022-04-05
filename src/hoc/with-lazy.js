@@ -3,13 +3,13 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.default = void 0;
+exports.withLazy = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _lazyHook = _interopRequireDefault(require("../helpers/utils/lazy-hook"));
+var _useLazyObserver = require("../helpers/hooks/use-lazy-observer");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -18,7 +18,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var withLazy = function withLazy(WrappedComponent) {
   return function (props) {
     var lazyComponentRef = (0, _react.useRef)(null);
-    var isLazyTriggered = (0, _lazyHook.default)(lazyComponentRef);
+    var isLazyTriggered = (0, _useLazyObserver.useLazyObserver)(lazyComponentRef);
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
       ref: lazyComponentRef
     }), /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({}, props, {
@@ -27,5 +27,4 @@ var withLazy = function withLazy(WrappedComponent) {
   };
 };
 
-var _default = withLazy;
-exports.default = _default;
+exports.withLazy = withLazy;

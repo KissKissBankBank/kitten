@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { Image, Title, Description, PillNumber, Amount, Input, Action } from './components';
 import { Context } from './context';
-import { getReactElementsByType, getReactElementsWithoutType } from '../../../../helpers/react/react-elements';
+import { getReactElementsByType, getReactElementsWithoutType } from '../../../../helpers/react/get-react-elements';
 export var ContributionCard = function ContributionCard(_ref) {
   var className = _ref.className,
       closeButtonLabel = _ref.closeButtonLabel,

@@ -24,7 +24,8 @@ export var TextCopy = function TextCopy(_ref) {
       forceOneLine = _ref.forceOneLine,
       buttonText = _ref.buttonText,
       buttonModifier = _ref.buttonModifier,
-      size = _ref.size;
+      size = _ref.size,
+      className = _ref.className;
 
   var _useState = useState(false),
       isMessageVisible = _useState[0],
@@ -64,7 +65,7 @@ export var TextCopy = function TextCopy(_ref) {
     window.getSelection().addRange(range);
   });
   return /*#__PURE__*/React.createElement(Wrapper, {
-    className: classNames('k-TextCopy', 'k-u-reset-button'),
+    className: classNames('k-TextCopy', 'k-u-reset-button', className),
     type: "button",
     onClick: copyText
   }, description && /*#__PURE__*/React.createElement(VisuallyHidden, null, description), /*#__PURE__*/React.createElement(TextInput, {
@@ -101,7 +102,7 @@ TextCopy.propTypes = {
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonModifier: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant'])
 };
 TextCopy.defaultProps = {
   alertMessage: undefined,
@@ -110,5 +111,5 @@ TextCopy.defaultProps = {
   forceOneLine: false,
   buttonText: undefined,
   buttonModifier: 'helium',
-  size: 'regular'
+  size: 'medium'
 };

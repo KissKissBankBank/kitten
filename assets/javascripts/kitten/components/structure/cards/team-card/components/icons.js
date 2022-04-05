@@ -38,7 +38,7 @@ export const TeamCardIcons = ({
     <StyledTeamCardIcons>
       {email && (
         <Button
-          size="tiny"
+          size="small"
           fit="icon"
           tag="a"
           href={`mailto:${email}`}
@@ -50,10 +50,7 @@ export const TeamCardIcons = ({
       )}
 
       {phoneNumber && (
-        <TeamCardPhoneIcon
-          {...props}
-          phoneNumber={phoneNumber}
-        />
+        <TeamCardPhoneIcon {...props} phoneNumber={phoneNumber} />
       )}
 
       <SocialLinks links={getSocialLinks()} />
@@ -76,14 +73,10 @@ const SocialLinks = ({ links = [] }) => (
           modifier="hydrogen"
           target="_blank"
           rel="noopener"
-          size="tiny"
+          size="small"
         >
-          {link.name === 'linkedin' && (
-            <LinkedinIcon aria-hidden />
-          )}
-          {link.name === 'twitter' && (
-            <TwitterIcon aria-hidden />
-          )}
+          {link.name === 'linkedin' && <LinkedinIcon aria-hidden />}
+          {link.name === 'twitter' && <TwitterIcon aria-hidden />}
         </Button>
       )
     })}

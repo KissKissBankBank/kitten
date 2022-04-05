@@ -81,7 +81,7 @@ describe('<NavBar />', () => {
             className="customClass"
             listProps={{ className: 'customListClass' }}
             navProps={{ className: 'customNavClass' }}
-            modifier="big"
+            modifier="large"
           >
             <NavBar.ListItem linkProps={{ href: '#1' }} active>
               Item 1

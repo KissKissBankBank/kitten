@@ -23,7 +23,7 @@ export default {
     placeholder: 'Placeholder…',
     disabled: false,
     helpMessage: 'Press Enter or comma to add an item to the list.',
-    size: 'regular',
+    size: 'medium',
     addEventKeys: ['Enter', ','],
     removeEventKeys: ['Backspace'],
   },
@@ -50,7 +50,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['tiny', 'regular', 'big', 'huge', 'giant'],
+      options: ['small', 'medium', 'large', 'huge', 'giant'],
       control: 'select',
     },
     addEventKeys: {

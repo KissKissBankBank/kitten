@@ -23,7 +23,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _useFocusTrap = require("../../../../helpers/dom/use-focus-trap");
+var _useFocusTrap = require("../../../../helpers/hooks/use-focus-trap");
 
 var _excluded = ["button", "open", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
     _excluded2 = ["href", "className", "icon", "children"],

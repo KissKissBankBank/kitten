@@ -51,20 +51,20 @@ var StepperIcon = function StepperIcon(_ref) {
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, (0, _extends2.default)({
-      size: "tiny",
+      size: "small",
       status: "info"
     }, props), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, null));
   }
 
   if (state === 'validated' || state === 'valid') {
     return /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, (0, _extends2.default)({
-      size: "tiny",
+      size: "small",
       status: "success"
     }, props), /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, null));
   }
 
   return /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, (0, _extends2.default)({
-    size: "tiny",
+    size: "small",
     empty: true
   }, props));
 };

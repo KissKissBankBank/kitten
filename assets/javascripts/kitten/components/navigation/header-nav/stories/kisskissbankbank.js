@@ -17,7 +17,7 @@ import {
   ButtonWithTooltip,
   Overlay,
   FlexWrapper,
-  HorizontalCrowdfundingCard,
+  HorizontalProjectCard,
   ClockCircleIcon,
   CheckedCircleIcon,
   CLOSE_OVERLAY_EVENT,
@@ -116,7 +116,7 @@ const SearchInput = () => {
     >
       <p className="k-u-a11y-visuallyHidden">4 résultats ont été trouvés</p>
       <FlexWrapper gap={5} padding={15}>
-        <HorizontalCrowdfundingCard
+        <HorizontalProjectCard
           title="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
           description="Maecenas sed diam eget risus varius blandit sit amet non magna."
           progress={37}
@@ -136,7 +136,7 @@ const SearchInput = () => {
             </div>
           }
         />
-        <HorizontalCrowdfundingCard
+        <HorizontalProjectCard
           title="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
           description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
           progress={100}
@@ -156,7 +156,7 @@ const SearchInput = () => {
             </div>
           }
         />
-        <HorizontalCrowdfundingCard
+        <HorizontalProjectCard
           title="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
           description="Morbi leo risus, porta ac consectetur ac, vestibulum at eros."
           progress={21}
@@ -176,7 +176,7 @@ const SearchInput = () => {
             </div>
           }
         />
-        <HorizontalCrowdfundingCard
+        <HorizontalProjectCard
           title="Maecenas sed diam eget risus varius blandit sit amet non magna."
           description="Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
           progress={60}
@@ -199,7 +199,7 @@ const SearchInput = () => {
       </FlexWrapper>
 
       <Button
-        size="tiny"
+        size="small"
         type="submit"
         fit="fluid"
         className="k-u-margin-bottom-double k-u-margin-horizontal-double"
@@ -268,7 +268,7 @@ export const KissKissBankBankHeaderNavStory = ({
               as: 'a',
               href: '#card',
               icon: true,
-              size: 'tiny',
+              size: 'small',
               rounded: true,
               modifier: 'hydrogen',
               fit: 'icon',
@@ -285,7 +285,7 @@ export const KissKissBankBankHeaderNavStory = ({
                 as: 'a',
                 href: '#hello',
                 icon: true,
-                size: 'tiny',
+                size: 'small',
                 rounded: true,
                 modifier: 'hydrogen',
                 fit: 'icon',
@@ -297,7 +297,7 @@ export const KissKissBankBankHeaderNavStory = ({
             {hasMentorEditButton && (
               <Button
                 as="a"
-                size="tiny"
+                size="small"
                 modifier="helium"
                 borderRadius={100}
                 className="k-u-hidden@m-down"
@@ -353,7 +353,7 @@ export const KissKissBankBankHeaderNavStory = ({
 
             <Button
               as="a"
-              size="tiny"
+              size="small"
               modifier="helium"
               borderRadius={100}
               className="k-u-hidden@m-down"

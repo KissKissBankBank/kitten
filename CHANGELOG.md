@@ -8,12 +8,53 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `ChatLayout`
   - `Discussion`
   - `MessagesMenu`
-- Feature: `OpenLockIconNext`: New component.
-- Feature: `DashboardLayout`: Add the following subcomponents to `DashboardLayout.Flow`:
+- Fix: `RadioButton`: Improve style.
+
+## [10.0.1] - 2022-04-05
+
+Fix:
+
+- `Text`: Use full utility class name to avoid purge.
+
+
+## [10.0.0] - 2022-04-05
+
+Breaking Changes:
+
+- Remove the following unused helpers and hocs:
+  - `numberUtils` helper
+  - `Deprecated()` and `hasDeprecatedProps` helpers
+  - `card` HOC
+  - `default-props` HOC
+  - `trigger-enhancer` HOC
+- `ScrollableContainer`: Remove `scrollableContainerStyle` export.
+- `BulletList`: Replace value names for `size` prop with `micro, small, medium, large, huge`.
+- `Label`: Use `size="small"` as default value.
+- `Label`: Remove `size="nano"` value.
+
+Deprecations/Changes:
+
+- `ProjectCard`: Migrate from `BackingCard`.
+- `HorizontalProjectCard`: Migrate from `HorizontalCrowdfundingCard`.
+- Components: Replace value names for `size` prop from `tiny, regular, default, big` to `small, medium, large`.
+
+Fix:
+
+- `DashboardLayout`: Fix `Flow` grid lines.
+
+## [9.6.0] - 2022-04-04
+
+Features:
+
+- `OpenLockIconNext`: New component.
+- `DashboardLayout`: Add the following subcomponents to `DashboardLayout.Flow`:
   - `Title`
   - `TitleAside`
-- Fix: `LightbulbIllustration`: Fix colors.
-- Fix: `TextCopy`: Better className propagation.
+
+Fixes:
+
+- `LightbulbIllustration`: Fix colors.
+- `TextCopy`: Enhance className propagation.
 
 ## [9.5.0] - 2022-04-01
 

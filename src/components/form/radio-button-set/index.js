@@ -63,7 +63,7 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
         itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
     return /*#__PURE__*/_react.default.createElement(_radioButton.RadioButton, (0, _extends2.default)({
       id: id,
-      variant: variant || 'orion',
+      variant: variant || null,
       design: design,
       error: error,
       size: size,
@@ -87,7 +87,7 @@ RadioButtonSet.propTypes = {
     id: _propTypes.default.string.isRequired,
     defaultChecked: _propTypes.default.bool
   })),
-  size: _propTypes.default.oneOf(['small', 'regular', 'big']),
+  size: _propTypes.default.oneOf(['small', 'medium', 'large']),
   variant: (0, _deprecated.default)(_propTypes.default.oneOf(['andromeda', 'orion']), 'Please use the RadioSet component instead'),
   design: _propTypes.default.oneOf(['disc', 'check']),
   disabled: _propTypes.default.bool,
@@ -103,7 +103,7 @@ RadioButtonSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  size: 'regular',
+  size: 'medium',
   fontWeight: 'regular',
   paragraphStyle: false
 };

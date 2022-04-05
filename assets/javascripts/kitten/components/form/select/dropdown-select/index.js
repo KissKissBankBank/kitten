@@ -10,6 +10,7 @@ import find from 'lodash/fp/find'
 import { DropdownCombobox } from './combobox'
 import { StyledDropdown } from './styles'
 import COLORS from '../../../../constants/colors-config'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const DropdownSelect = ({ combobox, ...props }) => {
   if (combobox) return <DropdownCombobox {...props} />
@@ -44,6 +45,8 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     arrowPosition,
     labelProps,
   } = props
+
+  checkDeprecatedSizes(size)
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -215,7 +218,7 @@ DropdownSelect.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
-  size: 'normal',
+  size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: item => `${item} is now selected.`,
@@ -241,7 +244,7 @@ DropdownSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
-  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,

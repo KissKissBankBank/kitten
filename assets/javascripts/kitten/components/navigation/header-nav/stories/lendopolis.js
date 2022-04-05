@@ -58,7 +58,7 @@ const InnerBurgerMenu = ({ isLogged }) => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       external
-      size="tiny"
+      size="small"
       href="#EXTERNAL_KISSKISSBANKBANK"
       target="_blank"
       rel="noopener"
@@ -67,7 +67,7 @@ const InnerBurgerMenu = ({ isLogged }) => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       external
-      size="tiny"
+      size="small"
       href="#EXTERNAL_MICRODON"
       target="_blank"
       rel="noopener"
@@ -76,7 +76,7 @@ const InnerBurgerMenu = ({ isLogged }) => (
     </HeaderMenu.Item>
     <HeaderMenu.Item
       external
-      size="tiny"
+      size="small"
       href="#EXTERNAL_GOODEED"
       target="_blank"
       rel="noopener"
@@ -104,7 +104,7 @@ const LoggedOutMenu = () => (
     <Button
       as="a"
       fit="content"
-      size="tiny"
+      size="small"
       modifier="calcium"
       borderRadius={100}
       href="#87641"
@@ -116,7 +116,7 @@ const LoggedOutMenu = () => (
     <Button
       as="a"
       fit="content"
-      size="tiny"
+      size="small"
       modifier="helium"
       borderRadius={100}
       href="#87642"
@@ -132,7 +132,7 @@ const PreRegisteredMenu = () => (
     <Button
       as="a"
       fit="content"
-      size="tiny"
+      size="small"
       modifier="helium"
       className="k-u-hidden@m-down"
       borderRadius={100}
@@ -150,7 +150,7 @@ const PreRegisteredMenu = () => (
         <Button
           as="span"
           icon={true}
-          size="tiny"
+          size="small"
           rounded={true}
           modifier="hydrogen"
           aria-label="Menu"

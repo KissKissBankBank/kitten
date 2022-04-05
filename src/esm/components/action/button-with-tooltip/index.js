@@ -46,7 +46,7 @@ export var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
   }, tooltipProps, {
     className: classNames('k-ButtonWithTooltip__tooltip', tooltipProps == null ? void 0 : tooltipProps.className)
   }), /*#__PURE__*/React.createElement(Text, {
-    size: "tiny",
+    size: "small",
     color: "font1",
     weight: "regular"
   }, tooltipText)));

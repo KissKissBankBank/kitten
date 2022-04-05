@@ -2,13 +2,13 @@
 
 exports[`<Tag /> should match its empty snapshot 1`] = `
 <span
-  className="sc-bdvvtL gnVgfy k-Tag k-Tag--info k-Tag--regular k-Tag--status"
+  className="sc-bdvvtL gnVgfy k-Tag k-Tag--info k-Tag--medium k-Tag--status"
 />
 `;
 
 exports[`<Tag /> should match its snapshot with props 1`] = `
 <span
-  className="sc-bdvvtL gnVgfy k-Tag k-Tag--info k-Tag--regular k-Tag--status"
+  className="sc-bdvvtL gnVgfy k-Tag k-Tag--info k-Tag--medium k-Tag--status"
 >
   <strong>
     5

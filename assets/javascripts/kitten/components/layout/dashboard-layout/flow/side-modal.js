@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
-import { useModal } from '../../../../helpers/dom/use-modal'
+import { useModal } from '../../../../helpers/hooks/use-modal'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'

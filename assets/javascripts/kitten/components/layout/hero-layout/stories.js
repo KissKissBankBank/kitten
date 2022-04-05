@@ -211,13 +211,13 @@ export const Default = ({
               className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
             >
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="regular" rounded>
+                <Button fit="content" size="medium" rounded>
                   <AirplaneIconNext />
                   <span>Partager</span>
                 </Button>
                 <Button
                   fit="content"
-                  size="regular"
+                  size="medium"
                   rounded
                   className="k-u-hidden@l-up"
                 >
@@ -226,11 +226,11 @@ export const Default = ({
                 </Button>
               </FlexWrapper>
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="regular" rounded>
+                <Button fit="content" size="medium" rounded>
                   <StarIconNext />
                   <span>Ajouter aux favoris</span>
                 </Button>
-                <Button fit="content" size="regular" modifier="helium" rounded>
+                <Button fit="content" size="medium" modifier="helium" rounded>
                   S’abonner
                 </Button>
               </FlexWrapper>
@@ -261,7 +261,7 @@ export const Default = ({
                 tag="h3"
                 weight="bold"
                 transform="uppercase"
-                size="tiny"
+                size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
               >
                 Pourquoi s’abonner&nbsp;?
@@ -275,13 +275,13 @@ export const Default = ({
                   />
                 }
               >
-                <Text size="default" className="k-u-line-height-1-25">
+                <Text size="medium" className="k-u-line-height-1-25">
                   Contribuez à faire vivre ce projet
                 </Text>
-                <Text size="default" className="k-u-line-height-1-25">
+                <Text size="medium" className="k-u-line-height-1-25">
                   Recevez un contenu exclusif
                 </Text>
-                <Text size="default" className="k-u-line-height-1-25">
+                <Text size="medium" className="k-u-line-height-1-25">
                   Faites partie du cercle privilégié d’abonnés
                 </Text>
               </List>
@@ -297,7 +297,7 @@ export const Default = ({
                 tag="h3"
                 weight="bold"
                 transform="uppercase"
-                size="tiny"
+                size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
               >
                 Comment ça marche&nbsp;?
@@ -386,16 +386,16 @@ export const Default = ({
               </Text>
               <FlexWrapper direction="row" gap={10}>
                 <a href="#">
-                  <FacebookButtonIcon rounded size="tiny" />
+                  <FacebookButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <TwitterButtonIcon rounded size="tiny" />
+                  <TwitterButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <InstagramButtonIcon rounded size="tiny" />
+                  <InstagramButtonIcon rounded size="small" />
                 </a>
                 <a href="#">
-                  <YoutubeButtonIcon rounded size="tiny" />
+                  <YoutubeButtonIcon rounded size="small" />
                 </a>
               </FlexWrapper>
             </div>
@@ -426,7 +426,7 @@ export const Default = ({
                 Contact
               </Text>
               <div>
-                <Button fit="content" rounded size="tiny">
+                <Button fit="content" rounded size="small">
                   <EnvelopeIcon />
                   <span>Nous écrire</span>
                 </Button>
