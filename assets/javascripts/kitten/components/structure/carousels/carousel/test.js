@@ -22,8 +22,8 @@ describe('<Carousel />', () => {
   let originalMatchMedia
   const data = [
     {
-      status:'normal',
-      imageProps:{
+      status: 'normal',
+      imageProps: {
         src: 'kitten.jpg',
         alt: 'image alt',
       },
@@ -57,11 +57,11 @@ describe('<Carousel />', () => {
             value={55}
           />
         </>
-      )
+      ),
     },
     {
-      status:'success',
-      imageProps:{
+      status: 'success',
+      imageProps: {
         src: 'kitten-1.jpg',
         alt: 'image alt',
       },
@@ -95,7 +95,7 @@ describe('<Carousel />', () => {
             value={55}
           />
         </>
-      )
+      ),
     },
   ]
 

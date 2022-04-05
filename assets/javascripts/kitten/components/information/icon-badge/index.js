@@ -108,33 +108,33 @@ export const IconBadge = ({
   status,
   hasBorder,
   ...others
-}) => { 
+}) => {
   checkDeprecatedSizes(size)
 
   return (
     <StyledBadge
-    className={classNames(
-      'k-IconBadge',
-      className,
-      `k-IconBadge--${size}`,
-      `k-IconBadge--${status}`,
-      {
-        'k-IconBadge--empty': empty,
-        'k-IconBadge--hasBorderStyles': border.length > 0,
-        'k-IconBadge--hasBorder': hasBorder,
-      },
-    )}
-    style={{
-      '--iconBadge-background-color': backgroundColor ?? null,
-      '--iconBadge-border-width':
-        'width' in border ? pxToRem(border.width) : null,
-      '--iconBadge-border-style': border?.style ?? null,
-      '--iconBadge-border-color': border?.color ?? null,
-    }}
-    {...others}
-  >
-    {children}
-  </StyledBadge>
+      className={classNames(
+        'k-IconBadge',
+        className,
+        `k-IconBadge--${size}`,
+        `k-IconBadge--${status}`,
+        {
+          'k-IconBadge--empty': empty,
+          'k-IconBadge--hasBorderStyles': border.length > 0,
+          'k-IconBadge--hasBorder': hasBorder,
+        },
+      )}
+      style={{
+        '--iconBadge-background-color': backgroundColor ?? null,
+        '--iconBadge-border-width':
+          'width' in border ? pxToRem(border.width) : null,
+        '--iconBadge-border-style': border?.style ?? null,
+        '--iconBadge-border-color': border?.color ?? null,
+      }}
+      {...others}
+    >
+      {children}
+    </StyledBadge>
   )
 }
 

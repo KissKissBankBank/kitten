@@ -59,7 +59,7 @@ const StyledButton = styled.button`
 
 export const TextButton = ({ className, size, ...props }) => {
   checkDeprecatedSizes(size)
-  
+
   return (
     <StyledButton
       type="button"

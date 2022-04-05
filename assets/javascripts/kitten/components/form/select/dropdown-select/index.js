@@ -45,9 +45,9 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     arrowPosition,
     labelProps,
   } = props
-  
+
   checkDeprecatedSizes(size)
-  
+
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }

@@ -227,7 +227,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -238,7 +238,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -249,7 +249,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -695,7 +695,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -706,7 +706,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <button
       aria-current={null}
@@ -719,7 +719,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
     </button>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal k-HeaderMenu__item--hasButton"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--hasButton"
   >
     <button
       className="c1 k-Button k-HeaderMenu__item__button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
@@ -964,7 +964,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -975,7 +975,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -986,7 +986,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal k-HeaderMenu__item--external"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--external"
   >
     <a
       aria-current={null}
@@ -1248,7 +1248,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -1259,7 +1259,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal k-HeaderMenu__item--isSelected"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--isSelected"
   >
     <a
       aria-current="page"
@@ -1270,7 +1270,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -1510,7 +1510,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -1521,7 +1521,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -1532,7 +1532,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -1772,7 +1772,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   }
 >
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}
@@ -1783,7 +1783,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item k-HeaderMenu__item--normal k-HeaderMenu__item--light"
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--light"
   >
     <a
       aria-current={null}
@@ -1794,7 +1794,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
     </a>
   </li>
   <li
-    className="k-HeaderMenu__item customLiClass k-HeaderMenu__item--normal"
+    className="k-HeaderMenu__item customLiClass k-HeaderMenu__item--medium"
   >
     <a
       aria-current={null}

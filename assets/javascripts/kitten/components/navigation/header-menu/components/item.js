@@ -92,6 +92,6 @@ Item.defaultProps = {
   href: null,
   isSelected: false,
   liProps: {},
-  size: 'normal',
+  size: 'medium',
   tag: 'a',
 }

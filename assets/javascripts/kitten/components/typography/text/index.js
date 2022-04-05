@@ -59,9 +59,8 @@ export const Text = ({
   letterSpacing,
   ...others
 }) => {
-  
   checkDeprecatedSizes(size)
-  
+
   const Tag = as || tag
 
   const textClassName = classNames(

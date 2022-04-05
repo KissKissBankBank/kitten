@@ -9,10 +9,7 @@ export default {
   parameters: {
     docs: {
       page: () => (
-        <DocsPage
-          filepath={__filename}
-          importString="HorizontalProjectCard"
-        />
+        <DocsPage filepath={__filename} importString="HorizontalProjectCard" />
       ),
     },
   },
