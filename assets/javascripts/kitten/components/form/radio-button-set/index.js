@@ -74,7 +74,7 @@ export const RadioButtonSet = ({
       {items.map(({ id, className, ...itemProps }) => (
         <RadioButton
           id={id}
-          variant={variant || 'orion'}
+          variant={variant || null}
           design={design}
           error={error}
           size={size}
