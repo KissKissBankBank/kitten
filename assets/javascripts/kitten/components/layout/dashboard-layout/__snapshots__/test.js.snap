@@ -165,7 +165,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
   .c0 {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 35vw 20vw;
     gap: 1.875rem 5vw;
   }
@@ -530,7 +530,7 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
   .c0 {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 35vw 20vw;
     gap: 1.875rem 5vw;
   }
