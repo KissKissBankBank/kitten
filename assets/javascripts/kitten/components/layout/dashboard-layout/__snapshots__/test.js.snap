@@ -129,6 +129,9 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
 }
 
 .c0 .k-DashboardLayout__flow__loading {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -502,6 +505,9 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
 }
 
 .c0 .k-DashboardLayout__flow__loading {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
