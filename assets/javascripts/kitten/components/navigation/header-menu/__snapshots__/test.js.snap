@@ -153,7 +153,8 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
@@ -161,28 +162,36 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
 .c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
@@ -559,7 +568,8 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
@@ -567,28 +577,36 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
 .c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
@@ -872,7 +890,8 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
@@ -880,28 +899,36 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
 .c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
@@ -1147,7 +1174,8 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
@@ -1155,28 +1183,36 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
 .c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
@@ -1400,7 +1436,8 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
@@ -1408,28 +1445,36 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
 .c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
@@ -1653,7 +1698,8 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
@@ -1661,28 +1707,36 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
 .c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }

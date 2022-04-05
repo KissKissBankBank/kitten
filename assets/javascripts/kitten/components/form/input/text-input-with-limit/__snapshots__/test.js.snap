@@ -62,7 +62,7 @@ exports[`<TextInputWithLimit /> with \`size\` prop matches with snapshot 1`] = `
   className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--tiny"
+    className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--small"
     defaultValue=""
     disabled={false}
     name="text"

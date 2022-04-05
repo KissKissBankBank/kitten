@@ -60,7 +60,7 @@ const ModalEditProject = () => {
     <>
       <GlobalStyle />
       <Modal
-        size="big"
+        size="large"
         trigger={null}
         isOpen
         hasCloseButton

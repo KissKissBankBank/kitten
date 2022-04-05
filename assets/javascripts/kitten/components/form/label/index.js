@@ -6,7 +6,6 @@ import isEmpty from 'lodash/fp/isEmpty'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledLabel = styled.label`

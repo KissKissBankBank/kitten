@@ -14,8 +14,8 @@ import {
 } from 'kitten'
 import {
   FLUID,
-  DEFAULT,
-  BIG,
+  MEDIUM,
+  LARGE,
 } from '../../../../components/action/button/standalone-styles'
 
 const StyledGrid = styled(Grid)`
@@ -63,11 +63,11 @@ const StyledText = styled(Text)`
 `
 
 const StyledButton = styled(Button)`
-  ${BIG}
+  ${LARGE}
 
   @media (max-width: ${ScreenConfig.XS.max}px) {
     ${FLUID}
-    ${DEFAULT}
+    ${MEDIUM}
   }
 `
 
@@ -118,7 +118,7 @@ const TextWithImage = ({ imagePosition }) => (
             </TextWithIcon>
           </Marger>
 
-          <StyledButton big>En savoir plus</StyledButton>
+          <StyledButton size="large">En savoir plus</StyledButton>
         </ContentGrid>
 
         <GridCol col-xs="10" offset-xs="1" col-l="5">

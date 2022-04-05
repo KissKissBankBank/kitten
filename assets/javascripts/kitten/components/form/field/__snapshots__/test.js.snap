@@ -46,6 +46,7 @@ Array [
         onKeyDown={[Function]}
         placeholder="Select…"
         role="combobox"
+        size="medium"
         type="text"
       />
     </div>

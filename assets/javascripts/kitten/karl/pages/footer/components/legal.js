@@ -7,7 +7,7 @@ export const Legal = props => {
       <DropdownSelect
         id="lang-select"
         hideLabel
-        size="tiny"
+        size="small"
         modifier="boron"
         className="k-Footer__legal--select"
         placeholder="Français"

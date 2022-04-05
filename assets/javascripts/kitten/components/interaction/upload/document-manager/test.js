@@ -8,7 +8,7 @@ describe('<DocumentManager />', () => {
       .create(
         <DocumentManager
           id="DocumentManager"
-          buttonProps={{ size: 'big' }}
+          buttonProps={{ size: 'large' }}
           fileInputProps={{ multiple: true }}
           canCancel={true}
         />,

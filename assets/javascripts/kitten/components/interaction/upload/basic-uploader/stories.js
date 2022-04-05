@@ -140,7 +140,7 @@ export const StatusLoading = args => (
     id="BasicUploader__StatusLoading"
     buttonText="Send document"
     buttonProps={{
-      big: true,
+      size: 'large',
       modifier: 'helium',
     }}
     status="loading"

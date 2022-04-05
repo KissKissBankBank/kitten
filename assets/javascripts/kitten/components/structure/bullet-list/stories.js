@@ -15,7 +15,7 @@ export default {
   ],
 
   args: {
-    size: 'regular',
+    size: 'medium',
     items: [
       { key: '1', item: 'Dis Manibus' },
       { key: '2', item: 'Calpurnia Felicla' },

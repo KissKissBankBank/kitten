@@ -55,7 +55,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['small', 'medium', 'big'],
+      options: ['small', 'medium', 'large'],
       control: 'inline-radio',
     },
     variant: {

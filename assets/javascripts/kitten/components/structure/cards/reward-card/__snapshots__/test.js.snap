@@ -11,7 +11,7 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
       className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-large k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,
@@ -47,7 +47,7 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
       className="k-RewardCard__titleWrapper k-RewardCard__drawer"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center"
+        className="k-u-size-large k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center"
         style={
           Object {
             "--line-clamp": 2,
@@ -111,7 +111,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-large k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,

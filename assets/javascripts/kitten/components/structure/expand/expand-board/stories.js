@@ -72,9 +72,9 @@ export default {
       name: 'ExpandBoard.Button: borderRadius',
       control: { type: 'range', min: 0, max: 25, step: 1 },
     },
-    buttonBig: {
-      name: 'ExpandBoard.Button: big',
-      control: 'boolean',
+    size: {
+      name: 'ExpandBoard.Button: large',
+      control: 'text',
     },
     buttonChildren: {
       name: 'ExpandBoard.Button: children',
@@ -95,7 +95,7 @@ export default {
     withAnimation: true,
     buttonExpandChildren: 'Lancez votre projet',
     buttonBorderRadius: 4,
-    buttonBig: false,
+    size: 'large',
     buttonChildren: 'KissKissBankBank & Co.',
     contentChildren:
       'KissKissBankBank et 1 483 037 KissBankers vous aident à réaliser vos projets créatifs, associatifs et entrepreneuriaux. Participez à la naissance de projets inspirants.',
@@ -107,14 +107,14 @@ export const Default = ({
   buttonChildren,
   buttonExpandChildren,
   buttonBorderRadius,
-  buttonBig,
+  size,
   ...args
 }) => (
   <ExpandBoard {...args}>
     <ExpandBoard.Button
       expandChildren={buttonExpandChildren}
       borderRadius={buttonBorderRadius}
-      big={buttonBig}
+      size={size}
     >
       {buttonChildren}
     </ExpandBoard.Button>

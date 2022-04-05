@@ -7,6 +7,7 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { CrossIcon } from '../../../graphics/icons/cross-icon'
 import { ScreenConfig } from '../../../../constants/screen-config'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -136,18 +137,21 @@ const StyledWrapper = styled.div`
 
   // Sizes
 
-  &.k-Form-TagList--tiny {
+  &.k-Form-TagList--tiny,
+  &.k-Form-TagList--small {
     --tagInput-padding-vertical: ${pxToRem(4)};
     --tagInput-tag-height: ${pxToRem(24)};
     min-height: ${pxToRem(40)};
   }
 
-  &.k-Form-TagList--regular {
+  &.k-Form-TagList--regular,
+  &.k-Form-TagList--medium {
     --tagInput-padding-vertical: ${pxToRem(5)};
     min-height: ${pxToRem(50)};
   }
 
-  &.k-Form-TagList--big {
+  &.k-Form-TagList--big,
+  &.k-Form-TagList--large {
     min-height: ${pxToRem(60)};
     --tagInput-tag-height: ${pxToRem(32)};
 
@@ -191,6 +195,8 @@ export const TagInput = ({
   disabled,
   size,
 }) => {
+  checkDeprecatedSizes(size)
+
   const [itemsList, setItemsList] = useState(
     Array.from(itemsListFromProps || initialItemsList),
   )
@@ -364,7 +370,7 @@ TagInput.defaultProps = {
   placeholder: '',
   onChange: () => {},
   disabled: false,
-  size: 'regular',
+  size: 'medium',
 }
 
 TagInput.propTypes = {
@@ -377,5 +383,5 @@ TagInput.propTypes = {
   onChange: PropTypes.func,
   disabled: PropTypes.bool,
   helpMessage: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['tiny', 'regular', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
 }

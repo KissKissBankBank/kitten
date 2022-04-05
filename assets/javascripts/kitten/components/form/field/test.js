@@ -22,7 +22,7 @@ describe('<Field />', () => {
             tooltipId="tooltip"
             tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
-            tiny={false}
+            size="medium"
             noMargin={false}
           />,
         )
@@ -84,7 +84,7 @@ describe('<Field />', () => {
         .create(
           <FieldInputExample
             id="input"
-            tiny={false}
+            size="medium"
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
@@ -108,7 +108,7 @@ describe('<Field />', () => {
         .create(
           <FieldPasswordExample
             id="input"
-            tiny={false}
+            size="medium"
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
@@ -130,7 +130,7 @@ describe('<Field />', () => {
         .create(
           <FieldPasswordExample
             id="input"
-            tiny={false}
+            size="medium"
             label="Label"
             tooltip="Tooltip"
             tooltipId="tooltip"
@@ -218,7 +218,7 @@ describe('<Field />', () => {
         .create(
           <FieldAutocompleteExample
             id="autocomplete"
-            tiny={false}
+            size="medium"
             label="Label"
             placeholder="Select…"
             items={['Foo', 'Bar']}
