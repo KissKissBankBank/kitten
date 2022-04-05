@@ -1,7 +1,6 @@
 import capitalize from 'lodash/fp/capitalize'
 
 export const margin = (options, asArray = false) => {
-
   const result = new Array()
 
   for (const [attribute, mediaQueries] of Object.entries(options)) {

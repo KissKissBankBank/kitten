@@ -46,7 +46,7 @@ Default.argTypes = {
   },
   displayIcon: { control: 'boolean' },
   iconPosition: { control: 'radio', options: ['start', 'center'] },
-  size: { control: 'radio', options: [ 'small', 'medium', 'large'] },
+  size: { control: 'radio', options: ['small', 'medium', 'large'] },
   fit: { control: 'radio', options: ['content', 'fluid'] },
 }
 

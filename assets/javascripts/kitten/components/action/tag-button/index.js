@@ -111,7 +111,7 @@ export const TagButton = ({
   ...props
 }) => {
   const others = (({ modifier, icon, ...rest }) => rest)(props)
-  
+
   checkDeprecatedSizes(size)
 
   return (

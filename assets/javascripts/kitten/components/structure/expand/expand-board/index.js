@@ -63,7 +63,7 @@ export class ExpandBoardButton extends PureComponent {
     } = this.props
 
     checkDeprecatedSizes(size)
-    
+
     const defaultExpandChildren = expandChildren ? expandChildren : children
 
     return (

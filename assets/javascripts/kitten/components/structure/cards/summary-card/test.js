@@ -13,7 +13,7 @@ describe('<SummaryCard />', () => {
             'aria-label': 'Click to show item',
             as: 'a',
             href: 'https://css-tricks.com',
-            onClick: () => {}
+            onClick: () => {},
           }}
         >
           <SummaryCard.Image>

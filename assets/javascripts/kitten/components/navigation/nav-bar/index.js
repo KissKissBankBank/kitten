@@ -93,14 +93,15 @@ const StyledNavBar = styled.div`
     height: ${pxToRem(HEADER_HEIGHT)};
   }
 
-  &.k-NavBar--big, &.k-NavBar--large {
+  &.k-NavBar--big,
+  &.k-NavBar--large {
     .k-NavBar__link {
       height: ${pxToRem(80)};
-  
+
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         height: ${pxToRem(100)};
       }
-    } 
+    }
   }
 `
 
@@ -125,7 +126,6 @@ export const NavBar = ({
   modifier,
   ...props
 }) => {
-
   checkDeprecatedSizes(modifier)
 
   return (

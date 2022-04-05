@@ -143,7 +143,7 @@ const Image = ({
   width,
 }) => {
   checkDeprecatedSizes(size)
-  
+
   const badgeElement = getReactElementsByType({
     children,
     type: AvatarWithTextAndBadge.Badge,

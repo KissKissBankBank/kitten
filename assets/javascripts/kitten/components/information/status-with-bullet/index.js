@@ -127,7 +127,7 @@ StatusWithBullet.propTypes = {
     'neutral',
     'none',
   ]),
-  size: PropTypes.oneOf(['micro', 'small','medium']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium']),
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
   bulletProps: PropTypes.object,
 }

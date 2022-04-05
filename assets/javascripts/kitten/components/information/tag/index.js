@@ -98,9 +98,8 @@ const StyledTag = styled.span`
 `
 
 export const Tag = ({ type, size, variant, className, flex, ...props }) => {
-  
   checkDeprecatedSizes(size)
-  
+
   return (
     <StyledTag
       className={classNames(
@@ -117,7 +116,6 @@ export const Tag = ({ type, size, variant, className, flex, ...props }) => {
     />
   )
 }
-  
 
 Tag.propTypes = {
   type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),

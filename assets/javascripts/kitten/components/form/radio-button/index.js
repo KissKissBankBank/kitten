@@ -369,9 +369,8 @@ export const RadioButton = ({
   paragraphStyle,
   ...inputProps
 }) => {
-
   checkDeprecatedSizes(size)
-  
+
   return (
     <StyledRadioButton
       className={classNames(

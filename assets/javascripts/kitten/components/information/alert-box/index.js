@@ -177,7 +177,7 @@ export const AlertBox = ({
   })()
 
   const iconSize = (() => {
-    switch(size) {
+    switch (size) {
       case 'large':
       case 'big':
         return 'medium'

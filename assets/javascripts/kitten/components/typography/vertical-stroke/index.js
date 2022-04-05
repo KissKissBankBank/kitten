@@ -7,9 +7,8 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 export const VerticalStroke = styled(({ className, size, ...others }) => {
-  
   checkDeprecatedSizes(size)
-  
+
   const verticalStrokeClassName = classNames(
     'k-VerticalStroke',
     {

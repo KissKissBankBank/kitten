@@ -50,10 +50,7 @@ export const TeamCardIcons = ({
       )}
 
       {phoneNumber && (
-        <TeamCardPhoneIcon
-          {...props}
-          phoneNumber={phoneNumber}
-        />
+        <TeamCardPhoneIcon {...props} phoneNumber={phoneNumber} />
       )}
 
       <SocialLinks links={getSocialLinks()} />
@@ -78,12 +75,8 @@ const SocialLinks = ({ links = [] }) => (
           rel="noopener"
           size="small"
         >
-          {link.name === 'linkedin' && (
-            <LinkedinIcon aria-hidden />
-          )}
-          {link.name === 'twitter' && (
-            <TwitterIcon aria-hidden />
-          )}
+          {link.name === 'linkedin' && <LinkedinIcon aria-hidden />}
+          {link.name === 'twitter' && <TwitterIcon aria-hidden />}
         </Button>
       )
     })}

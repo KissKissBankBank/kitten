@@ -25,7 +25,7 @@ const StyledButtonImage = styled.button`
     opacity: 0.8;
   }
 
-  &.k-ButtonImage--tiny, 
+  &.k-ButtonImage--tiny,
   &.k-ButtonImage--small {
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};
@@ -72,7 +72,6 @@ export const ButtonImage = ({
   img,
   ...others
 }) => {
-  
   checkDeprecatedSizes(size)
 
   return (

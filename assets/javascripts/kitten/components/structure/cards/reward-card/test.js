@@ -14,9 +14,7 @@ describe('<RewardCard />', () => {
             <RewardCard.Title>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
             </RewardCard.Title>
-            <RewardCard.Description>
-              Custom description
-            </RewardCard.Description>
+            <RewardCard.Description>Custom description</RewardCard.Description>
           </RewardCard.Contents>
         </RewardCard>,
       )
@@ -35,9 +33,7 @@ describe('<RewardCard />', () => {
             <RewardCard.Title truncateText={false}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
             </RewardCard.Title>
-            <RewardCard.Description>
-              Custom description
-            </RewardCard.Description>
+            <RewardCard.Description>Custom description</RewardCard.Description>
           </RewardCard.Contents>
         </RewardCard>,
       )

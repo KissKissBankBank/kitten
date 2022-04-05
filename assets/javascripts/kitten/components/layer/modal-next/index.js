@@ -624,7 +624,7 @@ const InnerModal = ({
   ...others
 }) => {
   checkDeprecatedSizes(size)
-  
+
   const [{ show }, dispatch] = useContext(ModalContext)
   const close = () => {
     dispatch(updateState(false))

@@ -104,9 +104,7 @@ export const ProjectsCarousel = ({
       className="ProjectsCarousel__button"
     >
       {buttonLabel}
-      <ArrowIcon
-        style={{ width: 6 }}
-      />
+      <ArrowIcon style={{ width: 6 }} />
     </Button>
   )
 

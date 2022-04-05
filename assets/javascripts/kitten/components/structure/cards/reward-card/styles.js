@@ -13,8 +13,7 @@ export const StyledRewardCard = styled.article`
   /* CARD STYLE */
 
   position: relative;
-  border: var(--rewardCard--border-width) solid
-    var(--rewardCard--border-color);
+  border: var(--rewardCard--border-width) solid var(--rewardCard--border-color);
   border-radius: var(--rewardCard--border-radius);
   display: flex;
   flex-direction: column;
