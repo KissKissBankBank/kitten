@@ -9,6 +9,7 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { getReactElementsByType } from '../../../helpers/react/get-react-elements'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -88,7 +89,8 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .k-Avatar--big {
+  .k-Avatar--big,
+  .k-Avatar--large {
     margin-right: ${pxToRem(15)};
 
     .k-Avatar__imageWrapper {
@@ -140,6 +142,8 @@ const Image = ({
   textColor,
   width,
 }) => {
+  checkDeprecatedSizes(size)
+  
   const badgeElement = getReactElementsByType({
     children,
     type: AvatarWithTextAndBadge.Badge,
@@ -179,7 +183,7 @@ Image.propTypes = {
   textColor: PropTypes.string,
   backgroundColor: PropTypes.string,
   alt: PropTypes.string,
-  size: PropTypes.oneOf(['regular', 'big']),
+  size: PropTypes.oneOf(['medium', 'large']),
 }
 
 Image.defaultProps = {
@@ -187,7 +191,7 @@ Image.defaultProps = {
   textColor: COLORS.background1,
   backgroundColor: COLORS.primary3,
   alt: null,
-  size: 'regular',
+  size: 'medium',
 }
 
 const Badge = ({ backgroundColor, className, a11yText, ...props }) => (
