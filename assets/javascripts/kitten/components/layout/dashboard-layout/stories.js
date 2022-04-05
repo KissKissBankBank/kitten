@@ -114,7 +114,7 @@ export const WithRewardContent = args => {
 
 export const WithFlowContent = ({ flowProps, ...args }) => {
   return (
-    <StoryLayout {...args}>
+    <StoryLayout {...args} fullHeightContent>
       <StoryWithFlow {...flowProps} />
     </StoryLayout>
   )

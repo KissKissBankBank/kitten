@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `ScrollableContainer`: Remove `scrollableContainerStyle` export.
 - Deprecation/Change: `HorizontalProjectCard`: Migrate from `HorizontalCrowdfundingCard`.
 - Deprecation/Change: `ProjectCard`: Migrate from `BackingCard`.
 - Breaking Change: Remove the following unused helpers and hocs:

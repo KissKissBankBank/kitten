@@ -21,13 +21,17 @@ const StyledFlow = styled.div`
   align-items: stretch;
   min-height: 100%;
   gap: ${pxToRem(20)};
+  @media ${mq.mobileAndTablet} {
+    margin-top: ${pxToRem(50)};
+  }
 
   @media ${mq.desktop} {
     min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 35vw 20vw;
     gap: ${pxToRem(30)} 5vw;
+    margin-top: ${pxToRem(80)};
   }
 
   &:not(.k-DashboardLayout__flow--isLoading) {
@@ -44,9 +48,7 @@ const StyledFlow = styled.div`
 
   .k-DashboardLayout__flow__loading,
   .k-DashboardLayout__flow__content {
-    flex: 1 0 100%;
     background-color: ${COLORS.background1};
-    padding-bottom: ${pxToRem(30)};
 
     @media ${mq.tabletAndDesktop} {
       padding-top: 0;
@@ -54,6 +56,7 @@ const StyledFlow = styled.div`
 
     @media ${mq.desktop} {
       grid-column: 1 / 2;
+      grid-row: 2 / span 1;
       padding-bottom: ${pxToRem(20)};
     }
   }
@@ -61,11 +64,13 @@ const StyledFlow = styled.div`
   @media ${mq.desktop} {
     .k-DashboardLayout__flow__title {
       grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
       align-self: center;
     }
 
     .k-DashboardLayout__flow__titleAside {
       grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
       align-self: center;
       justify-self: end;
     }
@@ -78,6 +83,7 @@ const StyledFlow = styled.div`
 
     @media ${mq.desktop} {
       grid-column: 1 / 2;
+      grid-row: 3 / span 1;
       bottom: 0;
       position: sticky;
       z-index: 1;
@@ -137,6 +143,7 @@ const StyledFlow = styled.div`
   .k-DashboardLayout__flow__aside {
     @media ${mq.desktop} {
       grid-column: 2 / 3;
+      grid-row: 2 / span 1;
     }
   }
 
@@ -155,6 +162,7 @@ const StyledFlow = styled.div`
   }
 
   .k-DashboardLayout__flow__loading {
+    flex: 1 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;

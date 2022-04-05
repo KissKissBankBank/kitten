@@ -2,10 +2,10 @@
 
 exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL kWHSEY sc-gsDKAQ jozYjE k-ScrollableContainer__wrapper"
+  className="sc-bdvvtL kWHSEY sc-gsDKAQ ceZtfb k-ScrollableContainer__wrapper"
 >
   <div
-    className="sc-dkPtRN dIzOpx k-ScrollableContainer"
+    className="k-ScrollableContainer"
     style={
       Object {
         "--scrollableContainer-gradient": "var(--color-grey-000, #fff)",
@@ -17,10 +17,10 @@ exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 
 exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL kWHSEY sc-gsDKAQ jozYjE k-ScrollableContainer__wrapper"
+  className="sc-bdvvtL kWHSEY sc-gsDKAQ ceZtfb k-ScrollableContainer__wrapper"
 >
   <div
-    className="sc-dkPtRN dIzOpx k-ScrollableContainer"
+    className="k-ScrollableContainer"
     style={
       Object {
         "--scrollableContainer-gradient": "var(--color-grey-000, #fff)",
@@ -47,10 +47,10 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sc-bdvvtL kWHSEY sc-gsDKAQ jozYjE k-ScrollableContainer__wrapper custom__class"
+  className="sc-bdvvtL kWHSEY sc-gsDKAQ ceZtfb k-ScrollableContainer__wrapper custom__class"
 >
   <div
-    className="sc-dkPtRN dIzOpx k-ScrollableContainer k-ScrollableContainer--hasRightGradient"
+    className="k-ScrollableContainer k-ScrollableContainer--hasRightGradient"
     style={
       Object {
         "--scrollableContainer-gradient": "#567890",

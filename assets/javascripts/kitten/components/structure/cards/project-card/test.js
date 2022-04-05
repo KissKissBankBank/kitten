@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ProjectCard } from 'kitten'
+import { ProjectCard } from './index'
 
 describe('<ProjectCard />', () => {
   let component
