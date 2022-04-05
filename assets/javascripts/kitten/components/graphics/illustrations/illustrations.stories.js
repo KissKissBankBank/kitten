@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, pxToRem } from '../../..'
+import { Text, pxToRem } from 'kitten'
 
 import { LightbulbIllustration } from './lightbulb-illustration'
 import { LinkBoxIllustration } from './link-box-illustration'

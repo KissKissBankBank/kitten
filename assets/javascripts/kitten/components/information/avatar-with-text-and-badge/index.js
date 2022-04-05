@@ -8,7 +8,7 @@ import { Badge as BadgeComponent } from '../../information/badge'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { getReactElementsByType } from '../../../helpers/react/react-elements'
+import { getReactElementsByType } from '../../../helpers/react/get-react-elements'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledWrapper = styled.div`

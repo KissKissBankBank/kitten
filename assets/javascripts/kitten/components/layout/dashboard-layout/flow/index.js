@@ -8,7 +8,7 @@ import { mq } from '../../../../constants/screen-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { LightbulbIllustration as Lightbulb } from '../../../graphics/illustrations/lightbulb-illustration'
 import { Loader } from '../../../graphics/animations/loader'
-import { getReactElementsWithoutType } from '../../../../helpers/react/react-elements'
+import { getReactElementsWithoutType } from '../../../../helpers/react/get-react-elements'
 import { Title as KittenTitle } from '../../../typography/title'
 
 import { SideCard } from './side-card'

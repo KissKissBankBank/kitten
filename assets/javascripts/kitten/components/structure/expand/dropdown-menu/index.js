@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { ArrowContainer } from '../../../information/boxes/arrow-container'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { useFocusTrap } from '../../../../helpers/dom/use-focus-trap'
+import { useFocusTrap } from '../../../../helpers/hooks/use-focus-trap'
 
 const zoomInAndOpacity = keyframes`
   0% {

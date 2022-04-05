@@ -8,7 +8,7 @@ import { Grid, GridCol } from '../../layout/grid'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
-} from '../../../helpers/react/react-elements'
+} from '../../../helpers/react/get-react-elements'
 
 export const HeroLayout = ({ className, children, ...props }) => (
   <StyledLayout className={classNames('k-HeroLayout', className)} {...props}>

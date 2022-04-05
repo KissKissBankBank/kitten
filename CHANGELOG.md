@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: Remove the following unused helpers and hocs:
+  - `numberUtils` helper
+  - `Deprecated()` and `hasDeprecatedProps` helpers
+  - `card` HOC
+  - `default-props` HOC
+  - `trigger-enhancer` HOC
 - Breaking change: `BulletList`: Remplace old prop size values by:
   `micro, small, medium, large, huge`.
 - Breaking change: `Label`: 
