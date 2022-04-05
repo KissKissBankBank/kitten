@@ -14,7 +14,7 @@ exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <h3
-    className="k-u-size-tiny k-u-weight-regular k-HorizontalProjectCard__title"
+    className="k-u-size-small k-u-weight-regular k-HorizontalProjectCard__title"
   >
     Custom title
   </h3>
@@ -80,7 +80,7 @@ exports[`<HorizontalProjectCard /> with noProgress prop matches with snapshot 1`
     />
   </div>
   <h3
-    className="k-u-size-tiny k-u-weight-regular k-HorizontalProjectCard__title"
+    className="k-u-size-small k-u-weight-regular k-HorizontalProjectCard__title"
   >
     Custom title
   </h3>
