@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `AlertBox`: Improve styles.
+
 ## [10.0.1] - 2022-04-05
 
 Fix:

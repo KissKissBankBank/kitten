@@ -154,6 +154,7 @@ export const AlertBox = ({
   iconPosition,
   size,
   fit,
+  hasBorder,
   ...others
 }) => {
   checkDeprecatedSizes(size)
@@ -211,6 +212,7 @@ export const AlertBox = ({
           children={internalIcon}
           status={status}
           size={iconSize}
+          hasBorder={hasBorder}
         />
       )}
 
@@ -242,4 +244,5 @@ AlertBox.defaultProps = {
   size: 'medium',
   fit: 'fluid',
   iconPosition: 'start',
+  hasBorder: true,
 }
