@@ -4,11 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `RadioButton`: Improve style.
+
 ## [10.0.1] - 2022-04-05
 
 Fix:
 
 - `Text`: Use full utility class name to avoid purge.
+
 
 ## [10.0.0] - 2022-04-05
 
