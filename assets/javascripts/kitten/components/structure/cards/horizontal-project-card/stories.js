@@ -1,17 +1,17 @@
 import React from 'react'
 import { COLORS, ClockCircleIcon, CheckedCircleIcon, Text } from 'kitten'
-import { HorizontalCrowdfundingCard } from './index'
+import { HorizontalProjectCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Structure/Cards/HorizontalCrowdfundingCard',
-  component: HorizontalCrowdfundingCard,
+  title: 'Structure/Cards/HorizontalProjectCard',
+  component: HorizontalProjectCard,
   parameters: {
     docs: {
       page: () => (
         <DocsPage
           filepath={__filename}
-          importString="HorizontalCrowdfundingCard"
+          importString="HorizontalProjectCard"
         />
       ),
     },
@@ -152,7 +152,7 @@ const InfoComponent = ({ info }) => {
 
 export const Default = args => {
   return (
-    <HorizontalCrowdfundingCard
+    <HorizontalProjectCard
       {...args}
       info={<InfoComponent info={args.info} />}
     />
@@ -161,7 +161,7 @@ export const Default = args => {
 
 export const PermanentProject = args => {
   return (
-    <HorizontalCrowdfundingCard
+    <HorizontalProjectCard
       {...args}
       noProgress
       info={
