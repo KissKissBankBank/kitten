@@ -76,11 +76,11 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-gsDKAQ dTVKjq k-Form-TextInput__textareaContainer"
+      className="sc-gsDKAQ cBEeqP k-Form-TextInput__textareaContainer"
     >
       <textarea
         aria-label="Texte à envoyer"
-        className="sc-bdvvtL huvuwE k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--tiny"
+        className="sc-bdvvtL iHDzQd k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -98,7 +98,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     </div>
     <button
       aria-label="Envoyer"
-      className="sc-dkPtRN APbYq k-Button k-Discussion__form__button k-Button--tiny k-Button--beryllium k-Button--fit-icon"
+      className="sc-dkPtRN dauyJh k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {

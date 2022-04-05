@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { StyledChatLayout } from './styles'
 import { Text } from '../../../components/typography/text'
-import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
+import { useWindowWidth } from '../../../helpers/hooks/use-window-width'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const ChatLayoutContext = createContext({})

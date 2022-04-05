@@ -138,7 +138,7 @@ Discussion.Form = ({ className, inputProps, buttonProps, ...props }) => {
       <TextInput
         tag="autoresize"
         aria-label="Votre message"
-        size="tiny"
+        size="small"
         maxRows={3}
         {...inputProps}
         className={classNames(
@@ -150,7 +150,7 @@ Discussion.Form = ({ className, inputProps, buttonProps, ...props }) => {
         fit="icon"
         aria-label="Envoyer"
         modifier="beryllium"
-        size="tiny"
+        size="small"
         type="submit"
         {...buttonProps}
         className={classNames(
