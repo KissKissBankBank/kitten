@@ -7,7 +7,7 @@ import {
   checkPage,
   checkPageLoop,
 } from './index'
-import { CrowdfundingCard } from '../../cards/crowdfunding-card'
+import { ProjectCard } from '../../cards/project-card'
 
 const projectCardMinWidth = 280
 const projectCardMarginBetween = 40
@@ -22,42 +22,80 @@ describe('<Carousel />', () => {
   let originalMatchMedia
   const data = [
     {
-      href: 'https://kitten.kisskissbankbank.com/',
-      ownerTitle: 'A Owner title',
-      ownerDescription: 'A Owner description',
-      imageProps: { src: '#image', alt: '' },
-      avatarProps: { src: '#image', alt: '' },
-      state: 'Lorem ipsum…',
-      loading: false,
-      title: 'A Lorem ipsum…',
-      subTitle: 'A Sed ut perspiciatis unde omnis iste natus error Lorem',
-      titleTruncate: true,
-      subTitleTruncate: true,
-      info1: 'Lorem ipsum…',
-      info2: 'Lorem ipsum…',
-      info3: 'Lorem ipsum…',
-      progress: 100,
-      stretch: true,
-      progressLabel: 'Crowdfunding progress',
+      status:'normal',
+      imageProps:{
+        src: 'kitten.jpg',
+        alt: 'image alt',
+      },
+      children: (
+        <>
+          <ProjectCard.Sticker className="k-u-hidden@xs-down">
+            Prolongation
+          </ProjectCard.Sticker>
+          <ProjectCard.Title>
+            The Office, la série culte décortiquée par S!CK
+          </ProjectCard.Title>
+          <ProjectCard.Line>
+            <span>
+              par <strong>Bidules</strong>
+            </span>
+          </ProjectCard.Line>
+          <ProjectCard.Item>
+            <span>134</span>
+            <span>contributeurs</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>7 jours</span>
+            <span>restants</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>9 930 €</span>
+            <span>sur 12 000 €</span>
+          </ProjectCard.Item>
+          <ProjectCard.Progress
+            aria-label="Progrès de la campagne"
+            value={55}
+          />
+        </>
+      )
     },
     {
-      href: 'https://kitten.kisskissbankbank.com/',
-      ownerTitle: 'B Owner title',
-      ownerDescription: 'B Owner description',
-      imageProps: { src: '#image', alt: '' },
-      avatarProps: { src: '#image', alt: '' },
-      state: 'Lorem ipsum…',
-      loading: false,
-      title: 'B Lorem ipsum…',
-      subTitle: 'B Sed ut perspiciatis unde omnis iste natus error Lorem',
-      titleTruncate: true,
-      subTitleTruncate: true,
-      info1: 'Lorem ipsum…',
-      info2: 'Lorem ipsum…',
-      info3: 'Lorem ipsum…',
-      progress: 42,
-      stretch: true,
-      progressLabel: 'Crowdfunding progress',
+      status:'success',
+      imageProps:{
+        src: 'kitten-1.jpg',
+        alt: 'image alt',
+      },
+      children: (
+        <>
+          <ProjectCard.Sticker className="k-u-hidden@xs-down">
+            Prolongation
+          </ProjectCard.Sticker>
+          <ProjectCard.Title className="custom className">
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </ProjectCard.Title>
+          <ProjectCard.Line>
+            <span>
+              par <strong>Bidules</strong>
+            </span>
+          </ProjectCard.Line>
+          <ProjectCard.Item>
+            <span>134</span>
+            <span>contributeurs</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>7 jours</span>
+            <span>restants</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>9 930 €</span>
+            <span>sur 12 000 €</span>
+          </ProjectCard.Item>
+          <ProjectCard.Progress
+            aria-label="Progrès de la campagne"
+            value={55}
+          />
+        </>
+      )
     },
   ]
 
@@ -79,7 +117,7 @@ describe('<Carousel />', () => {
           smallButtons={false}
         >
           {data.map((item, index) => (
-            <CrowdfundingCard {...item} key={index} />
+            <ProjectCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -100,7 +138,7 @@ describe('<Carousel />', () => {
           loop={true}
         >
           {data.map((item, index) => (
-            <CrowdfundingCard {...item} key={index} />
+            <ProjectCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -121,7 +159,7 @@ describe('<Carousel />', () => {
           exportVisibilityProps
         >
           {data.map((item, index) => (
-            <CrowdfundingCard {...item} key={index} />
+            <ProjectCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -142,7 +180,7 @@ describe('<Carousel />', () => {
           itemsPerPage={5}
         >
           {data.map((item, index) => (
-            <CrowdfundingCard {...item} key={index} />
+            <ProjectCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -163,7 +201,7 @@ describe('<Carousel />', () => {
           pagesClassName="custom-class"
         >
           {data.map((item, index) => (
-            <CrowdfundingCard {...item} key={index} />
+            <ProjectCard {...item} key={index} />
           ))}
         </Carousel>,
       )
@@ -187,7 +225,7 @@ describe('<Carousel />', () => {
           baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           renderItem={({ item }) => {
-            return <CrowdfundingCard {...item} />
+            return <ProjectCard {...item} />
           }}
         />,
       )
@@ -212,7 +250,7 @@ describe('<Carousel />', () => {
           data={[{ title: 'A' }]}
           withoutLeftOffset={true}
           renderItem={({ item }) => {
-            return <CrowdfundingCard {...item} />
+            return <ProjectCard {...item} />
           }}
         />,
       )
@@ -236,7 +274,7 @@ describe('<Carousel />', () => {
           baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           renderItem={({ item }) => {
-            return <CrowdfundingCard {...item} />
+            return <ProjectCard {...item} />
           }}
         />,
       )
