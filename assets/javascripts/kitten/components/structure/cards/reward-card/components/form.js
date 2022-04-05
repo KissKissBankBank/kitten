@@ -5,8 +5,8 @@ export const Form = ({ className, ...props }) => {
   return (
     <div
       className={classNames(
-        'k-BackingCard__formWrapper',
-        'k-BackingCard__drawer',
+        'k-RewardCard__formWrapper',
+        'k-RewardCard__drawer',
         className,
       )}
       {...props}

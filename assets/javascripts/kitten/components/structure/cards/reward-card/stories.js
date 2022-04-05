@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { BackingCard } from './index'
+import { RewardCard } from './index'
 import {
   pxToRem,
   ScreenConfig,
@@ -37,11 +37,11 @@ const argTypes = {
   disabled: { control: 'boolean' },
   hasBorder: { control: 'boolean' },
   truncateTitle: {
-    name: 'BackingCard.Title: truncate Text',
+    name: 'RewardCard.Title: truncate Text',
     control: 'boolean',
   },
   truncateText: {
-    name: 'BackingCard.Description: truncate Text',
+    name: 'RewardCard.Description: truncate Text',
     control: 'boolean',
   },
 }
@@ -53,11 +53,11 @@ const args = {
 }
 
 export default {
-  title: 'Structure/Cards/BackingCard',
-  component: BackingCard,
+  title: 'Structure/Cards/RewardCard',
+  component: RewardCard,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="BackingCard" />,
+      page: () => <DocsPage filepath={__filename} importString="RewardCard" />,
     },
   },
 }
@@ -72,38 +72,38 @@ export const Default = ({
   ...args
 }) => {
   return (
-    <BackingCard
+    <RewardCard
       {...args}
       disabled={disabled}
       as="button"
       className="k-u-reset-button"
     >
       {hasImage && (
-        <BackingCard.Image>
+        <RewardCard.Image>
           <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
-        </BackingCard.Image>
+        </RewardCard.Image>
       )}
-      <BackingCard.Contents>
+      <RewardCard.Contents>
         {disabled ? (
-          <BackingCard.HeadingTag text="Unavailable" />
+          <RewardCard.HeadingTag text="Unavailable" />
         ) : (
-          <BackingCard.HeadingTag icon="star" text="Star reward" />
+          <RewardCard.HeadingTag icon="star" text="Star reward" />
         )}
-        <BackingCard.Title truncateText={truncateTitle}>
+        <RewardCard.Title truncateText={truncateTitle}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-        </BackingCard.Title>
-        <BackingCard.Amount suffix={hasAmountSuffix ? 'Par mois' : null}>
+        </RewardCard.Title>
+        <RewardCard.Amount suffix={hasAmountSuffix ? 'Par mois' : null}>
           65&nbsp;€
-        </BackingCard.Amount>
-        <BackingCard.TagList>
+        </RewardCard.Amount>
+        <RewardCard.TagList>
           <Tag as="li" variant="light">
             <strong className="k-u-weight-regular">5</strong> contributeurs
           </Tag>
           <Tag as="li" variant="light">
             <strong className="k-u-weight-regular">2</strong> disponibles
           </Tag>
-        </BackingCard.TagList>
-        <BackingCard.Description
+        </RewardCard.TagList>
+        <RewardCard.Description
           moreButtonText="See more…"
           truncateText={truncateText}
         >
@@ -125,12 +125,12 @@ export const Default = ({
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
-        </BackingCard.Description>
-      </BackingCard.Contents>
+        </RewardCard.Description>
+      </RewardCard.Contents>
       {hasButton && (
-        <BackingCard.Button disabled={disabled}>Je soutiens</BackingCard.Button>
+        <RewardCard.Button disabled={disabled}>Je soutiens</RewardCard.Button>
       )}
-    </BackingCard>
+    </RewardCard>
   )
 }
 Default.decorators = [
@@ -156,8 +156,8 @@ Default.args = {
 
 export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
   return (
-    <BackingCard {...args}>
-      <BackingCard.Image>
+    <RewardCard {...args}>
+      <RewardCard.Image>
         <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
           <source
             src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
@@ -168,22 +168,22 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
             type="video/mp4"
           />
         </GifVideo>
-      </BackingCard.Image>
-      <BackingCard.Contents>
-        <BackingCard.HeadingTag icon="star" text="Star reward" />
-        <BackingCard.Title truncateText={truncateTitle}>
+      </RewardCard.Image>
+      <RewardCard.Contents>
+        <RewardCard.HeadingTag icon="star" text="Star reward" />
+        <RewardCard.Title truncateText={truncateTitle}>
           Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-        </BackingCard.Title>
-        <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-        <BackingCard.TagList>
+        </RewardCard.Title>
+        <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+        <RewardCard.TagList>
           <Tag as="li" variant="light">
             <strong className="k-u-weight-regular">5</strong> contributeurs
           </Tag>
           <Tag as="li" variant="light">
             <strong className="k-u-weight-regular">2</strong> disponibles
           </Tag>
-        </BackingCard.TagList>
-        <BackingCard.Description
+        </RewardCard.TagList>
+        <RewardCard.Description
           moreButtonText="See more…"
           truncateText={truncateText}
         >
@@ -205,10 +205,10 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
-        </BackingCard.Description>
-      </BackingCard.Contents>
-      <BackingCard.Button>Je soutiens</BackingCard.Button>
-    </BackingCard>
+        </RewardCard.Description>
+      </RewardCard.Contents>
+      <RewardCard.Button>Je soutiens</RewardCard.Button>
+    </RewardCard>
   )
 }
 Video.decorators = [
@@ -253,26 +253,26 @@ export const InACarouselComponent = ({ truncateTitle }) => {
         loop
         smallButtons
       >
-        <BackingCard stretch as="button" className="k-u-reset-button">
-          <BackingCard.Image id="one_such_ID" className="hellowORLD">
+        <RewardCard stretch as="button" className="k-u-reset-button">
+          <RewardCard.Image id="one_such_ID" className="hellowORLD">
             <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
-          </BackingCard.Image>
-          <BackingCard.Contents>
-            <BackingCard.HeadingTag icon="diamond" text="Diamond reward" />
-            <BackingCard.Title truncateText={truncateTitle}>
+          </RewardCard.Image>
+          <RewardCard.Contents>
+            <RewardCard.HeadingTag icon="diamond" text="Diamond reward" />
+            <RewardCard.Title truncateText={truncateTitle}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor,
               sit amet adipiscing.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+            </RewardCard.Title>
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -294,27 +294,27 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+          <RewardCard.Button as="div">Je soutiens</RewardCard.Button>
+        </RewardCard>
 
-        <BackingCard stretch as="button" className="k-u-reset-button">
-          <BackingCard.Contents>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title truncateText={truncateTitle}>
+        <RewardCard stretch as="button" className="k-u-reset-button">
+          <RewardCard.Contents>
+            <RewardCard.HeadingTag icon="star" text="Star reward" />
+            <RewardCard.Title truncateText={truncateTitle}>
               Smol titl.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+            </RewardCard.Title>
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -336,13 +336,13 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+          <RewardCard.Button as="div">Je soutiens</RewardCard.Button>
+        </RewardCard>
 
-        <BackingCard stretch as="button" className="k-u-reset-button">
-          <BackingCard.Image>
+        <RewardCard stretch as="button" className="k-u-reset-button">
+          <RewardCard.Image>
             <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
                 src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
@@ -353,19 +353,19 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 type="video/mp4"
               />
             </GifVideo>
-          </BackingCard.Image>
-          <BackingCard.Contents>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+          </RewardCard.Image>
+          <RewardCard.Contents>
+            <RewardCard.HeadingTag icon="star" text="Star reward" />
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -387,24 +387,24 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+          <RewardCard.Button as="div">Je soutiens</RewardCard.Button>
+        </RewardCard>
 
-        <BackingCard stretch as="button" className="k-u-reset-button">
-          <BackingCard.Contents>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+        <RewardCard stretch as="button" className="k-u-reset-button">
+          <RewardCard.Contents>
+            <RewardCard.HeadingTag icon="star" text="Star reward" />
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -426,17 +426,17 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-          <BackingCard.Button as="div">Je soutiens</BackingCard.Button>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+          <RewardCard.Button as="div">Je soutiens</RewardCard.Button>
+        </RewardCard>
 
-        <BackingCard stretch>
-          <BackingCard.Contents>
-            <BackingCard.Title textSize="giant">
+        <RewardCard stretch>
+          <RewardCard.Contents>
+            <RewardCard.Title textSize="giant">
               Je donne ce que je veux
-            </BackingCard.Title>
-            <BackingCard.Form>
+            </RewardCard.Title>
+            <RewardCard.Form>
               <Label
                 htmlFor="text_input_with_unit"
                 className="k-u-margin-bottom-single"
@@ -444,30 +444,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 Montant de votre don
               </Label>
               <TextInputWithUnit id="text_input_with_unit" unit="€" />
-            </BackingCard.Form>
-          </BackingCard.Contents>
-          <BackingCard.Button>Je soutiens</BackingCard.Button>
-        </BackingCard>
+            </RewardCard.Form>
+          </RewardCard.Contents>
+          <RewardCard.Button>Je soutiens</RewardCard.Button>
+        </RewardCard>
 
-        <BackingCard stretch disabled className="k-u-reset-button">
-          <BackingCard.Image>
+        <RewardCard stretch disabled className="k-u-reset-button">
+          <RewardCard.Image>
             <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
-          </BackingCard.Image>
-          <BackingCard.Contents>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title truncateText={truncateTitle}>
+          </RewardCard.Image>
+          <RewardCard.Contents>
+            <RewardCard.HeadingTag icon="star" text="Star reward" />
+            <RewardCard.Title truncateText={truncateTitle}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+            </RewardCard.Title>
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -489,26 +489,26 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+        </RewardCard>
 
-        <BackingCard stretch disabled className="k-u-reset-button">
-          <BackingCard.Contents>
-            <BackingCard.HeadingTag icon="star" text="Star reward" />
-            <BackingCard.Title truncateText={truncateTitle}>
+        <RewardCard stretch disabled className="k-u-reset-button">
+          <RewardCard.Contents>
+            <RewardCard.HeadingTag icon="star" text="Star reward" />
+            <RewardCard.Title truncateText={truncateTitle}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+            </RewardCard.Title>
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -530,12 +530,12 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+        </RewardCard>
 
-        <BackingCard stretch disabled className="k-u-reset-button">
-          <BackingCard.Image>
+        <RewardCard stretch disabled className="k-u-reset-button">
+          <RewardCard.Image>
             <GifVideo poster={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}>
               <source
                 src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
@@ -546,18 +546,18 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 type="video/mp4"
               />
             </GifVideo>
-          </BackingCard.Image>
-          <BackingCard.Contents>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+          </RewardCard.Image>
+          <RewardCard.Contents>
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -579,22 +579,22 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+        </RewardCard>
 
-        <BackingCard stretch disabled className="k-u-reset-button">
-          <BackingCard.Contents>
-            <BackingCard.Amount>65&nbsp;€</BackingCard.Amount>
-            <BackingCard.TagList>
+        <RewardCard stretch disabled className="k-u-reset-button">
+          <RewardCard.Contents>
+            <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
+            <RewardCard.TagList>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
                 <strong className="k-u-weight-regular">2</strong> disponibles
               </Tag>
-            </BackingCard.TagList>
-            <BackingCard.Description moreButtonText="See more…" truncateText>
+            </RewardCard.TagList>
+            <RewardCard.Description moreButtonText="See more…" truncateText>
               <p className="k-u-weight-light k-u-margin-none">
                 <strong className="k-u-weight-regular">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
@@ -616,9 +616,9 @@ export const InACarouselComponent = ({ truncateTitle }) => {
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-            </BackingCard.Description>
-          </BackingCard.Contents>
-        </BackingCard>
+            </RewardCard.Description>
+          </RewardCard.Contents>
+        </RewardCard>
       </Carousel>
     </StyledCarouselContainer>
   )

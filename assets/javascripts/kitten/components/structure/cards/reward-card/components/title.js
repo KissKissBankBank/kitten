@@ -12,10 +12,10 @@ export const Title = ({
   return (
     <div
       className={classNames(
-        'k-BackingCard__titleWrapper',
-        'k-BackingCard__drawer',
+        'k-RewardCard__titleWrapper',
+        'k-RewardCard__drawer',
         {
-          'k-BackingCard__titleWrapper--truncateText': truncateText,
+          'k-RewardCard__titleWrapper--truncateText': truncateText,
         },
       )}
     >
@@ -23,7 +23,7 @@ export const Title = ({
         tag="h3"
         weight="regular"
         className={classNames(
-          'k-BackingCard__title',
+          'k-RewardCard__title',
           'k-u-margin-none',
           'k-u-align-center',
           className,
