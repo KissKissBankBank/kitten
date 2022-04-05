@@ -25,6 +25,10 @@ Deprecations/Changes:
 - `HorizontalProjectCard`: Migrate from `HorizontalCrowdfundingCard`.
 - Components: Replace value names for `size` prop from `tiny, regular, default, big` to `small, medium, large`.
 
+Fix:
+
+- `DashboardLayout`: Fix `Flow` grid lines.
+
 ## [9.6.0] - 2022-04-04
 
 Features:
