@@ -3,7 +3,7 @@ import ResizeObserver from 'resize-observer-polyfill'
 import { domElementHelper } from '../../../../../helpers/dom/element-helper'
 import { CarouselPage } from './carousel-page'
 import classNames from 'classnames'
-import { usePrevious } from '../../../../../helpers/utils/use-previous-hook'
+import { usePrevious } from '../../../../../helpers/hooks/use-previous'
 
 if (domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill()

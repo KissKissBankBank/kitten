@@ -141,7 +141,7 @@ export const HorizontalProjectCard = ({
       </div>
       <Text
         weight="regular"
-        size="tiny"
+        size="small"
         as={titleTag}
         className="k-HorizontalProjectCard__title"
       >

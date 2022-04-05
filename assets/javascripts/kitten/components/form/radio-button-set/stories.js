@@ -64,7 +64,7 @@ export default {
     },
     size: {
       name: 'size',
-      options: ['small', 'regular', 'big'],
+      options: ['small', 'medium', 'large'],
       control: 'inline-radio',
     },
     design: {
@@ -89,7 +89,7 @@ const defaultArgs = {
   error: false,
   disabled: false,
   design: 'disc',
-  size: 'regular',
+  size: 'medium',
   fontWeight: 'regular',
   paragraphStyle: false,
 }

@@ -186,7 +186,8 @@ export const StyledDropdown = styled.div`
   /* SIZES */
 
   &.k-Form-Dropdown--micro,
-  &.k-Form-Dropdown--tiny {
+  &.k-Form-Dropdown--tiny,
+  &.k-Form-Dropdown--small {
     .k-Form-DropdownCombobox__statusBadges,
     .k-Form-DropdownSelect__button__statusBadges {
       svg {
@@ -200,15 +201,18 @@ export const StyledDropdown = styled.div`
     --DropdownSelect-buttonHeight: ${pxToRem(30)};
   }
 
-  &.k-Form-Dropdown--tiny {
+  &.k-Form-Dropdown--tiny,
+  &.k-Form-Dropdown--small {
     --DropdownSelect-buttonHeight: ${pxToRem(40)};
   }
 
-  &.k-Form-Dropdown--normal {
+  &.k-Form-Dropdown--normal,
+  &.k-Form-Dropdown--medium {
     --DropdownSelect-buttonHeight: ${pxToRem(50)};
   }
 
   &.k-Form-Dropdown--big,
+  &.k-Form-Dropdown--large,
   &.k-Form-Dropdown--huge,
   &.k-Form-Dropdown--giant {
     --DropdownSelect-buttonHeight: ${pxToRem(60)};
@@ -427,7 +431,9 @@ export const StyledDropdown = styled.div`
     }
 
     &.k-Form-Dropdown--normal,
+    &.k-Form-Dropdown--medium,
     &.k-Form-Dropdown--big,
+    &.k-Form-Dropdown--large,
     &.k-Form-Dropdown--huge,
     &.k-Form-Dropdown--giant {
       .k-Form-DropdownCombobox__input,

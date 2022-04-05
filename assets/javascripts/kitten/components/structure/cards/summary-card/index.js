@@ -6,7 +6,7 @@ import { Image, TitleTag, TitleBar, Cell } from './components'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
-} from '../../../../helpers/react/react-elements'
+} from '../../../../helpers/react/get-react-elements'
 import { NoImageIcon } from '../../../graphics/icons/no-image-icon'
 
 export const SummaryCard = ({

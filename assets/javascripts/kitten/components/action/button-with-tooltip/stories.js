@@ -51,7 +51,7 @@ WithButtonIcon.args = {
   buttonProps: {
     fit: 'icon',
     borderRadius: 100,
-    size: 'tiny',
+    size: 'small',
   },
 }
 WithButtonIcon.argTypes = {

@@ -2,10 +2,10 @@
 
 exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ hXqnIf k-Avatar__wrapper"
+  className="sc-gsDKAQ clgmYT k-Avatar__wrapper"
 >
   <div
-    className="k-Avatar k-Avatar--big"
+    className="k-Avatar k-Avatar--large"
     style={
       Object {
         "--Avatar-height": undefined,
@@ -56,10 +56,10 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
 
 exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ hXqnIf k-Avatar__wrapper"
+  className="sc-gsDKAQ clgmYT k-Avatar__wrapper"
 >
   <div
-    className="k-Avatar k-Avatar--regular"
+    className="k-Avatar k-Avatar--medium"
     style={
       Object {
         "--Avatar-height": undefined,
@@ -89,10 +89,10 @@ exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match wi
 
 exports[`<AvatarWithTextAndBadge /> with simple props and no avatar image should match with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ hXqnIf k-Avatar__wrapper"
+  className="sc-gsDKAQ clgmYT k-Avatar__wrapper"
 >
   <div
-    className="k-Avatar k-Avatar--regular"
+    className="k-Avatar k-Avatar--medium"
     style={
       Object {
         "--Avatar-height": undefined,

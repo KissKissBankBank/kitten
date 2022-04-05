@@ -87,11 +87,11 @@ export const Default = ({ value, ...args }) => {
           className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-end k-u-flex-gap-single"
           style={colorsObject}
         >
-          <Text size="tiny">Rendu&nbsp;:</Text>
+          <Text size="small">Rendu&nbsp;:</Text>
           <Button
             modifier="helium"
             rounded
-            size="tiny"
+            size="small"
             fit="content"
             type="button"
           >

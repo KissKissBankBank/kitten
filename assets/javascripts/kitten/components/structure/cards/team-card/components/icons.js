@@ -38,7 +38,7 @@ export const TeamCardIcons = ({
     <StyledTeamCardIcons>
       {email && (
         <Button
-          size="tiny"
+          size="small"
           fit="icon"
           tag="a"
           href={`mailto:${email}`}
@@ -76,7 +76,7 @@ const SocialLinks = ({ links = [] }) => (
           modifier="hydrogen"
           target="_blank"
           rel="noopener"
-          size="tiny"
+          size="small"
         >
           {link.name === 'linkedin' && (
             <LinkedinIcon aria-hidden />

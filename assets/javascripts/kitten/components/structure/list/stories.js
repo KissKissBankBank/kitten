@@ -85,7 +85,7 @@ export const ListWithButtonItem = ({ hasArrow, disabled, active, ...args }) => {
     <List {...args}>
       <List.ButtonItem hasArrow={hasArrow} withTopBorder>
         <ExampleWrapper>
-          <ExampleText tag="p" weight="regular" color="font1" size="tiny">
+          <ExampleText tag="p" weight="regular" color="font1" size="small">
             Taille XS
           </ExampleText>
           <Text tag="small" color="font1" size="micro">
@@ -95,7 +95,7 @@ export const ListWithButtonItem = ({ hasArrow, disabled, active, ...args }) => {
       </List.ButtonItem>
       <List.ButtonItem hasArrow={hasArrow} disabled={disabled} active={active}>
         <ExampleWrapper>
-          <ExampleText tag="p" weight="regular" size="tiny">
+          <ExampleText tag="p" weight="regular" size="small">
             Taille M
           </ExampleText>
           <Text tag="small" size="micro">
@@ -105,7 +105,7 @@ export const ListWithButtonItem = ({ hasArrow, disabled, active, ...args }) => {
       </List.ButtonItem>
       <List.ButtonItem hasArrow={hasArrow}>
         <ExampleWrapper>
-          <ExampleText tag="p" weight="regular" size="tiny">
+          <ExampleText tag="p" weight="regular" size="small">
             Taille XXL
           </ExampleText>
           <Text tag="small" size="micro">

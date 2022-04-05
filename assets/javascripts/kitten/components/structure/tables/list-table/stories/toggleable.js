@@ -16,7 +16,7 @@ import {
 const linkclassNames = [
   'k-u-color-primary1',
   'k-u-decoration-none',
-  'k-u-size-tiny k-u-weight-regular',
+  'k-u-size-small k-u-weight-regular',
 ].join(' ')
 
 const defaultHeaderColWidth = {

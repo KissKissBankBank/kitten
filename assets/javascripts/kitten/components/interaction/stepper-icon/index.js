@@ -19,7 +19,7 @@ export const StepperIconValidated = props => (
 export const StepperIcon = ({ state, ...props }) => {
   if (state === 'inProgress' || state === 'progress') {
     return (
-      <IconBadge size="tiny" status="info" {...props}>
+      <IconBadge size="small" status="info" {...props}>
         <ArrowIcon />
       </IconBadge>
     )
@@ -27,13 +27,13 @@ export const StepperIcon = ({ state, ...props }) => {
 
   if (state === 'validated' || state === 'valid') {
     return (
-      <IconBadge size="tiny" status="success" {...props}>
+      <IconBadge size="small" status="success" {...props}>
         <CheckedIcon />
       </IconBadge>
     )
   }
 
-  return <IconBadge size="tiny" empty {...props} />
+  return <IconBadge size="small" empty {...props} />
 }
 
 StepperIcon.defaultProps = {
