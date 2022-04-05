@@ -31,18 +31,18 @@ export const Description = ({
   return (
     <div
       className={classNames(
-        'k-BackingCard__descriptionWrapper',
-        'k-BackingCard__drawer',
-        'k-BackingCard__drawer--extensible',
+        'k-RewardCard__descriptionWrapper',
+        'k-RewardCard__drawer',
+        'k-RewardCard__drawer--extensible',
         className,
       )}
       {...props}
     >
       <div
         ref={descriptionElementRef}
-        className={classNames('k-BackingCard__description', {
-          'k-BackingCard__description--hasMore': displayMoreButton,
-          'k-BackingCard__description--truncateText': truncateText,
+        className={classNames('k-RewardCard__description', {
+          'k-RewardCard__description--hasMore': displayMoreButton,
+          'k-RewardCard__description--truncateText': truncateText,
         })}
       >
         <div>{children}</div>
@@ -50,7 +50,7 @@ export const Description = ({
 
       {displayMoreButton && (
         <Text
-          className="k-BackingCard__description__moreButton"
+          className="k-RewardCard__description__moreButton"
           color="primary1"
           weight="regular"
           size="micro"

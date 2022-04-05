@@ -362,7 +362,7 @@ export { LinkList } from './components/navigation/link-list'
 
 // Structure/Cards
 export { BackerCard } from './components/structure/cards/backer-card'
-export { BackingCard } from './components/structure/cards/backing-card'
+export { RewardCard as BackingCard } from './components/structure/cards/reward-card'
 export { ClickableCard } from './components/structure/cards/clickable-card'
 export { ContentCard } from './components/structure/cards/content-card'
 export { ContributionCard } from './components/structure/cards/contribution-card'
@@ -373,6 +373,7 @@ export { HorizontalProjectCard } from './components/structure/cards/horizontal-p
 export { HorizontalProjectCard as HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-project-card'
 export { ManagerCard } from './components/structure/cards/manager-card'
 export { ProjectCard } from './components/structure/cards/project-card'
+export { RewardCard } from './components/structure/cards/reward-card'
 export {
   SummaryCard,
   useSummaryCardResizeObserver,

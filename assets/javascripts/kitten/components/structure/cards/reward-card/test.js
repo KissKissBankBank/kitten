@@ -1,24 +1,24 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { BackingCard } from './index'
+import { RewardCard } from './index'
 import { Tag } from 'kitten'
 
-describe('<BackingCard />', () => {
+describe('<RewardCard />', () => {
   let component
 
   describe('default', () => {
     const component = renderer
       .create(
-        <BackingCard>
-          <BackingCard.Contents>
-            <BackingCard.Title>
+        <RewardCard>
+          <RewardCard.Contents>
+            <RewardCard.Title>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Description>
+            </RewardCard.Title>
+            <RewardCard.Description>
               Custom description
-            </BackingCard.Description>
-          </BackingCard.Contents>
-        </BackingCard>,
+            </RewardCard.Description>
+          </RewardCard.Contents>
+        </RewardCard>,
       )
       .toJSON()
 
@@ -30,16 +30,16 @@ describe('<BackingCard />', () => {
   describe('not truncated title', () => {
     const component = renderer
       .create(
-        <BackingCard>
-          <BackingCard.Contents>
-            <BackingCard.Title truncateText={false}>
+        <RewardCard>
+          <RewardCard.Contents>
+            <RewardCard.Title truncateText={false}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-            </BackingCard.Title>
-            <BackingCard.Description>
+            </RewardCard.Title>
+            <RewardCard.Description>
               Custom description
-            </BackingCard.Description>
-          </BackingCard.Contents>
-        </BackingCard>,
+            </RewardCard.Description>
+          </RewardCard.Contents>
+        </RewardCard>,
       )
       .toJSON()
 
@@ -52,19 +52,19 @@ describe('<BackingCard />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <BackingCard disabled hasBorder={false}>
-            <BackingCard.Image>
+          <RewardCard disabled hasBorder={false}>
+            <RewardCard.Image>
               <img src="/kitten.jpg" alt="" />
-            </BackingCard.Image>
-            <BackingCard.Contents>
-              <BackingCard.HeadingTag icon="star" text="Star reward" />
-              <BackingCard.Title>
+            </RewardCard.Image>
+            <RewardCard.Contents>
+              <RewardCard.HeadingTag icon="star" text="Star reward" />
+              <RewardCard.Title>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing eget dolor.
-              </BackingCard.Title>
-              <BackingCard.Amount suffix="Etiam Consectetur Venenatis">
+              </RewardCard.Title>
+              <RewardCard.Amount suffix="Etiam Consectetur Venenatis">
                 65&nbsp;€
-              </BackingCard.Amount>
-              <BackingCard.Description moreButtonText="See more…" truncateText>
+              </RewardCard.Amount>
+              <RewardCard.Description moreButtonText="See more…" truncateText>
                 <p className="k-u-margin-none">
                   Maecenas tempus, tellus eget condimentum rhoncus, sem quam
                   semper libero, sit amet adipiscing sem neque sed ipsum.
@@ -84,8 +84,8 @@ describe('<BackingCard />', () => {
                   enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                   tell
                 </p>
-              </BackingCard.Description>
-              <BackingCard.TagList>
+              </RewardCard.Description>
+              <RewardCard.TagList>
                 <Tag as="li">
                   <strong className="k-u-weight-regular">5</strong>{' '}
                   contributeurs
@@ -94,10 +94,10 @@ describe('<BackingCard />', () => {
                   <strong className="k-u-weight-regular">2/6</strong>{' '}
                   disponibles
                 </Tag>
-              </BackingCard.TagList>
-            </BackingCard.Contents>
-            <BackingCard.Button disabled>Je soutiens</BackingCard.Button>
-          </BackingCard>,
+              </RewardCard.TagList>
+            </RewardCard.Contents>
+            <RewardCard.Button disabled>Je soutiens</RewardCard.Button>
+          </RewardCard>,
         )
         .toJSON()
     })

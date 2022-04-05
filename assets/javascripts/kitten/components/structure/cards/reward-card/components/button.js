@@ -7,8 +7,8 @@ export const Button = ({ className, ...props }) => (
     modifier="helium"
     fit="content"
     className={classNames(
-      'k-BackingCard__button',
-      'k-BackingCard__drawer',
+      'k-RewardCard__button',
+      'k-RewardCard__drawer',
       className,
     )}
     {...props}

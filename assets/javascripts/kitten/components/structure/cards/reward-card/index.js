@@ -1,7 +1,7 @@
 import React, { cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { StyledBackingCard } from './styles'
+import { StyledRewardCard } from './styles'
 import {
   Info,
   Form,
@@ -19,7 +19,7 @@ import {
   getReactElementsWithoutTypeArray,
 } from '../../../../helpers/react/get-react-elements'
 
-export const BackingCard = ({
+export const RewardCard = ({
   children,
   className,
   disabled,
@@ -29,84 +29,84 @@ export const BackingCard = ({
 }) => {
   const contentsChild = getReactElementsByType({
     children,
-    type: BackingCard.Contents,
+    type: RewardCard.Contents,
   })[0]
 
   if (!!contentsChild) {
     return (
-      <StyledBackingCard
+      <StyledRewardCard
         {...props}
-        className={classNames('k-BackingCard', className, {
-          'k-BackingCard--disabled': disabled,
-          'k-BackingCard--hasBorder': hasBorder,
-          'k-BackingCard--isStretched': stretch,
+        className={classNames('k-RewardCard', className, {
+          'k-RewardCard--disabled': disabled,
+          'k-RewardCard--hasBorder': hasBorder,
+          'k-RewardCard--isStretched': stretch,
         })}
       >
         {children}
-      </StyledBackingCard>
+      </StyledRewardCard>
     )
   }
 
   // Old card version
 
   console.warn(
-    'This use of the BackingCard is deprecated. Please wrap contents with `BackingCard.Contents`.',
+    'This use of the RewardCard is deprecated. Please wrap contents with `RewardCard.Contents`.',
   )
 
   const imageChild = getReactElementsByType({
     children,
-    type: BackingCard.Image,
+    type: RewardCard.Image,
   })[0]
   const buttonChild = getReactElementsByType({
     children,
-    type: BackingCard.Button,
+    type: RewardCard.Button,
   })[0]
   const wrappedChildren = getReactElementsWithoutTypeArray({
     children,
-    typeArray: [BackingCard.Button, BackingCard.Image],
+    typeArray: [RewardCard.Button, RewardCard.Image],
   })
 
   return (
-    <StyledBackingCard
+    <StyledRewardCard
       {...props}
-      className={classNames('k-BackingCard', className, {
-        'k-BackingCard--disabled': disabled,
-        'k-BackingCard--hasBorder': hasBorder,
-        'k-BackingCard--isStretched': stretch,
+      className={classNames('k-RewardCard', className, {
+        'k-RewardCard--disabled': disabled,
+        'k-RewardCard--hasBorder': hasBorder,
+        'k-RewardCard--isStretched': stretch,
       })}
     >
       {imageChild && cloneElement(imageChild)}
 
-      <div className="k-BackingCard__gridWrapper">
+      <div className="k-RewardCard__gridWrapper">
         {wrappedChildren &&
           wrappedChildren.map((item, index) =>
-            cloneElement(item, { key: `BackingCard-${index}` }),
+            cloneElement(item, { key: `RewardCard-${index}` }),
           )}
       </div>
 
       {buttonChild && cloneElement(buttonChild, { disabled })}
-    </StyledBackingCard>
+    </StyledRewardCard>
   )
 }
 
-BackingCard.Info = Info
-BackingCard.Form = Form
-BackingCard.Title = Title
-BackingCard.Image = Image
-BackingCard.Amount = Amount
-BackingCard.Button = Button
-BackingCard.TagList = TagList
-BackingCard.HeadingTag = HeadingTag
-BackingCard.Description = Description
-BackingCard.Contents = Contents
+RewardCard.Info = Info
+RewardCard.Form = Form
+RewardCard.Title = Title
+RewardCard.Image = Image
+RewardCard.Amount = Amount
+RewardCard.Button = Button
+RewardCard.TagList = TagList
+RewardCard.HeadingTag = HeadingTag
+RewardCard.Description = Description
+RewardCard.Contents = Contents
 
-BackingCard.defaultProps = {
+RewardCard.defaultProps = {
   hasBorder: true,
   disabled: false,
   stretch: false,
 }
 
-BackingCard.propTypes = {
+RewardCard.propTypes = {
   hasBorder: PropTypes.bool,
   disabled: PropTypes.bool,
   stretch: PropTypes.bool,

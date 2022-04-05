@@ -20,7 +20,7 @@ export const HeadingTag = ({ text, icon, className, ...props }) => {
   return (
     <Tag
       variant="dark"
-      className={classNames('k-BackingCard__headingTag', className)}
+      className={classNames('k-RewardCard__headingTag', className)}
       {...props}
     >
       {iconDisplay}
