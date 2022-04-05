@@ -7,7 +7,7 @@ import { StyledSummaryCard } from './styles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Image, TitleTag, TitleBar, Cell } from './components';
-import { getReactElementsByType, getReactElementsWithoutType } from '../../../../helpers/react/react-elements';
+import { getReactElementsByType, getReactElementsWithoutType } from '../../../../helpers/react/get-react-elements';
 import { NoImageIcon } from '../../../graphics/icons/no-image-icon';
 export var SummaryCard = function SummaryCard(_ref) {
   var _imageChild$props;

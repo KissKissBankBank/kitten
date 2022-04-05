@@ -33,7 +33,7 @@ var DocLinkBox = function DocLinkBox(_ref) {
   })), /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox.Text, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "span",
     weight: "regular",
-    size: "tiny",
+    size: "small",
     lineHeight: "normal"
   }, title), /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "span",

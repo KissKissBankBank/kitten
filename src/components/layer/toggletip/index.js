@@ -217,7 +217,7 @@ var Toggletip = function Toggletip(_ref2) {
   })), /*#__PURE__*/_react.default.createElement("span", {
     role: "status"
   }, isOpen && /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Toggletip__bubble', 'k-u-weight-light', 'k-u-size-tiny', 'k-u-line-height-1-3', bubbleClassName, {
+    className: (0, _classnames.default)('k-Toggletip__bubble', 'k-u-weight-light', 'k-u-size-small', 'k-u-line-height-1-3', bubbleClassName, {
       'k-Toggletip__bubble--left': bubbleOnLeftSide,
       'k-Toggletip__bubble--lowTop': bubbleLowTop,
       'k-Toggletip__bubble--rightLimit': !bubbleOnLeftSide && bubbleRightLimit

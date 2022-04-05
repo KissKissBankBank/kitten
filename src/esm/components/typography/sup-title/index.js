@@ -3,7 +3,7 @@ import React from 'react';
 import { Text } from '../../typography/text';
 export var SupTitle = function SupTitle(props) {
   return /*#__PURE__*/React.createElement(Text, _extends({
-    size: "tiny",
+    size: "small",
     lineHeight: "normal",
     transform: "uppercase",
     weight: "bold"

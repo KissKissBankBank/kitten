@@ -4,30 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: `ScrollableContainer`: Remove `scrollableContainerStyle` export.
-- Deprecation/Change: `HorizontalProjectCard`: Migrate from `HorizontalCrowdfundingCard`.
-- Deprecation/Change: `ProjectCard`: Migrate from `BackingCard`.
-- Breaking Change: Remove the following unused helpers and hocs:
+## [10.0.0] - 2022-04-05
+
+Breaking Changes:
+
+- Remove the following unused helpers and hocs:
   - `numberUtils` helper
   - `Deprecated()` and `hasDeprecatedProps` helpers
   - `card` HOC
   - `default-props` HOC
   - `trigger-enhancer` HOC
-- Breaking change: `BulletList`: Remplace old prop size values by:
-  `micro, small, medium, large, huge`.
-- Breaking change: `Label`:
-  - Replace `small` prop size default value.
-  - Remove `nano` prop size value.
-- Change/Deprecation:
-  - Replace `tiny, regular, default, big` by `small, medium, large`
-    prop size values to the following folders:
-  - `Action`,
-  - `Typography`,
-  - `Form`,
-  - `Graphics`,
-  - `Information`,
-  - `Structure`,
-  - `Layer`
+- `ScrollableContainer`: Remove `scrollableContainerStyle` export.
+- `BulletList`: Replace value names for `size` prop with `micro, small, medium, large, huge`.
+- `Label`: Use `size="small"` as default value.
+- `Label`: Remove `size="nano"` value.
+
+Deprecations/Changes:
+
+- `ProjectCard`: Migrate from `BackingCard`.
+- `HorizontalProjectCard`: Migrate from `HorizontalCrowdfundingCard`.
+- Components: Replace value names for `size` prop from `tiny, regular, default, big` to `small, medium, large`.
 
 ## [9.6.0] - 2022-04-04
 

@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["minRows", "maxRows", "rows", "onChange", "value", "lineHeight", "style"];
-import React, { useState } from 'react';
+import React, { useState, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../../helpers/utils/typography';
-export var TextareaAutoResize = function TextareaAutoResize(_ref) {
+export var TextareaAutoResize = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var minRows = _ref.minRows,
       maxRows = _ref.maxRows,
       rows = _ref.rows,
@@ -45,6 +45,7 @@ export var TextareaAutoResize = function TextareaAutoResize(_ref) {
   };
 
   return /*#__PURE__*/React.createElement("textarea", _extends({
+    ref: ref || null,
     rows: innerRows,
     value: innerValue,
     onChange: handleChange,
@@ -52,7 +53,7 @@ export var TextareaAutoResize = function TextareaAutoResize(_ref) {
       lineHeight: pxToRem(lineHeight)
     })
   }, others));
-};
+});
 TextareaAutoResize.defaultProps = {
   minRows: 1,
   maxRows: 5,

@@ -19,20 +19,20 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
 
-var _elementHelper = _interopRequireDefault(require("../../../helpers/dom/element-helper"));
+var _elementHelper = require("../../../helpers/dom/element-helper");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _screenConfig = require("../../../constants/screen-config");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
 var _excluded = ["tag", "className", "children", "focusId", "size", "withoutPointerEvents", "htmlFor", "dot", "style"];
 
 var StyledLabel = _styledComponents.default.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "sc-l6ih7y-0"
-})(["display:block;", " cursor:pointer;font-size:", ";@media (min-width:", "){font-size:", ";}&.k-Label--tiny{line-height:1.3;font-size:", ";}&.k-Label--micro{line-height:1.3;font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10));
+})(["display:block;", " cursor:pointer;line-height:1.3;&.k-Label--micro{font-size:", ";}&.k-Label--small{font-size:", ";}&.k-Label--medium{font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-2), (0, _typography.stepToRem)(-1), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(10));
 
 var Label = function Label(_ref) {
   var _dot$backgroundColor;
@@ -47,9 +47,10 @@ var Label = function Label(_ref) {
       dot = _ref.dot,
       style = _ref.style,
       other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  (0, _deprecated.checkDeprecatedSizes)(size);
 
   var handleClick = function handleClick(e) {
-    if (_elementHelper.default.canUseDom() && focusId) {
+    if (_elementHelper.domElementHelper.canUseDom() && focusId) {
       e.preventDefault();
       document.getElementById(focusId).focus();
     }
@@ -77,13 +78,13 @@ exports.Label = Label;
 Label.defaultProps = {
   children: 'Label',
   focusId: null,
-  size: 'normal',
+  size: 'small',
   withoutPointerEvents: false,
   dot: {}
 };
 Label.propTypes = {
   focusId: _propTypes.default.oneOfType([_propTypes.default.bool, _propTypes.default.string]),
-  size: _propTypes.default.oneOf([null, undefined, 'normal', 'tiny', 'micro']),
+  size: _propTypes.default.oneOf(['micro', 'small', 'medium']),
   withoutPointerEvents: _propTypes.default.bool,
   dot: _propTypes.default.shape({
     width: _propTypes.default.number,

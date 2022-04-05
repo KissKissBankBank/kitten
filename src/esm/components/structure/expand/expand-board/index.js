@@ -6,6 +6,7 @@ import { Button } from '../../../action/button';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 var StyledButton = styled(Button).withConfig({
   displayName: "expand-board__StyledButton",
   componentId: "sc-tpghry-0"
@@ -36,6 +37,7 @@ export var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
         ariaId = _this$props.ariaId,
         borderRadius = _this$props.borderRadius,
         size = _this$props.size;
+    checkDeprecatedSizes(size);
     var defaultExpandChildren = expandChildren ? expandChildren : children;
     return /*#__PURE__*/React.createElement(StyledButton, {
       size: size,
@@ -71,7 +73,7 @@ ExpandBoardButton.defaultProps = {
   onClick: function onClick() {},
   ariaId: '',
   borderRadius: 0,
-  size: 'big'
+  size: 'large'
 };
 export var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {
   _inheritsLoose(ExpandBoardContent, _PureComponent2);

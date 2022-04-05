@@ -21,7 +21,7 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var TextareaAutoResize = function TextareaAutoResize(_ref) {
+var TextareaAutoResize = /*#__PURE__*/(0, _react.forwardRef)(function (_ref, ref) {
   var minRows = _ref.minRows,
       maxRows = _ref.maxRows,
       rows = _ref.rows,
@@ -62,6 +62,7 @@ var TextareaAutoResize = function TextareaAutoResize(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement("textarea", (0, _extends2.default)({
+    ref: ref || null,
     rows: innerRows,
     value: innerValue,
     onChange: handleChange,
@@ -69,8 +70,7 @@ var TextareaAutoResize = function TextareaAutoResize(_ref) {
       lineHeight: (0, _typography.pxToRem)(lineHeight)
     })
   }, others));
-};
-
+});
 exports.TextareaAutoResize = TextareaAutoResize;
 TextareaAutoResize.defaultProps = {
   minRows: 1,

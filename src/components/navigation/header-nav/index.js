@@ -41,7 +41,7 @@ var _quickAccessLink = require("./components/quick-access-link");
 
 var _searchInput = require("./components/search-input");
 
-var _usePreviousHook = require("../../../helpers/utils/use-previous-hook");
+var _usePrevious = require("../../../helpers/hooks/use-previous");
 
 var _styles = require("./styles");
 
@@ -77,7 +77,7 @@ var HeaderNav = function HeaderNav(_ref) {
 
   var stickyContainerRef = (0, _react.useRef)(null);
   var headerRef = (0, _react.useRef)(null);
-  var previousStickyState = (0, _usePreviousHook.usePrevious)(stickyState);
+  var previousStickyState = (0, _usePrevious.usePrevious)(stickyState);
 
   var callOnToggle = function callOnToggle(_ref2) {
     var isExpanded = _ref2.isExpanded,

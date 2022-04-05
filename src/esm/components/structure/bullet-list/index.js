@@ -12,7 +12,7 @@ import COLORS from '../../../constants/colors-config';
 var StyledBulletList = styled.ul.withConfig({
   displayName: "bullet-list__StyledBulletList",
   componentId: "sc-t43o49-0"
-})(["margin:", ";padding:", ";list-style:none;text-align:left;.k-BulletList__item{margin:", " ", ";display:block;", ";line-height:1.5;color:", ";&:before{margin-left:-", ";margin-right:", ";box-sizing:border-box;border-radius:var(--border-radius-rounded);width:", ";height:", ";display:inline-block;vertical-align:middle;background-color:", ";content:'';}}&.k-BulletList--tiny .k-BulletList__item{font-size:", ";&:before{width:", ";height:", ";}}&.k-BulletList--regular .k-BulletList__item{font-size:", ";}&.k-BulletList--large .k-BulletList__item{font-size:", ";}&.k-BulletList--big .k-BulletList__item{font-size:", ";margin:", " 0;}&.k-BulletList--huge .k-BulletList__item{font-size:", ";margin:", " 0;}"], pxToRem(0), pxToRem(0), pxToRem(5), pxToRem(16), TYPOGRAPHY.fontStyles.light, COLORS.font1, pxToRem(16), pxToRem(10), pxToRem(6), pxToRem(6), COLORS.font1, stepToRem(-2), pxToRem(4), pxToRem(4), stepToRem(-1), stepToRem(0), stepToRem(1), pxToRem(10), stepToRem(2), pxToRem(10));
+})(["margin:", ";padding:", ";list-style:none;text-align:left;.k-BulletList__item{margin:", " ", ";display:block;", ";line-height:1.5;color:", ";&:before{margin-left:-", ";margin-right:", ";box-sizing:border-box;border-radius:var(--border-radius-rounded);width:", ";height:", ";display:inline-block;vertical-align:middle;background-color:", ";content:'';}}&.k-BulletList--micro .k-BulletList__item{font-size:", ";&:before{width:", ";height:", ";}}&.k-BulletList--small .k-BulletList__item{font-size:", ";}&.k-BulletList--medium .k-BulletList__item{font-size:", ";}&.k-BulletList--large .k-BulletList__item{font-size:", ";margin:", " 0;}&.k-BulletList--huge .k-BulletList__item{font-size:", ";margin:", " 0;}"], pxToRem(0), pxToRem(0), pxToRem(5), pxToRem(16), TYPOGRAPHY.fontStyles.light, COLORS.font1, pxToRem(16), pxToRem(10), pxToRem(6), pxToRem(6), COLORS.font1, stepToRem(-2), pxToRem(4), pxToRem(4), stepToRem(-1), stepToRem(0), stepToRem(1), pxToRem(10), stepToRem(2), pxToRem(10));
 export var BulletList = function BulletList(_ref) {
   var items = _ref.items,
       size = _ref.size,
@@ -34,10 +34,10 @@ export var BulletList = function BulletList(_ref) {
   }));
 };
 BulletList.propTypes = {
-  size: PropTypes.oneOf(['tiny', 'regular', 'large', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
   items: PropTypes.array
 };
 BulletList.defaultProps = {
-  size: 'regular',
+  size: 'small',
   items: []
 };

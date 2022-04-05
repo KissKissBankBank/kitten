@@ -1,6 +1,5 @@
 import capitalize from 'lodash/fp/capitalize';
-
-var margin = function margin(options, asArray) {
+export var margin = function margin(options, asArray) {
   if (asArray === void 0) {
     asArray = false;
   }
@@ -56,4 +55,3 @@ var generateClassName = function generateClassName(_ref) {
 };
 
 var valuesNames = ['none', 'single', 'double', 'triple', 'quadruple', 'quintuple', 'sextuple', 'septuble', 'octuple', 'nonuple', 'decuple'];
-export default margin;

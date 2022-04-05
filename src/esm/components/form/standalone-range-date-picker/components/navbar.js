@@ -41,7 +41,7 @@ export var Navbar = /*#__PURE__*/function (_PureComponent) {
     var nextAriaLabel = months !== undefined && months.length > 0 ? (labels && labels.nextMonth) + ", " + months[nextMonth.getMonth()] + " " + nextMonth.getFullYear() : "" + (labels && labels.nextMonth);
     return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledText, {
       tag: "p",
-      size: "tiny",
+      size: "small",
       weight: "regular"
     }, title), /*#__PURE__*/React.createElement(StyledButton, {
       className: className

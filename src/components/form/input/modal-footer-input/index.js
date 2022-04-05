@@ -84,7 +84,7 @@ var ModalFooterInput = /*#__PURE__*/_react.default.forwardRef(function (_ref, re
     type: "button",
     modifier: "beryllium",
     fit: "icon",
-    size: "tiny",
+    size: "small",
     disabled: disabled || value.length < 1,
     className: "k-ModalFooterInput__button",
     onClick: handleSubmit

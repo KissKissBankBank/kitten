@@ -19,7 +19,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _usePreviousHook = require("../../../../helpers/utils/use-previous-hook");
+var _usePrevious = require("../../../../helpers/hooks/use-previous");
 
 var _flagIcon = require("../../../graphics/icons/flag-icon");
 
@@ -219,7 +219,7 @@ var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       getInputNumber = _useState6[0],
       setInputNumber = _useState6[1];
 
-  var getPreviousFormattedNumber = (0, _usePreviousHook.usePrevious)(getFormattedNumber);
+  var getPreviousFormattedNumber = (0, _usePrevious.usePrevious)(getFormattedNumber);
   var phoneProps = (0, _extends2.default)({}, DropdownPhoneSelect.defaultProps.phoneProps, props.phoneProps);
   var localization = locale === 'fr' ? _fr.default : [];
 

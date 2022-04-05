@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.default = void 0;
+exports.margin = void 0;
 
 var _capitalize = _interopRequireDefault(require("lodash/fp/capitalize"));
 
@@ -36,6 +36,8 @@ var margin = function margin(options, asArray) {
   return result.join(' ');
 };
 
+exports.margin = margin;
+
 var generateClassName = function generateClassName(_ref) {
   var attribute = _ref.attribute,
       mediaQuery = _ref.mediaQuery,
@@ -63,5 +65,3 @@ var generateClassName = function generateClassName(_ref) {
 };
 
 var valuesNames = ['none', 'single', 'double', 'triple', 'quadruple', 'quintuple', 'sextuple', 'septuble', 'octuple', 'nonuple', 'decuple'];
-var _default = margin;
-exports.default = _default;

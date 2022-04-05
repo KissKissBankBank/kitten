@@ -8,7 +8,7 @@ export var TeamCardTitle = function TeamCardTitle(_ref) {
   return /*#__PURE__*/React.createElement(Marger, {
     top: "2"
   }, /*#__PURE__*/React.createElement(Text, {
-    size: "default",
+    size: "medium",
     weight: "bold",
     color: "font1"
   }, children), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Text, {

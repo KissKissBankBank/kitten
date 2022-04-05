@@ -70,7 +70,7 @@ var CounterBlock = function CounterBlock(_ref) {
     className: "k-u-hidden@m-down"
   }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
     className: "styledStroke",
-    size: "big"
+    size: "large"
   })), isString(counter) ? /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "styledText",
     weight: "bold",
@@ -80,7 +80,7 @@ var CounterBlock = function CounterBlock(_ref) {
     className: "k-u-hidden@m-down"
   }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
     className: "styledStroke",
-    size: "big"
+    size: "large"
   }))), isString(subTitle) ? /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: margin
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (_React$createElement = {

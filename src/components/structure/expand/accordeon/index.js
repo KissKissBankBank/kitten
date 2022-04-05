@@ -25,7 +25,7 @@ var _content = require("./components/content");
 
 var _context = require("./components/context");
 
-var _reactElements = require("../../../../helpers/react/react-elements");
+var _getReactElements = require("../../../../helpers/react/get-react-elements");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -39,7 +39,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _debounce = require("../../../../helpers/utils/debounce");
+var _useDebounce = require("../../../../helpers/hooks/use-debounce");
 
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
@@ -64,7 +64,7 @@ var Accordeon = function Accordeon(_ref) {
       className = _ref.className,
       multiple = _ref.multiple,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var items = (0, _reactElements.getReactElementsByType)({
+  var items = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Accordeon.Item
   });
@@ -77,7 +77,7 @@ var Accordeon = function Accordeon(_ref) {
       accordeonWidth = _useState2[0],
       setAccordeonWidth = _useState2[1];
 
-  var debouncedAccordeonWidth = (0, _debounce.useDebounce)(accordeonWidth, 200);
+  var debouncedAccordeonWidth = (0, _useDebounce.useDebounce)(accordeonWidth, 200);
   var accordeonElement = (0, _react.useRef)(null);
   var fakeResizeObserver = {
     observe: function observe() {},

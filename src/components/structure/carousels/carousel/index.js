@@ -227,7 +227,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
           prevButtonText = _this$props3.prevButtonText,
           nextButtonText = _this$props3.nextButtonText,
-          tinyButtons = _this$props3.tinyButtons,
+          smallButtons = _this$props3.smallButtons,
           firstButtonText = _this$props3.firstButtonText,
           lastButtonText = _this$props3.lastButtonText,
           showPageSquares = _this$props3.showPageSquares,
@@ -269,7 +269,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className: "k-Carousel__pagination__button",
         fit: "icon",
         modifier: "beryllium",
-        size: tinyButtons ? 'tiny' : null,
+        size: smallButtons ? 'small' : null,
         onClick: _this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
@@ -280,7 +280,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className: "k-Carousel__pagination__button",
         fit: "icon",
         modifier: "beryllium",
-        size: tinyButtons ? 'tiny' : null,
+        size: smallButtons ? 'small' : null,
         onClick: _this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
@@ -374,7 +374,7 @@ CarouselBase.defaultProps = {
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
-  tinyButtons: false,
+  smallButtons: false,
   loop: false,
   exportVisibilityProps: false
 };
@@ -402,7 +402,7 @@ CarouselBase.propTypes = {
   prevButtonText: _propTypes.default.string,
   nextButtonText: _propTypes.default.string,
   pageClickText: _propTypes.default.func,
-  tinyButtons: _propTypes.default.bool,
+  smallButtons: _propTypes.default.bool,
   firstButtonText: _propTypes.default.string,
   lastButtonText: _propTypes.default.string,
   showPageSquares: _propTypes.default.bool,

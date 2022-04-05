@@ -19,9 +19,9 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _dropdownButton = require("./dropdown-button");
 
-var _elementHelper = _interopRequireDefault(require("../../../../helpers/dom/element-helper"));
+var _elementHelper = require("../../../../helpers/dom/element-helper");
 
-var _useWindowWidthHook = require("../../../../helpers/utils/use-window-width-hook");
+var _useWindowWidthHook = require("../../../../helpers/hooks/use-window-width-hook");
 
 var _events = _interopRequireWildcard(require("../../../../helpers/dom/events"));
 
@@ -244,12 +244,12 @@ var Dropdown = /*#__PURE__*/_react.default.forwardRef(function (_ref, dropdownRe
   };
 
   var getComputedHeightElement = function getComputedHeightElement() {
-    return _elementHelper.default.getComputedHeight(positionedVerticallyWith(), positionedWithBorder);
+    return _elementHelper.domElementHelper.getComputedHeight(positionedVerticallyWith(), positionedWithBorder);
   };
 
   var getComputedLeftElement = function getComputedLeftElement() {
     if (positionedHorizontallyWith) {
-      var computedLeftElement = _elementHelper.default.getComputedLeft(positionedHorizontallyWith());
+      var computedLeftElement = _elementHelper.domElementHelper.getComputedLeft(positionedHorizontallyWith());
 
       if (!dropdownContentWidth || typeof dropdownContentWidth === 'number') {
         var minContentWidth = function minContentWidth() {
@@ -283,7 +283,7 @@ var Dropdown = /*#__PURE__*/_react.default.forwardRef(function (_ref, dropdownRe
   };
 
   var handleDropdownPosition = function handleDropdownPosition() {
-    if (_elementHelper.default.canUseDom()) {
+    if (_elementHelper.domElementHelper.canUseDom()) {
       onPositionUpdate();
       setVerticalReferenceElement(getComputedHeightElement());
       setHorizontalReferenceElement(getComputedLeftElement());

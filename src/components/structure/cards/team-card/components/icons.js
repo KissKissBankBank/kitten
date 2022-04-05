@@ -53,7 +53,7 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/_react.default.createElement(_button.Button, {
-    size: "tiny",
+    size: "small",
     fit: "icon",
     tag: "a",
     href: "mailto:" + email,
@@ -84,7 +84,7 @@ var SocialLinks = function SocialLinks(_ref2) {
       modifier: "hydrogen",
       target: "_blank",
       rel: "noopener",
-      size: "tiny"
+      size: "small"
     }, link.name === 'linkedin' && /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
       "aria-hidden": true
     }), link.name === 'twitter' && /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {

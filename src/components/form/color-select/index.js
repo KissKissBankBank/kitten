@@ -189,7 +189,7 @@ var ColorSelect = function ColorSelect(_ref) {
       backgroundColor: color
     }
   }), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, inputProps, {
-    size: "tiny",
+    size: "small",
     center: true,
     as: /*#__PURE__*/(0, _react.forwardRef)(function (props, ref // eslint-disable-line no-unused-vars
     ) {

@@ -6,20 +6,26 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
 import classNames from 'classnames';
 import { strokeModifierStylesWithoutMargin } from './common/stroke-modifier-styles';
 export var MICRO = css(["width:", ";height:", ";"], pxToRem(15), pxToRem(2));
-export var TINY = css(["width:", ";height:", ";"], pxToRem(20), pxToRem(2));
-export var DEFAULT = css(["width:", ";height:", ";"], pxToRem(30), pxToRem(4));
-export var BIG = css(["width:", ";height:", ";"], pxToRem(50), pxToRem(4));
+export var SMALL = css(["width:", ";height:", ";"], pxToRem(20), pxToRem(2));
+export var MEDIUM = css(["width:", ";height:", ";"], pxToRem(30), pxToRem(4));
+export var LARGE = css(["width:", ";height:", ";"], pxToRem(50), pxToRem(4));
+/* DEPRECATED EXPORTS */
+
+export var TINY = SMALL;
+export var DEFAULT = MEDIUM;
+export var BIG = LARGE;
 export var HUGE = css(["width:", ";height:", ";"], pxToRem(100), pxToRem(6));
 export var StyledHorizontalStroke = styled.div.withConfig({
   displayName: "horizontal-stroke__StyledHorizontalStroke",
   componentId: "sc-1ynlu5y-0"
-})(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
+})(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--tiny,&.k-HorizontalStroke--size--small{", "}&.k-HorizontalStroke--size--default,&.k-HorizontalStroke--size--medium{", "}&.k-HorizontalStroke--size--big,&.k-HorizontalStroke--size--large{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
   var color = _ref.color;
   return color || COLORS.font1;
-}, MICRO, TINY, DEFAULT, BIG, HUGE, strokeModifierStylesWithoutMargin('&.k-HorizontalStroke--modifier'));
+}, MICRO, TINY, SMALL, MEDIUM, LARGE, HUGE, strokeModifierStylesWithoutMargin('&.k-HorizontalStroke--modifier'));
 export var HorizontalStroke = function HorizontalStroke(_ref2) {
   var className = _ref2.className,
       style = _ref2.style,
@@ -28,6 +34,8 @@ export var HorizontalStroke = function HorizontalStroke(_ref2) {
       customSize = _ref2.customSize,
       color = _ref2.color,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded);
+
+  checkDeprecatedSizes(size);
 
   var modifierClassName = function modifierClassName() {
     if (!modifier) return "k-HorizontalStroke--size--" + size;
@@ -49,7 +57,7 @@ export var HorizontalStroke = function HorizontalStroke(_ref2) {
   }));
 };
 HorizontalStroke.propTypes = {
-  size: PropTypes.oneOf(['micro', 'tiny', 'default', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
   modifier: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary']),
   customSize: PropTypes.shape({
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -58,7 +66,7 @@ HorizontalStroke.propTypes = {
   color: PropTypes.string
 };
 HorizontalStroke.defaultProps = {
-  size: 'default',
+  size: 'medium',
   customSize: {
     width: null,
     height: null

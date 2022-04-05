@@ -82,7 +82,7 @@ var Comment = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   }, !!text && /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "font1",
     weight: "light",
-    size: "tiny"
+    size: "small"
   }, text), children), footer && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Comment__footer"
   }, footer));

@@ -9,7 +9,7 @@ import { ArrowIcon } from '../../graphics/icons/arrow-icon';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { parseHtml } from '../../../helpers/utils/parser';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { useMedia } from '../../../helpers/utils/use-media-query';
+import { useMedia } from '../../../helpers/hooks/use-media-query';
 import { getMinQuery } from '../../../helpers/utils/media-queries';
 var StyledNav = styled.nav.withConfig({
   displayName: "pagination__StyledNav",
@@ -77,7 +77,7 @@ export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
         className: "k-Pagination__ListItem k-Pagination__ListItem__Ellipsis",
         "aria-hidden": "true"
       }, /*#__PURE__*/React.createElement(Text, {
-        size: "tiny",
+        size: "small",
         weight: "regular"
       }, "\u2026"));
     }
@@ -106,7 +106,7 @@ export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
       key: "link-" + number,
       className: "k-Pagination__Link",
       tabIndex: "0",
-      size: "tiny",
+      size: "small",
       fit: "icon"
     }, buttonProps), number));
   };
@@ -128,7 +128,7 @@ export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
       tabIndex: 0,
       onClick: isDisabled ? null : pageClickHandler(number),
       disabled: isDisabled,
-      size: "tiny",
+      size: "small",
       fit: "icon"
     }, /*#__PURE__*/React.createElement(ArrowIcon, {
       className: "k-Pagination__ArrowIcon",

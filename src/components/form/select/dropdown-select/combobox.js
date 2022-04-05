@@ -25,6 +25,8 @@ var _checkedCircleIcon = require("../../../graphics/icons/checked-circle-icon");
 
 var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
+var _deprecated = require("../../../../helpers/utils/deprecated");
+
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
 var _flow = _interopRequireDefault(require("lodash/fp/flow"));
@@ -84,6 +86,7 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       arrowPosition = _ref.arrowPosition,
       labelProps = _ref.labelProps,
       inputProps = _ref.inputProps;
+  (0, _deprecated.checkDeprecatedSizes)(size);
 
   var _useState = (0, _react.useState)([]),
       flattenedOptions = _useState[0],
@@ -272,7 +275,7 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  size: 'normal',
+  size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
@@ -300,7 +303,7 @@ DropdownCombobox.propTypes = {
   options: _propTypes.default.arrayOf(_propTypes.default.object),
   placeholder: _propTypes.default.string,
   labelPropsGetter: _propTypes.default.func,
-  size: _propTypes.default.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
+  size: _propTypes.default.oneOf(['micro', 'small', 'medium', 'large', 'huge', 'giant']),
   a11yStatusError: _propTypes.default.string,
   a11yStatusValid: _propTypes.default.string,
   a11ySelectionMessageDisplayer: _propTypes.default.func,

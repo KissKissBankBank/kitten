@@ -50,7 +50,7 @@ var BackerCard = function BackerCard(_ref) {
     color: "font1",
     weight: "regular",
     lineHeight: "normal",
-    size: "tiny"
+    size: "small"
   }, title, subtitle && /*#__PURE__*/_react.default.createElement(StyledSubtitle, {
     color: "font1",
     weight: "light",
