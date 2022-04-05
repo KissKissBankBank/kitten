@@ -94,13 +94,13 @@ const SiteHeaderComponent = () => {
               >
                 <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
                 <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
-                <HeaderMenu.Item size="tiny" href="#">
+                <HeaderMenu.Item size="small" href="#">
                   Gluten Mag
                 </HeaderMenu.Item>
-                <HeaderMenu.Item size="tiny" href="#">
+                <HeaderMenu.Item size="small" href="#">
                   Kallix — Mobilier de bureau pour le télétravail
                 </HeaderMenu.Item>
-                <HeaderMenu.Item size="tiny" href="#">
+                <HeaderMenu.Item size="small" href="#">
                   Mon premier court-métrage
                 </HeaderMenu.Item>
                 <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>

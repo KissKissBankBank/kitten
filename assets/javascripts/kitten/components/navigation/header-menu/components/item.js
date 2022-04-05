@@ -5,7 +5,7 @@ import classNames from 'classnames'
 
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import { Button, buttonModifiers } from '../../../action/button'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const Item = ({
   children,

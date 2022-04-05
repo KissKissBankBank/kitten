@@ -211,13 +211,13 @@ export const Default = ({
               className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
             >
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="regular" rounded>
+                <Button fit="content" size="medium" rounded>
                   <AirplaneIconNext />
                   <span>Partager</span>
                 </Button>
                 <Button
                   fit="content"
-                  size="regular"
+                  size="medium"
                   rounded
                   className="k-u-hidden@l-up"
                 >

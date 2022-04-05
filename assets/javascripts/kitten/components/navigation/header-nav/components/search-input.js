@@ -134,7 +134,7 @@ export const SearchInput = ({
       onKeyDown={handleKeyDown}
     >
       <TextInputWithButton
-        size="tiny"
+        size="small"
         rounded
         buttonValue={<SearchIcon />}
         buttonProps={{ ...searchButtonProps, ref: buttonElement }}
@@ -164,7 +164,7 @@ export const SearchInput = ({
           className="k-u-reset-button k-HeaderNav__searchInput__mobileFold"
           onClick={handleFoldButtonClick}
         >
-          <CrossIcon size="big" />
+          <CrossIcon size="large" />
           <span className="k-u-a11y-visuallyHidden">{a11yMobileClose}</span>
         </button>
       )}

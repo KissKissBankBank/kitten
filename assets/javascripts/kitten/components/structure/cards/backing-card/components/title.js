@@ -43,6 +43,6 @@ export const Title = ({
 }
 
 Title.defaultProps = {
-  textSize: 'big',
+  textSize: 'large',
   truncateText: true,
 }

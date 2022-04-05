@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
@@ -92,12 +93,14 @@ const StyledNavBar = styled.div`
     height: ${pxToRem(HEADER_HEIGHT)};
   }
 
-  &.k-NavBar--big .k-NavBar__link {
-    height: ${pxToRem(80)};
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      height: ${pxToRem(100)};
-    }
+  &.k-NavBar--big, &.k-NavBar--large {
+    .k-NavBar__link {
+      height: ${pxToRem(80)};
+  
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        height: ${pxToRem(100)};
+      }
+    } 
   }
 `
 
@@ -121,25 +124,30 @@ export const NavBar = ({
   colors,
   modifier,
   ...props
-}) => (
-  <StyledNavBar
-    {...props}
-    className={classNames('k-NavBar', `k-NavBar--${modifier}`, className)}
-    colors={colors}
-  >
-    <nav
-      {...navProps}
-      className={classNames('k-NavBar__nav', navProps.className)}
+}) => {
+
+  checkDeprecatedSizes(modifier)
+
+  return (
+    <StyledNavBar
+      {...props}
+      className={classNames('k-NavBar', `k-NavBar--${modifier}`, className)}
+      colors={colors}
     >
-      <ul
-        {...listProps}
-        className={classNames('k-NavBar__list', listProps.className)}
+      <nav
+        {...navProps}
+        className={classNames('k-NavBar__nav', navProps.className)}
       >
-        {children}
-      </ul>
-    </nav>
-  </StyledNavBar>
-)
+        <ul
+          {...listProps}
+          className={classNames('k-NavBar__list', listProps.className)}
+        >
+          {children}
+        </ul>
+      </nav>
+    </StyledNavBar>
+  )
+}
 
 NavBar.ListItem = NavBarItem
 
@@ -153,7 +161,7 @@ NavBar.defaultProps = {
     activeLink: COLORS.primary1,
     activeBorder: COLORS.primary1,
   },
-  modifier: 'regular',
+  modifier: 'medium',
 }
 
 NavBar.propTypes = {
@@ -164,5 +172,5 @@ NavBar.propTypes = {
     activeLink: PropTypes.string,
     activeBorder: PropTypes.string,
   }),
-  modifier: PropTypes.oneOf(['small', 'regular', 'big']),
+  modifier: PropTypes.oneOf(['small', 'medium', 'large']),
 }

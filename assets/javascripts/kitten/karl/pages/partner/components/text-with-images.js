@@ -64,7 +64,7 @@ const TextWithImages = () => (
               </StyledTitle>
 
               <Marger top="4" className="k-u-hidden@xs-down">
-                <Button as="a" href="#" modifier="helium" big>
+                <Button as="a" href="#" modifier="helium" size="large">
                   Rejoignez-nous
                 </Button>
               </Marger>

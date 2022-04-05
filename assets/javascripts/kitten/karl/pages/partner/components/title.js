@@ -11,17 +11,17 @@ import {
 } from 'kitten'
 import {
   HorizontalStroke,
-  DEFAULT,
-  BIG,
+  MEDIUM,
+  LARGE,
 } from '../../../../components/typography/horizontal-stroke'
 
 const StyledHorizontalStroke = styled(HorizontalStroke)`
-  ${DEFAULT}
+  ${MEDIUM}
   width: ${pxToRem(40)};
   margin: 0 auto;
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    ${BIG}
+    ${LARGE}
     height: ${pxToRem(6)};
     margin: 0;
   }

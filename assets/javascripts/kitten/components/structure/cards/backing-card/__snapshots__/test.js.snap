@@ -11,7 +11,7 @@ exports[`<BackingCard /> default matches with snapshot 1`] = `
       className="k-BackingCard__titleWrapper k-BackingCard__drawer k-BackingCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-large k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,
@@ -47,7 +47,7 @@ exports[`<BackingCard /> not truncated title matches with snapshot 1`] = `
       className="k-BackingCard__titleWrapper k-BackingCard__drawer"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center"
+        className="k-u-size-large k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center"
         style={
           Object {
             "--line-clamp": 2,
@@ -111,7 +111,7 @@ exports[`<BackingCard /> with some props matches with snapshot 1`] = `
       className="k-BackingCard__titleWrapper k-BackingCard__drawer k-BackingCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-large k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,

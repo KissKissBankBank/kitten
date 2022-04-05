@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useSelect } from 'downshift'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -12,7 +13,6 @@ import { WarningCircleIcon } from '../../../graphics/icons/warning-circle-icon'
 import { CheckedCircleIcon } from '../../../graphics/icons/checked-circle-icon'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import find from 'lodash/fp/find'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledDropdownSelectWithInput = styled.div`
   position: relative;
@@ -457,7 +457,7 @@ export const DropdownSelectWithInput = ({
   size,
 }) => {
   checkDeprecatedSizes(size)
-  
+
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }

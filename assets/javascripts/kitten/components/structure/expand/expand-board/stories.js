@@ -114,7 +114,7 @@ export const Default = ({
     <ExpandBoard.Button
       expandChildren={buttonExpandChildren}
       borderRadius={buttonBorderRadius}
-      big={buttonBig}
+      large={buttonBig}
     >
       {buttonChildren}
     </ExpandBoard.Button>

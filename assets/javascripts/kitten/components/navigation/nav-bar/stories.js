@@ -19,7 +19,7 @@ export default {
       activeLink: COLORS.primary1,
       activeBorder: COLORS.primary1,
     },
-    modifier: 'regular',
+    modifier: 'medium',
     listProps: {},
     navProps: {},
   },
@@ -27,7 +27,7 @@ export default {
     colors: {
       control: 'object',
     },
-    modifier: { control: 'radio', options: ['small', 'regular', 'big'] },
+    modifier: { control: 'radio', options: ['small', 'medium', 'large'] },
     listProps: { control: 'object' },
     navProps: { control: 'object' },
   },
