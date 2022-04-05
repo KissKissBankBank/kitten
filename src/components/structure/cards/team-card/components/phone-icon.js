@@ -36,7 +36,7 @@ var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
     fit: "icon",
     href: "tel:" + phoneNumber,
     modifier: "hydrogen",
-    size: "tiny",
+    size: "small",
     className: (0, _classnames.default)('k-u-hidden@s-up', className),
     "aria-label": buttonLabel
   }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {

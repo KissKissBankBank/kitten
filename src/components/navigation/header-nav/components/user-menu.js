@@ -15,7 +15,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _context = require("./context");
 
-var _reactElements = require("../../../../helpers/react/react-elements");
+var _getReactElements = require("../../../../helpers/react/get-react-elements");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -48,11 +48,11 @@ var UserMenu = function UserMenu(_ref) {
       id = _useContext.id,
       callOnToggle = _useContext.callOnToggle;
 
-  var buttonChild = (0, _reactElements.getReactElementsByType)({
+  var buttonChild = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: UserMenu.Button
   })[0];
-  var menuChild = (0, _reactElements.getReactElementsByType)({
+  var menuChild = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: UserMenu.Navigation
   })[0];

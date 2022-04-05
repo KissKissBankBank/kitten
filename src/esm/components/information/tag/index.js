@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem } from '../../../helpers/utils/typography';
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
 var StyledTag = styled.span.withConfig({
   displayName: "tag__StyledTag",
   componentId: "sc-t9jrs5-0"
@@ -19,6 +20,7 @@ export var Tag = function Tag(_ref) {
       flex = _ref.flex,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  checkDeprecatedSizes(size);
   return /*#__PURE__*/React.createElement(StyledTag, _extends({
     className: classNames('k-Tag', className, "k-Tag--" + type, "k-Tag--" + size, "k-Tag--" + variant, {
       'k-Tag--flex': flex
@@ -27,13 +29,13 @@ export var Tag = function Tag(_ref) {
 };
 Tag.propTypes = {
   type: PropTypes.oneOf(['info', 'warning', 'success', 'error', 'disabled']),
-  size: PropTypes.oneOf(['regular', 'small']),
+  size: PropTypes.oneOf(['small', 'medium']),
   variant: PropTypes.oneOf(['light', 'status', 'dark']),
   flex: PropTypes.bool
 };
 Tag.defaultProps = {
   type: 'info',
-  size: 'regular',
+  size: 'medium',
   variant: 'status',
   flex: false
 };

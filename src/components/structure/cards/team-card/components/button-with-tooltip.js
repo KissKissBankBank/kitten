@@ -52,7 +52,7 @@ var TeamCardButtonWithTooltip = function TeamCardButtonWithTooltip(_ref4) {
     className: "k-TeamCardButtonWithTooltip__tooltipArrow"
   })), /*#__PURE__*/_react.default.createElement(_button.Button, {
     fit: "icon",
-    size: "tiny",
+    size: "small",
     modifier: "hydrogen",
     tag: "span",
     "aria-label": phoneNumber

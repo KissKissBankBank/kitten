@@ -19,7 +19,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _components = require("./components");
 
-var _reactElements = require("../../../../helpers/react/react-elements");
+var _getReactElements = require("../../../../helpers/react/get-react-elements");
 
 var _noImageIcon = require("../../../graphics/icons/no-image-icon");
 
@@ -43,11 +43,11 @@ var SummaryCard = function SummaryCard(_ref) {
       size = _ref.size,
       type = _ref.type,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var imageChild = (0, _reactElements.getReactElementsByType)({
+  var imageChild = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: SummaryCard.Image
   })[0];
-  var wrappedChildren = (0, _reactElements.getReactElementsWithoutType)({
+  var wrappedChildren = (0, _getReactElements.getReactElementsWithoutType)({
     children: children,
     type: SummaryCard.Image
   });

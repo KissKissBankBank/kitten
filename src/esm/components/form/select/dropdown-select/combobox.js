@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import { WarningCircleIcon } from '../../../graphics/icons/warning-circle-icon';
 import { CheckedCircleIcon } from '../../../graphics/icons/checked-circle-icon';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 import find from 'lodash/fp/find';
 import flow from 'lodash/fp/flow';
 import uniqBy from 'lodash/fp/uniqBy';
@@ -57,6 +58,7 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       arrowPosition = _ref.arrowPosition,
       labelProps = _ref.labelProps,
       inputProps = _ref.inputProps;
+  checkDeprecatedSizes(size);
 
   var _useState = useState([]),
       flattenedOptions = _useState[0],
@@ -243,7 +245,7 @@ DropdownCombobox.defaultProps = {
   options: [],
   placeholder: 'Select',
   labelPropsGetter: function labelPropsGetter() {},
-  size: 'normal',
+  size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
@@ -271,7 +273,7 @@ DropdownCombobox.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
-  size: PropTypes.oneOf(['micro', 'tiny', 'normal', 'big', 'huge', 'giant']),
+  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,

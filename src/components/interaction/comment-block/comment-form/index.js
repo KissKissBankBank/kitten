@@ -113,21 +113,21 @@ var CommentForm = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
     className: "k-u-flex k-u-flex-justifyContent-end k-u-flex-gap-single"
   }, /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
-    size: "tiny",
+    size: "small",
     fit: "content",
     disabled: disabled,
     onClick: onClose
   }, closeButtonText), /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
     modifier: "beryllium",
-    size: "tiny",
+    size: "small",
     fit: "content",
     disabled: disabled,
     onClick: handleSubmit
   }, buttonText)) : (value.length > 0 || !!defaultValue) && /*#__PURE__*/_react.default.createElement(_button.Button, {
     type: "button",
     modifier: "beryllium",
-    size: "tiny",
+    size: "small",
     fit: "content",
     disabled: disabled,
     className: (0, _classnames.default)('k-CommentForm__submit', {

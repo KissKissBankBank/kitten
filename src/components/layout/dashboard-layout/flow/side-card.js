@@ -39,7 +39,7 @@ var Title = function Title(_ref) {
   var className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
-    size: "tiny",
+    size: "small",
     tag: "h3",
     weight: "bold",
     color: "font1",

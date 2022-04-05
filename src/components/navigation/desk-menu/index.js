@@ -21,7 +21,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _reactElements = require("../../../helpers/react/react-elements");
+var _getReactElements = require("../../../helpers/react/get-react-elements");
 
 var _excluded = ["className", "children"],
     _excluded2 = ["children", "className", "imageProps"],
@@ -39,7 +39,7 @@ var DeskMenu = function DeskMenu(_ref) {
   var className = _ref.className,
       children = _ref.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var HeaderChild = (0, _reactElements.getReactElementsByType)({
+  var HeaderChild = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Header
   })[0];

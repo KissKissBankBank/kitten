@@ -13,11 +13,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _deprecated = require("../../../helpers/utils/deprecated");
+
 var _excluded = ["size"];
 
 var KkbbFlashIllustration = function KkbbFlashIllustration(_ref) {
   var size = _ref.size,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  (0, _deprecated.checkDeprecatedSizes)(size);
 
   if (size === 'small') {
     return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
@@ -76,5 +79,5 @@ var KkbbFlashIllustration = function KkbbFlashIllustration(_ref) {
 
 exports.KkbbFlashIllustration = KkbbFlashIllustration;
 KkbbFlashIllustration.propTypes = {
-  size: _propTypes.default.oneOf(['small', 'normal', null, undefined])
+  size: _propTypes.default.oneOf(['small', 'medium', null, undefined])
 };

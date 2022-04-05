@@ -62,7 +62,7 @@ export var Comment = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
   }, !!text && /*#__PURE__*/React.createElement(Text, {
     color: "font1",
     weight: "light",
-    size: "tiny"
+    size: "small"
   }, text), children), footer && /*#__PURE__*/React.createElement("div", {
     className: "k-Comment__footer"
   }, footer));

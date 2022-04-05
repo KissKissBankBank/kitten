@@ -29,7 +29,7 @@ export var Image = function Image(_ref) {
       '--SimpleCard-player-button-size': pxToRem(playerButtonSize)
     }
   }, /*#__PURE__*/React.createElement(Text, {
-    size: "default",
+    size: "medium",
     weight: "regular",
     color: arrowColor,
     "aria-label": ariaLabel

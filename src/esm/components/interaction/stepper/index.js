@@ -43,7 +43,7 @@ export var StepperItem = function StepperItem(_ref) {
     state: state
   }, props), /*#__PURE__*/React.createElement(StepperText, {
     weight: "regular",
-    size: "tiny",
+    size: "small",
     tabIndex: "0"
   }, /*#__PURE__*/React.createElement(StepperIcon, {
     className: "k-Stepper__icon",
@@ -70,7 +70,7 @@ export var StepperLink = function StepperLink(_ref2) {
     state: state
   }, props), /*#__PURE__*/React.createElement(StepperText, _extends({
     weight: "regular",
-    size: "tiny",
+    size: "small",
     tag: "a",
     className: classNames('k-u-link', {
       'k-u-link-font1': state !== 'progress',

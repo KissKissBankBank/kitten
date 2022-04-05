@@ -4,7 +4,7 @@ var _excluded = ["children", "id", "index", "className"];
 import React, { useContext } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { getReactElementsByType } from '../../../../../helpers/react/react-elements';
+import { getReactElementsByType } from '../../../../../helpers/react/get-react-elements';
 import { Header } from './header';
 import { Content } from './content';
 import { Context } from './context';

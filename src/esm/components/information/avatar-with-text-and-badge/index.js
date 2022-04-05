@@ -12,11 +12,12 @@ import { Badge as BadgeComponent } from '../../information/badge';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
-import { getReactElementsByType } from '../../../helpers/react/react-elements';
+import { getReactElementsByType } from '../../../helpers/react/get-react-elements';
+import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
 var StyledWrapper = styled.div.withConfig({
   displayName: "avatar-with-text-and-badge__StyledWrapper",
   componentId: "sc-1npfhe1-0"
-})(["display:flex;align-items:center;padding:0;border:none;background:none;text-decoration:none;gap:", ";.k-Avatar{position:relative;padding:0;}.k-Avatar__imageWrapper{width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;border:var(--border-width) solid var(--color-grey-300);padding:0;color:var(--k-Avatar-color);background-color:var(--k-Avatar-background-color);}.k-Avatar__image{display:block;margin:0;padding:0;border:0;width:100%;height:100%;}.k-Avatar__noImage{display:flex;width:100%;height:100%;align-items:center;justify-content:center;", " font-size:", ";line-height:1;}.k-Avatar__badge{position:absolute;top:", ";right:", ";border:var(--border-width) solid white;}.k-Avatar__text{padding:pxToRem(10);padding-right:0;text-align:left;color:", ";text-decoration:none;", " font-size:", ";line-height:1.2;}.k-Avatar__text--hasEllipsis{&,& *{max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}}.k-Avatar--big{margin-right:", ";.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--customSize{width:var(--Avatar-width);height:var(--Avatar-height);}a&,button&,&.k-Avatar__wrapper--isHoverable{cursor:pointer;.k-Avatar{opacity:1;transition:opacity 0.2s;}&:hover .k-Avatar,&:focus .k-Avatar{opacity:0.8;border:var(--border-hover);}}"], pxToRem(10), pxToRem(40), pxToRem(40), TYPOGRAPHY.fontStyles.regular, stepToRem(-2), pxToRem(-4), pxToRem(-8), COLORS.font1, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(15), pxToRem(60), pxToRem(60), stepToRem(-1), stepToRem(0));
+})(["display:flex;align-items:center;padding:0;border:none;background:none;text-decoration:none;gap:", ";.k-Avatar{position:relative;padding:0;}.k-Avatar__imageWrapper{width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;border:var(--border-width) solid var(--color-grey-300);padding:0;color:var(--k-Avatar-color);background-color:var(--k-Avatar-background-color);}.k-Avatar__image{display:block;margin:0;padding:0;border:0;width:100%;height:100%;}.k-Avatar__noImage{display:flex;width:100%;height:100%;align-items:center;justify-content:center;", " font-size:", ";line-height:1;}.k-Avatar__badge{position:absolute;top:", ";right:", ";border:var(--border-width) solid white;}.k-Avatar__text{padding:pxToRem(10);padding-right:0;text-align:left;color:", ";text-decoration:none;", " font-size:", ";line-height:1.2;}.k-Avatar__text--hasEllipsis{&,& *{max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}}.k-Avatar--big,.k-Avatar--large{margin-right:", ";.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--customSize{width:var(--Avatar-width);height:var(--Avatar-height);}a&,button&,&.k-Avatar__wrapper--isHoverable{cursor:pointer;.k-Avatar{opacity:1;transition:opacity 0.2s;}&:hover .k-Avatar,&:focus .k-Avatar{opacity:0.8;border:var(--border-hover);}}"], pxToRem(10), pxToRem(40), pxToRem(40), TYPOGRAPHY.fontStyles.regular, stepToRem(-2), pxToRem(-4), pxToRem(-8), COLORS.font1, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(15), pxToRem(60), pxToRem(60), stepToRem(-1), stepToRem(0));
 
 var Image = function Image(_ref) {
   var alt = _ref.alt,
@@ -30,6 +31,7 @@ var Image = function Image(_ref) {
       text = _ref.text,
       textColor = _ref.textColor,
       width = _ref.width;
+  checkDeprecatedSizes(size);
   var badgeElement = getReactElementsByType({
     children: children,
     type: AvatarWithTextAndBadge.Badge
@@ -63,14 +65,14 @@ Image.propTypes = {
   textColor: PropTypes.string,
   backgroundColor: PropTypes.string,
   alt: PropTypes.string,
-  size: PropTypes.oneOf(['regular', 'big'])
+  size: PropTypes.oneOf(['medium', 'large'])
 };
 Image.defaultProps = {
   src: null,
   textColor: COLORS.background1,
   backgroundColor: COLORS.primary3,
   alt: null,
-  size: 'regular'
+  size: 'medium'
 };
 
 var Badge = function Badge(_ref2) {

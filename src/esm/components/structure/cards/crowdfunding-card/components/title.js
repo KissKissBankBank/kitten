@@ -56,7 +56,7 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
     }, !loading && /*#__PURE__*/React.createElement(Text, {
       tag: "span",
       color: "font1",
-      size: "default",
+      size: "medium",
       weight: "bold",
       lineHeight: "normal",
       className: "k-Card__title"
@@ -65,7 +65,7 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
     }, widgetTitle), !titleTruncate && widgetTitle)), !loading && /*#__PURE__*/React.createElement("div", {
       className: "k-CrowdfundingCard__title__dayCounter"
     }, /*#__PURE__*/React.createElement(Text, {
-      size: "tiny",
+      size: "small",
       color: "font1",
       weight: "regular",
       lineHeight: "normal"

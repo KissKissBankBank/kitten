@@ -21,7 +21,7 @@ var _loader = require("../../graphics/animations/loader");
 
 var _grid = require("../../layout/grid");
 
-var _reactElements = require("../../../helpers/react/react-elements");
+var _getReactElements = require("../../../helpers/react/get-react-elements");
 
 var _excluded = ["className", "children"],
     _excluded2 = ["className", "children"],
@@ -48,11 +48,11 @@ var Hero = function Hero(_ref2) {
   var className = _ref2.className,
       children = _ref2.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
-  var imageElement = (0, _reactElements.getReactElementsByType)({
+  var imageElement = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: HeroImage
   })[0];
-  var otherChildren = (0, _reactElements.getReactElementsWithoutType)({
+  var otherChildren = (0, _getReactElements.getReactElementsWithoutType)({
     children: children,
     type: HeroImage
   });

@@ -19,7 +19,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _elementHelper = require("../../../../helpers/dom/element-helper");
 
-var _useModal2 = require("../../../../helpers/dom/use-modal");
+var _useModal2 = require("../../../../helpers/hooks/use-modal");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 

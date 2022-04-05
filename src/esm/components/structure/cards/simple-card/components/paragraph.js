@@ -14,7 +14,7 @@ export var Paragraph = function Paragraph(_ref) {
     tag: "p",
     className: "k-u-margin-bottom-singleHalf"
   }, parseHtml(paragraph)), /*#__PURE__*/React.createElement(HorizontalStroke, {
-    size: "tiny",
+    size: "small",
     className: "k-u-margin-top-singleHalf"
   }));
 };

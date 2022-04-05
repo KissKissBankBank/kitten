@@ -30,7 +30,7 @@ export var Timeline = function Timeline(_ref) {
     return /*#__PURE__*/React.createElement("li", {
       className: "k-Timeline__listItem"
     }, /*#__PURE__*/React.createElement(Text, {
-      size: "tiny",
+      size: "small",
       className: "k-Timeline__listItem__bullet",
       "aria-hidden": true
     }, ++index), /*#__PURE__*/React.createElement("div", {

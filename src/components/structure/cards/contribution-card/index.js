@@ -25,7 +25,7 @@ var _components = require("./components");
 
 var _context = require("./context");
 
-var _reactElements = require("../../../../helpers/react/react-elements");
+var _getReactElements = require("../../../../helpers/react/get-react-elements");
 
 var _excluded = ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"];
 
@@ -46,11 +46,11 @@ var ContributionCard = function ContributionCard(_ref) {
       largeInput = _ref.largeInput,
       largeTitle = _ref.largeTitle,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var imageChild = (0, _reactElements.getReactElementsByType)({
+  var imageChild = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: ContributionCard.Image
   })[0];
-  var wrappedChildren = (0, _reactElements.getReactElementsWithoutType)({
+  var wrappedChildren = (0, _getReactElements.getReactElementsWithoutType)({
     children: children,
     type: ContributionCard.Image
   });

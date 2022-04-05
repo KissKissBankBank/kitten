@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { ArrowContainer } from '../../../information/boxes/arrow-container';
 import TYPOGRAPHY from '../../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
-import { useFocusTrap } from '../../../../helpers/dom/use-focus-trap';
+import { useFocusTrap } from '../../../../helpers/hooks/use-focus-trap';
 var zoomInAndOpacity = keyframes(["0%{transform:translateX(calc(-1 * var(--Dropdown-transform-x))) scale(.66);opacity:0;}to{transform:translateX(calc(-1 * var(--Dropdown-transform-x))) scale(1);opacity:1;}"]);
 var StyledDropdownMenu = styled.details.withConfig({
   displayName: "dropdown-menu__StyledDropdownMenu",

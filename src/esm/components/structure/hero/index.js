@@ -1,10 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["backgroundColor", "color", "backgroundImage"],
-    _excluded2 = ["direction", "tiny", "imageSrc", "contentBackgroundColor", "contentColor", "children"];
+    _excluded2 = ["direction", "tiny", "small", "imageSrc", "contentBackgroundColor", "contentColor", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import deprecated from 'prop-types-extra/lib/deprecated';
 import { Container } from '../../layout/container';
 import { Grid, GridCol } from '../../layout/grid';
 import { mq } from '../../../constants/screen-config';
@@ -22,7 +23,7 @@ var StyledHero = styled(function (_ref) {
 }).withConfig({
   displayName: "hero__StyledHero",
   componentId: "sc-1fnbzje-0"
-})([".k-Hero__contentGridCol{position:relative;z-index:1;padding-top:", ";margin-left:", ";}.k-Hero__content{background-color:", ";color:", ";padding:", " ", ";@media ", "{padding:", " ", ";}@media ", "{padding:", " ", ";}}.k-Hero__imageGridCol{margin-left:-", ";padding-bottom:", ";}.k-Hero__image{width:calc(100% + ", ");height:100%;background-image:url(", ");background-color:", ";background-size:cover;background-repeat:no-repeat;background-position:50% 50%;@media ", "{width:calc(100% + ", ");height:100vw;margin-left:", ";}@media ", "{width:calc(100% + ", ");margin-left:", ";}}&.k-Hero--direction-left{.k-Hero__contentGridCol{@media ", "{padding-top:", ";margin-left:0;}}.k-Hero__content{@media ", "{margin-left:", ";}}.k-Hero__imageGridCol{@media ", "{margin-left:-", ";padding-bottom:0;}@media ", "{margin-left:-100%;}}}&.k-Hero--direction-right{.k-Hero__contentGridCol{margin-left:", ";@media ", "{padding-top:", ";margin-left:", ";}@media ", "{margin-left:0;}}.k-Hero__content{@media ", "{margin-right:", ";}}.k-Hero__imageGridCol{margin-left:-", ";@media ", "{margin-left:-", ";}@media ", "{margin-left:-100%;}}.k-Hero__image{margin-left:", ";}}&.k-Hero--tiny{@media ", "{.k-Hero__contentGridCol{padding-bottom:", ";}.k-Hero__imageGridCol{padding-bottom:0;}}}"], 1 / NUM_COLUMNS * 100 + 'vw', 1 / NUM_COLUMNS * 100 + '%', function (_ref2) {
+})([".k-Hero__contentGridCol{position:relative;z-index:1;padding-top:", ";margin-left:", ";}.k-Hero__content{background-color:", ";color:", ";padding:", " ", ";@media ", "{padding:", " ", ";}@media ", "{padding:", " ", ";}}.k-Hero__imageGridCol{margin-left:-", ";padding-bottom:", ";}.k-Hero__image{width:calc(100% + ", ");height:100%;background-image:url(", ");background-color:", ";background-size:cover;background-repeat:no-repeat;background-position:50% 50%;@media ", "{width:calc(100% + ", ");height:100vw;margin-left:", ";}@media ", "{width:calc(100% + ", ");margin-left:", ";}}&.k-Hero--direction-left{.k-Hero__contentGridCol{@media ", "{padding-top:", ";margin-left:0;}}.k-Hero__content{@media ", "{margin-left:", ";}}.k-Hero__imageGridCol{@media ", "{margin-left:-", ";padding-bottom:0;}@media ", "{margin-left:-100%;}}}&.k-Hero--direction-right{.k-Hero__contentGridCol{margin-left:", ";@media ", "{padding-top:", ";margin-left:", ";}@media ", "{margin-left:0;}}.k-Hero__content{@media ", "{margin-right:", ";}}.k-Hero__imageGridCol{margin-left:-", ";@media ", "{margin-left:-", ";}@media ", "{margin-left:-100%;}}.k-Hero__image{margin-left:", ";}}&.k-Hero--tiny,&.k-Hero--small{@media ", "{.k-Hero__contentGridCol{padding-bottom:", ";}.k-Hero__imageGridCol{padding-bottom:0;}}}"], 1 / NUM_COLUMNS * 100 + 'vw', 1 / NUM_COLUMNS * 100 + '%', function (_ref2) {
   var backgroundColor = _ref2.backgroundColor;
   return backgroundColor;
 }, function (_ref3) {
@@ -38,6 +39,7 @@ var StyledHero = styled(function (_ref) {
 export var Hero = function Hero(_ref6) {
   var direction = _ref6.direction,
       tiny = _ref6.tiny,
+      small = _ref6.small,
       imageSrc = _ref6.imageSrc,
       contentBackgroundColor = _ref6.contentBackgroundColor,
       contentColor = _ref6.contentColor,
@@ -46,7 +48,8 @@ export var Hero = function Hero(_ref6) {
 
   return /*#__PURE__*/React.createElement(StyledHero, _extends({}, props, {
     className: classNames('k-Hero', props.className, "k-Hero--direction-" + direction, {
-      'k-Hero--tiny': tiny
+      'k-Hero--tiny': tiny,
+      'k-Hero--small': small
     }),
     backgroundColor: contentBackgroundColor,
     color: contentColor,
@@ -68,14 +71,15 @@ export var Hero = function Hero(_ref6) {
 };
 Hero.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
-  tiny: PropTypes.bool,
+  tiny: deprecated(PropTypes.bool, 'Please use `small` instead'),
+  small: PropTypes.bool,
   imageSrc: PropTypes.string,
   contentBackgroundColor: PropTypes.string,
   contentColor: PropTypes.string
 };
 Hero.defaultProps = {
   direction: 'left',
-  tiny: false,
+  small: false,
   imageSrc: '',
   contentBackgroundColor: COLORS.font1,
   contentColor: COLORS.background1

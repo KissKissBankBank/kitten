@@ -1,8 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React, { useRef } from 'react';
-import useLazyObserver from '../helpers/utils/lazy-hook';
-
-var withLazy = function withLazy(WrappedComponent) {
+import { useLazyObserver } from '../helpers/hooks/use-lazy-observer';
+export var withLazy = function withLazy(WrappedComponent) {
   return function (props) {
     var lazyComponentRef = useRef(null);
     var isLazyTriggered = useLazyObserver(lazyComponentRef);
@@ -13,5 +12,3 @@ var withLazy = function withLazy(WrappedComponent) {
     })));
   };
 };
-
-export default withLazy;

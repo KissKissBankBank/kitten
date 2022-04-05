@@ -7,6 +7,7 @@ import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
 import { Button, buttonModifiers } from '../../../action/button';
+import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 export var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,
@@ -19,6 +20,7 @@ export var Item = function Item(_ref) {
       tag = _ref.tag,
       other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  checkDeprecatedSizes(size);
   var Component = as || tag;
   return /*#__PURE__*/React.createElement("li", _extends({}, liProps, {
     className: classNames('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
@@ -48,7 +50,7 @@ Item.propTypes = {
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
   modifier: PropTypes.oneOf([null, undefined, 'light', 'default'].concat(buttonModifiers)),
-  size: PropTypes.oneOf(['normal', 'tiny', 'big']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
   tag: PropTypes.string
 };
@@ -59,6 +61,6 @@ Item.defaultProps = {
   href: null,
   isSelected: false,
   liProps: {},
-  size: 'normal',
+  size: 'medium',
   tag: 'a'
 };

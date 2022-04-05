@@ -16,7 +16,7 @@ import { Logged } from './components/logged';
 import { Hidden } from './components/hidden';
 import { QuickAccessLink } from './components/quick-access-link';
 import { SearchInput } from './components/search-input';
-import { usePrevious } from '../../../helpers/utils/use-previous-hook';
+import { usePrevious } from '../../../helpers/hooks/use-previous';
 import { StyledHeader } from './styles';
 
 var HeaderNav = function HeaderNav(_ref) {

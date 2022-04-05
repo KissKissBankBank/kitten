@@ -43,7 +43,7 @@ var Image = function Image(_ref) {
       '--SimpleCard-player-button-size': (0, _typography.pxToRem)(playerButtonSize)
     }
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-    size: "default",
+    size: "medium",
     weight: "regular",
     color: arrowColor,
     "aria-label": ariaLabel

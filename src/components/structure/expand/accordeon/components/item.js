@@ -15,7 +15,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _reactElements = require("../../../../../helpers/react/react-elements");
+var _getReactElements = require("../../../../../helpers/react/get-react-elements");
 
 var _header = require("./header");
 
@@ -39,11 +39,11 @@ var Item = function Item(_ref) {
   var _useContext = (0, _react.useContext)(_context.Context),
       selectedItem = _useContext.selectedItem;
 
-  var header = (0, _reactElements.getReactElementsByType)({
+  var header = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: _header.Header
   });
-  var content = (0, _reactElements.getReactElementsByType)({
+  var content = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: _content.Content
   });

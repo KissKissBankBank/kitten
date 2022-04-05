@@ -19,7 +19,7 @@ var _pagination = require("./components/pagination");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _reactElements = require("../../../../helpers/react/react-elements");
+var _getReactElements = require("../../../../helpers/react/get-react-elements");
 
 var _typography = require("../../../../helpers/utils/typography");
 
@@ -45,15 +45,15 @@ var NavTabCarousel = /*#__PURE__*/function (_Component) {
 
   _proto.render = function render() {
     var children = this.props.children;
-    var prev = (0, _reactElements.getReactElementsByType)({
+    var prev = (0, _getReactElements.getReactElementsByType)({
       children: children,
       type: NavTabCarousel.Prev
     })[0];
-    var next = (0, _reactElements.getReactElementsByType)({
+    var next = (0, _getReactElements.getReactElementsByType)({
       children: children,
       type: NavTabCarousel.Next
     })[0];
-    var pagination = (0, _reactElements.getReactElementsByType)({
+    var pagination = (0, _getReactElements.getReactElementsByType)({
       children: children,
       type: NavTabCarousel.Pagination
     })[0];

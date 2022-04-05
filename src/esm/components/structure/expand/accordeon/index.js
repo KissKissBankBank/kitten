@@ -9,14 +9,14 @@ import { Item } from './components/item';
 import { Header } from './components/header';
 import { Content } from './components/content';
 import { Context } from './components/context';
-import { getReactElementsByType } from '../../../../helpers/react/react-elements';
+import { getReactElementsByType } from '../../../../helpers/react/get-react-elements';
 import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import classNames from 'classnames';
 import TYPOGRAPHY from '../../../../constants/typography-config';
 import { ScreenConfig } from '../../../../constants/screen-config';
-import { useDebounce } from '../../../../helpers/utils/debounce';
+import { useDebounce } from '../../../../helpers/hooks/use-debounce';
 import { domElementHelper } from '../../../../helpers/dom/element-helper';
 var StyledAccordeon = styled.div.withConfig({
   displayName: "accordeon__StyledAccordeon",

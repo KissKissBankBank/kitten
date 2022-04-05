@@ -28,7 +28,7 @@ var _parser = require("../../../helpers/utils/parser");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _useMediaQuery = require("../../../helpers/utils/use-media-query");
+var _useMediaQuery = require("../../../helpers/hooks/use-media-query");
 
 var _mediaQueries = require("../../../helpers/utils/media-queries");
 
@@ -104,7 +104,7 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
         className: "k-Pagination__ListItem k-Pagination__ListItem__Ellipsis",
         "aria-hidden": "true"
       }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-        size: "tiny",
+        size: "small",
         weight: "regular"
       }, "\u2026"));
     }
@@ -133,7 +133,7 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
       key: "link-" + number,
       className: "k-Pagination__Link",
       tabIndex: "0",
-      size: "tiny",
+      size: "small",
       fit: "icon"
     }, buttonProps), number));
   };
@@ -155,7 +155,7 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
       tabIndex: 0,
       onClick: isDisabled ? null : pageClickHandler(number),
       disabled: isDisabled,
-      size: "tiny",
+      size: "small",
       fit: "icon"
     }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
       className: "k-Pagination__ArrowIcon",

@@ -68,7 +68,7 @@ var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
     as: "p",
     className: "k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf",
     weight: "regular",
-    size: "tiny",
+    size: "small",
     lineHeight: "1"
   }, title), fileList.length > 0 && /*#__PURE__*/_react.default.createElement("ul", {
     className: "k-DocumentsStatusBox__fileList"

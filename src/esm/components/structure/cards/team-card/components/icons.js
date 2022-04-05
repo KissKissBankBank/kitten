@@ -32,7 +32,7 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
   };
 
   return /*#__PURE__*/React.createElement(StyledTeamCardIcons, null, email && /*#__PURE__*/React.createElement(Button, {
-    size: "tiny",
+    size: "small",
     fit: "icon",
     tag: "a",
     href: "mailto:" + email,
@@ -61,7 +61,7 @@ var SocialLinks = function SocialLinks(_ref2) {
       modifier: "hydrogen",
       target: "_blank",
       rel: "noopener",
-      size: "tiny"
+      size: "small"
     }, link.name === 'linkedin' && /*#__PURE__*/React.createElement(LinkedinIcon, {
       "aria-hidden": true
     }), link.name === 'twitter' && /*#__PURE__*/React.createElement(TwitterIcon, {

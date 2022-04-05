@@ -4,7 +4,7 @@ var _excluded = ["src", "onChange", "className", "initialCrop", "disabled"];
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useDrag } from '../hooks/use-drag';
-import { usePrevious } from '../../../../../helpers/utils/use-previous-hook';
+import { usePrevious } from '../../../../../helpers/hooks/use-previous';
 export var ImageCropper = function ImageCropper(_ref) {
   var src = _ref.src,
       onChange = _ref.onChange,

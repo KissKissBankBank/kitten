@@ -19,7 +19,7 @@ var TeamCardTitle = function TeamCardTitle(_ref) {
   return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "2"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-    size: "default",
+    size: "medium",
     weight: "bold",
     color: "font1"
   }, children), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_text.Text, {

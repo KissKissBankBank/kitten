@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { getReactElementsByType } from '../../../helpers/react/react-elements';
+import { getReactElementsByType } from '../../../helpers/react/get-react-elements';
 var StyledDeskMenu = styled.nav.withConfig({
   displayName: "desk-menu__StyledDeskMenu",
   componentId: "sc-1s9s459-0"

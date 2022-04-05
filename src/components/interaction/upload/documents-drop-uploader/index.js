@@ -273,7 +273,7 @@ var DocumentsDropUploader = function DocumentsDropUploader(_ref) {
   }) : /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "label",
     htmlFor: id,
-    size: "tiny",
+    size: "small",
     weight: "regular",
     className: "k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
   }, /*#__PURE__*/_react.default.createElement("span", {
