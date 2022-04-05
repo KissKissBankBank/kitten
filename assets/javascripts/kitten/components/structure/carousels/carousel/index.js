@@ -221,7 +221,7 @@ class CarouselBase extends Component {
       hidePaginationOnMobile,
       prevButtonText,
       nextButtonText,
-      tinyButtons,
+      smallButtons,
       firstButtonText,
       lastButtonText,
       showPageSquares,
@@ -268,7 +268,7 @@ class CarouselBase extends Component {
             className="k-Carousel__pagination__button"
             fit="icon"
             modifier="beryllium"
-            size={tinyButtons ? 'tiny' : null}
+            size={smallButtons ? 'small' : null}
             onClick={this.goPrevPage}
             disabled={!loop && (currentPageIndex < 1 || numberOfPages < 1)}
           >
@@ -285,7 +285,7 @@ class CarouselBase extends Component {
             className="k-Carousel__pagination__button"
             fit="icon"
             modifier="beryllium"
-            size={tinyButtons ? 'tiny' : null}
+            size={smallButtons ? 'small' : null}
             onClick={this.goNextPage}
             disabled={!loop && currentPageIndex >= numberOfPages - 1}
           >
@@ -403,7 +403,7 @@ CarouselBase.defaultProps = {
   firstButtonText: 'First items',
   lastButtonText: 'Last items',
   showPageSquares: false,
-  tinyButtons: false,
+  smallButtons: false,
   loop: false,
   exportVisibilityProps: false,
 }
@@ -432,7 +432,7 @@ CarouselBase.propTypes = {
   prevButtonText: PropTypes.string,
   nextButtonText: PropTypes.string,
   pageClickText: PropTypes.func,
-  tinyButtons: PropTypes.bool,
+  smallButtons: PropTypes.bool,
   firstButtonText: PropTypes.string,
   lastButtonText: PropTypes.string,
   showPageSquares: PropTypes.bool,

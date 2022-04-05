@@ -50,7 +50,7 @@ const SelectorButton = ({ supTitle, title, statusProps }) => (
     </Text>
     <Text
       weight="regular"
-      size="tiny"
+      size="small"
       cssColor={COLORS.background1}
       className="selectorButton-title"
     >

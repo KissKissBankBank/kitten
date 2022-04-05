@@ -1,4 +1,4 @@
-import domElementHelper from '../element-helper'
+import { domElementHelper } from '../element-helper'
 import max from 'lodash/fp/max'
 import min from 'lodash/fp/min'
 import { pxToRem } from '../../utils/typography'

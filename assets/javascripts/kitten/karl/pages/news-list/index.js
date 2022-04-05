@@ -68,13 +68,13 @@ const NewsList = () => {
     <>
       <Head className="k-u-hidden@s-down">
         <HeadContainer>
-          <BackLink weight="bold" size="tiny" color="primary1" tag="a" href="#">
+          <BackLink weight="bold" size="small" color="primary1" tag="a" href="#">
             <LeftArrowIcon direction="left" /> Retour au projet
           </BackLink>
           <div>
             <AnchorLink
               weight="bold"
-              size="tiny"
+              size="small"
               color="font1"
               tag="a"
               href="#"
@@ -84,7 +84,7 @@ const NewsList = () => {
             </AnchorLink>
             <AnchorLink
               weight="bold"
-              size="tiny"
+              size="small"
               color="font1"
               tag="a"
               href="#"
@@ -93,7 +93,7 @@ const NewsList = () => {
             </AnchorLink>
             <AnchorLink
               weight="bold"
-              size="tiny"
+              size="small"
               color="font1"
               tag="a"
               href="#"
@@ -109,7 +109,7 @@ const NewsList = () => {
       </Head>
       <Container>
         <NewsContainer>
-          <Button size="big" fit="fluid" modifier="helium">
+          <Button size="large" fit="fluid" modifier="helium">
             <InstrumentTagIcon width="14" />
             <span>Créer une nouvelle actu</span>
           </Button>
@@ -117,7 +117,7 @@ const NewsList = () => {
             Mes Brouillons
           </BlockTitle>
           <HorizontalStroke
-            size="big"
+            size="large"
             className="k-u-margin-top-double k-u-margin-bottom-quadruple"
           />
           <Paragraph modifier="secondary">
@@ -139,7 +139,7 @@ const NewsList = () => {
             Programmées
           </BlockTitle>
           <HorizontalStroke
-            size="big"
+            size="large"
             className="k-u-margin-top-double k-u-margin-bottom-quadruple"
           />
           <Paragraph modifier="secondary">

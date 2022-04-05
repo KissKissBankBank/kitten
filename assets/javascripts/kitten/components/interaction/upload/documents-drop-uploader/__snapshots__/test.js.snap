@@ -161,7 +161,7 @@ exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
       className="k-DocumentsDropUploader__fileList"
     >
       <li
-        className="sc-bdvvtL gnVgfy k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--regular k-Tag--status"
+        className="sc-bdvvtL gnVgfy k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--medium k-Tag--status"
       >
         <span
           className="k-DocumentsDropUploader__file__text"
@@ -227,7 +227,7 @@ Array [
         className="k-DocumentsDropUploader__fileList"
       >
         <li
-          className="sc-bdvvtL gnVgfy k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--regular k-Tag--status"
+          className="sc-bdvvtL gnVgfy k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--medium k-Tag--status"
         >
           <span
             className="k-DocumentsDropUploader__file__text"
@@ -271,7 +271,7 @@ Array [
         type="file"
       />
       <label
-        className="k-u-size-tiny k-u-weight-regular k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
+        className="k-u-size-small k-u-weight-regular k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
         htmlFor="DocumentsDropUploader"
       >
         <span
@@ -331,7 +331,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
       className="k-DocumentsDropUploader__fileList"
     >
       <li
-        className="sc-bdvvtL gnVgfy k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--regular k-Tag--status"
+        className="sc-bdvvtL gnVgfy k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--medium k-Tag--status"
       >
         <span
           className="k-DocumentsDropUploader__file__text"
@@ -375,7 +375,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
       type="file"
     />
     <label
-      className="k-u-size-tiny k-u-weight-regular k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
+      className="k-u-size-small k-u-weight-regular k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
       htmlFor="DocumentsDropUploader"
     >
       <span

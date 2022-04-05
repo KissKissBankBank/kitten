@@ -149,11 +149,11 @@ StatusError.args = {
   displayTitle: 'Extrait KBIS refusé',
   displayContent: (
     <>
-      <Text weight="light" size="tiny" tag="p" className="k-u-margin-none">
+      <Text weight="light" size="small" tag="p" className="k-u-margin-none">
         Mauvaise adresse :
       </Text>
       <BulletList
-        size="regular"
+        size="small"
         items={[
           {
             key: '1',

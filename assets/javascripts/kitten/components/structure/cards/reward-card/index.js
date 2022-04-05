@@ -17,7 +17,7 @@ import {
 import {
   getReactElementsByType,
   getReactElementsWithoutTypeArray,
-} from '../../../../helpers/react/react-elements'
+} from '../../../../helpers/react/get-react-elements'
 
 export const RewardCard = ({
   children,

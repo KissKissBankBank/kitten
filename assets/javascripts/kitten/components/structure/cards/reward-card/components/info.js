@@ -15,7 +15,7 @@ export const Info = ({
     <p
       className={classNames(
         'k-RewardCard__info',
-        'k-u-size-tiny',
+        'k-u-size-small',
         'k-u-line-height-normal',
         className,
         {
@@ -28,7 +28,7 @@ export const Info = ({
       <Text
         className="k-RewardCard__info__legend"
         weight="regular"
-        size="tiny"
+        size="small"
         lineHeight="normal"
       >
         {legend}
@@ -36,7 +36,7 @@ export const Info = ({
       <Text
         className="k-RewardCard__info__value"
         weight="light"
-        size="tiny"
+        size="small"
         lineHeight="normal"
       >
         {value}

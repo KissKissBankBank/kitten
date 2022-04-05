@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, pxToRem } from '../../..'
+import { Text, pxToRem } from 'kitten'
 
 import { KissKissBankBankLogo } from './kisskissbankbanklogo'
 import { GoodeedLogo } from './goodeedlogo'
@@ -71,8 +71,8 @@ export const AllLogos = () => {
         <LogoContainer children={<KissKissBankBankLogo />} />
         <LogoContainer
           className="noMaxDimensions"
-          name="version tiny"
-          children={<KissKissBankBankLogo tiny />}
+          name="version small"
+          children={<KissKissBankBankLogo small />}
         />
       </Group>
 
@@ -82,8 +82,8 @@ export const AllLogos = () => {
         <LogoContainer children={<LendopolisLogoVerticalOnDark />} />
         <LogoContainer
           className="noMaxDimensions"
-          name="version tiny"
-          children={<LendopolisLogo tiny />}
+          name="version small"
+          children={<LendopolisLogo small />}
         />
       </Group>
 

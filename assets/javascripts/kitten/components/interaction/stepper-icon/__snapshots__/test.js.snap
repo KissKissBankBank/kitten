@@ -2,7 +2,7 @@
 
 exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL bYBLZA k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+  className="sc-bdvvtL hWhGiK k-IconBadge custom-class-name k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
   style={
     Object {
       "--iconBadge-background-color": null,
@@ -16,7 +16,7 @@ exports[`<StepperIcon /> StepperIconDefault matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL bYBLZA k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--info"
+  className="sc-bdvvtL hWhGiK k-IconBadge custom-class-name k-IconBadge--small k-IconBadge--info"
   style={
     Object {
       "--iconBadge-background-color": null,
@@ -49,7 +49,7 @@ exports[`<StepperIcon /> StepperIconInProgress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL bYBLZA k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--success"
+  className="sc-bdvvtL hWhGiK k-IconBadge custom-class-name k-IconBadge--small k-IconBadge--success"
   style={
     Object {
       "--iconBadge-background-color": null,
@@ -76,7 +76,7 @@ exports[`<StepperIcon /> StepperIconValidated matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL bYBLZA k-IconBadge k-IconBadge--tiny k-IconBadge--info k-IconBadge--empty"
+  className="sc-bdvvtL hWhGiK k-IconBadge k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
   style={
     Object {
       "--iconBadge-background-color": null,
@@ -90,7 +90,7 @@ exports[`<StepperIcon /> by default matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL bYBLZA k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--info"
+  className="sc-bdvvtL hWhGiK k-IconBadge custom-class-name k-IconBadge--small k-IconBadge--info"
   style={
     Object {
       "--iconBadge-background-color": null,
@@ -123,7 +123,7 @@ exports[`<StepperIcon /> state = progress matches with snapshot 1`] = `
 
 exports[`<StepperIcon /> state = valid matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL bYBLZA k-IconBadge custom-class-name k-IconBadge--tiny k-IconBadge--success"
+  className="sc-bdvvtL hWhGiK k-IconBadge custom-class-name k-IconBadge--small k-IconBadge--success"
   style={
     Object {
       "--iconBadge-background-color": null,

@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RewardCard /> default matches with snapshot 1`] = `
+exports[`<BackingCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--hasBorder"
+  className="sc-bdvvtL poVc k-BackingCard k-BackingCard--hasBorder"
 >
   <div
-    className="k-RewardCard__gridWrapper"
+    className="k-BackingCard__gridWrapper"
   >
     <div
-      className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
+      className="k-BackingCard__titleWrapper k-BackingCard__drawer k-BackingCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,
@@ -22,10 +22,10 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
       </h3>
     </div>
     <div
-      className="k-RewardCard__descriptionWrapper k-RewardCard__drawer k-RewardCard__drawer--extensible"
+      className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible"
     >
       <div
-        className="k-RewardCard__description"
+        className="k-BackingCard__description"
       >
         <div>
           Custom description
@@ -36,18 +36,18 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
 </article>
 `;
 
-exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
+exports[`<BackingCard /> not truncated title matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--hasBorder"
+  className="sc-bdvvtL poVc k-BackingCard k-BackingCard--hasBorder"
 >
   <div
-    className="k-RewardCard__gridWrapper"
+    className="k-BackingCard__gridWrapper"
   >
     <div
-      className="k-RewardCard__titleWrapper k-RewardCard__drawer"
+      className="k-BackingCard__titleWrapper k-BackingCard__drawer"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center"
+        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center"
         style={
           Object {
             "--line-clamp": 2,
@@ -58,10 +58,10 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
       </h3>
     </div>
     <div
-      className="k-RewardCard__descriptionWrapper k-RewardCard__drawer k-RewardCard__drawer--extensible"
+      className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible"
     >
       <div
-        className="k-RewardCard__description"
+        className="k-BackingCard__description"
       >
         <div>
           Custom description
@@ -72,12 +72,12 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 </article>
 `;
 
-exports[`<RewardCard /> with some props matches with snapshot 1`] = `
+exports[`<BackingCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--disabled"
+  className="sc-bdvvtL poVc k-BackingCard k-BackingCard--disabled"
 >
   <div
-    className="k-RewardCard__imageWrapper"
+    className="k-BackingCard__imageWrapper"
   >
     <img
       alt=""
@@ -85,10 +85,10 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="k-RewardCard__gridWrapper"
+    className="k-BackingCard__gridWrapper"
   >
     <span
-      className="sc-dkPtRN gHrgjH k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--regular k-Tag--dark"
+      className="sc-dkPtRN gHrgjH k-Tag k-BackingCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
     >
       <svg
         height="13"
@@ -108,10 +108,10 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       Star reward
     </span>
     <div
-      className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
+      className="k-BackingCard__titleWrapper k-BackingCard__drawer k-BackingCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-big k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-big k-u-weight-regular k-BackingCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,
@@ -122,24 +122,24 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       </h3>
     </div>
     <p
-      className="k-RewardCard__drawer k-RewardCard__amount__wrapper k-u-align-center"
+      className="k-BackingCard__drawer k-BackingCard__amount__wrapper k-u-align-center"
     >
       <span
-        className="k-u-weight-bold k-RewardCard__amount k-u-block"
+        className="k-u-weight-bold k-BackingCard__amount k-u-block"
       >
         65 €
       </span>
       <span
-        className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-regular k-RewardCard__amount__suffix k-u-block"
+        className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-regular k-BackingCard__amount__suffix k-u-block"
       >
         Etiam Consectetur Venenatis
       </span>
     </p>
     <div
-      className="k-RewardCard__descriptionWrapper k-RewardCard__drawer k-RewardCard__drawer--extensible"
+      className="k-BackingCard__descriptionWrapper k-BackingCard__drawer k-BackingCard__drawer--extensible"
     >
       <div
-        className="k-RewardCard__description k-RewardCard__description--truncateText"
+        className="k-BackingCard__description k-BackingCard__description--truncateText"
       >
         <div>
           <p
@@ -166,10 +166,10 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <ul
-      className="k-RewardCard__tagList k-RewardCard__drawer"
+      className="k-BackingCard__tagList k-BackingCard__drawer"
     >
       <li
-        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--regular k-Tag--status"
+        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-regular"
@@ -180,7 +180,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         contributeurs
       </li>
       <li
-        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--regular k-Tag--status"
+        className="sc-dkPtRN gHrgjH k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-regular"
@@ -193,7 +193,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-gsDKAQ itJLEU k-Button k-RewardCard__button k-RewardCard__drawer k-Button--regular k-Button--helium k-Button--fit-content k-Button--disabled"
+    className="sc-gsDKAQ dcifNb k-Button k-BackingCard__button k-BackingCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {

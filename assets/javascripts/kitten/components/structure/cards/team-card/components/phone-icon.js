@@ -20,7 +20,7 @@ export const TeamCardPhoneIcon = ({
         fit="icon"
         href={`tel:${phoneNumber}`}
         modifier="hydrogen"
-        size="tiny"
+        size="small"
         className={classNames('k-u-hidden@s-up', className)}
         aria-label={buttonLabel}
       >

@@ -12,7 +12,7 @@ describe('<Label />', () => {
     const tree = renderer
       .create(
         <Label
-          size="tiny"
+          size="small"
           children="Custom form label"
           focusId="customId"
           withoutPointerEvents
