@@ -9,7 +9,7 @@ const DEFAULT_HEIGHT = 8
 
 export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
   checkDeprecatedSizes(size)
-  
+
   const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
@@ -17,7 +17,7 @@ export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
     height,
   })
 
-  if (size === 'large') {
+  if (size === 'large' || size === 'big') {
     return (
       <svg
         width="24"
