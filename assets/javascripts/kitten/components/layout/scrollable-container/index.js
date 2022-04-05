@@ -1,9 +1,73 @@
 import React, { useState, useRef, useEffect } from 'react'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { StyledContainer, StyledScrollableContainer } from './styled'
-import COLORS from '../../../constants/colors-config'
 import throttle from 'lodash/throttle'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { Container } from '../../../components/layout/container'
+
+const gradientWidth = 20
+
+export const StyledContainer = styled(Container)`
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+
+  .k-ScrollableContainer {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: none;
+
+    /* Mandatory to combine scroll with this property on iOS. */
+    -webkit-overflow-scrolling: touch;
+    /* Hide scrollbar on Chrome and Safari. */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      pointer-events: none;
+      touch-action: none;
+      z-index: 5;
+      width: ${pxToRem(gradientWidth)};
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    &::before {
+      left: 0;
+      background-image: linear-gradient(
+        to right,
+        var(--scrollableContainer-gradient),
+        transparent
+      );
+    }
+    &::after {
+      right: 0;
+      background-image: linear-gradient(
+        to left,
+        var(--scrollableContainer-gradient),
+        transparent
+      );
+    }
+
+    &.k-ScrollableContainer--hasLeftGradient::before,
+    &.k-ScrollableContainer--hasRightGradient::after {
+      opacity: 1;
+    }
+  }
+`
 
 export const ScrollableContainer = ({
   shadowColor = COLORS.background1,
@@ -45,7 +109,7 @@ export const ScrollableContainer = ({
       {...other}
       className={classNames('k-ScrollableContainer__wrapper', className)}
     >
-      <StyledScrollableContainer
+      <div
         ref={refScrollableContainer}
         className={classNames('k-ScrollableContainer', {
           'k-ScrollableContainer--hasLeftGradient': !leftGradientState,
@@ -57,7 +121,7 @@ export const ScrollableContainer = ({
         }}
       >
         {children}
-      </StyledScrollableContainer>
+      </div>
     </StyledContainer>
   )
 }
