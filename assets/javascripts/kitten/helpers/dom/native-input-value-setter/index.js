@@ -1,4 +1,4 @@
-import domElementHelper from '../element-helper'
+import { domElementHelper } from '../element-helper'
 
 export const nativeInputValueSetter = (() => {
   if (!domElementHelper.canUseDom()) return false
