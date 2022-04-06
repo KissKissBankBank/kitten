@@ -67,8 +67,8 @@ const AlertWrapper = styled.div`
   }
 
   .k-Alert__iconBadge {
-    min-width: ${pxToRem(24)};
-    min-height: ${pxToRem(24)};
+    min-width: ${pxToRem(20)};
+    min-height: ${pxToRem(20)};
   }
 
   .k-Alert__closeButton {
