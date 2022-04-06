@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Deprecations/Changes: `Alert`: Deprecate the following props:
+  - `success`, replaced by `status="success"`,
+  - `error`, replaced by `status="danger"`,
+  - `warning`, replaced by `status="warning"`
+- Feature: `Alert`: Add `status="info"` default prop.
+- Fix: `Alert`: Remove `iconBadgeBorderColor` props.
 - Fix: `AlertBox`: Improve styles.
 
 ## [10.0.1] - 2022-04-05

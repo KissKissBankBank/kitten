@@ -30,6 +30,7 @@ Default.args = {
   size: 'medium',
   fit: 'fluid',
   iconPosition: 'start',
+  hasBorder: true,
 }
 Default.argTypes = {
   children: {
@@ -44,6 +45,7 @@ Default.argTypes = {
     control: 'select',
     options: ['info', 'success', 'danger', 'warning', 'disabled', 'pending'],
   },
+  hasBorder: { control: 'boolean' },
   displayIcon: { control: 'boolean' },
   iconPosition: { control: 'radio', options: ['start', 'center'] },
   size: { control: 'radio', options: ['small', 'medium', 'large'] },

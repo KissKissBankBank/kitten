@@ -2,7 +2,6 @@ import React from 'react'
 import { Alert } from './'
 import { action } from '@storybook/addon-actions'
 import { DocsPage } from 'storybook/docs-page'
-import { CrossIconNext, COLORS } from 'kitten'
 
 export default {
   title: 'Information/Alert',
@@ -14,32 +13,23 @@ export default {
   },
   args: {
     show: true,
-    error: false,
-    success: false,
-    warning: false,
+    status: 'info',
     closeButton: true,
     closeButtonLabel: 'Close Button label',
     onAfterClose: action('onAfterClose'),
     children: 'Modifications effectuées, lien ici, Modifications effectuées,',
-    icon: <CrossIconNext width={12} height={12} color={COLORS.background1} />,
+    icon: null,
     center: false,
+    hasBorder: true,
   },
   argTypes: {
     show: {
       name: 'show',
       control: 'boolean',
     },
-    error: {
-      name: 'error',
-      control: 'boolean',
-    },
-    success: {
-      name: 'success',
-      control: 'boolean',
-    },
-    warning: {
-      name: 'warning',
-      control: 'boolean',
+    status: {
+      control: 'select',
+      options: ['info', 'success', 'warning', 'danger'],
     },
     closeButton: {
       name: 'closeButton',
@@ -60,6 +50,7 @@ export default {
     center: {
       control: 'boolean',
     },
+    displayIcon: { control: 'boolean' },
   },
 }
 

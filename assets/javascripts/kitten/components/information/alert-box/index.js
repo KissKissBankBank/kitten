@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { StatusIconNext } from '../../graphics/icons-next/status-icon-next'
 import { IconBadge } from '../../information/icon-badge'
-import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
@@ -13,8 +12,8 @@ const AlertBoxWrapper = styled.div`
   ${TYPOGRAPHY.fontStyles.light};
   border-radius: var(--border-radius-s, ${pxToRem(6)});
   overflow: hidden;
-  background-color: ${COLORS.primary5};
-  color: ${COLORS.font1};
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900);
   gap: var(--alertBox-gap);
   padding: ${pxToRem(18)} var(--alertBox-gap);
 
