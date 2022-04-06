@@ -89,7 +89,7 @@ const AlertWrapper = styled.div`
     svg,
     svg path {
       transition: fill 0.2s ease;
-      fill: var(--color-primary-500);
+      fill: var(--color-primary-700);
 
       :hover {
         fill: var(--color-primary-900);
@@ -107,16 +107,16 @@ const AlertWrapper = styled.div`
     background-color: var(--color-success-100);
 
     [href] {
-      color: var(--color-success-500);
+      color: var(--color-success-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-success-500);
+        fill: var(--color-success-700);
 
         :hover {
-          fill: var(--color-success-300);
+          fill: var(--color-success-900);
         }
       }
     }
@@ -127,16 +127,16 @@ const AlertWrapper = styled.div`
     background-color: var(--color-danger-100);
 
     [href] {
-      color: var(--color-danger-500);
+      color: var(--color-danger-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-danger-500);
+        fill: var(--color-danger-700);
 
         :hover {
-          fill: var(--color-danger-700);
+          fill: var(--color-danger-900);
         }
       }
     }
@@ -146,16 +146,16 @@ const AlertWrapper = styled.div`
     background-color:var(--color-primary-100);
 
     [href] {
-      color: var(--color-primary-500);
+      color: var(--color-primary-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-primary-500);
+        fill: var(--color-primary-700);
 
         :hover {
-          fill: var(--color-primary-700);
+          fill: var(--color-primary-900);
         }
       }
     }
@@ -165,13 +165,13 @@ const AlertWrapper = styled.div`
     background-color: var(--color-warning-100);
 
     [href] {
-      color: var(--color-warning-900);
+      color: var(--color-warning-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-warning-500);
+        fill: var(--color-warning-700);
 
         :hover {
           fill: '#A47600';
