@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `OpenLockIconNext`: Improve styles.
 - Fix: `RadioButton`: Improve style.
 
 ## [10.0.1] - 2022-04-05
