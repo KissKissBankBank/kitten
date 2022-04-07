@@ -120,6 +120,23 @@ export const StyledChatLayout = styled.div`
 
   .k-ChatLayout__column {
     height: 100% !important;
+
+    @supports selector(:focus-visible) {
+      &:focus {
+        outline-style: auto;
+      }
+      &:focus:not(:focus-visible) {
+        outline: transparent;
+      }
+      &:focus-visible {
+        outline-style: auto;
+      }
+    }
+    @supports not (selector(:focus-visible)) {
+      &:focus {
+        outline: transparent;
+      }
+    }
   }
 
   /* Communs */

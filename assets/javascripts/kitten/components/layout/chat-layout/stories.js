@@ -229,6 +229,29 @@ export const Default = args => {
   const [activeDiscussion, setActiveDiscussion] = useState(discussions[1])
   const [inputValue, setInputValue] = useState('')
 
+  React.useEffect(() => {
+    handleLatestReadMessage()
+  }, [])
+
+  const handleMessageClick = (e, setActiveColumn, item) => {
+    setActiveColumn('chat')
+    setActiveDiscussion(item)
+    handleLatestReadMessage()
+  }
+
+  const handleLatestReadMessage = () => {
+    // Sélectionner le dernier message lu
+    const lastReadMessage = document.getElementById('message-2')
+
+    if (!lastReadMessage) return
+
+    lastReadMessage.focus({ preventScroll: true })
+
+    document
+      .getElementById('message-list')
+      .scrollTo(0, lastReadMessage.offsetTop - 20)
+  }
+
   return (
     <>
       <HeaderNav
@@ -263,11 +286,7 @@ export const Default = args => {
                   key={'message_' + index}
                   status={item.status}
                   active={activeDiscussion === item}
-                  onClick={() => {
-                    setActiveColumn('chat')
-                    setActiveDiscussion(item)
-                    // document.getElementById('chat')?.focus()
-                  }}
+                  onClick={e => handleMessageClick(e, setActiveColumn, item)}
                   avatarProps={{
                     src: item.avatar,
                   }}
@@ -292,7 +311,7 @@ export const Default = args => {
                     weight="light"
                     size="small"
                     className="k-u-clamp-1"
-                    lineHeight="1"
+                    lineHeight="1.2"
                   >
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris
                     condimentum nibh, ut fermentum massa justo sit amet risus.
@@ -314,14 +333,14 @@ export const Default = args => {
           title={<DiscussionTitleElement {...activeDiscussion} />}
           backAction={({ setActiveColumn }) => {
             setActiveColumn('list')
-            // document.getElementById('list')?.focus()
+            document.getElementById('list')?.focus({ preventScroll: true })
           }}
           backActionText={
             <BackElement title="Retour à la liste des messages" />
           }
           nextAction={({ setActiveColumn }) => {
             setActiveColumn('info')
-            // document.getElementById('info')?.focus()
+            document.getElementById('info')?.focus({ preventScroll: true })
           }}
           nextActionText={
             <Text
@@ -342,13 +361,8 @@ export const Default = args => {
             <Separator className="k-u-hidden@m-down" />
 
             <Discussion>
-              <p className="k-u-a11y-visuallyHidden">
-                Les messages de la discussion sont dans l’ordre
-                antéchronologique : le premier message de la liste est le plus
-                récent.
-              </p>
-              <Discussion.List>
-                <Discussion.Message>
+              <Discussion.List id="message-list">
+                <Discussion.Message tabIndex="-1" id="message-1">
                   <Discussion.Message.Avatar src={activeDiscussion.avatar} />
                   <Discussion.Message.Header>
                     <Text weight="regular" lineHeight="1">
@@ -360,8 +374,8 @@ export const Default = args => {
                       size="micro"
                       color="grey-700"
                     >
-                      &nbsp;•&nbsp;Hier{' '}
-                      <span className="k-u-a11y-visuallyHidden">à </span>18:30
+                      &nbsp;•&nbsp;Avant-Hier{' '}
+                      <span className="k-u-a11y-visuallyHidden">à </span>19:30
                     </Text>
                   </Discussion.Message.Header>
                   <Discussion.Message.Content>
@@ -372,7 +386,7 @@ export const Default = args => {
                     posuere consectetur est at lobortis.
                   </Discussion.Message.Content>
                 </Discussion.Message>
-                <Discussion.Message>
+                <Discussion.Message tabIndex="-1" id="message-2">
                   <Discussion.Message.Avatar src="/kitten-0.jpg" />
                   <Discussion.Message.Header>
                     <Text weight="regular" lineHeight="1">
@@ -393,7 +407,7 @@ export const Default = args => {
                     vitae elit libero, a pharetra augue.
                   </Discussion.Message.Content>
                 </Discussion.Message>
-                <Discussion.Message>
+                <Discussion.Message tabIndex="-1" id="message-3">
                   <Discussion.Message.Avatar src={activeDiscussion.avatar} />
                   <Discussion.Message.Header>
                     <Text weight="regular" lineHeight="1">
@@ -406,8 +420,8 @@ export const Default = args => {
                       activeColEl
                       color="grey-700"
                     >
-                      &nbsp;•&nbsp;Avant-Hier{' '}
-                      <span className="k-u-a11y-visuallyHidden">à </span>19:30
+                      &nbsp;•&nbsp;Hier{' '}
+                      <span className="k-u-a11y-visuallyHidden">à </span>18:30
                     </Text>
                   </Discussion.Message.Header>
                   <Discussion.Message.Content>
@@ -463,7 +477,7 @@ export const Default = args => {
           centeredHeader
           backAction={({ setActiveColumn }) => {
             setActiveColumn('chat')
-            // document.getElementById('chat')?.focus()
+            document.getElementById('chat')?.focus({ preventScroll: true })
           }}
           backActionText={<BackElement title="Retour à la discussion" />}
         >

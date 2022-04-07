@@ -34,16 +34,25 @@ export const Default = args => {
             <Text weight="regular" lineHeight="1">
               Claude L.
             </Text>
-            <Text weight="light" lineHeight="1" size="micro" color="grey-700">
-              &nbsp;•&nbsp;Hier{' '}
-              <span className="k-u-a11y-visuallyHidden">à </span>18:30
+            <Text
+              weight="light"
+              lineHeight="1"
+              size="micro"
+              activeColEl
+              color="grey-700"
+            >
+              &nbsp;•&nbsp;Avant-Hier{' '}
+              <span className="k-u-a11y-visuallyHidden">à </span>19:30
             </Text>
           </Discussion.Message.Header>
           <Discussion.Message.Content>
-            Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id
-            elit. Maecenas faucibus mollis interdum. Nullam id dolor id nibh
-            ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur
-            ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
+            Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis
+            consectetur purus sit amet fermentum. Integer posuere erat a ante
+            venenatis dapibus posuere velit aliquet. Praesent commodo cursus
+            magna, vel scelerisque nisl consectetur et. Integer posuere erat a
+            ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula
+            porta felis euismod semper. Vestibulum id ligula porta felis euismod
+            semper.
           </Discussion.Message.Content>
         </Discussion.Message>
         <Discussion.Message>
@@ -68,25 +77,16 @@ export const Default = args => {
             <Text weight="regular" lineHeight="1">
               Claude L.
             </Text>
-            <Text
-              weight="light"
-              lineHeight="1"
-              size="micro"
-              activeColEl
-              color="grey-700"
-            >
-              &nbsp;•&nbsp;Avant-Hier{' '}
-              <span className="k-u-a11y-visuallyHidden">à </span>19:30
+            <Text weight="light" lineHeight="1" size="micro" color="grey-700">
+              &nbsp;•&nbsp;Hier{' '}
+              <span className="k-u-a11y-visuallyHidden">à </span>18:30
             </Text>
           </Discussion.Message.Header>
           <Discussion.Message.Content>
-            Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis
-            consectetur purus sit amet fermentum. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Integer posuere erat a
-            ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula
-            porta felis euismod semper. Vestibulum id ligula porta felis euismod
-            semper.
+            Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id
+            elit. Maecenas faucibus mollis interdum. Nullam id dolor id nibh
+            ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur
+            ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
           </Discussion.Message.Content>
         </Discussion.Message>
       </Discussion.List>

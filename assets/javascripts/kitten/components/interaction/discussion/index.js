@@ -19,7 +19,7 @@ const DiscussionWrapper = styled.div`
     flex-grow: 0;
     flex-shrink: 1;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: ${pxToRem(20)};
     overflow: scroll;
   }
@@ -63,6 +63,26 @@ const DiscussionWrapper = styled.div`
 
     .k-Discussion__form__button {
       flex: 0 0 auto;
+    }
+  }
+
+  .k-Discussion__list,
+  .k-Discussion__message {
+    @supports selector(:focus-visible) {
+      &:focus {
+        outline-style: auto;
+      }
+      &:focus:not(:focus-visible) {
+        outline: transparent;
+      }
+      &:focus-visible {
+        outline-style: auto;
+      }
+    }
+    @supports not (selector(:focus-visible)) {
+      &:focus {
+        outline: transparent;
+      }
     }
   }
 `

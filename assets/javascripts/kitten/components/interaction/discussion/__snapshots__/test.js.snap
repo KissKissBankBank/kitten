@@ -2,7 +2,7 @@
 
 exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
 <div
-  className="sc-hKwDye cMNbST k-Discussion"
+  className="sc-hKwDye fPcPOF k-Discussion"
 >
   <p
     className="k-u-a11y-visuallyHidden"
@@ -76,11 +76,11 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-gsDKAQ cBEeqP k-Form-TextInput__textareaContainer"
+      className="sc-gsDKAQ kVwYzM k-Form-TextInput__textareaContainer"
     >
       <textarea
         aria-label="Texte à envoyer"
-        className="sc-bdvvtL iHDzQd k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small"
+        className="sc-bdvvtL iHDzQd k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small k-Form-TextInput--autoResize"
         disabled={false}
         name="text"
         onChange={[Function]}
