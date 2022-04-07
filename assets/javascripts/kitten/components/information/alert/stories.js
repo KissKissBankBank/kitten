@@ -13,7 +13,9 @@ export default {
   },
   args: {
     show: true,
-    status: 'info',
+    danger: false,
+    warning: false,
+    success: false,
     closeButton: true,
     closeButtonLabel: 'Close Button label',
     onAfterClose: action('onAfterClose'),
@@ -27,9 +29,17 @@ export default {
       name: 'show',
       control: 'boolean',
     },
-    status: {
-      control: 'select',
-      options: ['info', 'success', 'warning', 'danger'],
+    danger: {
+      name: 'danger',
+      control: 'boolean',
+    },
+    success: {
+      name: 'success',
+      control: 'boolean',
+    },
+    warning: {
+      name: 'warning',
+      control: 'boolean',
     },
     closeButton: {
       name: 'closeButton',

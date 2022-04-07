@@ -8,15 +8,15 @@ describe('<Alert />', () => {
     expect(component).toMatchSnapshot()
   })
   it('should matches with danger snapshot', () => {
-    const component = renderer.create(<Alert status="danger">Alert !</Alert>).toJSON()
+    const component = renderer.create(<Alert error >Alert !</Alert>).toJSON()
     expect(component).toMatchSnapshot()
   })
   it('should matches with success snapshot', () => {
-    const component = renderer.create(<Alert status="success">Alert !</Alert>).toJSON()
+    const component = renderer.create(<Alert success>Alert !</Alert>).toJSON()
     expect(component).toMatchSnapshot()
   })
   it('should matches with warning snapshot', () => {
-    const component = renderer.create(<Alert status="warning">Alert !</Alert>).toJSON()
+    const component = renderer.create(<Alert warning>Alert !</Alert>).toJSON()
     expect(component).toMatchSnapshot()
   })
   it('should matches with closeButton snapshot', () => {

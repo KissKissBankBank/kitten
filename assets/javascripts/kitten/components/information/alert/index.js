@@ -33,6 +33,23 @@ const AlertWrapper = styled.div`
   gap: var(--alert-gap);
   padding: ${pxToRem(18)} var(--alert-gap);
 
+  background-color:var(--color-primary-100);
+
+  [href] {
+    color: var(--color-primary-700);
+  }
+
+  .k-Alert__closeButton {
+    svg,
+    svg path {
+      fill: var(--color-primary-700);
+
+      :hover {
+        fill: var(--color-primary-900);
+      }
+    }
+  }
+
   &.k-Alert--hasCloseButton {
     --alert-close-width: calc(var(--alert-gap) + ${pxToRem(17)});
   }
@@ -142,25 +159,6 @@ const AlertWrapper = styled.div`
     }
   }
 
-  &.k-Alert--info {
-    background-color:var(--color-primary-100);
-
-    [href] {
-      color: var(--color-primary-700);
-    }
-
-    .k-Alert__closeButton {
-      svg,
-      svg path {
-        fill: var(--color-primary-700);
-
-        :hover {
-          fill: var(--color-primary-900);
-        }
-      }
-    }
-  }
-
   &.k-Alert--warning {
     background-color: var(--color-warning-100);
 
@@ -190,6 +188,7 @@ export const Alert = ({
   className,
   show,
   error,
+  danger,
   success,
   warning,
   closeButton,
@@ -238,6 +237,20 @@ export const Alert = ({
     }
   })()
 
+  const iconStatus = (() => {
+    switch (true) {
+      case warning:
+        return 'warning'
+      case success:
+        return 'success'
+      case danger:
+      case error:
+        return 'danger'
+      default:
+        return 'info'
+    }
+  })()
+
   return (
     <AlertWrapper
       ref={alertRef}
@@ -245,13 +258,12 @@ export const Alert = ({
       className={classNames(
         'k-Alert', 
         className, 
-        `k-Alert--${status}`,
-
         {
           'k-Alert--center': center,
-          'k-Alert--success': success && status === 'success',
-          'k-Alert--error': error && status === 'danger',
-          'k-Alert--warning': warning && status === 'warning',
+          'k-Alert--success': success,
+          'k-Alert--danger': danger,
+          'k-Alert--error': error, //DEPRECATED
+          'k-Alert--warning': warning,
           'k-Alert--hasCloseButton': !!closeButton,
           'k-Alert--hasIcon': !!icon || displayIcon,
           'k-Alert--shouldHide': !isMounted,
@@ -264,11 +276,10 @@ export const Alert = ({
         <IconBadge
           className="k-Alert__iconBadge"
           children={internalIcon}
-          status={status}
+          status={iconStatus}
           hasBorder={hasBorder}
         />
       )}
-
 
       <div className="k-Alert__text">{children}</div>
 
@@ -288,21 +299,21 @@ export const Alert = ({
 
 Alert.propTypes = {
   show: PropTypes.bool,
-  error: deprecated(PropTypes.bool, 'Use status="danger" instead'),
-  success: deprecated(PropTypes.bool, 'Use status="success" instead'),
-  warning: deprecated(PropTypes.bool, 'Use status="warning" instead'),
+  error: deprecated(PropTypes.bool, 'Use "danger" instead'),
+  danger: PropTypes.bool,
+  success: PropTypes.bool,
+  warning: PropTypes.bool,
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
   icon: PropTypes.node,
   center: PropTypes.bool,
-  status: PropTypes.oneOf([ 'info', 'success', 'danger', 'warning',]),
   displayIcon: PropTypes.bool,
 }
 
 Alert.defaultProps = {
   show: true,
-  error: false,
+  danger: false,
   success: false,
   warning: false,
   closeButton: false,
@@ -310,6 +321,5 @@ Alert.defaultProps = {
   onAfterClose: () => {},
   icon: null,
   center: false,
-  status: 'info',
   displayIcon: true,
 }
