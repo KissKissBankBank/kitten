@@ -225,18 +225,6 @@ export const Alert = ({
     return <StatusIconNext status={status} />
   })()
 
-  const role = (() => {
-    switch (true) {
-      case danger:
-        return 'alert'
-      case warning:
-      case success:
-        return 'status'
-      default:
-        return null
-    }
-  })()
-
   const iconStatus = (() => {
     switch (true) {
       case warning:
@@ -254,7 +242,7 @@ export const Alert = ({
   return (
     <AlertWrapper
       ref={alertRef}
-      role={role}
+      role="alert"
       className={classNames(
         'k-Alert',
         className,

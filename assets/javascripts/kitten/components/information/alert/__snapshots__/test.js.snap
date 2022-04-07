@@ -3,7 +3,7 @@
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
   className="sc-gsDKAQ ibWFdp k-Alert k-Alert--undefined k-Alert--hasCloseButton k-Alert--hasIcon"
-  role={null}
+  role="alert"
 >
   <span
     className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info"
@@ -116,7 +116,7 @@ exports[`<Alert /> should matches with danger snapshot 1`] = `
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
   className="sc-gsDKAQ ibWFdp k-Alert k-Alert--undefined k-Alert--hasIcon"
-  role={null}
+  role="alert"
 >
   <span
     className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info"
@@ -163,7 +163,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
   className="sc-gsDKAQ ibWFdp k-Alert k-Alert--undefined k-Alert--success k-Alert--hasIcon"
-  role="status"
+  role="alert"
 >
   <span
     className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--success"
@@ -210,7 +210,7 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
   className="sc-gsDKAQ ibWFdp k-Alert k-Alert--undefined k-Alert--warning k-Alert--hasIcon"
-  role="status"
+  role="alert"
 >
   <span
     className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--warning"
