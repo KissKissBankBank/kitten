@@ -70,7 +70,8 @@ const Wrapper = styled.button`
 
   .k-TextCopy__tooltip {
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -${pxToRem(50)};
     animation: 3s ${fadeInAndOut} ease-out;
   }
@@ -165,6 +166,7 @@ export const TextCopy = ({
           centered
           role="alert"
           className="k-TextCopy__tooltip"
+          borderRadius={6}
         >
           <Text color="background1" weight="light" size="micro">
             {alertMessage}
