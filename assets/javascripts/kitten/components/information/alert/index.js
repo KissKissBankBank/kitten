@@ -226,11 +226,11 @@ export const Alert = ({
   })()
 
   const role = (() => {
-    switch (status) {
-      case 'danger':
+    switch (true) {
+      case danger:
         return 'alert'
-      case 'warning':
-      case 'success':
+      case warning:
+      case success:
         return 'status'
       default:
         return null
