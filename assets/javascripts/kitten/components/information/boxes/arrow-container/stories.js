@@ -53,7 +53,7 @@ Default.argTypes = {
   },
   size: {
     name: 'size',
-    control: 'number',
+    control: 'text',
   },
   position: {
     name: 'position',
@@ -82,7 +82,7 @@ Default.argTypes = {
   },
   borderRadius: {
     name: 'borderRadius',
-    control: 'number',
+    control: 'text',
   },
   borderColor: {
     name: 'borderColor',
@@ -90,11 +90,11 @@ Default.argTypes = {
   },
   borderWidth: {
     name: 'borderWidth',
-    control: 'number',
+    control: 'text',
   },
   padding: {
     name: 'padding',
-    control: 'number',
+    control: 'text',
   },
   children: {
     name: 'children',

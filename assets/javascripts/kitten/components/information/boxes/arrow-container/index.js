@@ -143,12 +143,22 @@ export const ArrowContainer = ({
   style,
   ...props
 }) => {
+  const internalPadding =
+    typeof padding === 'number' ? pxToRem(padding) : padding
+  const internalBorderRadius =
+    typeof borderRadius === 'number' ? pxToRem(borderRadius) : borderRadius
+  const internalSize = typeof size === 'number' ? pxToRem(size) : size
+  const internalBorderWidth =
+    typeof borderWidth === 'number' ? pxToRem(borderWidth) : borderWidth
+
   const arrowDistance = (() => {
     switch (true) {
       case !!centered:
-        return `calc(50% - ${pxToRem(size)})`
+        return `calc(50% - ${internalSize})`
       case !!distanceAsPercentage:
-        return `calc(${distance}% - ${pxToRem(size)})`
+        return `calc(${distance}% - ${internalSize})`
+      case typeof distance === 'string':
+        return distance
       default:
         return pxToRem(distance)
     }
@@ -160,7 +170,7 @@ export const ArrowContainer = ({
       ? Math.floor(rawDistanceValue)
       : Math.ceil(rawDistanceValue)
 
-  const borderSize = borderDistance + size
+  const borderSize = `calc(${pxToRem(borderDistance)} + ${internalSize})`
 
   return (
     <Container
@@ -177,14 +187,14 @@ export const ArrowContainer = ({
       style={{
         ...style,
         '--k-ArrowContainer-arrowDistance': arrowDistance,
-        '--k-ArrowContainer-arrowSize': pxToRem(size),
+        '--k-ArrowContainer-arrowSize': internalSize,
         '--k-ArrowContainer-borderColor': borderColor,
         '--k-ArrowContainer-borderDistance': pxToRem(borderDistance),
-        '--k-ArrowContainer-borderSize': pxToRem(borderSize),
-        '--k-ArrowContainer-borderRadius': pxToRem(borderRadius),
-        '--k-ArrowContainer-borderWidth': pxToRem(borderWidth),
+        '--k-ArrowContainer-borderSize': borderSize,
+        '--k-ArrowContainer-borderRadius': internalBorderRadius,
+        '--k-ArrowContainer-borderWidth': internalBorderWidth,
         '--k-ArrowContainer-color': color,
-        '--k-ArrowContainer-padding': pxToRem(padding),
+        '--k-ArrowContainer-padding': internalPadding,
       }}
       {...props}
     >
@@ -196,17 +206,17 @@ export const ArrowContainer = ({
 
 ArrowContainer.propTypes = {
   color: PropTypes.string,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   position: PropTypes.string,
   distance: PropTypes.number,
   distanceAsPercentage: PropTypes.bool,
   distanceIsReverse: PropTypes.bool,
   centered: PropTypes.bool,
-  padding: PropTypes.number,
+  padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   shadow: PropTypes.bool,
-  borderRadius: PropTypes.number,
+  borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   borderColor: PropTypes.string,
-  borderWidth: PropTypes.number,
+  borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 ArrowContainer.defaultProps = {

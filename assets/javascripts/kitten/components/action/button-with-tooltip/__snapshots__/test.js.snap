@@ -390,7 +390,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
         "--k-ArrowContainer-borderColor": "var(--color-grey-300, #eee)",
         "--k-ArrowContainer-borderDistance": 0,
         "--k-ArrowContainer-borderRadius": "0.25rem",
-        "--k-ArrowContainer-borderSize": "0.4375rem",
+        "--k-ArrowContainer-borderSize": "calc(0 + 0.4375rem)",
         "--k-ArrowContainer-borderWidth": 0,
         "--k-ArrowContainer-color": "var(--color-grey-300, #eee)",
         "--k-ArrowContainer-padding": "0.5rem",

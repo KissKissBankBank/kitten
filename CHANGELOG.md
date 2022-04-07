@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ArrowContainer`: Allow CSS Custom Properties as prop values.
 - Fix: `OpenLockIconNext`: Improve styles.
 - Fix: `RadioButton`: Improve style.
 - Fix: `TextCopy`: Improve tooltip styles.
