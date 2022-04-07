@@ -255,20 +255,16 @@ export const Alert = ({
     <AlertWrapper
       ref={alertRef}
       role={role}
-      className={classNames(
-        'k-Alert', 
-        className, 
-        {
-          'k-Alert--center': center,
-          'k-Alert--success': success,
-          'k-Alert--danger': danger,
-          'k-Alert--error': error, //DEPRECATED
-          'k-Alert--warning': warning,
-          'k-Alert--hasCloseButton': !!closeButton,
-          'k-Alert--hasIcon': !!icon || displayIcon,
-          'k-Alert--shouldHide': !isMounted,
-        }
-      )}
+      className={classNames('k-Alert', className {
+        'k-Alert--center': center,
+        'k-Alert--success': success,
+        'k-Alert--danger': danger,
+        'k-Alert--error': error, //DEPRECATED
+        'k-Alert--warning': warning,
+        'k-Alert--hasCloseButton': !!closeButton,
+        'k-Alert--hasIcon': !!icon || displayIcon,
+        'k-Alert--shouldHide': !isMounted,
+      })}
       {...others}
     >
 
