@@ -8,7 +8,7 @@ describe('<Alert />', () => {
     expect(component).toMatchSnapshot()
   })
   it('should matches with danger snapshot', () => {
-    const component = renderer.create(<Alert error >Alert !</Alert>).toJSON()
+    const component = renderer.create(<Alert danger >Alert !</Alert>).toJSON()
     expect(component).toMatchSnapshot()
   })
   it('should matches with success snapshot', () => {
