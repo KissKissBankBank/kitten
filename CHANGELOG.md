@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `EditorialCard`: Add component.
+- Feature: `LongArrowIconNext`: Add component.
 - Feature: Add the following components:
   - `ChatLayout`
   - `Discussion`
