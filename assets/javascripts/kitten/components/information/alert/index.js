@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
+import { StatusIconNext } from '../../graphics/icons-next/status-icon-next'
 import { CrossIconNext } from '../../graphics/icons-next/cross-icon-next'
 import { IconBadge } from '../../information/icon-badge'
-import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const fadeOut = keyframes`
   0% { opacity: 1; }
@@ -24,13 +25,30 @@ const AlertWrapper = styled.div`
   margin: ${pxToRem(10)};
   border-radius: var(--border-radius-m);
   overflow: hidden;
-  background-color: ${COLORS.primary5};
-  color: ${COLORS.font1};
+  background-color: var(--color-primary-100);
+  color: var(--color-grey-900);
 
   display: flex;
   align-items: center;
   gap: var(--alert-gap);
   padding: ${pxToRem(18)} var(--alert-gap);
+
+  background-color: var(--color-primary-100);
+
+  [href] {
+    color: var(--color-primary-700);
+  }
+
+  .k-Alert__closeButton {
+    svg,
+    svg path {
+      fill: var(--color-primary-700);
+
+      :hover {
+        fill: var(--color-primary-900);
+      }
+    }
+  }
 
   &.k-Alert--hasCloseButton {
     --alert-close-width: calc(var(--alert-gap) + ${pxToRem(17)});
@@ -65,14 +83,9 @@ const AlertWrapper = styled.div`
     line-height: ${pxToRem(18)};
   }
 
-  .k-Alert__icon {
-    .k-Alert__iconBadge {
-      background-color: ${COLORS.primary1};
-      border-color: ${COLORS.primary4};
-      min-width: ${pxToRem(24)};
-      min-height: ${pxToRem(24)};
-      border-radius: var(--border-radius-rounded);
-    }
+  .k-Alert__iconBadge {
+    min-width: ${pxToRem(20)};
+    min-height: ${pxToRem(20)};
   }
 
   .k-Alert__closeButton {
@@ -93,84 +106,70 @@ const AlertWrapper = styled.div`
     svg,
     svg path {
       transition: fill 0.2s ease;
-      fill: ${COLORS.primary1};
+      fill: var(--color-primary-700);
 
       :hover {
-        fill: ${COLORS.primary3};
+        fill: var(--color-primary-900);
       }
     }
   }
 
   a {
     ${TYPOGRAPHY.fontStyles.bold};
-    color: ${COLORS.primary1};
+    color: var(--color-primary-500);
     text-decoration: underline;
   }
 
   &.k-Alert--success {
-    background-color: ${COLORS.tertiary1};
+    background-color: var(--color-success-100);
 
     [href] {
-      color: ${COLORS.valid};
-    }
-
-    .k-Alert__iconBadge {
-      background-color: ${COLORS.valid};
-      border-color: ${COLORS.tertiary2};
+      color: var(--color-success-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: ${COLORS.valid};
+        fill: var(--color-success-700);
 
         :hover {
-          fill: ${COLORS.tertiary2};
+          fill: var(--color-success-900);
         }
       }
     }
   }
 
-  &.k-Alert--error {
-    background-color: ${COLORS.error2};
+  &.k-Alert--error,
+  &.k-Alert--danger {
+    background-color: var(--color-danger-100);
 
     [href] {
-      color: ${COLORS.error};
-    }
-
-    .k-Alert__iconBadge {
-      background-color: ${COLORS.error};
-      border-color: ${COLORS.error3};
+      color: var(--color-danger-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: ${COLORS.error};
+        fill: var(--color-danger-700);
 
         :hover {
-          fill: ${COLORS.error4};
+          fill: var(--color-danger-900);
         }
       }
     }
   }
 
   &.k-Alert--warning {
-    background-color: ${COLORS.warning2};
+    background-color: var(--color-warning-100);
 
     [href] {
-      color: ${COLORS.orange3};
-    }
-
-    .k-Alert__iconBadge {
-      background-color: ${COLORS.orange3};
-      border-color: ${COLORS.orange};
+      color: var(--color-warning-700);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: ${COLORS.warning};
+        fill: var(--color-warning-700);
 
         :hover {
           fill: '#A47600';
@@ -188,16 +187,19 @@ const AlertWrapper = styled.div`
 export const Alert = ({
   className,
   show,
-  error,
-  success,
-  warning,
+  error, // Deprecated
+  danger, // Deprecated
+  success, // Deprecated
+  warning, // Deprecated
   closeButton,
   closeButtonLabel,
   children,
   onAfterClose,
   icon,
-  iconBadgeBorderColor,
   center,
+  status,
+  iconHasBorder,
+  displayIcon,
   ...others
 }) => {
   const [isTrashed, trashIt] = useState(false)
@@ -217,33 +219,60 @@ export const Alert = ({
 
   if (isTrashed || !show) return null
 
+  const internalIcon = icon || <StatusIconNext status={status} />
+
+  const role = (() => {
+    switch (true) {
+      case danger: //deprecated
+      case status === 'danger':
+        return 'alert'
+      case warning: //deprecated
+      case success: //deprecated
+      case status === 'warning':
+      case status === 'success':
+        return 'status'
+      default:
+        return null
+    }
+  })()
+
+  const statusIcon = (() => {
+    switch (true) {
+      case warning:
+        return 'warning'
+      case success:
+        return 'success'
+      case danger:
+      case error:
+        return 'danger'
+      default:
+        return status
+    }
+  })()
+
   return (
     <AlertWrapper
       ref={alertRef}
-      role="alert"
-      className={classNames('k-Alert', className, {
+      role={role}
+      className={classNames('k-Alert', className, `k-Alert--${status}`, {
         'k-Alert--center': center,
-        'k-Alert--success': success,
-        'k-Alert--error': error,
-        'k-Alert--warning': warning,
         'k-Alert--hasCloseButton': !!closeButton,
-        'k-Alert--hasIcon': !!icon,
+        'k-Alert--hasIcon': !!icon || displayIcon,
         'k-Alert--shouldHide': !isMounted,
+        // Status classes through deprecated props
+        'k-Alert--success': !!success,
+        'k-Alert--error': !!error,
+        'k-Alert--warning': !!warning,
       })}
       {...others}
     >
-      {!!icon && (
-        <div className="k-Alert__icon">
-          <IconBadge
-            className="k-Alert__iconBadge"
-            children={icon}
-            border={{
-              width: 2,
-              color: iconBadgeBorderColor,
-              style: 'solid',
-            }}
-          />
-        </div>
+      {displayIcon && (
+        <IconBadge
+          className="k-Alert__iconBadge"
+          children={internalIcon}
+          status={statusIcon}
+          hasBorder={iconHasBorder}
+        />
       )}
 
       <div className="k-Alert__text">{children}</div>
@@ -264,26 +293,31 @@ export const Alert = ({
 
 Alert.propTypes = {
   show: PropTypes.bool,
-  error: PropTypes.bool,
-  success: PropTypes.bool,
-  warning: PropTypes.bool,
+  error: deprecated(PropTypes.bool, 'Use the "status=danger" prop instead'),
+  success: deprecated(PropTypes.bool, 'Use the "status=success" prop instead'),
+  warning: deprecated(PropTypes.bool, 'Use the "status=warning" prop instead'),
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
   icon: PropTypes.node,
-  iconBadgeBorderColor: PropTypes.string,
+  iconBadgeBorderColor: deprecated(
+    PropTypes.string,
+    'Use iconHasBorder prop instead',
+  ),
   center: PropTypes.bool,
+  displayIcon: PropTypes.bool,
+  iconHasBorder: PropTypes.bool,
+  status: PropTypes.oneOf(['info', 'warning', 'success', 'danger']),
 }
 
 Alert.defaultProps = {
   show: true,
-  error: false,
-  success: false,
-  warning: false,
   closeButton: false,
   closeButtonLabel: 'Close',
   onAfterClose: () => {},
   icon: null,
-  iconBadgeBorderColor: COLORS.primary4,
   center: false,
+  displayIcon: true,
+  iconHasBorder: true,
+  status: 'info',
 }
