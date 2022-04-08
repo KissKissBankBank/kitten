@@ -28,6 +28,7 @@ import {
   LinkIconNext,
   LinkedinIconNext,
   LockOutlineIcon,
+  LongArrowIconNext,
   MessengerIconNext,
   OpenLockIconNext,
   PeopleIconNext,
@@ -272,6 +273,18 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer suffix='direction="right"'>
           <LargeArrowIconNext color={colorInput} direction="right" />
+        </IconContainer>
+        <IconContainer suffix='direction="up"'>
+          <LongArrowIconNext color={colorInput} direction="up" />
+        </IconContainer>
+        <IconContainer suffix='direction="down"'>
+          <LongArrowIconNext color={colorInput} direction="down" />
+        </IconContainer>
+        <IconContainer suffix='direction="left"'>
+          <LongArrowIconNext color={colorInput} direction="left" />
+        </IconContainer>
+        <IconContainer suffix='direction="right"'>
+          <LongArrowIconNext color={colorInput} direction="right" />
         </IconContainer>
       </Group>
 
