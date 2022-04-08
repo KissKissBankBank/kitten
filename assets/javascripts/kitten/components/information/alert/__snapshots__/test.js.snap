@@ -6,7 +6,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
   role={null}
 >
   <span
-    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info"
+    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -72,7 +72,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
   role={null}
 >
   <span
-    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info"
+    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -119,7 +119,7 @@ exports[`<Alert /> should matches with snapshot with custom icon 1`] = `
   role={null}
 >
   <span
-    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info"
+    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -145,7 +145,7 @@ exports[`<Alert /> should matches with snapshot with danger status prop 1`] = `
   role="alert"
 >
   <span
-    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--danger"
+    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--danger k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -228,7 +228,7 @@ exports[`<Alert /> should matches with snapshot with success status prop 1`] = `
   role="status"
 >
   <span
-    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--success"
+    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--success k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": null,
@@ -264,7 +264,7 @@ exports[`<Alert /> should matches with snapshot with warning status prop 1`] = `
   role="status"
 >
   <span
-    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--warning"
+    className="sc-bdvvtL wpCaS k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--warning k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": null,
