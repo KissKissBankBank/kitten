@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `TextInput`: Better gradient on Safari.
 - Fix: `OpenLockIconNext`: Improve styles.
 - Fix: `RadioButton`: Improve style.
+- Fix: `TextCopy`: Improve tooltip styles.
 
 ## [10.0.1] - 2022-04-05
 
