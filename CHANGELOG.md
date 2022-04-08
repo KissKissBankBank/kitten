@@ -4,35 +4,43 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `ArrowContainer`: Allow CSS Custom Properties as prop values.
-- Deprecations/Changes: `Alert`: Add `displayIcon` boolean prop, defaults to true. `Alert` now always displays an icon, unless `displayIcon` is defined to `false`.
-- Deprecations/Changes: `Alert`: Replace `iconBadgeBorderColor` prop with `iconHasBorder` boolean prop, defaults to true.
-- Deprecations/Changes: `Alert`: Deprecate the following props:
+## [10.1.0] - 2022-04-08
+
+Deprecations/Changes:
+
+- `Alert`: Add `displayIcon` boolean prop, defaults to true. `Alert` now always displays an icon, unless `displayIcon` is defined to `false`.
+- `Alert`: Replace `iconBadgeBorderColor` prop with `iconHasBorder` boolean prop, defaults to true.
+- `Alert`: Deprecate the following props:
   - `success`, replaced by `status="success"`,
   - `error`, replaced by `status="danger"`,
   - `warning`, replaced by `status="warning"`
-- Feature: `Alert`: Add `status="info"` default prop.
-- Feature: `AlertBox`: Add `iconHasBorder` prop, defaults to true.
-- Fix: `AlertBox`: Improve styles.
-- Feature: `EditorialCard`: Add component.
-- Feature: `LongArrowIconNext`: Add component.
-- Feature: `ProjectCard`: Add `overlayText` prop with empty default.
-- Feature: `ProjectCard`: Add `hoverableTitle` prop, defaults to false.
-- Feature: Add the following components:
-  - `ChatLayout`
-  - `Discussion`
-  - `MessagesMenu`
-- Fix: `TextInput`: Better gradient on Safari.
-- Fix: `OpenLockIconNext`: Improve styles.
-- Fix: `RadioButton`: Improve style.
-- Fix: `TextCopy`: Improve tooltip styles.
+
+Features:
+
+- `Alert`: Add `status="info"` default prop.
+- `AlertBox`: Add `iconHasBorder` prop, defaults to true.
+- `ArrowContainer`: Allow CSS Custom Properties as prop values.
+- `ChatLayout`: Add component.
+- `Discussion`: Add component.
+- `EditorialCard`: Add component.
+- `LongArrowIconNext`: Add component.
+- `MessagesMenu`: Add component.
+- `ProjectCard`: Add `hoverableTitle` prop, defaults to false.
+- `ProjectCard`: Add `overlayText` prop with empty default.
+
+Fixes:
+
+- `AlertBox`: Improve styles.
+- `OpenLockIconNext`: Improve styles.
+- `RadioButton`: Improve style.
+- `TextCopy`: Improve tooltip styles.
+- `TextInput`: Better gradient on Safari.
 
 ## [10.0.1] - 2022-04-05
 
 Fix:
 
 - `Text`: Use full utility class name to avoid purge.
-
 
 ## [10.0.0] - 2022-04-05
 

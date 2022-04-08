@@ -26,7 +26,7 @@ var _excluded = ["children", "className", "color", "size", "distance", "distance
 var Container = _styledComponents.default.div.withConfig({
   displayName: "arrow-container__Container",
   componentId: "sc-d6xzra-0"
-})(["position:relative;z-index:1;box-sizing:border-box;padding:var(--k-ArrowContainer-padding);background-color:var(--k-ArrowContainer-color);border-radius:var(--k-ArrowContainer-borderRadius);border:var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);&.k-ArrowContainer--hasShadow{box-shadow:0 ", " ", " 0 rgba(0,0,0,0.2);}.k-ArrowContainer__arrow{position:absolute;display:block;width:0;height:0;border:var(--k-ArrowContainer-arrowSize) solid transparent;}&.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before{content:'';display:block;position:absolute;width:0;height:0;z-index:-1;}--k-ArrowContainer-arrowMainPosition:calc( var(--k-ArrowContainer-arrowSize) * -2 );--k-ArrowContainer-arrowBorderMainPosition:calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );&.k-ArrowContainer--top .k-ArrowContainer__arrow{top:var(--k-ArrowContainer-arrowMainPosition);left:var(--k-ArrowContainer-arrowDistance);border-bottom-color:var(--k-ArrowContainer-color);&::before{top:var(--k-ArrowContainer-arrowBorderMainPosition);left:calc(var(--k-ArrowContainer-borderSize) * -1);border:var(--k-ArrowContainer-borderSize) solid transparent;border-bottom-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--bottom .k-ArrowContainer__arrow{bottom:var(--k-ArrowContainer-arrowMainPosition);left:var(--k-ArrowContainer-arrowDistance);border-top-color:var(--k-ArrowContainer-color);&::before{bottom:var(--k-ArrowContainer-arrowBorderMainPosition);left:calc(var(--k-ArrowContainer-borderSize) * -1);border:var(--k-ArrowContainer-borderSize) solid transparent;border-top-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--top,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom{.k-ArrowContainer__arrow{left:initial;right:var(--k-ArrowContainer-arrowDistance);&::before{left:initial;right:calc(var(--k-ArrowContainer-borderSize) * -1);}}}&.k-ArrowContainer--right .k-ArrowContainer__arrow{right:var(--k-ArrowContainer-arrowMainPosition);top:var(--k-ArrowContainer-arrowDistance);border-left-color:var(--k-ArrowContainer-color);&::before{right:var(--k-ArrowContainer-arrowBorderMainPosition);top:calc(var(--k-ArrowContainer-borderSize) * -1);border:var(--k-ArrowContainer-borderSize) solid transparent;border-left-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--left .k-ArrowContainer__arrow{left:var(--k-ArrowContainer-arrowMainPosition);top:var(--k-ArrowContainer-arrowDistance);border-right-color:var(--k-ArrowContainer-color);&::before{top:calc(var(--k-ArrowContainer-borderSize) * -1);left:var(--k-ArrowContainer-arrowBorderMainPosition);border:var(--k-ArrowContainer-borderSize) solid transparent;border-right-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--right,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--left{.k-ArrowContainer__arrow{top:initial;bottom:var(--k-ArrowContainer-arrowDistance);&::before{top:initial;bottom:calc(var(--k-ArrowContainer-borderSize) * -1);}}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
+})(["--arrowContainer-borderSize:calc( var(--arrowContainer-borderDistance) + var(--arrowContainer-arrowSize) );position:relative;z-index:1;box-sizing:border-box;padding:var(--arrowContainer-padding);background-color:var(--arrowContainer-color);border-radius:var(--arrowContainer-borderRadius);border:var(--arrowContainer-borderWidth) solid var(--arrowContainer-borderColor);&.k-ArrowContainer--hasShadow{box-shadow:0 ", " ", " 0 rgba(0,0,0,0.2);}.k-ArrowContainer__arrow{position:absolute;display:block;width:0;height:0;border:var(--arrowContainer-arrowSize) solid transparent;}&.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before{content:'';display:block;position:absolute;width:0;height:0;z-index:-1;}--arrowContainer-arrowMainPosition:calc( var(--arrowContainer-arrowSize) * -2 );--arrowContainer-arrowBorderMainPosition:calc( (var(--arrowContainer-borderSize) + var(--arrowContainer-borderDistance)) * -1 );&.k-ArrowContainer--top .k-ArrowContainer__arrow{top:var(--arrowContainer-arrowMainPosition);left:var(--arrowContainer-arrowDistance);border-bottom-color:var(--arrowContainer-color);&::before{top:var(--arrowContainer-arrowBorderMainPosition);left:calc(var(--arrowContainer-borderSize) * -1);border:var(--arrowContainer-borderSize) solid transparent;border-bottom-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--bottom .k-ArrowContainer__arrow{bottom:var(--arrowContainer-arrowMainPosition);left:var(--arrowContainer-arrowDistance);border-top-color:var(--arrowContainer-color);&::before{bottom:var(--arrowContainer-arrowBorderMainPosition);left:calc(var(--arrowContainer-borderSize) * -1);border:var(--arrowContainer-borderSize) solid transparent;border-top-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--top,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom{.k-ArrowContainer__arrow{left:initial;right:var(--arrowContainer-arrowDistance);&::before{left:initial;right:calc(var(--arrowContainer-borderSize) * -1);}}}&.k-ArrowContainer--right .k-ArrowContainer__arrow{right:var(--arrowContainer-arrowMainPosition);top:var(--arrowContainer-arrowDistance);border-left-color:var(--arrowContainer-color);&::before{right:var(--arrowContainer-arrowBorderMainPosition);top:calc(var(--arrowContainer-borderSize) * -1);border:var(--arrowContainer-borderSize) solid transparent;border-left-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--left .k-ArrowContainer__arrow{left:var(--arrowContainer-arrowMainPosition);top:var(--arrowContainer-arrowDistance);border-right-color:var(--arrowContainer-color);&::before{top:calc(var(--arrowContainer-borderSize) * -1);left:var(--arrowContainer-arrowBorderMainPosition);border:var(--arrowContainer-borderSize) solid transparent;border-right-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--right,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--left{.k-ArrowContainer__arrow{top:initial;bottom:var(--arrowContainer-arrowDistance);&::before{top:initial;bottom:calc(var(--arrowContainer-borderSize) * -1);}}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
 
 var ArrowContainer = function ArrowContainer(_ref) {
   var children = _ref.children,
@@ -45,14 +45,21 @@ var ArrowContainer = function ArrowContainer(_ref) {
       borderWidth = _ref.borderWidth,
       style = _ref.style,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  var internalPadding = typeof padding === 'number' ? (0, _typography.pxToRem)(padding) : padding;
+  var internalBorderRadius = typeof borderRadius === 'number' ? (0, _typography.pxToRem)(borderRadius) : borderRadius;
+  var internalSize = typeof size === 'number' ? (0, _typography.pxToRem)(size) : size;
+  var internalBorderWidth = typeof borderWidth === 'number' ? (0, _typography.pxToRem)(borderWidth) : borderWidth;
 
   var arrowDistance = function () {
     switch (true) {
       case !!centered:
-        return "calc(50% - " + (0, _typography.pxToRem)(size) + ")";
+        return "calc(50% - " + internalSize + ")";
 
       case !!distanceAsPercentage:
-        return "calc(" + distance + "% - " + (0, _typography.pxToRem)(size) + ")";
+        return "calc(" + distance + "% - " + internalSize + ")";
+
+      case typeof distance === 'string':
+        return distance;
 
       default:
         return (0, _typography.pxToRem)(distance);
@@ -61,7 +68,6 @@ var ArrowContainer = function ArrowContainer(_ref) {
 
   var rawDistanceValue = Math.sqrt(Math.pow(borderWidth, 2) * 2);
   var borderDistance = borderWidth % 2 === 0 ? Math.floor(rawDistanceValue) : Math.ceil(rawDistanceValue);
-  var borderSize = borderDistance + size;
   return /*#__PURE__*/_react.default.createElement(Container, (0, _extends2.default)({
     className: (0, _classnames.default)('k-ArrowContainer', className, "k-ArrowContainer--" + position, {
       'k-ArrowContainer--hasShadow': shadow,
@@ -69,15 +75,14 @@ var ArrowContainer = function ArrowContainer(_ref) {
       'k-ArrowContainer--reverseDistance': distanceIsReverse
     }),
     style: (0, _extends2.default)({}, style, {
-      '--k-ArrowContainer-arrowDistance': arrowDistance,
-      '--k-ArrowContainer-arrowSize': (0, _typography.pxToRem)(size),
-      '--k-ArrowContainer-borderColor': borderColor,
-      '--k-ArrowContainer-borderDistance': (0, _typography.pxToRem)(borderDistance),
-      '--k-ArrowContainer-borderSize': (0, _typography.pxToRem)(borderSize),
-      '--k-ArrowContainer-borderRadius': (0, _typography.pxToRem)(borderRadius),
-      '--k-ArrowContainer-borderWidth': (0, _typography.pxToRem)(borderWidth),
-      '--k-ArrowContainer-color': color,
-      '--k-ArrowContainer-padding': (0, _typography.pxToRem)(padding)
+      '--arrowContainer-arrowDistance': arrowDistance,
+      '--arrowContainer-arrowSize': internalSize,
+      '--arrowContainer-borderColor': borderColor,
+      '--arrowContainer-borderDistance': (0, _typography.pxToRem)(borderDistance),
+      '--arrowContainer-borderRadius': internalBorderRadius,
+      '--arrowContainer-borderWidth': internalBorderWidth,
+      '--arrowContainer-color': color,
+      '--arrowContainer-padding': internalPadding
     })
   }, props), children, /*#__PURE__*/_react.default.createElement("span", {
     className: "k-ArrowContainer__arrow"
@@ -87,17 +92,17 @@ var ArrowContainer = function ArrowContainer(_ref) {
 exports.ArrowContainer = ArrowContainer;
 ArrowContainer.propTypes = {
   color: _propTypes.default.string,
-  size: _propTypes.default.number,
+  size: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   position: _propTypes.default.string,
   distance: _propTypes.default.number,
   distanceAsPercentage: _propTypes.default.bool,
   distanceIsReverse: _propTypes.default.bool,
   centered: _propTypes.default.bool,
-  padding: _propTypes.default.number,
+  padding: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   shadow: _propTypes.default.bool,
-  borderRadius: _propTypes.default.number,
+  borderRadius: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   borderColor: _propTypes.default.string,
-  borderWidth: _propTypes.default.number
+  borderWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
 ArrowContainer.defaultProps = {
   color: _colorsConfig.default.background3,

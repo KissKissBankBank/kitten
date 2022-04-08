@@ -10,7 +10,7 @@ import classNames from 'classnames';
 var Container = styled.div.withConfig({
   displayName: "arrow-container__Container",
   componentId: "sc-d6xzra-0"
-})(["position:relative;z-index:1;box-sizing:border-box;padding:var(--k-ArrowContainer-padding);background-color:var(--k-ArrowContainer-color);border-radius:var(--k-ArrowContainer-borderRadius);border:var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);&.k-ArrowContainer--hasShadow{box-shadow:0 ", " ", " 0 rgba(0,0,0,0.2);}.k-ArrowContainer__arrow{position:absolute;display:block;width:0;height:0;border:var(--k-ArrowContainer-arrowSize) solid transparent;}&.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before{content:'';display:block;position:absolute;width:0;height:0;z-index:-1;}--k-ArrowContainer-arrowMainPosition:calc( var(--k-ArrowContainer-arrowSize) * -2 );--k-ArrowContainer-arrowBorderMainPosition:calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );&.k-ArrowContainer--top .k-ArrowContainer__arrow{top:var(--k-ArrowContainer-arrowMainPosition);left:var(--k-ArrowContainer-arrowDistance);border-bottom-color:var(--k-ArrowContainer-color);&::before{top:var(--k-ArrowContainer-arrowBorderMainPosition);left:calc(var(--k-ArrowContainer-borderSize) * -1);border:var(--k-ArrowContainer-borderSize) solid transparent;border-bottom-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--bottom .k-ArrowContainer__arrow{bottom:var(--k-ArrowContainer-arrowMainPosition);left:var(--k-ArrowContainer-arrowDistance);border-top-color:var(--k-ArrowContainer-color);&::before{bottom:var(--k-ArrowContainer-arrowBorderMainPosition);left:calc(var(--k-ArrowContainer-borderSize) * -1);border:var(--k-ArrowContainer-borderSize) solid transparent;border-top-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--top,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom{.k-ArrowContainer__arrow{left:initial;right:var(--k-ArrowContainer-arrowDistance);&::before{left:initial;right:calc(var(--k-ArrowContainer-borderSize) * -1);}}}&.k-ArrowContainer--right .k-ArrowContainer__arrow{right:var(--k-ArrowContainer-arrowMainPosition);top:var(--k-ArrowContainer-arrowDistance);border-left-color:var(--k-ArrowContainer-color);&::before{right:var(--k-ArrowContainer-arrowBorderMainPosition);top:calc(var(--k-ArrowContainer-borderSize) * -1);border:var(--k-ArrowContainer-borderSize) solid transparent;border-left-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--left .k-ArrowContainer__arrow{left:var(--k-ArrowContainer-arrowMainPosition);top:var(--k-ArrowContainer-arrowDistance);border-right-color:var(--k-ArrowContainer-color);&::before{top:calc(var(--k-ArrowContainer-borderSize) * -1);left:var(--k-ArrowContainer-arrowBorderMainPosition);border:var(--k-ArrowContainer-borderSize) solid transparent;border-right-color:var(--k-ArrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--right,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--left{.k-ArrowContainer__arrow{top:initial;bottom:var(--k-ArrowContainer-arrowDistance);&::before{top:initial;bottom:calc(var(--k-ArrowContainer-borderSize) * -1);}}}"], pxToRem(10), pxToRem(20));
+})(["--arrowContainer-borderSize:calc( var(--arrowContainer-borderDistance) + var(--arrowContainer-arrowSize) );position:relative;z-index:1;box-sizing:border-box;padding:var(--arrowContainer-padding);background-color:var(--arrowContainer-color);border-radius:var(--arrowContainer-borderRadius);border:var(--arrowContainer-borderWidth) solid var(--arrowContainer-borderColor);&.k-ArrowContainer--hasShadow{box-shadow:0 ", " ", " 0 rgba(0,0,0,0.2);}.k-ArrowContainer__arrow{position:absolute;display:block;width:0;height:0;border:var(--arrowContainer-arrowSize) solid transparent;}&.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before{content:'';display:block;position:absolute;width:0;height:0;z-index:-1;}--arrowContainer-arrowMainPosition:calc( var(--arrowContainer-arrowSize) * -2 );--arrowContainer-arrowBorderMainPosition:calc( (var(--arrowContainer-borderSize) + var(--arrowContainer-borderDistance)) * -1 );&.k-ArrowContainer--top .k-ArrowContainer__arrow{top:var(--arrowContainer-arrowMainPosition);left:var(--arrowContainer-arrowDistance);border-bottom-color:var(--arrowContainer-color);&::before{top:var(--arrowContainer-arrowBorderMainPosition);left:calc(var(--arrowContainer-borderSize) * -1);border:var(--arrowContainer-borderSize) solid transparent;border-bottom-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--bottom .k-ArrowContainer__arrow{bottom:var(--arrowContainer-arrowMainPosition);left:var(--arrowContainer-arrowDistance);border-top-color:var(--arrowContainer-color);&::before{bottom:var(--arrowContainer-arrowBorderMainPosition);left:calc(var(--arrowContainer-borderSize) * -1);border:var(--arrowContainer-borderSize) solid transparent;border-top-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--top,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom{.k-ArrowContainer__arrow{left:initial;right:var(--arrowContainer-arrowDistance);&::before{left:initial;right:calc(var(--arrowContainer-borderSize) * -1);}}}&.k-ArrowContainer--right .k-ArrowContainer__arrow{right:var(--arrowContainer-arrowMainPosition);top:var(--arrowContainer-arrowDistance);border-left-color:var(--arrowContainer-color);&::before{right:var(--arrowContainer-arrowBorderMainPosition);top:calc(var(--arrowContainer-borderSize) * -1);border:var(--arrowContainer-borderSize) solid transparent;border-left-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--left .k-ArrowContainer__arrow{left:var(--arrowContainer-arrowMainPosition);top:var(--arrowContainer-arrowDistance);border-right-color:var(--arrowContainer-color);&::before{top:calc(var(--arrowContainer-borderSize) * -1);left:var(--arrowContainer-arrowBorderMainPosition);border:var(--arrowContainer-borderSize) solid transparent;border-right-color:var(--arrowContainer-borderColor);}}&.k-ArrowContainer--reverseDistance.k-ArrowContainer--right,&.k-ArrowContainer--reverseDistance.k-ArrowContainer--left{.k-ArrowContainer__arrow{top:initial;bottom:var(--arrowContainer-arrowDistance);&::before{top:initial;bottom:calc(var(--arrowContainer-borderSize) * -1);}}}"], pxToRem(10), pxToRem(20));
 export var ArrowContainer = function ArrowContainer(_ref) {
   var children = _ref.children,
       className = _ref.className,
@@ -29,13 +29,21 @@ export var ArrowContainer = function ArrowContainer(_ref) {
       style = _ref.style,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  var internalPadding = typeof padding === 'number' ? pxToRem(padding) : padding;
+  var internalBorderRadius = typeof borderRadius === 'number' ? pxToRem(borderRadius) : borderRadius;
+  var internalSize = typeof size === 'number' ? pxToRem(size) : size;
+  var internalBorderWidth = typeof borderWidth === 'number' ? pxToRem(borderWidth) : borderWidth;
+
   var arrowDistance = function () {
     switch (true) {
       case !!centered:
-        return "calc(50% - " + pxToRem(size) + ")";
+        return "calc(50% - " + internalSize + ")";
 
       case !!distanceAsPercentage:
-        return "calc(" + distance + "% - " + pxToRem(size) + ")";
+        return "calc(" + distance + "% - " + internalSize + ")";
+
+      case typeof distance === 'string':
+        return distance;
 
       default:
         return pxToRem(distance);
@@ -44,7 +52,6 @@ export var ArrowContainer = function ArrowContainer(_ref) {
 
   var rawDistanceValue = Math.sqrt(Math.pow(borderWidth, 2) * 2);
   var borderDistance = borderWidth % 2 === 0 ? Math.floor(rawDistanceValue) : Math.ceil(rawDistanceValue);
-  var borderSize = borderDistance + size;
   return /*#__PURE__*/React.createElement(Container, _extends({
     className: classNames('k-ArrowContainer', className, "k-ArrowContainer--" + position, {
       'k-ArrowContainer--hasShadow': shadow,
@@ -52,15 +59,14 @@ export var ArrowContainer = function ArrowContainer(_ref) {
       'k-ArrowContainer--reverseDistance': distanceIsReverse
     }),
     style: _extends({}, style, {
-      '--k-ArrowContainer-arrowDistance': arrowDistance,
-      '--k-ArrowContainer-arrowSize': pxToRem(size),
-      '--k-ArrowContainer-borderColor': borderColor,
-      '--k-ArrowContainer-borderDistance': pxToRem(borderDistance),
-      '--k-ArrowContainer-borderSize': pxToRem(borderSize),
-      '--k-ArrowContainer-borderRadius': pxToRem(borderRadius),
-      '--k-ArrowContainer-borderWidth': pxToRem(borderWidth),
-      '--k-ArrowContainer-color': color,
-      '--k-ArrowContainer-padding': pxToRem(padding)
+      '--arrowContainer-arrowDistance': arrowDistance,
+      '--arrowContainer-arrowSize': internalSize,
+      '--arrowContainer-borderColor': borderColor,
+      '--arrowContainer-borderDistance': pxToRem(borderDistance),
+      '--arrowContainer-borderRadius': internalBorderRadius,
+      '--arrowContainer-borderWidth': internalBorderWidth,
+      '--arrowContainer-color': color,
+      '--arrowContainer-padding': internalPadding
     })
   }, props), children, /*#__PURE__*/React.createElement("span", {
     className: "k-ArrowContainer__arrow"
@@ -68,17 +74,17 @@ export var ArrowContainer = function ArrowContainer(_ref) {
 };
 ArrowContainer.propTypes = {
   color: PropTypes.string,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   position: PropTypes.string,
   distance: PropTypes.number,
   distanceAsPercentage: PropTypes.bool,
   distanceIsReverse: PropTypes.bool,
   centered: PropTypes.bool,
-  padding: PropTypes.number,
+  padding: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   shadow: PropTypes.bool,
-  borderRadius: PropTypes.number,
+  borderRadius: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   borderColor: PropTypes.string,
-  borderWidth: PropTypes.number
+  borderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 ArrowContainer.defaultProps = {
   color: COLORS.background3,
