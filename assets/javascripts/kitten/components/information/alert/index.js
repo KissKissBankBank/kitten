@@ -320,6 +320,6 @@ Alert.defaultProps = {
   icon: null,
   center: false,
   displayIcon: true,
-  iconHasBorder: false,
+  iconHasBorder: true,
   status: 'info',
 }
