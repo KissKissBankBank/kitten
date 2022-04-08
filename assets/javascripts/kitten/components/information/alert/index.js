@@ -261,7 +261,6 @@ export const Alert = ({
         'k-Alert--shouldHide': !isMounted,
         // Status classes through deprecated props
         'k-Alert--success': !!success,
-        'k-Alert--danger': !!danger,
         'k-Alert--error': !!error,
         'k-Alert--warning': !!warning,
       })}
@@ -295,7 +294,6 @@ export const Alert = ({
 Alert.propTypes = {
   show: PropTypes.bool,
   error: deprecated(PropTypes.bool, 'Use the "status=danger" prop instead'),
-  danger: deprecated(PropTypes.bool, 'Use the "status=danger" prop instead'),
   success: deprecated(PropTypes.bool, 'Use the "status=success" prop instead'),
   warning: deprecated(PropTypes.bool, 'Use the "status=warning" prop instead'),
   closeButton: PropTypes.bool,
