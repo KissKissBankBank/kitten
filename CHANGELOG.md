@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ProjectCard`: Add `overlayText` prop with empty default.
+- Feature: `ProjectCard`: Add `hoverableTitle` prop, defaults to false.
 - Feature: Add the following components:
   - `ChatLayout`
   - `Discussion`
