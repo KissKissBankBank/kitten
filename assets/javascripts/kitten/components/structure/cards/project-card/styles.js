@@ -92,14 +92,16 @@ export const StyledCard = styled.div`
       height: 100%;
       display: flex;
       position: absolute;
+      text-align: center;
       align-items: center;
+      box-sizing: border-box;
       justify-content: center;
       padding: ${pxToRem(20)};
       font-size: ${pxToRem(14)};
       color: var(--color-grey-000);
       ${TYPOGRAPHY.fontStyles.bold};
-      background-color: rgba(34, 34, 34, 0.8);
       transition: opacity var(--transition);
+      background-color: rgba(34, 34, 34, 0.8);
     }
   }
 
