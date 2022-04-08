@@ -168,12 +168,17 @@ const StyledTextareaContainer = styled.div`
     height: initial;
     resize: vertical;
     line-height: ${pxToRem(18)};
+    margin: 0;
 
     &:disabled {
       resize: none;
     }
 
     padding-bottom: 0;
+
+    &.k-Form-TextInput--autoResize {
+      resize: none;
+    }
 
     &.k-Form-TextInput--tiny,
     &.k-Form-TextInput--small {
@@ -330,6 +335,7 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--alignCenter': center,
                 'k-Form-TextInput--rounded': rounded,
                 'k-Form-TextInput--darkBackground': darkBackground,
+                'k-Form-TextInput--autoResize': tag === 'autoresize',
               },
             )}
             style={

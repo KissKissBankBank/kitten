@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add the following components:
+  - `ChatLayout`
+  - `Discussion`
+  - `MessagesMenu`
+- Fix: `TextInput`: Better gradient on Safari.
 - Fix: `OpenLockIconNext`: Improve styles.
 - Fix: `RadioButton`: Improve style.
 - Fix: `TextCopy`: Improve tooltip styles.
