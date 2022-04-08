@@ -5,6 +5,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `ArrowContainer`: Allow CSS Custom Properties as prop values.
+- Deprecations/Changes: `Alert`: Add `displayIcon` boolean prop, defaults to true. `Alert` now always displays an icon, unless `displayIcon` is defined to `false`.
+- Deprecations/Changes: `Alert`: Replace `iconBadgeBorderColor` prop with `iconHasBorder` boolean prop, defaults to true.
+- Deprecations/Changes: `Alert`: Deprecate the following props:
+  - `success`, replaced by `status="success"`,
+  - `error`, replaced by `status="danger"`,
+  - `warning`, replaced by `status="warning"`
+- Feature: `Alert`: Add `status="info"` default prop.
+- Feature: `AlertBox`: Add `iconHasBorder` prop, defaults to true.
+- Fix: `AlertBox`: Improve styles.
+- Feature: `EditorialCard`: Add component.
+- Feature: `LongArrowIconNext`: Add component.
+- Feature: `ProjectCard`: Add `overlayText` prop with empty default.
+- Feature: `ProjectCard`: Add `hoverableTitle` prop, defaults to false.
 - Feature: Add the following components:
   - `ChatLayout`
   - `Discussion`
