@@ -24,6 +24,7 @@ const argTypes = {
     name: 'Story component: progressProps',
     control: 'object',
   },
+  overlayText: { control: 'text' },
 }
 
 const args = {
@@ -38,6 +39,7 @@ const args = {
     'aria-label': 'Progrès de la campagne',
     value: '55',
   },
+  overlayText: '',
 }
 
 export const Default = ({ progressProps, ...args }) => (
@@ -96,6 +98,9 @@ export const Lendopolis = ({ progressProps, ...args }) => (
         <span>Prolongation</span>
       </Tag>
     }
+    overlayText="Réservé aux départements 72, 73, 74"
+    hoverableTitle
+    href="https://www.lendopolis.com"
   >
     <ProjectCard.Avatar
       imageProps={{

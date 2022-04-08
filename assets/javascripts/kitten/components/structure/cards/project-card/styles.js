@@ -22,6 +22,14 @@ export const StyledCard = styled.div`
   &[href]:active,
   &[href]:hover {
     border: var(--border-hover);
+
+    .k-ProjectCard__image__overlay {
+      opacity: 1;
+    }
+
+    &.k-ProjectCard--hoverableTitle .k-ProjectCard__title {
+      color: var(--color-primary-500);
+    }
   }
 
   &[href]:focus-visible {
@@ -75,6 +83,26 @@ export const StyledCard = styled.div`
         height: 100%;
       }
     }
+
+    .k-ProjectCard__image__overlay {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      text-align: center;
+      align-items: center;
+      box-sizing: border-box;
+      justify-content: center;
+      padding: ${pxToRem(20)};
+      font-size: ${pxToRem(14)};
+      color: var(--color-grey-000);
+      ${TYPOGRAPHY.fontStyles.bold};
+      transition: opacity var(--transition);
+      background-color: rgba(34, 34, 34, 0.8);
+    }
   }
 
   .k-ProjectCard__topLine {
@@ -96,6 +124,10 @@ export const StyledCard = styled.div`
     &.k-ProjectCard__topLine--right {
       justify-content: flex-end;
     }
+  }
+
+  .k-ProjectCard__title {
+    transition: color var(--transition);
   }
 
   .k-ProjectCard__content {
