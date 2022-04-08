@@ -13,23 +13,23 @@ export default {
     },
   },
   decorators: [
-    story => (
-      <div className="story-Container story-Grid">
-        {story()}
-      </div>
-    ),
+    story => <div className="story-Container story-Grid">{story()}</div>,
   ],
   argTypes: {
     href: { control: 'text' },
-    status: { control: 'radio', options: ['info', 'success', 'custom']},
+    status: { control: 'radio', options: ['info', 'success', 'custom'] },
     customColor: { control: 'color' },
-    hasArrow: {control: 'boolean'}
+    hasArrow: { control: 'boolean' },
+    linkActionText: { control: 'text' },
+    showVersoActionText: { control: 'text' },
   },
   args: {
     href: '#',
     status: 'info',
     customColor: 'var(--color-primary-500)',
-    hasArrow: true
+    hasArrow: true,
+    linkActionText: 'Voir tous les projets',
+    showVersoActionText: 'Plus de précisions',
   },
 }
 
@@ -37,14 +37,33 @@ export const Default = args => (
   <>
     <EditorialCard {...args}>
       <EditorialCard.Title>Les collectes à venir</EditorialCard.Title>
-      <EditorialCard.Content>Découvrez nos futurs projets et inscrivez-vous pour être informé dès l'ouverture des collectes.</EditorialCard.Content>
+      <EditorialCard.Content>
+        Découvrez nos futurs projets et inscrivez-vous pour être informé dès
+        l'ouverture des collectes.
+      </EditorialCard.Content>
     </EditorialCard>
-    <EditorialCard href="#hello" status="custom" hasVerso customColor="var(--color-grey-900)">
+    <EditorialCard
+      href="#hello"
+      status="custom"
+      customColor="var(--color-grey-900)"
+      linkActionText='Voir tous les projets réservés'
+      showVersoActionText='Lire plus de précisions'
+    >
       <EditorialCard.Title>Les collectes réservées</EditorialCard.Title>
-      <EditorialCard.Content>Pourquoi ces collectes sont reservées à certains départements?</EditorialCard.Content>
+      <EditorialCard.Content>
+        Pourquoi ces collectes sont reservées à certains départements?
+      </EditorialCard.Content>
       <EditorialCard.Verso actionText="Aller plus loin">
-        <p>Le projet financé est lauréat d’un appel d'offres mené par la Commission de Régulation de l’Énergie (CRE) qui encadre le développement des énergies renouvelables en France.</p>
-        <p>Pour investir dans ces projets, il faut pouvoir justifier d’une résidence dans le département d’implantation du projet ou un département limitrophe.</p>
+        <p>
+          Le projet financé est lauréat d’un appel d'offres mené par la
+          Commission de Régulation de l’Énergie (CRE) qui encadre le
+          développement des énergies renouvelables en France.
+        </p>
+        <p>
+          Pour investir dans ces projets, il faut pouvoir justifier d’une
+          résidence dans le département d’implantation du projet ou un
+          département limitrophe.
+        </p>
       </EditorialCard.Verso>
     </EditorialCard>
   </>

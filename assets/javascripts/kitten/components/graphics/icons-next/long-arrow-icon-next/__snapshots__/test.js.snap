@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LongArrowIconNext /> default props matches the snapshot 1`] = `
+<svg
+  fill="var(--color-grey-900, #222)"
+  height="33"
+  style={
+    Object {
+      "transform": "rotate(-90deg)",
+    }
+  }
+  viewBox="0 0 23 33"
+  width="23"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIconNext /> with the prop \`direction\` set to \`down\` matches the snapshot 1`] = `
+<svg
+  fill="var(--color-grey-900, #222)"
+  height="33"
+  style={
+    Object {
+      "transform": null,
+    }
+  }
+  viewBox="0 0 23 33"
+  width="23"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIconNext /> with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
+<svg
+  fill="var(--color-grey-900, #222)"
+  height="33"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
+  viewBox="0 0 23 33"
+  width="23"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z"
+  />
+</svg>
+`;
+
+exports[`<LongArrowIconNext /> with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
+<svg
+  fill="var(--color-grey-900, #222)"
+  height="33"
+  style={
+    Object {
+      "transform": "rotate(-90deg)",
+    }
+  }
+  viewBox="0 0 23 33"
+  width="23"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z"
+  />
+</svg>
+`;

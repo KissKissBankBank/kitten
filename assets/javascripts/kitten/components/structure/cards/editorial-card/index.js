@@ -10,14 +10,14 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { LongArrowIconNext } from '../../../graphics/icons-next/long-arrow-icon-next'
 import {
   getReactElementsByType,
-  getReactElementsWithoutType
+  getReactElementsWithoutType,
 } from '../../../../helpers/react/get-react-elements'
 
 const StyledEditorialCard = styled.div`
   box-sizing: border-box;
   height: 100%;
   position: relative;
-  color: var(--color-grey-200);
+  color: var(--color-grey-000);
   border-radius: var(--border-radius-m);
   overflow: hidden;
 
@@ -84,6 +84,10 @@ const StyledEditorialCard = styled.div`
   .k-EditorialCard__arrow {
     margin-top: ${pxToRem(20)};
     align-self: end;
+
+    @media ${mq.mobile} {
+      transform: none !important;
+    }
   }
 
   &.k-EditorialCard--info {
@@ -107,6 +111,7 @@ export const EditorialCard = ({
   style,
   linkActionText,
   showVersoActionText,
+  linkProps,
   ...props
 }) => {
   const [isRecto, setIsVerso] = useState(true)
@@ -118,7 +123,8 @@ export const EditorialCard = ({
   let actionProps = {
     className: 'k-EditorialCard__action',
     href: href,
-    'aria-label': linkActionText
+    'aria-label': linkActionText,
+    ...linkProps
   }
 
   if (hasVerso && isRecto) {
@@ -126,8 +132,12 @@ export const EditorialCard = ({
     actionProps = {
       className: 'k-EditorialCard__action k-u-reset-button',
       type: 'button',
-      onClick: () => setIsVerso(false),
-      'aria-label': showVersoActionText
+      onClick: (e) => {
+        setIsVerso(false)
+        linkProps.onClick(e)
+      },
+      'aria-label': showVersoActionText,
+      ...linkProps
     }
   }
 
@@ -146,14 +156,19 @@ export const EditorialCard = ({
       )}
       style={{
         '--editorialCard-customColor': !!customColor ? customColor : null,
-        ...style
+        ...style,
       }}
       {...props}
     >
       <div className="k-EditorialCard__grid">
         <div className="k-EditorialCard__recto">
           {getReactElementsWithoutType({ children, type: Verso })}
-          {!!hasArrow && <LongArrowIconNext className="k-EditorialCard__arrow" color="var(--color-grey-000)" />}
+          {!!hasArrow && (
+            <LongArrowIconNext
+              className="k-EditorialCard__arrow"
+              color="var(--color-grey-000)"
+            />
+          )}
         </div>
 
         {hasVerso && VersoChild}
@@ -170,6 +185,7 @@ EditorialCard.propTypes = {
   hasArrow: PropTypes.bool,
   linkActionText: PropTypes.string,
   showVersoActionText: PropTypes.string,
+  linkProps: PropTypes.object,
 }
 
 EditorialCard.defaultProps = {
@@ -178,6 +194,7 @@ EditorialCard.defaultProps = {
   hasArrow: true,
   linkActionText: 'Voir tous les projets',
   showVersoActionText: 'Plus de précisions',
+  linkProps: {}
 }
 
 const Title = ({ className, children, ...props }) => {
@@ -207,10 +224,7 @@ const Content = ({ className, ...props }) => {
 
 const Verso = ({ className, actionText, children, ...props }) => {
   return (
-    <div
-      className={classNames('k-EditorialCard__verso', className)}
-      {...props}
-    >
+    <div className={classNames('k-EditorialCard__verso', className)} {...props}>
       <div className="k-EditorialCard__content">{children}</div>
       <Text className="k-EditorialCard__actionText k-u-m-t-8" weight="bold">
         {actionText}

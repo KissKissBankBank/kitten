@@ -12,11 +12,11 @@ export const LongArrowIconNext = ({ direction, color, ...others }) => {
 
   return (
     <svg
-      {...others}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 23 33"
       fill={color}
       style={{ transform: transform[direction] }}
+      {...others}
     >
       <path d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z" />
     </svg>
