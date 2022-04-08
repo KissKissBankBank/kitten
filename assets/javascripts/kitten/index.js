@@ -302,7 +302,7 @@ export { LinkBox } from './components/information/boxes/link-box'
 export { CommentAvatar } from './components/interaction/comment-block/comment-avatar'
 export { CommentForm } from './components/interaction/comment-block/comment-form'
 export { Comment } from './components/interaction/comment-block/comment'
-
+export { Discussion } from './components/interaction/discussion'
 export { DragAndDropList } from './components/interaction/drag-and-drop-list'
 export {
   StepperIcon,
@@ -334,6 +334,7 @@ export {
   AdaptableGrid,
   AdaptableGridCol,
 } from './components/layout/adaptable-grid'
+export { ChatLayout } from './components/layout/chat-layout'
 export { Container } from './components/layout/container'
 export { DashboardLayout } from './components/layout/dashboard-layout'
 export { DeskLayout } from './components/layout/desk-layout'
@@ -353,6 +354,7 @@ export { DeskMenu } from './components/navigation/desk-menu'
 export { FloatingMenu } from './components/navigation/floating-menu'
 export { HeaderMenu } from './components/navigation/header-menu'
 export { default as HeaderNav } from './components/navigation/header-nav'
+export { MessagesMenu } from './components/navigation/messages-menu'
 export { NavBar } from './components/navigation/nav-bar'
 export { Pagination } from './components/navigation/pagination'
 export { LinkList } from './components/navigation/link-list'

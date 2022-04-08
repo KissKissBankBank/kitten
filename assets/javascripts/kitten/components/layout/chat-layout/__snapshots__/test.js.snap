@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChatLayout /> compare with snapshot matches with snapshot 1`] = `
+.c0 {
+  overflow: hidden;
+  height: calc(100vh - 4.0625rem);
+}
+
+.c0 .k-ChatLayout__column {
+  height: 100% !important;
+}
+
+.c0 .k-ChatLayout__column__title {
+  line-height: 6.25rem;
+  margin: 0;
+}
+
+@media (max-width:1079px) {
+  .c0 {
+    width: 100vw;
+  }
+
+  .c0 .k-ChatLayout__grid {
+    height: 100%;
+    width: 300vw;
+    display: grid;
+    grid-template-columns: repeat(3,100vw);
+    grid-template-rows: 100%;
+    gap: 0.625rem;
+    -webkit-transform: translateX(calc(-1px * var(--chatLayoutOffset,0)));
+    -ms-transform: translateX(calc(-1px * var(--chatLayoutOffset,0)));
+    transform: translateX(calc(-1px * var(--chatLayoutOffset,0)));
+    -webkit-transition: -webkit-transform var(--transition);
+    -webkit-transition: transform var(--transition);
+    transition: transform var(--transition);
+  }
+
+  .c0 .k-ChatLayout__columnHeader {
+    box-sizing: border-box;
+    height: 3.5rem;
+    padding: 0 1.25rem;
+    background-color: var(--color-grey-100);
+    display: grid;
+    gap: 0.625rem;
+    grid-template-columns: auto 1fr auto;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .c0 .k-ChatLayout__columnHeader__back,
+  .c0 .k-ChatLayout__columnHeader__next {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .c0 .k-ChatLayout__columnHeader__back {
+    padding-inline: 1.25rem 0.625rem;
+    margin-inline: -1.25rem -0.625rem;
+  }
+
+  .c0 .k-ChatLayout__columnHeader__next {
+    padding-inline: 0.625rem 1.25rem;
+    margin-inline: -0.625rem -1.25rem;
+  }
+
+  .c0 .k-ChatLayout__columnHeader__title {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-block: 0.625rem;
+  }
+
+  .c0 .k-ChatLayout__columnHeader.k-ChatLayout__columnHeader--centeredHeader {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .c0 .k-ChatLayout__columnHeader.k-ChatLayout__columnHeader--centeredHeader .k-ChatLayout__columnHeader__back {
+    justify-self: start;
+  }
+
+  .c0 .k-ChatLayout__columnHeader.k-ChatLayout__columnHeader--centeredHeader .k-ChatLayout__columnHeader__next {
+    justify-self: end;
+  }
+
+  .c0 .k-ChatLayout__columnHeader.k-ChatLayout__columnHeader--centeredHeader .k-ChatLayout__columnHeader__title {
+    justify-self: center;
+  }
+
+  .c0 .k-ChatLayout__column__title {
+    padding-inline: 1.25rem;
+  }
+
+  .c0 .k-ChatLayout__column__content {
+    height: calc(100% - 3.5rem);
+  }
+
+  .c0 .k-ChatLayout__column--isPrimaryColumn .k-ChatLayout__column__content {
+    height: calc(100% - 6.25rem);
+  }
+
+  .c0 .k-ChatLayout__column__content:not(.k-ChatLayout__column__content--fullWidth) {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 {
+    background-color: var(--color-grey-100);
+    padding: 0 3.125rem;
+  }
+
+  .c0 .k-ChatLayout__grid {
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 1.25rem;
+    display: grid;
+    gap: 1.5625rem;
+    grid-template-columns: 1fr 2fr 15rem;
+    grid-template-rows: 100%;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .c0 .k-ChatLayout__grid .k-ChatLayout__columnHeader {
+    display: none;
+  }
+
+  .c0 .k-ChatLayout__grid .k-ChatLayout__column__content {
+    height: calc(100% - 6.25rem);
+  }
+
+  .c0 .k-ChatLayout__grid .k-ChatLayout__column:not(.k-ChatLayout__column--isPrimaryColumn) {
+    margin-top: 6.25rem;
+  }
+}
+
+@supports selector(:focus-visible) {
+  .c0 .k-ChatLayout__column:focus {
+    outline-style: auto;
+  }
+
+  .c0 .k-ChatLayout__column:focus:not(:focus-visible) {
+    outline: transparent;
+  }
+
+  .c0 .k-ChatLayout__column:focus-visible {
+    outline-style: auto;
+  }
+}
+
+@supports not (selector(:focus-visible)) {
+  .c0 .k-ChatLayout__column:focus {
+    outline: transparent;
+  }
+}
+
+<main
+  className="c0 k-ChatLayout"
+  id="main"
+  style={
+    Object {
+      "--chatLayoutOffset": 0,
+    }
+  }
+>
+  <div
+    className="k-ChatLayout__grid"
+  >
+    <section
+      className="k-ChatLayout__column k-ChatLayout__col-list k-ChatLayout__column--isPrimaryColumn"
+      id="list"
+      tabIndex="-1"
+    >
+      <h1
+        className="k-u-size-giant k-u-weight-bold k-ChatLayout__column__title"
+      >
+        Messagerie
+      </h1>
+      <div
+        className="k-ChatLayout__column__content"
+      >
+        Hello world
+      </div>
+    </section>
+    <section
+      className="k-ChatLayout__column k-ChatLayout__col-chat k-ChatLayout__column--hasMobileHeader"
+      id="chat"
+      tabIndex="-1"
+    >
+      <div
+        className="k-ChatLayout__columnHeader"
+      >
+        <button
+          className="k-ChatLayout__columnHeader__back k-u-reset-button"
+          onClick={[Function]}
+          type="button"
+        >
+          Back action text
+        </button>
+        <div
+          className="k-ChatLayout__columnHeader__title"
+        >
+          <p>
+            Title
+          </p>
+        </div>
+        <button
+          className="k-ChatLayout__columnHeader__next k-u-reset-button"
+          onClick={[Function]}
+          type="button"
+        >
+          Next action text
+        </button>
+      </div>
+      <div
+        className="k-ChatLayout__column__content k-ChatLayout__column__content--fullWidth"
+      >
+        Hello world
+      </div>
+    </section>
+    <section
+      className="k-ChatLayout__column k-ChatLayout__col-info k-ChatLayout__column--hasMobileHeader"
+      id="info"
+      tabIndex="-1"
+    >
+      <div
+        className="k-ChatLayout__columnHeader k-ChatLayout__columnHeader--centeredHeader"
+      >
+        <button
+          className="k-ChatLayout__columnHeader__back k-u-reset-button"
+          onClick={[Function]}
+          type="button"
+        >
+          Back action text
+        </button>
+        <div
+          className="k-ChatLayout__columnHeader__title"
+        >
+          Title
+        </div>
+      </div>
+      <div
+        className="k-ChatLayout__column__content"
+      >
+        Hello world
+      </div>
+    </section>
+  </div>
+</main>
+`;

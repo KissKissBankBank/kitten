@@ -4,11 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Deprecations/Changes: `Alert`: Deprecate `error` replaced by `danger` prop.
-- Fix: `Alert`: Remove `iconBadgeBorderColor` props.
+- Deprecations/Changes: `Alert`: Deprecate the following props:
+  - `success`, replaced by `status="success"`,
+  - `error`, replaced by `status="danger"`,
+  - `warning`, replaced by `status="warning"`
+- Feature: `Alert`: Add `status="info"` default prop.
+- Fix: `Alert`: Remove `iconBadgeBorderColor` prop.
 - Fix: `AlertBox`: Improve styles.
+- Feature: Add the following components:
+  - `ChatLayout`
+  - `Discussion`
+  - `MessagesMenu`
+- Fix: `TextInput`: Better gradient on Safari.
 - Fix: `OpenLockIconNext`: Improve styles.
 - Fix: `RadioButton`: Improve style.
+- Fix: `TextCopy`: Improve tooltip styles.
 
 ## [10.0.1] - 2022-04-05
 
