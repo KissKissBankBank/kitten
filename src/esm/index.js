@@ -204,6 +204,7 @@ export { HomeIconNext } from './components/graphics/icons-next/home-icon-next';
 export { InfiniteIconNext } from './components/graphics/icons-next/infinite-icon-next';
 export { InstagramIconNext } from './components/graphics/icons-next/instagram-icon-next';
 export { LargeArrowIconNext } from './components/graphics/icons-next/large-arrow-icon-next';
+export { LongArrowIconNext } from './components/graphics/icons-next/long-arrow-icon-next';
 export { LinkIconNext } from './components/graphics/icons-next/link-icon-next';
 export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon-next';
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon';
@@ -265,6 +266,7 @@ export { LinkBox } from './components/information/boxes/link-box'; // Interactio
 export { CommentAvatar } from './components/interaction/comment-block/comment-avatar';
 export { CommentForm } from './components/interaction/comment-block/comment-form';
 export { Comment } from './components/interaction/comment-block/comment';
+export { Discussion } from './components/interaction/discussion';
 export { DragAndDropList } from './components/interaction/drag-and-drop-list';
 export { StepperIcon, StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/interaction/stepper-icon';
 export { Stepper } from './components/interaction/stepper'; // Interaction/Upload
@@ -283,6 +285,7 @@ export { Toggletip } from './components/layer/toggletip'; // Layout
 // ------
 
 export { AdaptableGrid, AdaptableGridCol } from './components/layout/adaptable-grid';
+export { ChatLayout } from './components/layout/chat-layout';
 export { Container } from './components/layout/container';
 export { DashboardLayout } from './components/layout/dashboard-layout';
 export { DeskLayout } from './components/layout/desk-layout';
@@ -300,6 +303,7 @@ export { DeskMenu } from './components/navigation/desk-menu';
 export { FloatingMenu } from './components/navigation/floating-menu';
 export { HeaderMenu } from './components/navigation/header-menu';
 export { default as HeaderNav } from './components/navigation/header-nav';
+export { MessagesMenu } from './components/navigation/messages-menu';
 export { NavBar } from './components/navigation/nav-bar';
 export { Pagination } from './components/navigation/pagination';
 export { LinkList } from './components/navigation/link-list'; // Structure
@@ -314,6 +318,7 @@ export { ClickableCard } from './components/structure/cards/clickable-card';
 export { ContentCard } from './components/structure/cards/content-card';
 export { ContributionCard } from './components/structure/cards/contribution-card';
 export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card';
+export { EditorialCard } from './components/structure/cards/editorial-card';
 export { EngagementCard } from './components/structure/cards/engagement-card';
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image';
 export { HorizontalProjectCard } from './components/structure/cards/horizontal-project-card';

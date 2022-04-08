@@ -28,7 +28,7 @@ var _progress = require("../../../feedback/progress");
 var _gifVideo = require("../../../embed/gif-video");
 
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign", "overlayText", "hoverableTitle"],
     _excluded3 = ["className", "style"],
     _excluded4 = ["className", "lastLine"],
     _excluded5 = ["className", "noMargin"],
@@ -54,12 +54,15 @@ var ProjectCard = function ProjectCard(_ref) {
       loading = _ref.loading,
       topLine = _ref.topLine,
       topLineAlign = _ref.topLineAlign,
+      overlayText = _ref.overlayText,
+      hoverableTitle = _ref.hoverableTitle,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCard, (0, _extends2.default)({
     as: href ? 'a' : 'div',
     className: (0, _classnames.default)('k-ProjectCard', className, "k-ProjectCard--" + status, {
       'k-ProjectCard--isStretched': stretch,
-      'k-ProjectCard--isLoading': loading
+      'k-ProjectCard--isLoading': loading,
+      'k-ProjectCard--hoverableTitle': hoverableTitle
     }),
     href: href
   }, props), /*#__PURE__*/_react.default.createElement("div", {
@@ -75,7 +78,9 @@ var ProjectCard = function ProjectCard(_ref) {
     return /*#__PURE__*/_react.default.createElement("source", (0, _extends2.default)({
       key: "video_source_" + sourceProps.src
     }, sourceProps));
-  }))), topLine && /*#__PURE__*/_react.default.createElement("div", {
+  })), !!overlayText && /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-ProjectCard__image__overlay"
+  }, overlayText)), topLine && /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-ProjectCard__topLine', "k-ProjectCard__topLine--" + topLineAlign)
   }, topLine), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-ProjectCard__content"
@@ -96,7 +101,9 @@ ProjectCard.defaultProps = {
   stretch: false,
   loading: false,
   topLine: null,
-  topLineAlign: 'right'
+  topLineAlign: 'right',
+  overlayText: '',
+  hoverableTitle: false
 };
 ProjectCard.propTypes = {
   sticker: (0, _deprecated.default)(_propTypes.default.node, 'Please use `ProjectCard.Sticker` instead.'),
@@ -107,7 +114,9 @@ ProjectCard.propTypes = {
   stretch: _propTypes.default.bool,
   loading: _propTypes.default.bool,
   topLine: _propTypes.default.node,
-  topLineAlign: _propTypes.default.oneOf(['left', 'center', 'right'])
+  topLineAlign: _propTypes.default.oneOf(['left', 'center', 'right']),
+  overlayText: _propTypes.default.node,
+  hoverableTitle: _propTypes.default.bool
 };
 
 ProjectCard.Title = function (_ref2) {

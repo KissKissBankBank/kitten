@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign"],
+    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign", "overlayText", "hoverableTitle"],
     _excluded3 = ["className", "style"],
     _excluded4 = ["className", "lastLine"],
     _excluded5 = ["className", "noMargin"],
@@ -35,13 +35,16 @@ export var ProjectCard = function ProjectCard(_ref) {
       loading = _ref.loading,
       topLine = _ref.topLine,
       topLineAlign = _ref.topLineAlign,
+      overlayText = _ref.overlayText,
+      hoverableTitle = _ref.hoverableTitle,
       props = _objectWithoutPropertiesLoose(_ref, _excluded2);
 
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     as: href ? 'a' : 'div',
     className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status, {
       'k-ProjectCard--isStretched': stretch,
-      'k-ProjectCard--isLoading': loading
+      'k-ProjectCard--isLoading': loading,
+      'k-ProjectCard--hoverableTitle': hoverableTitle
     }),
     href: href
   }, props), /*#__PURE__*/React.createElement("div", {
@@ -57,7 +60,9 @@ export var ProjectCard = function ProjectCard(_ref) {
     return /*#__PURE__*/React.createElement("source", _extends({
       key: "video_source_" + sourceProps.src
     }, sourceProps));
-  }))), topLine && /*#__PURE__*/React.createElement("div", {
+  })), !!overlayText && /*#__PURE__*/React.createElement("div", {
+    className: "k-ProjectCard__image__overlay"
+  }, overlayText)), topLine && /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ProjectCard__topLine', "k-ProjectCard__topLine--" + topLineAlign)
   }, topLine), /*#__PURE__*/React.createElement("div", {
     className: "k-ProjectCard__content"
@@ -76,7 +81,9 @@ ProjectCard.defaultProps = {
   stretch: false,
   loading: false,
   topLine: null,
-  topLineAlign: 'right'
+  topLineAlign: 'right',
+  overlayText: '',
+  hoverableTitle: false
 };
 ProjectCard.propTypes = {
   sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
@@ -87,7 +94,9 @@ ProjectCard.propTypes = {
   stretch: PropTypes.bool,
   loading: PropTypes.bool,
   topLine: PropTypes.node,
-  topLineAlign: PropTypes.oneOf(['left', 'center', 'right'])
+  topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
+  overlayText: PropTypes.node,
+  hoverableTitle: PropTypes.bool
 };
 
 ProjectCard.Title = function (_ref2) {
