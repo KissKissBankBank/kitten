@@ -35,4 +35,22 @@ describe('<Alert />', () => {
       .toJSON()
     expect(component).toMatchSnapshot()
   })
+  it('should matches with snapshot without icon', () => {
+    const component = renderer
+      .create(<Alert displayIcon={false}>Alert !</Alert>)
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
+  it('should matches with snapshot with icon border', () => {
+    const component = renderer
+      .create(<Alert iconHasBorder>Alert !</Alert>)
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
+  it('should matches with snapshot with custom icon', () => {
+    const component = renderer
+      .create(<Alert icon={<svg />}>Alert !</Alert>)
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
 })

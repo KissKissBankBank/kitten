@@ -19,7 +19,8 @@ export default {
     children: 'Modifications effectuées, lien ici, Modifications effectuées,',
     icon: null,
     center: false,
-    hasBorder: true,
+    iconHasBorder: true,
+    displayIcon: true,
     status: 'info',
   },
   argTypes: {
@@ -47,6 +48,9 @@ export default {
       control: 'boolean',
     },
     displayIcon: { control: 'boolean' },
+    iconHasBorder: {
+      control: 'boolean',
+    },
     status: {
       control: 'select',
       options: ['info', 'success', 'warning', 'danger'],

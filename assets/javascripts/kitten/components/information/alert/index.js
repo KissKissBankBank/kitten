@@ -198,7 +198,7 @@ export const Alert = ({
   icon,
   center,
   status,
-  hasBorder,
+  iconHasBorder,
   displayIcon,
   ...others
 }) => {
@@ -219,11 +219,7 @@ export const Alert = ({
 
   if (isTrashed || !show) return null
 
-  const internalIcon = (() => {
-    if (icon) return icon
-
-    return <StatusIconNext status={status} />
-  })()
+  const internalIcon = icon || <StatusIconNext status={status} />
 
   const role = (() => {
     switch (true) {
@@ -276,7 +272,7 @@ export const Alert = ({
           className="k-Alert__iconBadge"
           children={internalIcon}
           status={statusIcon}
-          hasBorder={hasBorder}
+          hasBorder={iconHasBorder}
         />
       )}
 
@@ -306,8 +302,13 @@ Alert.propTypes = {
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
   icon: PropTypes.node,
+  iconBadgeBorderColor: deprecated(
+    PropTypes.string,
+    'Use iconHasBorder prop instead',
+  ),
   center: PropTypes.bool,
   displayIcon: PropTypes.bool,
+  iconHasBorder: PropTypes.bool,
   status: PropTypes.oneOf(['info', 'warning', 'success', 'danger']),
 }
 
@@ -319,5 +320,6 @@ Alert.defaultProps = {
   icon: null,
   center: false,
   displayIcon: true,
+  iconHasBorder: false,
   status: 'info',
 }
