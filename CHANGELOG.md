@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `error`, replaced by `status="danger"`,
   - `warning`, replaced by `status="warning"`
 - Feature: `Alert`: Add `status="info"` default prop.
-- Fix: `Alert`: Remove `iconBadgeBorderColor` prop.
+- Deprecations/Changes: `Alert`: Remove `iconBadgeBorderColor` prop.
 - Fix: `AlertBox`: Improve styles.
 - Feature: Add the following components:
   - `ChatLayout`
