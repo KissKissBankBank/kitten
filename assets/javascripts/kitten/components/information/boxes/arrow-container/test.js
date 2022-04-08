@@ -42,6 +42,18 @@ describe('<ArrowContainer />', () => {
     })
   })
 
+  describe('with `size` string prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer size="var(--size)">Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `position` prop', () => {
     beforeEach(() => {
       component = renderer
@@ -118,6 +130,48 @@ describe('<ArrowContainer />', () => {
     })
   })
 
+  describe('with `borderRadius` string prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ArrowContainer borderRadius="var(--border-radius-m)">
+            Foobar
+          </ArrowContainer>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `padding` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer padding={20}>Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `padding` string prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ArrowContainer padding="var(--spacing-m)">Foobar</ArrowContainer>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `borderColor` prop', () => {
     beforeEach(() => {
       component = renderer
@@ -134,6 +188,22 @@ describe('<ArrowContainer />', () => {
     beforeEach(() => {
       component = renderer
         .create(<ArrowContainer borderWidth={3}>Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `borderWidth` string prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ArrowContainer borderWidth="var(--border-width)">
+            Foobar
+          </ArrowContainer>,
+        )
         .toJSON()
     })
 

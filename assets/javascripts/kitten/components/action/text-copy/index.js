@@ -166,7 +166,7 @@ export const TextCopy = ({
           centered
           role="alert"
           className="k-TextCopy__tooltip"
-          borderRadius={6}
+          borderRadius="var(--border-radius-s)"
         >
           <Text color="background1" weight="light" size="micro">
             {alertMessage}
