@@ -13,6 +13,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `Alert`: Add `status="info"` default prop.
 - Feature: `AlertBox`: Add `iconHasBorder` prop, defaults to true.
 - Fix: `AlertBox`: Improve styles.
+- Feature: `EditorialCard`: Add component.
+- Feature: `LongArrowIconNext`: Add component.
+- Feature: `ProjectCard`: Add `overlayText` prop with empty default.
+- Feature: `ProjectCard`: Add `hoverableTitle` prop, defaults to false.
 - Feature: Add the following components:
   - `ChatLayout`
   - `Discussion`

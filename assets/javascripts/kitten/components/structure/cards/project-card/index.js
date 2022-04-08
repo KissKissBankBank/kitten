@@ -22,6 +22,8 @@ export const ProjectCard = ({
   loading,
   topLine,
   topLineAlign,
+  overlayText,
+  hoverableTitle,
   ...props
 }) => {
   return (
@@ -34,6 +36,7 @@ export const ProjectCard = ({
         {
           'k-ProjectCard--isStretched': stretch,
           'k-ProjectCard--isLoading': loading,
+          'k-ProjectCard--hoverableTitle': hoverableTitle,
         },
       )}
       href={href}
@@ -66,6 +69,9 @@ export const ProjectCard = ({
               />
             ))}
           </GifVideo>
+        )}
+        {!!overlayText && (
+          <div className="k-ProjectCard__image__overlay">{overlayText}</div>
         )}
       </div>
 
@@ -102,6 +108,8 @@ ProjectCard.defaultProps = {
   loading: false,
   topLine: null,
   topLineAlign: 'right',
+  overlayText: '',
+  hoverableTitle: false,
 }
 
 ProjectCard.propTypes = {
@@ -123,6 +131,8 @@ ProjectCard.propTypes = {
   loading: PropTypes.bool,
   topLine: PropTypes.node,
   topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
+  overlayText: PropTypes.node,
+  hoverableTitle: PropTypes.bool,
 }
 
 ProjectCard.Title = ({ className, style, ...props }) => {
