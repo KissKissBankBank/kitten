@@ -1,6 +1,8 @@
 import React from 'react'
-import { Button, Title, Paragraph, Modal, Marger } from 'kitten'
+import { Modal } from './index'
+import { Button } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -32,56 +34,182 @@ const paragraphContainer = `
   nulla pariatur?
 `
 
-const StoryContent = ({ content }) => (
-  <Marger top="8" bottom="8">
-    <Marger bottom="2">
-      <Title modifier="tertiary" noMargin tag="p">
-        Lorem ipsum dolor sit consectetuer
-      </Title>
-    </Marger>
-
-    <Marger top="2" bottom="4">
-      <Paragraph modifier="secondary" noMargin tag="p">
-        {content}
-      </Paragraph>
-    </Marger>
-
-    <Marger top="4" bottom="10">
-      <Button modifier="helium" size="large">
-        Action 1 Button
-      </Button>
-    </Marger>
-  </Marger>
-)
-
-const StoryButton = ({ children }) => (
-  <Button modifier="helium">{children}</Button>
-)
-
 export default {
   title: 'Layer/Modal',
   component: Modal,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="Modal" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="Modal as Modal" />
+      ),
     },
+  },
+  subcomponents: {
+    Title: Modal.Title,
+    Paragraph: Modal.Paragraph,
+    Actions: Modal.Actions,
+    Button: Modal.Button,
+    CloseButton: Modal.CloseButton,
   },
   decorators: [
     story => <div className="story-Container story-Grid">{story()}</div>,
   ],
 }
 
-export const OldModal = () => (
-  <>
-    <p className="k-u-weight-light">
-      This Modal will be deprecated in the future.
-    </p>
+const args = {
+  ...Modal.defaultProps,
+  trigger: (
+    <Button modifier="helium" onClick={action('Trigger clicked')}>
+      Open
+    </Button>
+  ),
+  contentText: paragraphContainer,
+}
 
-    <Modal
-      closeButtonLabel="Fermer"
-      trigger={<StoryButton children="Open" />}
-      content={<StoryContent content={paragraphContainer} />}
-      disableOutsideScroll
-    />
-  </>
+const argTypes = {
+  trigger: {
+    name: 'trigger',
+    description: 'React element that is used as a trigger for the Modal.',
+    control: null,
+  },
+  label: {
+    name: 'label',
+    description: 'Label for the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  labelledby: {
+    name: 'labelledby',
+    description:
+      'ID for the element that labels the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  describedby: {
+    name: 'describedby',
+    description:
+      'ID for the element that describes the content of the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  closeButtonLabel: {
+    name: 'closeButtonLabel',
+    description: 'Label for the close button. For accessibility purposes.',
+    control: 'text',
+  },
+  fullSize: {
+    name: 'fullSize',
+    control: 'boolean',
+  },
+  fullSizeOnMobile: {
+    name: 'fullSizeOnMobile',
+    control: 'boolean',
+  },
+  modalProps: {
+    name: 'modalProps',
+    control: 'object',
+  },
+  hasCloseButton: {
+    name: 'hasCloseButton',
+    control: 'boolean',
+  },
+  size: {
+    name: 'size',
+    options: ['small', 'medium', 'large'],
+    control: 'select',
+  },
+  isOpen: {
+    name: 'isOpen',
+    control: 'boolean',
+  },
+  zIndex: {
+    name: 'zIndex',
+    control: 'number',
+  },
+  headerTitle: {
+    name: 'headerTitle',
+    control: 'object',
+  },
+  headerActions: {
+    name: 'headerActions',
+    control: 'object',
+  },
+  headerMessage: {
+    name: 'headerMessage',
+    control: 'object',
+  },
+  contentCols: {
+    name: 'contentCols',
+    control: 'object',
+  },
+  headerZIndex: {
+    name: 'headerZIndex',
+    control: 'number',
+  },
+  contentText: {
+    name: 'content text (story prop)',
+    control: 'text',
+  },
+}
+
+export const Default = ({
+  z_sticky,
+  z_stickyOnMobile,
+  z_fullSize,
+  z_fullSizeOnMobile,
+  contentText,
+  buttonSelection,
+  ...args
+}) => (
+  <Modal {...args}>
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>{contentText}</Modal.Paragraph>
+        {/* <Modal.Actions
+          sticky={z_sticky}
+          stickyOnMobile={z_stickyOnMobile}
+          fullSize={z_fullSize}
+          fullSizeOnMobile={z_fullSizeOnMobile}
+        >
+          {buttonSelection > 0 && (
+            <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+          )}
+          {buttonSelection > 1 && (
+            <Modal.CloseButton modifier="hydrogen">
+              Modal.CloseButton
+            </Modal.CloseButton>
+          )}
+        </Modal.Actions> */}
+      </>
+    )}
+  </Modal>
 )
+Default.args = {
+  ...args,
+  buttonSelection: 1,
+  z_sticky: false,
+  z_stickyOnMobile: false,
+  z_fullSize: false,
+  z_fullSizeOnMobile: false,
+}
+Default.argTypes = {
+  ...argTypes,
+  buttonSelection: {
+    name: 'number of action buttons to display (story prop)',
+    control: { type: 'range', min: 0, max: 2 },
+  },
+  z_sticky: {
+    name: 'Modal.Actions: sticky (story prop)',
+    control: 'boolean',
+  },
+  z_stickyOnMobile: {
+    name: 'Modal.Actions: stickyOnMobile (story prop)',
+    control: 'boolean',
+  },
+  z_fullSize: {
+    name: 'Modal.Actions: fullSize (story prop)',
+    control: 'boolean',
+  },
+  z_fullSizeOnMobile: {
+    name: 'Modal.Actions: fullSizeOnMobile (story prop)',
+    control: 'boolean',
+  },
+}

@@ -1,253 +1,277 @@
-import React, { Component } from 'react'
+import React, { useEffect, createContext, useReducer, useContext } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import ReactDOM from 'react-dom'
+
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../action/close-button'
-import { createGlobalStyle } from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
+import { Title } from '../../typography/title'
+import { Paragraph } from '../../typography/paragraph'
+import { Button } from '../../action/button'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
+import { GlobalStyle } from './styles'
 
-const GlobalStyle = createGlobalStyle`
-  body.k-Modal__body--open {
-    overflow: hidden;
-  }
-
-  .k-Modal__content {
-    position: relative;
-    max-height: calc(100% - ${pxToRem(20)} * 2);
-    max-width: calc(100vw - ${pxToRem(20)} * 2);
-
-    background-color: ${COLORS.background1};
-    text-align: center;
-    padding-left: ${pxToRem(60)};
-    padding-right: ${pxToRem(60)};
-
-    box-sizing: border-box;
-    overflow: scroll;
-
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-      max-width: ${pxToRem(690)};
-      padding-left: ${pxToRem(110)};
-      padding-right: ${pxToRem(110)};
-    }
-  }
-
-  .k-Modal__close {
-    position: absolute;
-    top: 0;
-    right: ${pxToRem(30)};
-
-    button {
-      margin: 0;
-    }
-  }
-
-  .k-Modal__close--fixed {
-    position: fixed;
-  }
-
-  .k-Modal__overlay {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgba(34, 34, 34, .9);
-  }
-`
-
-const AnimatedGlobalStyle = createGlobalStyle`
-  .k-Modal__overlay {
-    opacity: 0;
-  }
-  .k-Modal__content {
-    opacity: 0;
-    transform: scale(.94);
-  }
-
-  .k-Modal__overlay--afterOpen {
-    transition: opacity .3s ease;
-    opacity: 1;
-  }
-  .k-Modal--afterOpen {
-    transition: opacity .3s ease, transform .3s ease;
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  .k-Modal__overlay--beforeClose {
-    opacity: 0;
-  }
-  .k-Modal--beforeClose {
-    transition: opacity .3s ease, transform .5s ease;
-    transform: scale(1.06);
-    opacity: 0;
-  }
-`
-
-export class Modal extends Component {
-  state = {
-    showModal: false,
-  }
-
-  componentDidMount() {
-    console.warn(
-      'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
-    )
-  }
-
-  open = () => {
-    this.setState({ showModal: true })
-  }
-
-  close = () => {
-    this.setState({ showModal: false })
-    if (this.props.onClose) {
-      this.props.onClose()
-    }
-  }
-
-  renderCloseModal() {
-    const { closeButtonLabel } = this.props
-
-    return (
-      <div className="k-Modal__close">
-        <CloseButton
-          className="k-Modal__close--fixed"
-          modifier="hydrogen"
-          onClick={this.close}
-          size="micro"
-          closeButtonLabel={closeButtonLabel}
-        />
-      </div>
-    )
-  }
-
-  renderTriggerAction() {
-    if (!this.props.trigger) return
-
-    return <span onClick={this.open}>{this.props.trigger}</span>
-  }
-
-  renderGlobalStyle() {
-    const modalClassNames = this.props.modalClassNames
-
-    if (
-      modalClassNames.className.base !== 'k-Modal__content' &&
-      modalClassNames.overlayClassName.base !== 'k-Modal__overlay'
-    )
-      return
-
-    return <GlobalStyle />
-  }
-
-  render() {
-    const {
-      trigger,
-      content,
-      label,
-      labelledby,
-      describedby,
+const ModalTitle = ({
+  children,
+  className,
+  titlePosition,
+  ...props
+}) => (
+  <Title
+    tag="p"
+    className={classNames(
+      'k-Modal__title',
       className,
-      closeButtonLabel,
-      onClose,
-      modalProps,
-      disableOutsideScroll,
-      modalClassNames,
-      hasCloseButton,
-      isAnimated,
-      ...others
-    } = this.props
+      `k-u-align-${titlePosition}`,
+    )}
+    {...props}
+  >
+    {children}
+  </Title>
+)
 
-    const triggerClassNames = classNames('k-Modal', className)
+ModalTitle.propTypes = {
+  titlePosition: 'center',
+}
 
-    return (
-      <div className={triggerClassNames} {...others}>
-        {this.renderTriggerAction()}
+ModalTitle.defaultProps = {
+  titlePosition : PropTypes.oneOf(['center', 'left']),
+}
 
-        {this.renderGlobalStyle()}
+const ModalParagraph = ({
+  children,
+  className,
+  paragraphPosition,
+  ...props
+}) => (
+  <Paragraph
+    modifier="tertiary"
+    className={classNames(
+      'k-Modal__paragraph',
+      className,
+      `k-u-align-${paragraphPosition}`,
+    )}
+    {...props}
+  >
+    {children}  
+  </Paragraph>
+)
 
-        {isAnimated && <AnimatedGlobalStyle />}
+ModalParagraph.propTypes = {
+  paragraphPosition: 'center',
+}
 
-        <ReactModal
-          closeTimeoutMS={isAnimated ? 500 : 0}
-          role="dialog"
-          className={{ ...modalClassNames.className }}
-          overlayClassName={{ ...modalClassNames.overlayClassName }}
-          isOpen={this.state.showModal}
-          aria={{
-            labelledby,
-            describedby,
-          }}
-          ariaHideApp={false}
-          onRequestClose={this.close}
-          contentLabel={label}
-          bodyOpenClassName={
-            disableOutsideScroll ? 'k-Modal__body--open' : null
-          }
-          {...modalProps}
-        >
-          {content}
+ModalParagraph.defaultProps = {
+  paragraphPosition : PropTypes.oneOf(['center', 'left']),
+}
 
-          {hasCloseButton && this.renderCloseModal()}
-        </ReactModal>
-      </div>
-    )
+  // const ModalAction = ({ children, className, ...props }) => (
+  //   <Button
+  //     size="medium"
+  //     className={classNames(
+  //       'k-Modal__action',
+  //       className,
+  //     )}
+  //   >
+  //     {children}
+  //   </Button>
+  // )
+   
+const initialState = {
+  show: false,
+}
+  
+const ModalContext = createContext(initialState)
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'update':
+      return { ...state, ...action }
   }
 }
 
-Modal.propTypes = {
+export const updateState = show => ({
+  type: 'update',
+  show,
+})
+
+const ModalProvider = ({ children }) => {
+  return (
+    <ModalContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
+    </ModalContext.Provider>
+  )
+}
+
+const InnerModal = ({
+  trigger,
+  children,
+  label,
+  labelledby,
+  describedby,
+  className,
+  closeButtonLabel,
+  onClose,
+  modalProps,
+  hasCloseButton,
+  maxWidth,
+  size,
+  isOpen,
+  zIndex,
+  fullSize,
+  fullSizeOnMobile,
+  fullSizeTitle,
+  headerTitle,
+  headerActions,
+  headerMessage,
+  contentCols,
+  headerZIndex,
+  ...others
+}) => {
+
+  const [{ show }, dispatch] = useContext(ModalContext)
+  const close = () => {
+    dispatch(updateState(false))
+    if (onClose) {
+      onClose()
+    }
+  }
+  useEffect(() => {
+    if (!trigger) {
+      dispatch(updateState(true))
+    }
+  }, [])
+
+  useEffect(() => {
+    dispatch(updateState(isOpen))
+  }, [isOpen])
+
+  let customStyle = {
+    '--Modal-headerZIndex': headerZIndex,
+  }
+
+  const ModalPortal = ReactDOM.createPortal(
+    <>
+      <GlobalStyle zIndex={zIndex} />
+      <ReactModal
+        closeTimeoutMS={500}
+        role="dialog"
+        className={{
+          base: classNames(
+            'k-Modal__content',
+            `k-Modal__content--${size}`,
+          ),
+          afterOpen: 'k-Modal--afterOpen',
+          beforeClose: 'k-Modal--beforeClose',
+        }}
+        overlayClassName={{
+          base: classNames(
+            'k-Modal__overlay',
+            `k-Modal__overlay--${size}`,
+            {
+              'k-Modal__overlay--fullSize': fullSize,
+              'k-Modal__overlay--fullSizeOnMobile': fullSizeOnMobile,
+            },
+          ),
+          afterOpen: 'k-Modal__overlay--afterOpen',
+          beforeClose: 'k-Modal__overlay--beforeClose',
+        }}
+        isOpen={show}
+        onAfterOpen={({ overlayEl }) => {
+          overlayEl.scrollTop = 0
+        }}
+        aria={{
+          labelledby,
+          describedby,
+        }}
+        ariaHideApp={false}
+        onRequestClose={close}
+        contentLabel={label}
+        bodyOpenClassName="k-Modal__body--open"
+        style={{ content: customStyle }}
+        {...modalProps}
+      >
+        <>
+          {hasCloseButton && (
+            <div className="k-Modal__closeButton">
+              <CloseButton
+                style={{ position: 'fixed' }}
+                className="k-u-hidden@s-up k-u-margin-none"
+                modifier="hydrogen"
+                onClick={close}
+                size="micro"
+                closeButtonLabel={closeButtonLabel}
+              />
+              <CloseButton
+                style={{ position: 'fixed' }}
+                className="k-u-hidden@xs-down k-u-margin-none"
+                modifier="hydrogen"
+                onClick={close}
+                closeButtonLabel={closeButtonLabel}
+              />
+            </div>
+          )}
+          <div className="k-Modal__main">
+            {children({
+              open: () => dispatch(updateState(true)),
+              close: () => dispatch(updateState(false)),
+            })}
+          </div>
+        </>
+      </ReactModal>
+    </>,
+    document.body,
+  )
+  return (
+    <div className={classNames('k-Modal', className)} {...others}>
+      {trigger &&
+        React.cloneElement(trigger, {
+          onClick: clickEvent => {
+            dispatch(updateState(true))
+            if (
+              'onClick' in trigger.props &&
+              typeof trigger.props.onClick === 'function'
+            ) {
+              trigger.props.onClick(clickEvent)
+            }
+          },
+        })}
+      {ModalPortal}
+    </div>
+  )
+}
+
+export const Modal = props => {
+  if (!domElementHelper.canUseDom()) return null
+  return (
+    <ModalProvider>
+      <InnerModal {...props} />
+    </ModalProvider>
+  )
+}
+
+Modal.PropTypes = {
   label: PropTypes.string,
   labelledby: PropTypes.string,
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
-  modalProps: PropTypes.object,
-  disableOutsideScroll: PropTypes.bool,
-  modalClassNames: PropTypes.shape({
-    className: PropTypes.shape({
-      base: PropTypes.string,
-      afterOpen: PropTypes.string,
-      beforeClose: PropTypes.string,
-    }),
-    overlayClassName: PropTypes.shape({
-      base: PropTypes.string,
-      afterOpen: PropTypes.string,
-      beforeClose: PropTypes.string,
-    }),
-    closeContainerClassName: PropTypes.string,
-  }),
-  hasCloseButton: PropTypes.bool,
-  isAnimated: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  fullSize: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  zIndex: PropTypes.number,
 }
 
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
   describedby: '',
-  closeButtonLabel: '',
-  modalProps: {},
-  disableOutsideScroll: false,
-  modalClassNames: {
-    className: {
-      base: 'k-Modal__content',
-      afterOpen: 'k-Modal--afterOpen',
-      beforeClose: 'k-Modal--beforeClose',
-    },
-    overlayClassName: {
-      base: 'k-Modal__overlay',
-      afterOpen: 'k-Modal__overlay--afterOpen',
-      beforeClose: 'k-Modal__overlay--beforeClose',
-    },
-    closeContainerClassName: 'k-Modal__close',
-  },
-  hasCloseButton: true,
-  isAnimated: true,
+  closeButtonLabel: 'Fermer',
+  size: 'medium',
+  fullSize: false,
+  isOpen: false,
+  zIndex: 110,
 }
+
+Modal.Title = ModalTitle
+Modal.Paragraph = ModalParagraph
