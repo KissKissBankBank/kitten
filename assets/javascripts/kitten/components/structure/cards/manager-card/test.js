@@ -6,7 +6,7 @@ import { AvatarWithTextAndBadge } from '../../../information/avatar-with-text-an
 describe('<ManagerCard />', () => {
   let component
 
-  describe('default', () => {
+  describe('with action', () => {
     component = renderer
       .create(
         <ManagerCard

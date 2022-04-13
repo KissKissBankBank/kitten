@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ManagerCard /> default matches with snapshot 1`] = `
+exports[`<ManagerCard /> with action matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL kqFmOM k-ManagerCard"
+  className="sc-bdvvtL bjKHUA k-ManagerCard"
 >
   <div
     className="k-ManagerCard__image"
@@ -48,7 +48,7 @@ exports[`<ManagerCard /> default matches with snapshot 1`] = `
 
 exports[`<ManagerCard /> with avatar matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL kqFmOM k-ManagerCard"
+  className="sc-bdvvtL bjKHUA k-ManagerCard"
 >
   <div
     className="k-ManagerCard__image"

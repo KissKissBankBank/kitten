@@ -33,9 +33,9 @@ const StyledManagerCard = styled.article`
     }
   }
 
-  &:not(.k-ManagerCard__image) {
-    @media ${mq.mobile} {
-      flex-direction: row;
+  @media ${mq.mobile} {
+    > :not(.k-ManagerCard__image) {
+      flex-direction: column;
     }
   }
 
