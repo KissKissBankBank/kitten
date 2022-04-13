@@ -123,18 +123,6 @@ const argTypes = {
     name: 'zIndex',
     control: 'number',
   },
-  headerTitle: {
-    name: 'headerTitle',
-    control: 'object',
-  },
-  headerActions: {
-    name: 'headerActions',
-    control: 'object',
-  },
-  headerMessage: {
-    name: 'headerMessage',
-    control: 'object',
-  },
   contentCols: {
     name: 'contentCols',
     control: 'object',
@@ -142,10 +130,6 @@ const argTypes = {
   headerZIndex: {
     name: 'headerZIndex',
     control: 'number',
-  },
-  contentText: {
-    name: 'content text (story prop)',
-    control: 'text',
   },
 }
 

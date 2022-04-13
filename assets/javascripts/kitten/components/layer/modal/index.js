@@ -15,15 +15,17 @@ import { GlobalStyle } from './styles'
 const ModalTitle = ({
   children,
   className,
-  titlePosition,
+  align,
   ...props
 }) => (
   <Title
     tag="p"
+    noMargin
+    modifier="tertiary"
     className={classNames(
       'k-Modal__title',
       className,
-      `k-u-align-${titlePosition}`,
+      `k-u-align-${align}`,
     )}
     {...props}
   >
@@ -32,25 +34,26 @@ const ModalTitle = ({
 )
 
 ModalTitle.propTypes = {
-  titlePosition: 'center',
+  align: PropTypes.oneOf(['center', 'left']),
 }
 
 ModalTitle.defaultProps = {
-  titlePosition : PropTypes.oneOf(['center', 'left']),
+  align: 'center',
 }
 
 const ModalParagraph = ({
   children,
   className,
-  paragraphPosition,
+  align,
   ...props
 }) => (
   <Paragraph
     modifier="tertiary"
+    noMargin
     className={classNames(
       'k-Modal__paragraph',
       className,
-      `k-u-align-${paragraphPosition}`,
+      `k-u-align-${align}`,
     )}
     {...props}
   >
@@ -59,24 +62,24 @@ const ModalParagraph = ({
 )
 
 ModalParagraph.propTypes = {
-  paragraphPosition: 'center',
+  align: PropTypes.oneOf(['center', 'left']),
 }
 
 ModalParagraph.defaultProps = {
-  paragraphPosition : PropTypes.oneOf(['center', 'left']),
+  align: 'center',
 }
 
-  // const ModalAction = ({ children, className, ...props }) => (
-  //   <Button
-  //     size="medium"
-  //     className={classNames(
-  //       'k-Modal__action',
-  //       className,
-  //     )}
-  //   >
-  //     {children}
-  //   </Button>
-  // )
+  const ModalAction = ({ children, className, ...props }) => (
+    <Button
+      size="medium"
+      className={classNames(
+        'k-Modal__action',
+        className,
+      )}
+    >
+      {children}
+    </Button>
+  )
    
 const initialState = {
   show: false,
@@ -103,6 +106,15 @@ const ModalProvider = ({ children }) => {
     </ModalContext.Provider>
   )
 }
+
+const role = (() => {
+  switch (type) {
+    case 'modal':
+      return 'modal'
+    case 'dialog':
+      return 'dialog'
+  }
+})()
 
 const InnerModal = ({
   trigger,
@@ -156,7 +168,7 @@ const InnerModal = ({
       <GlobalStyle zIndex={zIndex} />
       <ReactModal
         closeTimeoutMS={500}
-        role="dialog"
+        role={role}
         className={{
           base: classNames(
             'k-Modal__content',
@@ -194,23 +206,12 @@ const InnerModal = ({
       >
         <>
           {hasCloseButton && (
-            <div className="k-Modal__closeButton">
-              <CloseButton
-                style={{ position: 'fixed' }}
-                className="k-u-hidden@s-up k-u-margin-none"
-                modifier="hydrogen"
-                onClick={close}
-                size="micro"
-                closeButtonLabel={closeButtonLabel}
-              />
-              <CloseButton
-                style={{ position: 'fixed' }}
-                className="k-u-hidden@xs-down k-u-margin-none"
-                modifier="hydrogen"
-                onClick={close}
-                closeButtonLabel={closeButtonLabel}
-              />
-            </div>
+            <CloseButton
+              className="k-Modal__closeButton"
+              size="micro"
+              closeButtonLabel={closeButtonLabel}
+              onClick={onClose}
+            />
           )}
           <div className="k-Modal__main">
             {children({
@@ -251,7 +252,7 @@ export const Modal = props => {
   )
 }
 
-Modal.PropTypes = {
+Modal.propTypes = {
   label: PropTypes.string,
   labelledby: PropTypes.string,
   describedby: PropTypes.string,
@@ -260,6 +261,8 @@ Modal.PropTypes = {
   fullSize: PropTypes.bool,
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
+  hasCloseButton: PropTypes.bool,
+  type: PropTypes.oneOf([`modal`, `dialog`]),
 }
 
 Modal.defaultProps = {
@@ -271,6 +274,8 @@ Modal.defaultProps = {
   fullSize: false,
   isOpen: false,
   zIndex: 110,
+  hasCloseButton: true,
+  type: 'modal',
 }
 
 Modal.Title = ModalTitle

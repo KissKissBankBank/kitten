@@ -11,38 +11,44 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .k-Modal__content {
+    --Modal-width: 600px;
+    --Modal-wrapperMaxWidth: 100vw;
+    --Modal-contentMargin: 40px;
+    --Modal-headerHeight: 0px;
+
     flex: 1 0 auto;
     position: relative;
     background-color: var(--color-grey-000);
-    border: var(--border);
     border-radius: var(--border-radius-l);
     box-sizing: border-box;
     transform: scale(0.94);
-    display: flex;
-    flex-direction: column;
-    gap: ${pxToRem(30)};
 
-    margin: 0;
-    width: calc(100vw - ${pxToRem(2 * 30 )});
+    margin: auto;
+    width: calc(100vw - (2 * var(--Modal-contentMargin) ));
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
   }
 
   .k-Modal__content--small {
-    width: ${pxToRem(300)};
+    --Modal-width: 300px;
+    width: var(--Modal-width);
   }
 
   .k-Modal__content--medium {
-    width: ${pxToRem(600)};
+    width: var(--Modal-width);
   }
 
   .k-Modal__content--large {
-    width: ${pxToRem(900)};
+    --Modal-width: 900px;
+    width: var(--Modal-width);
   }
 
   .k-Modal__main {
-    margin:${pxToRem(50)} ${pxToRem(20)};
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(30)};
+    margin: ${pxToRem(50)} ${pxToRem(20)};
 
     @media ${mq.tablet} {
       margin: ${pxToRem(50)} ${pxToRem(30)};
@@ -53,13 +59,24 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .k-Modal__title {
-    font-size: var(--font-size-6);
+    font-size: var(--font-size-6); !important
     
     @media ${mq.desktop} {
       font-size: var(--font-size-10);
     }
   }
 
+  .k-Modal__closeButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-right-radius: var(--border-radius-s);
+    border-right: none;
+    border-top: none;
+    z-index: 1;
+    right: ${pxToRem(-1)};
+    top: ${pxToRem(-1)};
+  }
 
   /* OVERLAY STYLES */
 
