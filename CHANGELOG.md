@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `PeopleCard`: Add new component.
+- Feature: `ManagerCard`: Add `ManagerCard.Image` subcomponent.
 
 ## [10.1.0] - 2022-04-08
 

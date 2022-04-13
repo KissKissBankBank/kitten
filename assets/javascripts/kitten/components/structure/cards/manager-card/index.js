@@ -19,7 +19,7 @@ const StyledManagerCard = styled.article`
   border-radius: var(--border-radius-m);
 
   display: flex;
-  gap: 0 ${pxToRem(10)};
+  gap: 0 ${pxToRem(15)};
 
   &.k-ManagerCard--hasAction {
     &:hover {
@@ -33,8 +33,10 @@ const StyledManagerCard = styled.article`
     }
   }
 
-  @media ${mq.mobile} {
-    flex-direction: column;
+  &:not(.k-ManagerCard__image) {
+    @media ${mq.mobile} {
+      flex-direction: row;
+    }
   }
 
   @media ${mq.tabletAndDesktop} {
@@ -56,6 +58,10 @@ const StyledManagerCard = styled.article`
     :focus-visible {
       outline: auto;
     }
+  }
+
+  .k-ManagerCard__image {
+    display: flex;
   }
 
   .k-ManagerCard__cell {
@@ -133,6 +139,12 @@ export const ManagerCard = ({
 
       {children}
     </StyledManagerCard>
+  )
+}
+
+ManagerCard.Image = ({ className, style, ...props }) => {
+  return (
+    <div {...props} className={classNames('k-ManagerCard__image', className)} />
   )
 }
 

@@ -2,14 +2,83 @@
 
 exports[`<ManagerCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL huGWEp k-ManagerCard k-ManagerCard--hasAction"
+  className="sc-bdvvtL kqFmOM k-ManagerCard"
 >
-  <a
-    aria-label="Click to show item"
-    className="k-ManagerCard__action"
-    href="https://css-tricks.com"
-    onClick={[Function]}
-  />
+  <div
+    className="k-ManagerCard__image"
+  >
+    <div
+      className="sc-dkPtRN dXeHaz k-Avatar__wrapper"
+    >
+      <div
+        className="k-Avatar k-Avatar--medium"
+        style={
+          Object {
+            "--Avatar-height": undefined,
+            "--Avatar-width": undefined,
+            "--k-Avatar-background-color": "var(--color-primary-900, #0496cc)",
+            "--k-Avatar-color": "var(--color-grey-000, #fff)",
+          }
+        }
+      >
+        <span
+          className="k-Avatar__imageWrapper"
+        >
+          <img
+            alt=""
+            className="k-Avatar__image"
+            src="/kitten-0.jpg"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-ManagerCard__cell"
+  >
+    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+  </div>
+  <div
+    className="k-ManagerCard__lastCell"
+  >
+    •••
+  </div>
+</article>
+`;
+
+exports[`<ManagerCard /> with avatar matches with snapshot 1`] = `
+<article
+  className="sc-bdvvtL kqFmOM k-ManagerCard"
+>
+  <div
+    className="k-ManagerCard__image"
+  >
+    <div
+      className="sc-dkPtRN dXeHaz k-Avatar__wrapper"
+    >
+      <div
+        className="k-Avatar k-Avatar--medium"
+        style={
+          Object {
+            "--Avatar-height": undefined,
+            "--Avatar-width": undefined,
+            "--k-Avatar-background-color": "var(--color-primary-900, #0496cc)",
+            "--k-Avatar-color": "var(--color-grey-000, #fff)",
+          }
+        }
+      >
+        <span
+          className="k-Avatar__imageWrapper"
+        >
+          <img
+            alt=""
+            className="k-Avatar__image"
+            src="/kitten-0.jpg"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
   <div
     className="k-ManagerCard__cell"
   >
