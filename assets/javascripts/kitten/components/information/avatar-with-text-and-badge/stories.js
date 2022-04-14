@@ -48,7 +48,7 @@ export default {
     imageSize: {
       name: 'Image Size (story prop)',
       description: 'Prop `size` on subcomponent `AvatarWithTextAndBadge.Image`',
-      options: ['medium', 'large'],
+      options: ['small', 'medium', 'large'],
       control: 'inline-radio',
     },
     imageIsDisplayed: {

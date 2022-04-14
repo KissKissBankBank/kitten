@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `AvatarWithTextAndBadge`: Add `small` prop size value.
 - Feature: `PeopleCard`: Add new component.
 
 ## [10.1.0] - 2022-04-08
