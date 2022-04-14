@@ -5,7 +5,7 @@ import { ManagerCard } from './index'
 describe('<ManagerCard />', () => {
   let component
 
-  describe('Default', () => {
+  describe('default', () => {
     component = renderer
       .create(
         <ManagerCard

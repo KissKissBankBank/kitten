@@ -19,7 +19,7 @@ const StyledManagerCard = styled.article`
   border-radius: var(--border-radius-m);
 
   display: flex;
-  gap: 0 ${pxToRem(20)};
+  gap: 0 ${pxToRem(10)};
 
   &.k-ManagerCard--hasAction {
     &:hover {
