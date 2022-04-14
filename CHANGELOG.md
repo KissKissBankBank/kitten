@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `PeopleCircleIconNext`: Add new icon.
 - Feature: `AvatarWithTextAndBadge`: Add `small` prop size value.
 - Feature: `PeopleCard`: Add new component.
 
