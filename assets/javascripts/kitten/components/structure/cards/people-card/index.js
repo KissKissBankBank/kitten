@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import classNames from 'classnames'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { mq } from '../../../../constants/screen-config'
+import { AvatarWithTextAndBadge } from '../../../information/avatar-with-text-and-badge'
+import { PeopleCircleIconNext } from '../../../graphics/icons-next/people-circle-icon-next'
 
 const StyledPeopleCard = styled.article`
   max-width: 100%;
@@ -13,56 +15,20 @@ const StyledPeopleCard = styled.article`
   background-color: var(--color-grey-000);
   padding: ${pxToRem(15)}};
 
-  transition: background-color var(--transition), border-color var(--transition);
-
   border: var(--border);
-  border-radius: var(--border-radius-m);
+  border-radius: var(--border-radius-s);
 
   display: flex;
   gap: 0 ${pxToRem(15)};
   height: ${pxToRem(63)};
 
-  &.k-PeopleCard--hasAction {
-    &:hover {
-      background-color: var(--color-grey-100);
-      border-color: var(--color-grey-500);
-    }
-
-    &:active {
-      background-color: var(--color-grey-200);
-      border-color: var(--color-grey-600);
-    }
-  }
-
   @media ${mq.mobile} {
     flex-direction: row;
   }
 
-  .k-PeopleCard__action {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--border-radius-m);
-    cursor: pointer;
-    z-index: 1;
-
-    :focus-visible {
-      outline: auto;
-    }
-  }
-
-  .k-PeopleCard__avatar {
+  .k-PeopleCard__image {
     display: flex;
-
-    .k-Avatar__imageWrapper {
-      width: ${pxToRem(24)};
-      height: ${pxToRem(24)};
-      box-sizing: content-box;
-    }
+    align-items: center;
   }
 
   .k-PeopleCard__cell {
@@ -126,9 +92,29 @@ export const PeopleCard = ({
   )
 }
 
-PeopleCard.Avatar = ({ className, style, ...props }) => {
+PeopleCard.Image = ({
+  className,
+  style,
+  peopleAvatar = true,
+  ...props
+}) => {
   return (
-    <div {...props} className={classNames('k-PeopleCard__avatar', className)} />
+    <div
+      {...props}
+      className={classNames('k-PeopleCard__image', className)}
+    >
+      {peopleAvatar ? (
+        <AvatarWithTextAndBadge>
+          <AvatarWithTextAndBadge.Image
+            alt=""
+            size="small"
+            src="/kitten-0.jpg"
+          />
+        </AvatarWithTextAndBadge>
+      ) : (
+        <PeopleCircleIconNext />   
+      )}
+    </div>
   )
 }
 

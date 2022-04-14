@@ -10,11 +10,26 @@ describe('<PeopleCard />', () => {
     component = renderer
       .create(
         <PeopleCard>
-          <PeopleCard.Avatar>
-            <AvatarWithTextAndBadge>
-              <AvatarWithTextAndBadge.Image alt="" src="/kitten-0.jpg" />
-            </AvatarWithTextAndBadge>
-          </PeopleCard.Avatar>
+          <PeopleCard.Image />
+          <PeopleCard.Cell>
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+            nibh, ut fermentum massa justo sit amet risus.
+          </PeopleCard.Cell>
+          <PeopleCard.LastCell>•••</PeopleCard.LastCell>
+        </PeopleCard>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('With peopleAvatar prop', () => {
+    component = renderer
+      .create(
+        <PeopleCard>
+          <PeopleCard.Image peopleAvatar />
           <PeopleCard.Cell>
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
             nibh, ut fermentum massa justo sit amet risus.
