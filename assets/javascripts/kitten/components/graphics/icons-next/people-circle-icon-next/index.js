@@ -26,4 +26,3 @@ PeopleCircleIconNext.defaultProps = {
   color: '#222',
   title: null,
 }
- 

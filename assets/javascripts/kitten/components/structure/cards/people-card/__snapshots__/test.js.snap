@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PeopleCard /> With peopleAvatar matches with snapshot 1`] = `
+exports[`<PeopleCard /> With peopleAvatar prop matches with snapshot 1`] = `
 <article
-  className="sc-dkPtRN fNbwZM k-PeopleCard"
+  className="sc-dkPtRN qWNZV k-PeopleCard"
 >
   <div
     className="k-PeopleCard__image"
@@ -48,7 +48,7 @@ exports[`<PeopleCard /> With peopleAvatar matches with snapshot 1`] = `
 
 exports[`<PeopleCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-dkPtRN fNbwZM k-PeopleCard"
+  className="sc-dkPtRN qWNZV k-PeopleCard"
 >
   <div
     className="k-PeopleCard__image"

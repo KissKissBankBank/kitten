@@ -24,6 +24,7 @@ const StyledPeopleCard = styled.article`
 
   @media ${mq.mobile} {
     flex-direction: row;
+    gap: 0 ${pxToRem(10)};
   }
 
   .k-PeopleCard__image {
@@ -40,33 +41,16 @@ const StyledPeopleCard = styled.article`
     z-index: 2;
     display: flex;
     align-items: stretch;
-
-    @media ${mq.mq} {
-      justify-content: flex-end;
-      margin-bottom: ${pxToRem(-20)};
-      margin-right: ${pxToRem(-30)};
-    }
-
-    @media ${mq.tabletAndDesktop} {
-      justify-content: stretch;
-      margin: ${pxToRem(-20)} ${pxToRem(-30)};
-    }
+    justify-content: stretch;
+    margin: ${pxToRem(-20)} ${pxToRem(-30)};
 
     .k-DropdownMenu .k-DropdownMenu__button {
       box-sizing: border-box;
       display: flex;
       justify-content: center;
-
-      @media ${mq.mobile} {
-        align-items: flex-end;
-        padding: ${pxToRem(20)} ${pxToRem(30)};
-      }
-
-      @media ${mq.tabletAndDesktop} {
-        align-items: center;
-        height: 100%;
-        padding: 0 ${pxToRem(30)};
-      }
+      align-items: center;
+      height: 100%;
+      padding: 0 ${pxToRem(30)};
 
       &:focus-visible .k-DropdownMenu__button__inside {
         outline: auto;

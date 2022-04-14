@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { PeopleCard } from './index'
-import { AvatarWithTextAndBadge } from '../../../information/avatar-with-text-and-badge'
 
 describe('<PeopleCard />', () => {
   let component
