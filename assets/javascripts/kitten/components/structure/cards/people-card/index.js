@@ -4,14 +4,14 @@ import classNames from 'classnames'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { mq } from '../../../../constants/screen-config'
 
-const StyledManagerCard = styled.article`
+const StyledPeopleCard = styled.article`
   max-width: 100%;
   position: relative;
   display: block;
   box-sizing: border-box;
   text-decoration: none;
   background-color: var(--color-grey-000);
-  padding: ${pxToRem(20)} ${pxToRem(30)} ${pxToRem(20)} ${pxToRem(20)};
+  padding: ${pxToRem(15)}};
 
   transition: background-color var(--transition), border-color var(--transition);
 
@@ -19,9 +19,10 @@ const StyledManagerCard = styled.article`
   border-radius: var(--border-radius-m);
 
   display: flex;
-  gap: 0 ${pxToRem(20)};
+  gap: 0 ${pxToRem(15)};
+  height: ${pxToRem(63)};
 
-  &.k-ManagerCard--hasAction {
+  &.k-PeopleCard--hasAction {
     &:hover {
       background-color: var(--color-grey-100);
       border-color: var(--color-grey-500);
@@ -34,14 +35,10 @@ const StyledManagerCard = styled.article`
   }
 
   @media ${mq.mobile} {
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  @media ${mq.tabletAndDesktop} {
-    height: ${pxToRem(105)};
-  }
-
-  .k-ManagerCard__action {
+  .k-PeopleCard__action {
     position: absolute;
     left: 0;
     right: 0;
@@ -58,11 +55,21 @@ const StyledManagerCard = styled.article`
     }
   }
 
-  .k-ManagerCard__cell {
+  .k-PeopleCard__avatar {
+    display: flex;
+
+    .k-Avatar__imageWrapper {
+      width: ${pxToRem(24)};
+      height: ${pxToRem(24)};
+      box-sizing: content-box;
+    }
+  }
+
+  .k-PeopleCard__cell {
     flex: 1 1 auto;
   }
 
-  .k-ManagerCard__lastCell {
+  .k-PeopleCard__lastCell {
     flex: 0 0 auto;
     z-index: 2;
     display: flex;
@@ -103,50 +110,39 @@ const StyledManagerCard = styled.article`
   }
 `
 
-export const ManagerCard = ({
+export const PeopleCard = ({
   className = '',
   children,
-  actionProps = {},
   ...props
 }) => {
-  const {
-    className: actionClassName,
-    as: actionAs = 'a',
-    ...action
-  } = actionProps
-  const ActionElement = actionAs
-  const hasAction = Object.keys(actionProps).length > 0
 
   return (
-    <StyledManagerCard
-      className={classNames('k-ManagerCard', className, {
-        'k-ManagerCard--hasAction': hasAction,
-      })}
+    <StyledPeopleCard
+      className={classNames('k-PeopleCard', className)}
       {...props}
     >
-      {hasAction && (
-        <ActionElement
-          className={classNames('k-ManagerCard__action', actionClassName)}
-          {...action}
-        />
-      )}
-
       {children}
-    </StyledManagerCard>
+    </StyledPeopleCard>
   )
 }
 
-ManagerCard.Cell = ({ className, style, ...props }) => {
+PeopleCard.Avatar = ({ className, style, ...props }) => {
   return (
-    <div {...props} className={classNames('k-ManagerCard__cell', className)} />
+    <div {...props} className={classNames('k-PeopleCard__avatar', className)} />
   )
 }
 
-ManagerCard.LastCell = ({ className, style, ...props }) => {
+PeopleCard.Cell = ({ className, style, ...props }) => {
+  return (
+    <div {...props} className={classNames('k-PeopleCard__cell', className)} />
+  )
+}
+
+PeopleCard.LastCell = ({ className, style, ...props }) => {
   return (
     <div
       {...props}
-      className={classNames('k-ManagerCard__lastCell', className)}
+      className={classNames('k-PeopleCard__lastCell', className)}
     />
   )
 }
