@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Changes : `SummaryCard`: Replace `xlarge` by `huge` prop size value.
+
 ## [10.1.0] - 2022-04-08
 
 Deprecations/Changes:
