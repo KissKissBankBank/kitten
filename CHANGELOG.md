@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Autocomplete`: Improve styles.
 - Changes : `SummaryCard`: Replace `xlarge` by `huge` prop size value.
 - Feature: `PeopleCircleIconNext`: Add new iconNext.
 - Feature: `AvatarWithTextAndBadge`: Add `small` prop size value.

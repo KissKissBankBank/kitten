@@ -92,7 +92,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__suggestions {
   position: absolute;
-  top: 3.125rem;
+  top: 3.75rem;
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -100,7 +100,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   padding: 0;
   background: var(--color-grey-000,#fff);
   border: var(--border-width) solid var(--color-grey-400);
-  border-top: none;
+  border-radius: var(--border-radius-s);
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
   max-height: 7.125rem;
@@ -283,7 +283,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__suggestions {
   position: absolute;
-  top: 3.125rem;
+  top: 3.75rem;
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -291,7 +291,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   padding: 0;
   background: var(--color-grey-000,#fff);
   border: var(--border-width) solid var(--color-grey-400);
-  border-top: none;
+  border-radius: var(--border-radius-s);
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
   max-height: 7.125rem;
@@ -526,7 +526,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__suggestions {
   position: absolute;
-  top: 3.125rem;
+  top: 3.75rem;
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -534,7 +534,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   padding: 0;
   background: var(--color-grey-000,#fff);
   border: var(--border-width) solid var(--color-grey-400);
-  border-top: none;
+  border-radius: var(--border-radius-s);
   list-style: none;
   height: calc(2.375rem * var(--Autocomplete-suggestions,1));
   max-height: 7.125rem;
