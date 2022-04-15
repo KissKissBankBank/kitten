@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Changes : `SummaryCard`: Replace `xlarge` by `huge` prop size value.
+- Feature: `PeopleCircleIconNext`: Add new iconNext.
+- Feature: `AvatarWithTextAndBadge`: Add `small` prop size value.
+- Feature: `PeopleCard`: Add new component.
+- Fix: `ImageDropUploader`: Fix async on `useEffect`
 
 ## [10.1.0] - 2022-04-08
 
