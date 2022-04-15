@@ -1,14 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { getReactElementsByType } from '../../../../helpers/react/get-react-elements'
 
 const StyledProfileCard = styled.article`
   --profileCard-padding: ${pxToRem(20)};
   --profileCard-image-size: ${pxToRem(100)};
 
-  &.k-DeskMenuWrapper--hasImage {
+  &.k-ProfileCardWrapper--hasImage {
     padding-top: calc(var(--profileCard-image-size) / 2);
   }
 
@@ -19,18 +21,18 @@ const StyledProfileCard = styled.article`
     display: flex;
     flex-direction: column;
     background-color: var(--color-grey-000);
+    gap: ${pxToRem(20)};
   }
 
   .k-ProfileCard__header {
     .k-ProfileCard__header__image {
       margin-top: calc(
-        -1 * (var(--ProfileCard-padding) + (var(--ProfileCard-image-size) / 2))
+        -1 * (var(--profileCard-padding) + (var(--profileCard-image-size) / 2))
       );
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: ${pxToRem(15)};
-      width: var(--ProfileCard-image-size);
-      height: var(--ProfileCard-image-size);
+      width: var(--profileCard-image-size);
+      height: var(--profileCard-image-size);
       object-fit: cover;
       object-position: center;
       display: block;
@@ -41,20 +43,33 @@ const StyledProfileCard = styled.article`
 
   .k-ProfileCard__content {
     text-align: center;
+    * { 
+      margin: 0;
+    }
+  }
+
+  .k-ProfileCard__action {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: ${pxToRem(10)};
   }
 `
 
 export const ProfileCard = ({
   className = '',
   children,
-  imageProps,
   ...props
 }) => {
+
+  const HeaderChild = getReactElementsByType({ children, type: Header })[0]
+  const imageProps = Object.keys(HeaderChild?.props?.imageProps || {}) || []
+
   return (
     <StyledProfileCard
       className={classNames('k-ProfileCardWrapper', className,
       {
-        'k-DeskMenuWrapper--hasImage': imageProps.length > 0,
+        'k-ProfileCardWrapper--hasImage': imageProps.length > 0,
       })}
       {...props}
     >
@@ -63,24 +78,38 @@ export const ProfileCard = ({
   )
 }
 
-ProfileCard.Header = ({ className, imageProps, ...props }) => (
+const Header = ({ className, imageProps, ...props }) => (
   <div className={classNames('k-ProfileCard__header', className)} {...props}>
-    <img
-      alt=""
-      {...imageProps}
-      className={classNames(
-        'k-ProfileCard__header__image',
-        imageProps.className,
-      )}
-    />
+    {Object.keys(imageProps).length > 0 && (
+      <img
+        alt=""
+        {...imageProps}
+        className={classNames(
+          'k-ProfileCard__header__image',
+          imageProps.className,
+        )}
+      />
+    )}
     <div className="k-ProfileCard__header__content" />
   </div>
 )
 
-ProfileCard.Content = ({ className, ...props }) => (
+Header.defaultProps = {
+  imageProps: {},
+}
+
+Header.protoTypes = {
+  imageProps: PropTypes.object,
+}
+
+const Content = ({ className, ...props }) => (
   <div className={classNames('k-ProfileCard__content', className)} {...props} />
 )
 
-ProfileCard.Action = ({ className, ...props }) => (
+const Action = ({ className, ...props }) => (
   <div className={classNames('k-ProfileCard__action', className)} {...props} />
 )
+
+ProfileCard.Header = Header
+ProfileCard.Content = Content
+ProfileCard.Action = Action

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
+.c0 {
+  --profileCard-padding: 1.25rem;
+  --profileCard-image-size: 6.25rem;
+}
+
+.c0.k-ProfileCardWrapper--hasImage {
+  padding-top: calc(var(--profileCard-image-size) / 2);
+}
+
+.c0 .k-ProfileCard {
+  border: var(--border);
+  border-radius: var(--border-radius-m);
+  padding: var(--profileCard-padding);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: var(--color-grey-000);
+  gap: 1.25rem;
+}
+
+.c0 .k-ProfileCard__header .k-ProfileCard__header__image {
+  margin-top: calc( -1 * (var(--profileCard-padding) + (var(--profileCard-image-size) / 2)) );
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--profileCard-image-size);
+  height: var(--profileCard-image-size);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--border-radius-rounded);
+  border: var(--border-width) solid var(--color-grey-300);
+}
+
+.c0 .k-ProfileCard__content {
+  text-align: center;
+}
+
+.c0 .k-ProfileCard__content * {
+  margin: 0;
+}
+
+.c0 .k-ProfileCard__action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+<article
+  className="c0 k-ProfileCardWrapper k-ProfileCardWrapper--hasImage"
+>
+  <div
+    className="k-ProfileCard"
+  >
+    <div
+      className="k-ProfileCard__header"
+    >
+      <img
+        alt=""
+        className="k-ProfileCard__header__image"
+        src="/kitten.jpg"
+      />
+      <div
+        className="k-ProfileCard__header__content"
+      />
+    </div>
+    <div
+      className="k-ProfileCard__content"
+    >
+      Hello world
+    </div>
+    <div
+      className="k-ProfileCard__action"
+    >
+      Action
+    </div>
+  </div>
+</article>
+`;
