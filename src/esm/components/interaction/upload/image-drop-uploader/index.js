@@ -1,19 +1,19 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _regeneratorRuntime from "@babel/runtime/regenerator";
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import TYPOGRAPHY from '../../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
-import { UploadIcon } from '../../../graphics/icons/upload-icon';
 import { CloseButton } from '../../../action/close-button';
+import { UploadIcon } from '../../../graphics/icons/upload-icon';
 import { Text } from '../../../typography/text';
 import { ImageCropper } from './components/image-cropper';
-import { pauseEvent } from './utils/pause-event';
 import { areImageDimensionsValid } from './utils/image-dimensions-check';
+import { pauseEvent } from './utils/pause-event';
 var CROP_WIDTH = 125;
 var StyledImageDropUploader = styled.div.withConfig({
   displayName: "image-drop-uploader__StyledImageDropUploader",
@@ -170,101 +170,120 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
     onCancel(true);
   };
 
-  useEffect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
-    var isValid, reader;
-    return _regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.t0 = imageRawData;
+  useEffect(function () {
+    var handleOnUploadCallback = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+        var isValid, reader;
+        return _regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.t0 = imageRawData;
 
-            if (!_context.t0) {
-              _context.next = 5;
-              break;
+                if (!_context.t0) {
+                  _context.next = 5;
+                  break;
+                }
+
+                _context.next = 4;
+                return isSelectedImageValid(imageRawData);
+
+              case 4:
+                _context.t0 = _context.sent;
+
+              case 5:
+                isValid = _context.t0;
+
+                if (isValid) {
+                  _context.next = 8;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 8:
+                setError(false);
+                reader = new FileReader();
+                reader.readAsDataURL(imageRawData);
+
+                reader.onloadend = function () {
+                  setImageDataURL(reader.result);
+                };
+
+                onUpload({
+                  value: reader.result,
+                  name: (imageRawData == null ? void 0 : imageRawData.name) || null,
+                  file: imageRawData || null
+                });
+
+              case 13:
+              case "end":
+                return _context.stop();
             }
+          }
+        }, _callee);
+      }));
 
-            _context.next = 4;
-            return isSelectedImageValid(imageRawData);
+      return function handleOnUploadCallback() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
 
-          case 4:
-            _context.t0 = _context.sent;
+    handleOnUploadCallback();
+  }, [imageRawData]);
+  useEffect(function () {
+    var handleOnChangeCallback = /*#__PURE__*/function () {
+      var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee2() {
+        var isValid;
+        return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.t0 = imageRawData;
 
-          case 5:
-            isValid = _context.t0;
+                if (!_context2.t0) {
+                  _context2.next = 5;
+                  break;
+                }
 
-            if (isValid) {
-              _context.next = 8;
-              break;
+                _context2.next = 4;
+                return isSelectedImageValid(imageRawData);
+
+              case 4:
+                _context2.t0 = _context2.sent;
+
+              case 5:
+                isValid = _context2.t0;
+
+                if (!(imageRawData && !isValid)) {
+                  _context2.next = 8;
+                  break;
+                }
+
+                return _context2.abrupt("return");
+
+              case 8:
+                onChange({
+                  value: imageDataURL,
+                  name: (imageRawData == null ? void 0 : imageRawData.name) || null,
+                  file: imageRawData || null,
+                  cropperData: cropperData
+                });
+                handleOnChangeCallback();
+
+              case 10:
+              case "end":
+                return _context2.stop();
             }
+          }
+        }, _callee2);
+      }));
 
-            return _context.abrupt("return");
-
-          case 8:
-            setError(false);
-            reader = new FileReader();
-            reader.readAsDataURL(imageRawData);
-
-            reader.onloadend = function () {
-              setImageDataURL(reader.result);
-            };
-
-            onUpload({
-              value: reader.result,
-              name: (imageRawData == null ? void 0 : imageRawData.name) || null,
-              file: imageRawData || null
-            });
-
-          case 13:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  })), [imageRawData]);
-  useEffect( /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee2() {
-    var isValid;
-    return _regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.t0 = imageRawData;
-
-            if (!_context2.t0) {
-              _context2.next = 5;
-              break;
-            }
-
-            _context2.next = 4;
-            return isSelectedImageValid(imageRawData);
-
-          case 4:
-            _context2.t0 = _context2.sent;
-
-          case 5:
-            isValid = _context2.t0;
-
-            if (!(imageRawData && !isValid)) {
-              _context2.next = 8;
-              break;
-            }
-
-            return _context2.abrupt("return");
-
-          case 8:
-            onChange({
-              value: imageDataURL,
-              name: (imageRawData == null ? void 0 : imageRawData.name) || null,
-              file: imageRawData || null,
-              cropperData: cropperData
-            });
-
-          case 9:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  })), [imageDataURL, cropperData, imageRawData]);
+      return function handleOnChangeCallback() {
+        return _ref3.apply(this, arguments);
+      };
+    }();
+  }, [imageDataURL, cropperData, imageRawData]);
 
   var handleCropperChange = function handleCropperChange(exportedCropperData) {
     setCropperData(exportedCropperData);
