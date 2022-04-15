@@ -90,7 +90,6 @@ const Header = ({ className, imageProps, ...props }) => (
         )}
       />
     )}
-    <div className="k-ProfileCard__header__content" />
   </div>
 )
 

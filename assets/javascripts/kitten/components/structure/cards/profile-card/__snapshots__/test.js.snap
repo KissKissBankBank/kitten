@@ -75,9 +75,6 @@ exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
         className="k-ProfileCard__header__image"
         src="/kitten.jpg"
       />
-      <div
-        className="k-ProfileCard__header__content"
-      />
     </div>
     <div
       className="k-ProfileCard__content"

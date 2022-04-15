@@ -18,8 +18,6 @@ export default {
       </div>
     ),
   ],
-  // args,
-  // argTypes,
 }
 
 export const Default = () => (
@@ -33,12 +31,11 @@ export const Default = () => (
 
     <ProfileCard.Content>
       <Text size="huge" weight="bold" tag="p" className="k-u-margin-double">
-        S!CK, le magazine cross-culture
+        Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
-        Chaque trimestre, soutenez l'indépendafnce d'un magazine 
-        cross-culture de 164 pages. Garanti loin des kiosques et 
-        sans publicité !
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">_</p>
       </Text>
       <Text size="micro" transform="uppercase" weight="bold">
@@ -71,12 +68,11 @@ export const OneButton = () => (
 
     <ProfileCard.Content>
       <Text size="huge" weight="bold" tag="p" className="k-u-margin-double">
-        S!CK, le magazine cross-culture
+        Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
-        Chaque trimestre, soutenez l'indépendafnce d'un magazine 
-        cross-culture de 164 pages. Garanti loin des kiosques et 
-        sans publicité !
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">_</p>
       </Text>
       <Text size="micro" transform="uppercase" weight="bold">

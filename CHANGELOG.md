@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `ProfileCard`: New component.
+- Feature: `ProfileCard`: Add new component.
 
 ## [10.2.0] - 2022-04-15
 
