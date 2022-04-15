@@ -97,7 +97,7 @@ SummaryCard.propTypes = {
   show: PropTypes.bool,
   actionProps: PropTypes.object,
   size: PropTypes.oneOf([
-    'xlarge',
+    'huge',
     'large',
     'medium',
     'tablet',
