@@ -32,7 +32,7 @@ export const Default = () => (
     />
 
     <ProfileCard.Content>
-      <Text size="huge" weight="bold">
+      <Text size="huge" weight="bold" tag="p">
         S!CK, le magazine cross-culture
       </Text>
       <Text size="small">

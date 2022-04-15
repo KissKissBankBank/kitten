@@ -8,6 +8,10 @@ const StyledProfileCard = styled.article`
   --profileCard-padding: ${pxToRem(20)};
   --profileCard-image-size: ${pxToRem(100)};
 
+  &.k-DeskMenuWrapper--hasImage {
+    padding-top: calc(var(--profileCard-image-size) / 2);
+  }
+
   .k-ProfileCard {
     border: var(--border);
     border-radius: var(--border-radius-m);
@@ -48,8 +52,9 @@ export const ProfileCard = ({
 }) => {
   return (
     <StyledProfileCard
-      className={classNames('k-ProfileCardWrapper', className, {
-        'k-ProfileCardWrapper--hasImage': imageProps.length > 0,
+      className={classNames('k-ProfileCardWrapper', className,
+      {
+        'k-DeskMenuWrapper--hasImage': imageProps.length > 0,
       })}
       {...props}
     >
@@ -60,16 +65,14 @@ export const ProfileCard = ({
 
 ProfileCard.Header = ({ className, imageProps, ...props }) => (
   <div className={classNames('k-ProfileCard__header', className)} {...props}>
-    {Object.keys(imageProps).length > 0 && (
-      <img
-        alt=""
-        {...imageProps}
-        className={classNames(
-          'k-ProfileCard__header__image',
-          imageProps.className,
-        )}
-      />
-    )}
+    <img
+      alt=""
+      {...imageProps}
+      className={classNames(
+        'k-ProfileCard__header__image',
+        imageProps.className,
+      )}
+    />
     <div className="k-ProfileCard__header__content" />
   </div>
 )
