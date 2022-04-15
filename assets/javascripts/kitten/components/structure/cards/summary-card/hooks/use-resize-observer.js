@@ -14,7 +14,7 @@ export const useResizeObserver = () => {
     const { width } = entries[0].contentRect
 
     if (width >= 1000) {
-      setSize('xlarge')
+      setSize('huge')
     } else if (width < 1000 && width >= 870) {
       setSize('large')
     } else if (width < 870 && width >= 760) {
