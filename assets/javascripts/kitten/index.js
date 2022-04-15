@@ -240,6 +240,7 @@ export { LinkedinIconNext } from './components/graphics/icons-next/linkedin-icon
 export { LockOutlineIcon } from './components/graphics/icons-next/lock-outline-icon'
 export { MessengerIconNext } from './components/graphics/icons-next/messenger-icon-next'
 export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-icon-next'
+export { PeopleCircleIconNext } from './components/graphics/icons-next/people-circle-icon-next'
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { RefundIcon } from './components/graphics/icons-next/refund-icon'
@@ -376,6 +377,7 @@ export { EngagementCardWithImage } from './components/structure/cards/engagement
 export { HorizontalProjectCard } from './components/structure/cards/horizontal-project-card'
 /* DEPRECATED */ export { HorizontalProjectCard as HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-project-card'
 export { ManagerCard } from './components/structure/cards/manager-card'
+export { PeopleCard } from './components/structure/cards/people-card'
 export { ProjectCard } from './components/structure/cards/project-card'
 export { RewardCard } from './components/structure/cards/reward-card'
 export {
