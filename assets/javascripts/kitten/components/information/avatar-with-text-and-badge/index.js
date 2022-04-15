@@ -89,6 +89,21 @@ const StyledWrapper = styled.div`
     }
   }
 
+  .k-Avatar--small {
+    .k-Avatar__imageWrapper {
+      width: ${pxToRem(30)};
+      height: ${pxToRem(30)};
+    }
+
+    .k-Avatar__noImage {
+      font-size: ${stepToRem(-2)};
+    }
+
+    & + .k-Avatar__text {
+      font-size: ${stepToRem(-2)};
+    }
+  }
+
   .k-Avatar--big,
   .k-Avatar--large {
     margin-right: ${pxToRem(15)};
@@ -183,7 +198,7 @@ Image.propTypes = {
   textColor: PropTypes.string,
   backgroundColor: PropTypes.string,
   alt: PropTypes.string,
-  size: PropTypes.oneOf(['medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 }
 
 Image.defaultProps = {
