@@ -1,16 +1,13 @@
-import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 import { createGlobalStyle } from 'styled-components'
-
 
 export const GlobalStyle = createGlobalStyle`
   body.k-Modal__body--open {
     overflow: hidden;
   }
 
-  .k-Modal__content {
+  .k-Modal__wrapper {
     --Modal-width: 600px;
     --Modal-wrapperMaxWidth: 100vw;
     --Modal-contentMargin: 40px;
@@ -30,16 +27,16 @@ export const GlobalStyle = createGlobalStyle`
     padding-right: 0;
   }
 
-  .k-Modal__content--small {
+  .k-Modal__wrapper--small {
     --Modal-width: 300px;
     width: var(--Modal-width);
   }
 
-  .k-Modal__content--medium {
+  .k-Modal__wrapper--medium {
     width: var(--Modal-width);
   }
 
-  .k-Modal__content--large {
+  .k-Modal__wrapper--large {
     --Modal-width: 900px;
     width: var(--Modal-width);
   }
@@ -74,8 +71,6 @@ export const GlobalStyle = createGlobalStyle`
     border-right: none;
     border-top: none;
     z-index: 1;
-    right: ${pxToRem(-1)};
-    top: ${pxToRem(-1)};
   }
 
   /* OVERLAY STYLES */
@@ -91,52 +86,6 @@ export const GlobalStyle = createGlobalStyle`
     bottom: 0;
     opacity: 0;
     background-color: rgba(34, 34, 34, .8);
-
-    &:not(.k-Modal__overlay--large):not(.k-Modal__overlay--fullSize) {
-      &::before,
-      &::after {
-        content: '';
-        flex: 1 1 33%;
-        min-height: ${pxToRem(50)};
-
-        @media ${mq.desktop} {
-          min-height: ${pxToRem(80)};
-        }
-      }
-    }
-    &.k-Modal__overlay--giant {
-      &::before,
-      &::after {
-        @media ${mq.mobileAndTablet} {
-          content: '';
-          flex: 1 1 33%;
-          min-height: ${pxToRem(50)};
-        }
-
-        @media ${mq.desktop} {
-          min-height: ${pxToRem(80)};
-        }
-      }
-    }
-
-    &.k-Modal__overlay--fullSize {
-      background: white;
-    }
-
-    @media ${mq.mobile} {
-      &.k-Modal__overlay--fullSizeOnMobile {
-        background: white;
-
-        .k-Modal__content {
-          flex: 1;
-        }
-
-        &::before, &::after {
-          min-height: 0 !important;
-          flex: 0 !important;
-        }
-      }
-    }
   }
 
   .k-Modal__overlay--afterOpen {

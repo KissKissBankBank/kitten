@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal } from './index'
-import { Button } from 'kitten'
+import { Button, Paragraph } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 
@@ -94,14 +94,6 @@ const argTypes = {
     description: 'Label for the close button. For accessibility purposes.',
     control: 'text',
   },
-  fullSize: {
-    name: 'fullSize',
-    control: 'boolean',
-  },
-  fullSizeOnMobile: {
-    name: 'fullSizeOnMobile',
-    control: 'boolean',
-  },
   modalProps: {
     name: 'modalProps',
     control: 'object',
@@ -123,21 +115,9 @@ const argTypes = {
     name: 'zIndex',
     control: 'number',
   },
-  contentCols: {
-    name: 'contentCols',
-    control: 'object',
-  },
-  headerZIndex: {
-    name: 'headerZIndex',
-    control: 'number',
-  },
 }
 
 export const Default = ({
-  z_sticky,
-  z_stickyOnMobile,
-  z_fullSize,
-  z_fullSizeOnMobile,
   contentText,
   buttonSelection,
   ...args
@@ -145,23 +125,20 @@ export const Default = ({
   <Modal {...args}>
     {() => (
       <>
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Paragraph>{contentText}</Modal.Paragraph>
-        {/* <Modal.Actions
-          sticky={z_sticky}
-          stickyOnMobile={z_stickyOnMobile}
-          fullSize={z_fullSize}
-          fullSizeOnMobile={z_fullSizeOnMobile}
-        >
-          {buttonSelection > 0 && (
-            <Modal.Button modifier="helium">Modal.Button</Modal.Button>
-          )}
-          {buttonSelection > 1 && (
-            <Modal.CloseButton modifier="hydrogen">
-              Modal.CloseButton
-            </Modal.CloseButton>
-          )}
-        </Modal.Actions> */}
+        <Modal.Title modifier="tertiary">Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Content>
+          <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
+           {contentText}
+          </Paragraph>
+        </Modal.Content>
+        {buttonSelection > 0 && (
+          <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+        )}
+        {buttonSelection > 1 && (
+          <Modal.CloseButton modifier="hydrogen">
+            Modal.CloseButton
+          </Modal.CloseButton>
+        )}
       </>
     )}
   </Modal>
@@ -169,10 +146,6 @@ export const Default = ({
 Default.args = {
   ...args,
   buttonSelection: 1,
-  z_sticky: false,
-  z_stickyOnMobile: false,
-  z_fullSize: false,
-  z_fullSizeOnMobile: false,
 }
 Default.argTypes = {
   ...argTypes,
@@ -180,20 +153,25 @@ Default.argTypes = {
     name: 'number of action buttons to display (story prop)',
     control: { type: 'range', min: 0, max: 2 },
   },
-  z_sticky: {
-    name: 'Modal.Actions: sticky (story prop)',
-    control: 'boolean',
-  },
-  z_stickyOnMobile: {
-    name: 'Modal.Actions: stickyOnMobile (story prop)',
-    control: 'boolean',
-  },
-  z_fullSize: {
-    name: 'Modal.Actions: fullSize (story prop)',
-    control: 'boolean',
-  },
-  z_fullSizeOnMobile: {
-    name: 'Modal.Actions: fullSizeOnMobile (story prop)',
-    control: 'boolean',
-  },
 }
+
+export const withForm = ({ contentText, ...args }) => (
+  <Modal {...args}>
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Content>
+        
+        </Modal.Content>
+        {buttonSelection > 0 && (
+          <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+        )}
+        {buttonSelection > 1 && (
+          <Modal.CloseButton modifier="hydrogen">
+            Modal.CloseButton
+          </Modal.CloseButton>
+        )}
+      </>
+    )}
+  </Modal>
+)

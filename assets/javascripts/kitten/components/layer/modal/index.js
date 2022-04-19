@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom'
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../action/close-button'
 import { Title } from '../../typography/title'
-import { Paragraph } from '../../typography/paragraph'
 import { Button } from '../../action/button'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { GlobalStyle } from './styles'
@@ -21,7 +20,6 @@ const ModalTitle = ({
   <Title
     tag="p"
     noMargin
-    modifier="tertiary"
     className={classNames(
       'k-Modal__title',
       className,
@@ -41,41 +39,30 @@ ModalTitle.defaultProps = {
   align: 'center',
 }
 
-const ModalParagraph = ({
+const ModalContent = ({
   children,
   className,
-  align,
   ...props
 }) => (
-  <Paragraph
-    modifier="tertiary"
-    noMargin
+  <div
     className={classNames(
-      'k-Modal__paragraph',
+      'k-Modal__content',
       className,
-      `k-u-align-${align}`,
     )}
     {...props}
   >
     {children}  
-  </Paragraph>
+  </div>
 )
 
-ModalParagraph.propTypes = {
-  align: PropTypes.oneOf(['center', 'left']),
-}
-
-ModalParagraph.defaultProps = {
-  align: 'center',
-}
-
-  const ModalAction = ({ children, className, ...props }) => (
+  const ModalButton = ({ children, className, ...props }) => (
     <Button
       size="medium"
       className={classNames(
-        'k-Modal__action',
+        'k-Modal__buttons',
         className,
       )}
+      {...props}
     >
       {children}
     </Button>
@@ -107,15 +94,6 @@ const ModalProvider = ({ children }) => {
   )
 }
 
-const role = (() => {
-  switch (type) {
-    case 'modal':
-      return 'modal'
-    case 'dialog':
-      return 'dialog'
-  }
-})()
-
 const InnerModal = ({
   trigger,
   children,
@@ -131,14 +109,7 @@ const InnerModal = ({
   size,
   isOpen,
   zIndex,
-  fullSize,
-  fullSizeOnMobile,
-  fullSizeTitle,
-  headerTitle,
-  headerActions,
-  headerMessage,
-  contentCols,
-  headerZIndex,
+  type,
   ...others
 }) => {
 
@@ -159,20 +130,17 @@ const InnerModal = ({
     dispatch(updateState(isOpen))
   }, [isOpen])
 
-  let customStyle = {
-    '--Modal-headerZIndex': headerZIndex,
-  }
-
   const ModalPortal = ReactDOM.createPortal(
     <>
       <GlobalStyle zIndex={zIndex} />
       <ReactModal
         closeTimeoutMS={500}
-        role={role}
+        role="dialog"
+        type={type}
         className={{
           base: classNames(
-            'k-Modal__content',
-            `k-Modal__content--${size}`,
+            'k-Modal__wrapper',
+            `k-Modal__wrapper--${size}`,
           ),
           afterOpen: 'k-Modal--afterOpen',
           beforeClose: 'k-Modal--beforeClose',
@@ -180,11 +148,6 @@ const InnerModal = ({
         overlayClassName={{
           base: classNames(
             'k-Modal__overlay',
-            `k-Modal__overlay--${size}`,
-            {
-              'k-Modal__overlay--fullSize': fullSize,
-              'k-Modal__overlay--fullSizeOnMobile': fullSizeOnMobile,
-            },
           ),
           afterOpen: 'k-Modal__overlay--afterOpen',
           beforeClose: 'k-Modal__overlay--beforeClose',
@@ -201,7 +164,6 @@ const InnerModal = ({
         onRequestClose={close}
         contentLabel={label}
         bodyOpenClassName="k-Modal__body--open"
-        style={{ content: customStyle }}
         {...modalProps}
       >
         <>
@@ -209,8 +171,9 @@ const InnerModal = ({
             <CloseButton
               className="k-Modal__closeButton"
               size="micro"
+              modifier="hydrogen"
               closeButtonLabel={closeButtonLabel}
-              onClick={onClose}
+              onClick={close}
             />
           )}
           <div className="k-Modal__main">
@@ -258,11 +221,10 @@ Modal.propTypes = {
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  fullSize: PropTypes.bool,
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
-  type: PropTypes.oneOf([`modal`, `dialog`]),
+  type: PropTypes.oneOf(['modal', 'dialog']),
 }
 
 Modal.defaultProps = {
@@ -271,7 +233,6 @@ Modal.defaultProps = {
   describedby: '',
   closeButtonLabel: 'Fermer',
   size: 'medium',
-  fullSize: false,
   isOpen: false,
   zIndex: 110,
   hasCloseButton: true,
@@ -279,4 +240,5 @@ Modal.defaultProps = {
 }
 
 Modal.Title = ModalTitle
-Modal.Paragraph = ModalParagraph
+Modal.Content = ModalContent
+Modal.Button = ModalButton
