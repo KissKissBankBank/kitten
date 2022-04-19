@@ -38,7 +38,7 @@ export const Default = () => (
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">_</p>
       </Text>
-      <Text size="micro" transform="uppercase" weight="bold">
+      <Text size="micro" transform="uppercase" weight="regular">
         530 ABONNÉS
       </Text>
     </ProfileCard.Content>
@@ -75,7 +75,7 @@ export const OneButton = () => (
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">_</p>
       </Text>
-      <Text size="micro" transform="uppercase" weight="bold">
+      <Text size="micro" transform="uppercase" weight="regular">
         530 ABONNÉS
       </Text>
     </ProfileCard.Content>
