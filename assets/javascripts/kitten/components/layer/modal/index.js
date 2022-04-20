@@ -7,12 +7,11 @@ import ReactDOM from 'react-dom'
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../action/close-button'
 import { Title } from '../../typography/title'
-import { Button } from '../../action/button'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { GlobalStyle } from './styles'
+import { Button } from '../../action/button'
 
 const ModalTitle = ({
-  children,
   className,
   align,
   ...props
@@ -26,9 +25,7 @@ const ModalTitle = ({
       `k-u-align-${align}`,
     )}
     {...props}
-  >
-    {children}
-  </Title>
+  />
 )
 
 ModalTitle.propTypes = {
@@ -40,34 +37,73 @@ ModalTitle.defaultProps = {
 }
 
 const ModalContent = ({
-  children,
   className,
+  align,
   ...props
 }) => (
   <div
     className={classNames(
       'k-Modal__content',
       className,
+      `k-u-align-${align}`,
     )}
     {...props}
-  >
-    {children}  
-  </div>
+  />
 )
 
-  const ModalButton = ({ children, className, ...props }) => (
-    <Button
-      size="medium"
-      className={classNames(
-        'k-Modal__buttons',
-        className,
-      )}
+ModalContent.propTypes = {
+  align: PropTypes.oneOf(['center', 'left']),
+}
+
+ModalContent.defaultProps = {
+  align: 'center',
+}
+
+const ModalForm = ({ className, twoColumns, ...props }) => (
+  <div 
+    className={classNames(
+      'k-Modal__form',
+      className,
+      {
+        'k-Modal__form--twoColumns': twoColumns,
+      },  
+    )}
       {...props}
-    >
-      {children}
-    </Button>
+  />
+)
+
+const ModalAction = ({ className, ...props }) => (
+  <div
+    className={classNames(
+      'k-Modal__action',
+      className,
+    )}
+    {...props}
+  />
+)
+
+
+const ModalCloseActionButton = ({ onClick, ...props }) => {
+  const [, dispatch] = useContext(ModalContext)
+  return (
+    <Button
+      {...props}
+      onClick={e => {
+        onClick(e)
+        dispatch(updateState(false))
+      }}
+    />
   )
-   
+}
+
+ModalCloseActionButton.propTypes = {
+  onClick: PropTypes.func,
+}
+
+ModalCloseActionButton.defaultProps = {
+  onClick: () => null,
+}
+  
 const initialState = {
   show: false,
 }
@@ -241,4 +277,6 @@ Modal.defaultProps = {
 
 Modal.Title = ModalTitle
 Modal.Content = ModalContent
-Modal.Button = ModalButton
+Modal.Form = ModalForm
+Modal.Action = ModalAction
+Modal.CloseButton = ModalCloseActionButton

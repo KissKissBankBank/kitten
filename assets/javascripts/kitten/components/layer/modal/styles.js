@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .k-Modal__wrapper {
     --Modal-width: 600px;
+    --Modal-width-mobile: 100%;
     --Modal-wrapperMaxWidth: 100vw;
     --Modal-contentMargin: 40px;
     --Modal-headerHeight: 0px;
@@ -25,20 +26,30 @@ export const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+
+    @media ${mq.mobile} {
+      width: var(--Modal-width-mobile);
+    }
   }
 
   .k-Modal__wrapper--small {
-    --Modal-width: 300px;
-    width: var(--Modal-width);
+    @media ${mq.tabletAndDesktop} {
+      --Modal-width: 300px;
+      width: var(--Modal-width);
+    }
   }
 
   .k-Modal__wrapper--medium {
-    width: var(--Modal-width);
+    @media ${mq.tabletAndDesktop} {
+      width: var(--Modal-width);
+    }
   }
 
   .k-Modal__wrapper--large {
-    --Modal-width: 900px;
-    width: var(--Modal-width);
+    @media ${mq.tabletAndDesktop} {
+      --Modal-width: 900px;
+      width: var(--Modal-width);
+    }
   }
 
   .k-Modal__main {
@@ -56,10 +67,34 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .k-Modal__title {
-    font-size: var(--font-size-6); !important
+    font-size: var(--font-size-6) !important; 
     
     @media ${mq.desktop} {
-      font-size: var(--font-size-10);
+      font-size: var(--font-size-10) !important;
+    }
+  }
+
+  .k-Modal__action {
+    display: flex;
+    justify-content: center;
+    gap: ${pxToRem(10)};
+  }
+
+  .k-Modal__content {
+    display: grid;
+    gap: ${pxToRem(30)};
+  }
+
+  /* FORM STYLES */
+
+  .k-Modal__form {
+    display: grid;
+  }
+
+  .k-Modal__form--twoColumns {
+    @media ${mq.tabletAndDesktop} {
+      grid-template-columns: 50% 50%;
+      gap: ${pxToRem(10)};
     }
   }
 
@@ -86,6 +121,17 @@ export const GlobalStyle = createGlobalStyle`
     bottom: 0;
     opacity: 0;
     background-color: rgba(34, 34, 34, .8);
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1 1 33%;
+      min-height: ${pxToRem(50)};
+
+      @media ${mq.tabletAndDesktop} {
+        min-height: ${pxToRem(80)};
+      }
+    }
   }
 
   .k-Modal__overlay--afterOpen {

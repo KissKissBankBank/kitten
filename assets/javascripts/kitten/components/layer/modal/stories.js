@@ -1,8 +1,15 @@
 import React from 'react'
 import { Modal } from './index'
-import { Button, Paragraph } from 'kitten'
+import {
+  Button,
+  Paragraph,
+  TextInput,
+  LocationInput,
+  DropdownSelect,
+} from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
+import { Label } from '../../form/label'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -125,14 +132,19 @@ export const Default = ({
   <Modal {...args}>
     {() => (
       <>
-        <Modal.Title modifier="tertiary">Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Content>
+        <Modal.Title align="center">
+          Lorem ipsum dolor sit consectetuer
+        </Modal.Title>
+        <Modal.Content align="center">
           <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
            {contentText}
           </Paragraph>
         </Modal.Content>
         {buttonSelection > 0 && (
-          <Modal.Button modifier="helium">Modal.Button</Modal.Button>
+          <Modal.Action>
+            <Button modifier="helium">Modal.Button</Button>
+            <Button modifier="hydrogen">Modal.Button</Button>
+          </Modal.Action>
         )}
         {buttonSelection > 1 && (
           <Modal.CloseButton modifier="hydrogen">
@@ -155,22 +167,52 @@ Default.argTypes = {
   },
 }
 
-export const withForm = ({ contentText, ...args }) => (
-  <Modal {...args}>
+export const withForm = () => (
+  <Modal {...Default.args}>
     {() => (
       <>
         <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
         <Modal.Content>
-        
+          <Modal.Form twoColumns>
+            <TextInput size="medium" />
+            <TextInput size="medium" />
+          </Modal.Form>
+          <Modal.Form twoColumns>
+            <TextInput size="medium" />
+          </Modal.Form>
+          <Modal.Form twoColumns>
+            <TextInput size="medium" />
+            <TextInput size="medium" />
+          </Modal.Form>
+          <Modal.Form>
+            <TextInput size="medium" />
+          </Modal.Form>
+          <Modal.Form>
+            <TextInput size="medium" />
+          </Modal.Form>
+          <Modal.Action>
+            <Button modifier="helium" fit="fluid">Ajouter le bénéficiaire</Button>
+          </Modal.Action>
         </Modal.Content>
-        {buttonSelection > 0 && (
-          <Modal.Button modifier="helium">Modal.Button</Modal.Button>
-        )}
-        {buttonSelection > 1 && (
-          <Modal.CloseButton modifier="hydrogen">
-            Modal.CloseButton
-          </Modal.CloseButton>
-        )}
+      </>
+    )}
+  </Modal>
+)
+
+export const withAction = () => (
+  <Modal {...Default.args} size="medium">
+    {() => (
+      <>
+        <Modal.Title>Oops... Quelque chose s’est mal passé.</Modal.Title>
+        <Modal.Content>
+          <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
+          Notre équipe a été automatiquement notifiée et fait en sorte de résoudre ce problème au plus vite.
+          </Paragraph>
+          <Modal.Action>
+            <Button modifier="helium">Retour à la page d'accueil</Button>
+            <Button modifier="hydrogen">Recharger la page</Button>
+          </Modal.Action>
+        </Modal.Content>
       </>
     )}
   </Modal>
