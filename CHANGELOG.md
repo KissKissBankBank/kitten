@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `CheckboxButton`: Add component.
+- Feature: `CheckboxButtonSet`: Add component.
 
 ## [10.2.0] - 2022-04-15
 
