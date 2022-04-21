@@ -25,7 +25,7 @@ exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
   gap: 1.25rem;
 }
 
-.c0 .k-ProfileCard__header .k-ProfileCard__header__image {
+.c0 .k-ProfileCard__avatar .k-ProfileCard__avatar__image {
   margin-top: calc( -1 * (var(--profileCard-padding) + (var(--profileCard-image-size) / 2)) );
   margin-left: auto;
   margin-right: auto;
@@ -68,11 +68,11 @@ exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
     className="k-ProfileCard"
   >
     <div
-      className="k-ProfileCard__header"
+      className="k-ProfileCard__avatar"
     >
       <img
         alt=""
-        className="k-ProfileCard__header__image"
+        className="k-ProfileCard__avatar__image"
         src="/kitten.jpg"
       />
     </div>
