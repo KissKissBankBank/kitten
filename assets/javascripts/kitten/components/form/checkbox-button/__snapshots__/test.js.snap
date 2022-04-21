@@ -1,67 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Checkbox /> default matches with snapshot 1`] = `
+exports[`<CheckboxButton /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gETUgH k-Form-Checkbox"
+  className="sc-bdvvtL iXBShQ k-Form-CheckboxButton k-Form-CheckboxButton--medium"
 >
   <input
-    className="k-Form-Checkbox__input"
+    className="k-Form-CheckboxButton__input"
     disabled={false}
     id="test-checkbox"
     type="checkbox"
   />
   <label
-    className="k-u-weight-light k-Form-Checkbox__label"
+    className="k-u-weight-regular k-Form-CheckboxButton__label"
     htmlFor="test-checkbox"
     onClick={[Function]}
   >
-    Label
+    <span
+      className="k-Form-CheckboxButton__labelText"
+    >
+      Label
+    </span>
   </label>
 </div>
 `;
 
-exports[`<Checkbox /> whith label and children props matches with snapshot 1`] = `
+exports[`<CheckboxButton /> whith label and children props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gETUgH k-Form-Checkbox"
+  className="sc-bdvvtL iXBShQ k-Form-CheckboxButton k-Form-CheckboxButton--medium"
 >
   <input
-    className="k-Form-Checkbox__input"
+    className="k-Form-CheckboxButton__input"
     disabled={false}
     id="test-checkbox"
     type="checkbox"
   />
   <label
-    className="k-u-weight-regular k-Form-Checkbox__label custom-label-className"
+    className="k-Form-CheckboxButton__label"
     htmlFor="test-checkbox"
     onClick={[Function]}
   >
-    Main label
+    <span
+      className="k-u-weight-regular k-Form-CheckboxButton__labelText custom-label-className"
+    >
+      Main label
+    </span>
+    <span
+      className="k-u-weight-light k-Form-CheckboxButton__content custom-text-className"
+    >
+      Secondary content
+    </span>
   </label>
-  <span
-    className="k-u-weight-light k-Form-Checkbox__content custom-text-className"
-    onClick={[Function]}
-  >
-    Secondary content
-  </span>
 </div>
 `;
 
-exports[`<Checkbox /> with label prop matches with snapshot 1`] = `
+exports[`<CheckboxButton /> with label prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gETUgH k-Form-Checkbox"
+  className="sc-bdvvtL iXBShQ k-Form-CheckboxButton k-Form-CheckboxButton--medium"
 >
   <input
-    className="k-Form-Checkbox__input"
+    className="k-Form-CheckboxButton__input"
     disabled={false}
     id="test-checkbox"
     type="checkbox"
   />
   <label
-    className="k-u-weight-light k-Form-Checkbox__label custom-label-className"
+    className="k-u-weight-regular k-Form-CheckboxButton__label custom-label-className"
     htmlFor="test-checkbox"
     onClick={[Function]}
   >
-    Test label
+    <span
+      className="k-Form-CheckboxButton__labelText"
+    >
+      Test label
+    </span>
   </label>
 </div>
 `;

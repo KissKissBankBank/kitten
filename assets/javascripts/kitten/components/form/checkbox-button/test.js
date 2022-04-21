@@ -1,17 +1,17 @@
 import React from 'react'
 import sinon from 'sinon'
-import { Checkbox } from '../../form/checkbox'
+import { CheckboxButton } from '../../form/checkbox-button'
 import { Text } from '../../typography/text'
 import renderer from 'react-test-renderer'
 
 const sinonTest = require('sinon-test')(sinon)
 
-describe('<Checkbox />', () => {
+describe('<CheckboxButton />', () => {
   describe('default', () => {
     let component
     beforeEach(() => {
       component = renderer
-        .create(<Checkbox id="test-checkbox">Label</Checkbox>)
+        .create(<CheckboxButton id="test-checkbox">Label</CheckboxButton>)
         .toJSON()
     })
 
@@ -25,7 +25,7 @@ describe('<Checkbox />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Checkbox
+          <CheckboxButton
             id="test-checkbox"
             label="Test label"
             labelProps={{ className: 'custom-label-className' }}
@@ -44,14 +44,14 @@ describe('<Checkbox />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Checkbox
+          <CheckboxButton
             id="test-checkbox"
             label="Main label"
             labelProps={{ className: 'custom-label-className' }}
             textProps={{ className: 'custom-text-className' }}
           >
             Secondary content
-          </Checkbox>,
+          </CheckboxButton>,
         )
         .toJSON()
     })
@@ -62,16 +62,16 @@ describe('<Checkbox />', () => {
   })
 
   describe('error prop', () => {
-    const component = shallow(<Checkbox error />)
-    const container = component.find('.k-Form-Checkbox')
+    const component = shallow(<CheckboxButton error />)
+    const container = component.find('.k-Form-CheckboxButton')
 
     it('passes the right props to the container element', () => {
-      expect(container.hasClass('k-Form-Checkbox--error')).toBe(true)
+      expect(container.hasClass('k-Form-CheckboxButton--error')).toBe(true)
     })
   })
 
   describe('disabled prop', () => {
-    const component = shallow(<Checkbox disabled />)
+    const component = shallow(<CheckboxButton disabled />)
     const input = component.find('input')
 
     it('passes the right props to the `input` component', () => {
@@ -81,11 +81,11 @@ describe('<Checkbox />', () => {
 
   describe('children prop', () => {
     const component = shallow(
-      <Checkbox>
+      <CheckboxButton>
         <svg />
-      </Checkbox>,
+      </CheckboxButton>,
     )
-    const labelChildren = component.find(Text).children()
+    const labelChildren = component.find(Text).children().children()
 
     it('passes the right props to the `label` component', () => {
       expect(labelChildren.type()).toBe('svg')
@@ -94,7 +94,7 @@ describe('<Checkbox />', () => {
 
   describe('textProps prop', () => {
     const component = shallow(
-      <Checkbox textProps={{ weight: 'regular' }}>Lorem ipsum…</Checkbox>,
+      <CheckboxButton textProps={{ weight: 'regular' }}>Lorem ipsum…</CheckboxButton>,
     )
     const labelText = component.find(Text)
 
@@ -109,11 +109,11 @@ describe('<Checkbox />', () => {
       sinonTest(function () {
         const clickSpy = this.spy()
         const wrapper = shallow(
-          <Checkbox children="Label" onLabelClick={clickSpy}>
+          <CheckboxButton children="Label" onLabelClick={clickSpy}>
             CLICK
-          </Checkbox>,
+          </CheckboxButton>,
         )
-        wrapper.find('.k-Form-Checkbox__label').simulate('click')
+        wrapper.find('.k-Form-CheckboxButton__label').simulate('click')
         expect(clickSpy.calledOnce).toBe(true)
       }),
     )
