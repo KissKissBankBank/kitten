@@ -8,7 +8,9 @@ export default {
   title: 'Form/CheckboxButton',
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="CheckboxButton" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="CheckboxButton" />
+      ),
     },
   },
   decorators: [
