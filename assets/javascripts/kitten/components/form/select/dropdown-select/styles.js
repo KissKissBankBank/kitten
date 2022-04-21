@@ -95,7 +95,6 @@ export const StyledDropdown = styled.div`
   .k-Form-Dropdown__list {
     box-sizing: border-box;
     position: absolute;
-    z-index: 1000;
     z-index: var(--menu-z-index, 1000);
     width: 100%;
     max-height: ${pxToRem(250)};
@@ -108,6 +107,10 @@ export const StyledDropdown = styled.div`
     &:not(:empty) {
       border: var(--DropdownSelect-border) solid var(--color-grey-400);
     }
+  }
+
+  &.k-Form-Dropdown--scrollable .k-Form-Dropdown__list {
+    max-height: ${pxToRem(222)};
   }
 
   .k-Form-Dropdown__item {

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownSelect`: Change list style to cut last item if scrollable.
+
 ## [10.2.0] - 2022-04-15
 
 Changes :
