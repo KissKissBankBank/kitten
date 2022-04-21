@@ -127,40 +127,6 @@ export const withTag = ({ contentFixedHeight, ...args }) => (
         massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet
         rutrum faucibus dolor auctor.
       </Paragraph>
-      <Paragraph>
-        Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi
-        leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio,
-        dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh
-        ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
-        egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum
-        faucibus dolor auctor.
-      </Paragraph>
     </ContentCard.Content>
-    <ContentCard.Footer>
-      <FlexWrapper
-        className="k-u-flex-alignItems-baseline k-u-flex-wrap-wrap k-u-flex-justifyContent-sb"
-        gap={[10, 30]}
-        direction="row"
-      >
-        <FlexWrapper
-          className="k-u-flex-alignItems-baseline"
-          gap={30}
-          direction="row"
-        >
-          <TextButton size="large">
-            <HeartIconNext />
-            144
-          </TextButton>
-          <TextButton size="large">
-            <BubbleIconNext />
-            33
-          </TextButton>
-        </FlexWrapper>
-        <TextButton size="large">
-          <AirplaneIconNext />
-          <span className="k-u-hidden@s-down">Partager</span>
-        </TextButton>
-      </FlexWrapper>
-    </ContentCard.Footer>
   </StyledContentCard>
 )
