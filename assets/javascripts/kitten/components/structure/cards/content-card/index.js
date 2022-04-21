@@ -50,11 +50,6 @@ const StyledCard = styled.article`
     }
   }
 
-  .k-ContentCard__content--tag {
-    display: flex;
-    gap: ${pxToRem(10)};
-  }
-
   .k-ContentCard__content--fixedHeight {
     max-height: ${pxToRem(150)};
     overflow: hidden;
