@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `FlashIconNext`: Add new component.
+- Feature: `Tag`: Improve styles.
+
 ## [10.2.0] - 2022-04-15
 
 Changes :

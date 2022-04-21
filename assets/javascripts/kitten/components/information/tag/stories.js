@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tag } from './index'
 import { DocsPage } from 'storybook/docs-page'
+import { FlashIconNext } from 'kitten'
 
 export default {
   title: 'Information/Tag',
@@ -16,6 +17,7 @@ export default {
     size: 'medium',
     variant: 'light',
     children: '5 contributors',
+    icon: null,
   },
   argTypes: {
     type: {
@@ -33,11 +35,22 @@ export default {
       options: ['light', 'status', 'dark'],
       control: 'radio',
     },
+    icon: { control: 'boolean' },
   },
 }
 
 export const Default = args => {
   return <Tag {...args} />
+}
+
+export const WithIcon = args => {
+  return (
+    <Tag {...args} icon flex>
+      <FlashIconNext width="10" color="#fff" />
+      Abonnement
+    </Tag>
+  ) 
+
 }
 
 export const AllVariants = () => {

@@ -95,9 +95,27 @@ const StyledTag = styled.span`
     font-size: ${pxToRem(8)};
     line-height: ${pxToRem(18)};
   }
+
+  &.k-Tag--icon {
+    svg {
+      width: ${pxToRem(10)};
+      gap: ${pxToRem(7)};
+    }
+  }
 `
 
-export const Tag = ({ type, size, variant, className, flex, ...props }) => {
+export const Tag = ({
+  type,
+  size,
+  variant,
+  className,
+  flex,
+  cssColor,
+  style,
+  icon,
+  children,
+  ...props
+}) => {
   checkDeprecatedSizes(size)
 
   return (
@@ -110,10 +128,13 @@ export const Tag = ({ type, size, variant, className, flex, ...props }) => {
         `k-Tag--${variant}`,
         {
           'k-Tag--flex': flex,
+          'k-Tag--icon': icon,
         },
       )}
       {...props}
-    />
+    >
+      {children}
+    </StyledTag>
   )
 }
 
@@ -122,6 +143,7 @@ Tag.propTypes = {
   size: PropTypes.oneOf(['small', 'medium']),
   variant: PropTypes.oneOf(['light', 'status', 'dark']),
   flex: PropTypes.bool,
+  icon: PropTypes.bool,
 }
 
 Tag.defaultProps = {
@@ -129,4 +151,5 @@ Tag.defaultProps = {
   size: 'medium',
   variant: 'status',
   flex: false,
+  icon: false,
 }
