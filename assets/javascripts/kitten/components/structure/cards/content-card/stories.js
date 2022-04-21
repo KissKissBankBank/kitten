@@ -1,6 +1,5 @@
 import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
-import styled from 'styled-components'
 import { ContentCard } from './index'
 import {
   Paragraph,
@@ -10,15 +9,7 @@ import {
   BubbleIconNext,
   AirplaneIconNext,
   Tag,
-  pxToRem,
 } from 'kitten'
-
-const StyledContentCard = styled(ContentCard)`
-  .k-ContentCard__content--tag {
-    display: flex;
-    gap: ${pxToRem(10)};
-  }
-`
 
 export default {
   title: 'Structure/Cards/ContentCard',
@@ -104,15 +95,15 @@ export const Default = ({ contentFixedHeight, ...args }) => (
 )
 
 export const withTag = ({ contentFixedHeight, ...args }) => (
-  <StyledContentCard {...args}>
+  <ContentCard {...args}>
     <ContentCard.Header>15 novembre 2021</ContentCard.Header>
     <ContentCard.Title>Aenean lacinia bibendum nulla sed !</ContentCard.Title>
     <ContentCard.Content fixedHeight={contentFixedHeight}>
-      <div className="k-ContentCard__content--tag">
+      <FlexWrapper gap={10} direction="row">
         <Tag variant="light">cover</Tag>
         <Tag variant="light">bakstage</Tag>
         <Tag variant="light">avant-premiere</Tag>
-      </div>
+      </FlexWrapper>
       <Paragraph>
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
         ut fermentum massa justo sit amet risus. Sed posuere consectetur est at
@@ -128,5 +119,5 @@ export const withTag = ({ contentFixedHeight, ...args }) => (
         rutrum faucibus dolor auctor.
       </Paragraph>
     </ContentCard.Content>
-  </StyledContentCard>
+  </ContentCard>
 )
