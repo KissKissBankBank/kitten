@@ -24,8 +24,8 @@ const StyledProfileCard = styled.article`
     gap: ${pxToRem(20)};
   }
 
-  .k-ProfileCard__header {
-    .k-ProfileCard__header__image {
+  .k-ProfileCard__avatar {
+    .k-ProfileCard__avatar__image {
       margin-top: calc(
         -1 * (var(--profileCard-padding) + (var(--profileCard-image-size) / 2))
       );
@@ -62,8 +62,8 @@ export const ProfileCard = ({
   ...props
 }) => {
 
-  const HeaderChild = getReactElementsByType({ children, type: Header })[0]
-  const imageProps = Object.keys(HeaderChild?.props?.imageProps || {}) || []
+  const AvatarChild = getReactElementsByType({ children, type: Avatar })[0]
+  const imageProps = Object.keys(AvatarChild?.props?.imageProps || {}) || []
 
   return (
     <StyledProfileCard
@@ -78,14 +78,14 @@ export const ProfileCard = ({
   )
 }
 
-const Header = ({ className, imageProps, ...props }) => (
-  <div className={classNames('k-ProfileCard__header', className)} {...props}>
+const Avatar = ({ className, imageProps, ...props }) => (
+  <div className={classNames('k-ProfileCard__avatar', className)} {...props}>
     {Object.keys(imageProps).length > 0 && (
       <img
         alt=""
         {...imageProps}
         className={classNames(
-          'k-ProfileCard__header__image',
+          'k-ProfileCard__avatar__image',
           imageProps.className,
         )}
       />
@@ -93,11 +93,11 @@ const Header = ({ className, imageProps, ...props }) => (
   </div>
 )
 
-Header.defaultProps = {
+Avatar.defaultProps = {
   imageProps: {},
 }
 
-Header.protoTypes = {
+Avatar.protoTypes = {
   imageProps: PropTypes.object,
 }
 
@@ -109,6 +109,6 @@ const Action = ({ className, ...props }) => (
   <div className={classNames('k-ProfileCard__action', className)} {...props} />
 )
 
-ProfileCard.Header = Header
+ProfileCard.Avatar = Avatar
 ProfileCard.Content = Content
 ProfileCard.Action = Action

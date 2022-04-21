@@ -12,7 +12,7 @@ describe('<ProfileCard />', () => {
       component = renderer
         .create(
           <ProfileCard>
-            <ProfileCard.Header imageProps={{ alt: '', src: `/kitten.jpg` }} />
+            <ProfileCard.Avatar imageProps={{ alt: '', src: `/kitten.jpg` }} />
             <ProfileCard.Content>
               Hello world
             </ProfileCard.Content>

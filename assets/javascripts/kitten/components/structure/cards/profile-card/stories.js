@@ -22,7 +22,7 @@ export default {
 
 export const Default = () => (
   <ProfileCard>
-    <ProfileCard.Header
+    <ProfileCard.Avatar
       imageProps={{
           alt: '',
           src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
@@ -59,7 +59,7 @@ export const Default = () => (
 
 export const OneButton = () => (
   <ProfileCard>
-    <ProfileCard.Header
+    <ProfileCard.Avatar
       imageProps={{
           alt: '',
           src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
