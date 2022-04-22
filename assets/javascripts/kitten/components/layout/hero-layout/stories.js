@@ -619,11 +619,11 @@ export const Simple = ({
             </ProfileCard.Content>
 
             <ProfileCard.Action>
-              <Button rounded modifier="helium" size="small">
+              <Button rounded modifier="helium" size="small" fit="content">
                 <EnvelopeIconNext />
                 Nous écrire
               </Button>
-              <Button rounded modifier="hydrogen" size="small">
+              <Button rounded modifier="hydrogen" size="small" fit="content">
                 <AirplaneIconNext />
                 Partager
               </Button>
