@@ -38,7 +38,6 @@ const StyledTag = styled.span`
       &,
       path {
         fill: currentColor;
-        transition: fill var(--transition);
       }
     }
   }
@@ -119,8 +118,6 @@ export const Tag = ({
   variant,
   className,
   flex,
-  cssColor,
-  style,
   children,
   ...props
 }) => {

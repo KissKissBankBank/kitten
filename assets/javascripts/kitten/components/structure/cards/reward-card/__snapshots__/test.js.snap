@@ -88,7 +88,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     className="k-RewardCard__gridWrapper"
   >
     <span
-      className="sc-dkPtRN gJyvtu k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
+      className="sc-dkPtRN gruJKQ k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
     >
       <svg
         height="13"
@@ -169,7 +169,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__tagList k-RewardCard__drawer"
     >
       <li
-        className="sc-dkPtRN gJyvtu k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+        className="sc-dkPtRN gruJKQ k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-regular"
@@ -180,7 +180,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         contributeurs
       </li>
       <li
-        className="sc-dkPtRN gJyvtu k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+        className="sc-dkPtRN gruJKQ k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-regular"
