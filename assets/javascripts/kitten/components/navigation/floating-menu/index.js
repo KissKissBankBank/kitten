@@ -24,7 +24,6 @@ const StyledFloatingMenu = styled.nav`
 
   @media ${mq.desktop} {
     border-radius: var(--border-radius-m);
-    padding: ${pxToRem(10)} 0;
   }
 
   .k-FloatingMenu__list {
@@ -37,12 +36,8 @@ const StyledFloatingMenu = styled.nav`
     flex-direction: row;
     overflow-x: auto;
 
-    @media ${mq.desktop} {
-      padding: 0;
-      flex-direction: column;
-    }
-
     .k-FloatingMenu__item {
+      box-sizing: border-box;
       height: ${pxToRem(50)};
       padding-bottom: ${pxToRem(4)};
       display: flex;
@@ -64,12 +59,6 @@ const StyledFloatingMenu = styled.nav`
         font-size: ${pxToRem(14)};
       }
 
-      @media ${mq.desktop} {
-        padding-bottom: 0;
-        padding-left: ${pxToRem(16)};
-        border-width: 0 0 0 ${pxToRem(4)};
-      }
-
       &[aria-current] {
         ${TYPOGRAPHY.fontStyles.bold}
         border-color: var(--color-gray-900);
@@ -85,17 +74,42 @@ const StyledFloatingMenu = styled.nav`
       }
     }
   }
+
+  &:not(.k-FloatingMenu--horizontal) {
+    @media ${mq.desktop} {
+      padding: ${pxToRem(10)} 0;
+
+      .k-FloatingMenu__list {
+        padding: 0;
+        flex-direction: column;
+      }
+      .k-FloatingMenu__item {
+        padding-bottom: 0;
+        padding-left: ${pxToRem(16)};
+        border-width: 0 0 0 ${pxToRem(4)};
+      }
+    }
+  }
 `
 
-export const FloatingMenu = ({ className, children, ...props }) => {
+export const FloatingMenu = ({ className, children, horizontal, ...props }) => {
   return (
     <StyledFloatingMenu
-      className={classNames('k-FloatingMenu', className)}
+      className={classNames('k-FloatingMenu', className, {
+        'k-FloatingMenu--horizontal': horizontal,
+      })}
       {...props}
     >
       <ul className="k-FloatingMenu__list">{children}</ul>
     </StyledFloatingMenu>
   )
+}
+
+FloatingMenu.defaultProps = {
+  horizontal: false,
+}
+FloatingMenu.proptypes = {
+  horizontal: PropTypes.bool,
 }
 
 const Item = ({ className, isActive, children, as, ...props }) => {

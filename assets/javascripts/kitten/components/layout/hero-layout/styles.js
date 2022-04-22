@@ -47,7 +47,8 @@ export const StyledLayout = styled.div`
     }
   }
 
-  .k-HeroLayout__hero__background {
+  .k-HeroLayout__hero__background,
+  .k-HeroLayout__page__background {
     z-index: 1;
     position: absolute;
     top: 0;
@@ -97,6 +98,14 @@ export const StyledLayout = styled.div`
     }
   }
 
+  .k-HeroLayout__page__background {
+    --heroLayout-imageHeight: ${pxToRem(320)};
+
+    @media ${mq.desktop} {
+      --heroLayout-imageHeight: ${pxToRem(280)};
+    }
+  }
+
   .k-HeroLayout__page {
     margin: 0 var(--container-padding) ${pxToRem(60)};
     display: flex;
@@ -105,7 +114,15 @@ export const StyledLayout = styled.div`
     display: grid;
 
     @media ${mq.mobileAndTablet} {
-      grid-template-areas: 'menu' 'content' 'aside';
+      grid-template-areas: 'first_aside' 'content' 'last_aside';
+
+      &.k-HeroLayout__page--hasTopMenu {
+        grid-template-areas: 'first_aside' 'top_menu' 'content' 'last_aside';
+
+        .k-HeroLayout__topMenu {
+          grid-area: top_menu;
+        }
+      }
     }
 
     @media ${mq.desktop} {
@@ -114,20 +131,47 @@ export const StyledLayout = styled.div`
         minmax(${pxToRem(210)}, 1fr)
         minmax(auto, ${pxToRem(670)})
         minmax(${pxToRem(210)}, 1fr);
-      grid-template-areas: 'menu content aside';
+      grid-template-areas: 'first_aside content last_aside';
+
+      &.k-HeroLayout__page--hasTopMenu {
+        margin-top: ${pxToRem(30)};
+        grid-template-areas:
+          '........... ....... ..........'
+          'first_aside content last_aside';
+        grid-template-rows: ${pxToRem(80)} auto;
+
+        .k-HeroLayout__topMenu {
+          grid-row: 1 / span 2;
+          grid-column: 2 / span 1;
+        }
+      }
     }
 
-    .k-HeroLayout__menu {
-      grid-area: menu;
+    .k-HeroLayout__topMenu {
+      pointer-events: none;
+
+      > * {
+        pointer-events: all;
+      }
     }
 
-    .k-HeroLayout__aside {
-      grid-area: aside;
+    .k-HeroLayout__firstAside {
+      grid-area: first_aside;
+      position: relative;
+      z-index: 2;
+    }
+
+    .k-HeroLayout__lastAside {
+      grid-area: last_aside;
+      position: relative;
+      z-index: 2;
     }
 
     .k-HeroLayout__loading,
     .k-HeroLayout__content {
       grid-area: content;
+      position: relative;
+      z-index: 2;
     }
 
     .k-HeroLayout__loading {
@@ -137,28 +181,38 @@ export const StyledLayout = styled.div`
   }
 
   @media ${mq.mobileAndTablet} {
-    .k-HeroLayout__sticky.k-HeroLayout__menu {
+    .k-HeroLayout__sticky--both,
+    .k-HeroLayout__sticky--mobile {
       transition: top var(--transition);
-      position: sticky;
+      position: sticky !important;
+      z-index: 4 !important;
       top: 0;
-      z-index: 2;
     }
   }
 
   @media ${mq.desktop} {
-    .k-HeroLayout__menu {
+    .k-HeroLayout__firstAside {
       justify-self: end;
     }
 
-    .k-HeroLayout__aside {
+    .k-HeroLayout__lastAside {
       justify-self: start;
     }
 
-    .k-HeroLayout__sticky__inside {
-      position: sticky;
-      top: ${pxToRem(HEADER_HEIGHT + 20)};
-      bottom: ${pxToRem(20)};
+    .k-HeroLayout__sticky--both .k-HeroLayout__sticky__insideTop,
+    .k-HeroLayout__sticky--both .k-HeroLayout__sticky__inside,
+    .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__insideTop,
+    .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
       transition: top var(--transition);
+      position: sticky !important;
+      z-index: 4 !important;
+      top: 0;
+      bottom: ${pxToRem(20)};
+    }
+
+    .k-HeroLayout__sticky--both .k-HeroLayout__sticky__inside,
+    .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
+      top: ${pxToRem(HEADER_HEIGHT + 20)};
     }
   }
 `

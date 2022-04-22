@@ -38,6 +38,7 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item {
+  box-sizing: border-box;
   height: 3.125rem;
   padding-bottom: 0.25rem;
   display: -webkit-box;
@@ -96,16 +97,6 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 @media (min-width:1080px) {
   .c0 {
     border-radius: var(--border-radius-m);
-    padding: 0.625rem 0;
-  }
-}
-
-@media (min-width:1080px) {
-  .c0 .k-FloatingMenu__list {
-    padding: 0;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 }
 
@@ -116,7 +107,18 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 }
 
 @media (min-width:1080px) {
-  .c0 .k-FloatingMenu__list .k-FloatingMenu__item {
+  .c0:not(.k-FloatingMenu--horizontal) {
+    padding: 0.625rem 0;
+  }
+
+  .c0:not(.k-FloatingMenu--horizontal) .k-FloatingMenu__list {
+    padding: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c0:not(.k-FloatingMenu--horizontal) .k-FloatingMenu__item {
     padding-bottom: 0;
     padding-left: 1rem;
     border-width: 0 0 0 0.25rem;

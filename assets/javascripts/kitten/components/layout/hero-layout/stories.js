@@ -34,6 +34,7 @@ import {
   EnvelopeIconNext,
   StarIconNext,
   Container,
+  ProfileCard,
 } from 'kitten'
 
 import Footer from 'kitten/karl/pages/footer'
@@ -111,9 +112,14 @@ const StyledAsideCard = styled(FlexWrapper)`
 
 const GlobalStyle = createGlobalStyle`
   @media ${mq.mobileAndTablet} {
-    .k-HeaderNav--isStuck + * .k-HeroLayout__sticky.k-HeroLayout__menu {
+    .k-HeaderNav--isStuck + * .k-HeroLayout__sticky--both.k-HeroLayout__topMenu,
+    .k-HeaderNav--isStuck + * .k-HeroLayout__sticky--both.k-HeroLayout__firstAside {
       top: ${pxToRem(HEADER_HEIGHT)} !important;
     }
+  }
+
+  .k-HeaderNav--isStuck + * .k-HeroLayout__topMenu .k-HeroLayout__sticky__insideTop {
+    top: ${pxToRem(HEADER_HEIGHT)} !important;
   }
 `
 
@@ -363,7 +369,7 @@ export const Default = ({
       </HeroLayout.Promo>
 
       <HeroLayout.Main>
-        <HeroLayout.Main.Menu>
+        <HeroLayout.Main.Menu sticky="both">
           <FloatingMenu style={{ margin: '0 -10px' }}>
             <FloatingMenu.Item href="#">Abonnements</FloatingMenu.Item>
             <FloatingMenu.Item href="#" isActive>
@@ -373,7 +379,7 @@ export const Default = ({
             <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
           </FloatingMenu>
         </HeroLayout.Main.Menu>
-        <HeroLayout.Main.Aside>
+        <HeroLayout.Main.Aside sticky="desktop">
           <StyledAsideCard gap={20}>
             <div>
               <Text
@@ -434,6 +440,188 @@ export const Default = ({
             </div>
           </StyledAsideCard>
         </HeroLayout.Main.Aside>
+        <HeroLayout.Main.Content
+          loading={isContentLoading}
+          loaderComponent={<KissKissLoadingAnimation />}
+        >
+          <p className="k-u-margin-top-none">
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+          <p>
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+          <p>
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+          <p>
+            Sed posuere consectetur est at lobortis. Cras mattis consectetur
+            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
+            quis risus eget urna mollis ornare vel eu leo.
+          </p>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
+            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
+            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
+            magna mollis euismod. Curabitur blandit tempus porttitor.
+          </p>
+          <p className="k-u-margin-bottom-none">
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
+            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
+            posuere consectetur est at lobortis. Vestibulum id ligula porta
+            felis euismod semper.
+          </p>
+        </HeroLayout.Main.Content>
+      </HeroLayout.Main>
+    </HeroLayout>
+    <Footer className="k-u-margin-top-quintuple" />
+  </>
+)
+
+export const Simple = ({
+  primary500,
+  primary700,
+  isContentLoading,
+  projectTitle,
+  projectSlogan,
+  bannerUrl,
+  ...args
+}) => (
+  <>
+    <GlobalStyle />
+    <HeaderNav
+      id="header_id"
+      quickAccessProps={{
+        href: '#mainContent',
+        text: 'Aller au contenu principal',
+        zIndex: 300,
+      }}
+      size="small"
+      borderStyle="border"
+      zIndexConfig={{
+        header: 102,
+        headerWithOpenMenu: 105,
+      }}
+    >
+      <HeaderNav.Logo href="#">
+        <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
+      </HeaderNav.Logo>
+    </HeaderNav>
+    <HeroLayout
+      {...args}
+      style={{
+        '--color-primary-500': primary500,
+        '--color-primary-700': primary700,
+      }}
+    >
+      <HeroLayout.Main>
+        <HeroLayout.Main.Image>
+          <img src={bannerUrl} alt="" />
+        </HeroLayout.Main.Image>
+        <HeroLayout.Main.TopMenu>
+          <FloatingMenu style={{ margin: '0 -10px' }} horizontal>
+            <FloatingMenu.Item href="#">Actualités</FloatingMenu.Item>
+            <FloatingMenu.Item href="#" isActive>
+              Mon abonnement
+            </FloatingMenu.Item>
+            <FloatingMenu.Item href="#">À propos</FloatingMenu.Item>
+            <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
+          </FloatingMenu>
+        </HeroLayout.Main.TopMenu>
+        <HeroLayout.Main.FirstAside sticky="desktop">
+          <ProfileCard>
+            <ProfileCard.Avatar
+              imageProps={{
+                alt: '',
+                src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+              }}
+            />
+
+            <ProfileCard.Content>
+              <Text
+                size="huge"
+                weight="bold"
+                tag="p"
+                className="k-u-margin-double"
+              >
+                Lorem Ipsum
+              </Text>
+              <Text size="small" tag="p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="k-u-margin-bottom-single">_</p>
+              </Text>
+              <Text size="micro" transform="uppercase" weight="regular">
+                530 ABONNÉS
+              </Text>
+            </ProfileCard.Content>
+
+            <ProfileCard.Action>
+              <Button rounded modifier="helium" size="small">
+                <EnvelopeIconNext />
+                Nous écrire
+              </Button>
+              <Button rounded modifier="hydrogen" size="small">
+                <AirplaneIconNext />
+                Partager
+              </Button>
+            </ProfileCard.Action>
+          </ProfileCard>
+        </HeroLayout.Main.FirstAside>
+
         <HeroLayout.Main.Content
           loading={isContentLoading}
           loaderComponent={<KissKissLoadingAnimation />}

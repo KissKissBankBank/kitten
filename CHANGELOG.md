@@ -5,6 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `ProfileCard`: Add new component.
+- Feature: `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
+- Feature: `HeroLayout`: Add the following subcomponents:
+  - `HeroLayout.Main.TopMenu`
+  - `HeroLayout.Main.Image`
+  - `HeroLayout.Main.FirstAside`
+  - `HeroLayout.Main.LastAside`
+- Deprecation/Change: `HeroLayout`: Deprecate the following subcomponents:
+  - `HeroLayout.Main.Menu`
+  - `HeroLayout.Main.Aside`
 
 ## [10.2.0] - 2022-04-15
 
