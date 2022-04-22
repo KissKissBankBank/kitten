@@ -15,23 +15,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Deprecation/Change: `HeroLayout`: Deprecate the following subcomponents:
   - `HeroLayout.Main.Menu`
   - `HeroLayout.Main.Aside`
+- Feature: Tokens: Add `shadows` CSS tokens.
+- Feature: Utilities: Add `k-u-shadow-*` CSS utilities.
 
 ## [10.2.0] - 2022-04-15
 
 Change :
 
-  - `SummaryCard`: Replace `xlarge` by `huge` prop size value.
+- `SummaryCard`: Replace `xlarge` by `huge` prop size value.
 
 Features:
 
-  - `PeopleCircleIconNext`: Add new iconNext.
-  - `AvatarWithTextAndBadge`: Add `small` prop size value.
-  - `PeopleCard`: Add new component.
+- `PeopleCircleIconNext`: Add new iconNext.
+- `AvatarWithTextAndBadge`: Add `small` prop size value.
+- `PeopleCard`: Add new component.
 
 Fixes:
 
-  - `ImageDropUploader`: Fix async on `useEffect`.
-  - `Autocomplete`: Improve styles.
+- `ImageDropUploader`: Fix async on `useEffect`.
+- `Autocomplete`: Improve styles.
 
 ## [10.1.0] - 2022-04-08
 

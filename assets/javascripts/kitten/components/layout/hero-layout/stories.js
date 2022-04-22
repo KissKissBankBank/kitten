@@ -582,7 +582,10 @@ export const Simple = ({
           </FloatingMenu>
         </HeroLayout.Main.TopMenu>
         <HeroLayout.Main.FirstAside sticky="desktop">
-          <ProfileCard>
+          <ProfileCard
+            className="k-u-margin-top-decuple@m-down"
+            cardProps={{ className: 'k-u-shadow-s' }}
+          >
             <ProfileCard.Avatar
               imageProps={{
                 alt: '',
@@ -594,17 +597,26 @@ export const Simple = ({
               <Text
                 size="huge"
                 weight="bold"
-                tag="p"
-                className="k-u-margin-double"
+                tag="h1"
+                className="k-u-margin-bottom-single"
               >
                 Lorem Ipsum
               </Text>
-              <Text size="small" tag="p">
+              <Text size="small" tag="p" className="k-u-margin-none">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                <p className="k-u-margin-bottom-single">_</p>
               </Text>
-              <Text size="micro" transform="uppercase" weight="regular">
+              <Text size="small" tag="p" className="k-u-margin-none">
+                -
+              </Text>
+              <Text
+                size="micro"
+                tag="p"
+                className="k-u-margin-none"
+                letterSpacing="10%"
+                transform="uppercase"
+                weight="regular"
+              >
                 530 ABONNÉS
               </Text>
             </ProfileCard.Content>

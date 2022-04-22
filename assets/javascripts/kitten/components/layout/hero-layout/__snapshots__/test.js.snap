@@ -69,6 +69,8 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 .c0 .k-HeroLayout__promo {
   background-color: var(--color-grey-200);
   padding: 1.875rem 0;
+  position: relative;
+  z-index: 5;
 }
 
 .c0 .k-HeroLayout__page__background {
@@ -321,6 +323,8 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 .c0 .k-HeroLayout__promo {
   background-color: var(--color-grey-200);
   padding: 1.875rem 0;
+  position: relative;
+  z-index: 5;
 }
 
 .c0 .k-HeroLayout__page__background {

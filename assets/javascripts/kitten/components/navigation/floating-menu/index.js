@@ -8,7 +8,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { mq, ScreenConfig } from '../../../constants/screen-config'
 
 const StyledFloatingMenu = styled.nav`
-  border: var(--border);
+  box-shadow: var(--shadow-m);
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(30)};
@@ -17,10 +17,6 @@ const StyledFloatingMenu = styled.nav`
   min-width: ${pxToRem(185)};
   border-bottom-left-radius: var(--border-radius-m);
   border-bottom-right-radius: var(--border-radius-m);
-
-  @media ${mq.mobile} {
-    border-top: 0;
-  }
 
   @media ${mq.desktop} {
     border-radius: var(--border-radius-m);
@@ -77,6 +73,7 @@ const StyledFloatingMenu = styled.nav`
 
   &:not(.k-FloatingMenu--horizontal) {
     @media ${mq.desktop} {
+      box-shadow: var(--shadow-s);
       padding: ${pxToRem(10)} 0;
 
       .k-FloatingMenu__list {
