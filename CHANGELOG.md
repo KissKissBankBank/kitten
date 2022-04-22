@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `CheckboxButton`: Add component.
+- Feature: `CheckboxButtonSet`: Add component.
+- Feature: `DropdownSelect`: Change list style to cut last item if scrollable.
 - Feature: `ProfileCard`: Add new component.
 
 ## [10.2.0] - 2022-04-15

@@ -129,6 +129,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
           'k-Form-Dropdown--error': error,
           'k-Form-Dropdown--valid': valid,
           'k-Form-Dropdown--disabled': disabled,
+          'k-Form-Dropdown--scrollable': flattenedOptions.length > 5,
         },
       )}
       style={{ '--menu-z-index': menuZIndex }}
