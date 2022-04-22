@@ -4,7 +4,7 @@ import { COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Layer/Toggletip',
+  title: 'Information/Toggletip',
   component: Toggletip,
   parameters: {
     docs: {
@@ -33,7 +33,7 @@ const argTypes = {
   },
   modifier: {
     name: 'modifier',
-    options: ['info', 'warning', 'error', 'success', 'disabled'],
+    options: ['info', 'warning', 'danger', 'success', 'disabled'],
     control: 'radio',
   },
   children: {

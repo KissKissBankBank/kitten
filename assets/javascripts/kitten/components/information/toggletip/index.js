@@ -6,55 +6,42 @@ import styled from 'styled-components'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
-import { QuestionMarkIcon } from '../../graphics/icons/question-mark-icon'
-import { WarningIcon } from '../../graphics/icons/warning-icon'
+import { IconBadge } from '../../information/icon-badge'
+import { StatusIconNext } from '../../graphics/icons-next/status-icon-next'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledWrapper = styled.span`
-  --toggletipAction-size: ${pxToRem(24)};
-
   position: relative;
   display: inline-block;
 
   &,
   &.k-Toggletip--info {
-    --toggletipAction-color: ${COLORS.primary1};
-    --toggletipBubble-color: ${COLORS.primary4};
+    --toggletipBubble-color: var(--color-primary-100);
   }
   &.k-Toggletip--warning {
-    --toggletipAction-color: ${COLORS.orange};
-    --toggletipBubble-color: ${COLORS.orange1};
+    --toggletipBubble-color: var(--color-warning-100);
   }
-  &.k-Toggletip--error {
-    --toggletipAction-color: ${COLORS.error};
-    --toggletipBubble-color: ${COLORS.error2};
+  &.k-Toggletip--error,
+  &.k-Toggletip--danger {
+    --toggletipBubble-color: var(--color-danger-100);
   }
   &.k-Toggletip--success {
-    --toggletipAction-color: ${COLORS.valid};
-    --toggletipBubble-color: ${COLORS.valid1};
+    --toggletipBubble-color: var(--color-success-100);
   }
   &.k-Toggletip--disabled {
-    --toggletipAction-color: ${COLORS.font2};
-    --toggletipBubble-color: ${COLORS.line1};
-  }
-
-  .k-Toggletip__action {
-    position: relative;
-    background-color: var(--toggletipAction-color);
-    width: var(--toggletipAction-size);
-    height: var(--toggletipAction-size);
-    border-radius: var(--border-radius-rounded);
+    --toggletipBubble-color: var(--color-grey-300);
   }
 
   .k-Toggletip__bubble {
-    --toggletipBubble-arrowMainPosition: ${pxToRem(-2 * 10)};
+    --toggletipBubble-arrowMainPosition: ${pxToRem(-2 * 8)};
 
     z-index: var(--toggletipBubble-zIndex);
     box-sizing: border-box;
     padding: ${pxToRem(12)};
     background-color: var(--toggletipBubble-color);
     text-align: left;
+    border-radius: var(--border-radius-s);
 
     &:after {
       content: '';
@@ -137,14 +124,6 @@ const StyledWrapper = styled.span`
   }
 `
 
-const ButtonIcon = ({ modifier }) => {
-  if (modifier === 'info') {
-    return <QuestionMarkIcon width={6} height={10} color={COLORS.background1} />
-  }
-
-  return <WarningIcon width={2} height={10} color={COLORS.background1} />
-}
-
 export const Toggletip = ({
   modifier,
   style,
@@ -154,6 +133,9 @@ export const Toggletip = ({
   actionProps,
   bubbleProps,
   targetElement,
+  icon,
+  displayIcon,
+  iconHasBorder,
   ...props
 }) => {
   const [isHover, setHoverState] = useState(false)
@@ -265,12 +247,33 @@ export const Toggletip = ({
     }, 100)
   }
 
+  const internalIcon = (() => {
+    if (icon) return icon
+
+    return <StatusIconNext status={modifier} />
+  })()
+
+  const role = (() => {
+    switch (modifier) {
+      case 'danger':
+        return 'alert'
+      case 'warning':
+      case 'success':
+        return 'status'
+      default:
+        return null
+    }
+  })()
+
   return (
     <StyledWrapper
       className={classNames(
         'k-Toggletip',
         className,
         `k-Toggletip--${modifier}`,
+        {
+          'k-Toggletip--hasIcon': displayIcon,
+        },
       )}
       style={{
         '--toggletipAction-top': actionPosition.top
@@ -285,35 +288,24 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      {!!targetElement && React.isValidElement(targetElement) ? (
+      {displayIcon && (
         <button
-          {...actionProps}
-          ref={actionElement}
-          type="button"
-          aria-label={actionLabel}
-          className="k-u-reset-button"
-        >
-          {targetElement}
-        </button>
-      ) : (
-        <button
-          {...actionProps}
           className={classNames(
-            'k-Toggletip__action',
+            'k-Toggletip--hasIcon',
             'k-u-reset-button',
-            actionProps.className,
           )}
           type="button"
           aria-label={actionLabel}
           onClick={handleClick}
-          onBlur={() => setOpen(false)}
           ref={actionElement}
-          style={{
-            '--toggletipAction-color': actionProps.color || null,
-            ...actionProps.style,
-          }}
         >
-          <ButtonIcon modifier={modifier} />
+          <IconBadge
+            className="k-Toggletip__icon"
+            children={internalIcon}
+            status={modifier}
+            size="small"
+            hasBorder={iconHasBorder}
+          />
         </button>
       )}
 
@@ -322,9 +314,9 @@ export const Toggletip = ({
           <span
             className={classNames(
               'k-Toggletip__bubble',
-              'k-u-weight-light',
-              'k-u-size-small',
               'k-u-line-height-1-3',
+              'k-u-size-small',
+              'k-u-weight-light',
               bubbleClassName,
               {
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
@@ -353,16 +345,19 @@ Toggletip.defaultProps = {
   actionProps: {},
   bubbleProps: {},
   targetElement: null,
+  displayIcon: true,
+  iconHasBorder: true,
 }
 
 Toggletip.propTypes = {
-  modifier: PropTypes.oneOf([
+  modifier: deprecated(PropTypes.oneOf([
     'info',
     'warning',
-    'error',
+    'danger',
     'success',
     'disabled',
   ]),
+  'Please use danger modifier instead'),
   actionLabel: PropTypes.string.isRequired,
   actionProps: PropTypes.object,
   bubbleProps: PropTypes.object,
@@ -371,4 +366,6 @@ Toggletip.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]),
+  displayIcon: PropTypes.bool,
+  iconHasBorder: PropTypes.bool,
 }

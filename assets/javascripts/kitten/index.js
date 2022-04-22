@@ -289,6 +289,7 @@ export { CounterBlock } from './components/information/counter-block'
 export { IconBadge } from './components/information/icon-badge'
 export { StatusWithBullet } from './components/information/status-with-bullet'
 export { Tag } from './components/information/tag'
+export { Toggletip } from './components/information/toggletip'
 
 // Information/Boxes
 export { ArrowContainer } from './components/information/boxes/arrow-container'
@@ -327,7 +328,6 @@ export { DocumentsStatusBox } from './components/interaction/upload/documents-st
 export { Modal } from './components/layer/modal'
 export { Modal as ModalNext } from './components/layer/modal-next'
 export { Overlay } from './components/layer/overlay'
-export { Toggletip } from './components/layer/toggletip'
 
 // Layout
 // ------
