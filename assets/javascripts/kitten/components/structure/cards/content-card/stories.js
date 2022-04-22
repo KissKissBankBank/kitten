@@ -8,6 +8,7 @@ import {
   HeartIconNext,
   BubbleIconNext,
   AirplaneIconNext,
+  Tag,
 } from 'kitten'
 
 export default {
@@ -90,5 +91,33 @@ export const Default = ({ contentFixedHeight, ...args }) => (
         </TextButton>
       </FlexWrapper>
     </ContentCard.Footer>
+  </ContentCard>
+)
+
+export const withTag = ({ contentFixedHeight, ...args }) => (
+  <ContentCard {...args}>
+    <ContentCard.Header>15 novembre 2021</ContentCard.Header>
+    <ContentCard.Title>Aenean lacinia bibendum nulla sed !</ContentCard.Title>
+    <ContentCard.Content fixedHeight={contentFixedHeight}>
+      <FlexWrapper gap={10} direction="row">
+        <Tag variant="light">cover</Tag>
+        <Tag variant="light">bakstage</Tag>
+        <Tag variant="light">avant-premiere</Tag>
+      </FlexWrapper>
+      <Paragraph>
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+        ut fermentum massa justo sit amet risus. Sed posuere consectetur est at
+        lobortis. Donec sed odio dui. Donec ullamcorper nulla non metus auctor
+        fringilla.
+      </Paragraph>
+      <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+        erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus,
+        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+        massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet
+        rutrum faucibus dolor auctor.
+      </Paragraph>
+    </ContentCard.Content>
   </ContentCard>
 )
