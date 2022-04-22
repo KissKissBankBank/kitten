@@ -92,7 +92,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__suggestions {
   position: absolute;
-  top: 3.75rem;
+  top: 3.4375rem;
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -283,7 +283,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__suggestions {
   position: absolute;
-  top: 3.75rem;
+  top: 3.4375rem;
   left: 0;
   right: 0;
   overflow-y: auto;
@@ -526,7 +526,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
 
 .c0 .k-Form-Autocomplete__suggestions {
   position: absolute;
-  top: 3.75rem;
+  top: 3.4375rem;
   left: 0;
   right: 0;
   overflow-y: auto;

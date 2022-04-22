@@ -167,7 +167,6 @@ export const Default = args => {
         labelPropsGetter={passedLabelProps => {
           passedLabelProps && setLabelProps(passedLabelProps())
         }}
-        defaultSelectedValue="fuji"
       />
       <p>
         Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
