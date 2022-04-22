@@ -54,7 +54,7 @@ const StyledProfileCard = styled.article`
   }
 `
 
-export const ProfileCard = ({ className, cardProps, children, ...props }) => {
+export const ProfileCard = ({ className, children, ...props }) => {
   const AvatarChild = getReactElementsByType({ children, type: Avatar })[0]
   const imageProps = Object.keys(AvatarChild?.props?.imageProps || {}) || []
 
@@ -65,22 +65,11 @@ export const ProfileCard = ({ className, cardProps, children, ...props }) => {
       })}
       {...props}
     >
-      <div
-        {...cardProps}
-        className={classNames('k-ProfileCard', cardProps?.className)}
-      >
+      <div className="k-ProfileCard">
         {children}
       </div>
     </StyledProfileCard>
   )
-}
-
-ProfileCard.defaultProps = {
-  cardProps: {},
-}
-
-ProfileCard.protoTypes = {
-  cardProps: PropTypes.object,
 }
 
 const Avatar = ({ className, imageProps, ...props }) => (
