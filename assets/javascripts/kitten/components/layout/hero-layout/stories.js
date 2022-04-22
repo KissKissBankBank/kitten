@@ -582,10 +582,7 @@ export const Simple = ({
           </FloatingMenu>
         </HeroLayout.Main.TopMenu>
         <HeroLayout.Main.FirstAside sticky="desktop">
-          <ProfileCard
-            className="k-u-margin-top-decuple@m-down"
-            cardProps={{ className: 'k-u-shadow-s' }}
-          >
+          <ProfileCard className="k-u-margin-top-decuple@m-down">
             <ProfileCard.Avatar
               imageProps={{
                 alt: '',

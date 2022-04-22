@@ -16,6 +16,7 @@ const StyledProfileCard = styled.article`
 
   .k-ProfileCard {
     border: var(--border-width) solid var(--color-grey-300);
+    box-shadow: var(--shadow-s);
     border-radius: var(--border-radius-m);
     padding: var(--profileCard-padding);
     display: flex;
