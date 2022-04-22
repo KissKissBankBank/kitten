@@ -65,9 +65,7 @@ export const ProfileCard = ({ className, children, ...props }) => {
       })}
       {...props}
     >
-      <div className="k-ProfileCard">
-        {children}
-      </div>
+      <div className="k-ProfileCard">{children}</div>
     </StyledProfileCard>
   )
 }
