@@ -45,12 +45,11 @@ export const Default = args => {
 
 export const WithIcon = args => {
   return (
-    <Tag {...args} icon flex>
-      <FlashIconNext width="10" color="#fff" />
+    <Tag {...args} flex>
+      <FlashIconNext width="10" />
       Abonnement
     </Tag>
-  ) 
-
+  )
 }
 
 export const AllVariants = () => {

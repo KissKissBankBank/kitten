@@ -25,6 +25,26 @@ const StyledTag = styled.span`
     gap: ${pxToRem(8)};
   }
 
+  &.k-Tag--small {
+    gap: ${pxToRem(5)};
+    height: ${pxToRem(18)};
+    padding: 0 ${pxToRem(5)};
+    font-size: ${pxToRem(8)};
+    line-height: ${pxToRem(18)};
+  }
+
+  & {
+    svg {
+      &,
+      path {
+        fill: currentColor;
+        transition: fill var(--transition);
+      }
+    }
+  }
+
+  /* LIGHT */
+
   &.k-Tag--light.k-Tag--info {
     background-color: var(--color-primary-100);
     color: var(--color-grey-900);
@@ -45,6 +65,8 @@ const StyledTag = styled.span`
     background-color: var(--color-grey-300);
     color: var(--color-grey-900);
   }
+
+  /* STATUS */
 
   &.k-Tag--status.k-Tag--info {
     background-color: var(--color-primary-100);
@@ -67,6 +89,8 @@ const StyledTag = styled.span`
     color: var(--color-grey-800);
   }
 
+  /* DARK */
+
   &.k-Tag--dark.k-Tag--info {
     background-color: var(--color-primary-500);
     color: var(--color-grey-000);
@@ -87,21 +111,6 @@ const StyledTag = styled.span`
     background-color: var(--color-grey-800);
     color: var(--color-grey-000);
   }
-
-  &.k-Tag--small {
-    gap: ${pxToRem(5)};
-    height: ${pxToRem(18)};
-    padding: 0 ${pxToRem(5)};
-    font-size: ${pxToRem(8)};
-    line-height: ${pxToRem(18)};
-  }
-
-  &.k-Tag--icon {
-    svg {
-      width: ${pxToRem(10)};
-      gap: ${pxToRem(7)};
-    }
-  }
 `
 
 export const Tag = ({
@@ -112,7 +121,6 @@ export const Tag = ({
   flex,
   cssColor,
   style,
-  icon,
   children,
   ...props
 }) => {
@@ -128,7 +136,6 @@ export const Tag = ({
         `k-Tag--${variant}`,
         {
           'k-Tag--flex': flex,
-          'k-Tag--icon': icon,
         },
       )}
       {...props}
@@ -143,7 +150,6 @@ Tag.propTypes = {
   size: PropTypes.oneOf(['small', 'medium']),
   variant: PropTypes.oneOf(['light', 'status', 'dark']),
   flex: PropTypes.bool,
-  icon: PropTypes.bool,
 }
 
 Tag.defaultProps = {
@@ -151,5 +157,4 @@ Tag.defaultProps = {
   size: 'medium',
   variant: 'status',
   flex: false,
-  icon: false,
 }
