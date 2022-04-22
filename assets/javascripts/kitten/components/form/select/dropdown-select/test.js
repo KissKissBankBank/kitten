@@ -41,4 +41,34 @@ describe('<DropdownSelect />', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
+  it('should match its snapshot with few options', () => {
+    const tree = renderer
+      .create(
+        <DropdownSelect
+          id="dropdown-select-test"
+          labelText="DropdownSelect test"
+          items={[
+            {
+              value: 'bianchi',
+              label: 'Bianchi',
+              children: [
+                { value: 'bmc', label: 'BMC' },
+                { value: 'cannondale', label: 'Cannondale' },
+              ],
+            },
+            { value: 'canyon', label: 'Canyon' },
+            { value: 'cervelo', label: 'Cervelo' },
+          ]}
+          openOnLoad
+          labelProps={{
+            'data-custom-label': 'Hello World',
+            className: 'k-u-weight-light',
+          }}
+        />,
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
 })
