@@ -79,7 +79,7 @@ const Wrapper = styled.div`
 
   .k-Form-Autocomplete__suggestions {
     position: absolute;
-    top: ${pxToRem(60)};
+    top: ${pxToRem(55)};
     left: 0;
     right: 0;
     overflow-y: auto;
