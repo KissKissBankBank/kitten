@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button, Title, Paragraph, Modal, Marger } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
+import { Modal, Button, Paragraph, Field } from 'kitten'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -32,56 +33,211 @@ const paragraphContainer = `
   nulla pariatur?
 `
 
-const StoryContent = ({ content }) => (
-  <Marger top="8" bottom="8">
-    <Marger bottom="2">
-      <Title modifier="tertiary" noMargin tag="p">
-        Lorem ipsum dolor sit consectetuer
-      </Title>
-    </Marger>
-
-    <Marger top="2" bottom="4">
-      <Paragraph modifier="secondary" noMargin tag="p">
-        {content}
-      </Paragraph>
-    </Marger>
-
-    <Marger top="4" bottom="10">
-      <Button modifier="helium" size="large">
-        Action 1 Button
-      </Button>
-    </Marger>
-  </Marger>
-)
-
-const StoryButton = ({ children }) => (
-  <Button modifier="helium">{children}</Button>
-)
-
 export default {
   title: 'Layer/Modal',
   component: Modal,
   parameters: {
     docs: {
-      page: () => <DocsPage filepath={__filename} importString="Modal" />,
+      page: () => (
+        <DocsPage filepath={__filename} importString="Modal as Modal" />
+      ),
     },
+  },
+  subcomponents: {
+    Title: Modal.Title,
+    Paragraph: Modal.Paragraph,
+    Actions: Modal.Actions,
+    Button: Modal.Button,
+    CloseButton: Modal.CloseButton,
   },
   decorators: [
     story => <div className="story-Container story-Grid">{story()}</div>,
   ],
 }
 
-export const OldModal = () => (
-  <>
-    <p className="k-u-weight-light">
-      This Modal will be deprecated in the future.
-    </p>
+const args = {
+  ...Modal.defaultProps,
+  trigger: (
+    <Button modifier="helium" onClick={action('Trigger clicked')}>
+      Open
+    </Button>
+  ),
+  onClose: action('onClose triggered'),
+  contentText: paragraphContainer,
+}
 
-    <Modal
-      closeButtonLabel="Fermer"
-      trigger={<StoryButton children="Open" />}
-      content={<StoryContent content={paragraphContainer} />}
-      disableOutsideScroll
-    />
-  </>
+const argTypes = {
+  trigger: {
+    name: 'trigger',
+    description: 'React element that is used as a trigger for the Modal.',
+    control: null,
+  },
+  label: {
+    name: 'label',
+    description: 'Label for the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  labelledby: {
+    name: 'labelledby',
+    description:
+      'ID for the element that labels the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  describedby: {
+    name: 'describedby',
+    description:
+      'ID for the element that describes the content of the modal. For accessibility purposes.',
+    control: 'text',
+  },
+  closeButtonLabel: {
+    name: 'closeButtonLabel',
+    description: 'Label for the close button. For accessibility purposes.',
+    control: 'text',
+  },
+  modalProps: {
+    name: 'modalProps',
+    control: 'object',
+  },
+  hasCloseButton: {
+    name: 'hasCloseButton',
+    control: 'boolean',
+  },
+  size: {
+    name: 'size',
+    options: ['small', 'medium', 'large'],
+    control: 'select',
+  },
+  isOpen: {
+    name: 'isOpen',
+    control: 'boolean',
+  },
+  zIndex: {
+    name: 'zIndex',
+    control: 'number',
+  },
+}
+
+export const Default = ({ contentText, buttonSelection, ...args }) => (
+  <Modal {...args}>
+    {() => (
+      <>
+        <Modal.Title align="center">
+          Lorem ipsum dolor sit consectetuer
+        </Modal.Title>
+        <Modal.Content align="center">
+          <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
+            {contentText}
+          </Paragraph>
+        </Modal.Content>
+        {buttonSelection > 0 && (
+          <Modal.Actions>
+            {buttonSelection > 1 && (
+              <Button modifier="hydrogen">Modal.Button</Button>
+            )}
+            <Button modifier="helium">Modal.Button</Button>
+          </Modal.Actions>
+        )}
+      </>
+    )}
+  </Modal>
+)
+Default.args = {
+  ...args,
+  buttonSelection: 1,
+}
+Default.argTypes = {
+  ...argTypes,
+  buttonSelection: {
+    name: 'number of action buttons to display (story prop)',
+    control: { type: 'range', min: 0, max: 2 },
+  },
+}
+
+export const withForm = () => (
+  <Modal {...Default.args}>
+    {({ close }) => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Content>
+          <Modal.Form twoColumns>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'girlishly' }}>
+                Girlishly
+              </Field.Label>
+              <Field.Input size="medium" id="girlishly" />
+            </div>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'acropolitan' }}>
+                Acropolitan
+              </Field.Label>
+              <Field.Input size="medium" id="acropolitan" />
+            </div>
+          </Modal.Form>
+          <Modal.Form twoColumns>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'choreic' }}>
+                Choreic
+              </Field.Label>
+              <Field.Input size="medium" id="choreic" />
+            </div>
+          </Modal.Form>
+          <Modal.Form twoColumns>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'nectarine' }}>
+                Nectarine
+              </Field.Label>
+              <Field.Input size="medium" id="nectarine" />
+            </div>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'petrifiable' }}>
+                Petrifiable
+              </Field.Label>
+              <Field.Input size="medium" id="petrifiable" />
+            </div>
+          </Modal.Form>
+          <Modal.Form>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'eversive' }}>
+                Eversive
+              </Field.Label>
+              <Field.Input size="medium" id="eversive" />
+            </div>
+          </Modal.Form>
+          <Modal.Form>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'interpenetrable' }}>
+                Interpenetrable
+              </Field.Label>
+              <Field.Input size="medium" id="interpenetrable" />
+            </div>
+          </Modal.Form>
+          <Modal.Actions>
+            <Button modifier="helium" fit="fluid" onClick={close}>
+              Ajouter le bénéficiaire
+            </Button>
+          </Modal.Actions>
+        </Modal.Content>
+      </>
+    )}
+  </Modal>
+)
+
+export const withAction = () => (
+  <Modal {...Default.args} size="medium">
+    {() => (
+      <>
+        <Modal.Title>Oops… Quelque chose s’est mal passé.</Modal.Title>
+        <Modal.Content>
+          <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
+            Notre équipe a été automatiquement notifiée et fait en sorte de
+            résoudre ce problème au plus vite.
+          </Paragraph>
+          <Modal.Actions>
+            <Button modifier="helium">Retour à la page d’accueil</Button>
+            <Button modifier="hydrogen">Recharger la page</Button>
+          </Modal.Actions>
+        </Modal.Content>
+      </>
+    )}
+  </Modal>
 )

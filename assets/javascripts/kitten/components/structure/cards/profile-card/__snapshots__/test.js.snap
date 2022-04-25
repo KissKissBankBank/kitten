@@ -11,7 +11,8 @@ exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-ProfileCard {
-  border: var(--border);
+  border: var(--border-width) solid var(--color-grey-300);
+  box-shadow: var(--shadow-s);
   border-radius: var(--border-radius-m);
   padding: var(--profileCard-padding);
   display: -webkit-box;
@@ -40,10 +41,6 @@ exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
 
 .c0 .k-ProfileCard__content {
   text-align: center;
-}
-
-.c0 .k-ProfileCard__content * {
-  margin: 0;
 }
 
 .c0 .k-ProfileCard__action {

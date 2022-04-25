@@ -269,9 +269,8 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
                   file: imageRawData || null,
                   cropperData: cropperData
                 });
-                handleOnChangeCallback();
 
-              case 10:
+              case 9:
               case "end":
                 return _context2.stop();
             }
@@ -283,6 +282,8 @@ export var ImageDropUploader = function ImageDropUploader(_ref) {
         return _ref3.apply(this, arguments);
       };
     }();
+
+    handleOnChangeCallback();
   }, [imageDataURL, cropperData, imageRawData]);
 
   var handleCropperChange = function handleCropperChange(exportedCropperData) {

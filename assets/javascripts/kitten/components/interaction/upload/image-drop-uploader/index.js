@@ -315,8 +315,8 @@ export const ImageDropUploader = ({
         file: imageRawData || null,
         cropperData: cropperData,
       })
-      handleOnChangeCallback()
     }
+    handleOnChangeCallback()
   }, [imageDataURL, cropperData, imageRawData])
 
   const handleCropperChange = exportedCropperData => {

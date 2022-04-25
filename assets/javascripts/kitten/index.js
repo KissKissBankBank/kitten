@@ -66,6 +66,8 @@ export { CheckList } from './components/feedback/check-list'
 
 export { Autocomplete } from './components/form/autocomplete'
 export { Checkbox } from './components/form/checkbox'
+export { CheckboxButton } from './components/form/checkbox-button'
+export { CheckboxButtonSet } from './components/form/checkbox-button-set'
 export { CheckboxSet } from './components/form/checkbox-set'
 export { CreditCardForm } from './components/form/credit-card-form'
 export { ColorSelect } from './components/form/color-select'
