@@ -1,20 +1,15 @@
 import React from 'react'
-import sinon from 'sinon'
+import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
 import { Modal } from './index'
 
 describe('<Modal />', () => {
-  const sandbox = sinon.createSandbox()
-  console.warn = jest.fn()
-
   describe('with trigger', () => {
     const component = mount(
       <Modal trigger={<span className="trigger-example" />} />,
     )
 
     it('contains the trigger', () => {
-      expect(console.warn).toHaveBeenCalledWith(
-        'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
-      )
       expect(component.find('.trigger-example').exists()).toBe(true)
     })
   })
@@ -23,31 +18,105 @@ describe('<Modal />', () => {
     const component = mount(<Modal className="content-example" />)
 
     it('contains the content', () => {
-      expect(console.warn).toHaveBeenCalledWith(
-        'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
-      )
       expect(component.render().hasClass('content-example')).toBe(true)
       expect(component.render().hasClass('k-Modal')).toBe(true)
     })
+  })
 
-    describe('with onClose prop', () => {
-      let onCloseSpy
-      let modalComponent
+  let component
 
-      beforeAll(() => {
-        onCloseSpy = sandbox.spy()
-        modalComponent = mount(
-          <Modal className="content-example" onClose={onCloseSpy} />,
-        )
+  describe('snapshot tests', () => {
+    describe('is closed', () => {
+      beforeEach(() => {
+        ReactDOM.createPortal = jest.fn(element => {
+          return element
+        })
 
-        modalComponent.instance().close()
+        component = renderer
+          .create(
+            <Modal size="medium" trigger={<button>Open</button>}>
+              {() => (
+                <>
+                  <Modal.Title>
+                    Oops… Quelque chose s’est mal passé.
+                  </Modal.Title>
+                  <Modal.Content>
+                    <p>
+                      Notre équipe a été automatiquement notifiée et fait en
+                      sorte de résoudre ce problème au plus vite.
+                    </p>
+                    <Modal.Actions>
+                      <button>Retour à la page d’accueil</button>
+                      <button>Recharger la page</button>
+                    </Modal.Actions>
+                  </Modal.Content>
+                </>
+              )}
+            </Modal>,
+          )
+          .toJSON()
       })
 
-      it('calls onClose prop callback', () => {
-        expect(console.warn).toHaveBeenCalledWith(
-          'The Modal component on `modals/modal` will be deprecated in favor of `ModalNext`.',
-        )
-        expect(onCloseSpy.calledOnce).toBe(true)
+      afterEach(() => {
+        ReactDOM.createPortal.mockClear()
+      })
+
+      it('matches with snapshot', () => {
+        expect(component).toMatchSnapshot()
+      })
+    })
+
+    describe('is open', () => {
+      beforeEach(() => {
+        ReactDOM.createPortal = jest.fn(element => {
+          return element
+        })
+
+        component = renderer
+          .create(
+            <Modal
+              size="medium"
+              isOpen
+              modalProps={{
+                style: {
+                  content: {
+                    wordSpacing: 10,
+                    lineHeight: 20,
+                  },
+                  overlay: {
+                    background: '#fff',
+                  }
+                }
+              }}
+            >
+              {() => (
+                <>
+                  <Modal.Title>
+                    Oops… Quelque chose s’est mal passé.
+                  </Modal.Title>
+                  <Modal.Content>
+                    <p>
+                      Notre équipe a été automatiquement notifiée et fait en
+                      sorte de résoudre ce problème au plus vite.
+                    </p>
+                    <Modal.Actions>
+                      <button>Retour à la page d’accueil</button>
+                      <button>Recharger la page</button>
+                    </Modal.Actions>
+                  </Modal.Content>
+                </>
+              )}
+            </Modal>,
+          )
+          .toJSON()
+      })
+
+      afterEach(() => {
+        ReactDOM.createPortal.mockClear()
+      })
+
+      it('matches with snapshot', () => {
+        expect(component).toMatchSnapshot()
       })
     })
   })
