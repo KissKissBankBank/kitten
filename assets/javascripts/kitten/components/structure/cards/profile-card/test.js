@@ -13,13 +13,9 @@ describe('<ProfileCard />', () => {
         .create(
           <ProfileCard>
             <ProfileCard.Avatar imageProps={{ alt: '', src: `/kitten.jpg` }} />
-            <ProfileCard.Content>
-              Hello world
-            </ProfileCard.Content>
-            <ProfileCard.Action>
-              Action
-            </ProfileCard.Action>
-          </ProfileCard>
+            <ProfileCard.Content>Hello world</ProfileCard.Content>
+            <ProfileCard.Action>Action</ProfileCard.Action>
+          </ProfileCard>,
         )
         .toJSON()
     })
