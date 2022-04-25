@@ -2,8 +2,6 @@ import React, { useEffect, createContext, useReducer, useContext } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactDOM from 'react-dom'
-
-// Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../action/close-button'
 import { Title } from '../../typography/title'
@@ -11,19 +9,11 @@ import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { GlobalStyle } from './styles'
 import { Button } from '../../action/button'
 
-const ModalTitle = ({
-  className,
-  align,
-  ...props
-}) => (
+const ModalTitle = ({ className, align, ...props }) => (
   <Title
     tag="p"
     noMargin
-    className={classNames(
-      'k-Modal__title',
-      className,
-      `k-u-align-${align}`,
-    )}
+    className={classNames('k-Modal__title', className, `k-u-align-${align}`)}
     {...props}
   />
 )
@@ -36,17 +26,9 @@ ModalTitle.defaultProps = {
   align: 'center',
 }
 
-const ModalContent = ({
-  className,
-  align,
-  ...props
-}) => (
+const ModalContent = ({ className, align, ...props }) => (
   <div
-    className={classNames(
-      'k-Modal__content',
-      className,
-      `k-u-align-${align}`,
-    )}
+    className={classNames('k-Modal__content', className, `k-u-align-${align}`)}
     {...props}
   />
 )
@@ -60,31 +42,22 @@ ModalContent.defaultProps = {
 }
 
 const ModalForm = ({ className, twoColumns, ...props }) => (
-  <div 
-    className={classNames(
-      'k-Modal__form',
-      className,
-      {
-        'k-Modal__form--twoColumns': twoColumns,
-      },  
-    )}
-      {...props}
-  />
-)
-
-const ModalAction = ({ className, ...props }) => (
   <div
-    className={classNames(
-      'k-Modal__action',
-      className,
-    )}
+    className={classNames('k-Modal__form', className, {
+      'k-Modal__form--twoColumns': twoColumns,
+    })}
     {...props}
   />
 )
 
+const ModalActions = ({ className, ...props }) => (
+  <div className={classNames('k-Modal__actions', className)} {...props} />
+)
 
 const ModalCloseActionButton = ({ onClick, ...props }) => {
   const [, dispatch] = useContext(ModalContext)
+  console.warn('Please use a normal `Button` instead.')
+
   return (
     <Button
       {...props}
@@ -103,11 +76,11 @@ ModalCloseActionButton.propTypes = {
 ModalCloseActionButton.defaultProps = {
   onClick: () => null,
 }
-  
+
 const initialState = {
   show: false,
 }
-  
+
 const ModalContext = createContext(initialState)
 
 const reducer = (state, action) => {
@@ -121,14 +94,6 @@ export const updateState = show => ({
   type: 'update',
   show,
 })
-
-const ModalProvider = ({ children }) => {
-  return (
-    <ModalContext.Provider value={useReducer(reducer, initialState)}>
-      {children}
-    </ModalContext.Provider>
-  )
-}
 
 const InnerModal = ({
   trigger,
@@ -148,14 +113,13 @@ const InnerModal = ({
   type,
   ...others
 }) => {
-
   const [{ show }, dispatch] = useContext(ModalContext)
+
   const close = () => {
     dispatch(updateState(false))
-    if (onClose) {
-      onClose()
-    }
+    onClose()
   }
+
   useEffect(() => {
     if (!trigger) {
       dispatch(updateState(true))
@@ -174,17 +138,12 @@ const InnerModal = ({
         role="dialog"
         type={type}
         className={{
-          base: classNames(
-            'k-Modal__wrapper',
-            `k-Modal__wrapper--${size}`,
-          ),
+          base: classNames('k-Modal__wrapper', `k-Modal__wrapper--${size}`),
           afterOpen: 'k-Modal--afterOpen',
           beforeClose: 'k-Modal--beforeClose',
         }}
         overlayClassName={{
-          base: classNames(
-            'k-Modal__overlay',
-          ),
+          base: classNames('k-Modal__overlay'),
           afterOpen: 'k-Modal__overlay--afterOpen',
           beforeClose: 'k-Modal__overlay--beforeClose',
         }}
@@ -213,10 +172,12 @@ const InnerModal = ({
             />
           )}
           <div className="k-Modal__main">
-            {children({
-              open: () => dispatch(updateState(true)),
-              close: () => dispatch(updateState(false)),
-            })}
+            {typeof children === 'function'
+              ? children({
+                  open: () => dispatch(updateState(true)),
+                  close: () => dispatch(updateState(false)),
+                })
+              : children}
           </div>
         </>
       </ReactModal>
@@ -245,9 +206,9 @@ const InnerModal = ({
 export const Modal = props => {
   if (!domElementHelper.canUseDom()) return null
   return (
-    <ModalProvider>
+    <ModalContext.Provider value={useReducer(reducer, initialState)}>
       <InnerModal {...props} />
-    </ModalProvider>
+    </ModalContext.Provider>
   )
 }
 
@@ -261,6 +222,7 @@ Modal.propTypes = {
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
   type: PropTypes.oneOf(['modal', 'dialog']),
+  onClose: PropTypes.func,
 }
 
 Modal.defaultProps = {
@@ -273,10 +235,11 @@ Modal.defaultProps = {
   zIndex: 110,
   hasCloseButton: true,
   type: 'modal',
+  onClose: () => {},
 }
 
 Modal.Title = ModalTitle
 Modal.Content = ModalContent
 Modal.Form = ModalForm
-Modal.Action = ModalAction
+Modal.Actions = ModalActions
 Modal.CloseButton = ModalCloseActionButton

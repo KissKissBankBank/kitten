@@ -1,15 +1,8 @@
 import React from 'react'
 import { Modal } from './index'
-import {
-  Button,
-  Paragraph,
-  TextInput,
-  LocationInput,
-  DropdownSelect,
-} from 'kitten'
+import { Button, Paragraph, Field } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
-import { Label } from '../../form/label'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -70,6 +63,7 @@ const args = {
       Open
     </Button>
   ),
+  onClose: action('onClose triggered'),
   contentText: paragraphContainer,
 }
 
@@ -124,11 +118,7 @@ const argTypes = {
   },
 }
 
-export const Default = ({
-  contentText,
-  buttonSelection,
-  ...args
-}) => (
+export const Default = ({ contentText, buttonSelection, ...args }) => (
   <Modal {...args}>
     {() => (
       <>
@@ -137,19 +127,16 @@ export const Default = ({
         </Modal.Title>
         <Modal.Content align="center">
           <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
-           {contentText}
+            {contentText}
           </Paragraph>
         </Modal.Content>
         {buttonSelection > 0 && (
-          <Modal.Action>
+          <Modal.Actions>
+            {buttonSelection > 1 && (
+              <Button modifier="hydrogen">Modal.Button</Button>
+            )}
             <Button modifier="helium">Modal.Button</Button>
-            <Button modifier="hydrogen">Modal.Button</Button>
-          </Modal.Action>
-        )}
-        {buttonSelection > 1 && (
-          <Modal.CloseButton modifier="hydrogen">
-            Modal.CloseButton
-          </Modal.CloseButton>
+          </Modal.Actions>
         )}
       </>
     )}
@@ -169,30 +156,67 @@ Default.argTypes = {
 
 export const withForm = () => (
   <Modal {...Default.args}>
-    {() => (
+    {({ close }) => (
       <>
         <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
         <Modal.Content>
           <Modal.Form twoColumns>
-            <TextInput size="medium" />
-            <TextInput size="medium" />
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'girlishly' }}>
+                Girlishly
+              </Field.Label>
+              <Field.Input size="medium" id="girlishly" />
+            </div>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'acropolitan' }}>
+                Acropolitan
+              </Field.Label>
+              <Field.Input size="medium" id="acropolitan" />
+            </div>
           </Modal.Form>
           <Modal.Form twoColumns>
-            <TextInput size="medium" />
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'choreic' }}>
+                Choreic
+              </Field.Label>
+              <Field.Input size="medium" id="choreic" />
+            </div>
           </Modal.Form>
           <Modal.Form twoColumns>
-            <TextInput size="medium" />
-            <TextInput size="medium" />
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'nectarine' }}>
+                Nectarine
+              </Field.Label>
+              <Field.Input size="medium" id="nectarine" />
+            </div>
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'petrifiable' }}>
+                Petrifiable
+              </Field.Label>
+              <Field.Input size="medium" id="petrifiable" />
+            </div>
           </Modal.Form>
           <Modal.Form>
-            <TextInput size="medium" />
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'eversive' }}>
+                Eversive
+              </Field.Label>
+              <Field.Input size="medium" id="eversive" />
+            </div>
           </Modal.Form>
           <Modal.Form>
-            <TextInput size="medium" />
+            <div>
+              <Field.Label labelProps={{ htmlFor: 'interpenetrable' }}>
+                Interpenetrable
+              </Field.Label>
+              <Field.Input size="medium" id="interpenetrable" />
+            </div>
           </Modal.Form>
-          <Modal.Action>
-            <Button modifier="helium" fit="fluid">Ajouter le bénéficiaire</Button>
-          </Modal.Action>
+          <Modal.Actions>
+            <Button modifier="helium" fit="fluid" onClick={close}>
+              Ajouter le bénéficiaire
+            </Button>
+          </Modal.Actions>
         </Modal.Content>
       </>
     )}
@@ -203,15 +227,16 @@ export const withAction = () => (
   <Modal {...Default.args} size="medium">
     {() => (
       <>
-        <Modal.Title>Oops... Quelque chose s’est mal passé.</Modal.Title>
+        <Modal.Title>Oops… Quelque chose s’est mal passé.</Modal.Title>
         <Modal.Content>
           <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
-          Notre équipe a été automatiquement notifiée et fait en sorte de résoudre ce problème au plus vite.
+            Notre équipe a été automatiquement notifiée et fait en sorte de
+            résoudre ce problème au plus vite.
           </Paragraph>
-          <Modal.Action>
-            <Button modifier="helium">Retour à la page d'accueil</Button>
+          <Modal.Actions>
+            <Button modifier="helium">Retour à la page d’accueil</Button>
             <Button modifier="hydrogen">Recharger la page</Button>
-          </Modal.Action>
+          </Modal.Actions>
         </Modal.Content>
       </>
     )}

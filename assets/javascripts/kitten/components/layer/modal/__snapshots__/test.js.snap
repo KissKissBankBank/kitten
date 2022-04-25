@@ -83,7 +83,7 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
             Notre équipe a été automatiquement notifiée et fait en sorte de résoudre ce problème au plus vite.
           </p>
           <div
-            className="k-Modal__action"
+            className="k-Modal__actions"
           >
             <button>
               Retour à la page d’accueil

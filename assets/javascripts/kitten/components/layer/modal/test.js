@@ -45,10 +45,10 @@ describe('<Modal />', () => {
                       Notre équipe a été automatiquement notifiée et fait en
                       sorte de résoudre ce problème au plus vite.
                     </p>
-                    <Modal.Action>
+                    <Modal.Actions>
                       <button>Retour à la page d’accueil</button>
                       <button>Recharger la page</button>
-                    </Modal.Action>
+                    </Modal.Actions>
                   </Modal.Content>
                 </>
               )}
@@ -85,10 +85,10 @@ describe('<Modal />', () => {
                       Notre équipe a été automatiquement notifiée et fait en
                       sorte de résoudre ce problème au plus vite.
                     </p>
-                    <Modal.Action>
+                    <Modal.Actions>
                       <button>Retour à la page d’accueil</button>
                       <button>Recharger la page</button>
-                    </Modal.Action>
+                    </Modal.Actions>
                   </Modal.Content>
                 </>
               )}

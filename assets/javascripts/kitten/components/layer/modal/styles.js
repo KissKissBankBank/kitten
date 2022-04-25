@@ -74,7 +74,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .k-Modal__action {
+  .k-Modal__actions {
     display: flex;
     justify-content: center;
     gap: ${pxToRem(10)};
