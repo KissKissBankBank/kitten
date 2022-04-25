@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix: `CheckboxButton` and `CheckboxButtonSet`: Expose components
 
 - Feature: `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
 - Feature: `HeroLayout`: Add the following subcomponents:
