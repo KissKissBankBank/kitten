@@ -8,10 +8,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .k-Modal__wrapper {
-    --Modal-width: 600px;
-    --Modal-width-mobile: 100%;
+    --Modal-width: ${pxToRem(600)};
     --Modal-wrapperMaxWidth: 100vw;
-    --Modal-contentMargin: 40px;
+    --Modal-contentMargin: ${pxToRem(40)};
     --Modal-headerHeight: 0px;
 
     flex: 1 0 auto;
@@ -23,32 +22,25 @@ export const GlobalStyle = createGlobalStyle`
 
     margin: auto;
     width: calc(100vw - (2 * var(--Modal-contentMargin) ));
+    max-width: var(--Modal-width);
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
 
     @media ${mq.mobile} {
-      width: var(--Modal-width-mobile);
+      --Modal-contentMargin: ${pxToRem(20)}
     }
   }
 
   .k-Modal__wrapper--small {
     @media ${mq.tabletAndDesktop} {
-      --Modal-width: 300px;
-      width: var(--Modal-width);
-    }
-  }
-
-  .k-Modal__wrapper--medium {
-    @media ${mq.tabletAndDesktop} {
-      width: var(--Modal-width);
+      --Modal-width: ${pxToRem(300)};
     }
   }
 
   .k-Modal__wrapper--large {
     @media ${mq.tabletAndDesktop} {
-      --Modal-width: 900px;
-      width: var(--Modal-width);
+      --Modal-width: ${pxToRem(900)};
     }
   }
 
@@ -78,6 +70,10 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     gap: ${pxToRem(10)};
+
+    @media ${mq.mobile} {
+      flex-direction: column;
+    }
   }
 
   .k-Modal__content {

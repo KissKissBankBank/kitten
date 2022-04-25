@@ -95,6 +95,14 @@ export const updateState = show => ({
   show,
 })
 
+const ModalProvider = ({ children }) => {
+  return (
+    <ModalContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
+    </ModalContext.Provider>
+  )
+}
+
 const InnerModal = ({
   trigger,
   children,
@@ -110,7 +118,6 @@ const InnerModal = ({
   size,
   isOpen,
   zIndex,
-  type,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -136,7 +143,6 @@ const InnerModal = ({
       <ReactModal
         closeTimeoutMS={500}
         role="dialog"
-        type={type}
         className={{
           base: classNames('k-Modal__wrapper', `k-Modal__wrapper--${size}`),
           afterOpen: 'k-Modal--afterOpen',
@@ -184,6 +190,7 @@ const InnerModal = ({
     </>,
     document.body,
   )
+
   return (
     <div className={classNames('k-Modal', className)} {...others}>
       {trigger &&
@@ -206,9 +213,9 @@ const InnerModal = ({
 export const Modal = props => {
   if (!domElementHelper.canUseDom()) return null
   return (
-    <ModalContext.Provider value={useReducer(reducer, initialState)}>
+    <ModalProvider>
       <InnerModal {...props} />
-    </ModalContext.Provider>
+    </ModalProvider>
   )
 }
 
@@ -221,7 +228,6 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
-  type: PropTypes.oneOf(['modal', 'dialog']),
   onClose: PropTypes.func,
 }
 
@@ -234,7 +240,6 @@ Modal.defaultProps = {
   isOpen: false,
   zIndex: 110,
   hasCloseButton: true,
-  type: 'modal',
   onClose: () => {},
 }
 

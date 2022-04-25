@@ -1,8 +1,7 @@
 import React from 'react'
-import { Modal } from './index'
-import { Button, Paragraph, Field } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
+import { Modal, Button, Paragraph, Field } from 'kitten'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
