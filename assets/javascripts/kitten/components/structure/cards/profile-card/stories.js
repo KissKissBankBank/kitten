@@ -13,9 +13,7 @@ export default {
   },
   decorators: [
     story => (
-      <div className="story-Container story-Grid story-Grid">
-        {story()}
-      </div>
+      <div className="story-Container story-Grid story-Grid">{story()}</div>
     ),
   ],
 }
@@ -24,9 +22,9 @@ export const Default = () => (
   <ProfileCard>
     <ProfileCard.Avatar
       imageProps={{
-          alt: '',
-          src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-        }}
+        alt: '',
+        src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+      }}
     />
 
     <ProfileCard.Content>
@@ -34,9 +32,9 @@ export const Default = () => (
         Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        <p className="k-u-margin-bottom-single">_</p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+        <p className="k-u-margin-bottom-single">-</p>
       </Text>
       <Text size="micro" transform="uppercase" weight="regular">
         530 ABONNÉS
@@ -56,14 +54,13 @@ export const Default = () => (
   </ProfileCard>
 )
 
-
 export const OneButton = () => (
   <ProfileCard>
     <ProfileCard.Avatar
       imageProps={{
-          alt: '',
-          src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-        }}
+        alt: '',
+        src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+      }}
     />
 
     <ProfileCard.Content>
@@ -71,8 +68,8 @@ export const OneButton = () => (
         Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">_</p>
       </Text>
       <Text size="micro" transform="uppercase" weight="regular">

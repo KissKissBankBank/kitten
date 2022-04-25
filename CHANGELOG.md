@@ -5,6 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 - Fix: `CheckboxButton` and `CheckboxButtonSet`: Expose components
 
+- Feature: `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
+- Feature: `HeroLayout`: Add the following subcomponents:
+  - `HeroLayout.Main.TopMenu`
+  - `HeroLayout.Main.Image`
+  - `HeroLayout.Main.FirstAside`
+  - `HeroLayout.Main.LastAside`
+- Deprecation/Change: `HeroLayout`: Deprecate the following subcomponents:
+  - `HeroLayout.Main.Menu`
+  - `HeroLayout.Main.Aside`
+- Feature: Tokens: Add `shadows` CSS tokens.
+- Feature: Utilities: Add `k-u-shadow-*` CSS utilities.
+
 ## [10.3.0] - 2022-04-25
 
 Features:

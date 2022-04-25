@@ -28,7 +28,8 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   gap: 1.5625rem;
 }
 
-.c0 .k-HeroLayout__hero__background {
+.c0 .k-HeroLayout__hero__background,
+.c0 .k-HeroLayout__page__background {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -38,7 +39,8 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   height: var(--heroLayout-imageHeight);
 }
 
-.c0 .k-HeroLayout__hero__background img {
+.c0 .k-HeroLayout__hero__background img,
+.c0 .k-HeroLayout__page__background img {
   display: block;
   width: 100%;
   height: 100%;
@@ -46,7 +48,8 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   object-position: center;
 }
 
-.c0 .k-HeroLayout__hero__background::after {
+.c0 .k-HeroLayout__hero__background::after,
+.c0 .k-HeroLayout__page__background::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -66,6 +69,12 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 .c0 .k-HeroLayout__promo {
   background-color: var(--color-grey-200);
   padding: 1.875rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.c0 .k-HeroLayout__page__background {
+  --heroLayout-imageHeight: 20rem;
 }
 
 .c0 .k-HeroLayout__page {
@@ -81,17 +90,31 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   display: grid;
 }
 
-.c0 .k-HeroLayout__page .k-HeroLayout__menu {
-  grid-area: menu;
+.c0 .k-HeroLayout__page .k-HeroLayout__topMenu {
+  pointer-events: none;
 }
 
-.c0 .k-HeroLayout__page .k-HeroLayout__aside {
-  grid-area: aside;
+.c0 .k-HeroLayout__page .k-HeroLayout__topMenu > * {
+  pointer-events: all;
+}
+
+.c0 .k-HeroLayout__page .k-HeroLayout__firstAside {
+  grid-area: first_aside;
+  position: relative;
+  z-index: 2;
+}
+
+.c0 .k-HeroLayout__page .k-HeroLayout__lastAside {
+  grid-area: last_aside;
+  position: relative;
+  z-index: 2;
 }
 
 .c0 .k-HeroLayout__page .k-HeroLayout__loading,
 .c0 .k-HeroLayout__page .k-HeroLayout__content {
   grid-area: content;
+  position: relative;
+  z-index: 2;
 }
 
 .c0 .k-HeroLayout__page .k-HeroLayout__loading {
@@ -144,9 +167,23 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   }
 }
 
+@media (min-width:1080px) {
+  .c0 .k-HeroLayout__page__background {
+    --heroLayout-imageHeight: 17.5rem;
+  }
+}
+
 @media (max-width:1079px) {
   .c0 .k-HeroLayout__page {
-    grid-template-areas: 'menu' 'content' 'aside';
+    grid-template-areas: 'first_aside' 'content' 'last_aside';
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu {
+    grid-template-areas: 'first_aside' 'top_menu' 'content' 'last_aside';
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__topMenu {
+    grid-area: top_menu;
   }
 }
 
@@ -154,37 +191,58 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   .c0 .k-HeroLayout__page {
     margin: 4.375rem 4.375rem 6.25rem;
     grid-template-columns: minmax(13.125rem,1fr) minmax(auto,41.875rem) minmax(13.125rem,1fr);
-    grid-template-areas: 'menu content aside';
+    grid-template-areas: 'first_aside content last_aside';
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu {
+    margin-top: 1.875rem;
+    grid-template-areas: '........... ....... ..........' 'first_aside content last_aside';
+    grid-template-rows: 5rem auto;
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__topMenu {
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
   }
 }
 
 @media (max-width:1079px) {
-  .c0 .k-HeroLayout__sticky.k-HeroLayout__menu {
+  .c0 .k-HeroLayout__sticky--both,
+  .c0 .k-HeroLayout__sticky--mobile {
     -webkit-transition: top var(--transition);
     transition: top var(--transition);
-    position: -webkit-sticky;
-    position: sticky;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    z-index: 4 !important;
     top: 0;
-    z-index: 2;
   }
 }
 
 @media (min-width:1080px) {
-  .c0 .k-HeroLayout__menu {
+  .c0 .k-HeroLayout__firstAside {
     justify-self: end;
   }
 
-  .c0 .k-HeroLayout__aside {
+  .c0 .k-HeroLayout__lastAside {
     justify-self: start;
   }
 
-  .c0 .k-HeroLayout__sticky__inside {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5.3125rem;
-    bottom: 1.25rem;
+  .c0 .k-HeroLayout__sticky--both .k-HeroLayout__sticky__insideTop,
+  .c0 .k-HeroLayout__sticky--both .k-HeroLayout__sticky__inside,
+  .c0 .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__insideTop,
+  .c0 .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
     -webkit-transition: top var(--transition);
     transition: top var(--transition);
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    z-index: 4 !important;
+    top: 0;
+    bottom: 1.25rem;
+  }
+
+  .c0 .k-HeroLayout__sticky--both .k-HeroLayout__sticky__inside,
+  .c0 .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
+    top: 5.3125rem;
   }
 }
 
@@ -224,7 +282,8 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   gap: 1.5625rem;
 }
 
-.c0 .k-HeroLayout__hero__background {
+.c0 .k-HeroLayout__hero__background,
+.c0 .k-HeroLayout__page__background {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -234,7 +293,8 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   height: var(--heroLayout-imageHeight);
 }
 
-.c0 .k-HeroLayout__hero__background img {
+.c0 .k-HeroLayout__hero__background img,
+.c0 .k-HeroLayout__page__background img {
   display: block;
   width: 100%;
   height: 100%;
@@ -242,7 +302,8 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   object-position: center;
 }
 
-.c0 .k-HeroLayout__hero__background::after {
+.c0 .k-HeroLayout__hero__background::after,
+.c0 .k-HeroLayout__page__background::after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -262,6 +323,12 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 .c0 .k-HeroLayout__promo {
   background-color: var(--color-grey-200);
   padding: 1.875rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.c0 .k-HeroLayout__page__background {
+  --heroLayout-imageHeight: 20rem;
 }
 
 .c0 .k-HeroLayout__page {
@@ -277,17 +344,31 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   display: grid;
 }
 
-.c0 .k-HeroLayout__page .k-HeroLayout__menu {
-  grid-area: menu;
+.c0 .k-HeroLayout__page .k-HeroLayout__topMenu {
+  pointer-events: none;
 }
 
-.c0 .k-HeroLayout__page .k-HeroLayout__aside {
-  grid-area: aside;
+.c0 .k-HeroLayout__page .k-HeroLayout__topMenu > * {
+  pointer-events: all;
+}
+
+.c0 .k-HeroLayout__page .k-HeroLayout__firstAside {
+  grid-area: first_aside;
+  position: relative;
+  z-index: 2;
+}
+
+.c0 .k-HeroLayout__page .k-HeroLayout__lastAside {
+  grid-area: last_aside;
+  position: relative;
+  z-index: 2;
 }
 
 .c0 .k-HeroLayout__page .k-HeroLayout__loading,
 .c0 .k-HeroLayout__page .k-HeroLayout__content {
   grid-area: content;
+  position: relative;
+  z-index: 2;
 }
 
 .c0 .k-HeroLayout__page .k-HeroLayout__loading {
@@ -340,9 +421,23 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   }
 }
 
+@media (min-width:1080px) {
+  .c0 .k-HeroLayout__page__background {
+    --heroLayout-imageHeight: 17.5rem;
+  }
+}
+
 @media (max-width:1079px) {
   .c0 .k-HeroLayout__page {
-    grid-template-areas: 'menu' 'content' 'aside';
+    grid-template-areas: 'first_aside' 'content' 'last_aside';
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu {
+    grid-template-areas: 'first_aside' 'top_menu' 'content' 'last_aside';
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__topMenu {
+    grid-area: top_menu;
   }
 }
 
@@ -350,37 +445,58 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   .c0 .k-HeroLayout__page {
     margin: 4.375rem 4.375rem 6.25rem;
     grid-template-columns: minmax(13.125rem,1fr) minmax(auto,41.875rem) minmax(13.125rem,1fr);
-    grid-template-areas: 'menu content aside';
+    grid-template-areas: 'first_aside content last_aside';
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu {
+    margin-top: 1.875rem;
+    grid-template-areas: '........... ....... ..........' 'first_aside content last_aside';
+    grid-template-rows: 5rem auto;
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__topMenu {
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 1;
   }
 }
 
 @media (max-width:1079px) {
-  .c0 .k-HeroLayout__sticky.k-HeroLayout__menu {
+  .c0 .k-HeroLayout__sticky--both,
+  .c0 .k-HeroLayout__sticky--mobile {
     -webkit-transition: top var(--transition);
     transition: top var(--transition);
-    position: -webkit-sticky;
-    position: sticky;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    z-index: 4 !important;
     top: 0;
-    z-index: 2;
   }
 }
 
 @media (min-width:1080px) {
-  .c0 .k-HeroLayout__menu {
+  .c0 .k-HeroLayout__firstAside {
     justify-self: end;
   }
 
-  .c0 .k-HeroLayout__aside {
+  .c0 .k-HeroLayout__lastAside {
     justify-self: start;
   }
 
-  .c0 .k-HeroLayout__sticky__inside {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5.3125rem;
-    bottom: 1.25rem;
+  .c0 .k-HeroLayout__sticky--both .k-HeroLayout__sticky__insideTop,
+  .c0 .k-HeroLayout__sticky--both .k-HeroLayout__sticky__inside,
+  .c0 .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__insideTop,
+  .c0 .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
     -webkit-transition: top var(--transition);
     transition: top var(--transition);
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    z-index: 4 !important;
+    top: 0;
+    bottom: 1.25rem;
+  }
+
+  .c0 .k-HeroLayout__sticky--both .k-HeroLayout__sticky__inside,
+  .c0 .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
+    top: 5.3125rem;
   }
 }
 
