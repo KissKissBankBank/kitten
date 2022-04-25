@@ -327,6 +327,7 @@ export { HorizontalProjectCard } from './components/structure/cards/horizontal-p
 
 export { HorizontalProjectCard as HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-project-card';
 export { ManagerCard } from './components/structure/cards/manager-card';
+export { ProfileCard } from './components/structure/cards/profile-card';
 export { PeopleCard } from './components/structure/cards/people-card';
 export { ProjectCard } from './components/structure/cards/project-card';
 export { RewardCard } from './components/structure/cards/reward-card';

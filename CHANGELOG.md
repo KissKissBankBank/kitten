@@ -4,11 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `ImageDropUploader`: Fix async function.
-- Feature: `CheckboxButton`: Add component.
-- Feature: `CheckboxButtonSet`: Add component.
-- Feature: `DropdownSelect`: Change list style to cut last item if scrollable.
-- Feature: `ProfileCard`: Add new component.
+## [10.3.0] - 2022-04-25
+
+Features:
+
+  - `CheckboxButton`: Add component.
+  - `CheckboxButtonSet`: Add component.
+  - `DropdownSelect`: Change list style to cut last item if scrollable.
+  - `ProfileCard`: Add new component.
+
+Fix:
+
+  - `ImageDropUploader`: Fix async function.
+
 
 ## [10.2.0] - 2022-04-15
 

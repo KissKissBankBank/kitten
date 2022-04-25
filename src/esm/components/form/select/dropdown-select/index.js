@@ -129,7 +129,8 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       'k-Form-Dropdown--isOpen': isOpen,
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
-      'k-Form-Dropdown--disabled': disabled
+      'k-Form-Dropdown--disabled': disabled,
+      'k-Form-Dropdown--scrollable': flattenedOptions.length > 5
     }),
     style: {
       '--menu-z-index': menuZIndex
