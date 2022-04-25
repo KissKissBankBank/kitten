@@ -1,6 +1,5 @@
 import React from 'react'
 import { Toggletip } from './index'
-import { COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -65,10 +64,6 @@ export const MultipleToggletips = args => (
       <Toggletip
         {...args}
         id="Toggletip-top"
-        bubbleProps={{
-          className: 'k-u-color-background1 k-u-weight-regular',
-          color: COLORS.primary1,
-        }}
       />
     </div>
     <div className="k-u-margin-vertical-quadruple k-u-align-right">

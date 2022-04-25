@@ -130,7 +130,6 @@ export const Toggletip = ({
   className,
   children,
   actionLabel,
-  actionProps,
   bubbleProps,
   targetElement,
   icon,
@@ -269,11 +268,9 @@ export const Toggletip = ({
     <StyledWrapper
       className={classNames(
         'k-Toggletip',
+        'k-Toggletip--action',
         className,
         `k-Toggletip--${modifier}`,
-        {
-          'k-Toggletip--hasIcon': displayIcon,
-        },
       )}
       style={{
         '--toggletipAction-top': actionPosition.top
@@ -288,14 +285,27 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      {displayIcon && (
+      {!!targetElement && React.isValidElement(targetElement) ? (
+        <button
+          ref={actionElement}
+          type="button"
+          aria-label={actionLabel}
+          className={classNames(
+            'k-u-reset-button',
+          )}
+        >
+          {targetElement}
+        </button>
+          
+      ) : (
         <button
           className={classNames(
-            'k-Toggletip--hasIcon',
+            'k-Toggletip--action',
             'k-u-reset-button',
           )}
           type="button"
           aria-label={actionLabel}
+          onBlur={() => setOpen(false)}
           onClick={handleClick}
           ref={actionElement}
         >
@@ -342,10 +352,8 @@ export const Toggletip = ({
 
 Toggletip.defaultProps = {
   modifier: 'info',
-  actionProps: {},
   bubbleProps: {},
   targetElement: null,
-  displayIcon: true,
   iconHasBorder: true,
 }
 
@@ -359,13 +367,12 @@ Toggletip.propTypes = {
   ]),
   'Please use danger modifier instead'),
   actionLabel: PropTypes.string.isRequired,
-  actionProps: PropTypes.object,
+  actionProps: deprecated(PropTypes.object),
   bubbleProps: PropTypes.object,
   targetElement: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]),
-  displayIcon: PropTypes.bool,
   iconHasBorder: PropTypes.bool,
 }
