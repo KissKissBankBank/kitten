@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix: `CheckboxButton` and `CheckboxButtonSet`: Expose components
 
 ## [10.3.0] - 2022-04-25
 
