@@ -91,6 +91,6 @@ SummaryCard.defaultProps = {
 SummaryCard.propTypes = {
   show: _propTypes.default.bool,
   actionProps: _propTypes.default.object,
-  size: _propTypes.default.oneOf(['xlarge', 'large', 'medium', 'tablet', 'small', 'mobile']),
+  size: _propTypes.default.oneOf(['huge', 'large', 'medium', 'tablet', 'small', 'mobile']),
   type: _propTypes.default.oneOf(['ownerContribution', 'ownerSubscription', 'contributorContribution', 'contributorSubscription'])
 };

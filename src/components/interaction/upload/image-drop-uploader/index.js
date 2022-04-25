@@ -11,13 +11,13 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
@@ -25,17 +25,17 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _uploadIcon = require("../../../graphics/icons/upload-icon");
-
 var _closeButton = require("../../../action/close-button");
+
+var _uploadIcon = require("../../../graphics/icons/upload-icon");
 
 var _text = require("../../../typography/text");
 
 var _imageCropper = require("./components/image-cropper");
 
-var _pauseEvent = require("./utils/pause-event");
-
 var _imageDimensionsCheck = require("./utils/image-dimensions-check");
+
+var _pauseEvent = require("./utils/pause-event");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -198,101 +198,121 @@ var ImageDropUploader = function ImageDropUploader(_ref) {
     onCancel(true);
   };
 
-  (0, _react.useEffect)( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-    var isValid, reader;
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.t0 = imageRawData;
+  (0, _react.useEffect)(function () {
+    var handleOnUploadCallback = /*#__PURE__*/function () {
+      var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        var isValid, reader;
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.t0 = imageRawData;
 
-            if (!_context.t0) {
-              _context.next = 5;
-              break;
+                if (!_context.t0) {
+                  _context.next = 5;
+                  break;
+                }
+
+                _context.next = 4;
+                return isSelectedImageValid(imageRawData);
+
+              case 4:
+                _context.t0 = _context.sent;
+
+              case 5:
+                isValid = _context.t0;
+
+                if (isValid) {
+                  _context.next = 8;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 8:
+                setError(false);
+                reader = new FileReader();
+                reader.readAsDataURL(imageRawData);
+
+                reader.onloadend = function () {
+                  setImageDataURL(reader.result);
+                };
+
+                onUpload({
+                  value: reader.result,
+                  name: (imageRawData == null ? void 0 : imageRawData.name) || null,
+                  file: imageRawData || null
+                });
+
+              case 13:
+              case "end":
+                return _context.stop();
             }
+          }
+        }, _callee);
+      }));
 
-            _context.next = 4;
-            return isSelectedImageValid(imageRawData);
+      return function handleOnUploadCallback() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
 
-          case 4:
-            _context.t0 = _context.sent;
+    handleOnUploadCallback();
+  }, [imageRawData]);
+  (0, _react.useEffect)(function () {
+    var handleOnChangeCallback = /*#__PURE__*/function () {
+      var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
+        var isValid;
+        return _regenerator.default.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.t0 = imageRawData;
 
-          case 5:
-            isValid = _context.t0;
+                if (!_context2.t0) {
+                  _context2.next = 5;
+                  break;
+                }
 
-            if (isValid) {
-              _context.next = 8;
-              break;
+                _context2.next = 4;
+                return isSelectedImageValid(imageRawData);
+
+              case 4:
+                _context2.t0 = _context2.sent;
+
+              case 5:
+                isValid = _context2.t0;
+
+                if (!(imageRawData && !isValid)) {
+                  _context2.next = 8;
+                  break;
+                }
+
+                return _context2.abrupt("return");
+
+              case 8:
+                onChange({
+                  value: imageDataURL,
+                  name: (imageRawData == null ? void 0 : imageRawData.name) || null,
+                  file: imageRawData || null,
+                  cropperData: cropperData
+                });
+
+              case 9:
+              case "end":
+                return _context2.stop();
             }
+          }
+        }, _callee2);
+      }));
 
-            return _context.abrupt("return");
+      return function handleOnChangeCallback() {
+        return _ref3.apply(this, arguments);
+      };
+    }();
 
-          case 8:
-            setError(false);
-            reader = new FileReader();
-            reader.readAsDataURL(imageRawData);
-
-            reader.onloadend = function () {
-              setImageDataURL(reader.result);
-            };
-
-            onUpload({
-              value: reader.result,
-              name: (imageRawData == null ? void 0 : imageRawData.name) || null,
-              file: imageRawData || null
-            });
-
-          case 13:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  })), [imageRawData]);
-  (0, _react.useEffect)( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2() {
-    var isValid;
-    return _regenerator.default.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.t0 = imageRawData;
-
-            if (!_context2.t0) {
-              _context2.next = 5;
-              break;
-            }
-
-            _context2.next = 4;
-            return isSelectedImageValid(imageRawData);
-
-          case 4:
-            _context2.t0 = _context2.sent;
-
-          case 5:
-            isValid = _context2.t0;
-
-            if (!(imageRawData && !isValid)) {
-              _context2.next = 8;
-              break;
-            }
-
-            return _context2.abrupt("return");
-
-          case 8:
-            onChange({
-              value: imageDataURL,
-              name: (imageRawData == null ? void 0 : imageRawData.name) || null,
-              file: imageRawData || null,
-              cropperData: cropperData
-            });
-
-          case 9:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  })), [imageDataURL, cropperData, imageRawData]);
+    handleOnChangeCallback();
+  }, [imageDataURL, cropperData, imageRawData]);
 
   var handleCropperChange = function handleCropperChange(exportedCropperData) {
     setCropperData(exportedCropperData);

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { UploadIcon } from '../../../graphics/icons/upload-icon'
 import { CloseButton } from '../../../action/close-button'
+import { UploadIcon } from '../../../graphics/icons/upload-icon'
 import { Text } from '../../../typography/text'
 import { ImageCropper } from './components/image-cropper'
-import { pauseEvent } from './utils/pause-event'
 import { areImageDimensionsValid } from './utils/image-dimensions-check'
+import { pauseEvent } from './utils/pause-event'
 
 const CROP_WIDTH = 125
 
@@ -283,34 +283,40 @@ export const ImageDropUploader = ({
     onCancel(true)
   }
 
-  useEffect(async () => {
-    const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
-    if (!isValid) return
+  useEffect(() => {
+    const handleOnUploadCallback = async () => {
+      const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
+      if (!isValid) return
 
-    setError(false)
-    const reader = new FileReader()
-    reader.readAsDataURL(imageRawData)
-    reader.onloadend = () => {
-      setImageDataURL(reader.result)
+      setError(false)
+      const reader = new FileReader()
+      reader.readAsDataURL(imageRawData)
+      reader.onloadend = () => {
+        setImageDataURL(reader.result)
+      }
+
+      onUpload({
+        value: reader.result,
+        name: imageRawData?.name || null,
+        file: imageRawData || null,
+      })
     }
-
-    onUpload({
-      value: reader.result,
-      name: imageRawData?.name || null,
-      file: imageRawData || null,
-    })
+    handleOnUploadCallback()
   }, [imageRawData])
 
-  useEffect(async () => {
-    const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
-    if (imageRawData && !isValid) return
+  useEffect(() => {
+    const handleOnChangeCallback = async () => {
+      const isValid = imageRawData && (await isSelectedImageValid(imageRawData))
+      if (imageRawData && !isValid) return
 
-    onChange({
-      value: imageDataURL,
-      name: imageRawData?.name || null,
-      file: imageRawData || null,
-      cropperData: cropperData,
-    })
+      onChange({
+        value: imageDataURL,
+        name: imageRawData?.name || null,
+        file: imageRawData || null,
+        cropperData: cropperData,
+      })
+    }
+    handleOnChangeCallback()
   }, [imageDataURL, cropperData, imageRawData])
 
   const handleCropperChange = exportedCropperData => {

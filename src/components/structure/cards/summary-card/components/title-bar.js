@@ -70,5 +70,5 @@ TitleBar.propTypes = {
     contributions: _propTypes.default.string,
     availability: _propTypes.default.string
   }),
-  size: _propTypes.default.oneOf(['xlarge', 'large', 'medium', 'tablet', 'small', 'mobile'])
+  size: _propTypes.default.oneOf(['huge', 'large', 'medium', 'tablet', 'small', 'mobile'])
 };
