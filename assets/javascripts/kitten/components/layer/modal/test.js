@@ -74,7 +74,21 @@ describe('<Modal />', () => {
 
         component = renderer
           .create(
-            <Modal size="medium" isOpen>
+            <Modal
+              size="medium"
+              isOpen
+              modalProps={{
+                style: {
+                  content: {
+                    wordSpacing: 10,
+                    lineHeight: 20,
+                  },
+                  overlay: {
+                    background: '#fff',
+                  }
+                }
+              }}
+            >
               {() => (
                 <>
                   <Modal.Title>

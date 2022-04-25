@@ -20,7 +20,12 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
     className="k-Modal__overlay"
     onClick={[Function]}
     onMouseDown={[Function]}
-    style={Object {}}
+    style={
+      Object {
+        "--modal-zIndex": 110,
+        "background": "#fff",
+      }
+    }
   >
     <div
       aria-describedby=""
@@ -33,7 +38,12 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
       onMouseDown={[Function]}
       onMouseUp={[Function]}
       role="dialog"
-      style={Object {}}
+      style={
+        Object {
+          "lineHeight": 20,
+          "wordSpacing": 10,
+        }
+      }
       tabIndex="-1"
     >
       <button

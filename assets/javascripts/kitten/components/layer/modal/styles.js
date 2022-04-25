@@ -8,10 +8,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .k-Modal__wrapper {
-    --Modal-width: ${pxToRem(600)};
-    --Modal-wrapperMaxWidth: 100vw;
-    --Modal-contentMargin: ${pxToRem(40)};
-    --Modal-headerHeight: 0px;
+    --modal-width: ${pxToRem(600)};
+    --modal-wrapperMaxWidth: 100vw;
+    --modal-contentMargin: ${pxToRem(40)};
+    --modal-headerHeight: 0px;
 
     flex: 1 0 auto;
     position: relative;
@@ -21,26 +21,26 @@ export const GlobalStyle = createGlobalStyle`
     transform: scale(0.94);
 
     margin: auto;
-    width: calc(100vw - (2 * var(--Modal-contentMargin) ));
-    max-width: var(--Modal-width);
+    width: calc(100vw - (2 * var(--modal-contentMargin) ));
+    max-width: var(--modal-width);
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
 
     @media ${mq.mobile} {
-      --Modal-contentMargin: ${pxToRem(20)}
+      --modal-contentMargin: ${pxToRem(20)}
     }
-  }
 
-  .k-Modal__wrapper--small {
-    @media ${mq.tabletAndDesktop} {
-      --Modal-width: ${pxToRem(300)};
+    &.k-Modal__wrapper--small {
+      @media ${mq.tabletAndDesktop} {
+        --modal-width: ${pxToRem(300)};
+      }
     }
-  }
 
-  .k-Modal__wrapper--large {
-    @media ${mq.tabletAndDesktop} {
-      --Modal-width: ${pxToRem(900)};
+    &.k-Modal__wrapper--large {
+      @media ${mq.tabletAndDesktop} {
+        --modal-width: ${pxToRem(900)};
+      }
     }
   }
 
@@ -117,6 +117,7 @@ export const GlobalStyle = createGlobalStyle`
     bottom: 0;
     opacity: 0;
     background-color: rgba(34, 34, 34, .8);
+    z-index: var(--modal-zIndex, 110);
 
     &::before,
     &::after {

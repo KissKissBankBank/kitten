@@ -139,7 +139,7 @@ const InnerModal = ({
 
   const ModalPortal = ReactDOM.createPortal(
     <>
-      <GlobalStyle zIndex={zIndex} />
+      <GlobalStyle />
       <ReactModal
         closeTimeoutMS={500}
         role="dialog"
@@ -166,6 +166,15 @@ const InnerModal = ({
         contentLabel={label}
         bodyOpenClassName="k-Modal__body--open"
         {...modalProps}
+        style={{
+          overlay: {
+            ...modalProps?.style?.overlay,
+            '--modal-zIndex': zIndex
+          },
+          content: {
+            ...modalProps?.style?.content,
+          }
+        }}
       >
         <>
           {hasCloseButton && (
