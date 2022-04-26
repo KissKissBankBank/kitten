@@ -25,6 +25,25 @@ const StyledTag = styled.span`
     gap: ${pxToRem(8)};
   }
 
+  &.k-Tag--small {
+    gap: ${pxToRem(5)};
+    height: ${pxToRem(18)};
+    padding: 0 ${pxToRem(5)};
+    font-size: ${pxToRem(8)};
+    line-height: ${pxToRem(18)};
+  }
+
+  & {
+    svg {
+      &,
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
+  /* LIGHT */
+
   &.k-Tag--light.k-Tag--info {
     background-color: var(--color-primary-100);
     color: var(--color-grey-900);
@@ -45,6 +64,8 @@ const StyledTag = styled.span`
     background-color: var(--color-grey-300);
     color: var(--color-grey-900);
   }
+
+  /* STATUS */
 
   &.k-Tag--status.k-Tag--info {
     background-color: var(--color-primary-100);
@@ -67,6 +88,8 @@ const StyledTag = styled.span`
     color: var(--color-grey-800);
   }
 
+  /* DARK */
+
   &.k-Tag--dark.k-Tag--info {
     background-color: var(--color-primary-500);
     color: var(--color-grey-000);
@@ -87,17 +110,17 @@ const StyledTag = styled.span`
     background-color: var(--color-grey-800);
     color: var(--color-grey-000);
   }
-
-  &.k-Tag--small {
-    gap: ${pxToRem(5)};
-    height: ${pxToRem(18)};
-    padding: 0 ${pxToRem(5)};
-    font-size: ${pxToRem(8)};
-    line-height: ${pxToRem(18)};
-  }
 `
 
-export const Tag = ({ type, size, variant, className, flex, ...props }) => {
+export const Tag = ({
+  type,
+  size,
+  variant,
+  className,
+  flex,
+  children,
+  ...props
+}) => {
   checkDeprecatedSizes(size)
 
   return (
@@ -113,7 +136,9 @@ export const Tag = ({ type, size, variant, className, flex, ...props }) => {
         },
       )}
       {...props}
-    />
+    >
+      {children}
+    </StyledTag>
   )
 }
 

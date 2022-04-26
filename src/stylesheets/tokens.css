@@ -13,6 +13,9 @@
 * @tokens Borders
   @presenter Border
 */--outline:auto;--outline-input:2px solid var(--color-grey-900);--outline-offset:0;--outline-offset-input:-2px;--transition-timing:0.2s;--transition-timing-function:ease;--transition:var(--transition-timing) var(--transition-timing-function);/*!
+* @tokens Shadow
+* @presenter Shadow
+*/--shadow-xs:0 0 0.625rem rgba(0,0,0,0.1);--shadow-s:0 0 1.25rem rgba(0,0,0,0.1);--shadow-m:0 0 1.875rem rgba(0,0,0,0.1);--shadow-l:0 0 2.5rem rgba(0,0,0,0.1);--shadow-xl:0 0 3.125rem rgba(0,0,0,0.1);/*!
 * @tokens Spacing
 * @presenter Spacing
 * Automatically generated, do not edit

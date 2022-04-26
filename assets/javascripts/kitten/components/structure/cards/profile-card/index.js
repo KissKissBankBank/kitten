@@ -15,7 +15,8 @@ const StyledProfileCard = styled.article`
   }
 
   .k-ProfileCard {
-    border: var(--border);
+    border: var(--border-width) solid var(--color-grey-300);
+    box-shadow: var(--shadow-s);
     border-radius: var(--border-radius-m);
     padding: var(--profileCard-padding);
     display: flex;
@@ -43,9 +44,6 @@ const StyledProfileCard = styled.article`
 
   .k-ProfileCard__content {
     text-align: center;
-    * { 
-      margin: 0;
-    }
   }
 
   .k-ProfileCard__action {
@@ -56,19 +54,13 @@ const StyledProfileCard = styled.article`
   }
 `
 
-export const ProfileCard = ({
-  className = '',
-  children,
-  ...props
-}) => {
-
+export const ProfileCard = ({ className, children, ...props }) => {
   const AvatarChild = getReactElementsByType({ children, type: Avatar })[0]
   const imageProps = Object.keys(AvatarChild?.props?.imageProps || {}) || []
 
   return (
     <StyledProfileCard
-      className={classNames('k-ProfileCardWrapper', className,
-      {
+      className={classNames('k-ProfileCardWrapper', className, {
         'k-ProfileCardWrapper--hasImage': imageProps.length > 0,
       })}
       {...props}

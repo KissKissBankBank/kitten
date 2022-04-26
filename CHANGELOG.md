@@ -5,27 +5,65 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Toggletip`: Improve styles.
-- Feature: `CheckboxButton`: Add component.
-- Feature: `CheckboxButtonSet`: Add component.
-- Feature: `DropdownSelect`: Change list style to cut last item if scrollable.
-- Feature: `ProfileCard`: Add new component.
+
+## [10.4.0] - 2022-04-26
+
+Deprecations/Changes:
+
+- `HeroLayout`: Deprecate the following subcomponents:
+  - `HeroLayout.Main.Menu`
+  - `HeroLayout.Main.Aside`
+
+Features:
+
+- Tokens: Add `shadows` CSS tokens.
+- Utilities: Add `k-u-shadow-*` CSS utilities.
+- `FlashIconNext`: Add component.
+- `HeroLayout`: Add the following subcomponents:
+  - `HeroLayout.Main.TopMenu`
+  - `HeroLayout.Main.Image`
+  - `HeroLayout.Main.FirstAside`
+  - `HeroLayout.Main.LastAside`
+- `DropdownSelect`: Change list style to cut last item if scrollable.
+- `Modal`: Modernize component in order to replace `ModalNext`.
+- `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
+- `Tag`: Improve styles.
+
+Fix:
+
+- Fix ESM exports for the following components:
+  - `CheckboxButton`
+  - `CheckboxButtonSet`
+
+## [10.3.0] - 2022-04-25
+
+Features:
+
+- `CheckboxButton`: Add component.
+- `CheckboxButtonSet`: Add component.
+- `DropdownSelect`: Change list style to cut last item if scrollable.
+- `ProfileCard`: Add new component.
+
+Fix:
+
+- `ImageDropUploader`: Fix async function.
 
 ## [10.2.0] - 2022-04-15
 
 Change :
 
-  - `SummaryCard`: Replace `xlarge` by `huge` prop size value.
+- `SummaryCard`: Replace `xlarge` by `huge` prop size value.
 
 Features:
 
-  - `PeopleCircleIconNext`: Add new iconNext.
-  - `AvatarWithTextAndBadge`: Add `small` prop size value.
-  - `PeopleCard`: Add new component.
+- `PeopleCircleIconNext`: Add new iconNext.
+- `AvatarWithTextAndBadge`: Add `small` prop size value.
+- `PeopleCard`: Add new component.
 
 Fixes:
 
-  - `ImageDropUploader`: Fix async on `useEffect`.
-  - `Autocomplete`: Improve styles.
+- `ImageDropUploader`: Fix async on `useEffect`.
+- `Autocomplete`: Improve styles.
 
 ## [10.1.0] - 2022-04-08
 
@@ -298,11 +336,11 @@ Fixes:
 Features:
 
 - Style: Change disabled styles on the following input components:
-    - `Autocomplete`
-    - `TextInput` and all inputs that depend on it
-    - `LocationInput`
-    - `DropdownSelect`
-    - `DropdownSelectWithInput`
+  - `Autocomplete`
+  - `TextInput` and all inputs that depend on it
+  - `LocationInput`
+  - `DropdownSelect`
+  - `DropdownSelectWithInput`
 - `Button`: Add `krypton` modifier.
 - `Pagination`: Modernize styles.
 - `IconBadge`: Add `micro` to the size prop.
@@ -439,7 +477,7 @@ Fix:
 
 ## [7.1.0] - 2022-01-20
 
-Features: 
+Features:
 
 - `HorizontalCrowdfundingCard`: Add `noProgress` prop, defaults to `false`.
 - `TextCopy`: Add `size` prop, default to `regular`.
@@ -512,8 +550,8 @@ Feature:
 
 Fixes:
 
-  - `TextInput`: Improve placeholder style.
-  - `createEvent`: Prevent SSR issue.
+- `TextInput`: Improve placeholder style.
+- `createEvent`: Prevent SSR issue.
 
 ## [6.17.0] - 2022-01-10
 
@@ -525,7 +563,7 @@ Features:
 
 Fixes:
 
-- `Tag`:  New UI - colors style.
+- `Tag`: New UI - colors style.
 - `ContributionCard`: Fix image display.
 - `DeskLayout`: Fix menu column width.
 - `ImageDropUploader`: Add background color.
@@ -592,7 +630,7 @@ Features:
 
 Fix:
 
--  `ProjectCard`: Fix display.
+- `ProjectCard`: Fix display.
 
 ## [6.13.0] - 2021-12-28
 
@@ -602,7 +640,7 @@ Feature:
 
 Fix:
 
--  `ProjectCard`: Fix link props.
+- `ProjectCard`: Fix link props.
 
 ## [6.12.0] - 2021-12-28
 
@@ -635,28 +673,28 @@ Fix:
 
 Features:
 
-  - `SummaryCard`: Add component.
-  - `RewardSummaryCard`: Deprecate component.
+- `SummaryCard`: Add component.
+- `RewardSummaryCard`: Deprecate component.
 
 ## [6.10.0] - 2021-12-16
 
 Features:
 
-  - `CommentForm`: Add close button, add `onClose` and `closeButtonText` props
-  - `Accordeon`: Add `multiple` prop to let more than one item opened.
+- `CommentForm`: Add close button, add `onClose` and `closeButtonText` props
+- `Accordeon`: Add `multiple` prop to let more than one item opened.
 
 ## [6.9.1] - 2021-12-15
 
 Fix:
 
-  - Logos: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
+- Logos: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
 
 ## [6.9.0] - 2021-12-15
 
 Features:
 
-  - `StickyContainer`: Add `onChange` event prop.
-  - `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
+- `StickyContainer`: Add `onChange` event prop.
+- `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
 
 ## [6.8.0] - 2021-12-14
 
@@ -692,7 +730,7 @@ Features
 
 - Tokens: Add `transitions` related tokens.
 - Utilities: Add `k-u-ellipsis` CSS utility class.
-- Utilities: Add `baseline` option to `k-u-alignItems-`  CSS utility classes.
+- Utilities: Add `baseline` option to `k-u-alignItems-` CSS utility classes.
 - Utilities: Add `grey1` option to `k-u-link-` CSS utility classes.
 - `HeartIconNext`: Add component.
 - `ModalFooterInput`: Add component.
@@ -754,7 +792,6 @@ Fixes:
 
 - `LendoLoadingAnimation`: Fix console errors.
 - `LendoLoadingAnimation`: Fix style bug.
-
 
 ## [6.4.0] - 2021-11-23
 

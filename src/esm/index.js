@@ -42,6 +42,8 @@ export { CheckList } from './components/feedback/check-list'; // Form
 
 export { Autocomplete } from './components/form/autocomplete';
 export { Checkbox } from './components/form/checkbox';
+export { CheckboxButton } from './components/form/checkbox-button';
+export { CheckboxButtonSet } from './components/form/checkbox-button-set';
 export { CheckboxSet } from './components/form/checkbox-set';
 export { CreditCardForm } from './components/form/credit-card-form';
 export { ColorSelect } from './components/form/color-select';
@@ -196,8 +198,9 @@ export { EditIconNext } from './components/graphics/icons-next/edit-icon-next';
 export { EmbedIconNext } from './components/graphics/icons-next/embed-icon-next';
 export { EnvelopeIconNext } from './components/graphics/icons-next/envelope-icon-next';
 export { EyeIconNext } from './components/graphics/icons-next/eye-icon-next';
-export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next';
 export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon-next';
+export { FlashIconNext } from './components/graphics/icons-next/flash-icon-next';
+export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next';
 export { GiftIcon } from './components/graphics/icons-next/gift-icon';
 export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next';
 export { HomeIconNext } from './components/graphics/icons-next/home-icon-next';
@@ -327,6 +330,7 @@ export { HorizontalProjectCard } from './components/structure/cards/horizontal-p
 
 export { HorizontalProjectCard as HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-project-card';
 export { ManagerCard } from './components/structure/cards/manager-card';
+export { ProfileCard } from './components/structure/cards/profile-card';
 export { PeopleCard } from './components/structure/cards/people-card';
 export { ProjectCard } from './components/structure/cards/project-card';
 export { RewardCard } from './components/structure/cards/reward-card';

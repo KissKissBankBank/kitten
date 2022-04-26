@@ -59,28 +59,74 @@ HeroLayout.Promo = ({ className, ...props }) => (
   <div className={classNames('k-HeroLayout__promo', className)} {...props} />
 )
 
-HeroLayout.Main = ({ className, ...props }) => (
-  <div className={classNames('k-HeroLayout__page', className)} {...props} />
+HeroLayout.Main = ({ className, hasTopMenu, children, ...props }) => {
+  const TopMenuElement = getReactElementsByType({
+    children: children,
+    type: MainTopMenu,
+  })[0]
+
+  return (
+    <div
+      className={classNames('k-HeroLayout__page', className, {
+        'k-HeroLayout__page--hasTopMenu': !!TopMenuElement,
+      })}
+      {...props}
+    >
+      {children}
+    </div>
+  )
+}
+
+HeroLayout.Main.defaultProps = {
+  hasTopMenu: false,
+}
+
+HeroLayout.Main.propTypes = {
+  hasTopMenu: PropTypes.bool,
+}
+
+HeroLayout.Main.Image = ({ className, ...props }) => (
+  <div
+    className={classNames('k-HeroLayout__page__background', className)}
+    {...props}
+  />
 )
 
-HeroLayout.Main.Aside = ({ children, className, ...props }) => (
+HeroLayout.Main.FirstAside = ({ children, className, sticky, ...props }) => (
   <div
-    className={classNames(
-      'k-HeroLayout__aside k-HeroLayout__sticky',
-      className,
-    )}
+    className={classNames('k-HeroLayout__firstAside', className, {
+      [`k-HeroLayout__sticky--${sticky}`]: !!sticky && sticky != 'none',
+    })}
     {...props}
   >
     <div className="k-HeroLayout__sticky__inside">{children}</div>
   </div>
 )
 
-HeroLayout.Main.Menu = ({ children, className, ...props }) => (
+HeroLayout.Main.Menu = HeroLayout.Main.FirstAside
+
+HeroLayout.Main.LastAside = ({ children, className, sticky, ...props }) => (
   <div
-    className={classNames('k-HeroLayout__menu k-HeroLayout__sticky', className)}
+    className={classNames('k-HeroLayout__lastAside', className, {
+      [`k-HeroLayout__sticky--${sticky}`]: !!sticky && sticky != 'none',
+    })}
     {...props}
   >
     <div className="k-HeroLayout__sticky__inside">{children}</div>
+  </div>
+)
+
+HeroLayout.Main.Aside = HeroLayout.Main.LastAside
+
+const MainTopMenu = ({ children, className, ...props }) => (
+  <div
+    className={classNames(
+      'k-HeroLayout__topMenu k-HeroLayout__sticky--both',
+      className,
+    )}
+    {...props}
+  >
+    <div className="k-HeroLayout__sticky__insideTop">{children}</div>
   </div>
 )
 
@@ -124,3 +170,4 @@ HeroLayout.Main.Content.propTypes = {
 HeroLayout.Hero = Hero
 HeroLayout.Hero.Image = HeroImage
 HeroLayout.Hero.Block = HeroBlock
+HeroLayout.Main.TopMenu = MainTopMenu

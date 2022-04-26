@@ -18,6 +18,7 @@ import {
   EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
+  FlashIconNext,
   FilterIconNext,
   GiftIcon,
   HeartIconNext,
@@ -163,6 +164,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <EyeIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <FlashIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <FilterIconNext color={colorInput} />
