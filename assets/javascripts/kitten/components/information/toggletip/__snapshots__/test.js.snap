@@ -19,6 +19,11 @@ exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
     className="k-u-reset-button k-Toggletip__action"
     onBlur={[Function]}
     onClick={[Function]}
+    style={
+      Object {
+        "--toggletipAction-color": null,
+      }
+    }
     type="button"
   >
     <p
@@ -52,6 +57,11 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
     className="k-u-reset-button k-Toggletip__action"
     onBlur={[Function]}
     onClick={[Function]}
+    style={
+      Object {
+        "--toggletipAction-color": null,
+      }
+    }
     type="button"
   >
     <span
@@ -114,6 +124,11 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
     className="k-u-reset-button k-Toggletip__action"
     onBlur={[Function]}
     onClick={[Function]}
+    style={
+      Object {
+        "--toggletipAction-color": null,
+      }
+    }
     type="button"
   >
     <span

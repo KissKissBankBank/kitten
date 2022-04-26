@@ -99,6 +99,11 @@ Array [
             className="k-u-reset-button k-Toggletip__action"
             onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <span
@@ -216,6 +221,11 @@ Array [
             className="k-u-reset-button k-Toggletip__action"
             onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <span
@@ -319,6 +329,11 @@ Array [
             className="k-u-reset-button k-Toggletip__action"
             onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <span
@@ -433,6 +448,11 @@ Array [
             className="k-u-reset-button k-Toggletip__action"
             onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <span
@@ -546,6 +566,11 @@ Array [
             className="k-u-reset-button k-Toggletip__action"
             onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <span
@@ -692,6 +717,11 @@ Array [
             className="k-u-reset-button k-Toggletip__action"
             onBlur={[Function]}
             onClick={[Function]}
+            style={
+              Object {
+                "--toggletipAction-color": null,
+              }
+            }
             type="button"
           >
             <span

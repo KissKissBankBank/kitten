@@ -24,7 +24,6 @@ Features:
   - `HeroLayout.Main.Image`
   - `HeroLayout.Main.FirstAside`
   - `HeroLayout.Main.LastAside`
-- `DropdownSelect`: Change list style to cut last item if scrollable.
 - `Modal`: Modernize component in order to replace `ModalNext`.
 - `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
 - `Tag`: Improve styles.
