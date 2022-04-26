@@ -22,6 +22,7 @@ export const StyledLayout = styled.div`
 
   .k-HeroLayout__hero {
     position: relative;
+    z-index: 6;
     padding: ${pxToRem(135)} var(--container-padding) ${pxToRem(70)};
 
     @media ${mq.desktop} {

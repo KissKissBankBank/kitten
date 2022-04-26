@@ -9,6 +9,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 .c0 .k-HeroLayout__hero {
   position: relative;
+  z-index: 6;
   padding: 8.4375rem var(--container-padding) 4.375rem;
 }
 
@@ -263,6 +264,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 
 .c0 .k-HeroLayout__hero {
   position: relative;
+  z-index: 6;
   padding: 8.4375rem var(--container-padding) 4.375rem;
 }
 
