@@ -23,26 +23,35 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _excluded = ["className", "children"],
+var _excluded = ["className", "children", "horizontal"],
     _excluded2 = ["className", "isActive", "children", "as"];
 
 var StyledFloatingMenu = _styledComponents.default.nav.withConfig({
   displayName: "floating-menu__StyledFloatingMenu",
   componentId: "sc-11idy8q-0"
-})(["border:var(--border);display:flex;flex-direction:column;gap:", ";background-color:var(--color-grey-000);overflow:hidden;min-width:", ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);@media ", "{border-top:0;}@media ", "{border-radius:var(--border-radius-m);padding:", " 0;}.k-FloatingMenu__list{margin:0;padding:0 ", ";list-style:none;display:flex;gap:", " ", ";justify-content:space-around;flex-direction:row;overflow-x:auto;@media ", "{padding:0;flex-direction:column;}.k-FloatingMenu__item{height:", ";padding-bottom:", ";display:flex;align-items:center;line-height:", ";color:var(--color-grey-900);", " font-size:", ";text-decoration:none;transition:border-color var(--transition);white-space:nowrap;border-color:transparent;border-width:", " 0 0;border-style:solid;@media (max-width:", "px){font-size:", ";}@media ", "{padding-bottom:0;padding-left:", ";border-width:0 0 0 ", ";}&[aria-current]{", " border-color:var(--color-gray-900);}&:hover,&:active{", "}&:focus-visible{outline-style:auto;}}}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(185), _screenConfig.mq.mobile, _screenConfig.mq.desktop, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), _screenConfig.mq.desktop, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(20), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(4), _screenConfig.ScreenConfig.XXS.max, (0, _typography.pxToRem)(14), _screenConfig.mq.desktop, (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(4), _typographyConfig.default.fontStyles.bold, _typographyConfig.default.fontStyles.bold);
+})(["box-shadow:var(--shadow-m);display:flex;flex-direction:column;gap:", ";background-color:var(--color-grey-000);overflow:hidden;min-width:", ";border-bottom-left-radius:var(--border-radius-m);border-bottom-right-radius:var(--border-radius-m);@media ", "{border-radius:var(--border-radius-m);}.k-FloatingMenu__list{margin:0;padding:0 ", ";list-style:none;display:flex;gap:", " ", ";justify-content:space-around;flex-direction:row;overflow-x:auto;.k-FloatingMenu__item{box-sizing:border-box;height:", ";padding-bottom:", ";display:flex;align-items:center;line-height:", ";color:var(--color-grey-900);", " font-size:", ";text-decoration:none;transition:border-color var(--transition);white-space:nowrap;border-color:transparent;border-width:", " 0 0;border-style:solid;@media (max-width:", "px){font-size:", ";}&[aria-current]{", " border-color:var(--color-gray-900);}&:hover,&:active{", "}&:focus-visible{outline-style:auto;}}}&:not(.k-FloatingMenu--horizontal){@media ", "{box-shadow:var(--shadow-s);padding:", " 0;.k-FloatingMenu__list{padding:0;flex-direction:column;}.k-FloatingMenu__item{padding-bottom:0;padding-left:", ";border-width:0 0 0 ", ";}}}"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(185), _screenConfig.mq.desktop, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(20), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(4), _screenConfig.ScreenConfig.XXS.max, (0, _typography.pxToRem)(14), _typographyConfig.default.fontStyles.bold, _typographyConfig.default.fontStyles.bold, _screenConfig.mq.desktop, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(4));
 
 var FloatingMenu = function FloatingMenu(_ref) {
   var className = _ref.className,
       children = _ref.children,
+      horizontal = _ref.horizontal,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(StyledFloatingMenu, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-FloatingMenu', className)
+    className: (0, _classnames.default)('k-FloatingMenu', className, {
+      'k-FloatingMenu--horizontal': horizontal
+    })
   }, props), /*#__PURE__*/_react.default.createElement("ul", {
     className: "k-FloatingMenu__list"
   }, children));
 };
 
 exports.FloatingMenu = FloatingMenu;
+FloatingMenu.defaultProps = {
+  horizontal: false
+};
+FloatingMenu.proptypes = {
+  horizontal: _propTypes.default.bool
+};
 
 var Item = function Item(_ref2) {
   var className = _ref2.className,
