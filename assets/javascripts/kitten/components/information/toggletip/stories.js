@@ -61,10 +61,7 @@ CustomTargetElement.argTypes = argTypes
 export const MultipleToggletips = args => (
   <>
     <div className="k-u-margin-bottom-quadruple">
-      <Toggletip
-        {...args}
-        id="Toggletip-top"
-      />
+      <Toggletip {...args} id="Toggletip-top" />
     </div>
     <div className="k-u-margin-vertical-quadruple k-u-align-right">
       <Toggletip

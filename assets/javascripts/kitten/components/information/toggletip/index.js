@@ -55,7 +55,7 @@ const StyledWrapper = styled.span`
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       position: absolute;
-      top: calc(var(--toggletipAction-size) + ${pxToRem(20)});
+      top: calc(var(--toggletipAction-height) + ${pxToRem(20)});
       left: calc(
         -1 * var(--toggletipAction-left) + ${pxToRem(CONTAINER_PADDING_THIN)}
       );
@@ -65,7 +65,7 @@ const StyledWrapper = styled.span`
         top: var(--toggletipBubble-arrowMainPosition);
         left: calc(
           var(--toggletipAction-left) - ${pxToRem(CONTAINER_PADDING_THIN)} -
-            ${pxToRem(10)} + (var(--toggletipAction-size) / 2)
+            ${pxToRem(10)} + (var(--toggletipAction-height) / 2)
         );
         border-bottom-color: var(--toggletipBubble-color);
       }
@@ -85,7 +85,7 @@ const StyledWrapper = styled.span`
         max-width: calc(
           100vw - var(--toggletipAction-left) -
             ${pxToRem(CONTAINER_PADDING_THIN + 20)} -
-            var(--toggletipAction-size)
+            var(--toggletipAction-height)
         );
       }
 
@@ -104,7 +104,7 @@ const StyledWrapper = styled.span`
         &:after {
           top: calc(
             var(--toggletipAction-top) - ${pxToRem(CONTAINER_PADDING_THIN)} -
-              ${pxToRem(10)} + (var(--toggletipAction-size) / 2)
+              ${pxToRem(10)} + (var(--toggletipAction-height) / 2)
           );
         }
       }
@@ -206,6 +206,7 @@ export const Toggletip = ({
     setActionPosition({
       top: actionElementCoords.top,
       left: actionElementCoords.left,
+      height: actionElementCoords.height,
     })
 
     const bubblePlusMargins = 220 + 20 + CONTAINER_PADDING_THIN
@@ -254,6 +255,7 @@ export const Toggletip = ({
 
   const role = (() => {
     switch (modifier) {
+      case 'error':
       case 'danger':
         return 'alert'
       case 'warning':
@@ -273,6 +275,9 @@ export const Toggletip = ({
         `k-Toggletip--${modifier}`,
       )}
       style={{
+        '--toggletipAction-height': actionPosition.height
+          ? pxToRem(actionPosition.height)
+          : undefined,
         '--toggletipAction-top': actionPosition.top
           ? pxToRem(actionPosition.top)
           : undefined,
@@ -285,30 +290,17 @@ export const Toggletip = ({
       onMouseLeave={() => setHoverState(false)}
       {...props}
     >
-      {!!targetElement && React.isValidElement(targetElement) ? (
-        <button
-          ref={actionElement}
-          type="button"
-          aria-label={actionLabel}
-          className={classNames(
-            'k-u-reset-button',
-          )}
-        >
-          {targetElement}
-        </button>
-          
-      ) : (
-        <button
-          className={classNames(
-            'k-Toggletip--action',
-            'k-u-reset-button',
-          )}
-          type="button"
-          aria-label={actionLabel}
-          onBlur={() => setOpen(false)}
-          onClick={handleClick}
-          ref={actionElement}
-        >
+      <button
+        ref={actionElement}
+        onBlur={() => setOpen(false)}
+        onClick={handleClick}
+        type="button"
+        aria-label={actionLabel}
+        className="k-u-reset-button k-Toggletip__action"
+      >
+        {!!targetElement && React.isValidElement(targetElement) ? (
+          targetElement
+        ) : (
           <IconBadge
             className="k-Toggletip__icon"
             children={internalIcon}
@@ -316,10 +308,10 @@ export const Toggletip = ({
             size="small"
             hasBorder={iconHasBorder}
           />
-        </button>
-      )}
+        )}
+      </button>
 
-      <span role="status">
+      <span role={role}>
         {isOpen && (
           <span
             className={classNames(
@@ -358,14 +350,13 @@ Toggletip.defaultProps = {
 }
 
 Toggletip.propTypes = {
-  modifier: deprecated(PropTypes.oneOf([
+  modifier: PropTypes.oneOf([
     'info',
     'warning',
     'danger',
     'success',
     'disabled',
   ]),
-  'Please use danger modifier instead'),
   actionLabel: PropTypes.string.isRequired,
   actionProps: deprecated(PropTypes.object),
   bubbleProps: PropTypes.object,
