@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `FlashIconNext`: Add new component.
+- Feature: `Tag`: Improve styles.
+- Feature: `CheckboxButton`: Add component.
+- Feature: `CheckboxButtonSet`: Add component.
+- Feature: `DropdownSelect`: Change list style to cut last item if scrollable.
+- Feature: `ProfileCard`: Add new component.
 - Feature: `Modal`: Modernize component in order to replace `ModalNext`.
 - Fix: `CheckboxButton` and `CheckboxButtonSet`: Expose components
 - Feature: `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
