@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeroLayout`: Fix Hero z-index.
+
 ## [10.4.0] - 2022-04-26
 
 Deprecations/Changes:
