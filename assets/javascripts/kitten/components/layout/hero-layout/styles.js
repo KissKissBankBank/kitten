@@ -19,6 +19,7 @@ export const StyledLayout = styled.div`
   }
 
   display: block;
+  position: relative;
 
   .k-HeroLayout__hero {
     position: relative;
@@ -102,10 +103,10 @@ export const StyledLayout = styled.div`
   }
 
   .k-HeroLayout__page__background {
-    --heroLayout-imageHeight: ${pxToRem(320)};
+    --heroLayout-imageHeight: ${pxToRem(260)};
 
     @media ${mq.desktop} {
-      --heroLayout-imageHeight: ${pxToRem(280)};
+      --heroLayout-imageHeight: ${pxToRem(220)};
     }
   }
 
@@ -136,12 +137,20 @@ export const StyledLayout = styled.div`
         minmax(${pxToRem(210)}, 1fr);
       grid-template-areas: 'first_aside content last_aside';
 
+      .k-HeroLayout__page__background {
+        top: ${pxToRem(-70)};
+      }
+
       &.k-HeroLayout__page--hasTopMenu {
         margin-top: ${pxToRem(30)};
         grid-template-areas:
           '........... ....... ..........'
           'first_aside content last_aside';
         grid-template-rows: ${pxToRem(80)} auto;
+
+        .k-HeroLayout__page__background {
+          top: ${pxToRem(-30)};
+        }
 
         .k-HeroLayout__topMenu {
           grid-row: 1 / span 2;
