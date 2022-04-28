@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `HeroLayout`: Fix Hero z-index.
+- Fix: `HeroLayout`: Fix Background image position in simple mode.
 
 ## [10.4.0] - 2022-04-26
 

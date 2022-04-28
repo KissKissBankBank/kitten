@@ -5,6 +5,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
   --container-padding: 1.25rem;
   --heroLayout-imageHeight: 18.75rem;
   display: block;
+  position: relative;
 }
 
 .c0 .k-HeroLayout__hero {
@@ -75,7 +76,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 }
 
 .c0 .k-HeroLayout__page__background {
-  --heroLayout-imageHeight: 20rem;
+  --heroLayout-imageHeight: 16.25rem;
 }
 
 .c0 .k-HeroLayout__page {
@@ -170,7 +171,7 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
 
 @media (min-width:1080px) {
   .c0 .k-HeroLayout__page__background {
-    --heroLayout-imageHeight: 17.5rem;
+    --heroLayout-imageHeight: 13.75rem;
   }
 }
 
@@ -195,10 +196,18 @@ exports[`<HeroLayout /> compare with loading snapshot matches with snapshot 1`] 
     grid-template-areas: 'first_aside content last_aside';
   }
 
+  .c0 .k-HeroLayout__page .k-HeroLayout__page__background {
+    top: -4.375rem;
+  }
+
   .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu {
     margin-top: 1.875rem;
     grid-template-areas: '........... ....... ..........' 'first_aside content last_aside';
     grid-template-rows: 5rem auto;
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__page__background {
+    top: -1.875rem;
   }
 
   .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__topMenu {
@@ -260,6 +269,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
   --container-padding: 1.25rem;
   --heroLayout-imageHeight: 18.75rem;
   display: block;
+  position: relative;
 }
 
 .c0 .k-HeroLayout__hero {
@@ -330,7 +340,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 }
 
 .c0 .k-HeroLayout__page__background {
-  --heroLayout-imageHeight: 20rem;
+  --heroLayout-imageHeight: 16.25rem;
 }
 
 .c0 .k-HeroLayout__page {
@@ -425,7 +435,7 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
 
 @media (min-width:1080px) {
   .c0 .k-HeroLayout__page__background {
-    --heroLayout-imageHeight: 17.5rem;
+    --heroLayout-imageHeight: 13.75rem;
   }
 }
 
@@ -450,10 +460,18 @@ exports[`<HeroLayout /> compare with snapshot matches with snapshot 1`] = `
     grid-template-areas: 'first_aside content last_aside';
   }
 
+  .c0 .k-HeroLayout__page .k-HeroLayout__page__background {
+    top: -4.375rem;
+  }
+
   .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu {
     margin-top: 1.875rem;
     grid-template-areas: '........... ....... ..........' 'first_aside content last_aside';
     grid-template-rows: 5rem auto;
+  }
+
+  .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__page__background {
+    top: -1.875rem;
   }
 
   .c0 .k-HeroLayout__page.k-HeroLayout__page--hasTopMenu .k-HeroLayout__topMenu {
