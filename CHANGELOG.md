@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix `BurgerButton` icon position.
+
 ## [10.4.1] - 2022-04-28
 
 Fixes:

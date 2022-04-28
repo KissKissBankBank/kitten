@@ -61,6 +61,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__BurgerMenu__button {
+    text-align: center;
     padding: 0;
     height: 100%;
 
