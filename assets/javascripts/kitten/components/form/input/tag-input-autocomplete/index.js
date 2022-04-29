@@ -49,9 +49,8 @@ export const TagInputAutocomplete = ({
 
   const removeLastValueFromList = () => {
     const lastItem = itemsList[itemsList.length - 1]
-    if (lastItem.disabled) {
-      return
-    }
+    if (!lastItem) return
+    if (lastItem.disabled) return
     setLastRemoved(lastItem)
     const newList = Array.from(itemsList.slice(0, -1))
     itemsListFromProps ? onChange(newList) : setItemsList(newList)
@@ -164,6 +163,10 @@ export const TagInputAutocomplete = ({
   }
 
   const handleInputBlur = e => {
+    // check if focus stays in the component
+    const ancestor = e.target.closest('.k-Form-TagInput')
+    if (ancestor.matches(':focus-within')) return
+
     setTimeout(() => {
       setShowSuggestions(false)
     }, 100)
@@ -172,6 +175,7 @@ export const TagInputAutocomplete = ({
   }
 
   const handleSelectSuggestion = value => () => {
+    console.log(value)
     if (!value) return
     const suggestionText = getSuggestionText(value)
 
