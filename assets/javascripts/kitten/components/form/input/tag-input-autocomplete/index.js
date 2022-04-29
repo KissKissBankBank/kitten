@@ -100,7 +100,7 @@ export const TagInputAutocomplete = ({
       // If a suggestion is selected through keyboard nav
       if (selectedSuggestionIndex > -1) {
         const selectedValue = suggestionsList[selectedSuggestionIndex]
-        return handleSelectSuggestion(selectedValue)
+        return handleSelectSuggestion(selectedValue)()
       }
 
       const value = inputEl?.current?.innerText.trim()
@@ -167,7 +167,7 @@ export const TagInputAutocomplete = ({
     onBlur(e)
   }
 
-  const handleSelectSuggestion = value => {
+  const handleSelectSuggestion = value => () => {
     if (!value) return
 
     if (itemsList.includes(value)) {
@@ -305,7 +305,7 @@ export const TagInputAutocomplete = ({
               <li
                 key={suggestion + index}
                 id={slugify(`${suggestion}-${index}`)}
-                onClick={() => handleSelectSuggestion(suggestion)}
+                onClick={handleSelectSuggestion(suggestion)}
                 role="option"
                 aria-selected={selectedSuggestionIndex === index}
                 tabIndex="-1"
