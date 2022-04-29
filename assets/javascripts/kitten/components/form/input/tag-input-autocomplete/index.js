@@ -241,12 +241,12 @@ export const TagInputAutocomplete = ({
               onInput={handleInputChange}
               onBlur={handleInputBlur}
               aria-owns={`${id}-results`}
-              aria-expanded={showSuggestions ? items.length > 0 : null}
+              aria-expanded={showSuggestions ? suggestionsList.length > 0 : null}
               aria-autocomplete="both"
               aria-activedescendant={
                 suggestions[selectedSuggestionIndex]
                   ? slugify(
-                      `${items[selectedSuggestionIndex]}-${selectedSuggestionIndex}`,
+                      `${suggestionsList[selectedSuggestionIndex]}-${selectedSuggestionIndex}`,
                     )
                   : ''
               }
