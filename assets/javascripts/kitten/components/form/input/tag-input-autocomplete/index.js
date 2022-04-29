@@ -145,7 +145,7 @@ export const TagInputAutocomplete = ({
 
     const newSuggestions = suggestions.filter(item => {
       return (
-        item.toLowerCase().includes(search) &&
+        item.toLowerCase().startsWith(search) &&
         item !== inputValue &&
         !itemsList.includes(item)
       )
