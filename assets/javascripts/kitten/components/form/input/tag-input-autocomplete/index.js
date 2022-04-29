@@ -38,6 +38,8 @@ export const TagInputAutocomplete = ({
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [suggestionsList, setSuggestionsList] = useState(suggestions)
 
+  const getSuggestionText = (suggestion) => suggestion.searchableString || suggestion
+
   const focusInputEl = () => !disabled && inputEl?.current?.focus()
 
   const addValueToList = value => {
@@ -144,10 +146,12 @@ export const TagInputAutocomplete = ({
     const search = `${inputValue}`.toLowerCase()
 
     const newSuggestions = suggestions.filter(item => {
+      const suggestionText = getSuggestionText(item)
+
       return (
-        item.toLowerCase().startsWith(search) &&
-        item !== inputValue &&
-        !itemsList.includes(item)
+        suggestionText.toLowerCase().startsWith(search) &&
+        suggestionText !== inputValue &&
+        !itemsList.includes(suggestionText)
       )
     })
 
@@ -169,17 +173,9 @@ export const TagInputAutocomplete = ({
 
   const handleSelectSuggestion = value => () => {
     if (!value) return
+    const suggestionText = getSuggestionText(value)
 
-    if (itemsList.includes(value)) {
-      inputEl.current.innerText = value
-      inputEl.current.focus
-      let sel = window.getSelection()
-      sel.selectAllChildren(inputEl.current)
-      sel.collapseToEnd()
-    } else {
-      handleAddItem(value)
-    }
-
+    handleAddItem(suggestionText)
     setShowSuggestions(false)
   }
 
@@ -241,7 +237,9 @@ export const TagInputAutocomplete = ({
               onInput={handleInputChange}
               onBlur={handleInputBlur}
               aria-owns={`${id}-results`}
-              aria-expanded={showSuggestions ? suggestionsList.length > 0 : null}
+              aria-expanded={
+                showSuggestions ? suggestionsList.length > 0 : null
+              }
               aria-autocomplete="both"
               aria-activedescendant={
                 suggestions[selectedSuggestionIndex]
@@ -301,19 +299,23 @@ export const TagInputAutocomplete = ({
             style={{ '--Autocomplete-suggestions': suggestionsList.length }}
             className="k-Form-Autocomplete__suggestions"
           >
-            {suggestionsList.map((suggestion, index) => (
-              <li
-                key={suggestion + index}
-                id={slugify(`${suggestion}-${index}`)}
-                onClick={handleSelectSuggestion(suggestion)}
-                role="option"
-                aria-selected={selectedSuggestionIndex === index}
-                tabIndex="-1"
-                className="k-Form-Autocomplete__suggestion__item"
-              >
-                {suggestion}
-              </li>
-            ))}
+            {suggestionsList.map((suggestion, index) => {
+              const suggestionText = getSuggestionText(suggestion)
+
+              return (
+                <li
+                  key={suggestionText + index}
+                  id={slugify(`${suggestionText}-${index}`)}
+                  onClick={handleSelectSuggestion(suggestion)}
+                  role="option"
+                  aria-selected={selectedSuggestionIndex === index}
+                  tabIndex="-1"
+                  className="k-Form-Autocomplete__suggestion__item"
+                >
+                  {suggestion.displayNode || suggestionText}
+                </li>
+              )
+            })}
           </StyledSuggestionsList>
 
           <div
