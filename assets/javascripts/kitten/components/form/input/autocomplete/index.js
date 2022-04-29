@@ -2,17 +2,15 @@ import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import isFunction from 'lodash/fp/isFunction'
 import PropTypes from 'prop-types'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import COLORS from '../../../constants/colors-config'
-import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import slugify from 'slugify'
-import { Loader } from '../../graphics/animations/loader'
 import classNames from 'classnames'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import TYPOGRAPHY from '../../../../constants/typography-config'
+import COLORS from '../../../../constants/colors-config'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
+import { Loader } from '../../../graphics/animations/loader'
 
-const itemHeight = 38
-const maxItemsVisibled = 3
-const borderSize = 'var(--border-width)'
+export const maxVisibleSuggestions = 3
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,7 +24,7 @@ const Wrapper = styled.div`
     border-radius: var(--border-radius-s);
 
     background: ${COLORS.background1};
-    border: ${borderSize} solid var(--color-grey-400);
+    border: var(--border-width) solid var(--color-grey-400);
     padding: 0 ${pxToRem(15)};
 
     ${TYPOGRAPHY.fontStyles.light};
@@ -77,53 +75,6 @@ const Wrapper = styled.div`
     z-index: 1;
   }
 
-  .k-Form-Autocomplete__suggestions {
-    position: absolute;
-    top: ${pxToRem(55)};
-    left: 0;
-    right: 0;
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-
-    background: ${COLORS.background1};
-    border: ${borderSize} solid var(--color-grey-400);
-    border-radius: var(--border-radius-s);
-
-    list-style: none;
-
-    height: calc(${pxToRem(itemHeight)} * var(--Autocomplete-suggestions, 1));
-    max-height: ${pxToRem(itemHeight * maxItemsVisibled)};
-  }
-
-  .k-Form-Autocomplete__suggestion__item {
-    padding: ${pxToRem(10)} ${pxToRem(15)};
-
-    ${TYPOGRAPHY.fontStyles.light};
-    font-size: ${stepToRem(-1)};
-
-    line-height: 1.3;
-    color: ${COLORS.font1};
-
-    &.k-Form-Autocomplete__suggestion__item--noresult {
-      font-style: italic;
-    }
-    &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
-      cursor: pointer;
-      transition: background-color 0.2s;
-
-      :hover,
-      :focus,
-      :active {
-        background-color: ${COLORS.background3};
-      }
-
-      &[aria-selected='true'] {
-        background-color: ${COLORS.line1};
-      }
-    }
-  }
-
   /* STATES */
 
   &.k-Form-Autocomplete--hasIcon-left {
@@ -165,6 +116,62 @@ const Wrapper = styled.div`
   }
 `
 
+export const StyledSuggestionsList = styled.ul`
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + ${pxToRem(5)});
+  left: ${pxToRem(-1)};
+  right: ${pxToRem(-1)};
+  display: flex;
+  flex-direction: column;
+  gap: ${pxToRem(2)};
+  overflow-y: auto;
+  margin: 0;
+  padding: ${pxToRem(1)};
+
+  background: var(--color-grey-000);
+  border: var(--border-width) solid var(--color-grey-400);
+  border-radius: var(--border-radius-m);
+
+  list-style: none;
+
+  max-height: calc(
+    ${pxToRem(4 + 34 * maxVisibleSuggestions)} +
+      (min(2, (var(--Autocomplete-suggestions) - 1)) * ${pxToRem(2)})
+  );
+
+  .k-Form-Autocomplete__suggestion__item {
+    box-sizing: border-box;
+    height: ${pxToRem(34)};
+    padding: ${pxToRem(8)} ${pxToRem(13)};
+    border-radius: var(--border-radius-s);
+
+    ${TYPOGRAPHY.fontStyles.light};
+    font-size: ${stepToRem(-1)};
+
+    line-height: ${pxToRem(18)};
+    color: var(--color-grey-900);
+
+    &.k-Form-Autocomplete__suggestion__item--noresult {
+      font-style: italic;
+    }
+    &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+      cursor: pointer;
+      transition: background-color var(--transition);
+
+      :hover,
+      :focus,
+      :active {
+        background-color: var(--color-grey-200);
+      }
+
+      &[aria-selected='true'] {
+        background-color: var(--color-grey-300);
+      }
+    }
+  }
+`
+
 export const Autocomplete = ({
   className,
   items: defaultItems,
@@ -183,7 +190,7 @@ export const Autocomplete = ({
 }) => {
   const [items, setItems] = useState(defaultItems)
   const [value, setValue] = useState(props.defaultValue)
-  const [selectedItemIndex, setSelectedItemIndex] = useState(-1)
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1)
   const [showSuggestions, setShowSuggestions] = useState(false)
   const inputEl = useRef(null)
   const suggestionsEl = useRef(null)
@@ -195,6 +202,14 @@ export const Autocomplete = ({
     updateSuggestions()
     setShowSuggestions(!!value)
   }, [value, defaultItems])
+
+  useEffect(() => {
+    suggestionsEl?.current?.children[selectedSuggestionIndex]?.scrollIntoView({
+      block: 'center',
+      inline: 'nearest',
+      behavior: 'smooth',
+    })
+  }, [selectedSuggestionIndex])
 
   const handleChange = e => {
     setValue(e.target.value)
@@ -211,28 +226,23 @@ export const Autocomplete = ({
   }
 
   const handleKeyDown = e => {
-    const enterKeyCode = 13
-    const escKeyCode = 27
-    const arrowUpKeyCode = 38
-    const arrowDownKeyCode = 40
-
-    if (e.keyCode === escKeyCode) setShowSuggestions(false)
-
     if (showSuggestions) {
-      if (e.keyCode === arrowUpKeyCode) {
+      if (e.key === 'Escape') setShowSuggestions(false)
+
+      if (e.key === 'ArrowUp') {
         e.preventDefault()
         prevSelectedItem()
       }
 
-      if (e.keyCode === arrowDownKeyCode) {
+      if (e.key === 'ArrowDown') {
         e.preventDefault()
         nextSelectedItem()
       }
 
-      if (e.keyCode === enterKeyCode) {
+      if (e.key === 'Enter') {
         e.preventDefault()
 
-        const selectedValue = items[selectedItemIndex]
+        const selectedValue = items[selectedSuggestionIndex]
         handleClickItem(selectedValue)()
       }
     }
@@ -265,31 +275,17 @@ export const Autocomplete = ({
   }
 
   const prevSelectedItem = () => {
-    const newIndex = selectedItemIndex - 1
-
-    suggestionsScrollTop(newIndex)
-    setSelectedItemIndex(newIndex < 0 ? 0 : newIndex)
-
-    const scrollTop = newIndex * itemHeight
-    suggestionsScrollTop(scrollTop)
+    const newIndex = selectedSuggestionIndex - 1
+    setSelectedSuggestionIndex(newIndex < 0 ? 0 : newIndex)
   }
 
   const nextSelectedItem = () => {
-    const newIndex = selectedItemIndex + 1
+    const newIndex = selectedSuggestionIndex + 1
     const itemsLength = items.length - 1
-
-    suggestionsScrollTop(newIndex)
-    setSelectedItemIndex(newIndex >= itemsLength ? itemsLength : newIndex)
-
-    const scrollTop = (newIndex - maxItemsVisibled + 1) * itemHeight
-    suggestionsScrollTop(scrollTop)
+    setSelectedSuggestionIndex(newIndex >= itemsLength ? itemsLength : newIndex)
   }
 
-  const resetSelectedItem = () => setSelectedItemIndex(-1)
-
-  const suggestionsScrollTop = value => {
-    suggestionsEl.current.scrollTop = value > 0 ? value : 0
-  }
+  const resetSelectedItem = () => setSelectedSuggestionIndex(-1)
 
   return (
     <Wrapper
@@ -312,8 +308,10 @@ export const Autocomplete = ({
         aria-expanded={showSuggestions ? items.length > 0 : null}
         aria-autocomplete="both"
         aria-activedescendant={
-          items[selectedItemIndex]
-            ? slugify(`${items[selectedItemIndex]}-${selectedItemIndex}`)
+          items[selectedSuggestionIndex]
+            ? slugify(
+                `${items[selectedSuggestionIndex]}-${selectedSuggestionIndex}`,
+              )
             : ''
         }
         className="k-Form-Autocomplete__input"
@@ -337,12 +335,12 @@ export const Autocomplete = ({
         items.length === 0 &&
         noResultMessage &&
         showNoResultMessage && (
-          <ul
+          <StyledSuggestionsList
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
             tabIndex="-1"
-            style={{ '--Autocomplete-suggestions': '1' }}
+            style={{ '--Autocomplete-suggestions': 1 }}
             className="k-Form-Autocomplete__suggestions"
           >
             <li
@@ -352,12 +350,12 @@ export const Autocomplete = ({
             >
               {noResultMessage}
             </li>
-          </ul>
+          </StyledSuggestionsList>
         )}
 
       {showSuggestions && items.length > 0 && (
         <>
-          <ul
+          <StyledSuggestionsList
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
@@ -371,14 +369,14 @@ export const Autocomplete = ({
                 id={slugify(`${item}-${index}`)}
                 onClick={handleClickItem(item)}
                 role="option"
-                aria-selected={selectedItemIndex === index}
+                aria-selected={selectedSuggestionIndex === index}
                 tabIndex="-1"
                 className="k-Form-Autocomplete__suggestion__item"
               >
                 {item}
               </li>
             ))}
-          </ul>
+          </StyledSuggestionsList>
 
           <VisuallyHidden lang="en" aria-live="assertive">
             {items.length} results are available.

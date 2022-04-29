@@ -9,12 +9,12 @@ import { CrossIcon } from '../../../graphics/icons/cross-icon'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
-const StyledWrapper = styled.div`
+export const StyledTagInputWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   font-size: ${stepToRem(-1)};
   box-sizing: border-box;
-  border-radius: 0;
   width: 100%;
   border: var(--border);
   transition: border 0.2s ease;
@@ -31,7 +31,7 @@ const StyledWrapper = styled.div`
     border: var(--border-hover);
   }
 
-  .k-Form-TagList__list {
+  .k-Form-TagInput__list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -40,22 +40,22 @@ const StyledWrapper = styled.div`
     padding: 0;
     margin: 0;
   }
-  .k-Form-TagList__item {
+  .k-Form-TagInput__item {
     padding: 0;
     margin: 0;
     order: 1;
     max-width: 100%;
     overflow: hidden;
   }
-  .k-Form-TagList__inputItem {
+  .k-Form-TagInput__inputItem {
     flex: 1 0 auto;
     order: 2;
 
-    &:last-of-type .k-Form-TagList__input:empty::before {
+    &:last-of-type .k-Form-TagInput__input:empty::before {
       content: attr(aria-placeholder);
     }
   }
-  .k-Form-TagList__input {
+  .k-Form-TagInput__input {
     width: 100%;
     height: 100%;
     min-width: ${pxToRem(20)};
@@ -77,11 +77,11 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .k-Form-TagList__tagItem {
+  .k-Form-TagInput__tagItem {
     display: flex;
     color: ${COLORS.text1};
     background-color: ${COLORS.primary5};
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius-s);
     height: var(--tagInput-tag-height, ${pxToRem(30)});
     align-items: center;
     transition: color 0.2s ease, background-color 0.2s ease;
@@ -91,24 +91,24 @@ const StyledWrapper = styled.div`
       background-color: ${COLORS.primary4};
     }
 
-    &.k-Form-TagList__tagItem--disabled {
+    &.k-Form-TagInput__tagItem--disabled {
       color: ${COLORS.font2};
       background-color: ${COLORS.line1};
 
-      .k-Form-TagList__tag,
-      .k-Form-TagList__button {
+      .k-Form-TagInput__tag,
+      .k-Form-TagInput__button {
         cursor: not-allowed;
       }
     }
   }
 
-  .k-Form-TagList__tag {
+  .k-Form-TagInput__tag {
     ${TYPOGRAPHY.fontStyles.regular};
     padding: 0 ${pxToRem(2)} 0.15em ${pxToRem(10)};
     line-height: 1;
   }
 
-  .k-Form-TagList__button {
+  .k-Form-TagInput__button {
     ${TYPOGRAPHY.fontStyles.bold};
     border: 0;
     background-color: transparent;
@@ -121,37 +121,37 @@ const StyledWrapper = styled.div`
     outline-offset: ${pxToRem(-2)};
   }
 
-  &.k-Form-TagList--disabled {
+  &.k-Form-TagInput--disabled {
     cursor: not-allowed;
 
-    .k-Form-TagList__tagItem {
+    .k-Form-TagInput__tagItem {
       color: ${COLORS.font2};
       background-color: ${COLORS.line1};
     }
 
-    .k-Form-TagList__tag,
-    .k-Form-TagList__button {
+    .k-Form-TagInput__tag,
+    .k-Form-TagInput__button {
       cursor: not-allowed;
     }
   }
 
   // Sizes
 
-  &.k-Form-TagList--tiny,
-  &.k-Form-TagList--small {
-    --tagInput-padding-vertical: ${pxToRem(4)};
-    --tagInput-tag-height: ${pxToRem(24)};
+  &.k-Form-TagInput--tiny,
+  &.k-Form-TagInput--small {
+    --tagInput-padding-vertical: ${pxToRem(5)};
+    --tagInput-padding-horizontal: ${pxToRem(8)};
+    --tagInput-tag-height: ${pxToRem(26)};
     min-height: ${pxToRem(40)};
   }
 
-  &.k-Form-TagList--regular,
-  &.k-Form-TagList--medium {
-    --tagInput-padding-vertical: ${pxToRem(5)};
+  &.k-Form-TagInput--regular,
+  &.k-Form-TagInput--medium {
     min-height: ${pxToRem(50)};
   }
 
-  &.k-Form-TagList--big,
-  &.k-Form-TagList--large {
+  &.k-Form-TagInput--big,
+  &.k-Form-TagInput--large {
     min-height: ${pxToRem(60)};
     --tagInput-tag-height: ${pxToRem(32)};
 
@@ -161,7 +161,7 @@ const StyledWrapper = styled.div`
     }
   }
 
-  &.k-Form-TagList--huge {
+  &.k-Form-TagInput--huge {
     min-height: ${pxToRem(70)};
     --tagInput-tag-height: ${pxToRem(36)};
 
@@ -171,7 +171,7 @@ const StyledWrapper = styled.div`
     }
   }
 
-  &.k-Form-TagList--giant {
+  &.k-Form-TagInput--giant {
     min-height: ${pxToRem(70)};
     --tagInput-tag-height: ${pxToRem(40)};
 
@@ -279,13 +279,13 @@ export const TagInput = ({
   }
 
   return (
-    <StyledWrapper
+    <StyledTagInputWrapper
       className={classNames(
-        'k-Form-TagList',
+        'k-Form-TagInput',
         className,
-        `k-Form-TagList--${size}`,
+        `k-Form-TagInput--${size}`,
         {
-          'k-Form-TagList--disabled': disabled,
+          'k-Form-TagInput--disabled': disabled,
         },
       )}
       onClick={focusInputEl}
@@ -293,9 +293,9 @@ export const TagInput = ({
       <p className="k-u-a11y-visuallyHidden" id={`${id}-legend`}>
         {helpMessage}
       </p>
-      <ul className="k-Form-TagList__list">
+      <ul className="k-Form-TagInput__list">
         {!disabled && (
-          <li className="k-Form-TagList__item k-Form-TagList__inputItem">
+          <li className="k-Form-TagInput__item k-Form-TagInput__inputItem">
             <span
               ref={inputEl}
               id={id}
@@ -304,7 +304,7 @@ export const TagInput = ({
               aria-describedby={`${id}-legend`}
               aria-placeholder={placeholder}
               onKeyDown={onKeyDown}
-              className="k-Form-TagList__input"
+              className="k-Form-TagInput__input"
             />
           </li>
         )}
@@ -316,13 +316,13 @@ export const TagInput = ({
             <li
               key={itemValue + index}
               className={classNames(
-                'k-Form-TagList__item k-Form-TagList__tagItem',
+                'k-Form-TagInput__item k-Form-TagInput__tagItem',
                 {
-                  'k-Form-TagList__tagItem--disabled': itemDisabled,
+                  'k-Form-TagInput__tagItem--disabled': itemDisabled,
                 },
               )}
             >
-              <span className="k-Form-TagList__tag">
+              <span className="k-Form-TagInput__tag">
                 {itemValue}
                 {itemDisabled && (
                   <span className="k-u-a11y-visuallyHidden">
@@ -331,7 +331,7 @@ export const TagInput = ({
                 )}
               </span>
               <button
-                className="k-Form-TagList__button"
+                className="k-Form-TagInput__button"
                 type="button"
                 disabled={itemDisabled || disabled}
                 onClick={() => removeValueFromList(item)}
@@ -358,7 +358,7 @@ export const TagInput = ({
           )
         })}
       </ul>
-    </StyledWrapper>
+    </StyledTagInputWrapper>
   )
 }
 
