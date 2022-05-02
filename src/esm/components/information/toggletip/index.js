@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement"],
+var _excluded = ["modifier", "style", "className", "children", "actionLabel", "actionProps", "bubbleProps", "targetElement", "icon", "displayIcon", "iconHasBorder"],
     _excluded2 = ["className", "zIndex", "color", "style"];
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
@@ -10,43 +10,27 @@ import styled from 'styled-components';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
-import COLORS from '../../../constants/colors-config';
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config';
-import { QuestionMarkIcon } from '../../graphics/icons/question-mark-icon';
-import { WarningIcon } from '../../graphics/icons/warning-icon';
+import { IconBadge } from '../../information/icon-badge';
+import { StatusIconNext } from '../../graphics/icons-next/status-icon-next';
+import deprecated from 'prop-types-extra/lib/deprecated';
 var StyledWrapper = styled.span.withConfig({
   displayName: "toggletip__StyledWrapper",
-  componentId: "sc-zvcssl-0"
-})(["--toggletipAction-size:", ";position:relative;display:inline-block;&,&.k-Toggletip--info{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--warning{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--error{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--success{--toggletipAction-color:", ";--toggletipBubble-color:", ";}&.k-Toggletip--disabled{--toggletipAction-color:", ";--toggletipBubble-color:", ";}.k-Toggletip__action{position:relative;background-color:var(--toggletipAction-color);width:var(--toggletipAction-size);height:var(--toggletipAction-size);border-radius:var(--border-radius-rounded);}.k-Toggletip__bubble{--toggletipBubble-arrowMainPosition:", ";z-index:var(--toggletipBubble-zIndex);box-sizing:border-box;padding:", ";background-color:var(--toggletipBubble-color);text-align:left;&:after{content:'';position:absolute;display:block;width:0;height:0;border:", " solid transparent;border-radius:var(--border-radius-s);}@media (max-width:", "){position:absolute;top:calc(var(--toggletipAction-size) + ", ");left:calc( -1 * var(--toggletipAction-left) + ", " );width:calc(100vw - ", ");&:after{top:var(--toggletipBubble-arrowMainPosition);left:calc( var(--toggletipAction-left) - ", " - ", " + (var(--toggletipAction-size) / 2) );border-bottom-color:var(--toggletipBubble-color);}}@media (min-width:", "){position:absolute;top:50%;transform:translateY(-50%);left:calc(100% + ", ");transform:translateY(-50%);min-width:", ";max-width:", ";width:max-content;&.k-Toggletip__bubble--rightLimit{max-width:calc( 100vw - var(--toggletipAction-left) - ", " - var(--toggletipAction-size) );}&:after{left:var(--toggletipBubble-arrowMainPosition);top:calc(50% - ", ");border-right-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--lowTop{top:calc( -1 * var(--toggletipAction-top) + ", " );transform:none;&:after{top:calc( var(--toggletipAction-top) - ", " - ", " + (var(--toggletipAction-size) / 2) );}}&.k-Toggletip__bubble--left{left:initial;right:calc(100% + ", ");&:after{left:initial;right:var(--toggletipBubble-arrowMainPosition);border-right-color:transparent;border-left-color:var(--toggletipBubble-color);}}}}"], pxToRem(24), COLORS.primary1, COLORS.primary4, COLORS.orange, COLORS.orange1, COLORS.error, COLORS.error2, COLORS.valid, COLORS.valid1, COLORS.font2, COLORS.line1, pxToRem(-2 * 10), pxToRem(12), pxToRem(10), pxToRem(ScreenConfig.XS.max), pxToRem(20), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN * 2), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(20), pxToRem(220), pxToRem(440), pxToRem(CONTAINER_PADDING_THIN + 20), pxToRem(10), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(20));
-
-var ButtonIcon = function ButtonIcon(_ref) {
-  var modifier = _ref.modifier;
-
-  if (modifier === 'info') {
-    return /*#__PURE__*/React.createElement(QuestionMarkIcon, {
-      width: 6,
-      height: 10,
-      color: COLORS.background1
-    });
-  }
-
-  return /*#__PURE__*/React.createElement(WarningIcon, {
-    width: 2,
-    height: 10,
-    color: COLORS.background1
-  });
-};
-
-export var Toggletip = function Toggletip(_ref2) {
-  var modifier = _ref2.modifier,
-      style = _ref2.style,
-      className = _ref2.className,
-      children = _ref2.children,
-      actionLabel = _ref2.actionLabel,
-      actionProps = _ref2.actionProps,
-      bubbleProps = _ref2.bubbleProps,
-      targetElement = _ref2.targetElement,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
+  componentId: "sc-n283j7-0"
+})(["position:relative;display:inline-block;&,&.k-Toggletip--info{--toggletipBubble-color:var(--color-primary-100);}&.k-Toggletip--warning{--toggletipBubble-color:var(--color-warning-100);}&.k-Toggletip--error,&.k-Toggletip--danger{--toggletipBubble-color:var(--color-danger-100);}&.k-Toggletip--success{--toggletipBubble-color:var(--color-success-100);}&.k-Toggletip--disabled{--toggletipBubble-color:var(--color-grey-300);}.k-Toggletip__bubble{--toggletipBubble-arrowMainPosition:", ";z-index:var(--toggletipBubble-zIndex);box-sizing:border-box;padding:", ";background-color:var(--toggletipBubble-color);text-align:left;border-radius:var(--border-radius-s);&:after{content:'';position:absolute;display:block;width:0;height:0;border:", " solid transparent;border-radius:var(--border-radius-s);}@media (max-width:", "){position:absolute;top:calc(var(--toggletipAction-height) + ", ");left:calc( -1 * var(--toggletipAction-left) + ", " );width:calc(100vw - ", ");&:after{top:var(--toggletipBubble-arrowMainPosition);left:calc( var(--toggletipAction-left) - ", " - ", " + (var(--toggletipAction-height) / 2) );border-bottom-color:var(--toggletipBubble-color);}}@media (min-width:", "){position:absolute;top:50%;transform:translateY(-50%);left:calc(100% + ", ");transform:translateY(-50%);min-width:", ";max-width:", ";width:max-content;&.k-Toggletip__bubble--rightLimit{max-width:calc( 100vw - var(--toggletipAction-left) - ", " - var(--toggletipAction-height) );}&:after{left:var(--toggletipBubble-arrowMainPosition);top:calc(50% - ", ");border-right-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--lowTop{top:calc( -1 * var(--toggletipAction-top) + ", " );transform:none;&:after{top:calc( var(--toggletipAction-top) - ", " - ", " + (var(--toggletipAction-height) / 2) );}}&.k-Toggletip__bubble--left{left:initial;right:calc(100% + ", ");&:after{left:initial;right:var(--toggletipBubble-arrowMainPosition);border-right-color:transparent;border-left-color:var(--toggletipBubble-color);}}}}"], pxToRem(-2 * 8), pxToRem(12), pxToRem(10), pxToRem(ScreenConfig.XS.max), pxToRem(20), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN * 2), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(20), pxToRem(220), pxToRem(440), pxToRem(CONTAINER_PADDING_THIN + 20), pxToRem(10), pxToRem(CONTAINER_PADDING_THIN), pxToRem(CONTAINER_PADDING_THIN), pxToRem(10), pxToRem(20));
+export var Toggletip = function Toggletip(_ref) {
+  var modifier = _ref.modifier,
+      style = _ref.style,
+      className = _ref.className,
+      children = _ref.children,
+      actionLabel = _ref.actionLabel,
+      actionProps = _ref.actionProps,
+      bubbleProps = _ref.bubbleProps,
+      targetElement = _ref.targetElement,
+      icon = _ref.icon,
+      displayIcon = _ref.displayIcon,
+      iconHasBorder = _ref.iconHasBorder,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   var _useState = useState(false),
       isHover = _useState[0],
@@ -125,7 +109,8 @@ export var Toggletip = function Toggletip(_ref2) {
     var actionElementCoords = actionElement.current.getBoundingClientRect();
     setActionPosition({
       top: actionElementCoords.top,
-      left: actionElementCoords.left
+      left: actionElementCoords.left,
+      height: actionElementCoords.height
     });
     var bubblePlusMargins = 220 + 20 + CONTAINER_PADDING_THIN;
     var shouldDisplayOnLeftSide = document.body.clientWidth < actionElementCoords.right + bubblePlusMargins;
@@ -159,9 +144,32 @@ export var Toggletip = function Toggletip(_ref2) {
     }, 100);
   };
 
+  var internalIcon = function () {
+    if (icon) return icon;
+    return /*#__PURE__*/React.createElement(StatusIconNext, {
+      status: modifier
+    });
+  }();
+
+  var role = function () {
+    switch (modifier) {
+      case 'error':
+      case 'danger':
+        return 'alert';
+
+      case 'warning':
+      case 'success':
+        return 'status';
+
+      default:
+        return null;
+    }
+  }();
+
   return /*#__PURE__*/React.createElement(StyledWrapper, _extends({
-    className: classNames('k-Toggletip', className, "k-Toggletip--" + modifier),
+    className: classNames('k-Toggletip', 'k-Toggletip--action', className, "k-Toggletip--" + modifier),
     style: _extends({
+      '--toggletipAction-height': actionPosition.height ? pxToRem(actionPosition.height) : undefined,
       '--toggletipAction-top': actionPosition.top ? pxToRem(actionPosition.top) : undefined,
       '--toggletipAction-left': actionPosition.left ? pxToRem(actionPosition.left) : undefined
     }, style),
@@ -171,27 +179,26 @@ export var Toggletip = function Toggletip(_ref2) {
     onMouseLeave: function onMouseLeave() {
       return setHoverState(false);
     }
-  }, props), !!targetElement && /*#__PURE__*/React.isValidElement(targetElement) ? /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
+  }, props), /*#__PURE__*/React.createElement("button", {
     ref: actionElement,
-    type: "button",
-    "aria-label": actionLabel,
-    className: "k-u-reset-button"
-  }), targetElement) : /*#__PURE__*/React.createElement("button", _extends({}, actionProps, {
-    className: classNames('k-Toggletip__action', 'k-u-reset-button', actionProps.className),
-    type: "button",
-    "aria-label": actionLabel,
-    onClick: handleClick,
     onBlur: function onBlur() {
       return setOpen(false);
     },
-    ref: actionElement,
+    onClick: handleClick,
+    type: "button",
+    "aria-label": actionLabel,
+    className: "k-u-reset-button k-Toggletip__action",
     style: _extends({
       '--toggletipAction-color': actionProps.color || null
     }, actionProps.style)
-  }), /*#__PURE__*/React.createElement(ButtonIcon, {
-    modifier: modifier
+  }, !!targetElement && /*#__PURE__*/React.isValidElement(targetElement) ? targetElement : /*#__PURE__*/React.createElement(IconBadge, {
+    className: "k-Toggletip__icon",
+    children: internalIcon,
+    status: modifier,
+    size: "small",
+    hasBorder: iconHasBorder
   })), /*#__PURE__*/React.createElement("span", {
-    role: "status"
+    role: role
   }, isOpen && /*#__PURE__*/React.createElement("span", _extends({
     className: classNames('k-Toggletip__bubble', 'k-u-weight-light', 'k-u-size-small', 'k-u-line-height-1-3', bubbleClassName, {
       'k-Toggletip__bubble--left': bubbleOnLeftSide,
@@ -208,12 +215,14 @@ Toggletip.defaultProps = {
   modifier: 'info',
   actionProps: {},
   bubbleProps: {},
-  targetElement: null
+  targetElement: null,
+  iconHasBorder: true
 };
 Toggletip.propTypes = {
-  modifier: PropTypes.oneOf(['info', 'warning', 'error', 'success', 'disabled']),
+  modifier: PropTypes.oneOf(['info', 'warning', 'danger', 'success', 'disabled']),
   actionLabel: PropTypes.string.isRequired,
-  actionProps: PropTypes.object,
+  actionProps: deprecated(PropTypes.object),
   bubbleProps: PropTypes.object,
-  targetElement: PropTypes.oneOfType([PropTypes.element, PropTypes.node, PropTypes.arrayOf(PropTypes.node)])
+  targetElement: PropTypes.oneOfType([PropTypes.element, PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
+  iconHasBorder: PropTypes.bool
 };

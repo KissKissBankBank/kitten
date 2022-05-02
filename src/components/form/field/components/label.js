@@ -17,7 +17,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _label = require("../../../form/label");
 
-var _toggletip = require("../../../layer/toggletip");
+var _toggletip = require("../../../information/toggletip");
 
 var _line = require("../../../structure/line");
 
