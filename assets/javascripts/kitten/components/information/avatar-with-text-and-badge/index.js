@@ -156,6 +156,7 @@ const Image = ({
   text,
   textColor,
   width,
+  ...props
 }) => {
   checkDeprecatedSizes(size)
 
@@ -181,7 +182,7 @@ const Image = ({
     >
       <span className="k-Avatar__imageWrapper">
         {src ? (
-          <img className="k-Avatar__image" src={src} alt={alt} />
+          <img className="k-Avatar__image" src={src} alt={alt} {...props} />
         ) : (
           <span className="k-Avatar__noImage">{text}</span>
         )}
@@ -205,7 +206,7 @@ Image.defaultProps = {
   src: null,
   textColor: COLORS.background1,
   backgroundColor: COLORS.primary3,
-  alt: null,
+  alt: '',
   size: 'medium',
 }
 

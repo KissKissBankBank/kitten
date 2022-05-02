@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `HeaderNav`: Fix `BurgerButton` icon position.
+- Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
+- Feature: `TagInputAutocomplete`: Add component.
+- Feature: `Autocomplete`: Move to `input` dir and modernize component.
 
 ## [10.4.1] - 2022-04-28
 

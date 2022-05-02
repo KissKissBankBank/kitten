@@ -90,51 +90,6 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   z-index: 1;
 }
 
-.c0 .k-Form-Autocomplete__suggestions {
-  position: absolute;
-  top: 3.4375rem;
-  left: 0;
-  right: 0;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-  background: var(--color-grey-000,#fff);
-  border: var(--border-width) solid var(--color-grey-400);
-  border-radius: var(--border-radius-s);
-  list-style: none;
-  height: calc(2.375rem * var(--Autocomplete-suggestions,1));
-  max-height: 7.125rem;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item {
-  padding: 0.625rem 0.9375rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: var(--color-grey-900,#222);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
-  font-style: italic;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult) {
-  cursor: pointer;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
-  background-color: var(--color-grey-200,#f6f6f6);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
-  background-color: var(--color-grey-300,#eee);
-}
-
 .c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
   padding-left: 2.8125rem;
 }
@@ -281,51 +236,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   z-index: 1;
 }
 
-.c0 .k-Form-Autocomplete__suggestions {
-  position: absolute;
-  top: 3.4375rem;
-  left: 0;
-  right: 0;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-  background: var(--color-grey-000,#fff);
-  border: var(--border-width) solid var(--color-grey-400);
-  border-radius: var(--border-radius-s);
-  list-style: none;
-  height: calc(2.375rem * var(--Autocomplete-suggestions,1));
-  max-height: 7.125rem;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item {
-  padding: 0.625rem 0.9375rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: var(--color-grey-900,#222);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
-  font-style: italic;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult) {
-  cursor: pointer;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
-  background-color: var(--color-grey-200,#f6f6f6);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
-  background-color: var(--color-grey-300,#eee);
-}
-
 .c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
   padding-left: 2.8125rem;
 }
@@ -384,17 +294,9 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
     className="k-Form-Autocomplete__icon"
   >
     <svg
-      fill="#222"
       height={15}
-      viewBox="0 0 12 15"
       width={15}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      
-      <path
-        d="M6 0C2.686 0 0 2.72 0 6.033 0 7.69.672 9.186 1.758 10.31L6 14.313l4.282-4.094v-.008A6.003 6.003 0 0 0 6 0zm.04 8.4a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8z"
-      />
-    </svg>
+    />
   </span>
 </div>
 `;
@@ -522,51 +424,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   align-self: center;
   padding: 0 1.125rem;
   z-index: 1;
-}
-
-.c0 .k-Form-Autocomplete__suggestions {
-  position: absolute;
-  top: 3.4375rem;
-  left: 0;
-  right: 0;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-  background: var(--color-grey-000,#fff);
-  border: var(--border-width) solid var(--color-grey-400);
-  border-radius: var(--border-radius-s);
-  list-style: none;
-  height: calc(2.375rem * var(--Autocomplete-suggestions,1));
-  max-height: 7.125rem;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item {
-  padding: 0.625rem 0.9375rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: var(--color-grey-900,#222);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
-  font-style: italic;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult) {
-  cursor: pointer;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
-  background-color: var(--color-grey-200,#f6f6f6);
-}
-
-.c0 .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
-  background-color: var(--color-grey-300,#eee);
 }
 
 .c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
