@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
 - Feature: `TagInputAutocomplete`: Add component.
 - Feature: `Autocomplete`: Move to `input` dir and modernize component.
 
