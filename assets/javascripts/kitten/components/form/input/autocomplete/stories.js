@@ -125,7 +125,7 @@ const items = [
 
 export default {
   component: Autocomplete,
-  title: 'Form/Autocomplete',
+  title: 'Form/Input/Autocomplete',
   parameters: {
     docs: {
       page: () => (

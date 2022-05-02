@@ -35,6 +35,12 @@ import {
   StarIconNext,
   Container,
   ProfileCard,
+  DropdownMenu,
+  LinkIconNext,
+  FacebookIconNext,
+  TwitterIconNext,
+  WhatsappIconNext,
+  EmbedIconNext,
 } from 'kitten'
 
 import Footer from 'kitten/karl/pages/footer'
@@ -217,13 +223,45 @@ export const Default = ({
               className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
             >
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="medium" rounded>
-                  <AirplaneIconNext />
-                  <span>Partager</span>
-                </Button>
+                <DropdownMenu
+                  menuPosition="center"
+                  button={({ open }) => (
+                    <Button
+                      active={open}
+                      rounded
+                      fit="content"
+                      as="span"
+                      size="small"
+                    >
+                      <AirplaneIconNext />
+                      <span>Partager</span>
+                    </Button>
+                  )}
+                  top="10px"
+                >
+                  <DropdownMenu.Button icon={<LinkIconNext />}>
+                    Copier le lien
+                  </DropdownMenu.Button>
+                  <DropdownMenu.Separator />
+                  <DropdownMenu.Button icon={<FacebookIconNext />}>
+                    Facebook
+                  </DropdownMenu.Button>
+                  <DropdownMenu.Button icon={<TwitterIconNext />}>
+                    Twitter
+                  </DropdownMenu.Button>
+                  <DropdownMenu.Button icon={<WhatsappIconNext />}>
+                    Whatsapp
+                  </DropdownMenu.Button>
+
+                  <DropdownMenu.Separator />
+                  <DropdownMenu.Button icon={<EmbedIconNext />}>
+                    Insérer sur son site
+                  </DropdownMenu.Button>
+                </DropdownMenu>
+
                 <Button
                   fit="content"
-                  size="medium"
+                  size="small"
                   rounded
                   className="k-u-hidden@l-up"
                 >
@@ -232,11 +270,11 @@ export const Default = ({
                 </Button>
               </FlexWrapper>
               <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="medium" rounded>
+                <Button fit="content" size="small" rounded>
                   <StarIconNext />
                   <span>Ajouter aux favoris</span>
                 </Button>
-                <Button fit="content" size="medium" modifier="helium" rounded>
+                <Button fit="content" size="small" modifier="helium" rounded>
                   S’abonner
                 </Button>
               </FlexWrapper>

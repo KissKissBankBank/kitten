@@ -1,10 +1,9 @@
 import React from 'react'
 import { Toggletip } from './index'
-import { COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
-  title: 'Layer/Toggletip',
+  title: 'Information/Toggletip',
   component: Toggletip,
   parameters: {
     docs: {
@@ -33,7 +32,7 @@ const argTypes = {
   },
   modifier: {
     name: 'modifier',
-    options: ['info', 'warning', 'error', 'success', 'disabled'],
+    options: ['info', 'warning', 'danger', 'success', 'disabled'],
     control: 'radio',
   },
   children: {
@@ -62,14 +61,7 @@ CustomTargetElement.argTypes = argTypes
 export const MultipleToggletips = args => (
   <>
     <div className="k-u-margin-bottom-quadruple">
-      <Toggletip
-        {...args}
-        id="Toggletip-top"
-        bubbleProps={{
-          className: 'k-u-color-background1 k-u-weight-regular',
-          color: COLORS.primary1,
-        }}
-      />
+      <Toggletip {...args} id="Toggletip-top" />
     </div>
     <div className="k-u-margin-vertical-quadruple k-u-align-right">
       <Toggletip
