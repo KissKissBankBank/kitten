@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Autocomplete } from './index'
-import { LocationIcon } from '../../graphics/icons/location-icon'
 
 const items = [
   'Abyssin',
@@ -47,7 +46,7 @@ describe('<Autocomplete />', () => {
             id="autocomplete"
             name="autocomplete"
             placeholder="Search a kitten…"
-            icon={<LocationIcon />}
+            icon={<svg />}
             items={items}
           />,
         )

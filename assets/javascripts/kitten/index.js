@@ -64,7 +64,6 @@ export { CheckList } from './components/feedback/check-list'
 // Form
 // ----
 
-export { Autocomplete } from './components/form/autocomplete'
 export { Checkbox } from './components/form/checkbox'
 export { CheckboxButton } from './components/form/checkbox-button'
 export { CheckboxButtonSet } from './components/form/checkbox-button-set'
@@ -85,10 +84,12 @@ export { ToggleSwitch } from './components/form/toggle-switch'
 export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'
 
 // Form/Input
+export { Autocomplete } from './components/form/input/autocomplete'
 export { LocationInput } from './components/form/input/location-input'
 export { ModalFooterInput } from './components/form/input/modal-footer-input'
 export { PasswordInput } from './components/form/input/password-input'
 export { TagInput } from './components/form/input/tag-input'
+export { TagInputAutocomplete } from './components/form/input/tag-input-autocomplete'
 export { TextareaAutoResize } from './components/form/input/textarea-auto-resize'
 export { TextInput } from './components/form/input/text-input'
 export { TextInputWithButton } from './components/form/input/text-input-with-button'

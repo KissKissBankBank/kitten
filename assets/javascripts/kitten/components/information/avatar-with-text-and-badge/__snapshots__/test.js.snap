@@ -76,6 +76,7 @@ exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match wi
         alt="Alt text"
         className="k-Avatar__image"
         src="/kitten.jpg"
+        srcSet="/kitten.jpg, /kitten@2x.jpg 2x, /kitten@3x.jpg 3x"
       />
     </span>
   </div>

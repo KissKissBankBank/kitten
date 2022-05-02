@@ -12,6 +12,7 @@ describe('<AvatarWithTextAndBadge />', () => {
               alt="Alt text"
               src="/kitten.jpg"
               text="ST"
+              srcSet="/kitten.jpg, /kitten@2x.jpg 2x, /kitten@3x.jpg 3x"
             />
 
             <AvatarWithTextAndBadge.Text>

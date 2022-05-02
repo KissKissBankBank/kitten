@@ -5,6 +5,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Toggletip`: Improve styles.
+- Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
+- Feature: `TagInputAutocomplete`: Add component.
+- Feature: `Autocomplete`: Move to `input` dir and modernize component.
+
+## [10.4.1] - 2022-04-28
+
+Fixes:
+
+- `HeroLayout`: Fix Hero z-index.
+- `HeroLayout`: Fix Background image position in simple mode.
 
 ## [10.4.0] - 2022-04-26
 

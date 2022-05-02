@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TagInput /> should match its disabled snapshot with disabled props 1`] = `
+exports[`<TagInputAutocomplete /> should match its disabled snapshot with disabled props 1`] = `
 <div
   className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
   onClick={[Function]}
@@ -145,7 +145,7 @@ exports[`<TagInput /> should match its disabled snapshot with disabled props 1`]
 </div>
 `;
 
-exports[`<TagInput /> should match its disabled snapshot with objects on initialItemsList 1`] = `
+exports[`<TagInputAutocomplete /> should match its disabled snapshot with objects on initialItemsList 1`] = `
 <div
   className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
   onClick={[Function]}
@@ -335,7 +335,7 @@ exports[`<TagInput /> should match its disabled snapshot with objects on initial
 </div>
 `;
 
-exports[`<TagInput /> should match its snapshot 1`] = `
+exports[`<TagInputAutocomplete /> should match its snapshot 1`] = `
 <div
   className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--medium"
   onClick={[Function]}
@@ -353,11 +353,17 @@ exports[`<TagInput /> should match its snapshot 1`] = `
       className="k-Form-TagInput__item k-Form-TagInput__inputItem"
     >
       <span
+        aria-activedescendant=""
+        aria-autocomplete="both"
         aria-describedby="test-slider-input-legend"
+        aria-expanded={null}
+        aria-owns="test-slider-input-results"
         aria-placeholder=""
         className="k-Form-TagInput__input"
         contentEditable={true}
         id="test-slider-input"
+        onBlur={[Function]}
+        onInput={[Function]}
         onKeyDown={[Function]}
         role="textbox"
       />
@@ -372,7 +378,7 @@ exports[`<TagInput /> should match its snapshot 1`] = `
 </div>
 `;
 
-exports[`<TagInput /> should match its snapshot with props 1`] = `
+exports[`<TagInputAutocomplete /> should match its snapshot with props 1`] = `
 <div
   className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--huge"
   onClick={[Function]}
@@ -390,11 +396,17 @@ exports[`<TagInput /> should match its snapshot with props 1`] = `
       className="k-Form-TagInput__item k-Form-TagInput__inputItem"
     >
       <span
+        aria-activedescendant=""
+        aria-autocomplete="both"
         aria-describedby="test-slider-input-legend"
+        aria-expanded={null}
+        aria-owns="test-slider-input-results"
         aria-placeholder="OK"
         className="k-Form-TagInput__input"
         contentEditable={true}
         id="test-slider-input"
+        onBlur={[Function]}
+        onInput={[Function]}
         onKeyDown={[Function]}
         role="textbox"
       />
