@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Toggletip`: Improve styles.
 - Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
 - Feature: `TagInputAutocomplete`: Add component.
 - Feature: `Autocomplete`: Move to `input` dir and modernize component.
@@ -28,15 +29,11 @@ Features:
 - Tokens: Add `shadows` CSS tokens.
 - Utilities: Add `k-u-shadow-*` CSS utilities.
 - `FlashIconNext`: Add component.
-- `CheckboxButton`: Add component.
-- `CheckboxButtonSet`: Add component.
-- `ProfileCard`: Add component.
 - `HeroLayout`: Add the following subcomponents:
   - `HeroLayout.Main.TopMenu`
   - `HeroLayout.Main.Image`
   - `HeroLayout.Main.FirstAside`
   - `HeroLayout.Main.LastAside`
-- `DropdownSelect`: Change list style to cut last item if scrollable.
 - `Modal`: Modernize component in order to replace `ModalNext`.
 - `FloatingMenu`: Add `horizontal` boolean prop, defaults to false.
 - `Tag`: Improve styles.
