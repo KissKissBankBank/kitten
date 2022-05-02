@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Token`: Add `--border-with-shadow` border token when the shadow is used.
 - Fix: `HeaderNav`: Fix `BurgerButton` icon position.
 - Feature: `Toggletip`: Improve styles.
 - Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
