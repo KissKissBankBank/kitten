@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav`: Fix `BurgerButton` icon position.
 - Feature: `Toggletip`: Improve styles.
 - Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
 - Feature: `TagInputAutocomplete`: Add component.
