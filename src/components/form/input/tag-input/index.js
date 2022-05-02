@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.TagInput = void 0;
+exports.TagInput = exports.StyledTagInputWrapper = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -29,10 +29,12 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledWrapper = _styledComponents.default.div.withConfig({
-  displayName: "tag-input__StyledWrapper",
+var StyledTagInputWrapper = _styledComponents.default.div.withConfig({
+  displayName: "tag-input__StyledTagInputWrapper",
   componentId: "sc-ehmcaj-0"
-})(["display:flex;align-items:center;font-size:", ";box-sizing:border-box;border-radius:0;width:100%;border:var(--border);transition:border 0.2s ease;padding:var(--tagInput-padding-vertical,", ") var(--tagInput-padding-horizontal,", ");border-radius:var(--border-radius-s);&:focus-within{outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&:hover{border:var(--border-hover);}.k-Form-TagList__list{width:100%;display:flex;flex-wrap:wrap;gap:", ";list-style:none;padding:0;margin:0;}.k-Form-TagList__item{padding:0;margin:0;order:1;max-width:100%;overflow:hidden;}.k-Form-TagList__inputItem{flex:1 0 auto;order:2;&:last-of-type .k-Form-TagList__input:empty::before{content:attr(aria-placeholder);}}.k-Form-TagList__input{width:100%;height:100%;min-width:", ";display:block;padding:", " 0 ", ";box-sizing:border-box;line-height:1;", ";cursor:text;&:empty::before{color:", ";content:' ';}&:focus{outline-offset:", ";}}.k-Form-TagList__tagItem{display:flex;color:", ";background-color:", ";border-radius:var(--border-radius-xs);height:var(--tagInput-tag-height,", ");align-items:center;transition:color 0.2s ease,background-color 0.2s ease;cursor:default;&:hover{background-color:", ";}&.k-Form-TagList__tagItem--disabled{color:", ";background-color:", ";.k-Form-TagList__tag,.k-Form-TagList__button{cursor:not-allowed;}}}.k-Form-TagList__tag{", ";padding:0 ", " 0.15em ", ";line-height:1;}.k-Form-TagList__button{", ";border:0;background-color:transparent;color:inherit;padding:0 ", " 0 ", ";align-self:stretch;display:flex;align-items:center;cursor:pointer;outline-offset:", ";}&.k-Form-TagList--disabled{cursor:not-allowed;.k-Form-TagList__tagItem{color:", ";background-color:", ";}.k-Form-TagList__tag,.k-Form-TagList__button{cursor:not-allowed;}}&.k-Form-TagList--tiny,&.k-Form-TagList--small{--tagInput-padding-vertical:", ";--tagInput-tag-height:", ";min-height:", ";}&.k-Form-TagList--regular,&.k-Form-TagList--medium{--tagInput-padding-vertical:", ";min-height:", ";}&.k-Form-TagList--big,&.k-Form-TagList--large{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--huge{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagList--giant{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}"], (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(6), _typographyConfig.default.fontStyles.light, _colorsConfig.default.font2, (0, _typography.pxToRem)(2), _colorsConfig.default.text1, _colorsConfig.default.primary5, (0, _typography.pxToRem)(30), _colorsConfig.default.primary4, _colorsConfig.default.font2, _colorsConfig.default.line1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.bold, (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(-2), _colorsConfig.default.font2, _colorsConfig.default.line1, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(24), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(32), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(70), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(36), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), (0, _typography.stepToRem)(0));
+})(["position:relative;display:flex;align-items:center;font-size:", ";box-sizing:border-box;width:100%;border:var(--border);transition:border 0.2s ease;padding:var(--tagInput-padding-vertical,", ") var(--tagInput-padding-horizontal,", ");border-radius:var(--border-radius-s);&:focus-within{outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&:hover{border:var(--border-hover);}.k-Form-TagInput__list{width:100%;display:flex;flex-wrap:wrap;gap:", ";list-style:none;padding:0;margin:0;}.k-Form-TagInput__item{padding:0;margin:0;order:1;max-width:100%;overflow:hidden;}.k-Form-TagInput__inputItem{flex:1 0 auto;order:2;&:last-of-type .k-Form-TagInput__input:empty::before{content:attr(aria-placeholder);}}.k-Form-TagInput__input{width:100%;height:100%;min-width:", ";display:block;padding:", " 0 ", ";box-sizing:border-box;line-height:1;", ";cursor:text;&:empty::before{color:", ";content:' ';}&:focus{outline-offset:", ";}}.k-Form-TagInput__tagItem{display:flex;color:", ";background-color:", ";border-radius:var(--border-radius-s);height:var(--tagInput-tag-height,", ");align-items:center;transition:color 0.2s ease,background-color 0.2s ease;cursor:default;&:hover{background-color:", ";}&.k-Form-TagInput__tagItem--disabled{color:", ";background-color:", ";.k-Form-TagInput__tag,.k-Form-TagInput__button{cursor:not-allowed;}}}.k-Form-TagInput__tag{", ";padding:0 ", " 0.15em ", ";line-height:1;}.k-Form-TagInput__button{", ";border:0;background-color:transparent;color:inherit;padding:0 ", " 0 ", ";align-self:stretch;display:flex;align-items:center;cursor:pointer;outline-offset:", ";}&.k-Form-TagInput--disabled{cursor:not-allowed;.k-Form-TagInput__tagItem{color:", ";background-color:", ";}.k-Form-TagInput__tag,.k-Form-TagInput__button{cursor:not-allowed;}}&.k-Form-TagInput--tiny,&.k-Form-TagInput--small{--tagInput-padding-vertical:", ";--tagInput-padding-horizontal:", ";--tagInput-tag-height:", ";min-height:", ";}&.k-Form-TagInput--regular,&.k-Form-TagInput--medium{min-height:", ";}&.k-Form-TagInput--big,&.k-Form-TagInput--large{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagInput--huge{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}&.k-Form-TagInput--giant{min-height:", ";--tagInput-tag-height:", ";@media (min-width:", "px){min-height:", ";font-size:", ";}}"], (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(6), _typographyConfig.default.fontStyles.light, _colorsConfig.default.font2, (0, _typography.pxToRem)(2), _colorsConfig.default.text1, _colorsConfig.default.primary5, (0, _typography.pxToRem)(30), _colorsConfig.default.primary4, _colorsConfig.default.font2, _colorsConfig.default.line1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.bold, (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(-2), _colorsConfig.default.font2, _colorsConfig.default.line1, (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(26), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(32), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(70), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(36), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), (0, _typography.stepToRem)(0));
+
+exports.StyledTagInputWrapper = StyledTagInputWrapper;
 
 var TagInput = function TagInput(_ref) {
   var placeholder = _ref.placeholder,
@@ -131,18 +133,18 @@ var TagInput = function TagInput(_ref) {
     }
   };
 
-  return /*#__PURE__*/_react.default.createElement(StyledWrapper, {
-    className: (0, _classnames.default)('k-Form-TagList', className, "k-Form-TagList--" + size, {
-      'k-Form-TagList--disabled': disabled
+  return /*#__PURE__*/_react.default.createElement(StyledTagInputWrapper, {
+    className: (0, _classnames.default)('k-Form-TagInput', className, "k-Form-TagInput--" + size, {
+      'k-Form-TagInput--disabled': disabled
     }),
     onClick: focusInputEl
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "k-u-a11y-visuallyHidden",
     id: id + "-legend"
   }, helpMessage), /*#__PURE__*/_react.default.createElement("ul", {
-    className: "k-Form-TagList__list"
+    className: "k-Form-TagInput__list"
   }, !disabled && /*#__PURE__*/_react.default.createElement("li", {
-    className: "k-Form-TagList__item k-Form-TagList__inputItem"
+    className: "k-Form-TagInput__item k-Form-TagInput__inputItem"
   }, /*#__PURE__*/_react.default.createElement("span", {
     ref: inputEl,
     id: id,
@@ -151,21 +153,21 @@ var TagInput = function TagInput(_ref) {
     "aria-describedby": id + "-legend",
     "aria-placeholder": placeholder,
     onKeyDown: onKeyDown,
-    className: "k-Form-TagList__input"
+    className: "k-Form-TagInput__input"
   })), itemsList.map(function (item, index) {
     var itemValue = (item == null ? void 0 : item.value) || item;
     var itemDisabled = (item == null ? void 0 : item.disabled) || false;
     return /*#__PURE__*/_react.default.createElement("li", {
       key: itemValue + index,
-      className: (0, _classnames.default)('k-Form-TagList__item k-Form-TagList__tagItem', {
-        'k-Form-TagList__tagItem--disabled': itemDisabled
+      className: (0, _classnames.default)('k-Form-TagInput__item k-Form-TagInput__tagItem', {
+        'k-Form-TagInput__tagItem--disabled': itemDisabled
       })
     }, /*#__PURE__*/_react.default.createElement("span", {
-      className: "k-Form-TagList__tag"
+      className: "k-Form-TagInput__tag"
     }, itemValue, itemDisabled && /*#__PURE__*/_react.default.createElement("span", {
       className: "k-u-a11y-visuallyHidden"
     }, "\xC9l\xE9ment d\xE9sactiv\xE9.")), /*#__PURE__*/_react.default.createElement("button", {
-      className: "k-Form-TagList__button",
+      className: "k-Form-TagInput__button",
       type: "button",
       disabled: itemDisabled || disabled,
       onClick: function onClick() {

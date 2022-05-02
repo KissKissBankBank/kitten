@@ -5,9 +5,9 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.AvatarWithTextAndBadge = void 0;
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -31,9 +31,10 @@ var _getReactElements = require("../../../helpers/react/get-react-elements");
 
 var _deprecated2 = require("../../../helpers/utils/deprecated");
 
-var _excluded = ["backgroundColor", "className", "a11yText"],
-    _excluded2 = ["textClassName", "className", "withEllipsisOverflow"],
-    _excluded3 = ["className", "hoverable"];
+var _excluded = ["alt", "backgroundColor", "children", "className", "height", "size", "src", "style", "text", "textColor", "width"],
+    _excluded2 = ["backgroundColor", "className", "a11yText"],
+    _excluded3 = ["textClassName", "className", "withEllipsisOverflow"],
+    _excluded4 = ["className", "hoverable"];
 
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "avatar-with-text-and-badge__StyledWrapper",
@@ -51,7 +52,8 @@ var Image = function Image(_ref) {
       style = _ref.style,
       text = _ref.text,
       textColor = _ref.textColor,
-      width = _ref.width;
+      width = _ref.width,
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   (0, _deprecated2.checkDeprecatedSizes)(size);
   var badgeElement = (0, _getReactElements.getReactElementsByType)({
     children: children,
@@ -70,11 +72,11 @@ var Image = function Image(_ref) {
     })
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "k-Avatar__imageWrapper"
-  }, src ? /*#__PURE__*/_react.default.createElement("img", {
+  }, src ? /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
     className: "k-Avatar__image",
     src: src,
     alt: alt
-  }) : /*#__PURE__*/_react.default.createElement("span", {
+  }, props)) : /*#__PURE__*/_react.default.createElement("span", {
     className: "k-Avatar__noImage"
   }, text)), badge);
 };
@@ -92,7 +94,7 @@ Image.defaultProps = {
   src: null,
   textColor: _colorsConfig.default.background1,
   backgroundColor: _colorsConfig.default.primary3,
-  alt: null,
+  alt: '',
   size: 'medium'
 };
 
@@ -100,7 +102,7 @@ var Badge = function Badge(_ref2) {
   var backgroundColor = _ref2.backgroundColor,
       className = _ref2.className,
       a11yText = _ref2.a11yText,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
   return /*#__PURE__*/_react.default.createElement(_badge.Badge, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Avatar__badge', className),
     color: backgroundColor,
@@ -121,7 +123,7 @@ var Text = function Text(_ref3) {
   var textClassName = _ref3.textClassName,
       className = _ref3.className,
       withEllipsisOverflow = _ref3.withEllipsisOverflow,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded2);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
     className: (0, _classnames.default)('k-Avatar__text', textClassName, className, {
       'k-Avatar__text--hasEllipsis': withEllipsisOverflow
@@ -140,7 +142,7 @@ Text.defaultProps = {
 var AvatarWithTextAndBadge = function AvatarWithTextAndBadge(_ref4) {
   var className = _ref4.className,
       hoverable = _ref4.hoverable,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded3);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded4);
   return /*#__PURE__*/_react.default.createElement(StyledWrapper, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Avatar__wrapper', className, {
       'k-Avatar__wrapper--isHoverable': hoverable

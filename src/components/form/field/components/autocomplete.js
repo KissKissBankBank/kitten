@@ -7,7 +7,7 @@ exports.FieldAutocomplete = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _autocomplete = require("../../../form/autocomplete");
+var _autocomplete = require("../../../form/input/autocomplete");
 
 var FieldAutocomplete = function FieldAutocomplete(props) {
   return /*#__PURE__*/_react.default.createElement("div", {

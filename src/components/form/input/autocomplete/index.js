@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.Autocomplete = void 0;
+exports.maxVisibleSuggestions = exports.StyledSuggestionsList = exports.Autocomplete = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -17,19 +17,19 @@ var _isFunction = _interopRequireDefault(require("lodash/fp/isFunction"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _typography = require("../../../helpers/utils/typography");
-
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
-
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
-var _visuallyHidden = require("../../accessibility/visually-hidden");
-
 var _slugify = _interopRequireDefault(require("slugify"));
 
-var _loader = require("../../graphics/animations/loader");
-
 var _classnames = _interopRequireDefault(require("classnames"));
+
+var _typography = require("../../../../helpers/utils/typography");
+
+var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
+
+var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
+
+var _visuallyHidden = require("../../../accessibility/visually-hidden");
+
+var _loader = require("../../../graphics/animations/loader");
 
 var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"];
 
@@ -37,14 +37,20 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var itemHeight = 38;
-var maxItemsVisibled = 3;
-var borderSize = 'var(--border-width)';
+var maxVisibleSuggestions = 3;
+exports.maxVisibleSuggestions = maxVisibleSuggestions;
 
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "autocomplete__Wrapper",
-  componentId: "sc-lfeqwe-0"
-})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;border-radius:var(--border-radius-s);background:", ";border:", " solid var(--color-grey-400);padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border:var(--border-danger);color:", ";:focus{border-color:var(--color-grey-500);color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}.k-Form-Autocomplete__suggestions{position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid var(--color-grey-400);border-radius:var(--border-radius-s);list-style:none;height:calc(", " * var(--Autocomplete-suggestions,1));max-height:", ";}.k-Form-Autocomplete__suggestion__item{padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}&[aria-selected='true']{background-color:", ";}}}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__input{border:var(--color-grey-300);background-color:var(--color-grey-200);color:var(--color-grey-600);}.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, borderSize, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.error3, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(55), _colorsConfig.default.background1, borderSize, (0, _typography.pxToRem)(itemHeight), (0, _typography.pxToRem)(itemHeight * maxItemsVisibled), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background3, _colorsConfig.default.line1, (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2);
+  componentId: "sc-1bpe1y1-0"
+})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;border-radius:var(--border-radius-s);background:", ";border:var(--border-width) solid var(--color-grey-400);padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border:var(--border-danger);color:", ";:focus{border-color:var(--color-grey-500);color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__input{border:var(--color-grey-300);background-color:var(--color-grey-200);color:var(--color-grey-600);}.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.error3, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2);
+
+var StyledSuggestionsList = _styledComponents.default.ul.withConfig({
+  displayName: "autocomplete__StyledSuggestionsList",
+  componentId: "sc-1bpe1y1-1"
+})(["box-sizing:border-box;position:absolute;top:calc(100% + ", ");left:", ";right:", ";display:flex;flex-direction:column;gap:", ";overflow-y:auto;margin:0;padding:", ";background:var(--color-grey-000);border:var(--border-width) solid var(--color-grey-400);border-radius:var(--border-radius-m);list-style:none;max-height:calc( ", " + (min(2,(var(--Autocomplete-suggestions) - 1)) * ", ") );.k-Form-Autocomplete__suggestion__item{box-sizing:border-box;height:", ";padding:", " ", ";border-radius:var(--border-radius-s);", ";font-size:", ";line-height:", ";color:var(--color-grey-900);&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color var(--transition);:hover,:focus,:active{background-color:var(--color-grey-200);}&[aria-selected='true']{background-color:var(--color-grey-300);}}}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(-1), (0, _typography.pxToRem)(-1), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(4 + 34 * maxVisibleSuggestions), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(34), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(13), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(18));
+
+exports.StyledSuggestionsList = StyledSuggestionsList;
 
 var Autocomplete = function Autocomplete(_ref) {
   var _classNames;
@@ -73,8 +79,8 @@ var Autocomplete = function Autocomplete(_ref) {
       setValue = _useState2[1];
 
   var _useState3 = (0, _react.useState)(-1),
-      selectedItemIndex = _useState3[0],
-      setSelectedItemIndex = _useState3[1];
+      selectedSuggestionIndex = _useState3[0],
+      setSelectedSuggestionIndex = _useState3[1];
 
   var _useState4 = (0, _react.useState)(false),
       showSuggestions = _useState4[0],
@@ -90,6 +96,15 @@ var Autocomplete = function Autocomplete(_ref) {
     updateSuggestions();
     setShowSuggestions(!!value);
   }, [value, defaultItems]);
+  (0, _react.useEffect)(function () {
+    var _suggestionsEl$curren, _suggestionsEl$curren2;
+
+    suggestionsEl == null ? void 0 : (_suggestionsEl$curren = suggestionsEl.current) == null ? void 0 : (_suggestionsEl$curren2 = _suggestionsEl$curren.children[selectedSuggestionIndex]) == null ? void 0 : _suggestionsEl$curren2.scrollIntoView({
+      block: 'center',
+      inline: 'nearest',
+      behavior: 'smooth'
+    });
+  }, [selectedSuggestionIndex]);
 
   var handleChange = function handleChange(e) {
     setValue(e.target.value);
@@ -104,26 +119,22 @@ var Autocomplete = function Autocomplete(_ref) {
   };
 
   var handleKeyDown = function handleKeyDown(e) {
-    var enterKeyCode = 13;
-    var escKeyCode = 27;
-    var arrowUpKeyCode = 38;
-    var arrowDownKeyCode = 40;
-    if (e.keyCode === escKeyCode) setShowSuggestions(false);
-
     if (showSuggestions) {
-      if (e.keyCode === arrowUpKeyCode) {
+      if (e.key === 'Escape') setShowSuggestions(false);
+
+      if (e.key === 'ArrowUp') {
         e.preventDefault();
         prevSelectedItem();
       }
 
-      if (e.keyCode === arrowDownKeyCode) {
+      if (e.key === 'ArrowDown') {
         e.preventDefault();
         nextSelectedItem();
       }
 
-      if (e.keyCode === enterKeyCode) {
+      if (e.key === 'Enter') {
         e.preventDefault();
-        var selectedValue = items[selectedItemIndex];
+        var selectedValue = items[selectedSuggestionIndex];
         handleClickItem(selectedValue)();
       }
     }
@@ -155,28 +166,18 @@ var Autocomplete = function Autocomplete(_ref) {
   };
 
   var prevSelectedItem = function prevSelectedItem() {
-    var newIndex = selectedItemIndex - 1;
-    suggestionsScrollTop(newIndex);
-    setSelectedItemIndex(newIndex < 0 ? 0 : newIndex);
-    var scrollTop = newIndex * itemHeight;
-    suggestionsScrollTop(scrollTop);
+    var newIndex = selectedSuggestionIndex - 1;
+    setSelectedSuggestionIndex(newIndex < 0 ? 0 : newIndex);
   };
 
   var nextSelectedItem = function nextSelectedItem() {
-    var newIndex = selectedItemIndex + 1;
+    var newIndex = selectedSuggestionIndex + 1;
     var itemsLength = items.length - 1;
-    suggestionsScrollTop(newIndex);
-    setSelectedItemIndex(newIndex >= itemsLength ? itemsLength : newIndex);
-    var scrollTop = (newIndex - maxItemsVisibled + 1) * itemHeight;
-    suggestionsScrollTop(scrollTop);
+    setSelectedSuggestionIndex(newIndex >= itemsLength ? itemsLength : newIndex);
   };
 
   var resetSelectedItem = function resetSelectedItem() {
-    return setSelectedItemIndex(-1);
-  };
-
-  var suggestionsScrollTop = function suggestionsScrollTop(value) {
-    suggestionsEl.current.scrollTop = value > 0 ? value : 0;
+    return setSelectedSuggestionIndex(-1);
   };
 
   return /*#__PURE__*/_react.default.createElement(Wrapper, {
@@ -192,7 +193,7 @@ var Autocomplete = function Autocomplete(_ref) {
     "aria-owns": props.name + "-results",
     "aria-expanded": showSuggestions ? items.length > 0 : null,
     "aria-autocomplete": "both",
-    "aria-activedescendant": items[selectedItemIndex] ? (0, _slugify.default)(items[selectedItemIndex] + "-" + selectedItemIndex) : '',
+    "aria-activedescendant": items[selectedSuggestionIndex] ? (0, _slugify.default)(items[selectedSuggestionIndex] + "-" + selectedSuggestionIndex) : '',
     className: "k-Form-Autocomplete__input"
   })), isLoading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_loader.Loader, {
     className: "k-Form-Autocomplete__loader",
@@ -205,20 +206,20 @@ var Autocomplete = function Autocomplete(_ref) {
   }, /*#__PURE__*/_react.default.cloneElement(icon, {
     width: 15,
     height: 15
-  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/_react.default.createElement("ul", {
+  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/_react.default.createElement(StyledSuggestionsList, {
     ref: suggestionsEl,
     id: props.name + "-results",
     role: "listbox",
     tabIndex: "-1",
     style: {
-      '--Autocomplete-suggestions': '1'
+      '--Autocomplete-suggestions': 1
     },
     className: "k-Form-Autocomplete__suggestions"
   }, /*#__PURE__*/_react.default.createElement("li", {
     className: "k-Form-Autocomplete__suggestion__item k-Form-Autocomplete__suggestion__item--noresult",
     role: "option",
     tabIndex: "-1"
-  }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("ul", {
+  }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledSuggestionsList, {
     ref: suggestionsEl,
     id: props.name + "-results",
     role: "listbox",
@@ -233,7 +234,7 @@ var Autocomplete = function Autocomplete(_ref) {
       id: (0, _slugify.default)(item + "-" + index),
       onClick: handleClickItem(item),
       role: "option",
-      "aria-selected": selectedItemIndex === index,
+      "aria-selected": selectedSuggestionIndex === index,
       tabIndex: "-1",
       className: "k-Form-Autocomplete__suggestion__item"
     }, item);
