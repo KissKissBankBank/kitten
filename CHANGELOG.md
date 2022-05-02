@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `HeaderNav`: Fix `BurgerButton` icon position.
-- Feature: `Toggletip`: Improve styles.
-- Fix: `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
-- Feature: `TagInputAutocomplete`: Add component.
-- Feature: `Autocomplete`: Move to `input` dir and modernize component.
+## [10.5.0] - 2022-05-02
+
+Features:
+
+- `Toggletip`: Improve styles.
+- `TagInputAutocomplete`: Add component.
+- `Autocomplete`: Move to `form/input` directory and modernize component.
+
+Fixes:
+
+- `HeaderNav`: Fix `BurgerButton` icon position.
+- `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
 
 ## [10.4.1] - 2022-04-28
 

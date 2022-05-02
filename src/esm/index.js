@@ -40,7 +40,6 @@ export { VerticalStepper } from './components/feedback/vertical-stepper';
 export { CheckList } from './components/feedback/check-list'; // Form
 // ----
 
-export { Autocomplete } from './components/form/autocomplete';
 export { Checkbox } from './components/form/checkbox';
 export { CheckboxButton } from './components/form/checkbox-button';
 export { CheckboxButtonSet } from './components/form/checkbox-button-set';
@@ -60,10 +59,12 @@ export { RangeSlider } from './components/form/range-slider';
 export { ToggleSwitch } from './components/form/toggle-switch';
 export { StandaloneRangeDatePicker } from './components/form/standalone-range-date-picker'; // Form/Input
 
+export { Autocomplete } from './components/form/input/autocomplete';
 export { LocationInput } from './components/form/input/location-input';
 export { ModalFooterInput } from './components/form/input/modal-footer-input';
 export { PasswordInput } from './components/form/input/password-input';
 export { TagInput } from './components/form/input/tag-input';
+export { TagInputAutocomplete } from './components/form/input/tag-input-autocomplete';
 export { TextareaAutoResize } from './components/form/input/textarea-auto-resize';
 export { TextInput } from './components/form/input/text-input';
 export { TextInputWithButton } from './components/form/input/text-input-with-button';
@@ -257,7 +258,8 @@ export { Badge } from './components/information/badge';
 export { CounterBlock } from './components/information/counter-block';
 export { IconBadge } from './components/information/icon-badge';
 export { StatusWithBullet } from './components/information/status-with-bullet';
-export { Tag } from './components/information/tag'; // Information/Boxes
+export { Tag } from './components/information/tag';
+export { Toggletip } from './components/information/toggletip'; // Information/Boxes
 
 export { ArrowContainer } from './components/information/boxes/arrow-container';
 export { DocLinkBox } from './components/information/boxes/doc-link-box';
@@ -284,8 +286,7 @@ export { DocumentsStatusBox } from './components/interaction/upload/documents-st
 
 export { Modal } from './components/layer/modal';
 export { Modal as ModalNext } from './components/layer/modal-next';
-export { Overlay } from './components/layer/overlay';
-export { Toggletip } from './components/layer/toggletip'; // Layout
+export { Overlay } from './components/layer/overlay'; // Layout
 // ------
 
 export { AdaptableGrid, AdaptableGridCol } from './components/layout/adaptable-grid';

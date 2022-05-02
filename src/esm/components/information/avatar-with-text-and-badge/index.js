@@ -1,8 +1,9 @@
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 import _extends from "@babel/runtime/helpers/extends";
-var _excluded = ["backgroundColor", "className", "a11yText"],
-    _excluded2 = ["textClassName", "className", "withEllipsisOverflow"],
-    _excluded3 = ["className", "hoverable"];
+import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
+var _excluded = ["alt", "backgroundColor", "children", "className", "height", "size", "src", "style", "text", "textColor", "width"],
+    _excluded2 = ["backgroundColor", "className", "a11yText"],
+    _excluded3 = ["textClassName", "className", "withEllipsisOverflow"],
+    _excluded4 = ["className", "hoverable"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -30,7 +31,9 @@ var Image = function Image(_ref) {
       style = _ref.style,
       text = _ref.text,
       textColor = _ref.textColor,
-      width = _ref.width;
+      width = _ref.width,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+
   checkDeprecatedSizes(size);
   var badgeElement = getReactElementsByType({
     children: children,
@@ -49,11 +52,11 @@ var Image = function Image(_ref) {
     })
   }, /*#__PURE__*/React.createElement("span", {
     className: "k-Avatar__imageWrapper"
-  }, src ? /*#__PURE__*/React.createElement("img", {
+  }, src ? /*#__PURE__*/React.createElement("img", _extends({
     className: "k-Avatar__image",
     src: src,
     alt: alt
-  }) : /*#__PURE__*/React.createElement("span", {
+  }, props)) : /*#__PURE__*/React.createElement("span", {
     className: "k-Avatar__noImage"
   }, text)), badge);
 };
@@ -71,7 +74,7 @@ Image.defaultProps = {
   src: null,
   textColor: COLORS.background1,
   backgroundColor: COLORS.primary3,
-  alt: null,
+  alt: '',
   size: 'medium'
 };
 
@@ -79,7 +82,7 @@ var Badge = function Badge(_ref2) {
   var backgroundColor = _ref2.backgroundColor,
       className = _ref2.className,
       a11yText = _ref2.a11yText,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded);
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
 
   return /*#__PURE__*/React.createElement(BadgeComponent, _extends({
     className: classNames('k-Avatar__badge', className),
@@ -101,7 +104,7 @@ var Text = function Text(_ref3) {
   var textClassName = _ref3.textClassName,
       className = _ref3.className,
       withEllipsisOverflow = _ref3.withEllipsisOverflow,
-      props = _objectWithoutPropertiesLoose(_ref3, _excluded2);
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("span", _extends({
     className: classNames('k-Avatar__text', textClassName, className, {
@@ -120,7 +123,7 @@ Text.defaultProps = {
 export var AvatarWithTextAndBadge = function AvatarWithTextAndBadge(_ref4) {
   var className = _ref4.className,
       hoverable = _ref4.hoverable,
-      props = _objectWithoutPropertiesLoose(_ref4, _excluded3);
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
   return /*#__PURE__*/React.createElement(StyledWrapper, _extends({
     className: classNames('k-Avatar__wrapper', className, {
