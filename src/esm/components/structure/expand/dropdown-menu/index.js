@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["button", "open", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
+var _excluded = ["button", "open", "onOpen", "onClose", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
     _excluded2 = ["href", "className", "icon", "children"],
     _excluded3 = ["type", "className", "icon", "children"],
     _excluded4 = ["className"];
@@ -20,6 +20,8 @@ var StyledDropdownMenu = styled.details.withConfig({
 export var DropdownMenu = function DropdownMenu(_ref) {
   var button = _ref.button,
       open = _ref.open,
+      onOpen = _ref.onOpen,
+      onClose = _ref.onClose,
       onToggle = _ref.onToggle,
       menuProps = _ref.menuProps,
       menuPosition = _ref.menuPosition,
@@ -47,7 +49,16 @@ export var DropdownMenu = function DropdownMenu(_ref) {
 
   var handleToggle = function handleToggle(event) {
     onToggle(event);
-    setIsOpen(event.target.open);
+    var hasBeenOpened = event.target.open;
+
+    if (hasBeenOpened) {
+      event.target.firstChild.focus();
+      onOpen();
+    } else {
+      onClose();
+    }
+
+    setIsOpen(hasBeenOpened);
   };
 
   var arrowDistanceProps = function () {
@@ -154,6 +165,8 @@ export var DropdownMenu = function DropdownMenu(_ref) {
 DropdownMenu.defaultProps = {
   button: function button() {},
   open: false,
+  onOpen: function onOpen() {},
+  onClose: function onClose() {},
   onToggle: function onToggle() {},
   menuProps: {},
   menuPosition: 'left',
@@ -163,6 +176,8 @@ DropdownMenu.defaultProps = {
 DropdownMenu.propTypes = {
   button: PropTypes.func,
   open: PropTypes.bool,
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func,
   onToggle: PropTypes.func,
   menuProps: PropTypes.object,
   menuPosition: PropTypes.oneOf(['left', 'center', 'right']),
