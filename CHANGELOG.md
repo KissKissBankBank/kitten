@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Modal`: Add `as` prop, defaults to `div`.
 - Fix: `ManagerCard`: Fix multiline content.
+- Feature: `DropdownMenu`: Add `onOpen` and `onClose` props.
 
 ## [10.5.0] - 2022-05-02
 
