@@ -115,6 +115,10 @@ const argTypes = {
     name: 'zIndex',
     control: 'number',
   },
+  as: {
+    name: 'as',
+    control: 'text',
+  },
 }
 
 export const Default = ({ contentText, buttonSelection, ...args }) => (
