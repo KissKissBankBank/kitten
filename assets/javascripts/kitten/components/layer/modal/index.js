@@ -118,6 +118,7 @@ const InnerModal = ({
   size,
   isOpen,
   zIndex,
+  as: ModalElement,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -201,7 +202,7 @@ const InnerModal = ({
   )
 
   return (
-    <div className={classNames('k-Modal', className)} {...others}>
+    <ModalElement className={classNames('k-Modal', className)} {...others}>
       {trigger &&
         React.cloneElement(trigger, {
           onClick: clickEvent => {
@@ -215,7 +216,7 @@ const InnerModal = ({
           },
         })}
       {ModalPortal}
-    </div>
+    </ModalElement>
   )
 }
 
@@ -238,6 +239,7 @@ Modal.propTypes = {
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
   onClose: PropTypes.func,
+  as: PropTypes.string,
 }
 
 Modal.defaultProps = {
@@ -250,6 +252,7 @@ Modal.defaultProps = {
   zIndex: 110,
   hasCloseButton: true,
   onClose: () => {},
+  as: 'div'
 }
 
 Modal.Title = ModalTitle

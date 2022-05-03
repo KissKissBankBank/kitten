@@ -15,11 +15,12 @@ describe('<Modal />', () => {
   })
 
   describe('with content prop', () => {
-    const component = mount(<Modal className="content-example" />)
+    const component = mount(<Modal className="content-example" as="strong" />)
 
     it('contains the content', () => {
       expect(component.render().hasClass('content-example')).toBe(true)
       expect(component.render().hasClass('k-Modal')).toBe(true)
+      expect(component.render().is('strong')).toBe(true)
     })
   })
 

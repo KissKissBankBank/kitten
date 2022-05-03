@@ -37,10 +37,6 @@ const StyledManagerCard = styled.article`
     flex-direction: column;
   }
 
-  @media ${mq.tabletAndDesktop} {
-    height: ${pxToRem(105)};
-  }
-
   .k-ManagerCard__action {
     position: absolute;
     left: 0;
