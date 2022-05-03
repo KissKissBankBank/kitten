@@ -41,7 +41,9 @@ var useFocusTrap = function useFocusTrap(_ref) {
     if (shouldTrapFocus) {
       elRef.current.addEventListener('keydown', handleFocus);
       return function (_) {
-        elRef.current.removeEventListener('keydown', handleFocus);
+        var _elRef$current;
+
+        elRef == null ? void 0 : (_elRef$current = elRef.current) == null ? void 0 : _elRef$current.removeEventListener('keydown', handleFocus);
       };
     }
   }, [shouldTrapFocus]);

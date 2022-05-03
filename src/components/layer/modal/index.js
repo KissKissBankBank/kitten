@@ -34,7 +34,7 @@ var _excluded = ["className", "align"],
     _excluded3 = ["className", "twoColumns"],
     _excluded4 = ["className"],
     _excluded5 = ["onClick"],
-    _excluded6 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex"];
+    _excluded6 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "as"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -163,6 +163,7 @@ var InnerModal = function InnerModal(_ref7) {
       size = _ref7.size,
       isOpen = _ref7.isOpen,
       zIndex = _ref7.zIndex,
+      ModalElement = _ref7.as,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded6);
 
   var _useContext2 = (0, _react.useContext)(ModalContext),
@@ -233,7 +234,7 @@ var InnerModal = function InnerModal(_ref7) {
     }
   }) : children)))), document.body);
 
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(ModalElement, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Modal', className)
   }, others), trigger && /*#__PURE__*/_react.default.cloneElement(trigger, {
     onClick: function onClick(clickEvent) {
@@ -261,7 +262,8 @@ Modal.propTypes = {
   isOpen: _propTypes.default.bool,
   zIndex: _propTypes.default.number,
   hasCloseButton: _propTypes.default.bool,
-  onClose: _propTypes.default.func
+  onClose: _propTypes.default.func,
+  as: _propTypes.default.string
 };
 Modal.defaultProps = {
   label: 'Modal',
@@ -272,7 +274,8 @@ Modal.defaultProps = {
   isOpen: false,
   zIndex: 110,
   hasCloseButton: true,
-  onClose: function onClose() {}
+  onClose: function onClose() {},
+  as: 'div'
 };
 Modal.Title = ModalTitle;
 Modal.Content = ModalContent;

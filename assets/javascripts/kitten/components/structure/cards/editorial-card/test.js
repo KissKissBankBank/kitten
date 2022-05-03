@@ -32,7 +32,7 @@ describe('<EditorialCard />', () => {
             href="#hello"
             status="custom"
             customColor="var(--color-grey-900)"
-            linkProps={() => {}}
+            linkProps={{ onClick: () => {} }}
           >
             <EditorialCard.Title>Les collectes réservées</EditorialCard.Title>
             <EditorialCard.Content>

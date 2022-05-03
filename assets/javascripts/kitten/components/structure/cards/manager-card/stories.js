@@ -9,6 +9,7 @@ import {
   EllipsisIcon,
   FlexWrapper,
   LockOutlineIcon,
+  Tag,
 } from 'kitten'
 
 const argTypes = {
@@ -21,6 +22,11 @@ const argTypes = {
     name: 'actionProps',
     description: 'Properties for the Action component',
     control: { type: 'object' },
+  },
+  displayTags: {
+    name: 'displayTags (story prop)',
+    description: 'Displays a line of tags',
+    control: { type: 'boolean' },
   },
 }
 
@@ -35,6 +41,7 @@ const args = {
       action('Clicked')(e)
     },
   },
+  displayTags: false,
 }
 
 export default {
@@ -60,7 +67,7 @@ const StyledFlexWrapper = styled(FlexWrapper)`
   height: 100%;
 `
 
-export const Default = args => (
+export const Default = ({ displayTags, ...args }) => (
   <ManagerCard {...args}>
     <ManagerCard.Cell>
       <StyledFlexWrapper gap={8} className="k-u-flex-justifyContent-center">
@@ -76,10 +83,16 @@ export const Default = args => (
           tag="p"
           weight="bold"
           size="large"
-          className="k-u-line-height-1 k-u-margin-none k-u-clamp-1 k-u-clamp-2@xs-down"
+          className="k-u-flex-shrink-none k-u-line-height-1-3 k-u-margin-none k-u-clamp-1 k-u-clamp-2@xs-down"
         >
           Owner Contribution vel augue laoreet rutrum faucibus dolor auctor.
         </Text>
+        {displayTags && (
+          <FlexWrapper direction="row" gap={5}>
+            <Tag variant="light">Beauté</Tag>
+            <Tag variant="light">Laideur</Tag>
+          </FlexWrapper>
+        )}
         <p className="k-u-line-height-1 k-u-flex k-u-flex-gap-noneHalf k-u-flex-alignItems-center k-u-color-grey-700 k-u-margin-none">
           <LockOutlineIcon
             width="12"
