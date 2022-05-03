@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import { DropdownMenu } from './index'
 import {
@@ -142,6 +142,46 @@ export const Default = ({ menuPosition, ...args }) => {
 }
 
 Default.decorators = [story => <div className="story-Container">{story()}</div>]
+
+export const Controlled = ({ ...args }) => {
+  const [isOpen, setOpen] = useState(false)
+
+  return (
+    <>
+      <StyledWrapper>
+        <div>
+          <DropdownMenu
+            {...args}
+            open={isOpen}
+            positionedButton
+            onClose={() => setOpen(false)}
+            onOpen={() => setOpen(true)}
+          >
+            <DropdownMenu.Link href="">A link</DropdownMenu.Link>
+            <DropdownMenu.Button>Click this button</DropdownMenu.Button>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Link href="">
+              Another last very very very very very very very very very very
+              long link
+            </DropdownMenu.Link>
+          </DropdownMenu>
+        </div>
+      </StyledWrapper>
+      <Button
+        onClick={() => {
+          setOpen(current => !current)
+        }}
+        active={isOpen}
+      >
+        {isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+      </Button>
+    </>
+  )
+}
+
+Controlled.decorators = [
+  story => <div className="story-Container story-Grid">{story()}</div>,
+]
 
 export const WithAvatar = args => (
   <>
