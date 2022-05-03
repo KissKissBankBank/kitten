@@ -25,7 +25,7 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _useFocusTrap = require("../../../../helpers/hooks/use-focus-trap");
 
-var _excluded = ["button", "open", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
+var _excluded = ["button", "open", "onOpen", "onClose", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
     _excluded2 = ["href", "className", "icon", "children"],
     _excluded3 = ["type", "className", "icon", "children"],
     _excluded4 = ["className"];
@@ -44,6 +44,8 @@ var StyledDropdownMenu = _styledComponents.default.details.withConfig({
 var DropdownMenu = function DropdownMenu(_ref) {
   var button = _ref.button,
       open = _ref.open,
+      onOpen = _ref.onOpen,
+      onClose = _ref.onClose,
       onToggle = _ref.onToggle,
       menuProps = _ref.menuProps,
       menuPosition = _ref.menuPosition,
@@ -71,7 +73,16 @@ var DropdownMenu = function DropdownMenu(_ref) {
 
   var handleToggle = function handleToggle(event) {
     onToggle(event);
-    setIsOpen(event.target.open);
+    var hasBeenOpened = event.target.open;
+
+    if (hasBeenOpened) {
+      event.target.firstChild.focus();
+      onOpen();
+    } else {
+      onClose();
+    }
+
+    setIsOpen(hasBeenOpened);
   };
 
   var arrowDistanceProps = function () {
@@ -180,6 +191,8 @@ exports.DropdownMenu = DropdownMenu;
 DropdownMenu.defaultProps = {
   button: function button() {},
   open: false,
+  onOpen: function onOpen() {},
+  onClose: function onClose() {},
   onToggle: function onToggle() {},
   menuProps: {},
   menuPosition: 'left',
@@ -189,6 +202,8 @@ DropdownMenu.defaultProps = {
 DropdownMenu.propTypes = {
   button: _propTypes.default.func,
   open: _propTypes.default.bool,
+  onOpen: _propTypes.default.func,
+  onClose: _propTypes.default.func,
   onToggle: _propTypes.default.func,
   menuProps: _propTypes.default.object,
   menuPosition: _propTypes.default.oneOf(['left', 'center', 'right']),
