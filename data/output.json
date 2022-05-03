@@ -755,5 +755,119 @@
       "value": "none",
       "type": "textDecoration"
     }
+  },
+  "boxShadow": {
+    "xs": {
+      "value": {
+        "x": 0,
+        "y": 0,
+        "blur": "0.625rem",
+        "spread": "0.625rem",
+        "color": "#0000001a",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
+    "s": {
+      "value": {
+        "x": 0,
+        "y": 0,
+        "blur": "1.25rem",
+        "spread": "1.25rem",
+        "color": "#0000001a",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
+    "m": {
+      "value": {
+        "x": 0,
+        "y": 0,
+        "blur": "1.875rem",
+        "spread": "1.875rem",
+        "color": "#0000001a",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
+    "l": {
+      "value": {
+        "x": 0,
+        "y": 0,
+        "blur": "2.5rem",
+        "spread": "2.5rem",
+        "color": "#0000001a",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
+    "xl": {
+      "value": {
+        "x": 0,
+        "y": 0,
+        "blur": "3.125rem",
+        "spread": "3.125rem",
+        "color": "#0000001a",
+        "type": "dropShadow"
+      },
+      "type": "boxShadow"
+    },
+    "hover": {
+      "xs": {
+        "value": {
+          "x": 0,
+          "y": 0,
+          "blur": "0.625rem",
+          "spread": "0.625rem",
+          "color": "#00000033",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "s": {
+        "value": {
+          "x": 0,
+          "y": 0,
+          "blur": "1.25rem",
+          "spread": "1.25rem",
+          "color": "#00000033",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "m": {
+        "value": {
+          "x": 0,
+          "y": 0,
+          "blur": "1.875rem",
+          "spread": "1.875rem",
+          "color": "#00000033",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "l": {
+        "value": {
+          "x": 0,
+          "y": 0,
+          "blur": "2.5rem",
+          "spread": "2.5rem",
+          "color": "#00000033",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      },
+      "xl": {
+        "value": {
+          "x": 0,
+          "y": 0,
+          "blur": "3.125rem",
+          "spread": "3.125rem",
+          "color": "#00000033",
+          "type": "dropShadow"
+        },
+        "type": "boxShadow"
+      }
+    }
   }
 }
