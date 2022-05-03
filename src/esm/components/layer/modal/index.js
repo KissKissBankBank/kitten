@@ -5,7 +5,7 @@ var _excluded = ["className", "align"],
     _excluded3 = ["className", "twoColumns"],
     _excluded4 = ["className"],
     _excluded5 = ["onClick"],
-    _excluded6 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex"];
+    _excluded6 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "as"];
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -142,6 +142,7 @@ var InnerModal = function InnerModal(_ref7) {
       size = _ref7.size,
       isOpen = _ref7.isOpen,
       zIndex = _ref7.zIndex,
+      ModalElement = _ref7.as,
       others = _objectWithoutPropertiesLoose(_ref7, _excluded6);
 
   var _useContext2 = useContext(ModalContext),
@@ -210,7 +211,7 @@ var InnerModal = function InnerModal(_ref7) {
       return dispatch(updateState(false));
     }
   }) : children)))), document.body);
-  return /*#__PURE__*/React.createElement("div", _extends({
+  return /*#__PURE__*/React.createElement(ModalElement, _extends({
     className: classNames('k-Modal', className)
   }, others), trigger && /*#__PURE__*/React.cloneElement(trigger, {
     onClick: function onClick(clickEvent) {
@@ -236,7 +237,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  as: PropTypes.string
 };
 Modal.defaultProps = {
   label: 'Modal',
@@ -247,7 +249,8 @@ Modal.defaultProps = {
   isOpen: false,
   zIndex: 110,
   hasCloseButton: true,
-  onClose: function onClose() {}
+  onClose: function onClose() {},
+  as: 'div'
 };
 Modal.Title = ModalTitle;
 Modal.Content = ModalContent;

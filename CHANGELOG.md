@@ -7,8 +7,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Changes: 
   - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
   - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
-- Feature: `Modal`: Add `as` prop, defaults to `div`.
-- Fix: `ManagerCard`: Fix multiline content.
+
+## [10.6.0] - 2022-05-03
+
+Features:
+
+- `Modal`: Add `as` prop, defaults to `div`.
+- `DropdownMenu`: Add `onOpen` and `onClose` props.
+
+Fix:
+
+- `ManagerCard`: Fix multiline content.
 
 ## [10.5.0] - 2022-05-02
 

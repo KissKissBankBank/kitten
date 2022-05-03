@@ -59,9 +59,6 @@ describe('<Toggletip />', () => {
               color: 'black',
               style: { width: '100%' },
             }}
-            actionProps={{
-              className: 'customClassName',
-            }}
           >
             <div>This is the custom content of the Toggletip</div>
           </Toggletip>,
