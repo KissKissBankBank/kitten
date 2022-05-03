@@ -21,6 +21,7 @@ $k-typography: (
 @include k-utilities-align-self;
 @include k-utilities-background-color;
 @include k-utilities-border;
+@include k-utilities-box-shadow;
 @include k-utilities-cursor;
 @include k-utilities-event;
 @include k-utilities-justify-content;
@@ -31,7 +32,6 @@ $k-typography: (
 @include k-utilities-flexbox-element;
 @include k-utilities-responsive;
 @include k-utilities-link;
-@include k-utilities-shadow;
 @include k-utilities-reset-button;
 @include k-utilities-m;
 @include k-utilities-margin;

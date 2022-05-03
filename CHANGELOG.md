@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Changes: 
+  - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
+  - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
+
 ## [10.6.0] - 2022-05-03
 
 Features:

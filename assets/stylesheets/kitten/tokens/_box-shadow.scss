@@ -1,0 +1,19 @@
+:root {
+  /*!
+  * @tokens BoxShadow
+  * @presenter BoxShadow
+  * Automatically generated, do not edit
+  */
+
+  --box-shadow-xs: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* 10px */
+  --box-shadow-s: 0 0 1.25rem rgba(0, 0, 0, 0.1);   /* 20px */
+  --box-shadow-m: 0 0 1.875rem rgba(0, 0, 0, 0.1);  /* 30px */
+  --box-shadow-l: 0 0 2.5rem rgba(0, 0, 0, 0.1);    /* 40px */
+  --box-shadow-xl: 0 0 3.125rem rgba(0, 0, 0, 0.1); /* 50px */
+
+  --box-shadow-hover-xs: 0 0 0.625rem rgba(0, 0, 0, 0.2); /* 10px */
+  --box-shadow-hover-s: 0 0 1.25rem rgba(0, 0, 0, 0.2);   /* 20px */
+  --box-shadow-hover-m: 0 0 1.875rem rgba(0, 0, 0, 0.2);  /* 30px */
+  --box-shadow-hover-l: 0 0 2.5rem rgba(0, 0, 0, 0.2);    /* 40px */
+  --box-shadow-hover-xl: 0 0 3.125rem rgba(0, 0, 0, 0.2); /* 50px */
+}
