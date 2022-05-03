@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ProjectCard`: Add `box-shadow` variable.
 - Changes: 
   - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
   - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
