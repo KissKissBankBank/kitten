@@ -1,0 +1,37 @@
+/// Shadow utilities.
+///
+/// @group shadow
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-box-shadow;
+///
+/// @example html
+///
+///   <div class="k-u-box-shadow-xs">…</div>
+///   <div class="k-u-box-shadow-s">…</div>
+///   <div class="k-u-box-shadow-m">…</div>
+///   <div class="k-u-box-shadow-l">…</div>
+///   <div class="k-u-box-shadow-xl">…</div>
+
+@mixin k-utilities-box-shadow {
+  .k-u-box-shadow-xs {
+    box-shadow: var(--box-shadow-xs) !important;
+  }
+
+  .k-u-box-shadow-s {
+    box-shadow: var(--box-shadow-s) !important;
+  }
+
+  .k-u-box-shadow-m {
+    box-shadow: var(--box-shadow-m) !important;
+  }
+
+  .k-u-box-shadow-l {
+    box-shadow: var(--box-shadow-l) !important;
+  }
+
+  .k-u-box-shadow-xl {
+    box-shadow: var(--box-shadow-xl) !important;
+  }
+}
