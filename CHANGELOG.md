@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Token`: Add `--border-with-shadow` border token when the shadow is used.
+- Fix: `Token`: Rename `--shadow-*` by `--box-shadow-*`.
 - Feature: `Modal`: Add `as` prop, defaults to `div`.
 - Fix: `ManagerCard`: Fix multiline content.
 
