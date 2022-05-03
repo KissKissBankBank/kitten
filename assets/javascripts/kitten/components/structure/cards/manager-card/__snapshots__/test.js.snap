@@ -2,7 +2,7 @@
 
 exports[`<ManagerCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL huGWEp k-ManagerCard k-ManagerCard--hasAction"
+  className="sc-bdvvtL iYxOWD k-ManagerCard k-ManagerCard--hasAction"
 >
   <a
     aria-label="Click to show item"
