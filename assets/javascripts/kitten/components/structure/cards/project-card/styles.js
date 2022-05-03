@@ -17,11 +17,11 @@ export const StyledCard = styled.div`
   color: var(--color-grey-900);
   text-decoration: none;
   transition: border var(--transition);
-  box-shadow: var(--shadow-m);
+  box-shadow: var(--box-shadow-m);
 
   &[href]:active,
   &[href]:hover {
-    box-shadow: var(--shadow-hover-m);
+    box-shadow: var(--box-shadow-hover-m);
 
     .k-ProjectCard__image__overlay {
       opacity: 1;
