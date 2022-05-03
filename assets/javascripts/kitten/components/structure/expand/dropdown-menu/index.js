@@ -160,6 +160,8 @@ const StyledDropdownMenu = styled.details`
 export const DropdownMenu = ({
   button,
   open,
+  onOpen,
+  onClose,
   onToggle,
   menuProps,
   menuPosition,
@@ -184,7 +186,16 @@ export const DropdownMenu = ({
   const handleToggle = event => {
     onToggle(event)
 
-    setIsOpen(event.target.open)
+    const hasBeenOpened = event.target.open
+
+    if (hasBeenOpened) {
+      event.target.firstChild.focus()
+      onOpen()
+    } else {
+      onClose()
+    }
+
+    setIsOpen(hasBeenOpened)
   }
 
   const arrowDistanceProps = (() => {
@@ -306,6 +317,8 @@ export const DropdownMenu = ({
 DropdownMenu.defaultProps = {
   button: () => {},
   open: false,
+  onOpen: () => {},
+  onClose: () => {},
   onToggle: () => {},
   menuProps: {},
   menuPosition: 'left',
@@ -316,6 +329,8 @@ DropdownMenu.defaultProps = {
 DropdownMenu.propTypes = {
   button: PropTypes.func,
   open: PropTypes.bool,
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func,
   onToggle: PropTypes.func,
   menuProps: PropTypes.object,
   menuPosition: PropTypes.oneOf(['left', 'center', 'right']),

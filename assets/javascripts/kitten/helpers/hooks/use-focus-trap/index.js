@@ -36,7 +36,7 @@ export const useFocusTrap = ({ shouldTrapFocus }) => {
       elRef.current.addEventListener('keydown', handleFocus)
 
       return _ => {
-        elRef.current.removeEventListener('keydown', handleFocus)
+        elRef?.current?.removeEventListener('keydown', handleFocus)
       }
     }
   }, [shouldTrapFocus])
