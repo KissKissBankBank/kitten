@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--hasBorder"
+  className="sc-bdvvtL gCqBEg k-RewardCard k-RewardCard--hasBorder"
 >
   <div
     className="k-RewardCard__gridWrapper"
@@ -38,7 +38,7 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--hasBorder"
+  className="sc-bdvvtL gCqBEg k-RewardCard k-RewardCard--hasBorder"
 >
   <div
     className="k-RewardCard__gridWrapper"
@@ -74,7 +74,7 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dZtHUg k-RewardCard k-RewardCard--disabled"
+  className="sc-bdvvtL gCqBEg k-RewardCard k-RewardCard--disabled"
 >
   <div
     className="k-RewardCard__imageWrapper"

@@ -13,12 +13,17 @@ export const StyledRewardCard = styled.article`
   /* CARD STYLE */
 
   position: relative;
-  border: var(--rewardCard--border-width) solid var(--rewardCard--border-color);
+  box-shadow: var(--box-shadow-m);
   border-radius: var(--rewardCard--border-radius);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   transition: border-color 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    box-shadow: var(--box-shadow-hover-m);
+  }
 
   &.k-RewardCard--isStretched {
     height: 100%;
