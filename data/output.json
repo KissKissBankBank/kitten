@@ -763,7 +763,7 @@
         "y": 0,
         "blur": "0.625rem",
         "spread": "0.625rem",
-        "color": "#0000001a",
+        "color": "#00000014",
         "type": "dropShadow"
       },
       "type": "boxShadow"
@@ -774,7 +774,7 @@
         "y": 0,
         "blur": "1.25rem",
         "spread": "1.25rem",
-        "color": "#0000001a",
+        "color": "#00000014",
         "type": "dropShadow"
       },
       "type": "boxShadow"
@@ -785,7 +785,7 @@
         "y": 0,
         "blur": "1.875rem",
         "spread": "1.875rem",
-        "color": "#0000001a",
+        "color": "#00000014",
         "type": "dropShadow"
       },
       "type": "boxShadow"
@@ -796,7 +796,7 @@
         "y": 0,
         "blur": "2.5rem",
         "spread": "2.5rem",
-        "color": "#0000001a",
+        "color": "#00000014",
         "type": "dropShadow"
       },
       "type": "boxShadow"
@@ -807,7 +807,7 @@
         "y": 0,
         "blur": "3.125rem",
         "spread": "3.125rem",
-        "color": "#0000001a",
+        "color": "#00000014",
         "type": "dropShadow"
       },
       "type": "boxShadow"
@@ -819,7 +819,7 @@
           "y": 0,
           "blur": "0.625rem",
           "spread": "0.625rem",
-          "color": "#00000033",
+          "color": "#00000026",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -830,7 +830,7 @@
           "y": 0,
           "blur": "1.25rem",
           "spread": "1.25rem",
-          "color": "#00000033",
+          "color": "#00000026",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -841,7 +841,7 @@
           "y": 0,
           "blur": "1.875rem",
           "spread": "1.875rem",
-          "color": "#00000033",
+          "color": "#00000026",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -852,7 +852,7 @@
           "y": 0,
           "blur": "2.5rem",
           "spread": "2.5rem",
-          "color": "#00000033",
+          "color": "#00000026",
           "type": "dropShadow"
         },
         "type": "boxShadow"
@@ -863,7 +863,7 @@
           "y": 0,
           "blur": "3.125rem",
           "spread": "3.125rem",
-          "color": "#00000033",
+          "color": "#00000026",
           "type": "dropShadow"
         },
         "type": "boxShadow"
