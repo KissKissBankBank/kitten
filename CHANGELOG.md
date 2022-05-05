@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Cards`: Add `box-shadow` variable on some cards.
+- Feature: `Cards`: Add `--box-shadow` variables on some cards.
+- Fix: `Token`: Update `BoxShadow` tokens values.
 - Changes: 
   - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
   - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
