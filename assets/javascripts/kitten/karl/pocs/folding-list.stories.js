@@ -49,7 +49,7 @@ const Wrapper = styled.div`
       position: absolute;
       top: 100%;
       width: ${pxToRem(200)};
-      padding: ${pxToRem(20)};
+      padding: ${pxToRem(10)} ${pxToRem(20)};
       border-radius: var(--border-radius-m);
       right: 0;
       border: var(--border);
