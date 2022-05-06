@@ -14,7 +14,7 @@
   @presenter Border
 */--outline:auto;--outline-input:2px solid var(--color-grey-900);--outline-offset:0;--outline-offset-input:-2px;--transition-timing:0.2s;--transition-timing-function:ease;--transition:var(--transition-timing) var(--transition-timing-function);/*!
 * @tokens BoxShadow
-* @presenter BoxShadow
+* @presenter Shadow
 * Automatically generated, do not edit
 */--box-shadow-xs:0 0 0.625rem rgba(0,0,0,0.08);--box-shadow-s:0 0 1.25rem rgba(0,0,0,0.08);--box-shadow-m:0 0 1.875rem rgba(0,0,0,0.08);--box-shadow-l:0 0 2.5rem rgba(0,0,0,0.08);--box-shadow-xl:0 0 3.125rem rgba(0,0,0,0.08);--box-shadow-hover-xs:0 0 0.625rem rgba(0,0,0,0.15);--box-shadow-hover-s:0 0 1.25rem rgba(0,0,0,0.15);--box-shadow-hover-m:0 0 1.875rem rgba(0,0,0,0.15);--box-shadow-hover-l:0 0 2.5rem rgba(0,0,0,0.15);--box-shadow-hover-xl:0 0 3.125rem rgba(0,0,0,0.15);/*!
 * @tokens Spacing
