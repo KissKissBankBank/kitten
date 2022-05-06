@@ -48,7 +48,9 @@ const Wrapper = styled.div`
     .menu-inside {
       position: absolute;
       top: 100%;
-      width: 200px;
+      width: ${pxToRem(200)};
+      padding: ${pxToRem(20)};
+      border-radius: var(--border-radius-m);
       right: 0;
       border: var(--border);
     }
