@@ -13,7 +13,7 @@ export const StyledCard = styled.div`
   flex-direction: column;
   box-sizing: border-box;
 
-  border-radius: var(--border-radius-xs);
+  border-radius: var(--border-radius-m);
   color: var(--color-grey-900);
   text-decoration: none;
   transition: border var(--transition);
