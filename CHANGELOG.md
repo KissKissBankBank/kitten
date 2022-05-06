@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `Cards`: Add `--box-shadow` variables on some cards.
 - Fix: `Token`: Update `BoxShadow` tokens values.
+- Feature: `IconBadge`: Add pending status icon.
 - Changes: 
   - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
   - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
