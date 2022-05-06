@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `IconBadge`: Add pending status icon.
 - Changes: 
   - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
   - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
