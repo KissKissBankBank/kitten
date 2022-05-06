@@ -174,7 +174,7 @@ export const FoldingList = () => {
     Array.from(listWrapperEl.children).forEach(child => observer.observe(child))
 
     return () => {
-      Array.from(listWrapperEl.children).forEach(child =>
+      Array.from(listWrapperEl?.children).forEach(child =>
         observer.unObserve(child),
       )
     }
