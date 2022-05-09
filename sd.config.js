@@ -1,10 +1,24 @@
 const StyleDictionary = require('style-dictionary')
 
+// Helpers
 const pxToRem = sizeInPx => {
   if (sizeInPx === 0) return 0
   return parseFloat(sizeInPx / 16) + 'rem'
 }
 
+const getInt = value => parseInt(value.toString())
+
+const longHexToRgba = value => {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(value);
+  return result ? `rgba(${[
+      parseInt(result[1], 16),
+      parseInt(result[2], 16),
+      parseInt(result[3], 16),
+      (parseInt(result[4], 16) / 256).toFixed(2),
+    ].join(', ')})` : null;
+}
+
+// Header formatter
 const getHeader = (tokenName, tokenPresenter, dictionary) => {
   return (
     `:root {\n` +
@@ -41,6 +55,13 @@ StyleDictionary.registerFormat({
 })
 
 StyleDictionary.registerFormat({
+  name: 'boxShadow',
+  formatter: ({ dictionary }) => {
+    return getHeader('BoxShadow', 'Shadow', dictionary)
+  },
+})
+
+StyleDictionary.registerFormat({
   name: 'fontSize',
   formatter: ({ dictionary }) => {
     return getHeader('FontSize', 'FontSize', dictionary)
@@ -59,29 +80,57 @@ StyleDictionary.registerTransform({
   type: 'value',
   name: 'pxToRem',
   matcher: token => token.value.toString().endsWith('px'),
-  transformer: token => pxToRem(parseInt(token.value.toString())),
+  transformer: token => pxToRem(getInt(token.value)),
+})
+
+StyleDictionary.registerTransform({
+  type: 'value',
+  name: 'shadow',
+  transitive: true,
+  matcher: token => token.type === 'boxShadow',
+  transformer: token => {
+    const valueArray = [
+      pxToRem(getInt(token.value.x)),
+      pxToRem(getInt(token.value.y)),
+      pxToRem(getInt(token.value.blur)),
+    ]
+    if (!!token.value.spread) {
+      valueArray.push(pxToRem(getInt(token.value.spread)))
+    }
+
+    valueArray.push(longHexToRgba(token.value.color))
+
+    return valueArray.join(' ')
+  },
 })
 
 module.exports = {
   source: ['data/output.json'],
   platforms: {
     css: {
-      transforms: ['color/hex', 'pxToRem', 'name/cti/kebab'],
+      transforms: ['color/hex', 'pxToRem', 'shadow', 'name/cti/kebab'],
       transformGroup: 'css',
       buildPath: 'assets/stylesheets/kitten/tokens/',
       files: [
-        {
-          destination: '_colors.scss',
-          format: 'colorCss',
-          filter: {
-            type: 'color',
-          },
-        },
         {
           destination: '_border-radius.scss',
           format: 'borderRadius',
           filter: {
             type: 'borderRadius',
+          },
+        },
+        {
+          destination: '_box-shadow.scss',
+          format: 'boxShadow',
+          filter: {
+            type: 'boxShadow',
+          },
+        },
+        {
+          destination: '_colors.scss',
+          format: 'colorCss',
+          filter: {
+            type: 'color',
           },
         },
         {

@@ -13,15 +13,15 @@ export const StyledCard = styled.div`
   flex-direction: column;
   box-sizing: border-box;
 
-  border: var(--border);
   border-radius: var(--border-radius-m);
   color: var(--color-grey-900);
   text-decoration: none;
   transition: border var(--transition);
+  box-shadow: var(--box-shadow-m);
 
   &[href]:active,
   &[href]:hover {
-    border: var(--border-hover);
+    box-shadow: var(--box-shadow-hover-m);
 
     .k-ProjectCard__image__overlay {
       opacity: 1;

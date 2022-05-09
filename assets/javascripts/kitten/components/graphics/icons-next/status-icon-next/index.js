@@ -79,7 +79,19 @@ StatusIconNext.Success = ({ color, ...props }) => (
   </svg>
 )
 
-StatusIconNext.Pending = StatusIconNext.Success
+StatusIconNext.Pending = ({ color, ...props }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 8 9"
+    width="8"
+    height="9"
+    fill={color}
+    {...props}
+    style={{ marginLeft: "2px"}}
+  >
+    <path fillRule="evenodd" d="M2.172.012C1.475.012.91.577.91 1.275v7.508h5.064a1.253 1.253 0 0 0 0-2.506H3.435V1.275C3.435.577 2.87.012 2.172.012Z" clip-rule="evenodd"/>
+  </svg>
+)
 
 StatusIconNext.defaultProps = {
   status: 'info',

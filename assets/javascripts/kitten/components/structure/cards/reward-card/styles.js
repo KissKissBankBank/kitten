@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { mq } from '../../../../constants/screen-config'
@@ -8,12 +7,12 @@ export const StyledRewardCard = styled.article`
   --rewardCard--border-width: 0;
   --rewardCard--border-radius: 0;
   --rewardCard--grid-col: repeat(auto-fit, minmax(${pxToRem(120)}, 1fr));
-  --rewardCard--border-color: var(--color-grey-400);
+  --rewardCard--box-shadow: var(--box-shadow-m);
 
   /* CARD STYLE */
 
   position: relative;
-  border: var(--rewardCard--border-width) solid var(--rewardCard--border-color);
+  box-shadow: var(--rewardCard--box-shadow);
   border-radius: var(--rewardCard--border-radius);
   display: flex;
   flex-direction: column;
@@ -188,7 +187,7 @@ export const StyledRewardCard = styled.article`
     align-items: center;
     gap: ${pxToRem(6)};
 
-    color: ${COLORS.primary1};
+    color: var(--color-primary-500);
     ${TYPOGRAPHY.fontStyles.regular}
 
     svg,
@@ -223,7 +222,7 @@ export const StyledRewardCard = styled.article`
   &.k-RewardCard--hasHover:hover:not(.k-RewardCard--disabled),
   button&:hover:not(.k-RewardCard--disabled),
   a&:hover:not(.k-RewardCard--disabled) {
-    --rewardCard--border-color: var(--color-grey-500);
+    --rewardCard--box-shadow: var(--box-shadow-hover-m);
 
     cursor: pointer;
 
@@ -235,11 +234,11 @@ export const StyledRewardCard = styled.article`
       }
     }
     .k-RewardCard__button:not(.k-Button--disabled) {
-      border-color: ${COLORS.primary2};
-      background-color: ${COLORS.primary2};
+      border-color: var(--color-primary-700);
+      background-color: var(--color-primary-700);
     }
     .k-RewardCard__description__moreButton {
-      color: ${COLORS.primary2};
+      color: var(--color-primary-700);
     }
   }
 
