@@ -94,7 +94,9 @@ describe('<CheckboxButton />', () => {
 
   describe('textProps prop', () => {
     const component = shallow(
-      <CheckboxButton textProps={{ weight: 'regular' }}>Lorem ipsum…</CheckboxButton>,
+      <CheckboxButton textProps={{ weight: 'regular' }}>
+        Lorem ipsum…
+      </CheckboxButton>,
     )
     const labelText = component.find(Text)
 

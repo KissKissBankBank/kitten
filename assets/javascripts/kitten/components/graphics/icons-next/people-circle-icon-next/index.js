@@ -11,9 +11,14 @@ export const PeopleCircleIconNext = ({ color, title, ...props }) => (
     {...props}
   >
     {title && <title>{title}</title>}
-    <circle cx="12" cy="12" r="11" stroke={color} strokeWidth="2"/>
-    <path stroke={color} strokeLinecap="round" strokeWidth="2" d="M5 20c1.615-2.4 2.692-4 7-4s5.923 2.4 7 4"/>
-    <circle cx="12" cy="9.5" r="3.5" stroke={color} strokeWidth="2"/>
+    <circle cx="12" cy="12" r="11" stroke={color} strokeWidth="2" />
+    <path
+      stroke={color}
+      strokeLinecap="round"
+      strokeWidth="2"
+      d="M5 20c1.615-2.4 2.692-4 7-4s5.923 2.4 7 4"
+    />
+    <circle cx="12" cy="9.5" r="3.5" stroke={color} strokeWidth="2" />
   </svg>
 )
 

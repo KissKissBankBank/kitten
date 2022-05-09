@@ -84,7 +84,7 @@ describe('<Modal />', () => {
                 },
               }}
             >
-              {({close}) => (
+              {({ close }) => (
                 <>
                   <Modal.Header>
                     <Modal.Title>

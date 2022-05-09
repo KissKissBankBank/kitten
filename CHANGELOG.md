@@ -4,14 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Cards`: Add `--box-shadow` variables on some cards.
-- Fix: `Token`: Update `BoxShadow` tokens values.
-- Feature: `IconBadge`: Add pending status icon.
-- Changes: 
-  - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
-  - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
-- Feature: `Modal`: Add `Header`, `HeaderLeft` `HeaderRight` subcomponents.
-- Feature: `Modal`: Add `noMargin` prop to `Content` subcomponent.
+## [10.7.0] - 2022-05-09
+
+Deprecations/Changes:
+
+- Tokens: Rename `--shadow-*` to `--box-shadow-*`.
+- Utilities: Rename `k-u-shadow-*` to `k-u-box-shadow-*`.
+
+Features:
+
+- `Cards`: Add `--box-shadow` variables on some cards.
+- `IconBadge`: Add pending status icon.
+- `Modal`: Add `Header`, `HeaderLeft` `HeaderRight` subcomponents.
+- `Modal`: Add `noMargin` prop to `Content` subcomponent.
+
+Fix:
+
+- Tokens: Update Box Shadow tokens values.
 
 ## [10.6.0] - 2022-05-03
 

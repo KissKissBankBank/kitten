@@ -1,11 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "align"],
-    _excluded2 = ["className", "align"],
-    _excluded3 = ["className", "twoColumns"],
-    _excluded4 = ["className"],
-    _excluded5 = ["onClick"],
-    _excluded6 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "as"];
+var _excluded = ["className"],
+    _excluded2 = ["className"],
+    _excluded3 = ["className"],
+    _excluded4 = ["className", "align"],
+    _excluded5 = ["className", "align", "noMargin"],
+    _excluded6 = ["className", "twoColumns"],
+    _excluded7 = ["className"],
+    _excluded8 = ["onClick"],
+    _excluded9 = ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "size", "isOpen", "zIndex", "as"];
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -17,10 +20,37 @@ import { domElementHelper } from '../../../helpers/dom/element-helper';
 import { GlobalStyle } from './styles';
 import { Button } from '../../action/button';
 
-var ModalTitle = function ModalTitle(_ref) {
+var ModalHeader = function ModalHeader(_ref) {
   var className = _ref.className,
-      align = _ref.align,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-Modal__header', className)
+  }, props));
+};
+
+var ModalHeaderLeft = function ModalHeaderLeft(_ref2) {
+  var className = _ref2.className,
+      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-Modal__header_left', className)
+  }, props));
+};
+
+var ModalHeaderRight = function ModalHeaderRight(_ref3) {
+  var className = _ref3.className,
+      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
+
+  return /*#__PURE__*/React.createElement("div", _extends({
+    className: classNames('k-Modal__header_right', className)
+  }, props));
+};
+
+var ModalTitle = function ModalTitle(_ref4) {
+  var className = _ref4.className,
+      align = _ref4.align,
+      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
 
   return /*#__PURE__*/React.createElement(Title, _extends({
     tag: "p",
@@ -36,27 +66,32 @@ ModalTitle.defaultProps = {
   align: 'center'
 };
 
-var ModalContent = function ModalContent(_ref2) {
-  var className = _ref2.className,
-      align = _ref2.align,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
+var ModalContent = function ModalContent(_ref5) {
+  var className = _ref5.className,
+      align = _ref5.align,
+      noMargin = _ref5.noMargin,
+      props = _objectWithoutPropertiesLoose(_ref5, _excluded5);
 
   return /*#__PURE__*/React.createElement("div", _extends({
-    className: classNames('k-Modal__content', className, "k-u-align-" + align)
+    className: classNames('k-Modal__content', className, "k-u-align-" + align, {
+      'k-Modal__content--noMargin': noMargin
+    })
   }, props));
 };
 
 ModalContent.propTypes = {
-  align: PropTypes.oneOf(['center', 'left'])
+  align: PropTypes.oneOf(['center', 'left']),
+  noMargin: PropTypes.bool
 };
 ModalContent.defaultProps = {
-  align: 'center'
+  align: 'center',
+  noMargin: false
 };
 
-var ModalForm = function ModalForm(_ref3) {
-  var className = _ref3.className,
-      twoColumns = _ref3.twoColumns,
-      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
+var ModalForm = function ModalForm(_ref6) {
+  var className = _ref6.className,
+      twoColumns = _ref6.twoColumns,
+      props = _objectWithoutPropertiesLoose(_ref6, _excluded6);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-Modal__form', className, {
@@ -65,18 +100,18 @@ var ModalForm = function ModalForm(_ref3) {
   }, props));
 };
 
-var ModalActions = function ModalActions(_ref4) {
-  var className = _ref4.className,
-      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
+var ModalActions = function ModalActions(_ref7) {
+  var className = _ref7.className,
+      props = _objectWithoutPropertiesLoose(_ref7, _excluded7);
 
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-Modal__actions', className)
   }, props));
 };
 
-var ModalCloseActionButton = function ModalCloseActionButton(_ref5) {
-  var _onClick = _ref5.onClick,
-      props = _objectWithoutPropertiesLoose(_ref5, _excluded5);
+var ModalCloseActionButton = function ModalCloseActionButton(_ref8) {
+  var _onClick = _ref8.onClick,
+      props = _objectWithoutPropertiesLoose(_ref8, _excluded8);
 
   var _useContext = useContext(ModalContext),
       dispatch = _useContext[1];
@@ -118,32 +153,32 @@ export var updateState = function updateState(show) {
   };
 };
 
-var ModalProvider = function ModalProvider(_ref6) {
-  var children = _ref6.children;
+var ModalProvider = function ModalProvider(_ref9) {
+  var children = _ref9.children;
   return /*#__PURE__*/React.createElement(ModalContext.Provider, {
     value: useReducer(reducer, initialState)
   }, children);
 };
 
-var InnerModal = function InnerModal(_ref7) {
+var InnerModal = function InnerModal(_ref10) {
   var _modalProps$style, _modalProps$style2;
 
-  var trigger = _ref7.trigger,
-      children = _ref7.children,
-      label = _ref7.label,
-      labelledby = _ref7.labelledby,
-      describedby = _ref7.describedby,
-      className = _ref7.className,
-      closeButtonLabel = _ref7.closeButtonLabel,
-      onClose = _ref7.onClose,
-      modalProps = _ref7.modalProps,
-      hasCloseButton = _ref7.hasCloseButton,
-      maxWidth = _ref7.maxWidth,
-      size = _ref7.size,
-      isOpen = _ref7.isOpen,
-      zIndex = _ref7.zIndex,
-      ModalElement = _ref7.as,
-      others = _objectWithoutPropertiesLoose(_ref7, _excluded6);
+  var trigger = _ref10.trigger,
+      children = _ref10.children,
+      label = _ref10.label,
+      labelledby = _ref10.labelledby,
+      describedby = _ref10.describedby,
+      className = _ref10.className,
+      closeButtonLabel = _ref10.closeButtonLabel,
+      onClose = _ref10.onClose,
+      modalProps = _ref10.modalProps,
+      hasCloseButton = _ref10.hasCloseButton,
+      maxWidth = _ref10.maxWidth,
+      size = _ref10.size,
+      isOpen = _ref10.isOpen,
+      zIndex = _ref10.zIndex,
+      ModalElement = _ref10.as,
+      others = _objectWithoutPropertiesLoose(_ref10, _excluded9);
 
   var _useContext2 = useContext(ModalContext),
       show = _useContext2[0].show,
@@ -176,8 +211,8 @@ var InnerModal = function InnerModal(_ref7) {
       beforeClose: 'k-Modal__overlay--beforeClose'
     },
     isOpen: show,
-    onAfterOpen: function onAfterOpen(_ref8) {
-      var overlayEl = _ref8.overlayEl;
+    onAfterOpen: function onAfterOpen(_ref11) {
+      var overlayEl = _ref11.overlayEl;
       overlayEl.scrollTop = 0;
     },
     aria: {
@@ -252,6 +287,9 @@ Modal.defaultProps = {
   onClose: function onClose() {},
   as: 'div'
 };
+Modal.Header = ModalHeader;
+Modal.HeaderLeft = ModalHeaderLeft;
+Modal.HeaderRight = ModalHeaderRight;
 Modal.Title = ModalTitle;
 Modal.Content = ModalContent;
 Modal.Form = ModalForm;
