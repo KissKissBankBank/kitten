@@ -44,6 +44,7 @@ export const parameters = {
         'Navigation',
         'Layer',
         'Pages',
+        'PoCs',
       ],
       method: 'alphabetical',
     },
