@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tag } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import { FlashIconNext, Text } from 'kitten'
+import { FlashIconNext } from 'kitten'
 
 export default {
   title: 'Information/Tag',

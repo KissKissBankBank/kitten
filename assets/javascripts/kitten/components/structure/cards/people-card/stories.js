@@ -2,12 +2,7 @@ import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import styled from 'styled-components'
 import { PeopleCard } from './index'
-import {
-  Text,
-  DropdownMenu,
-  EllipsisIcon,
-  FlexWrapper,
-} from 'kitten'
+import { Text, DropdownMenu, EllipsisIcon, FlexWrapper } from 'kitten'
 
 const args = {
   as: 'article',

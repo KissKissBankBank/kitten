@@ -46,8 +46,8 @@ export const Default = args => (
       href="#hello"
       status="custom"
       customColor="var(--color-grey-900)"
-      linkActionText='Voir tous les projets réservés'
-      showVersoActionText='Lire plus de précisions'
+      linkActionText="Voir tous les projets réservés"
+      showVersoActionText="Lire plus de précisions"
     >
       <EditorialCard.Title>Les collectes réservées</EditorialCard.Title>
       <EditorialCard.Content>

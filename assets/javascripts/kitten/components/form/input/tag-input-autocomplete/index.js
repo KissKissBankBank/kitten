@@ -38,7 +38,8 @@ export const TagInputAutocomplete = ({
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [suggestionsList, setSuggestionsList] = useState(suggestions)
 
-  const getSuggestionText = (suggestion) => suggestion.searchableString || suggestion
+  const getSuggestionText = suggestion =>
+    suggestion.searchableString || suggestion
 
   const focusInputEl = () => !disabled && inputEl?.current?.focus()
 
@@ -175,7 +176,6 @@ export const TagInputAutocomplete = ({
   }
 
   const handleSelectSuggestion = value => () => {
-    console.log(value)
     if (!value) return
     const suggestionText = getSuggestionText(value)
 

@@ -60,12 +60,7 @@ const StyledPeopleCard = styled.article`
   }
 `
 
-export const PeopleCard = ({
-  className = '',
-  children,
-  ...props
-}) => {
-
+export const PeopleCard = ({ className = '', children, ...props }) => {
   return (
     <StyledPeopleCard
       className={classNames('k-PeopleCard', className)}
@@ -76,17 +71,9 @@ export const PeopleCard = ({
   )
 }
 
-PeopleCard.Image = ({
-  className,
-  style,
-  peopleAvatar = true,
-  ...props
-}) => {
+PeopleCard.Image = ({ className, style, peopleAvatar = true, ...props }) => {
   return (
-    <div
-      {...props}
-      className={classNames('k-PeopleCard__image', className)}
-    >
+    <div {...props} className={classNames('k-PeopleCard__image', className)}>
       {peopleAvatar ? (
         <AvatarWithTextAndBadge>
           <AvatarWithTextAndBadge.Image
@@ -96,7 +83,7 @@ PeopleCard.Image = ({
           />
         </AvatarWithTextAndBadge>
       ) : (
-        <PeopleCircleIconNext />   
+        <PeopleCircleIconNext />
       )}
     </div>
   )
