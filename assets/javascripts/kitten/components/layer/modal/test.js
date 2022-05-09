@@ -36,23 +36,17 @@ describe('<Modal />', () => {
         component = renderer
           .create(
             <Modal size="medium" trigger={<button>Open</button>}>
-              {() => (
-                <>
-                  <Modal.Title>
-                    Oops… Quelque chose s’est mal passé.
-                  </Modal.Title>
-                  <Modal.Content>
-                    <p>
-                      Notre équipe a été automatiquement notifiée et fait en
-                      sorte de résoudre ce problème au plus vite.
-                    </p>
-                    <Modal.Actions>
-                      <button>Retour à la page d’accueil</button>
-                      <button>Recharger la page</button>
-                    </Modal.Actions>
-                  </Modal.Content>
-                </>
-              )}
+              <Modal.Title>Oops… Quelque chose s’est mal passé.</Modal.Title>
+              <Modal.Content>
+                <p>
+                  Notre équipe a été automatiquement notifiée et fait en sorte
+                  de résoudre ce problème au plus vite.
+                </p>
+                <Modal.Actions>
+                  <button>Retour à la page d’accueil</button>
+                  <button>Recharger la page</button>
+                </Modal.Actions>
+              </Modal.Content>
             </Modal>,
           )
           .toJSON()
@@ -86,23 +80,29 @@ describe('<Modal />', () => {
                   },
                   overlay: {
                     background: '#fff',
-                  }
-                }
+                  },
+                },
               }}
             >
-              {() => (
+              {({close}) => (
                 <>
-                  <Modal.Title>
-                    Oops… Quelque chose s’est mal passé.
-                  </Modal.Title>
+                  <Modal.Header>
+                    <Modal.Title>
+                      Oops… Quelque chose s’est mal passé.
+                    </Modal.Title>
+                    <Modal.HeaderRight>Hello</Modal.HeaderRight>
+                    <Modal.HeaderLeft>World</Modal.HeaderLeft>
+                  </Modal.Header>
                   <Modal.Content>
                     <p>
                       Notre équipe a été automatiquement notifiée et fait en
                       sorte de résoudre ce problème au plus vite.
                     </p>
                     <Modal.Actions>
-                      <button>Retour à la page d’accueil</button>
-                      <button>Recharger la page</button>
+                      <button onClick={close}>
+                        Retour à la page d’accueil
+                      </button>
+                      <button onClick={close}>Recharger la page</button>
                     </Modal.Actions>
                   </Modal.Content>
                 </>

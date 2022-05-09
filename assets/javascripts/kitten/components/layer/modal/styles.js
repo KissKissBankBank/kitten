@@ -9,9 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .k-Modal__wrapper {
     --modal-width: ${pxToRem(600)};
-    --modal-wrapperMaxWidth: 100vw;
     --modal-contentMargin: ${pxToRem(40)};
-    --modal-headerHeight: 0px;
 
     flex: 1 0 auto;
     position: relative;
@@ -31,14 +29,12 @@ export const GlobalStyle = createGlobalStyle`
       --modal-contentMargin: ${pxToRem(20)}
     }
 
-    &.k-Modal__wrapper--small {
-      @media ${mq.tabletAndDesktop} {
+    @media ${mq.tabletAndDesktop} {
+      &.k-Modal__wrapper--small {
         --modal-width: ${pxToRem(300)};
       }
-    }
 
-    &.k-Modal__wrapper--large {
-      @media ${mq.tabletAndDesktop} {
+      &.k-Modal__wrapper--large {
         --modal-width: ${pxToRem(900)};
       }
     }
@@ -57,6 +53,44 @@ export const GlobalStyle = createGlobalStyle`
       margin: ${pxToRem(50)} ${pxToRem(40)};
     }
   }
+
+  .k-Modal__header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: ${pxToRem(10)};
+
+    margin: ${pxToRem(-50)} ${pxToRem(-20)} ${pxToRem(-30)};
+    padding: ${pxToRem(10)};
+
+    @media ${mq.tablet} {
+      margin: ${pxToRem(-50)} ${pxToRem(-30)} ${pxToRem(-30)};
+      padding: ${pxToRem(20)};
+    }
+    @media ${mq.desktop} {
+      margin: ${pxToRem(-50)} ${pxToRem(-40)} ${pxToRem(-30)};
+      padding: ${pxToRem(30)};
+    }
+
+    .k-Modal__header_left {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-self: start;
+    }
+
+    .k-Modal__title {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: stretch;
+    }
+
+    .k-Modal__header_right {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      justify-self: end;
+    }
+  }
+
 
   .k-Modal__title {
     font-size: var(--font-size-6) !important; 
@@ -79,6 +113,18 @@ export const GlobalStyle = createGlobalStyle`
   .k-Modal__content {
     display: grid;
     gap: ${pxToRem(30)};
+  }
+
+  .k-Modal__content--noMargin {
+    margin-inline: ${pxToRem(-20)};
+
+    @media ${mq.tablet} {
+      margin-inline: ${pxToRem(-30)};
+    }
+
+    @media ${mq.desktop} {
+      margin-inline: ${pxToRem(-40)};
+    }
   }
 
   /* FORM STYLES */

@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Changes: 
   - `Token`: Rename `--shadow-*` by `--box-shadow-*`.
   - `Utilities`: Rename `k-u-shadow-*` by `k-u-box-shadow-*`.
+- Feature: `Modal`: Add `Header`, `HeaderLeft` `HeaderRight` subcomponents.
+- Feature: `Modal`: Add `noMargin` prop to `Content` subcomponent.
 
 ## [10.6.0] - 2022-05-03
 
