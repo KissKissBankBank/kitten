@@ -76,16 +76,30 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
       <div
         className="k-Modal__main"
       >
-        <p
-          className="sc-gsDKAQ hjXNvp k-Title k-Modal__title k-u-align-center k-Title--primary k-Title--noMargin"
-          style={
-            Object {
-              "--Title-css-color": null,
-            }
-          }
+        <div
+          className="k-Modal__header"
         >
-          Oops… Quelque chose s’est mal passé.
-        </p>
+          <p
+            className="sc-gsDKAQ hjXNvp k-Title k-Modal__title k-u-align-center k-Title--primary k-Title--noMargin"
+            style={
+              Object {
+                "--Title-css-color": null,
+              }
+            }
+          >
+            Oops… Quelque chose s’est mal passé.
+          </p>
+          <div
+            className="k-Modal__header_right"
+          >
+            Hello
+          </div>
+          <div
+            className="k-Modal__header_left"
+          >
+            World
+          </div>
+        </div>
         <div
           className="k-Modal__content k-u-align-center"
         >
@@ -95,10 +109,14 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
           <div
             className="k-Modal__actions"
           >
-            <button>
+            <button
+              onClick={[Function]}
+            >
               Retour à la page d’accueil
             </button>
-            <button>
+            <button
+              onClick={[Function]}
+            >
               Recharger la page
             </button>
           </div>

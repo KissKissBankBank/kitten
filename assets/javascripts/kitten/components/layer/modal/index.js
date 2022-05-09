@@ -9,6 +9,18 @@ import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { GlobalStyle } from './styles'
 import { Button } from '../../action/button'
 
+const ModalHeader = ({ className, ...props }) => (
+  <div className={classNames('k-Modal__header', className)} {...props} />
+)
+
+const ModalHeaderLeft = ({ className, ...props }) => (
+  <div className={classNames('k-Modal__header_left', className)} {...props} />
+)
+
+const ModalHeaderRight = ({ className, ...props }) => (
+  <div className={classNames('k-Modal__header_right', className)} {...props} />
+)
+
 const ModalTitle = ({ className, align, ...props }) => (
   <Title
     tag="p"
@@ -26,19 +38,23 @@ ModalTitle.defaultProps = {
   align: 'center',
 }
 
-const ModalContent = ({ className, align, ...props }) => (
+const ModalContent = ({ className, align, noMargin, ...props }) => (
   <div
-    className={classNames('k-Modal__content', className, `k-u-align-${align}`)}
+    className={classNames('k-Modal__content', className, `k-u-align-${align}`, {
+      'k-Modal__content--noMargin': noMargin,
+    })}
     {...props}
   />
 )
 
 ModalContent.propTypes = {
   align: PropTypes.oneOf(['center', 'left']),
+  noMargin: PropTypes.bool,
 }
 
 ModalContent.defaultProps = {
   align: 'center',
+  noMargin: false,
 }
 
 const ModalForm = ({ className, twoColumns, ...props }) => (
@@ -170,11 +186,11 @@ const InnerModal = ({
         style={{
           overlay: {
             ...modalProps?.style?.overlay,
-            '--modal-zIndex': zIndex
+            '--modal-zIndex': zIndex,
           },
           content: {
             ...modalProps?.style?.content,
-          }
+          },
         }}
       >
         <>
@@ -252,9 +268,12 @@ Modal.defaultProps = {
   zIndex: 110,
   hasCloseButton: true,
   onClose: () => {},
-  as: 'div'
+  as: 'div',
 }
 
+Modal.Header = ModalHeader
+Modal.HeaderLeft = ModalHeaderLeft
+Modal.HeaderRight = ModalHeaderRight
 Modal.Title = ModalTitle
 Modal.Content = ModalContent
 Modal.Form = ModalForm

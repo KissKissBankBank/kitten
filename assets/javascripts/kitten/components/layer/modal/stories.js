@@ -1,7 +1,16 @@
 import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
-import { Modal, Button, Paragraph, Field } from 'kitten'
+import styled from 'styled-components'
+import {
+  Modal,
+  Button,
+  Paragraph,
+  Field,
+  EditIconNext,
+  CrossIconNext,
+  pxToRem,
+} from 'kitten'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -240,6 +249,61 @@ export const withAction = () => (
             <Button modifier="helium">Retour à la page d’accueil</Button>
             <Button modifier="hydrogen">Recharger la page</Button>
           </Modal.Actions>
+        </Modal.Content>
+      </>
+    )}
+  </Modal>
+)
+
+const StyledToolbar = styled.div`
+  height: ${pxToRem(50)};
+  background-color: var(--color-grey-200);
+`
+
+export const withEditor = () => (
+  <Modal {...Default.args} hasCloseButton={false} isOpen size="large">
+    {({ close }) => (
+      <>
+        <Modal.Header>
+          <Modal.Title>À quoi servira le sujet&nbsp;?</Modal.Title>
+          <Modal.HeaderRight>
+            <Button
+              fit="content"
+              mobileFit="icon"
+              modifier="helium"
+              onClick={close}
+            >
+              <span className="k-u-hidden@xs-down">Sauvegarder</span>
+              <EditIconNext
+                className="k-u-hidden@s-up"
+                width="20"
+                height="20"
+              />
+            </Button>
+          </Modal.HeaderRight>
+          <Modal.HeaderLeft>
+            <Button fit="content" mobileFit="icon" onClick={close}>
+              <span className="k-u-hidden@xs-down">Annuler</span>
+              <CrossIconNext
+                className="k-u-hidden@s-up"
+                width="20"
+                height="20"
+              />
+            </Button>
+          </Modal.HeaderLeft>
+        </Modal.Header>
+        <Modal.Content noMargin>
+          <StyledToolbar />
+        </Modal.Content>
+        <Modal.Content align="left">
+          <Paragraph modifier="secondary" noMargin>
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+            nibh, ut fermentum massa justo sit amet risus. Curabitur blandit
+            tempus porttitor. Donec id elit non mi porta gravida at eget metus.
+            Nullam id dolor id nibh ultricies vehicula ut id elit. Donec id elit
+            non mi porta gravida at eget metus. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.
+          </Paragraph>
         </Modal.Content>
       </>
     )}
