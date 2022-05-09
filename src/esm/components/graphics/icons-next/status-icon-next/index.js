@@ -4,7 +4,8 @@ var _excluded = ["status"],
     _excluded2 = ["color"],
     _excluded3 = ["color"],
     _excluded4 = ["color"],
-    _excluded5 = ["color"];
+    _excluded5 = ["color"],
+    _excluded6 = ["color"];
 import React from 'react';
 export var StatusIconNext = function StatusIconNext(_ref) {
   var status = _ref.status,
@@ -110,7 +111,27 @@ StatusIconNext.Success = function (_ref5) {
   }));
 };
 
-StatusIconNext.Pending = StatusIconNext.Success;
+StatusIconNext.Pending = function (_ref6) {
+  var color = _ref6.color,
+      props = _objectWithoutPropertiesLoose(_ref6, _excluded6);
+
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 8 9",
+    width: "8",
+    height: "9",
+    fill: color
+  }, props, {
+    style: {
+      marginLeft: '2px'
+    }
+  }), /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M2.172.012C1.475.012.91.577.91 1.275v7.508h5.064a1.253 1.253 0 0 0 0-2.506H3.435V1.275C3.435.577 2.87.012 2.172.012Z",
+    "clip-rule": "evenodd"
+  }));
+};
+
 StatusIconNext.defaultProps = {
   status: 'info',
   color: 'var(--color-grey-900)'

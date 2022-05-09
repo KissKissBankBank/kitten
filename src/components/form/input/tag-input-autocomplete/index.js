@@ -202,7 +202,6 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
 
   var handleSelectSuggestion = function handleSelectSuggestion(value) {
     return function () {
-      console.log(value);
       if (!value) return;
       var suggestionText = getSuggestionText(value);
       handleAddItem(suggestionText);

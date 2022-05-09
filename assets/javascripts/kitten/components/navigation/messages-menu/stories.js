@@ -16,10 +16,6 @@ export default {
   decorators: [
     story => <div className="story-Container story-Grid">{story()}</div>,
   ],
-
-  argTypes: {},
-
-  args: {},
 }
 
 const discussions = [
@@ -130,7 +126,7 @@ const discussions = [
   },
 ]
 
-export const Default = args => {
+export const Default = () => {
   const [activeDiscussion, setActiveDiscussion] = useState(discussions[1])
 
   return (

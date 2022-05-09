@@ -124,7 +124,7 @@ export const EditorialCard = ({
     className: 'k-EditorialCard__action',
     href: href,
     'aria-label': linkActionText,
-    ...linkProps
+    ...linkProps,
   }
 
   if (hasVerso && isRecto) {
@@ -132,12 +132,12 @@ export const EditorialCard = ({
     actionProps = {
       className: 'k-EditorialCard__action k-u-reset-button',
       type: 'button',
-      onClick: (e) => {
+      onClick: e => {
         setIsVerso(false)
         linkProps.onClick(e)
       },
       'aria-label': showVersoActionText,
-      ...linkProps
+      ...linkProps,
     }
   }
 
@@ -194,7 +194,7 @@ EditorialCard.defaultProps = {
   hasArrow: true,
   linkActionText: 'Voir tous les projets',
   showVersoActionText: 'Plus de précisions',
-  linkProps: {}
+  linkProps: {},
 }
 
 const Title = ({ className, children, ...props }) => {

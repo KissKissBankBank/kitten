@@ -3,7 +3,7 @@ import { TagInputAutocomplete } from './index'
 import { DocsPage } from 'storybook/docs-page'
 
 const suggestions = [
-  "Chat de gouttière",
+  'Chat de gouttière',
   {
     searchableString: 'Abyssinian',
     displayNode: 'Abyssinian (16)',
