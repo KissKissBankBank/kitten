@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Carousel`: Add `shadowSize` prop to handle cards with shadows.
+## [10.8.0] - 2022-05-10
+
+Feature:
+
+- `Carousel`: Add `shadowSize` prop to handle cards with shadows.
 
 ## [10.7.0] - 2022-05-09
 

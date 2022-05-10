@@ -33,6 +33,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _grid = require("../../../layout/grid");
 
+var _typography = require("../../../../helpers/utils/typography");
+
 var _styles = require("./styles");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -317,22 +319,22 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className = _this$props4.className,
         paginationPosition = _this$props4.paginationPosition,
         showOtherPages = _this$props4.showOtherPages,
-        itemMinWidth = _this$props4.itemMinWidth;
+        itemMinWidth = _this$props4.itemMinWidth,
+        style = _this$props4.style,
+        shadowSize = _this$props4.shadowSize;
     if (getDataLength({
       data: data,
       children: children
-    }) === 0) return null;
-    var commonProps = {
-      baseItemMarginBetween: baseItemMarginBetween,
-      itemMinWidth: itemMinWidth,
-      numberOfItemsPerPage: this.state.numberOfItemsPerPage,
-      numberOfPages: this.state.numberOfPages
-    }; // legacy mode
+    }) === 0) return null; // legacy mode
 
     if (!!data && !!renderItem) {
-      return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
+      return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, {
+        baseItemMarginBetween: baseItemMarginBetween,
+        itemMinWidth: itemMinWidth,
+        numberOfItemsPerPage: this.state.numberOfItemsPerPage,
+        numberOfPages: this.state.numberOfPages,
         className: (0, _classnames.default)('k-Carousel', className, 'k-LegacyCarousel')
-      }), /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: "12",
         "col-l": withoutLeftOffset ? '11' : '10',
         "offset-l": withoutLeftOffset ? '0' : '1'
@@ -342,12 +344,18 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, this.renderPagination())));
     }
 
-    return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
+    return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, {
+      style: (0, _extends2.default)({}, style, {
+        '--carousel-shadowSize': (0, _typography.pxToRem)(shadowSize) || null,
+        '--carousel-baseItemMarginBetween': (0, _typography.pxToRem)(baseItemMarginBetween),
+        '--carousel-numberOfItemsPerPage': this.state.numberOfItemsPerPage,
+        '--carousel-numberOfPages': this.state.numberOfPages
+      }),
       paginationPosition: paginationPosition,
       className: (0, _classnames.default)('k-Carousel', className, {
         'k-Carousel--showOtherPages': showOtherPages
       })
-    }), this.renderCarouselInner(), this.renderPagination());
+    }, this.renderCarouselInner(), this.renderPagination());
   };
 
   return CarouselBase;
@@ -376,7 +384,8 @@ CarouselBase.defaultProps = {
   showPageSquares: false,
   smallButtons: false,
   loop: false,
-  exportVisibilityProps: false
+  exportVisibilityProps: false,
+  shadowSize: 0
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
@@ -408,6 +417,7 @@ CarouselBase.propTypes = {
   showPageSquares: _propTypes.default.bool,
   loop: _propTypes.default.bool,
   exportVisibilityProps: _propTypes.default.bool,
+  shadowSize: _propTypes.default.number,
   data: (0, _deprecated.default)(_propTypes.default.array, 'Provide `Carousel` with children instead of data/renderItem'),
   renderItem: (0, _deprecated.default)(_propTypes.default.func, 'Provide `Carousel` with children instead of data/renderItem'),
   withoutLeftOffset: (0, _deprecated.default)(_propTypes.default.bool, 'Provide `Carousel` with children instead of data/renderItem')

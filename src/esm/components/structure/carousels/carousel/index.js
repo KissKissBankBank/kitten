@@ -12,6 +12,7 @@ import { CarouselInner } from './components/carousel-inner';
 import { VisuallyHidden } from '../../../accessibility/visually-hidden';
 import classNames from 'classnames';
 import { Grid, GridCol } from '../../../layout/grid';
+import { pxToRem } from '../../../../helpers/utils/typography';
 import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles';
 
 var getDataLength = function getDataLength(_ref) {
@@ -281,22 +282,22 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className = _this$props4.className,
         paginationPosition = _this$props4.paginationPosition,
         showOtherPages = _this$props4.showOtherPages,
-        itemMinWidth = _this$props4.itemMinWidth;
+        itemMinWidth = _this$props4.itemMinWidth,
+        style = _this$props4.style,
+        shadowSize = _this$props4.shadowSize;
     if (getDataLength({
       data: data,
       children: children
-    }) === 0) return null;
-    var commonProps = {
-      baseItemMarginBetween: baseItemMarginBetween,
-      itemMinWidth: itemMinWidth,
-      numberOfItemsPerPage: this.state.numberOfItemsPerPage,
-      numberOfPages: this.state.numberOfPages
-    }; // legacy mode
+    }) === 0) return null; // legacy mode
 
     if (!!data && !!renderItem) {
-      return /*#__PURE__*/React.createElement(StyledCarouselContainer, _extends({}, commonProps, {
+      return /*#__PURE__*/React.createElement(StyledCarouselContainer, {
+        baseItemMarginBetween: baseItemMarginBetween,
+        itemMinWidth: itemMinWidth,
+        numberOfItemsPerPage: this.state.numberOfItemsPerPage,
+        numberOfPages: this.state.numberOfPages,
         className: classNames('k-Carousel', className, 'k-LegacyCarousel')
-      }), /*#__PURE__*/React.createElement(Grid, null, /*#__PURE__*/React.createElement(GridCol, {
+      }, /*#__PURE__*/React.createElement(Grid, null, /*#__PURE__*/React.createElement(GridCol, {
         col: "12",
         "col-l": withoutLeftOffset ? '11' : '10',
         "offset-l": withoutLeftOffset ? '0' : '1'
@@ -306,12 +307,18 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, this.renderPagination())));
     }
 
-    return /*#__PURE__*/React.createElement(StyledCarouselContainer, _extends({}, commonProps, {
+    return /*#__PURE__*/React.createElement(StyledCarouselContainer, {
+      style: _extends({}, style, {
+        '--carousel-shadowSize': pxToRem(shadowSize) || null,
+        '--carousel-baseItemMarginBetween': pxToRem(baseItemMarginBetween),
+        '--carousel-numberOfItemsPerPage': this.state.numberOfItemsPerPage,
+        '--carousel-numberOfPages': this.state.numberOfPages
+      }),
       paginationPosition: paginationPosition,
       className: classNames('k-Carousel', className, {
         'k-Carousel--showOtherPages': showOtherPages
       })
-    }), this.renderCarouselInner(), this.renderPagination());
+    }, this.renderCarouselInner(), this.renderPagination());
   };
 
   return CarouselBase;
@@ -339,7 +346,8 @@ CarouselBase.defaultProps = {
   showPageSquares: false,
   smallButtons: false,
   loop: false,
-  exportVisibilityProps: false
+  exportVisibilityProps: false,
+  shadowSize: 0
 };
 CarouselBase.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
@@ -371,6 +379,7 @@ CarouselBase.propTypes = {
   showPageSquares: PropTypes.bool,
   loop: PropTypes.bool,
   exportVisibilityProps: PropTypes.bool,
+  shadowSize: PropTypes.number,
   data: deprecated(PropTypes.array, 'Provide `Carousel` with children instead of data/renderItem'),
   renderItem: deprecated(PropTypes.func, 'Provide `Carousel` with children instead of data/renderItem'),
   withoutLeftOffset: deprecated(PropTypes.bool, 'Provide `Carousel` with children instead of data/renderItem')
