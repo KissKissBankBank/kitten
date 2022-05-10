@@ -115,6 +115,11 @@ const buttonsPositionStyle = mediaQuery => ({ paginationPosition }) => {
 // Styled component
 
 export const StyledCarouselContainer = styled.div`
+  --carousel-innerSpacing: max(
+    ${pxToRem(OUTLINE_PLUS_OFFSET)},
+    var(--carousel-shadowSize, 0px)
+  );
+
   &.k-Carousel:not(.k-LegacyCarousel) {
     display: flex;
     ${flexContainerdirectionStyle('default')}
@@ -315,21 +320,25 @@ export const StyledCarouselContainer = styled.div`
   // Carousel Inner
 
   .k-Carousel__inner {
-    margin: ${pxToRem(-4)};
+    margin: calc(-1 * var(--carousel-innerSpacing));
     display: grid;
-    grid-template-columns: repeat(
-      ${({ numberOfPages }) => numberOfPages},
-      100%
+    grid-template-columns: repeat(var(--carousel-numberOfPages), 100%);
+    grid-gap: calc(
+      (${pxToRem(CONTAINER_PADDING_THIN)} / 2) -
+        (var(--carousel-innerSpacing) * 2)
     );
-    grid-gap: ${pxToRem(CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
+      grid-gap: calc(
+        (${pxToRem(CONTAINER_PADDING)} / 2) - (var(--carousel-innerSpacing) * 2)
+      );
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      grid-gap: ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
+      grid-gap: calc(
+        var(--carousel-baseItemMarginBetween) -
+          (var(--carousel-innerSpacing) * 2)
+      );
     }
 
     overflow-x: scroll;
@@ -368,20 +377,30 @@ export const StyledCarouselContainer = styled.div`
 
   &.k-Carousel--showOtherPages .k-Carousel__inner {
     margin: 0 !important;
-    padding: 0 ${pxToRem(CONTAINER_PADDING_THIN - OUTLINE_PLUS_OFFSET)};
-    scroll-padding: ${pxToRem(CONTAINER_PADDING_THIN - OUTLINE_PLUS_OFFSET)};
+    padding: 0
+      calc(${pxToRem(CONTAINER_PADDING_THIN)} - var(--carousel-innerSpacing));
+    scroll-padding: calc(
+      ${pxToRem(CONTAINER_PADDING_THIN)} - var(--carousel-innerSpacing)
+    );
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
+      padding: 0
+        calc(${pxToRem(CONTAINER_PADDING)} - var(--carousel-innerSpacing));
+      scroll-padding: calc(
+        ${pxToRem(CONTAINER_PADDING)} - var(--carousel-innerSpacing)
+      );
     }
 
     .k-Carousel__inner__pageContainer {
       &:last-child {
-        padding-right: ${pxToRem(CONTAINER_PADDING_THIN - OUTLINE_PLUS_OFFSET)};
+        padding-right: calc(
+          ${pxToRem(CONTAINER_PADDING_THIN)} - var(--carousel-innerSpacing)
+        );
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          padding-right: ${pxToRem(CONTAINER_PADDING - OUTLINE_PLUS_OFFSET)};
+          padding-right: calc(
+            ${pxToRem(CONTAINER_PADDING)} - var(--carousel-innerSpacing)
+          );
         }
       }
     }
@@ -391,23 +410,38 @@ export const StyledCarouselContainer = styled.div`
 
   .k-Carousel__page {
     display: grid;
-    grid-template-columns: repeat(
-      ${({ numberOfItemsPerPage }) => numberOfItemsPerPage},
-      1fr
+    grid-template-columns: repeat(var(--carousel-numberOfItemsPerPage), 1fr);
+    grid-gap: calc(
+      ${pxToRem(CONTAINER_PADDING_THIN / 2)} -
+        (var(--carousel-innerSpacing) * 2)
     );
-    grid-gap: ${pxToRem(CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      grid-gap: ${pxToRem(CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2)};
+      grid-gap: calc(
+        ${pxToRem(CONTAINER_PADDING / 2)} - (var(--carousel-innerSpacing) * 2)
+      );
     }
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      grid-gap: ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2)};
+      grid-gap: calc(
+        var(--carousel-baseItemMarginBetween) -
+          (var(--carousel-innerSpacing) * 2)
+      );
     }
 
     .k-Carousel__page__item {
       overflow: hidden;
-      padding: ${pxToRem(OUTLINE_PLUS_OFFSET)};
+      padding-inline: min(
+        var(--carousel-innerSpacing),
+        calc(var(--carousel-baseItemMarginBetween) / 2)
+      );
+      padding-block: var(--carousel-innerSpacing);
+
+      :first-child {
+        padding-left: var(--carousel-innerSpacing);
+      }
+      :last-child {
+        padding-right: var(--carousel-innerSpacing);
+      }
     }
   }
 `
