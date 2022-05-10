@@ -13,6 +13,7 @@ import { CarouselInner } from './components/carousel-inner'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 import classNames from 'classnames'
 import { Grid, GridCol } from '../../../layout/grid'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles'
 
@@ -326,22 +327,20 @@ class CarouselBase extends Component {
       paginationPosition,
       showOtherPages,
       itemMinWidth,
+      style,
+      shadowSize,
     } = this.props
 
     if (getDataLength({ data, children }) === 0) return null
-
-    const commonProps = {
-      baseItemMarginBetween: baseItemMarginBetween,
-      itemMinWidth: itemMinWidth,
-      numberOfItemsPerPage: this.state.numberOfItemsPerPage,
-      numberOfPages: this.state.numberOfPages,
-    }
 
     // legacy mode
     if (!!data && !!renderItem) {
       return (
         <StyledCarouselContainer
-          {...commonProps}
+          baseItemMarginBetween={baseItemMarginBetween}
+          itemMinWidth={itemMinWidth}
+          numberOfItemsPerPage={this.state.numberOfItemsPerPage}
+          numberOfPages={this.state.numberOfPages}
           className={classNames('k-Carousel', className, 'k-LegacyCarousel')}
         >
           <Grid>
@@ -362,7 +361,13 @@ class CarouselBase extends Component {
 
     return (
       <StyledCarouselContainer
-        {...commonProps}
+        style={{
+          ...style,
+          '--carousel-shadowSize': pxToRem(shadowSize) || null,
+          '--carousel-baseItemMarginBetween': pxToRem(baseItemMarginBetween),
+          '--carousel-numberOfItemsPerPage': this.state.numberOfItemsPerPage,
+          '--carousel-numberOfPages': this.state.numberOfPages,
+        }}
         paginationPosition={paginationPosition}
         className={classNames('k-Carousel', className, {
           'k-Carousel--showOtherPages': showOtherPages,
@@ -406,6 +411,7 @@ CarouselBase.defaultProps = {
   smallButtons: false,
   loop: false,
   exportVisibilityProps: false,
+  shadowSize: 0,
 }
 
 CarouselBase.propTypes = {
@@ -438,6 +444,7 @@ CarouselBase.propTypes = {
   showPageSquares: PropTypes.bool,
   loop: PropTypes.bool,
   exportVisibilityProps: PropTypes.bool,
+  shadowSize: PropTypes.number,
 
   data: deprecated(
     PropTypes.array,

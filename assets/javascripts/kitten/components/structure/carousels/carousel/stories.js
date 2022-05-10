@@ -38,6 +38,7 @@ const args = {
   loop: false,
   exportVisibilityProps: false,
   baseItemMarginBetween: CONTAINER_PADDING,
+  shadowSize: 30,
 }
 
 export default {
@@ -79,6 +80,7 @@ export default {
     showPageSquares: { control: 'boolean' },
     loop: { control: 'boolean' },
     exportVisibilityProps: { control: 'boolean' },
+    shadowSize: { control: 'number' },
   },
   args,
 }
@@ -358,7 +360,7 @@ const engagementsData = [
 ]
 
 const StyledContainer = styled.div`
-  margin-top: ${pxToRem(20)};
+  margin: ${pxToRem(20)} ${pxToRem(-40)};
   box-sizing: border-box;
 
   .k-Carousel__page__item a {
@@ -384,8 +386,12 @@ const StyledContainer = styled.div`
 `
 
 export const EngagementsCarousel = args => (
-  <StyledContainer fullWidthBelowScreenSize="S">
-    <Carousel {...args}>
+  <StyledContainer>
+    <Carousel
+      {...args}
+      shadowSize={0}
+      paginationPosition={{ default: 'bottom' }}
+    >
       {engagementsData.map(({ bgColor, children }, index) => (
         <EngagementCard
           key={`card__${index}`}

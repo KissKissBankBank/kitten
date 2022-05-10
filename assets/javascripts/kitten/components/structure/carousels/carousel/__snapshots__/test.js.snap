@@ -2,7 +2,15 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dKFCpL k-Carousel"
+  className="sc-dkPtRN gmacoJ k-Carousel"
+  style={
+    Object {
+      "--carousel-baseItemMarginBetween": "2.5rem",
+      "--carousel-numberOfItemsPerPage": 3,
+      "--carousel-numberOfPages": 1,
+      "--carousel-shadowSize": "1.25rem",
+    }
+  }
 >
   <div
     className="k-Carousel__inner"
@@ -21,7 +29,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -126,7 +134,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--success"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -238,7 +246,15 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dKFCpL k-Carousel"
+  className="sc-dkPtRN gmacoJ k-Carousel"
+  style={
+    Object {
+      "--carousel-baseItemMarginBetween": "2.5rem",
+      "--carousel-numberOfItemsPerPage": 3,
+      "--carousel-numberOfPages": 1,
+      "--carousel-shadowSize": null,
+    }
+  }
 >
   <div
     className="k-Carousel__inner"
@@ -257,7 +273,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -362,7 +378,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--success"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -476,7 +492,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eghNle k-Carousel k-LegacyCarousel"
+  className="sc-dkPtRN kgrJRU k-Carousel k-LegacyCarousel"
 >
   <div
     className="sc-gsDKAQ hebEnC k-Grid"
@@ -501,7 +517,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+                className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
                 title="A"
               >
                 <div
@@ -537,7 +553,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eghNle k-Carousel k-LegacyCarousel"
+  className="sc-dkPtRN kgrJRU k-Carousel k-LegacyCarousel"
 >
   <div
     className="sc-gsDKAQ hebEnC k-Grid"
@@ -562,7 +578,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+                className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
                 title="A"
               >
                 <div
@@ -598,7 +614,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eghNle k-Carousel k-LegacyCarousel"
+  className="sc-dkPtRN kgrJRU k-Carousel k-LegacyCarousel"
 >
   <div
     className="sc-gsDKAQ hebEnC k-Grid"
@@ -623,7 +639,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+                className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
                 title="A"
               >
                 <div
@@ -659,7 +675,15 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dKFCpL k-Carousel"
+  className="sc-dkPtRN gmacoJ k-Carousel"
+  style={
+    Object {
+      "--carousel-baseItemMarginBetween": "2.5rem",
+      "--carousel-numberOfItemsPerPage": 3,
+      "--carousel-numberOfPages": 1,
+      "--carousel-shadowSize": null,
+    }
+  }
 >
   <div
     className="k-Carousel__inner"
@@ -678,7 +702,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -783,7 +807,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--success"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -895,7 +919,15 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN cQFFON k-Carousel"
+  className="sc-dkPtRN gmacoJ k-Carousel"
+  style={
+    Object {
+      "--carousel-baseItemMarginBetween": "2.5rem",
+      "--carousel-numberOfItemsPerPage": 5,
+      "--carousel-numberOfPages": 1,
+      "--carousel-shadowSize": null,
+    }
+  }
 >
   <div
     className="k-Carousel__inner"
@@ -914,7 +946,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -1019,7 +1051,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--success"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -1137,7 +1169,15 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dKFCpL k-Carousel"
+  className="sc-dkPtRN gmacoJ k-Carousel"
+  style={
+    Object {
+      "--carousel-baseItemMarginBetween": "2.5rem",
+      "--carousel-numberOfItemsPerPage": 3,
+      "--carousel-numberOfPages": 1,
+      "--carousel-shadowSize": null,
+    }
+  }
 >
   <div
     className="k-Carousel__inner"
@@ -1156,7 +1196,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -1261,7 +1301,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye iwTqke k-ProjectCard k-ProjectCard--success"
+            className="sc-hKwDye dClgOE k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div

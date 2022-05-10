@@ -16,7 +16,7 @@ export const StyledCard = styled.div`
   border-radius: var(--border-radius-m);
   color: var(--color-grey-900);
   text-decoration: none;
-  transition: border var(--transition);
+  transition: box-shadow var(--transition);
   box-shadow: var(--box-shadow-m);
 
   &[href]:active,
