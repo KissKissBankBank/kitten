@@ -13,7 +13,7 @@ import {
   ArrowIcon,
   MicrophoneIconNext,
   QuestionBubbleIconNext,
-  UsersFilledIconNext,
+  UsersIconNext,
 } from 'kitten'
 
 const DashboardContent = styled.div`
@@ -244,7 +244,7 @@ export const StoryWithDashboard = () => (
         >
           <h2 className="k-u-a11y-visuallyHidden">Contributions</h2>
           <div className="kiss-dashboard__block__iconLine">
-            <UsersFilledIconNext height="30" width="30" />
+            <UsersIconNext height="30" width="30" />
           </div>
           <div className="kiss-dashboard__block__dataLine">
             <div className="kiss-dashboard__block__dataLine__item">

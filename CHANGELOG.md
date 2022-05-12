@@ -7,7 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Icons: Add the following components:
   - `MicrophoneIconNext`
   - `QuestionBubbleIconNext`
-  - `UsersFilledIconNext`
 
 ## [10.8.0] - 2022-05-10
 
