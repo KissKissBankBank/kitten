@@ -162,6 +162,8 @@ const DashboardContent = styled.div`
     &:hover,
     &:active,
     &:focus {
+      ${TYPOGRAPHY.fontStyles.regular}
+
       > svg {
         margin-right: ${pxToRem(-5)};
       }
