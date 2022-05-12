@@ -47,6 +47,8 @@ import {
   UsersIconNext,
   WhatsappIconNext,
   WindowEditIconNext,
+  MicrophoneIconNext,
+  QuestionBubbleIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -230,6 +232,12 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <EmbedIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <MicrophoneIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <QuestionBubbleIconNext color={colorInput} width={24} height={24} />
         </IconContainer>
       </Group>
 
