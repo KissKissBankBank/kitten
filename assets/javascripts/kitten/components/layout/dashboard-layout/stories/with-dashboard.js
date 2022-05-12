@@ -49,8 +49,7 @@ const DashboardContent = styled.div`
     }
     .kiss-dashboard__block__dataLine {
       display: flex;
-      gap: ${pxToRem(10)};
-      justify-content: space-between;
+      gap: ${pxToRem(30)};
       align-items: flex-end;
 
       @media ${mq.mobile} {
@@ -58,11 +57,13 @@ const DashboardContent = styled.div`
         align-items: stretch;
       }
     }
+
     .kiss-dashboard__block__dataLine__item {
       display: flex;
       flex-direction: column;
       gap: ${pxToRem(5)};
     }
+
     .kiss-dashboard__block__dataLine__separator {
       align-self: stretch;
       flex: 0 0 ${pxToRem(1)};
