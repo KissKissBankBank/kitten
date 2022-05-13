@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button, COLORS } from 'kitten'
-import { ICON } from '../../../components/action/button/standalone-styles'
-import { modifierStyles } from '../../../components/action/button/helpers/modifier-styles'
+import { ICON } from '../../../../components/action/button/standalone-styles'
+import { modifierStyles } from '../../../../components/action/button/helpers/modifier-styles'
 
 export default styled(({ tag, ...props }) => (
   <Button fit="icon" as={tag} {...props} />
