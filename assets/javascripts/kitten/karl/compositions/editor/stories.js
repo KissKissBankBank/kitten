@@ -19,7 +19,7 @@ import {
 } from 'kitten'
 
 export default {
-  title: 'pages/Editor',
+  title: 'compositions/Editor',
 }
 
 export const Example = () => {
