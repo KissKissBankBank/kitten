@@ -24,7 +24,7 @@ export const StyledLayout = styled.div`
   .k-HeroLayout__hero {
     position: relative;
     z-index: 6;
-    padding: ${pxToRem(135)} var(--container-padding) ${pxToRem(70)};
+    padding: ${pxToRem(135)} var(--container-padding) ${pxToRem(50)};
 
     @media ${mq.desktop} {
       display: flex;
@@ -66,23 +66,23 @@ export const StyledLayout = styled.div`
       object-fit: cover;
       object-position: center;
     }
+  }
 
-    ::after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: var(--heroLayout-imageHeight);
-      background: linear-gradient(
-        to bottom,
-        hsla(0deg, 0%, 100%, 0) 15%,
-        hsla(0deg, 0%, 100%, 0.3) 30%,
-        hsla(0deg, 0%, 100%, 0.9) 70%,
-        var(--color-grey-000)
-      );
-    }
+  .k-HeroLayout__hero__background::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--heroLayout-imageHeight);
+    background: linear-gradient(
+      to bottom,
+      hsla(0deg, 0%, 100%, 0) 15%,
+      hsla(0deg, 0%, 100%, 0.3) 30%,
+      hsla(0deg, 0%, 100%, 0.9) 70%,
+      var(--color-grey-000)
+    );
   }
 
   .k-HeroLayout__hero__block {
@@ -106,26 +106,22 @@ export const StyledLayout = styled.div`
     --heroLayout-imageHeight: ${pxToRem(260)};
 
     @media ${mq.desktop} {
-      --heroLayout-imageHeight: ${pxToRem(220)};
+      --heroLayout-imageHeight: ${pxToRem(200)};
     }
   }
 
   .k-HeroLayout__page {
     margin: 0 var(--container-padding) ${pxToRem(60)};
-    display: flex;
-    flex-direction: column;
-    gap: ${pxToRem(50)} ${pxToRem(50)};
     display: grid;
+    gap: ${pxToRem(50)} ${pxToRem(50)};
 
     @media ${mq.mobileAndTablet} {
-      grid-template-areas: 'first_aside' 'content' 'last_aside';
+      grid-template-columns: 1fr;
 
-      &.k-HeroLayout__page--hasTopMenu {
-        grid-template-areas: 'first_aside' 'top_menu' 'content' 'last_aside';
-
-        .k-HeroLayout__topMenu {
-          grid-area: top_menu;
-        }
+      .k-HeroLayout__topMenu,
+      .k-HeroLayout__topMenuBg {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
       }
     }
 
@@ -135,53 +131,88 @@ export const StyledLayout = styled.div`
         minmax(${pxToRem(210)}, 1fr)
         minmax(auto, ${pxToRem(670)})
         minmax(${pxToRem(210)}, 1fr);
-      grid-template-areas: 'first_aside content last_aside';
 
-      .k-HeroLayout__page__background {
-        top: ${pxToRem(-70)};
+      .k-HeroLayout__firstAside {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+      }
+      .k-HeroLayout__lastAside {
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 1;
+      }
+      .k-HeroLayout__loading,
+      .k-HeroLayout__content {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
       }
 
       &.k-HeroLayout__page--hasTopMenu {
-        margin-top: ${pxToRem(30)};
-        grid-template-areas:
-          '........... ....... ..........'
-          'first_aside content last_aside';
-        grid-template-rows: ${pxToRem(80)} auto;
+        margin-top: 0;
+        padding-top: ${pxToRem(120)};
+        grid-template-rows: ${pxToRem(200 - 50 - 120)} ${pxToRem(60)} auto;
 
-        .k-HeroLayout__page__background {
-          top: ${pxToRem(-30)};
+        .k-HeroLayout__firstAside {
+          grid-row: 1 / span 3;
+          grid-column: 1 / span 1;
+        }
+        .k-HeroLayout__lastAside {
+          grid-row: 3 / span 1;
+          grid-column: 3 / span 1;
+        }
+        .k-HeroLayout__loading,
+        .k-HeroLayout__content {
+          grid-row: 3 / span 1;
+          grid-column: 2 / span 1;
         }
 
+        .k-HeroLayout__topMenuBg {
+          grid-row: 2 / span 2;
+          grid-column: 1 / span 3;
+        }
         .k-HeroLayout__topMenu {
-          grid-row: 1 / span 2;
+          grid-row: 2 / span 2;
           grid-column: 2 / span 1;
         }
       }
     }
 
+    .k-HeroLayout__topMenuBg,
     .k-HeroLayout__topMenu {
+      position: relative;
+      z-index: 5;
       pointer-events: none;
 
-      > * {
+      .k-HeroLayout__sticky__insideTop {
         pointer-events: all;
       }
     }
 
+    .k-HeroLayout__topMenuBg {
+      margin-inline: ${pxToRem(-70)};
+
+      .k-HeroLayout__sticky__insideTop {
+        background-color: var(--color-grey-000);
+        box-shadow: var(--box-shadow-m);
+        height: ${pxToRem(60)};
+      }
+    }
+
+    .k-HeroLayout__topMenu {
+      max-width: calc(100vw - (2 * var(--container-padding)));
+    }
+
     .k-HeroLayout__firstAside {
-      grid-area: first_aside;
       position: relative;
-      z-index: 2;
+      z-index: 7 !important;
     }
 
     .k-HeroLayout__lastAside {
-      grid-area: last_aside;
       position: relative;
-      z-index: 2;
+      z-index: 6 !important;
     }
 
     .k-HeroLayout__loading,
     .k-HeroLayout__content {
-      grid-area: content;
       position: relative;
       z-index: 2;
     }
@@ -216,8 +247,7 @@ export const StyledLayout = styled.div`
     .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__insideTop,
     .k-HeroLayout__sticky--desktop .k-HeroLayout__sticky__inside {
       transition: top var(--transition);
-      position: sticky !important;
-      z-index: 4 !important;
+      position: sticky;
       top: 0;
       bottom: ${pxToRem(20)};
     }

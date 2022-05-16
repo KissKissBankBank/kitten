@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Icons: Add the following components:
   - `MicrophoneIconNext`
   - `QuestionBubbleIconNext`
+- Fix: `NavBar`: Modernize component.
+- Feature: `NavBar`: Add the following props:
+  - `align`: defaults to `center`,
+  - `mobileAlign`: defaults to null,
+  - `hasPadding`: defaults to true,
+
 
 ## [10.8.0] - 2022-05-10
 
