@@ -748,7 +748,7 @@ export const Simple = ({
                       size="huge"
                       weight="bold"
                       tag="h1"
-                      className="k-u-margin-bottom-single"
+                      className="k-u-margin-top-none k-u-margin-bottom-single"
                     >
                       Lorem Ipsum
                     </Text>
