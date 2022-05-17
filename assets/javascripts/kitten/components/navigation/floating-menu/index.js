@@ -50,13 +50,13 @@ const StyledFloatingMenu = styled.nav`
       }
 
       &[aria-current] {
-        ${TYPOGRAPHY.fontStyles.bold}
+        ${TYPOGRAPHY.fontStyles.regular}
         border-color: var(--color-primary-500);
       }
 
       &:hover,
       &:active {
-        ${TYPOGRAPHY.fontStyles.bold}
+        ${TYPOGRAPHY.fontStyles.regular}
       }
 
       &:focus-visible {

@@ -64,22 +64,14 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item[aria-current] {
   font-family: Maax,Helvetica,Arial,sans-serif;
-  -webkit-letter-spacing: .01rem;
-  -moz-letter-spacing: .01rem;
-  -ms-letter-spacing: .01rem;
-  letter-spacing: .01rem;
-  font-weight: 600;
+  font-weight: 500;
   border-color: var(--color-primary-500);
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:hover,
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:active {
   font-family: Maax,Helvetica,Arial,sans-serif;
-  -webkit-letter-spacing: .01rem;
-  -moz-letter-spacing: .01rem;
-  -ms-letter-spacing: .01rem;
-  letter-spacing: .01rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:focus-visible {
