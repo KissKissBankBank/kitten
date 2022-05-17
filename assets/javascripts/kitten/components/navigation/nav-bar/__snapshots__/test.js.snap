@@ -12,19 +12,20 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
 .c0 .k-NavBar__nav {
   width: auto;
   margin: 0;
-  background: var(--navBar-background);
+  padding: 0 1.25rem;
+  background: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.c0.k-NavBar--hasPadding .k-NavBar__nav {
-  padding: 0 1.25rem;
-}
-
-.c0.k-NavBar--hasPadding .k-NavBar__nav::before,
-.c0.k-NavBar--hasPadding .k-NavBar__nav::after {
+.c0 .k-NavBar__nav::before,
+.c0 .k-NavBar__nav::after {
   content: '';
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -38,13 +39,16 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5625rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.c0 .k-NavBar__listItem + .k-NavBar__listItem {
+  margin-left: 1.5625rem;
 }
 
 .c0 .k-NavBar__link {
@@ -72,32 +76,28 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  color: var(--navBar-link);
-  border-bottom: 0.25rem solid var(--navBar-border);
+  color: #00f;
+  border-bottom: 0.25rem solid transparent;
   -webkit-transition: color 0.2s,border-color 0.2s;
   transition: color 0.2s,border-color 0.2s;
   cursor: pointer;
 }
 
 .c0 .k-NavBar__link:hover {
-  color: var(--navBar-activeLink);
+  color: #808;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: var(--navBar-activeBorder);
-  color: var(--navBar-activeLink);
+  border-color: rgba(128,0,128,.5);
+  color: #808;
   border-width: 0.25rem;
 }
 
-.c0.k-NavBar--small .k-NavBar__list {
-  gap: 1.875rem;
-}
-
 .c0.k-NavBar--small .k-NavBar__link {
-  height: 3.75rem;
+  height: 4.0625rem;
 }
 
 .c0.k-NavBar--big .k-NavBar__link,
@@ -105,100 +105,33 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   height: 5rem;
 }
 
-.c0.k-NavBar--center .k-NavBar__nav {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c0.k-NavBar--start .k-NavBar__nav {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.c0.k-NavBar--end .k-NavBar__nav {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c0.k-NavBar--space-between .k-NavBar__nav {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media (min-width:640px) {
-  .c0.k-NavBar--hasPadding .k-NavBar__nav {
+@media (min-width:40rem) {
+  .c0 .k-NavBar__nav {
     padding: 0 2.5rem;
   }
 }
 
-@media (min-width:640px) {
-  .c0 .k-NavBar__list {
-    gap: 3.125rem;
+@media (min-width:40rem) {
+  .c0 .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: 3.125rem;
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0 .k-NavBar__link {
     height: 5rem;
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0.k-NavBar--big .k-NavBar__link,
   .c0.k-NavBar--large .k-NavBar__link {
     height: 6.25rem;
   }
 }
 
-@media (max-width:639px) {
-  .c0.k-NavBar--mobile-center .k-NavBar__nav {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .c0.k-NavBar--mobile-start .k-NavBar__nav {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-
-  .c0.k-NavBar--mobile-end .k-NavBar__nav {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-
-  .c0.k-NavBar--mobile-space-between .k-NavBar__nav {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
 <div
-  className="c0 k-NavBar k-NavBar--medium k-NavBar--center customClass k-NavBar--hasPadding"
-  style={
-    Object {
-      "--navBar-activeBorder": "rgba(128,0,128,.5)",
-      "--navBar-activeLink": "#808",
-      "--navBar-background": "#fff",
-      "--navBar-border": "transparent",
-      "--navBar-link": "#00f",
-    }
-  }
+  className="c0 k-NavBar k-NavBar--medium customClass"
 >
   <nav
     className="k-NavBar__nav customNavClass"
@@ -267,19 +200,20 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 .c0 .k-NavBar__nav {
   width: auto;
   margin: 0;
-  background: var(--navBar-background);
+  padding: 0 1.25rem;
+  background: var(--color-primary-100,#f3fbff);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.c0.k-NavBar--hasPadding .k-NavBar__nav {
-  padding: 0 1.25rem;
-}
-
-.c0.k-NavBar--hasPadding .k-NavBar__nav::before,
-.c0.k-NavBar--hasPadding .k-NavBar__nav::after {
+.c0 .k-NavBar__nav::before,
+.c0 .k-NavBar__nav::after {
   content: '';
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -293,13 +227,16 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5625rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.c0 .k-NavBar__listItem + .k-NavBar__listItem {
+  margin-left: 1.5625rem;
 }
 
 .c0 .k-NavBar__link {
@@ -327,32 +264,28 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  color: var(--navBar-link);
-  border-bottom: 0.25rem solid var(--navBar-border);
+  color: var(--color-grey-900,#222);
+  border-bottom: 0.25rem solid transparent;
   -webkit-transition: color 0.2s,border-color 0.2s;
   transition: color 0.2s,border-color 0.2s;
   cursor: pointer;
 }
 
 .c0 .k-NavBar__link:hover {
-  color: var(--navBar-activeLink);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: var(--navBar-activeBorder);
-  color: var(--navBar-activeLink);
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
   border-width: 0.25rem;
 }
 
-.c0.k-NavBar--small .k-NavBar__list {
-  gap: 1.875rem;
-}
-
 .c0.k-NavBar--small .k-NavBar__link {
-  height: 3.75rem;
+  height: 4.0625rem;
 }
 
 .c0.k-NavBar--big .k-NavBar__link,
@@ -360,100 +293,33 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   height: 5rem;
 }
 
-.c0.k-NavBar--center .k-NavBar__nav {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c0.k-NavBar--start .k-NavBar__nav {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.c0.k-NavBar--end .k-NavBar__nav {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c0.k-NavBar--space-between .k-NavBar__nav {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media (min-width:640px) {
-  .c0.k-NavBar--hasPadding .k-NavBar__nav {
+@media (min-width:40rem) {
+  .c0 .k-NavBar__nav {
     padding: 0 2.5rem;
   }
 }
 
-@media (min-width:640px) {
-  .c0 .k-NavBar__list {
-    gap: 3.125rem;
+@media (min-width:40rem) {
+  .c0 .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: 3.125rem;
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0 .k-NavBar__link {
     height: 5rem;
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0.k-NavBar--big .k-NavBar__link,
   .c0.k-NavBar--large .k-NavBar__link {
     height: 6.25rem;
   }
 }
 
-@media (max-width:639px) {
-  .c0.k-NavBar--mobile-center .k-NavBar__nav {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .c0.k-NavBar--mobile-start .k-NavBar__nav {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-
-  .c0.k-NavBar--mobile-end .k-NavBar__nav {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-
-  .c0.k-NavBar--mobile-space-between .k-NavBar__nav {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
 <div
-  className="c0 k-NavBar k-NavBar--large k-NavBar--center customClass k-NavBar--hasPadding"
-  style={
-    Object {
-      "--navBar-activeBorder": "var(--color-primary-500)",
-      "--navBar-activeLink": "var(--color-primary-500)",
-      "--navBar-background": "var(--color-grey-000)",
-      "--navBar-border": "transparent",
-      "--navBar-link": "var(--color-grey-900)",
-    }
-  }
+  className="c0 k-NavBar k-NavBar--large customClass"
 >
   <nav
     className="k-NavBar__nav customNavClass"
@@ -522,19 +388,20 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 .c0 .k-NavBar__nav {
   width: auto;
   margin: 0;
-  background: var(--navBar-background);
+  padding: 0 1.25rem;
+  background: var(--color-primary-100,#f3fbff);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.c0.k-NavBar--hasPadding .k-NavBar__nav {
-  padding: 0 1.25rem;
-}
-
-.c0.k-NavBar--hasPadding .k-NavBar__nav::before,
-.c0.k-NavBar--hasPadding .k-NavBar__nav::after {
+.c0 .k-NavBar__nav::before,
+.c0 .k-NavBar__nav::after {
   content: '';
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -548,13 +415,16 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.5625rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 0;
   padding: 0;
+}
+
+.c0 .k-NavBar__listItem + .k-NavBar__listItem {
+  margin-left: 1.5625rem;
 }
 
 .c0 .k-NavBar__link {
@@ -582,32 +452,28 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   position: relative;
-  color: var(--navBar-link);
-  border-bottom: 0.25rem solid var(--navBar-border);
+  color: var(--color-grey-900,#222);
+  border-bottom: 0.25rem solid transparent;
   -webkit-transition: color 0.2s,border-color 0.2s;
   transition: color 0.2s,border-color 0.2s;
   cursor: pointer;
 }
 
 .c0 .k-NavBar__link:hover {
-  color: var(--navBar-activeLink);
+  color: var(--color-primary-500,#19b4fa);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: var(--navBar-activeBorder);
-  color: var(--navBar-activeLink);
+  border-color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#19b4fa);
   border-width: 0.25rem;
 }
 
-.c0.k-NavBar--small .k-NavBar__list {
-  gap: 1.875rem;
-}
-
 .c0.k-NavBar--small .k-NavBar__link {
-  height: 3.75rem;
+  height: 4.0625rem;
 }
 
 .c0.k-NavBar--big .k-NavBar__link,
@@ -615,100 +481,33 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   height: 5rem;
 }
 
-.c0.k-NavBar--center .k-NavBar__nav {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c0.k-NavBar--start .k-NavBar__nav {
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.c0.k-NavBar--end .k-NavBar__nav {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.c0.k-NavBar--space-between .k-NavBar__nav {
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media (min-width:640px) {
-  .c0.k-NavBar--hasPadding .k-NavBar__nav {
+@media (min-width:40rem) {
+  .c0 .k-NavBar__nav {
     padding: 0 2.5rem;
   }
 }
 
-@media (min-width:640px) {
-  .c0 .k-NavBar__list {
-    gap: 3.125rem;
+@media (min-width:40rem) {
+  .c0 .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: 3.125rem;
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0 .k-NavBar__link {
     height: 5rem;
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0.k-NavBar--big .k-NavBar__link,
   .c0.k-NavBar--large .k-NavBar__link {
     height: 6.25rem;
   }
 }
 
-@media (max-width:639px) {
-  .c0.k-NavBar--mobile-center .k-NavBar__nav {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .c0.k-NavBar--mobile-start .k-NavBar__nav {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-
-  .c0.k-NavBar--mobile-end .k-NavBar__nav {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-
-  .c0.k-NavBar--mobile-space-between .k-NavBar__nav {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
 <div
-  className="c0 k-NavBar k-NavBar--medium k-NavBar--center customClass k-NavBar--hasPadding"
-  style={
-    Object {
-      "--navBar-activeBorder": "var(--color-primary-500)",
-      "--navBar-activeLink": "var(--color-primary-500)",
-      "--navBar-background": "var(--color-grey-000)",
-      "--navBar-border": "transparent",
-      "--navBar-link": "var(--color-grey-900)",
-    }
-  }
+  className="c0 k-NavBar k-NavBar--medium customClass"
 >
   <nav
     className="k-NavBar__nav customNavClass"

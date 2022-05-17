@@ -15,16 +15,10 @@ const StyledFloatingMenu = styled.nav`
   background-color: var(--color-grey-000);
   overflow: hidden;
   min-width: ${pxToRem(185)};
-  border-bottom-left-radius: var(--border-radius-m);
-  border-bottom-right-radius: var(--border-radius-m);
-
-  @media ${mq.desktop} {
-    border-radius: var(--border-radius-m);
-  }
 
   .k-FloatingMenu__list {
     margin: 0;
-    padding: 0 ${pxToRem(10)};
+    padding: 0 ${pxToRem(20)};
     list-style: none;
     display: flex;
     gap: ${pxToRem(2)} ${pxToRem(10)};
@@ -35,7 +29,7 @@ const StyledFloatingMenu = styled.nav`
     .k-FloatingMenu__item {
       box-sizing: border-box;
       height: ${pxToRem(50)};
-      padding-bottom: ${pxToRem(4)};
+      padding-top: ${pxToRem(4)};
       display: flex;
       align-items: center;
       line-height: ${pxToRem(20)};
@@ -48,7 +42,7 @@ const StyledFloatingMenu = styled.nav`
       white-space: nowrap;
 
       border-color: transparent;
-      border-width: ${pxToRem(4)} 0 0;
+      border-width: 0 0 ${pxToRem(4)};
       border-style: solid;
 
       @media (max-width: ${ScreenConfig.XXS.max}px) {
@@ -57,7 +51,7 @@ const StyledFloatingMenu = styled.nav`
 
       &[aria-current] {
         ${TYPOGRAPHY.fontStyles.bold}
-        border-color: var(--color-gray-900);
+        border-color: var(--color-primary-500);
       }
 
       &:hover,
@@ -71,19 +65,35 @@ const StyledFloatingMenu = styled.nav`
     }
   }
 
+  @media ${mq.desktop} {
+    border-radius: none;
+    box-shadow: none;
+
+    .k-FloatingMenu__list {
+      justify-content: flex-start;
+      padding: 0;
+      gap: ${pxToRem(2)} ${pxToRem(30)};
+
+      .k-FloatingMenu__item {
+        height: ${pxToRem(60)};
+      }
+    }
+  }
+
   &:not(.k-FloatingMenu--horizontal) {
     @media ${mq.desktop} {
       box-shadow: var(--box-shadow-s);
+      border-radius: var(--border-radius-m);
       padding: ${pxToRem(10)} 0;
 
       .k-FloatingMenu__list {
-        padding: 0;
         flex-direction: column;
       }
       .k-FloatingMenu__item {
-        padding-bottom: 0;
+        padding-top: 0;
         padding-left: ${pxToRem(16)};
         border-width: 0 0 0 ${pxToRem(4)};
+        height: ${pxToRem(50)};
       }
     }
   }
