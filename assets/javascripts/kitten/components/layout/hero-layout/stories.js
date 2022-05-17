@@ -122,7 +122,7 @@ const StyledAsideCard = styled(FlexWrapper)`
 
 const GlobalStyle = createGlobalStyle`
   .k-HeroLayout__firstAside.story-topAdjusted .k-HeroLayout__sticky__inside {
-    top: ${pxToRem(HEADER_HEIGHT + 115)} !important;
+    top: ${pxToRem(HEADER_HEIGHT + 120)} !important;
   }
 
   .k-HeaderNav--isStuck + * {
