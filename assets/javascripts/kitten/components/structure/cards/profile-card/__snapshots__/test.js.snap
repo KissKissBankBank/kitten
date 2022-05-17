@@ -11,7 +11,6 @@ exports[`<ProfileCard /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-ProfileCard {
-  border: var(--border-width) solid var(--color-grey-300);
   box-shadow: var(--box-shadow-s);
   border-radius: var(--border-radius-m);
   padding: var(--profileCard-padding);
