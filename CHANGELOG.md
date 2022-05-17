@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `align`: defaults to `center`,
   - `mobileAlign`: defaults to null,
   - `hasPadding`: defaults to true,
+- Fix: `ProfileCard`: Remove border style.
 
 
 ## [10.8.0] - 2022-05-10
