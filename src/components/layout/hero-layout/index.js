@@ -32,7 +32,7 @@ var _excluded = ["className", "children"],
     _excluded7 = ["className"],
     _excluded8 = ["children", "className", "sticky"],
     _excluded9 = ["children", "className", "sticky"],
-    _excluded10 = ["children", "className"],
+    _excluded10 = ["children", "className", "bgProps"],
     _excluded11 = ["children", "loading", "loaderComponent", "contentProps"];
 
 var HeroLayout = function HeroLayout(_ref) {
@@ -100,13 +100,9 @@ HeroLayout.Main = function (_ref6) {
       hasTopMenu = _ref6.hasTopMenu,
       children = _ref6.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
-  var TopMenuElement = (0, _getReactElements.getReactElementsByType)({
-    children: children,
-    type: MainTopMenu
-  })[0];
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-HeroLayout__page', className, {
-      'k-HeroLayout__page--hasTopMenu': !!TopMenuElement
+      'k-HeroLayout__page--hasTopMenu': hasTopMenu
     })
   }, props), children);
 };
@@ -161,12 +157,24 @@ HeroLayout.Main.Aside = HeroLayout.Main.LastAside;
 var MainTopMenu = function MainTopMenu(_ref10) {
   var children = _ref10.children,
       className = _ref10.className,
+      bgProps = _ref10.bgProps,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref10, _excluded10);
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, bgProps, {
+    className: (0, _classnames.default)('k-HeroLayout__topMenuBg k-HeroLayout__sticky--both', bgProps == null ? void 0 : bgProps.className)
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-HeroLayout__sticky__insideTop"
+  })), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-HeroLayout__topMenu k-HeroLayout__sticky--both', className)
   }, props), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-HeroLayout__sticky__insideTop"
-  }, children));
+  }, children)));
+};
+
+MainTopMenu.defaultProps = {
+  bgProps: {}
+};
+MainTopMenu.propTypes = {
+  bgProps: _propTypes.default.object
 };
 
 HeroLayout.Main.Content = function (_ref11) {

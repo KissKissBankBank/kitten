@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Icons: Add the following components:
+## [10.9.0] - 2022-05-17
+
+Features:
+
+- `HeroLayout`: Better simple mode.
+- Icons: Add the following components:
   - `MicrophoneIconNext`
   - `QuestionBubbleIconNext`
-- Fix: `ProfileCard`: Remove border style.
-- Fix: `FloatingMenu`: Style updates.
-- Feature: `HeroLayout`: Better simple mode.
+
+Fixes:
+
+- `FloatingMenu`: Style updates.
+- `ProfileCard`: Remove border style.
 
 ## [10.8.0] - 2022-05-10
 
