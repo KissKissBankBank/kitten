@@ -1,14 +1,14 @@
 import React from 'react'
 import { Text } from '../../../typography/text'
 
-export const FieldError = ({ children, ...others }) => {
+export const FieldHelp = ({ children, ...others }) => {
   return (
     <div className="k-u-margin-top-single">
       <Text
         tag="p"
-        color="error"
+        color="var(--color-grey-700)"
         size="micro"
-        weight="regular"
+        weight="light"
         lineHeight="normal"
         className="k-u-margin-none"
         {...others}

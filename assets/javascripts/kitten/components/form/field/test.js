@@ -102,6 +102,30 @@ describe('<Field />', () => {
     })
   })
 
+  describe('with <Field.Input /> in help', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldInputExample
+            id="input"
+            size="medium"
+            label="Label"
+            tooltip="Tooltip"
+            tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
+            placeholder="Placeholder…"
+            help
+            helpMessage="Help!"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with <Field.Password />', () => {
     beforeEach(() => {
       component = renderer
