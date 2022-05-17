@@ -41,6 +41,8 @@ import {
   TwitterIconNext,
   WhatsappIconNext,
   EmbedIconNext,
+  useWindowWidth,
+  ScreenConfig,
 } from 'kitten'
 
 import Footer from 'kitten/karl/pages/footer'
@@ -117,15 +119,37 @@ const StyledAsideCard = styled(FlexWrapper)`
 `
 
 const GlobalStyle = createGlobalStyle`
-  @media ${mq.mobileAndTablet} {
-    .k-HeaderNav--isStuck + * .k-HeroLayout__sticky--both.k-HeroLayout__topMenu,
-    .k-HeaderNav--isStuck + * .k-HeroLayout__sticky--both.k-HeroLayout__firstAside {
-      top: ${pxToRem(HEADER_HEIGHT)} !important;
+  .k-ProfileCard {
+    max-width: ${pxToRem(300)};
+  }
+
+  .k-FloatingMenu {
+    @media ${mq.mobileAndTablet} {
+      margin-inline: ${pxToRem(-20)};
     }
   }
 
-  .k-HeaderNav--isStuck + * .k-HeroLayout__topMenu .k-HeroLayout__sticky__insideTop {
-    top: ${pxToRem(HEADER_HEIGHT)} !important;
+  .k-HeroLayout__firstAside.story-topAdjusted .k-HeroLayout__sticky__inside {
+    top: ${pxToRem(HEADER_HEIGHT + 120)} !important;
+  }
+
+  .k-HeaderNav--isStuck + * {
+    .k-HeroLayout__topMenu,
+    .k-HeroLayout__topMenuBg {
+       .k-HeroLayout__sticky__insideTop {
+        top: ${pxToRem(HEADER_HEIGHT)} !important;
+      }
+    }
+
+    @media ${mq.mobileAndTablet} {
+      .k-HeroLayout__topMenu,
+      .k-HeroLayout__topMenuBg,
+      .k-HeroLayout__firstAside {
+        &.k-HeroLayout__sticky--both {
+          top: ${pxToRem(HEADER_HEIGHT)} !important;
+        }
+      }
+    }
   }
 `
 
@@ -155,6 +179,183 @@ export default {
     primary700: { control: 'color' },
   },
 }
+
+const Hero = ({ bannerUrl, projectTitle, projectSlogan }) => (
+  <HeroLayout.Hero>
+    <HeroLayout.Hero.Image>
+      <img src={bannerUrl} alt="" />
+    </HeroLayout.Hero.Image>
+
+    <HeroLayout.Hero.Block>
+      <a href="#" className="k-u-block">
+        <StyledAvatar
+          src={`/kitten-${9 - Math.floor(Math.random() * 10)}.jpg`}
+          alt="Nom du porteur de projet"
+        />
+      </a>
+    </HeroLayout.Hero.Block>
+
+    <HeroLayout.Hero.Block>
+      <FlexWrapper className="k-u-flex-alignItems-center" gap={30}>
+        <Title noMargin modifier="primary">
+          {projectTitle}
+        </Title>
+        <Text tag="p" size="giant" className="k-u-margin-none">
+          {projectSlogan}
+        </Text>
+        <StyledCounter>
+          <span className="kiss-ProjectPage-hero-number">538</span>
+          <span className="kiss-ProjectPage-hero-text">abonnés</span>
+        </StyledCounter>
+        <FlexWrapper
+          gap={5}
+          className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
+        >
+          <FlexWrapper direction="row" gap={5}>
+            <DropdownMenu
+              menuPosition="center"
+              button={({ open }) => (
+                <Button
+                  active={open}
+                  rounded
+                  fit="content"
+                  as="span"
+                  size="small"
+                >
+                  <AirplaneIconNext />
+                  <span>Partager</span>
+                </Button>
+              )}
+              top="10px"
+            >
+              <DropdownMenu.Button icon={<LinkIconNext />}>
+                Copier le lien
+              </DropdownMenu.Button>
+              <DropdownMenu.Separator />
+              <DropdownMenu.Button icon={<FacebookIconNext />}>
+                Facebook
+              </DropdownMenu.Button>
+              <DropdownMenu.Button icon={<TwitterIconNext />}>
+                Twitter
+              </DropdownMenu.Button>
+              <DropdownMenu.Button icon={<WhatsappIconNext />}>
+                Whatsapp
+              </DropdownMenu.Button>
+
+              <DropdownMenu.Separator />
+              <DropdownMenu.Button icon={<EmbedIconNext />}>
+                Insérer sur son site
+              </DropdownMenu.Button>
+            </DropdownMenu>
+
+            <Button
+              fit="content"
+              size="small"
+              rounded
+              className="k-u-hidden@l-up"
+            >
+              <EnvelopeIconNext />
+              <span>Nous écrire</span>
+            </Button>
+          </FlexWrapper>
+          <FlexWrapper direction="row" gap={5}>
+            <Button fit="content" size="small" rounded>
+              <StarIconNext />
+              <span>Ajouter aux favoris</span>
+            </Button>
+            <Button fit="content" size="small" modifier="helium" rounded>
+              S’abonner
+            </Button>
+          </FlexWrapper>
+        </FlexWrapper>
+      </FlexWrapper>
+    </HeroLayout.Hero.Block>
+  </HeroLayout.Hero>
+)
+
+const Content = ({ isContentLoading }) => (
+  <HeroLayout.Main.Content
+    loading={isContentLoading}
+    loaderComponent={<KissKissLoadingAnimation />}
+  >
+    <p className="k-u-margin-top-none">
+      Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit
+      amet fermentum. Curabitur blandit tempus porttitor. Nullam quis risus eget
+      urna mollis ornare vel eu leo.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi
+      leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus,
+      porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac
+      cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+      sit amet risus. Etiam porta sem malesuada magna mollis euismod. Curabitur
+      blandit tempus porttitor.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam
+      quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus
+      magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at
+      lobortis. Vestibulum id ligula porta felis euismod semper.
+    </p>
+    <p>
+      Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit
+      amet fermentum. Curabitur blandit tempus porttitor. Nullam quis risus eget
+      urna mollis ornare vel eu leo.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi
+      leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus,
+      porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac
+      cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+      sit amet risus. Etiam porta sem malesuada magna mollis euismod. Curabitur
+      blandit tempus porttitor.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam
+      quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus
+      magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at
+      lobortis. Vestibulum id ligula porta felis euismod semper.
+    </p>
+    <p>
+      Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit
+      amet fermentum. Curabitur blandit tempus porttitor. Nullam quis risus eget
+      urna mollis ornare vel eu leo.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi
+      leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus,
+      porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac
+      cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+      sit amet risus. Etiam porta sem malesuada magna mollis euismod. Curabitur
+      blandit tempus porttitor.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam
+      quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus
+      magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at
+      lobortis. Vestibulum id ligula porta felis euismod semper.
+    </p>
+    <p>
+      Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit
+      amet fermentum. Curabitur blandit tempus porttitor. Nullam quis risus eget
+      urna mollis ornare vel eu leo.
+    </p>
+    <p>
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi
+      leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus,
+      porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac
+      cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+      sit amet risus. Etiam porta sem malesuada magna mollis euismod. Curabitur
+      blandit tempus porttitor.
+    </p>
+    <p className="k-u-margin-bottom-none">
+      Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam
+      quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus
+      magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at
+      lobortis. Vestibulum id ligula porta felis euismod semper.
+    </p>
+  </HeroLayout.Main.Content>
+)
 
 export const Default = ({
   primary500,
@@ -192,96 +393,11 @@ export const Default = ({
         '--color-primary-700': primary700,
       }}
     >
-      <HeroLayout.Hero>
-        <HeroLayout.Hero.Image>
-          <img src={bannerUrl} alt="" />
-        </HeroLayout.Hero.Image>
-
-        <HeroLayout.Hero.Block>
-          <a href="#" className="k-u-block">
-            <StyledAvatar
-              src={`/kitten-${9 - Math.floor(Math.random() * 10)}.jpg`}
-              alt="Nom du porteur de projet"
-            />
-          </a>
-        </HeroLayout.Hero.Block>
-
-        <HeroLayout.Hero.Block>
-          <FlexWrapper className="k-u-flex-alignItems-center" gap={30}>
-            <Title noMargin modifier="primary">
-              {projectTitle}
-            </Title>
-            <Text tag="p" size="giant" className="k-u-margin-none">
-              {projectSlogan}
-            </Text>
-            <StyledCounter>
-              <span className="kiss-ProjectPage-hero-number">538</span>
-              <span className="kiss-ProjectPage-hero-text">abonnés</span>
-            </StyledCounter>
-            <FlexWrapper
-              gap={5}
-              className="k-u-flex-direction-row@l-up k-u-flex-direction-column k-u-flex-alignItems-center"
-            >
-              <FlexWrapper direction="row" gap={5}>
-                <DropdownMenu
-                  menuPosition="center"
-                  button={({ open }) => (
-                    <Button
-                      active={open}
-                      rounded
-                      fit="content"
-                      as="span"
-                      size="small"
-                    >
-                      <AirplaneIconNext />
-                      <span>Partager</span>
-                    </Button>
-                  )}
-                  top="10px"
-                >
-                  <DropdownMenu.Button icon={<LinkIconNext />}>
-                    Copier le lien
-                  </DropdownMenu.Button>
-                  <DropdownMenu.Separator />
-                  <DropdownMenu.Button icon={<FacebookIconNext />}>
-                    Facebook
-                  </DropdownMenu.Button>
-                  <DropdownMenu.Button icon={<TwitterIconNext />}>
-                    Twitter
-                  </DropdownMenu.Button>
-                  <DropdownMenu.Button icon={<WhatsappIconNext />}>
-                    Whatsapp
-                  </DropdownMenu.Button>
-
-                  <DropdownMenu.Separator />
-                  <DropdownMenu.Button icon={<EmbedIconNext />}>
-                    Insérer sur son site
-                  </DropdownMenu.Button>
-                </DropdownMenu>
-
-                <Button
-                  fit="content"
-                  size="small"
-                  rounded
-                  className="k-u-hidden@l-up"
-                >
-                  <EnvelopeIconNext />
-                  <span>Nous écrire</span>
-                </Button>
-              </FlexWrapper>
-              <FlexWrapper direction="row" gap={5}>
-                <Button fit="content" size="small" rounded>
-                  <StarIconNext />
-                  <span>Ajouter aux favoris</span>
-                </Button>
-                <Button fit="content" size="small" modifier="helium" rounded>
-                  S’abonner
-                </Button>
-              </FlexWrapper>
-            </FlexWrapper>
-          </FlexWrapper>
-        </HeroLayout.Hero.Block>
-      </HeroLayout.Hero>
+      <Hero
+        projectTitle={projectTitle}
+        projectSlogan={projectSlogan}
+        bannerUrl={bannerUrl}
+      />
 
       <HeroLayout.Promo>
         <Container>
@@ -408,7 +524,7 @@ export const Default = ({
 
       <HeroLayout.Main>
         <HeroLayout.Main.Menu sticky="both">
-          <FloatingMenu style={{ margin: '0 -10px' }}>
+          <FloatingMenu>
             <FloatingMenu.Item href="#">Abonnements</FloatingMenu.Item>
             <FloatingMenu.Item href="#" isActive>
               À propos
@@ -417,6 +533,9 @@ export const Default = ({
             <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
           </FloatingMenu>
         </HeroLayout.Main.Menu>
+
+        <Content isContentLoading={isContentLoading} />
+
         <HeroLayout.Main.Aside sticky="desktop">
           <StyledAsideCard gap={20}>
             <div>
@@ -478,91 +597,6 @@ export const Default = ({
             </div>
           </StyledAsideCard>
         </HeroLayout.Main.Aside>
-        <HeroLayout.Main.Content
-          loading={isContentLoading}
-          loaderComponent={<KissKissLoadingAnimation />}
-        >
-          <p className="k-u-margin-top-none">
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p className="k-u-margin-bottom-none">
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-        </HeroLayout.Main.Content>
       </HeroLayout.Main>
     </HeroLayout>
     <Footer className="k-u-margin-top-quintuple" />
@@ -577,185 +611,149 @@ export const Simple = ({
   projectSlogan,
   bannerUrl,
   ...args
-}) => (
-  <>
-    <GlobalStyle />
-    <HeaderNav
-      id="header_id"
-      quickAccessProps={{
-        href: '#mainContent',
-        text: 'Aller au contenu principal',
-        zIndex: 300,
-      }}
-      size="small"
-      borderStyle="border"
-      zIndexConfig={{
-        header: 102,
-        headerWithOpenMenu: 105,
-      }}
-    >
-      <HeaderNav.Logo href="#">
-        <KissKissBankBankLogo height="25" className="k-u-margin-left-double" />
-      </HeaderNav.Logo>
-    </HeaderNav>
-    <HeroLayout
-      {...args}
-      style={{
-        '--color-primary-500': primary500,
-        '--color-primary-700': primary700,
-      }}
-    >
-      <HeroLayout.Main>
-        <HeroLayout.Main.Image>
-          <img src={bannerUrl} alt="" />
-        </HeroLayout.Main.Image>
-        <HeroLayout.Main.TopMenu>
-          <FloatingMenu style={{ margin: '0 -10px' }} horizontal>
-            <FloatingMenu.Item href="#">Actualités</FloatingMenu.Item>
-            <FloatingMenu.Item href="#" isActive>
-              Mon abonnement
-            </FloatingMenu.Item>
-            <FloatingMenu.Item href="#">À propos</FloatingMenu.Item>
-            <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
-          </FloatingMenu>
-        </HeroLayout.Main.TopMenu>
-        <HeroLayout.Main.FirstAside sticky="desktop">
-          <ProfileCard className="k-u-margin-top-decuple@m-down">
-            <ProfileCard.Avatar
-              imageProps={{
-                alt: '',
-                src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-              }}
-            />
+}) => {
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
 
-            <ProfileCard.Content>
-              <Text
-                size="huge"
-                weight="bold"
-                tag="h1"
-                className="k-u-margin-bottom-single"
+  return (
+    <>
+      <GlobalStyle />
+      <HeaderNav
+        id="header_id"
+        quickAccessProps={{
+          href: '#mainContent',
+          text: 'Aller au contenu principal',
+          zIndex: 300,
+        }}
+        size="small"
+        borderStyle="border"
+        zIndexConfig={{
+          header: 102,
+          headerWithOpenMenu: 105,
+        }}
+      >
+        <HeaderNav.Logo href="#">
+          <KissKissBankBankLogo
+            height="25"
+            className="k-u-margin-left-double"
+          />
+        </HeaderNav.Logo>
+      </HeaderNav>
+      <HeroLayout
+        {...args}
+        style={{
+          '--color-primary-500': primary500,
+          '--color-primary-700': primary700,
+        }}
+      >
+        {windowWidth <= ScreenConfig.M.max && (
+          <Hero
+            projectTitle={projectTitle}
+            projectSlogan={projectSlogan}
+            bannerUrl={bannerUrl}
+          />
+        )}
+
+        <HeroLayout.Main hasTopMenu>
+          {windowWidth >= ScreenConfig.L.min && (
+            <>
+              <HeroLayout.Main.Image>
+                <img src={bannerUrl} alt="" />
+              </HeroLayout.Main.Image>
+              <HeroLayout.Main.FirstAside
+                className="story-topAdjusted"
+                sticky="desktop"
               >
-                Lorem Ipsum
-              </Text>
-              <Text size="small" tag="p" className="k-u-margin-none">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Text>
-              <Text size="small" tag="p" className="k-u-margin-none">
-                -
-              </Text>
-              <Text
-                size="micro"
-                tag="p"
-                className="k-u-margin-none"
-                letterSpacing="10%"
-                transform="uppercase"
-                weight="regular"
-              >
-                530 ABONNÉS
-              </Text>
-            </ProfileCard.Content>
+                <ProfileCard>
+                  <ProfileCard.Avatar
+                    imageProps={{
+                      alt: '',
+                      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+                    }}
+                  />
 
-            <ProfileCard.Action>
-              <Button rounded modifier="helium" size="small" fit="content">
-                <EnvelopeIconNext />
-                Nous écrire
-              </Button>
-              <Button rounded modifier="hydrogen" size="small" fit="content">
-                <AirplaneIconNext />
-                Partager
-              </Button>
-            </ProfileCard.Action>
-          </ProfileCard>
-        </HeroLayout.Main.FirstAside>
+                  <ProfileCard.Content>
+                    <Text
+                      size="huge"
+                      weight="bold"
+                      tag="h1"
+                      className="k-u-margin-top-none k-u-margin-bottom-single"
+                    >
+                      Lorem Ipsum
+                    </Text>
+                    <Text size="small" tag="p" className="k-u-margin-none">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </Text>
+                    <Text size="small" tag="p" className="k-u-margin-none">
+                      -
+                    </Text>
+                    <Text
+                      size="micro"
+                      tag="p"
+                      className="k-u-margin-none"
+                      letterSpacing="10%"
+                      transform="uppercase"
+                      weight="regular"
+                    >
+                      530 ABONNÉS
+                    </Text>
+                  </ProfileCard.Content>
 
-        <HeroLayout.Main.Content
-          loading={isContentLoading}
-          loaderComponent={<KissKissLoadingAnimation />}
-        >
-          <p className="k-u-margin-top-none">
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-          <p>
-            Sed posuere consectetur est at lobortis. Cras mattis consectetur
-            purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam
-            quis risus eget urna mollis ornare vel eu leo.
-          </p>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi
-            leo risus, porta ac consectetur ac, vestibulum at eros. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-            magna mollis euismod. Curabitur blandit tempus porttitor.
-          </p>
-          <p className="k-u-margin-bottom-none">
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Nullam quis risus eget urna mollis ornare vel eu leo. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Sed
-            posuere consectetur est at lobortis. Vestibulum id ligula porta
-            felis euismod semper.
-          </p>
-        </HeroLayout.Main.Content>
-      </HeroLayout.Main>
-    </HeroLayout>
-    <Footer className="k-u-margin-top-quintuple" />
-  </>
-)
+                  <ProfileCard.Action>
+                    <Button
+                      rounded
+                      modifier="helium"
+                      size="small"
+                      fit="content"
+                    >
+                      <EnvelopeIconNext />
+                      Nous écrire
+                    </Button>
+                    <Button
+                      rounded
+                      modifier="hydrogen"
+                      size="small"
+                      fit="content"
+                    >
+                      <AirplaneIconNext />
+                      Partager
+                    </Button>
+                  </ProfileCard.Action>
+                </ProfileCard>
+              </HeroLayout.Main.FirstAside>
+
+              <HeroLayout.Main.TopMenu>
+                <FloatingMenu horizontal>
+                  <FloatingMenu.Item href="#">Abonnements</FloatingMenu.Item>
+                  <FloatingMenu.Item href="#" isActive>
+                    À propos
+                  </FloatingMenu.Item>
+                  <FloatingMenu.Item href="#">Actualités</FloatingMenu.Item>
+                  <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
+                </FloatingMenu>
+              </HeroLayout.Main.TopMenu>
+            </>
+          )}
+
+          {windowWidth <= ScreenConfig.M.max && (
+            <HeroLayout.Main.Menu sticky="both">
+              <FloatingMenu>
+                <FloatingMenu.Item href="#">Abonnements</FloatingMenu.Item>
+                <FloatingMenu.Item href="#" isActive>
+                  À propos
+                </FloatingMenu.Item>
+                <FloatingMenu.Item href="#">Actualités</FloatingMenu.Item>
+                <FloatingMenu.Item href="#">FAQ</FloatingMenu.Item>
+              </FloatingMenu>
+            </HeroLayout.Main.Menu>
+          )}
+
+          <Content isContentLoading={isContentLoading} />
+        </HeroLayout.Main>
+      </HeroLayout>
+      <Footer className="k-u-margin-top-quintuple" />
+    </>
+  )
+}

@@ -14,13 +14,11 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
   background-color: var(--color-grey-000);
   overflow: hidden;
   min-width: 11.5625rem;
-  border-bottom-left-radius: var(--border-radius-m);
-  border-bottom-right-radius: var(--border-radius-m);
 }
 
 .c0 .k-FloatingMenu__list {
   margin: 0;
-  padding: 0 0.625rem;
+  padding: 0 1.25rem;
   list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -40,7 +38,7 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item {
   box-sizing: border-box;
   height: 3.125rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -60,38 +58,24 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
   transition: border-color var(--transition);
   white-space: nowrap;
   border-color: transparent;
-  border-width: 0.25rem 0 0;
+  border-width: 0 0 0.25rem;
   border-style: solid;
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item[aria-current] {
   font-family: Maax,Helvetica,Arial,sans-serif;
-  -webkit-letter-spacing: .01rem;
-  -moz-letter-spacing: .01rem;
-  -ms-letter-spacing: .01rem;
-  letter-spacing: .01rem;
-  font-weight: 600;
-  border-color: var(--color-gray-900);
+  font-weight: 500;
+  border-color: var(--color-primary-500);
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:hover,
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:active {
   font-family: Maax,Helvetica,Arial,sans-serif;
-  -webkit-letter-spacing: .01rem;
-  -moz-letter-spacing: .01rem;
-  -ms-letter-spacing: .01rem;
-  letter-spacing: .01rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:focus-visible {
   outline-style: auto;
-}
-
-@media (min-width:1080px) {
-  .c0 {
-    border-radius: var(--border-radius-m);
-  }
 }
 
 @media (max-width:399px) {
@@ -101,22 +85,43 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 }
 
 @media (min-width:1080px) {
+  .c0 {
+    border-radius: none;
+    box-shadow: none;
+  }
+
+  .c0 .k-FloatingMenu__list {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 0.125rem 1.875rem;
+  }
+
+  .c0 .k-FloatingMenu__list .k-FloatingMenu__item {
+    height: 3.75rem;
+  }
+}
+
+@media (min-width:1080px) {
   .c0:not(.k-FloatingMenu--horizontal) {
     box-shadow: var(--box-shadow-s);
+    border-radius: var(--border-radius-m);
     padding: 0.625rem 0;
   }
 
   .c0:not(.k-FloatingMenu--horizontal) .k-FloatingMenu__list {
-    padding: 0;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 
   .c0:not(.k-FloatingMenu--horizontal) .k-FloatingMenu__item {
-    padding-bottom: 0;
+    padding-top: 0;
     padding-left: 1rem;
     border-width: 0 0 0 0.25rem;
+    height: 3.125rem;
   }
 }
 
