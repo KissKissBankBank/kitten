@@ -12,6 +12,7 @@ const StyledCard = styled.article`
   padding: ${pxToRem(20)};
   border: var(--border);
   border-radius: var(--border-radius-m);
+  background-color: var(--color-grey-000);
   width: 100%;
   box-sizing: border-box;
 

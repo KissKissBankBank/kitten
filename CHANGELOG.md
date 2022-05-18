@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContentCard`: Improve style.
+
 ## [10.9.0] - 2022-05-17
 
 Features:
