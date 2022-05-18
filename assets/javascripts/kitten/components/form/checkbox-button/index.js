@@ -38,7 +38,6 @@ const StyledCheckboxButton = styled.div`
     flex-shrink: 0;
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
-    margin-top: ${pxToRem(1)};
     border-radius: var(--border-radius-s);
 
     background-color: var(--color-grey-000);
