@@ -38,7 +38,7 @@ const StyledCheckboxButton = styled.div`
     flex-shrink: 0;
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
-    margin: 0;
+    margin-top: ${pxToRem(1)};
     border-radius: var(--border-radius-s);
 
     background-color: var(--color-grey-000);
@@ -151,23 +151,23 @@ const StyledCheckboxButton = styled.div`
     }
   }
   &.k-Form-CheckboxButton--small .k-Form-CheckboxButton__label {
-    padding: ${pxToRem(15 - 1)} ${pxToRem(15)};
+    padding: ${pxToRem(9 - 2)} ${pxToRem(15)};
     min-height: ${pxToRem(40)};
   }
 
   &.k-Form-CheckboxButton--medium .k-Form-CheckboxButton__label {
-    padding: ${pxToRem(20 - 1)} ${pxToRem(20)};
+    padding: ${pxToRem(20 - 2)} ${pxToRem(20)};
     min-height: ${pxToRem(60)};
   }
 
   &.k-Form-CheckboxButton--large .k-Form-CheckboxButton__label {
-    padding: ${pxToRem(20 - 1)} ${pxToRem(20)};
+    padding: ${pxToRem(20 - 2)} ${pxToRem(20)};
     min-height: ${pxToRem(60)};
   }
 
   @media ${mq.tabletAndDesktop} {
     &.k-Form-CheckboxButton--large .k-Form-CheckboxButton__label {
-      padding: ${pxToRem(30 - 1)} ${pxToRem(30)};
+      padding: ${pxToRem(30 - 2)} ${pxToRem(30)};
       min-height: ${pxToRem(80)};
     }
   }

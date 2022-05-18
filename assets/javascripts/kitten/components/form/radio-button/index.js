@@ -276,8 +276,8 @@ const StyledRadioButton = styled.div`
       display: flex;
 
       .k-Form-RadioButton__label {
-        padding: ${pxToRem(12 - 2)} ${pxToRem(15)};
-        min-height: 0;
+        padding: ${pxToRem(11 - 2)} ${pxToRem(15)};
+        min-height: ${pxToRem(40)};
       }
     }
 
@@ -293,7 +293,7 @@ const StyledRadioButton = styled.div`
       margin: ${pxToRem(20)} 0;
 
       .k-Form-RadioButton__label::before {
-        margin-top: ${pxToRem(4)};
+        margin-top: ${pxToRem(3)};
       }
 
       .k-Form-RadioButton__labelText {
