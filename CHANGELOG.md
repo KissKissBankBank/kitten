@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Optimized styles on the following components:
+  - `RadioButton`,
+  - `CheckboxButton`.
+
 ## [10.9.0] - 2022-05-17
 
 Features:

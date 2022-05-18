@@ -18,7 +18,7 @@ const StyledCheckboxButton = styled.div`
 
   .k-Form-CheckboxButton__label {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     align-self: flex-start;
     flex-wrap: wrap;
     cursor: pointer;

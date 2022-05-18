@@ -35,7 +35,7 @@ const StyledRadioButton = styled.div`
     flex-shrink: 0;
     width: ${pxToRem(16)};
     height: ${pxToRem(16)};
-    margin: ${pxToRem(4)} ${pxToRem(10)} 0 0;
+    margin-right: ${pxToRem(10)};
 
     content: '';
     background-position: center;
@@ -172,14 +172,11 @@ const StyledRadioButton = styled.div`
 
     .k-Form-RadioButton__label {
       box-sizing: border-box;
-      min-height: ${pxToRem(70)};
+      min-height: ${pxToRem(60)};
       border-radius: var(--border-radius-s);
       border: var(--border);
-      padding: ${pxToRem(26 - 2)} ${pxToRem(15)};
-    }
-
-    .k-Form-RadioButton__label::before {
-      margin-top: ${pxToRem(3)};
+      padding: ${pxToRem(20 - 2)} ${pxToRem(15)};
+      align-items: center;
     }
 
     .k-Form-RadioButton__input:hover:not(:disabled) {
@@ -292,10 +289,6 @@ const StyledRadioButton = styled.div`
     @media (min-width: ${ScreenConfig.S.min}px) {
       margin: ${pxToRem(20)} 0;
 
-      .k-Form-RadioButton__label::before {
-        margin-top: ${pxToRem(3)};
-      }
-
       .k-Form-RadioButton__labelText {
         flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
         line-height: ${pxToRem(22)};
@@ -314,11 +307,11 @@ const StyledRadioButton = styled.div`
       &.k-Form-RadioButton--large {
         .k-Form-RadioButton__label {
           min-height: ${pxToRem(80)};
-          padding: ${pxToRem(30 - 2)} ${pxToRem(15)};
+          padding: ${pxToRem(26 - 2)} ${pxToRem(15)};
         }
 
         .k-Form-RadioButton__label::before {
-          margin: ${pxToRem(2)} ${pxToRem(20)} 0 0;
+          margin-right: ${pxToRem(20)};
           width: ${pxToRem(20)};
           height: ${pxToRem(20)};
         }
