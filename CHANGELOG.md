@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Icons: Add `GoogleIconNext` and `FacebookIconCircleNext` components.
 - Fix: `ContentCard`: Improve style.
 - Fix: `HeroLayout`: Fix automated assignment of hasTopMenu.
 
