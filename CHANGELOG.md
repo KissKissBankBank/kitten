@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `ContentCard`: Improve style.
 - Fix: `HeroLayout`: Fix automated assignment of hasTopMenu.
 
 ## [10.9.0] - 2022-05-17
