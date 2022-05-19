@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Field`: Add `Field.Help` subcomponent.
 - Feature: Icons: Add the following components:
   - `MicrophoneIconNext`
   - `QuestionBubbleIconNext`

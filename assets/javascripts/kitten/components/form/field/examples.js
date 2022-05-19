@@ -156,7 +156,7 @@ export const FieldRadioSetExample = ({
     <Field.RadioSet
       name="radio"
       items={items}
-      error={error} 
+      error={error}
       variant={variant}
     />
   </FieldBase>
