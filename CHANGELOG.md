@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeroLayout`: Fix automated assignment of hasTopMenu.
+
 ## [10.9.0] - 2022-05-17
 
 Features:
