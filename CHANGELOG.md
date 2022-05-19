@@ -5,12 +5,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Field`: Add `Field.Help` subcomponent.
-- Feature: Icons: Add the following components:
+- Fix: Optimized styles on the following components:
+  - `RadioButton`,
+  - `CheckboxButton`.
+- Feature: Icons: Add `GoogleIconNext` and `FacebookIconCircleNext` components.
+- Fix: `ContentCard`: Improve style.
+- Fix: `HeroLayout`: Fix automated assignment of hasTopMenu.
+- Feature: Utilities: Add `.k-u-border-*` utility classes.
+
+## [10.9.0] - 2022-05-17
+
+Features:
+
+- `HeroLayout`: Better simple mode.
+- Icons: Add the following components:
   - `MicrophoneIconNext`
   - `QuestionBubbleIconNext`
-- Fix: `ProfileCard`: Remove border style.
-- Fix: `FloatingMenu`: Style updates.
-- Feature: `HeroLayout`: Better simple mode.
+
+Fixes:
+
+- `FloatingMenu`: Style updates.
+- `ProfileCard`: Remove border style.
 
 ## [10.8.0] - 2022-05-10
 

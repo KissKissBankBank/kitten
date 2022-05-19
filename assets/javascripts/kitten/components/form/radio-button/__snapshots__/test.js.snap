@@ -37,7 +37,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   flex-shrink: 0;
   width: 1rem;
   height: 1rem;
-  margin: 0.25rem 0.625rem 0 0;
+  margin-right: 0.625rem;
   content: '';
   background-position: center;
   background-repeat: no-repeat;
@@ -158,14 +158,14 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 
 .c0.k-Form-RadioButton--orion .k-Form-RadioButton__label {
   box-sizing: border-box;
-  min-height: 4.375rem;
+  min-height: 3.75rem;
   border-radius: var(--border-radius-s);
   border: var(--border);
-  padding: 1.5rem 0.9375rem;
-}
-
-.c0.k-Form-RadioButton--orion .k-Form-RadioButton__label::before {
-  margin-top: 0.1875rem;
+  padding: 1.125rem 0.9375rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0.k-Form-RadioButton--orion .k-Form-RadioButton__input:hover:not(:disabled) + .k-Form-RadioButton__label {
@@ -250,8 +250,8 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton--small .k-Form-RadioButton__label {
-  padding: 0.625rem 0.9375rem;
-  min-height: 0;
+  padding: 0.5625rem 0.9375rem;
+  min-height: 2.5rem;
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label,
@@ -287,10 +287,6 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
     margin: 1.25rem 0;
   }
 
-  .c0.k-Form-RadioButton--orion .k-Form-RadioButton__label::before {
-    margin-top: 0.25rem;
-  }
-
   .c0.k-Form-RadioButton--orion .k-Form-RadioButton__labelText {
     -webkit-flex: 1 0 calc(100% - 1.875rem);
     -ms-flex: 1 0 calc(100% - 1.875rem);
@@ -312,12 +308,12 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label,
   .c0.k-Form-RadioButton--orion.k-Form-RadioButton--large .k-Form-RadioButton__label {
     min-height: 5rem;
-    padding: 1.75rem 0.9375rem;
+    padding: 1.5rem 0.9375rem;
   }
 
   .c0.k-Form-RadioButton--orion.k-Form-RadioButton--big .k-Form-RadioButton__label::before,
   .c0.k-Form-RadioButton--orion.k-Form-RadioButton--large .k-Form-RadioButton__label::before {
-    margin: 0.125rem 1.25rem 0 0;
+    margin-right: 1.25rem;
     width: 1.25rem;
     height: 1.25rem;
   }

@@ -59,11 +59,16 @@ HeroLayout.Promo = ({ className, ...props }) => (
   <div className={classNames('k-HeroLayout__promo', className)} {...props} />
 )
 
-HeroLayout.Main = ({ className, hasTopMenu, children, ...props }) => {
+HeroLayout.Main = ({ className, hasTopMenu = false, children, ...props }) => {
+  const TopMenuElement = getReactElementsByType({
+    children: children,
+    type: MainTopMenu,
+  })[0]
+
   return (
     <div
       className={classNames('k-HeroLayout__page', className, {
-        'k-HeroLayout__page--hasTopMenu': hasTopMenu,
+        'k-HeroLayout__page--hasTopMenu': hasTopMenu || !!TopMenuElement,
       })}
       {...props}
     >
