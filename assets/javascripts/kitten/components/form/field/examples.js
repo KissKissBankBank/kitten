@@ -10,7 +10,6 @@ const FieldBase = ({
   error,
   errorMessage,
   help,
-  helpMessage,
   children,
 }) => (
   <Field>
@@ -25,7 +24,7 @@ const FieldBase = ({
 
     {children}
     {error && <Field.ErrorMessage>{errorMessage}</Field.ErrorMessage>}
-    {help && <Field.HelpMessage>{helpMessage}</Field.HelpMessage>}
+    {help && <Field.Help>{help}</Field.Help>}
   </Field>
 )
 
@@ -39,7 +38,6 @@ export const FieldInputExample = ({
   error,
   errorMessage,
   help,
-  helpMessage,
   limit,
   unit,
   size,
@@ -54,7 +52,6 @@ export const FieldInputExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
-    helpMessage={helpMessage}
   >
     <Field.Input
       id={id}
@@ -64,7 +61,6 @@ export const FieldInputExample = ({
       name="field"
       placeholder={placeholder}
       error={error}
-      help={help}
       noMargin={noMargin}
     />
   </FieldBase>
@@ -80,7 +76,6 @@ export const FieldPasswordExample = ({
   error,
   errorMessage,
   help,
-  helpMessage,
   size,
 }) => (
   <FieldBase
@@ -92,7 +87,6 @@ export const FieldPasswordExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
-    helpMessage={helpMessage}
   >
     <Field.Password
       id={id}
@@ -102,7 +96,6 @@ export const FieldPasswordExample = ({
       hiddenIconLabel="Hide password"
       placeholder={placeholder}
       error={error}
-      help={help}
     />
   </FieldBase>
 )
@@ -117,7 +110,6 @@ export const FieldRadioButtonSetExample = ({
   error,
   errorMessage,
   help,
-  helpMessage,
   variant,
 }) => (
   <FieldBase
@@ -129,13 +121,11 @@ export const FieldRadioButtonSetExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
-    helpMessage={helpMessage}
   >
     <Field.RadioButtonSet
       name="radio"
       items={items}
       error={error}
-      help={help}
       variant={variant}
     />
   </FieldBase>
@@ -151,7 +141,6 @@ export const FieldRadioSetExample = ({
   error,
   errorMessage,
   help,
-  helpMessage,
   variant,
 }) => (
   <FieldBase
@@ -163,13 +152,11 @@ export const FieldRadioSetExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
-    helpMessage={helpMessage}
   >
     <Field.RadioSet
       name="radio"
       items={items}
-      error={error}
-      help={help}
+      error={error} 
       variant={variant}
     />
   </FieldBase>
@@ -185,7 +172,6 @@ export const FieldAutocompleteExample = ({
   error,
   errorMessage,
   help,
-  helpMessage,
   items,
   size,
 }) => (
@@ -198,7 +184,6 @@ export const FieldAutocompleteExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
-    helpMessage={helpMessage}
   >
     <Field.Autocomplete
       id={id}
@@ -206,7 +191,6 @@ export const FieldAutocompleteExample = ({
       name="field"
       placeholder={placeholder}
       error={error}
-      help={help}
       items={items}
     />
   </FieldBase>

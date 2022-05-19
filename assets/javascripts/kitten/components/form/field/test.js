@@ -114,8 +114,7 @@ describe('<Field />', () => {
             tooltipId="tooltip"
             tooltipProps={{ actionLabel: 'Learn more' }}
             placeholder="Placeholder…"
-            help
-            helpMessage="Help!"
+            help="Help!"
           />,
         )
         .toJSON()

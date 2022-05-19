@@ -16,7 +16,7 @@ export class Field extends Component {
   static RadioButtonSet = FieldRadioButtonSet
   static Checkbox = FieldCheckbox
   static ErrorMessage = FieldError
-  static HelpMessage = FieldHelp
+  static Help = FieldHelp
   static Password = FieldPassword
   static Autocomplete = FieldAutocomplete
 
