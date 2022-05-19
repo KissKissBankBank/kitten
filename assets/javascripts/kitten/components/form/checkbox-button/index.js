@@ -18,7 +18,7 @@ const StyledCheckboxButton = styled.div`
 
   .k-Form-CheckboxButton__label {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     align-self: flex-start;
     flex-wrap: wrap;
     cursor: pointer;
@@ -38,7 +38,6 @@ const StyledCheckboxButton = styled.div`
     flex-shrink: 0;
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
-    margin: 0;
     border-radius: var(--border-radius-s);
 
     background-color: var(--color-grey-000);
@@ -151,7 +150,7 @@ const StyledCheckboxButton = styled.div`
     }
   }
   &.k-Form-CheckboxButton--small .k-Form-CheckboxButton__label {
-    padding: ${pxToRem(15 - 1)} ${pxToRem(15)};
+    padding: ${pxToRem(10 - 1)} ${pxToRem(15)};
     min-height: ${pxToRem(40)};
   }
 

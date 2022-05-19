@@ -2,7 +2,7 @@
 
 exports[`<CheckboxButton /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL iXBShQ k-Form-CheckboxButton k-Form-CheckboxButton--medium"
+  className="sc-bdvvtL fohtuw k-Form-CheckboxButton k-Form-CheckboxButton--medium"
 >
   <input
     className="k-Form-CheckboxButton__input"
@@ -26,7 +26,7 @@ exports[`<CheckboxButton /> default matches with snapshot 1`] = `
 
 exports[`<CheckboxButton /> whith label and children props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL iXBShQ k-Form-CheckboxButton k-Form-CheckboxButton--medium"
+  className="sc-bdvvtL fohtuw k-Form-CheckboxButton k-Form-CheckboxButton--medium"
 >
   <input
     className="k-Form-CheckboxButton__input"
@@ -55,7 +55,7 @@ exports[`<CheckboxButton /> whith label and children props matches with snapshot
 
 exports[`<CheckboxButton /> with label prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL iXBShQ k-Form-CheckboxButton k-Form-CheckboxButton--medium"
+  className="sc-bdvvtL fohtuw k-Form-CheckboxButton k-Form-CheckboxButton--medium"
 >
   <input
     className="k-Form-CheckboxButton__input"

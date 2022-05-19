@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Optimized styles on the following components:
+  - `RadioButton`,
+  - `CheckboxButton`.
 - Feature: Icons: Add `GoogleIconNext` and `FacebookIconCircleNext` components.
 - Fix: `ContentCard`: Improve style.
 - Fix: `HeroLayout`: Fix automated assignment of hasTopMenu.
