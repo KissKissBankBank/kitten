@@ -97,12 +97,17 @@ HeroLayout.Promo = function (_ref5) {
 
 HeroLayout.Main = function (_ref6) {
   var className = _ref6.className,
-      hasTopMenu = _ref6.hasTopMenu,
+      _ref6$hasTopMenu = _ref6.hasTopMenu,
+      hasTopMenu = _ref6$hasTopMenu === void 0 ? false : _ref6$hasTopMenu,
       children = _ref6.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
+  var TopMenuElement = (0, _getReactElements.getReactElementsByType)({
+    children: children,
+    type: MainTopMenu
+  })[0];
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-HeroLayout__page', className, {
-      'k-HeroLayout__page--hasTopMenu': hasTopMenu
+      'k-HeroLayout__page--hasTopMenu': hasTopMenu || !!TopMenuElement
     })
   }, props), children);
 };
