@@ -12,6 +12,7 @@ Features:
   - Utilities: Add `.k-u-border-*` utility classes.
 
 Fixes:
+
   - Optimized styles on the following components:
     - `RadioButton`,
     - `CheckboxButton`.
