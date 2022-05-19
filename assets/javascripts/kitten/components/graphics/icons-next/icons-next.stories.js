@@ -18,7 +18,7 @@ import {
   EnvelopeIconNext,
   EyeIconNext,
   FacebookIconNext,
-  FacebookIconColorNext,
+  FacebookIconCircleNext,
   FlashIconNext,
   FilterIconNext,
   GiftIcon,
@@ -353,7 +353,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <GoogleIconNext />
         </IconContainer>
         <IconContainer>
-          <FacebookIconColorNext />
+          <FacebookIconCircleNext />
         </IconContainer>
       </Group>
     </Container>

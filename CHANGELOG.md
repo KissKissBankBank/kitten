@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Icons`: Add `GoogleIconNext` and `FacebookIconColorNext` components.
+- Feature: `Icons`: Add `GoogleIconNext` and `FacebookIconCircleNext` components.
 
 ## [10.9.0] - 2022-05-17
 
