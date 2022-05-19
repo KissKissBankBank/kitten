@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `AlertBox`: Improve `IconBadge` style.
+
 ## [10.10.0] - 2022-05-19
 
 Features:
