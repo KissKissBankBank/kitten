@@ -7,22 +7,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `Field`: Add `Field.Help` subcomponent with `hiddenOnBlur` prop.
 - Fix: `AlertBox`: Improve `IconBadge` style.
 - Feature: `ContentCard`: Add `box-shadow` variable.
-- Fix `MessagesMenu`: Set width on `<button/>`.
+- Fix `MessagesMenu`: Set width on items.
 
 ## [10.10.0] - 2022-05-19
 
 Features:
 
-  - Icons: Add `GoogleIconNext` and `FacebookIconCircleNext` components.
-  - Utilities: Add `.k-u-border-*` utility classes.
+- Icons: Add `GoogleIconNext` and `FacebookIconCircleNext` components.
+- Utilities: Add `.k-u-border-*` utility classes.
 
 Fixes:
 
-  - Optimized styles on the following components:
-    - `RadioButton`,
-    - `CheckboxButton`.
-  - `ContentCard`: Improve style.
-  - `HeroLayout`: Fix automated assignment of hasTopMenu.
+- Optimized styles on the following components:
+  - `RadioButton`,
+  - `CheckboxButton`.
+- `ContentCard`: Improve style.
+- `HeroLayout`: Fix automated assignment of hasTopMenu.
 
 ## [10.9.0] - 2022-05-17
 
