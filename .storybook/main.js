@@ -3,6 +3,7 @@ const kittenPaths = require('../src/config/paths')
 
 module.exports = {
   core: {
+    disableTelemetry: true, // Piss off, Storybook https://storybook.js.org/docs/react/configure/telemetry
     builder: 'webpack5',
   },
   webpackFinal: async config => {
