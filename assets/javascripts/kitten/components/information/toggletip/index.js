@@ -299,8 +299,8 @@ export const Toggletip = ({
         aria-label={actionLabel}
         className="k-u-reset-button k-Toggletip__action"
         style={{
-          '--toggletipAction-color': actionProps.color || null,
-          ...actionProps.style,
+          '--toggletipAction-color': actionProps?.color || null,
+          ...actionProps?.style,
         }}
       >
         {!!targetElement && React.isValidElement(targetElement) ? (
@@ -349,7 +349,6 @@ export const Toggletip = ({
 
 Toggletip.defaultProps = {
   modifier: 'info',
-  actionProps: {},
   bubbleProps: {},
   targetElement: null,
   iconHasBorder: true,
