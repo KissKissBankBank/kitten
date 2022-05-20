@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `ContentCard`: Add `box-shadow` variable.
+
 ## [10.10.0] - 2022-05-19
 
 Features:
