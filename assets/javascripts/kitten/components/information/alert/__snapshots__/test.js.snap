@@ -241,6 +241,11 @@ exports[`<Alert /> should matches with snapshot with success status prop 1`] = `
     <svg
       fill="var(--color-grey-900)"
       height="9"
+      style={
+        Object {
+          "marginTop": 1,
+        }
+      }
       viewBox="0 0 11 9"
       width="11"
       xmlns="http://www.w3.org/2000/svg"
