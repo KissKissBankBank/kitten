@@ -10,7 +10,7 @@ import { Title } from '../../../typography/title'
 
 const StyledCard = styled.article`
   padding: ${pxToRem(20)};
-  border: var(--border);
+  box-shadow: var(--box-shadow-m);
   border-radius: var(--border-radius-m);
   background-color: var(--color-grey-000);
   width: 100%;
