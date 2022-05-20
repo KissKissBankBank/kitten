@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -37,6 +37,7 @@ const StyledMessagesMenu = styled.ul`
 
   .k-MessagesMenu__message__button {
     display: flex;
+    width: 100%;
     gap: ${pxToRem(10)};
     align-items: center;
     height: ${pxToRem(55)};
