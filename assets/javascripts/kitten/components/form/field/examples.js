@@ -9,6 +9,7 @@ const FieldBase = ({
   id,
   error,
   errorMessage,
+  help,
   children,
 }) => (
   <Field>
@@ -23,6 +24,7 @@ const FieldBase = ({
 
     {children}
     {error && <Field.ErrorMessage>{errorMessage}</Field.ErrorMessage>}
+    {help && <Field.Help>{help}</Field.Help>}
   </Field>
 )
 
@@ -35,6 +37,7 @@ export const FieldInputExample = ({
   placeholder,
   error,
   errorMessage,
+  help,
   limit,
   unit,
   size,
@@ -48,6 +51,7 @@ export const FieldInputExample = ({
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
+    help={help}
   >
     <Field.Input
       id={id}
@@ -71,6 +75,7 @@ export const FieldPasswordExample = ({
   placeholder,
   error,
   errorMessage,
+  help,
   size,
 }) => (
   <FieldBase
@@ -81,6 +86,7 @@ export const FieldPasswordExample = ({
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
+    help={help}
   >
     <Field.Password
       id={id}
@@ -103,6 +109,7 @@ export const FieldRadioButtonSetExample = ({
   items,
   error,
   errorMessage,
+  help,
   variant,
 }) => (
   <FieldBase
@@ -113,6 +120,7 @@ export const FieldRadioButtonSetExample = ({
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
+    help={help}
   >
     <Field.RadioButtonSet
       name="radio"
@@ -132,6 +140,7 @@ export const FieldRadioSetExample = ({
   items,
   error,
   errorMessage,
+  help,
   variant,
 }) => (
   <FieldBase
@@ -142,6 +151,7 @@ export const FieldRadioSetExample = ({
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
+    help={help}
   >
     <Field.RadioSet
       name="radio"
@@ -161,6 +171,7 @@ export const FieldAutocompleteExample = ({
   placeholder,
   error,
   errorMessage,
+  help,
   items,
   size,
 }) => (
@@ -172,6 +183,7 @@ export const FieldAutocompleteExample = ({
     tooltipId={tooltipId}
     error={error}
     errorMessage={errorMessage}
+    help={help}
   >
     <Field.Autocomplete
       id={id}
