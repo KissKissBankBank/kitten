@@ -243,7 +243,7 @@ exports[`<Alert /> should matches with snapshot with success status prop 1`] = `
       height="9"
       style={
         Object {
-          "marginTop": "1px",
+          "marginTop": 1,
         }
       }
       viewBox="0 0 11 9"
