@@ -2,7 +2,7 @@
 
 exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
 <ul
-  className="sc-bdvvtL ixkPTq k-MessagesMenu"
+  className="sc-bdvvtL NKIbJ k-MessagesMenu"
 >
   <li
     className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
