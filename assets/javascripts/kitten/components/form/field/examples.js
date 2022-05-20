@@ -10,6 +10,7 @@ const FieldBase = ({
   error,
   errorMessage,
   help,
+  helpHiddenOnBlur,
   children,
 }) => (
   <Field>
@@ -24,7 +25,7 @@ const FieldBase = ({
 
     {children}
     {error && <Field.ErrorMessage>{errorMessage}</Field.ErrorMessage>}
-    {help && <Field.Help>{help}</Field.Help>}
+    {help && <Field.Help hiddenOnBlur={helpHiddenOnBlur}>{help}</Field.Help>}
   </Field>
 )
 
@@ -38,6 +39,7 @@ export const FieldInputExample = ({
   error,
   errorMessage,
   help,
+  helpHiddenOnBlur,
   limit,
   unit,
   size,
@@ -52,6 +54,7 @@ export const FieldInputExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
+    helpHiddenOnBlur={helpHiddenOnBlur}
   >
     <Field.Input
       id={id}
@@ -76,6 +79,7 @@ export const FieldPasswordExample = ({
   error,
   errorMessage,
   help,
+  helpHiddenOnBlur,
   size,
 }) => (
   <FieldBase
@@ -87,6 +91,7 @@ export const FieldPasswordExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
+    helpHiddenOnBlur={helpHiddenOnBlur}
   >
     <Field.Password
       id={id}
@@ -110,6 +115,7 @@ export const FieldRadioButtonSetExample = ({
   error,
   errorMessage,
   help,
+  helpHiddenOnBlur,
   variant,
 }) => (
   <FieldBase
@@ -121,6 +127,7 @@ export const FieldRadioButtonSetExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
+    helpHiddenOnBlur={helpHiddenOnBlur}
   >
     <Field.RadioButtonSet
       name="radio"
@@ -141,6 +148,7 @@ export const FieldRadioSetExample = ({
   error,
   errorMessage,
   help,
+  helpHiddenOnBlur,
   variant,
 }) => (
   <FieldBase
@@ -152,6 +160,7 @@ export const FieldRadioSetExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
+    helpHiddenOnBlur={helpHiddenOnBlur}
   >
     <Field.RadioSet
       name="radio"
@@ -172,6 +181,7 @@ export const FieldAutocompleteExample = ({
   error,
   errorMessage,
   help,
+  helpHiddenOnBlur,
   items,
   size,
 }) => (
@@ -184,6 +194,7 @@ export const FieldAutocompleteExample = ({
     error={error}
     errorMessage={errorMessage}
     help={help}
+    helpHiddenOnBlur={helpHiddenOnBlur}
   >
     <Field.Autocomplete
       id={id}

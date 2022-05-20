@@ -55,6 +55,7 @@ WithInput.args = {
   error: false,
   errorMessage: 'Error message…',
   help: 'Help message…',
+  helpHiddenOnBlur: false,
   limit: undefined,
   unit: undefined,
   noMargin: false,
@@ -73,6 +74,7 @@ WithInput.argTypes = {
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
   help: { control: 'text' },
+  helpHiddenOnBlur: { control: 'boolean' },
   limit: { control: 'number' },
   unit: { control: 'text' },
   noMargin: { control: 'boolean' },
@@ -91,6 +93,8 @@ WithPassword.args = {
   placeholder: 'Placeholder…',
   error: false,
   errorMessage: 'Error message…',
+  help: 'Help message…',
+  helpHiddenOnBlur: false,
 }
 WithPassword.argTypes = {
   id: { control: 'text' },
@@ -105,6 +109,8 @@ WithPassword.argTypes = {
   placeholder: { control: 'text' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
+  help: { control: 'text' },
+  helpHiddenOnBlur: { control: 'boolean' },
 }
 
 export const WithRadioButtons = args => {
@@ -134,6 +140,8 @@ WithRadioButtons.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
+  help: 'Help message…',
+  helpHiddenOnBlur: false,
 }
 WithRadioButtons.argTypes = {
   id: { control: 'text' },
@@ -148,6 +156,8 @@ WithRadioButtons.argTypes = {
   items: { control: 'object' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
+  help: { control: 'text' },
+  helpHiddenOnBlur: { control: 'boolean' },
 }
 
 export const WithRadio = args => {
@@ -176,6 +186,8 @@ WithRadio.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
+  help: 'Help message…',
+  helpHiddenOnBlur: false,
 }
 WithRadio.argTypes = {
   id: { control: 'text' },
@@ -186,6 +198,8 @@ WithRadio.argTypes = {
   items: { control: 'object' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
+  help: { control: 'text' },
+  helpHiddenOnBlur: { control: 'boolean' },
 }
 
 export const WithAutocomplete = args => {
@@ -213,6 +227,8 @@ WithAutocomplete.args = {
   ],
   error: false,
   errorMessage: 'Error message…',
+  help: 'Help message…',
+  helpHiddenOnBlur: false,
 }
 WithAutocomplete.argTypes = {
   id: { control: 'text' },
@@ -228,4 +244,6 @@ WithAutocomplete.argTypes = {
   items: { control: 'object' },
   error: { control: 'boolean' },
   errorMessage: { control: 'text' },
+  help: { control: 'text' },
+  helpHiddenOnBlur: { control: 'boolean' },
 }
