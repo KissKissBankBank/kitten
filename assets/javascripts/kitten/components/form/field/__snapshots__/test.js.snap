@@ -3,7 +3,7 @@
 exports[`<Field /> with <Field.Autocomplete /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -27,7 +27,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-u-margin-top-single"
+    className="k-u-margin-top-single k-Field__control"
   >
     <div
       className="sc-bqiRlB jUdxlI k-Form-Autocomplete"
@@ -57,7 +57,7 @@ Array [
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -149,7 +149,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-u-margin-top-single"
+    className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
@@ -159,22 +159,18 @@ Array [
       placeholder="Placeholder…"
     />
   </div>,
-  <div
-    className="k-u-margin-top-single"
+  <p
+    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-Field__error k-u-margin-none k-u-margin-top-single"
   >
-    <p
-      className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-u-margin-none"
-    >
-      Error!
-    </p>
-  </div>,
+    Error!
+  </p>,
 ]
 `;
 
 exports[`<Field /> with <Field.Input /> in help matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -266,7 +262,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-u-margin-top-single"
+    className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium"
@@ -276,22 +272,23 @@ Array [
       placeholder="Placeholder…"
     />
   </div>,
-  <div
-    className="k-u-margin-top-single"
+  <p
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-Field__help k-u-margin-none k-u-margin-top-single"
+    style={
+      Object {
+        "color": "var(--color-grey-700)",
+      }
+    }
   >
-    <p
-      className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
-    >
-      Help!
-    </p>
-  </div>,
+    Help!
+  </p>,
 ]
 `;
 
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -383,7 +380,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-u-margin-top-single"
+    className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium"
@@ -399,7 +396,7 @@ Array [
 exports[`<Field /> with <Field.Input limit /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -491,7 +488,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-u-margin-top-single"
+    className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <div
       className="sc-gKclnd iZxmye k-Form-TextInputWithLimit"
@@ -518,7 +515,7 @@ Array [
 exports[`<Field /> with <Field.Input unit /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -610,7 +607,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-u-margin-top-single"
+    className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <div
       className="sc-iCfMLu dsgXNH k-Form-TextInputWithUnit"
@@ -636,7 +633,7 @@ Array [
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -728,7 +725,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-u-margin-top-single"
+    className="k-u-margin-top-single k-Field__control"
   >
     <div
       className="sc-crHmcD lfvliB k-Form-PasswordInput"
@@ -767,22 +764,18 @@ Array [
       </button>
     </div>
   </div>,
-  <div
-    className="k-u-margin-top-single"
+  <p
+    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-Field__error k-u-margin-none k-u-margin-top-single"
   >
-    <p
-      className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-u-margin-none"
-    >
-      Error!
-    </p>
-  </div>,
+    Error!
+  </p>,
 ]
 `;
 
 exports[`<Field /> with <Field.Password /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -874,7 +867,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-u-margin-top-single"
+    className="k-u-margin-top-single k-Field__control"
   >
     <div
       className="sc-crHmcD lfvliB k-Form-PasswordInput"
@@ -919,7 +912,7 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -943,7 +936,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-u-margin-top-single"
+    className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
       className="sc-kDTinF cpxjqd k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
@@ -1025,7 +1018,7 @@ Array [
 exports[`<Field /> with <Field.RadioSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="k-u-margin-bottom-single"
+    className="k-Field__label k-u-margin-bottom-single"
   >
     <div
       className="sc-hKwDye kYrfwi k-Line"
@@ -1049,7 +1042,7 @@ Array [
     </div>
   </div>,
   <div
-    className="k-u-margin-top-single"
+    className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
       className="sc-pVTFL jPxVOQ k-Form-RadioSet"

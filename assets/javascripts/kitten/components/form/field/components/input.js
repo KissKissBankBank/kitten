@@ -18,7 +18,7 @@ export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
 
   return (
     <div
-      className={classNames('k-FieldInput', className, {
+      className={classNames('k-FieldInput', 'k-Field__control', className, {
         'k-u-margin-top-single': !noMargin,
       })}
     >

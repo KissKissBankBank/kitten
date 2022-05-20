@@ -1,20 +1,23 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Text } from '../../../typography/text'
 
-export const FieldError = ({ children, ...others }) => {
+export const FieldError = ({ children, className, ...others }) => {
   return (
-    <div className="k-u-margin-top-single">
-      <Text
-        tag="p"
-        color="error"
-        size="micro"
-        weight="regular"
-        lineHeight="normal"
-        className="k-u-margin-none"
-        {...others}
-      >
-        {children}
-      </Text>
-    </div>
+    <Text
+      tag="p"
+      color="error"
+      size="micro"
+      weight="regular"
+      lineHeight="normal"
+      className={classNames(
+        className,
+        'k-Field__error',
+        'k-u-margin-none k-u-margin-top-single',
+      )}
+      {...others}
+    >
+      {children}
+    </Text>
   )
 }

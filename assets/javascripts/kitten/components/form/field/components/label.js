@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { Label } from '../../../form/label'
 import { Toggletip } from '../../../information/toggletip'
 import { Line } from '../../../structure/line'
@@ -14,11 +15,19 @@ export class FieldLabel extends Component {
       labelProps,
       link,
       tooltipLabel,
+      className,
       ...others
     } = this.props
 
     return (
-      <div className="k-u-margin-bottom-single" {...others}>
+      <div
+        className={classNames(
+          className,
+          'k-Field__label',
+          'k-u-margin-bottom-single',
+        )}
+        {...others}
+      >
         <Line style={{ lineHeight: 1 }}>
           <Line.Item>
             <Label {...labelProps}>{children}</Label>

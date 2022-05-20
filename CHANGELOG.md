@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Field`: Add `Field.Help` subcomponent.
+- Feature: `Field`: Add `Field.Help` subcomponent with `hiddenOnBlur` prop.
 - Fix: `AlertBox`: Improve `IconBadge` style.
 - Feature: `ContentCard`: Add `box-shadow` variable.
 

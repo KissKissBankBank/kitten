@@ -6,7 +6,7 @@ Array [
     className="k-u-margin-bottom-triple"
   >
     <div
-      className="k-u-margin-bottom-single"
+      className="k-Field__label k-u-margin-bottom-single"
     >
       <div
         className="sc-eCImPb dZlDpq k-Line"
@@ -30,7 +30,7 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput sc-bdvvtL fUNvYp k-u-margin-top-single"
+      className="k-FieldInput k-Field__control sc-bdvvtL fUNvYp k-u-margin-top-single"
     >
       <input
         autoComplete="cc-number"
@@ -54,7 +54,7 @@ Array [
     className="k-u-margin-bottom-triple"
   >
     <div
-      className="k-u-margin-bottom-single"
+      className="k-Field__label k-u-margin-bottom-single"
     >
       <div
         className="sc-eCImPb dZlDpq k-Line"
@@ -78,7 +78,7 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput k-u-margin-top-single"
+      className="k-FieldInput k-Field__control k-u-margin-top-single"
     >
       <input
         autoComplete="cc-exp"
@@ -107,7 +107,7 @@ Array [
     className="k-u-margin-bottom-triple"
   >
     <div
-      className="k-u-margin-bottom-single"
+      className="k-Field__label k-u-margin-bottom-single"
     >
       <div
         className="sc-eCImPb dZlDpq k-Line"
@@ -131,7 +131,7 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput k-u-margin-top-single"
+      className="k-FieldInput k-Field__control k-u-margin-top-single"
     >
       <input
         autoComplete="cc-csc"
