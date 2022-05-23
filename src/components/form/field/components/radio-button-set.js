@@ -11,7 +11,7 @@ var _radioButtonSet = require("../../../form/radio-button-set");
 
 var FieldRadioButtonSet = function FieldRadioButtonSet(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-u-margin-top-single"
+    className: "k-u-margin-top-single k-Field__control"
   }, /*#__PURE__*/_react.default.createElement(_radioButtonSet.RadioButtonSet, props));
 };
 

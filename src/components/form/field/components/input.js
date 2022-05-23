@@ -40,7 +40,7 @@ var FieldInput = function FieldInput(_ref) {
   }
 
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: (0, _classnames.default)('k-FieldInput', className, {
+    className: (0, _classnames.default)('k-FieldInput', 'k-Field__control', className, {
       'k-u-margin-top-single': !noMargin
     })
   }, /*#__PURE__*/_react.default.createElement(Input, (0, _extends2.default)({

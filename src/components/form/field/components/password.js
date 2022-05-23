@@ -11,7 +11,7 @@ var _passwordInput = require("../../../form/input/password-input");
 
 var FieldPassword = function FieldPassword(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-u-margin-top-single"
+    className: "k-u-margin-top-single k-Field__control"
   }, /*#__PURE__*/_react.default.createElement(_passwordInput.PasswordInput, props));
 };
 

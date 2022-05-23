@@ -17,6 +17,8 @@ var FieldBase = function FieldBase(_ref) {
       id = _ref.id,
       error = _ref.error,
       errorMessage = _ref.errorMessage,
+      help = _ref.help,
+      helpHiddenOnBlur = _ref.helpHiddenOnBlur,
       children = _ref.children;
   return /*#__PURE__*/_react.default.createElement(_.Field, null, /*#__PURE__*/_react.default.createElement(_.Field.Label, {
     labelProps: {
@@ -25,7 +27,9 @@ var FieldBase = function FieldBase(_ref) {
     tooltip: tooltip,
     tooltipProps: tooltipProps,
     tooltipId: tooltipId
-  }, label), children, error && /*#__PURE__*/_react.default.createElement(_.Field.ErrorMessage, null, errorMessage));
+  }, label), children, error && /*#__PURE__*/_react.default.createElement(_.Field.ErrorMessage, null, errorMessage), help && /*#__PURE__*/_react.default.createElement(_.Field.Help, {
+    hiddenOnBlur: helpHiddenOnBlur
+  }, help));
 };
 
 var FieldInputExample = function FieldInputExample(_ref2) {
@@ -37,6 +41,8 @@ var FieldInputExample = function FieldInputExample(_ref2) {
       placeholder = _ref2.placeholder,
       error = _ref2.error,
       errorMessage = _ref2.errorMessage,
+      help = _ref2.help,
+      helpHiddenOnBlur = _ref2.helpHiddenOnBlur,
       limit = _ref2.limit,
       unit = _ref2.unit,
       size = _ref2.size,
@@ -48,7 +54,9 @@ var FieldInputExample = function FieldInputExample(_ref2) {
     tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
-    errorMessage: errorMessage
+    errorMessage: errorMessage,
+    help: help,
+    helpHiddenOnBlur: helpHiddenOnBlur
   }, /*#__PURE__*/_react.default.createElement(_.Field.Input, {
     id: id,
     size: size,
@@ -72,6 +80,8 @@ var FieldPasswordExample = function FieldPasswordExample(_ref3) {
       placeholder = _ref3.placeholder,
       error = _ref3.error,
       errorMessage = _ref3.errorMessage,
+      help = _ref3.help,
+      helpHiddenOnBlur = _ref3.helpHiddenOnBlur,
       size = _ref3.size;
   return /*#__PURE__*/_react.default.createElement(FieldBase, {
     id: id,
@@ -80,7 +90,9 @@ var FieldPasswordExample = function FieldPasswordExample(_ref3) {
     tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
-    errorMessage: errorMessage
+    errorMessage: errorMessage,
+    help: help,
+    helpHiddenOnBlur: helpHiddenOnBlur
   }, /*#__PURE__*/_react.default.createElement(_.Field.Password, {
     id: id,
     size: size,
@@ -103,6 +115,8 @@ var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
       items = _ref4.items,
       error = _ref4.error,
       errorMessage = _ref4.errorMessage,
+      help = _ref4.help,
+      helpHiddenOnBlur = _ref4.helpHiddenOnBlur,
       variant = _ref4.variant;
   return /*#__PURE__*/_react.default.createElement(FieldBase, {
     id: id,
@@ -111,7 +125,9 @@ var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
     tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
-    errorMessage: errorMessage
+    errorMessage: errorMessage,
+    help: help,
+    helpHiddenOnBlur: helpHiddenOnBlur
   }, /*#__PURE__*/_react.default.createElement(_.Field.RadioButtonSet, {
     name: "radio",
     items: items,
@@ -131,6 +147,8 @@ var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
       items = _ref5.items,
       error = _ref5.error,
       errorMessage = _ref5.errorMessage,
+      help = _ref5.help,
+      helpHiddenOnBlur = _ref5.helpHiddenOnBlur,
       variant = _ref5.variant;
   return /*#__PURE__*/_react.default.createElement(FieldBase, {
     id: id,
@@ -139,7 +157,9 @@ var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
     tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
-    errorMessage: errorMessage
+    errorMessage: errorMessage,
+    help: help,
+    helpHiddenOnBlur: helpHiddenOnBlur
   }, /*#__PURE__*/_react.default.createElement(_.Field.RadioSet, {
     name: "radio",
     items: items,
@@ -159,6 +179,8 @@ var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
       placeholder = _ref6.placeholder,
       error = _ref6.error,
       errorMessage = _ref6.errorMessage,
+      help = _ref6.help,
+      helpHiddenOnBlur = _ref6.helpHiddenOnBlur,
       items = _ref6.items,
       size = _ref6.size;
   return /*#__PURE__*/_react.default.createElement(FieldBase, {
@@ -168,7 +190,9 @@ var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
     tooltipProps: tooltipProps,
     tooltipId: tooltipId,
     error: error,
-    errorMessage: errorMessage
+    errorMessage: errorMessage,
+    help: help,
+    helpHiddenOnBlur: helpHiddenOnBlur
   }, /*#__PURE__*/_react.default.createElement(_.Field.Autocomplete, {
     id: id,
     size: size,

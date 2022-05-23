@@ -10,7 +10,9 @@ var _react = _interopRequireDefault(require("react"));
 var _checkbox = require("../../../form/checkbox");
 
 var FieldCheckbox = function FieldCheckbox(props) {
-  return /*#__PURE__*/_react.default.createElement(_checkbox.Checkbox, props);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-Field__control"
+  }, /*#__PURE__*/_react.default.createElement(_checkbox.Checkbox, props));
 };
 
 exports.FieldCheckbox = FieldCheckbox;

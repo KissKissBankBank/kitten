@@ -15,6 +15,8 @@ var _input = require("./components/input");
 
 var _error = require("./components/error");
 
+var _help = require("./components/help");
+
 var _radioSet = require("./components/radio-set");
 
 var _radioButtonSet = require("./components/radio-button-set");
@@ -54,5 +56,6 @@ Field.RadioSet = _radioSet.FieldRadioSet;
 Field.RadioButtonSet = _radioButtonSet.FieldRadioButtonSet;
 Field.Checkbox = _checkbox.FieldCheckbox;
 Field.ErrorMessage = _error.FieldError;
+Field.Help = _help.FieldHelp;
 Field.Password = _password.FieldPassword;
 Field.Autocomplete = _autocomplete.FieldAutocomplete;

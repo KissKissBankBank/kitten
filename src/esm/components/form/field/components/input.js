@@ -25,7 +25,7 @@ export var FieldInput = function FieldInput(_ref) {
   }
 
   return /*#__PURE__*/React.createElement("div", {
-    className: classNames('k-FieldInput', className, {
+    className: classNames('k-FieldInput', 'k-Field__control', className, {
       'k-u-margin-top-single': !noMargin
     })
   }, /*#__PURE__*/React.createElement(Input, _extends({

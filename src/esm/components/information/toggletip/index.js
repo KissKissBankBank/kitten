@@ -189,8 +189,8 @@ export var Toggletip = function Toggletip(_ref) {
     "aria-label": actionLabel,
     className: "k-u-reset-button k-Toggletip__action",
     style: _extends({
-      '--toggletipAction-color': actionProps.color || null
-    }, actionProps.style)
+      '--toggletipAction-color': (actionProps == null ? void 0 : actionProps.color) || null
+    }, actionProps == null ? void 0 : actionProps.style)
   }, !!targetElement && /*#__PURE__*/React.isValidElement(targetElement) ? targetElement : /*#__PURE__*/React.createElement(IconBadge, {
     className: "k-Toggletip__icon",
     children: internalIcon,
@@ -213,7 +213,6 @@ export var Toggletip = function Toggletip(_ref) {
 };
 Toggletip.defaultProps = {
   modifier: 'info',
-  actionProps: {},
   bubbleProps: {},
   targetElement: null,
   iconHasBorder: true
