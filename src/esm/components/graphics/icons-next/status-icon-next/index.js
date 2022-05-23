@@ -106,7 +106,11 @@ StatusIconNext.Success = function (_ref5) {
     fill: color,
     width: "11",
     height: "9"
-  }, props), /*#__PURE__*/React.createElement("path", {
+  }, props, {
+    style: {
+      marginTop: 1
+    }
+  }), /*#__PURE__*/React.createElement("path", {
     d: "m2.134 6.553 1.767 1.768L5.67 6.553l4.42-4.419A1.25 1.25 0 0 0 8.321.366l-4.42 4.42-1.767-1.768A1.25 1.25 0 0 0 .366 4.785l1.768 1.768Z"
   }));
 };
@@ -123,7 +127,8 @@ StatusIconNext.Pending = function (_ref6) {
     fill: color
   }, props, {
     style: {
-      marginLeft: '2px'
+      marginLeft: 2,
+      marginBottom: 1
     }
   }), /*#__PURE__*/React.createElement("path", {
     fillRule: "evenodd",

@@ -15,13 +15,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _label = require("../../../form/label");
 
 var _toggletip = require("../../../information/toggletip");
 
 var _line = require("../../../structure/line");
 
-var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel"];
+var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -45,9 +47,10 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
         labelProps = _this$props.labelProps,
         link = _this$props.link,
         tooltipLabel = _this$props.tooltipLabel,
+        className = _this$props.className,
         others = (0, _objectWithoutPropertiesLoose2.default)(_this$props, _excluded);
     return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
-      className: "k-u-margin-bottom-single"
+      className: (0, _classnames.default)(className, 'k-Field__label', 'k-u-margin-bottom-single')
     }, others), /*#__PURE__*/_react.default.createElement(_line.Line, {
       style: {
         lineHeight: 1

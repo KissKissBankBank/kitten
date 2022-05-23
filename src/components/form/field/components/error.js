@@ -11,25 +11,24 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 
 var _react = _interopRequireDefault(require("react"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _text = require("../../../typography/text");
 
-var _excluded = ["children"];
+var _excluded = ["children", "className"];
 
 var FieldError = function FieldError(_ref) {
   var children = _ref.children,
+      className = _ref.className,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-u-margin-top-single"
-  }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     tag: "p",
     color: "error",
     size: "micro",
     weight: "regular",
     lineHeight: "normal",
-    style: {
-      margin: 0
-    }
-  }, others), children));
+    className: (0, _classnames.default)(className, 'k-Field__error', 'k-u-margin-none k-u-margin-top-single')
+  }, others), children);
 };
 
 exports.FieldError = FieldError;

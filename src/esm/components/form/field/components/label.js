@@ -1,9 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
-var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel"];
+var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className"];
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Label } from '../../../form/label';
 import { Toggletip } from '../../../information/toggletip';
 import { Line } from '../../../structure/line';
@@ -25,10 +26,11 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
         labelProps = _this$props.labelProps,
         link = _this$props.link,
         tooltipLabel = _this$props.tooltipLabel,
+        className = _this$props.className,
         others = _objectWithoutPropertiesLoose(_this$props, _excluded);
 
     return /*#__PURE__*/React.createElement("div", _extends({
-      className: "k-u-margin-bottom-single"
+      className: classNames(className, 'k-Field__label', 'k-u-margin-bottom-single')
     }, others), /*#__PURE__*/React.createElement(Line, {
       style: {
         lineHeight: 1

@@ -4,10 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Field`: Add `Field.Help` subcomponent with `hiddenOnBlur` prop.
-- Fix: `AlertBox`: Improve `IconBadge` style.
-- Feature: `ContentCard`: Add `box-shadow` variable.
-- Fix `MessagesMenu`: Set width on items.
+## [10.11.0] - 2022-05-23
+
+Features:
+
+- `Field`: Add `Field.Help` subcomponent with `hiddenOnBlur` prop.
+- `ContentCard`: Add shadow style to card.
+
+Fixes:
+
+- `AlertBox`: Improve `IconBadge` style.
+- `MessagesMenu`: Set width on items.
 
 ## [10.10.0] - 2022-05-19
 
