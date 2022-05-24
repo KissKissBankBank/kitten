@@ -82,7 +82,7 @@ const Image = ({
           className="k-CrowdfundingCard__image__title"
           tag="div"
           size="micro"
-          weight="regular"
+          weight="500"
           color="font1"
         >
           {!loading && ownerTitle}
@@ -92,7 +92,7 @@ const Image = ({
           className="k-CrowdfundingCard__image__description"
           tag="div"
           size="micro"
-          weight="light"
+          weight="400"
           color="font1"
         >
           {!loading && ownerDescription}

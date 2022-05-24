@@ -36,7 +36,7 @@ class State extends PureComponent {
             <Text
               size="micro"
               lineHeight="normal"
-              weight="regular"
+              weight="500"
               color="font1"
             >
               {state}

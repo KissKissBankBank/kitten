@@ -96,7 +96,7 @@ const Login = props => (
             <Field>
               <StyledLabel
                 link={
-                  <StyledLink tag="a" href="#" weight="regular" size="small">
+                  <StyledLink tag="a" href="#" weight="500" size="small">
                     Mot de passe oublié ?
                   </StyledLink>
                 }
@@ -127,7 +127,7 @@ const Login = props => (
               Créez votre compte en quelques minutes seulement et commencez à
               investir.
               <br />
-              <StyledLink tag="a" href="#" weight="regular" size="small">
+              <StyledLink tag="a" href="#" weight="500" size="small">
                 Inscrivez-vous
               </StyledLink>
             </Text>

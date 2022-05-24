@@ -110,7 +110,7 @@ export const CrowdfundingCard = ({
         />
         {!loading && additionalInfo && (
           <span className="k-CrowdfundingCard__additionalInfo">
-            <Text size="micro" lineHeight="normal" weight="light">
+            <Text size="micro" lineHeight="normal" weight="400">
               {additionalInfo}
             </Text>
           </span>

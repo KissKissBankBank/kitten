@@ -130,7 +130,7 @@ exports[`<EditorialCard /> with custom linkProps, color and verso matches with s
         </p>
       </div>
       <span
-        className="k-u-weight-bold k-EditorialCard__actionText k-u-m-t-8"
+        className="k-u-weight-600 k-EditorialCard__actionText k-u-m-t-8"
       >
         Aller plus loin
       </span>

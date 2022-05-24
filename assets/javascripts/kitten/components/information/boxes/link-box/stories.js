@@ -69,7 +69,7 @@ export const Default = args => (
         Partie 1
       </Text>
 
-      <Text size="small" weight="regular" lineHeight="normal">
+      <Text size="small" weight="500" lineHeight="normal">
         Les différents types de financement participatif
       </Text>
     </LinkBox.Text>
@@ -79,7 +79,7 @@ export const Default = args => (
 export const WithVariant = args => (
   <LinkBox {...args}>
     <LinkBox.Text>
-      <Text size="small" weight="light" lineHeight="normal">
+      <Text size="small" weight="400" lineHeight="normal">
         <strong>Paramètres -</strong> Titre du projet, Catégorie principale,
         Montant de l’objectif, Type d’objectif …
       </Text>

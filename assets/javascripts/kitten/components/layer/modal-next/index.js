@@ -722,7 +722,7 @@ const InnerModal = ({
                 {headerTitle ? (
                   headerTitle
                 ) : (
-                  <Text size="small" color="font1" weight="regular">
+                  <Text size="small" color="font1" weight="500">
                     {fullSizeTitle}
                   </Text>
                 )}

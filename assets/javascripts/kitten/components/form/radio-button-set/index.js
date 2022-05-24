@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import { RadioButton } from '../../form/radio-button'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Label } from '../../form/label'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledRadioButtonSet = styled.fieldset`
   margin: 0;
@@ -47,51 +48,56 @@ export const RadioButtonSet = ({
   paragraphStyle,
   labelProps,
   ...props
-}) => (
-  <StyledRadioButtonSet
-    className={classNames(
-      'k-Form-RadioButtonSet',
-      className,
-      `k-Form-RadioButtonSet--${variant || 'orion'}`,
-    )}
-    disabled={disabled}
-    {...props}
-  >
-    {label && (
-      <Label
-        tag="legend"
-        {...labelProps}
-        className={classNames(
-          'k-Form-RadioButtonSet__label',
-          labelProps.className,
-        )}
-      >
-        {label}
-      </Label>
-    )}
-    {children && !label && <legend>{children}</legend>}
-    <div className="k-Form-RadioButtonSet__radioContainer">
-      {items.map(({ id, className, ...itemProps }) => (
-        <RadioButton
-          id={id}
-          variant={variant || null}
-          design={design}
-          error={error}
-          size={size}
-          fontWeight={fontWeight}
-          paragraphStyle={paragraphStyle}
-          name={name}
-          key={id}
-          {...itemProps}
+}) => {
+
+  checkDeprecatedWeights(weight)
+  
+  return (
+    <StyledRadioButtonSet
+      className={classNames(
+        'k-Form-RadioButtonSet',
+        className,
+        `k-Form-RadioButtonSet--${variant || 'orion'}`,
+      )}
+      disabled={disabled}
+      {...props}
+    >
+      {label && (
+        <Label
+          tag="legend"
+          {...labelProps}
           className={classNames(
-            'k-Form-RadioButtonSet__radioButton',
-            className,
+            'k-Form-RadioButtonSet__label',
+            labelProps.className,
           )}
-        />
-      ))}
-    </div>
-  </StyledRadioButtonSet>
-)
+        >
+          {label}
+        </Label>
+      )}
+      {children && !label && <legend>{children}</legend>}
+      <div className="k-Form-RadioButtonSet__radioContainer">
+        {items.map(({ id, className, ...itemProps }) => (
+          <RadioButton
+            id={id}
+            variant={variant || null}
+            design={design}
+            error={error}
+            size={size}
+            fontWeight={fontWeight}
+            paragraphStyle={paragraphStyle}
+            name={name}
+            key={id}
+            {...itemProps}
+            className={classNames(
+              'k-Form-RadioButtonSet__radioButton',
+              className,
+            )}
+          />
+        ))}
+      </div>
+    </StyledRadioButtonSet>
+  )
+}
 
 RadioButtonSet.propTypes = {
   name: PropTypes.string.isRequired,
@@ -112,7 +118,7 @@ RadioButtonSet.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
-  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  fontWeight: PropTypes.oneOf(['400', '500', '600']),
   paragraphStyle: PropTypes.bool,
 }
 
@@ -125,6 +131,6 @@ RadioButtonSet.defaultProps = {
   disabled: false,
   labelProps: {},
   size: 'medium',
-  fontWeight: 'regular',
+  fontWeight: '500',
   paragraphStyle: false,
 }

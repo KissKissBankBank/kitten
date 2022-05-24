@@ -98,7 +98,7 @@ export const AllModifiers = args => {
       {buttonModifiers.map(modifier => (
         <div className="k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
           <Button {...args} modifier={modifier} />
-          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light">
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-400">
             {modifier}
           </span>
         </div>
@@ -117,7 +117,7 @@ export const DarkModifiers = args => {
       {['beryllium', 'boron', 'scandium'].map(modifier => (
         <div className="k-u-margin-vertical-double k-u-flex k-u-flex-direction-column k-u-flex-alignItems-center">
           <Button {...args} modifier={modifier} />
-          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-light k-u-color-background1">
+          <span className="k-u-margin-top-single k-u-margin-bottom-triple k-u-weight-400 k-u-color-background1">
             {modifier}
           </span>
         </div>

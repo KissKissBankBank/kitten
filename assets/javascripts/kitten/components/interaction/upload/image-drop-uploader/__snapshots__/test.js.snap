@@ -128,7 +128,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </button>
   </div>
   <p
-    className="k-u-color-error k-u-size-micro k-u-weight-bold k-u-margin-top-noneHalf"
+    className="k-u-color-error k-u-size-micro k-u-weight-600 k-u-margin-top-noneHalf"
     id="ImageDropUploader-error-description"
   >
     Error

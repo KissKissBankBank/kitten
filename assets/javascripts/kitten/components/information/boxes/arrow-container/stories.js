@@ -24,7 +24,7 @@ export default {
 
 export const Default = ({ children, ...args }) => (
   <ArrowContainer {...args}>
-    <Text size="small" color="font1" weight="light">
+    <Text size="small" color="font1" weight="400">
       {children}
     </Text>
   </ArrowContainer>

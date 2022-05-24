@@ -74,7 +74,7 @@ export default {
     },
     fontWeight: {
       name: 'fontWeight',
-      options: ['light', 'regular', 'bold'],
+      options: ['400', '500', '600'],
       control: 'inline-radio',
     },
     paragraphStyle: {
@@ -90,7 +90,7 @@ const defaultArgs = {
   disabled: false,
   design: 'disc',
   size: 'medium',
-  fontWeight: 'regular',
+  fontWeight: '500',
   paragraphStyle: false,
 }
 

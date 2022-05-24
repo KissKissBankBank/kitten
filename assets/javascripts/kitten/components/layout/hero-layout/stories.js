@@ -419,7 +419,7 @@ export const Default = ({
             <GridCol col="12" col-s="6" col-l="4">
               <Text
                 tag="h3"
-                weight="bold"
+                weight="600"
                 transform="uppercase"
                 size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
@@ -455,7 +455,7 @@ export const Default = ({
             <GridCol col="12">
               <Text
                 tag="h3"
-                weight="bold"
+                weight="600"
                 transform="uppercase"
                 size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
@@ -675,7 +675,7 @@ export const Simple = ({
                   <ProfileCard.Content>
                     <Text
                       size="huge"
-                      weight="bold"
+                      weight="600"
                       tag="h1"
                       className="k-u-margin-top-none k-u-margin-bottom-single"
                     >
@@ -695,7 +695,7 @@ export const Simple = ({
                       className="k-u-margin-none"
                       letterSpacing="10%"
                       transform="uppercase"
-                      weight="regular"
+                      weight="500"
                     >
                       530 ABONNÉS
                     </Text>

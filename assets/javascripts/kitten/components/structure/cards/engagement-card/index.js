@@ -59,7 +59,7 @@ export const EngagementCard = ({
       backgroundColor={backgroundColor}
     >
       <StyledIcon>{icon}</StyledIcon>
-      <StyledText size="micro" weight="regular" color="font1">
+      <StyledText size="micro" weight="500" color="font1">
         {children}
       </StyledText>
     </StyledCard>

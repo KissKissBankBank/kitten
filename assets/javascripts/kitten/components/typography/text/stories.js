@@ -25,7 +25,7 @@ export default {
     fontStyle: null,
     tag: 'span',
     transform: null,
-    weight: 'light',
+    weight: '400',
     children: 'Lorem ipsum dolor sit amet…',
   },
   argTypes: {
@@ -73,7 +73,7 @@ export default {
     weight: {
       name: 'weight',
       description: 'Sets a weight.',
-      options: ['light', 'regular', 'bold'],
+      options: ['400', '500', '600'],
       control: 'select',
     },
     children: {

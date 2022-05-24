@@ -135,13 +135,13 @@ const Info = ({ label, text }) => (
   <span className="k-u-inlineFlex k-u-flex-direction-column">
     <Text
       tag="strong"
-      weight="bold"
+      weight="600"
       size="small"
       className="k-u-inlineFlex@s-down"
     >
       {parseHtml(text)}
     </Text>
-    <Text weight="light" size="small">
+    <Text weight="400" size="small">
       {parseHtml(label)}
     </Text>
   </span>

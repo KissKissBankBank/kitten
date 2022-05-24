@@ -61,8 +61,8 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text color="font1" weight="light">
-                Donnez <Text weight="regular">de la visibilité et du sens</Text>{' '}
+              <Text color="font1" weight="400">
+                Donnez <Text weight="500">de la visibilité et du sens</Text>{' '}
                 à votre marque, entreprise, collectivité, association,
                 fondation...
               </Text>
@@ -72,8 +72,8 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#CAF4FE', borderColor: '#CAF4FE' },
               }}
             >
-              <Text color="font1" weight="light">
-                <Text weight="regular">Fédérez votre communauté</Text> ou vos
+              <Text color="font1" weight="400">
+                <Text weight="500">Fédérez votre communauté</Text> ou vos
                 collaborateurs en donnant naissance à des projets impactants
               </Text>
             </IconList.Item>
@@ -82,8 +82,8 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text color="font1" weight="light">
-                Touchez de <Text weight="regular">nouveaux publics</Text>
+              <Text color="font1" weight="400">
+                Touchez de <Text weight="500">nouveaux publics</Text>
               </Text>
             </IconList.Item>
             <IconList.Item
@@ -91,9 +91,9 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#CAF4FE', borderColor: '#CAF4FE' },
               }}
             >
-              <Text color="font1" weight="light">
+              <Text color="font1" weight="400">
                 Repérez, accompagnez et{' '}
-                <Text weight="regular">révélez les talents</Text> de demain dans
+                <Text weight="500">révélez les talents</Text> de demain dans
                 les domaines qui vous tiennent à coeur
               </Text>
             </IconList.Item>
@@ -102,9 +102,9 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text color="font1" weight="light">
+              <Text color="font1" weight="400">
                 Enrichissez votre image grâce aux{' '}
-                <Text weight="regular">
+                <Text weight="500">
                   valeurs citoyennes, positives et collaboratives
                 </Text>{' '}
                 du crowdfunding
@@ -115,9 +115,9 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#CAF4FE', borderColor: '#CAF4FE' },
               }}
             >
-              <Text color="font1" weight="light">
+              <Text color="font1" weight="400">
                 Dynamisez l’économie locale en soutenant{' '}
-                <Text weight="regular">
+                <Text weight="500">
                   les créateurs et entrepreneurs de votre territoire
                 </Text>
               </Text>

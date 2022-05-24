@@ -308,7 +308,7 @@ export const DocumentManager = ({
             <div className="k-DocumentManager__uploader__content">
               <Text
                 tag="div"
-                weight="regular"
+                weight="500"
                 size="small"
                 lineHeight="normal"
                 className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
@@ -320,7 +320,7 @@ export const DocumentManager = ({
               {internalStatus === 'ready' && (
                 <Text
                   tag="div"
-                  weight="light"
+                  weight="400"
                   size="micro"
                   lineHeight="normal"
                   className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
@@ -383,7 +383,7 @@ export const DocumentManager = ({
         <div className="k-DocumentManager__display__content">
           <Text
             tag="div"
-            weight="regular"
+            weight="500"
             size="small"
             className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
           >
@@ -396,7 +396,7 @@ export const DocumentManager = ({
           )}
           <Text
             tag="div"
-            weight="light"
+            weight="400"
             size="micro"
             className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
           >
@@ -408,7 +408,7 @@ export const DocumentManager = ({
               onClick={handleCancelClick}
             >
               <Text
-                weight="regular"
+                weight="500"
                 size="small"
                 className="k-DocumentManager__actionButton__text"
               >
@@ -422,7 +422,7 @@ export const DocumentManager = ({
               onClick={handleReplaceClick}
             >
               <Text
-                weight="regular"
+                weight="500"
                 size="small"
                 className="k-DocumentManager__actionButton__text"
               >

@@ -7,7 +7,10 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
+import {
+  checkDeprecatedSizes,
+  checkDeprecatedWeights,
+} from '../../../helpers/utils/deprecated'
 
 const StyledRadioButton = styled.div`
   margin: ${pxToRem(10)} 0;
@@ -248,7 +251,8 @@ const StyledRadioButton = styled.div`
 
     /* FONT STYLES */
 
-    &.k-Form-RadioButton__labelText--regular {
+    &.k-Form-RadioButton__labelText--regular,
+    &.k-Form-RadioButton__labelText--500 {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.regular};
         line-height: ${pxToRem(20)};
@@ -256,13 +260,15 @@ const StyledRadioButton = styled.div`
       }
     }
 
-    &.k-Form-RadioButton__labelText--light {
+    &.k-Form-RadioButton__labelText--light,
+    &.k-Form-RadioButton__labelText--400 {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.light};
       }
     }
 
-    &.k-Form-RadioButton__labelText--bold {
+    &.k-Form-RadioButton__labelText--bold,
+    &.k-Form-RadioButton__labelText--600 {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.bold};
       }
@@ -363,6 +369,7 @@ export const RadioButton = ({
   ...inputProps
 }) => {
   checkDeprecatedSizes(size)
+  checkDeprecatedWeights(weight)
 
   return (
     <StyledRadioButton
@@ -418,7 +425,7 @@ RadioButton.propTypes = {
   ),
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  fontWeight: PropTypes.oneOf(['400', '500', '600']),
   paragraphStyle: PropTypes.bool,
 }
 
@@ -429,6 +436,6 @@ RadioButton.defaultProps = {
   disabled: false,
   design: 'disc',
   size: 'medium',
-  fontWeight: 'regular',
+  fontWeight: '500',
   paragraphStyle: false,
 }

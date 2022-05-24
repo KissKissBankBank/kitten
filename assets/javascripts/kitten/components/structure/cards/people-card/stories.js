@@ -53,7 +53,7 @@ export const Default = ({ peopleAvatar, ...args }) => (
       <StyledFlexWrapper gap={5} className="k-u-flex-justifyContent-center">
         <Text
           tag="p"
-          weight="regular"
+          weight="500"
           size="small"
           className="k-u-line-height-1 k-u-margin-none k-u-clamp-1 k-u-clamp-2@xs-down"
         >
@@ -61,7 +61,7 @@ export const Default = ({ peopleAvatar, ...args }) => (
         </Text>
         <Text
           tag="p"
-          weight="light"
+          weight="400"
           size="small"
           className="k-u-line-height-1 k-u-margin-none"
         >

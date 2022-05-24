@@ -52,7 +52,7 @@ class Subtitle extends PureComponent {
               },
             )}
             size="micro"
-            weight="regular"
+            weight="500"
             tag="p"
             color="font1"
             style={{ '--line-clamp': 1, ...style }}
@@ -84,7 +84,7 @@ class Subtitle extends PureComponent {
             size="micro"
             color="font1"
             lineHeight="normal"
-            weight="light"
+            weight="400"
             style={{ '--line-clamp': 1, ...style }}
           >
             {widgetSubtitle}

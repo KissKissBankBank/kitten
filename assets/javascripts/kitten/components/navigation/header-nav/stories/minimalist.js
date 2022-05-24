@@ -35,7 +35,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
             style={{ margin: 0 }}
             tag="h1"
             size="small"
-            weight="bold"
+            weight="600"
             transform="uppercase"
             lineHeight="normal"
           >
@@ -43,7 +43,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, ...args }) => (
           </Text>
         )}
         {subText && (
-          <Text weight="light" size="small" lineHeight="normal">
+          <Text weight="400" size="small" lineHeight="normal">
             {parseHtml(subText)}
           </Text>
         )}

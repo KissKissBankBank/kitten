@@ -6,3 +6,12 @@ export const checkDeprecatedSizes = size => {
     )
   }
 }
+
+export const checkDeprecatedWeights = weight => {
+  const deprecatedWeights = ['light', 'regular', 'bold']
+  if (deprecatedWeights.includes(weight)) {
+    console.warn(
+      `The value ${weight} for prop weight is deprecated. Please use '400', '500' or '600' instead.`,
+    )
+  }
+}

@@ -6,6 +6,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledLinkList = styled.ul`
   text-align: center;
@@ -88,6 +89,9 @@ export const LinkList = ({
   href,
   ...others
 }) => {
+  
+  checkDeprecatedWeights(weight)
+
   return (
     <StyledLinkList
       {...others}
@@ -127,7 +131,7 @@ LinkList.propTypes = {
   color: PropTypes.oneOf(['light', 'dark']),
   lineHeight: PropTypes.oneOf(['normal']),
   itemMargin: PropTypes.oneOf(['double', 'triple']),
-  weight: PropTypes.oneOf(['regular', 'light']),
+  weight: PropTypes.oneOf(['400', '500']),
   margin: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -147,5 +151,5 @@ LinkList.defaultProps = {
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
-  weight: 'regular',
+  weight: '500',
 }

@@ -208,7 +208,7 @@ export const StoryWithDashboard = () => (
           </div>
           <div className="kiss-dashboard__block__dataLine">
             <div className="kiss-dashboard__block__dataLine__item">
-              <Text lineHeight="1" size="giant" weight="bold">
+              <Text lineHeight="1" size="giant" weight="600">
                 1&nbsp;800&nbsp;€
               </Text>
               <Text lineHeight="1" size="small">
@@ -217,7 +217,7 @@ export const StoryWithDashboard = () => (
             </div>
             <hr className="kiss-dashboard__block__dataLine__separator" />
             <div className="kiss-dashboard__block__dataLine__item">
-              <Text lineHeight="1" size="giant" weight="bold">
+              <Text lineHeight="1" size="giant" weight="600">
                 90&nbsp;%
               </Text>
               <Text lineHeight="1" size="small">
@@ -229,7 +229,7 @@ export const StoryWithDashboard = () => (
               <Text lineHeight="1" size="small">
                 Fin de campagne&nbsp;:
               </Text>
-              <Text lineHeight="1" weight="bold">
+              <Text lineHeight="1" weight="600">
                 2 janvier 2022 à minuit
               </Text>
             </div>
@@ -249,7 +249,7 @@ export const StoryWithDashboard = () => (
           </div>
           <div className="kiss-dashboard__block__dataLine">
             <div className="kiss-dashboard__block__dataLine__item">
-              <Text lineHeight="1" size="giant" weight="bold">
+              <Text lineHeight="1" size="giant" weight="600">
                 33&nbsp;547
               </Text>
               <Text lineHeight="1" size="small">
@@ -304,7 +304,7 @@ export const StoryWithDashboard = () => (
 
           <Text
             size="giant"
-            weight="bold"
+            weight="600"
             lineHeight="1"
             tag="h2"
             className="k-u-margin-none"

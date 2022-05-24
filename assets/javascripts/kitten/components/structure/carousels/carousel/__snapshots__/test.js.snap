@@ -121,7 +121,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -226,7 +226,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -365,7 +365,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -470,7 +470,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -794,7 +794,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -899,7 +899,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -1038,7 +1038,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -1143,7 +1143,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -1288,7 +1288,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %
@@ -1393,7 +1393,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   />
                 </div>
                 <span
-                  className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
                 >
                   55
                    %

@@ -1,7 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
+import { 
+  checkDeprecatedSizes,
+  checkDeprecatedWeights,
+} from '../../../helpers/utils/deprecated'
 
 export const allowedColorStrings = [
   'font1',
@@ -60,6 +63,7 @@ export const Text = ({
   ...others
 }) => {
   checkDeprecatedSizes(size)
+  checkDeprecatedWeights(weight)
 
   const Tag = as || tag
 
@@ -140,9 +144,12 @@ export const Text = ({
       'k-u-transform-uppercase': transform == 'uppercase',
 
       // Weight.
-      'k-u-weight-light': weight == 'light',
-      'k-u-weight-regular': weight == 'regular',
-      'k-u-weight-bold': weight == 'bold',
+      'k-u-weight-light': weight == 'light', // Deprecated
+      'k-u-weight-400': weight == '400',
+      'k-u-weight-regular': weight == 'regular', // Deprecated
+      'k-u-weight-500': weight == '500',
+      'k-u-weight-bold': weight == 'bold', // Deprecated
+      'k-u-weight-600': weight == '600',
     },
     className,
   )
@@ -173,7 +180,7 @@ Text.propTypes = {
   ]),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
-  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  weight: PropTypes.oneOf(['400', '500', '600']),
   letterSpacing: PropTypes.string,
 }
 

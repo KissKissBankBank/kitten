@@ -28,8 +28,8 @@ export const Default = () => (
         style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
       }}
     >
-      <Text weight="light">
-        <Text weight="regular">Donnez de la visibilité</Text> et du sens à votre
+      <Text weight="400">
+        <Text weight="500">Donnez de la visibilité</Text> et du sens à votre
         marque, entreprise, collectivité, association, fondation…
       </Text>
     </IconList.Item>

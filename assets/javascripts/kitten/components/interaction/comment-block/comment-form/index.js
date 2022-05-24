@@ -216,7 +216,7 @@ export const CommentForm = React.forwardRef(
               id={`${id}-description`}
               color="error"
               size="micro"
-              weight="regular"
+              weight="500"
               className="k-CommentForm__error"
             >
               {errorMessage}

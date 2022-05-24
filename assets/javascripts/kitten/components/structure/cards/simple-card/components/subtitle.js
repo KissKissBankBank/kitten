@@ -7,7 +7,7 @@ export const Subtitle = ({ subtitle }) => {
   return (
     <Text
       size="micro"
-      weight="regular"
+      weight="500"
       tag="div"
       className="k-SimpleCard__subtitle k-u-margin-bottom-singleHalf"
     >

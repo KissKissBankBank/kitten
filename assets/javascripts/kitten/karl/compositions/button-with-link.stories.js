@@ -147,7 +147,7 @@ export const Example = () => {
             />
             <Text
               as="div"
-              weight="regular"
+              weight="500"
               letterSpacing="10%"
               size="small"
               cssColor="var(--color-primary-500)"
@@ -158,7 +158,7 @@ export const Example = () => {
             </Text>
           </div>
           <div>
-            <Text weight="bold" as="div" lineHeight="1.2">
+            <Text weight="600" as="div" lineHeight="1.2">
               Lancer une campagne limitée dans le temps avec un objectif à
               atteindre.
             </Text>
@@ -166,7 +166,7 @@ export const Example = () => {
               customSize={{ width: 6, height: 3 }}
               className="k-u-margin-horizontal-auto k-u-margin-vertical-single"
             />
-            <Text weight="light" size="small" as="div" lineHeight="1.2">
+            <Text weight="400" size="small" as="div" lineHeight="1.2">
               Idéal pour booster le lancement d’un nouveau projet.
             </Text>
           </div>
@@ -200,7 +200,7 @@ export const Example = () => {
             />
             <Text
               as="div"
-              weight="regular"
+              weight="500"
               letterSpacing="10%"
               size="small"
               cssColor="var(--color-primary-500)"
@@ -211,7 +211,7 @@ export const Example = () => {
             </Text>
           </div>
           <div>
-            <Text weight="bold" as="div" lineHeight="1.2">
+            <Text weight="600" as="div" lineHeight="1.2">
               Générer un revenu sur la durée grâce à des contributeurs
               récurrents.
             </Text>
@@ -219,7 +219,7 @@ export const Example = () => {
               customSize={{ width: 6, height: 3 }}
               className="k-u-margin-horizontal-auto k-u-margin-vertical-single"
             />
-            <Text weight="light" size="small" as="div" lineHeight="1.2">
+            <Text weight="400" size="small" as="div" lineHeight="1.2">
               Idéal si vous avez du contenu mensuel ou trimestriel à offrir à
               vos contributeurs.
             </Text>

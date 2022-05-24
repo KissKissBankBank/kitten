@@ -41,7 +41,7 @@ class Informations extends PureComponent {
         {!loading && (
           <Text
             lineHeight="normal"
-            weight="light"
+            weight="400"
             color="font1"
             className="k-CrowdfundingCard__informations__info"
           >

@@ -200,7 +200,7 @@ export const Checkbox = ({
             tag="label"
             htmlFor={id}
             onClick={onLabelClick}
-            weight="regular"
+            weight="500"
             {...labelProps}
             className={classNames(
               'k-Form-Checkbox__label',

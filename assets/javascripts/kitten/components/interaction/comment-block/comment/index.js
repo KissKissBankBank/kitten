@@ -150,13 +150,13 @@ export const Comment = React.forwardRef(
             {...avatarImgProps}
             className="k-Comment__header__image"
           />
-          <Text weight="regular" color="font1" className="k-u-ellipsis">
+          <Text weight="500" color="font1" className="k-u-ellipsis">
             {ownerName}
           </Text>
           <Text size="micro" aria-hidden>
             •
           </Text>
-          <Text size="micro" weight="light">
+          <Text size="micro" weight="400">
             {commentDate}
           </Text>
         </div>
@@ -165,7 +165,7 @@ export const Comment = React.forwardRef(
 
       <div className="k-Comment__content">
         {!!text && (
-          <Text color="font1" weight="light" size="small">
+          <Text color="font1" weight="400" size="small">
             {text}
           </Text>
         )}

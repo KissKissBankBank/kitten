@@ -74,7 +74,7 @@ class TitleComponent extends PureComponent {
                 tag="span"
                 color="font1"
                 size="medium"
-                weight="bold"
+                weight="600"
                 lineHeight="normal"
                 className="k-Card__title"
               >
@@ -90,7 +90,7 @@ class TitleComponent extends PureComponent {
               <Text
                 size="small"
                 color="font1"
-                weight="regular"
+                weight="500"
                 lineHeight="normal"
               >
                 {dayCounter}

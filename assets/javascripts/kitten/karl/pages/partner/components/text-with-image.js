@@ -106,7 +106,7 @@ const TextWithImage = ({ imagePosition }) => (
 
               <Text
                 tag="p"
-                weight="regular"
+                weight="500"
                 fontStyle="italic"
                 size="small"
                 lineHeight="normal"

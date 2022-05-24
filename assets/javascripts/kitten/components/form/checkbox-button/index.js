@@ -230,7 +230,7 @@ export const CheckboxButton = ({
           tag="label"
           htmlFor={id}
           onClick={onLabelClick}
-          weight="regular"
+          weight="500"
           {...labelProps}
           {...textProps}
           className={classNames(
@@ -248,7 +248,7 @@ export const CheckboxButton = ({
           tag="label"
           htmlFor={id}
           onClick={onLabelClick}
-          weight="regular"
+          weight="500"
           {...labelProps}
           {...textProps}
           className={classNames(
@@ -268,7 +268,7 @@ export const CheckboxButton = ({
           onClick={onLabelClick}
         >
           <Text
-            weight="regular"
+            weight="500"
             {...labelProps}
             className={classNames(
               'k-Form-CheckboxButton__labelText',

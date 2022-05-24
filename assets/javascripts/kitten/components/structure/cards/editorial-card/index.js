@@ -226,7 +226,7 @@ const Verso = ({ className, actionText, children, ...props }) => {
   return (
     <div className={classNames('k-EditorialCard__verso', className)} {...props}>
       <div className="k-EditorialCard__content">{children}</div>
-      <Text className="k-EditorialCard__actionText k-u-m-t-8" weight="bold">
+      <Text className="k-EditorialCard__actionText k-u-m-t-8" weight="600">
         {actionText}
       </Text>
     </div>

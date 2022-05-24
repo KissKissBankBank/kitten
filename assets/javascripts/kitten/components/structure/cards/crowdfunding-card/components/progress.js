@@ -41,7 +41,7 @@ class ProgressBar extends PureComponent {
         />
 
         <Text
-          weight="regular"
+          weight="500"
           size="micro"
           color="font1"
           className="k-CrowdfundingCard__progressBar__percent"

@@ -45,7 +45,7 @@ const Title = ({ className, ...props }) => {
     <Text
       size="small"
       tag="h3"
-      weight="bold"
+      weight="600"
       color="font1"
       lineHeight="1.3"
       className={classNames(

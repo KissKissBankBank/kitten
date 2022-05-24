@@ -73,15 +73,15 @@ export const Default = ({ displayTags, ...args }) => (
       <StyledFlexWrapper gap={8} className="k-u-flex-justifyContent-center">
         <Text
           tag="p"
-          weight="light"
+          weight="400"
           size="micro"
           className="k-u-line-height-1 k-u-margin-none"
         >
-          Publiée le <strong className="k-u-weight-bold">2 février 2022</strong>
+          Publiée le <strong className="k-u-weight-600">2 février 2022</strong>
         </Text>
         <Text
           tag="p"
-          weight="bold"
+          weight="600"
           size="large"
           className="k-u-flex-shrink-none k-u-line-height-1-3 k-u-margin-none k-u-clamp-1 k-u-clamp-2@xs-down"
         >
@@ -101,7 +101,7 @@ export const Default = ({ displayTags, ...args }) => (
             className="k-u-flex-shrink-none"
             aria-hidden
           />
-          <Text weight="light" size="micro">
+          <Text weight="400" size="micro">
             Actualité réservée à mes contributeurs
           </Text>
         </p>

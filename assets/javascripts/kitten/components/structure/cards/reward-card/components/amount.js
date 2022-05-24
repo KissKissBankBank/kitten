@@ -13,12 +13,12 @@ export const Amount = ({ className, suffix, children, ...props }) => {
       )}
       {...props}
     >
-      <Text weight="bold" className="k-RewardCard__amount k-u-block">
+      <Text weight="600" className="k-RewardCard__amount k-u-block">
         {children}
       </Text>
       {suffix && (
         <Text
-          weight="regular"
+          weight="500"
           transform="uppercase"
           letterSpacing="10%"
           className="k-RewardCard__amount__suffix k-u-block"

@@ -61,7 +61,7 @@ export const CardWithButton = ({
           margin={false}
           className="PreDeposit__triptych__card__notice"
         >
-          <Text lineHeight="normal" size="micro" weight="regular" color="font1">
+          <Text lineHeight="normal" size="micro" weight="500" color="font1">
             {parseHtml(notice)}
           </Text>
         </Paragraph>

@@ -408,7 +408,7 @@ export const DocumentsDropUploader = ({
               tag="label"
               htmlFor={id}
               size="small"
-              weight="regular"
+              weight="500"
               className="k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
             >
               <span aria-hidden>+&nbsp;</span>
@@ -431,7 +431,7 @@ export const DocumentsDropUploader = ({
                 as="li"
                 size="micro"
                 color="error"
-                weight="bold"
+                weight="600"
               >
                 {errorMsg}
               </Text>

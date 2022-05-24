@@ -35,7 +35,7 @@ describe('<StatusWithBullet />', () => {
           bulletProps={{ className: 'k-u-sample-class' }}
           className="k-u-sample-class"
           size="micro"
-          weight="light"
+          weight="400"
         />,
       )
       .toJSON()

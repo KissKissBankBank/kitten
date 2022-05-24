@@ -89,7 +89,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+        className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %
@@ -192,7 +192,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+        className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %
@@ -305,7 +305,7 @@ exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
         />
       </div>
       <span
-        className="k-u-line-height-1 k-u-size-small k-u-weight-bold k-u-hidden@xs-down k-ProjectCard__progress__text"
+        className="k-u-line-height-1 k-u-size-small k-u-weight-600 k-u-hidden@xs-down k-ProjectCard__progress__text"
       >
         55
          %

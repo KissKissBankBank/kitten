@@ -8,23 +8,26 @@
 ///
 /// @example html
 ///
-///     <p class="k-u-weight-light">…</p>
-///     <p class="k-u-weight-regular">…</p>
-///     <p class="k-u-weight-bold">…</p>
+///     <p class="k-u-weight-400">…</p>
+///     <p class="k-u-weight-500">…</p>
+///     <p class="k-u-weight-600">…</p>
 
 @mixin k-utilities-weight {
-  .k-u-weight-light {
+  .k-u-weight-light,
+  .k-u-weight-400 {
     font-family: map-get(k-map-fetch($k-fonts, 'light'), 'family') !important;
     font-weight: map-get(k-map-fetch($k-fonts, 'light'), 'weight') !important;
   }
 
-  .k-u-weight-regular {
+  .k-u-weight-regular,
+  .k-u-weight-500 {
     font-family: map-get(k-map-fetch($k-fonts, 'regular'), 'family') !important;
     font-weight: map-get(k-map-fetch($k-fonts, 'regular'), 'weight') !important;
   }
 
   .k-u-strong,
-  .k-u-weight-bold {
+  .k-u-weight-bold,
+  .k-u-weight-600 {
     font-family: map-get(k-map-fetch($k-fonts, 'bold'), 'family') !important;
     font-weight: map-get(k-map-fetch($k-fonts, 'bold'), 'weight') !important;
     letter-spacing: map-get(

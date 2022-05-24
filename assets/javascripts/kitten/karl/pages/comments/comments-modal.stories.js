@@ -54,7 +54,7 @@ const ProxyComment = ({ isAdmin = false, onReply = () => {}, ...args }) => {
           <>
             <Text
               as="button"
-              weight="regular"
+              weight="500"
               size="micro"
               className="k-u-reset-button k-u-link k-u-link-font1"
               onClick={handleReplyClick}
@@ -63,7 +63,7 @@ const ProxyComment = ({ isAdmin = false, onReply = () => {}, ...args }) => {
             </Text>
             <Text
               as="button"
-              weight="regular"
+              weight="500"
               size="micro"
               className="k-u-reset-button k-u-link k-u-link-font1"
             >
@@ -258,7 +258,7 @@ export const AsAdmin = () => {
                       ) : (
                         <>
                           En réponse à{' '}
-                          <span className="k-u-weight-regular">
+                          <span className="k-u-weight-500">
                             {replyText.ownerName}
                           </span>
                         </>
@@ -271,7 +271,7 @@ export const AsAdmin = () => {
                       tag="button"
                       size="micro"
                       className="k-u-reset-button k-u-link k-u-link-grey1"
-                      weight="regular"
+                      weight="500"
                     >
                       Annuler
                     </Text>

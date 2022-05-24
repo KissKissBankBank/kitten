@@ -27,7 +27,7 @@ export const Info = ({
     >
       <Text
         className="k-RewardCard__info__legend"
-        weight="regular"
+        weight="500"
         size="small"
         lineHeight="normal"
       >
@@ -35,7 +35,7 @@ export const Info = ({
       </Text>{' '}
       <Text
         className="k-RewardCard__info__value"
-        weight="light"
+        weight="400"
         size="small"
         lineHeight="normal"
       >

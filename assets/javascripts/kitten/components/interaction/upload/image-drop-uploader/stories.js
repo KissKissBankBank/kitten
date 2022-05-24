@@ -224,7 +224,7 @@ export const WithDistantImage = args => {
           />
           <RewardCard.Description moreButtonText="See more…" truncateText>
             <p className="k-u-margin-none">
-              <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <strong className="k-u-weight-500">Maecenas tempus</strong>,
               tellus eget condimentum rhoncus, sem quam semper libero,{' '}
               <em className="k-u-style-italic">sit amet adipiscing</em> sem
               neque sed ipsum.
@@ -247,10 +247,10 @@ export const WithDistantImage = args => {
           </RewardCard.Description>
           <RewardCard.TagList>
             <Tag as="li">
-              <strong className="k-u-weight-regular">5</strong> contributeurs
+              <strong className="k-u-weight-500">5</strong> contributeurs
             </Tag>
             <Tag as="li">
-              <strong className="k-u-weight-regular">2/6</strong> disponibles
+              <strong className="k-u-weight-500">2/6</strong> disponibles
             </Tag>
           </RewardCard.TagList>
         </RewardCard>

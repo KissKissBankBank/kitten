@@ -6,6 +6,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledRadio = styled.div`
   /* label block */
@@ -73,13 +74,16 @@ const StyledRadio = styled.div`
     font-size: ${stepToRem(-1)};
     line-height: 1.5;
 
-    &.k-Form-Radio__labelText--normal {
+    &.k-Form-Radio__labelText--normal,
+    &.k-Form-Radio__labelText--500 {
       ${TYPOGRAPHY.fontStyles.regular};
     }
-    &.k-Form-Radio__labelText--light {
+    &.k-Form-Radio__labelText--light
+    &.k-Form-Radio__labelText--400 {
       ${TYPOGRAPHY.fontStyles.light};
     }
-    &.k-Form-Radio__labelText--bold {
+    &.k-Form-Radio__labelText--bold,
+    &.k-Form-Radio__labelText--600 {
       ${TYPOGRAPHY.fontStyles.bold};
     }
   }
@@ -202,6 +206,9 @@ export const Radio = ({
   fontWeight,
   ...inputProps
 }) => {
+  
+  checkDeprecatedWeights(weight)
+
   return (
     <StyledRadio
       className={classNames(
@@ -247,12 +254,12 @@ Radio.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   design: PropTypes.oneOf(['disc', 'check']),
-  fontWeight: PropTypes.oneOf(['light', 'normal', 'bold']),
+  fontWeight: PropTypes.oneOf(['400', '500', '600']),
 }
 
 Radio.defaultProps = {
   error: false,
   disabled: false,
   design: 'disc',
-  fontWeight: 'normal',
+  fontWeight: '500',
 }

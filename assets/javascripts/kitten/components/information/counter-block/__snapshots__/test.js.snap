@@ -36,7 +36,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       />
     </div>
     <p
-      className="k-u-style-italic k-u-weight-bold styledText"
+      className="k-u-style-italic k-u-weight-600 styledText"
     >
       13 106
     </p>
@@ -59,7 +59,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     className="sc-gsDKAQ bsaqBj"
   >
     <p
-      className="k-u-size-huge k-u-style-italic k-u-weight-light styledSubTitle"
+      className="k-u-size-huge k-u-style-italic k-u-weight-400 styledSubTitle"
     >
       bar
     </p>

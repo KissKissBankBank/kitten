@@ -136,7 +136,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
           {children.type.name} <ArrowIcon direction="right" />
         </LinkTo>
       ) : (
-        <Text weight="light" size="micro">
+        <Text weight="400" size="micro">
           {children.type.name}
           {suffix && <> {suffix}</>}
         </Text>

@@ -140,7 +140,7 @@ export const HorizontalProjectCard = ({
         <img {...imageProps} alt={imageProps.alt || ''} />
       </div>
       <Text
-        weight="regular"
+        weight="500"
         size="small"
         as={titleTag}
         className="k-HorizontalProjectCard__title"
@@ -149,7 +149,7 @@ export const HorizontalProjectCard = ({
       </Text>
       <Text
         as="p"
-        weight="light"
+        weight="400"
         size="micro"
         className="k-HorizontalProjectCard__description"
       >
@@ -166,7 +166,7 @@ export const HorizontalProjectCard = ({
             className="k-HorizontalProjectCard__progress__ramp"
           />
           <Text
-            weight="light"
+            weight="400"
             size="micro"
             className="k-HorizontalProjectCard__progress__value"
           >
