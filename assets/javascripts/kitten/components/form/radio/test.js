@@ -17,7 +17,7 @@ describe('<Radio />', () => {
             disabled={false}
             text="Radio Label"
             design="disc"
-            fontWeight="500"
+            weight="500"
           >
             Children
           </Radio>,

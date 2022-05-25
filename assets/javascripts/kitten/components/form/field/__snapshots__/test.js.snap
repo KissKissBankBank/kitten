@@ -927,127 +927,91 @@ Array [
       >
         <label
           className="sc-bdvvtL ikmzYA k-Label k-Label--small"
-          htmlFor="input"
+          htmlFor="option-a"
           onClick={[Function]}
         >
           Label
         </label>
-      </div>
-      <div
-        className="k-Line__item"
-      >
-        <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
-          id="tooltip"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "--toggletipAction-height": undefined,
-              "--toggletipAction-left": undefined,
-              "--toggletipAction-top": undefined,
-            }
-          }
-        >
-          <button
-            aria-label="Learn more"
-            className="k-u-reset-button k-Toggletip__action"
-            onBlur={[Function]}
-            onClick={[Function]}
-            style={
-              Object {
-                "--toggletipAction-color": null,
-              }
-            }
-            type="button"
-          >
-            <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
-              style={
-                Object {
-                  "--iconBadge-background-color": null,
-                  "--iconBadge-border-color": null,
-                  "--iconBadge-border-style": null,
-                  "--iconBadge-border-width": null,
-                }
-              }
-            >
-              <svg
-                fill="var(--color-grey-900)"
-                height="14"
-                viewBox="0 0 4 14"
-                width="4"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="2"
-                  cy="1.25"
-                  r="1.25"
-                  transform="rotate(-180 2 1.25)"
-                />
-                <rect
-                  height="9"
-                  rx="1.25"
-                  transform="rotate(-180 3.25 13.5)"
-                  width="2.5"
-                  x="3.25"
-                  y="13.5"
-                />
-              </svg>
-            </span>
-          </button>
-          <span
-            role={null}
-          />
-        </span>
       </div>
     </div>
   </div>,
   <div
     className="k-u-margin-top-single k-Field__control"
   >
-    <div
-      className="sc-crHmcD lfvliB k-Form-PasswordInput"
+    <fieldset
+      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+      disabled={false}
     >
-      <input
-        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
-        disabled={false}
-        id="input"
-        name="field"
-        placeholder="Placeholder…"
-        type="password"
-      />
-      <button
-        aria-label="Show password"
-        aria-pressed={false}
-        className="k-Form-PasswordInput__icon k-u-reset-button"
-        onClick={[Function]}
-        type="button"
+      <div
+        className="k-Form-RadioButtonSet__radioContainer"
       >
-        <svg
-          fill="#222"
-          viewBox="0 0 18 12"
-          width="18"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="sc-jrQzAO dvqeuA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
-          
-          <path
-            d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+          <input
+            className="k-Form-RadioButton__input"
+            defaultChecked={true}
+            disabled={false}
+            id="option-a"
+            name="radio"
+            type="radio"
           />
-          <circle
-            cx="9"
-            cy="6"
-            r="2"
+          <label
+            className="k-Form-RadioButton__label"
+            htmlFor="option-a"
+          >
+            <span
+              className="k-Form-RadioButton__labelText"
+            >
+              Option A
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-jrQzAO dvqeuA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
+        >
+          <input
+            className="k-Form-RadioButton__input"
+            disabled={false}
+            id="option-b"
+            name="radio"
+            type="radio"
           />
-        </svg>
-      </button>
-    </div>
+          <label
+            className="k-Form-RadioButton__label"
+            htmlFor="option-b"
+          >
+            <span
+              className="k-Form-RadioButton__labelText"
+            >
+              Option B
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-jrQzAO dvqeuA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
+        >
+          <input
+            className="k-Form-RadioButton__input"
+            disabled={false}
+            id="option-c"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-RadioButton__label"
+            htmlFor="option-c"
+          >
+            <span
+              className="k-Form-RadioButton__labelText"
+            >
+              Option C
+            </span>
+          </label>
+        </div>
+      </div>
+    </fieldset>
   </div>,
-  <p
-    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
-  >
-    Error!
-  </p>,
 ]
 `;
 
@@ -1069,126 +1033,90 @@ Array [
       >
         <label
           className="sc-bdvvtL ikmzYA k-Label k-Label--small"
-          htmlFor="input"
+          htmlFor="option-a"
           onClick={[Function]}
         >
           Label
         </label>
-      </div>
-      <div
-        className="k-Line__item"
-      >
-        <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
-          id="tooltip"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "--toggletipAction-height": undefined,
-              "--toggletipAction-left": undefined,
-              "--toggletipAction-top": undefined,
-            }
-          }
-        >
-          <button
-            aria-label="Learn more"
-            className="k-u-reset-button k-Toggletip__action"
-            onBlur={[Function]}
-            onClick={[Function]}
-            style={
-              Object {
-                "--toggletipAction-color": null,
-              }
-            }
-            type="button"
-          >
-            <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
-              style={
-                Object {
-                  "--iconBadge-background-color": null,
-                  "--iconBadge-border-color": null,
-                  "--iconBadge-border-style": null,
-                  "--iconBadge-border-width": null,
-                }
-              }
-            >
-              <svg
-                fill="var(--color-grey-900)"
-                height="14"
-                viewBox="0 0 4 14"
-                width="4"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="2"
-                  cy="1.25"
-                  r="1.25"
-                  transform="rotate(-180 2 1.25)"
-                />
-                <rect
-                  height="9"
-                  rx="1.25"
-                  transform="rotate(-180 3.25 13.5)"
-                  width="2.5"
-                  x="3.25"
-                  y="13.5"
-                />
-              </svg>
-            </span>
-          </button>
-          <span
-            role={null}
-          />
-        </span>
       </div>
     </div>
   </div>,
   <div
     className="k-u-margin-top-single k-Field__control"
   >
-    <div
-      className="sc-crHmcD lfvliB k-Form-PasswordInput"
+    <fieldset
+      className="sc-pVTFL jPxVOQ k-Form-RadioSet"
+      disabled={false}
     >
-      <input
-        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
-        disabled={false}
-        id="input"
-        name="field"
-        placeholder="Placeholder…"
-        type="password"
-      />
-      <button
-        aria-label="Show password"
-        aria-pressed={false}
-        className="k-Form-PasswordInput__icon k-u-reset-button"
-        onClick={[Function]}
-        type="button"
+      <div
+        className="k-Form-RadioSet__radioContainer"
       >
-        <svg
-          fill="#222"
-          viewBox="0 0 18 12"
-          width="18"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          className="sc-furwcr kuBled k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
-          
-          <path
-            d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+          <input
+            className="k-Form-Radio__input"
+            defaultChecked={true}
+            disabled={false}
+            id="option-a"
+            name="radio"
+            type="radio"
           />
-          <circle
-            cx="9"
-            cy="6"
-            r="2"
+          <label
+            className="k-Form-Radio__label"
+            htmlFor="option-a"
+          >
+            <span
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+            >
+              Option A
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-furwcr kuBled k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+        >
+          <input
+            className="k-Form-Radio__input"
+            disabled={false}
+            id="option-b"
+            name="radio"
+            type="radio"
           />
-        </svg>
-      </button>
-    </div>
+          <label
+            className="k-Form-Radio__label"
+            htmlFor="option-b"
+          >
+            <span
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+            >
+              Option B
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-furwcr kuBled k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+        >
+          <input
+            className="k-Form-Radio__input"
+            disabled={false}
+            id="option-c"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-Radio__label"
+            htmlFor="option-c"
+          >
+            <span
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+            >
+              Option C
+            </span>
+          </label>
+        </div>
+      </div>
+    </fieldset>
   </div>,
-  <p
-    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
-  >
-    Error!
-  </p>,
 ]
 `;

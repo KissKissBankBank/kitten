@@ -29,7 +29,7 @@ export default {
     variant: 'orion',
     design: 'disc',
     children: null,
-    fontWeight: '500',
+    weight: '500',
     paragraphStyle: false,
   },
   argTypes: {
@@ -72,8 +72,8 @@ export default {
       name: 'children',
       control: 'text',
     },
-    fontWeight: {
-      name: 'fontWeight',
+    weight: {
+      name: 'weight',
       options: ['400', '500', '600'],
       control: 'inline-radio',
     },
@@ -111,6 +111,6 @@ RadioButtonsWithParagraph.args = {
   variant: 'orion',
   design: 'disc',
   children: null,
-  fontWeight: '400',
+  weight: '400',
   paragraphStyle: true,
 }

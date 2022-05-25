@@ -21,7 +21,7 @@ describe('<RadiButton />', () => {
             size="medium"
             design="disc"
             paragraphStyle={false}
-            fontweight="500"
+            weight="500"
           >
             Children
           </RadioButton>,

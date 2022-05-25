@@ -364,7 +364,8 @@ export const RadioButton = ({
   disabled,
   variant,
   design,
-  fontWeight,
+  fontWeight, // Deprecated
+  weight,
   paragraphStyle,
   ...inputProps
 }) => {
@@ -379,7 +380,7 @@ export const RadioButton = ({
         `k-Form-RadioButton--${variant || 'orion'}`,
         `k-Form-RadioButton--${design}`,
         `k-Form-RadioButton--${size}`,
-        `k-Form-RadioButton__labelText--${fontWeight}`,
+        `k-Form-RadioButton__labelText--${fontWeight || weight}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,
@@ -425,7 +426,8 @@ RadioButton.propTypes = {
   ),
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  fontWeight: PropTypes.oneOf(['400', '500', '600']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '600']),
   paragraphStyle: PropTypes.bool,
 }
 
@@ -436,6 +438,6 @@ RadioButton.defaultProps = {
   disabled: false,
   design: 'disc',
   size: 'medium',
-  fontWeight: '500',
+  weight: '500',
   paragraphStyle: false,
 }

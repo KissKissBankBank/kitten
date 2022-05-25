@@ -6,6 +6,7 @@ import { Radio } from '../../form/radio'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Label } from '../../form/label'
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledRadioSet = styled.fieldset`
   margin: 0;
@@ -37,7 +38,8 @@ export const RadioSet = ({
   design,
   label,
   children,
-  fontWeight,
+  fontWeight, // Deprecated
+  weight,
   labelProps,
   ...props
 }) => {
@@ -67,7 +69,7 @@ export const RadioSet = ({
             id={id}
             design={design}
             error={error}
-            fontWeight={fontWeight}
+            fontWeight={fontWeight || weight}
             name={name}
             key={id}
             {...itemProps}
@@ -93,7 +95,8 @@ RadioSet.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
-  fontWeight: PropTypes.oneOf(['400', '500', '600']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '600']),
 }
 
 RadioSet.defaultProps = {
@@ -104,5 +107,5 @@ RadioSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  fontWeight: '500',
+  weight: '500',
 }

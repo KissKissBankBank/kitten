@@ -44,7 +44,8 @@ export const RadioButtonSet = ({
   label,
   children,
   size,
-  fontWeight,
+  fontWeight, // Deprecated
+  weight,
   paragraphStyle,
   labelProps,
   ...props
@@ -83,7 +84,7 @@ export const RadioButtonSet = ({
             design={design}
             error={error}
             size={size}
-            fontWeight={fontWeight}
+            weight={fontWeight || weight}
             paragraphStyle={paragraphStyle}
             name={name}
             key={id}
@@ -118,7 +119,8 @@ RadioButtonSet.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
-  fontWeight: PropTypes.oneOf(['400', '500', '600']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '600']),
   paragraphStyle: PropTypes.bool,
 }
 
@@ -131,6 +133,6 @@ RadioButtonSet.defaultProps = {
   disabled: false,
   labelProps: {},
   size: 'medium',
-  fontWeight: '500',
+  weight: '500',
   paragraphStyle: false,
 }

@@ -7,6 +7,7 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledRadio = styled.div`
   /* label block */
@@ -203,7 +204,8 @@ export const Radio = ({
   error,
   disabled,
   design,
-  fontWeight,
+  fontWeight, // Deprecated
+  weight,
   ...inputProps
 }) => {
   
@@ -231,7 +233,7 @@ export const Radio = ({
         <span
           className={classNames(
             'k-Form-Radio__labelText',
-            `k-Form-Radio__labelText--${fontWeight}`,
+            `k-Form-Radio__labelText--${fontWeight || weight}`,
             {
               'k-Form-Radio__labelText--withContents': !!children,
             },
@@ -254,12 +256,13 @@ Radio.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   design: PropTypes.oneOf(['disc', 'check']),
-  fontWeight: PropTypes.oneOf(['400', '500', '600']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '600']),
 }
 
 Radio.defaultProps = {
   error: false,
   disabled: false,
   design: 'disc',
-  fontWeight: '500',
+  weight: '500',
 }
