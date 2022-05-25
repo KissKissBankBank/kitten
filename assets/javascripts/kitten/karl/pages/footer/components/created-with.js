@@ -5,10 +5,7 @@ export const CreatedWith = props => {
   return (
     <div className="k-Footer__createdWith" {...props}>
       <div className="k-Footer__createdWith--logo">
-        <Text
-          size="small"
-          weight="regular"
-        >
+        <Text size="small" weight="regular">
           Crée avec
         </Text>
         <KissKissBankBankLogo width="165" />
