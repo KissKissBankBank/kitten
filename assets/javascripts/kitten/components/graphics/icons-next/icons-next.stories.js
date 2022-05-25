@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   AirplaneIconNext,
+  AirplaneRightIconNext,
   BankCardIconNext,
   BubbleIconNext,
   CheckedShieldIconNext,
@@ -135,6 +136,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
       <Group>
         <IconContainer>
           <AirplaneIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <AirplaneRightIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <BankCardIconNext color={colorInput} />
