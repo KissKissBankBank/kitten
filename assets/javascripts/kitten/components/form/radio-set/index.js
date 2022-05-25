@@ -69,7 +69,7 @@ export const RadioSet = ({
             id={id}
             design={design}
             error={error}
-            fontWeight={fontWeight || weight}
+            weight={fontWeight || weight}
             name={name}
             key={id}
             {...itemProps}

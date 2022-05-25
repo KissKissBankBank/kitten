@@ -195,6 +195,6 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: 'light',
+  weight: '400',
   letterSpacing: null,
 }
