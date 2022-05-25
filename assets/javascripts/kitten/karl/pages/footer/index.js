@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Baseline,
+  CreatedWith,
   Ecosystem,
   ListItems,
   SocialButton,
@@ -26,26 +27,43 @@ const Stroke = ({ className, ...props }) => (
   />
 )
 
-const Footer = props => {
+const Footer = ({ variant, ...props }) => {
   return (
-    <StyledFooter {...props}>
-      <div className="k-Footer__gridWrapper">
-        <Baseline />
-        <Stroke className="k-u-hidden@l-up" />
-        <div className="k-u-margin-left-double@s-up">
-          <SocialButton className="k-u-hidden@m-down" />
-          <ListItems />
-        </div>
-      </div>
-      <Stroke />
-      <Ecosystem />
+    <>
+      {variant != "minimalist" &&
+        <StyledFooter {...props}>
+          <div className="k-Footer__gridWrapper">
+            <Baseline />
+            <Stroke className="k-u-hidden@l-up" />
+            <div className="k-u-margin-left-double@s-up">
+              <SocialButton className="k-u-hidden@m-down" />
+              <ListItems />
+            </div>
+          </div>
+          <Stroke />
+          <Ecosystem />
 
-      <Stroke />
-      <Partners />
+          <Stroke />
+          <Partners />
 
-      <Stroke />
-      <Legal />
-    </StyledFooter>
+          <Stroke />
+          <Legal />
+        </StyledFooter>
+      }
+
+      {variant == "minimalist" &&
+        <StyledFooter
+          className="k-Footer__minimalist"
+          {...props}
+        >
+          <CreatedWith />
+          <Partners />
+
+          <Stroke />
+          <Legal />
+        </StyledFooter>
+      }
+  </>
   )
 }
 

@@ -7,3 +7,5 @@ export default {
 }
 
 export const Default = () => <Footer />
+
+export const Minimalist = () => <Footer variant="minimalist" />
