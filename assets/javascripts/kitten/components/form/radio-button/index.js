@@ -39,7 +39,7 @@ const StyledRadioButton = styled.div`
     content: '';
     background-position: center;
     background-repeat: no-repeat;
-    background-color: $var(--color-grey-000);
+    background-color: var(--color-grey-000);
     border: var(--border);
     border-radius: var(--border-radius-rounded);
 
