@@ -96,7 +96,6 @@ const DashboardContent = styled.div`
     }
   }
 
-
   .kiss-dashboard__block__link {
     flex: 1 0 auto;
     display: flex;
