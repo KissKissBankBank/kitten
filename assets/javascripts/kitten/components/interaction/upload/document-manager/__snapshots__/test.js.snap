@@ -224,15 +224,16 @@ exports[`<DocumentManager /> should match snapshot with ready state props 1`] = 
     type="file"
   />
   <label
-    className="sc-bdvvtL ipSHQg k-Button k-DocumentManager__uploader__button k-Button--large k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bdvvtL gsrpFO k-Button k-DocumentManager__uploader__button k-Button--large k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
-    type="button"
+    type={null}
   >
     <div
       className="k-DocumentManager__uploader__container"

@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
 - Fix: `CheckableButton`: Handle ARIA role.
 - Feature: `TagInputAutocomplete`: Add `inputLabel` prop.
+- Feature: `Button`: Add `hasBullet` and `bulletColor` props.
 
 - Fix: `DragAndDropList`: Add useEffect to listen children collection changes
 
