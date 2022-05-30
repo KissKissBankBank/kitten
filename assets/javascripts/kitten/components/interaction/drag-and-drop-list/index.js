@@ -117,25 +117,22 @@ export const DragAndDropList = ({
   showHandle,
   ...props
 }) => {
+  const onSetChildrenDict = () => {
+    return React.Children.toArray(children).reduce(
+      (acc, current) => ({ ...acc, [current.props.id]: current }),
+      {},
+    )
+  }
+
   const [items, setItems] = useState(
     React.Children.toArray(children).map(child => child.props.id),
   )
-  const [childrenDict, setChildrenDict] = useState(
-    React.Children.toArray(children).reduce(
-      (acc, current) => ({ ...acc, [current.props.id]: current }),
-      {},
-    ),
-  )
+  const [childrenDict, setChildrenDict] = useState(onSetChildrenDict())
   const [activeId, setActiveId] = useState(null)
 
   useEffect(() => {
     setItems(React.Children.toArray([...children]).map(child => child.props.id))
-    setChildrenDict(
-      React.Children.toArray([...children]).reduce(
-        (acc, current) => ({ ...acc, [current.props.id]: current }),
-        {},
-      ),
-    )
+    setChildrenDict(onSetChildrenDict())
   }, [children?.length])
 
   const sensors = useSensors(
