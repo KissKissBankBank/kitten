@@ -23,6 +23,8 @@ export const TagInputAutocomplete = ({
   onKeyDown,
   onBlur,
   suggestionsNumberA11yMessage,
+  showSuggestionsOnFocus,
+  inputLabel,
 }) => {
   checkDeprecatedSizes(size)
 
@@ -163,6 +165,11 @@ export const TagInputAutocomplete = ({
     setInputValue(event.target?.innerText || '')
   }
 
+  const handleInputFocus = () => {
+    if (!showSuggestionsOnFocus) return
+    setShowSuggestions(true)
+  }
+
   const handleInputBlur = e => {
     // check if focus stays in the component
     const ancestor = e.target.closest('.k-Form-TagInput')
@@ -170,7 +177,7 @@ export const TagInputAutocomplete = ({
 
     setTimeout(() => {
       setShowSuggestions(false)
-    }, 100)
+    }, 50)
 
     onBlur(e)
   }
@@ -180,11 +187,16 @@ export const TagInputAutocomplete = ({
     const suggestionText = getSuggestionText(value)
 
     handleAddItem(suggestionText)
-    setShowSuggestions(false)
+
+    if (!showSuggestionsOnFocus) {
+      setShowSuggestions(false)
+    }
   }
 
   useEffect(() => {
-    setShowSuggestions(false)
+    if (!showSuggestionsOnFocus) {
+      setShowSuggestions(false)
+    }
     if (!itemsListFromProps) {
       onChange(itemsList)
     }
@@ -198,7 +210,10 @@ export const TagInputAutocomplete = ({
 
   useEffect(() => {
     updateSuggestions()
-    setShowSuggestions(inputValue !== '')
+
+    if (!showSuggestionsOnFocus) {
+      setShowSuggestions(inputValue !== '')
+    }
   }, [inputValue])
 
   useEffect(() => {
@@ -232,6 +247,7 @@ export const TagInputAutocomplete = ({
             <span
               ref={inputEl}
               id={id}
+              aria-label={inputLabel}
               contentEditable
               role="textbox"
               aria-describedby={`${id}-legend`}
@@ -239,8 +255,9 @@ export const TagInputAutocomplete = ({
               onKeyDown={handleInputKeydown}
               className="k-Form-TagInput__input"
               onInput={handleInputChange}
+              onFocus={handleInputFocus}
               onBlur={handleInputBlur}
-              aria-owns={`${id}-results`}
+              aria-owns={showSuggestions ? `${id}-results` : null}
               aria-expanded={
                 showSuggestions ? suggestionsList.length > 0 : null
               }
@@ -357,6 +374,7 @@ TagInputAutocomplete.defaultProps = {
   suggestionsNumberA11yMessage: number => {
     return `${number} suggestions.`
   },
+  showSuggestionsOnFocus: true,
 }
 
 TagInputAutocomplete.propTypes = {
@@ -365,4 +383,6 @@ TagInputAutocomplete.propTypes = {
   onKeyDown: PropTypes.func,
   onBlur: PropTypes.func,
   suggestionsNumberA11yMessage: PropTypes.func,
+  showSuggestionsOnFocus: PropTypes.bool,
+  inputLabel: PropTypes.string,
 }

@@ -503,6 +503,8 @@ export default {
     suggestions,
     suggestionsNumberA11yMessage: valeur =>
       `Il y a ${valeur} suggestions. Flèches haut/bas pour les dérouler.`,
+    showSuggestionsOnFocus: false,
+    inputLabel: 'Input label',
   },
   argTypes: {
     id: {
@@ -545,6 +547,12 @@ export default {
     suggestionsNumberA11yMessage: {
       name: 'suggestionsNumberA11yMessage',
       control: 'function',
+    },
+    showSuggestionsOnFocus: {
+      control: 'boolean',
+    },
+    inputLabel: {
+      control: 'text',
     },
   },
 }
