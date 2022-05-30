@@ -55,23 +55,36 @@ var DragAndDropList = function DragAndDropList(_ref) {
       showHandle = _ref.showHandle,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
-  var _useState = (0, _react.useState)(_react.default.Children.toArray(children).map(function (child) {
-    return child.props.id;
-  })),
+  var onSetChildrenDict = function onSetChildrenDict() {
+    return _react.default.Children.toArray(children).reduce(function (acc, current) {
+      var _extends2;
+
+      return (0, _extends3.default)({}, acc, (_extends2 = {}, _extends2[current.props.id] = current, _extends2));
+    }, {});
+  };
+
+  var onSetItems = function onSetItems() {
+    return _react.default.Children.toArray(children).map(function (child) {
+      return child.props.id;
+    });
+  };
+
+  var _useState = (0, _react.useState)(onSetItems()),
       items = _useState[0],
       setItems = _useState[1];
 
-  var _useState2 = (0, _react.useState)(_react.default.Children.toArray(children).reduce(function (acc, current) {
-    var _extends2;
-
-    return (0, _extends3.default)({}, acc, (_extends2 = {}, _extends2[current.props.id] = current, _extends2));
-  }, {})),
-      childrenDict = _useState2[0];
+  var _useState2 = (0, _react.useState)(onSetChildrenDict()),
+      childrenDict = _useState2[0],
+      setChildrenDict = _useState2[1];
 
   var _useState3 = (0, _react.useState)(null),
       activeId = _useState3[0],
       setActiveId = _useState3[1];
 
+  (0, _react.useEffect)(function () {
+    setItems(onSetItems());
+    setChildrenDict(onSetChildrenDict());
+  }, [children == null ? void 0 : children.length]);
   var sensors = (0, _core.useSensors)((0, _core.useSensor)(_core.MouseSensor, {
     activationConstraint: {
       distance: 5

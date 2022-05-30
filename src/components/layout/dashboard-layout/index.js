@@ -37,7 +37,7 @@ var _flow = require("./flow");
 
 var _styles = require("./styles");
 
-var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style"],
+var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style", "sidebarProps", "contentProps"],
     _excluded2 = ["className", "hasButton", "buttonProps", "children", "isOpen"],
     _excluded3 = ["openLabel", "closeLabel"],
     _excluded4 = ["className", "children", "tag"],
@@ -59,6 +59,10 @@ var DashboardLayout = function DashboardLayout(_ref) {
       _ref$overlayZIndex = _ref.overlayZIndex,
       overlayZIndex = _ref$overlayZIndex === void 0 ? 100 : _ref$overlayZIndex,
       style = _ref.style,
+      _ref$sidebarProps = _ref.sidebarProps,
+      sidebarProps = _ref$sidebarProps === void 0 ? {} : _ref$sidebarProps,
+      _ref$contentProps = _ref.contentProps,
+      contentProps = _ref$contentProps === void 0 ? {} : _ref$contentProps,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
@@ -190,19 +194,20 @@ var DashboardLayout = function DashboardLayout(_ref) {
   })), /*#__PURE__*/_react.default.createElement("a", {
     className: "k-DashboardLayout__quickAccessLink",
     href: "#main"
-  }, quickAccessLinkText), /*#__PURE__*/_react.default.createElement("div", {
+  }, quickAccessLinkText), /*#__PURE__*/_react.default.createElement("section", {
     className: (0, _classnames.default)('k-DashboardLayout', props.className, {
       'k-DashboardLayout--isOpen': isOpen
     }),
     style: (0, _extends2.default)({}, style, {
       '--DashboardLayout-overlay-zindex': overlayZIndex
     })
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    ref: sideBarElement,
+  }, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    ref: sideBarElement
+  }, sidebarProps, {
     tabIndex: -1,
-    className: "k-DashboardLayout__sideWrapper",
+    className: (0, _classnames.default)('k-DashboardLayout__sideWrapper', sidebarProps == null ? void 0 : sidebarProps.className),
     "aria-hidden": isDesktop ? null : !isOpen
-  }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, backLinkProps, {
+  }), /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, backLinkProps, {
     className: (0, _classnames.default)('k-DashboardLayout__backLink', backLinkProps.className)
   }), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     "aria-hidden": true,
@@ -219,11 +224,12 @@ var DashboardLayout = function DashboardLayout(_ref) {
   })), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: SideFooter
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    ref: contentElement,
+  }))), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+    ref: contentElement
+  }, contentProps, {
     tabIndex: -1,
-    className: "k-DashboardLayout__mainWrapper"
-  }, renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
+    className: (0, _classnames.default)('k-DashboardLayout__mainWrapper', contentProps == null ? void 0 : contentProps.className)
+  }), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Header
   }), {
@@ -307,7 +313,7 @@ var SideFooter = function SideFooter(_ref6) {
 var Alerts = function Alerts(_ref7) {
   var className = _ref7.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded7);
-  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("section", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__alerts', 'k-DashboardLayout__fullWidth', className)
   }, props));
 };
@@ -317,7 +323,7 @@ var Toaster = function Toaster(_ref8) {
       isOpen = _ref8.isOpen,
       children = _ref8.children,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref8, _excluded8);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("section", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardLayout__toaster__wrapper', 'k-DashboardLayout__fullWidth', className, {
       'k-DashboardLayout__toaster--isOpen': isOpen
     }),
@@ -337,7 +343,9 @@ DashboardLayout.propTypes = {
   }),
   quickAccessLinkText: _propTypes.default.node.isRequired,
   fullHeightContent: _propTypes.default.bool,
-  overlayZIndex: _propTypes.default.number
+  overlayZIndex: _propTypes.default.number,
+  sidebarProps: _propTypes.default.object,
+  contentProps: _propTypes.default.object
 };
 Header.propTypes = {
   buttonProps: _propTypes.default.shape({

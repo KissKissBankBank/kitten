@@ -57,7 +57,9 @@ var HeaderNav = function HeaderNav(_ref) {
       quickAccessProps = _ref.quickAccessProps,
       stickyProps = _ref.stickyProps,
       zIndexConfig = _ref.zIndexConfig,
-      className = _ref.className;
+      className = _ref.className,
+      navProps = _ref.navProps,
+      headerProps = _ref.headerProps;
 
   var _useState = (0, _react.useState)(false),
       isMenuExpanded = _useState[0],
@@ -107,27 +109,28 @@ var HeaderNav = function HeaderNav(_ref) {
       expandBy: menuExpandBy,
       callOnToggle: callOnToggle
     }
-  }, /*#__PURE__*/_react.default.createElement(_styles.StyledHeader, {
-    style: {
+  }, /*#__PURE__*/_react.default.createElement(_styles.StyledHeader, (0, _extends2.default)({}, headerProps, {
+    style: (0, _extends2.default)({
       '--HeaderNav-zIndex': zIndexConfig.header,
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
-    },
+    }, headerProps == null ? void 0 : headerProps.style),
     zIndex: zIndexConfig,
-    className: (0, _classnames.default)('k-HeaderNav__wrapper', {
+    className: (0, _classnames.default)('k-HeaderNav__wrapper', headerProps == null ? void 0 : headerProps.className, {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded,
       'k-HeaderNav--isStuck': stuckState
     })
-  }, /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
+  }), /*#__PURE__*/_react.default.createElement(_stickyContainer.StickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
     isSticky: stickyState
   }, stickyProps, {
     className: (0, _classnames.default)('k-HeaderNav__stickyContainer', stickyProps == null ? void 0 : stickyProps.className),
     onChange: handleStickyChange
-  }), /*#__PURE__*/_react.default.createElement("nav", {
-    ref: headerRef,
+  }), /*#__PURE__*/_react.default.createElement("nav", (0, _extends2.default)({
+    ref: headerRef
+  }, navProps, {
     id: id,
-    className: (0, _classnames.default)('k-HeaderNav', className)
-  }, /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, quickAccessProps), children))));
+    className: (0, _classnames.default)('k-HeaderNav', className, navProps.className)
+  }), /*#__PURE__*/_react.default.createElement(_quickAccessLink.QuickAccessLink, quickAccessProps), children))));
 };
 
 HeaderNav.Button = _button.Button;
@@ -153,6 +156,8 @@ HeaderNav.propTypes = {
   stickyProps: _propTypes.default.shape({
     top: _propTypes.default.number
   }),
+  headerProps: _propTypes.default.object,
+  navProps: _propTypes.default.object,
   zIndexConfig: _propTypes.default.shape({
     header: _propTypes.default.number,
     headerWithOpenMenu: _propTypes.default.number
@@ -164,6 +169,8 @@ HeaderNav.defaultProps = {
   isLogged: false,
   quickAccessProps: {},
   stickyProps: {},
+  headerProps: {},
+  navProps: {},
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3
