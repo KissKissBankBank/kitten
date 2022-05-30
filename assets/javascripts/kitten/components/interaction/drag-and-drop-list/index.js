@@ -124,14 +124,16 @@ export const DragAndDropList = ({
     )
   }
 
-  const [items, setItems] = useState(
-    React.Children.toArray(children).map(child => child.props.id),
-  )
+  const onSetItems = () => {
+    return React.Children.toArray(children).map(child => child.props.id)
+  }
+
+  const [items, setItems] = useState(onSetItems())
   const [childrenDict, setChildrenDict] = useState(onSetChildrenDict())
   const [activeId, setActiveId] = useState(null)
 
   useEffect(() => {
-    setItems(React.Children.toArray([...children]).map(child => child.props.id))
+    setItems(onSetItems())
     setChildrenDict(onSetChildrenDict())
   }, [children?.length])
 
