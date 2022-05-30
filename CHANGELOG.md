@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `CheckableButton`: Handle ARIA role.
 - Feature: `TagInputAutocomplete`: Add `inputLabel` prop.
 
+- Fix: `DragAndDropList`: Add useEffect to listen children collection changes
+
 ## [10.11.0] - 2022-05-23
 
 Features:
