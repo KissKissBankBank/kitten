@@ -8,17 +8,18 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
   
   <a
     aria-label="linkedin"
-    className="sc-dkPtRN hlSIhl k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+    className="sc-dkPtRN foMhKn k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     href="https://www.linkedin.com"
     rel="noopener"
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     target="_blank"
-    type="button"
+    type={null}
   >
     <svg
       aria-hidden={true}
@@ -63,15 +64,16 @@ Array [
   >
     <a
       aria-label="E-mail"
-      className="sc-dkPtRN hlSIhl k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN foMhKn k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="mailto:example@kisskissbankbank.com"
       style={
         Object {
           "--Button-border-radius": null,
+          "--Button-bullet-color": null,
         }
       }
-      type="button"
+      type={null}
     >
       <svg
         aria-hidden={true}
@@ -89,15 +91,16 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-dkPtRN hlSIhl k-Button k-u-hidden@s-up k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN foMhKn k-Button k-u-hidden@s-up k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="tel:06 00 00 00 00"
       style={
         Object {
           "--Button-border-radius": null,
+          "--Button-bullet-color": null,
         }
       }
-      type="button"
+      type={null}
     >
       <svg
         aria-hidden={true}
@@ -128,14 +131,15 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-dkPtRN hlSIhl k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-dkPtRN foMhKn k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         style={
           Object {
             "--Button-border-radius": null,
+            "--Button-bullet-color": null,
           }
         }
-        type="button"
+        type={null}
       >
         <svg
           fill="#222"
@@ -153,17 +157,18 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-dkPtRN hlSIhl k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN foMhKn k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.linkedin.com"
       rel="noopener"
       style={
         Object {
           "--Button-border-radius": null,
+          "--Button-bullet-color": null,
         }
       }
       target="_blank"
-      type="button"
+      type={null}
     >
       <svg
         aria-hidden={true}
@@ -181,17 +186,18 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-dkPtRN hlSIhl k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN foMhKn k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.twitter.com"
       rel="noopener"
       style={
         Object {
           "--Button-border-radius": null,
+          "--Button-bullet-color": null,
         }
       }
       target="_blank"
-      type="button"
+      type={null}
     >
       <svg
         aria-hidden={true}

@@ -210,6 +210,32 @@ const StyledButton = styled.button`
   /* MODIFIERS */
 
   ${({ modifier }) => modifierStyles(modifier)}
+
+  &.k-Button--hasBullet {
+    --Button-bullet-radius: ${pxToRem(3 + 4)}; /* border + (width/2) */
+    --Math-Cos45: 0.7071; /* Math.cos(45) */
+    --Button-radius: var(--Button-border-radius, 0);
+    --Button-bullet-distance: calc(
+      var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) -
+        var(--Button-bullet-radius)
+    );
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: var(--Button-bullet-color, var(--color-primary-500));
+      width: ${pxToRem(8)};
+      height: ${pxToRem(8)};
+      border-radius: ${pxToRem(8)};
+      border: ${pxToRem(3)} solid var(--color-grey-000);
+      right: var(--Button-bullet-distance);
+      top: var(--Button-bullet-distance);
+    }
+
+    &.k-Button--rounded {
+      --Button-radius: calc(var(--Button-dimension) / 2);
+    }
+  }
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
@@ -229,6 +255,9 @@ export const Button = ({
   fit,
   mobileFit,
   active,
+  style,
+  hasBullet,
+  bulletColor,
   ...props
 }) => {
   if (deprecatedModifiers.includes(modifier)) {
@@ -257,14 +286,17 @@ export const Button = ({
           [`k-Button--mobile-fit-${mobileFit}`]: !!mobileFit,
           'k-Button--disabled': disabled,
           'k-Button--rounded': rounded,
+          'k-Button--hasBullet': hasBullet,
         },
       )}
       modifier={internalModifier}
       style={{
+        ...style,
         '--Button-border-radius':
           borderRadius != null ? pxToRem(borderRadius) : null,
+        '--Button-bullet-color': hasBullet && bulletColor ? bulletColor : null,
       }}
-      type="button"
+      type={internalTag === 'button' ? 'button' : null}
       as={internalTag}
       disabled={internalTag === 'button' ? disabled : null}
       {...props}
@@ -283,6 +315,8 @@ Button.propTypes = {
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
   modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
   active: PropTypes.bool,
+  hasBullet: PropTypes.bool,
+  bulletColor: PropTypes.string,
 }
 
 Button.defaultProps = {
@@ -294,4 +328,5 @@ Button.defaultProps = {
   fit: 'min-width',
   mobileFit: null,
   active: false,
+  hasBullet: false,
 }

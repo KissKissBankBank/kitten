@@ -16,14 +16,15 @@ exports[`<TextCopy /> should match snapshot 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ bAfvLx k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+    className="sc-gsDKAQ bjTHaH k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
-    type="button"
+    type={null}
   >
     <svg
       height="22"
@@ -62,14 +63,15 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ dcifNb k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--helium k-Button--fit-content"
+    className="sc-gsDKAQ iLsKyh k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--helium k-Button--fit-content"
     disabled={null}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
-    type="button"
+    type={null}
   >
     Button text
   </span>
@@ -97,14 +99,15 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ bAfvLx k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+    className="sc-gsDKAQ bjTHaH k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
-    type="button"
+    type={null}
   >
     <svg
       height="22"
@@ -143,14 +146,15 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ bAfvLx k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+    className="sc-gsDKAQ bjTHaH k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
-    type="button"
+    type={null}
   >
     <svg
       height="22"
