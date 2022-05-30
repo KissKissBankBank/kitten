@@ -62,12 +62,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="sc-jRQBWg dPLTXP k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-min-width"
+            className="sc-jRQBWg RGdNB k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-min-width"
             href={null}
             onClick={null}
             style={
               Object {
                 "--Button-border-radius": null,
+                "--Button-bullet-color": null,
               }
             }
             type="button"
@@ -116,12 +117,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-jRQBWg dPLTXP k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-min-width"
+          className="sc-jRQBWg RGdNB k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-min-width"
           href={null}
           onClick={null}
           style={
             Object {
               "--Button-border-radius": null,
+              "--Button-bullet-color": null,
             }
           }
           type="button"
@@ -165,12 +167,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-jRQBWg dPLTXP k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-min-width"
+          className="sc-jRQBWg RGdNB k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-min-width"
           href={null}
           onClick={null}
           style={
             Object {
               "--Button-border-radius": null,
+              "--Button-bullet-color": null,
             }
           }
           type="button"
