@@ -144,6 +144,7 @@ export const CheckableButton = ({
         className,
         `k-CheckableButton--${checkPosition}`,
       )}
+      role="checkbox"
       {...props}
       aria-checked={isChecked || null}
       modifier={checkedModifier}

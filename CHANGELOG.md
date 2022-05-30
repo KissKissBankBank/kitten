@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `AirplaneIconNext`: Add `direction` prop, defaults to `up-left`.
 - Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
+- Feature: `HeaderNav`: Add `navProps` and `headerProps` props.
+- Feature: `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
+- Fix: `CheckableButton`: Handle ARIA role.
+- Feature: `TagInputAutocomplete`: Add `inputLabel` prop.
+
+- Fix: `DragAndDropList`: Add useEffect to listen children collection changes
 
 ## [10.11.0] - 2022-05-23
 

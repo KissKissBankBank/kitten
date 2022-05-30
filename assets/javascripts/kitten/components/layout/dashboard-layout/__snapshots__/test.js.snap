@@ -1248,7 +1248,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   >
     Custom quick access link text
   </a>
-  <div
+  <section
     className="k-DashboardLayout"
     style={
       Object {
@@ -1364,11 +1364,11 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
         </div>
         Header content
       </header>
-      <div
+      <section
         className="k-DashboardLayout__alerts k-DashboardLayout__fullWidth"
       >
         Alert!
-      </div>
+      </section>
       <main
         className="k-DashboardLayout__main"
         id="main"
@@ -1376,7 +1376,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
         <p>
           Main content
         </p>
-        <div
+        <section
           aria-live="polite"
           className="k-DashboardLayout__toaster__wrapper k-DashboardLayout__fullWidth"
         >
@@ -1385,13 +1385,13 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
           >
             Toaster
           </div>
-        </div>
+        </section>
         <div
           className="k-DashboardLayout__toaster__spacer"
         />
       </main>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
@@ -1886,7 +1886,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   >
     Custom quick access link text
   </a>
-  <div
+  <section
     className="k-DashboardLayout"
     style={
       Object {
@@ -2011,6 +2011,6 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
         </p>
       </main>
     </div>
-  </div>
+  </section>
 </div>
 `;
