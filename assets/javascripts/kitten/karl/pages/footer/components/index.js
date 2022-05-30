@@ -1,4 +1,5 @@
 export { Baseline } from './baseline'
+export { CreatedWith } from './created-with'
 export { ListItems } from './list-items'
 export { SocialButton } from './social-button'
 export { Ecosystem } from './ecosystem'
