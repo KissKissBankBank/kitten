@@ -18,7 +18,7 @@ Features:
 Fixes:
 
 - `CheckableButton`: Handle ARIA role.
-- `DragAndDropList`: Add useEffect to listen children collection changes
+- `DragAndDropList`: Add useEffect to listen children collection changes.
 
 ## [10.11.0] - 2022-05-23
 
