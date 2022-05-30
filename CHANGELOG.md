@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
+- Feature: `HeaderNav`: Add `navProps` and `headerProps` props.
+- Feature: `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
+- Fix: `CheckableButton`: Handle ARIA role.
+- Feature: `TagInputAutocomplete`: Add `inputLabel` prop.
 
 ## [10.11.0] - 2022-05-23
 

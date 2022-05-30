@@ -32,6 +32,8 @@ export const DashboardLayout = ({
   fullHeightContent,
   overlayZIndex = 100,
   style,
+  sidebarProps = {},
+  contentProps = {},
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -153,11 +155,12 @@ export const DashboardLayout = ({
           type: SiteHeader,
         }),
       )}
+
       <a className="k-DashboardLayout__quickAccessLink" href="#main">
         {quickAccessLinkText}
       </a>
 
-      <div
+      <section
         className={classNames('k-DashboardLayout', props.className, {
           'k-DashboardLayout--isOpen': isOpen,
         })}
@@ -168,8 +171,12 @@ export const DashboardLayout = ({
       >
         <div
           ref={sideBarElement}
+          {...sidebarProps}
           tabIndex={-1}
-          className="k-DashboardLayout__sideWrapper"
+          className={classNames(
+            'k-DashboardLayout__sideWrapper',
+            sidebarProps?.className,
+          )}
           aria-hidden={isDesktop ? null : !isOpen}
         >
           <a
@@ -209,10 +216,15 @@ export const DashboardLayout = ({
             }),
           )}
         </div>
+
         <div
           ref={contentElement}
+          {...contentProps}
           tabIndex={-1}
-          className="k-DashboardLayout__mainWrapper"
+          className={classNames(
+            'k-DashboardLayout__mainWrapper',
+            contentProps?.className,
+          )}
         >
           {renderComponentChildrenArray(
             getReactElementsByType({
@@ -257,7 +269,7 @@ export const DashboardLayout = ({
             )}
           </main>
         </div>
-      </div>
+      </section>
     </StyledDashboard>
   )
 }
@@ -328,7 +340,7 @@ const SideFooter = ({ className, ...props }) => (
 )
 
 const Alerts = ({ className, ...props }) => (
-  <div
+  <section
     className={classNames(
       'k-DashboardLayout__alerts',
       'k-DashboardLayout__fullWidth',
@@ -341,7 +353,7 @@ const Alerts = ({ className, ...props }) => (
 const Toaster = ({ className, isOpen, children, ...props }) => {
   return (
     <>
-      <div
+      <section
         className={classNames(
           'k-DashboardLayout__toaster__wrapper',
           'k-DashboardLayout__fullWidth',
@@ -354,7 +366,7 @@ const Toaster = ({ className, isOpen, children, ...props }) => {
         {...props}
       >
         <div className="k-DashboardLayout__toaster">{children}</div>
-      </div>
+      </section>
       <div className="k-DashboardLayout__toaster__spacer" />
     </>
   )
@@ -369,6 +381,8 @@ DashboardLayout.propTypes = {
   quickAccessLinkText: PropTypes.node.isRequired,
   fullHeightContent: PropTypes.bool,
   overlayZIndex: PropTypes.number,
+  sidebarProps: PropTypes.object,
+  contentProps: PropTypes.object,
 }
 
 Header.propTypes = {

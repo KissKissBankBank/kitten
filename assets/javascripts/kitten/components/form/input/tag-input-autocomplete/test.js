@@ -23,6 +23,7 @@ describe('<TagInputAutocomplete />', () => {
           id="test-slider-input"
           helpMessage="Press Enter or Comma to add an item."
           suggestions={suggestions}
+          inputLabel="Tag input"
         />,
       )
       .toJSON()
@@ -41,6 +42,7 @@ describe('<TagInputAutocomplete />', () => {
           removeEventKeys={['e', '^', 'Backspace']}
           initialItemsList={['Black', 'Blue', 'Green and magenta']}
           placeholder="OK"
+          inputLabel="Tag input"
         />,
       )
       .toJSON()
@@ -56,6 +58,7 @@ describe('<TagInputAutocomplete />', () => {
           helpMessage="This list input is disabled."
           suggestions={suggestions}
           initialItemsList={['Black', 'Blue', 'Green and magenta']}
+          inputLabel="Tag input"
         />,
       )
       .toJSON()
@@ -76,6 +79,7 @@ describe('<TagInputAutocomplete />', () => {
             'Green and magenta',
             { value: 'Green and magenta', disabled: false },
           ]}
+          inputLabel="Tag input"
         />,
       )
       .toJSON()
