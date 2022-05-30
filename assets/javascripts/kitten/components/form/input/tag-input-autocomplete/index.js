@@ -24,6 +24,7 @@ export const TagInputAutocomplete = ({
   onBlur,
   suggestionsNumberA11yMessage,
   showSuggestionsOnFocus,
+  inputLabel,
 }) => {
   checkDeprecatedSizes(size)
 
@@ -246,6 +247,7 @@ export const TagInputAutocomplete = ({
             <span
               ref={inputEl}
               id={id}
+              aria-label={inputLabel}
               contentEditable
               role="textbox"
               aria-describedby={`${id}-legend`}
@@ -255,7 +257,7 @@ export const TagInputAutocomplete = ({
               onInput={handleInputChange}
               onFocus={handleInputFocus}
               onBlur={handleInputBlur}
-              aria-owns={`${id}-results`}
+              aria-owns={showSuggestions ? `${id}-results` : null}
               aria-expanded={
                 showSuggestions ? suggestionsList.length > 0 : null
               }
@@ -382,4 +384,5 @@ TagInputAutocomplete.propTypes = {
   onBlur: PropTypes.func,
   suggestionsNumberA11yMessage: PropTypes.func,
   showSuggestionsOnFocus: PropTypes.bool,
+  inputLabel: PropTypes.string,
 }

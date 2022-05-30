@@ -334,6 +334,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   aria-checked={null}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
@@ -679,6 +680,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--lithium k-Button--fit-min-width k-Button--disabled"
   disabled={true}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1024,6 +1026,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--copper k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1369,6 +1372,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--large k-Button--lithium k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
@@ -1714,6 +1718,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--small k-Button--lithium k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,

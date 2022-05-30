@@ -30,6 +30,8 @@ const HeaderNav = ({
   stickyProps,
   zIndexConfig,
   className,
+  navProps,
+  headerProps,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
@@ -64,12 +66,14 @@ const HeaderNav = ({
       }}
     >
       <StyledHeader
+        {...headerProps}
         style={{
           '--HeaderNav-zIndex': zIndexConfig.header,
           '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
+          ...headerProps?.style,
         }}
         zIndex={zIndexConfig}
-        className={classNames('k-HeaderNav__wrapper', {
+        className={classNames('k-HeaderNav__wrapper', headerProps?.className, {
           'k-HeaderNav--menuIsExpanded': isMenuExpanded,
           'k-HeaderNav--isStuck': stuckState,
         })}
@@ -86,8 +90,9 @@ const HeaderNav = ({
         >
           <nav
             ref={headerRef}
+            {...navProps}
             id={id}
-            className={classNames('k-HeaderNav', className)}
+            className={classNames('k-HeaderNav', className, navProps.className)}
           >
             <QuickAccessLink {...quickAccessProps} />
             {children}
@@ -122,6 +127,8 @@ HeaderNav.propTypes = {
   stickyProps: PropTypes.shape({
     top: PropTypes.number,
   }),
+  headerProps: PropTypes.object,
+  navProps: PropTypes.object,
   zIndexConfig: PropTypes.shape({
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number,
@@ -134,6 +141,8 @@ HeaderNav.defaultProps = {
   isLogged: false,
   quickAccessProps: {},
   stickyProps: {},
+  headerProps: {},
+  navProps: {},
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3,
