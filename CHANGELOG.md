@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `Checkbox`: Improve styles.
+- Fix: `Checkbox` and `RadioButton`: Improve styles.
 
 ## [10.11.0] - 2022-05-23
 
