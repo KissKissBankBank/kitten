@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   DndContext,
   closestCenter,
@@ -120,13 +120,23 @@ export const DragAndDropList = ({
   const [items, setItems] = useState(
     React.Children.toArray(children).map(child => child.props.id),
   )
-  const [childrenDict] = useState(
+  const [childrenDict, setChildrenDict] = useState(
     React.Children.toArray(children).reduce(
       (acc, current) => ({ ...acc, [current.props.id]: current }),
       {},
     ),
   )
   const [activeId, setActiveId] = useState(null)
+
+  useEffect(() => {
+    setItems(React.Children.toArray([...children]).map(child => child.props.id))
+    setChildrenDict(
+      React.Children.toArray([...children]).reduce(
+        (acc, current) => ({ ...acc, [current.props.id]: current }),
+        {},
+      ),
+    )
+  }, [children.length])
 
   const sensors = useSensors(
     useSensor(MouseSensor, {
