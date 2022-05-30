@@ -28,7 +28,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -90,7 +90,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -152,7 +152,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -214,7 +214,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >

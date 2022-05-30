@@ -136,7 +136,7 @@ export const DragAndDropList = ({
         {},
       ),
     )
-  }, [children.length])
+  }, [children?.length])
 
   const sensors = useSensors(
     useSensor(MouseSensor, {
