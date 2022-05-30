@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `AirplaneIconNext`: Add `direction` prop, defaults to `up-left`.
 - Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
 - Feature: `HeaderNav`: Add `navProps` and `headerProps` props.
 - Feature: `DashboardLayout`: Add `sidebarProps` and `contentProps` props.

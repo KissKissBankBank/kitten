@@ -133,8 +133,11 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
   return (
     <Container>
       <Group>
-        <IconContainer>
+        <IconContainer suffix='direction="up-left"'>
           <AirplaneIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer suffix='direction="left"'>
+          <AirplaneIconNext direction="left" color={colorInput} />
         </IconContainer>
         <IconContainer>
           <BankCardIconNext color={colorInput} />
