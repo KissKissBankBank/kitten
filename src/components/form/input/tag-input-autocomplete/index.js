@@ -42,7 +42,9 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       suggestions = _ref.suggestions,
       onKeyDown = _ref.onKeyDown,
       onBlur = _ref.onBlur,
-      suggestionsNumberA11yMessage = _ref.suggestionsNumberA11yMessage;
+      suggestionsNumberA11yMessage = _ref.suggestionsNumberA11yMessage,
+      showSuggestionsOnFocus = _ref.showSuggestionsOnFocus,
+      inputLabel = _ref.inputLabel;
   (0, _deprecated.checkDeprecatedSizes)(size);
   var inputEl = (0, _react.useRef)(null);
   var suggestionsEl = (0, _react.useRef)(null);
@@ -190,13 +192,18 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
     setInputValue(((_event$target = event.target) == null ? void 0 : _event$target.innerText) || '');
   };
 
+  var handleInputFocus = function handleInputFocus() {
+    if (!showSuggestionsOnFocus) return;
+    setShowSuggestions(true);
+  };
+
   var handleInputBlur = function handleInputBlur(e) {
     // check if focus stays in the component
     var ancestor = e.target.closest('.k-Form-TagInput');
     if (ancestor.matches(':focus-within')) return;
     setTimeout(function () {
       setShowSuggestions(false);
-    }, 100);
+    }, 50);
     onBlur(e);
   };
 
@@ -205,12 +212,17 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       if (!value) return;
       var suggestionText = getSuggestionText(value);
       handleAddItem(suggestionText);
-      setShowSuggestions(false);
+
+      if (!showSuggestionsOnFocus) {
+        setShowSuggestions(false);
+      }
     };
   };
 
   (0, _react.useEffect)(function () {
-    setShowSuggestions(false);
+    if (!showSuggestionsOnFocus) {
+      setShowSuggestions(false);
+    }
 
     if (!itemsListFromProps) {
       onChange(itemsList);
@@ -223,7 +235,10 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
   }, [itemsListFromProps]);
   (0, _react.useEffect)(function () {
     updateSuggestions();
-    setShowSuggestions(inputValue !== '');
+
+    if (!showSuggestionsOnFocus) {
+      setShowSuggestions(inputValue !== '');
+    }
   }, [inputValue]);
   (0, _react.useEffect)(function () {
     var _suggestionsEl$curren, _suggestionsEl$curren2;
@@ -254,6 +269,7 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
   }, /*#__PURE__*/_react.default.createElement("span", {
     ref: inputEl,
     id: id,
+    "aria-label": inputLabel,
     contentEditable: true,
     role: "textbox",
     "aria-describedby": id + "-legend",
@@ -261,8 +277,9 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
     onKeyDown: handleInputKeydown,
     className: "k-Form-TagInput__input",
     onInput: handleInputChange,
+    onFocus: handleInputFocus,
     onBlur: handleInputBlur,
-    "aria-owns": id + "-results",
+    "aria-owns": showSuggestions ? id + "-results" : null,
     "aria-expanded": showSuggestions ? suggestionsList.length > 0 : null,
     "aria-autocomplete": "both",
     "aria-activedescendant": suggestions[selectedSuggestionIndex] ? (0, _slugify.default)(suggestionsList[selectedSuggestionIndex] + "-" + selectedSuggestionIndex) : ''
@@ -334,11 +351,14 @@ TagInputAutocomplete.defaultProps = (0, _extends2.default)({}, _tagInput.TagInpu
   onBlur: function onBlur() {},
   suggestionsNumberA11yMessage: function suggestionsNumberA11yMessage(number) {
     return number + " suggestions.";
-  }
+  },
+  showSuggestionsOnFocus: true
 });
 TagInputAutocomplete.propTypes = (0, _extends2.default)({}, _tagInput.TagInput.propTypes, {
   suggestions: _propTypes.default.array,
   onKeyDown: _propTypes.default.func,
   onBlur: _propTypes.default.func,
-  suggestionsNumberA11yMessage: _propTypes.default.func
+  suggestionsNumberA11yMessage: _propTypes.default.func,
+  showSuggestionsOnFocus: _propTypes.default.bool,
+  inputLabel: _propTypes.default.string
 });

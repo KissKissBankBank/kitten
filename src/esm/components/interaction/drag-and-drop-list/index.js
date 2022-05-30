@@ -2,7 +2,7 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["children", "className", "onChange", "a11yButtonLabel", "a11yAnnouncement", "a11yContainerLabelElement", "a11yInstructions", "gap", "style", "showHandle"],
     _excluded2 = ["id"];
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DndContext, closestCenter, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors, DragOverlay } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
 import { restrictToWindowEdges, restrictToVerticalAxis } from '@dnd-kit/modifiers';
@@ -28,23 +28,36 @@ export var DragAndDropList = function DragAndDropList(_ref) {
       showHandle = _ref.showHandle,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  var _useState = useState(React.Children.toArray(children).map(function (child) {
-    return child.props.id;
-  })),
+  var onSetChildrenDict = function onSetChildrenDict() {
+    return React.Children.toArray(children).reduce(function (acc, current) {
+      var _extends2;
+
+      return _extends({}, acc, (_extends2 = {}, _extends2[current.props.id] = current, _extends2));
+    }, {});
+  };
+
+  var onSetItems = function onSetItems() {
+    return React.Children.toArray(children).map(function (child) {
+      return child.props.id;
+    });
+  };
+
+  var _useState = useState(onSetItems()),
       items = _useState[0],
       setItems = _useState[1];
 
-  var _useState2 = useState(React.Children.toArray(children).reduce(function (acc, current) {
-    var _extends2;
-
-    return _extends({}, acc, (_extends2 = {}, _extends2[current.props.id] = current, _extends2));
-  }, {})),
-      childrenDict = _useState2[0];
+  var _useState2 = useState(onSetChildrenDict()),
+      childrenDict = _useState2[0],
+      setChildrenDict = _useState2[1];
 
   var _useState3 = useState(null),
       activeId = _useState3[0],
       setActiveId = _useState3[1];
 
+  useEffect(function () {
+    setItems(onSetItems());
+    setChildrenDict(onSetChildrenDict());
+  }, [children == null ? void 0 : children.length]);
   var sensors = useSensors(useSensor(MouseSensor, {
     activationConstraint: {
       distance: 5

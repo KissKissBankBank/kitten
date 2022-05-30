@@ -4,15 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `AirplaneIconNext`: Add `direction` prop, defaults to `up-left`.
-- Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
-- Feature: `HeaderNav`: Add `navProps` and `headerProps` props.
-- Feature: `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
-- Fix: `CheckableButton`: Handle ARIA role.
-- Feature: `TagInputAutocomplete`: Add `inputLabel` prop.
-- Feature: `Button`: Add `hasBullet` and `bulletColor` props.
+## [10.12.0] - 2022-05-30
 
-- Fix: `DragAndDropList`: Add useEffect to listen children collection changes
+Features:
+
+- `AirplaneIconNext`: Add `direction` prop, defaults to `up-left`.
+- `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
+- `HeaderNav`: Add `navProps` and `headerProps` props.
+- `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
+- `TagInputAutocomplete`: Add `inputLabel` prop.
+- `Button`: Add `hasBullet` and `bulletColor` props.
+
+Fixes:
+
+- `CheckableButton`: Handle ARIA role.
+- `DragAndDropList`: Add useEffect to listen children collection changes.
 
 ## [10.11.0] - 2022-05-23
 
