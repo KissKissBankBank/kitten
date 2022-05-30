@@ -213,7 +213,6 @@ export { SpeechBubbleIcon } from './components/graphics/icons/speech-bubble-icon
 
 // Graphics/IconsNext
 export { AirplaneIconNext } from './components/graphics/icons-next/airplane-icon-next'
-export { AirplaneRightIconNext } from './components/graphics/icons-next/airplane-right-icon-next'
 export { BankCardIconNext } from './components/graphics/icons-next/bank-card-icon-next'
 export { BubbleIconNext } from './components/graphics/icons-next/bubble-icon-next'
 export { CheckedShieldIconNext } from './components/graphics/icons-next/checked-shield-icon-next'

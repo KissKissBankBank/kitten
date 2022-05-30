@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {
   AirplaneIconNext,
-  AirplaneRightIconNext,
   BankCardIconNext,
   BubbleIconNext,
   CheckedShieldIconNext,
@@ -134,11 +133,11 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
   return (
     <Container>
       <Group>
-        <IconContainer>
+        <IconContainer suffix='direction="up-left"'>
           <AirplaneIconNext color={colorInput} />
         </IconContainer>
-        <IconContainer>
-          <AirplaneRightIconNext color={colorInput} />
+        <IconContainer suffix='direction="left"'>
+          <AirplaneIconNext direction="left" color={colorInput} />
         </IconContainer>
         <IconContainer>
           <BankCardIconNext color={colorInput} />
