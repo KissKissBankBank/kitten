@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 
@@ -70,7 +69,7 @@ const StyledRadio = styled.div`
   .k-Form-Radio__labelText {
     flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
     ${TYPOGRAPHY.fontStyles.light}
-    font-size: ${stepToRem(-1)};
+    font-size: ${pxToRem(14)};
     line-height: 1.5;
 
     &.k-Form-Radio__labelText--normal {
@@ -98,7 +97,7 @@ const StyledRadio = styled.div`
     flex: 1 0 calc(100% - ${pxToRem(16 + 10 + 10)});
 
     ${TYPOGRAPHY.fontStyles.light}
-    font-size: ${stepToRem(-2)};
+    font-size: ${pxToRem(12)};
     line-height: ${pxToRem(19)};
 
     &:empty {
@@ -109,7 +108,7 @@ const StyledRadio = styled.div`
   @media ${mq.tabletAndDesktop} {
     .k-Form-Radio__labelContents {
       margin-top: ${pxToRem(8)};
-      font-size: ${stepToRem(-1)};
+      font-size: ${pxToRem(14)};
       line-height: ${pxToRem(22)};
     }
   }
@@ -126,7 +125,7 @@ const StyledRadio = styled.div`
     &.k-Form-Radio--error
       .k-Form-Radio__input:checked:not(:disabled)
       + .k-Form-Radio__label::before {
-      background-color: ${COLORS.error};
+      background-color: var(--color-danger-500);
     }
 
     .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {

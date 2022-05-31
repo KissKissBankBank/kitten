@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 
 ## [10.12.0] - 2022-05-30
