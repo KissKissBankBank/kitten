@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
+
 ## [10.12.0] - 2022-05-30
 
 Features:
