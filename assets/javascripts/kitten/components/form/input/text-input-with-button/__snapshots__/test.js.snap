@@ -10,11 +10,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -34,11 +35,12 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     name="text"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
     onClick={[Function]}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -59,11 +61,12 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -122,11 +125,12 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     name="text"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--medium k-Button--beryllium k-Button--fit-min-width k-Button--disabled"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--medium k-Button--beryllium k-Button--fit-min-width k-Button--disabled"
     disabled={true}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -146,11 +150,12 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--medium k-Button--beryllium k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -172,11 +177,12 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     value="foobar"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -196,11 +202,12 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Button--small k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Button--small k-Button--beryllium k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"
@@ -220,11 +227,12 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN dauyJh k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN cibJND k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--medium k-Button--beryllium k-Button--fit-min-width"
     disabled={false}
     style={
       Object {
         "--Button-border-radius": null,
+        "--Button-bullet-color": null,
       }
     }
     type="button"

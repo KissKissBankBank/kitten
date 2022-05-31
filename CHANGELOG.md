@@ -5,11 +5,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
-- Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
-- Feature: `HeaderNav`: Add `navProps` and `headerProps` props.
-- Feature: `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
-- Fix: `CheckableButton`: Handle ARIA role.
-- Feature: `TagInputAutocomplete`: Add `inputLabel` prop.
+- Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
+
+## [10.12.0] - 2022-05-30
+
+Features:
+
+- `AirplaneIconNext`: Add `direction` prop, defaults to `up-left`.
+- `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
+- `HeaderNav`: Add `navProps` and `headerProps` props.
+- `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
+- `TagInputAutocomplete`: Add `inputLabel` prop.
+- `Button`: Add `hasBullet` and `bulletColor` props.
+
+Fixes:
+
+- `CheckableButton`: Handle ARIA role.
+- `DragAndDropList`: Add useEffect to listen children collection changes.
 
 ## [10.11.0] - 2022-05-23
 

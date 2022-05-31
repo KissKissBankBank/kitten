@@ -14,18 +14,19 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-disabled={null}
-        className="sc-bdvvtL ipSHQg k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gsrpFO k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#9"
         onClick={[Function]}
         style={
           Object {
             "--Button-border-radius": null,
+            "--Button-bullet-color": null,
           }
         }
         tabIndex={0}
         title="Page précédente"
-        type="button"
+        type={null}
       >
         <svg
           aria-hidden="true"
@@ -53,17 +54,18 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-label="Aller à la page 1"
-        className="sc-bdvvtL ipSHQg k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gsrpFO k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#1"
         onClick={[Function]}
         style={
           Object {
             "--Button-border-radius": null,
+            "--Button-bullet-color": null,
           }
         }
         tabIndex="0"
-        type="button"
+        type={null}
       >
         1
       </a>
@@ -83,16 +85,17 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <span
         aria-current="page"
-        className="sc-bdvvtL hBdEXb k-Button k-Pagination__Link k-Button--small k-Button--lithium k-Button--fit-icon"
+        className="sc-bdvvtL dbcWcN k-Button k-Pagination__Link k-Button--small k-Button--lithium k-Button--fit-icon"
         disabled={null}
         style={
           Object {
             "--Button-border-radius": null,
+            "--Button-bullet-color": null,
           }
         }
         tabIndex="0"
         title="Page 10, il s’agit de la page actuelle"
-        type="button"
+        type={null}
       >
         10
       </span>
@@ -112,17 +115,18 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-label="Aller à la page 42"
-        className="sc-bdvvtL ipSHQg k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gsrpFO k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#42"
         onClick={[Function]}
         style={
           Object {
             "--Button-border-radius": null,
+            "--Button-bullet-color": null,
           }
         }
         tabIndex="0"
-        type="button"
+        type={null}
       >
         42
       </a>
@@ -132,18 +136,19 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-disabled={null}
-        className="sc-bdvvtL ipSHQg k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gsrpFO k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#11"
         onClick={[Function]}
         style={
           Object {
             "--Button-border-radius": null,
+            "--Button-bullet-color": null,
           }
         }
         tabIndex={0}
         title="Page suivante"
-        type="button"
+        type={null}
       >
         <svg
           aria-hidden="true"

@@ -27,7 +27,9 @@ var HeaderNav = function HeaderNav(_ref) {
       quickAccessProps = _ref.quickAccessProps,
       stickyProps = _ref.stickyProps,
       zIndexConfig = _ref.zIndexConfig,
-      className = _ref.className;
+      className = _ref.className,
+      navProps = _ref.navProps,
+      headerProps = _ref.headerProps;
 
   var _useState = useState(false),
       isMenuExpanded = _useState[0],
@@ -77,27 +79,28 @@ var HeaderNav = function HeaderNav(_ref) {
       expandBy: menuExpandBy,
       callOnToggle: callOnToggle
     }
-  }, /*#__PURE__*/React.createElement(StyledHeader, {
-    style: {
+  }, /*#__PURE__*/React.createElement(StyledHeader, _extends({}, headerProps, {
+    style: _extends({
       '--HeaderNav-zIndex': zIndexConfig.header,
       '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
-    },
+    }, headerProps == null ? void 0 : headerProps.style),
     zIndex: zIndexConfig,
-    className: classNames('k-HeaderNav__wrapper', {
+    className: classNames('k-HeaderNav__wrapper', headerProps == null ? void 0 : headerProps.className, {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded,
       'k-HeaderNav--isStuck': stuckState
     })
-  }, /*#__PURE__*/React.createElement(StickyContainer, _extends({
+  }), /*#__PURE__*/React.createElement(StickyContainer, _extends({
     ref: stickyContainerRef,
     isSticky: stickyState
   }, stickyProps, {
     className: classNames('k-HeaderNav__stickyContainer', stickyProps == null ? void 0 : stickyProps.className),
     onChange: handleStickyChange
-  }), /*#__PURE__*/React.createElement("nav", {
-    ref: headerRef,
+  }), /*#__PURE__*/React.createElement("nav", _extends({
+    ref: headerRef
+  }, navProps, {
     id: id,
-    className: classNames('k-HeaderNav', className)
-  }, /*#__PURE__*/React.createElement(QuickAccessLink, quickAccessProps), children))));
+    className: classNames('k-HeaderNav', className, navProps.className)
+  }), /*#__PURE__*/React.createElement(QuickAccessLink, quickAccessProps), children))));
 };
 
 HeaderNav.Button = Button;
@@ -123,6 +126,8 @@ HeaderNav.propTypes = {
   stickyProps: PropTypes.shape({
     top: PropTypes.number
   }),
+  headerProps: PropTypes.object,
+  navProps: PropTypes.object,
   zIndexConfig: PropTypes.shape({
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number
@@ -134,6 +139,8 @@ HeaderNav.defaultProps = {
   isLogged: false,
   quickAccessProps: {},
   stickyProps: {},
+  headerProps: {},
+  navProps: {},
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3

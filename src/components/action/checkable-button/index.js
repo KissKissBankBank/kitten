@@ -63,7 +63,8 @@ var CheckableButton = function CheckableButton(_ref) {
   }();
 
   return /*#__PURE__*/_react.default.createElement(StyledCheckableButton, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-CheckableButton', className, "k-CheckableButton--" + checkPosition)
+    className: (0, _classnames.default)('k-CheckableButton', className, "k-CheckableButton--" + checkPosition),
+    role: "checkbox"
   }, props, {
     "aria-checked": isChecked || null,
     modifier: checkedModifier

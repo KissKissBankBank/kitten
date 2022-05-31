@@ -2,7 +2,7 @@
 
 exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
 <a
-  className="sc-gsDKAQ fqNskk k-HorizontalProjectCard k-HorizontalProjectCard--noProgressOnMobile"
+  className="sc-gsDKAQ jTnea k-HorizontalProjectCard k-HorizontalProjectCard--noProgressOnMobile"
   href="#"
 >
   <div
@@ -66,9 +66,35 @@ exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
 </a>
 `;
 
+exports[`<HorizontalProjectCard /> with noProgress and no info prop matches with snapshot 1`] = `
+<a
+  className="sc-gsDKAQ jTnea k-HorizontalProjectCard k-HorizontalProjectCard--noBottomLine"
+  href="#"
+>
+  <div
+    className="k-HorizontalProjectCard__imageWrapper"
+  >
+    <img
+      alt=""
+      src="#image"
+    />
+  </div>
+  <h3
+    className="k-u-size-small k-u-weight-regular k-HorizontalProjectCard__title"
+  >
+    Custom title
+  </h3>
+  <p
+    className="k-u-size-micro k-u-weight-light k-HorizontalProjectCard__description"
+  >
+    Custom description
+  </p>
+</a>
+`;
+
 exports[`<HorizontalProjectCard /> with noProgress prop matches with snapshot 1`] = `
 <a
-  className="sc-gsDKAQ fqNskk k-HorizontalProjectCard"
+  className="sc-gsDKAQ jTnea k-HorizontalProjectCard"
   href="#"
 >
   <div

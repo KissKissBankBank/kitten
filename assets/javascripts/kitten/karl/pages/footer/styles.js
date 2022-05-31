@@ -12,6 +12,10 @@ export const StyledFooter = styled.footer`
     padding-top: ${pxToRem(20)};
   }
 
+  &.k-Footer__minimalist {
+    padding-top: ${pxToRem(0)};
+  }
+
   .k-Footer__gridWrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -169,6 +173,42 @@ export const StyledFooter = styled.footer`
 
     @media ${mq.mobile} {
       flex-direction: column;
+    }
+  }
+
+  /* CREATED WITH */
+
+  .k-Footer__createdWith {
+    background-color: var(--color-grey-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: ${pxToRem(50)} ${pxToRem(30)};
+    margin: ${pxToRem(0)} ${pxToRem(-20)} ${pxToRem(20)} ${pxToRem(-20)};
+    
+    @media ${mq.mobile} {
+      flex-direction: column;
+      padding: ${pxToRem(40)} ${pxToRem(30)};
+      margin-bottom: ${pxToRem(30)};
+    }
+  }
+  
+  .k-Footer__createdWith--logo {
+    display: flex;
+    align-items: center;
+    gap: ${pxToRem(10)};
+    margin-right: ${pxToRem(30)};
+    text-align: left;
+
+    @media ${mq.mobile} {
+      margin: 0 0 ${pxToRem(30)} 0;
+    }
+  }
+
+  .k-Footer__createdWith--paragraph {
+    line-height: normal !important;
+    @media ${mq.mobile} {
+      text-align: center;
     }
   }
 

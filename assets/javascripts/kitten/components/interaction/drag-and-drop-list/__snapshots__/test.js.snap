@@ -28,7 +28,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -41,13 +41,14 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL ipSHQg k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bdvvtL gsrpFO k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
           style={
             Object {
               "--Button-border-radius": null,
+              "--Button-bullet-color": null,
             }
           }
           type="button"
@@ -90,7 +91,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -103,13 +104,14 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL ipSHQg k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bdvvtL gsrpFO k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
           style={
             Object {
               "--Button-border-radius": null,
+              "--Button-bullet-color": null,
             }
           }
           type="button"
@@ -152,7 +154,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -165,13 +167,14 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL ipSHQg k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bdvvtL gsrpFO k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
           style={
             Object {
               "--Button-border-radius": null,
+              "--Button-bullet-color": null,
             }
           }
           type="button"
@@ -214,7 +217,7 @@ Array [
         Object {
           "--translate-x": undefined,
           "--translate-y": undefined,
-          "transition": undefined,
+          "transition": "transform 0ms linear",
         }
       }
     >
@@ -227,13 +230,14 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL ipSHQg k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bdvvtL gsrpFO k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
           style={
             Object {
               "--Button-border-radius": null,
+              "--Button-bullet-color": null,
             }
           }
           type="button"
