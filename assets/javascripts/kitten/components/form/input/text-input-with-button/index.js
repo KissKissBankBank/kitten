@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { TextInput } from '../../../form/input/text-input'
@@ -116,7 +115,6 @@ export const TextInputWithButton = React.forwardRef(
       error,
       disabled,
       size,
-      value,
       rounded,
       buttonValue,
       modifier,
@@ -171,7 +169,7 @@ export const TextInputWithButton = React.forwardRef(
           modifier={modifier}
           size={size}
         >
-          {value || buttonValue}
+          {buttonValue}
         </ButtonComponent>
       </StyledTextInputWithButton>
     )
@@ -187,8 +185,6 @@ TextInputWithButton.propTypes = {
   inset: PropTypes.bool,
   modifier: PropTypes.string,
   inputValue: PropTypes.string,
-  // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
-  value: deprecated(PropTypes.node, 'Use `buttonValue` instead.'),
   buttonValue: PropTypes.node,
 }
 
