@@ -26,7 +26,6 @@ export default {
     largeContent: false,
     text: 'RadioButton label',
     size: 'medium',
-    variant: 'orion',
     design: 'disc',
     children: null,
     fontWeight: 'regular',
@@ -56,11 +55,6 @@ export default {
     size: {
       name: 'size',
       options: ['small', 'medium', 'large'],
-      control: 'inline-radio',
-    },
-    variant: {
-      name: 'variant',
-      options: ['andromeda', 'orion'],
       control: 'inline-radio',
     },
     design: {
@@ -108,7 +102,6 @@ RadioButtonsWithParagraph.args = {
   largeContent: false,
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   size: 'large',
-  variant: 'orion',
   design: 'disc',
   children: null,
   fontWeight: 'light',
