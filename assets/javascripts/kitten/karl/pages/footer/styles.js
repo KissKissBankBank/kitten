@@ -12,6 +12,10 @@ export const StyledFooter = styled.footer`
     padding-top: ${pxToRem(20)};
   }
 
+  &.k-Footer__minimalist {
+    padding-top: ${pxToRem(0)};
+  }
+
   .k-Footer__gridWrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -180,7 +184,7 @@ export const StyledFooter = styled.footer`
     justify-content: center;
     align-items: center;
     padding: ${pxToRem(50)} ${pxToRem(30)};
-    margin: ${pxToRem(-20)} ${pxToRem(-20)} ${pxToRem(20)} ${pxToRem(-20)};
+    margin: ${pxToRem(0)} ${pxToRem(-20)} ${pxToRem(20)} ${pxToRem(-20)};
     
     @media ${mq.mobile} {
       flex-direction: column;

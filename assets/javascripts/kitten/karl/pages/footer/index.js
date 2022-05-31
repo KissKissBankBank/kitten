@@ -52,7 +52,7 @@ const Footer = ({ variant, ...props }) => {
       }
 
       {variant == "minimalist" &&
-        <StyledFooter {...props}
+        <StyledFooter className="k-Footer__minimalist" {...props}
         >
           <CreatedWith />
           <Partners />
