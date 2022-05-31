@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change:
+  - `SizeProp`: Remove old deprecated values.
+  - `Helpers`: Remove `checkDeprecatedSizes` utility.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 
 ## [10.12.0] - 2022-05-30
