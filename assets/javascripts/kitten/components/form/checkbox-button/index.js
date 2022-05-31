@@ -47,8 +47,10 @@ const StyledCheckboxButton = styled.div`
       background-color var(--transition);
   }
 
-  .k-Form-CheckboxButton__input:focus + .k-Form-CheckboxButton__label::before {
-    border: var(--border-active-primary);
+  .k-Form-CheckboxButton__input:focus 
+    & + .k-Form-CheckboxButton__label {
+      border: var(--border-active-primary);
+    }
   }
 
   .k-Form-CheckboxButton__input:checked + .k-Form-CheckboxButton__label::before,
@@ -80,18 +82,27 @@ const StyledCheckboxButton = styled.div`
   .k-Form-CheckboxButton__input:hover:not(:disabled) {
     & + .k-Form-CheckboxButton__label {
       border-color: var(--color-primary-300);
+      ::before {
+        border-color: var(--color-primary-300);
+      }
     }
   }
 
   .k-Form-CheckboxButton__input:focus:not(:disabled) {
     & + .k-Form-CheckboxButton__label {
-      border-color: var(--color-primary-500);
+      border-color: var(--color-primary-500);     
+      ::before {
+        border-color: var(--color-primary-500);
+      }
     }
   }
 
   .k-Form-CheckboxButton__input:active:not(:disabled) {
     & + .k-Form-CheckboxButton__label {
       border-color: var(--color-primary-500);
+      ::before {
+        border-color: var(--color-primary-500);
+      }
     }
   }
 

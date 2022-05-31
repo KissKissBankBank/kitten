@@ -98,11 +98,12 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     </div>
     <button
       aria-label="Envoyer"
-      className="sc-dkPtRN dauyJh k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+      className="sc-dkPtRN cibJND k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {
           "--Button-border-radius": null,
+          "--Button-bullet-color": null,
         }
       }
       type="submit"

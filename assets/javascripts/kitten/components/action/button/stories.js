@@ -20,6 +20,8 @@ const args = {
   fit: 'min-width',
   mobileFit: undefined,
   active: false,
+  hasBullet: false,
+  bulletColor: undefined,
 }
 
 const argTypes = {
@@ -62,6 +64,14 @@ const argTypes = {
   active: {
     name: 'active',
     control: 'boolean',
+  },
+  hasBullet: {
+    name: 'hasBullet',
+    control: 'boolean',
+  },
+  bulletColor: {
+    name: 'bulletColor',
+    control: 'color',
   },
 }
 
@@ -169,7 +179,7 @@ WithTextAndIcon.argTypes = {
   },
 }
 
-export const WithBadge = ({ children, ...args }) => (
+export const WithIconBadge = ({ children, ...args }) => (
   <Button {...args}>
     <span>{children}</span>
     <Badge color="red" Icon={Cart}>
@@ -177,3 +187,10 @@ export const WithBadge = ({ children, ...args }) => (
     </Badge>
   </Button>
 )
+
+export const WithBullet = args => <Button {...args} />
+
+WithBullet.args = {
+  ...args,
+  hasBullet: true,
+}

@@ -9,7 +9,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
   - Deprecated: `fontWeight` by `weight` on the following components:
     - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
-- Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
+- Fix: `Checkbox` and `RadioButton`: Improve styles.
+- Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
+
+## [10.12.0] - 2022-05-30
+
+Features:
+
+- `AirplaneIconNext`: Add `direction` prop, defaults to `up-left`.
+- `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.
+- `HeaderNav`: Add `navProps` and `headerProps` props.
+- `DashboardLayout`: Add `sidebarProps` and `contentProps` props.
+- `TagInputAutocomplete`: Add `inputLabel` prop.
+- `Button`: Add `hasBullet` and `bulletColor` props.
+
+Fixes:
+
+- `CheckableButton`: Handle ARIA role.
+- `DragAndDropList`: Add useEffect to listen children collection changes.
 
 ## [10.11.0] - 2022-05-23
 

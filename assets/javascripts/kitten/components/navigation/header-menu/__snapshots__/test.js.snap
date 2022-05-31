@@ -416,6 +416,29 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c1.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c1.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c1.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 .c0 {
   --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
   margin: 0;
@@ -727,6 +750,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
       style={
         Object {
           "--Button-border-radius": null,
+          "--Button-bullet-color": null,
         }
       }
       type="button"

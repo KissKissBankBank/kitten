@@ -98,6 +98,18 @@ const StyledCard = styled.a`
     }
   }
 
+  &.k-HorizontalProjectCard--noBottomLine {
+    grid-template-rows: repeat(2, 1fr);
+
+    .k-HorizontalProjectCard__imageWrapper {
+      grid-row: 1 / span 2;
+    }
+
+    .k-HorizontalProjectCard__title {
+      align-self: end;
+    }
+  }
+
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
     &.k-HorizontalProjectCard--noProgressOnMobile {
       .k-HorizontalProjectCard__progress {
@@ -133,6 +145,7 @@ export const HorizontalProjectCard = ({
       href={href}
       className={classNames('k-HorizontalProjectCard', className, {
         'k-HorizontalProjectCard--noProgressOnMobile': noProgressOnMobile,
+        'k-HorizontalProjectCard--noBottomLine': !info && noProgress,
       })}
       {...props}
     >
@@ -155,7 +168,7 @@ export const HorizontalProjectCard = ({
       >
         {description}
       </Text>
-      <div className="k-HorizontalProjectCard__info">{info}</div>
+      {!!info && <div className="k-HorizontalProjectCard__info">{info}</div>}
       {!noProgress && (
         <div className="k-HorizontalProjectCard__progress">
           <Progress

@@ -158,6 +158,29 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 .c1 {
   gap: 0;
 }
@@ -334,9 +357,11 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   aria-checked={null}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -501,6 +526,29 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c1 {
@@ -679,9 +727,11 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--lithium k-Button--fit-min-width k-Button--disabled"
   disabled={true}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -846,6 +896,29 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000);
   color: var(--color-grey-600);
+}
+
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c1 {
@@ -1024,9 +1097,11 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--medium k-Button--copper k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -1191,6 +1266,29 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c1 {
@@ -1369,9 +1467,11 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--large k-Button--lithium k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -1536,6 +1636,29 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
+}
+
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c1 {
@@ -1714,9 +1837,11 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   aria-checked={true}
   className="c0 k-Button c1 k-CheckableButton k-CheckableButton--bottom k-Button--small k-Button--lithium k-Button--fit-min-width"
   disabled={false}
+  role="checkbox"
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"

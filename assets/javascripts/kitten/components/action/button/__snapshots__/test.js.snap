@@ -158,6 +158,29 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -218,9 +241,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
-  type="button"
+  type={null}
 >
   MyButton
 </a>
@@ -384,6 +408,29 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -443,6 +490,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="submit"
@@ -608,6 +656,29 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -666,6 +737,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": "0.25rem",
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -832,6 +904,29 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -890,6 +985,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -1056,6 +1152,29 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -1114,6 +1233,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -1280,6 +1400,29 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -1338,6 +1481,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -1504,6 +1648,29 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -1564,9 +1731,10 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
-  type="button"
+  type={null}
 >
   MyButton
 </a>
@@ -1730,6 +1898,29 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -1788,6 +1979,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -1954,6 +2146,29 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -2012,6 +2227,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -2178,6 +2394,29 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -2236,6 +2475,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -2402,6 +2642,29 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -2460,6 +2723,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -2626,6 +2890,29 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -2684,6 +2971,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -2850,6 +3138,29 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -2908,6 +3219,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -3074,6 +3386,29 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -3132,6 +3467,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -3298,6 +3634,29 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -3356,6 +3715,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"
@@ -3527,6 +3887,29 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
+.c0.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c0.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 @media (min-width:40rem) {
   .c0.k-Button--big,
   .c0.k-Button--large {
@@ -3585,6 +3968,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   style={
     Object {
       "--Button-border-radius": null,
+      "--Button-bullet-color": null,
     }
   }
   type="button"

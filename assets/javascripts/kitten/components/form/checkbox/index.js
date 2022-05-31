@@ -21,6 +21,7 @@ const StyledCheckbox = styled.div`
   &.k-Form-Checkbox--disabled input,
   &.k-Form-Checkbox--disabled label {
     cursor: not-allowed;
+    color: var(--color-grey-600);
   }
 
   .k-Form-Checkbox__label {

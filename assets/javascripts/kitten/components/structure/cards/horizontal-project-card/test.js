@@ -48,4 +48,25 @@ describe('<HorizontalProjectCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with noProgress and no info prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <HorizontalProjectCard
+            title="Custom title"
+            description="Custom description"
+            href="#"
+            imageProps={{ src: '#image', alt: '' }}
+            info={null}
+            noProgress
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
