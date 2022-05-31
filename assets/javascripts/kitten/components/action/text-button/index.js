@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { mq } from '../../../constants/screen-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledButton = styled.button`
   ${TYPOGRAPHY.fontStyles.regular}
@@ -58,7 +57,6 @@ const StyledButton = styled.button`
 `
 
 export const TextButton = ({ className, size, ...props }) => {
-  checkDeprecatedSizes(size)
 
   return (
     <StyledButton

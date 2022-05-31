@@ -7,7 +7,6 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledRadioButton = styled.div`
   margin: ${pxToRem(10)} 0;
@@ -278,7 +277,6 @@ const StyledRadioButton = styled.div`
       }
     }
 
-    &.k-Form-RadioButton--big,
     &.k-Form-RadioButton--large {
       .k-Form-RadioButton__label {
         min-height: ${pxToRem(60)};
@@ -303,7 +301,6 @@ const StyledRadioButton = styled.div`
         border-width: ${pxToRem(6)};
       }
 
-      &.k-Form-RadioButton--big,
       &.k-Form-RadioButton--large {
         .k-Form-RadioButton__label {
           min-height: ${pxToRem(80)};
@@ -362,7 +359,6 @@ export const RadioButton = ({
   paragraphStyle,
   ...inputProps
 }) => {
-  checkDeprecatedSizes(size)
 
   return (
     <StyledRadioButton

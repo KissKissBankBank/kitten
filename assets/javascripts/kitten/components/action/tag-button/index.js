@@ -6,7 +6,6 @@ import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
@@ -57,7 +56,6 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
   }
 
-  &.k-Buttons__tagButton--tiny,
   &.k-Buttons__tagButton--small {
     min-height: ${pxToRem(30)};
     min-width: ${pxToRem(60)};
@@ -65,7 +63,6 @@ const StyledTagButton = styled.button`
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Buttons__tagButton--big,
   &.k-Buttons__tagButton--large {
     min-height: ${pxToRem(50)};
     min-width: ${pxToRem(80)};
@@ -111,8 +108,6 @@ export const TagButton = ({
   ...props
 }) => {
   const others = (({ modifier, icon, ...rest }) => rest)(props)
-
-  checkDeprecatedSizes(size)
 
   return (
     <StyledTagButton

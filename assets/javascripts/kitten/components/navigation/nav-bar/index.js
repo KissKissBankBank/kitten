@@ -5,7 +5,6 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
@@ -126,7 +125,6 @@ export const NavBar = ({
   modifier,
   ...props
 }) => {
-  checkDeprecatedSizes(modifier)
 
   return (
     <StyledNavBar

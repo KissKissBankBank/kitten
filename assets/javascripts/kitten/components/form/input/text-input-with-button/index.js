@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { TextInput } from '../../../form/input/text-input'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import { Button } from '../../../action/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
@@ -62,17 +61,14 @@ const StyledTextInputWithButton = styled.div`
     }
   }
 
-  &.k-Form-TextInputWithButton--tiny,
   &.k-Form-TextInputWithButton--small {
     --text-input-size: ${pxToRem(40)};
   }
 
-  &.k-Form-TextInputWithButton--regular,
   &.k-Form-TextInputWithButton--medium {
     --text-input-size: ${pxToRem(50)};
   }
 
-  &.k-Form-TextInputWithButton--big,
   &.k-Form-TextInputWithButton--large {
     --text-input-size: ${pxToRem(60)};
 
@@ -128,7 +124,6 @@ export const TextInputWithButton = React.forwardRef(
     },
     ref,
   ) => {
-    checkDeprecatedSizes(size)
 
     const ButtonComponent = inset ? 'button' : Button
 

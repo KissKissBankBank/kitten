@@ -22,7 +22,6 @@ import {
   CONTAINER_MAX_WIDTH,
 } from '../../../constants/grid-config'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 
@@ -623,8 +622,6 @@ const InnerModal = ({
   headerZIndex,
   ...others
 }) => {
-  checkDeprecatedSizes(size)
-
   const [{ show }, dispatch] = useContext(ModalContext)
   const close = () => {
     dispatch(updateState(false))

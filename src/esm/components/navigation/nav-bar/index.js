@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 import { CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { HEADER_HEIGHT } from '../../navigation/header-nav/config';
