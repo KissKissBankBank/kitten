@@ -2,7 +2,7 @@
 
 exports[`<TagInputAutocomplete /> should match its disabled snapshot with disabled props 1`] = `
 <div
-  className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
+  className="sc-bdvvtL kWlXQM k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
   onClick={[Function]}
 >
   <p
@@ -147,7 +147,7 @@ exports[`<TagInputAutocomplete /> should match its disabled snapshot with disabl
 
 exports[`<TagInputAutocomplete /> should match its disabled snapshot with objects on initialItemsList 1`] = `
 <div
-  className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
+  className="sc-bdvvtL kWlXQM k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
   onClick={[Function]}
 >
   <p
@@ -337,7 +337,7 @@ exports[`<TagInputAutocomplete /> should match its disabled snapshot with object
 
 exports[`<TagInputAutocomplete /> should match its snapshot 1`] = `
 <div
-  className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--medium"
+  className="sc-bdvvtL kWlXQM k-Form-TagInput k-Form-TagInput--medium"
   onClick={[Function]}
 >
   <p
@@ -381,7 +381,7 @@ exports[`<TagInputAutocomplete /> should match its snapshot 1`] = `
 
 exports[`<TagInputAutocomplete /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdvvtL bTaJII k-Form-TagInput k-Form-TagInput--huge"
+  className="sc-bdvvtL kWlXQM k-Form-TagInput k-Form-TagInput--huge"
   onClick={[Function]}
 >
   <p

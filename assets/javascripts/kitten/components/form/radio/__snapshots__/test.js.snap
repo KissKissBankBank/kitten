@@ -85,13 +85,13 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 }
 
 .c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--bold,
-.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--600 {
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--700 {
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
-  font-weight: 600;
+  fontweight: 700px;
 }
 
 .c1 .k-Form-Radio__input:active + .k-Form-Radio__labelText {

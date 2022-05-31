@@ -29,7 +29,7 @@ const EmailPreferences = () => (
           ornare sem lacinia quam venenatis vestibulum.
         </Text>
         <br />
-        <Text weight="600" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -56,7 +56,7 @@ const EmailPreferences = () => (
           elit.
         </Text>
         <br />
-        <Text weight="600" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -81,7 +81,7 @@ const EmailPreferences = () => (
           ornare sem lacinia quam venenatis vestibulum.
         </Text>
         <br />
-        <Text weight="600" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -108,7 +108,7 @@ const EmailPreferences = () => (
           elit.
         </Text>
         <br />
-        <Text weight="600" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -133,7 +133,7 @@ const EmailPreferences = () => (
           ornare sem lacinia quam venenatis vestibulum.
         </Text>
         <br />
-        <Text weight="600" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>

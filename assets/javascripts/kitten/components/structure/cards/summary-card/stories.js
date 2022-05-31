@@ -124,7 +124,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-ownerContribution-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Owner Contribution vel augue laoreet rutrum faucibus dolor
                 auctor.
               </Text>
@@ -207,7 +207,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-ownerSubscription-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Owner Subscription lacus vel augue.
               </Text>
             </SummaryCard.Cell>
@@ -306,7 +306,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorContribution-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Contributor Contribution dolor auctor.
               </Text>
             </SummaryCard.Cell>
@@ -392,7 +392,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorSubscription-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Contributor Subscription Vivamus sagittis lacus vel augue
                 laoreet rutrum faucibus dolor auctor.
               </Text>

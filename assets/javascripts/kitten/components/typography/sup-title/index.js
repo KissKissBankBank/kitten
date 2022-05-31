@@ -6,7 +6,7 @@ export const SupTitle = props => (
     size="small"
     lineHeight="normal"
     transform="uppercase"
-    weight="600"
+    weight="700"
     {...props}
   />
 )

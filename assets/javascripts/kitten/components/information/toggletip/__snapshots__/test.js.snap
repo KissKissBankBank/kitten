@@ -27,7 +27,7 @@ exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
     type="button"
   >
     <p
-      className="k-u-weight-600"
+      className="k-u-weight-700"
     >
       This is the target of my tooltip
     </p>

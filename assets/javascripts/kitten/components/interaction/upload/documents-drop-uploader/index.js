@@ -431,7 +431,7 @@ export const DocumentsDropUploader = ({
                 as="li"
                 size="micro"
                 color="error"
-                weight="600"
+                weight="700"
               >
                 {errorMsg}
               </Text>

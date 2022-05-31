@@ -7,7 +7,7 @@ export const Title = ({ largeTitle, ...props }) => {
   return (
     <Text
       color="font1"
-      weight="600"
+      weight="700"
       {...props}
       className={classNames('k-ContributionCard__title', props.className, {
         'k-ContributionCard__title--large': largeTitle,

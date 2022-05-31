@@ -23,7 +23,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
     className="k-ContributionCard__gridWrapper"
   >
     <span
-      className="k-u-color-font1 k-u-weight-600 k-ContributionCard__title"
+      className="k-u-color-font1 k-u-weight-700 k-ContributionCard__title"
     >
       Lorem ipsum dolor sit amet, consectetuer
       <p
@@ -87,12 +87,12 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
     className="k-ContributionCard__gridWrapper"
   >
     <span
-      className="k-u-color-font1 k-u-weight-600 k-ContributionCard__title k-ContributionCard__title--large"
+      className="k-u-color-font1 k-u-weight-700 k-ContributionCard__title k-ContributionCard__title--large"
     >
       Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor eget dolor.eget dolor.eget dolor.
     </span>
     <span
-      className="k-u-color-font1 k-u-size-huge k-u-weight-600 k-ContributionCard__amount"
+      className="k-u-color-font1 k-u-size-huge k-u-weight-700 k-ContributionCard__amount"
     >
       1005 €
     </span>

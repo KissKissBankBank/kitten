@@ -74,7 +74,7 @@ class TitleComponent extends PureComponent {
                 tag="span"
                 color="font1"
                 size="medium"
-                weight="600"
+                weight="700"
                 lineHeight="normal"
                 className="k-Card__title"
               >

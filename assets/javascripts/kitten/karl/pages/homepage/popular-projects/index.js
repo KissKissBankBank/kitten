@@ -11,12 +11,12 @@ const InfoComponent = () => (
   <>
     <span className="k-u-hidden@s-up">
       <Text weight="400">J -</Text>{' '}
-      <Text tag="strong" weight="600">
+      <Text tag="strong" weight="700">
         7
       </Text>
     </span>
     <span className="k-u-hidden@xs-down">
-      <Text tag="strong" weight="600">
+      <Text tag="strong" weight="700">
         7 jours
       </Text>
       <br />

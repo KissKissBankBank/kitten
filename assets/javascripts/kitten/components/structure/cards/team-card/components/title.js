@@ -5,7 +5,7 @@ import { Marger } from '../../../../layout/marger'
 
 export const TeamCardTitle = ({ children, subTitle }) => (
   <Marger top="2">
-    <Text size="medium" weight="600" color="font1">
+    <Text size="medium" weight="700" color="font1">
       {children}
     </Text>
     <br />

@@ -288,7 +288,7 @@ Array [
     id="DocumentsDropUploader-error-description"
   >
     <li
-      className="k-u-color-error k-u-size-micro k-u-weight-600"
+      className="k-u-color-error k-u-size-micro k-u-weight-700"
     />
   </ul>,
 ]

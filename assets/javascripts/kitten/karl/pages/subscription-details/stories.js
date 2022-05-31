@@ -51,7 +51,7 @@ export const ContributorPayment = () => {
         <StyledWrapper>
           <div className="k-SubscriptionDetails__title">
             <div>
-              <Text weight="600">Abonnement</Text>
+              <Text weight="700">Abonnement</Text>
               <Text
                 tag="p"
                 size="micro"
@@ -98,7 +98,7 @@ export const ContributorPayment = () => {
           <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
 
           <PaymentList
-            subtitleweight="600"
+            subtitleweight="700"
             subtitle="Petit Plus"
             amount="2 €"
             tag="Validé"
@@ -125,7 +125,7 @@ export const ContributorSubscription = () => {
           <Text size="small" weight="400">
             <br />
             par{' '}
-            <Text weight="600" size="medium">
+            <Text weight="700" size="medium">
               Sick Magazine
             </Text>
           </Text>
@@ -149,13 +149,13 @@ export const ContributorSubscription = () => {
       <div className="k-SubscriptionDetails__details">
         <div>
           <Text size="small">Fréquence</Text>
-          <Text tag="p" weight="600" size="small" className="k-u-margin-none">
+          <Text tag="p" weight="700" size="small" className="k-u-margin-none">
             Mensuel
           </Text>
         </div>
         <div>
           <Text size="small">Mode de livraison</Text>
-          <Text tag="p" weight="600" size="small" className="k-u-margin-none">
+          <Text tag="p" weight="700" size="small" className="k-u-margin-none">
             Livraison
           </Text>
         </div>
@@ -164,7 +164,7 @@ export const ContributorSubscription = () => {
       <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
       <div className="k-SubscriptionDetails__option">
         <Text size="small">Option</Text>
-        <Text tag="p" weight="600" size="small" className="k-u-margin-none">
+        <Text tag="p" weight="700" size="small" className="k-u-margin-none">
           Végétarien
         </Text>
       </div>
@@ -191,7 +191,7 @@ export const ContributorReward = () => {
               <Text size="small" weight="400">
                 <br />
                 par{' '}
-                <Text weight="600" size="medium">
+                <Text weight="700" size="medium">
                   Sick Magazine
                 </Text>
               </Text>
@@ -222,7 +222,7 @@ export const ContributorReward = () => {
               <Text size="small">Option</Text>
               <Text
                 tag="p"
-                weight="600"
+                weight="700"
                 size="small"
                 className="k-u-margin-none"
               >
@@ -233,7 +233,7 @@ export const ContributorReward = () => {
               <Text size="small">Mode de livraison</Text>
               <Text
                 tag="p"
-                weight="600"
+                weight="700"
                 size="small"
                 className="k-u-margin-none"
               >

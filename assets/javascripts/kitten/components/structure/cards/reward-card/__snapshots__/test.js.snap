@@ -125,7 +125,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__drawer k-RewardCard__amount__wrapper k-u-align-center"
     >
       <span
-        className="k-u-weight-600 k-RewardCard__amount k-u-block"
+        className="k-u-weight-700 k-RewardCard__amount k-u-block"
       >
         65 €
       </span>

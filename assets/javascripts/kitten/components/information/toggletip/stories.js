@@ -53,7 +53,7 @@ export const CustomTargetElement = args => <Toggletip {...args} />
 CustomTargetElement.args = {
   ...args,
   targetElement: (
-    <p className="k-u-weight-600">This is the trigger of my tooltip</p>
+    <p className="k-u-weight-700">This is the trigger of my tooltip</p>
   ),
 }
 CustomTargetElement.argTypes = argTypes

@@ -73,7 +73,7 @@ export default {
     weight: {
       name: 'weight',
       description: 'Sets a weight.',
-      options: ['400', '500', '600'],
+      options: ['400', '500', '700'],
       control: 'select',
     },
     children: {

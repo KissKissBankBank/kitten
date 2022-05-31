@@ -216,7 +216,7 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_2">
             <div>
-              <Text weight="600">Prénom Nom</Text>
+              <Text weight="700">Prénom Nom</Text>
               <br />
               <Text size="micro" weight="400">
                 Prenom-Nom
@@ -294,7 +294,7 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_2">
             <div>
-              <Text weight="600">Prénom Nom</Text>
+              <Text weight="700">Prénom Nom</Text>
               <br />
               <Text size="micro">Prenom-Nom</Text>
             </div>

@@ -85,7 +85,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
           >
             {children}
           </Text>
-          <ShowMoreLink weight="600" color="primary1" tag="a" href="#">
+          <ShowMoreLink weight="700" color="primary1" tag="a" href="#">
             Voir tout
           </ShowMoreLink>
         </div>

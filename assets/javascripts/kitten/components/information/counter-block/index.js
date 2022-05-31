@@ -97,7 +97,7 @@ export const CounterBlock = ({
         {isString(counter) ? (
           <Text
             className="styledText"
-            weight="600"
+            weight="700"
             tag={titleTag}
             fontStyle="italic"
           >

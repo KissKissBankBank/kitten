@@ -419,7 +419,7 @@ export const Default = ({
             <GridCol col="12" col-s="6" col-l="4">
               <Text
                 tag="h3"
-                weight="600"
+                weight="700"
                 transform="uppercase"
                 size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
@@ -455,7 +455,7 @@ export const Default = ({
             <GridCol col="12">
               <Text
                 tag="h3"
-                weight="600"
+                weight="700"
                 transform="uppercase"
                 size="small"
                 className="k-u-letter-spacing-10 k-u-margin-top-none k-u-margin-bottom-singleHalf"
@@ -675,7 +675,7 @@ export const Simple = ({
                   <ProfileCard.Content>
                     <Text
                       size="huge"
-                      weight="600"
+                      weight="700"
                       tag="h1"
                       className="k-u-margin-top-none k-u-margin-bottom-single"
                     >

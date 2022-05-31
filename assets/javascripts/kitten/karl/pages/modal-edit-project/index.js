@@ -132,7 +132,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="600" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Don libre récurrent
                               <Text
                                 tag="p"
@@ -155,7 +155,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="600" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Abonnement contre contrepartie
                               <Text
                                 tag="p"
@@ -227,7 +227,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="600" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Don libre
                               <Text
                                 tag="p"
@@ -250,7 +250,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="600" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Don contre contrepartie
                               <Text
                                 tag="p"
@@ -273,7 +273,7 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="600" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Précommande
                               <Text
                                 tag="p"

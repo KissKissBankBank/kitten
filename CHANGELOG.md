@@ -4,8 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: 
-  - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 600`.
+- Breaking change:
+
+  - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
   - Deprecated: `fontWeight` by `weight` on the following components:
     - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
 - Feature: `TagInputWithAutocomplete`: Add `showSuggestionsOnFocus` prop, defaults to false.

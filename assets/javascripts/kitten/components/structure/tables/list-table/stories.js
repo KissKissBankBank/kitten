@@ -219,7 +219,7 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_3">
             <div>
-              <Text weight="600">Prénom Nom</Text>
+              <Text weight="700">Prénom Nom</Text>
               <br />
               <Text size="micro" weight="400">
                 Prenom-Nom
@@ -296,7 +296,7 @@ export const Default = () => (
 
           <ListTable.Col className="customCol_3">
             <div>
-              <Text weight="600">Prénom Nom</Text>
+              <Text weight="700">Prénom Nom</Text>
               <br />
               <Text size="micro">Prenom-Nom</Text>
             </div>

@@ -235,13 +235,13 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton__labelText--bold .k-Form-RadioButton__labelText,
-.c0.k-Form-RadioButton--orion.k-Form-RadioButton__labelText--600 .k-Form-RadioButton__labelText {
+.c0.k-Form-RadioButton--orion.k-Form-RadioButton__labelText--700 .k-Form-RadioButton__labelText {
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
-  font-weight: 600;
+  fontweight: 700px;
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton--small {

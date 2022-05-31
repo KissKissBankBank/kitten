@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-hKwDye jneITa k-Title k-Title--secondary k-Title--noMargin"
+          className="sc-hKwDye bxMoSW k-Title k-Title--secondary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -47,7 +47,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-hKwDye jneITa k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+            className="sc-hKwDye bxMoSW k-Title k-u-align-center k-Title--senary k-Title--noMargin"
             style={
               Object {
                 "--Title-css-color": null,
@@ -97,7 +97,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-hKwDye jneITa k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
+          className="sc-hKwDye bxMoSW k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -150,7 +150,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-hKwDye jneITa k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+          className="sc-hKwDye bxMoSW k-Title k-u-align-center k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,

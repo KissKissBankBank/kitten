@@ -8,7 +8,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     className="sc-gsDKAQ ctNjuL"
   >
     <p
-      className="sc-bdvvtL eyTmrc k-Title k-Title--tertiary k-Title--noMargin"
+      className="sc-bdvvtL iCvexg k-Title k-Title--tertiary k-Title--noMargin"
       style={
         Object {
           "--Title-css-color": null,
@@ -36,7 +36,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       />
     </div>
     <p
-      className="k-u-style-italic k-u-weight-600 styledText"
+      className="k-u-style-italic k-u-weight-700 styledText"
     >
       13 106
     </p>

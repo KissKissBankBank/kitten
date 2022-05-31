@@ -56,7 +56,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorSubscription-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Contributor Subscription Vivamus sagittis lacus vel augue
                 laoreet rutrum faucibus dolor auctor.
               </Text>
@@ -126,7 +126,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorSubscription-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Recto Verso : le point de départ de l'aventure en France
               </Text>
             </SummaryCard.Cell>
@@ -226,7 +226,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorContribution-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Contributor Contribution dolor auctor.
               </Text>
             </SummaryCard.Cell>
@@ -286,7 +286,7 @@ export const WithContributions = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorContribution-title"
             >
-              <Text weight="600" size="small">
+              <Text weight="700" size="small">
                 Dé-mots : imaginer, écrire, rire
               </Text>
             </SummaryCard.Cell>

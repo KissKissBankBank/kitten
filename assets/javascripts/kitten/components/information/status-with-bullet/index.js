@@ -81,7 +81,7 @@ const StyledStatus = styled.span`
     ${TYPOGRAPHY.fontStyles.regular}
   }
   &.k-StatusWithBullet--bold,
-  &.k-StatusWithBullet--600 {
+  &.k-StatusWithBullet--700 {
     ${TYPOGRAPHY.fontStyles.bold}
   }
 `
@@ -135,7 +135,7 @@ StatusWithBullet.propTypes = {
     'none',
   ]),
   size: PropTypes.oneOf(['micro', 'small', 'medium']),
-  weight: PropTypes.oneOf(['400', '500', '600']),
+  weight: PropTypes.oneOf(['400', '500', '700']),
   bulletProps: PropTypes.object,
 }
 

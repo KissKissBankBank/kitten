@@ -158,7 +158,7 @@ export const Example = () => {
             </Text>
           </div>
           <div>
-            <Text weight="600" as="div" lineHeight="1.2">
+            <Text weight="700" as="div" lineHeight="1.2">
               Lancer une campagne limitée dans le temps avec un objectif à
               atteindre.
             </Text>
@@ -211,7 +211,7 @@ export const Example = () => {
             </Text>
           </div>
           <div>
-            <Text weight="600" as="div" lineHeight="1.2">
+            <Text weight="700" as="div" lineHeight="1.2">
               Générer un revenu sur la durée grâce à des contributeurs
               récurrents.
             </Text>

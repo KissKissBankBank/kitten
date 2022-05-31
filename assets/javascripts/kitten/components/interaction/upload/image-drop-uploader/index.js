@@ -476,7 +476,7 @@ export const ImageDropUploader = ({
           as="p"
           size="micro"
           color="error"
-          weight="600"
+          weight="700"
           className="k-u-margin-top-noneHalf"
         >
           {internalErrorMessage}

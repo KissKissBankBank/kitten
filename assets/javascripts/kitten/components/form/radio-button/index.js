@@ -268,7 +268,7 @@ const StyledRadioButton = styled.div`
     }
 
     &.k-Form-RadioButton__labelText--bold,
-    &.k-Form-RadioButton__labelText--600 {
+    &.k-Form-RadioButton__labelText--700 {
       .k-Form-RadioButton__labelText {
         ${TYPOGRAPHY.fontStyles.bold};
       }
@@ -427,7 +427,7 @@ RadioButton.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
-  weight: PropTypes.oneOf(['400', '500', '600']),
+  weight: PropTypes.oneOf(['400', '500', '700']),
   paragraphStyle: PropTypes.bool,
 }
 

@@ -178,7 +178,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
-  font-weight: 600;
+  fontweight: 700px;
   font-size: 0.75rem;
   line-height: 1;
 }

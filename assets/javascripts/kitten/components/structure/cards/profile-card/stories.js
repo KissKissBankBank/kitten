@@ -28,7 +28,7 @@ export const Default = () => (
     />
 
     <ProfileCard.Content>
-      <Text size="huge" weight="600" tag="p" className="k-u-margin-double">
+      <Text size="huge" weight="700" tag="p" className="k-u-margin-double">
         Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
@@ -64,7 +64,7 @@ export const OneButton = () => (
     />
 
     <ProfileCard.Content>
-      <Text size="huge" weight="600" tag="p" className="k-u-margin-double">
+      <Text size="huge" weight="700" tag="p" className="k-u-margin-double">
         Lorem Ipsum
       </Text>
       <Text size="small" tag="p">

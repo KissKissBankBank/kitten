@@ -182,7 +182,7 @@ exports[`<ChatLayout /> compare with snapshot matches with snapshot 1`] = `
       tabIndex="-1"
     >
       <h1
-        className="k-u-size-giant k-u-weight-600 k-ChatLayout__column__title"
+        className="k-u-size-giant k-u-weight-700 k-ChatLayout__column__title"
       >
         Messagerie
       </h1>

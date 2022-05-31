@@ -80,7 +80,7 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
           className="k-Modal__header"
         >
           <p
-            className="sc-gsDKAQ hjXNvp k-Title k-Modal__title k-u-align-center k-Title--primary k-Title--noMargin"
+            className="sc-gsDKAQ sZKlR k-Title k-Modal__title k-u-align-center k-Title--primary k-Title--noMargin"
             style={
               Object {
                 "--Title-css-color": null,

@@ -75,7 +75,7 @@ Default.argTypes = {
 
 export const ModifierMetrics = () => (
   <>
-    <Text weight="600">Primary</Text>
+    <Text weight="700">Primary</Text>
     <br />
     <Text size="micro">• Desktop version - 20px</Text>
     <Paragraph modifier="primary">
@@ -100,7 +100,7 @@ export const ModifierMetrics = () => (
     </Paragraph>
 
     <Marger top="6">
-      <Text weight="600">Secondary</Text>
+      <Text weight="700">Secondary</Text>
       <br />
       <Text size="micro">• Desktop version - 16px</Text>
       <Paragraph modifier="secondary">
@@ -126,7 +126,7 @@ export const ModifierMetrics = () => (
     </Marger>
 
     <Marger top="6">
-      <Text weight="600">Tertiary</Text>
+      <Text weight="700">Tertiary</Text>
       <br />
       <Text size="micro">• Desktop version - 14px</Text>
       <Paragraph modifier="tertiary">
@@ -152,7 +152,7 @@ export const ModifierMetrics = () => (
     </Marger>
 
     <Marger top="6">
-      <Text weight="600">Quaternary</Text>
+      <Text weight="700">Quaternary</Text>
       <br />
       <Text size="micro">• Desktop version - 12px</Text>
       <Paragraph modifier="quaternary">

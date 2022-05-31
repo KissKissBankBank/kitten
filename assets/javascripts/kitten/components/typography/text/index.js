@@ -149,7 +149,7 @@ export const Text = ({
       'k-u-weight-regular': weight == 'regular', // Deprecated
       'k-u-weight-500': weight == '500',
       'k-u-weight-bold': weight == 'bold', // Deprecated
-      'k-u-weight-600': weight == '600',
+      'k-u-weight-700': weight == '700',
     },
     className,
   )
@@ -180,7 +180,7 @@ Text.propTypes = {
   ]),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
-  weight: PropTypes.oneOf(['400', '500', '600']),
+  weight: PropTypes.oneOf(['400', '500', '700']),
   letterSpacing: PropTypes.string,
 }
 

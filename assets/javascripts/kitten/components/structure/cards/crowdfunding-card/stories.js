@@ -135,7 +135,7 @@ const Info = ({ label, text }) => (
   <span className="k-u-inlineFlex k-u-flex-direction-column">
     <Text
       tag="strong"
-      weight="600"
+      weight="700"
       size="small"
       className="k-u-inlineFlex@s-down"
     >

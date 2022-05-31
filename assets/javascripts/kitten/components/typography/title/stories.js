@@ -62,7 +62,7 @@ Default.argTypes = argTypes
 export const ModifierMetrics = () => (
   <>
     <Marger>
-      <Text weight="600">Primary</Text>
+      <Text weight="700">Primary</Text>
       <br />
       <Text size="micro">• Desktop version - 64px</Text>
       <br />
@@ -80,7 +80,7 @@ export const ModifierMetrics = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="600">Secondary</Text>
+      <Text weight="700">Secondary</Text>
       <br />
       <Text size="micro">• Desktop version - 48px</Text>
       <br />
@@ -97,7 +97,7 @@ export const ModifierMetrics = () => (
       </Marger>
     </Marger>
     <Marger top="7">
-      <Text weight="600">Tertiary</Text>
+      <Text weight="700">Tertiary</Text>
       <br />
       <Text size="micro">• Desktop version - 36px</Text>
       <br />
@@ -114,7 +114,7 @@ export const ModifierMetrics = () => (
       </Marger>
     </Marger>
     <Marger top="7">
-      <Text weight="600">Quaternary</Text>
+      <Text weight="700">Quaternary</Text>
       <br />
       <Text size="micro">• Desktop version - 32px</Text>
       <br />
@@ -132,7 +132,7 @@ export const ModifierMetrics = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="600">Quinary</Text>
+      <Text weight="700">Quinary</Text>
       <br />
       <Text size="micro">• Desktop version - 28px</Text>
       <br />
@@ -150,7 +150,7 @@ export const ModifierMetrics = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="600">Senary</Text>
+      <Text weight="700">Senary</Text>
       <br />
       <Text size="micro">• Desktop version - 24px</Text>
       <br />
@@ -163,13 +163,13 @@ export const ModifierMetrics = () => (
       <Marger top="1">
         <Text size="micro">• Mobile version - 18px</Text>
         <br />
-        <Text size="large" weight="600">
+        <Text size="large" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
     </Marger>
     <Marger top="7">
-      <Text weight="600">Septenary</Text>
+      <Text weight="700">Septenary</Text>
       <br />
       <Text size="micro">• Desktop version - 20px</Text>
       <br />
@@ -177,14 +177,14 @@ export const ModifierMetrics = () => (
       <Marger top="1">
         <Text size="micro">• Tablet version - 18px</Text>
         <br />
-        <Text size="large" weight="600">
+        <Text size="large" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
       <Marger top="1">
         <Text size="micro">• Mobile version - 16px</Text>
         <br />
-        <Text size="medium" weight="600">
+        <Text size="medium" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>

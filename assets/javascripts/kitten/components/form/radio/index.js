@@ -84,7 +84,7 @@ const StyledRadio = styled.div`
       ${TYPOGRAPHY.fontStyles.light};
     }
     &.k-Form-Radio__labelText--bold,
-    &.k-Form-Radio__labelText--600 {
+    &.k-Form-Radio__labelText--700 {
       ${TYPOGRAPHY.fontStyles.bold};
     }
   }
@@ -257,7 +257,7 @@ Radio.propTypes = {
   disabled: PropTypes.bool,
   design: PropTypes.oneOf(['disc', 'check']),
   fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
-  weight: PropTypes.oneOf(['400', '500', '600']),
+  weight: PropTypes.oneOf(['400', '500', '700']),
 }
 
 Radio.defaultProps = {
