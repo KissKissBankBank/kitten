@@ -20,9 +20,6 @@ export const modifierStyles = modifier => {
 
   switch (modifier) {
     case 'hydrogen':
-    case 'carbon':
-    case 'oxygen':
-    case 'calcium':
       borderColor = 'var(--color-grey-400)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
@@ -58,11 +55,6 @@ export const modifierStyles = modifier => {
       break
 
     case 'beryllium':
-    case 'social_facebook':
-    case 'social_twitter':
-    case 'social_linkedin':
-    case 'social_instagram':
-    case 'social_youtube':
       borderColor = COLORS.font1
       backgroundColor = COLORS.font1
       color = COLORS.background1
