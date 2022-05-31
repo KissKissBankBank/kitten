@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 - Breaking Change: `Button`: Use `fit=content` as default.
+- Breaking Change: `Button`: Remove deprecated modifiers.
 
 ## [10.12.0] - 2022-05-30
 
