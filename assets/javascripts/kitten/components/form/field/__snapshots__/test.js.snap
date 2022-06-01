@@ -946,7 +946,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO cHAywC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -955,6 +955,7 @@ Array [
             id="option-a"
             name="radio"
             type="radio"
+            variant={null}
           />
           <label
             className="k-Form-RadioButton__label"
@@ -968,7 +969,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO cHAywC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -976,6 +977,7 @@ Array [
             id="option-b"
             name="radio"
             type="radio"
+            variant={null}
           />
           <label
             className="k-Form-RadioButton__label"
@@ -989,7 +991,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO cHAywC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -997,6 +999,7 @@ Array [
             id="option-c"
             name="radio"
             type="radio"
+            variant={null}
           />
           <label
             className="k-Form-RadioButton__label"
