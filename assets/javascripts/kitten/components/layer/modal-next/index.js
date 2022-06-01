@@ -8,7 +8,7 @@ import isEmpty from 'lodash/fp/isEmpty'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { CloseButton } from '../../action/close-button'
 import { Button } from '../../action/button'
-import { ICON_TINY } from '../../action/button/standalone-styles'
+import { ICON_SMALL } from '../../action/button/standalone-styles'
 import { Paragraph } from '../../typography/paragraph/next'
 import { Text } from '../../typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -85,7 +85,6 @@ const GlobalStyle = createGlobalStyle`
       --Modal-wrapperMaxWidth: ${pxToRem(CONTAINER_MAX_WIDTH)};
     }
 
-    &.k-ModalNext__content--big,
     &.k-ModalNext__content--large {
       --Modal-colNumber: 8;
 
@@ -234,7 +233,7 @@ const GlobalStyle = createGlobalStyle`
 
       .k-Button {
         @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-          ${() => ICON_TINY}
+          ${() => ICON_SMALL}
         }
       }
     }

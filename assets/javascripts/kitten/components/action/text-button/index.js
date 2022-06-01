@@ -37,7 +37,6 @@ const StyledButton = styled.button`
     fill: currentColor;
   }
 
-  &.k-TextButton--normal,
   &.k-TextButton--medium {
     font-size: ${pxToRem(14)};
 
@@ -46,7 +45,6 @@ const StyledButton = styled.button`
     }
   }
 
-  &.k-TextButton--big,
   &.k-TextButton--large {
     font-size: ${pxToRem(16)};
 
