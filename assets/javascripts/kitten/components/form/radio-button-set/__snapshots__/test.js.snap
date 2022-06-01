@@ -2,7 +2,7 @@
 
 exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend
@@ -24,7 +24,6 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
         id="option-a"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -46,7 +45,6 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
         id="option-b"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -68,7 +66,6 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
         id="option-c"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -87,7 +84,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 
 exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend
@@ -110,7 +107,6 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
         id="option-a"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -132,7 +128,6 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
         id="option-b"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -154,7 +149,6 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
         id="option-c"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -173,7 +167,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
 
 exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend>
@@ -194,7 +188,6 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
         id="option-a"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -216,7 +209,6 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
         id="option-b"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
@@ -238,7 +230,6 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
         id="option-c"
         name="test-radio-button-set"
         type="radio"
-        variant={null}
       />
       <label
         className="k-Form-RadioButton__label"
