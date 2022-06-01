@@ -15,7 +15,7 @@ const TYPOGRAPHY = {
     bold: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       letterSpacing: '.01rem',
-      fontweight: 700,
+      fontWeight: 700,
     },
     regularUppercase: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
@@ -24,7 +24,7 @@ const TYPOGRAPHY = {
     },
     boldUppercase: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontweight: 700,
+      fontWeight: 700,
       letterSpacing: '.1rem',
       textTransform: 'uppercase',
     },

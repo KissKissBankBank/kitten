@@ -249,7 +249,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
-  fontweight: 700px;
+  font-weight: 700;
 }
 
 .c0.k-Form-RadioButton--orion.k-Form-RadioButton--small {

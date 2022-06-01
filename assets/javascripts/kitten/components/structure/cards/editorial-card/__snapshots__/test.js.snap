@@ -16,7 +16,7 @@ exports[`<EditorialCard /> by default matches with snapshot 1`] = `
       className="k-EditorialCard__recto"
     >
       <h1
-        className="sc-bdvvtL iCvexg k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
+        className="sc-bdvvtL fgJpqN k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
         style={
           Object {
             "--Title-css-color": "inherit",
@@ -78,7 +78,7 @@ exports[`<EditorialCard /> with custom linkProps, color and verso matches with s
       className="k-EditorialCard__recto"
     >
       <h1
-        className="sc-bdvvtL iCvexg k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
+        className="sc-bdvvtL fgJpqN k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
         style={
           Object {
             "--Title-css-color": "inherit",

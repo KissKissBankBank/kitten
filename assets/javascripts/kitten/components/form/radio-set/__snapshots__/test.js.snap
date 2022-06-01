@@ -15,7 +15,7 @@ exports[`<RadioSet /> default matches with snapshot 1`] = `
     className="k-Form-RadioSet__radioContainer"
   >
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -37,7 +37,7 @@ exports[`<RadioSet /> default matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -58,7 +58,7 @@ exports[`<RadioSet /> default matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -98,7 +98,7 @@ exports[`<RadioSet /> with children and label matches with snapshot 1`] = `
     className="k-Form-RadioSet__radioContainer"
   >
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -120,7 +120,7 @@ exports[`<RadioSet /> with children and label matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -141,7 +141,7 @@ exports[`<RadioSet /> with children and label matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -179,7 +179,7 @@ exports[`<RadioSet /> with children matches with snapshot 1`] = `
     className="k-Form-RadioSet__radioContainer"
   >
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -201,7 +201,7 @@ exports[`<RadioSet /> with children matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"
@@ -222,7 +222,7 @@ exports[`<RadioSet /> with children matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL icNSgB k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+      className="sc-bdvvtL cCOTvI k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
     >
       <input
         className="k-Form-Radio__input"

@@ -44,7 +44,7 @@ describe('<Text />', () => {
 
     beforeEach(() => {
       component = renderer
-        .create(<Text cssColor="#F00" style={{ fontWeight: 'bold' }} />)
+        .create(<Text cssColor="#F00" style={{ fontWeight: '700' }} />)
         .toJSON()
     })
 

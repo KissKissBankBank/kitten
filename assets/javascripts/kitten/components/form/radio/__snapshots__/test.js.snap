@@ -91,7 +91,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
-  fontweight: 700px;
+  font-weight: 700;
 }
 
 .c1 .k-Form-Radio__input:active + .k-Form-Radio__labelText {
