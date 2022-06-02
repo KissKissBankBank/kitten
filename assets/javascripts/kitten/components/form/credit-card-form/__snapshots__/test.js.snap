@@ -32,22 +32,25 @@ Array [
     <div
       className="k-FieldInput k-Field__control sc-bdvvtL fUNvYp k-u-margin-top-single"
     >
-      <input
-        autoComplete="cc-number"
-        className="sc-jRQBWg kDkrds k-Form-TextInput k-Form-TextInput--medium"
-        disabled={false}
-        id="frmCCNum"
-        inputMode="numeric"
-        name="cardnumber"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseUp={[Function]}
-        placeholder="#### #### #### #######"
-        type="text"
-        value=""
-      />
+      <div
+        className="sc-jRQBWg cdbdbv k-TextInput__wrapper k-TextInput__wrapper--medium"
+      >
+        <input
+          autoComplete="cc-number"
+          className="k-TextInput"
+          defaultValue=""
+          disabled={false}
+          inputMode="numeric"
+          name="cardnumber"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseUp={[Function]}
+          placeholder="#### #### #### #######"
+          type="text"
+        />
+      </div>
     </div>
   </div>,
   <div
@@ -80,27 +83,30 @@ Array [
     <div
       className="k-FieldInput k-Field__control k-u-margin-top-single"
     >
-      <input
-        autoComplete="cc-exp"
-        className="sc-jRQBWg kDkrds k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--medium"
-        disabled={false}
-        id="frmCCExp"
-        inputMode="numeric"
-        name="cc-exp"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseUp={[Function]}
-        placeholder="MM/AA"
-        style={
-          Object {
-            "--input-content-width": 6,
+      <div
+        className="sc-jRQBWg cdbdbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasDigits"
+      >
+        <input
+          autoComplete="cc-exp"
+          className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
+          defaultValue=""
+          disabled={false}
+          inputMode="numeric"
+          name="cc-exp"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseUp={[Function]}
+          placeholder="MM/AA"
+          style={
+            Object {
+              "--input-content-width": 6,
+            }
           }
-        }
-        type="text"
-        value=""
-      />
+          type="text"
+        />
+      </div>
     </div>
   </div>,
   <div
@@ -133,27 +139,30 @@ Array [
     <div
       className="k-FieldInput k-Field__control k-u-margin-top-single"
     >
-      <input
-        autoComplete="cc-csc"
-        className="sc-jRQBWg kDkrds k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--medium"
-        disabled={false}
-        id="frmCCCVC"
-        inputMode="numeric"
-        name="cvc"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onMouseUp={[Function]}
-        placeholder="###"
-        style={
-          Object {
-            "--input-content-width": 6,
+      <div
+        className="sc-jRQBWg cdbdbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasDigits"
+      >
+        <input
+          autoComplete="cc-csc"
+          className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
+          defaultValue=""
+          disabled={false}
+          inputMode="numeric"
+          name="cvc"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseUp={[Function]}
+          placeholder="###"
+          style={
+            Object {
+              "--input-content-width": 6,
+            }
           }
-        }
-        type="text"
-        value=""
-      />
+          type="text"
+        />
+      </div>
     </div>
   </div>,
 ]
