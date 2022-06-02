@@ -56,8 +56,7 @@ const DiscussionWrapper = styled.div`
     align-items: flex-end;
     gap: ${pxToRem(10)};
 
-    .k-Form-TextInput__textareaContainer {
-      /* .k-Discussion__form__input { */
+    .k-TextInput__wrapper {
       flex: 1 0 auto;
     }
 
