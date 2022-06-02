@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../information/boxes/arrow-container'
@@ -23,49 +23,19 @@ const fadeInAndOut = keyframes`
 
 const Wrapper = styled.button`
   position: relative;
-  display: flex;
-  gap: ${pxToRem(5)};
   width: 100%;
 
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    flex-direction: column;
-  }
-
-  .k-TextCopy__text {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    line-height: calc(1.15 * ${stepToRem(-1)});
-    text-align: left;
-    overflow: hidden;
-
-    span {
-      max-width: 100%;
-      max-height: calc(2 * 1.15 * ${stepToRem(-1)});
-      overflow: hidden;
-      text-overflow: ellipsis;
+  .k-TextInput__wrapper {
+    .k-TextInput{
+      --text-input-height: auto;
+      line-height: 1.15;
+      display: flex;
+      align-items: center;
     }
 
-    &.k-TextCopy__text--forceOneLine span {
-      white-space: nowrap;
+    @media ${mq.mobile} {
+      flex-direction: column;
     }
-  }
-
-  .k-TextCopy__buttonTextButton {
-    flex: 1 0 auto;
-    padding: 0 ${pxToRem(15)};
-    align-self: stretch;
-    box-sizing: border-box;
-  }
-
-  .k-TextCopy__iconButton {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    padding: ${pxToRem(10)};
-    border: var(--border);
-    align-self: stretch;
-    box-sizing: border-box;
   }
 
   .k-TextCopy__tooltip {
@@ -77,21 +47,28 @@ const Wrapper = styled.button`
   }
 
   &:hover {
+    .k-TextInput {
+      border: var(--border-hover);
+    }
     .k-Button {
-      border-color: ${COLORS.primary2};
-      background-color: ${COLORS.primary2};
+      border-color: var(--color-primary-700);
+      background-color: var(--color-primary-700);
     }
   }
 
   &:active {
+    .k-TextInput {
+      border: var(--border-active);
+    }
     .k-Button {
-      border-color: ${COLORS.primary3};
-      background-color: ${COLORS.primary3};
+      border-color: var(--color-primary-900);
+      background-color: var(--color-primary-900);
     }
   }
 `
 
 export const TextCopy = ({
+  id,
   children,
   textToCopy,
   alertMessage,
@@ -139,24 +116,25 @@ export const TextCopy = ({
     >
       {description && <VisuallyHidden>{description}</VisuallyHidden>}
       <TextInput
-        as="div"
+        id={id}
+        tag="div"
         className={classNames('k-TextCopy__text', 'k-u-reset-button', {
           'k-TextCopy__text--forceOneLine': forceOneLine,
         })}
         size={size}
+        has="button"
+        buttonProps={{
+          as: 'span',
+          modifier: !!buttonText ? buttonModifier : 'hydrogen',
+          className: "k-TextCopy__button",
+          fit: buttonText ? 'content' : 'icon',
+          children: !!buttonText ? buttonText : <CopyIcon />,
+        }}
       >
-        <span ref={textElement}>{children}</span>
+        <span ref={textElement} className={classNames({
+          'k-u-clamp-1': forceOneLine,
+        })}>{children}</span>
       </TextInput>
-
-      <Button
-        as="span"
-        modifier={!!buttonText ? buttonModifier : 'hydrogen'}
-        className="k-TextCopy__buttonTextButton"
-        fit={buttonText ? 'content' : 'icon'}
-        size={size}
-      >
-        {!!buttonText ? buttonText : <CopyIcon />}
-      </Button>
 
       {alertMessage && isMessageVisible && (
         <ArrowContainer
@@ -188,6 +166,7 @@ TextCopy.propTypes = {
 }
 
 TextCopy.defaultProps = {
+  id: 'TextCopy',
   alertMessage: undefined,
   textToCopy: undefined,
   description: undefined,
