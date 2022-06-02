@@ -8,6 +8,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="password"
     name="password"
     onChange={[Function]}
     type="password"

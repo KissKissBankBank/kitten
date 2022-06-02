@@ -158,6 +158,7 @@ Array [
         className="k-TextInput k-TextInput--error"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"
@@ -276,6 +277,7 @@ Array [
         className="k-TextInput"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"
@@ -399,6 +401,7 @@ Array [
         className="k-TextInput"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"
@@ -512,6 +515,7 @@ Array [
         className="k-TextInput k-TextInput--hasLimit"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"
@@ -630,6 +634,7 @@ Array [
         className="k-TextInput k-TextInput--hasUnit"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"
@@ -748,6 +753,7 @@ Array [
         className="k-TextInput k-TextInput--hasButton k-TextInput--error"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"
@@ -893,6 +899,7 @@ Array [
         className="k-TextInput k-TextInput--hasButton"
         defaultValue=""
         disabled={false}
+        id="input"
         name="field"
         onChange={[Function]}
         placeholder="Placeholder…"

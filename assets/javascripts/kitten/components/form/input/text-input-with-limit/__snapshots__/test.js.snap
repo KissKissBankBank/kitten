@@ -8,6 +8,7 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasLimit"
     defaultValue=""
     disabled={false}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
@@ -27,6 +28,7 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
     className="k-TextInput k-TextInput--hasLimit k-TextInput--disabled"
     defaultValue=""
     disabled={true}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
@@ -46,6 +48,7 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
     className="k-TextInput k-TextInput--hasLimit k-TextInput--error"
     defaultValue=""
     disabled={false}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
@@ -65,6 +68,7 @@ exports[`<TextInputWithLimit /> with \`size\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasLimit"
     defaultValue=""
     disabled={false}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />

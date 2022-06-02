@@ -39,6 +39,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
         className="k-TextInput k-ContributionCard__input k-TextInput--hasUnit"
         defaultValue=""
         disabled={false}
+        id="Input"
         name="text"
         onChange={[Function]}
       />

@@ -13,6 +13,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
       className="k-TextInput k-TextCopy__text k-u-reset-button k-TextInput--hasButton"
       defaultValue=""
       disabled={false}
+      id="TextCopy"
       name="text"
       onChange={[Function]}
     >
@@ -68,6 +69,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
       className="k-TextInput k-TextCopy__text k-u-reset-button k-TextInput--hasButton"
       defaultValue=""
       disabled={false}
+      id="TextCopy"
       name="text"
       onChange={[Function]}
     >
@@ -112,6 +114,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
       className="k-TextInput k-TextCopy__text k-u-reset-button k-TextInput--hasButton"
       defaultValue=""
       disabled={false}
+      id="TextCopy"
       name="text"
       onChange={[Function]}
     >
@@ -167,6 +170,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
       className="k-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-TextInput--hasButton"
       defaultValue=""
       disabled={false}
+      id="TextCopy"
       name="text"
       onChange={[Function]}
     >

@@ -87,6 +87,7 @@ export const TextInput = React.forwardRef(
         )}
         <InputComponent
           ref={ref || null}
+          id={id}
           aria-describedby={describedBy}
           disabled={disabled}
           name={name}
@@ -173,6 +174,7 @@ TextInput.propTypes = {
   id: PropTypes.string.isRequired,
   tag: PropTypes.oneOfType([
     PropTypes.object,
+    PropTypes.string,
     PropTypes.oneOf(['input', 'textarea', 'autoresize']),
   ]),
   valid: PropTypes.bool,

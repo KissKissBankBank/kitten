@@ -40,6 +40,7 @@ Array [
           className="k-TextInput"
           defaultValue=""
           disabled={false}
+          id="frmCCNum"
           inputMode="numeric"
           name="cardnumber"
           onBlur={[Function]}
@@ -91,6 +92,7 @@ Array [
           className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
           defaultValue=""
           disabled={false}
+          id="frmCCExp"
           inputMode="numeric"
           name="cc-exp"
           onBlur={[Function]}
@@ -147,6 +149,7 @@ Array [
           className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
           defaultValue=""
           disabled={false}
+          id="frmCCCVC"
           inputMode="numeric"
           name="cvc"
           onBlur={[Function]}

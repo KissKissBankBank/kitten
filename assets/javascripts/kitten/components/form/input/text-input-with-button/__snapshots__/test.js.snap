@@ -8,6 +8,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
   />
@@ -35,6 +36,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
   />
@@ -62,6 +64,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
     placeholder="Les props sont transmises"
@@ -129,6 +132,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     className="k-TextInput k-TextInput--hasButton k-TextInput--disabled"
     defaultValue=""
     disabled={true}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
   />
@@ -156,6 +160,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton k-TextInput--error"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
   />
@@ -183,6 +188,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     inputValue="foobar"
     name="text"
     onChange={[Function]}
@@ -212,6 +218,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
   />
@@ -239,6 +246,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton k-TextInput--valid"
     defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
     onChange={[Function]}
   />

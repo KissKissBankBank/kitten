@@ -8,6 +8,7 @@ exports[`<TextInput /> with \`autoresize\` prop matches with snapshot 1`] = `
     className="k-TextInput"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
     rows={1}
@@ -31,6 +32,7 @@ exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--alignCenter"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -45,6 +47,7 @@ exports[`<TextInput /> with \`darkBackground\` prop matches with snapshot 1`] = 
     className="k-TextInput k-TextInput--darkBackground"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -59,6 +62,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_12"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
     style={
@@ -78,6 +82,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--disabled"
     defaultValue=""
     disabled={true}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -92,6 +97,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--error"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -106,6 +112,7 @@ exports[`<TextInput /> with \`has=button buttonIsInset\` props matches with snap
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -128,6 +135,7 @@ exports[`<TextInput /> with \`has=button\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasButton"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -154,6 +162,7 @@ exports[`<TextInput /> with \`has=icon iconPosition=right\` props matches with s
     className="k-TextInput k-TextInput--hasIcon"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -174,6 +183,7 @@ exports[`<TextInput /> with \`has=icon\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasIcon"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -194,6 +204,7 @@ exports[`<TextInput /> with \`has=limit\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasLimit"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -213,6 +224,7 @@ exports[`<TextInput /> with \`has=unit unitIsWord\` props matches with snapshot 
     className="k-TextInput k-TextInput--hasUnit"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -232,6 +244,7 @@ exports[`<TextInput /> with \`has=unit\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--hasUnit"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -251,6 +264,7 @@ exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
     className="k-TextInput"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="foobar"
     onChange={[Function]}
   />
@@ -265,6 +279,7 @@ exports[`<TextInput /> with \`size\` prop matches with snapshot 1`] = `
     className="k-TextInput"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -279,6 +294,7 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
     className="k-TextInput"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />
@@ -293,6 +309,7 @@ exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
     className="k-TextInput"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="message"
     onChange={[Function]}
   />
@@ -310,6 +327,7 @@ exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
     className="k-TextInput k-TextInput--valid"
     defaultValue=""
     disabled={false}
+    id="TextInput"
     name="text"
     onChange={[Function]}
   />

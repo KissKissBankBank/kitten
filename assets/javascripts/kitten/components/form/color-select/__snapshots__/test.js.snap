@@ -3,7 +3,7 @@
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
   className="sc-dkPtRN fIyQYQ k-Form-ColorSelect"
-  name="test-slider-input"
+  name="test-color-select"
 >
   <div
     className="k-Form-ColorSelect__picker"
@@ -113,6 +113,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
         className="k-TextInput k-TextInput--alignCenter"
         defaultValue=""
         disabled={false}
+        id="test-color-select"
         name="text"
         onBlur={[Function]}
         onChange={[Function]}
@@ -131,7 +132,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 exports[`<ColorSelect /> should match its snapshot with props and children 1`] = `
 <div
   className="sc-dkPtRN fIyQYQ k-Form-ColorSelect"
-  name="test-slider-input"
+  name="test-color-select"
 >
   <div
     className="k-Form-ColorSelect__picker"
@@ -241,6 +242,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
         className="k-TextInput k-TextInput--alignCenter"
         defaultValue=""
         disabled={false}
+        id="test-color-select"
         name="text"
         onBlur={[Function]}
         onChange={[Function]}

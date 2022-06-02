@@ -83,6 +83,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
         className="k-TextInput k-Discussion__form__input"
         defaultValue=""
         disabled={false}
+        id="TextInput"
         name="text"
         onChange={[Function]}
         placeholder="Envoyer un message"
