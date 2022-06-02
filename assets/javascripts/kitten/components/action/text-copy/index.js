@@ -4,12 +4,11 @@ import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { mq } from '../../../constants/screen-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../information/boxes/arrow-container'
 import { Text } from '../../typography/text'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { Button } from '../../action/button'
 import { TextInput } from '../../form/input/text-input'
 
 const fadeInAndOut = keyframes`
@@ -26,7 +25,7 @@ const Wrapper = styled.button`
   width: 100%;
 
   .k-TextInput__wrapper {
-    .k-TextInput{
+    .k-TextInput {
       --text-input-height: auto;
       line-height: 1.15;
       display: flex;
@@ -126,14 +125,19 @@ export const TextCopy = ({
         buttonProps={{
           as: 'span',
           modifier: !!buttonText ? buttonModifier : 'hydrogen',
-          className: "k-TextCopy__button",
+          className: 'k-TextCopy__button',
           fit: buttonText ? 'content' : 'icon',
           children: !!buttonText ? buttonText : <CopyIcon />,
         }}
       >
-        <span ref={textElement} className={classNames({
-          'k-u-clamp-1': forceOneLine,
-        })}>{children}</span>
+        <span
+          ref={textElement}
+          className={classNames({
+            'k-u-clamp-1': forceOneLine,
+          })}
+        >
+          {children}
+        </span>
       </TextInput>
 
       {alertMessage && isMessageVisible && (

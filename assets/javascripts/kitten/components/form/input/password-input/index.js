@@ -27,7 +27,11 @@ export const PasswordInput = ({
         'aria-pressed': !isHidden,
         onClick: handleClick,
         className: 'k-PasswordInput__icon',
-        children: <PasswordIcon color={`var(--color-${ isHidden ? 'grey-900' : 'primary-500' })`} />
+        children: (
+          <PasswordIcon
+            color={`var(--color-${isHidden ? 'grey-900' : 'primary-500'})`}
+          />
+        ),
       }}
     />
   )
