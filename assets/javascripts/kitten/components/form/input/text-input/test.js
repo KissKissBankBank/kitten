@@ -116,4 +116,92 @@ describe('<TextInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `has=button` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInput has="button" buttonProps={{ children: 'Hello world' }} />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=button buttonIsInset` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInput
+            has="button"
+            buttonIsInset
+            buttonProps={{ children: 'Hello world' }}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=icon` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput has="icon" icon={<svg />} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=icon iconPosition=right` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput has="icon" icon={<svg />} iconPosition="right" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=limit` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput has="limit" limit={90} />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=unit` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput has="unit" unit="€" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=unit unitIsWord` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput has="unit" unit="grand" unitIsWord />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
