@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
@@ -102,7 +101,6 @@ const StyledTagButton = styled.button`
 
 export const TagButton = ({
   children,
-  selected,
   active,
   className,
   size,
@@ -122,7 +120,7 @@ export const TagButton = ({
         className,
         `k-Buttons__tagButton--${size}`,
         {
-          'k-Buttons__tagButton--active': active || selected,
+          'k-Buttons__tagButton--active': active,
         },
       )}
       as={tag || as}
@@ -136,12 +134,6 @@ export const TagButton = ({
 TagButton.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   active: PropTypes.bool,
-  icon: deprecated(PropTypes.bool, 'Icon is not implemented anymore.'),
-  modifier: deprecated(
-    PropTypes.string,
-    'Modifiers are not implemented anymore.',
-  ),
-  selected: deprecated(PropTypes.bool, 'Please use `active` instead'),
 }
 
 TagButton.defaultProps = {

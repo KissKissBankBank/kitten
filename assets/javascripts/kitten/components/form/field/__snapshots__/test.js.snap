@@ -939,14 +939,14 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO cHAywC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -968,7 +968,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO cHAywC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -989,7 +989,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO cHAywC k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
         >
           <input
             className="k-Form-RadioButton__input"
