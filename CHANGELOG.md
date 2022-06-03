@@ -7,9 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
 - Breaking change: `Radio`: Remove `variant` prop.
 - Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
+- Breaking Change: `Alert`: Remove deprecated props.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
-- Breaking Change: `Alert`: Remove deprecated props.
 
 ## [10.12.0] - 2022-05-30
 
