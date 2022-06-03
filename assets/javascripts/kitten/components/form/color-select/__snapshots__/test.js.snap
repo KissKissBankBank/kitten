@@ -272,7 +272,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
           Rendu :
         </span>
         <button
-          className="sc-gsDKAQ iLsKyh k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
+          className="sc-gsDKAQ cJaukN k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
           style={
             Object {
               "--Button-border-radius": null,

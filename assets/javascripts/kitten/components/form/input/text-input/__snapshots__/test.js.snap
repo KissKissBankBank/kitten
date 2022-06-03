@@ -140,7 +140,7 @@ exports[`<TextInput /> with \`has=button\` prop matches with snapshot 1`] = `
     onChange={[Function]}
   />
   <button
-    className="sc-gsDKAQ bjTHaH k-Button k-TextInput__button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
+    className="sc-gsDKAQ euJLpD k-Button k-TextInput__button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
     style={
       Object {
         "--Button-border-radius": null,

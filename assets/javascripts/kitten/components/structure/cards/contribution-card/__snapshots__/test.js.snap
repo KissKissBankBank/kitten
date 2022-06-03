@@ -50,7 +50,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </span>
     </div>
     <button
-      className="sc-bdvvtL eQscAQ k-Button k-ContributionCard__action k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+      className="sc-bdvvtL bVkIbM k-Button k-ContributionCard__action k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
       disabled={true}
       style={
         Object {
