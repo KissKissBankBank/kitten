@@ -6,6 +6,7 @@ import { RadioButton } from '../../form/radio-button'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Label } from '../../form/label'
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledRadioButtonSet = styled.fieldset`
   margin: 0;
@@ -56,7 +57,6 @@ export const RadioButtonSet = ({
       className={classNames(
         'k-Form-RadioButtonSet',
         className,
-        `k-Form-RadioButtonSet--${variant || 'orion'}`,
       )}
       disabled={disabled}
       {...props}
@@ -78,7 +78,6 @@ export const RadioButtonSet = ({
         {items.map(({ id, className, ...itemProps }) => (
           <RadioButton
             id={id}
-            variant={variant || null}
             design={design}
             error={error}
             size={size}
