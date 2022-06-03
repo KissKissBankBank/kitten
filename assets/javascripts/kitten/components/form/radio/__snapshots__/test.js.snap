@@ -124,7 +124,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-Radio--check.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
-  background-color: var(--color-danger-500,#ff0046);
+  background-color: var(--color-danger-500);
 }
 
 .c0.k-Form-Radio--check .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
