@@ -78,21 +78,18 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -182,7 +179,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -328,21 +324,18 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -432,7 +425,6 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -576,21 +568,18 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -680,7 +669,6 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -824,21 +812,18 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -928,7 +913,6 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1072,21 +1056,18 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1176,7 +1157,6 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1320,21 +1300,18 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1424,7 +1401,6 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1568,21 +1544,18 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1672,7 +1645,6 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1818,21 +1790,18 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1922,7 +1891,6 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2066,21 +2034,18 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -2170,7 +2135,6 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2314,21 +2278,18 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -2418,7 +2379,6 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2562,21 +2522,18 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -2666,7 +2623,6 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2810,21 +2766,18 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -2914,7 +2867,6 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3058,21 +3010,18 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -3162,7 +3111,6 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3306,21 +3254,18 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -3410,7 +3355,6 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3554,21 +3498,18 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -3658,7 +3599,6 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3807,21 +3747,18 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -3911,7 +3848,6 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;

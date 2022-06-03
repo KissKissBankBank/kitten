@@ -4,8 +4,8 @@ import { RadioButtonSet } from './index'
 import { pxToRem, GUTTER, ScreenConfig, Title } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
-const OrionGlobalStyle = createGlobalStyle`
-  .k-Form-RadioButtonSet.k-Form-RadioButtonSet__orionGrid .k-Form-RadioButtonSet__radioContainer {
+const RadioButtonSetGlobalStyle = createGlobalStyle`
+  .k-Form-RadioButtonSet.k-Form-RadioButtonSet__grid .k-Form-RadioButtonSet__radioContainer {
     display: grid;
     grid-template-columns: 1fr;
     gap: ${pxToRem(GUTTER)};
@@ -111,16 +111,16 @@ Default.args = {
   ],
 }
 
-export const OrionGrid = args => (
-  <RadioButtonSet className="k-Form-RadioButtonSet__orionGrid" {...args}>
-    <OrionGlobalStyle />
+export const WithGrid = args => (
+  <RadioButtonSet className="k-Form-RadioButtonSet__grid" {...args}>
+    <RadioButtonSetGlobalStyle />
     <Title modifier="quaternary" className="k-u-margin-bottom-triple">
       Choisissez le montant que vous souhaitez offrir
     </Title>
   </RadioButtonSet>
 )
 
-OrionGrid.args = {
+WithGrid.args = {
   ...defaultArgs,
   items: [
     {
@@ -151,13 +151,13 @@ OrionGrid.args = {
   ],
 }
 
-export const OrionGridWithLabel = args => (
-  <RadioButtonSet className="k-Form-RadioButtonSet__orionGrid" {...args}>
-    <OrionGlobalStyle />
+export const GridWithLabel = args => (
+  <RadioButtonSet className="k-Form-RadioButtonSet__grid" {...args}>
+    <RadioButtonSetGlobalStyle />
   </RadioButtonSet>
 )
 
-OrionGridWithLabel.args = {
+GridWithLabel.args = {
   ...defaultArgs,
   items: [
     {

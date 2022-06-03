@@ -2,7 +2,7 @@
 
 exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend
@@ -84,7 +84,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 
 exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend
@@ -167,7 +167,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
 
 exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend>

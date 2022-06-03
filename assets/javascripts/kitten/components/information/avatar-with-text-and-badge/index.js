@@ -2,14 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
 
 import { Badge as BadgeComponent } from '../../information/badge'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { getReactElementsByType } from '../../../helpers/react/get-react-elements'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -104,7 +102,6 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .k-Avatar--big,
   .k-Avatar--large {
     margin-right: ${pxToRem(15)};
 
@@ -158,8 +155,6 @@ const Image = ({
   width,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
-
   const badgeElement = getReactElementsByType({
     children,
     type: AvatarWithTextAndBadge.Badge,
@@ -229,10 +224,10 @@ Badge.defaultProps = {
   a11yText: 'Notification(s)',
 }
 
-const Text = ({ textClassName, className, withEllipsisOverflow, ...props }) => {
+const Text = ({ className, withEllipsisOverflow, ...props }) => {
   return (
     <span
-      className={classNames('k-Avatar__text', textClassName, className, {
+      className={classNames('k-Avatar__text', className, {
         'k-Avatar__text--hasEllipsis': withEllipsisOverflow,
       })}
       {...props}
@@ -242,10 +237,6 @@ const Text = ({ textClassName, className, withEllipsisOverflow, ...props }) => {
 
 Text.propTypes = {
   withEllipsisOverflow: PropTypes.bool,
-  textClassName: deprecated(
-    PropTypes.string,
-    'Please use standard `className` prop.',
-  ),
 }
 
 Text.defaultProps = {

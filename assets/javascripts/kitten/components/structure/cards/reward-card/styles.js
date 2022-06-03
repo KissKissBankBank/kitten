@@ -203,11 +203,6 @@ export const StyledRewardCard = styled.article`
     }
   }
 
-  .k-RewardCard__info__legend,
-  .k-RewardCard__info__value {
-    white-space: nowrap;
-  }
-
   .k-RewardCard__tagList {
     list-style: none;
     margin: 0;

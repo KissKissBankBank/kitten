@@ -97,19 +97,16 @@ const StyledCheckableButton = styled(Button)`
   }
 
   &.k-Button--micro,
-  &.k-Button--tiny,
   &.k-Button--small {
     --CheckableButton-dimension: ${pxToRem(15)};
     --CheckableButton-checkMargin: ${pxToRem(10)};
   }
 
-  &.k-Button--regular,
   &.k-Button--medium {
     --CheckableButton-dimension: ${pxToRem(20)};
     --CheckableButton-checkMargin: ${pxToRem(15)};
   }
 
-  &.k-Button--big,
   &.k-Button--large,
   &.k-Button--huge,
   &.k-Button--giant {

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import { RadioButton } from '../../form/radio-button'
@@ -39,7 +38,6 @@ export const RadioButtonSet = ({
   className,
   name,
   error,
-  variant,
   design,
   label,
   children,
@@ -112,10 +110,6 @@ RadioButtonSet.propTypes = {
     }),
   ),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  variant: deprecated(
-    PropTypes.oneOf(['andromeda', 'orion']),
-    'Please use the RadioSet component instead',
-  ),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,

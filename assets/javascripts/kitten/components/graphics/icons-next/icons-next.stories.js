@@ -351,7 +351,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
       </Group>
 
-      <Group title="Icônes réseaux sociaux couleurs"> 
+      <Group title="Icônes réseaux sociaux couleurs">
         <IconContainer>
           <GoogleIconNext />
         </IconContainer>

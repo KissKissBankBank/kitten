@@ -127,11 +127,8 @@ export const Text = ({
       // Size.
       'k-u-size-giant': size == 'giant',
       'k-u-size-huge': size == 'huge',
-      'k-u-size-big': size == 'big', // Deprecated
       'k-u-size-large': size == 'large',
-      'k-u-size-default': size == 'default', // Deprecated
       'k-u-size-medium': size == 'medium',
-      'k-u-size-tiny': size == 'tiny', // Deprecated
       'k-u-size-small': size == 'small',
       'k-u-size-micro': size == 'micro',
       'k-u-size-nano': size == 'nano',

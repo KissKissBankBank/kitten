@@ -6,7 +6,6 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize'
 import classNames from 'classnames'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const StyledInput = styled.input`
   --input-padding-horizontal: ${pxToRem(15)};
@@ -36,17 +35,14 @@ export const StyledInput = styled.input`
 
   // SIZES
 
-  &.k-Form-TextInput--tiny,
   &.k-Form-TextInput--small {
     --input-height: ${pxToRem(40)};
   }
 
-  &.k-Form-TextInput--regular,
   &.k-Form-TextInput--medium {
     --input-height: ${pxToRem(50)};
   }
 
-  &.k-Form-TextInput--big,
   &.k-Form-TextInput--large {
     --input-height: ${pxToRem(60)};
 
@@ -180,19 +176,16 @@ const StyledTextareaContainer = styled.div`
       resize: none;
     }
 
-    &.k-Form-TextInput--tiny,
     &.k-Form-TextInput--small {
       padding-top: ${pxToRem(9)};
       padding-bottom: ${pxToRem(9)};
     }
 
-    &.k-Form-TextInput--regular,
     &.k-Form-TextInput--medium {
       padding-top: ${pxToRem(14)};
       padding-bottom: ${pxToRem(14)};
     }
 
-    &.k-Form-TextInput--big,
     &.k-Form-TextInput--large {
       padding-top: ${pxToRem(18)};
       padding-bottom: ${pxToRem(18)};
@@ -309,8 +302,6 @@ export class TextInput extends PureComponent {
     const digitsClass = !!digits
       ? `k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_${digits}`
       : null
-
-    checkDeprecatedSizes(size)
 
     if (['textarea', 'autoresize'].includes(tag)) {
       return (

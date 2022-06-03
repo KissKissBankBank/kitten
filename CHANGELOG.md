@@ -11,8 +11,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
   - Typography config: Remove `regularUppercase` and `boldUppercase` styles.
   - Typography config: Add `fontStyles['400']`, `fontStyles['500']` and `fontStyles['700']`.
+
+- Breaking change: Remove old `size` values from all components and styles.
+- Breaking change: `Helpers`: Remove `checkDeprecatedSizes` utility.
+- Breaking change: `TextInputWithButton`: Remove `value` prop.
+- Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
+- Breaking change: `Radio`: Remove `variant` prop.
+- Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
+- Breaking Changes: Remove `RewardCard.Info`.
+- Breaking Changes: Remove `CrowdfundingCard`.
+- Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
 
 ## [10.12.0] - 2022-05-30
 

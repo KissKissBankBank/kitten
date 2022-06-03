@@ -2,10 +2,10 @@
 
 exports[`<TextInput /> with \`autoresize\` prop matches with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ kVwYzM k-Form-TextInput__textareaContainer"
+  className="sc-gsDKAQ iICuau k-Form-TextInput__textareaContainer"
 >
   <textarea
-    className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--autoresize k-Form-TextInput--medium k-Form-TextInput--autoResize"
+    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--autoresize k-Form-TextInput--medium k-Form-TextInput--autoResize"
     disabled={false}
     name="text"
     onChange={[Function]}
@@ -24,7 +24,7 @@ exports[`<TextInput /> with \`autoresize\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--alignCenter"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--alignCenter"
   disabled={false}
   name="text"
 />
@@ -32,7 +32,7 @@ exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`darkBackground\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--darkBackground"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--darkBackground"
   disabled={false}
   name="text"
 />
@@ -40,7 +40,7 @@ exports[`<TextInput /> with \`darkBackground\` prop matches with snapshot 1`] = 
 
 exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_12 k-Form-TextInput--medium"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_12 k-Form-TextInput--medium"
   disabled={false}
   name="text"
   style={
@@ -53,7 +53,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--disabled"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--disabled"
   disabled={true}
   name="text"
 />
@@ -61,7 +61,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
   disabled={false}
   name="text"
 />
@@ -69,7 +69,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium"
   disabled={false}
   name="foobar"
 />
@@ -77,7 +77,7 @@ exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`size\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium"
   disabled={false}
   name="text"
 />
@@ -85,7 +85,7 @@ exports[`<TextInput /> with \`size\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium"
   disabled={false}
   name="text"
 />
@@ -93,10 +93,10 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ kVwYzM k-Form-TextInput__textareaContainer"
+  className="sc-gsDKAQ iICuau k-Form-TextInput__textareaContainer"
 >
   <textarea
-    className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--textarea k-Form-TextInput--medium"
+    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--textarea k-Form-TextInput--medium"
     disabled={false}
     name="message"
   />
@@ -108,7 +108,7 @@ exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bdvvtL iHDzQd k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--valid"
+  className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--valid"
   disabled={false}
   name="text"
 />

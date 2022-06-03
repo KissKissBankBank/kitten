@@ -5,7 +5,6 @@ import { StatusIconNext } from '../../graphics/icons-next/status-icon-next'
 import { IconBadge } from '../../information/icon-badge'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import classNames from 'classnames'
 
 const AlertBoxWrapper = styled.div`
@@ -44,7 +43,6 @@ const AlertBoxWrapper = styled.div`
     line-height: ${pxToRem(18)};
   }
 
-  &.k-AlertBox--normal,
   &.k-AlertBox--medium {
     gap: ${pxToRem(15)};
     padding: ${pxToRem(10)};
@@ -56,7 +54,6 @@ const AlertBoxWrapper = styled.div`
     }
   }
 
-  &.k-AlertBox--big,
   &.k-AlertBox--large {
     gap: ${pxToRem(20)};
     padding: ${pxToRem(20)};
@@ -156,8 +153,6 @@ export const AlertBox = ({
   iconHasBorder,
   ...others
 }) => {
-  checkDeprecatedSizes(size)
-
   const internalIcon = (() => {
     if (icon) return icon
 
@@ -179,10 +174,8 @@ export const AlertBox = ({
   const iconSize = (() => {
     switch (size) {
       case 'large':
-      case 'big':
         return 'medium'
       case 'medium':
-      case 'normal':
         return 'small'
       case 'small':
         return 'micro'

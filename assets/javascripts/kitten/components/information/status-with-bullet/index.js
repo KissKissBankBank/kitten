@@ -40,7 +40,6 @@ const StyledStatus = styled.span`
     color: ${COLORS.primary1};
   }
 
-  &.k-StatusWithBullet--normal,
   &.k-StatusWithBullet--medium {
     font-size: ${stepToRem(0)};
 
@@ -51,7 +50,6 @@ const StyledStatus = styled.span`
     }
   }
 
-  &.k-StatusWithBullet--tiny,
   &.k-StatusWithBullet--small {
     font-size: ${stepToRem(-1)};
 

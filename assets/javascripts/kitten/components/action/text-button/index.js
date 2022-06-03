@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { mq } from '../../../constants/screen-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledButton = styled.button`
   ${TYPOGRAPHY.fontStyles['500']}
@@ -38,7 +37,6 @@ const StyledButton = styled.button`
     fill: currentColor;
   }
 
-  &.k-TextButton--normal,
   &.k-TextButton--medium {
     font-size: ${pxToRem(14)};
 
@@ -47,7 +45,6 @@ const StyledButton = styled.button`
     }
   }
 
-  &.k-TextButton--big,
   &.k-TextButton--large {
     font-size: ${pxToRem(16)};
 
@@ -58,8 +55,6 @@ const StyledButton = styled.button`
 `
 
 export const TextButton = ({ className, size, ...props }) => {
-  checkDeprecatedSizes(size)
-
   return (
     <StyledButton
       type="button"

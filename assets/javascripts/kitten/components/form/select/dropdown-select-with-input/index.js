@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { useSelect } from 'downshift'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -285,7 +284,6 @@ const StyledDropdownSelectWithInput = styled.div`
 
   /* SIZES */
 
-  &.k-Form-DropdownSelectWithInput--tiny,
   &.k-Form-DropdownSelectWithInput--small {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(40)};
@@ -307,7 +305,6 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-  &.k-Form-DropdownSelectWithInput--normal,
   &.k-Form-DropdownSelectWithInput--medium {
     .k-Form-DropdownSelectWithInput__container {
       height: ${pxToRem(50)};
@@ -329,7 +326,6 @@ const StyledDropdownSelectWithInput = styled.div`
     }
   }
 
-  &.k-Form-DropdownSelectWithInput--big,
   &.k-Form-DropdownSelectWithInput--large,
   &.k-Form-DropdownSelectWithInput--huge,
   &.k-Form-DropdownSelectWithInput--giant {
@@ -456,8 +452,6 @@ export const DropdownSelectWithInput = ({
   hideIconOnMobile,
   size,
 }) => {
-  checkDeprecatedSizes(size)
-
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }
