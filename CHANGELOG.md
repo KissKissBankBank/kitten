@@ -13,8 +13,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Changes: Remove `RewardCard.Info`.
 - Breaking Changes: Remove `CrowdfundingCard`.
 - Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
-- Breaking Change: `DatePicker`: Remove component.
 - Breaking Change: `TextInput`: Update component.
+- Breaking Change: `TextCopy`: Update component.
+- Breaking Change: `DatePicker`: Remove component.
 
 ## [10.12.0] - 2022-05-30
 
