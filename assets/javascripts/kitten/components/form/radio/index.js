@@ -70,21 +70,21 @@ const StyledRadio = styled.div`
 
   .k-Form-Radio__labelText {
     flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(14)};
     line-height: 1.5;
 
     &.k-Form-Radio__labelText--normal,
     &.k-Form-Radio__labelText--500 {
-      ${TYPOGRAPHY.fontStyles.regular};
+      ${TYPOGRAPHY.fontStyles['500']};
     }
     &.k-Form-Radio__labelText--light
     &.k-Form-Radio__labelText--400 {
-      ${TYPOGRAPHY.fontStyles.light};
+      ${TYPOGRAPHY.fontStyles['400']};
     }
     &.k-Form-Radio__labelText--bold,
     &.k-Form-Radio__labelText--700 {
-      ${TYPOGRAPHY.fontStyles.bold};
+      ${TYPOGRAPHY.fontStyles['700']};
     }
   }
 
@@ -93,7 +93,7 @@ const StyledRadio = styled.div`
   }
 
   .k-Form-Radio__labelText--withContents {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
   }
 
   .k-Form-Radio__labelContents {
@@ -101,7 +101,7 @@ const StyledRadio = styled.div`
     margin-left: ${pxToRem(16 + 10)};
     flex: 1 0 calc(100% - ${pxToRem(16 + 10 + 10)});
 
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(12)};
     line-height: ${pxToRem(19)};
 

@@ -25,7 +25,7 @@ const StyledCard = styled.article`
   }
 
   .k-ContentCard__header {
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     font-size: ${pxToRem(14)};
   }
   .k-ContentCard__title {

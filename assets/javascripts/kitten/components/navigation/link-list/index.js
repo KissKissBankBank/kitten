@@ -39,7 +39,7 @@ const StyledLinkList = styled.ul`
   }
 
   .k-LinkList__link {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-1)};
     text-decoration: none;
 
@@ -57,12 +57,12 @@ const StyledLinkList = styled.ul`
 
   .k-LinkList__item--regular,
   .k-LinkList__link--regular {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
   }
 
   .k-LinkList__item--light,
   .k-LinkList__link--light {
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
   }
 
   .k-LinkList__link--normalLineHeight {

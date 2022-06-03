@@ -56,7 +56,7 @@ const StyledDeskMenu = styled.nav`
     gap: ${pxToRem(2)};
 
     .k-DeskMenu__item {
-      ${TYPOGRAPHY.fontStyles.regular}
+      ${TYPOGRAPHY.fontStyles['500']}
 
       font-size: ${pxToRem(14)};
       text-decoration: none;

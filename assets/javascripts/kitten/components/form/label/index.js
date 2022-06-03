@@ -10,7 +10,7 @@ import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledLabel = styled.label`
   display: block;
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   cursor: pointer;
   line-height: 1.3;
 

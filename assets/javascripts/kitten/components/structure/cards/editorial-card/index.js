@@ -54,11 +54,11 @@ const StyledEditorialCard = styled.div`
   }
 
   .k-EditorialCard__recto {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
   }
 
   .k-EditorialCard__verso {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
   }
 
   .k-EditorialCard__content {

@@ -38,7 +38,7 @@ const StyledContent = styled.div`
   justify-content: center;
   flex: 1;
 
-  ${TYPOGRAPHY.fontStyles.light};
+  ${TYPOGRAPHY.fontStyles['400']};
   color: ${COLORS.font1};
   line-height: 1.6;
   font-size: ${pxToRem(14)};

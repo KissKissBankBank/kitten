@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
   - Deprecated: `fontWeight` by `weight` on the following components:
     - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
+  - Typography config: Remove `regularUppercase` and `boldUppercase` styles.
+  - Typography config: Add `fontStyles['400']`, `fontStyles['500']` and `fontStyles['700']`.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 

@@ -110,7 +110,7 @@ const StyledRadioButton = styled.div`
 
   .k-Form-RadioButton__labelText {
     flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(14)};
     line-height: 1.5;
   }
@@ -131,13 +131,13 @@ const StyledRadioButton = styled.div`
     }
 
     .k-Form-RadioButton__labelText {
-      ${TYPOGRAPHY.fontStyles.regular}
+      ${TYPOGRAPHY.fontStyles['500']}
       font-size: ${pxToRem(20)};
     }
   }
 
   .k-Form-RadioButton__labelText--withContents {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
   }
 
   .k-Form-RadioButton__labelContents {
@@ -145,7 +145,7 @@ const StyledRadioButton = styled.div`
     margin-left: ${pxToRem(16 + 10)};
     flex: 1 0 calc(100% - ${pxToRem(16 + 10 + 10)});
 
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(12)};
     line-height: ${pxToRem(19)};
 
@@ -263,7 +263,7 @@ const StyledRadioButton = styled.div`
     &.k-Form-RadioButton__labelText--regular,
     &.k-Form-RadioButton__labelText--500 {
       .k-Form-RadioButton__labelText {
-        ${TYPOGRAPHY.fontStyles.regular};
+        ${TYPOGRAPHY.fontStyles['500']};
         line-height: ${pxToRem(20)};
         font-size: ${pxToRem(14)};
       }
@@ -272,14 +272,14 @@ const StyledRadioButton = styled.div`
     &.k-Form-RadioButton__labelText--light,
     &.k-Form-RadioButton__labelText--400 {
       .k-Form-RadioButton__labelText {
-        ${TYPOGRAPHY.fontStyles.light};
+        ${TYPOGRAPHY.fontStyles['400']};
       }
     }
 
     &.k-Form-RadioButton__labelText--bold,
     &.k-Form-RadioButton__labelText--700 {
       .k-Form-RadioButton__labelText {
-        ${TYPOGRAPHY.fontStyles.bold};
+        ${TYPOGRAPHY.fontStyles['700']};
       }
     }
 

@@ -13,7 +13,7 @@ const StyledTag = styled.span`
   padding: 0 ${pxToRem(10)};
   white-space: nowrap;
   line-height: ${pxToRem(24)};
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   font-size: ${pxToRem(10)};
   border-radius: var(--border-radius-rounded);
   text-transform: uppercase;

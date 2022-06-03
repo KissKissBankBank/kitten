@@ -5,7 +5,7 @@ import { ArrowIcon } from '../../../../graphics/icons/arrow-icon'
 
 const sharedStyledArrowIcons = css`
   color: #fff;
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   align-items: center;
   display: flex;
   transition: transform 0.3s ease-in-out;

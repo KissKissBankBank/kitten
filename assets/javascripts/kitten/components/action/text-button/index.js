@@ -9,7 +9,7 @@ import { mq } from '../../../constants/screen-config'
 import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledButton = styled.button`
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   display: inline-flex;
   align-items: center;
   gap: ${pxToRem(10)};

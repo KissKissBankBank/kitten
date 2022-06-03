@@ -100,7 +100,7 @@ const DashboardContent = styled.div`
     flex: 1 0 auto;
     display: flex;
     align-items: flex-end;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${pxToRem(14)};
     color: var(--color-primary-500);
     transition: color var(--transition);
@@ -144,7 +144,7 @@ const DashboardContent = styled.div`
   }
   .kiss-dashboard__block__questions__item {
     color: var(--color-grey-900);
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -162,7 +162,7 @@ const DashboardContent = styled.div`
     &:hover,
     &:active,
     &:focus {
-      ${TYPOGRAPHY.fontStyles.regular}
+      ${TYPOGRAPHY.fontStyles['500']}
 
       > svg {
         margin-right: ${pxToRem(-5)};

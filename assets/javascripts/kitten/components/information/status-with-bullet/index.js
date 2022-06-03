@@ -74,15 +74,15 @@ const StyledStatus = styled.span`
 
   &.k-StatusWithBullet--light,
   &.k-StatusWithBullet--400 {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
   }
   &.k-StatusWithBullet--regular,
   &.k-StatusWithBullet--500 {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
   }
   &.k-StatusWithBullet--bold,
   &.k-StatusWithBullet--700 {
-    ${TYPOGRAPHY.fontStyles.bold}
+    ${TYPOGRAPHY.fontStyles['700']}
   }
 `
 

@@ -11,7 +11,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 const StyledInformationBox = styled.div`
   &.k-InformationBox {
     display: inline-block;
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
   }
 
   .k-InformationBox__container {

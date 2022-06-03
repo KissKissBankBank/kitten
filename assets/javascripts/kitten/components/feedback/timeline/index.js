@@ -59,7 +59,7 @@ const StyledTimeline = styled.div`
     line-height: 0;
     flex: 0 0 ${pxToRem(circleSize)};
     position: relative;
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
 
     @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       margin-right: ${pxToRem(20)};

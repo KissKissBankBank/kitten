@@ -17,29 +17,18 @@ const TYPOGRAPHY = {
       letterSpacing: '.01rem',
       fontWeight: 700,
     },
-    400: {
+    '400': {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       fontWeight: 400,
     },
-    500: {
+    '500': {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       fontWeight: 500,
     },
-    700: {
+    '700': {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       letterSpacing: '.01rem',
       fontWeight: 700,
-    },
-    regularUppercase: {
-      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontWeight: 500,
-      textTransform: 'uppercase',
-    },
-    boldUppercase: {
-      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontWeight: 700,
-      letterSpacing: '.1rem',
-      textTransform: 'uppercase',
     },
   },
 }

@@ -57,7 +57,7 @@ export const Styles = styled.div`
     vertical-align: middle;
 
     &.SingleEntryTable__Column--Col {
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
       border-left-width: 0;
       border-top-width: 0;
 
@@ -67,7 +67,7 @@ export const Styles = styled.div`
     }
 
     &.SingleEntryTable__Column--HeaderCol {
-      ${TYPOGRAPHY.fontStyles.bold}
+      ${TYPOGRAPHY.fontStyles['700']}
       background: ${COLORS.background2};
       border-left-width: 0;
 

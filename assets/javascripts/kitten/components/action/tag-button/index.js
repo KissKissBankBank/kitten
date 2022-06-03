@@ -23,7 +23,7 @@ const StyledTagButton = styled.button`
   border-style: solid;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   font-size: ${stepToRem(-2)};
   color: ${COLORS.font1};
   line-height: 1.3;

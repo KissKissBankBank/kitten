@@ -64,7 +64,7 @@ export const StyledTagInputWrapper = styled.div`
     box-sizing: border-box;
 
     line-height: 1;
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     cursor: text;
 
     &:empty::before {
@@ -103,13 +103,13 @@ export const StyledTagInputWrapper = styled.div`
   }
 
   .k-Form-TagInput__tag {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     padding: 0 ${pxToRem(2)} 0.15em ${pxToRem(10)};
     line-height: 1;
   }
 
   .k-Form-TagInput__button {
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     border: 0;
     background-color: transparent;
     color: inherit;

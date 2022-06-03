@@ -69,13 +69,13 @@ const StyledCounter = styled.div`
   flex-direction: column;
 
   .kiss-ProjectPage-hero-number {
-    ${TYPOGRAPHY.fontStyles.bold}
+    ${TYPOGRAPHY.fontStyles['700']}
     font-size: ${pxToRem(28)};
     letter-spacing: -0.015em;
     line-height: 1;
   }
   .kiss-ProjectPage-hero-text {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(12)};
     line-height: 1;
   }

@@ -15,7 +15,7 @@ export const StyledInput = styled.input`
 
   font-size: ${stepToRem(-1)};
   line-height: 1em;
-  ${TYPOGRAPHY.fontStyles.light};
+  ${TYPOGRAPHY.fontStyles['400']};
   box-sizing: border-box;
   border-width: var(--input-border-width);
   border-style: solid;

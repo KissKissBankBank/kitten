@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: center;
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-2)};
     line-height: 1;
   }
@@ -74,7 +74,7 @@ const StyledWrapper = styled.div`
     color: ${COLORS.font1};
     text-decoration: none;
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: 1.2;
   }

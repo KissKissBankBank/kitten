@@ -45,7 +45,7 @@ export const StyledDropdown = styled.div`
 
   .k-Form-DropdownCombobox__input,
   .k-Form-DropdownSelect__content {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     display: inline-block;
     box-sizing: border-box;
 
@@ -118,7 +118,7 @@ export const StyledDropdown = styled.div`
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-1)};
     user-select: none;
     line-height: 1.3;
@@ -441,14 +441,14 @@ export const StyledDropdown = styled.div`
     &.k-Form-Dropdown--giant {
       .k-Form-DropdownCombobox__input,
       .k-Form-DropdownSelect__content {
-        ${TYPOGRAPHY.fontStyles.regular}
+        ${TYPOGRAPHY.fontStyles['500']}
       }
     }
 
     .k-Form-Dropdown__item {
       color: ${COLORS.background1};
       &[aria-selected='true'] {
-        ${TYPOGRAPHY.fontStyles.regular}
+        ${TYPOGRAPHY.fontStyles['500']}
         background-color: ${COLORS.font1};
       }
       &[disabled] {

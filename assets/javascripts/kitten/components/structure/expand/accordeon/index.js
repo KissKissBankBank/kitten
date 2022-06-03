@@ -55,7 +55,7 @@ const StyledAccordeon = styled.div`
     border: var(--border);
     border-radius: var(--border-radius-m);
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: inherit;
     cursor: pointer;
     text-align: left;
@@ -83,7 +83,7 @@ const StyledAccordeon = styled.div`
   }
 
   .k-Accordeon__content {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     box-sizing: border-box;
     visibility: visible;
     overflow: visible;

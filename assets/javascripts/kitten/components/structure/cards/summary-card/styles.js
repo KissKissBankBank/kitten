@@ -370,7 +370,7 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
     gap: ${pxToRem(10)};
 
     color: var(--color-primary-500);
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
 
     span {
       overflow: hidden;

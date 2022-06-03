@@ -57,7 +57,7 @@ const StyledButtonWithLink = styled.div`
     right: 0;
     padding: ${pxToRem(30)};
     text-align: center;
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     color: var(--color-primary-500);
     transition: color var(--transition);
     text-decoration: none;

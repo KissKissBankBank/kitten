@@ -78,7 +78,7 @@ const CommentWrapper = styled.div`
     gap: ${pxToRem(10)};
   }
   .k-Comment__content {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(14)};
   }
   .k-Comment__footer {

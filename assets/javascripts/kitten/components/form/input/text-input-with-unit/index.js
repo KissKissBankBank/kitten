@@ -46,7 +46,7 @@ const StyledTextInputWithUnit = styled.div`
     white-space: nowrap;
     transition: all 0.2s;
     font-size: ${stepToRem(0)};
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     background-color: var(--color-grey-000);
 
     &.k-Form-TextInputWithUnit__unit--disabled {

@@ -48,7 +48,7 @@ const StyledHorizontalTimeline = styled.dl`
     margin-left: calc((${pxToRem(50)} - ${pxToRem(15)}) / -2);
     z-index: 3;
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
   }
   .k-HorizontalTimeline__year:nth-of-type(even) {

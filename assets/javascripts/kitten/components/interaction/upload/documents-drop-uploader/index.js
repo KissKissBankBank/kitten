@@ -101,13 +101,13 @@ const StyledDocumentsDropUploader = styled.div`
     gap: ${pxToRem(5)};
   }
   .k-DocumentsDropUploader__title {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: 1;
   }
   .k-DocumentsDropUploader__text,
   .k-DocumentsDropUploader__info {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-2)};
     line-height: ${pxToRem(16)};
 

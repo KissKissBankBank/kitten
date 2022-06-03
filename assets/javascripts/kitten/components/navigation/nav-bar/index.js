@@ -56,7 +56,7 @@ const StyledNavBar = styled.div`
   .k-NavBar__link {
     height: ${pxToRem(65)};
     box-sizing: border-box;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     text-decoration: none;
     text-align: center;

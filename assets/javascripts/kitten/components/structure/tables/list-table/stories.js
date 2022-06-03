@@ -29,7 +29,7 @@ export default {
 
 const ListTableStyles = createGlobalStyle`
   #CustomListTable {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
 
     .k-ListTable__HeaderList {
       height: ${pxToRem(50)};
