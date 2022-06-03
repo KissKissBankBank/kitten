@@ -40,25 +40,21 @@ exports[`<TextButton /> with text matches with snapshot 1`] = `
   fill: currentColor;
 }
 
-.c0.k-TextButton--normal,
 .c0.k-TextButton--medium {
   font-size: 0.875rem;
 }
 
-.c0.k-TextButton--big,
 .c0.k-TextButton--large {
   font-size: 1rem;
 }
 
 @media (min-width:640px) {
-  .c0.k-TextButton--normal,
   .c0.k-TextButton--medium {
     font-size: 1rem;
   }
 }
 
 @media (min-width:640px) {
-  .c0.k-TextButton--big,
   .c0.k-TextButton--large {
     font-size: 1.25rem;
   }

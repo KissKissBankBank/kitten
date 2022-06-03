@@ -486,19 +486,14 @@ export {
 export {
   FLUID as BUTTON_STYLE_FLUID,
   MEDIUM as BUTTON_STYLE_MEDIUM,
-  DEFAULT as BUTTON_STYLE_DEFAULT, // Deprecated
   SMALL as BUTTON_STYLE_SMALL,
-  TINY as BUTTON_STYLE_TINY, // Deprecated
   LARGE as BUTTON_STYLE_LARGE,
-  BIG as BUTTON_STYLE_BIG, // Deprecated
   HUGE as BUTTON_STYLE_HUGE,
   GIANT as BUTTON_STYLE_GIANT,
   ICON as BUTTON_STYLE_ICON,
   ICON_MICRO as BUTTON_STYLE_ICON_MICRO,
   ICON_SMALL as BUTTON_STYLE_ICON_SMALL,
-  ICON_TINY as BUTTON_STYLE_ICON_TINY, // Deprecated
   ICON_LARGE as BUTTON_STYLE_ICON_LARGE,
-  ICON_BIG as BUTTON_STYLE_ICON_BIG, // Deprecated
   ICON_HUGE as BUTTON_STYLE_ICON_HUGE,
   ICON_GIANT as BUTTON_STYLE_ICON_GIANT,
 } from './components/action/button/standalone-styles'
@@ -506,11 +501,8 @@ export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './component
 export {
   MICRO as HORIZONTAL_STROKE_STYLE_MICRO,
   SMALL as HORIZONTAL_STROKE_STYLE_SMALL,
-  TINY as HORIZONTAL_STROKE_STYLE_TINY, // Deprecated
   MEDIUM as HORIZONTAL_STROKE_STYLE_MEDIUM,
-  DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT, // Deprecated
   LARGE as HORIZONTAL_STROKE_STYLE_LARGE,
-  BIG as HORIZONTAL_STROKE_STYLE_BIG, // Deprecated
   HUGE as HORIZONTAL_STROKE_STYLE_HUGE,
 } from './components/typography/horizontal-stroke'
 export { BUTTON_SHIFT as DRAG_AND_DROP_LIST_BUTTON_SHIFT } from './components/interaction/drag-and-drop-list'
@@ -572,7 +564,6 @@ export { parseHtml } from './helpers/utils/parser'
 export { createRangeFromZeroTo } from './helpers/utils/range'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
-export { checkDeprecatedSizes } from './helpers/utils/deprecated'
 
 // ---
 // HOC

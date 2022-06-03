@@ -5,7 +5,6 @@ import { Button } from '../../../action/button'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 const StyledButton = styled(Button)`
   width: 100%;
@@ -61,8 +60,6 @@ export class ExpandBoardButton extends PureComponent {
       borderRadius,
       size,
     } = this.props
-
-    checkDeprecatedSizes(size)
 
     const defaultExpandChildren = expandChildren ? expandChildren : children
 

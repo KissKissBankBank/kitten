@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledButtonImage = styled.button.withConfig({
   displayName: "button-image__StyledButtonImage",
   componentId: "sc-1g89n03-0"

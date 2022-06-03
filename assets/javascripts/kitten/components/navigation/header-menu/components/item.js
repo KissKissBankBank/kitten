@@ -5,7 +5,6 @@ import classNames from 'classnames'
 
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 import { Button, buttonModifiers } from '../../../action/button'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const Item = ({
   children,
@@ -19,7 +18,6 @@ export const Item = ({
   tag,
   ...other
 }) => {
-  checkDeprecatedSizes(size)
 
   const Component = as || tag
 

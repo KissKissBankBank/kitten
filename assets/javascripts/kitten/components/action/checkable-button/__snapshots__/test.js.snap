@@ -78,21 +78,18 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -280,19 +277,16 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny,
 .c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular,
 .c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
-.c1.k-Button--big,
 .c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
@@ -301,7 +295,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -448,21 +441,18 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -650,19 +640,16 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny,
 .c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular,
 .c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
-.c1.k-Button--big,
 .c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
@@ -671,7 +658,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -818,21 +804,18 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1020,19 +1003,16 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny,
 .c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular,
 .c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
-.c1.k-Button--big,
 .c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
@@ -1041,7 +1021,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1188,21 +1167,18 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1390,19 +1366,16 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny,
 .c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular,
 .c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
-.c1.k-Button--big,
 .c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
@@ -1411,7 +1384,6 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1558,21 +1530,18 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -1760,19 +1729,16 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
 }
 
 .c1.k-Button--micro,
-.c1.k-Button--tiny,
 .c1.k-Button--small {
   --CheckableButton-dimension: 0.9375rem;
   --CheckableButton-checkMargin: 0.625rem;
 }
 
-.c1.k-Button--regular,
 .c1.k-Button--medium {
   --CheckableButton-dimension: 1.25rem;
   --CheckableButton-checkMargin: 0.9375rem;
 }
 
-.c1.k-Button--big,
 .c1.k-Button--large,
 .c1.k-Button--huge,
 .c1.k-Button--giant {
@@ -1781,7 +1747,6 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;

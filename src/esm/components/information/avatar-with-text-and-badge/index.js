@@ -14,7 +14,7 @@ import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { getReactElementsByType } from '../../../helpers/react/get-react-elements';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledWrapper = styled.div.withConfig({
   displayName: "avatar-with-text-and-badge__StyledWrapper",
   componentId: "sc-1npfhe1-0"

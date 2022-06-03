@@ -9,7 +9,7 @@ import isEmpty from 'lodash/fp/isEmpty';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledLabel = styled.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "sc-l6ih7y-0"

@@ -247,7 +247,6 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   letter-spacing: .01rem;
   font-weight: 600;
 }
-
 .c0.k-Form-RadioButton--check .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
   border-width: 0.125rem;
   background-color: var(--color-primary-500);
@@ -290,9 +289,6 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
     min-height: 5rem;
     padding: 1.5rem 0.9375rem;
   }
-
-  .c0.k-Form-RadioButton--big .k-Form-RadioButton__label::before,
-  .c0.k-Form-RadioButton--large .k-Form-RadioButton__label::before {
     margin-right: 1.25rem;
     width: 1.25rem;
     height: 1.25rem;

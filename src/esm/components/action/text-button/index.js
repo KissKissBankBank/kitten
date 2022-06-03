@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { mq } from '../../../constants/screen-config';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledButton = styled.button.withConfig({
   displayName: "text-button__StyledButton",
   componentId: "sc-1b04xr2-0"
