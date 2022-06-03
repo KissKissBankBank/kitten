@@ -186,10 +186,9 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
-    defaultValue=""
+    defaultValue="foobar"
     disabled={false}
     id="TextInputWithButton"
-    inputValue="foobar"
     name="text"
     onChange={[Function]}
     placeholder="Les props sont transmises"
