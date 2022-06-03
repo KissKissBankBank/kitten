@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const FacebookIconCircleNext = ({ color, title, ...props }) => (
-  <svg 
+  <svg
     width="24"
     height="24"
     viewBox="0 0 24 24"

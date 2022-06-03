@@ -24,7 +24,7 @@ import { Title } from '../../typography/title';
 import COLORS from '../../../constants/colors-config';
 import { CONTAINER_PADDING, CONTAINER_PADDING_THIN, GUTTER, CONTAINER_MAX_WIDTH } from '../../../constants/grid-config';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER;
 var oneGridCol = "calc((100vw - " + pxToRem(paddingPlusGutters) + ") / 12 + " + pxToRem(GUTTER) + ")";
 var oneGridColXl = "calc((" + pxToRem(CONTAINER_MAX_WIDTH) + " - " + pxToRem(paddingPlusGutters) + ") / 12 + " + pxToRem(GUTTER) + ")";

@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledStatus = styled.span`
   color: currentColor;
@@ -37,7 +36,6 @@ const StyledStatus = styled.span`
     color: ${COLORS.primary1};
   }
 
-  &.k-StatusWithBullet--normal,
   &.k-StatusWithBullet--medium {
     font-size: ${stepToRem(0)};
 
@@ -48,7 +46,6 @@ const StyledStatus = styled.span`
     }
   }
 
-  &.k-StatusWithBullet--tiny,
   &.k-StatusWithBullet--small {
     font-size: ${stepToRem(-1)};
 
@@ -90,8 +87,6 @@ export const StatusWithBullet = ({
   weight,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
-
   return (
     <StyledStatus
       className={classNames(

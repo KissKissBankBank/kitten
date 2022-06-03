@@ -5,7 +5,7 @@ import { DocsPage } from 'storybook/docs-page'
 
 const args = {
   direction: 'left',
-  tiny: false,
+  small: false,
   imageSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
   contentBackgroundColor: COLORS.font1,
   contentColor: COLORS.background1,

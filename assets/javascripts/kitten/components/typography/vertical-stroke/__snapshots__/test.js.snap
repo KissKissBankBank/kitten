@@ -7,19 +7,16 @@ exports[`<VerticalStroke /> by default matches with snapshot 1`] = `
   background: var(--color-grey-900,#222);
 }
 
-.c0.k-VerticalStroke--tiny,
 .c0.k-VerticalStroke--small {
   height: 1.25rem;
   width: 0.125rem;
 }
 
-.c0.k-VerticalStroke--default,
 .c0.k-VerticalStroke--medium {
   height: 1.875rem;
   width: 0.25rem;
 }
 
-.c0.k-VerticalStroke--big,
 .c0.k-VerticalStroke--large {
   height: 3.125rem;
   width: 0.25rem;
@@ -42,19 +39,16 @@ exports[`<VerticalStroke /> with className prop matches with snapshot 1`] = `
   background: var(--color-grey-900,#222);
 }
 
-.c0.k-VerticalStroke--tiny,
 .c0.k-VerticalStroke--small {
   height: 1.25rem;
   width: 0.125rem;
 }
 
-.c0.k-VerticalStroke--default,
 .c0.k-VerticalStroke--medium {
   height: 1.875rem;
   width: 0.25rem;
 }
 
-.c0.k-VerticalStroke--big,
 .c0.k-VerticalStroke--large {
   height: 3.125rem;
   width: 0.25rem;
@@ -77,19 +71,16 @@ exports[`<VerticalStroke /> with size="huge" prop matches with snapshot 1`] = `
   background: var(--color-grey-900,#222);
 }
 
-.c0.k-VerticalStroke--tiny,
 .c0.k-VerticalStroke--small {
   height: 1.25rem;
   width: 0.125rem;
 }
 
-.c0.k-VerticalStroke--default,
 .c0.k-VerticalStroke--medium {
   height: 1.875rem;
   width: 0.25rem;
 }
 
-.c0.k-VerticalStroke--big,
 .c0.k-VerticalStroke--large {
   height: 3.125rem;
   width: 0.25rem;
@@ -112,19 +103,16 @@ exports[`<VerticalStroke /> with size="large" prop matches with snapshot 1`] = `
   background: var(--color-grey-900,#222);
 }
 
-.c0.k-VerticalStroke--tiny,
 .c0.k-VerticalStroke--small {
   height: 1.25rem;
   width: 0.125rem;
 }
 
-.c0.k-VerticalStroke--default,
 .c0.k-VerticalStroke--medium {
   height: 1.875rem;
   width: 0.25rem;
 }
 
-.c0.k-VerticalStroke--big,
 .c0.k-VerticalStroke--large {
   height: 3.125rem;
   width: 0.25rem;
@@ -147,19 +135,16 @@ exports[`<VerticalStroke /> with size="medium" prop matches with snapshot 1`] = 
   background: var(--color-grey-900,#222);
 }
 
-.c0.k-VerticalStroke--tiny,
 .c0.k-VerticalStroke--small {
   height: 1.25rem;
   width: 0.125rem;
 }
 
-.c0.k-VerticalStroke--default,
 .c0.k-VerticalStroke--medium {
   height: 1.875rem;
   width: 0.25rem;
 }
 
-.c0.k-VerticalStroke--big,
 .c0.k-VerticalStroke--large {
   height: 3.125rem;
   width: 0.25rem;
@@ -182,19 +167,16 @@ exports[`<VerticalStroke /> with size="small" prop matches with snapshot 1`] = `
   background: var(--color-grey-900,#222);
 }
 
-.c0.k-VerticalStroke--tiny,
 .c0.k-VerticalStroke--small {
   height: 1.25rem;
   width: 0.125rem;
 }
 
-.c0.k-VerticalStroke--default,
 .c0.k-VerticalStroke--medium {
   height: 1.875rem;
   width: 0.25rem;
 }
 
-.c0.k-VerticalStroke--big,
 .c0.k-VerticalStroke--large {
   height: 3.125rem;
   width: 0.25rem;

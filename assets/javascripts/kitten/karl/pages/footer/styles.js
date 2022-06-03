@@ -185,14 +185,14 @@ export const StyledFooter = styled.footer`
     align-items: center;
     padding: ${pxToRem(50)} ${pxToRem(30)};
     margin: ${pxToRem(0)} ${pxToRem(-20)} ${pxToRem(20)} ${pxToRem(-20)};
-    
+
     @media ${mq.mobile} {
       flex-direction: column;
       padding: ${pxToRem(40)} ${pxToRem(30)};
       margin-bottom: ${pxToRem(30)};
     }
   }
-  
+
   .k-Footer__createdWith--logo {
     display: flex;
     align-items: center;

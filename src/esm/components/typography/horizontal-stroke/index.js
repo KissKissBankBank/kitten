@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 import classNames from 'classnames';
 import { strokeModifierStylesWithoutMargin } from './common/stroke-modifier-styles';
 export var MICRO = css(["width:", ";height:", ";"], pxToRem(15), pxToRem(2));

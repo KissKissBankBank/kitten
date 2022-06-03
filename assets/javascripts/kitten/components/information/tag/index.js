@@ -4,7 +4,6 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledTag = styled.span`
   display: inline-block;
@@ -121,8 +120,6 @@ export const Tag = ({
   children,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
-
   return (
     <StyledTag
       className={classNames(
