@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 - Breaking Change: `DatePicker`: Remove component.
+- Breaking Change: `TextInput`: Update component.
 
 ## [10.12.0] - 2022-05-30
 
