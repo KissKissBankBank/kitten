@@ -15,23 +15,23 @@
 @mixin k-utilities-weight {
   .k-u-weight-light,
   .k-u-weight-400 {
-    font-family: map-get(k-map-fetch($k-fonts, 'light'), 'family') !important;
-    font-weight: map-get(k-map-fetch($k-fonts, 'light'), 'weight') !important;
+    font-family: map-get(k-map-fetch($k-fonts, '400'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, '400'), 'weight') !important;
   }
 
   .k-u-weight-regular,
   .k-u-weight-500 {
-    font-family: map-get(k-map-fetch($k-fonts, 'regular'), 'family') !important;
-    font-weight: map-get(k-map-fetch($k-fonts, 'regular'), 'weight') !important;
+    font-family: map-get(k-map-fetch($k-fonts, '500'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, '500'), 'weight') !important;
   }
 
   .k-u-strong,
   .k-u-weight-bold,
   .k-u-weight-700 {
-    font-family: map-get(k-map-fetch($k-fonts, 'bold'), 'family') !important;
-    font-weight: map-get(k-map-fetch($k-fonts, 'bold'), 'weight') !important;
+    font-family: map-get(k-map-fetch($k-fonts, '700'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, '700'), 'weight') !important;
     letter-spacing: map-get(
-      k-map-fetch($k-fonts, 'bold'), 'letter-spacing'
+      k-map-fetch($k-fonts, '700'), 'letter-spacing'
     ) !important;
   }
 }
