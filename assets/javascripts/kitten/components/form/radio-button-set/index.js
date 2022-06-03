@@ -38,7 +38,6 @@ export const RadioButtonSet = ({
   className,
   name,
   error,
-  variant,
   design,
   label,
   children,
@@ -52,7 +51,6 @@ export const RadioButtonSet = ({
     className={classNames(
       'k-Form-RadioButtonSet',
       className,
-      `k-Form-RadioButtonSet--${variant || 'orion'}`,
     )}
     disabled={disabled}
     {...props}
@@ -74,7 +72,6 @@ export const RadioButtonSet = ({
       {items.map(({ id, className, ...itemProps }) => (
         <RadioButton
           id={id}
-          variant={variant || null}
           design={design}
           error={error}
           size={size}
@@ -105,10 +102,6 @@ RadioButtonSet.propTypes = {
     }),
   ),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  variant: deprecated(
-    PropTypes.oneOf(['andromeda', 'orion']),
-    'Please use the RadioSet component instead',
-  ),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
