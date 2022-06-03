@@ -939,7 +939,7 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet"
       disabled={false}
     >
       <div

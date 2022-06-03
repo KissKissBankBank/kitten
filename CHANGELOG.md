@@ -6,6 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change: Remove old `size` values from all components and styles.
 - Breaking change: `Helpers`: Remove `checkDeprecatedSizes` utility.
+- Breaking change: `TextInoutWithButton`: Remove `value` prop.
+- Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
+- Breaking change: `Radio`: Remove `variant` prop.
+- Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 
