@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import { TextInput } from '../../../form/input/text-input'
 
 export const TextInputWithButton = React.forwardRef(
-  ({ buttonValue, modifier, buttonProps, inset, ...others }, ref) => {
+  ({ buttonValue, modifier, buttonProps, inputValue, inset, ...others }, ref) => {
     return (
       <TextInput
         ref={ref || null}
         {...others}
+        value={inputValue}
         has="button"
         buttonIsInset={inset}
         buttonProps={{
@@ -25,6 +26,7 @@ TextInputWithButton.propTypes = {
   modifier: PropTypes.string,
   buttonValue: PropTypes.node,
   buttonProps: PropTypes.object,
+  inputValue: PropTypes.string,
 }
 
 TextInputWithButton.defaultProps = {

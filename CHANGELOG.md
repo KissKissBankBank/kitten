@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `TextInoutWithButton`: Remove `value` prop.
+- Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
+- Breaking change: `Radio`: Remove `variant` prop.
+- Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
+- Breaking Changes: Remove `RewardCard.Info`.
+- Breaking Changes: Remove `CrowdfundingCard`.
+- Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
 - Breaking Change: `DatePicker`: Remove component.
 - Breaking Change: `TextInput`: Update component.
 
