@@ -107,7 +107,6 @@ export const IconBadge = ({
   hasBorder,
   ...others
 }) => {
-
   return (
     <StyledBadge
       className={classNames(

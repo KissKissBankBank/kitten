@@ -55,7 +55,6 @@ const StyledButton = styled.button`
 `
 
 export const TextButton = ({ className, size, ...props }) => {
-
   return (
     <StyledButton
       type="button"

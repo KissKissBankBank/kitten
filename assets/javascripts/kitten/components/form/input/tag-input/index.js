@@ -191,7 +191,6 @@ export const TagInput = ({
   disabled,
   size,
 }) => {
-
   const [itemsList, setItemsList] = useState(
     Array.from(itemsListFromProps || initialItemsList),
   )

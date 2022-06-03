@@ -25,7 +25,6 @@ export const TagInputAutocomplete = ({
   showSuggestionsOnFocus,
   inputLabel,
 }) => {
-
   const inputEl = useRef(null)
   const suggestionsEl = useRef(null)
 

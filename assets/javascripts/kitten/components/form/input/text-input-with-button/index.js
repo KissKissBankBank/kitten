@@ -122,7 +122,6 @@ export const TextInputWithButton = React.forwardRef(
     },
     ref,
   ) => {
-
     const ButtonComponent = inset ? 'button' : Button
 
     return (

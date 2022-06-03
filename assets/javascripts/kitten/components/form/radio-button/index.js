@@ -83,7 +83,7 @@ const StyledRadioButton = styled.div`
       border-color: var(--color-grey-400);
     }
   }
-  
+
   /* Label text styles */
   .k-Form-RadioButton__labelText {
     flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
@@ -95,7 +95,7 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__input:active + .k-Form-RadioButton__labelText {
     color: var(--color-primary-900);
   }
-  
+
   :disabled .k-Form-RadioButton__labelText,
   .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__labelText {
     color: var(--color-grey-600);
@@ -305,7 +305,6 @@ export const RadioButton = ({
   paragraphStyle,
   ...inputProps
 }) => {
-
   return (
     <StyledRadioButton
       className={classNames(

@@ -6,7 +6,6 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 export const VerticalStroke = styled(({ className, size, ...others }) => {
-
   const verticalStrokeClassName = classNames(
     'k-VerticalStroke',
     {

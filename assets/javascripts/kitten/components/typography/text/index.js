@@ -58,7 +58,6 @@ export const Text = ({
   letterSpacing,
   ...others
 }) => {
-
   const Tag = as || tag
 
   const textClassName = classNames(

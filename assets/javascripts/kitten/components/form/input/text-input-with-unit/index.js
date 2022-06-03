@@ -91,7 +91,6 @@ export const TextInputWithUnit = ({
   wrapperProps,
   ...others
 }) => {
-
   const input = useRef(null)
 
   return (

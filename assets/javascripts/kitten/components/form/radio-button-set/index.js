@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import { RadioButton } from '../../form/radio-button'
@@ -48,10 +47,7 @@ export const RadioButtonSet = ({
   ...props
 }) => (
   <StyledRadioButtonSet
-    className={classNames(
-      'k-Form-RadioButtonSet',
-      className,
-    )}
+    className={classNames('k-Form-RadioButtonSet', className)}
     disabled={disabled}
     {...props}
   >

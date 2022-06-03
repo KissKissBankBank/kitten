@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const LightbulbIllustration = ({ size, ...props }) => {
-
   if (size === 'small') {
     return (
       <svg width={24} height={33} viewBox="0 0 24 33" {...props}>

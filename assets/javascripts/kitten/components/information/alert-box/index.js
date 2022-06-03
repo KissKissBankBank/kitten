@@ -153,7 +153,6 @@ export const AlertBox = ({
   iconHasBorder,
   ...others
 }) => {
-
   const internalIcon = (() => {
     if (icon) return icon
 

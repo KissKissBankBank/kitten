@@ -452,7 +452,6 @@ export const DropdownSelectWithInput = ({
   hideIconOnMobile,
   size,
 }) => {
-
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }

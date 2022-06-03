@@ -7,7 +7,6 @@ const DEFAULT_WIDTH = 8
 const DEFAULT_HEIGHT = 8
 
 export const CrossIcon = ({ color, title, width, height, size, ...props }) => {
-
   const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,

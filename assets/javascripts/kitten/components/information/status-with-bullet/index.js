@@ -87,7 +87,6 @@ export const StatusWithBullet = ({
   weight,
   ...props
 }) => {
-
   return (
     <StyledStatus
       className={classNames(

@@ -69,7 +69,6 @@ export const ButtonImage = ({
   img,
   ...others
 }) => {
-
   return (
     <StyledButtonImage
       as={tag}

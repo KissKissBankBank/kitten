@@ -67,7 +67,6 @@ export const HorizontalStroke = ({
   color,
   ...props
 }) => {
-
   const modifierClassName = () => {
     if (!modifier) return `k-HorizontalStroke--size--${size}`
 

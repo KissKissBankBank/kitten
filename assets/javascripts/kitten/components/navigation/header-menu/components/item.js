@@ -18,7 +18,6 @@ export const Item = ({
   tag,
   ...other
 }) => {
-
   const Component = as || tag
 
   return (

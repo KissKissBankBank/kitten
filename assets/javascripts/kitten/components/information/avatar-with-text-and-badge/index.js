@@ -155,7 +155,6 @@ const Image = ({
   width,
   ...props
 }) => {
-
   const badgeElement = getReactElementsByType({
     children,
     type: AvatarWithTextAndBadge.Badge,

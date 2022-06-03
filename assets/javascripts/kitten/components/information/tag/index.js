@@ -120,7 +120,6 @@ export const Tag = ({
   children,
   ...props
 }) => {
-
   return (
     <StyledTag
       className={classNames(

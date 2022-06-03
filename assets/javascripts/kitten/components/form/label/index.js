@@ -52,7 +52,6 @@ export const Label = ({
   style,
   ...other
 }) => {
-
   const handleClick = e => {
     if (domElementHelper.canUseDom() && focusId) {
       e.preventDefault()

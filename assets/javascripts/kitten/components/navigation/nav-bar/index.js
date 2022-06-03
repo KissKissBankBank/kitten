@@ -125,7 +125,6 @@ export const NavBar = ({
   modifier,
   ...props
 }) => {
-
   return (
     <StyledNavBar
       {...props}
