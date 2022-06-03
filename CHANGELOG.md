@@ -12,6 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 - Breaking Change: `Button`: Use `fit=content` as default.
 - Breaking Change: `Button`: Remove deprecated modifiers.
+- Breaking Changes: Remove `RewardCard.Info`.
+- Breaking Changes: Remove `CrowdfundingCard`.
+- Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
 
 ## [10.12.0] - 2022-05-30
 
