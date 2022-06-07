@@ -103,7 +103,7 @@ const SwitchWrapper = styled.div`
   }
   .k-ToggleSwitch__label {
     padding-left: ${pxToRem(10)};
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(0)};
     color: ${COLORS.font1};
     transition: color var(--toggleSwitch-duration) ease;

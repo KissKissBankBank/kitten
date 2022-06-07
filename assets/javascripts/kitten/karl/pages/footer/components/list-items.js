@@ -15,7 +15,7 @@ export const ListItems = props => {
     >
       {/* 1 */}
       <div>
-        <Text size="large" weight="regular" cssColor="var(--color-grey-000)">
+        <Text size="large" weight="500" cssColor="var(--color-grey-000)">
           Financer un projet
         </Text>
         <HorizontalStroke
@@ -43,7 +43,7 @@ export const ListItems = props => {
 
       {/* 2 */}
       <div>
-        <Text size="large" weight="regular" cssColor="var(--color-grey-000)">
+        <Text size="large" weight="500" cssColor="var(--color-grey-000)">
           Partenariats
         </Text>
         <HorizontalStroke
@@ -63,7 +63,7 @@ export const ListItems = props => {
 
       {/* 3 */}
       <div>
-        <Text size="large" weight="regular" cssColor="var(--color-grey-000)">
+        <Text size="large" weight="500" cssColor="var(--color-grey-000)">
           À propos
         </Text>
         <HorizontalStroke
@@ -84,7 +84,7 @@ export const ListItems = props => {
 
       {/* 4 */}
       <div>
-        <Text size="large" weight="regular" cssColor="var(--color-grey-000)">
+        <Text size="large" weight="500" cssColor="var(--color-grey-000)">
           Nos engagements
         </Text>
         <HorizontalStroke

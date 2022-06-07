@@ -47,14 +47,27 @@ $k-fonts: (
     family: ("Maax", Helvetica, Arial, sans-serif),
     weight: 400
   ),
+  '400': (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 400
+  ),
   regular: (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    weight: 500
+  ),
+  '500': (
     family: ("Maax", Helvetica, Arial, sans-serif),
     weight: 500
   ),
   bold: (
     family: ("Maax", Helvetica, Arial, sans-serif),
     letter-spacing: .01rem,
-    weight: 600
+    weight: 700
+  ),
+  '700': (
+    family: ("Maax", Helvetica, Arial, sans-serif),
+    letter-spacing: .01rem,
+    weight: 700
   ),
 ) !default;
 

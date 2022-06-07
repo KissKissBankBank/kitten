@@ -126,7 +126,7 @@ export const Default = () => (
   <>
     <StyledGridTable id="CustomGridTable" scrollable>
       <GridTable.Header
-        className="customHeaderClass k-u-weight-regular"
+        className="customHeaderClass k-u-weight-500"
         listProps={{ className: 'customListClass' }}
       >
         <GridTable.Col className="customCol_0">
@@ -136,43 +136,43 @@ export const Default = () => (
 
         <GridTable.Col className="customCol_1">
           <Text
-            weight="regular"
+            weight="500"
             size="small"
             className="k-u-hidden@s-down k-u-hidden@m"
           >
             Date
           </Text>
-          <Text weight="regular" size="small" className="k-u-hidden@l-up">
+          <Text weight="500" size="small" className="k-u-hidden@l-up">
             Contributeur
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_2">
-          <Text weight="regular" size="small">
+          <Text weight="500" size="small">
             Contributeur
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_3">
-          <Text weight="regular" size="small">
+          <Text weight="500" size="small">
             Montant
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_4">
-          <Text weight="regular" size="small">
+          <Text weight="500" size="small">
             Statut
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_5">
-          <Text weight="regular" size="small">
+          <Text weight="500" size="small">
             Mode de livraison
           </Text>
         </GridTable.Col>
 
         <GridTable.Col className="customCol_6">
-          <Text weight="regular" size="small">
+          <Text weight="500" size="small">
             Statut livraison
           </Text>
         </GridTable.Col>
@@ -190,7 +190,7 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_1">
             <div>
-              <Text size="small" weight="regular">
+              <Text size="small" weight="500">
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
@@ -203,7 +203,7 @@ export const Default = () => (
               <br />
               <Text
                 size="micro"
-                weight="regular"
+                weight="500"
                 lineHeight="1"
                 as="a"
                 href="#"
@@ -216,16 +216,16 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_2">
             <div>
-              <Text weight="bold">Prénom Nom</Text>
+              <Text weight="700">Prénom Nom</Text>
               <br />
-              <Text size="micro" weight="light">
+              <Text size="micro" weight="400">
                 Prenom-Nom
               </Text>
             </div>
           </GridTable.Col>
 
           <GridTable.Col className="customCol_3">
-            <Text size="small" weight="regular">
+            <Text size="small" weight="500">
               72&nbsp;€
             </Text>
           </GridTable.Col>
@@ -235,7 +235,7 @@ export const Default = () => (
           </GridTable.Col>
 
           <GridTable.Col className="customCol_5">
-            <Text size="small" weight="regular">
+            <Text size="small" weight="500">
               Livraison
             </Text>
           </GridTable.Col>
@@ -268,7 +268,7 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_1">
             <div>
-              <Text size="small" weight="regular">
+              <Text size="small" weight="500">
                 <time dateTime="2019-09-12">12/09/2019</time>
               </Text>
               <br />
@@ -281,7 +281,7 @@ export const Default = () => (
               <br />
               <Text
                 size="micro"
-                weight="regular"
+                weight="500"
                 lineHeight="1"
                 as="a"
                 href="#"
@@ -294,14 +294,14 @@ export const Default = () => (
 
           <GridTable.Col className="customCol_2">
             <div>
-              <Text weight="bold">Prénom Nom</Text>
+              <Text weight="700">Prénom Nom</Text>
               <br />
               <Text size="micro">Prenom-Nom</Text>
             </div>
           </GridTable.Col>
 
           <GridTable.Col className="customCol_3">
-            <Text size="small" weight="regular">
+            <Text size="small" weight="500">
               72&nbsp;€
             </Text>
           </GridTable.Col>
@@ -311,7 +311,7 @@ export const Default = () => (
           </GridTable.Col>
 
           <GridTable.Col className="customCol_5">
-            <Text size="small" weight="regular">
+            <Text size="small" weight="500">
               Livraison
             </Text>
           </GridTable.Col>

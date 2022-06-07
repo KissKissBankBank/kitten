@@ -167,7 +167,7 @@ const FormWithImage = () => (
               tag="p"
               size="micro"
               lineHeight="normal"
-              weight="light"
+              weight="400"
               color="font1"
               style={{ margin: 0 }}
             >

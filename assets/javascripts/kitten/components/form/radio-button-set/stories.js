@@ -72,9 +72,9 @@ export default {
       options: ['disc', 'check'],
       control: 'inline-radio',
     },
-    fontWeight: {
-      name: 'fontWeight',
-      options: ['light', 'regular', 'bold'],
+    weight: {
+      name: 'weight',
+      options: ['400', '500', '700'],
       control: 'inline-radio',
     },
     paragraphStyle: {
@@ -90,7 +90,7 @@ const defaultArgs = {
   disabled: false,
   design: 'disc',
   size: 'medium',
-  fontWeight: 'regular',
+  weight: '500',
   paragraphStyle: false,
 }
 

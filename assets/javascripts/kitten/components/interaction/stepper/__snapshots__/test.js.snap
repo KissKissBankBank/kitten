@@ -11,7 +11,7 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
       className="sc-eCImPb lbcvSl"
     >
       <span
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
         tabIndex="0"
       >
         <span
@@ -43,7 +43,7 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
       className="sc-eCImPb lbcvSl"
     >
       <a
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -77,7 +77,7 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
       className="sc-eCImPb lbcvSl"
     >
       <a
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -112,7 +112,7 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
     >
       <a
         aria-current="page"
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -146,7 +146,7 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
       className="sc-eCImPb bOoqEJ"
     >
       <span
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
         tabIndex="0"
       >
         <span
@@ -178,7 +178,7 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
       className="sc-eCImPb gydIeX"
     >
       <span
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
         tabIndex="0"
       >
         <span
@@ -229,7 +229,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
       className="sc-eCImPb gydIeX"
     >
       <a
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn k-u-link k-u-link-primary1"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-primary1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -282,7 +282,7 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
       className="sc-eCImPb lbcvSl"
     >
       <span
-        className="k-u-size-small k-u-weight-regular sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
         tabIndex="0"
       >
         <span

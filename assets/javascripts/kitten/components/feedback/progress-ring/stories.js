@@ -62,7 +62,7 @@ export const DefaultProps = args => (
     <Text
       size="micro"
       color="font1"
-      weight="regular"
+      weight="500"
       className="k-u-margin-left-single"
     >
       Financé à {args.value}%

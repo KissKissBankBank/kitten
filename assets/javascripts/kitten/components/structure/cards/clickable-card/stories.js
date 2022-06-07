@@ -56,11 +56,11 @@ export const Default = ({ imageShape, imageFit, ...args }) => {
         <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
       </ClickableCard.Image>
       <ClickableCard.Content>
-        <Text weight="light" lineHeight="1.3">
+        <Text weight="400" lineHeight="1.3">
           Kitty McMeow
         </Text>
         <br />
-        <Text weight="regular" lineHeight="1.3" color="primary1">
+        <Text weight="500" lineHeight="1.3" color="primary1">
           @kitty.mcmeow
         </Text>
       </ClickableCard.Content>

@@ -10,7 +10,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledTextInputWithButton = styled.div`
   .k-Form-TextInputWithButton__button {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     flex: 1 0 auto;

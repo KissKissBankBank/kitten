@@ -55,7 +55,7 @@ export default {
     color: 'dark',
     lineHeight: null,
     itemMargin: 'double',
-    weight: 'regular',
+    weight: '500',
   },
 }
 

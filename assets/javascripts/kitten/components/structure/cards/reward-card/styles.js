@@ -170,7 +170,7 @@ export const StyledRewardCard = styled.article`
     }
 
     .k-RewardCard__description * {
-      ${TYPOGRAPHY.fontStyles.light.fontFamily};
+      ${TYPOGRAPHY.fontStyles['400'].fontFamily};
       font-size: var(--rewardCard-description-fontSize);
       line-height: calc(
         (var(--rewardCard-description-fontSize) + ${pxToRem(4)})
@@ -188,7 +188,7 @@ export const StyledRewardCard = styled.article`
     gap: ${pxToRem(6)};
 
     color: var(--color-primary-500);
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
 
     svg,
     path {

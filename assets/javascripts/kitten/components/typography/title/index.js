@@ -12,7 +12,7 @@ import {
 const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
 
-  ${TYPOGRAPHY.fontStyles.bold};
+  ${TYPOGRAPHY.fontStyles['700']};
   color: var(--Title-css-color);
 
   &.k-Title--noMargin {

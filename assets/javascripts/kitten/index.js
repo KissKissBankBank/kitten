@@ -564,6 +564,7 @@ export { parseHtml } from './helpers/utils/parser'
 export { createRangeFromZeroTo } from './helpers/utils/range'
 export { stringUtils, upcaseFirst } from './helpers/utils/string'
 export { pxToRem, stepToRem } from './helpers/utils/typography'
+export { checkDeprecatedWeights } from './helpers/utils/deprecated'
 
 // ---
 // HOC

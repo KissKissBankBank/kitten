@@ -80,7 +80,7 @@ export class CommentAvatar extends PureComponent {
     if (!commentDate) return
 
     return (
-      <Text size="micro" weight="light" color="font1">
+      <Text size="micro" weight="400" color="font1">
         {commentDate}
       </Text>
     )

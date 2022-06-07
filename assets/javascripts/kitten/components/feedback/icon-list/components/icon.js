@@ -27,7 +27,7 @@ export const Icon = styled.span`
   background-color: ${COLORS.background1};
   border: 2px solid ${COLORS.line1};
 
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   font-size: ${pxToRem(14)};
 
   img {

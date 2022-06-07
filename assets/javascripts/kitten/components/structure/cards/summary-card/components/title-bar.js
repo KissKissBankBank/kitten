@@ -20,7 +20,7 @@ export const TitleBar = ({ className, values, size, id, type }) => {
         <div className="k-SummaryCard-Wrapper__imageWrapper">
           <Text
             size="micro"
-            weight="regular"
+            weight="500"
             cssColor="var(--color-grey-700)"
             className="k-SummaryCard-TitleBar__image"
             id={`${id}-image`}
@@ -35,7 +35,7 @@ export const TitleBar = ({ className, values, size, id, type }) => {
             key={`${id}-${item}`}
             id={`${id}-${item}`}
             size="micro"
-            weight="regular"
+            weight="500"
             cssColor="var(--color-grey-700)"
             className={`k-SummaryCard-TitleBar__${item}`}
             style={{ '--summaryCardCell-name': item }}

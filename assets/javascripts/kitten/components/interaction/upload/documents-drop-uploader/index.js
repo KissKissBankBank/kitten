@@ -101,13 +101,13 @@ const StyledDocumentsDropUploader = styled.div`
     gap: ${pxToRem(5)};
   }
   .k-DocumentsDropUploader__title {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: 1;
   }
   .k-DocumentsDropUploader__text,
   .k-DocumentsDropUploader__info {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-2)};
     line-height: ${pxToRem(16)};
 
@@ -408,7 +408,7 @@ export const DocumentsDropUploader = ({
               tag="label"
               htmlFor={id}
               size="small"
-              weight="regular"
+              weight="500"
               className="k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
             >
               <span aria-hidden>+&nbsp;</span>
@@ -431,7 +431,7 @@ export const DocumentsDropUploader = ({
                 as="li"
                 size="micro"
                 color="error"
-                weight="bold"
+                weight="700"
               >
                 {errorMsg}
               </Text>

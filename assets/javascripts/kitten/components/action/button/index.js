@@ -63,7 +63,7 @@ const StyledButton = styled.button`
   align-items: center;
   gap: ${pxToRem(10)};
 
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   font-size: ${stepToRem(-1)};
   color: ${COLORS.font1};
   line-height: 1.3;

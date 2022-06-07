@@ -116,7 +116,7 @@ const StyledRangeSlider = styled.div`
 
   .k-RangeSlider__rangeThumbText {
     position: absolute;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: ${pxToRem(18)};
     color: ${COLORS.font1};

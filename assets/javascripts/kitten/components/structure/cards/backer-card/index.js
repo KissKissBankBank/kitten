@@ -30,11 +30,11 @@ export const BackerCard = ({
 }) => (
   <StyledCard {...others}>
     <Marger top="4" bottom="1">
-      <Text color="font1" weight="regular" lineHeight="normal" size="small">
+      <Text color="font1" weight="500" lineHeight="normal" size="small">
         {title}
 
         {subtitle && (
-          <StyledSubtitle color="font1" weight="light" size="micro">
+          <StyledSubtitle color="font1" weight="400" size="micro">
             {subtitle}
           </StyledSubtitle>
         )}
@@ -49,7 +49,7 @@ export const BackerCard = ({
       <Text
         tag="p"
         color="font1"
-        weight="light"
+        weight="400"
         size="micro"
         lineHeight="normal"
         className="k-u-margin-none"

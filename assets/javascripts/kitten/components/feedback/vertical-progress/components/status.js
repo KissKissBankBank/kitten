@@ -84,7 +84,7 @@ const StyledWrapper = styled.div`
 
   .k-VerticalProgress__title {
     margin: 0;
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     font-size: ${stepToRem(0)};
     align-self: center;
 

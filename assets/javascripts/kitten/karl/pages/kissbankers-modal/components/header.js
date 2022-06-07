@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
 `
 
 const StyledTitle = styled.h1`
-  ${TYPOGRAPHY.fontStyles.light}
+  ${TYPOGRAPHY.fontStyles['400']}
   margin: 0;
   text-align: center;
   font-size: ${stepToRem(-1)};

@@ -8,7 +8,7 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 
 const StyledCheckbox = styled.div`
-  ${TYPOGRAPHY.fontStyles.light}
+  ${TYPOGRAPHY.fontStyles['400']}
   font-size: ${stepToRem(-1)};
   line-height: 1.5;
 
@@ -28,7 +28,7 @@ const StyledCheckbox = styled.div`
     flex-basis: calc(100% - ${pxToRem(20 + 10)});
     cursor: pointer;
     transition: color 0.2s;
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
 
     &:active {
       color: ${COLORS.primary3};
@@ -97,7 +97,7 @@ const StyledCheckbox = styled.div`
 
   .k-Form-Checkbox__link,
   label a {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: ${COLORS.primary1};
     text-decoration: none;
     transition: color 0.2s;
@@ -201,7 +201,7 @@ export const Checkbox = ({
             tag="label"
             htmlFor={id}
             onClick={onLabelClick}
-            weight="regular"
+            weight="500"
             {...labelProps}
             className={classNames(
               'k-Form-Checkbox__label',

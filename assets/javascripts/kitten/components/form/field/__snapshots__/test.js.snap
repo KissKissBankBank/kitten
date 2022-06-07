@@ -160,7 +160,7 @@ Array [
     />
   </div>,
   <p
-    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-Field__error k-u-margin-none k-u-margin-top-single"
+    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
   >
     Error!
   </p>,
@@ -273,7 +273,7 @@ Array [
     />
   </div>,
   <p
-    className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-Field__help k-u-margin-none k-u-margin-top-single"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-400 k-Field__help k-u-margin-none k-u-margin-top-single"
     style={
       Object {
         "color": "var(--color-grey-700)",
@@ -765,7 +765,7 @@ Array [
     </div>
   </div>,
   <p
-    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-Field__error k-u-margin-none k-u-margin-top-single"
+    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
   >
     Error!
   </p>,
@@ -946,7 +946,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jrQzAO csOpuY k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -968,7 +968,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO csOpuY k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -989,7 +989,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO csOpuY k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1052,7 +1052,7 @@ Array [
         className="k-Form-RadioSet__radioContainer"
       >
         <div
-          className="sc-furwcr bNYJax k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1067,14 +1067,14 @@ Array [
             htmlFor="option-a"
           >
             <span
-              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
             >
               Option A
             </span>
           </label>
         </div>
         <div
-          className="sc-furwcr bNYJax k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1088,14 +1088,14 @@ Array [
             htmlFor="option-b"
           >
             <span
-              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
             >
               Option B
             </span>
           </label>
         </div>
         <div
-          className="sc-furwcr bNYJax k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1109,7 +1109,7 @@ Array [
             htmlFor="option-c"
           >
             <span
-              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
             >
               Option C
             </span>

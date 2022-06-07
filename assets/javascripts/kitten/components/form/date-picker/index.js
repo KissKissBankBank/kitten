@@ -66,7 +66,7 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-Weekday {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
 
     ${({ styles }) => css`
       color: ${styles.weekdaysColor};
@@ -100,7 +100,7 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-Day--today {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     ${({ styles }) => css`
       color: ${styles.day.today.color};
     `}
@@ -146,7 +146,7 @@ const StyledDatePicker = styled.div`
 
   .DayPicker {
     font-size: ${stepToRem(1)};
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
 
     ${({ styles }) => css`
       border: solid ${styles.borderColor} ${borderSize};
@@ -159,7 +159,7 @@ const StyledDatePicker = styled.div`
           &:not(.DayPicker-Day--selected) {
             &:not(.DayPicker-Day--outside) {
               &:hover {
-                ${TYPOGRAPHY.fontStyles.light}
+                ${TYPOGRAPHY.fontStyles['400']}
                 ${({ styles }) => css`
                   background-color: ${styles.day.hover.backgroundColor};
                   color: ${styles.day.hover.color};

@@ -11,7 +11,7 @@ const StyledTextInputWithLimit = styled.div`
   display: block;
 
   .k-Form-TextInputWithLimit__limitNumber {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-2)};
     line-height: 1.3;
     position: absolute;

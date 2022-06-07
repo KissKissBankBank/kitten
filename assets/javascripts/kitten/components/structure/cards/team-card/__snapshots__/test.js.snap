@@ -48,13 +48,13 @@ Array [
     className="sc-bdvvtL bibmy"
   >
     <span
-      className="k-u-color-font1 k-u-size-medium k-u-weight-bold"
+      className="k-u-color-font1 k-u-size-medium k-u-weight-700"
     >
       Lorem Ipsum
     </span>
     <br />
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-400"
     >
       Consectetur
     </span>
@@ -118,7 +118,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-hKwDye fNEgRH k-u-hidden@xs-down"
+      className="sc-hKwDye hSGFCy k-u-hidden@xs-down"
       href="tel:06 00 00 00 00"
     >
       <span

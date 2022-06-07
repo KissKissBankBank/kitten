@@ -31,7 +31,7 @@ const InputWrapper = styled.div`
 
     border: none;
 
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(14)};
     line-height: ${pxToRem(18)};
 

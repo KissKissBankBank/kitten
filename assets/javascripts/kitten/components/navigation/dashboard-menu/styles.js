@@ -178,7 +178,7 @@ export const StyledDashboardMenu = styled.nav`
   /* TEXT STYLES */
   .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
   .k-DashboardMenu__list > li > .k-DashboardMenu__item {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     background-color: ${COLORS.font1};
     cursor: pointer;
   }
@@ -189,7 +189,7 @@ export const StyledDashboardMenu = styled.nav`
   }
 
   .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     line-height: ${pxToRem(18)};
     max-width: 100%;
     display: inline-block;
@@ -200,7 +200,7 @@ export const StyledDashboardMenu = styled.nav`
     &:hover,
     &:focus,
     &[aria-current='page'] {
-      ${TYPOGRAPHY.fontStyles.regular}
+      ${TYPOGRAPHY.fontStyles['500']}
       color: ${COLORS.background1};
     }
   }
