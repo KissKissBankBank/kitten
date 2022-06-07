@@ -108,8 +108,8 @@ export const Default = ({
           truncateText={truncateText}
         >
           <p className="k-u-weight-400 k-u-margin-none">
-            <strong className="k-u-weight-500">Maecenas tempus</strong>,
-            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+            <strong className="k-u-weight-500">Maecenas tempus</strong>, tellus
+            eget condimentum rhoncus, sem quam semper libero,{' '}
             <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
             sed ipsum.
           </p>
@@ -188,8 +188,8 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
           truncateText={truncateText}
         >
           <p className="k-u-weight-400 k-u-margin-none">
-            <strong className="k-u-weight-500">Maecenas tempus</strong>,
-            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+            <strong className="k-u-weight-500">Maecenas tempus</strong>, tellus
+            eget condimentum rhoncus, sem quam semper libero,{' '}
             <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
             sed ipsum.
           </p>

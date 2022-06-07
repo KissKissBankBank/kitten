@@ -83,12 +83,10 @@ describe('<RewardCard />', () => {
               </RewardCard.Description>
               <RewardCard.TagList>
                 <Tag as="li">
-                  <strong className="k-u-weight-500">5</strong>{' '}
-                  contributeurs
+                  <strong className="k-u-weight-500">5</strong> contributeurs
                 </Tag>
                 <Tag as="li">
-                  <strong className="k-u-weight-500">2/6</strong>{' '}
-                  disponibles
+                  <strong className="k-u-weight-500">2/6</strong> disponibles
                 </Tag>
               </RewardCard.TagList>
             </RewardCard.Contents>

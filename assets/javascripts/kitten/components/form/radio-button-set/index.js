@@ -49,15 +49,11 @@ export const RadioButtonSet = ({
   labelProps,
   ...props
 }) => {
-
   checkDeprecatedWeights(weight)
-  
+
   return (
     <StyledRadioButtonSet
-      className={classNames(
-        'k-Form-RadioButtonSet',
-        className,
-      )}
+      className={classNames('k-Form-RadioButtonSet', className)}
       disabled={disabled}
       {...props}
     >

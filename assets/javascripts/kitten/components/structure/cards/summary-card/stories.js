@@ -410,8 +410,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               aria-describedby="SummaryList-contributorSubscription-amount"
             >
               <Text size="small">
-                <strong className="k-u-weight-500">30 €</strong> par
-                trimestre
+                <strong className="k-u-weight-500">30 €</strong> par trimestre
               </Text>
             </SummaryCard.Cell>
 
