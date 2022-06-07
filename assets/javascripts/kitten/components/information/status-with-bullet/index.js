@@ -5,10 +5,7 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography'
-import {
-  checkDeprecatedSizes,
-  checkDeprecatedWeights,
-} from '../../../helpers/utils/deprecated'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledStatus = styled.span`
   color: currentColor;
@@ -94,7 +91,6 @@ export const StatusWithBullet = ({
   weight,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
   checkDeprecatedWeights(weight)
 
   return (

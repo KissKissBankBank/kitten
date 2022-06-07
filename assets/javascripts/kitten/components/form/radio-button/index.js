@@ -6,10 +6,7 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import {
-  checkDeprecatedSizes,
-  checkDeprecatedWeights,
-} from '../../../helpers/utils/deprecated'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledRadioButton = styled.div`
   margin: ${pxToRem(15)} 0;
@@ -88,7 +85,6 @@ const StyledRadioButton = styled.div`
       min-height: ${pxToRem(40)};
     }
   }
-  &.k-Form-RadioButton--big,
   &.k-Form-RadioButton--large {
     .k-Form-RadioButton__label {
       min-height: ${pxToRem(60)};
@@ -108,7 +104,6 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
       border-width: ${pxToRem(6)};
     }
-    &.k-Form-RadioButton--big,
     &.k-Form-RadioButton--large {
       .k-Form-RadioButton__label {
         min-height: ${pxToRem(80)};
@@ -311,7 +306,6 @@ export const RadioButton = ({
   paragraphStyle,
   ...inputProps
 }) => {
-  checkDeprecatedSizes(size)
   checkDeprecatedWeights(weight)
 
   return (

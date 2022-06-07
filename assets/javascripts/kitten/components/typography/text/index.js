@@ -1,10 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { 
-  checkDeprecatedSizes,
-  checkDeprecatedWeights,
-} from '../../../helpers/utils/deprecated'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 export const allowedColorStrings = [
   'font1',
@@ -62,7 +59,6 @@ export const Text = ({
   letterSpacing,
   ...others
 }) => {
-  checkDeprecatedSizes(size)
   checkDeprecatedWeights(weight)
 
   const Tag = as || tag
@@ -141,11 +137,8 @@ export const Text = ({
       'k-u-transform-uppercase': transform == 'uppercase',
 
       // Weight.
-      'k-u-weight-light': weight == 'light', // Deprecated
       'k-u-weight-400': weight == '400',
-      'k-u-weight-regular': weight == 'regular', // Deprecated
       'k-u-weight-500': weight == '500',
-      'k-u-weight-bold': weight == 'bold', // Deprecated
       'k-u-weight-700': weight == '700',
     },
     className,
