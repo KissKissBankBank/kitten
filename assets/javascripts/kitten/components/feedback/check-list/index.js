@@ -13,7 +13,7 @@ const List = styled.ul`
   margin: 0;
 
   .k-CheckList__item {
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     list-style-type: none;
     display: flex;
     align-items: stretch;

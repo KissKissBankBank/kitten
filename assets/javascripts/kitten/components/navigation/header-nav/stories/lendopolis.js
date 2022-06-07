@@ -206,14 +206,14 @@ const LoggedInMenu = () => (
           >
             <Text
               lineHeight="normal"
-              weight="regular"
+              weight="500"
               tag="div"
               style={{ marginBottom: pxToRem(2) }}
             >
               Hello world
             </Text>
-            <span className="k-u-weight-light">
-              <span className="k-u-weight-light k-u-hidden@xs-down">
+            <span className="k-u-weight-400">
+              <span className="k-u-weight-400 k-u-hidden@xs-down">
                 Solde&nbsp;:
               </span>
               {` 15 2568 €`}

@@ -27,7 +27,7 @@ describe('<Toggletip />', () => {
         .create(
           <Toggletip
             targetElement={
-              <p className="k-u-weight-bold">
+              <p className="k-u-weight-700">
                 This is the target of my tooltip
               </p>
             }

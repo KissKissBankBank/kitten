@@ -69,7 +69,7 @@ const NewsList = () => {
       <Head className="k-u-hidden@s-down">
         <HeadContainer>
           <BackLink
-            weight="bold"
+            weight="700"
             size="small"
             color="primary1"
             tag="a"
@@ -79,7 +79,7 @@ const NewsList = () => {
           </BackLink>
           <div>
             <AnchorLink
-              weight="bold"
+              weight="700"
               size="small"
               color="font1"
               tag="a"
@@ -89,7 +89,7 @@ const NewsList = () => {
               Brouillons
             </AnchorLink>
             <AnchorLink
-              weight="bold"
+              weight="700"
               size="small"
               color="font1"
               tag="a"
@@ -98,7 +98,7 @@ const NewsList = () => {
               Programmées
             </AnchorLink>
             <AnchorLink
-              weight="bold"
+              weight="700"
               size="small"
               color="font1"
               tag="a"

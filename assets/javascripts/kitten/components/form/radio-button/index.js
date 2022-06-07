@@ -6,18 +6,17 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledRadioButton = styled.div`
   margin: ${pxToRem(15)} 0;
-
   &,
   & * {
     transition: all 0.2s ease;
   }
 
   /* label block */
-
+  
   .k-Form-RadioButton__label {
     box-sizing: border-box;
     display: flex;
@@ -30,9 +29,7 @@ const StyledRadioButton = styled.div`
     border: var(--border);
     padding: ${pxToRem(20 - 2)} ${pxToRem(15)};
   }
-
   /* RADIO BOX */
-
   .k-Form-RadioButton__label::before {
     box-sizing: border-box;
     display: block;
@@ -40,7 +37,6 @@ const StyledRadioButton = styled.div`
     width: ${pxToRem(16)};
     height: ${pxToRem(16)};
     margin-right: ${pxToRem(10)};
-
     content: '';
     background-position: center;
     background-repeat: no-repeat;
@@ -51,13 +47,12 @@ const StyledRadioButton = styled.div`
   }
 
   /* HIDE INPUT */
-
+  
   .k-Form-RadioButton__input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
-
   .k-Form-RadioButton__input:hover:not(:disabled) {
     & + .k-Form-RadioButton__label {
       border-color: var(--color-primary-300);
@@ -90,44 +85,35 @@ const StyledRadioButton = styled.div`
       min-height: ${pxToRem(40)};
     }
   }
-
-  &.k-Form-RadioButton--big,
   &.k-Form-RadioButton--large {
     .k-Form-RadioButton__label {
       min-height: ${pxToRem(60)};
       padding: ${pxToRem(20 - 2)} ${pxToRem(15)};
     }
   }
-
   @media (min-width: ${ScreenConfig.S.min}px) {
     margin: ${pxToRem(20)} 0;
     .k-Form-RadioButton__labelText {
       flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
       line-height: ${pxToRem(22)};
     }
-
     .k-Form-RadioButton__labelContents {
       margin-left: ${pxToRem(20 + 10)};
       flex: 1 0 calc(100% - ${pxToRem(20 + 10 + 10)});
     }
-
     .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
       border-width: ${pxToRem(6)};
     }
-
-    &.k-Form-RadioButton--big,
     &.k-Form-RadioButton--large {
       .k-Form-RadioButton__label {
         min-height: ${pxToRem(80)};
         padding: ${pxToRem(26 - 2)} ${pxToRem(15)};
       }
-
       .k-Form-RadioButton__label::before {
         margin-right: ${pxToRem(20)};
         width: ${pxToRem(20)};
         height: ${pxToRem(20)};
       }
-
       .k-Form-RadioButton__labelText {
         flex: 1 0 calc(100% - ${pxToRem(20 + 20)});
         font-size: ${pxToRem(16)};
@@ -149,13 +135,10 @@ const StyledRadioButton = styled.div`
     + .k-Form-RadioButton__label::before {
     outline-style: auto;
   }
-
   .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
     border: ${pxToRem(5)} solid var(--color-primary-500);
   }
-
   /* ERROR STYLE */
-
   &.k-Form-RadioButton--error {
     .k-Form-RadioButton__label::before {
       border-color: var(--color-danger-300);
@@ -174,7 +157,6 @@ const StyledRadioButton = styled.div`
       color: var(--color-grey-600);
       background-color: var(--color-grey-200);
     }
-
     & + .k-Form-RadioButton__label::before {
       background-color: var(--color-grey-300);
       border-color: var(--color-grey-400);
@@ -198,14 +180,12 @@ const StyledRadioButton = styled.div`
       color: var(--color-grey-500);
     }
   }
-
   &.k-Form-RadioButton--error {
     .k-Form-RadioButton__input:not(:disabled) + .k-Form-RadioButton__label {
       border-color: var(--color-danger-300);
       background-color: var(--color-grey-000);
     }
   }
-
   /* PARAGRAPH STYLE */
 
   &.k-Form-RadioButton--paragraphStyle {
@@ -228,7 +208,6 @@ const StyledRadioButton = styled.div`
     font-size: ${pxToRem(14)};
     line-height: 1.5;
   }
-
   :active .k-Form-RadioButton__labelText,
   .k-Form-RadioButton__input:active + .k-Form-RadioButton__labelText {
     color: var(--color-primary-900);
@@ -238,40 +217,32 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__labelText {
     color: var(--color-grey-600);
   }
-
   &.k-Form-RadioButton--largeLabel {
     .k-Form-RadioButton__label::before {
       margin-top: ${pxToRem(8)};
     }
-
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.regular}
       font-size: ${pxToRem(20)};
     }
   }
-
   .k-Form-RadioButton__labelText--withContents {
     ${TYPOGRAPHY.fontStyles.regular}
   }
-
   .k-Form-RadioButton__labelContents {
     margin-top: ${pxToRem(4)};
     margin-left: ${pxToRem(16 + 10)};
     flex: 1 0 calc(100% - ${pxToRem(16 + 10 + 10)});
-
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${pxToRem(12)};
     line-height: ${pxToRem(19)};
-
     &:empty {
       display: none;
     }
   }
-
   &.k-Form-RadioButton--largeContent .k-Form-RadioButton__labelContents {
     font-size: ${pxToRem(14)};
   }
-
   @media (min-width: ${ScreenConfig.S.min}px) {
     .k-Form-RadioButton__labelContents {
       margin-top: ${pxToRem(8)};
@@ -289,13 +260,11 @@ const StyledRadioButton = styled.div`
       font-size: ${pxToRem(14)};
     }
   }
-
   &.k-Form-RadioButton__labelText--light {
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.light};
     }
   }
-
   &.k-Form-RadioButton__labelText--bold {
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.bold};
@@ -303,20 +272,17 @@ const StyledRadioButton = styled.div`
   }
 
   /* DESIGN = "check" */
-
   &.k-Form-RadioButton--check {
     .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
       border-width: ${pxToRem(2)};
       background-color: var(--color-primary-500);
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' width='11' height='8' fill='%23fff' %3E%3Cpath d='M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z' /%3E%3C/svg%3E");
     }
-
     &.k-Form-RadioButton--error
       .k-Form-RadioButton__input:checked:not(:disabled)
       + .k-Form-RadioButton__label::before {
       background-color: var(--color-danger-500);
     }
-
     .k-Form-RadioButton__input:disabled + .k-Form-RadioButton__label::before {
       background-color: var(--color-grey-400);
     }
@@ -335,11 +301,12 @@ export const RadioButton = ({
   error,
   disabled,
   design,
-  fontWeight,
+  fontWeight, // Deprecated
+  weight,
   paragraphStyle,
   ...inputProps
 }) => {
-  checkDeprecatedSizes(size)
+  checkDeprecatedWeights(weight)
 
   return (
     <StyledRadioButton
@@ -348,7 +315,7 @@ export const RadioButton = ({
         className,
         `k-Form-RadioButton--${design}`,
         `k-Form-RadioButton--${size}`,
-        `k-Form-RadioButton__labelText--${fontWeight}`,
+        `k-Form-RadioButton__labelText--${fontWeight || weight}`,
         {
           'k-Form-RadioButton--error': error,
           'k-Form-RadioButton--largeLabel': large,
@@ -390,7 +357,8 @@ RadioButton.propTypes = {
   disabled: PropTypes.bool,
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '700']),
   paragraphStyle: PropTypes.bool,
 }
 
@@ -401,6 +369,6 @@ RadioButton.defaultProps = {
   disabled: false,
   design: 'disc',
   size: 'medium',
-  fontWeight: 'regular',
+  weight: '500',
   paragraphStyle: false,
 }

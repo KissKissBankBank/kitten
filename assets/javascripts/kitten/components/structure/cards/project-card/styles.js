@@ -99,7 +99,7 @@ export const StyledCard = styled.div`
       padding: ${pxToRem(20)};
       font-size: ${pxToRem(14)};
       color: var(--color-grey-000);
-      ${TYPOGRAPHY.fontStyles.bold};
+      ${TYPOGRAPHY.fontStyles['700']};
       transition: opacity var(--transition);
       background-color: rgba(34, 34, 34, 0.8);
     }
@@ -153,7 +153,7 @@ export const StyledCard = styled.div`
     padding: ${pxToRem(0)} ${pxToRem(10)};
 
     color: var(--color-grey-000);
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${pxToRem(12)};
   }
 

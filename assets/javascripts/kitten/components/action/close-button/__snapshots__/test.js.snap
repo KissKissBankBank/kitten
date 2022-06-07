@@ -78,21 +78,18 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -182,7 +179,6 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -341,21 +337,18 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c0.k-Button--tiny,
 .c0.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c0.k-Button--regular,
 .c0.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c0.k-Button--big,
 .c0.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -445,7 +438,6 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c0.k-Button--big,
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;

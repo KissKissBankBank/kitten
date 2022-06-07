@@ -128,11 +128,7 @@ export const FieldRadioButtonSetExample = ({
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
   >
-    <Field.RadioButtonSet
-      name="radio"
-      items={items}
-      error={error}
-    />
+    <Field.RadioButtonSet name="radio" items={items} error={error} />
   </FieldBase>
 )
 
@@ -159,11 +155,7 @@ export const FieldRadioSetExample = ({
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
   >
-    <Field.RadioSet
-      name="radio"
-      items={items}
-      error={error}
-    />
+    <Field.RadioSet name="radio" items={items} error={error} />
   </FieldBase>
 )
 

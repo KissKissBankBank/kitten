@@ -44,7 +44,7 @@ const CardComponent = ({
       <img alt="" {...imageProps} />
     </SummaryCard.Image>
     <SummaryCard.Cell name="title" aria-describedby="SummaryList-title">
-      <Text weight="bold" size="small">
+      <Text weight="700" size="small">
         {title}
       </Text>
       {!!star && <SummaryCard.TitleTag text="Contrepartie star" />}
@@ -88,7 +88,7 @@ export const Default = () => {
     <div ref={ref}>
       <p
         id="container_label_element"
-        className="k-u-weight-light k-u-margin-bottom-double"
+        className="k-u-weight-400 k-u-margin-bottom-double"
       >
         Cette liste peut être réorganisée à l'aide des boutons.
       </p>
@@ -179,7 +179,7 @@ export const Simple = () => {
     <>
       <p
         id="container_label_element"
-        className="k-u-weight-light k-u-margin-bottom-double"
+        className="k-u-weight-400 k-u-margin-bottom-double"
       >
         Cette liste peut être réorganisée à l'aide des boutons.
       </p>

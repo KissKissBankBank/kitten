@@ -42,7 +42,7 @@ const KeySection = () => (
               key: '1',
               className: 'k-u-margin-bottom-double',
               item: (
-                <Text weight="light" className="PreDeposit__keySection__item">
+                <Text weight="400" className="PreDeposit__keySection__item">
                   Un coach pour vous conseiller sur la mise en forme de votre
                   page projet, votre stratégie de communication durant la
                   collecte et l'envoi de vos contreparties.
@@ -53,7 +53,7 @@ const KeySection = () => (
               key: '2',
               className: 'k-u-margin-bottom-double',
               item: (
-                <Text weight="light" className="PreDeposit__keySection__item">
+                <Text weight="400" className="PreDeposit__keySection__item">
                   Une équipe d’experts pour chaque secteur d’activité, proche de
                   vos besoins et de vos problématiques.
                 </Text>
@@ -62,7 +62,7 @@ const KeySection = () => (
             {
               key: '3',
               item: (
-                <Text weight="light" className="PreDeposit__keySection__item">
+                <Text weight="400" className="PreDeposit__keySection__item">
                   <span style={{ color: '#19b4fa' }}>Un blog</span> et{' '}
                   <span style={{ color: '#19b4fa' }}>des vidéos tutos</span>{' '}
                   pour devenir un pro du financement participatif !

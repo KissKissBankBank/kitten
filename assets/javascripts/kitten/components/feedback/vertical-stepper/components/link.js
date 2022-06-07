@@ -13,7 +13,7 @@ const StyledParagraph = styled.span`
   line-height: 1;
 
   .k-Steppers--VerticalStepper__link {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-2)};
     line-height: normal;
     color: ${COLORS.primary1};

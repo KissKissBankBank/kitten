@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import { Container } from '../../layout/container'
 import { Grid, GridCol } from '../../layout/grid'
 import { mq } from '../../../constants/screen-config'
@@ -125,7 +124,6 @@ const StyledHero = styled(
     }
   }
 
-  &.k-Hero--tiny,
   &.k-Hero--small {
     @media ${mq.desktop} {
       .k-Hero__contentGridCol {
@@ -141,7 +139,6 @@ const StyledHero = styled(
 
 export const Hero = ({
   direction,
-  tiny,
   small,
   imageSrc,
   contentBackgroundColor,
@@ -155,10 +152,7 @@ export const Hero = ({
       'k-Hero',
       props.className,
       `k-Hero--direction-${direction}`,
-      {
-        'k-Hero--tiny': tiny,
-        'k-Hero--small': small,
-      },
+      { 'k-Hero--small': small },
     )}
     backgroundColor={contentBackgroundColor}
     color={contentColor}
@@ -178,7 +172,6 @@ export const Hero = ({
 
 Hero.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']),
-  tiny: deprecated(PropTypes.bool, 'Please use `small` instead'),
   small: PropTypes.bool,
   imageSrc: PropTypes.string,
   contentBackgroundColor: PropTypes.string,

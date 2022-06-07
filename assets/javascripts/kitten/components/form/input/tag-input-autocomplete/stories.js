@@ -571,7 +571,7 @@ export const Default = args => {
             : 'Press Enter or comma to add an item to the list.'
         }
       />
-      <p className="k-u-weight-light">List: {tagList.join(', ')}</p>
+      <p className="k-u-weight-400">List: {tagList.join(', ')}</p>
     </div>
   )
 }

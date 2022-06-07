@@ -10,7 +10,7 @@ import deprecated from 'prop-types-extra/lib/deprecated';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledTagButton = styled.button.withConfig({
   displayName: "tag-button__StyledTagButton",
   componentId: "sc-9e8qw0-0"

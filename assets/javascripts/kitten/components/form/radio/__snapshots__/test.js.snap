@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Radio /> default matches with snapshot 1`] = `
-.c0 .k-Form-Radio__label {
+.c1 .k-Form-Radio__label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,7 +21,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   transition: color var(--transition);
 }
 
-.c0 .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__label::before {
   box-sizing: border-box;
   display: block;
   -webkit-flex-shrink: 0;
@@ -40,30 +40,30 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   transition: border var(--transition),background var(--transition);
 }
 
-.c0 .k-Form-Radio__input {
+.c1 .k-Form-Radio__input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.c0 .k-Form-Radio__input:focus + .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__input:focus + .k-Form-Radio__label::before {
   border-color: var(--color-primary-500);
   outline-style: auto;
 }
 
-.c0 .k-Form-Radio__input:focus:not(:focus-visible) + .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__input:focus:not(:focus-visible) + .k-Form-Radio__label::before {
   outline-color: transparent;
 }
 
-.c0 .k-Form-Radio__input:focus-visible + .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__input:focus-visible + .k-Form-Radio__label::before {
   outline-style: auto;
 }
 
-.c0 .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
   border: 0.3125rem solid var(--color-primary-500);
 }
 
-.c0 .k-Form-Radio__labelText {
+.c1 .k-Form-Radio__labelText {
   -webkit-flex: 1 0 calc(100% - 1.625rem);
   -ms-flex: 1 0 calc(100% - 1.625rem);
   flex: 1 0 calc(100% - 1.625rem);
@@ -73,35 +73,37 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   line-height: 1.5;
 }
 
-.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--normal {
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--normal,
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--500 {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
-.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--light {
+.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--light .c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--400 {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
-.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--bold {
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--bold,
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--700 {
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.c0 .k-Form-Radio__input:active + .k-Form-Radio__labelText {
+.c1 .k-Form-Radio__input:active + .k-Form-Radio__labelText {
   color: var(--color-primary-500);
 }
 
-.c0 .k-Form-Radio__labelText--withContents {
+.c1 .k-Form-Radio__labelText--withContents {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
-.c0 .k-Form-Radio__labelContents {
+.c1 .k-Form-Radio__labelContents {
   margin-top: 0.25rem;
   margin-left: 1.625rem;
   -webkit-flex: 1 0 calc(100% - 2.25rem);
@@ -113,71 +115,71 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   line-height: 1.1875rem;
 }
 
-.c0 .k-Form-Radio__labelContents:empty {
+.c1 .k-Form-Radio__labelContents:empty {
   display: none;
 }
 
-.c0.k-Form-Radio--check .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
+.c1.k-Form-Radio--check .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
   border-width: 0.125rem;
   background-color: var(--color-primary-500);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' width='11' height='8' fill='%23fff' %3E%3Cpath d='M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z' /%3E%3C/svg%3E");
 }
 
-.c0.k-Form-Radio--check.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+.c1.k-Form-Radio--check.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
   background-color: var(--color-danger-500);
 }
 
-.c0.k-Form-Radio--check .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
+.c1.k-Form-Radio--check .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
   background-color: var(--color-grey-500);
 }
 
-.c0:hover .k-Form-Radio__label::before {
+.c1:hover .k-Form-Radio__label::before {
   border-color: var(--color-primary-300);
 }
 
-.c0:hover .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+.c1:hover .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
   border-color: var(--color-primary-500);
 }
 
-.c0:active .k-Form-Radio__label::before,
-.c0:focus .k-Form-Radio__label::before {
+.c1:active .k-Form-Radio__label::before,
+.c1:focus .k-Form-Radio__label::before {
   border-color: var(--color-primary-500);
 }
 
-.c0:active .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before,
-.c0:focus .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+.c1:active .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before,
+.c1:focus .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
   border-color: var(--color-primary-500);
 }
 
-.c0.k-Form-Radio--error .k-Form-Radio__label::before {
+.c1.k-Form-Radio--error .k-Form-Radio__label::before {
   border-color: var(--color-danger-300);
 }
 
-.c0.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+.c1.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
   border-color: var(--color-danger-500);
 }
 
-.c0 .k-Form-Radio__input:disabled {
+.c1 .k-Form-Radio__input:disabled {
   cursor: not-allowed;
 }
 
-.c0 .k-Form-Radio__input:disabled + .k-Form-Radio__label {
+.c1 .k-Form-Radio__input:disabled + .k-Form-Radio__label {
   color: var(--color-grey-600);
   cursor: not-allowed;
 }
 
-.c0 .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
   background-color: var(--color-grey-000);
   border-color: var(--color-grey-400);
 }
 
-.c0 .k-Form-Radio__input:disabled:checked + .k-Form-Radio__label::before {
+.c1 .k-Form-Radio__input:disabled:checked + .k-Form-Radio__label::before {
   background-color: var(--color-grey-000);
   border-color: var(--color-grey-500);
 }
 
 @media (min-width:640px) {
-  .c0 .k-Form-Radio__labelContents {
+  .c1 .k-Form-Radio__labelContents {
     margin-top: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -185,7 +187,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-Radio k-Form-Radio--disc"
+  className="c0 c1 k-Form-Radio k-Form-Radio--disc"
 >
   <input
     className="k-Form-Radio__input"
@@ -199,7 +201,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
     htmlFor="test_1"
   >
     <span
-      className="k-Form-Radio__labelText k-Form-Radio__labelText--normal k-Form-Radio__labelText--withContents"
+      className="k-Form-Radio__labelText k-Form-Radio__labelText--500 k-Form-Radio__labelText--withContents"
     >
       Radio Label
     </span>

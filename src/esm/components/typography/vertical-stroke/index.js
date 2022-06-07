@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 export var VerticalStroke = styled(function (_ref) {
   var className = _ref.className,
       size = _ref.size,

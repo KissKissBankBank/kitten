@@ -8,7 +8,7 @@ import { StatusIconNext } from '../../graphics/icons-next/status-icon-next';
 import { IconBadge } from '../../information/icon-badge';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 import classNames from 'classnames';
 var AlertBoxWrapper = styled.div.withConfig({
   displayName: "alert-box__AlertBoxWrapper",

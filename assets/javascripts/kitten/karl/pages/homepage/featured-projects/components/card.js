@@ -238,7 +238,7 @@ const CardBase = ({
               className="k-u-align-center k-u-margin-left-single"
               size="micro"
               color="font1"
-              weight="regular"
+              weight="500"
             >
               Financé à 135 %
             </Text>
@@ -252,7 +252,7 @@ const CardBase = ({
               className="k-u-align-center k-u-margin-left-single"
               size="micro"
               color="font1"
-              weight="regular"
+              weight="500"
             >
               Projet réussi !
             </Text>
@@ -272,7 +272,7 @@ const CardBase = ({
               className="k-u-align-center k-u-margin-left-single"
               size="micro"
               color="font1"
-              weight="regular"
+              weight="500"
             >
               Financé à 50%
             </Text>

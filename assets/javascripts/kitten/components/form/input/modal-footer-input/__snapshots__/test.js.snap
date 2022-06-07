@@ -20,7 +20,7 @@ exports[`<ModalFooterInput /> with empty snapshot matches with snapshot 1`] = `
     }
   />
   <button
-    className="sc-bdvvtL ceqbax k-Button k-ModalFooterInput__button k-Button--small k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+    className="sc-bdvvtL kWDUW k-Button k-ModalFooterInput__button k-Button--small k-Button--beryllium k-Button--fit-icon k-Button--disabled"
     disabled={true}
     onClick={[Function]}
     style={

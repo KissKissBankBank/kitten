@@ -79,7 +79,7 @@ ChatLayout.Column = ({
         <Text
           tag="h1"
           size="giant"
-          weight="bold"
+          weight="700"
           className="k-ChatLayout__column__title"
         >
           {title}

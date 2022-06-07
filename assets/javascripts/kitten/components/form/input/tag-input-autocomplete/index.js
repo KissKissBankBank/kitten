@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import slugify from 'slugify'
 import { CrossIcon } from '../../../graphics/icons/cross-icon'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import { TagInput, StyledTagInputWrapper } from '../tag-input'
 import { StyledSuggestionsList } from '../autocomplete'
 
@@ -26,8 +25,6 @@ export const TagInputAutocomplete = ({
   showSuggestionsOnFocus,
   inputLabel,
 }) => {
-  checkDeprecatedSizes(size)
-
   const inputEl = useRef(null)
   const suggestionsEl = useRef(null)
 

@@ -66,7 +66,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
       </GarbageButton>
       {publishedAt && (
         <Publication>
-          <Text weight="light" color="font1">
+          <Text weight="400" color="font1">
             Programmé pour le{' '}
           </Text>
           <strong className="k-u-strong">{publishedAt}</strong>
@@ -78,14 +78,14 @@ const NewsCard = ({ title, children, publishedAt }) => {
       <Splitter>
         <div>
           <Text
-            weight="light"
+            weight="400"
             size="medium"
             tag="div"
             className="k-u-margin-top-single k-u-margin-right-double"
           >
             {children}
           </Text>
-          <ShowMoreLink weight="bold" color="primary1" tag="a" href="#">
+          <ShowMoreLink weight="700" color="primary1" tag="a" href="#">
             Voir tout
           </ShowMoreLink>
         </div>

@@ -131,7 +131,7 @@ export const ProjectsCarousel = ({
 
                 {!!description && (
                   <Marger top=".5">
-                    <Text size="small" color="font1" weight="light">
+                    <Text size="small" color="font1" weight="400">
                       {description}
                     </Text>
                   </Marger>

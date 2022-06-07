@@ -64,7 +64,7 @@ export const StoryWithFlow = ({
       </Button>
     </DashboardLayout.Flow.TitleAside>
     <DashboardLayout.Flow.Content>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel
         augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
@@ -80,7 +80,7 @@ export const StoryWithFlow = ({
         deactivateDropdown
         className="k-u-margin-bottom-triple"
       />
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit. Sed posuere consectetur est at lobortis. Lorem ipsum dolor
@@ -95,7 +95,7 @@ export const StoryWithFlow = ({
       >
         https://www.kisskissbankbank.com/fr/projects/test-de-campagne-par-joachim/?secret-reward=hileo6
       </TextCopy>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -104,14 +104,14 @@ export const StoryWithFlow = ({
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -120,7 +120,7 @@ export const StoryWithFlow = ({
         est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
         sem nec elit.
       </p>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
         dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus
         magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
@@ -129,14 +129,14 @@ export const StoryWithFlow = ({
         amet non magna. Cum sociis natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus.
       </p>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
         risus varius blandit sit amet non magna. Maecenas sed diam eget risus
         varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
         consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
         venenatis vestibulum.
       </p>
-      <p className="k-u-weight-light k-u-margin-top-none k-u-margin-bottom-triple">
+      <p className="k-u-weight-400 k-u-margin-top-none k-u-margin-bottom-triple">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
         quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
@@ -160,8 +160,8 @@ export const StoryWithFlow = ({
           Side content in Paragraph
         </DashboardLayout.Flow.AsideCard.Paragraph>
         <DashboardLayout.Flow.AsideCard.List>
-          <li className="k-u-weight-light">Side content in List (item 1)</li>
-          <li className="k-u-weight-light">Side content in List (item 2)</li>
+          <li className="k-u-weight-400">Side content in List (item 1)</li>
+          <li className="k-u-weight-400">Side content in List (item 2)</li>
         </DashboardLayout.Flow.AsideCard.List>
       </DashboardLayout.Flow.AsideCard>
     </DashboardLayout.Flow.Aside>
@@ -172,7 +172,7 @@ export const StoryWithFlow = ({
         </Button>
       ) : flowShowUnsavedText ? (
         <Text
-          weight="light"
+          weight="400"
           cssColor={COLORS.font3}
           size="small"
           className="k-u-hidden@xs-down"

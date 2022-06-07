@@ -90,7 +90,7 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
           {children?.type?.name} <ArrowIcon direction="right" />
         </LinkTo>
       ) : (
-        <Text weight="light" size="micro">
+        <Text weight="400" size="micro">
           {children?.type?.name}
           {suffix && (
             <>
@@ -351,7 +351,7 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
       </Group>
 
-      <Group title="Icônes réseaux sociaux couleurs"> 
+      <Group title="Icônes réseaux sociaux couleurs">
         <IconContainer>
           <GoogleIconNext />
         </IconContainer>

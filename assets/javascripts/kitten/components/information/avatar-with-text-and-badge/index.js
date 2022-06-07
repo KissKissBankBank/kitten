@@ -8,7 +8,6 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { getReactElementsByType } from '../../../helpers/react/get-react-elements'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -54,7 +53,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: center;
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-2)};
     line-height: 1;
   }
@@ -73,7 +72,7 @@ const StyledWrapper = styled.div`
     color: ${COLORS.font1};
     text-decoration: none;
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: 1.2;
   }
@@ -103,7 +102,6 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .k-Avatar--big,
   .k-Avatar--large {
     margin-right: ${pxToRem(15)};
 
@@ -157,8 +155,6 @@ const Image = ({
   width,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
-
   const badgeElement = getReactElementsByType({
     children,
     type: AvatarWithTextAndBadge.Badge,

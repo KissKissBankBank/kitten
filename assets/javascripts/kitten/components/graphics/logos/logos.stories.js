@@ -21,7 +21,7 @@ const Container = styled.div`
 const Group = styled(({ className, children, title }) => {
   return (
     <>
-      <h2 className="k-u-size-giant k-u-weight-bold">{title}</h2>
+      <h2 className="k-u-size-giant k-u-weight-700">{title}</h2>
       <div className={className}>{children}</div>
     </>
   )

@@ -4,10 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: `TextInoutWithButton`: Remove `value` prop.
+- Breaking change:
+
+  - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
+  - Deprecated: `fontWeight` by `weight` on the following components:
+    - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
+  - Typography config: Remove `regularUppercase` and `boldUppercase` styles.
+  - Typography config: Add `fontStyles['400']`, `fontStyles['500']` and `fontStyles['700']`.
+
+- Breaking change: Remove old `size` values from all components and styles.
+- Breaking change: `Helpers`: Remove `checkDeprecatedSizes` utility.
+- Breaking change: `TextInputWithButton`: Remove `value` prop.
 - Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
 - Breaking change: `Radio`: Remove `variant` prop.
 - Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
+- Breaking Change: `Alert`: Remove deprecated props.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 - Breaking Change: `Button`: Use `fit=content` as default.

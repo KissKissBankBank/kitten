@@ -106,7 +106,7 @@ const StyledDropdownMenu = styled.details`
   }
 
   .k-DropdownMenu__menu__item {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: var(--color-grey-000);
     text-decoration: none;
     display: flex;

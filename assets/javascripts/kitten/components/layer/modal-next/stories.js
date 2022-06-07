@@ -222,7 +222,7 @@ export const Controlled = ({ contentText, ...args }) => {
       <Button modifier="helium" onClick={() => updateModalState(!showModal)}>
         Open
       </Button>
-      <Text tag="p" weight="light">
+      <Text tag="p" weight="400">
         The modal is controlled through a state that controls the{' '}
         <code>isOpen</code> prop.
         <br />
@@ -285,7 +285,7 @@ FullSize.args = {
   ...args,
   fullSize: true,
   headerTitle: (
-    <Text size="small" color="font1" weight="regular">
+    <Text size="small" color="font1" weight="500">
       Lorem ipsum dolor sit consectetuer
     </Text>
   ),
@@ -298,7 +298,7 @@ export const CustomInnerSize = ({ contentText, ...args }) => (
       <>
         <Modal.Title>Custom inner size</Modal.Title>
         <Modal.Block className="k-u-background-color-background3">
-          <Text weight="light" tag="p" className="k-u-margin-vertical-triple">
+          <Text weight="400" tag="p" className="k-u-margin-vertical-triple">
             This Modal has the following inner size, defined by{' '}
             <code>contentCols</code> prop:
             <br />

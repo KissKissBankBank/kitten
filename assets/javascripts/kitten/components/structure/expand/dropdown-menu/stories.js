@@ -196,7 +196,7 @@ export const WithAvatar = args => (
 
             <AvatarWithTextAndBadge.Text>
               <Text
-                weight="regular"
+                weight="500"
                 className="k-u-block k-u-link k-u-link-primary1"
               >
                 Kitten Kitty

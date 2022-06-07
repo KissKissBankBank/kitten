@@ -81,7 +81,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="small" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Marque ou entreprise
                 </Text>
               </Marger>
@@ -98,7 +98,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="small" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Collectivité territoriale ou réseau
                 </Text>
               </Marger>
@@ -115,7 +115,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="small" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Média ou agence
                 </Text>
               </Marger>
@@ -132,7 +132,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="small" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Marque ou Association ou fondation
                 </Text>
               </Marger>
@@ -149,7 +149,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="small" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   École ou incubateur
                 </Text>
               </Marger>

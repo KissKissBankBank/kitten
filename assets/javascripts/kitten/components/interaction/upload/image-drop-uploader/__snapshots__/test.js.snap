@@ -100,7 +100,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </div>
     <button
       aria-label="Cancel"
-      className="sc-bdvvtL fQhrWd k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--fit-icon"
+      className="sc-bdvvtL jnHLzO k-Button k-ImageDropUploader__manager__cancelButton k-Button--micro k-Button--hydrogen k-Button--fit-icon"
       disabled={false}
       onClick={[Function]}
       style={
@@ -129,7 +129,7 @@ exports[`<ImageDropUploader /> should match snapshot with error 1`] = `
     </button>
   </div>
   <p
-    className="k-u-color-error k-u-size-micro k-u-weight-bold k-u-margin-top-noneHalf"
+    className="k-u-color-error k-u-size-micro k-u-weight-700 k-u-margin-top-noneHalf"
     id="ImageDropUploader-error-description"
   >
     Error

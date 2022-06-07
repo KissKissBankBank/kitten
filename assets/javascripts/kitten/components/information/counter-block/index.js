@@ -97,7 +97,7 @@ export const CounterBlock = ({
         {isString(counter) ? (
           <Text
             className="styledText"
-            weight="bold"
+            weight="700"
             tag={titleTag}
             fontStyle="italic"
           >
@@ -120,7 +120,7 @@ export const CounterBlock = ({
             tag={subTitleTag}
             tag="p"
             fontStyle="italic"
-            weight="light"
+            weight="400"
           >
             {subTitle}
           </Text>

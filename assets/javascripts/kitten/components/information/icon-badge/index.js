@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledBadge = styled.span`
   box-sizing: border-box;
@@ -59,7 +58,6 @@ const StyledBadge = styled.span`
     }
   }
 
-  &.k-IconBadge--tiny,
   &.k-IconBadge--small {
     min-width: ${pxToRem(20)};
     min-height: ${pxToRem(20)};
@@ -70,7 +68,6 @@ const StyledBadge = styled.span`
     }
   }
 
-  &.k-IconBadge--big,
   &.k-IconBadge--large {
     min-width: ${pxToRem(40)};
     min-height: ${pxToRem(40)};
@@ -110,8 +107,6 @@ export const IconBadge = ({
   hasBorder,
   ...others
 }) => {
-  checkDeprecatedSizes(size)
-
   return (
     <StyledBadge
       className={classNames(

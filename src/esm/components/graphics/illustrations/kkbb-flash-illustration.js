@@ -3,7 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["size"];
 import React from 'react';
 import PropTypes from 'prop-types';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 export var KkbbFlashIllustration = function KkbbFlashIllustration(_ref) {
   var size = _ref.size,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);

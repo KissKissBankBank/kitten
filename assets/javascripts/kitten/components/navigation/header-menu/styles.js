@@ -32,7 +32,7 @@ export const StyledList = styled.ul`
 
     background-color: ${COLORS.background1};
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: ${COLORS.font1};
     line-height: 1;
     font-size: ${pxToRem(14)};
@@ -148,16 +148,14 @@ export const StyledList = styled.ul`
     }
   }
 
-  .k-HeaderMenu__item--tiny,
   .k-HeaderMenu__item--small {
     .k-HeaderMenu__item__link {
       height: auto;
       padding-top: 0;
       padding-bottom: ${pxToRem(10)};
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
     }
 
-    & + .k-HeaderMenu__item--tiny,
     & + .k-HeaderMenu__item--small {
       .k-HeaderMenu__item__link {
         padding-top: ${pxToRem(5)};
@@ -177,7 +175,6 @@ export const StyledList = styled.ul`
     }
   }
 
-  .k-HeaderMenu__item--big,
   .k-HeaderMenu__item--large {
     .k-HeaderMenu__item__link {
       height: ${pxToRem(70)};

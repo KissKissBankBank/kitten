@@ -27,7 +27,7 @@ exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
     type="button"
   >
     <p
-      className="k-u-weight-bold"
+      className="k-u-weight-700"
     >
       This is the target of my tooltip
     </p>
@@ -65,7 +65,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
     type="button"
   >
     <span
-      className="sc-bdvvtL wpCaS k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+      className="sc-bdvvtL gIJdRE k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
       style={
         Object {
           "--iconBadge-background-color": null,
@@ -132,7 +132,7 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
     type="button"
   >
     <span
-      className="sc-bdvvtL wpCaS k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--warning k-IconBadge--hasBorder"
+      className="sc-bdvvtL gIJdRE k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--warning k-IconBadge--hasBorder"
       style={
         Object {
           "--iconBadge-background-color": null,

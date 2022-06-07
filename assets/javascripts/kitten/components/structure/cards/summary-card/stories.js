@@ -124,7 +124,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-ownerContribution-title"
             >
-              <Text weight="bold" size="small">
+              <Text weight="700" size="small">
                 Owner Contribution vel augue laoreet rutrum faucibus dolor
                 auctor.
               </Text>
@@ -207,7 +207,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-ownerSubscription-title"
             >
-              <Text weight="bold" size="small">
+              <Text weight="700" size="small">
                 Owner Subscription lacus vel augue.
               </Text>
             </SummaryCard.Cell>
@@ -306,7 +306,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorContribution-title"
             >
-              <Text weight="bold" size="small">
+              <Text weight="700" size="small">
                 Contributor Contribution dolor auctor.
               </Text>
             </SummaryCard.Cell>
@@ -322,7 +322,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="amount"
               aria-describedby="SummaryList-contributorContribution-amount"
             >
-              <Text weight="regular" size="small">
+              <Text weight="500" size="small">
                 10 000 €
               </Text>
             </SummaryCard.Cell>
@@ -339,7 +339,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="shipping"
               aria-describedby="SummaryList-contributorContribution-shipping"
             >
-              <Text weight="regular" size="small" className="k-u-block">
+              <Text weight="500" size="small" className="k-u-block">
                 Nov 2021
               </Text>
               <Text size="small" className="k-u-block">
@@ -392,7 +392,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="title"
               aria-describedby="SummaryList-contributorSubscription-title"
             >
-              <Text weight="bold" size="small">
+              <Text weight="700" size="small">
                 Contributor Subscription Vivamus sagittis lacus vel augue
                 laoreet rutrum faucibus dolor auctor.
               </Text>
@@ -410,7 +410,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               aria-describedby="SummaryList-contributorSubscription-amount"
             >
               <Text size="small">
-                <strong className="k-u-weight-regular">30 €</strong> par
+                <strong className="k-u-weight-500">30 €</strong> par
                 trimestre
               </Text>
             </SummaryCard.Cell>
@@ -437,7 +437,7 @@ export const WithCells = ({ hasImage, hasTitleTag, ...args }) => {
               name="shipping"
               aria-describedby="SummaryList-contributorSubscription-shipping"
             >
-              <Text weight="regular" size="small" className="k-u-block">
+              <Text weight="500" size="small" className="k-u-block">
                 Nov 2021
               </Text>
               <Text size="small" className="k-u-block">

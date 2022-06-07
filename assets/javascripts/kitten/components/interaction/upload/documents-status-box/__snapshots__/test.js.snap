@@ -31,7 +31,7 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-line-height-1 k-u-size-small k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       Document status: accepted
     </p>
@@ -39,12 +39,12 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
       className="k-DocumentsStatusBox__fileList"
     >
       <li
-        className="k-u-size-micro k-u-weight-light k-DocumentsStatusBox__fileName"
+        className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
       >
         kitten_document_1.jpg
       </li>
       <li
-        className="k-u-size-micro k-u-weight-light k-DocumentsStatusBox__fileName"
+        className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
       >
         kitten_document_2.jpg
       </li>
@@ -84,7 +84,7 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-line-height-1 k-u-size-small k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       Document status: denied
     </p>
@@ -92,18 +92,18 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
       className="k-DocumentsStatusBox__fileList"
     >
       <li
-        className="k-u-size-micro k-u-weight-light k-DocumentsStatusBox__fileName"
+        className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
       >
         kitten_document_1.jpg
       </li>
       <li
-        className="k-u-size-micro k-u-weight-light k-DocumentsStatusBox__fileName"
+        className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
       >
         kitten_document_2.jpg
       </li>
     </ul>
     <p
-      className="k-u-line-height-1 k-u-size-micro k-u-weight-regular k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
+      className="k-u-line-height-1 k-u-size-micro k-u-weight-500 k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
     >
       The document was incorrect
     </p>
@@ -142,7 +142,7 @@ exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-line-height-1 k-u-size-small k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       
     </p>
@@ -181,7 +181,7 @@ exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
     className="k-DocumentsStatusBox__content"
   >
     <p
-      className="k-u-line-height-1 k-u-size-small k-u-weight-regular k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
     >
       Documents status: awaiting confirmation
     </p>
@@ -189,18 +189,18 @@ exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
       className="k-DocumentsStatusBox__fileList"
     >
       <li
-        className="k-u-size-micro k-u-weight-light k-DocumentsStatusBox__fileName"
+        className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
       >
         kitten_document_1.jpg
       </li>
       <li
-        className="k-u-size-micro k-u-weight-light k-DocumentsStatusBox__fileName"
+        className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
       >
         kitten_document_2.jpg
       </li>
     </ul>
     <p
-      className="k-u-line-height-1 k-u-size-micro k-u-weight-regular k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
+      className="k-u-line-height-1 k-u-size-micro k-u-weight-500 k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
     >
       This process can take up to two days
     </p>

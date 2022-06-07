@@ -17,7 +17,7 @@ const Title = styled.h2`
 
 const StyledCardDescription = styled.h3`
   margin: 0;
-  ${TYPOGRAPHY.fontStyles.light}
+  ${TYPOGRAPHY.fontStyles['400']}
   font-size: 1.125em;
 `
 

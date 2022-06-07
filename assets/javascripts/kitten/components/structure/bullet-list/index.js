@@ -15,7 +15,7 @@ const StyledBulletList = styled.ul`
   .k-BulletList__item {
     margin: ${pxToRem(5)} ${pxToRem(16)};
     display: block;
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     line-height: 1.5;
     color: ${COLORS.font1};
 

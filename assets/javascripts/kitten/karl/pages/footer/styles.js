@@ -127,8 +127,8 @@ export const StyledFooter = styled.footer`
     font-size: ${pxToRem(14)};
     line-height: 1.2;
     text-decoration: none;
-    font-family: ${TYPOGRAPHY.fontStyles.regular.fontFamily};
-    font-weight: ${TYPOGRAPHY.fontStyles.light.fontWeight};
+    font-family: ${TYPOGRAPHY.fontStyles['500'].fontFamily};
+    font-weight: ${TYPOGRAPHY.fontStyles['400'].fontWeight};
 
     @media ${mq.mobile} {
       font-size: ${pxToRem(12)};
@@ -185,14 +185,14 @@ export const StyledFooter = styled.footer`
     align-items: center;
     padding: ${pxToRem(50)} ${pxToRem(30)};
     margin: ${pxToRem(0)} ${pxToRem(-20)} ${pxToRem(20)} ${pxToRem(-20)};
-    
+
     @media ${mq.mobile} {
       flex-direction: column;
       padding: ${pxToRem(40)} ${pxToRem(30)};
       margin-bottom: ${pxToRem(30)};
     }
   }
-  
+
   .k-Footer__createdWith--logo {
     display: flex;
     align-items: center;

@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import { modifierStyles } from './helpers/modifier-styles'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 export const buttonModifiers = [
   'hydrogen',
@@ -53,7 +52,7 @@ const StyledButton = styled.button`
   align-items: center;
   gap: ${pxToRem(10)};
 
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   font-size: ${stepToRem(-1)};
   color: ${COLORS.font1};
   line-height: 1.3;
@@ -98,21 +97,18 @@ const StyledButton = styled.button`
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Button--tiny,
   &.k-Button--small {
     --Button-dimension: ${pxToRem(40)};
     --Button-min-width: ${pxToRem(160)};
     --Button-padding: ${pxToRem(7)} ${pxToRem(20)};
   }
 
-  &.k-Button--regular,
   &.k-Button--medium {
     --Button-dimension: ${pxToRem(50)};
     --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
   }
 
-  &.k-Button--big,
   &.k-Button--large {
     --Button-dimension: ${pxToRem(50)};
     --Button-min-width: ${pxToRem(200)};
@@ -251,8 +247,6 @@ export const Button = ({
   bulletColor,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
-
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag

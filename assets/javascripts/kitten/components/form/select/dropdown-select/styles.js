@@ -45,7 +45,7 @@ export const StyledDropdown = styled.div`
 
   .k-Form-DropdownCombobox__input,
   .k-Form-DropdownSelect__content {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     display: inline-block;
     box-sizing: border-box;
 
@@ -118,7 +118,7 @@ export const StyledDropdown = styled.div`
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-1)};
     user-select: none;
     line-height: 1.3;
@@ -189,7 +189,6 @@ export const StyledDropdown = styled.div`
   /* SIZES */
 
   &.k-Form-Dropdown--micro,
-  &.k-Form-Dropdown--tiny,
   &.k-Form-Dropdown--small {
     .k-Form-DropdownCombobox__statusBadges,
     .k-Form-DropdownSelect__button__statusBadges {
@@ -204,17 +203,14 @@ export const StyledDropdown = styled.div`
     --DropdownSelect-buttonHeight: ${pxToRem(30)};
   }
 
-  &.k-Form-Dropdown--tiny,
   &.k-Form-Dropdown--small {
     --DropdownSelect-buttonHeight: ${pxToRem(40)};
   }
 
-  &.k-Form-Dropdown--normal,
   &.k-Form-Dropdown--medium {
     --DropdownSelect-buttonHeight: ${pxToRem(50)};
   }
 
-  &.k-Form-Dropdown--big,
   &.k-Form-Dropdown--large,
   &.k-Form-Dropdown--huge,
   &.k-Form-Dropdown--giant {
@@ -433,22 +429,20 @@ export const StyledDropdown = styled.div`
       }
     }
 
-    &.k-Form-Dropdown--normal,
     &.k-Form-Dropdown--medium,
-    &.k-Form-Dropdown--big,
     &.k-Form-Dropdown--large,
     &.k-Form-Dropdown--huge,
     &.k-Form-Dropdown--giant {
       .k-Form-DropdownCombobox__input,
       .k-Form-DropdownSelect__content {
-        ${TYPOGRAPHY.fontStyles.regular}
+        ${TYPOGRAPHY.fontStyles['500']}
       }
     }
 
     .k-Form-Dropdown__item {
       color: ${COLORS.background1};
       &[aria-selected='true'] {
-        ${TYPOGRAPHY.fontStyles.regular}
+        ${TYPOGRAPHY.fontStyles['500']}
         background-color: ${COLORS.font1};
       }
       &[disabled] {
