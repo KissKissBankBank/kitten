@@ -23,7 +23,7 @@ exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-a"
       onClick={[Function]}
     >
@@ -45,7 +45,7 @@ exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-b"
       onClick={[Function]}
     >
@@ -67,7 +67,7 @@ exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-c"
       onClick={[Function]}
     >
@@ -104,7 +104,7 @@ exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`]
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-a"
       onClick={[Function]}
     >
@@ -126,7 +126,7 @@ exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`]
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-b"
       onClick={[Function]}
     >
@@ -148,7 +148,7 @@ exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`]
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-c"
       onClick={[Function]}
     >
@@ -184,7 +184,7 @@ exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-a"
       onClick={[Function]}
     >
@@ -206,7 +206,7 @@ exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-b"
       onClick={[Function]}
     >
@@ -228,7 +228,7 @@ exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="k-u-weight-regular k-Form-CheckboxButton__label"
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
       htmlFor="option-c"
       onClick={[Function]}
     >

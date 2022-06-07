@@ -132,11 +132,11 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Don libre récurrent
                               <Text
                                 tag="p"
-                                weight="light"
+                                weight="400"
                                 cssColor={COLORS.grey1}
                                 size="micro"
                                 className="k-u-margin-none"
@@ -155,11 +155,11 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Abonnement contre contrepartie
                               <Text
                                 tag="p"
-                                weight="light"
+                                weight="400"
                                 cssColor={COLORS.grey1}
                                 size="micro"
                                 className="k-u-margin-none"
@@ -227,11 +227,11 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Don libre
                               <Text
                                 tag="p"
-                                weight="light"
+                                weight="400"
                                 cssColor={COLORS.grey1}
                                 size="micro"
                                 className="k-u-margin-none"
@@ -250,11 +250,11 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Don contre contrepartie
                               <Text
                                 tag="p"
-                                weight="light"
+                                weight="400"
                                 cssColor={COLORS.grey1}
                                 size="micro"
                                 className="k-u-margin-none"
@@ -273,11 +273,11 @@ const ModalEditProject = () => {
                             aria-hidden
                           />
                           <div className="k-u-margin-left-single">
-                            <Text weight="bold" size="small" color="font1">
+                            <Text weight="700" size="small" color="font1">
                               Précommande
                               <Text
                                 tag="p"
-                                weight="light"
+                                weight="400"
                                 cssColor={COLORS.grey1}
                                 size="micro"
                                 className="k-u-margin-none"

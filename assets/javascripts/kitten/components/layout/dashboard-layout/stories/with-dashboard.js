@@ -100,7 +100,7 @@ const DashboardContent = styled.div`
     flex: 1 0 auto;
     display: flex;
     align-items: flex-end;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${pxToRem(14)};
     color: var(--color-primary-500);
     transition: color var(--transition);
@@ -144,7 +144,7 @@ const DashboardContent = styled.div`
   }
   .kiss-dashboard__block__questions__item {
     color: var(--color-grey-900);
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -162,7 +162,7 @@ const DashboardContent = styled.div`
     &:hover,
     &:active,
     &:focus {
-      ${TYPOGRAPHY.fontStyles.regular}
+      ${TYPOGRAPHY.fontStyles['500']}
 
       > svg {
         margin-right: ${pxToRem(-5)};
@@ -207,7 +207,7 @@ export const StoryWithDashboard = () => (
           </div>
           <div className="kiss-dashboard__block__dataLine">
             <div className="kiss-dashboard__block__dataLine__item">
-              <Text lineHeight="1" size="giant" weight="bold">
+              <Text lineHeight="1" size="giant" weight="700">
                 1&nbsp;800&nbsp;€
               </Text>
               <Text lineHeight="1" size="small">
@@ -216,7 +216,7 @@ export const StoryWithDashboard = () => (
             </div>
             <hr className="kiss-dashboard__block__dataLine__separator" />
             <div className="kiss-dashboard__block__dataLine__item">
-              <Text lineHeight="1" size="giant" weight="bold">
+              <Text lineHeight="1" size="giant" weight="700">
                 90&nbsp;%
               </Text>
               <Text lineHeight="1" size="small">
@@ -228,7 +228,7 @@ export const StoryWithDashboard = () => (
               <Text lineHeight="1" size="small">
                 Fin de campagne&nbsp;:
               </Text>
-              <Text lineHeight="1" weight="bold">
+              <Text lineHeight="1" weight="700">
                 2 janvier 2022 à minuit
               </Text>
             </div>
@@ -248,7 +248,7 @@ export const StoryWithDashboard = () => (
           </div>
           <div className="kiss-dashboard__block__dataLine">
             <div className="kiss-dashboard__block__dataLine__item">
-              <Text lineHeight="1" size="giant" weight="bold">
+              <Text lineHeight="1" size="giant" weight="700">
                 33&nbsp;547
               </Text>
               <Text lineHeight="1" size="small">
@@ -303,7 +303,7 @@ export const StoryWithDashboard = () => (
 
           <Text
             size="giant"
-            weight="bold"
+            weight="700"
             lineHeight="1"
             tag="h2"
             className="k-u-margin-none"

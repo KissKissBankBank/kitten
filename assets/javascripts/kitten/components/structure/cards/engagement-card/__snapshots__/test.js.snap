@@ -29,7 +29,7 @@ exports[`<EngagementCard /> by default matches with snapshot 1`] = `
     </svg>
   </div>
   <span
-    className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-gsDKAQ cWuyhI"
+    className="k-u-color-font1 k-u-size-micro k-u-weight-500 sc-gsDKAQ cWuyhI"
   />
 </a>
 `;

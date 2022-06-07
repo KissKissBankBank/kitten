@@ -57,7 +57,7 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__content {
     display: flex;
     align-items: center;
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     color: ${COLORS.font1};
     font-size: ${pxToRem(-2)};
 
@@ -136,7 +136,7 @@ const StyledDropdownSelectWithInput = styled.div`
 
   .k-Form-DropdownSelectWithInput__input {
     display: none;
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-1)};
     color: ${COLORS.font1};
     appearance: none;
@@ -178,7 +178,7 @@ const StyledDropdownSelectWithInput = styled.div`
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     color: ${COLORS.font1};
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-1)};
     user-select: none;
     min-height: ${pxToRem(40)};

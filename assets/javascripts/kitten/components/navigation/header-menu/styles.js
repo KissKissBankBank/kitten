@@ -32,7 +32,7 @@ export const StyledList = styled.ul`
 
     background-color: ${COLORS.background1};
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: ${COLORS.font1};
     line-height: 1;
     font-size: ${pxToRem(14)};
@@ -153,7 +153,7 @@ export const StyledList = styled.ul`
       height: auto;
       padding-top: 0;
       padding-bottom: ${pxToRem(10)};
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
     }
 
     & + .k-HeaderMenu__item--small {

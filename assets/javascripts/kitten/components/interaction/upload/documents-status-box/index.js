@@ -91,7 +91,7 @@ export const DocumentsStatusBox = ({
         <Text
           as="p"
           className="k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
-          weight="regular"
+          weight="500"
           size="small"
           lineHeight="1"
         >
@@ -106,7 +106,7 @@ export const DocumentsStatusBox = ({
                 as="li"
                 className="k-DocumentsStatusBox__fileName"
                 size="micro"
-                weight="light"
+                weight="400"
               >
                 {file}
               </Text>
@@ -117,7 +117,7 @@ export const DocumentsStatusBox = ({
         {!!message && (
           <Text
             as="p"
-            weight="regular"
+            weight="500"
             size="micro"
             className="k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
             lineHeight="1"
@@ -130,7 +130,7 @@ export const DocumentsStatusBox = ({
           <Text
             as="button"
             className="k-DocumentsStatusBox__button k-u-reset-button k-u-align-left k-u-margin-top-single"
-            weight="regular"
+            weight="500"
             color="error"
             type="button"
             size="micro"

@@ -70,7 +70,7 @@ const StepperText = styled(Text)`
 export const StepperItem = ({ children, state, ...props }) => {
   return (
     <ItemWrapper state={state} {...props}>
-      <StepperText weight="regular" size="small" tabIndex="0">
+      <StepperText weight="500" size="small" tabIndex="0">
         <StepperIcon className="k-Stepper__icon" state={state} />
         {children}
       </StepperText>
@@ -99,7 +99,7 @@ export const StepperLink = ({
   return (
     <ItemWrapper state={state} {...props}>
       <StepperText
-        weight="regular"
+        weight="500"
         size="small"
         tag="a"
         className={classNames('k-u-link', {

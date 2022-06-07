@@ -142,7 +142,7 @@ Discussion.Message.Content = ({ className, children, ...props }) => {
   return (
     <Text
       as="div"
-      weight="light"
+      weight="400"
       className={classNames('k-Discussion__message__content', className)}
       {...props}
     >

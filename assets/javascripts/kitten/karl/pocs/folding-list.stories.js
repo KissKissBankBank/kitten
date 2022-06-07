@@ -227,7 +227,7 @@ export const FoldingList = () => {
           >
             <span>
               {item.name}{' '}
-              <span className="k-u-weight-light">({item.quantity})</span>
+              <span className="k-u-weight-400">({item.quantity})</span>
             </span>
           </Button>
         ))}

@@ -35,7 +35,7 @@ const StyledPillNumberInput = styled.div`
     border: 0;
     min-width: 0;
 
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     text-align: center;
 

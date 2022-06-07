@@ -119,7 +119,7 @@ const ToggleButton = styled.button`
   white-space: nowrap;
   display: flex;
   align-items: center;
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   font-size: ${stepToRem(-1)};
 
   svg {

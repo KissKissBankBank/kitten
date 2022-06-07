@@ -31,11 +31,11 @@ export const Default = args => {
         <Discussion.Message>
           <Discussion.Message.Avatar src="/kitten-3.jpg" />
           <Discussion.Message.Header>
-            <Text weight="regular" lineHeight="1">
+            <Text weight="500" lineHeight="1">
               Claude L.
             </Text>
             <Text
-              weight="light"
+              weight="400"
               lineHeight="1"
               size="micro"
               activeColEl
@@ -58,10 +58,10 @@ export const Default = args => {
         <Discussion.Message>
           <Discussion.Message.Avatar src="/kitten-0.jpg" />
           <Discussion.Message.Header>
-            <Text weight="regular" lineHeight="1">
+            <Text weight="500" lineHeight="1">
               Moi
             </Text>
-            <Text weight="light" lineHeight="1" size="micro" color="grey-700">
+            <Text weight="400" lineHeight="1" size="micro" color="grey-700">
               &nbsp;•&nbsp;Hier{' '}
               <span className="k-u-a11y-visuallyHidden">à </span>10:00
             </Text>
@@ -74,10 +74,10 @@ export const Default = args => {
         <Discussion.Message>
           <Discussion.Message.Avatar src="/kitten-3.jpg" />
           <Discussion.Message.Header>
-            <Text weight="regular" lineHeight="1">
+            <Text weight="500" lineHeight="1">
               Claude L.
             </Text>
-            <Text weight="light" lineHeight="1" size="micro" color="grey-700">
+            <Text weight="400" lineHeight="1" size="micro" color="grey-700">
               &nbsp;•&nbsp;Hier{' '}
               <span className="k-u-a11y-visuallyHidden">à </span>18:30
             </Text>

@@ -8,7 +8,7 @@ import { modifierStyles } from './helpers/modifier-styles'
 const modifierList = ['primary', 'secondary', 'tertiary', 'quaternary']
 
 const StyledParagraph = styled.p`
-  ${TYPOGRAPHY.fontStyles.light};
+  ${TYPOGRAPHY.fontStyles['400']};
 
   &.k-Paragraph--noMargin {
     margin-top: 0;

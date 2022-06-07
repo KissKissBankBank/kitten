@@ -196,7 +196,7 @@ ProjectCard.Progress = ({ className, value, ...props }) => {
     <div className={classNames('k-ProjectCard__progress', className)}>
       <Progress value={value} {...props} />
       <Text
-        weight="bold"
+        weight="700"
         size="small"
         lineHeight="1"
         className="k-u-hidden@xs-down k-ProjectCard__progress__text"

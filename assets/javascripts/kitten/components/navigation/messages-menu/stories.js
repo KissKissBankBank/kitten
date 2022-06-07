@@ -145,11 +145,11 @@ export const Default = () => {
           }}
         >
           <div>
-            <Text weight="regular" lineHeight="1" size="micro">
+            <Text weight="500" lineHeight="1" size="micro">
               {item.longName}
             </Text>
             <Text
-              weight="regular"
+              weight="500"
               lineHeight="1"
               size="nano"
               letterSpacing="10%"
@@ -161,7 +161,7 @@ export const Default = () => {
             </Text>
           </div>
           <Text
-            weight="light"
+            weight="400"
             size="small"
             className="k-u-clamp-1"
             lineHeight="1"

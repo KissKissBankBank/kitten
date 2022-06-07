@@ -150,7 +150,7 @@ export const TextCopy = ({
           className="k-TextCopy__tooltip"
           borderRadius="var(--border-radius-s)"
         >
-          <Text color="background1" weight="light" size="micro">
+          <Text color="background1" weight="400" size="micro">
             {alertMessage}
           </Text>
         </ArrowContainer>

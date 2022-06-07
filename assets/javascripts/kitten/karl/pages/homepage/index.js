@@ -57,7 +57,7 @@ const StyledHomePage = styled.div`
     display: block;
     text-align: right;
     text-decoration: none;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: ${COLORS.font1};
     transition: color 0.4s ease;
 

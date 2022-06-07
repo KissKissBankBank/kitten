@@ -60,7 +60,7 @@ const StyledSelectorButton = styled(props => (
 const SelectorButton = ({ supTitle, title, statusProps }) => (
   <StyledSelectorButton gap="0px">
     <Text
-      weight="light"
+      weight="400"
       size="nano"
       transform="uppercase"
       cssColor={COLORS.font3}
@@ -69,14 +69,14 @@ const SelectorButton = ({ supTitle, title, statusProps }) => (
       {supTitle}
     </Text>
     <Text
-      weight="regular"
+      weight="500"
       size="small"
       cssColor={COLORS.background1}
       className="selectorButton-title"
     >
       {title}
     </Text>
-    <StatusWithBullet size="micro" weight="light" {...statusProps} />
+    <StatusWithBullet size="micro" weight="400" {...statusProps} />
   </StyledSelectorButton>
 )
 
@@ -167,7 +167,7 @@ export const SimpleMultiMenu = () => (
         padding={{ right: pxToRem(15) }}
       >
         <Text
-          weight="regular"
+          weight="500"
           size="nano"
           transform="uppercase"
           cssColor={COLORS.font3}
@@ -317,7 +317,7 @@ export const MultiMenu = () => (
         padding={{ right: pxToRem(15) }}
       >
         <Text
-          weight="regular"
+          weight="500"
           size="nano"
           transform="uppercase"
           cssColor={COLORS.font3}

@@ -90,7 +90,7 @@ const StyledContainerStatus = styled.div`
 
     background-color: ${COLORS.background1};
 
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${pxToRem(14)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {

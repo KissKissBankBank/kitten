@@ -9,7 +9,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 const StyledLabel = styled.label`
   display: block;
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   cursor: pointer;
   line-height: 1.3;
 

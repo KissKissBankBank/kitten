@@ -123,6 +123,29 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   width: 100%;
 }
 
+.c1.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c1.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c1.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 .c1 svg:not(.k-ColorSvg),
 .c1 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -153,29 +176,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-400);
   background-color: var(--color-grey-000);
   color: var(--color-grey-600);
-}
-
-.c1.k-Button--hasBullet {
-  --Button-bullet-radius: 0.4375rem;
-  --Math-Cos45: 0.7071;
-  --Button-radius: var(--Button-border-radius,0);
-  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
-}
-
-.c1.k-Button--hasBullet::after {
-  content: '';
-  position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 0.5rem;
-  border: 0.1875rem solid var(--color-grey-000);
-  right: var(--Button-bullet-distance);
-  top: var(--Button-bullet-distance);
-}
-
-.c1.k-Button--hasBullet.k-Button--rounded {
-  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c2 {
@@ -300,6 +300,29 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   width: 100%;
 }
 
+.c2.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c2.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c2.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 .c2 svg:not(.k-ColorSvg),
 .c2 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -330,29 +353,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-600);
   background-color: var(--color-grey-300);
   color: var(--color-grey-600);
-}
-
-.c2.k-Button--hasBullet {
-  --Button-bullet-radius: 0.4375rem;
-  --Math-Cos45: 0.7071;
-  --Button-radius: var(--Button-border-radius,0);
-  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
-}
-
-.c2.k-Button--hasBullet::after {
-  content: '';
-  position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 0.5rem;
-  border: 0.1875rem solid var(--color-grey-000);
-  right: var(--Button-bullet-distance);
-  top: var(--Button-bullet-distance);
-}
-
-.c2.k-Button--hasBullet.k-Button--rounded {
-  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c0 {
@@ -510,7 +510,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   role="group"
 >
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonGroup__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
     style={
       Object {
         "--Button-border-radius": null,
@@ -522,7 +522,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button1
   </button>
   <button
-    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--medium k-Button--lithium k-Button--fit-min-width"
+    className="c2 k-Button k-ButtonGroup__button k-ButtonGroup__button--isActive k-Button--medium k-Button--lithium k-Button--fit-content"
     style={
       Object {
         "--Button-border-radius": null,
@@ -534,7 +534,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
     Button2
   </button>
   <button
-    className="c1 k-Button k-ButtonGroup__button k-Button--medium k-Button--hydrogen k-Button--fit-min-width"
+    className="c1 k-Button k-ButtonGroup__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
     style={
       Object {
         "--Button-border-radius": null,

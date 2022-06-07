@@ -59,14 +59,14 @@ export const Styles = styled.div`
     vertical-align: middle;
 
     &.DoubleEntryTable__Column--Col {
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
       white-space: nowrap;
       border-left-width: 0;
       border-top-width: 0;
     }
 
     &.DoubleEntryTable__Column--TitleCol {
-      ${TYPOGRAPHY.fontStyles.regular}
+      ${TYPOGRAPHY.fontStyles['500']}
       background: ${COLORS.background1};
       border-top-width: 0;
       border-left-width: var(--border-width);
@@ -80,7 +80,7 @@ export const Styles = styled.div`
     }
 
     &.DoubleEntryTable__Column--HeaderCol {
-      ${TYPOGRAPHY.fontStyles.bold}
+      ${TYPOGRAPHY.fontStyles['700']}
       background: rgba(0,0,0,.016);
       border-left-width: 0;
       width: ${pxToRem(135)};

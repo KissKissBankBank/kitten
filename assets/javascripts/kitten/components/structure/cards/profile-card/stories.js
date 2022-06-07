@@ -28,7 +28,7 @@ export const Default = () => (
     />
 
     <ProfileCard.Content>
-      <Text size="huge" weight="bold" tag="p" className="k-u-margin-double">
+      <Text size="huge" weight="700" tag="p" className="k-u-margin-double">
         Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
@@ -36,7 +36,7 @@ export const Default = () => (
         tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">-</p>
       </Text>
-      <Text size="micro" transform="uppercase" weight="regular">
+      <Text size="micro" transform="uppercase" weight="500">
         530 ABONNÉS
       </Text>
     </ProfileCard.Content>
@@ -64,7 +64,7 @@ export const OneButton = () => (
     />
 
     <ProfileCard.Content>
-      <Text size="huge" weight="bold" tag="p" className="k-u-margin-double">
+      <Text size="huge" weight="700" tag="p" className="k-u-margin-double">
         Lorem Ipsum
       </Text>
       <Text size="small" tag="p">
@@ -72,7 +72,7 @@ export const OneButton = () => (
         tempor incididunt ut labore et dolore magna aliqua.
         <p className="k-u-margin-bottom-single">_</p>
       </Text>
-      <Text size="micro" transform="uppercase" weight="regular">
+      <Text size="micro" transform="uppercase" weight="500">
         530 ABONNÉS
       </Text>
     </ProfileCard.Content>

@@ -8,7 +8,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
   
   <a
     aria-label="linkedin"
-    className="sc-dkPtRN YxYdj k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+    className="sc-dkPtRN bNneck k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     href="https://www.linkedin.com"
     rel="noopener"
@@ -48,13 +48,13 @@ Array [
     className="sc-bdvvtL bibmy"
   >
     <span
-      className="k-u-color-font1 k-u-size-medium k-u-weight-bold"
+      className="k-u-color-font1 k-u-size-medium k-u-weight-700"
     >
       Lorem Ipsum
     </span>
     <br />
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-400"
     >
       Consectetur
     </span>
@@ -64,7 +64,7 @@ Array [
   >
     <a
       aria-label="E-mail"
-      className="sc-dkPtRN YxYdj k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="mailto:example@kisskissbankbank.com"
       style={
@@ -91,7 +91,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-dkPtRN YxYdj k-Button k-u-hidden@s-up k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-u-hidden@s-up k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="tel:06 00 00 00 00"
       style={
@@ -118,7 +118,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-hKwDye fNEgRH k-u-hidden@xs-down"
+      className="sc-hKwDye hSGFCy k-u-hidden@xs-down"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -131,7 +131,7 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-dkPtRN YxYdj k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-dkPtRN bNneck k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         style={
           Object {
@@ -157,7 +157,7 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-dkPtRN YxYdj k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.linkedin.com"
       rel="noopener"
@@ -186,7 +186,7 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-dkPtRN YxYdj k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.twitter.com"
       rel="noopener"

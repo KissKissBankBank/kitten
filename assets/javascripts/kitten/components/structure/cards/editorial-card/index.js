@@ -54,11 +54,11 @@ const StyledEditorialCard = styled.div`
   }
 
   .k-EditorialCard__recto {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
   }
 
   .k-EditorialCard__verso {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
   }
 
   .k-EditorialCard__content {
@@ -226,7 +226,7 @@ const Verso = ({ className, actionText, children, ...props }) => {
   return (
     <div className={classNames('k-EditorialCard__verso', className)} {...props}>
       <div className="k-EditorialCard__content">{children}</div>
-      <Text className="k-EditorialCard__actionText k-u-m-t-8" weight="bold">
+      <Text className="k-EditorialCard__actionText k-u-m-t-8" weight="700">
         {actionText}
       </Text>
     </div>

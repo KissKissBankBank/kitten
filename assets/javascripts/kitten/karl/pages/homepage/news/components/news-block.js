@@ -85,14 +85,14 @@ const StyledNewsBlock = styled.div`
       font-size: ${stepToRem(0)};
       line-height: normal;
       line-height: 1.2;
-      ${TYPOGRAPHY.fontStyles.bold}
+      ${TYPOGRAPHY.fontStyles['700']}
       transition: color .4s ease;
     }
     .NewsBlock__newsCard__excerpt {
       margin: ${pxToRem(10)} 0 0;
       font-size: ${stepToRem(-2)};
       line-height: ${stepToRem(2)};
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {

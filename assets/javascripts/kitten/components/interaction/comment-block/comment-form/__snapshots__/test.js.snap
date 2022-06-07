@@ -75,7 +75,7 @@ exports[`<CommentForm /> should match its error snapshot 1`] = `
       className="k-CommentForm__arrow"
     />
     <span
-      className="k-u-color-error k-u-size-micro k-u-weight-regular k-CommentForm__error"
+      className="k-u-color-error k-u-size-micro k-u-weight-500 k-CommentForm__error"
       id="custom-textarea-id-description"
     >
       Cum sociis natoque penatibus et magnis

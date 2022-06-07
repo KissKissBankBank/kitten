@@ -8,7 +8,7 @@ import classNames from 'classnames'
 const StyledTitle = styled.p`
   margin: 0 0 ${pxToRem(5)};
 
-  ${TYPOGRAPHY.fontStyles.bold};
+  ${TYPOGRAPHY.fontStyles['700']};
   font-size: ${stepToRem(-2)};
   line-height: 1;
 

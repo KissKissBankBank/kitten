@@ -28,7 +28,7 @@ export default {
     size: 'medium',
     design: 'disc',
     children: null,
-    fontWeight: 'regular',
+    weight: '500',
     paragraphStyle: false,
   },
   argTypes: {
@@ -66,9 +66,9 @@ export default {
       name: 'children',
       control: 'text',
     },
-    fontWeight: {
-      name: 'fontWeight',
-      options: ['light', 'regular', 'bold'],
+    weight: {
+      name: 'weight',
+      options: ['400', '500', '700'],
       control: 'inline-radio',
     },
     paragraphStyle: {
@@ -104,6 +104,6 @@ RadioButtonsWithParagraph.args = {
   size: 'large',
   design: 'disc',
   children: null,
-  fontWeight: 'light',
+  weight: '400',
   paragraphStyle: true,
 }

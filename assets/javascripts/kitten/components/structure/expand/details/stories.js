@@ -48,7 +48,7 @@ Default.args = {
   summaryRender: ({ open }) => (
     <Text
       tag="p"
-      weight="regular"
+      weight="500"
       size="small"
       color="primary1"
       className="k-u-link k-u-link-primary1"
@@ -61,7 +61,7 @@ Default.args = {
   open: false,
   summaryProps: {},
   children: (
-    <Text tag="p" weight="light" size="small">
+    <Text tag="p" weight="400" size="small">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

@@ -20,7 +20,7 @@ const AlertWrapper = styled.div`
     --alert-gap: ${pxToRem(20)};
   }
 
-  ${TYPOGRAPHY.fontStyles.light};
+  ${TYPOGRAPHY.fontStyles['400']};
   margin: ${pxToRem(10)};
   border-radius: var(--border-radius-m);
   overflow: hidden;
@@ -114,7 +114,7 @@ const AlertWrapper = styled.div`
   }
 
   a {
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     color: var(--color-primary-500);
     text-decoration: underline;
   }

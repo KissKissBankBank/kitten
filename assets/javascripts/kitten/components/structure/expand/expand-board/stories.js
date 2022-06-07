@@ -119,7 +119,7 @@ export const Default = ({
       {buttonChildren}
     </ExpandBoard.Button>
     <ExpandBoard.Content>
-      <div className="ExpandBoardStory__content k-u-weight-light">
+      <div className="ExpandBoardStory__content k-u-weight-400">
         {contentChildren}
       </div>
     </ExpandBoard.Content>

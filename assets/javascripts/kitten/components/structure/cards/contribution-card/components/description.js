@@ -7,7 +7,7 @@ export const Description = props => {
     <Text
       tag="p"
       color="font1"
-      weight="light"
+      weight="400"
       size="micro"
       {...props}
       className={classNames('k-ContributionCard__description', props.className)}

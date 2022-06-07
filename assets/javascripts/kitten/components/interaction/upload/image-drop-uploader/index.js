@@ -118,13 +118,13 @@ const StyledImageDropUploader = styled.div`
 
   .k-ImageDropUploader__button__title,
   .k-ImageDropUploader__manager__title {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: 1em;
   }
   .k-ImageDropUploader__button__text,
   .k-ImageDropUploader__manager__text {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-2)};
     color: ${COLORS.grey1};
     line-height: 1em;
@@ -476,7 +476,7 @@ export const ImageDropUploader = ({
           as="p"
           size="micro"
           color="error"
-          weight="bold"
+          weight="700"
           className="k-u-margin-top-noneHalf"
         >
           {internalErrorMessage}

@@ -8,7 +8,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
 
 const AlertBoxWrapper = styled.div`
-  ${TYPOGRAPHY.fontStyles.light};
+  ${TYPOGRAPHY.fontStyles['400']};
   border-radius: var(--border-radius-s, ${pxToRem(6)});
   overflow: hidden;
   background-color: var(--color-primary-100);
@@ -82,7 +82,7 @@ const AlertBoxWrapper = styled.div`
 
   .k-u-link,
   a {
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     text-decoration: none;
   }
 

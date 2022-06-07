@@ -116,7 +116,7 @@ const StyledTextWithSideImage = styled(Grid)`
   }
 
   .TextWithSideImage__itemTitle {
-    ${TYPOGRAPHY.fontStyles.bold}
+    ${TYPOGRAPHY.fontStyles['700']}
     font-size: ${stepToRem(0)};
     margin: 0 0 ${pxToRem(5)};
 

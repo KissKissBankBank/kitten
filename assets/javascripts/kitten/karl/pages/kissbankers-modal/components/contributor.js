@@ -16,11 +16,11 @@ const StyledContainer = styled.div`
 `
 
 const StyledLastName = styled.span`
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   text-transform: uppercase;
 `
 const StyledLink = styled.a`
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   display: inline-block;
   text-decoration: none;
   color: ${COLORS.primary1};

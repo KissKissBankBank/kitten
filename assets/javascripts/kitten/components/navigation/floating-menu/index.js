@@ -35,7 +35,7 @@ const StyledFloatingMenu = styled.nav`
       line-height: ${pxToRem(20)};
       color: var(--color-grey-900);
 
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
       font-size: ${pxToRem(16)};
       text-decoration: none;
       transition: border-color var(--transition);
@@ -50,13 +50,13 @@ const StyledFloatingMenu = styled.nav`
       }
 
       &[aria-current] {
-        ${TYPOGRAPHY.fontStyles.regular}
+        ${TYPOGRAPHY.fontStyles['500']}
         border-color: var(--color-primary-500);
       }
 
       &:hover,
       &:active {
-        ${TYPOGRAPHY.fontStyles.regular}
+        ${TYPOGRAPHY.fontStyles['500']}
       }
 
       &:focus-visible {

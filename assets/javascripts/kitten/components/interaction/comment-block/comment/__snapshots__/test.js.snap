@@ -16,18 +16,18 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         src="#image"
       />
       <span
-        className="k-u-color-font1 k-u-weight-regular k-u-ellipsis"
+        className="k-u-color-font1 k-u-weight-500 k-u-ellipsis"
       >
         Custom name
       </span>
       <span
         aria-hidden={true}
-        className="k-u-size-micro k-u-weight-light"
+        className="k-u-size-micro k-u-weight-400"
       >
         •
       </span>
       <span
-        className="k-u-size-micro k-u-weight-light"
+        className="k-u-size-micro k-u-weight-400"
       >
         Custom date
       </span>
@@ -60,18 +60,18 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         src="#image"
       />
       <span
-        className="k-u-color-font1 k-u-weight-regular k-u-ellipsis"
+        className="k-u-color-font1 k-u-weight-500 k-u-ellipsis"
       >
         Custom name
       </span>
       <span
         aria-hidden={true}
-        className="k-u-size-micro k-u-weight-light"
+        className="k-u-size-micro k-u-weight-400"
       >
         •
       </span>
       <span
-        className="k-u-size-micro k-u-weight-light"
+        className="k-u-size-micro k-u-weight-400"
       >
         Custom date
       </span>
@@ -130,18 +130,18 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         src="#image"
       />
       <span
-        className="k-u-color-font1 k-u-weight-regular k-u-ellipsis"
+        className="k-u-color-font1 k-u-weight-500 k-u-ellipsis"
       >
         Custom name
       </span>
       <span
         aria-hidden={true}
-        className="k-u-size-micro k-u-weight-light"
+        className="k-u-size-micro k-u-weight-400"
       >
         •
       </span>
       <span
-        className="k-u-size-micro k-u-weight-light"
+        className="k-u-size-micro k-u-weight-400"
       >
         Custom date
       </span>

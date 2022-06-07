@@ -28,7 +28,7 @@ const StyledTitleWithStroke = styled.div`
   .k-TitleWithStroke__title {
     margin-top: 0;
     margin-bottom: 0;
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     color: currentColor;
   }
 

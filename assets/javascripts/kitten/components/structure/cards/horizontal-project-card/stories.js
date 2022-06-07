@@ -92,7 +92,7 @@ const InfoComponent = ({ info }) => {
             bgColor={COLORS.primary1}
             className="k-u-margin-right-noneHalf"
           />
-          <Text weight="regular" size="micro" color="primary1">
+          <Text weight="500" size="micro" color="primary1">
             Dernier jour&nbsp;!
           </Text>
         </div>
@@ -107,7 +107,7 @@ const InfoComponent = ({ info }) => {
             bgColor={COLORS.primary1}
             className="k-u-margin-right-noneHalf"
           />
-          <Text weight="regular" size="micro" color="primary1">
+          <Text weight="500" size="micro" color="primary1">
             Derniers jours&nbsp;!
           </Text>
         </div>
@@ -122,7 +122,7 @@ const InfoComponent = ({ info }) => {
             bgColor={COLORS.primary1}
             className="k-u-margin-right-noneHalf"
           />
-          <Text weight="regular" size="micro" color="font1">
+          <Text weight="500" size="micro" color="font1">
             En cours
           </Text>
         </div>
@@ -137,7 +137,7 @@ const InfoComponent = ({ info }) => {
             bgColor={COLORS.valid}
             className="k-u-margin-right-noneHalf"
           />
-          <Text weight="regular" size="micro" color="font1">
+          <Text weight="500" size="micro" color="font1">
             Réussi
           </Text>
         </div>
@@ -162,7 +162,7 @@ export const PermanentProject = args => {
       {...args}
       noProgress
       info={
-        <Text weight="regular" size="micro" color="primary1">
+        <Text weight="500" size="micro" color="primary1">
           158 abonnés
         </Text>
       }

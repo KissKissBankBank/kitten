@@ -27,7 +27,7 @@ const Wrapper = styled.div`
     border: var(--border-width) solid var(--color-grey-400);
     padding: 0 ${pxToRem(15)};
 
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     color: ${COLORS.font1};
@@ -146,7 +146,7 @@ export const StyledSuggestionsList = styled.ul`
     padding: ${pxToRem(8)} ${pxToRem(13)};
     border-radius: var(--border-radius-s);
 
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     font-size: ${stepToRem(-1)};
 
     line-height: ${pxToRem(18)};

@@ -26,7 +26,7 @@ export const Default = () => (
         src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
       }}
     >
-      <Text className="k-u-block k-u-ellipsis" weight="regular">
+      <Text className="k-u-block k-u-ellipsis" weight="500">
         Lorem-Ipsum
       </Text>
       <Text className="k-u-block k-u-ellipsis" size="micro">
@@ -62,7 +62,7 @@ export const WithLinkStyle = () => (
         src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
       }}
     >
-      <Text className="k-u-block k-u-ellipsis" weight="regular">
+      <Text className="k-u-block k-u-ellipsis" weight="500">
         Lorem-Ipsum
       </Text>
     </DeskMenu.Header>

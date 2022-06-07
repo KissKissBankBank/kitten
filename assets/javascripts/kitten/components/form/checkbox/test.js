@@ -94,12 +94,12 @@ describe('<Checkbox />', () => {
 
   describe('textProps prop', () => {
     const component = shallow(
-      <Checkbox textProps={{ weight: 'regular' }}>Lorem ipsum…</Checkbox>,
+      <Checkbox textProps={{ weight: '500' }}>Lorem ipsum…</Checkbox>,
     )
     const labelText = component.find(Text)
 
     it('passes the right props to the `Text` component', () => {
-      expect(labelText.prop('weight')).toBe('regular')
+      expect(labelText.prop('weight')).toBe('500')
     })
   })
 

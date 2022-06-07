@@ -51,11 +51,11 @@ export const ContributorPayment = () => {
         <StyledWrapper>
           <div className="k-SubscriptionDetails__title">
             <div>
-              <Text weight="bold">Abonnement</Text>
+              <Text weight="700">Abonnement</Text>
               <Text
                 tag="p"
                 size="micro"
-                weight="light"
+                weight="400"
                 className="k-u-margin-none"
                 cssColor="var(--color-grey-700"
               >
@@ -98,7 +98,7 @@ export const ContributorPayment = () => {
           <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
 
           <PaymentList
-            subtitleWeight="bold"
+            subtitleweight="700"
             subtitle="Petit Plus"
             amount="2 €"
             tag="Validé"
@@ -119,13 +119,13 @@ export const ContributorSubscription = () => {
           <img src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} alt="" />
         </div>
         <div>
-          <Text weight="regular" size="small">
+          <Text weight="500" size="small">
             Club des lecteurs
           </Text>
-          <Text size="small" weight="light">
+          <Text size="small" weight="400">
             <br />
             par{' '}
-            <Text weight="bold" size="medium">
+            <Text weight="700" size="medium">
               Sick Magazine
             </Text>
           </Text>
@@ -149,13 +149,13 @@ export const ContributorSubscription = () => {
       <div className="k-SubscriptionDetails__details">
         <div>
           <Text size="small">Fréquence</Text>
-          <Text tag="p" weight="bold" size="small" className="k-u-margin-none">
+          <Text tag="p" weight="700" size="small" className="k-u-margin-none">
             Mensuel
           </Text>
         </div>
         <div>
           <Text size="small">Mode de livraison</Text>
-          <Text tag="p" weight="bold" size="small" className="k-u-margin-none">
+          <Text tag="p" weight="700" size="small" className="k-u-margin-none">
             Livraison
           </Text>
         </div>
@@ -164,7 +164,7 @@ export const ContributorSubscription = () => {
       <Separator className="k-u-margin-top-singleHalf k-u-margin-bottom-singleHalf" />
       <div className="k-SubscriptionDetails__option">
         <Text size="small">Option</Text>
-        <Text tag="p" weight="bold" size="small" className="k-u-margin-none">
+        <Text tag="p" weight="700" size="small" className="k-u-margin-none">
           Végétarien
         </Text>
       </div>
@@ -185,13 +185,13 @@ export const ContributorReward = () => {
               />
             </div>
             <div>
-              <Text weight="regular" size="small">
+              <Text weight="500" size="small">
                 Club des lecteurs
               </Text>
-              <Text size="small" weight="light">
+              <Text size="small" weight="400">
                 <br />
                 par{' '}
-                <Text weight="bold" size="medium">
+                <Text weight="700" size="medium">
                   Sick Magazine
                 </Text>
               </Text>
@@ -222,7 +222,7 @@ export const ContributorReward = () => {
               <Text size="small">Option</Text>
               <Text
                 tag="p"
-                weight="bold"
+                weight="700"
                 size="small"
                 className="k-u-margin-none"
               >
@@ -233,7 +233,7 @@ export const ContributorReward = () => {
               <Text size="small">Mode de livraison</Text>
               <Text
                 tag="p"
-                weight="bold"
+                weight="700"
                 size="small"
                 className="k-u-margin-none"
               >

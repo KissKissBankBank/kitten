@@ -11,7 +11,7 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
       className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-large k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-large k-u-weight-500 k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,
@@ -47,7 +47,7 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
       className="k-RewardCard__titleWrapper k-RewardCard__drawer"
     >
       <h3
-        className="k-u-size-large k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center"
+        className="k-u-size-large k-u-weight-500 k-RewardCard__title k-u-margin-none k-u-align-center"
         style={
           Object {
             "--line-clamp": 2,
@@ -111,7 +111,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__titleWrapper k-RewardCard__drawer k-RewardCard__titleWrapper--truncateText"
     >
       <h3
-        className="k-u-size-large k-u-weight-regular k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
+        className="k-u-size-large k-u-weight-500 k-RewardCard__title k-u-margin-none k-u-align-center k-u-clamp"
         style={
           Object {
             "--line-clamp": 2,
@@ -125,12 +125,12 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__drawer k-RewardCard__amount__wrapper k-u-align-center"
     >
       <span
-        className="k-u-weight-bold k-RewardCard__amount k-u-block"
+        className="k-u-weight-700 k-RewardCard__amount k-u-block"
       >
         65 €
       </span>
       <span
-        className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-regular k-RewardCard__amount__suffix k-u-block"
+        className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-500 k-RewardCard__amount__suffix k-u-block"
       >
         Etiam Consectetur Venenatis
       </span>
@@ -172,28 +172,26 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         className="sc-dkPtRN gruJKQ k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
-          className="k-u-weight-regular"
+          className="k-u-weight-500"
         >
           5
         </strong>
-         
-        contributeurs
+         contributeurs
       </li>
       <li
         className="sc-dkPtRN gruJKQ k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
-          className="k-u-weight-regular"
+          className="k-u-weight-500"
         >
           2/6
         </strong>
-         
-        disponibles
+         disponibles
       </li>
     </ul>
   </div>
   <button
-    className="sc-gsDKAQ cJaukN k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+    className="sc-gsDKAQ bgXtbu k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {

@@ -212,7 +212,7 @@ export const WithComponentsForLabel = args => {
           label: (
             <>
               <ArrowIcon direction="right" />
-              <Text weight="bold">Un titre de la France</Text>
+              <Text weight="700">Un titre de la France</Text>
               Une explication du label
             </>
           ),
@@ -223,7 +223,7 @@ export const WithComponentsForLabel = args => {
           label: (
             <>
               <ArrowIcon direction="right" />
-              <Text weight="bold">Un titre de l'Espagne</Text>
+              <Text weight="700">Un titre de l'Espagne</Text>
               Une explication du label
             </>
           ),

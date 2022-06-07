@@ -104,7 +104,7 @@ const DiscussionTitleElement = ({ name, avatar, className }) => (
   >
     <StyledImg src={avatar} alt="" />
     <span className="k-u-a11y-visuallyHidden">Discussion avec</span>
-    <Text weight="regular" size="small" tag="h2" className="k-u-margin-none">
+    <Text weight="500" size="small" tag="h2" className="k-u-margin-none">
       {name}
     </Text>
   </div>
@@ -292,11 +292,11 @@ export const Default = args => {
                   }}
                 >
                   <div>
-                    <Text weight="regular" lineHeight="1" size="micro">
+                    <Text weight="500" lineHeight="1" size="micro">
                       {item.longName}
                     </Text>
                     <Text
-                      weight="regular"
+                      weight="500"
                       lineHeight="1"
                       size="nano"
                       letterSpacing="10%"
@@ -308,7 +308,7 @@ export const Default = args => {
                     </Text>
                   </div>
                   <Text
-                    weight="light"
+                    weight="400"
                     size="small"
                     className="k-u-clamp-1"
                     lineHeight="1.2"
@@ -344,7 +344,7 @@ export const Default = args => {
           }}
           nextActionText={
             <Text
-              weight="regular"
+              weight="500"
               className="k-u-link k-u-link-primary1"
               size="small"
             >
@@ -365,11 +365,11 @@ export const Default = args => {
                 <Discussion.Message tabIndex="-1" id="message-1">
                   <Discussion.Message.Avatar src={activeDiscussion.avatar} />
                   <Discussion.Message.Header>
-                    <Text weight="regular" lineHeight="1">
+                    <Text weight="500" lineHeight="1">
                       {activeDiscussion.longName}
                     </Text>
                     <Text
-                      weight="light"
+                      weight="400"
                       lineHeight="1"
                       size="micro"
                       color="grey-700"
@@ -389,11 +389,11 @@ export const Default = args => {
                 <Discussion.Message tabIndex="-1" id="message-2">
                   <Discussion.Message.Avatar src="/kitten-0.jpg" />
                   <Discussion.Message.Header>
-                    <Text weight="regular" lineHeight="1">
+                    <Text weight="500" lineHeight="1">
                       Moi
                     </Text>
                     <Text
-                      weight="light"
+                      weight="400"
                       lineHeight="1"
                       size="micro"
                       color="grey-700"
@@ -410,11 +410,11 @@ export const Default = args => {
                 <Discussion.Message tabIndex="-1" id="message-3">
                   <Discussion.Message.Avatar src={activeDiscussion.avatar} />
                   <Discussion.Message.Header>
-                    <Text weight="regular" lineHeight="1">
+                    <Text weight="500" lineHeight="1">
                       {activeDiscussion.longName}
                     </Text>
                     <Text
-                      weight="light"
+                      weight="400"
                       lineHeight="1"
                       size="micro"
                       activeColEl
@@ -466,7 +466,7 @@ export const Default = args => {
           hasMobileHeader
           title={
             <Text
-              weight="regular"
+              weight="500"
               size="small"
               tag="h2"
               className="k-u-margin-none"
@@ -484,13 +484,13 @@ export const Default = args => {
           <StyledInfoBlock>
             <img src={activeDiscussion.avatar} alt="" />
             <FlexWrapper gap={5} className="k-u-flex-alignItems-center">
-              <Text weight="regular" lineHeight="1" size="medium">
+              <Text weight="500" lineHeight="1" size="medium">
                 {activeDiscussion.longName}
               </Text>
-              <Text weight="light" lineHeight="1" size="micro">
+              <Text weight="400" lineHeight="1" size="micro">
                 {activeDiscussion.name}
               </Text>
-              <Text weight="light" lineHeight="1" size="nano" color="grey-700">
+              <Text weight="400" lineHeight="1" size="nano" color="grey-700">
                 {activeDiscussion.email}
               </Text>
             </FlexWrapper>
