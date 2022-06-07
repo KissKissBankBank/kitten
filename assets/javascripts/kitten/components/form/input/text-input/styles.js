@@ -72,7 +72,7 @@ export const StyledInputWrapper = styled.div`
   .k-TextInput {
     font-size: ${pxToRem(14)};
     line-height: 1em;
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     box-sizing: border-box;
     border-width: var(--text-input-border-width);
     border-style: solid;
@@ -231,7 +231,7 @@ export const StyledInputWrapper = styled.div`
   /* HAS BUTTON */
 
   .k-TextInput__button {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${pxToRem(14)};
     line-height: 1.3;
     flex: 1 0 auto;
@@ -333,7 +333,7 @@ export const StyledInputWrapper = styled.div`
   /* HAS LIMIT */
 
   .k-TextInput__limitNumber {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${pxToRem(12)};
     line-height: 1.3;
     position: absolute;
@@ -404,7 +404,7 @@ export const StyledInputWrapper = styled.div`
       white-space: nowrap;
       transition: all 0.2s;
       font-size: ${pxToRem(16)};
-      ${TYPOGRAPHY.fontStyles.regular};
+      ${TYPOGRAPHY.fontStyles['500']};
       background-color: var(--color-grey-000);
       padding-inline: var(--text-input-unit-padding);
 

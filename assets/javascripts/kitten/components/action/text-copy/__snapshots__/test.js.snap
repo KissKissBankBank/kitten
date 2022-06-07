@@ -24,7 +24,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
       </span>
     </div>
     <span
-      className="sc-dkPtRN YxYdj k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       style={
         Object {
@@ -80,7 +80,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
       </span>
     </div>
     <span
-      className="sc-dkPtRN hhdHlh k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--helium k-Button--fit-content"
+      className="sc-dkPtRN kUVwfG k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--helium k-Button--fit-content"
       disabled={null}
       style={
         Object {
@@ -125,7 +125,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
       </span>
     </div>
     <span
-      className="sc-dkPtRN YxYdj k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       style={
         Object {
@@ -181,7 +181,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
       </span>
     </div>
     <span
-      className="sc-dkPtRN YxYdj k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+      className="sc-dkPtRN bNneck k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
       disabled={null}
       style={
         Object {
