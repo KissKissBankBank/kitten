@@ -78,8 +78,7 @@ const StyledRadio = styled.div`
     &.k-Form-Radio__labelText--500 {
       ${TYPOGRAPHY.fontStyles['500']};
     }
-    &.k-Form-Radio__labelText--light
-    &.k-Form-Radio__labelText--400 {
+    &.k-Form-Radio__labelText--light &.k-Form-Radio__labelText--400 {
       ${TYPOGRAPHY.fontStyles['400']};
     }
     &.k-Form-Radio__labelText--bold,
@@ -207,7 +206,6 @@ export const Radio = ({
   weight,
   ...inputProps
 }) => {
-  
   checkDeprecatedWeights(weight)
 
   return (

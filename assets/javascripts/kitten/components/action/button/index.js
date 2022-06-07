@@ -8,17 +8,6 @@ import { modifierStyles } from './helpers/modifier-styles'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
 
-const deprecatedModifiers = [
-  'carbon',
-  'oxygen',
-  'calcium',
-  'social_facebook',
-  'social_twitter',
-  'social_linkedin',
-  'social_instagram',
-  'social_youtube',
-]
-
 export const buttonModifiers = [
   'hydrogen',
   'helium',
@@ -203,9 +192,7 @@ const StyledButton = styled.button`
     }
   }
 
-  /* MODIFIERS */
-
-  ${({ modifier }) => modifierStyles(modifier)}
+  /* BULLET */
 
   &.k-Button--hasBullet {
     --Button-bullet-radius: ${pxToRem(3 + 4)}; /* border + (width/2) */
@@ -232,6 +219,10 @@ const StyledButton = styled.button`
       --Button-radius: calc(var(--Button-dimension) / 2);
     }
   }
+
+  /* MODIFIERS */
+
+  ${({ modifier }) => modifierStyles(modifier)}
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
@@ -256,14 +247,6 @@ export const Button = ({
   bulletColor,
   ...props
 }) => {
-  if (deprecatedModifiers.includes(modifier)) {
-    console.warn(
-      `The modifier ${modifier} has been deprecated. Please use one for the following: ${buttonModifiers.join(
-        ', ',
-      )}.`,
-    )
-  }
-
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag
@@ -307,7 +290,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
-  modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
+  modifier: PropTypes.oneOf(buttonModifiers),
   active: PropTypes.bool,
   hasBullet: PropTypes.bool,
   bulletColor: PropTypes.string,
@@ -319,7 +302,7 @@ Button.defaultProps = {
   borderRadius: null,
   size: 'medium',
   modifier: 'hydrogen',
-  fit: 'min-width',
+  fit: 'content',
   mobileFit: null,
   active: false,
   hasBullet: false,

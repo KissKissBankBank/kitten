@@ -62,8 +62,8 @@ const TextWithIconList = () => (
               }}
             >
               <Text color="font1" weight="400">
-                Donnez <Text weight="500">de la visibilité et du sens</Text>{' '}
-                à votre marque, entreprise, collectivité, association,
+                Donnez <Text weight="500">de la visibilité et du sens</Text> à
+                votre marque, entreprise, collectivité, association,
                 fondation...
               </Text>
             </IconList.Item>
@@ -93,8 +93,8 @@ const TextWithIconList = () => (
             >
               <Text color="font1" weight="400">
                 Repérez, accompagnez et{' '}
-                <Text weight="500">révélez les talents</Text> de demain dans
-                les domaines qui vous tiennent à coeur
+                <Text weight="500">révélez les talents</Text> de demain dans les
+                domaines qui vous tiennent à coeur
               </Text>
             </IconList.Item>
             <IconList.Item

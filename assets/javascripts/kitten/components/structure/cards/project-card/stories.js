@@ -264,11 +264,7 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
           </Text>
           <Text size="small"> abonnés</Text>
         </div>
-        <Text
-          size="small"
-          weight="500"
-          className="k-u-link k-u-link-primary1"
-        >
+        <Text size="small" weight="500" className="k-u-link k-u-link-primary1">
           S’abonner
         </Text>
       </ProjectCard.Line>
@@ -297,11 +293,7 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
           </Text>
           <Text size="small"> abonnés</Text>
         </div>
-        <Text
-          size="small"
-          weight="500"
-          className="k-u-link k-u-link-primary1"
-        >
+        <Text size="small" weight="500" className="k-u-link k-u-link-primary1">
           S’abonner
         </Text>
       </ProjectCard.Line>

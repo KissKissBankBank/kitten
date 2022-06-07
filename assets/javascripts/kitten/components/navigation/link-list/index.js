@@ -89,7 +89,6 @@ export const LinkList = ({
   href,
   ...others
 }) => {
-  
   checkDeprecatedWeights(weight)
 
   return (

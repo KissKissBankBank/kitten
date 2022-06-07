@@ -21,6 +21,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: `Alert`: Remove deprecated props.
 - Fix: `Checkbox` and `RadioButton`: Improve styles.
 - Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
+- Breaking Change: `Button`: Use `fit=content` as default.
+- Breaking Change: `Button`: Remove deprecated modifiers.
 - Breaking Changes: Remove `RewardCard.Info`.
 - Breaking Changes: Remove `CrowdfundingCard`.
 - Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.

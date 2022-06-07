@@ -43,10 +43,9 @@ export const RadioSet = ({
   labelProps,
   ...props
 }) => {
-  
   checkDeprecatedWeights(weight)
 
-  return ( 
+  return (
     <StyledRadioSet
       className={classNames('k-Form-RadioSet', className)}
       disabled={disabled}
@@ -56,7 +55,10 @@ export const RadioSet = ({
         <Label
           tag="legend"
           {...labelProps}
-          className={classNames('k-Form-RadioSet__legend', labelProps.className)}
+          className={classNames(
+            'k-Form-RadioSet__legend',
+            labelProps.className,
+          )}
         >
           {label}
         </Label>

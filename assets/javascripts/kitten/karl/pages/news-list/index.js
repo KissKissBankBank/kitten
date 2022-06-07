@@ -68,13 +68,7 @@ const NewsList = () => {
     <>
       <Head className="k-u-hidden@s-down">
         <HeadContainer>
-          <BackLink
-            weight="700"
-            size="small"
-            color="primary1"
-            tag="a"
-            href="#"
-          >
+          <BackLink weight="700" size="small" color="primary1" tag="a" href="#">
             <LeftArrowIcon direction="left" /> Retour au projet
           </BackLink>
           <div>

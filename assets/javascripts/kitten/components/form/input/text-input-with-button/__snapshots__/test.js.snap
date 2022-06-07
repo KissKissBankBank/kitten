@@ -10,7 +10,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -35,7 +35,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     name="text"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     onClick={[Function]}
     style={
       Object {
@@ -61,7 +61,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -125,7 +125,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     name="text"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--medium k-Button--beryllium k-Button--fit-min-width k-Button--disabled"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--disabled k-Button--medium k-Button--beryllium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {
@@ -150,7 +150,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--error k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -177,7 +177,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     value="foobar"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -202,7 +202,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Button--small k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Button--small k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -227,7 +227,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-dkPtRN korLib k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--medium k-Button--beryllium k-Button--fit-min-width"
+    className="sc-dkPtRN htsvko k-Button k-Form-TextInputWithButton__button k-Form-TextInputWithButton__button--valid k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
