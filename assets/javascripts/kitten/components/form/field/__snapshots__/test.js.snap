@@ -149,21 +149,17 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
-    <div
-      className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium"
-    >
-      <input
-        className="k-TextInput k-TextInput--error"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-    </div>
+    <input
+      className="k-TextInput k-TextInput--error"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
   </div>,
   <p
     className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
@@ -268,21 +264,17 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
-    <div
-      className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium"
-    >
-      <input
-        className="k-TextInput"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-    </div>
+    <input
+      className="k-TextInput"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
   </div>,
   <p
     className="k-u-line-height-normal k-u-size-micro k-u-weight-400 k-Field__help k-u-margin-none k-u-margin-top-single"
@@ -392,21 +384,17 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
-    <div
-      className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium"
-    >
-      <input
-        className="k-TextInput"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-    </div>
+    <input
+      className="k-TextInput"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
   </div>,
 ]
 `;
@@ -506,25 +494,21 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
+    <input
+      className="k-TextInput k-TextInput--hasLimit"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
     <div
-      className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium"
+      className="k-TextInput__limitNumber"
     >
-      <input
-        className="k-TextInput k-TextInput--hasLimit"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-      <div
-        className="k-TextInput__limitNumber"
-      >
-        80
-      </div>
+      80
     </div>
   </div>,
 ]
@@ -625,26 +609,22 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasUnit"
   >
-    <div
-      className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+    <input
+      className="k-TextInput k-TextInput--hasUnit"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
+    <span
+      className="k-TextInput__unit"
     >
-      <input
-        className="k-TextInput k-TextInput--hasUnit"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-      <span
-        className="k-TextInput__unit"
-      >
-        €
-      </span>
-    </div>
+      €
+    </span>
   </div>,
 ]
 `;

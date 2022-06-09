@@ -5,7 +5,7 @@ import { TextInput } from '../../../form/input/text-input'
 import { TextInputWithLimit } from '../../../form/input/text-input-with-limit'
 import { TextInputWithUnit } from '../../../form/input/text-input-with-unit'
 
-export const FieldInput = ({ limit, unit, noMargin, ...props }) => {
+export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
   const has = (() => {
     switch (true) {
       case !!limit:
@@ -23,11 +23,13 @@ export const FieldInput = ({ limit, unit, noMargin, ...props }) => {
       limit={limit}
       unit={unit}
       {...props}
-      wrapperProps={{ className: classNames(
+      wrapperProps={{
+        ...props.wrapperProps,
+        className: classNames(
         'k-FieldInput',
         'k-Field__control',
-        props.className,
-        props.wrapperProps.className,
+        className,
+        props.wrapperProps?.className,
         {
           'k-u-margin-top-single': !noMargin,
         })
