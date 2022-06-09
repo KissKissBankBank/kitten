@@ -25,6 +25,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Change: `Button`: Remove deprecated modifiers.
 - Breaking Changes: Remove `CrowdfundingCard`.
 - Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
+- Feature: `BackerCard`: Add `titleTag` prop.
 
 ## [10.12.0] - 2022-05-30
 
