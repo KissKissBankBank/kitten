@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Breaking change:
 
+  - `RewardCard`: Put it back `RewardCard.Info`.
   - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
   - Deprecated: `fontWeight` by `weight` on the following components:
     - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.

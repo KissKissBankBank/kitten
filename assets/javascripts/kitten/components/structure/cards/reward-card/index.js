@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { StyledRewardCard } from './styles'
 import {
+  Info,
   Form,
   Title,
   Image,
@@ -88,6 +89,7 @@ export const RewardCard = ({
   )
 }
 
+RewardCard.Info = Info
 RewardCard.Form = Form
 RewardCard.Title = Title
 RewardCard.Image = Image
