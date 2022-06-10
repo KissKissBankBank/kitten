@@ -16,7 +16,7 @@ const FieldHelpGlobalStyles = createGlobalStyle`
   .k-Field__control:focus-within + .k-Field__error + .k-Field__help--hiddenOnBlur {
     opacity: 1;
     max-height: ${pxToRem(50)};
-    margin-top: ${pxToRem(10)};
+    margin-top: ${pxToRem(10)} !important;
   }
 `
 
