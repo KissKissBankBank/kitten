@@ -232,6 +232,10 @@ const StyledButton = styled.button`
       top: var(--Button-bullet-distance);
     }
 
+    &.k-Button--fit-icon {
+      overflow: initial;
+    }
+
     &.k-Button--rounded {
       --Button-radius: calc(var(--Button-dimension) / 2);
     }
