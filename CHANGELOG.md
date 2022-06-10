@@ -19,13 +19,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking change: `Radio`: Remove `variant` prop.
 - Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
 - Breaking Change: `Alert`: Remove deprecated props.
-- Fix: `Checkbox` and `RadioButton`: Improve styles.
-- Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
 - Breaking Change: `Button`: Use `fit=content` as default.
 - Breaking Change: `Button`: Remove deprecated modifiers.
 - Breaking Changes: Remove `CrowdfundingCard`.
 - Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
 - Feature: `BackerCard`: Add `titleTag` prop.
+
+## [10.12.1] - 2022-06-10
+
+Fixes:
+
+- `Checkbox`: Improve styles.
+- `RadioButton`: Improve styles.
+- `Field`: Improve styles on `Field.Help` subcomponent.
+- `HorizontalProjectCard`: Remove last line if no info is supplied.
 
 ## [10.12.0] - 2022-05-30
 
