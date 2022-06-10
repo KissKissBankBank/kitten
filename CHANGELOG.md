@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `Checkbox` and `RadioButton`: Improve styles.
-- Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
-- Fix: `Field`: Improve styles for `Field.Help` subcomponent.
+## [10.12.1] - 2022-06-10
+
+Fixes:
+
+- `Checkbox`: Improve styles.
+- `RadioButton`: Improve styles.
+- `Field`: Improve styles on `Field.Help` subcomponent.
+- `HorizontalProjectCard`: Remove last line if no info is supplied.
 
 ## [10.12.0] - 2022-05-30
 
