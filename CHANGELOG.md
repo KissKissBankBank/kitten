@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Button`: Disable overflow when button displays a bullet.
+- Fix: `DropdownSelect`: Change outline style on `combobox` input.
 
 ## [10.12.1] - 2022-06-10
 
