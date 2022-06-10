@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DropdownSelect`: Change outline style on `combobox` input.
+
 ## [10.12.1] - 2022-06-10
 
 Fixes:
