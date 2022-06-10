@@ -247,3 +247,28 @@ WithAutocomplete.argTypes = {
   help: { control: 'text' },
   helpHiddenOnBlur: { control: 'boolean' },
 }
+
+export const WithMultipleExamples = () => {
+  return (
+    <div className="k-u-flex k-u-flex-direction-column k-u-flex-gap-double">
+      <div>
+        <FieldInputExample {...WithInput.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldPasswordExample {...WithPassword.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldAutocompleteExample {...WithAutocomplete.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldInputExample {...WithInput.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldPasswordExample {...WithPassword.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldAutocompleteExample {...WithAutocomplete.args} helpHiddenOnBlur />
+      </div>
+    </div>
+  )
+}
