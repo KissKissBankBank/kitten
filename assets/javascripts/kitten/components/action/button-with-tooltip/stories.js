@@ -50,8 +50,9 @@ WithButtonIcon.args = {
   ...args,
   buttonProps: {
     fit: 'icon',
-    borderRadius: 100,
     size: 'small',
+    hasBullet: true,
+    rounded: true,
   },
 }
 WithButtonIcon.argTypes = {

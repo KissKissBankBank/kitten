@@ -177,6 +177,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -545,6 +549,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -917,6 +925,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -1287,6 +1299,10 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -1655,6 +1671,10 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {

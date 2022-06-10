@@ -177,6 +177,10 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -438,6 +442,10 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
