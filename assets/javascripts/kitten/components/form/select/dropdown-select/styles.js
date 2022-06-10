@@ -68,8 +68,12 @@ export const StyledDropdown = styled.div`
       var(--DropdownSelect-buttonHeight) - 2 * var(--DropdownSelect-border)
     );
   }
-  .k-Form-DropdownCombobox__input:focus {
-    outline-offset: var(--outline-offset-input);
+  .k-Form-DropdownCombobox:focus-within {
+    outline: auto;
+
+    .k-Form-DropdownCombobox__input {
+      outline: transparent;
+    }
   }
 
   .k-Form-DropdownCombobox__arrowButton,
