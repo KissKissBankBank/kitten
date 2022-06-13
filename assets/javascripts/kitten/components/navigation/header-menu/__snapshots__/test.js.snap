@@ -393,6 +393,10 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c1.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c1.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }

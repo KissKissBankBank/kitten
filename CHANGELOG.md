@@ -25,6 +25,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
 - Feature: `BackerCard`: Add `titleTag` prop.
 
+## [10.12.2] - 2022-06-10
+
+Fixes:
+
+- `Button`: Disable overflow when button displays a bullet.
+- `DropdownSelect`: Change outline style on `combobox` input.
+
 ## [10.12.1] - 2022-06-10
 
 Fixes:

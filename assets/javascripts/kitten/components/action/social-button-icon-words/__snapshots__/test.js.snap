@@ -142,6 +142,10 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -398,6 +402,10 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -658,6 +666,10 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -914,6 +926,10 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -1174,6 +1190,10 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -1430,6 +1450,10 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -1690,6 +1714,10 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -1946,6 +1974,10 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {

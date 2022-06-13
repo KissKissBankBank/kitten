@@ -142,6 +142,10 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -395,6 +399,10 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -652,6 +660,10 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -905,6 +917,10 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -1162,6 +1178,10 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -1415,6 +1435,10 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -1672,6 +1696,10 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -1925,6 +1953,10 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
@@ -2182,6 +2214,10 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   top: var(--Button-bullet-distance);
 }
 
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
 .c0.k-Button--hasBullet.k-Button--rounded {
   --Button-radius: calc(var(--Button-dimension) / 2);
 }
@@ -2435,6 +2471,10 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   border: 0.1875rem solid var(--color-grey-000);
   right: var(--Button-bullet-distance);
   top: var(--Button-bullet-distance);
+}
+
+.c0.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
 }
 
 .c0.k-Button--hasBullet.k-Button--rounded {
