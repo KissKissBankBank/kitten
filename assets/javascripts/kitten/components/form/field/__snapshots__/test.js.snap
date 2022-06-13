@@ -946,7 +946,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
+          className="sc-jrQzAO dWNjLM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -968,7 +968,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
+          className="sc-jrQzAO dWNjLM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -989,7 +989,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
+          className="sc-jrQzAO dWNjLM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"

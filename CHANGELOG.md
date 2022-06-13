@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `RadioButton`: Better font weight styles.
+
 ## [11.0.0] - 2022-06-13
 
 Breaking changes:
