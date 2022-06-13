@@ -106,7 +106,7 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 
 @media (min-width:1080px) {
   .c0:not(.k-FloatingMenu--horizontal) {
-    box-shadow: var(--box-shadow-s);
+    box-shadow: var(--box-shadow-m);
     border-radius: var(--border-radius-m);
     padding: 0.625rem 0;
   }
