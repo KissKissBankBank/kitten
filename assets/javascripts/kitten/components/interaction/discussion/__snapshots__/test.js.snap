@@ -27,7 +27,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
         Claude L.
       </div>
       <div
-        className="k-u-weight-light k-Discussion__message__content"
+        className="k-u-weight-400 k-Discussion__message__content"
       >
         Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
       </div>
@@ -46,7 +46,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
         Moi
       </div>
       <div
-        className="k-u-weight-light k-Discussion__message__content"
+        className="k-u-weight-400 k-Discussion__message__content"
       >
         Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.
       </div>
@@ -65,7 +65,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
         Claude L.
       </div>
       <div
-        className="k-u-weight-light k-Discussion__message__content"
+        className="k-u-weight-400 k-Discussion__message__content"
       >
         Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper.
       </div>
@@ -76,11 +76,11 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-gsDKAQ kVwYzM k-Form-TextInput__textareaContainer"
+      className="sc-gsDKAQ iICuau k-Form-TextInput__textareaContainer"
     >
       <textarea
         aria-label="Texte à envoyer"
-        className="sc-bdvvtL iHDzQd k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small k-Form-TextInput--autoResize"
+        className="sc-bdvvtL ekFnRP k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small k-Form-TextInput--autoResize"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -98,7 +98,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     </div>
     <button
       aria-label="Envoyer"
-      className="sc-dkPtRN eDxidD k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+      className="sc-dkPtRN iiA-dfs k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {

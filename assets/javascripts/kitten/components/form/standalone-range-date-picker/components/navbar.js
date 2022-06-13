@@ -54,7 +54,7 @@ export class Navbar extends PureComponent {
 
     return (
       <>
-        <StyledText tag="p" size="small" weight="regular">
+        <StyledText tag="p" size="small" weight="500">
           {title}
         </StyledText>
         <StyledButton className={className}>

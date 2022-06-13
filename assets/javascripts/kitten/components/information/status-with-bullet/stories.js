@@ -24,7 +24,7 @@ export default {
     statusMessage: 'Message',
     statusType: 'success',
     size: 'small',
-    weight: 'regular',
+    weight: '500',
     bulletProps: {},
   },
 
@@ -45,7 +45,7 @@ export default {
     },
     weight: {
       name: 'weight',
-      options: ['light', 'regular', 'bold'],
+      options: ['400', '500', '700'],
       control: 'select',
     },
     bulletProps: {

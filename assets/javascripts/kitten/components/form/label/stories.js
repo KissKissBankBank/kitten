@@ -78,10 +78,10 @@ export const WithFocusId = args => (
   <>
     <Label {...args} focusId="focusable-component" />
     <FocusableComponent id="focusable-component" tabIndex="0">
-      <span className="k-u-color-primary1 k-u-weight-bold k-u-background-color-primary5 focused">
+      <span className="k-u-color-primary1 k-u-weight-700 k-u-background-color-primary5 focused">
         😸 Focused
       </span>
-      <span className="k-u-color-font2 k-u-weight-regular not-focused">
+      <span className="k-u-color-font2 k-u-weight-500 not-focused">
         😿 Not focused
       </span>
     </FocusableComponent>

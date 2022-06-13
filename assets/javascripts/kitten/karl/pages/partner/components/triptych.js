@@ -25,7 +25,7 @@ const Card = () => (
     </Marger>
 
     <Marger bottom="3">
-      <Text color="font1" size="huge" weight="bold">
+      <Text color="font1" size="huge" weight="700">
         La Social Cup, la Coupe de France des jeunes entrepreneurs sociaux
       </Text>
     </Marger>

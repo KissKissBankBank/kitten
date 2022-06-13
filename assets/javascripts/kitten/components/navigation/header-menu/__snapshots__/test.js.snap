@@ -153,7 +153,6 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
@@ -162,35 +161,27 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
@@ -338,21 +329,18 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   font-size: 0.75rem;
 }
 
-.c1.k-Button--tiny,
 .c1.k-Button--small {
   --Button-dimension: 2.5rem;
   --Button-min-width: 10rem;
   --Button-padding: 0.4375rem 1.25rem;
 }
 
-.c1.k-Button--regular,
 .c1.k-Button--medium {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
   --Button-padding: 0.625rem 1.875rem;
 }
 
-.c1.k-Button--big,
 .c1.k-Button--large {
   --Button-dimension: 3.125rem;
   --Button-min-width: 12.5rem;
@@ -386,6 +374,33 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   width: 100%;
 }
 
+.c1.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c1.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c1.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
+.c1.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
 .c1 svg:not(.k-ColorSvg),
 .c1 svg:not(.k-ColorSvg) path {
   fill: currentColor;
@@ -414,33 +429,6 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   border: var(--border-width) solid var(--color-grey-200);
   background-color: var(--color-grey-200);
   color: var(--color-grey-600);
-}
-
-.c1.k-Button--hasBullet {
-  --Button-bullet-radius: 0.4375rem;
-  --Math-Cos45: 0.7071;
-  --Button-radius: var(--Button-border-radius,0);
-  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
-}
-
-.c1.k-Button--hasBullet::after {
-  content: '';
-  position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 0.5rem;
-  border: 0.1875rem solid var(--color-grey-000);
-  right: var(--Button-bullet-distance);
-  top: var(--Button-bullet-distance);
-}
-
-.c1.k-Button--hasBullet.k-Button--fit-icon {
-  overflow: initial;
-}
-
-.c1.k-Button--hasBullet.k-Button--rounded {
-  --Button-radius: calc(var(--Button-dimension) / 2);
 }
 
 .c0 {
@@ -595,7 +583,6 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
@@ -604,35 +591,27 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
@@ -661,7 +640,6 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
 }
 
 @media (min-width:40rem) {
-  .c1.k-Button--big,
   .c1.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -918,7 +896,6 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
@@ -927,35 +904,27 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
@@ -1202,7 +1171,6 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
@@ -1211,35 +1179,27 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
@@ -1464,7 +1424,6 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
@@ -1473,35 +1432,27 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
@@ -1726,7 +1677,6 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   height: auto;
   padding-top: 0;
@@ -1735,35 +1685,27 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   font-weight: 400;
 }
 
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--tiny .k-HeaderMenu__item__link,
-.c0 .k-HeaderMenu__item--tiny + .k-HeaderMenu__item--small .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
   padding-top: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 2.5rem;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
 }
 
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
-.c0 .k-HeaderMenu__item--tiny.k-HeaderMenu__item--external .k-HeaderMenu__item__link img,
 .c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
   max-height: 1.25rem;
   max-width: 5.625rem;
 }
 
-.c0 .k-HeaderMenu__item--big .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
 }
 
-.c0 .k-HeaderMenu__item--big.k-HeaderMenu__item--external .k-HeaderMenu__item__link,
 .c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
   height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;

@@ -7,7 +7,6 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { CrossIcon } from '../../../graphics/icons/cross-icon'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const StyledTagInputWrapper = styled.div`
   position: relative;
@@ -64,7 +63,7 @@ export const StyledTagInputWrapper = styled.div`
     box-sizing: border-box;
 
     line-height: 1;
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
     cursor: text;
 
     &:empty::before {
@@ -103,13 +102,13 @@ export const StyledTagInputWrapper = styled.div`
   }
 
   .k-Form-TagInput__tag {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     padding: 0 ${pxToRem(2)} 0.15em ${pxToRem(10)};
     line-height: 1;
   }
 
   .k-Form-TagInput__button {
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     border: 0;
     background-color: transparent;
     color: inherit;
@@ -137,7 +136,6 @@ export const StyledTagInputWrapper = styled.div`
 
   // Sizes
 
-  &.k-Form-TagInput--tiny,
   &.k-Form-TagInput--small {
     --tagInput-padding-vertical: ${pxToRem(5)};
     --tagInput-padding-horizontal: ${pxToRem(8)};
@@ -145,12 +143,10 @@ export const StyledTagInputWrapper = styled.div`
     min-height: ${pxToRem(40)};
   }
 
-  &.k-Form-TagInput--regular,
   &.k-Form-TagInput--medium {
     min-height: ${pxToRem(50)};
   }
 
-  &.k-Form-TagInput--big,
   &.k-Form-TagInput--large {
     min-height: ${pxToRem(60)};
     --tagInput-tag-height: ${pxToRem(32)};
@@ -195,8 +191,6 @@ export const TagInput = ({
   disabled,
   size,
 }) => {
-  checkDeprecatedSizes(size)
-
   const [itemsList, setItemsList] = useState(
     Array.from(itemsListFromProps || initialItemsList),
   )

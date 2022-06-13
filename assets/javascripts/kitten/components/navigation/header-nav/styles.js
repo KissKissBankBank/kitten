@@ -43,7 +43,7 @@ export const StyledHeader = styled.header`
 
     &,
     * {
-      ${TYPOGRAPHY.fontStyles.regular};
+      ${TYPOGRAPHY.fontStyles['500']};
       box-sizing: border-box;
     }
 
@@ -81,7 +81,7 @@ export const StyledHeader = styled.header`
     padding: 0 ${pxToRem(30)};
     background-color: ${COLORS.background1};
     border-right: var(--border);
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: ${COLORS.font1};
     line-height: 1;
     font-size: ${pxToRem(16)};
@@ -116,7 +116,7 @@ export const StyledHeader = styled.header`
   }
 
   .k-HeaderNav__Button {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -319,7 +319,7 @@ export const StyledHeader = styled.header`
     border-top: ${pxToRem(4)} solid transparent;
     border-bottom: ${pxToRem(4)} solid transparent;
 
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-1)};
     line-height: normal;
 
@@ -458,7 +458,7 @@ export const StyledHeader = styled.header`
     .k-Form-TextInput {
       text-overflow: ellipsis;
       overflow: hidden;
-      ${TYPOGRAPHY.fontStyles.light};
+      ${TYPOGRAPHY.fontStyles['400']};
       width: 100%;
     }
 

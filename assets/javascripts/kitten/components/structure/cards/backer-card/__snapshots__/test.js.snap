@@ -2,81 +2,61 @@
 
 exports[`<BackerCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gRWzMW"
+  className="sc-gsDKAQ fPBURW k-BackerCard"
 >
-  <div
-    className="sc-bdvvtL bFaRXD"
-  >
-    <span
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-regular"
+  <div>
+    <div
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-500"
     >
       Backer name
-    </span>
+    </div>
   </div>
-  <div
-    className="sc-bdvvtL kDDJrJ"
+  <span
+    className="sc-bdvvtL hARQpn k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents"
   >
-    <span
-      className="sc-gsDKAQ bkhteQ k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents sc-eCImPb bXGXzj"
-    >
-      <img
-        alt=""
-        className="k-ButtonImage__img"
-        src="#custom-src"
-      />
-    </span>
-  </div>
-  <div
-    className="sc-bdvvtL jMBxLn"
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="#custom-src"
+    />
+  </span>
+  <p
+    className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-400 k-u-margin-none"
   >
-    <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
-    >
-      Description
-    </p>
-  </div>
+    Description
+  </p>
 </div>
 `;
 
 exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gRWzMW"
+  className="sc-gsDKAQ fPBURW k-BackerCard"
 >
-  <div
-    className="sc-bdvvtL bFaRXD"
-  >
-    <span
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-regular"
+  <div>
+    <div
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-500"
     >
       Backer name
-      <span
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-hKwDye lnIyHp"
-      >
-        Subtitle
-      </span>
-    </span>
-  </div>
-  <div
-    className="sc-bdvvtL kDDJrJ"
-  >
-    <span
-      className="sc-gsDKAQ bkhteQ k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents sc-eCImPb bXGXzj"
+    </div>
+    <div
+      className="k-u-color-font1 k-u-size-micro k-u-weight-400"
     >
-      <img
-        alt=""
-        className="k-ButtonImage__img"
-        src="#custom-src"
-      />
-    </span>
+      Subtitle
+    </div>
   </div>
-  <div
-    className="sc-bdvvtL jMBxLn"
+  <span
+    className="sc-bdvvtL hARQpn k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents"
   >
-    <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
-    >
-      Description
-    </p>
-  </div>
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="#custom-src"
+    />
+  </span>
+  <p
+    className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-400 k-u-margin-none"
+  >
+    Description
+  </p>
 </div>
 `;

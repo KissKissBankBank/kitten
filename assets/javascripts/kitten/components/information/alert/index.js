@@ -8,7 +8,6 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
-import deprecated from 'prop-types-extra/lib/deprecated'
 
 const fadeOut = keyframes`
   0% { opacity: 1; }
@@ -21,7 +20,7 @@ const AlertWrapper = styled.div`
     --alert-gap: ${pxToRem(20)};
   }
 
-  ${TYPOGRAPHY.fontStyles.light};
+  ${TYPOGRAPHY.fontStyles['400']};
   margin: ${pxToRem(10)};
   border-radius: var(--border-radius-m);
   overflow: hidden;
@@ -115,7 +114,7 @@ const AlertWrapper = styled.div`
   }
 
   a {
-    ${TYPOGRAPHY.fontStyles.bold};
+    ${TYPOGRAPHY.fontStyles['700']};
     color: var(--color-primary-500);
     text-decoration: underline;
   }
@@ -139,7 +138,6 @@ const AlertWrapper = styled.div`
     }
   }
 
-  &.k-Alert--error,
   &.k-Alert--danger {
     background-color: var(--color-danger-100);
 
@@ -187,10 +185,6 @@ const AlertWrapper = styled.div`
 export const Alert = ({
   className,
   show,
-  error, // Deprecated
-  danger, // Deprecated
-  success, // Deprecated
-  warning, // Deprecated
   closeButton,
   closeButtonLabel,
   children,
@@ -222,31 +216,14 @@ export const Alert = ({
   const internalIcon = icon || <StatusIconNext status={status} />
 
   const role = (() => {
-    switch (true) {
-      case danger: //deprecated
-      case status === 'danger':
+    switch (status) {
+      case 'danger':
         return 'alert'
-      case warning: //deprecated
-      case success: //deprecated
-      case status === 'warning':
-      case status === 'success':
+      case 'warning':
+      case 'success':
         return 'status'
       default:
         return null
-    }
-  })()
-
-  const statusIcon = (() => {
-    switch (true) {
-      case warning:
-        return 'warning'
-      case success:
-        return 'success'
-      case danger:
-      case error:
-        return 'danger'
-      default:
-        return status
     }
   })()
 
@@ -259,10 +236,6 @@ export const Alert = ({
         'k-Alert--hasCloseButton': !!closeButton,
         'k-Alert--hasIcon': !!icon || displayIcon,
         'k-Alert--shouldHide': !isMounted,
-        // Status classes through deprecated props
-        'k-Alert--success': !!success,
-        'k-Alert--error': !!error,
-        'k-Alert--warning': !!warning,
       })}
       {...others}
     >
@@ -270,7 +243,7 @@ export const Alert = ({
         <IconBadge
           className="k-Alert__iconBadge"
           children={internalIcon}
-          status={statusIcon}
+          status={status}
           hasBorder={iconHasBorder}
         />
       )}
@@ -293,17 +266,10 @@ export const Alert = ({
 
 Alert.propTypes = {
   show: PropTypes.bool,
-  error: deprecated(PropTypes.bool, 'Use the "status=danger" prop instead'),
-  success: deprecated(PropTypes.bool, 'Use the "status=success" prop instead'),
-  warning: deprecated(PropTypes.bool, 'Use the "status=warning" prop instead'),
   closeButton: PropTypes.bool,
   closeButtonLabel: PropTypes.string,
   onAfterClose: PropTypes.func,
   icon: PropTypes.node,
-  iconBadgeBorderColor: deprecated(
-    PropTypes.string,
-    'Use iconHasBorder prop instead',
-  ),
   center: PropTypes.bool,
   displayIcon: PropTypes.bool,
   iconHasBorder: PropTypes.bool,

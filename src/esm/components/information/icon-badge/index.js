@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledBadge = styled.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-r56wro-0"

@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledStatus = styled.span.withConfig({
   displayName: "status-with-bullet__StyledStatus",
   componentId: "sc-jelywm-0"

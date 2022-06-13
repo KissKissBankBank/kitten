@@ -10,7 +10,6 @@ import find from 'lodash/fp/find'
 import { DropdownCombobox } from './combobox'
 import { StyledDropdown } from './styles'
 import COLORS from '../../../../constants/colors-config'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 
 export const DropdownSelect = ({ combobox, ...props }) => {
   if (combobox) return <DropdownCombobox {...props} />
@@ -45,8 +44,6 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     arrowPosition,
     labelProps,
   } = props
-
-  checkDeprecatedSizes(size)
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))

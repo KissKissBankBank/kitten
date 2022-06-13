@@ -4,7 +4,6 @@ import { TextInput } from '../../../form/input/text-input'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import classNames from 'classnames'
 
 const StyledTextInputWithUnit = styled.div`
@@ -46,22 +45,19 @@ const StyledTextInputWithUnit = styled.div`
     white-space: nowrap;
     transition: all 0.2s;
     font-size: ${stepToRem(0)};
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     background-color: var(--color-grey-000);
 
     &.k-Form-TextInputWithUnit__unit--disabled {
       color: var(--color-grey-700);
       background-color: var(--color-grey-200);
     }
-    &.k-Form-TextInputWithUnit__unit--tiny,
     &.k-Form-TextInputWithUnit__unit--small {
       padding: 0 ${pxToRem(10)};
     }
-    &.k-Form-TextInputWithUnit__unit--regular,
     &.k-Form-TextInputWithUnit__unit--medium {
       padding: 0 ${pxToRem(12)};
     }
-    &.k-Form-TextInputWithUnit__unit--big,
     &.k-Form-TextInputWithUnit__unit--large,
     &.k-Form-TextInputWithUnit__unit--huge {
       padding: 0 ${pxToRem(20)};
@@ -95,8 +91,6 @@ export const TextInputWithUnit = ({
   wrapperProps,
   ...others
 }) => {
-  checkDeprecatedSizes(size)
-
   const input = useRef(null)
 
   return (

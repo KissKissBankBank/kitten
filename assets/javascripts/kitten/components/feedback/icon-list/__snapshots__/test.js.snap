@@ -132,10 +132,10 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
         className="c4"
       >
         <span
-          className="k-u-weight-light"
+          className="k-u-weight-400"
         >
           <span
-            className="k-u-weight-regular"
+            className="k-u-weight-500"
           >
             Foo
           </span>

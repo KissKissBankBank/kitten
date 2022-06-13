@@ -52,7 +52,7 @@ export const Description = ({
         <Text
           className="k-RewardCard__description__moreButton"
           color="primary1"
-          weight="regular"
+          weight="500"
           size="micro"
         >
           {moreButtonText}

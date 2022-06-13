@@ -136,7 +136,7 @@ const Row = ({ hasExtraColumn }) => {
 
       <GridTable.Col className="customCol_1">
         <div>
-          <Text size="small" weight="regular">
+          <Text size="small" weight="500">
             <time dateTime="2019-09-12">12/09/2019</time>
           </Text>
           <br />
@@ -149,7 +149,7 @@ const Row = ({ hasExtraColumn }) => {
           <br />
           <Text
             size="micro"
-            weight="regular"
+            weight="500"
             lineHeight="1"
             as="a"
             href="#"
@@ -162,16 +162,16 @@ const Row = ({ hasExtraColumn }) => {
 
       <GridTable.Col className="customCol_2">
         <div>
-          <Text weight="bold">Prénom Nom</Text>
+          <Text weight="700">Prénom Nom</Text>
           <br />
-          <Text size="micro" weight="light">
+          <Text size="micro" weight="400">
             Prenom-Nom
           </Text>
         </div>
       </GridTable.Col>
 
       <GridTable.Col className="customCol_3">
-        <Text size="small" weight="regular">
+        <Text size="small" weight="500">
           72&nbsp;€
         </Text>
       </GridTable.Col>
@@ -186,7 +186,7 @@ const Row = ({ hasExtraColumn }) => {
       </GridTable.Col>
 
       <GridTable.Col className="customCol_5">
-        <Text size="small" weight="regular">
+        <Text size="small" weight="500">
           Livraison
         </Text>
       </GridTable.Col>
@@ -206,7 +206,7 @@ const Row = ({ hasExtraColumn }) => {
 
       {hasExtraColumn ? (
         <GridTable.Col className="customCol_7">
-          <Text size="small" weight="regular">
+          <Text size="small" weight="500">
             -
           </Text>
         </GridTable.Col>
@@ -255,18 +255,18 @@ export const StoryWithTable = () => {
           id="CustomGridTable"
           style={{ '--col-number': hasExtraColumn ? 8 : 7 }}
         >
-          <GridTable.Header className="k-u-weight-regular">
+          <GridTable.Header className="k-u-weight-500">
             <GridTable.Col className="customCol_0">
               <VisuallyHidden>Sélection</VisuallyHidden>
               <Checkbox aria-label="Sélectionner toutes les contributions de la liste" />
             </GridTable.Col>
 
             <GridTable.Col className="customCol_1">
-              <Text weight="regular" color="font1" size="small">
+              <Text weight="500" color="font1" size="small">
                 Date
                 <br className="k-u-hidden@l-up" />
                 <Text
-                  weight="regular"
+                  weight="500"
                   color="font1"
                   size="small"
                   className="k-u-hidden@l-up"
@@ -277,38 +277,38 @@ export const StoryWithTable = () => {
             </GridTable.Col>
 
             <GridTable.Col className="customCol_2">
-              <Text weight="regular" color="font1" size="small">
+              <Text weight="500" color="font1" size="small">
                 Contributeur
               </Text>
             </GridTable.Col>
 
             <GridTable.Col className="customCol_3">
-              <Text weight="regular" color="font1" size="small">
+              <Text weight="500" color="font1" size="small">
                 Montant
               </Text>
             </GridTable.Col>
 
             <GridTable.Col className="customCol_4">
-              <Text weight="regular" color="font1" size="small">
+              <Text weight="500" color="font1" size="small">
                 Statut
               </Text>
             </GridTable.Col>
 
             <GridTable.Col className="customCol_5">
-              <Text weight="regular" color="font1" size="small">
+              <Text weight="500" color="font1" size="small">
                 Mode de livraison
               </Text>
             </GridTable.Col>
 
             <GridTable.Col className="customCol_6">
-              <Text weight="regular" color="font1" size="small">
+              <Text weight="500" color="font1" size="small">
                 Statut livraison
               </Text>
             </GridTable.Col>
 
             {hasExtraColumn ? (
               <GridTable.Col className="customCol_7">
-                <Text weight="regular" color="font1" size="small">
+                <Text weight="500" color="font1" size="small">
                   Dernière modification
                 </Text>
               </GridTable.Col>
@@ -337,7 +337,7 @@ export const StoryWithTable = () => {
             className="k-u-flex-alignItems-center"
           >
             <div style={{ flex: '1 0 auto' }} className="k-u-hidden@xs-down">
-              <Text color="background1" size="small" weight="regular">
+              <Text color="background1" size="small" weight="500">
                 Text
               </Text>
             </div>

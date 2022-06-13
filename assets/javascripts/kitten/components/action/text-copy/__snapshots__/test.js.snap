@@ -7,7 +7,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   type="button"
 >
   <div
-    className="sc-dkPtRN ePImc k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
+    className="sc-dkPtRN defcwe k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
     disabled={false}
     name="text"
   >
@@ -16,7 +16,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ iusxUP k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+    className="sc-gsDKAQ pspEM k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     style={
       Object {
@@ -54,7 +54,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <div
-    className="sc-dkPtRN ePImc k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
+    className="sc-dkPtRN defcwe k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
     disabled={false}
     name="text"
   >
@@ -63,7 +63,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ eOSZsp k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--helium k-Button--fit-content"
+    className="sc-gsDKAQ dXzmNS k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--helium k-Button--fit-content"
     disabled={null}
     style={
       Object {
@@ -90,7 +90,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <div
-    className="sc-dkPtRN ePImc k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
+    className="sc-dkPtRN defcwe k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
     disabled={false}
     name="text"
   >
@@ -99,7 +99,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ iusxUP k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+    className="sc-gsDKAQ pspEM k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     style={
       Object {
@@ -137,7 +137,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <div
-    className="sc-dkPtRN ePImc k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--medium"
+    className="sc-dkPtRN defcwe k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--medium"
     disabled={false}
     name="text"
   >
@@ -146,7 +146,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     </span>
   </div>
   <span
-    className="sc-gsDKAQ iusxUP k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+    className="sc-gsDKAQ pspEM k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
     disabled={null}
     style={
       Object {

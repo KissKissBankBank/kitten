@@ -30,7 +30,7 @@ const Stroke = ({ className, ...props }) => (
 const Footer = ({ variant, ...props }) => {
   return (
     <>
-      {variant != "minimalist" &&
+      {variant != 'minimalist' && (
         <StyledFooter {...props}>
           <div className="k-Footer__gridWrapper">
             <Baseline />
@@ -49,19 +49,18 @@ const Footer = ({ variant, ...props }) => {
           <Stroke />
           <Legal />
         </StyledFooter>
-      }
+      )}
 
-      {variant == "minimalist" &&
-        <StyledFooter className="k-Footer__minimalist" {...props}
-        >
+      {variant == 'minimalist' && (
+        <StyledFooter className="k-Footer__minimalist" {...props}>
           <CreatedWith />
           <Partners />
 
           <Stroke />
           <Legal />
         </StyledFooter>
-      }
-  </>
+      )}
+    </>
   )
 }
 

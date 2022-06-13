@@ -23,20 +23,20 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
     className="k-ContributionCard__gridWrapper"
   >
     <span
-      className="k-u-color-font1 k-u-weight-bold k-ContributionCard__title"
+      className="k-u-color-font1 k-u-weight-700 k-ContributionCard__title"
     >
       Lorem ipsum dolor sit amet, consectetuer
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light k-ContributionCard__description"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-400 k-ContributionCard__description"
       >
         adipiscing ligula eget dolor eget dolor.eget dolor.eget dolor.
       </p>
     </span>
     <div
-      className="sc-jRQBWg cUdsKU k-Form-TextInputWithUnit k-ContributionCard__inputWrapper"
+      className="sc-jRQBWg eWcicQ k-Form-TextInputWithUnit k-ContributionCard__inputWrapper"
     >
       <input
-        className="sc-hKwDye hGRSpD k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--medium"
+        className="sc-hKwDye PuTOx k-Form-TextInput k-Form-TextInputWithUnit__input k-ContributionCard__input k-Form-TextInput--medium"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -49,7 +49,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </span>
     </div>
     <button
-      className="sc-bdvvtL iceaqY k-Button k-ContributionCard__action k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+      className="sc-bdvvtL hsVCKD k-Button k-ContributionCard__action k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
       disabled={true}
       style={
         Object {
@@ -88,12 +88,12 @@ exports[`<ContributionCard /> default matches with snapshot 1`] = `
     className="k-ContributionCard__gridWrapper"
   >
     <span
-      className="k-u-color-font1 k-u-weight-bold k-ContributionCard__title k-ContributionCard__title--large"
+      className="k-u-color-font1 k-u-weight-700 k-ContributionCard__title k-ContributionCard__title--large"
     >
       Lorem ipsum dolor sit amet, consectetuer adipiscing ligula eget dolor eget dolor.eget dolor.eget dolor.
     </span>
     <span
-      className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-ContributionCard__amount"
+      className="k-u-color-font1 k-u-size-huge k-u-weight-700 k-ContributionCard__amount"
     >
       1005 €
     </span>

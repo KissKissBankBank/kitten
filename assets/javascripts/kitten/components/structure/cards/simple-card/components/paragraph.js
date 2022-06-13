@@ -10,7 +10,7 @@ export const Paragraph = ({ paragraph }) => {
       <Text
         lineHeight="normal"
         size="micro"
-        weight="light"
+        weight="400"
         tag="p"
         className="k-u-margin-bottom-singleHalf"
       >

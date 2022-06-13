@@ -1,62 +1,63 @@
 import React from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Marger } from '../../../layout/marger'
 import { Text } from '../../../typography/text'
 import { ButtonImage } from '../../../action/button-image'
 
 const StyledCard = styled.div`
-  padding: 0 ${pxToRem(20)};
-  border: var(--border);
+  padding: ${pxToRem(40)} ${pxToRem(20)};
+  border-radius: var(--border-radius-s);
+  box-shadow: var(--box-shadow-s);
   text-align: center;
   word-break: break-word;
-`
-
-const StyledSubtitle = styled(Text)`
-  display: block;
-`
-
-const StyledButtonImage = styled(ButtonImage)`
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: ${pxToRem(10)};
 `
 
 export const BackerCard = ({
+  className,
   title,
+  titleTag,
   subtitle,
   imgProps,
   description,
   ...others
 }) => (
-  <StyledCard {...others}>
-    <Marger top="4" bottom="1">
-      <Text color="font1" weight="regular" lineHeight="normal" size="small">
-        {title}
-
-        {subtitle && (
-          <StyledSubtitle color="font1" weight="light" size="micro">
-            {subtitle}
-          </StyledSubtitle>
-        )}
-      </Text>
-    </Marger>
-
-    <Marger top="1" bottom="1">
-      <StyledButtonImage tag="span" img={imgProps} withoutPointerEvents huge />
-    </Marger>
-
-    <Marger top="1" bottom="4">
+  <StyledCard className={classNames('k-BackerCard', className)} {...others}>
+    <div>
       <Text
-        tag="p"
+        tag={titleTag || 'div'}
         color="font1"
-        weight="light"
-        size="micro"
+        weight="500"
         lineHeight="normal"
-        className="k-u-margin-none"
+        size="small"
       >
-        {description}
+        {title}
       </Text>
-    </Marger>
+
+      {subtitle && (
+        <Text tag="div" color="font1" weight="400" size="micro">
+          {subtitle}
+        </Text>
+      )}
+    </div>
+
+    <ButtonImage tag="span" img={imgProps} withoutPointerEvents huge />
+
+    <Text
+      tag="p"
+      color="font1"
+      weight="400"
+      size="micro"
+      lineHeight="normal"
+      className="k-u-margin-none"
+    >
+      {description}
+    </Text>
   </StyledCard>
 )
 
@@ -65,8 +66,10 @@ BackerCard.propTypes = {
   subtitle: PropTypes.string,
   imgProps: PropTypes.object.isRequired,
   description: PropTypes.node.isRequired,
+  titleTag: PropTypes.string,
 }
 
 BackerCard.defaultProps = {
   subtitle: null,
+  titleTag: 'div',
 }

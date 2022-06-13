@@ -5,7 +5,6 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
@@ -56,7 +55,7 @@ const StyledNavBar = styled.div`
   .k-NavBar__link {
     height: ${pxToRem(65)};
     box-sizing: border-box;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     text-decoration: none;
     text-align: center;
@@ -126,8 +125,6 @@ export const NavBar = ({
   modifier,
   ...props
 }) => {
-  checkDeprecatedSizes(modifier)
-
   return (
     <StyledNavBar
       {...props}

@@ -224,7 +224,7 @@ export const BasicUploader = ({
           <div>
             <Text
               tag="p"
-              weight="regular"
+              weight="500"
               color={internalStatus === 'error' ? 'error' : 'font1'}
               size="small"
               lineHeight="normal"
@@ -238,7 +238,7 @@ export const BasicUploader = ({
             </Text>
             <Text
               tag="p"
-              weight="light"
+              weight="400"
               color={internalStatus === 'error' ? 'error' : 'font1'}
               size="micro"
               lineHeight="normal"

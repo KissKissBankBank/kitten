@@ -47,7 +47,7 @@ const RewardCardComponent = ({
       <img alt="" {...imageProps} />
     </SummaryCard.Image>
     <SummaryCard.Cell name="title" aria-describedby="RewardSummaryList-title">
-      <Text weight="bold" size="small">
+      <Text weight="700" size="small">
         {title}
       </Text>
       {!!star && <SummaryCard.TitleTag text="Contrepartie star" />}

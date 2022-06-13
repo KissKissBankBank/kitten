@@ -10,10 +10,10 @@ export const DocLinkBox = ({ isExternal, href, title, text, ...props }) => {
         <LinkBoxIllustration className="k-LinkBox__icon--svg" />
       </LinkBox.Icon>
       <LinkBox.Text>
-        <Text tag="span" weight="regular" size="small" lineHeight="normal">
+        <Text tag="span" weight="500" size="small" lineHeight="normal">
           {title}
         </Text>
-        <Text tag="span" weight="light" size="micro" lineHeight="normal">
+        <Text tag="span" weight="400" size="micro" lineHeight="normal">
           {text}
         </Text>
       </LinkBox.Text>

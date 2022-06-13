@@ -100,7 +100,7 @@ export const Default = ({ showFooter, disabledButton, ...args }) => {
           <>
             <Text
               as="button"
-              weight="regular"
+              weight="500"
               size="micro"
               className="k-u-reset-button k-u-link k-u-link-font1"
               onClick={action('comment')}
@@ -109,7 +109,7 @@ export const Default = ({ showFooter, disabledButton, ...args }) => {
             </Text>
             <Text
               as="button"
-              weight="regular"
+              weight="500"
               size="micro"
               className="k-u-reset-button k-u-link k-u-link-font1"
               onClick={action('delete')}

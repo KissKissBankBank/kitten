@@ -4,7 +4,6 @@ import classNames from 'classnames'
 import styled from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledTag = styled.span`
   display: inline-block;
@@ -13,7 +12,7 @@ const StyledTag = styled.span`
   padding: 0 ${pxToRem(10)};
   white-space: nowrap;
   line-height: ${pxToRem(24)};
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   font-size: ${pxToRem(10)};
   border-radius: var(--border-radius-rounded);
   text-transform: uppercase;
@@ -121,8 +120,6 @@ export const Tag = ({
   children,
   ...props
 }) => {
-  checkDeprecatedSizes(size)
-
   return (
     <StyledTag
       className={classNames(

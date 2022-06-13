@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '../../../../action/button'
 import { PhoneIcon } from '../../../../graphics/icons/phone-icon'
-import COLORS from '../../../../../constants/colors-config'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
 
@@ -17,8 +16,8 @@ const StyledTeamCardButtonWithTooltip = styled.a`
     margin-left: ${pxToRem(-50)};
     font-size: ${stepToRem(-1)};
     line-height: normal;
-    font-weight: regular;
-    color: ${COLORS.background1};
+    font-weight: 500;
+    color: var(--color-grey-000);
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;

@@ -14,7 +14,7 @@ const StyledLocationInput = styled.div`
   width: 100%;
 
   .k-LocationInput__input {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
 
@@ -92,13 +92,13 @@ const StyledLocationInput = styled.div`
   }
 
   .k-LocationInput__autocompleteItem__mainText {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     margin-left: ${pxToRem(20)};
     color: ${COLORS.font1};
   }
 
   .k-LocationInput__autocompleteItem__secondaryText {
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     margin-left: 1ch;
   }
 

@@ -321,7 +321,7 @@ export const Toggletip = ({
           <span
             className={classNames(
               'k-Toggletip__bubble',
-              'k-u-weight-light',
+              'k-u-weight-400',
               'k-u-size-small',
               'k-u-line-height-1-3',
               bubbleClassName,

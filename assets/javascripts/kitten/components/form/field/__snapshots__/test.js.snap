@@ -107,7 +107,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -152,7 +152,7 @@ Array [
     className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
+      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -160,7 +160,7 @@ Array [
     />
   </div>,
   <p
-    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-Field__error k-u-margin-none k-u-margin-top-single"
+    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
   >
     Error!
   </p>,
@@ -220,7 +220,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -265,7 +265,7 @@ Array [
     className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium"
+      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium"
       disabled={false}
       id="input"
       name="field"
@@ -273,7 +273,7 @@ Array [
     />
   </div>,
   <p
-    className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-Field__help k-u-margin-none k-u-margin-top-single"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-400 k-Field__help k-u-margin-none k-u-margin-top-single"
     style={
       Object {
         "color": "var(--color-grey-700)",
@@ -338,7 +338,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -383,7 +383,7 @@ Array [
     className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInput--medium"
+      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium"
       disabled={false}
       id="input"
       name="field"
@@ -446,7 +446,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -494,7 +494,7 @@ Array [
       className="sc-gKclnd iZxmye k-Form-TextInputWithLimit"
     >
       <input
-        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
+        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
         defaultValue=""
         disabled={false}
         id="input"
@@ -565,7 +565,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -610,10 +610,10 @@ Array [
     className="k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <div
-      className="sc-iCfMLu dsgXNH k-Form-TextInputWithUnit"
+      className="sc-iCfMLu dsUhOH k-Form-TextInputWithUnit"
     >
       <input
-        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--medium"
+        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--medium"
         disabled={false}
         id="input"
         name="field"
@@ -683,7 +683,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -731,7 +731,7 @@ Array [
       className="sc-crHmcD lfvliB k-Form-PasswordInput"
     >
       <input
-        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
+        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -765,7 +765,7 @@ Array [
     </div>
   </div>,
   <p
-    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular k-Field__error k-u-margin-none k-u-margin-top-single"
+    className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
   >
     Error!
   </p>,
@@ -825,7 +825,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ bmbDCz k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -873,7 +873,7 @@ Array [
       className="sc-crHmcD lfvliB k-Form-PasswordInput"
     >
       <input
-        className="sc-eCImPb fIxmwD k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium"
+        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium"
         disabled={false}
         id="input"
         name="field"
@@ -939,14 +939,14 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet k-Form-RadioButtonSet--orion"
+      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -968,7 +968,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -989,7 +989,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO kNzWLU k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--orion k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--regular"
+          className="sc-jrQzAO jpdNxz k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1052,7 +1052,7 @@ Array [
         className="k-Form-RadioSet__radioContainer"
       >
         <div
-          className="sc-furwcr bNYJax k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1067,14 +1067,14 @@ Array [
             htmlFor="option-a"
           >
             <span
-              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
             >
               Option A
             </span>
           </label>
         </div>
         <div
-          className="sc-furwcr bNYJax k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1088,14 +1088,14 @@ Array [
             htmlFor="option-b"
           >
             <span
-              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
             >
               Option B
             </span>
           </label>
         </div>
         <div
-          className="sc-furwcr bNYJax k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1109,7 +1109,7 @@ Array [
             htmlFor="option-c"
           >
             <span
-              className="k-Form-Radio__labelText k-Form-Radio__labelText--normal"
+              className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
             >
               Option C
             </span>

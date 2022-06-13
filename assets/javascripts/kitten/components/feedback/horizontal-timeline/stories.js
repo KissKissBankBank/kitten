@@ -25,7 +25,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-top-none k-u-margin-bottom-noneHalf"
-              weight="regular"
+              weight="500"
               lineHeight="1.3"
             >
               Création de Lendopolis
@@ -33,7 +33,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-none"
-              weight="light"
+              weight="400"
               size="micro"
               lineHeight="1.3"
             >
@@ -46,7 +46,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-top-none k-u-margin-bottom-noneHalf"
-              weight="regular"
+              weight="500"
               lineHeight="1.3"
             >
               Lancement des projets énergies renouvelables
@@ -54,7 +54,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-none"
-              weight="light"
+              weight="400"
               size="micro"
               lineHeight="1.3"
             >
@@ -67,7 +67,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-top-none k-u-margin-bottom-noneHalf"
-              weight="regular"
+              weight="500"
               lineHeight="1.3"
             >
               Lancement des projets immobiliers
@@ -75,7 +75,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-none"
-              weight="light"
+              weight="400"
               size="micro"
               lineHeight="1.3"
             >
@@ -86,7 +86,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-top-none k-u-margin-bottom-noneHalf"
-              weight="regular"
+              weight="500"
               lineHeight="1.3"
             >
               Arrêt du TPE / PME
@@ -94,7 +94,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-none"
-              weight="light"
+              weight="400"
               size="micro"
               lineHeight="1.3"
             >
@@ -106,7 +106,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-top-none k-u-margin-bottom-noneHalf"
-              weight="regular"
+              weight="500"
               lineHeight="1.3"
             >
               Projets financés par actions
@@ -114,7 +114,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-none"
-              weight="light"
+              weight="400"
               size="micro"
               lineHeight="1.3"
             >
@@ -128,7 +128,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-top-none k-u-margin-bottom-noneHalf"
-              weight="regular"
+              weight="500"
               lineHeight="1.3"
             >
               Arrêt de l’immobilier
@@ -136,7 +136,7 @@ export const Default = () => (
             <Text
               tag="p"
               className="k-u-margin-none"
-              weight="light"
+              weight="400"
               size="micro"
               lineHeight="1.3"
             >

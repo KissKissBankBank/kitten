@@ -21,7 +21,7 @@ export const Title = ({
     >
       <Text
         tag="h3"
-        weight="regular"
+        weight="500"
         className={classNames(
           'k-RewardCard__title',
           'k-u-margin-none',

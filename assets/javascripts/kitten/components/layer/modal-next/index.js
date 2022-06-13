@@ -8,7 +8,7 @@ import isEmpty from 'lodash/fp/isEmpty'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { CloseButton } from '../../action/close-button'
 import { Button } from '../../action/button'
-import { ICON_TINY } from '../../action/button/standalone-styles'
+import { ICON_SMALL } from '../../action/button/standalone-styles'
 import { Paragraph } from '../../typography/paragraph/next'
 import { Text } from '../../typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -22,7 +22,6 @@ import {
   CONTAINER_MAX_WIDTH,
 } from '../../../constants/grid-config'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 
@@ -86,7 +85,6 @@ const GlobalStyle = createGlobalStyle`
       --Modal-wrapperMaxWidth: ${pxToRem(CONTAINER_MAX_WIDTH)};
     }
 
-    &.k-ModalNext__content--big,
     &.k-ModalNext__content--large {
       --Modal-colNumber: 8;
 
@@ -235,7 +233,7 @@ const GlobalStyle = createGlobalStyle`
 
       .k-Button {
         @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-          ${() => ICON_TINY}
+          ${() => ICON_SMALL}
         }
       }
     }
@@ -623,8 +621,6 @@ const InnerModal = ({
   headerZIndex,
   ...others
 }) => {
-  checkDeprecatedSizes(size)
-
   const [{ show }, dispatch] = useContext(ModalContext)
   const close = () => {
     dispatch(updateState(false))
@@ -722,7 +718,7 @@ const InnerModal = ({
                 {headerTitle ? (
                   headerTitle
                 ) : (
-                  <Text size="small" color="font1" weight="regular">
+                  <Text size="small" color="font1" weight="500">
                     {fullSizeTitle}
                   </Text>
                 )}

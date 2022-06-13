@@ -15,18 +15,20 @@ const TYPOGRAPHY = {
     bold: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       letterSpacing: '.01rem',
-      fontWeight: 600,
+      fontWeight: 700,
     },
-    regularUppercase: {
+    400: {
+      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
+      fontWeight: 400,
+    },
+    500: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       fontWeight: 500,
-      textTransform: 'uppercase',
     },
-    boldUppercase: {
+    700: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontWeight: 600,
-      letterSpacing: '.1rem',
-      textTransform: 'uppercase',
+      letterSpacing: '.01rem',
+      fontWeight: 700,
     },
   },
 }

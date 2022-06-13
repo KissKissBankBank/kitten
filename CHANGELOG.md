@@ -4,7 +4,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change:
+
+  - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
+  - Deprecated: `fontWeight` by `weight` on the following components:
+    - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
+  - Typography config: Remove `regularUppercase` and `boldUppercase` styles.
+  - Typography config: Add `fontStyles['400']`, `fontStyles['500']` and `fontStyles['700']`.
+
+- Breaking change: Remove old `size` values from all components and styles.
+- Breaking change: `Helpers`: Remove `checkDeprecatedSizes` utility.
+- Breaking change: `TextInputWithButton`: Remove `value` prop.
+- Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
+- Breaking change: `Radio`: Remove `variant` prop.
+- Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
+- Breaking Change: `Alert`: Remove deprecated props.
+- Breaking Change: `Button`: Use `fit=content` as default.
+- Breaking Change: `Button`: Remove deprecated modifiers.
+- Breaking Changes: Remove `CrowdfundingCard`.
+- Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
+- Feature: `BackerCard`: Add `titleTag` prop.
+
 ## [10.12.2] - 2022-06-10
+
+Fixes:
 
 - `Button`: Disable overflow when button displays a bullet.
 - `DropdownSelect`: Change outline style on `combobox` input.

@@ -77,7 +77,7 @@ const SiteHeaderComponent = () => {
                   className="k-u-hidden@xs-down"
                   withEllipsisOverflow={true}
                 >
-                  <Text lineHeight="normal" weight="regular">
+                  <Text lineHeight="normal" weight="500">
                     Jean Charles Édouard
                   </Text>
                 </AvatarWithTextAndBadge.Text>
@@ -172,13 +172,13 @@ export const StoryLayout = ({
             withEllipsisOverflow
             className="k-u-color-background1"
           >
-            <Text lineHeight="normal" weight="regular">
+            <Text lineHeight="normal" weight="500">
               T-shirts brodés Free Boobs Club
             </Text>
             <br />
             <StatusWithBullet
               as="span"
-              weight="light"
+              weight="400"
               size="micro"
               statusType={status}
             >

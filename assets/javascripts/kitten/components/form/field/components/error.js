@@ -8,7 +8,7 @@ export const FieldError = ({ children, className, ...others }) => {
       tag="p"
       color="error"
       size="micro"
-      weight="regular"
+      weight="500"
       lineHeight="normal"
       className={classNames(
         className,

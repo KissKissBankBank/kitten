@@ -13,7 +13,7 @@ describe('<LinkList />', () => {
           <LinkList
             color="dark"
             itemMargin="double"
-            weight="regular"
+            weight="500"
             margin
             items={[
               { key: '1', item: 'Item 1', href: '#', active: true },

@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledRadio = styled.div`
   /* label block */
@@ -68,18 +70,20 @@ const StyledRadio = styled.div`
 
   .k-Form-Radio__labelText {
     flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(14)};
     line-height: 1.5;
 
-    &.k-Form-Radio__labelText--normal {
-      ${TYPOGRAPHY.fontStyles.regular};
+    &.k-Form-Radio__labelText--normal,
+    &.k-Form-Radio__labelText--500 {
+      ${TYPOGRAPHY.fontStyles['500']};
     }
-    &.k-Form-Radio__labelText--light {
-      ${TYPOGRAPHY.fontStyles.light};
+    &.k-Form-Radio__labelText--light &.k-Form-Radio__labelText--400 {
+      ${TYPOGRAPHY.fontStyles['400']};
     }
-    &.k-Form-Radio__labelText--bold {
-      ${TYPOGRAPHY.fontStyles.bold};
+    &.k-Form-Radio__labelText--bold,
+    &.k-Form-Radio__labelText--700 {
+      ${TYPOGRAPHY.fontStyles['700']};
     }
   }
 
@@ -88,7 +92,7 @@ const StyledRadio = styled.div`
   }
 
   .k-Form-Radio__labelText--withContents {
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
   }
 
   .k-Form-Radio__labelContents {
@@ -96,7 +100,7 @@ const StyledRadio = styled.div`
     margin-left: ${pxToRem(16 + 10)};
     flex: 1 0 calc(100% - ${pxToRem(16 + 10 + 10)});
 
-    ${TYPOGRAPHY.fontStyles.light}
+    ${TYPOGRAPHY.fontStyles['400']}
     font-size: ${pxToRem(12)};
     line-height: ${pxToRem(19)};
 
@@ -198,9 +202,12 @@ export const Radio = ({
   error,
   disabled,
   design,
-  fontWeight,
+  fontWeight, // Deprecated
+  weight,
   ...inputProps
 }) => {
+  checkDeprecatedWeights(weight)
+
   return (
     <StyledRadio
       className={classNames(
@@ -223,7 +230,7 @@ export const Radio = ({
         <span
           className={classNames(
             'k-Form-Radio__labelText',
-            `k-Form-Radio__labelText--${fontWeight}`,
+            `k-Form-Radio__labelText--${fontWeight || weight}`,
             {
               'k-Form-Radio__labelText--withContents': !!children,
             },
@@ -246,12 +253,13 @@ Radio.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   design: PropTypes.oneOf(['disc', 'check']),
-  fontWeight: PropTypes.oneOf(['light', 'normal', 'bold']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '700']),
 }
 
 Radio.defaultProps = {
   error: false,
   disabled: false,
   design: 'disc',
-  fontWeight: 'normal',
+  weight: '500',
 }

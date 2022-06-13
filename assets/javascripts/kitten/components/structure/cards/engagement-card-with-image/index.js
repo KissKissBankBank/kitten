@@ -66,7 +66,7 @@ export const EngagementCardWithImage = ({
       </StyledCard>
       <StyledText
         size="micro"
-        weight="regular"
+        weight="500"
         color="font1"
         decoration="none"
         lineHeight="normal"

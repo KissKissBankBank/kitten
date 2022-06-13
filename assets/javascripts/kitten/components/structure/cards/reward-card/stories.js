@@ -97,31 +97,31 @@ export const Default = ({
         </RewardCard.Amount>
         <RewardCard.TagList>
           <Tag as="li" variant="light">
-            <strong className="k-u-weight-regular">5</strong> contributeurs
+            <strong className="k-u-weight-500">5</strong> contributeurs
           </Tag>
           <Tag as="li" variant="light">
-            <strong className="k-u-weight-regular">2</strong> disponibles
+            <strong className="k-u-weight-500">2</strong> disponibles
           </Tag>
         </RewardCard.TagList>
         <RewardCard.Description
           moreButtonText="See more…"
           truncateText={truncateText}
         >
-          <p className="k-u-weight-light k-u-margin-none">
-            <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+          <p className="k-u-weight-400 k-u-margin-none">
+            <strong className="k-u-weight-500">Maecenas tempus</strong>, tellus
+            eget condimentum rhoncus, sem quam semper libero,{' '}
             <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
             sed ipsum.
           </p>
-          <p className="k-u-weight-light k-u-margin-none">
+          <p className="k-u-weight-400 k-u-margin-none">
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
-          <p className="k-u-weight-light k-u-margin-none">
+          <p className="k-u-weight-400 k-u-margin-none">
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
-          <p className="k-u-weight-light k-u-margin-none">
+          <p className="k-u-weight-400 k-u-margin-none">
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
@@ -177,31 +177,31 @@ export const Video = ({ truncateText, hasImage, hasButton, ...args }) => {
         <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
         <RewardCard.TagList>
           <Tag as="li" variant="light">
-            <strong className="k-u-weight-regular">5</strong> contributeurs
+            <strong className="k-u-weight-500">5</strong> contributeurs
           </Tag>
           <Tag as="li" variant="light">
-            <strong className="k-u-weight-regular">2</strong> disponibles
+            <strong className="k-u-weight-500">2</strong> disponibles
           </Tag>
         </RewardCard.TagList>
         <RewardCard.Description
           moreButtonText="See more…"
           truncateText={truncateText}
         >
-          <p className="k-u-weight-light k-u-margin-none">
-            <strong className="k-u-weight-regular">Maecenas tempus</strong>,
-            tellus eget condimentum rhoncus, sem quam semper libero,{' '}
+          <p className="k-u-weight-400 k-u-margin-none">
+            <strong className="k-u-weight-500">Maecenas tempus</strong>, tellus
+            eget condimentum rhoncus, sem quam semper libero,{' '}
             <em className="k-u-style-italic">sit amet adipiscing</em> sem neque
             sed ipsum.
           </p>
-          <p className="k-u-weight-light k-u-margin-none">
+          <p className="k-u-weight-400 k-u-margin-none">
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
-          <p className="k-u-weight-light k-u-margin-none">
+          <p className="k-u-weight-400 k-u-margin-none">
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
-          <p className="k-u-weight-light k-u-margin-none">
+          <p className="k-u-weight-400 k-u-margin-none">
             Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
             Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tell
           </p>
@@ -266,30 +266,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -308,30 +308,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -359,30 +359,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -398,30 +398,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -461,30 +461,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -502,30 +502,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -551,30 +551,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
@@ -588,30 +588,30 @@ export const InACarouselComponent = ({ truncateTitle }) => {
             <RewardCard.Amount>65&nbsp;€</RewardCard.Amount>
             <RewardCard.TagList>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">5</strong> contributeurs
+                <strong className="k-u-weight-500">5</strong> contributeurs
               </Tag>
               <Tag as="li" variant="light">
-                <strong className="k-u-weight-regular">2</strong> disponibles
+                <strong className="k-u-weight-500">2</strong> disponibles
               </Tag>
             </RewardCard.TagList>
             <RewardCard.Description moreButtonText="See more…" truncateText>
-              <p className="k-u-weight-light k-u-margin-none">
-                <strong className="k-u-weight-regular">Maecenas tempus</strong>,
+              <p className="k-u-weight-400 k-u-margin-none">
+                <strong className="k-u-weight-500">Maecenas tempus</strong>,
                 tellus eget condimentum rhoncus, sem quam semper libero,{' '}
                 <em className="k-u-style-italic">sit amet adipiscing</em> sem
                 neque sed ipsum.
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell
               </p>
-              <p className="k-u-weight-light k-u-margin-none">
+              <p className="k-u-weight-400 k-u-margin-none">
                 Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
                 enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 tell

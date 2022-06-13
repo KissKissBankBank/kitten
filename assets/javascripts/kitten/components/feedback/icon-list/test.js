@@ -19,8 +19,8 @@ describe('<IconList />', () => {
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text weight="light">
-                <Text weight="regular">Foo</Text>Bar
+              <Text weight="400">
+                <Text weight="500">Foo</Text>Bar
               </Text>
             </IconList.Item>
             <IconList.Item>FooBar</IconList.Item>

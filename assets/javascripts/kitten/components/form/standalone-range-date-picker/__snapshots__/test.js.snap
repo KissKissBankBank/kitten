@@ -14,7 +14,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="k-u-size-small k-u-weight-regular sc-gsDKAQ hwIbfa"
+        className="k-u-size-small k-u-weight-500 sc-gsDKAQ hwIbfa"
       >
         Sélectionnez la période souhaitée
       </p>
@@ -23,7 +23,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bdvvtL kmiPCe k-Button sc-hKwDye ghbuQj k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+          className="sc-bdvvtL dsilnN k-Button sc-hKwDye ghbuQj k-Button--medium k-Button--hydrogen k-Button--fit-icon"
           onClick={[Function]}
           style={
             Object {
@@ -54,7 +54,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bdvvtL kmiPCe k-Button sc-hKwDye ghbuQj k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+          className="sc-bdvvtL dsilnN k-Button sc-hKwDye ghbuQj k-Button--medium k-Button--hydrogen k-Button--fit-icon"
           onClick={[Function]}
           style={
             Object {

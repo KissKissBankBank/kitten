@@ -7,18 +7,6 @@ import styled from 'styled-components'
 import { modifierStyles } from './helpers/modifier-styles'
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
-
-const deprecatedModifiers = [
-  'carbon',
-  'oxygen',
-  'calcium',
-  'social_facebook',
-  'social_twitter',
-  'social_linkedin',
-  'social_instagram',
-  'social_youtube',
-]
 
 export const buttonModifiers = [
   'hydrogen',
@@ -64,7 +52,7 @@ const StyledButton = styled.button`
   align-items: center;
   gap: ${pxToRem(10)};
 
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   font-size: ${stepToRem(-1)};
   color: ${COLORS.font1};
   line-height: 1.3;
@@ -109,21 +97,18 @@ const StyledButton = styled.button`
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Button--tiny,
   &.k-Button--small {
     --Button-dimension: ${pxToRem(40)};
     --Button-min-width: ${pxToRem(160)};
     --Button-padding: ${pxToRem(7)} ${pxToRem(20)};
   }
 
-  &.k-Button--regular,
   &.k-Button--medium {
     --Button-dimension: ${pxToRem(50)};
     --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
   }
 
-  &.k-Button--big,
   &.k-Button--large {
     --Button-dimension: ${pxToRem(50)};
     --Button-min-width: ${pxToRem(200)};
@@ -207,9 +192,7 @@ const StyledButton = styled.button`
     }
   }
 
-  /* MODIFIERS */
-
-  ${({ modifier }) => modifierStyles(modifier)}
+  /* BULLET */
 
   &.k-Button--hasBullet {
     --Button-bullet-radius: ${pxToRem(3 + 4)}; /* border + (width/2) */
@@ -240,6 +223,10 @@ const StyledButton = styled.button`
       --Button-radius: calc(var(--Button-dimension) / 2);
     }
   }
+
+  /* MODIFIERS */
+
+  ${({ modifier }) => modifierStyles(modifier)}
 `
 
 // const ForwardedButtonComponent = forwardRef((props, ref) => {
@@ -264,16 +251,6 @@ export const Button = ({
   bulletColor,
   ...props
 }) => {
-  if (deprecatedModifiers.includes(modifier)) {
-    console.warn(
-      `The modifier ${modifier} has been deprecated. Please use one for the following: ${buttonModifiers.join(
-        ', ',
-      )}.`,
-    )
-  }
-
-  checkDeprecatedSizes(size)
-
   const internalModifier = active ? 'lithium' : modifier
 
   const internalTag = as || tag
@@ -317,7 +294,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
-  modifier: PropTypes.oneOf([...buttonModifiers, ...deprecatedModifiers]),
+  modifier: PropTypes.oneOf(buttonModifiers),
   active: PropTypes.bool,
   hasBullet: PropTypes.bool,
   bulletColor: PropTypes.string,
@@ -329,7 +306,7 @@ Button.defaultProps = {
   borderRadius: null,
   size: 'medium',
   modifier: 'hydrogen',
-  fit: 'min-width',
+  fit: 'content',
   mobileFit: null,
   active: false,
   hasBullet: false,

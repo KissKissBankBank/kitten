@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { TextInput } from '../../../form/input/text-input'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated'
 import { Button } from '../../../action/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledTextInputWithButton = styled.div`
   .k-Form-TextInputWithButton__button {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-1)};
     line-height: 1.3;
     flex: 1 0 auto;
@@ -62,17 +60,14 @@ const StyledTextInputWithButton = styled.div`
     }
   }
 
-  &.k-Form-TextInputWithButton--tiny,
   &.k-Form-TextInputWithButton--small {
     --text-input-size: ${pxToRem(40)};
   }
 
-  &.k-Form-TextInputWithButton--regular,
   &.k-Form-TextInputWithButton--medium {
     --text-input-size: ${pxToRem(50)};
   }
 
-  &.k-Form-TextInputWithButton--big,
   &.k-Form-TextInputWithButton--large {
     --text-input-size: ${pxToRem(60)};
 
@@ -116,7 +111,6 @@ export const TextInputWithButton = React.forwardRef(
       error,
       disabled,
       size,
-      value,
       rounded,
       buttonValue,
       modifier,
@@ -128,8 +122,6 @@ export const TextInputWithButton = React.forwardRef(
     },
     ref,
   ) => {
-    checkDeprecatedSizes(size)
-
     const ButtonComponent = inset ? 'button' : Button
 
     return (
@@ -171,7 +163,7 @@ export const TextInputWithButton = React.forwardRef(
           modifier={modifier}
           size={size}
         >
-          {value || buttonValue}
+          {buttonValue}
         </ButtonComponent>
       </StyledTextInputWithButton>
     )
@@ -187,8 +179,6 @@ TextInputWithButton.propTypes = {
   inset: PropTypes.bool,
   modifier: PropTypes.string,
   inputValue: PropTypes.string,
-  // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
-  value: deprecated(PropTypes.node, 'Use `buttonValue` instead.'),
   buttonValue: PropTypes.node,
 }
 

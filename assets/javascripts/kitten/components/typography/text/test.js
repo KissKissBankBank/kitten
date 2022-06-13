@@ -44,7 +44,7 @@ describe('<Text />', () => {
 
     beforeEach(() => {
       component = renderer
-        .create(<Text cssColor="#F00" style={{ fontWeight: 'bold' }} />)
+        .create(<Text cssColor="#F00" style={{ fontWeight: '700' }} />)
         .toJSON()
     })
 
@@ -70,10 +70,10 @@ describe('<Text />', () => {
   })
 
   describe('with weight prop', () => {
-    const component = shallow(<Text weight="light" />)
+    const component = shallow(<Text weight="400" />)
 
     it('has a good utility class', () => {
-      expect(component.hasClass('k-u-weight-light')).toBe(true)
+      expect(component.hasClass('k-u-weight-400')).toBe(true)
     })
   })
 

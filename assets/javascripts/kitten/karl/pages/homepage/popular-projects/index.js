@@ -10,13 +10,13 @@ import {
 const InfoComponent = () => (
   <>
     <span className="k-u-hidden@s-up">
-      <Text weight="light">J -</Text>{' '}
-      <Text tag="strong" weight="bold">
+      <Text weight="400">J -</Text>{' '}
+      <Text tag="strong" weight="700">
         7
       </Text>
     </span>
     <span className="k-u-hidden@xs-down">
-      <Text tag="strong" weight="bold">
+      <Text tag="strong" weight="700">
         7 jours
       </Text>
       <br />

@@ -47,6 +47,6 @@ export default {
 
 export const Default = args => (
   <Row {...args}>
-    <Text weight="light">FooBar</Text>
+    <Text weight="400">FooBar</Text>
   </Row>
 )

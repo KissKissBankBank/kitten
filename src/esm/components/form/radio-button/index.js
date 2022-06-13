@@ -9,7 +9,7 @@ import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { ScreenConfig } from '../../../constants/screen-config';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledRadioButton = styled.div.withConfig({
   displayName: "radio-button__StyledRadioButton",
   componentId: "sc-wb11e0-0"

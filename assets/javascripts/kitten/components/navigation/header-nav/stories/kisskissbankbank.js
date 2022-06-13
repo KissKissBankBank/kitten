@@ -130,7 +130,7 @@ const SearchInput = () => {
                 bgColor={COLORS.primary1}
                 className="k-u-margin-right-noneHalf"
               />
-              <Text weight="regular" size="micro" color="primary1">
+              <Text weight="500" size="micro" color="primary1">
                 Dernier jour&nbsp;!
               </Text>
             </div>
@@ -150,7 +150,7 @@ const SearchInput = () => {
                 bgColor={COLORS.valid}
                 className="k-u-margin-right-noneHalf"
               />
-              <Text weight="regular" size="micro" color="font1">
+              <Text weight="500" size="micro" color="font1">
                 Réussi
               </Text>
             </div>
@@ -170,7 +170,7 @@ const SearchInput = () => {
                 bgColor={COLORS.primary1}
                 className="k-u-margin-right-noneHalf"
               />
-              <Text weight="regular" size="micro">
+              <Text weight="500" size="micro">
                 En cours
               </Text>
             </div>
@@ -190,7 +190,7 @@ const SearchInput = () => {
                 bgColor={COLORS.primary1}
                 className="k-u-margin-right-noneHalf"
               />
-              <Text weight="regular" size="micro">
+              <Text weight="500" size="micro">
                 En cours
               </Text>
             </div>
@@ -328,7 +328,7 @@ export const KissKissBankBankHeaderNavStory = ({
                     className="k-u-hidden@xs-down"
                     withEllipsisOverflow={true}
                   >
-                    <Text lineHeight="normal" weight="regular">
+                    <Text lineHeight="normal" weight="500">
                       Jean Charles Édouard
                     </Text>
                   </AvatarWithTextAndBadge.Text>

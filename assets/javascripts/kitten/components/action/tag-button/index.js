@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated'
 
 const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
@@ -23,7 +21,7 @@ const StyledTagButton = styled.button`
   border-style: solid;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles['500']};
   font-size: ${stepToRem(-2)};
   color: ${COLORS.font1};
   line-height: 1.3;
@@ -57,7 +55,6 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
   }
 
-  &.k-Buttons__tagButton--tiny,
   &.k-Buttons__tagButton--small {
     min-height: ${pxToRem(30)};
     min-width: ${pxToRem(60)};
@@ -65,7 +62,6 @@ const StyledTagButton = styled.button`
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Buttons__tagButton--big,
   &.k-Buttons__tagButton--large {
     min-height: ${pxToRem(50)};
     min-width: ${pxToRem(80)};
@@ -102,7 +98,6 @@ const StyledTagButton = styled.button`
 
 export const TagButton = ({
   children,
-  selected,
   active,
   className,
   size,
@@ -112,8 +107,6 @@ export const TagButton = ({
 }) => {
   const others = (({ modifier, icon, ...rest }) => rest)(props)
 
-  checkDeprecatedSizes(size)
-
   return (
     <StyledTagButton
       type={!tag && !as ? 'button' : null}
@@ -122,7 +115,7 @@ export const TagButton = ({
         className,
         `k-Buttons__tagButton--${size}`,
         {
-          'k-Buttons__tagButton--active': active || selected,
+          'k-Buttons__tagButton--active': active,
         },
       )}
       as={tag || as}
@@ -136,12 +129,6 @@ export const TagButton = ({
 TagButton.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   active: PropTypes.bool,
-  icon: deprecated(PropTypes.bool, 'Icon is not implemented anymore.'),
-  modifier: deprecated(
-    PropTypes.string,
-    'Modifiers are not implemented anymore.',
-  ),
-  selected: deprecated(PropTypes.bool, 'Please use `active` instead'),
 }
 
 TagButton.defaultProps = {

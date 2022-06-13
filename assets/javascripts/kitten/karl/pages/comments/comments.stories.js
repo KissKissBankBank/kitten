@@ -47,7 +47,7 @@ const ProxyComment = ({ isAdmin = false, ...args }) => {
           <>
             <Text
               as="button"
-              weight="regular"
+              weight="500"
               size="micro"
               className="k-u-reset-button k-u-link k-u-link-font1"
             >
@@ -55,7 +55,7 @@ const ProxyComment = ({ isAdmin = false, ...args }) => {
             </Text>
             <Text
               as="button"
-              weight="regular"
+              weight="500"
               size="micro"
               className="k-u-reset-button k-u-link k-u-link-font1"
             >

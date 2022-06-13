@@ -6,6 +6,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 const StyledLinkList = styled.ul`
   text-align: center;
@@ -38,7 +39,7 @@ const StyledLinkList = styled.ul`
   }
 
   .k-LinkList__link {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
     font-size: ${stepToRem(-1)};
     text-decoration: none;
 
@@ -56,12 +57,12 @@ const StyledLinkList = styled.ul`
 
   .k-LinkList__item--regular,
   .k-LinkList__link--regular {
-    ${TYPOGRAPHY.fontStyles.regular};
+    ${TYPOGRAPHY.fontStyles['500']};
   }
 
   .k-LinkList__item--light,
   .k-LinkList__link--light {
-    ${TYPOGRAPHY.fontStyles.light};
+    ${TYPOGRAPHY.fontStyles['400']};
   }
 
   .k-LinkList__link--normalLineHeight {
@@ -88,6 +89,8 @@ export const LinkList = ({
   href,
   ...others
 }) => {
+  checkDeprecatedWeights(weight)
+
   return (
     <StyledLinkList
       {...others}
@@ -127,7 +130,7 @@ LinkList.propTypes = {
   color: PropTypes.oneOf(['light', 'dark']),
   lineHeight: PropTypes.oneOf(['normal']),
   itemMargin: PropTypes.oneOf(['double', 'triple']),
-  weight: PropTypes.oneOf(['regular', 'light']),
+  weight: PropTypes.oneOf(['400', '500']),
   margin: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -147,5 +150,5 @@ LinkList.defaultProps = {
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
-  weight: 'regular',
+  weight: '500',
 }

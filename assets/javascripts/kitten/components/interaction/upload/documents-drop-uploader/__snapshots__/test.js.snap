@@ -271,7 +271,7 @@ Array [
         type="file"
       />
       <label
-        className="k-u-size-small k-u-weight-regular k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
+        className="k-u-size-small k-u-weight-500 k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
         htmlFor="DocumentsDropUploader"
       >
         <span
@@ -288,7 +288,7 @@ Array [
     id="DocumentsDropUploader-error-description"
   >
     <li
-      className="k-u-color-error k-u-size-micro k-u-weight-bold"
+      className="k-u-color-error k-u-size-micro k-u-weight-700"
     />
   </ul>,
 ]
@@ -375,7 +375,7 @@ exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
       type="file"
     />
     <label
-      className="k-u-size-small k-u-weight-regular k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
+      className="k-u-size-small k-u-weight-500 k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
       htmlFor="DocumentsDropUploader"
     >
       <span

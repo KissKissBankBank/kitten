@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { modifierStyles } from './helpers/modifier-styles';
 import { ScreenConfig } from '../../../constants/screen-config';
 import classNames from 'classnames';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
 export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron', 'krypton'];
 export var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];

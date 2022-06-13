@@ -374,7 +374,7 @@ export const StyledDashboard = styled.div`
     padding: ${pxToRem(20)} ${pxToRem(30)};
     color: ${COLORS.background1};
     background-color: ${COLORS.font1};
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     line-height: 1;
     font-size: ${stepToRem(1)};
     text-decoration: none;
@@ -403,7 +403,7 @@ export const StyledDashboard = styled.div`
     align-items: center;
     color: ${COLORS.background1};
     transition: color 0.2s ease, background-color 0.2s ease;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
     line-height: 1.2;
     text-decoration: none;

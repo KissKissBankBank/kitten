@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import styled from 'styled-components';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-import { checkDeprecatedSizes } from '../../../helpers/utils/deprecated';
+;
 var StyledTag = styled.span.withConfig({
   displayName: "tag__StyledTag",
   componentId: "sc-t9jrs5-0"

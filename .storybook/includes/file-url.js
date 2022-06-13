@@ -19,7 +19,7 @@ export const FileUrl = ({filepath, filenames = 'index.js'}) => {
           key={`${item}_${index}`}
           tag="a"
           href={`${ghUrl}${item}`}
-          weight="regular"
+          weight="500"
           className="k-u-link k-u-link-primary1 k-u-decoration-underline"
           target="_blank"
         >
