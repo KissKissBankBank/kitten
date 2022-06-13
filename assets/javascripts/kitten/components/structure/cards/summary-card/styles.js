@@ -255,13 +255,13 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
 
   transition: background-color 0.2s ease, border-color 0.2s ease;
 
-  border: var(--border);
+  box-shadow: var(--box-shadow-m);
   border-radius: var(--border-radius-m);
 
   &.k-SummaryCard--hasAction {
     &:hover {
       background-color: var(--color-grey-100);
-      border-color: var(--color-grey-500);
+      box-shadow: var(--box-shadow-hover-m);
     }
     &:active {
       background-color: var(--color-grey-200);

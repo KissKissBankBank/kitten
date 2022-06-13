@@ -15,7 +15,7 @@ const StyledManagerCard = styled.article`
 
   transition: background-color var(--transition), border-color var(--transition);
 
-  border: var(--border);
+  box-shadow: var(--box-shadow-m);
   border-radius: var(--border-radius-m);
 
   display: flex;
@@ -24,7 +24,7 @@ const StyledManagerCard = styled.article`
   &.k-ManagerCard--hasAction {
     &:hover {
       background-color: var(--color-grey-100);
-      border-color: var(--color-grey-500);
+      box-shadow: var(--box-shadow-hover-m);
     }
 
     &:active {
