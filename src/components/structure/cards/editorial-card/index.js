@@ -43,7 +43,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var StyledEditorialCard = _styledComponents.default.div.withConfig({
   displayName: "editorial-card__StyledEditorialCard",
   componentId: "sc-r7owgx-0"
-})(["box-sizing:border-box;height:100%;position:relative;color:var(--color-grey-000);border-radius:var(--border-radius-m);overflow:hidden;font-size:var(--font-size-3);line-height:", ";.k-EditorialCard__grid{height:100%;display:grid;grid-template-columns:100%;transition:transform var(--transition);}&.k-EditorialCard--hasVerso .k-EditorialCard__grid{grid-template-columns:repeat(2,100%);}&:not(.k-EditorialCard--isRecto) .k-EditorialCard__grid{transform:translateX(-100%);}.k-EditorialCard__recto,.k-EditorialCard__verso{box-sizing:border-box;height:100%;padding:", ";display:flex;flex-direction:column;}@media ", "{font-size:var(--font-size-4);line-height:", ";}.k-EditorialCard__recto{", "}.k-EditorialCard__verso{", "}.k-EditorialCard__content{flex:1 1 auto;p{margin:0;& + p{margin-top:1em;}}}.k-EditorialCard__action{position:absolute;top:0;left:0;width:100%;height:100%;}.k-EditorialCard__arrow{margin-top:", ";align-self:end;@media ", "{transform:none !important;}}&.k-EditorialCard--info{background-color:var(--color-primary-500);}&.k-EditorialCard--success{background-color:var(--color-success-500);}&.k-EditorialCard--custom{background-color:var(--editorialCard-customColor);}"], (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(30), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(20), _typographyConfig.default.fontStyles.regular, _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(20), _screenConfig.mq.mobile);
+})(["box-sizing:border-box;height:100%;position:relative;color:var(--color-grey-000);border-radius:var(--border-radius-m);overflow:hidden;font-size:var(--font-size-3);line-height:", ";.k-EditorialCard__grid{height:100%;display:grid;grid-template-columns:100%;transition:transform var(--transition);}&.k-EditorialCard--hasVerso .k-EditorialCard__grid{grid-template-columns:repeat(2,100%);}&:not(.k-EditorialCard--isRecto) .k-EditorialCard__grid{transform:translateX(-100%);}.k-EditorialCard__recto,.k-EditorialCard__verso{box-sizing:border-box;height:100%;padding:", ";display:flex;flex-direction:column;}@media ", "{font-size:var(--font-size-4);line-height:", ";}.k-EditorialCard__recto{", "}.k-EditorialCard__verso{", "}.k-EditorialCard__content{flex:1 1 auto;p{margin:0;& + p{margin-top:1em;}}}.k-EditorialCard__action{position:absolute;top:0;left:0;width:100%;height:100%;}.k-EditorialCard__arrow{margin-top:", ";align-self:end;@media ", "{transform:none !important;}}&.k-EditorialCard--info{background-color:var(--color-primary-500);}&.k-EditorialCard--success{background-color:var(--color-success-500);}&.k-EditorialCard--custom{background-color:var(--editorialCard-customColor);}"], (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(30), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(20), _typographyConfig.default.fontStyles['500'], _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(20), _screenConfig.mq.mobile);
 
 var EditorialCard = function EditorialCard(_ref) {
   var children = _ref.children,
@@ -161,7 +161,7 @@ var Verso = function Verso(_ref4) {
     className: "k-EditorialCard__content"
   }, children), /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "k-EditorialCard__actionText k-u-m-t-8",
-    weight: "bold"
+    weight: "700"
   }, actionText));
 };
 

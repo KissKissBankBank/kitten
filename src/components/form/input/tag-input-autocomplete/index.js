@@ -17,8 +17,6 @@ var _slugify = _interopRequireDefault(require("slugify"));
 
 var _crossIcon = require("../../../graphics/icons/cross-icon");
 
-var _deprecated = require("../../../../helpers/utils/deprecated");
-
 var _tagInput = require("../tag-input");
 
 var _autocomplete = require("../autocomplete");
@@ -45,7 +43,6 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       suggestionsNumberA11yMessage = _ref.suggestionsNumberA11yMessage,
       showSuggestionsOnFocus = _ref.showSuggestionsOnFocus,
       inputLabel = _ref.inputLabel;
-  (0, _deprecated.checkDeprecatedSizes)(size);
   var inputEl = (0, _react.useRef)(null);
   var suggestionsEl = (0, _react.useRef)(null);
 

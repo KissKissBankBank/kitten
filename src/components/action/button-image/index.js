@@ -21,14 +21,12 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
-var _deprecated = require("../../../helpers/utils/deprecated");
-
 var _excluded = ["tag", "className", "size", "withoutPointerEvents", "withBorder", "img"];
 
 var StyledButtonImage = _styledComponents.default.button.withConfig({
   displayName: "button-image__StyledButtonImage",
   componentId: "sc-1g89n03-0"
-})(["width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--tiny,&.k-ButtonImage--small{width:", ";height:", ";}&.k-ButtonImage--big,&.k-ButtonImage--large{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:var(--border);}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
+})(["width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;cursor:pointer;border:0;padding:0;opacity:1;transition:opacity 0.2s;&:hover,&:focus{opacity:0.8;}&.k-ButtonImage--small{width:", ";height:", ";}&.k-ButtonImage--large{@media (min-width:", "px){width:", ";height:", ";}}&.k-ButtonImage--huge{width:", ";height:", ";}&.k-ButtonImage--withoutPointerEvents{pointer-events:none;}&.k-ButtonImage--withBorder{border:var(--border);}.k-ButtonImage__img{display:block;margin:0;padding:0;border:0;width:100%;height:100%;object-fit:cover;}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80));
 
 var ButtonImage = function ButtonImage(_ref) {
   var tag = _ref.tag,
@@ -38,7 +36,6 @@ var ButtonImage = function ButtonImage(_ref) {
       withBorder = _ref.withBorder,
       img = _ref.img,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  (0, _deprecated.checkDeprecatedSizes)(size);
   return /*#__PURE__*/_react.default.createElement(StyledButtonImage, (0, _extends2.default)({
     as: tag,
     className: (0, _classnames.default)('k-ButtonImage', "k-ButtonImage--" + size, {

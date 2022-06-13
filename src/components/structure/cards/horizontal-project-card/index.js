@@ -73,13 +73,13 @@ var HorizontalProjectCard = function HorizontalProjectCard(_ref) {
   }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
     alt: imageProps.alt || ''
   }))), /*#__PURE__*/_react.default.createElement(_text.Text, {
-    weight: "regular",
+    weight: "500",
     size: "small",
     as: titleTag,
     className: "k-HorizontalProjectCard__title"
   }, title), /*#__PURE__*/_react.default.createElement(_text.Text, {
     as: "p",
-    weight: "light",
+    weight: "400",
     size: "micro",
     className: "k-HorizontalProjectCard__description"
   }, description), !!info && /*#__PURE__*/_react.default.createElement("div", {
@@ -97,7 +97,7 @@ var HorizontalProjectCard = function HorizontalProjectCard(_ref) {
     },
     className: "k-HorizontalProjectCard__progress__ramp"
   }), /*#__PURE__*/_react.default.createElement(_text.Text, {
-    weight: "light",
+    weight: "400",
     size: "micro",
     className: "k-HorizontalProjectCard__progress__value"
   }, progress, "\xA0%")));

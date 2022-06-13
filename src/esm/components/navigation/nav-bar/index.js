@@ -9,7 +9,6 @@ import classNames from 'classnames';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-;
 import { CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { HEADER_HEIGHT } from '../../navigation/header-nav/config';
@@ -19,7 +18,7 @@ var StyledNavBar = styled.div.withConfig({
 })(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--small .k-NavBar__link{height:", ";}&.k-NavBar--big,&.k-NavBar--large{.k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}}"], pxToRem(CONTAINER_PADDING_THIN), function (_ref) {
   var colors = _ref.colors;
   return colors.background || COLORS.primary6;
-}, pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(25), pxToRem(ScreenConfig.S.min), pxToRem(50), pxToRem(65), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), function (_ref2) {
+}, pxToRem(ScreenConfig.S.min), pxToRem(CONTAINER_PADDING), pxToRem(25), pxToRem(ScreenConfig.S.min), pxToRem(50), pxToRem(65), TYPOGRAPHY.fontStyles['500'], stepToRem(-1), function (_ref2) {
   var colors = _ref2.colors;
   return colors.link || COLORS.font1;
 }, pxToRem(4), function (_ref3) {
@@ -61,7 +60,6 @@ export var NavBar = function NavBar(_ref8) {
       modifier = _ref8.modifier,
       props = _objectWithoutPropertiesLoose(_ref8, _excluded2);
 
-  checkDeprecatedSizes(modifier);
   return /*#__PURE__*/React.createElement(StyledNavBar, _extends({}, props, {
     className: classNames('k-NavBar', "k-NavBar--" + modifier, className),
     colors: colors

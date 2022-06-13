@@ -30,7 +30,7 @@ export var Image = function Image(_ref) {
     }
   }, /*#__PURE__*/React.createElement(Text, {
     size: "medium",
-    weight: "regular",
+    weight: "500",
     color: arrowColor,
     "aria-label": ariaLabel
   }, "\u25BA")), /*#__PURE__*/React.createElement("img", _extends({}, imageProps, {

@@ -7,7 +7,6 @@ import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
 import { Button, buttonModifiers } from '../../../action/button';
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 export var Item = function Item(_ref) {
   var children = _ref.children,
       external = _ref.external,
@@ -20,7 +19,6 @@ export var Item = function Item(_ref) {
       tag = _ref.tag,
       other = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  checkDeprecatedSizes(size);
   var Component = as || tag;
   return /*#__PURE__*/React.createElement("li", _extends({}, liProps, {
     className: classNames('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {

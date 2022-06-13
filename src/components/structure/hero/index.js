@@ -15,8 +15,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
-
 var _container = require("../../layout/container");
 
 var _grid = require("../../layout/grid");
@@ -32,7 +30,7 @@ var _typography = require("../../../helpers/utils/typography");
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _excluded = ["backgroundColor", "color", "backgroundImage"],
-    _excluded2 = ["direction", "tiny", "small", "imageSrc", "contentBackgroundColor", "contentColor", "children"];
+    _excluded2 = ["direction", "small", "imageSrc", "contentBackgroundColor", "contentColor", "children"];
 var StyledHero = (0, _styledComponents.default)(function (_ref) {
   var backgroundColor = _ref.backgroundColor,
       color = _ref.color,
@@ -42,7 +40,7 @@ var StyledHero = (0, _styledComponents.default)(function (_ref) {
 }).withConfig({
   displayName: "hero__StyledHero",
   componentId: "sc-1fnbzje-0"
-})([".k-Hero__contentGridCol{position:relative;z-index:1;padding-top:", ";margin-left:", ";}.k-Hero__content{background-color:", ";color:", ";padding:", " ", ";@media ", "{padding:", " ", ";}@media ", "{padding:", " ", ";}}.k-Hero__imageGridCol{margin-left:-", ";padding-bottom:", ";}.k-Hero__image{width:calc(100% + ", ");height:100%;background-image:url(", ");background-color:", ";background-size:cover;background-repeat:no-repeat;background-position:50% 50%;@media ", "{width:calc(100% + ", ");height:100vw;margin-left:", ";}@media ", "{width:calc(100% + ", ");margin-left:", ";}}&.k-Hero--direction-left{.k-Hero__contentGridCol{@media ", "{padding-top:", ";margin-left:0;}}.k-Hero__content{@media ", "{margin-left:", ";}}.k-Hero__imageGridCol{@media ", "{margin-left:-", ";padding-bottom:0;}@media ", "{margin-left:-100%;}}}&.k-Hero--direction-right{.k-Hero__contentGridCol{margin-left:", ";@media ", "{padding-top:", ";margin-left:", ";}@media ", "{margin-left:0;}}.k-Hero__content{@media ", "{margin-right:", ";}}.k-Hero__imageGridCol{margin-left:-", ";@media ", "{margin-left:-", ";}@media ", "{margin-left:-100%;}}.k-Hero__image{margin-left:", ";}}&.k-Hero--tiny,&.k-Hero--small{@media ", "{.k-Hero__contentGridCol{padding-bottom:", ";}.k-Hero__imageGridCol{padding-bottom:0;}}}"], 1 / _gridConfig.NUM_COLUMNS * 100 + 'vw', 1 / _gridConfig.NUM_COLUMNS * 100 + '%', function (_ref2) {
+})([".k-Hero__contentGridCol{position:relative;z-index:1;padding-top:", ";margin-left:", ";}.k-Hero__content{background-color:", ";color:", ";padding:", " ", ";@media ", "{padding:", " ", ";}@media ", "{padding:", " ", ";}}.k-Hero__imageGridCol{margin-left:-", ";padding-bottom:", ";}.k-Hero__image{width:calc(100% + ", ");height:100%;background-image:url(", ");background-color:", ";background-size:cover;background-repeat:no-repeat;background-position:50% 50%;@media ", "{width:calc(100% + ", ");height:100vw;margin-left:", ";}@media ", "{width:calc(100% + ", ");margin-left:", ";}}&.k-Hero--direction-left{.k-Hero__contentGridCol{@media ", "{padding-top:", ";margin-left:0;}}.k-Hero__content{@media ", "{margin-left:", ";}}.k-Hero__imageGridCol{@media ", "{margin-left:-", ";padding-bottom:0;}@media ", "{margin-left:-100%;}}}&.k-Hero--direction-right{.k-Hero__contentGridCol{margin-left:", ";@media ", "{padding-top:", ";margin-left:", ";}@media ", "{margin-left:0;}}.k-Hero__content{@media ", "{margin-right:", ";}}.k-Hero__imageGridCol{margin-left:-", ";@media ", "{margin-left:-", ";}@media ", "{margin-left:-100%;}}.k-Hero__image{margin-left:", ";}}&.k-Hero--small{@media ", "{.k-Hero__contentGridCol{padding-bottom:", ";}.k-Hero__imageGridCol{padding-bottom:0;}}}"], 1 / _gridConfig.NUM_COLUMNS * 100 + 'vw', 1 / _gridConfig.NUM_COLUMNS * 100 + '%', function (_ref2) {
   var backgroundColor = _ref2.backgroundColor;
   return backgroundColor;
 }, function (_ref3) {
@@ -58,7 +56,6 @@ var StyledHero = (0, _styledComponents.default)(function (_ref) {
 
 var Hero = function Hero(_ref6) {
   var direction = _ref6.direction,
-      tiny = _ref6.tiny,
       small = _ref6.small,
       imageSrc = _ref6.imageSrc,
       contentBackgroundColor = _ref6.contentBackgroundColor,
@@ -67,7 +64,6 @@ var Hero = function Hero(_ref6) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded2);
   return /*#__PURE__*/_react.default.createElement(StyledHero, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-Hero', props.className, "k-Hero--direction-" + direction, {
-      'k-Hero--tiny': tiny,
       'k-Hero--small': small
     }),
     backgroundColor: contentBackgroundColor,
@@ -92,7 +88,6 @@ var Hero = function Hero(_ref6) {
 exports.Hero = Hero;
 Hero.propTypes = {
   direction: _propTypes.default.oneOf(['left', 'right']),
-  tiny: (0, _deprecated.default)(_propTypes.default.bool, 'Please use `small` instead'),
   small: _propTypes.default.bool,
   imageSrc: _propTypes.default.string,
   contentBackgroundColor: _propTypes.default.string,

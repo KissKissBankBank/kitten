@@ -21,8 +21,6 @@ var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
 var _button = require("../../../action/button");
 
-var _deprecated2 = require("../../../../helpers/utils/deprecated");
-
 var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
 
 var Item = function Item(_ref) {
@@ -36,7 +34,6 @@ var Item = function Item(_ref) {
       as = _ref.as,
       tag = _ref.tag,
       other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  (0, _deprecated2.checkDeprecatedSizes)(size);
   var Component = as || tag;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({}, liProps, {
     className: (0, _classnames.default)('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {

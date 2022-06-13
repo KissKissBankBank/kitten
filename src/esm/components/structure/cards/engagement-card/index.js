@@ -37,7 +37,7 @@ export var EngagementCard = function EngagementCard(_ref2) {
     backgroundColor: backgroundColor
   }), /*#__PURE__*/React.createElement(StyledIcon, null, icon), /*#__PURE__*/React.createElement(StyledText, {
     size: "micro",
-    weight: "regular",
+    weight: "500",
     color: "font1"
   }, children));
 };

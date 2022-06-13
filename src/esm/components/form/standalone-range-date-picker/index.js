@@ -21,13 +21,13 @@ var StyledDatePicker = styled.div.withConfig({
 })(["display:inline-block;box-sizing:border-box;.DayPickerInput-Overlay{min-width:calc(7 * ", " + 2 * ", ");margin-top:", ";box-shadow:none;@media (min-width:", "px){min-width:calc(7 * ", " + 2 * ", ");}}.DayPicker-Caption{text-align:center;height:", ";line-height:", ";margin:0;padding:0;overflow:hidden;", " & div{margin:0;font-size:", ";}}.DayPicker{font-size:", ";", " border:none;.DayPicker-Month{margin:0;@media (min-width:", "px){&:first-of-type{margin-right:", ";}}}.DayPicker-Weekday{", " ", "}.DayPicker-Weekday,.DayPicker-Day{padding:0;width:", ";height:", ";vertical-align:middle;box-sizing:border-box;font-size:", ";@media (min-width:", "px){width:", ";height:", ";}}.DayPicker-Day{", " border-radius:0;&.DayPicker-Day--today{", " ", "}&.DayPicker-Day--selected{outline-offset:calc(-1 * ", " / 2);&:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled){&,&:hover{", "}&:focus{z-index:25;", " outline-offset:0;}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{", "}&.DayPicker-Day--start,&.DayPicker-Day--end{&,&:hover{", "}&:focus{", " outline-offset:calc(", " / -2);z-index:25;}&:focus:not(:focus-visible){outline-color:transparent;}&:focus-visible{", "}}}}&.DayPicker-Day--disabled{", " pointer-events:none;}&.DayPicker-Day--outside{border:0;}&:not(.DayPicker-Day--disabled):focus{z-index:25;position:relative;outline-style:solid;outline-width:", ";", "}}&:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover{", " ", "}}"], tinyCellSize, tinyDayPickerPadding, pxToRem(18), ScreenConfig.S.min, cellSize, dayPickerPadding, cellSize, cellSize, function (_ref) {
   var styles = _ref.styles;
   return css(["background-color:", ";color:", ";"], styles.header.backgroundColor, styles.header.color);
-}, stepToRem(-1), stepToRem(-1), TYPOGRAPHY.fontStyles.light, ScreenConfig.M.min, pxToRem(30), TYPOGRAPHY.fontStyles.regular, function (_ref2) {
+}, stepToRem(-1), stepToRem(-1), TYPOGRAPHY.fontStyles['400'], ScreenConfig.M.min, pxToRem(30), TYPOGRAPHY.fontStyles['500'], function (_ref2) {
   var styles = _ref2.styles;
   return css(["color:", ";"], styles.weekdaysColor);
 }, tinyCellSize, tinyCellSize, stepToRem(-2), ScreenConfig.S.min, cellSize, cellSize, function (_ref3) {
   var styles = _ref3.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, TYPOGRAPHY.fontStyles.regular, function (_ref4) {
+}, TYPOGRAPHY.fontStyles['500'], function (_ref4) {
   var styles = _ref4.styles;
   return css(["color:", ";"], styles.day.today.color);
 }, borderSize, function (_ref5) {
@@ -54,7 +54,7 @@ var StyledDatePicker = styled.div.withConfig({
 }, borderSize, function (_ref12) {
   var styles = _ref12.styles;
   return css(["outline-color:", ";outline-offset:0;"], styles.day.focus.color);
-}, TYPOGRAPHY.fontStyles.light, function (_ref13) {
+}, TYPOGRAPHY.fontStyles['400'], function (_ref13) {
   var styles = _ref13.styles;
   return css(["background-color:", ";color:", ";border:", ";outline:", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });

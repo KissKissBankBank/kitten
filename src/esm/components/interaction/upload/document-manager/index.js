@@ -162,13 +162,13 @@ export var DocumentManager = function DocumentManager(_ref2) {
       className: "k-DocumentManager__uploader__content"
     }, /*#__PURE__*/React.createElement(Text, {
       tag: "div",
-      weight: "regular",
+      weight: "500",
       size: "small",
       lineHeight: "normal",
       className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
     }, internalStatus === 'file-selected' ? internalFileName : buttonTitle), internalStatus === 'ready' && /*#__PURE__*/React.createElement(Text, {
       tag: "div",
-      weight: "light",
+      weight: "400",
       size: "micro",
       lineHeight: "normal",
       className: "k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
@@ -205,28 +205,28 @@ export var DocumentManager = function DocumentManager(_ref2) {
     className: "k-DocumentManager__display__content"
   }, /*#__PURE__*/React.createElement(Text, {
     tag: "div",
-    weight: "regular",
+    weight: "500",
     size: "small",
     className: "k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
   }, displayTitle), displayContent && /*#__PURE__*/React.createElement("div", {
     className: "k-DocumentManager__display__content__content k-u-margin-top-noneHalf"
   }, displayContent), /*#__PURE__*/React.createElement(Text, {
     tag: "div",
-    weight: "light",
+    weight: "400",
     size: "micro",
     className: "k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
   }, displaySubtitle), canCancel && /*#__PURE__*/React.createElement("button", {
     className: "k-DocumentManager__actionButton k-u-reset-button",
     onClick: handleCancelClick
   }, /*#__PURE__*/React.createElement(Text, {
-    weight: "regular",
+    weight: "500",
     size: "small",
     className: "k-DocumentManager__actionButton__text"
   }, cancelButtonText)), canReplace && /*#__PURE__*/React.createElement("button", {
     className: "k-DocumentManager__actionButton k-u-reset-button",
     onClick: handleReplaceClick
   }, /*#__PURE__*/React.createElement(Text, {
-    weight: "regular",
+    weight: "500",
     size: "small",
     className: "k-DocumentManager__actionButton__text"
   }, replaceButtonText)))));

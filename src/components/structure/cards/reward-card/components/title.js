@@ -29,7 +29,7 @@ var Title = function Title(_ref) {
     })
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     tag: "h3",
-    weight: "regular",
+    weight: "500",
     className: (0, _classnames.default)('k-RewardCard__title', 'k-u-margin-none', 'k-u-align-center', className, {
       'k-u-clamp': truncateText
     }),

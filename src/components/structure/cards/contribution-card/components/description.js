@@ -17,7 +17,7 @@ var Description = function Description(props) {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     tag: "p",
     color: "font1",
-    weight: "light",
+    weight: "400",
     size: "micro"
   }, props, {
     className: (0, _classnames.default)('k-ContributionCard__description', props.className)

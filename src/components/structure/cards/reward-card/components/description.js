@@ -60,7 +60,7 @@ var Description = function Description(_ref) {
   }, /*#__PURE__*/_react.default.createElement("div", null, children)), displayMoreButton && /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "k-RewardCard__description__moreButton",
     color: "primary1",
-    weight: "regular",
+    weight: "500",
     size: "micro"
   }, moreButtonText));
 };

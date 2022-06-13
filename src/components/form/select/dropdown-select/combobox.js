@@ -25,8 +25,6 @@ var _checkedCircleIcon = require("../../../graphics/icons/checked-circle-icon");
 
 var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
-var _deprecated = require("../../../../helpers/utils/deprecated");
-
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
 var _flow = _interopRequireDefault(require("lodash/fp/flow"));
@@ -86,7 +84,6 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       arrowPosition = _ref.arrowPosition,
       labelProps = _ref.labelProps,
       inputProps = _ref.inputProps;
-  (0, _deprecated.checkDeprecatedSizes)(size);
 
   var _useState = (0, _react.useState)([]),
       flattenedOptions = _useState[0],

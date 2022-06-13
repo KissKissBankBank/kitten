@@ -27,9 +27,6 @@ var modifierStyles = function modifierStyles(modifier) {
 
   switch (modifier) {
     case 'hydrogen':
-    case 'carbon':
-    case 'oxygen':
-    case 'calcium':
       borderColor = 'var(--color-grey-400)';
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.font1;
@@ -65,11 +62,6 @@ var modifierStyles = function modifierStyles(modifier) {
       break;
 
     case 'beryllium':
-    case 'social_facebook':
-    case 'social_twitter':
-    case 'social_linkedin':
-    case 'social_instagram':
-    case 'social_youtube':
       borderColor = _colorsConfig.default.font1;
       backgroundColor = _colorsConfig.default.font1;
       color = _colorsConfig.default.background1;

@@ -110,7 +110,7 @@ ChatLayout.Column = function (_ref2) {
   }, props), isPrimaryColumn && /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "h1",
     size: "giant",
-    weight: "bold",
+    weight: "700",
     className: "k-ChatLayout__column__title"
   }, title), hasMobileHeader && /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-ChatLayout__columnHeader', {

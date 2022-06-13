@@ -69,7 +69,7 @@ var CheckboxButton = function CheckboxButton(_ref) {
     tag: "label",
     htmlFor: id,
     onClick: onLabelClick,
-    weight: "regular"
+    weight: "500"
   }, labelProps, textProps, {
     className: (0, _classnames.default)('k-Form-CheckboxButton__label', textProps == null ? void 0 : textProps.className, labelProps == null ? void 0 : labelProps.className)
   }), /*#__PURE__*/_react.default.createElement("span", {
@@ -78,7 +78,7 @@ var CheckboxButton = function CheckboxButton(_ref) {
     tag: "label",
     htmlFor: id,
     onClick: onLabelClick,
-    weight: "regular"
+    weight: "500"
   }, labelProps, textProps, {
     className: (0, _classnames.default)('k-Form-CheckboxButton__label', textProps == null ? void 0 : textProps.className, labelProps == null ? void 0 : labelProps.className)
   }), /*#__PURE__*/_react.default.createElement("span", {
@@ -88,7 +88,7 @@ var CheckboxButton = function CheckboxButton(_ref) {
     htmlFor: id,
     onClick: onLabelClick
   }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
-    weight: "regular"
+    weight: "500"
   }, labelProps, {
     className: (0, _classnames.default)('k-Form-CheckboxButton__labelText', labelProps == null ? void 0 : labelProps.className)
   }), label), /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({}, textProps, {

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import TYPOGRAPHY from '../../../../../constants/typography-config';
 import { pxToRem } from '../../../../../helpers/utils/typography';
 import { ArrowIcon } from '../../../../graphics/icons/arrow-icon';
-var sharedStyledArrowIcons = css(["color:#fff;", ";align-items:center;display:flex;transition:transform 0.3s ease-in-out;line-height:1;width:40%;"], TYPOGRAPHY.fontStyles.regular);
+var sharedStyledArrowIcons = css(["color:#fff;", ";align-items:center;display:flex;transition:transform 0.3s ease-in-out;line-height:1;width:40%;"], TYPOGRAPHY.fontStyles['500']);
 var sharedHoverStyledArrowIcons = css(["cursor:pointer;color:", ";svg{fill:", ";}"], function (_ref) {
   var hoverColor = _ref.hoverColor;
   return hoverColor;

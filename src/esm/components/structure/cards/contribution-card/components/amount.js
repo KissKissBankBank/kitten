@@ -5,7 +5,7 @@ import { Text } from '../../../../typography/text';
 export var Amount = function Amount(props) {
   return /*#__PURE__*/React.createElement(Text, _extends({
     color: "font1",
-    weight: "bold",
+    weight: "700",
     size: "huge"
   }, props, {
     className: classNames('k-ContributionCard__amount', props.className)

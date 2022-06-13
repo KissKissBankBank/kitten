@@ -26,9 +26,9 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var StyledList = _styledComponents.default.ul.withConfig({
   displayName: "list__StyledList",
   componentId: "sc-1rzzvwx-0"
-})(["margin:", " 0 ", ";padding:0;", ";font-size:", ";line-height:normal;", ""], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(12), function (_ref) {
+})(["margin:", " 0 ", ";padding:0;", ";font-size:", ";line-height:normal;", ""], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(12), function (_ref) {
   var error = _ref.error;
-  return error && (0, _styledComponents.css)(["", ";color:", ";"], _typographyConfig.default.fontStyles.regular, _colorsConfig.default.error);
+  return error && (0, _styledComponents.css)(["", ";color:", ";"], _typographyConfig.default.fontStyles['500'], _colorsConfig.default.error);
 });
 
 var StyledItem = _styledComponents.default.li.withConfig({
