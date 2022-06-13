@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Cards` & `Menu`: Add `--box-shadow` variables on some cards and menu.
+
 ## [11.0.0] - 2022-06-13
 
 Breaking changes:

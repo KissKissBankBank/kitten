@@ -82,7 +82,7 @@ const StyledFloatingMenu = styled.nav`
 
   &:not(.k-FloatingMenu--horizontal) {
     @media ${mq.desktop} {
-      box-shadow: var(--box-shadow-s);
+      box-shadow: var(--box-shadow-m);
       border-radius: var(--border-radius-m);
       padding: ${pxToRem(10)} 0;
 
