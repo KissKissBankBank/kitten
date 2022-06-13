@@ -24,7 +24,7 @@ var Title = function Title(_ref) {
   return /*#__PURE__*/React.createElement(Text, _extends({
     size: "small",
     tag: "h3",
-    weight: "bold",
+    weight: "700",
     color: "font1",
     lineHeight: "1.3",
     className: classNames('k-DashboardLayout__flow__sideCard__title', className)

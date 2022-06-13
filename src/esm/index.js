@@ -320,20 +320,13 @@ export { LinkList } from './components/navigation/link-list'; // Structure
 // Structure/Cards
 
 export { BackerCard } from './components/structure/cards/backer-card';
-/* DEPRECATED */
-
-export { RewardCard as BackingCard } from './components/structure/cards/reward-card';
 export { ClickableCard } from './components/structure/cards/clickable-card';
 export { ContentCard } from './components/structure/cards/content-card';
 export { ContributionCard } from './components/structure/cards/contribution-card';
-export { CrowdfundingCard } from './components/structure/cards/crowdfunding-card';
 export { EditorialCard } from './components/structure/cards/editorial-card';
 export { EngagementCard } from './components/structure/cards/engagement-card';
 export { EngagementCardWithImage } from './components/structure/cards/engagement-card-with-image';
 export { HorizontalProjectCard } from './components/structure/cards/horizontal-project-card';
-/* DEPRECATED */
-
-export { HorizontalProjectCard as HorizontalCrowdfundingCard } from './components/structure/cards/horizontal-project-card';
 export { ManagerCard } from './components/structure/cards/manager-card';
 export { ProfileCard } from './components/structure/cards/profile-card';
 export { PeopleCard } from './components/structure/cards/people-card';
@@ -387,17 +380,9 @@ export { DROPDOWN_ANIMATED_DELAY } from './constants/dropdown-config'; // Consta
 
 export { domEvents, A11Y_EVENT, FOCUS_EVENT, A11Y_FIRST_FOCUS_REACHED_EVENT, A11Y_LAST_FOCUS_REACHED_EVENT, DROPDOWN_EVENT, TOGGLE_DROPDOWN_EVENT, DROPDOWN_FIRST_FOCUS_REACHED_EVENT, DROPDOWN_LAST_FOCUS_REACHED_EVENT, DASHBOARD_HIDE_CONTENT_EVENT, DASHBOARD_SHOW_CONTENT_EVENT } from './helpers/dom/events'; // Constants from Components
 
-export { FLUID as BUTTON_STYLE_FLUID, MEDIUM as BUTTON_STYLE_MEDIUM, DEFAULT as BUTTON_STYLE_DEFAULT, // Deprecated
-SMALL as BUTTON_STYLE_SMALL, TINY as BUTTON_STYLE_TINY, // Deprecated
-LARGE as BUTTON_STYLE_LARGE, BIG as BUTTON_STYLE_BIG, // Deprecated
-HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_SMALL as BUTTON_STYLE_ICON_SMALL, ICON_TINY as BUTTON_STYLE_ICON_TINY, // Deprecated
-ICON_LARGE as BUTTON_STYLE_ICON_LARGE, ICON_BIG as BUTTON_STYLE_ICON_BIG, // Deprecated
-ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/action/button/standalone-styles';
+export { FLUID as BUTTON_STYLE_FLUID, MEDIUM as BUTTON_STYLE_MEDIUM, SMALL as BUTTON_STYLE_SMALL, LARGE as BUTTON_STYLE_LARGE, HUGE as BUTTON_STYLE_HUGE, GIANT as BUTTON_STYLE_GIANT, ICON as BUTTON_STYLE_ICON, ICON_MICRO as BUTTON_STYLE_ICON_MICRO, ICON_SMALL as BUTTON_STYLE_ICON_SMALL, ICON_LARGE as BUTTON_STYLE_ICON_LARGE, ICON_HUGE as BUTTON_STYLE_ICON_HUGE, ICON_GIANT as BUTTON_STYLE_ICON_GIANT } from './components/action/button/standalone-styles';
 export { OUTLINE_PLUS_OFFSET as CAROUSEL_OUTLINE_PLUS_OFFSET } from './components/structure/carousels/carousel/styles';
-export { MICRO as HORIZONTAL_STROKE_STYLE_MICRO, SMALL as HORIZONTAL_STROKE_STYLE_SMALL, TINY as HORIZONTAL_STROKE_STYLE_TINY, // Deprecated
-MEDIUM as HORIZONTAL_STROKE_STYLE_MEDIUM, DEFAULT as HORIZONTAL_STROKE_STYLE_DEFAULT, // Deprecated
-LARGE as HORIZONTAL_STROKE_STYLE_LARGE, BIG as HORIZONTAL_STROKE_STYLE_BIG, // Deprecated
-HUGE as HORIZONTAL_STROKE_STYLE_HUGE } from './components/typography/horizontal-stroke';
+export { MICRO as HORIZONTAL_STROKE_STYLE_MICRO, SMALL as HORIZONTAL_STROKE_STYLE_SMALL, MEDIUM as HORIZONTAL_STROKE_STYLE_MEDIUM, LARGE as HORIZONTAL_STROKE_STYLE_LARGE, HUGE as HORIZONTAL_STROKE_STYLE_HUGE } from './components/typography/horizontal-stroke';
 export { BUTTON_SHIFT as DRAG_AND_DROP_LIST_BUTTON_SHIFT } from './components/interaction/drag-and-drop-list';
 export { HEADER_HEIGHT } from './components/navigation/header-nav/config';
 export { CLOSE_OVERLAY_EVENT, OPEN_OVERLAY_EVENT } from './components/layer/overlay'; // -------
@@ -435,7 +420,7 @@ export { parseHtml } from './helpers/utils/parser';
 export { createRangeFromZeroTo } from './helpers/utils/range';
 export { stringUtils, upcaseFirst } from './helpers/utils/string';
 export { pxToRem, stepToRem } from './helpers/utils/typography';
-export { checkDeprecatedSizes } from './helpers/utils/deprecated'; // ---
+export { checkDeprecatedWeights } from './helpers/utils/deprecated'; // ---
 // HOC
 // ---
 

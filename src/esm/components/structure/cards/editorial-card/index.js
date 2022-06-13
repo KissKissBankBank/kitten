@@ -18,7 +18,7 @@ import { getReactElementsByType, getReactElementsWithoutType } from '../../../..
 var StyledEditorialCard = styled.div.withConfig({
   displayName: "editorial-card__StyledEditorialCard",
   componentId: "sc-r7owgx-0"
-})(["box-sizing:border-box;height:100%;position:relative;color:var(--color-grey-000);border-radius:var(--border-radius-m);overflow:hidden;font-size:var(--font-size-3);line-height:", ";.k-EditorialCard__grid{height:100%;display:grid;grid-template-columns:100%;transition:transform var(--transition);}&.k-EditorialCard--hasVerso .k-EditorialCard__grid{grid-template-columns:repeat(2,100%);}&:not(.k-EditorialCard--isRecto) .k-EditorialCard__grid{transform:translateX(-100%);}.k-EditorialCard__recto,.k-EditorialCard__verso{box-sizing:border-box;height:100%;padding:", ";display:flex;flex-direction:column;}@media ", "{font-size:var(--font-size-4);line-height:", ";}.k-EditorialCard__recto{", "}.k-EditorialCard__verso{", "}.k-EditorialCard__content{flex:1 1 auto;p{margin:0;& + p{margin-top:1em;}}}.k-EditorialCard__action{position:absolute;top:0;left:0;width:100%;height:100%;}.k-EditorialCard__arrow{margin-top:", ";align-self:end;@media ", "{transform:none !important;}}&.k-EditorialCard--info{background-color:var(--color-primary-500);}&.k-EditorialCard--success{background-color:var(--color-success-500);}&.k-EditorialCard--custom{background-color:var(--editorialCard-customColor);}"], pxToRem(18), pxToRem(30), mq.tabletAndDesktop, pxToRem(20), TYPOGRAPHY.fontStyles.regular, TYPOGRAPHY.fontStyles.light, pxToRem(20), mq.mobile);
+})(["box-sizing:border-box;height:100%;position:relative;color:var(--color-grey-000);border-radius:var(--border-radius-m);overflow:hidden;font-size:var(--font-size-3);line-height:", ";.k-EditorialCard__grid{height:100%;display:grid;grid-template-columns:100%;transition:transform var(--transition);}&.k-EditorialCard--hasVerso .k-EditorialCard__grid{grid-template-columns:repeat(2,100%);}&:not(.k-EditorialCard--isRecto) .k-EditorialCard__grid{transform:translateX(-100%);}.k-EditorialCard__recto,.k-EditorialCard__verso{box-sizing:border-box;height:100%;padding:", ";display:flex;flex-direction:column;}@media ", "{font-size:var(--font-size-4);line-height:", ";}.k-EditorialCard__recto{", "}.k-EditorialCard__verso{", "}.k-EditorialCard__content{flex:1 1 auto;p{margin:0;& + p{margin-top:1em;}}}.k-EditorialCard__action{position:absolute;top:0;left:0;width:100%;height:100%;}.k-EditorialCard__arrow{margin-top:", ";align-self:end;@media ", "{transform:none !important;}}&.k-EditorialCard--info{background-color:var(--color-primary-500);}&.k-EditorialCard--success{background-color:var(--color-success-500);}&.k-EditorialCard--custom{background-color:var(--editorialCard-customColor);}"], pxToRem(18), pxToRem(30), mq.tabletAndDesktop, pxToRem(20), TYPOGRAPHY.fontStyles['500'], TYPOGRAPHY.fontStyles['400'], pxToRem(20), mq.mobile);
 export var EditorialCard = function EditorialCard(_ref) {
   var children = _ref.children,
       className = _ref.className,
@@ -137,7 +137,7 @@ var Verso = function Verso(_ref4) {
     className: "k-EditorialCard__content"
   }, children), /*#__PURE__*/React.createElement(Text, {
     className: "k-EditorialCard__actionText k-u-m-t-8",
-    weight: "bold"
+    weight: "700"
   }, actionText));
 };
 

@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.TINY = exports.StyledHorizontalStroke = exports.SMALL = exports.MICRO = exports.MEDIUM = exports.LARGE = exports.HorizontalStroke = exports.HUGE = exports.DEFAULT = exports.BIG = void 0;
+exports.StyledHorizontalStroke = exports.SMALL = exports.MICRO = exports.MEDIUM = exports.LARGE = exports.HorizontalStroke = exports.HUGE = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -18,8 +18,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typography = require("../../../helpers/utils/typography");
-
-var _deprecated = require("../../../helpers/utils/deprecated");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -38,25 +36,17 @@ exports.SMALL = SMALL;
 var MEDIUM = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(4));
 exports.MEDIUM = MEDIUM;
 var LARGE = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(4));
-/* DEPRECATED EXPORTS */
-
 exports.LARGE = LARGE;
-var TINY = SMALL;
-exports.TINY = TINY;
-var DEFAULT = MEDIUM;
-exports.DEFAULT = DEFAULT;
-var BIG = LARGE;
-exports.BIG = BIG;
 var HUGE = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(100), (0, _typography.pxToRem)(6));
 exports.HUGE = HUGE;
 
 var StyledHorizontalStroke = _styledComponents.default.div.withConfig({
   displayName: "horizontal-stroke__StyledHorizontalStroke",
   componentId: "sc-1ynlu5y-0"
-})(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--tiny,&.k-HorizontalStroke--size--small{", "}&.k-HorizontalStroke--size--default,&.k-HorizontalStroke--size--medium{", "}&.k-HorizontalStroke--size--big,&.k-HorizontalStroke--size--large{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
+})(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--small{", "}&.k-HorizontalStroke--size--medium{", "}&.k-HorizontalStroke--size--large{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
   var color = _ref.color;
   return color || _colorsConfig.default.font1;
-}, MICRO, TINY, SMALL, MEDIUM, LARGE, HUGE, (0, _strokeModifierStyles.strokeModifierStylesWithoutMargin)('&.k-HorizontalStroke--modifier'));
+}, MICRO, SMALL, MEDIUM, LARGE, HUGE, (0, _strokeModifierStyles.strokeModifierStylesWithoutMargin)('&.k-HorizontalStroke--modifier'));
 
 exports.StyledHorizontalStroke = StyledHorizontalStroke;
 
@@ -68,7 +58,6 @@ var HorizontalStroke = function HorizontalStroke(_ref2) {
       customSize = _ref2.customSize,
       color = _ref2.color,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
-  (0, _deprecated.checkDeprecatedSizes)(size);
 
   var modifierClassName = function modifierClassName() {
     if (!modifier) return "k-HorizontalStroke--size--" + size;

@@ -105,7 +105,7 @@ var Pagination = /*#__PURE__*/(0, _react.forwardRef)(function (_ref2, _ref) {
         "aria-hidden": "true"
       }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "small",
-        weight: "regular"
+        weight: "500"
       }, "\u2026"));
     }
 

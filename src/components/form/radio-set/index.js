@@ -23,7 +23,11 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../form/label");
 
-var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "fontWeight", "labelProps"],
+var _deprecated = require("../../../helpers/utils/deprecated");
+
+var _deprecated2 = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
+var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "fontWeight", "weight", "labelProps"],
     _excluded2 = ["id", "className"];
 
 var StyledRadioSet = _styledComponents.default.fieldset.withConfig({
@@ -41,8 +45,10 @@ var RadioSet = function RadioSet(_ref) {
       label = _ref.label,
       children = _ref.children,
       fontWeight = _ref.fontWeight,
+      weight = _ref.weight,
       labelProps = _ref.labelProps,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  (0, _deprecated.checkDeprecatedWeights)(weight);
   return /*#__PURE__*/_react.default.createElement(StyledRadioSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-RadioSet', className),
     disabled: disabled
@@ -60,7 +66,7 @@ var RadioSet = function RadioSet(_ref) {
       id: id,
       design: design,
       error: error,
-      fontWeight: fontWeight,
+      weight: fontWeight || weight,
       name: name,
       key: id
     }, itemProps, {
@@ -82,7 +88,8 @@ RadioSet.propTypes = {
   design: _propTypes.default.oneOf(['disc', 'check']),
   disabled: _propTypes.default.bool,
   labelProps: _propTypes.default.object,
-  fontWeight: _propTypes.default.oneOf(['light', 'normal', 'bold'])
+  fontWeight: (0, _deprecated2.default)(_propTypes.default.string, 'Prefere use `weight` prop instead'),
+  weight: _propTypes.default.oneOf(['400', '500', '700'])
 };
 RadioSet.defaultProps = {
   name: 'radioSet',
@@ -92,5 +99,5 @@ RadioSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  fontWeight: 'normal'
+  weight: '500'
 };

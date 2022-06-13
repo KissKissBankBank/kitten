@@ -11,7 +11,7 @@ import { titleModifierStyles, titleModifiersNames } from '../common/title-modifi
 var StyledTitle = styled.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles.bold, titleModifierStyles('&.k-Title'));
+})(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles['700'], titleModifierStyles('&.k-Title'));
 export var Title = function Title(_ref) {
   var modifier = _ref.modifier,
       tag = _ref.tag,

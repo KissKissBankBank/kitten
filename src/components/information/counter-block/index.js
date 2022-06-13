@@ -73,7 +73,7 @@ var CounterBlock = function CounterBlock(_ref) {
     size: "large"
   })), isString(counter) ? /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "styledText",
-    weight: "bold",
+    weight: "700",
     tag: titleTag,
     fontStyle: "italic"
   }, counter, unit && /*#__PURE__*/_react.default.createElement(Unit, null, "\xA0", unit)) : counter, /*#__PURE__*/_react.default.createElement(StrokeContainer, {
@@ -87,7 +87,7 @@ var CounterBlock = function CounterBlock(_ref) {
     className: "styledSubTitle",
     size: "huge",
     tag: subTitleTag
-  }, _React$createElement["tag"] = "p", _React$createElement.fontStyle = "italic", _React$createElement.weight = "light", _React$createElement), subTitle)) : subTitle);
+  }, _React$createElement["tag"] = "p", _React$createElement.fontStyle = "italic", _React$createElement.weight = "400", _React$createElement), subTitle)) : subTitle);
 };
 
 exports.CounterBlock = CounterBlock;

@@ -54,13 +54,13 @@ export var HorizontalProjectCard = function HorizontalProjectCard(_ref) {
   }, /*#__PURE__*/React.createElement("img", _extends({}, imageProps, {
     alt: imageProps.alt || ''
   }))), /*#__PURE__*/React.createElement(Text, {
-    weight: "regular",
+    weight: "500",
     size: "small",
     as: titleTag,
     className: "k-HorizontalProjectCard__title"
   }, title), /*#__PURE__*/React.createElement(Text, {
     as: "p",
-    weight: "light",
+    weight: "400",
     size: "micro",
     className: "k-HorizontalProjectCard__description"
   }, description), !!info && /*#__PURE__*/React.createElement("div", {
@@ -78,7 +78,7 @@ export var HorizontalProjectCard = function HorizontalProjectCard(_ref) {
     },
     className: "k-HorizontalProjectCard__progress__ramp"
   }), /*#__PURE__*/React.createElement(Text, {
-    weight: "light",
+    weight: "400",
     size: "micro",
     className: "k-HorizontalProjectCard__progress__value"
   }, progress, "\xA0%")));

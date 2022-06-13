@@ -3,12 +3,9 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["size"];
 import React from 'react';
 import PropTypes from 'prop-types';
-;
 export var LightbulbIllustration = function LightbulbIllustration(_ref) {
   var size = _ref.size,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  checkDeprecatedSizes(size);
 
   if (size === 'small') {
     return /*#__PURE__*/React.createElement("svg", _extends({

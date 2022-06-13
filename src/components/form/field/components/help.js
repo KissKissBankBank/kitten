@@ -32,7 +32,7 @@ var FieldHelp = function FieldHelp(_ref) {
     tag: "p",
     cssColor: "var(--color-grey-700)",
     size: "micro",
-    weight: "light",
+    weight: "400",
     lineHeight: "normal",
     className: (0, _classnames.default)('k-Field__help', className, 'k-u-margin-none', {
       'k-u-margin-top-single': !hiddenOnBlur,

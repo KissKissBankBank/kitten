@@ -42,7 +42,7 @@ export var StepperItem = function StepperItem(_ref) {
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
   }, props), /*#__PURE__*/React.createElement(StepperText, {
-    weight: "regular",
+    weight: "500",
     size: "small",
     tabIndex: "0"
   }, /*#__PURE__*/React.createElement(StepperIcon, {
@@ -69,7 +69,7 @@ export var StepperLink = function StepperLink(_ref2) {
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
   }, props), /*#__PURE__*/React.createElement(StepperText, _extends({
-    weight: "regular",
+    weight: "500",
     size: "small",
     tag: "a",
     className: classNames('k-u-link', {

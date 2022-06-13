@@ -22,18 +22,20 @@ var TYPOGRAPHY = {
     bold: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       letterSpacing: '.01rem',
-      fontweight: 700
+      fontWeight: 700
     },
-    regularUppercase: {
+    400: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontWeight: 500,
-      textTransform: 'uppercase'
+      fontWeight: 400
     },
-    boldUppercase: {
+    500: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontweight: 700,
-      letterSpacing: '.1rem',
-      textTransform: 'uppercase'
+      fontWeight: 500
+    },
+    700: {
+      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
+      letterSpacing: '.01rem',
+      fontWeight: 700
     }
   }
 };

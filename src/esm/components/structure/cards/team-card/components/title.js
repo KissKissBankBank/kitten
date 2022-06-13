@@ -9,12 +9,12 @@ export var TeamCardTitle = function TeamCardTitle(_ref) {
     top: "2"
   }, /*#__PURE__*/React.createElement(Text, {
     size: "medium",
-    weight: "bold",
+    weight: "700",
     color: "font1"
   }, children), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Text, {
     size: "micro",
     color: "font1",
-    weight: "light"
+    weight: "400"
   }, subTitle));
 };
 TeamCardTitle.propTypes = {

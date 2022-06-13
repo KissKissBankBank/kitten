@@ -20,12 +20,12 @@ export var Info = function Info(_ref) {
     })
   }, props), /*#__PURE__*/React.createElement(Text, {
     className: "k-RewardCard__info__legend",
-    weight: "regular",
+    weight: "500",
     size: "small",
     lineHeight: "normal"
   }, legend), ' ', /*#__PURE__*/React.createElement(Text, {
     className: "k-RewardCard__info__value",
-    weight: "light",
+    weight: "400",
     size: "small",
     lineHeight: "normal"
   }, value));

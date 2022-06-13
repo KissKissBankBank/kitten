@@ -16,7 +16,7 @@ var _text = require("../../../../typography/text");
 var Amount = function Amount(props) {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     color: "font1",
-    weight: "bold",
+    weight: "700",
     size: "huge"
   }, props, {
     className: (0, _classnames.default)('k-ContributionCard__amount', props.className)

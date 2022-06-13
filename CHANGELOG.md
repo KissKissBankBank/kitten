@@ -4,26 +4,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change:
+## [11.0.0] - 2022-06-13
 
-  - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
-  - Deprecated: `fontWeight` by `weight` on the following components:
-    - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
-  - Typography config: Remove `regularUppercase` and `boldUppercase` styles.
-  - Typography config: Add `fontStyles['400']`, `fontStyles['500']` and `fontStyles['700']`.
+Breaking changes:
 
-- Breaking change: Remove old `size` values from all components and styles.
-- Breaking change: `Helpers`: Remove `checkDeprecatedSizes` utility.
-- Breaking change: `TextInputWithButton`: Remove `value` prop.
-- Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
-- Breaking change: `Radio`: Remove `variant` prop.
-- Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
-- Breaking Change: `Alert`: Remove deprecated props.
-- Breaking Change: `Button`: Use `fit=content` as default.
-- Breaking Change: `Button`: Remove deprecated modifiers.
-- Breaking Changes: Remove `CrowdfundingCard`.
-- Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
-- Feature: `BackerCard`: Add `titleTag` prop.
+- Remove old `size` values from all components and styles.
+- Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
+- Typography config: Remove `regularUppercase` and `boldUppercase` styles.
+- Typography config: Add '400', '500' and '700' styles.
+- Change prop names from `fontWeight` to `weight` on the following components:
+  - `Radio`
+  - `RadioSet`
+  - `RadioButton`
+  - `RadioButtonSet`.
+- Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
+- `Helpers`: Remove `checkDeprecatedSizes` utility.
+- `TextInputWithButton`: Remove `value` prop.
+- `AvatarWithTextAndBadge`: Remove `textClassName` prop.
+- `Radio`: Remove `variant` prop.
+- `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
+- `Alert`: Remove deprecated props.
+- `Button`: Use `fit=content` as default.
+- `Button`: Remove deprecated modifiers.
+- `CrowdfundingCard`: Remove component.
+
+Feature:
+
+- `BackerCard`: Add `titleTag` prop.
 
 ## [10.12.2] - 2022-06-10
 

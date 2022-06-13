@@ -17,7 +17,7 @@ export var Title = function Title(_ref) {
     })
   }, /*#__PURE__*/React.createElement(Text, _extends({
     tag: "h3",
-    weight: "regular",
+    weight: "500",
     className: classNames('k-RewardCard__title', 'k-u-margin-none', 'k-u-align-center', className, {
       'k-u-clamp': truncateText
     }),

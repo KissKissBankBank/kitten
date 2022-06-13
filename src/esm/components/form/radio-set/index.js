@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "fontWeight", "labelProps"],
+var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "fontWeight", "weight", "labelProps"],
     _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,6 +9,8 @@ import classNames from 'classnames';
 import { Radio } from '../../form/radio';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { Label } from '../../form/label';
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
+import deprecated from 'prop-types-extra/lib/deprecated';
 var StyledRadioSet = styled.fieldset.withConfig({
   displayName: "radio-set__StyledRadioSet",
   componentId: "sc-tsmzen-0"
@@ -23,9 +25,11 @@ export var RadioSet = function RadioSet(_ref) {
       label = _ref.label,
       children = _ref.children,
       fontWeight = _ref.fontWeight,
+      weight = _ref.weight,
       labelProps = _ref.labelProps,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  checkDeprecatedWeights(weight);
   return /*#__PURE__*/React.createElement(StyledRadioSet, _extends({
     className: classNames('k-Form-RadioSet', className),
     disabled: disabled
@@ -44,7 +48,7 @@ export var RadioSet = function RadioSet(_ref) {
       id: id,
       design: design,
       error: error,
-      fontWeight: fontWeight,
+      weight: fontWeight || weight,
       name: name,
       key: id
     }, itemProps, {
@@ -64,7 +68,8 @@ RadioSet.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
-  fontWeight: PropTypes.oneOf(['light', 'normal', 'bold'])
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '700'])
 };
 RadioSet.defaultProps = {
   name: 'radioSet',
@@ -74,5 +79,5 @@ RadioSet.defaultProps = {
   design: 'disc',
   disabled: false,
   labelProps: {},
-  fontWeight: 'normal'
+  weight: '500'
 };

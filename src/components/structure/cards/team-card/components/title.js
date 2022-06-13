@@ -20,12 +20,12 @@ var TeamCardTitle = function TeamCardTitle(_ref) {
     top: "2"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "medium",
-    weight: "bold",
+    weight: "700",
     color: "font1"
   }, children), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     color: "font1",
-    weight: "light"
+    weight: "400"
   }, subTitle));
 };
 

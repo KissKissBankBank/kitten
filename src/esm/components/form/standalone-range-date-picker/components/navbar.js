@@ -42,7 +42,7 @@ export var Navbar = /*#__PURE__*/function (_PureComponent) {
     return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledText, {
       tag: "p",
       size: "small",
-      weight: "regular"
+      weight: "500"
     }, title), /*#__PURE__*/React.createElement(StyledButton, {
       className: className
     }, /*#__PURE__*/React.createElement(StyledArrowIcon, {

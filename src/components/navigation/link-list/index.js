@@ -25,12 +25,14 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+var _deprecated = require("../../../helpers/utils/deprecated");
+
 var _excluded = ["className", "margin", "items", "lineHeight", "itemMargin", "color", "weight", "href"];
 
 var StyledLinkList = _styledComponents.default.ul.withConfig({
   displayName: "link-list__StyledLinkList",
   componentId: "sc-yasa1m-0"
-})(["text-align:center;list-style-type:none;padding:0;@media (min-width:", "px){text-align:left;}&.k-LinkList--withoutMargin{margin-top:0;margin-bottom:0;.k-LinkList__item:last-child{margin-bottom:0;}}.k-LinkList__item{margin-bottom:", ";}.k-LinkList__item--double{margin-bottom:", ";}.k-LinkList__item--triple{margin-bottom:", ";}.k-LinkList__link{", ";font-size:", ";text-decoration:none;&:active,&.k-LinkList__link--isActive{color:", ";}&:hover{color:", ";}transition:color 0.2s;}.k-LinkList__item--regular,.k-LinkList__link--regular{", ";}.k-LinkList__item--light,.k-LinkList__link--light{", ";}.k-LinkList__link--normalLineHeight{line-height:normal;}.k-LinkList__link--light{color:", ";}.k-LinkList__link--dark{color:", ";}"], _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), _colorsConfig.default.primary3, _colorsConfig.default.primary1, _typographyConfig.default.fontStyles.regular, _typographyConfig.default.fontStyles.light, _colorsConfig.default.background1, _colorsConfig.default.font1);
+})(["text-align:center;list-style-type:none;padding:0;@media (min-width:", "px){text-align:left;}&.k-LinkList--withoutMargin{margin-top:0;margin-bottom:0;.k-LinkList__item:last-child{margin-bottom:0;}}.k-LinkList__item{margin-bottom:", ";}.k-LinkList__item--double{margin-bottom:", ";}.k-LinkList__item--triple{margin-bottom:", ";}.k-LinkList__link{", ";font-size:", ";text-decoration:none;&:active,&.k-LinkList__link--isActive{color:", ";}&:hover{color:", ";}transition:color 0.2s;}.k-LinkList__item--regular,.k-LinkList__link--regular{", ";}.k-LinkList__item--light,.k-LinkList__link--light{", ";}.k-LinkList__link--normalLineHeight{line-height:normal;}.k-LinkList__link--light{color:", ";}.k-LinkList__link--dark{color:", ";}"], _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-1), _colorsConfig.default.primary3, _colorsConfig.default.primary1, _typographyConfig.default.fontStyles['500'], _typographyConfig.default.fontStyles['400'], _colorsConfig.default.background1, _colorsConfig.default.font1);
 
 var LinkList = function LinkList(_ref) {
   var className = _ref.className,
@@ -42,6 +44,7 @@ var LinkList = function LinkList(_ref) {
       weight = _ref.weight,
       href = _ref.href,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  (0, _deprecated.checkDeprecatedWeights)(weight);
   return /*#__PURE__*/_react.default.createElement(StyledLinkList, (0, _extends2.default)({}, others, {
     className: (0, _classnames.default)('k-LinkList', others.className, {
       'k-LinkList--withoutMargin': !margin
@@ -68,7 +71,7 @@ LinkList.propTypes = {
   color: _propTypes.default.oneOf(['light', 'dark']),
   lineHeight: _propTypes.default.oneOf(['normal']),
   itemMargin: _propTypes.default.oneOf(['double', 'triple']),
-  weight: _propTypes.default.oneOf(['regular', 'light']),
+  weight: _propTypes.default.oneOf(['400', '500']),
   margin: _propTypes.default.bool,
   items: _propTypes.default.arrayOf(_propTypes.default.shape({
     item: _propTypes.default.string.isRequired,
@@ -86,5 +89,5 @@ LinkList.defaultProps = {
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
-  weight: 'regular'
+  weight: '500'
 };

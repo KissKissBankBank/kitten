@@ -20,7 +20,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var StyledTitle = _styledComponents.default.p.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-1itzaq4-0"
-})(["margin:0 0 ", ";", ";font-size:", ";line-height:1;@media (min-width:", "px){font-size:", ";}"], (0, _typography.pxToRem)(5), _typographyConfig.default.fontStyles.bold, (0, _typography.stepToRem)(-2), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(-1));
+})(["margin:0 0 ", ";", ";font-size:", ";line-height:1;@media (min-width:", "px){font-size:", ";}"], (0, _typography.pxToRem)(5), _typographyConfig.default.fontStyles['700'], (0, _typography.stepToRem)(-2), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(-1));
 
 var Title = function Title(_ref) {
   var className = _ref.className,

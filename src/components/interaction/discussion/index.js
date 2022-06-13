@@ -94,7 +94,7 @@ Discussion.Message.Content = function (_ref6) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     as: "div",
-    weight: "light",
+    weight: "400",
     className: (0, _classnames.default)('k-Discussion__message__content', className)
   }, props), children);
 };

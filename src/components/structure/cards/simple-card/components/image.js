@@ -44,7 +44,7 @@ var Image = function Image(_ref) {
     }
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "medium",
-    weight: "regular",
+    weight: "500",
     color: arrowColor,
     "aria-label": ariaLabel
   }, "\u25BA")), /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {

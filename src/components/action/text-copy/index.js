@@ -118,7 +118,7 @@ var TextCopy = function TextCopy(_ref) {
     borderRadius: "var(--border-radius-s)"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "background1",
-    weight: "light",
+    weight: "400",
     size: "micro"
   }, alertMessage)));
 };

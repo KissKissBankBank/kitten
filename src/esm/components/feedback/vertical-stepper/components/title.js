@@ -7,7 +7,7 @@ import classNames from 'classnames';
 var StyledTitle = styled.p.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-1itzaq4-0"
-})(["margin:0 0 ", ";", ";font-size:", ";line-height:1;@media (min-width:", "px){font-size:", ";}"], pxToRem(5), TYPOGRAPHY.fontStyles.bold, stepToRem(-2), ScreenConfig.S.min, stepToRem(-1));
+})(["margin:0 0 ", ";", ";font-size:", ";line-height:1;@media (min-width:", "px){font-size:", ";}"], pxToRem(5), TYPOGRAPHY.fontStyles['700'], stepToRem(-2), ScreenConfig.S.min, stepToRem(-1));
 export var Title = function Title(_ref) {
   var className = _ref.className,
       children = _ref.children;

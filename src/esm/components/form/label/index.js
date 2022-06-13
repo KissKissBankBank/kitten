@@ -9,11 +9,10 @@ import isEmpty from 'lodash/fp/isEmpty';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
-;
 var StyledLabel = styled.label.withConfig({
   displayName: "label__StyledLabel",
   componentId: "sc-l6ih7y-0"
-})(["display:block;", " cursor:pointer;line-height:1.3;&.k-Label--micro{font-size:", ";}&.k-Label--small{font-size:", ";}&.k-Label--medium{font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-2), stepToRem(-1), stepToRem(0), pxToRem(10));
+})(["display:block;", " cursor:pointer;line-height:1.3;&.k-Label--micro{font-size:", ";}&.k-Label--small{font-size:", ";}&.k-Label--medium{font-size:", ";}&.k-Label--withoutPointerEvents{pointer-events:none;}.k-Label--dot{margin:0 0 0 ", ";width:var(--dot-width);height:var(--dot-width);background-color:var(--dot-background-color);vertical-align:middle;display:inline-block;border-radius:var(--border-radius-rounded);}"], TYPOGRAPHY.fontStyles['500'], stepToRem(-2), stepToRem(-1), stepToRem(0), pxToRem(10));
 export var Label = function Label(_ref) {
   var _dot$backgroundColor;
 
@@ -27,8 +26,6 @@ export var Label = function Label(_ref) {
       dot = _ref.dot,
       style = _ref.style,
       other = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  checkDeprecatedSizes(size);
 
   var handleClick = function handleClick(e) {
     if (domElementHelper.canUseDom() && focusId) {

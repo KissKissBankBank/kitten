@@ -34,7 +34,7 @@ var TitleBar = function TitleBar(_ref) {
     className: "k-SummaryCard-Wrapper__imageWrapper"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
-    weight: "regular",
+    weight: "500",
     cssColor: "var(--color-grey-700)",
     className: "k-SummaryCard-TitleBar__image",
     id: id + "-image"
@@ -45,7 +45,7 @@ var TitleBar = function TitleBar(_ref) {
       key: id + "-" + item,
       id: id + "-" + item,
       size: "micro",
-      weight: "regular",
+      weight: "500",
       cssColor: "var(--color-grey-700)",
       className: "k-SummaryCard-TitleBar__" + item,
       style: {

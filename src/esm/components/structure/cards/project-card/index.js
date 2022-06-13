@@ -176,7 +176,7 @@ ProjectCard.Progress = function (_ref8) {
   }, /*#__PURE__*/React.createElement(Progress, _extends({
     value: value
   }, props)), /*#__PURE__*/React.createElement(Text, {
-    weight: "bold",
+    weight: "700",
     size: "small",
     lineHeight: "1",
     className: "k-u-hidden@xs-down k-ProjectCard__progress__text"

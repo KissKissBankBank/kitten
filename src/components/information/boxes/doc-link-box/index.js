@@ -32,12 +32,12 @@ var DocLinkBox = function DocLinkBox(_ref) {
     className: "k-LinkBox__icon--svg"
   })), /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox.Text, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "span",
-    weight: "regular",
+    weight: "500",
     size: "small",
     lineHeight: "normal"
   }, title), /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "span",
-    weight: "light",
+    weight: "400",
     size: "micro",
     lineHeight: "normal"
   }, text)));

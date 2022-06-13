@@ -17,8 +17,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
-
 var _badge = require("../../information/badge");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
@@ -29,17 +27,15 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _getReactElements = require("../../../helpers/react/get-react-elements");
 
-var _deprecated2 = require("../../../helpers/utils/deprecated");
-
 var _excluded = ["alt", "backgroundColor", "children", "className", "height", "size", "src", "style", "text", "textColor", "width"],
     _excluded2 = ["backgroundColor", "className", "a11yText"],
-    _excluded3 = ["textClassName", "className", "withEllipsisOverflow"],
+    _excluded3 = ["className", "withEllipsisOverflow"],
     _excluded4 = ["className", "hoverable"];
 
 var StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "avatar-with-text-and-badge__StyledWrapper",
   componentId: "sc-1npfhe1-0"
-})(["display:flex;align-items:center;padding:0;border:none;background:none;text-decoration:none;gap:", ";.k-Avatar{position:relative;padding:0;}.k-Avatar__imageWrapper{width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;border:var(--border-width) solid var(--color-grey-300);padding:0;color:var(--k-Avatar-color);background-color:var(--k-Avatar-background-color);}.k-Avatar__image{display:block;margin:0;padding:0;border:0;width:100%;height:100%;}.k-Avatar__noImage{display:flex;width:100%;height:100%;align-items:center;justify-content:center;", " font-size:", ";line-height:1;}.k-Avatar__badge{position:absolute;top:", ";right:", ";border:var(--border-width) solid white;}.k-Avatar__text{padding:pxToRem(10);padding-right:0;text-align:left;color:", ";text-decoration:none;", " font-size:", ";line-height:1.2;}.k-Avatar__text--hasEllipsis{&,& *{max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}}.k-Avatar--small{.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--big,.k-Avatar--large{margin-right:", ";.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--customSize{width:var(--Avatar-width);height:var(--Avatar-height);}a&,button&,&.k-Avatar__wrapper--isHoverable{cursor:pointer;.k-Avatar{opacity:1;transition:opacity 0.2s;}&:hover .k-Avatar,&:focus .k-Avatar{opacity:0.8;border:var(--border-hover);}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(-4), (0, _typography.pxToRem)(-8), _colorsConfig.default.font1, _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-2), (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.stepToRem)(-1), (0, _typography.stepToRem)(0));
+})(["display:flex;align-items:center;padding:0;border:none;background:none;text-decoration:none;gap:", ";.k-Avatar{position:relative;padding:0;}.k-Avatar__imageWrapper{width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;border:var(--border-width) solid var(--color-grey-300);padding:0;color:var(--k-Avatar-color);background-color:var(--k-Avatar-background-color);}.k-Avatar__image{display:block;margin:0;padding:0;border:0;width:100%;height:100%;}.k-Avatar__noImage{display:flex;width:100%;height:100%;align-items:center;justify-content:center;", " font-size:", ";line-height:1;}.k-Avatar__badge{position:absolute;top:", ";right:", ";border:var(--border-width) solid white;}.k-Avatar__text{padding:pxToRem(10);padding-right:0;text-align:left;color:", ";text-decoration:none;", " font-size:", ";line-height:1.2;}.k-Avatar__text--hasEllipsis{&,& *{max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}}.k-Avatar--small{.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--large{margin-right:", ";.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--customSize{width:var(--Avatar-width);height:var(--Avatar-height);}a&,button&,&.k-Avatar__wrapper--isHoverable{cursor:pointer;.k-Avatar{opacity:1;transition:opacity 0.2s;}&:hover .k-Avatar,&:focus .k-Avatar{opacity:0.8;border:var(--border-hover);}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(-4), (0, _typography.pxToRem)(-8), _colorsConfig.default.font1, _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.stepToRem)(-2), (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.stepToRem)(-1), (0, _typography.stepToRem)(0));
 
 var Image = function Image(_ref) {
   var alt = _ref.alt,
@@ -54,7 +50,6 @@ var Image = function Image(_ref) {
       textColor = _ref.textColor,
       width = _ref.width,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  (0, _deprecated2.checkDeprecatedSizes)(size);
   var badgeElement = (0, _getReactElements.getReactElementsByType)({
     children: children,
     type: AvatarWithTextAndBadge.Badge
@@ -120,20 +115,18 @@ Badge.defaultProps = {
 };
 
 var Text = function Text(_ref3) {
-  var textClassName = _ref3.textClassName,
-      className = _ref3.className,
+  var className = _ref3.className,
       withEllipsisOverflow = _ref3.withEllipsisOverflow,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-Avatar__text', textClassName, className, {
+    className: (0, _classnames.default)('k-Avatar__text', className, {
       'k-Avatar__text--hasEllipsis': withEllipsisOverflow
     })
   }, props));
 };
 
 Text.propTypes = {
-  withEllipsisOverflow: _propTypes.default.bool,
-  textClassName: (0, _deprecated.default)(_propTypes.default.string, 'Please use standard `className` prop.')
+  withEllipsisOverflow: _propTypes.default.bool
 };
 Text.defaultProps = {
   withEllipsisOverflow: false

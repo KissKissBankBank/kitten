@@ -13,7 +13,7 @@ export var FieldError = function FieldError(_ref) {
     tag: "p",
     color: "error",
     size: "micro",
-    weight: "regular",
+    weight: "500",
     lineHeight: "normal",
     className: classNames(className, 'k-Field__error', 'k-u-margin-none k-u-margin-top-single')
   }, others), children);

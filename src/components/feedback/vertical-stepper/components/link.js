@@ -30,7 +30,7 @@ var _excluded = ["className"];
 var StyledParagraph = _styledComponents.default.span.withConfig({
   displayName: "link__StyledParagraph",
   componentId: "sc-kwm1tk-0"
-})(["margin:0;padding:0;line-height:1;.k-Steppers--VerticalStepper__link{", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;@media (min-width:", "px){font-size:", ";}:before{padding:0 ", ";content:'\u25CF';font-size:", ";color:", ";}&:hover,&:focus,&:active{color:", ";}}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-2), _colorsConfig.default.primary1, _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), _colorsConfig.default.font1, _colorsConfig.default.primary3);
+})(["margin:0;padding:0;line-height:1;.k-Steppers--VerticalStepper__link{", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;@media (min-width:", "px){font-size:", ";}:before{padding:0 ", ";content:'\u25CF';font-size:", ";color:", ";}&:hover,&:focus,&:active{color:", ";}}"], _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-2), _colorsConfig.default.primary1, _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), _colorsConfig.default.font1, _colorsConfig.default.primary3);
 
 var Link = function Link(_ref) {
   var className = _ref.className,

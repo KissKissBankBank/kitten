@@ -51,4 +51,4 @@ var StyledItem = _styledComponents.default.li.withConfig({
 var StyledContent = _styledComponents.default.div.withConfig({
   displayName: "item__StyledContent",
   componentId: "sc-1drcg7-1"
-})(["display:flex;flex-direction:column;justify-content:center;flex:1;", ";color:", ";line-height:1.6;font-size:", ";@media (min-width:", "px){font-size:", ";}"], _typographyConfig.default.fontStyles.light, _colorsConfig.default.font1, (0, _typography.pxToRem)(14), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(16));
+})(["display:flex;flex-direction:column;justify-content:center;flex:1;", ";color:", ";line-height:1.6;font-size:", ";@media (min-width:", "px){font-size:", ";}"], _typographyConfig.default.fontStyles['400'], _colorsConfig.default.font1, (0, _typography.pxToRem)(14), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(16));

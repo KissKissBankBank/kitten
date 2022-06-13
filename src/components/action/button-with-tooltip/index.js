@@ -72,7 +72,7 @@ var ButtonWithTooltip = function ButtonWithTooltip(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "small",
     color: "font1",
-    weight: "regular"
+    weight: "500"
   }, tooltipText)));
 };
 

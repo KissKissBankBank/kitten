@@ -13,7 +13,6 @@ import find from 'lodash/fp/find';
 import { DropdownCombobox } from './combobox';
 import { StyledDropdown } from './styles';
 import COLORS from '../../../../constants/colors-config';
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 export var DropdownSelect = function DropdownSelect(_ref) {
   var combobox = _ref.combobox,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
@@ -47,7 +46,6 @@ export var DropdownSelect = function DropdownSelect(_ref) {
       direction = props.direction,
       arrowPosition = props.arrowPosition,
       labelProps = props.labelProps;
-  checkDeprecatedSizes(size);
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,

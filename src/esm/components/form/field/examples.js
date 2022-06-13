@@ -102,8 +102,7 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
       error = _ref4.error,
       errorMessage = _ref4.errorMessage,
       help = _ref4.help,
-      helpHiddenOnBlur = _ref4.helpHiddenOnBlur,
-      variant = _ref4.variant;
+      helpHiddenOnBlur = _ref4.helpHiddenOnBlur;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -117,8 +116,7 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
   }, /*#__PURE__*/React.createElement(Field.RadioButtonSet, {
     name: "radio",
     items: items,
-    error: error,
-    variant: variant
+    error: error
   }));
 };
 export var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
@@ -131,8 +129,7 @@ export var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
       error = _ref5.error,
       errorMessage = _ref5.errorMessage,
       help = _ref5.help,
-      helpHiddenOnBlur = _ref5.helpHiddenOnBlur,
-      variant = _ref5.variant;
+      helpHiddenOnBlur = _ref5.helpHiddenOnBlur;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -146,8 +143,7 @@ export var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
   }, /*#__PURE__*/React.createElement(Field.RadioSet, {
     name: "radio",
     items: items,
-    error: error,
-    variant: variant
+    error: error
   }));
 };
 export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {

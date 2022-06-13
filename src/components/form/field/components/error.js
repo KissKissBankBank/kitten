@@ -25,7 +25,7 @@ var FieldError = function FieldError(_ref) {
     tag: "p",
     color: "error",
     size: "micro",
-    weight: "regular",
+    weight: "500",
     lineHeight: "normal",
     className: (0, _classnames.default)(className, 'k-Field__error', 'k-u-margin-none k-u-margin-top-single')
   }, others), children);
