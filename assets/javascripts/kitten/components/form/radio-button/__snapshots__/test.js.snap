@@ -178,7 +178,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.25rem;
 }
 
 .c0:active .k-Form-RadioButton__labelText,
@@ -226,19 +226,20 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   font-size: 0.875rem;
 }
 
-.c0.k-Form-RadioButton__labelText--regular .k-Form-RadioButton__labelText {
+.c0.k-Form-RadioButton--weight-500 .k-Form-RadioButton__labelText,
+.c0.k-Form-RadioButton--weight-regular .k-Form-RadioButton__labelText {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
 }
 
-.c0.k-Form-RadioButton__labelText--light .k-Form-RadioButton__labelText {
+.c0.k-Form-RadioButton--weight-400 .k-Form-RadioButton__labelText,
+.c0.k-Form-RadioButton--weight-light .k-Form-RadioButton__labelText {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
-.c0.k-Form-RadioButton__labelText--bold .k-Form-RadioButton__labelText {
+.c0.k-Form-RadioButton--weight-700 .k-Form-RadioButton__labelText,
+.c0.k-Form-RadioButton--weight-bold .k-Form-RadioButton__labelText {
   font-family: Maax,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
@@ -312,7 +313,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 }
 
 <div
-  className="c0 k-Form-RadioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton__labelText--500"
+  className="c0 k-Form-RadioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
 >
   <input
     className="k-Form-RadioButton__input"
