@@ -4,8 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `RadioButton`: Better font weight styles.
-- Feature: `Cards` & `Navigation`: Add `--box-shadow` variables on some cards and nagivation.
+## [11.1.0] - 2022-06-14
+
+Feature:
+
+- Add box shadow styles on the following components:
+  - `DeskMenu`
+  - `FloatingMenu`
+  - `ManagerCard`
+  - `SummaryCard`
+
+Fix:
+
+- `RadioButton`: Better font weight styles.
 
 ## [11.0.0] - 2022-06-13
 
