@@ -14,6 +14,7 @@ export const StyledRewardCard = styled.article`
   position: relative;
   box-shadow: var(--rewardCard--box-shadow);
   border-radius: var(--rewardCard--border-radius);
+  border: var(--border-light);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -218,6 +219,7 @@ export const StyledRewardCard = styled.article`
   button&:hover:not(.k-RewardCard--disabled),
   a&:hover:not(.k-RewardCard--disabled) {
     --rewardCard--box-shadow: var(--box-shadow-hover-m);
+    border: var(--border);
 
     cursor: pointer;
 

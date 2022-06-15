@@ -257,11 +257,13 @@ export const StyledSummaryCard = styled(({ type, ...props }) => (
 
   box-shadow: var(--box-shadow-m);
   border-radius: var(--border-radius-m);
+  border: var(--border-light);
 
   &.k-SummaryCard--hasAction {
     &:hover {
       background-color: var(--color-grey-100);
       box-shadow: var(--box-shadow-hover-m);
+      border: var(--border);
     }
     &:active {
       background-color: var(--color-grey-200);

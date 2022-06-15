@@ -17,6 +17,7 @@ const StyledManagerCard = styled.article`
 
   box-shadow: var(--box-shadow-m);
   border-radius: var(--border-radius-m);
+  border: var(--border-light);
 
   display: flex;
   gap: 0 ${pxToRem(10)};
@@ -25,6 +26,7 @@ const StyledManagerCard = styled.article`
     &:hover {
       background-color: var(--color-grey-100);
       box-shadow: var(--box-shadow-hover-m);
+      border: var(--border);
     }
 
     &:active {

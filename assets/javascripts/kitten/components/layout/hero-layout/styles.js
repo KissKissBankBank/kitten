@@ -193,6 +193,7 @@ export const StyledLayout = styled.div`
       .k-HeroLayout__sticky__insideTop {
         background-color: var(--color-grey-000);
         box-shadow: var(--box-shadow-m);
+        border: var(--border-light);
         height: ${pxToRem(60)};
       }
     }

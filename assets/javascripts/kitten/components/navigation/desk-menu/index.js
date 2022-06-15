@@ -17,6 +17,7 @@ const StyledDeskMenu = styled.nav`
 
   .k-DeskMenu {
     box-shadow: var(--box-shadow-m);
+    border: var(--border-light);
     border-radius: var(--border-radius-m);
     padding: var(--deskMenu-padding);
     display: flex;

@@ -9,6 +9,7 @@ import { mq, ScreenConfig } from '../../../constants/screen-config'
 
 const StyledFloatingMenu = styled.nav`
   box-shadow: var(--box-shadow-m);
+  border: var(--border-light);
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(30)};
@@ -83,6 +84,7 @@ const StyledFloatingMenu = styled.nav`
   &:not(.k-FloatingMenu--horizontal) {
     @media ${mq.desktop} {
       box-shadow: var(--box-shadow-m);
+      border: var(--border-light);
       border-radius: var(--border-radius-m);
       padding: ${pxToRem(10)} 0;
 

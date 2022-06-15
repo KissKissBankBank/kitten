@@ -18,10 +18,12 @@ export const StyledCard = styled.div`
   text-decoration: none;
   transition: box-shadow var(--transition);
   box-shadow: var(--box-shadow-m);
+  border: var(--border-light);
 
   &[href]:active,
   &[href]:hover {
     box-shadow: var(--box-shadow-hover-m);
+    border: var(--border);
 
     .k-ProjectCard__image__overlay {
       opacity: 1;

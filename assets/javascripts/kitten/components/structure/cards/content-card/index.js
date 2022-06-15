@@ -11,6 +11,7 @@ import { Title } from '../../../typography/title'
 const StyledCard = styled.article`
   padding: ${pxToRem(20)};
   box-shadow: var(--box-shadow-m);
+  border: var(--border-light);
   border-radius: var(--border-radius-m);
   background-color: var(--color-grey-000);
   width: 100%;

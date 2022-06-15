@@ -9,7 +9,8 @@ import { ButtonImage } from '../../../action/button-image'
 const StyledCard = styled.div`
   padding: ${pxToRem(40)} ${pxToRem(20)};
   border-radius: var(--border-radius-s);
-  box-shadow: var(--box-shadow-s);
+  box-shadow: var(--box-shadow-m);
+  border: var(--border-light);
   text-align: center;
   word-break: break-word;
   display: flex;
