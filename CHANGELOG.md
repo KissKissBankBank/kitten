@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `MessagesMenu`: Add `closeButtonProps` prop.
+
 ## [11.1.0] - 2022-06-14
 
 Feature:
