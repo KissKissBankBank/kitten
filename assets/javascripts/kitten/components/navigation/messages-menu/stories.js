@@ -121,7 +121,7 @@ const discussions = [
     name: 'Marshall',
     email: 'marshall@kisskissbankbank.com',
     longName: 'Marshall Kudley',
-    avatar: '/kitten-15.jpg',
+    avatar: '/kitten-0.jpg',
     status: 'read',
   },
 ]
@@ -140,6 +140,12 @@ export const Default = () => {
             action('Clicked')({ ...item, ...event })
             setActiveDiscussion(item)
           }}
+          closeButtonProps={{
+            onClick: (event) => {
+              action('Close clicked')({ ...item, ...event })
+              setActiveDiscussion(item)
+            }
+          }}
           avatarProps={{
             src: item.avatar,
           }}
@@ -156,8 +162,8 @@ export const Default = () => {
               color="grey-700"
               transform="uppercase"
             >
-              &nbsp;•&nbsp;Hier{' '}
-              <span className="k-u-a11y-visuallyHidden">à </span>19:30
+              &nbsp;<span aria-hidden>•</span>{' '}Hier&nbsp;
+              <span className="k-u-a11y-visuallyHidden">à&nbsp;</span>19:30
             </Text>
           </div>
           <Text

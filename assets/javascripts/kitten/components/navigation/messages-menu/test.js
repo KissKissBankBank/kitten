@@ -17,6 +17,10 @@ describe('<MessagesMenu />', () => {
               avatarProps={{
                 src: '/kitten-0.jpg',
               }}
+              closeButtonProps={{
+                onClick: () => {},
+                'aria-label': "Hello world",
+              }}
             >
               <div>
                 <span>Claude L.</span>
@@ -40,6 +44,10 @@ describe('<MessagesMenu />', () => {
               onClick={() => {}}
               avatarProps={{
                 src: '/kitten-0.jpg',
+              }}
+              closeButtonProps={{
+                onClick: () => {},
+                'aria-label': "Hello world",
               }}
             >
               <div>
