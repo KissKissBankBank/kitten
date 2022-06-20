@@ -44,8 +44,6 @@ export var ChatLayout = function ChatLayout(_ref) {
       setActiveColumn: setActiveColumn
     }
   }, /*#__PURE__*/React.createElement(StyledChatLayout, _extends({
-    as: "main",
-    id: "main",
     className: classNames('k-ChatLayout', className),
     style: _extends({}, style, {
       '--chatLayoutOffset': activeColOffset
