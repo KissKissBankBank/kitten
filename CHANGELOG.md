@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: `Discussion`: Fix discussion.
+
 ## [11.2.0] - 2022-06-20
 
 Feature:

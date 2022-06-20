@@ -17,7 +17,7 @@ const DiscussionWrapper = styled.div`
 
   .k-Discussion__list {
     flex-grow: 1;
-    flex-shrink: 0;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     gap: ${pxToRem(20)};

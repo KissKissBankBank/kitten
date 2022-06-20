@@ -2,7 +2,7 @@
 
 exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
 <div
-  className="sc-hKwDye iDaFjl k-Discussion"
+  className="sc-hKwDye jnjFXk k-Discussion"
 >
   <p
     className="k-u-a11y-visuallyHidden"
