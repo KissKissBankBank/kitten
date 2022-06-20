@@ -151,20 +151,23 @@ MessagesMenu.Message = ({
         />
         <div className="k-MessagesMenu__message__content">{children}</div>
       </button>
-      <Button
-        rounded
-        fit="icon"
-        size="micro"
-        className={classNames(
-          'k-MessagesMenu__message__closeButton',
-          avatarProps.className,
-        )}
-        {...closeButtonProps}
-      >
-        {closeButtonProps.children || (
-          <CrossIconNext />
-        )}
-      </Button>
+
+      {Object.keys(closeButtonProps).length > 0 && (
+        <Button
+          rounded
+          fit="icon"
+          size="micro"
+          className={classNames(
+            'k-MessagesMenu__message__closeButton',
+            avatarProps.className,
+          )}
+          {...closeButtonProps}
+        >
+          {closeButtonProps.children || (
+            <CrossIconNext />
+          )}
+        </Button>
+      )}
     </li>
   )
 }
