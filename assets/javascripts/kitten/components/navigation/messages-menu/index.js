@@ -22,6 +22,7 @@ const StyledMessagesMenu = styled.ul`
   .k-MessagesMenu__message {
     overflow: hidden;
     position: relative;
+    flex: 0 0 auto;
     margin: 0;
     padding: 0;
     display: flex;

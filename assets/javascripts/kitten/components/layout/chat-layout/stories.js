@@ -290,6 +290,9 @@ export const Default = args => {
                   avatarProps={{
                     src: item.avatar,
                   }}
+                  closeButtonProps={{
+                    onClick: action('close button', item.longName)
+                  }}
                 >
                   <div>
                     <Text weight="500" lineHeight="1" size="micro">
