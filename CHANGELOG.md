@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `MessagesMenu`: Fix message height.
+
 ## [11.2.1] - 2022-06-20
 
 Fix:
