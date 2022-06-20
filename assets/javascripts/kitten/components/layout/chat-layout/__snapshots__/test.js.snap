@@ -164,9 +164,8 @@ exports[`<ChatLayout /> compare with snapshot matches with snapshot 1`] = `
   }
 }
 
-<main
+<div
   className="c0 k-ChatLayout"
-  id="main"
   style={
     Object {
       "--chatLayoutOffset": 0,
@@ -256,5 +255,5 @@ exports[`<ChatLayout /> compare with snapshot matches with snapshot 1`] = `
       </div>
     </section>
   </div>
-</main>
+</div>
 `;

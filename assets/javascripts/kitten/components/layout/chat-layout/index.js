@@ -31,8 +31,6 @@ export const ChatLayout = ({ className, children, style, ...props }) => {
   return (
     <ChatLayoutContext.Provider value={{ setActiveColumn }}>
       <StyledChatLayout
-        as="main"
-        id="main"
         className={classNames('k-ChatLayout', className)}
         style={{ ...style, '--chatLayoutOffset': activeColOffset }}
         {...props}
