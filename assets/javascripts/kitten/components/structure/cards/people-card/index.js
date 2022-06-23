@@ -32,8 +32,22 @@ const StyledPeopleCard = styled.article`
     align-items: center;
   }
 
+  &.k-PeopleCard--disabled .k-PeopleCard__image {
+    opacity: .5;
+  }
+
   .k-PeopleCard__cell {
     flex: 1 1 auto;
+  }
+
+  &.k-PeopleCard--disabled .k-PeopleCard__lastCell {
+    display: none;
+  }
+
+  &.k-PeopleCard--disabled {
+    background-color: var(--color-grey-200);
+    border-color: var(--color-grey-400);
+    color: var(--color-grey-700);
   }
 
   .k-PeopleCard__lastCell {
@@ -60,10 +74,13 @@ const StyledPeopleCard = styled.article`
   }
 `
 
-export const PeopleCard = ({ className = '', children, ...props }) => {
+export const PeopleCard = ({ className = '', children, disabled = false, ...props }) => {
   return (
     <StyledPeopleCard
-      className={classNames('k-PeopleCard', className)}
+      className={classNames(
+        'k-PeopleCard', className,
+        {'k-PeopleCard--disabled': disabled},
+      )}
       {...props}
     >
       {children}
