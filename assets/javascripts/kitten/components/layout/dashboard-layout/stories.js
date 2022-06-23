@@ -52,6 +52,7 @@ export default {
     },
     toasterIsOpen: false,
     multiMenu: false,
+    hasDarkBg: false,
   },
   argTypes: {
     quickAccessLinkText: { control: 'text' },
@@ -77,6 +78,7 @@ export default {
     },
     flowProps: { name: 'Flow Props (story prop)', control: 'object' },
     multiMenu: { name: 'MultiMenu (story prop)', control: 'boolean' },
+    hasDarkBg: 'boolean',
   },
 }
 
@@ -114,7 +116,7 @@ export const WithRewardContent = args => {
 
 export const WithFlowContent = ({ flowProps, ...args }) => {
   return (
-    <StoryLayout {...args} fullHeightContent>
+    <StoryLayout {...args} fullHeightContent hasDarkBg>
       <StoryWithFlow {...flowProps} />
     </StoryLayout>
   )
