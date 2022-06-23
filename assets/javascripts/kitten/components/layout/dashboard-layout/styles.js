@@ -7,7 +7,7 @@ import {
 } from '../../../constants/grid-config'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 const ALL_COLS = `(100vw - ${pxToRem(
@@ -38,7 +38,7 @@ export const StyledDashboard = styled.div`
     outline: 1px dotted;
   }
 
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+  @media ${mq.desktop} {
     .k-DashboardLayout__siteHeader {
       &,
       & ~ .k-DashboardLayout {
@@ -49,7 +49,7 @@ export const StyledDashboard = styled.div`
     .k-DashboardLayout__siteHeader {
       display: block;
       height: var(--dashboardLayout-siteHeaderHeight);
-      background: ${COLORS.background1};
+      background: var(--color-grey-000);
 
       & ~ .k-DashboardLayout .k-DashboardLayout__backLink {
         display: none;
@@ -63,14 +63,14 @@ export const StyledDashboard = styled.div`
     min-height: -webkit-fill-available;
 
     display: grid;
-    background-color: ${COLORS.background1};
+    background-color: var(--color-grey-000);
 
     & > * {
       min-width: 0;
     }
 
     .k-DashboardLayout__sideWrapper {
-      background-color: ${COLORS.font1};
+      background-color: var(--color-grey-900);
     }
   }
 
@@ -80,7 +80,7 @@ export const StyledDashboard = styled.div`
     left: 0;
     bottom: ${pxToRem(-120)};
     padding: ${pxToRem(20)} ${pxToRem(20)} ${pxToRem(40)};
-    background: ${COLORS.background1};
+    background: var(--color-grey-000);
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
       bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
@@ -117,7 +117,7 @@ export const StyledDashboard = styled.div`
 
   /* TABLET + MOBILE */
 
-  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+  @media ${mq.mobileAndTablet} {
     /* overflow: hidden; */
     position: relative;
 
@@ -155,7 +155,7 @@ export const StyledDashboard = styled.div`
           .k-DashboardLayout__alerts {
             &::before {
               opacity: 0.8;
-              background-color: ${COLORS.font1};
+              background-color: var(--color-grey-900);
               pointer-events: all;
             }
           }
@@ -186,7 +186,7 @@ export const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
-        background-color: ${COLORS.background1};
+        background-color: var(--color-grey-000);
         width: calc(100vw + ${pxToRem(2)});
         display: flex;
         align-items: stretch;
@@ -200,8 +200,8 @@ export const StyledDashboard = styled.div`
           display: flex;
           align-items: center;
 
-          background-color: ${COLORS.font1};
-          border-left: ${pxToRem(2)} solid ${COLORS.line3};
+          background-color: var(--color-grey-900);
+          border-left: ${pxToRem(2)} solid var(--color-grey-800);
 
           > * {
             align-self: initial;
@@ -230,7 +230,7 @@ export const StyledDashboard = styled.div`
             left: ${pxToRem(-2)};
             right: 0;
             bottom: 0;
-            background-color: ${COLORS.background1};
+            background-color: var(--color-grey-000);
             opacity: 0;
             pointer-events: none;
             z-index: var(--DashboardLayout-overlay-zindex, 100);
@@ -264,7 +264,7 @@ export const StyledDashboard = styled.div`
 
   /* MOBILE */
 
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+  @media ${mq.mobile} {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: ${pxToRem(CONTAINER_PADDING_THIN)};
       --DashboardLayout-side-width: calc(100vw - ${pxToRem(50)});
@@ -301,10 +301,10 @@ export const StyledDashboard = styled.div`
 
   /* TABLET + DESKTOP */
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media ${mq.tabletAndDesktop} {
     .k-DashboardLayout__toaster {
-      background-color: ${COLORS.font1};
-      color: ${COLORS.background1};
+      background-color: var(--color-grey-900);
+      color: var(--color-grey-000);
       border-radius: var(--border-radius-s);
       padding: ${pxToRem(20)};
     }
@@ -312,10 +312,10 @@ export const StyledDashboard = styled.div`
 
   /* DESKTOP */
 
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+  @media ${mq.desktop} {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: 7.5vw;
-      --DashboardLayout-side-width: min(${pxToRem(384)}, 25vw);
+      --DashboardLayout-side-width: min(${pxToRem(359)}, 20vw);
 
       grid-template-columns: var(--DashboardLayout-side-width) 1fr;
 
@@ -341,7 +341,21 @@ export const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
-        background-color: ${COLORS.background1};
+        background-color: var(--color-grey-000);
+
+        &.k-DashboardLayout__mainWrapper--darkBg {
+          &, .k-DashboardLayout__flow__nav, .k-DashboardLayout__flow__content {
+            background-color: var(--color-grey-100);
+          }
+
+          .k-DashboardLayout__flow__nav::before {
+            background: linear-gradient(
+              to bottom,
+              rgba(251, 251, 251, 0),
+              rgba(251, 251, 251, 1)
+            );
+          }
+        }
 
         .k-DashboardLayout__heading {
           display: none;
@@ -372,8 +386,8 @@ export const StyledDashboard = styled.div`
     left: -100%;
     z-index: 110;
     padding: ${pxToRem(20)} ${pxToRem(30)};
-    color: ${COLORS.background1};
-    background-color: ${COLORS.font1};
+    color: var(--color-grey-000);
+    background-color: var(--color-grey-900);
     ${TYPOGRAPHY.fontStyles['500']}
     line-height: 1;
     font-size: ${stepToRem(1)};
@@ -387,7 +401,7 @@ export const StyledDashboard = styled.div`
       left: 0;
       opacity: 1;
       transition-delay: 0, 0.2s;
-      border: ${pxToRem(2)} solid ${COLORS.primary4};
+      border: ${pxToRem(2)} solid var(--color-primary-300);
     }
   }
 
@@ -397,11 +411,11 @@ export const StyledDashboard = styled.div`
     gap: ${pxToRem(15)};
     height: ${pxToRem(40)};
     padding: 0 ${pxToRem(15)};
-    background-color: ${COLORS.line3};
+    background-color: var(--color-grey-800);
     border-radius: var(--border-radius-s);
     display: flex;
     align-items: center;
-    color: ${COLORS.background1};
+    color: var(--color-grey-000);
     transition: color 0.2s ease, background-color 0.2s ease;
     ${TYPOGRAPHY.fontStyles['500']}
     font-size: ${stepToRem(-1)};
@@ -413,7 +427,7 @@ export const StyledDashboard = styled.div`
     }
 
     &:hover {
-      color: ${COLORS.primary1};
+      color: var(--color-primary-500);
     }
   }
 `
