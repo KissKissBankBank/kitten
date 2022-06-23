@@ -37,7 +37,7 @@ var _flow = require("./flow");
 
 var _styles = require("./styles");
 
-var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style", "sidebarProps", "contentProps"],
+var _excluded = ["children", "backLinkProps", "buttonProps", "quickAccessLinkText", "fullHeightContent", "overlayZIndex", "style", "sidebarProps", "contentProps", "hasDarkBg"],
     _excluded2 = ["className", "hasButton", "buttonProps", "children", "isOpen"],
     _excluded3 = ["openLabel", "closeLabel"],
     _excluded4 = ["className", "children", "tag"],
@@ -63,6 +63,8 @@ var DashboardLayout = function DashboardLayout(_ref) {
       sidebarProps = _ref$sidebarProps === void 0 ? {} : _ref$sidebarProps,
       _ref$contentProps = _ref.contentProps,
       contentProps = _ref$contentProps === void 0 ? {} : _ref$contentProps,
+      _ref$hasDarkBg = _ref.hasDarkBg,
+      hasDarkBg = _ref$hasDarkBg === void 0 ? false : _ref$hasDarkBg,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
@@ -228,7 +230,9 @@ var DashboardLayout = function DashboardLayout(_ref) {
     ref: contentElement
   }, contentProps, {
     tabIndex: -1,
-    className: (0, _classnames.default)('k-DashboardLayout__mainWrapper', contentProps == null ? void 0 : contentProps.className)
+    className: (0, _classnames.default)('k-DashboardLayout__mainWrapper', contentProps == null ? void 0 : contentProps.className, {
+      'k-DashboardLayout__mainWrapper--darkBg': hasDarkBg
+    })
   }), renderComponentChildrenArray((0, _getReactElements.getReactElementsByType)({
     children: children,
     type: Header
@@ -345,7 +349,8 @@ DashboardLayout.propTypes = {
   fullHeightContent: _propTypes.default.bool,
   overlayZIndex: _propTypes.default.number,
   sidebarProps: _propTypes.default.object,
-  contentProps: _propTypes.default.object
+  contentProps: _propTypes.default.object,
+  hasDarkBg: _propTypes.default.bool
 };
 Header.propTypes = {
   buttonProps: _propTypes.default.shape({
