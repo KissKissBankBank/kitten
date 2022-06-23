@@ -74,7 +74,12 @@ const StyledPeopleCard = styled.article`
   }
 `
 
-export const PeopleCard = ({ className = '', children, disabled = false, ...props }) => {
+export const PeopleCard = ({ 
+  className = '',
+  children,
+  disabled = false,
+  ...props
+}) => {
   return (
     <StyledPeopleCard
       className={classNames(
