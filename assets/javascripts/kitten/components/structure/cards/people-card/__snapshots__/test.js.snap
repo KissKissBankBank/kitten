@@ -2,7 +2,7 @@
 
 exports[`<PeopleCard /> With peopleAvatar prop matches with snapshot 1`] = `
 <article
-  className="sc-dkPtRN liCzeY k-PeopleCard"
+  className="sc-dkPtRN bMGTQA k-PeopleCard"
 >
   <div
     className="k-PeopleCard__image"
@@ -48,7 +48,7 @@ exports[`<PeopleCard /> With peopleAvatar prop matches with snapshot 1`] = `
 
 exports[`<PeopleCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-dkPtRN liCzeY k-PeopleCard"
+  className="sc-dkPtRN bMGTQA k-PeopleCard"
 >
   <div
     className="k-PeopleCard__image"
