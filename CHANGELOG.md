@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `PeopleCard`: Add `disabled` prop.
 - Feature: `DashboardLayout`: Add `hasDarkBg` prop for new flow style.
 
 ## [11.2.2] - 2022-06-20

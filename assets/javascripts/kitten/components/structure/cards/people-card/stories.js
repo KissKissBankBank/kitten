@@ -7,6 +7,7 @@ import { Text, DropdownMenu, EllipsisIcon, FlexWrapper } from 'kitten'
 const args = {
   as: 'article',
   peopleAvatar: true,
+  disabled: false,
 }
 
 const argTypes = {
@@ -20,6 +21,10 @@ const argTypes = {
     description: 'If false return `PeopleCircleIconNext`',
     control: { type: 'boolean' },
   },
+  disabled: {
+    name: 'disabled',
+    control: { type: 'boolean' },
+  }
 }
 
 export default {
