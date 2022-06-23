@@ -315,7 +315,7 @@ export const StyledDashboard = styled.div`
   @media ${mq.desktop} {
     .k-DashboardLayout {
       --DashboardLayout-main-margin: 7.5vw;
-      --DashboardLayout-side-width: min(${pxToRem(359)}, 20vw);
+      --DashboardLayout-side-width: min(${pxToRem(359)}, 25vw);
 
       grid-template-columns: var(--DashboardLayout-side-width) 1fr;
 

@@ -1177,7 +1177,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    --DashboardLayout-side-width: min(22.4375rem,20vw);
+    --DashboardLayout-side-width: min(22.4375rem,25vw);
     grid-template-columns: var(--DashboardLayout-side-width) 1fr;
   }
 
@@ -1830,7 +1830,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 @media (min-width:1080px) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    --DashboardLayout-side-width: min(22.4375rem,20vw);
+    --DashboardLayout-side-width: min(22.4375rem,25vw);
     grid-template-columns: var(--DashboardLayout-side-width) 1fr;
   }
 
