@@ -81,12 +81,17 @@ const StyledFlow = styled.div`
     background-color: ${COLORS.background1};
     width: 100%;
 
+
     @media ${mq.desktop} {
       grid-column: 1 / 2;
       grid-row: 3 / span 1;
       bottom: 0;
       position: sticky;
       z-index: 1;
+
+      width: calc(100% + ${pxToRem(30 * 2)});
+      padding-inline: ${pxToRem(30)};
+      margin-inline: ${pxToRem(-30)};
 
       &::before {
         position: absolute;

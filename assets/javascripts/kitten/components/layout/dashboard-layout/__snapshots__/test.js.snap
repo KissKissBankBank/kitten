@@ -220,6 +220,9 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = 
     position: -webkit-sticky;
     position: sticky;
     z-index: 1;
+    width: calc(100% + 3.75rem);
+    padding-inline: 1.875rem;
+    margin-inline: -1.875rem;
   }
 
   .c0 .k-DashboardLayout__flow__nav::before {
@@ -596,6 +599,9 @@ exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapsho
     position: -webkit-sticky;
     position: sticky;
     z-index: 1;
+    width: calc(100% + 3.75rem);
+    padding-inline: 1.875rem;
+    margin-inline: -1.875rem;
   }
 
   .c0 .k-DashboardLayout__flow__nav::before {
@@ -822,7 +828,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
   min-height: -webkit-fill-available;
   display: grid;
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
 }
 
 .c0 .k-DashboardLayout > * {
@@ -830,7 +836,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 }
 
 .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
-  background-color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-900);
 }
 
 .c0 .k-DashboardLayout__toaster__wrapper {
@@ -839,7 +845,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   left: 0;
   bottom: -7.5rem;
   padding: 1.25rem 1.25rem 2.5rem;
-  background: var(--color-grey-000,#fff);
+  background: var(--color-grey-000);
   opacity: 0;
   -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
   transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
@@ -877,8 +883,8 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   left: -100%;
   z-index: 110;
   padding: 1.25rem 1.875rem;
-  color: var(--color-grey-000,#fff);
-  background-color: var(--color-grey-900,#222);
+  color: var(--color-grey-000);
+  background-color: var(--color-grey-900);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   line-height: 1;
@@ -898,7 +904,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   opacity: 1;
   -webkit-transition-delay: 0,0.2s;
   transition-delay: 0,0.2s;
-  border: 0.125rem solid var(--color-primary-300,#bae8fd);
+  border: 0.125rem solid var(--color-primary-300);
 }
 
 .c0 .k-DashboardLayout__backLink {
@@ -911,7 +917,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   gap: 0.9375rem;
   height: 2.5rem;
   padding: 0 0.9375rem;
-  background-color: var(--color-grey-800,#2d2d2d);
+  background-color: var(--color-grey-800);
   border-radius: var(--border-radius-s);
   display: -webkit-box;
   display: -webkit-flex;
@@ -921,7 +927,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--color-grey-000,#fff);
+  color: var(--color-grey-000);
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -937,10 +943,10 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 }
 
 .c0 .k-DashboardLayout__backLink:hover {
-  color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500);
 }
 
-@media (min-width:67.5rem) {
+@media (min-width:1080px) {
   .c0 .k-DashboardLayout__siteHeader,
   .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout {
     --dashboardLayout-siteHeaderHeight: 4.0625rem;
@@ -949,7 +955,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout__siteHeader {
     display: block;
     height: var(--dashboardLayout-siteHeaderHeight);
-    background: var(--color-grey-000,#fff);
+    background: var(--color-grey-000);
   }
 
   .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout .k-DashboardLayout__backLink {
@@ -957,7 +963,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 }
 
-@media (max-width:67.4375rem) {
+@media (max-width:1079px) {
   .c0 {
     position: relative;
   }
@@ -995,7 +1001,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before,
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts::before {
     opacity: 0.8;
-    background-color: var(--color-grey-900,#222);
+    background-color: var(--color-grey-900);
     pointer-events: all;
   }
 
@@ -1034,7 +1040,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
-    background-color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-000);
     width: calc(100vw + 0.125rem);
     display: -webkit-box;
     display: -webkit-flex;
@@ -1064,8 +1070,8 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: var(--color-grey-900,#222);
-    border-left: 0.125rem solid var(--color-grey-800,#2d2d2d);
+    background-color: var(--color-grey-900);
+    border-left: 0.125rem solid var(--color-grey-800);
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading > * {
@@ -1100,7 +1106,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     left: -0.125rem;
     right: 0;
     bottom: 0;
-    background-color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-000);
     opacity: 0;
     pointer-events: none;
     z-index: var(--DashboardLayout-overlay-zindex,100);
@@ -1131,7 +1137,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 1.25rem;
     --DashboardLayout-side-width: calc(100vw - 3.125rem);
@@ -1159,19 +1165,19 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0 .k-DashboardLayout__toaster {
-    background-color: var(--color-grey-900,#222);
-    color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-900);
+    color: var(--color-grey-000);
     border-radius: var(--border-radius-s);
     padding: 1.25rem;
   }
 }
 
-@media (min-width:67.5rem) {
+@media (min-width:1080px) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    --DashboardLayout-side-width: min(24rem,25vw);
+    --DashboardLayout-side-width: min(22.4375rem,20vw);
     grid-template-columns: var(--DashboardLayout-side-width) 1fr;
   }
 
@@ -1211,7 +1217,17 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
-    background-color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-000);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__content {
+    background-color: var(--color-grey-100);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav::before {
+    background: linear-gradient( to bottom,rgba(251,251,251,0),rgba(251,251,251,1) );
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
@@ -1465,7 +1481,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
   min-height: -webkit-fill-available;
   display: grid;
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
 }
 
 .c0 .k-DashboardLayout > * {
@@ -1473,7 +1489,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 }
 
 .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
-  background-color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-900);
 }
 
 .c0 .k-DashboardLayout__toaster__wrapper {
@@ -1482,7 +1498,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   left: 0;
   bottom: -7.5rem;
   padding: 1.25rem 1.25rem 2.5rem;
-  background: var(--color-grey-000,#fff);
+  background: var(--color-grey-000);
   opacity: 0;
   -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
   transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
@@ -1520,8 +1536,8 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   left: -100%;
   z-index: 110;
   padding: 1.25rem 1.875rem;
-  color: var(--color-grey-000,#fff);
-  background-color: var(--color-grey-900,#222);
+  color: var(--color-grey-000);
+  background-color: var(--color-grey-900);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   line-height: 1;
@@ -1541,7 +1557,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   opacity: 1;
   -webkit-transition-delay: 0,0.2s;
   transition-delay: 0,0.2s;
-  border: 0.125rem solid var(--color-primary-300,#bae8fd);
+  border: 0.125rem solid var(--color-primary-300);
 }
 
 .c0 .k-DashboardLayout__backLink {
@@ -1554,7 +1570,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   gap: 0.9375rem;
   height: 2.5rem;
   padding: 0 0.9375rem;
-  background-color: var(--color-grey-800,#2d2d2d);
+  background-color: var(--color-grey-800);
   border-radius: var(--border-radius-s);
   display: -webkit-box;
   display: -webkit-flex;
@@ -1564,7 +1580,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--color-grey-000,#fff);
+  color: var(--color-grey-000);
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -1580,10 +1596,10 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 }
 
 .c0 .k-DashboardLayout__backLink:hover {
-  color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500);
 }
 
-@media (min-width:67.5rem) {
+@media (min-width:1080px) {
   .c0 .k-DashboardLayout__siteHeader,
   .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout {
     --dashboardLayout-siteHeaderHeight: 4.0625rem;
@@ -1592,7 +1608,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout__siteHeader {
     display: block;
     height: var(--dashboardLayout-siteHeaderHeight);
-    background: var(--color-grey-000,#fff);
+    background: var(--color-grey-000);
   }
 
   .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout .k-DashboardLayout__backLink {
@@ -1600,7 +1616,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 }
 
-@media (max-width:67.4375rem) {
+@media (max-width:1079px) {
   .c0 {
     position: relative;
   }
@@ -1638,7 +1654,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before,
   .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts::before {
     opacity: 0.8;
-    background-color: var(--color-grey-900,#222);
+    background-color: var(--color-grey-900);
     pointer-events: all;
   }
 
@@ -1677,7 +1693,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
-    background-color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-000);
     width: calc(100vw + 0.125rem);
     display: -webkit-box;
     display: -webkit-flex;
@@ -1707,8 +1723,8 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: var(--color-grey-900,#222);
-    border-left: 0.125rem solid var(--color-grey-800,#2d2d2d);
+    background-color: var(--color-grey-900);
+    border-left: 0.125rem solid var(--color-grey-800);
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading > * {
@@ -1743,7 +1759,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     left: -0.125rem;
     right: 0;
     bottom: 0;
-    background-color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-000);
     opacity: 0;
     pointer-events: none;
     z-index: var(--DashboardLayout-overlay-zindex,100);
@@ -1774,7 +1790,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 1.25rem;
     --DashboardLayout-side-width: calc(100vw - 3.125rem);
@@ -1802,19 +1818,19 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0 .k-DashboardLayout__toaster {
-    background-color: var(--color-grey-900,#222);
-    color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-900);
+    color: var(--color-grey-000);
     border-radius: var(--border-radius-s);
     padding: 1.25rem;
   }
 }
 
-@media (min-width:67.5rem) {
+@media (min-width:1080px) {
   .c0 .k-DashboardLayout {
     --DashboardLayout-main-margin: 7.5vw;
-    --DashboardLayout-side-width: min(24rem,25vw);
+    --DashboardLayout-side-width: min(22.4375rem,20vw);
     grid-template-columns: var(--DashboardLayout-side-width) 1fr;
   }
 
@@ -1854,7 +1870,17 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
-    background-color: var(--color-grey-000,#fff);
+    background-color: var(--color-grey-000);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__content {
+    background-color: var(--color-grey-100);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav::before {
+    background: linear-gradient( to bottom,rgba(251,251,251,0),rgba(251,251,251,1) );
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
