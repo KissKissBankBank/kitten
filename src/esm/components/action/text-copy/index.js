@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import COLORS from '../../../constants/colors-config';
-import { ScreenConfig } from '../../../constants/screen-config';
+import { mq } from '../../../constants/screen-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import { CopyIcon } from '../../graphics/icons/copy-icon';
 import { ArrowContainer } from '../../information/boxes/arrow-container';
@@ -15,7 +15,7 @@ var fadeInAndOut = keyframes(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
 var Wrapper = styled.button.withConfig({
   displayName: "text-copy__Wrapper",
   componentId: "sc-1d5z8sz-0"
-})(["position:relative;display:flex;gap:", ";width:100%;@media (max-width:", "){flex-direction:column;}.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:calc(1.15 * ", ");text-align:left;overflow:hidden;span{max-width:100%;max-height:calc(2 * 1.15 * ", ");overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine span{white-space:nowrap;}}.k-TextCopy__buttonTextButton{flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:var(--border);align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:50%;transform:translateX(-50%);bottom:-", ";animation:3s ", " ease-out;}&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}"], pxToRem(5), pxToRem(ScreenConfig.XS.max), stepToRem(-1), stepToRem(-1), pxToRem(15), pxToRem(10), pxToRem(50), fadeInAndOut, COLORS.primary2, COLORS.primary2, COLORS.primary3, COLORS.primary3);
+})(["position:relative;display:grid;gap:", ";width:100%;@media ", "{grid-template-rows:1fr 1fr;}@media ", "{grid-template-columns:1fr auto;}.k-TextCopy__text{display:flex;align-items:center;justify-content:flex-start;line-height:calc(1.15 * ", ");text-align:left;overflow:hidden;span{max-width:100%;max-height:calc(2 * 1.15 * ", ");overflow:hidden;text-overflow:ellipsis;}&.k-TextCopy__text--forceOneLine span{white-space:nowrap;}}.k-TextCopy__buttonTextButton{flex:1 0 auto;padding:0 ", ";align-self:stretch;box-sizing:border-box;}.k-TextCopy__iconButton{display:flex;cursor:pointer;align-items:center;padding:", ";border:var(--border);align-self:stretch;box-sizing:border-box;}.k-TextCopy__tooltip{position:absolute;left:50%;transform:translateX(-50%);bottom:-", ";animation:3s ", " ease-out;}&:hover{.k-Button{border-color:", ";background-color:", ";}}&:active{.k-Button{border-color:", ";background-color:", ";}}"], pxToRem(5), mq.mobile, mq.tabletAndDesktop, stepToRem(-1), stepToRem(-1), pxToRem(15), pxToRem(10), pxToRem(50), fadeInAndOut, COLORS.primary2, COLORS.primary2, COLORS.primary3, COLORS.primary3);
 export var TextCopy = function TextCopy(_ref) {
   var children = _ref.children,
       textToCopy = _ref.textToCopy,

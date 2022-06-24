@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `TextCopy`: Fix resize bug on webkit.
-- Fix: `RewardCard`: Fix background color.
+## [11.4.1] - 2022-06-24
+
+Fixes:
+
+- `TextCopy`: Fix resize bug on webkit.
+- `RewardCard`: Fix background color.
 
 ## [11.4.0] - 2022-06-24
 
