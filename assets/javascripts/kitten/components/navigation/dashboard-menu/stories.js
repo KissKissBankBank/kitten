@@ -196,8 +196,9 @@ export const SimpleMultiMenu = () => (
       data={[
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -346,8 +347,9 @@ export const MultiMenu = () => (
       data={[
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -365,8 +367,9 @@ export const MultiMenu = () => (
         },
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -384,8 +387,9 @@ export const MultiMenu = () => (
         },
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -403,8 +407,9 @@ export const MultiMenu = () => (
         },
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -422,8 +427,9 @@ export const MultiMenu = () => (
         },
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -441,8 +447,9 @@ export const MultiMenu = () => (
         },
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
@@ -460,8 +467,9 @@ export const MultiMenu = () => (
         },
         {
           href: '#',
-          onClick: e => {
+          onClick: (e, closeSelector) => {
             e.preventDefault()
+            closeSelector()
             action('Selector link click')(e)
           },
           children: (
