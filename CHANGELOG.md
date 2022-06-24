@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextCopy`: Fix resize bug on webkit.
+
 ## [11.4.0] - 2022-06-24
 
 Feature:
