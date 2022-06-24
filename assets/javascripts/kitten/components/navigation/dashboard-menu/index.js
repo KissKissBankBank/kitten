@@ -121,6 +121,10 @@ const Selector = ({ data, className, ...props }) => {
     }
   }, [detailsElement])
 
+  const closeSelector = () => {
+    detailsElement.current.open = false
+  }
+
   const handleDetails = event => {
     if (event.target.open) {
       window.addEventListener('keydown', handleEsc)
@@ -136,7 +140,7 @@ const Selector = ({ data, className, ...props }) => {
 
   const handleEsc = event => {
     if (event.key === 'Escape' && detailsElement?.current) {
-      detailsElement.current.open = false
+      closeSelector()
     }
   }
 
@@ -145,7 +149,7 @@ const Selector = ({ data, className, ...props }) => {
       detailsElement?.current &&
       !detailsElement.current.contains(event.target)
     ) {
-      detailsElement.current.open = false
+      closeSelector()
     }
   }
 
@@ -208,7 +212,7 @@ const Selector = ({ data, className, ...props }) => {
       </summary>
 
       <div className="k-DashboardMenu__selectorList">
-        {data.map(({ icon, children, isActive, ...itemProps }, index) => {
+        {data.map(({ icon, children, isActive, onClick, ...itemProps }, index) => {
           if (isActive) return
 
           return (
@@ -219,6 +223,9 @@ const Selector = ({ data, className, ...props }) => {
                 'k-DashboardMenu__selectorButton',
                 itemProps.className,
               )}
+              onClick={(e) => {
+                onClick(e, closeSelector)
+              }}
             >
               {!!icon && (
                 <span className="k-DashboardMenu__iconWrapper">{icon}</span>
