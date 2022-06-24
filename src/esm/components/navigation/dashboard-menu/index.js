@@ -7,7 +7,7 @@ var _excluded = ["className"],
     _excluded5 = ["className", "children"],
     _excluded6 = ["data", "className"],
     _excluded7 = ["children", "icon", "isActive"],
-    _excluded8 = ["icon", "children", "isActive"];
+    _excluded8 = ["icon", "children", "isActive", "onClick"];
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -119,6 +119,10 @@ var Selector = function Selector(_ref6) {
     };
   }, [detailsElement]);
 
+  var closeSelector = function closeSelector() {
+    detailsElement.current.open = false;
+  };
+
   var handleDetails = function handleDetails(event) {
     if (event.target.open) {
       window.addEventListener('keydown', handleEsc);
@@ -132,13 +136,13 @@ var Selector = function Selector(_ref6) {
 
   var handleEsc = function handleEsc(event) {
     if (event.key === 'Escape' && detailsElement != null && detailsElement.current) {
-      detailsElement.current.open = false;
+      closeSelector();
     }
   };
 
   var handleClickOutside = function handleClickOutside(event) {
     if (detailsElement != null && detailsElement.current && !detailsElement.current.contains(event.target)) {
-      detailsElement.current.open = false;
+      closeSelector();
     }
   };
 
@@ -190,13 +194,17 @@ var Selector = function Selector(_ref6) {
     var icon = _ref8.icon,
         children = _ref8.children,
         isActive = _ref8.isActive,
+        _onClick = _ref8.onClick,
         itemProps = _objectWithoutPropertiesLoose(_ref8, _excluded8);
 
     if (isActive) return;
     return /*#__PURE__*/React.createElement("a", _extends({
       key: children + index
     }, itemProps, {
-      className: classNames('k-DashboardMenu__selectorButton', itemProps.className)
+      className: classNames('k-DashboardMenu__selectorButton', itemProps.className),
+      onClick: function onClick(e) {
+        _onClick(e, closeSelector);
+      }
     }), !!icon && /*#__PURE__*/React.createElement("span", {
       className: "k-DashboardMenu__iconWrapper"
     }, icon), /*#__PURE__*/React.createElement("span", {

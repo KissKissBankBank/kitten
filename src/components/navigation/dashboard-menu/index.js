@@ -32,7 +32,7 @@ var _excluded = ["className"],
     _excluded5 = ["className", "children"],
     _excluded6 = ["data", "className"],
     _excluded7 = ["children", "icon", "isActive"],
-    _excluded8 = ["icon", "children", "isActive"];
+    _excluded8 = ["icon", "children", "isActive", "onClick"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -137,6 +137,10 @@ var Selector = function Selector(_ref6) {
     };
   }, [detailsElement]);
 
+  var closeSelector = function closeSelector() {
+    detailsElement.current.open = false;
+  };
+
   var handleDetails = function handleDetails(event) {
     if (event.target.open) {
       window.addEventListener('keydown', handleEsc);
@@ -150,13 +154,13 @@ var Selector = function Selector(_ref6) {
 
   var handleEsc = function handleEsc(event) {
     if (event.key === 'Escape' && detailsElement != null && detailsElement.current) {
-      detailsElement.current.open = false;
+      closeSelector();
     }
   };
 
   var handleClickOutside = function handleClickOutside(event) {
     if (detailsElement != null && detailsElement.current && !detailsElement.current.contains(event.target)) {
-      detailsElement.current.open = false;
+      closeSelector();
     }
   };
 
@@ -207,12 +211,16 @@ var Selector = function Selector(_ref6) {
     var icon = _ref8.icon,
         children = _ref8.children,
         isActive = _ref8.isActive,
+        _onClick = _ref8.onClick,
         itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref8, _excluded8);
     if (isActive) return;
     return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
       key: children + index
     }, itemProps, {
-      className: (0, _classnames.default)('k-DashboardMenu__selectorButton', itemProps.className)
+      className: (0, _classnames.default)('k-DashboardMenu__selectorButton', itemProps.className),
+      onClick: function onClick(e) {
+        _onClick(e, closeSelector);
+      }
     }), !!icon && /*#__PURE__*/_react.default.createElement("span", {
       className: "k-DashboardMenu__iconWrapper"
     }, icon), /*#__PURE__*/_react.default.createElement("span", {
