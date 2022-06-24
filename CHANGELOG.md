@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `DashboardMenu`: Add `closeSelector()` arg as Selector item click property.
+## [11.4.0] - 2022-06-24
+
+Feature:
+
+- `DashboardMenu`: Add `closeSelector()` arg as Selector item click property.
 
 ## [11.3.0] - 2022-06-23
 
