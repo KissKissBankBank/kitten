@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { CopyIcon } from '../../graphics/icons/copy-icon'
 import { ArrowContainer } from '../../information/boxes/arrow-container'
@@ -23,12 +23,16 @@ const fadeInAndOut = keyframes`
 
 const Wrapper = styled.button`
   position: relative;
-  display: flex;
+  display: grid;
   gap: ${pxToRem(5)};
   width: 100%;
 
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    flex-direction: column;
+  @media ${mq.mobile} {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media ${mq.tabletAndDesktop} {
+    grid-template-columns: 1fr auto;
   }
 
   .k-TextCopy__text {

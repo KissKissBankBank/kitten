@@ -2,7 +2,7 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <button
-  className="sc-eCImPb TnWmx k-TextCopy k-u-reset-button"
+  className="sc-eCImPb drqIKL k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
@@ -44,7 +44,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
 
 exports[`<TextCopy /> should match snapshot with button text 1`] = `
 <button
-  className="sc-eCImPb TnWmx k-TextCopy k-u-reset-button"
+  className="sc-eCImPb drqIKL k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
@@ -80,7 +80,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <button
-  className="sc-eCImPb TnWmx k-TextCopy k-u-reset-button"
+  className="sc-eCImPb drqIKL k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
@@ -127,7 +127,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <button
-  className="sc-eCImPb TnWmx k-TextCopy k-u-reset-button"
+  className="sc-eCImPb drqIKL k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
