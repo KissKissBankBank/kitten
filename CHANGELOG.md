@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `PlayerIconNext`: Add icon component.
+- Fix: `Video`: Update style.
+- Fix: `EmbedPlayer`: Update style.
+
 ## [11.4.1] - 2022-06-24
 
 Fixes:

@@ -51,6 +51,7 @@ import {
   WindowEditIconNext,
   MicrophoneIconNext,
   QuestionBubbleIconNext,
+  PlayerIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -58,7 +59,7 @@ import LinkTo from '@storybook/addon-links/react'
 
 const Container = styled.div`
   padding: ${pxToRem(40)};
-  background-color: lightgray;
+  background-color: var(--color-grey-300);
 `
 
 const Group = styled(({ className, children, title }) => {
@@ -120,9 +121,15 @@ const IconContainer = styled(({ className, link, children, suffix }) => {
     max-height: ${pxToRem(27)};
   }
 
-  &.noMaxDimensions svg {
-    max-height: initial;
-    max-width: initial;
+  &.noMaxDimensions {
+    .svgWrapper {
+      height: auto;
+    }
+
+    svg {
+      max-height: initial;
+      max-width: initial;
+    }
   }
   &.noMaxWidth svg {
     max-width: initial;
@@ -357,6 +364,11 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <FacebookIconCircleNext />
+        </IconContainer>
+      </Group>
+      <Group title="Icônes spéciales">
+        <IconContainer className="noMaxDimensions">
+          <PlayerIconNext />
         </IconContainer>
       </Group>
     </Container>
