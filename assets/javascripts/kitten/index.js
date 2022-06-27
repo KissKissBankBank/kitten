@@ -249,6 +249,7 @@ export { MicrophoneIconNext } from './components/graphics/icons-next/microphone-
 export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-icon-next'
 export { PeopleCircleIconNext } from './components/graphics/icons-next/people-circle-icon-next'
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next'
+export { PlayerIconNext } from './components/graphics/icons-next/player-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { QuestionBubbleIconNext } from './components/graphics/icons-next/question-bubble-icon-next'
 export { RefundIcon } from './components/graphics/icons-next/refund-icon'
