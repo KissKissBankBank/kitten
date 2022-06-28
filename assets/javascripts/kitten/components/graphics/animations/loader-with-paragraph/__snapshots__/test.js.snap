@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<LoaderWithParagraph /> With custom component should match with snapshot 1`] = `
+<div
+  className="sc-dkPtRN kUzqVi k-LoaderWithParagraph k-LoaderWithParagraph--left"
+>
+  <svg
+    aria-hidden={true}
+    className="k-LoaderWithParagraph__loader"
+  />
+  <p
+    className="sc-gsDKAQ egqPzK k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+  >
+    Loading
+  </p>
+</div>
+`;
+
 exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`] = `
 <div
   className="sc-dkPtRN kUzqVi k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
