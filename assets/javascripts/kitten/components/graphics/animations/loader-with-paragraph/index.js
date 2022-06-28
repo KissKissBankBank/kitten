@@ -81,5 +81,5 @@ LoaderWithParagraph.propTypes = {
   loaderPosition: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   loaderProps: PropTypes.object,
   paragraphProps: PropTypes.object,
-  loaderComponent: PropTypes.node,
+  loaderComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
 }
