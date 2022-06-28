@@ -27,20 +27,18 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _excluded = ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "style", "className"];
+var _playerIconNext = require("../../../components/graphics/icons-next/player-icon-next");
+
+var _excluded = ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "className"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var actionKeys = ['Enter', ' '];
-var playerButtonSize = 90;
-var playerButtonXSSize = 70;
-
 var StyledEmbedPlayer = _styledComponents.default.div.withConfig({
   displayName: "embed-player__StyledEmbedPlayer",
   componentId: "sc-15ix1ty-0"
-})(["position:relative;display:block;width:100%;background-color:", ";.k-EmbedPlayer__thumbnail{display:block;width:100%;object-fit:cover;object-position:center;}.k-EmbedPlayer__embededPlayer{position:absolute;top:0;width:100%;height:100%;}&:focus-visible{outline:auto;}&:hover .k-EmbedPlayer__button,&:focus .k-EmbedPlayer__button{background-color:", ";.k-EmbedPlayer__buttonPicto{fill:", ";}}&:active .k-EmbedPlayer__button{background-color:", ";.k-EmbedPlayer__buttonPicto{fill:", ";}}.k-EmbedPlayer__button{width:", ";height:", ";top:calc(50% - ", ");left:calc(50% - ", ");background:", ";position:absolute;display:flex;align-items:center;justify-content:center;z-index:1;@media (min-width:", "){width:", ";height:", ";top:calc(50% - ", ");left:calc(50% - ", ");}}.k-EmbedPlayer__buttonPicto{width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}.k-EmbedPlayer__playerPreview{position:relative;transition:opacity ease 600ms;z-index:1;opacity:1;}&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__playerPreview{opacity:0;z-index:0;}&.k-EmbedPlayer--cursorPointer .k-EmbedPlayer__playerPreview{cursor:pointer;}"], _colorsConfig.default.font1, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.primary3, _colorsConfig.default.background1, (0, _typography.pxToRem)(playerButtonXSSize), (0, _typography.pxToRem)(playerButtonXSSize), (0, _typography.pxToRem)(playerButtonXSSize / 2), (0, _typography.pxToRem)(playerButtonXSSize / 2), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(playerButtonSize), (0, _typography.pxToRem)(playerButtonSize), (0, _typography.pxToRem)(playerButtonSize / 2), (0, _typography.pxToRem)(playerButtonSize / 2), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
+})(["position:relative;display:block;width:100%;background-color:", ";.k-EmbedPlayer__thumbnail{display:block;width:100%;object-fit:cover;object-position:center;}.k-EmbedPlayer__embededPlayer{position:absolute;top:0;width:100%;height:100%;}&:focus-visible{outline:auto;}.k-EmbedPlayer__button{cursor:pointer;top:0;left:0;right:0;bottom:0;width:100%;height:100%;position:absolute;transition:opacity var(--transition),z-index var(--transition);transition-delay:0s,var(--transition-timing);opacity:1;z-index:1;display:flex;align-items:center;justify-content:center;}.k-EmbedPlayer__playerPreview{position:relative;transition:opacity var(--transition),z-index var(--transition);transition-delay:0s,var(--transition-timing);z-index:1;opacity:1;}&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__button,&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__playerPreview{opacity:0;z-index:0;}"], _colorsConfig.default.font1);
 
 var EmbedPlayer = function EmbedPlayer(_ref) {
   var ratio = _ref.ratio,
@@ -49,8 +47,6 @@ var EmbedPlayer = function EmbedPlayer(_ref) {
       badgeComponent = _ref$previewProps.badgeComponent,
       iframeHtml = _ref.iframeHtml,
       playButtonLabel = _ref.playButtonLabel,
-      _ref$style = _ref.style,
-      mainStyle = _ref$style === void 0 ? void 0 : _ref$style,
       className = _ref.className,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
@@ -67,44 +63,21 @@ var EmbedPlayer = function EmbedPlayer(_ref) {
     previewVideo.current.blur();
   };
 
-  var handleKeyPress = function handleKeyPress(event) {
-    event.preventDefault();
-    if (actionKeys.includes(event.key)) handleClick();
-  };
-
-  var handleFocus = function handleFocus(event) {
-    event.preventDefault();
-    previewVideo.current.focus();
-    handleKeyPress(event);
-  };
-
-  var componentClassNames = (0, _classnames.default)('k-EmbedPlayer', className, {
-    'k-EmbedPlayer--videoIsPlaying': hasIframeHtml && isPlayerVisible,
-    'k-EmbedPlayer--cursorPointer': hasIframeHtml
-  });
   return /*#__PURE__*/_react.default.createElement(StyledEmbedPlayer, (0, _extends2.default)({
     ref: previewVideo
   }, others, {
-    style: (0, _extends2.default)({}, mainStyle),
-    onClick: hasIframeHtml ? handleClick : null,
-    onKeyPress: hasIframeHtml ? handleKeyPress : null,
-    onFocus: hasIframeHtml ? handleFocus : null,
-    role: hasIframeHtml ? 'button' : null,
-    tabIndex: hasIframeHtml ? 0 : null,
-    "aria-label": hasIframeHtml ? playButtonLabel : null,
-    className: componentClassNames
+    className: (0, _classnames.default)('k-EmbedPlayer', className, {
+      'k-EmbedPlayer--videoIsPlaying': hasIframeHtml && isPlayerVisible,
+      'k-EmbedPlayer--cursorPointer': hasIframeHtml
+    })
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-EmbedPlayer__playerPreview"
-  }, hasIframeHtml && /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-EmbedPlayer__button"
-  }, /*#__PURE__*/_react.default.createElement("svg", {
-    "aria-hidden": true,
-    className: "k-EmbedPlayer__buttonPicto",
-    viewBox: "0 0 10 10",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/_react.default.createElement("path", {
-    d: "M0 0l10 5-10 5z"
-  }))), /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
+  }, hasIframeHtml && /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    className: "k-u-reset-button k-EmbedPlayer__button",
+    onClick: handleClick,
+    "aria-label": playButtonLabel
+  }, /*#__PURE__*/_react.default.createElement(_playerIconNext.PlayerIconNext, null)), /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
     ratio: validRatio
   }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, thumbnail, {
     className: "k-EmbedPlayer__thumbnail " + (thumbnail.className || '')
@@ -120,8 +93,7 @@ EmbedPlayer.propTypes = {
   previewProps: _propTypes.default.shape({
     thumbnail: _propTypes.default.shape({
       src: _propTypes.default.string.isRequired,
-      alt: _propTypes.default.string.isRequired,
-      style: _propTypes.default.string
+      alt: _propTypes.default.string.isRequired
     }).isRequired
   }).isRequired,
   badgeComponent: _propTypes.default.node,
@@ -131,9 +103,7 @@ EmbedPlayer.propTypes = {
 };
 EmbedPlayer.defaultProps = {
   previewProps: {
-    thumbnail: {
-      style: {}
-    }
+    thumbnail: {}
   },
   badgeComponent: null,
   iframeHtml: null

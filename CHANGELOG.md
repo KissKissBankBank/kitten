@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `DashboardLayout`: Add position style to `main`.
-- Feature: `LoaderWithParagraph`: Add `loaderComponent` prop for custom component.
-- Feature: `PlayerIconNext`: Add icon component.
-- Fix: `Video`: Update style.
-- Fix: `EmbedPlayer`: Update style.
+## [11.5.0] - 2022-06-28
+
+Features:
+
+- `LoaderWithParagraph`: Add `loaderComponent` prop for custom component.
+- `PlayerIconNext`: Add icon component.
+
+Fixes:
+
+- `DashboardLayout`: Add position style to `main`.
+- `EmbedPlayer`: Update style.
+- `Video`: Update style.
 
 ## [11.4.1] - 2022-06-24
 
