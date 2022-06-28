@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DashboardLayout`: Add position style to `main`.
 - Feature: `PlayerIconNext`: Add icon component.
 - Fix: `Video`: Update style.
 - Fix: `EmbedPlayer`: Update style.
