@@ -1053,6 +1053,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: relative;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
@@ -1217,6 +1218,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    position: relative;
     background-color: var(--color-grey-000);
   }
 
@@ -1232,10 +1234,6 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
     display: none;
-  }
-
-  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
-    position: relative;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
@@ -1710,6 +1708,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: relative;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
@@ -1874,6 +1873,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    position: relative;
     background-color: var(--color-grey-000);
   }
 
@@ -1889,10 +1889,6 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
     display: none;
-  }
-
-  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
-    position: relative;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
