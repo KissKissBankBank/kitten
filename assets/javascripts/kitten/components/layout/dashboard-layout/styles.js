@@ -191,6 +191,7 @@ export const StyledDashboard = styled.div`
         display: flex;
         align-items: stretch;
         flex-direction: column;
+        position: relative;
 
         .k-DashboardLayout__heading {
           padding-left: ${pxToRem(CONTAINER_PADDING)};
@@ -341,6 +342,7 @@ export const StyledDashboard = styled.div`
       }
 
       .k-DashboardLayout__mainWrapper {
+        position: relative;
         background-color: var(--color-grey-000);
 
         &.k-DashboardLayout__mainWrapper--darkBg {
@@ -362,8 +364,6 @@ export const StyledDashboard = styled.div`
         }
 
         .k-DashboardLayout__main {
-          position: relative;
-
           &:not(.k-DashboardLayout__main--fullHeight) {
             padding-top: ${pxToRem(80)};
             padding-bottom: ${pxToRem(80)};
