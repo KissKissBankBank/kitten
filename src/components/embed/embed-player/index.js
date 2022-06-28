@@ -85,7 +85,9 @@ var EmbedPlayer = function EmbedPlayer(_ref) {
     className: "k-EmbedPlayer__embededPlayer"
   }, /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
     ratio: validRatio
-  }, (0, _parser.parseHtml)(iframeHtml))));
+  }, (0, _parser.parseHtml)(iframeHtml, {
+    sanitize: false
+  }))));
 };
 
 exports.EmbedPlayer = EmbedPlayer;
