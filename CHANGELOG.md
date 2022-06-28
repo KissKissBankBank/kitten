@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DashboardLayout`: Add position style to the main section’s wrapper.
+
 ## [11.5.0] - 2022-06-28
 
 Features:
