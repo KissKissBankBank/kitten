@@ -1234,6 +1234,10 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
     display: none;
   }
 
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+    position: relative;
+  }
+
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -1885,6 +1889,10 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
     display: none;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+    position: relative;
   }
 
   .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {

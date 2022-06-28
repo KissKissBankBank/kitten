@@ -362,6 +362,8 @@ export const StyledDashboard = styled.div`
         }
 
         .k-DashboardLayout__main {
+          position: relative;
+
           &:not(.k-DashboardLayout__main--fullHeight) {
             padding-top: ${pxToRem(80)};
             padding-bottom: ${pxToRem(80)};
