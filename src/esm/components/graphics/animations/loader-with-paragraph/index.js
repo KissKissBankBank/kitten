@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"];
+var _excluded = ["className", "loaderPosition", "loaderProps", "loaderComponent", "paragraphProps", "children"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
@@ -16,13 +16,15 @@ export var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
   var className = _ref.className,
       loaderPosition = _ref.loaderPosition,
       loaderProps = _ref.loaderProps,
+      loaderComponent = _ref.loaderComponent,
       paragraphProps = _ref.paragraphProps,
       children = _ref.children,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  var Component = loaderComponent || Loader;
   return /*#__PURE__*/React.createElement(StyledLoaderWithParagraph, _extends({
     className: classNames('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--" + loaderPosition)
-  }, others), /*#__PURE__*/React.createElement(Loader, _extends({
+  }, others), /*#__PURE__*/React.createElement(Component, _extends({
     "aria-hidden": true
   }, loaderProps, {
     className: classNames('k-LoaderWithParagraph__loader', loaderProps.className)
@@ -37,10 +39,12 @@ LoaderWithParagraph.defaultProps = {
   children: 'Loading',
   loaderPosition: 'left',
   loaderProps: {},
-  paragraphProps: {}
+  paragraphProps: {},
+  loaderComponent: null
 };
 LoaderWithParagraph.propTypes = {
   loaderPosition: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   loaderProps: PropTypes.object,
-  paragraphProps: PropTypes.object
+  paragraphProps: PropTypes.object,
+  loaderComponent: PropTypes.node
 };
