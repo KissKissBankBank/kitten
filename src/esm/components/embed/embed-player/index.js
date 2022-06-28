@@ -60,7 +60,9 @@ export var EmbedPlayer = function EmbedPlayer(_ref) {
     className: "k-EmbedPlayer__embededPlayer"
   }, /*#__PURE__*/React.createElement(ResponsiveIframeContainer, {
     ratio: validRatio
-  }, parseHtml(iframeHtml))));
+  }, parseHtml(iframeHtml, {
+    sanitize: false
+  }))));
 };
 EmbedPlayer.propTypes = {
   previewProps: PropTypes.shape({

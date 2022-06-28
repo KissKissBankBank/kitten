@@ -65,5 +65,5 @@ LoaderWithParagraph.propTypes = {
   loaderPosition: _propTypes.default.oneOf(['top', 'right', 'bottom', 'left']),
   loaderProps: _propTypes.default.object,
   paragraphProps: _propTypes.default.object,
-  loaderComponent: _propTypes.default.node
+  loaderComponent: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.object])
 };
