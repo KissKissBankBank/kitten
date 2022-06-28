@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `LoaderWithParagraph`: Fix console warning.
 - Fix: `EmbedPlayer`: Disable embed code sanitization.
 
 ## [11.5.1] - 2022-06-28
