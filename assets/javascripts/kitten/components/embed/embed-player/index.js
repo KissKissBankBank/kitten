@@ -119,7 +119,7 @@ export const EmbedPlayer = ({
       {hasIframeHtml && isPlayerVisible && (
         <div className="k-EmbedPlayer__embededPlayer">
           <ResponsiveIframeContainer ratio={validRatio}>
-            {parseHtml(iframeHtml)}
+            {parseHtml(iframeHtml, { sanitize: false })}
           </ResponsiveIframeContainer>
         </div>
       )}
