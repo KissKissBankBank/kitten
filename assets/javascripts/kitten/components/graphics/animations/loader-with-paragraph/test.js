@@ -11,6 +11,14 @@ describe('<LoaderWithParagraph />', () => {
     })
   })
 
+  describe('With custom component', () => {
+    it('should match with snapshot', () => {
+      const tree = renderer.create(<LoaderWithParagraph loaderComponent="svg" />).toJSON()
+
+      expect(tree).toMatchSnapshot()
+    })
+  })
+
   describe('With custom props', () => {
     it('should match with snapshot', () => {
       const tree = renderer

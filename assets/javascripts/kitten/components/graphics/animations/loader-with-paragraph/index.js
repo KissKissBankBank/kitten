@@ -29,10 +29,13 @@ export const LoaderWithParagraph = ({
   className,
   loaderPosition,
   loaderProps,
+  loaderComponent,
   paragraphProps,
   children,
   ...others
 }) => {
+  const Component = loaderComponent || Loader
+
   return (
     <StyledLoaderWithParagraph
       className={classNames(
@@ -42,7 +45,7 @@ export const LoaderWithParagraph = ({
       )}
       {...others}
     >
-      <Loader
+      <Component
         aria-hidden
         {...loaderProps}
         className={classNames(
@@ -71,10 +74,12 @@ LoaderWithParagraph.defaultProps = {
   loaderPosition: 'left',
   loaderProps: {},
   paragraphProps: {},
+  loaderComponent: null,
 }
 
 LoaderWithParagraph.propTypes = {
   loaderPosition: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
   loaderProps: PropTypes.object,
   paragraphProps: PropTypes.object,
+  loaderComponent: PropTypes.node,
 }
