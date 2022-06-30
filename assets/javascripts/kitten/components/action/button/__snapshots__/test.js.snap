@@ -33,7 +33,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -283,7 +283,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -531,7 +531,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -779,7 +779,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -1275,7 +1275,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -1523,7 +1523,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -1773,7 +1773,7 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -2021,7 +2021,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -2269,7 +2269,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -2517,7 +2517,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -2765,7 +2765,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -3013,7 +3013,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -3261,7 +3261,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -3509,7 +3509,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -3757,7 +3757,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -4010,7 +4010,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
