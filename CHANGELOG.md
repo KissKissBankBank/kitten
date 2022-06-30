@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Tokens`: Add `font-weight` CSS tokens.
+
 ## [11.5.2] - 2022-06-28
 
 Fix:
