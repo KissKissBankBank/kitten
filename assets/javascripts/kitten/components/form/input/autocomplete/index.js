@@ -220,11 +220,10 @@ export const Autocomplete = ({
   }
 
   const handleBlur = e => {
+    onBlur(e)
     setTimeout(() => {
       setShowSuggestions(false)
-    }, 100)
-
-    onBlur(e)
+    }, 200)
   }
 
   const handleKeyDown = e => {
