@@ -123,6 +123,25 @@ const items = [
   'York Chocolate',
 ]
 
+const objectItems = [
+  {
+    name: 'item1',
+    value: 0,
+  },
+  {
+    name: 'item2',
+    value: 1,
+  },
+  {
+    name: 'item3',
+    value: 2,
+  },
+  {
+    name: 'item4',
+    value: 3,
+  },
+]
+
 export default {
   component: Autocomplete,
   title: 'Form/Input/Autocomplete',
@@ -143,7 +162,7 @@ export default {
 
   args: {
     name: 'autocomplete',
-    items,
+    label: 'name',
     disabled: false,
     error: false,
     icon: null,
@@ -166,6 +185,10 @@ export default {
     items: {
       name: 'items',
       control: 'object',
+    },
+    label: {
+      name: 'label',
+      control: 'string',
     },
     error: {
       name: 'error',
@@ -219,7 +242,29 @@ export const Default = args => (
       Choose your kitten:
     </Field.Label>
 
-    <Autocomplete id="autocomplete" placeholder="Search a kitten…" {...args} />
+    <Autocomplete
+      id="autocomplete"
+      placeholder="Search a kitten…"
+      items={items}
+      {...args}
+    />
+
+    <p>🐱 🐱 🐱 🐱 🐱</p>
+  </Field>
+)
+
+export const WithObjectList = args => (
+  <Field>
+    <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+      Choose your kitten:
+    </Field.Label>
+
+    <Autocomplete
+      id="autocomplete"
+      placeholder="Search a kitten…"
+      items={objectItems}
+      {...args}
+    />
 
     <p>🐱 🐱 🐱 🐱 🐱</p>
   </Field>
@@ -231,7 +276,12 @@ export const WithIcon = args => (
       Choose your kitten:
     </Field.Label>
 
-    <Autocomplete id="autocomplete" placeholder="Search a kitten…" {...args} />
+    <Autocomplete
+      id="autocomplete"
+      placeholder="Search a kitten…"
+      items={items}
+      {...args}
+    />
 
     <p>🐱 🐱 🐱 🐱 🐱</p>
   </Field>

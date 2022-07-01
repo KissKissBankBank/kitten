@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import isFunction from 'lodash/fp/isFunction'
+import isEmpty from 'lodash/fp/isEmpty'
 import PropTypes from 'prop-types'
 import slugify from 'slugify'
 import classNames from 'classnames'
@@ -175,6 +176,7 @@ export const StyledSuggestionsList = styled.ul`
 export const Autocomplete = ({
   className,
   items: defaultItems,
+  label,
   error,
   onChange,
   onBlur,
@@ -194,14 +196,14 @@ export const Autocomplete = ({
   const [showSuggestions, setShowSuggestions] = useState(false)
   const inputEl = useRef(null)
   const suggestionsEl = useRef(null)
+
   const showNoResultMessage = isFunction(shouldShowNoResultMessage)
     ? shouldShowNoResultMessage({ items, value })
     : shouldShowNoResultMessage
 
   useEffect(() => {
     updateSuggestions()
-    setShowSuggestions(!!value)
-  }, [value, defaultItems])
+  }, [value])
 
   useEffect(() => {
     suggestionsEl?.current?.children[selectedSuggestionIndex]?.scrollIntoView({
@@ -212,17 +214,16 @@ export const Autocomplete = ({
   }, [selectedSuggestionIndex])
 
   const handleChange = e => {
+    setShowSuggestions(!isEmpty(value))
     setValue(e.target.value)
-
     onChange(e)
   }
 
   const handleBlur = e => {
+    onBlur(e)
     setTimeout(() => {
       setShowSuggestions(false)
-    }, 100)
-
-    onBlur(e)
+    }, 200)
   }
 
   const handleKeyDown = e => {
@@ -243,33 +244,39 @@ export const Autocomplete = ({
         e.preventDefault()
 
         const selectedValue = items[selectedSuggestionIndex]
-        handleClickItem(selectedValue)()
+        handleClickItem(selectedValue)
+        setShowSuggestions(false)
       }
     }
 
     onKeyDown(e)
   }
 
-  const handleClickItem = value => () => {
+  const handleClickItem = value => {
     if (!value) return
 
-    inputEl.current.value = value
+    const selectedValue = value[label] || value
+    inputEl.current.value = selectedValue
     inputEl.current.focus()
 
-    setValue(value)
-    setShowSuggestions(false)
     onSelect(value)
+    setValue(selectedValue)
+    setShowSuggestions(false)
   }
 
   const updateSuggestions = () => {
     const search = `${value}`.toLowerCase()
 
     const newItems = updateSuggestionsStrategy
-      ? updateSuggestionsStrategy({ items: defaultItems, value })
-      : defaultItems.filter(
-          item => item.toLowerCase().includes(search) && item !== value,
-        )
-
+      ? updateSuggestionsStrategy({ items: items, value })
+      : defaultItems.filter(item => {
+          if (typeof item === 'string') {
+            return item.toLowerCase().includes(search) && item !== value
+          }
+          return (
+            item[label].toLowerCase().includes(search) && item[label] !== value
+          )
+        })
     setItems(newItems)
     resetSelectedItem()
   }
@@ -367,13 +374,13 @@ export const Autocomplete = ({
               <li
                 key={item + index}
                 id={slugify(`${item}-${index}`)}
-                onClick={handleClickItem(item)}
+                onClick={() => handleClickItem(item)}
                 role="option"
                 aria-selected={selectedSuggestionIndex === index}
                 tabIndex="-1"
                 className="k-Form-Autocomplete__suggestion__item"
               >
-                {item}
+                {item[label] || item}
               </li>
             ))}
           </StyledSuggestionsList>
@@ -389,7 +396,9 @@ export const Autocomplete = ({
 
 Autocomplete.propTypes = {
   name: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  ).isRequired,
   error: PropTypes.bool,
   icon: PropTypes.object,
   iconPosition: PropTypes.oneOf(['left', 'right']),
