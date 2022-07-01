@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Autocomplete`: Can pass objects to autocomplete items.
 - Fix: `Button`: New `hydrogen` modifier border style.
 
 ## [11.5.2] - 2022-06-28
