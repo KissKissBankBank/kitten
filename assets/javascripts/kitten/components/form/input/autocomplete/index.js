@@ -397,7 +397,9 @@ export const Autocomplete = ({
 
 Autocomplete.propTypes = {
   name: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  ).isRequired,
   error: PropTypes.bool,
   icon: PropTypes.object,
   iconPosition: PropTypes.oneOf(['left', 'right']),
