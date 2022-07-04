@@ -15,22 +15,6 @@ describe('<Marger />', () => {
   })
 
   describe('with top prop', () => {
-    describe('with string prop', () => {
-      it('has margin-top CSS rule', () => {
-        const tree = renderer.create(<Marger top="1.5" />).toJSON()
-
-        expect(tree).toMatchSnapshot()
-        expect(tree).toHaveStyleRule('margin-top', '0.9375rem')
-      })
-
-      it('works with .5 value', () => {
-        const tree = renderer.create(<Marger top=".5" />).toJSON()
-
-        expect(tree).toMatchSnapshot()
-        expect(tree).toHaveStyleRule('margin-top', '0.3125rem')
-      })
-    })
-
     describe('with object prop', () => {
       it('has margin-top CSS rule', () => {
         const tree = renderer
@@ -160,14 +144,6 @@ describe('<Marger />', () => {
       expect(tree).toHaveStyleRule('margin-bottom', '1.25rem', {
         media: '(min-width:768px)',
       })
-    })
-  })
-
-  describe('with other prop', () => {
-    it('has a custom class', () => {
-      const marger = shallow(<Marger className="custom__class" />)
-
-      expect(marger.hasClass('custom__class')).toBe(true)
     })
   })
 })
