@@ -49,4 +49,6 @@ export default {
 
 export const Default = args => <LoaderWithParagraph {...args} />
 
-export const WithCustomComponent = args => <LoaderWithParagraph {...args} loaderComponent={KissKissLoadingAnimation} />
+export const WithCustomComponent = args => (
+  <LoaderWithParagraph {...args} loaderComponent={KissKissLoadingAnimation} />
+)
