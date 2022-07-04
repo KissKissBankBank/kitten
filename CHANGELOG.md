@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [11.6.1] - 2022-07-04
+
+Fix:
+
+- `Autocomplete`: Update updateSuggestionsStrategy function.
+
+
 ## [11.6.0] - 2022-07-01
 
 Feature: 
