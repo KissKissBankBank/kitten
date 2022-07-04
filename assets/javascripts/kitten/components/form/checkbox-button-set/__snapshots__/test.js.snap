@@ -2,17 +2,17 @@
 
 exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN guRjAt k-Form-CheckboxButtonSet"
+  className="sc-dkzDqf dbYqxW k-Form-CheckboxButtonSet"
   disabled={false}
 >
   <legend
-    className="sc-gsDKAQ gDfswp k-Label k-Form-CheckboxButtonSet__label k-Label--small"
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxButtonSet__label k-Label--small"
     onClick={[Function]}
   >
     Label
   </legend>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -35,7 +35,7 @@ exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -57,7 +57,7 @@ exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -83,17 +83,17 @@ exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
 
 exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN guRjAt k-Form-CheckboxButtonSet"
+  className="sc-dkzDqf dbYqxW k-Form-CheckboxButtonSet"
   disabled={false}
 >
   <legend
-    className="sc-gsDKAQ gDfswp k-Label k-Form-CheckboxButtonSet__label k-Label--small"
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxButtonSet__label k-Label--small"
     onClick={[Function]}
   >
     Label test
   </legend>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -116,7 +116,7 @@ exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`]
     </label>
   </div>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -138,7 +138,7 @@ exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`]
     </label>
   </div>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -164,7 +164,7 @@ exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`]
 
 exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN guRjAt k-Form-CheckboxButtonSet"
+  className="sc-dkzDqf dbYqxW k-Form-CheckboxButtonSet"
   disabled={false}
 >
   <legend>
@@ -173,7 +173,7 @@ exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
     </h1>
   </legend>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -196,7 +196,7 @@ exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"
@@ -218,7 +218,7 @@ exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
     </label>
   </div>
   <div
-    className="sc-bdvvtL hkzfhu k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
   >
     <input
       className="k-Form-CheckboxButton__input"

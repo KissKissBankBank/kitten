@@ -34,6 +34,7 @@ Array [
     >
       <div
         aria-describedby="DndDescribedBy-1"
+        aria-disabled={false}
         aria-roledescription="sortable"
         className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
         role="button"
@@ -41,7 +42,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL gknruy k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bczRLJ cSiVWF k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -97,6 +98,7 @@ Array [
     >
       <div
         aria-describedby="DndDescribedBy-1"
+        aria-disabled={false}
         aria-roledescription="sortable"
         className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
         role="button"
@@ -104,7 +106,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL gknruy k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bczRLJ cSiVWF k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -160,6 +162,7 @@ Array [
     >
       <div
         aria-describedby="DndDescribedBy-1"
+        aria-disabled={false}
         aria-roledescription="sortable"
         className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
         role="button"
@@ -167,7 +170,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL gknruy k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bczRLJ cSiVWF k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -223,6 +226,7 @@ Array [
     >
       <div
         aria-describedby="DndDescribedBy-1"
+        aria-disabled={false}
         aria-roledescription="sortable"
         className="k-DragAndDropList__item k-DragAndDropList__item--hasButton"
         role="button"
@@ -230,7 +234,7 @@ Array [
       >
         <button
           aria-label="Reorder"
-          className="sc-bdvvtL gknruy k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+          className="sc-bczRLJ cSiVWF k-Button k-DragAndDropList__item__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
           onKeyDown={[Function]}
           onMouseDown={[Function]}
           onTouchStart={[Function]}
@@ -281,7 +285,13 @@ Array [
         "display": "none",
       }
     }
-  />,
+  >
+    
+    To pick up a draggable item, press the space bar.
+    While dragging, use the arrow keys to move the item.
+    Press space again to drop the item in its new position, or press escape to cancel.
+  
+  </div>,
   <div
     aria-atomic={true}
     aria-live="assertive"

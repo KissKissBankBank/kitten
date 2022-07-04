@@ -2,12 +2,12 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
 >
   
   <input
     aria-labelledby={null}
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium"
     disabled={false}
     name="text"
   />
@@ -38,12 +38,12 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
 >
   
   <input
     aria-labelledby={null}
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium k-Form-TextInput--disabled"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium k-Form-TextInput--disabled"
     disabled={true}
     name="text"
   />
@@ -74,12 +74,12 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 <div
-  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_right"
+  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_right"
 >
   
   <input
     aria-labelledby={null}
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium k-Form-TextInput--valid"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium k-Form-TextInput--valid"
     disabled={false}
     name="text"
   />
@@ -110,12 +110,12 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN dMRxqY k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
 >
   
   <input
     aria-labelledby={null}
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"

@@ -2,7 +2,7 @@
 
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-dkPtRN fIyQYQ k-Form-ColorSelect"
+  className="sc-dkzDqf fpxlvr k-Form-ColorSelect"
   name="test-slider-input"
 >
   <div
@@ -107,7 +107,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
     />
     <input
       aria-label="Code hexadécimal de la couleur"
-      className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--small k-Form-TextInput--alignCenter"
+      className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInput--small k-Form-TextInput--alignCenter"
       disabled={false}
       name="text"
       onBlur={[Function]}
@@ -125,7 +125,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 
 exports[`<ColorSelect /> should match its snapshot with props and children 1`] = `
 <div
-  className="sc-dkPtRN fIyQYQ k-Form-ColorSelect"
+  className="sc-dkzDqf fpxlvr k-Form-ColorSelect"
   name="test-slider-input"
 >
   <div
@@ -230,7 +230,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
     />
     <input
       aria-label="Code hexadécimal de la couleur"
-      className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInput--small k-Form-TextInput--alignCenter"
+      className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInput--small k-Form-TextInput--alignCenter"
       disabled={false}
       name="text"
       onBlur={[Function]}
@@ -260,7 +260,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
           Rendu :
         </span>
         <button
-          className="sc-hKwDye cBlNdt k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
+          className="sc-hKMtZM cOpTyi k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
           style={
             Object {
               "--Button-border-radius": null,

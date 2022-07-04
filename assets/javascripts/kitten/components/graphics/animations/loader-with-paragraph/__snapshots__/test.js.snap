@@ -2,11 +2,11 @@
 
 exports[`<LoaderWithParagraph /> With custom component should match with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kUzqVi k-LoaderWithParagraph k-LoaderWithParagraph--left"
+  className="sc-dkzDqf dTZBGZ k-LoaderWithParagraph k-LoaderWithParagraph--left"
 >
   <div
     aria-hidden={true}
-    className="sc-ZOtfp huxzxE k-KissKissLoadingAnimation k-LoaderWithParagraph__loader"
+    className="sc-ZyCDH khtNVl k-KissKissLoadingAnimation k-LoaderWithParagraph__loader"
   >
     <svg
       className="k-KissKissLoadingAnimation__svg"
@@ -26,7 +26,7 @@ exports[`<LoaderWithParagraph /> With custom component should match with snapsho
     </svg>
   </div>
   <p
-    className="sc-gsDKAQ egqPzK k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
   >
     Loading
   </p>
@@ -35,11 +35,11 @@ exports[`<LoaderWithParagraph /> With custom component should match with snapsho
 
 exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kUzqVi k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
+  className="sc-dkzDqf dTZBGZ k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
 >
   <button
     aria-hidden={true}
-    className="sc-bdvvtL dGpMAW k-Loader k-LoaderWithParagraph__loader customClassName"
+    className="sc-bczRLJ kOGTcx k-Loader k-LoaderWithParagraph__loader customClassName"
   >
     <svg
       className="k-Loader__circle"
@@ -79,7 +79,7 @@ exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`
     </svg>
   </button>
   <p
-    className="sc-gsDKAQ egqPzK k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
   >
     A custom loading massage
   </p>
@@ -88,11 +88,11 @@ exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`
 
 exports[`<LoaderWithParagraph /> With default props should match with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kUzqVi k-LoaderWithParagraph k-LoaderWithParagraph--left"
+  className="sc-dkzDqf dTZBGZ k-LoaderWithParagraph k-LoaderWithParagraph--left"
 >
   <div
     aria-hidden={true}
-    className="sc-bdvvtL dGpMAW k-Loader k-LoaderWithParagraph__loader"
+    className="sc-bczRLJ kOGTcx k-Loader k-LoaderWithParagraph__loader"
   >
     <svg
       className="k-Loader__circle"
@@ -132,7 +132,7 @@ exports[`<LoaderWithParagraph /> With default props should match with snapshot 1
     </svg>
   </div>
   <p
-    className="sc-gsDKAQ egqPzK k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
   >
     Loading
   </p>

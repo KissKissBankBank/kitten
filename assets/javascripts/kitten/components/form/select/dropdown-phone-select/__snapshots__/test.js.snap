@@ -2,7 +2,7 @@
 
 exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-dkPtRN gvvltd k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--medium k-Form-DropdownSelectWithInput--isOpen"
+  className="sc-dkzDqf iGlxsa k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--medium k-Form-DropdownSelectWithInput--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -10,7 +10,7 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-gsDKAQ gDfswp k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--small"
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single k-Label--small"
     htmlFor="dropdown-phone-select-test"
     id="dropdown-phone-select-test_element-label"
     onClick={[Function]}
@@ -106,7 +106,7 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
         className="k-Form-DropdownSelectWithInput__item__icon"
       >
         <div
-          className="sc-bdvvtL gWIEPn be"
+          className="sc-bczRLJ jywXFA be"
           style={
             Object {
               "backgroundImage": "url(./flags.png)",
@@ -141,7 +141,7 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
         className="k-Form-DropdownSelectWithInput__item__icon"
       >
         <div
-          className="sc-bdvvtL gWIEPn fr"
+          className="sc-bczRLJ jywXFA fr"
           style={
             Object {
               "backgroundImage": "url(./flags.png)",
@@ -176,7 +176,7 @@ exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
         className="k-Form-DropdownSelectWithInput__item__icon"
       >
         <div
-          className="sc-bdvvtL gWIEPn lu"
+          className="sc-bczRLJ jywXFA lu"
           style={
             Object {
               "backgroundImage": "url(./flags.png)",

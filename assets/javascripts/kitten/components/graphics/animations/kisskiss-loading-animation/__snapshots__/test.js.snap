@@ -3,7 +3,7 @@
 exports[`<KissKissLoadingAnimation /> With custom props should match with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sc-bdvvtL kCQrLF k-KissKissLoadingAnimation customClassName"
+  className="sc-bczRLJ iuCeyK k-KissKissLoadingAnimation customClassName"
 >
   <svg
     className="k-KissKissLoadingAnimation__svg"
@@ -27,7 +27,7 @@ exports[`<KissKissLoadingAnimation /> With custom props should match with snapsh
 exports[`<KissKissLoadingAnimation /> With default props should match with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sc-bdvvtL kCQrLF k-KissKissLoadingAnimation"
+  className="sc-bczRLJ iuCeyK k-KissKissLoadingAnimation"
 >
   <svg
     className="k-KissKissLoadingAnimation__svg"

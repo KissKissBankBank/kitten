@@ -2,10 +2,10 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-dkzDqf dUSiFH k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
     defaultValue=""
     disabled={false}
     name="text"
@@ -21,10 +21,10 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-dkzDqf dUSiFH k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium k-Form-TextInput--disabled"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium k-Form-TextInput--disabled"
     defaultValue=""
     disabled={true}
     name="text"
@@ -40,10 +40,10 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-dkzDqf dUSiFH k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium k-Form-TextInput--error"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium k-Form-TextInput--error"
     defaultValue=""
     disabled={false}
     name="text"
@@ -59,10 +59,10 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`size\` prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-dkzDqf dUSiFH k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--small"
+    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--small"
     defaultValue=""
     disabled={false}
     name="text"

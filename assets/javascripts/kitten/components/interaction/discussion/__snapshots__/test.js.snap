@@ -2,7 +2,7 @@
 
 exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
 <div
-  className="sc-hKwDye jnjFXk k-Discussion"
+  className="sc-hKMtZM fBYQJn k-Discussion"
 >
   <p
     className="k-u-a11y-visuallyHidden"
@@ -76,11 +76,11 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-gsDKAQ iICuau k-Form-TextInput__textareaContainer"
+      className="sc-gsnTZi iPfMgm k-Form-TextInput__textareaContainer"
     >
       <textarea
         aria-label="Texte à envoyer"
-        className="sc-bdvvtL ekFnRP k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small k-Form-TextInput--autoResize"
+        className="sc-bczRLJ etIXKI k-Form-TextInput k-Discussion__form__input k-Form-TextInput--autoresize k-Form-TextInput--small k-Form-TextInput--autoResize"
         disabled={false}
         name="text"
         onChange={[Function]}
@@ -98,7 +98,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     </div>
     <button
       aria-label="Envoyer"
-      className="sc-dkPtRN iiA-dfs k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+      className="sc-dkzDqf iTOFRf k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {

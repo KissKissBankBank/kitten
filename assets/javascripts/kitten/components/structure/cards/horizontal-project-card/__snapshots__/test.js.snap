@@ -2,7 +2,7 @@
 
 exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
 <a
-  className="sc-gsDKAQ jTnea k-HorizontalProjectCard k-HorizontalProjectCard--noProgressOnMobile"
+  className="sc-gsnTZi ktFvcy k-HorizontalProjectCard k-HorizontalProjectCard--noProgressOnMobile"
   href="#"
 >
   <div
@@ -38,7 +38,7 @@ exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="sc-bdvvtL dMgDfH k-Meters-Progress k-HorizontalProjectCard__progress__ramp"
+      className="sc-bczRLJ jJFxiY k-Meters-Progress k-HorizontalProjectCard__progress__ramp"
       role="progressbar"
       style={
         Object {
@@ -68,7 +68,7 @@ exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
 
 exports[`<HorizontalProjectCard /> with noProgress and no info prop matches with snapshot 1`] = `
 <a
-  className="sc-gsDKAQ jTnea k-HorizontalProjectCard k-HorizontalProjectCard--noBottomLine"
+  className="sc-gsnTZi ktFvcy k-HorizontalProjectCard k-HorizontalProjectCard--noBottomLine"
   href="#"
 >
   <div
@@ -94,7 +94,7 @@ exports[`<HorizontalProjectCard /> with noProgress and no info prop matches with
 
 exports[`<HorizontalProjectCard /> with noProgress prop matches with snapshot 1`] = `
 <a
-  className="sc-gsDKAQ jTnea k-HorizontalProjectCard"
+  className="sc-gsnTZi ktFvcy k-HorizontalProjectCard"
   href="#"
 >
   <div
