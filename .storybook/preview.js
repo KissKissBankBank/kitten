@@ -26,9 +26,8 @@ export const parameters = {
     storySort: {
       order: [
         'Documentation',
-        ['Introduction', 'Usage', 'Design', 'Design Token'],
+        ['Introduction', 'Usage', 'Design'],
         'Helpers',
-        'Tokens',
         'Accessibility',
         'Layout',
         'Graphics',
@@ -52,10 +51,6 @@ export const parameters = {
   controls: {
     expanded: true,
     sort: 'requiredFirst',
-  },
-  designToken: {
-    defaultTab: 'Colors',
-    files: tokenFiles
   },
 }
 

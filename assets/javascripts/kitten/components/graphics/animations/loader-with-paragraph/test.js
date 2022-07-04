@@ -1,6 +1,7 @@
 import React from 'react'
 import { LoaderWithParagraph } from './index'
 import renderer from 'react-test-renderer'
+import { KissKissLoadingAnimation } from 'kitten'
 
 describe('<LoaderWithParagraph />', () => {
   describe('With default props', () => {
@@ -13,7 +14,11 @@ describe('<LoaderWithParagraph />', () => {
 
   describe('With custom component', () => {
     it('should match with snapshot', () => {
-      const tree = renderer.create(<LoaderWithParagraph loaderComponent="svg" />).toJSON()
+      const tree = renderer
+        .create(
+          <LoaderWithParagraph loaderComponent={KissKissLoadingAnimation} />,
+        )
+        .toJSON()
 
       expect(tree).toMatchSnapshot()
     })

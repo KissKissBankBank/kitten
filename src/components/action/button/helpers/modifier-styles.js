@@ -27,7 +27,7 @@ var modifierStyles = function modifierStyles(modifier) {
 
   switch (modifier) {
     case 'hydrogen':
-      borderColor = 'var(--color-grey-400)';
+      borderColor = 'var(--color-grey-700)';
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.font1;
       hoverBorderColor = 'var(--color-primary-500)';

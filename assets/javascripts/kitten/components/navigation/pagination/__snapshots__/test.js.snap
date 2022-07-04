@@ -14,7 +14,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-disabled={null}
-        className="sc-bdvvtL dsilnN k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gknruy k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#9"
         onClick={[Function]}
@@ -54,7 +54,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-label="Aller à la page 1"
-        className="sc-bdvvtL dsilnN k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gknruy k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#1"
         onClick={[Function]}
@@ -115,7 +115,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-label="Aller à la page 42"
-        className="sc-bdvvtL dsilnN k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gknruy k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#42"
         onClick={[Function]}
@@ -136,7 +136,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <a
         aria-disabled={null}
-        className="sc-bdvvtL dsilnN k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL gknruy k-Button k-Pagination__Link k-Button--small k-Button--hydrogen k-Button--fit-icon"
         disabled={null}
         href="#11"
         onClick={[Function]}

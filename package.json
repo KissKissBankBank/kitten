@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "11.5.2",
+  "version": "11.6.1",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -104,7 +104,6 @@
     "sass-loader": "11.0.1",
     "sinon": "10.0.0",
     "sinon-test": "3.0.0",
-    "storybook-design-token": "2.2.0",
     "style-dictionary": "^3.0.3",
     "style-loader": "3.2.1",
     "terser-webpack-plugin": "5.2.3",

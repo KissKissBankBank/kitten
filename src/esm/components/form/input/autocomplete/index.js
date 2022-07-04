@@ -1,9 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
+import _asyncToGenerator from "@babel/runtime/helpers/asyncToGenerator";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"];
+var _excluded = ["className", "items", "label", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"];
+import _regeneratorRuntime from "@babel/runtime/regenerator";
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import isFunction from 'lodash/fp/isFunction';
+import isEmpty from 'lodash/fp/isEmpty';
 import PropTypes from 'prop-types';
 import slugify from 'slugify';
 import classNames from 'classnames';
@@ -26,6 +29,7 @@ export var Autocomplete = function Autocomplete(_ref) {
 
   var className = _ref.className,
       defaultItems = _ref.items,
+      label = _ref.label,
       error = _ref.error,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
@@ -63,8 +67,7 @@ export var Autocomplete = function Autocomplete(_ref) {
   }) : shouldShowNoResultMessage;
   useEffect(function () {
     updateSuggestions();
-    setShowSuggestions(!!value);
-  }, [value, defaultItems]);
+  }, [value]);
   useEffect(function () {
     var _suggestionsEl$curren, _suggestionsEl$curren2;
 
@@ -76,15 +79,16 @@ export var Autocomplete = function Autocomplete(_ref) {
   }, [selectedSuggestionIndex]);
 
   var handleChange = function handleChange(e) {
+    setShowSuggestions(!isEmpty(e.target.value));
     setValue(e.target.value);
     onChange(e);
   };
 
   var handleBlur = function handleBlur(e) {
+    onBlur(e);
     setTimeout(function () {
       setShowSuggestions(false);
-    }, 100);
-    onBlur(e);
+    }, 200);
   };
 
   var handleKeyDown = function handleKeyDown(e) {
@@ -104,7 +108,8 @@ export var Autocomplete = function Autocomplete(_ref) {
       if (e.key === 'Enter') {
         e.preventDefault();
         var selectedValue = items[selectedSuggestionIndex];
-        handleClickItem(selectedValue)();
+        handleClickItem(selectedValue);
+        setShowSuggestions(false);
       }
     }
 
@@ -112,27 +117,66 @@ export var Autocomplete = function Autocomplete(_ref) {
   };
 
   var handleClickItem = function handleClickItem(value) {
-    return function () {
-      if (!value) return;
-      inputEl.current.value = value;
-      inputEl.current.focus();
-      setValue(value);
-      setShowSuggestions(false);
-      onSelect(value);
-    };
+    if (!value) return;
+    var selectedValue = value[label] || value;
+    inputEl.current.value = selectedValue;
+    inputEl.current.focus();
+    onSelect(value);
+    setValue(selectedValue);
+    setShowSuggestions(false);
   };
 
-  var updateSuggestions = function updateSuggestions() {
-    var search = ("" + value).toLowerCase();
-    var newItems = updateSuggestionsStrategy ? updateSuggestionsStrategy({
-      items: defaultItems,
-      value: value
-    }) : defaultItems.filter(function (item) {
-      return item.toLowerCase().includes(search) && item !== value;
-    });
-    setItems(newItems);
-    resetSelectedItem();
-  };
+  var updateSuggestions = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {
+      var search, newItems;
+      return _regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              search = ("" + value).toLowerCase();
+
+              if (!updateSuggestionsStrategy) {
+                _context.next = 7;
+                break;
+              }
+
+              _context.next = 4;
+              return updateSuggestionsStrategy({
+                items: items,
+                value: value
+              });
+
+            case 4:
+              _context.t0 = _context.sent;
+              _context.next = 8;
+              break;
+
+            case 7:
+              _context.t0 = defaultItems.filter(function (item) {
+                if (typeof item === 'string') {
+                  return item.toLowerCase().includes(search) && item !== value;
+                }
+
+                return item[label].toLowerCase().includes(search) && item[label] !== value;
+              });
+
+            case 8:
+              newItems = _context.t0;
+              setItems(newItems);
+              resetSelectedItem();
+
+            case 11:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function updateSuggestions() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
 
   var prevSelectedItem = function prevSelectedItem() {
     var newIndex = selectedSuggestionIndex - 1;
@@ -201,12 +245,14 @@ export var Autocomplete = function Autocomplete(_ref) {
     return /*#__PURE__*/React.createElement("li", {
       key: item + index,
       id: slugify(item + "-" + index),
-      onClick: handleClickItem(item),
+      onClick: function onClick() {
+        return handleClickItem(item);
+      },
       role: "option",
       "aria-selected": selectedSuggestionIndex === index,
       tabIndex: "-1",
       className: "k-Form-Autocomplete__suggestion__item"
-    }, item);
+    }, item[label] || item);
   })), /*#__PURE__*/React.createElement(VisuallyHidden, {
     lang: "en",
     "aria-live": "assertive"
@@ -214,7 +260,7 @@ export var Autocomplete = function Autocomplete(_ref) {
 };
 Autocomplete.propTypes = {
   name: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])).isRequired,
   error: PropTypes.bool,
   icon: PropTypes.object,
   iconPosition: PropTypes.oneOf(['left', 'right']),

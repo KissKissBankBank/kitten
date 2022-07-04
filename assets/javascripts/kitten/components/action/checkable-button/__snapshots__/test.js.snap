@@ -33,7 +33,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-400);
+  border: var(--border-width) solid var(--color-grey-700);
   background-color: var(--color-grey-000,#fff);
   color: var(--color-grey-900,#222);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
