@@ -178,10 +178,6 @@
     "maax": {
       "value": "Maax",
       "type": "fontFamilies"
-    },
-    "roboto": {
-      "value": "Roboto",
-      "type": "fontFamilies"
     }
   },
   "letterSpacing": {
@@ -285,7 +281,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 64
@@ -313,7 +309,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 46
@@ -339,7 +335,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 46
@@ -365,7 +361,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 40
@@ -393,7 +389,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 32
@@ -419,7 +415,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 28
@@ -445,7 +441,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-0"
+          "value": 700
         },
         "lineHeight": {
           "value": 22
@@ -473,7 +469,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-1"
+          "value": 400
         },
         "lineHeight": {
           "value": "AUTO"
@@ -499,7 +495,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-1"
+          "value": 400
         },
         "lineHeight": {
           "value": "AUTO"
@@ -522,10 +518,10 @@
       },
       "medium": {
         "fontFamily": {
-          "value": "Roboto"
+          "value": "$fontFamilies.roboto"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-1"
+          "value": 400
         },
         "lineHeight": {
           "value": 64
@@ -545,7 +541,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-1"
+          "value": 400
         },
         "lineHeight": {
           "value": "AUTO"
@@ -573,7 +569,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-1"
+          "value": 500
         },
         "lineHeight": {
           "value": "AUTO"
@@ -598,10 +594,10 @@
     "info": {
       "medium": {
         "fontFamily": {
-          "value": "Roboto"
+          "value": "$fontFamilies.roboto"
         },
         "fontWeight": {
-          "value": "$fontWeights.roboto-2"
+          "value": 500
         },
         "lineHeight": {
           "value": "AUTO"
@@ -627,7 +623,7 @@
           "value": "Maax"
         },
         "fontWeight": {
-          "value": "$fontWeights.maax-1"
+          "value": 400
         },
         "lineHeight": {
           "value": "AUTO"
