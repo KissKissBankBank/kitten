@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `DropdownMenu`: Add `textProps` prop on Button and Link subcomponents.
+
 ## [11.6.1] - 2022-07-04
 
 Fix:

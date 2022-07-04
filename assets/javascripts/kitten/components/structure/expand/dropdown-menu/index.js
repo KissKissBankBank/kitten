@@ -338,7 +338,14 @@ DropdownMenu.propTypes = {
   top: PropTypes.string,
 }
 
-DropdownMenu.Link = ({ href = '', className, icon, children, ...rest }) => (
+DropdownMenu.Link = ({
+  href = '',
+  textProps = {},
+  className,
+  icon,
+  children,
+  ...rest
+}) => (
   <a
     href={href}
     className={classNames(
@@ -349,12 +356,13 @@ DropdownMenu.Link = ({ href = '', className, icon, children, ...rest }) => (
     {...rest}
   >
     <IconWrapper icon={icon} />
-    <span>{children}</span>
+    <span {...textProps}>{children}</span>
   </a>
 )
 
 DropdownMenu.Button = ({
   type = 'button',
+  textProps = {},
   className,
   icon,
   children,
@@ -371,7 +379,7 @@ DropdownMenu.Button = ({
     {...rest}
   >
     <IconWrapper icon={icon} />
-    <span>{children}</span>
+    <span {...textProps}>{children}</span>
   </button>
 )
 
