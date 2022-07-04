@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import {DayPicker} from 'react-day-picker'
-import styled, { css } from 'styled-components'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
+import { DayPicker } from 'react-day-picker'
+import styled from 'styled-components'
+import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { ScreenConfig } from '../../../constants/screen-config'
 import fr from 'date-fns/locale/fr'
 import enGB from 'date-fns/locale/en-GB'
 import 'react-day-picker/dist/style.css'
@@ -103,8 +101,8 @@ StandaloneRangeDatePicker.propTypes = {
   to: PropTypes.instanceOf(Date),
   onChange: PropTypes.func,
   months: PropTypes.array,
-  previousMonth: PropTypes.string,
-  nextMonth: PropTypes.string,
+  previousMonth: PropTypes.func,
+  nextMonth: PropTypes.func,
   styles: PropTypes.object,
 }
 
@@ -115,39 +113,4 @@ StandaloneRangeDatePicker.defaultProps = {
   months: [],
   previousMonth: () => '',
   nextMonth: () => '',
-  styles: {
-    header: {
-      backgroundColor: COLORS.background1,
-      color: COLORS.font1,
-      icon: {
-        color: COLORS.font1,
-      },
-    },
-    borderColor: 'var(--color-grey-400)',
-    weekdaysColor: COLORS.font1,
-    day: {
-      focus: {
-        color: COLORS.primary1,
-      },
-      hover: {
-        backgroundColor: COLORS.primary1,
-        color: COLORS.background1,
-      },
-      today: {
-        color: COLORS.primary1,
-      },
-      disabled: {
-        color: COLORS.line2,
-      },
-      selected: {
-        backgroundColor: COLORS.primary6,
-        color: COLORS.primary1,
-        borderColor: COLORS.primary4,
-      },
-      selectedStartAndEnd: {
-        backgroundColor: COLORS.primary1,
-        color: COLORS.background1,
-      },
-    },
-  },
 }
