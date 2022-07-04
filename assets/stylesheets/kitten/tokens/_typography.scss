@@ -30,6 +30,7 @@
     letter-spacing: -.01em;
     line-height: 1.12em;
   };
+
   --typography-subtitle-large: {
     font-size: var(--font-size-7),
     font-weight: var(--font-weight-700),
@@ -69,7 +70,6 @@
 
 
   /* Text // Label */
-
   --typography-label-large: {
     font-size: var(--font-size-4),
     font-weight: var(--font-weight-500),
