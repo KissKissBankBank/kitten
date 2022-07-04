@@ -59,7 +59,6 @@ export default {
     title: 'Sélectionnez la période souhaitée',
     previousMonth: (month) => `Mois précédent : ${fr.localize.month(getMonth(month))}`,
     nextMonth: (month) => `Mois suivant : ${fr.localize.month(getMonth(month))}`,
-    styles: styles,
     firstDayOfWeek: 1,
     initialMonth: today,
     numberOfMonths: 2,
@@ -100,10 +99,6 @@ export default {
       name: 'nextMonth',
       description: 'data-label for the next month button',
       control: 'function',
-    },
-    styles: {
-      name: 'styles',
-      control: 'object',
     },
     firstDayOfWeek: {
       name: 'firstDayOfWeek',
