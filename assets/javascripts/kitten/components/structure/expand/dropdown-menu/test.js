@@ -11,9 +11,16 @@ describe('<DropdownMenu />', () => {
       component = renderer
         .create(
           <DropdownMenu button={() => <span>Open me!</span>}>
-            <DropdownMenu.Link>Content</DropdownMenu.Link>
+            <DropdownMenu.Link textProps={{ className: 'custom-class' }}>
+              Content
+            </DropdownMenu.Link>
             <DropdownMenu.Separator />
-            <DropdownMenu.Button icon={<svg />}>Content</DropdownMenu.Button>
+            <DropdownMenu.Button
+              textProps={{ className: 'custom-class' }}
+              icon={<svg />}
+            >
+              Content
+            </DropdownMenu.Button>
           </DropdownMenu>,
         )
         .toJSON()
