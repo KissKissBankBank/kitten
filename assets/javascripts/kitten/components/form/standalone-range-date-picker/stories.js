@@ -3,6 +3,8 @@ import { StandaloneRangeDatePicker } from './index'
 import { COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
+import getMonth from 'date-fns/getMonth'
+import fr from 'date-fns/locale/fr'
 
 const today = new Date()
 
@@ -92,8 +94,8 @@ export default {
     weekDays: weekDays,
     months: months,
     title: 'Sélectionnez la période souhaitée',
-    previousMonth: 'Mois précédent',
-    nextMonth: 'Mois suivant',
+    previousMonth: (month) => `Mois précédent : ${fr.localize.month(getMonth(month))}`,
+    nextMonth: (month) => `Mois suivant : ${fr.localize.month(getMonth(month))}`,
     styles: styles,
     firstDayOfWeek: 1,
     initialMonth: today,
@@ -129,12 +131,12 @@ export default {
     previousMonth: {
       name: 'previousMonth',
       description: 'data-label for the previous month button',
-      control: 'text',
+      control: 'function',
     },
     nextMonth: {
       name: 'nextMonth',
       description: 'data-label for the next month button',
-      control: 'text',
+      control: 'function',
     },
     styles: {
       name: 'styles',
