@@ -518,7 +518,7 @@
       },
       "medium": {
         "fontFamily": {
-          "value": "$fontFamilies.roboto"
+          "value": "Maax"
         },
         "fontWeight": {
           "value": 400
@@ -594,7 +594,7 @@
     "info": {
       "medium": {
         "fontFamily": {
-          "value": "$fontFamilies.roboto"
+          "value": "Maax"
         },
         "fontWeight": {
           "value": 500
