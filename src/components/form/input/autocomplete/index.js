@@ -5,7 +5,11 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.maxVisibleSuggestions = exports.StyledSuggestionsList = exports.Autocomplete = void 0;
 
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
@@ -109,7 +113,7 @@ var Autocomplete = function Autocomplete(_ref) {
   }, [selectedSuggestionIndex]);
 
   var handleChange = function handleChange(e) {
-    setShowSuggestions(!(0, _isEmpty.default)(value));
+    setShowSuggestions(!(0, _isEmpty.default)(e.target.value));
     setValue(e.target.value);
     onChange(e);
   };
@@ -156,21 +160,57 @@ var Autocomplete = function Autocomplete(_ref) {
     setShowSuggestions(false);
   };
 
-  var updateSuggestions = function updateSuggestions() {
-    var search = ("" + value).toLowerCase();
-    var newItems = updateSuggestionsStrategy ? updateSuggestionsStrategy({
-      items: items,
-      value: value
-    }) : defaultItems.filter(function (item) {
-      if (typeof item === 'string') {
-        return item.toLowerCase().includes(search) && item !== value;
-      }
+  var updateSuggestions = /*#__PURE__*/function () {
+    var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+      var search, newItems;
+      return _regenerator.default.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              search = ("" + value).toLowerCase();
 
-      return item[label].toLowerCase().includes(search) && item[label] !== value;
-    });
-    setItems(newItems);
-    resetSelectedItem();
-  };
+              if (!updateSuggestionsStrategy) {
+                _context.next = 7;
+                break;
+              }
+
+              _context.next = 4;
+              return updateSuggestionsStrategy({
+                items: items,
+                value: value
+              });
+
+            case 4:
+              _context.t0 = _context.sent;
+              _context.next = 8;
+              break;
+
+            case 7:
+              _context.t0 = defaultItems.filter(function (item) {
+                if (typeof item === 'string') {
+                  return item.toLowerCase().includes(search) && item !== value;
+                }
+
+                return item[label].toLowerCase().includes(search) && item[label] !== value;
+              });
+
+            case 8:
+              newItems = _context.t0;
+              setItems(newItems);
+              resetSelectedItem();
+
+            case 11:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function updateSuggestions() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
 
   var prevSelectedItem = function prevSelectedItem() {
     var newIndex = selectedSuggestionIndex - 1;

@@ -214,7 +214,7 @@ export const Autocomplete = ({
   }, [selectedSuggestionIndex])
 
   const handleChange = e => {
-    setShowSuggestions(!isEmpty(value))
+    setShowSuggestions(!isEmpty(e.target.value))
     setValue(e.target.value)
     onChange(e)
   }
@@ -264,11 +264,11 @@ export const Autocomplete = ({
     setShowSuggestions(false)
   }
 
-  const updateSuggestions = () => {
+  const updateSuggestions = async () => {
     const search = `${value}`.toLowerCase()
 
     const newItems = updateSuggestionsStrategy
-      ? updateSuggestionsStrategy({ items: items, value })
+      ? await updateSuggestionsStrategy({ items: items, value })
       : defaultItems.filter(item => {
           if (typeof item === 'string') {
             return item.toLowerCase().includes(search) && item !== value

@@ -4,8 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Remove `DatePicker`.
+- Deprecations/Change: Remove `DatePicker`.
 - Feature: `StandaloneRangeDatePicker`: Update component and dependencies.
+
+## [11.6.1] - 2022-07-04
+
+Fix:
+
+- `Autocomplete`: Update updateSuggestionsStrategy function.
 
 ## [11.6.0] - 2022-07-01
 
