@@ -21,6 +21,7 @@ import {
   FacebookIconCircleNext,
   FlashIconNext,
   FilterIconNext,
+  GarbageIconNext,
   GiftIcon,
   GoogleIconNext,
   HeartIconNext,
@@ -250,6 +251,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <QuestionBubbleIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <GarbageIconNext color={colorInput} width={24} height={24} />
         </IconContainer>
       </Group>
 

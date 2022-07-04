@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Icons: Add `GarbageIconNext` icon component.
+
 ## [11.6.1] - 2022-07-04
 
 Fix:
