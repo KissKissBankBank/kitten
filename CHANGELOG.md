@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `Tokens`: Add `font-weight` CSS tokens.
+- Feature: `DropdownMenu`: Add `textProps` prop on Button and Link subcomponents.
+- Feature: Icons: Add `GarbageIconNext` icon component.
 
 ## [11.6.1] - 2022-07-04
 
