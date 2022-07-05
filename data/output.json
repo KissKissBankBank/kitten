@@ -178,10 +178,6 @@
     "maax": {
       "value": "Maax",
       "type": "fontFamilies"
-    },
-    "roboto": {
-      "value": "Roboto",
-      "type": "fontFamilies"
     }
   },
   "letterSpacing": {

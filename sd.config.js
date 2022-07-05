@@ -69,6 +69,13 @@ StyleDictionary.registerFormat({
 })
 
 StyleDictionary.registerFormat({
+  name: 'fontWeight',
+  formatter: ({ dictionary }) => {
+    return getHeader('FontWeight', 'FontWeight', dictionary)
+  },
+})
+
+StyleDictionary.registerFormat({
   name: 'spacing',
   formatter: ({ dictionary }) => {
     return getHeader('Spacing', 'Spacing', dictionary)
@@ -138,6 +145,13 @@ module.exports = {
           format: 'fontSize',
           filter: {
             type: 'fontSizes',
+          },
+        },
+        {
+          destination: '_font-weight.scss',
+          format: 'fontWeight',
+          filter: {
+            type: 'fontWeights',
           },
         },
         {

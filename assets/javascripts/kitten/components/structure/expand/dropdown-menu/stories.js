@@ -101,7 +101,7 @@ export const Default = ({ menuPosition, ...args }) => {
           <DropdownMenu.Link href="">A link</DropdownMenu.Link>
           <DropdownMenu.Button>Click this button</DropdownMenu.Button>
           <DropdownMenu.Separator />
-          <DropdownMenu.Link href="">
+          <DropdownMenu.Link href="" textProps={{ className: 'k-u-ellipsis' }}>
             Another last very very very very very very very very very very long
             link
           </DropdownMenu.Link>
