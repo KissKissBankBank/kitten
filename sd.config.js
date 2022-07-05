@@ -92,6 +92,17 @@ StyleDictionary.registerTransform({
 
 StyleDictionary.registerTransform({
   type: 'value',
+  name: 'typography',
+  transitive: true,
+  matcher: token => token.type === 'typography',
+  transformer: (token) => {
+    const {value} = token
+    return `${value.fontWeight} ${value.fontSize}/${value.lineHeight} ${value.fontFamily}`
+  }
+})
+
+StyleDictionary.registerTransform({
+  type: 'value',
   name: 'shadow',
   transitive: true,
   matcher: token => token.type === 'boxShadow',
@@ -159,6 +170,13 @@ module.exports = {
           format: 'spacing',
           filter: {
             type: 'spacing',
+          },
+        },
+        {
+          destination: '_typography.scss',
+          format: 'typography',
+          filter: {
+            type: 'typography',
           },
         },
       ],
