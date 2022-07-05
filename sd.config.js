@@ -23,8 +23,6 @@ const getHeader = (tokenName, tokenPresenter, dictionary) => {
   return (
     `:root {\n` +
     `  /*!\n` +
-    `  * @tokens ${tokenName}\n` +
-    `  * @presenter ${tokenPresenter}\n` +
     `  * Automatically generated, do not edit\n` +
     `  */\n\n` +
     dictionary.allTokens
@@ -97,7 +95,7 @@ StyleDictionary.registerTransform({
   matcher: token => token.type === 'typography',
   transformer: (token) => {
     const {value} = token
-    return `${value.fontWeight} ${value.fontSize}/${value.lineHeight} ${value.fontFamily}`
+    return `${value.fontWeight} ${pxToRem(getInt(value.fontSize))}/${pxToRem(getInt(value.lineHeight))} ${value.fontFamily}`
   }
 })
 
@@ -126,59 +124,73 @@ module.exports = {
   source: ['data/output.json'],
   platforms: {
     css: {
-      transforms: ['color/hex', 'pxToRem', 'shadow', 'name/cti/kebab'],
+      transforms: ['color/hex', 'pxToRem', 'shadow', 'name/cti/kebab', 'typography'],
       transformGroup: 'css',
       buildPath: 'assets/stylesheets/kitten/tokens/',
       files: [
         {
           destination: '_border-radius.scss',
-          format: 'borderRadius',
+          format: 'css/variables',
           filter: {
             type: 'borderRadius',
           },
         },
         {
           destination: '_box-shadow.scss',
-          format: 'boxShadow',
+          format: 'css/variables',
           filter: {
             type: 'boxShadow',
           },
         },
         {
           destination: '_colors.scss',
-          format: 'colorCss',
+          format: 'css/variables',
           filter: {
             type: 'color',
           },
         },
         {
           destination: '_font-size.scss',
-          format: 'fontSize',
+          format: 'css/variables',
           filter: {
             type: 'fontSizes',
           },
         },
         {
           destination: '_font-weight.scss',
-          format: 'fontWeight',
+          format: 'css/variables',
           filter: {
             type: 'fontWeights',
           },
         },
         {
           destination: '_spacing.scss',
-          format: 'spacing',
+          format: 'css/variables',
           filter: {
             type: 'spacing',
           },
         },
         {
           destination: '_typography.scss',
-          format: 'typography',
+          format: 'css/variables',
           filter: {
             type: 'typography',
           },
         },
+        // {
+        //   destination: '_font-family.scss',
+        //   format: 'css/variables',
+        //   filter: {
+        //     type: 'fontFamily',
+        //   },
+        // },
+        // {
+        //   destination: '_line-height.scss',
+        //   format: 'css/variables',
+        //   filter: {
+        //     type: 'lineHeight',
+        //   },
+        // },
       ],
     },
   },

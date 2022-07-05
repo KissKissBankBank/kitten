@@ -1,0 +1,5 @@
+:root {
+  --line-height-s: calc((--var(font-size)) + .125rem);
+  --line-height-m: calc((--var(font-size)) + .25rem);
+  --line-height-auto: auto;
+}

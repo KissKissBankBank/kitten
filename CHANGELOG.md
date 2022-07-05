@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Tokens`: Add `typography` css tokens.
+- Feature: `Tokens`: Add `typography`, `font-family` and `line-height` css tokens.
 - Feature: `Tokens`: Add `font-weight` CSS tokens.
 - Feature: `DropdownMenu`: Add `textProps` prop on Button and Link subcomponents.
 - Feature: Icons: Add `GarbageIconNext` icon component.
