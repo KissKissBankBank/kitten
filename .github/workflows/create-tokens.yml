@@ -17,8 +17,6 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm ci
-      # Transform Figma Tokens JSON to something Style Dictionary can read
-      - run: npx token-transformer data/tokens.json data/output.json global
       # Convert tokens according to Style Dictionary config
       - run: npm run build:style-dictionary
       # Build SCSS Tokens file
