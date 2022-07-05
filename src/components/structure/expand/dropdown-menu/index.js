@@ -26,8 +26,8 @@ var _typography = require("../../../../helpers/utils/typography");
 var _useFocusTrap = require("../../../../helpers/hooks/use-focus-trap");
 
 var _excluded = ["button", "open", "onOpen", "onClose", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
-    _excluded2 = ["href", "className", "icon", "children"],
-    _excluded3 = ["type", "className", "icon", "children"],
+    _excluded2 = ["href", "textProps", "className", "icon", "children"],
+    _excluded3 = ["type", "textProps", "className", "icon", "children"],
     _excluded4 = ["className"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -214,6 +214,8 @@ DropdownMenu.propTypes = {
 DropdownMenu.Link = function (_ref2) {
   var _ref2$href = _ref2.href,
       href = _ref2$href === void 0 ? '' : _ref2$href,
+      _ref2$textProps = _ref2.textProps,
+      textProps = _ref2$textProps === void 0 ? {} : _ref2$textProps,
       className = _ref2.className,
       icon = _ref2.icon,
       children = _ref2.children,
@@ -223,12 +225,14 @@ DropdownMenu.Link = function (_ref2) {
     className: (0, _classnames.default)('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__link', className)
   }, rest), /*#__PURE__*/_react.default.createElement(IconWrapper, {
     icon: icon
-  }), /*#__PURE__*/_react.default.createElement("span", null, children));
+  }), /*#__PURE__*/_react.default.createElement("span", textProps, children));
 };
 
 DropdownMenu.Button = function (_ref3) {
   var _ref3$type = _ref3.type,
       type = _ref3$type === void 0 ? 'button' : _ref3$type,
+      _ref3$textProps = _ref3.textProps,
+      textProps = _ref3$textProps === void 0 ? {} : _ref3$textProps,
       className = _ref3.className,
       icon = _ref3.icon,
       children = _ref3.children,
@@ -238,7 +242,7 @@ DropdownMenu.Button = function (_ref3) {
     className: (0, _classnames.default)('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__button', 'k-u-reset-button', className)
   }, rest), /*#__PURE__*/_react.default.createElement(IconWrapper, {
     icon: icon
-  }), /*#__PURE__*/_react.default.createElement("span", null, children));
+  }), /*#__PURE__*/_react.default.createElement("span", textProps, children));
 };
 
 DropdownMenu.Separator = function (_ref4) {
