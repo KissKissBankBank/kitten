@@ -105,16 +105,9 @@ module.exports = {
               'typography',
               'fontSizes',
               'fontWeights',
-              'fontFamilies'
+              'fontFamilies',
+              'lineHeights'
             ].includes(obj.type)
-          },
-        },
-        {
-          destination: '_line-height.scss',
-          options: {outputReferences: true},
-          format: 'css/variables',
-          filter: {
-            type: 'lineHeights',
           },
         },
       ],
