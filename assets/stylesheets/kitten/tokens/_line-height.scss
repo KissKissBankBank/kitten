@@ -1,5 +1,14 @@
+/**
+ * Do not edit directly
+ * Generated on Tue, 05 Jul 2022 17:19:10 GMT
+ */
+
 :root {
-  --line-height-s: calc((--var(font-size)) + .125rem);
-  --line-height-m: calc((--var(font-size)) + .25rem);
-  --line-height-auto: auto;
+  --line-heights-6: AUTO;
+  --line-heights-5: 1.375rem;
+  --line-heights-4: 1.75rem;
+  --line-heights-3: 2rem;
+  --line-heights-2: 2.5rem;
+  --line-heights-1: 2.875rem;
+  --line-heights-0: 4rem;
 }
