@@ -2,6 +2,19 @@ const StyleDictionary = require('style-dictionary')
 
 const { fileHeader, createPropertyFormatter } = StyleDictionary.formatHelpers
 
+// Consts
+
+const ITEM_TYPES = {
+  'typography': 'font',
+  'color': 'color',
+  'fontFamilies': 'font-family',
+  'borderRadius': 'border-radius',
+  'fontSizes': 'font-size',
+  'boxShadow': 'box-shadow',
+  'lineHeights': 'line-height',
+  'fontWeights': 'font-weight',
+}
+
 // Helpers
 const pxToRem = sizeInPx => {
   if (sizeInPx === 0) return 0
@@ -52,6 +65,7 @@ StyleDictionary.registerTransform({
   },
 })
 
+// Utils
 const formattedVariables = ({ dictionary, outputReferences }) => {
     const formatProperty = createPropertyFormatter({
       outputReferences,
@@ -61,6 +75,14 @@ const formattedVariables = ({ dictionary, outputReferences }) => {
     return dictionary.allTokens.map(formatProperty).join('\n');
 }
 
+const formattedClasses = ({ dictionary }) => {
+    const formatProperty = (item) => {
+      return `  .k-u-${item.name} { ${ITEM_TYPES[item.type]}: var(--${item.name}) !important; }`
+    }
+    return dictionary.allTokens.map(formatProperty).join('\n');
+}
+
+// Formats
 StyleDictionary.registerFormat({
   name: 'orderedCssVariables',
   formatter: function({dictionary, options={}, file}) {
@@ -73,6 +95,16 @@ StyleDictionary.registerFormat({
   },
 });
 
+StyleDictionary.registerFormat({
+  name: 'customCssUtilities',
+  formatter: function({dictionary, options={}, file}) {
+    return fileHeader({file}) +
+      '@mixin k-token {\n' +
+      formattedClasses({ dictionary }) +
+      `}\n`;
+  },
+});
+
 module.exports = {
   parsers: [{
     pattern: /\.json$/,
@@ -82,6 +114,28 @@ module.exports = {
   }],
   source: ['data/tokens.json'],
   platforms: {
+    cssUtilityClass: {
+      transforms: ['name/cti/kebab'],
+      buildPath: 'assets/stylesheets/kitten/utilities/',
+      files: [
+        {
+          destination: '_token.scss',
+          format: 'customCssUtilities',
+          filter: (obj) => {
+            return [
+              'borderRadius',
+              'boxShadow',
+              'color',
+              'typography',
+              'fontSizes',
+              'fontWeights',
+              'fontFamilies',
+              'lineHeights'
+            ].includes(obj.type)
+          },
+        },
+      ],
+    },
     css: {
       transforms: ['color/hex', 'name/cti/kebab', 'pxToRem', 'shadow', 'typography'],
       buildPath: 'assets/stylesheets/kitten/tokens/',

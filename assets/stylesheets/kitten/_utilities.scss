@@ -41,9 +41,6 @@
 // Reset
 @import './utilities/reset/button';
 
-// Shadow
-@import './utilities/shadow/box-shadow';
-
 // Spacing
 @import './utilities/spacing/m';
 @import './utilities/spacing/margin';
@@ -65,3 +62,6 @@
 @import './utilities/text/style';
 @import './utilities/text/transform';
 @import './utilities/text/weight';
+
+// Token
+@import './utilities/token'

@@ -21,7 +21,6 @@ $k-typography: (
 @include k-utilities-align-self;
 @include k-utilities-background-color;
 @include k-utilities-border;
-@include k-utilities-box-shadow;
 @include k-utilities-cursor;
 @include k-utilities-event;
 @include k-utilities-justify-content;
@@ -51,5 +50,8 @@ $k-typography: (
 @include k-utilities-transform;
 @include k-utilities-weight;
 
+@include k-token;
+
 @include k-utilities-letter-spacing;
 @include k-utilities-display;
+

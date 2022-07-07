@@ -21,6 +21,8 @@ jobs:
         run: npm run build:style-dictionary
       - name: Build SCSS Tokens files
         run: npm run build:tokens
+      - name: Build SCSS Utility
+        run: npm run build:utilities
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
