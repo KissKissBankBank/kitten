@@ -119,6 +119,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -298,7 +302,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -307,7 +311,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -316,7 +320,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -325,7 +329,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -343,6 +347,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -484,6 +492,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   overflow: hidden;
   width: var(--Button-dimension);
   height: var(--Button-dimension);
+}
+
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
 }
 
 .c0.k-Button--fit-fluid {
@@ -665,7 +677,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -674,7 +686,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -683,7 +695,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -692,7 +704,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -710,6 +722,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -851,6 +867,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   overflow: hidden;
   width: var(--Button-dimension);
   height: var(--Button-dimension);
+}
+
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
 }
 
 .c0.k-Button--fit-fluid {
@@ -1032,7 +1052,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1041,7 +1061,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1050,7 +1070,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1059,7 +1079,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1077,6 +1097,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -1220,6 +1244,10 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1399,7 +1427,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1408,7 +1436,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1417,7 +1445,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1426,7 +1454,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1444,6 +1472,10 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -1587,6 +1619,10 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1766,7 +1802,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   --CheckableButton-checkMargin: 1.25rem;
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1775,7 +1811,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1784,7 +1820,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1793,7 +1829,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1811,6 +1847,10 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {

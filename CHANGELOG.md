@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Tokens: Add `font`, `font-family` and `line-height` css tokens.
 - Feature: Utilities: Automagically generate utility classes from tokens.
+- Fix: `Button`: Fix `hydrogen` button style with `icon` fit.
 
 ## [11.7.1] - 2022-07-07
 

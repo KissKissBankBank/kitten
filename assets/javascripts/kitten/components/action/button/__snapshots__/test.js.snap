@@ -119,6 +119,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -182,7 +186,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -191,7 +195,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -200,7 +204,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -209,7 +213,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -227,6 +231,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -369,6 +377,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -432,7 +444,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -441,7 +453,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -450,7 +462,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -459,7 +471,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -477,6 +489,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -617,6 +633,10 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -680,7 +700,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -689,7 +709,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -698,7 +718,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -707,7 +727,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -725,6 +745,10 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -865,6 +889,10 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -928,7 +956,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -937,7 +965,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -946,7 +974,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -955,7 +983,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -973,6 +1001,10 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -1113,6 +1145,10 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1176,7 +1212,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1185,7 +1221,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1194,7 +1230,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1203,7 +1239,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1221,6 +1257,10 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -1361,6 +1401,10 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1424,7 +1468,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1433,7 +1477,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1442,7 +1486,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1451,7 +1495,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1469,6 +1513,10 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -1609,6 +1657,10 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1672,7 +1724,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1681,7 +1733,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1690,7 +1742,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1699,7 +1751,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1717,6 +1769,10 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -1859,6 +1915,10 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1922,7 +1982,7 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -1931,7 +1991,7 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -1940,7 +2000,7 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -1949,7 +2009,7 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -1967,6 +2027,10 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -2107,6 +2171,10 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -2170,7 +2238,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2179,7 +2247,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -2188,7 +2256,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -2197,7 +2265,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -2215,6 +2283,10 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -2355,6 +2427,10 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -2418,7 +2494,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2427,7 +2503,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -2436,7 +2512,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -2445,7 +2521,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -2463,6 +2539,10 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -2603,6 +2683,10 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -2666,7 +2750,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2675,7 +2759,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -2684,7 +2768,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -2693,7 +2777,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -2711,6 +2795,10 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -2851,6 +2939,10 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -2914,7 +3006,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -2923,7 +3015,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -2932,7 +3024,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -2941,7 +3033,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -2959,6 +3051,10 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -3099,6 +3195,10 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -3162,7 +3262,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3171,7 +3271,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -3180,7 +3280,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -3189,7 +3289,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -3207,6 +3307,10 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -3347,6 +3451,10 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -3410,7 +3518,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3419,7 +3527,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -3428,7 +3536,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -3437,7 +3545,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -3455,6 +3563,10 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -3595,6 +3707,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -3658,7 +3774,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3667,7 +3783,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -3676,7 +3792,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -3685,7 +3801,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -3703,6 +3819,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -3843,6 +3963,10 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -3906,7 +4030,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -3915,7 +4039,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -3924,7 +4048,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -3933,7 +4057,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -3951,6 +4075,10 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
@@ -4096,6 +4224,10 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -4159,7 +4291,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   color: var(--color-grey-600);
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -4168,7 +4300,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -4177,7 +4309,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c0.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -4186,7 +4318,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c0[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -4204,6 +4336,10 @@ exports[`<Button /> with text matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c0[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
