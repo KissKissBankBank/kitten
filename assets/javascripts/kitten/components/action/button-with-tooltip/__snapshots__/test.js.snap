@@ -229,6 +229,10 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
+.c1.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
 .c1.k-Button--fit-fluid {
   width: 100%;
 }
@@ -337,7 +341,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   --ButtonWithTooltip-origin: 1.0625rem;
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c1.k-Button--large {
     --Button-min-width: 13.75rem;
     --Button-dimension: 4.375rem;
@@ -346,7 +350,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c1.k-Button--huge {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5rem;
@@ -355,7 +359,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:640px) {
   .c1.k-Button--giant {
     --Button-min-width: 13.75rem;
     --Button-dimension: 5.625rem;
@@ -364,7 +368,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   }
 }
 
-@media (max-width:39.9375rem) {
+@media (max-width:639px) {
   .c1[class*='k-Button--mobile-fit'] {
     min-width: initial !important;
     padding: var(--Button-padding);
@@ -382,6 +386,10 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
   }
 
   .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
