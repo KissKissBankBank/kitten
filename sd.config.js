@@ -5,14 +5,14 @@ const { fileHeader, createPropertyFormatter } = StyleDictionary.formatHelpers
 // Consts
 
 const ITEM_TYPES = {
-  'typography': 'font',
-  'color': 'color',
-  'fontFamilies': 'font-family',
-  'borderRadius': 'border-radius',
-  'fontSizes': 'font-size',
-  'boxShadow': 'box-shadow',
-  'lineHeights': 'line-height',
-  'fontWeights': 'font-weight',
+  typography: 'font',
+  color: 'color',
+  fontFamilies: 'font-family',
+  borderRadius: 'border-radius',
+  fontSizes: 'font-size',
+  boxShadow: 'box-shadow',
+  lineHeights: 'line-height',
+  fontWeights: 'font-weight',
 }
 
 // Helpers
@@ -36,12 +36,16 @@ StyleDictionary.registerTransform({
   name: 'typography',
   transitive: true,
   matcher: token => {
-    return (token.type === 'typography')
+    return token.type === 'typography'
   },
-  transformer: (token) => {
-    const {value} = token
-    return `${value.fontWeight.value} ${value.fontSize.value}/${value.lineHeight.value} ${value.fontFamily.value}`
-  }
+  transformer: token => {
+    const { value } = token
+    let lineHeight = ''
+    if (value.lineHeight.value !== 'auto') {
+      lineHeight = `/${value.lineHeight.value}`
+    }
+    return `${value.fontWeight.value} ${value.fontSize.value}${lineHeight} ${value.fontFamily.value}`
+  },
 })
 
 StyleDictionary.registerTransform({
@@ -55,7 +59,7 @@ StyleDictionary.registerTransform({
       pxToRem(getInt(token.value.y)),
       pxToRem(getInt(token.value.blur)),
     ]
-    if (token.value.spread !== "0" || token.value.spread > 0) {
+    if (token.value.spread !== '0' || token.value.spread > 0) {
       valueArray.push(pxToRem(getInt(token.value.spread)))
     }
 
@@ -67,51 +71,59 @@ StyleDictionary.registerTransform({
 
 // Utils
 const formattedVariables = ({ dictionary, outputReferences }) => {
-    const formatProperty = createPropertyFormatter({
-      outputReferences,
-      dictionary,
-      format: 'css'
-    });
-    return dictionary.allTokens.map(formatProperty).join('\n');
+  const formatProperty = createPropertyFormatter({
+    outputReferences,
+    dictionary,
+    format: 'css',
+  })
+  return dictionary.allTokens.map(formatProperty).join('\n')
 }
 
 const formattedClasses = ({ dictionary }) => {
-    const formatProperty = (item) => {
-      return `  .k-u-${item.name} { ${ITEM_TYPES[item.type]}: var(--${item.name}) !important; }`
-    }
-    return dictionary.allTokens.map(formatProperty).join('\n');
+  const formatProperty = item => {
+    return `  .k-u-${item.name} { ${ITEM_TYPES[item.type]}: var(--${
+      item.name
+    }) !important; }`
+  }
+  return dictionary.allTokens.map(formatProperty).join('\n')
 }
 
 // Formats
 StyleDictionary.registerFormat({
   name: 'orderedCssVariables',
-  formatter: function({dictionary, options={}, file}) {
-    const selector = options.selector ? options.selector : `:root`;
-    const { outputReferences } = options;
-    return fileHeader({file}) +
+  formatter: function ({ dictionary, options = {}, file }) {
+    const selector = options.selector ? options.selector : `:root`
+    const { outputReferences } = options
+    return (
+      fileHeader({ file }) +
       `${selector} {\n` +
-      formattedVariables({dictionary, outputReferences}) +
-      `\n}\n`;
+      formattedVariables({ dictionary, outputReferences }) +
+      `\n}\n`
+    )
   },
-});
+})
 
 StyleDictionary.registerFormat({
   name: 'customCssUtilities',
-  formatter: function({dictionary, options={}, file}) {
-    return fileHeader({file}) +
+  formatter: function ({ dictionary, file }) {
+    return (
+      fileHeader({ file }) +
       '@mixin k-token {\n' +
       formattedClasses({ dictionary }) +
-      `}\n`;
+      `}\n`
+    )
   },
-});
+})
 
 module.exports = {
-  parsers: [{
-    pattern: /\.json$/,
-    parse: ({ contents }) => {
-      return JSON.parse(contents).global;
-    }
-  }],
+  parsers: [
+    {
+      pattern: /\.json$/,
+      parse: ({ contents }) => {
+        return JSON.parse(contents).global
+      },
+    },
+  ],
   source: ['data/tokens.json'],
   platforms: {
     cssUtilityClass: {
@@ -121,7 +133,7 @@ module.exports = {
         {
           destination: '_token.scss',
           format: 'customCssUtilities',
-          filter: (obj) => {
+          filter: obj => {
             return [
               'borderRadius',
               'boxShadow',
@@ -130,19 +142,25 @@ module.exports = {
               'fontSizes',
               'fontWeights',
               'fontFamilies',
-              'lineHeights'
+              'lineHeights',
             ].includes(obj.type)
           },
         },
       ],
     },
     css: {
-      transforms: ['color/hex', 'name/cti/kebab', 'pxToRem', 'shadow', 'typography'],
+      transforms: [
+        'color/hex',
+        'name/cti/kebab',
+        'pxToRem',
+        'shadow',
+        'typography',
+      ],
       buildPath: 'assets/stylesheets/kitten/tokens/',
       files: [
         {
           destination: '_border-radius.scss',
-          options: {outputReferences: true},
+          options: { outputReferences: true },
           format: 'orderedCssVariables',
           filter: {
             type: 'borderRadius',
@@ -150,7 +168,7 @@ module.exports = {
         },
         {
           destination: '_box-shadow.scss',
-          options: {outputReferences: true},
+          options: { outputReferences: true },
           format: 'orderedCssVariables',
           filter: {
             type: 'boxShadow',
@@ -158,7 +176,7 @@ module.exports = {
         },
         {
           destination: '_colors.scss',
-          options: {outputReferences: true},
+          options: { outputReferences: true },
           format: 'orderedCssVariables',
           filter: {
             type: 'color',
@@ -166,7 +184,7 @@ module.exports = {
         },
         {
           destination: '_spacing.scss',
-          options: {outputReferences: true},
+          options: { outputReferences: true },
           format: 'orderedCssVariables',
           filter: {
             type: 'spacing',
@@ -174,15 +192,15 @@ module.exports = {
         },
         {
           destination: '_typography.scss',
-          options: {outputReferences: true},
+          options: { outputReferences: true },
           format: 'orderedCssVariables',
-          filter: (obj) => {
+          filter: obj => {
             return [
               'typography',
               'fontSizes',
               'fontWeights',
               'fontFamilies',
-              'lineHeights'
+              'lineHeights',
             ].includes(obj.type)
           },
         },
