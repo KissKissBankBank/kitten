@@ -1,5 +1,7 @@
 const StyleDictionary = require('style-dictionary')
 
+const { fileHeader, createPropertyFormatter } = StyleDictionary.formatHelpers
+
 // Helpers
 const pxToRem = sizeInPx => {
   if (sizeInPx === 0) return 0
@@ -50,6 +52,27 @@ StyleDictionary.registerTransform({
   },
 })
 
+const formattedVariables = ({ dictionary, outputReferences }) => {
+    const formatProperty = createPropertyFormatter({
+      outputReferences,
+      dictionary,
+      format: 'css'
+    });
+    return dictionary.allTokens.map(formatProperty).join('\n');
+}
+
+StyleDictionary.registerFormat({
+  name: 'orderedCssVariables',
+  formatter: function({dictionary, options={}, file}) {
+    const selector = options.selector ? options.selector : `:root`;
+    const { outputReferences } = options;
+    return fileHeader({file}) +
+      `${selector} {\n` +
+      formattedVariables({dictionary, outputReferences}) +
+      `\n}\n`;
+  },
+});
+
 module.exports = {
   parsers: [{
     pattern: /\.json$/,
@@ -60,14 +83,13 @@ module.exports = {
   source: ['data/tokens.json'],
   platforms: {
     css: {
-      transforms: ['color/hex', 'pxToRem', 'shadow', 'name/cti/kebab', 'typography'],
-      transformGroup: 'css',
+      transforms: ['color/hex', 'name/cti/kebab', 'pxToRem', 'shadow', 'typography'],
       buildPath: 'assets/stylesheets/kitten/tokens/',
       files: [
         {
           destination: '_border-radius.scss',
           options: {outputReferences: true},
-          format: 'css/variables',
+          format: 'orderedCssVariables',
           filter: {
             type: 'borderRadius',
           },
@@ -75,7 +97,7 @@ module.exports = {
         {
           destination: '_box-shadow.scss',
           options: {outputReferences: true},
-          format: 'css/variables',
+          format: 'orderedCssVariables',
           filter: {
             type: 'boxShadow',
           },
@@ -83,7 +105,7 @@ module.exports = {
         {
           destination: '_colors.scss',
           options: {outputReferences: true},
-          format: 'css/variables',
+          format: 'orderedCssVariables',
           filter: {
             type: 'color',
           },
@@ -91,7 +113,7 @@ module.exports = {
         {
           destination: '_spacing.scss',
           options: {outputReferences: true},
-          format: 'css/variables',
+          format: 'orderedCssVariables',
           filter: {
             type: 'spacing',
           },
@@ -99,7 +121,7 @@ module.exports = {
         {
           destination: '_typography.scss',
           options: {outputReferences: true},
-          format: 'css/variables',
+          format: 'orderedCssVariables',
           filter: (obj) => {
             return [
               'typography',
