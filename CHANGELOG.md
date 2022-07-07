@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Tokens: Add `font`, `font-family` and `line-height` css tokens.
+
 ## [11.7.1] - 2022-07-07
 
 Fix:

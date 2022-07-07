@@ -1,18 +1,17 @@
-:root {
-  /*!
-  * @tokens BoxShadow
-  * @presenter Shadow
-  * Automatically generated, do not edit
-  */
+/**
+ * Do not edit directly
+ * Generated on Thu, 07 Jul 2022 09:37:00 GMT
+ */
 
-  --box-shadow-xs: 0 0 0.625rem rgba(0, 0, 0, 0.08); /* color: black, blur: 10px */
-  --box-shadow-s: 0 0 1.25rem rgba(0, 0, 0, 0.08); /* color: black, blur: 20px */
-  --box-shadow-m: 0 0 1.875rem rgba(0, 0, 0, 0.08); /* color: black, blur: 30px */
-  --box-shadow-l: 0 0 2.5rem rgba(0, 0, 0, 0.08); /* color: black, blur: 40px */
-  --box-shadow-xl: 0 0 3.125rem rgba(0, 0, 0, 0.08); /* color: black, blur: 50px */
-  --box-shadow-hover-xs: 0 0 0.625rem rgba(0, 0, 0, 0.15); /* color: black, blur: 10px */
-  --box-shadow-hover-s: 0 0 1.25rem rgba(0, 0, 0, 0.15); /* color: black, blur: 20px */
-  --box-shadow-hover-m: 0 0 1.875rem rgba(0, 0, 0, 0.15); /* color: black, blur: 30px */
-  --box-shadow-hover-l: 0 0 2.5rem rgba(0, 0, 0, 0.15); /* color: black, blur: 40px */
-  --box-shadow-hover-xl: 0 0 3.125rem rgba(0, 0, 0, 0.15); /* color: black, blur: 50px */
+:root {
+  --box-shadow-xs: 0 0 0.625rem rgba(0, 0, 0, 0.08);
+  --box-shadow-s: 0 0 1.25rem rgba(0, 0, 0, 0.08);
+  --box-shadow-m: 0 0 1.875rem rgba(0, 0, 0, 0.08);
+  --box-shadow-l: 0 0 2.5rem rgba(0, 0, 0, 0.08);
+  --box-shadow-xl: 0 0 3.125rem rgba(0, 0, 0, 0.08);
+  --box-shadow-hover-xs: 0 0 0.625rem rgba(0, 0, 0, 0.15);
+  --box-shadow-hover-s: 0 0 1.25rem rgba(0, 0, 0, 0.15);
+  --box-shadow-hover-m: 0 0 1.875rem rgba(0, 0, 0, 0.15);
+  --box-shadow-hover-l: 0 0 2.5rem rgba(0, 0, 0, 0.15);
+  --box-shadow-hover-xl: 0 0 3.125rem rgba(0, 0, 0, 0.15);
 }
