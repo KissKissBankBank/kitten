@@ -3,6 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["className", "children", "empty", "size", "border", "backgroundColor", "status", "hasBorder"];
 import React from 'react';
 import classNames from 'classnames';
+import isEmpty from 'lodash/fp/isEmpty';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
@@ -26,7 +27,7 @@ export var IconBadge = function IconBadge(_ref) {
   return /*#__PURE__*/React.createElement(StyledBadge, _extends({
     className: classNames('k-IconBadge', className, "k-IconBadge--" + size, "k-IconBadge--" + status, {
       'k-IconBadge--empty': empty,
-      'k-IconBadge--hasBorderStyles': border.length > 0,
+      'k-IconBadge--hasBorderStyles': !isEmpty(border),
       'k-IconBadge--hasBorder': hasBorder
     }),
     style: {

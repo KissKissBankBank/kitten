@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `IconBadge`: Fix `hasBorderStyles`.
+## [11.7.1] - 2022-07-07
+
+Fix:
+
+- `IconBadge`: Fix `hasBorderStyles`.
 
 ## [11.7.0] - 2022-07-05
 
