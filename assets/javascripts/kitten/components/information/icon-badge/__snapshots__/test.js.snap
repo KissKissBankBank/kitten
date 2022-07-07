@@ -18,7 +18,7 @@ exports[`<IconBadge /> by default matches with snapshot 1`] = `
 
 exports[`<IconBadge /> with border style matches with snapshot 1`] = `
 <span
-  className="sc-bdvvtL gIJdRE k-IconBadge k-IconBadge--small k-IconBadge--info"
+  className="sc-bdvvtL gIJdRE k-IconBadge k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorderStyles"
   style={
     Object {
       "--iconBadge-background-color": null,

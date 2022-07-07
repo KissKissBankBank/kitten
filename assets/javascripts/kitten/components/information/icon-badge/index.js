@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import isEmpty from 'lodash/fp/isEmpty'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -116,7 +117,7 @@ export const IconBadge = ({
         `k-IconBadge--${status}`,
         {
           'k-IconBadge--empty': empty,
-          'k-IconBadge--hasBorderStyles': border.length > 0,
+          'k-IconBadge--hasBorderStyles': !isEmpty(border),
           'k-IconBadge--hasBorder': hasBorder,
         },
       )}
