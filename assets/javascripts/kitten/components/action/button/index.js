@@ -5,7 +5,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import styled from 'styled-components'
 import { modifierStyles } from './helpers/modifier-styles'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { mq } from '../../../constants/screen-config'
 import classNames from 'classnames'
 
 export const buttonModifiers = [
@@ -114,7 +114,7 @@ const StyledButton = styled.button`
     --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(30)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media ${mq.tabletAndDesktop} {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(70)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
@@ -127,7 +127,7 @@ const StyledButton = styled.button`
     --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media ${mq.tabletAndDesktop} {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(80)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
@@ -140,7 +140,7 @@ const StyledButton = styled.button`
     --Button-min-width: ${pxToRem(200)};
     --Button-padding: ${pxToRem(10)} ${pxToRem(10)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media ${mq.tabletAndDesktop} {
       --Button-min-width: ${pxToRem(220)};
       --Button-dimension: ${pxToRem(90)};
       --Button-padding: ${pxToRem(10)} ${pxToRem(40)};
@@ -159,6 +159,10 @@ const StyledButton = styled.button`
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
+
+    &.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+      border-color: var(--color-grey-400);
+    }
   }
 
   &.k-Button--fit-fluid {
@@ -167,7 +171,7 @@ const StyledButton = styled.button`
 
   /* BESPOKE FIT for mobile */
 
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+  @media ${mq.mobile} {
     &[class*='k-Button--mobile-fit'] {
       min-width: initial !important;
       padding: var(--Button-padding);
@@ -184,6 +188,10 @@ const StyledButton = styled.button`
         overflow: hidden;
         width: var(--Button-dimension);
         height: var(--Button-dimension);
+
+        &.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+          border-color: var(--color-grey-400);
+        }
       }
 
       &.k-Button--mobile-fit-fluid {
