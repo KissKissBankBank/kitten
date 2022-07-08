@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Tokens: Add `font`, `font-family` and `line-height` css tokens.
+- Feature: Utilities: Automagically generate utility classes from tokens.
+- Fix: `Button`: Fix `hydrogen` button style with `icon` fit.
+- Feature: `SlideModal`: Add new component.
+- Fix: `CloseButton`: Use `CrossIconNext` icon.
+- Feature: `Field`: Add `tag` prop.
+- Feature: `Field`: Add `center` prop to `Field.Label`.
+- Fix: `TextInputWithButton`: Fix mobile styles.
+
 ## [11.7.1] - 2022-07-07
 
 Fix:

@@ -1,5 +1,20 @@
 const StyleDictionary = require('style-dictionary')
 
+const { fileHeader, createPropertyFormatter } = StyleDictionary.formatHelpers
+
+// Consts
+
+const ITEM_TYPES = {
+  typography: 'font',
+  color: 'color',
+  fontFamilies: 'font-family',
+  borderRadius: 'border-radius',
+  fontSizes: 'font-size',
+  boxShadow: 'box-shadow',
+  lineHeights: 'line-height',
+  fontWeights: 'font-weight',
+}
+
 // Helpers
 const pxToRem = sizeInPx => {
   if (sizeInPx === 0) return 0
@@ -8,86 +23,29 @@ const pxToRem = sizeInPx => {
 
 const getInt = value => parseInt(value.toString())
 
-const longHexToRgba = value => {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(value);
-  return result ? `rgba(${[
-      parseInt(result[1], 16),
-      parseInt(result[2], 16),
-      parseInt(result[3], 16),
-      (parseInt(result[4], 16) / 256).toFixed(2),
-    ].join(', ')})` : null;
-}
-
-// Header formatter
-const getHeader = (tokenName, tokenPresenter, dictionary) => {
-  return (
-    `:root {\n` +
-    `  /*!\n` +
-    `  * @tokens ${tokenName}\n` +
-    `  * @presenter ${tokenPresenter}\n` +
-    `  * Automatically generated, do not edit\n` +
-    `  */\n\n` +
-    dictionary.allTokens
-      .map(token => {
-        return (
-          `  --${token.name}: ${token.value};` +
-          ` /* ${token.description || token.original.value} */`
-        )
-      })
-      .join(`\n`) +
-    `\n}\n`
-  )
-}
-
-// Formats
-StyleDictionary.registerFormat({
-  name: 'colorCss',
-  formatter: ({ dictionary }) => {
-    return getHeader('Colors', 'Color', dictionary)
-  },
-})
-
-StyleDictionary.registerFormat({
-  name: 'borderRadius',
-  formatter: ({ dictionary }) => {
-    return getHeader('BorderRadius', 'BorderRadius', dictionary)
-  },
-})
-
-StyleDictionary.registerFormat({
-  name: 'boxShadow',
-  formatter: ({ dictionary }) => {
-    return getHeader('BoxShadow', 'Shadow', dictionary)
-  },
-})
-
-StyleDictionary.registerFormat({
-  name: 'fontSize',
-  formatter: ({ dictionary }) => {
-    return getHeader('FontSize', 'FontSize', dictionary)
-  },
-})
-
-StyleDictionary.registerFormat({
-  name: 'fontWeight',
-  formatter: ({ dictionary }) => {
-    return getHeader('FontWeight', 'FontWeight', dictionary)
-  },
-})
-
-StyleDictionary.registerFormat({
-  name: 'spacing',
-  formatter: ({ dictionary }) => {
-    return getHeader('Spacing', 'Spacing', dictionary)
-  },
-})
-
 // Transforms
 StyleDictionary.registerTransform({
   type: 'value',
   name: 'pxToRem',
   matcher: token => token.value.toString().endsWith('px'),
   transformer: token => pxToRem(getInt(token.value)),
+})
+
+StyleDictionary.registerTransform({
+  type: 'value',
+  name: 'typography',
+  transitive: true,
+  matcher: token => {
+    return token.type === 'typography'
+  },
+  transformer: token => {
+    const { value } = token
+    let lineHeight = ''
+    if (value.lineHeight.value !== 'auto') {
+      lineHeight = `/${value.lineHeight.value}`
+    }
+    return `${value.fontWeight.value} ${value.fontSize.value}${lineHeight} ${value.fontFamily.value}`
+  },
 })
 
 StyleDictionary.registerTransform({
@@ -101,64 +59,149 @@ StyleDictionary.registerTransform({
       pxToRem(getInt(token.value.y)),
       pxToRem(getInt(token.value.blur)),
     ]
-    if (!!token.value.spread) {
+    if (token.value.spread !== '0' || token.value.spread > 0) {
       valueArray.push(pxToRem(getInt(token.value.spread)))
     }
 
-    valueArray.push(longHexToRgba(token.value.color))
+    valueArray.push(token.value.color)
 
     return valueArray.join(' ')
   },
 })
 
+// Utils
+const formattedVariables = ({ dictionary, outputReferences }) => {
+  const formatProperty = createPropertyFormatter({
+    outputReferences,
+    dictionary,
+    format: 'css',
+  })
+  return dictionary.allTokens.map(formatProperty).join('\n')
+}
+
+const formattedClasses = ({ dictionary }) => {
+  const formatProperty = item => {
+    return `  .k-u-${item.name} { ${ITEM_TYPES[item.type]}: var(--${
+      item.name
+    }) !important; }`
+  }
+  return dictionary.allTokens.map(formatProperty).join('\n')
+}
+
+// Formats
+StyleDictionary.registerFormat({
+  name: 'orderedCssVariables',
+  formatter: function ({ dictionary, options = {}, file }) {
+    const selector = options.selector ? options.selector : `:root`
+    const { outputReferences } = options
+    return (
+      fileHeader({ file }) +
+      `${selector} {\n` +
+      formattedVariables({ dictionary, outputReferences }) +
+      `\n}\n`
+    )
+  },
+})
+
+StyleDictionary.registerFormat({
+  name: 'customCssUtilities',
+  formatter: function ({ dictionary, file }) {
+    return (
+      fileHeader({ file }) +
+      '@mixin k-token {\n' +
+      formattedClasses({ dictionary }) +
+      `}\n`
+    )
+  },
+})
+
 module.exports = {
-  source: ['data/output.json'],
+  parsers: [
+    {
+      pattern: /\.json$/,
+      parse: ({ contents }) => {
+        return JSON.parse(contents).global
+      },
+    },
+  ],
+  source: ['data/tokens.json'],
   platforms: {
+    cssUtilityClass: {
+      transforms: ['name/cti/kebab'],
+      buildPath: 'assets/stylesheets/kitten/utilities/',
+      files: [
+        {
+          destination: '_token.scss',
+          format: 'customCssUtilities',
+          filter: obj => {
+            return [
+              'borderRadius',
+              'boxShadow',
+              'color',
+              'typography',
+              'fontSizes',
+              'fontWeights',
+              'fontFamilies',
+              'lineHeights',
+            ].includes(obj.type)
+          },
+        },
+      ],
+    },
     css: {
-      transforms: ['color/hex', 'pxToRem', 'shadow', 'name/cti/kebab'],
-      transformGroup: 'css',
+      transforms: [
+        'color/hex',
+        'name/cti/kebab',
+        'pxToRem',
+        'shadow',
+        'typography',
+      ],
       buildPath: 'assets/stylesheets/kitten/tokens/',
       files: [
         {
           destination: '_border-radius.scss',
-          format: 'borderRadius',
+          options: { outputReferences: true },
+          format: 'orderedCssVariables',
           filter: {
             type: 'borderRadius',
           },
         },
         {
           destination: '_box-shadow.scss',
-          format: 'boxShadow',
+          options: { outputReferences: true },
+          format: 'orderedCssVariables',
           filter: {
             type: 'boxShadow',
           },
         },
         {
           destination: '_colors.scss',
-          format: 'colorCss',
+          options: { outputReferences: true },
+          format: 'orderedCssVariables',
           filter: {
             type: 'color',
           },
         },
         {
-          destination: '_font-size.scss',
-          format: 'fontSize',
-          filter: {
-            type: 'fontSizes',
-          },
-        },
-        {
-          destination: '_font-weight.scss',
-          format: 'fontWeight',
-          filter: {
-            type: 'fontWeights',
-          },
-        },
-        {
           destination: '_spacing.scss',
-          format: 'spacing',
+          options: { outputReferences: true },
+          format: 'orderedCssVariables',
           filter: {
             type: 'spacing',
+          },
+        },
+        {
+          destination: '_typography.scss',
+          options: { outputReferences: true },
+          format: 'orderedCssVariables',
+          filter: obj => {
+            return [
+              'typography',
+              'fontSizes',
+              'fontWeights',
+              'fontFamilies',
+              'lineHeights',
+            ].includes(obj.type)
           },
         },
       ],
