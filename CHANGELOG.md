@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: `Button`: Fix `hydrogen` button style with `icon` fit.
 - Feature: `SlideModal`: Add new component.
 - Fix: `CloseButton`: Use `CrossIconNext` icon.
+- Feature: `Field`: Add `tag` prop.
 
 ## [11.7.1] - 2022-07-07
 
