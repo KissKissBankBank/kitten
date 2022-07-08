@@ -16,6 +16,7 @@ export class FieldLabel extends Component {
       link,
       tooltipLabel,
       className,
+      center,
       ...others
     } = this.props
 
@@ -28,7 +29,7 @@ export class FieldLabel extends Component {
         )}
         {...others}
       >
-        <Line style={{ lineHeight: 1 }}>
+        <Line style={{ lineHeight: 1 }} className={classNames({ 'k-u-flex-justifyContent-center': center })}>
           <Line.Item>
             <Label {...labelProps}>{children}</Label>
           </Line.Item>
@@ -58,9 +59,11 @@ FieldLabel.propTypes = {
   tooltip: PropTypes.string,
   labelProps: PropTypes.object,
   tooltipProps: PropTypes.object,
+  center: PropTypes.bool,
 }
 
 FieldLabel.defaultProps = {
   tooltip: null,
   labelProps: {},
+  center: false,
 }

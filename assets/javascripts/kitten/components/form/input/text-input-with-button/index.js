@@ -6,7 +6,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { TextInput } from '../../../form/input/text-input'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { Button } from '../../../action/button'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { mq } from '../../../../constants/screen-config'
 
 const StyledTextInputWithButton = styled.div`
   .k-Form-TextInputWithButton__button {
@@ -19,8 +19,15 @@ const StyledTextInputWithButton = styled.div`
   }
 
   &:not(.k-Form-TextInputWithButton--insetButton) {
-    display: flex;
+    display: grid;
     gap: ${pxToRem(10)};
+
+    @media ${mq.mobile} {
+      grid-template-rows: repeat(2, 1fr);
+    }
+    @media ${mq.tabletAndDesktop} {
+      grid-template-columns: 1fr auto;
+    }
   }
 
   &.k-Form-TextInputWithButton--insetButton {
@@ -71,7 +78,7 @@ const StyledTextInputWithButton = styled.div`
   &.k-Form-TextInputWithButton--large {
     --text-input-size: ${pxToRem(60)};
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tabletAndDesktop} {
       --text-input-size: ${pxToRem(70)};
     }
   }
@@ -79,7 +86,7 @@ const StyledTextInputWithButton = styled.div`
   &.k-Form-TextInputWithButton--huge {
     --text-input-size: ${pxToRem(70)};
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tabletAndDesktop} {
       --text-input-size: ${pxToRem(80)};
     }
   }
@@ -87,7 +94,7 @@ const StyledTextInputWithButton = styled.div`
   &.k-Form-TextInputWithButton--giant {
     --text-input-size: ${pxToRem(70)};
 
-    @media (min-width: ${ScreenConfig.M.min}px) {
+    @media ${mq.tabletAndDesktop} {
       --text-input-size: ${pxToRem(90)};
     }
   }
