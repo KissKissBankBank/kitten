@@ -5,7 +5,6 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
-import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { mq } from '../../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -346,7 +345,9 @@ export const StyledDashboard = styled.div`
         background-color: var(--color-grey-000);
 
         &.k-DashboardLayout__mainWrapper--darkBg {
-          &, .k-DashboardLayout__flow__nav, .k-DashboardLayout__flow__content {
+          &,
+          .k-DashboardLayout__flow__nav,
+          .k-DashboardLayout__flow__content {
             background-color: var(--color-grey-100);
           }
 

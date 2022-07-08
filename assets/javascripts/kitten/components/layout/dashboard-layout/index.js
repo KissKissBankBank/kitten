@@ -225,7 +225,7 @@ export const DashboardLayout = ({
           className={classNames(
             'k-DashboardLayout__mainWrapper',
             contentProps?.className,
-            {'k-DashboardLayout__mainWrapper--darkBg': hasDarkBg,}
+            { 'k-DashboardLayout__mainWrapper--darkBg': hasDarkBg },
           )}
         >
           {renderComponentChildrenArray(

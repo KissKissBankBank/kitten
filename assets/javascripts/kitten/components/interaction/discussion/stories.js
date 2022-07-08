@@ -15,7 +15,8 @@ export default {
     story => (
       <div className="story-Container story-Grid story-Grid--large">
         {story()}
-      </div>),
+      </div>
+    ),
   ],
   argTypes: {},
   args: {},
@@ -37,12 +38,7 @@ export const Default = args => {
             <Text weight="500" lineHeight="1">
               Claude L.
             </Text>
-            <Text
-              weight="400"
-              lineHeight="1"
-              size="micro"
-              color="grey-700"
-            >
+            <Text weight="400" lineHeight="1" size="micro" color="grey-700">
               &nbsp;•&nbsp;Avant-Hier{' '}
               <span className="k-u-a11y-visuallyHidden">à </span>19:30
             </Text>
@@ -105,7 +101,7 @@ export const Default = args => {
             setInputValue(e.target.value)
           },
           onKeyPress: e => {
-            if (e.key === "Enter" && !e.shiftKey) {
+            if (e.key === 'Enter' && !e.shiftKey) {
               e.preventDefault()
 
               if (inputValue.trim().split('<br>').join('').length > 0) {
@@ -113,7 +109,7 @@ export const Default = args => {
                 setInputValue('')
               }
             }
-          }
+          },
         }}
         buttonProps={{
           'aria-label': 'Envoyer',

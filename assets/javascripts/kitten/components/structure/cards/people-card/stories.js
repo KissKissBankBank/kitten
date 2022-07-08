@@ -24,7 +24,7 @@ const argTypes = {
   disabled: {
     name: 'disabled',
     control: { type: 'boolean' },
-  }
+  },
 }
 
 export default {

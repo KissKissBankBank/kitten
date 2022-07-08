@@ -121,7 +121,7 @@ export const FieldRadioButtonSetExample = ({
   errorMessage,
   help,
   helpHiddenOnBlur,
-  tag
+  tag,
 }) => (
   <FieldBase
     id={id}

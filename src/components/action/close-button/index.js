@@ -13,7 +13,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _button = require("../../action/button");
 
-var _crossIcon = require("../../graphics/icons/cross-icon");
+var _crossIconNext = require("../../graphics/icons-next/cross-icon-next");
 
 var _excluded = ["closeButtonLabel", "buttonModifier"];
 
@@ -27,9 +27,9 @@ var CloseButton = function CloseButton(_ref) {
     title: closeButtonLabel,
     "aria-label": closeButtonLabel,
     modifier: buttonModifier
-  }, others), /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
-    width: "8",
-    height: "8"
+  }, others), /*#__PURE__*/_react.default.createElement(_crossIconNext.CrossIconNext, {
+    width: "20",
+    height: "20"
   }));
 };
 

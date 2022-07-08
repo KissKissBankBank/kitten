@@ -15,7 +15,9 @@ describe('<SlideModal />', () => {
   })
 
   describe('with content prop', () => {
-    const component = mount(<SlideModal className="content-example" as="strong" />)
+    const component = mount(
+      <SlideModal className="content-example" as="strong" />,
+    )
 
     it('contains the content', () => {
       expect(component.render().hasClass('content-example')).toBe(true)
@@ -36,7 +38,9 @@ describe('<SlideModal />', () => {
         component = renderer
           .create(
             <SlideModal size="medium" trigger={<button>Open</button>}>
-              <SlideModal.Title>Oops… Quelque chose s’est mal passé.</SlideModal.Title>
+              <SlideModal.Title>
+                Oops… Quelque chose s’est mal passé.
+              </SlideModal.Title>
               <SlideModal.Content>
                 <p>
                   Notre équipe a été automatiquement notifiée et fait en sorte
@@ -96,9 +100,7 @@ describe('<SlideModal />', () => {
                     </p>
                   </SlideModal.Content>
                   <SlideModal.Actions>
-                    <button onClick={close}>
-                      Retour à la page d’accueil
-                    </button>
+                    <button onClick={close}>Retour à la page d’accueil</button>
                     <button onClick={close}>Recharger la page</button>
                   </SlideModal.Actions>
                 </>

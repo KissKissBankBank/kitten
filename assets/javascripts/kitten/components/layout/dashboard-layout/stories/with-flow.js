@@ -73,10 +73,10 @@ export const StoryWithFlow = ({
 
       <div className="k-u-flex k-u-flex-gap-triple k-u-flex-direction-column k-u-padding-vertical-triple k-u-padding-horizontal-triple k-u-border-radius-l k-u-box-shadow-m">
         <p className="k-u-weight-400 k-u-margin-none">
-          Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel
-          augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel
-          augue laoreet rutrum faucibus dolor auctor.
+          Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo
+          odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis
+          lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis
+          lacus vel augue laoreet rutrum faucibus dolor auctor.
         </p>
         <DropdownSelectWithInput
           id="DropdownSelectWithInput"
@@ -90,10 +90,11 @@ export const StoryWithFlow = ({
         <p className="k-u-weight-400 k-u-margin-none">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis,
           est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
-          sem nec elit. Sed posuere consectetur est at lobortis. Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus
-          varius blandit sit amet non magna. Etiam porta sem malesuada magna
-          mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          sem nec elit. Sed posuere consectetur est at lobortis. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget
+          risus varius blandit sit amet non magna. Etiam porta sem malesuada
+          magna mollis euismod. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
         </p>
 
         <TextCopy
@@ -112,20 +113,20 @@ export const StoryWithFlow = ({
           montes, nascetur ridiculus mus.
         </p>
         <p className="k-u-weight-400 k-u-margin-none">
-          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-          risus varius blandit sit amet non magna. Maecenas sed diam eget risus
-          varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
-          consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-          venenatis vestibulum.
+          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+          eget risus varius blandit sit amet non magna. Maecenas sed diam eget
+          risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla
+          sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia
+          quam venenatis vestibulum.
         </p>
         <p className="k-u-weight-400 k-u-margin-none">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
           quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
           Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
           mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis,
-          est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
-          sem nec elit.
+          condimentum nibh, ut fermentum massa justo sit amet risus. Duis
+          mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit.
         </p>
         <p className="k-u-weight-400 k-u-margin-none">
           Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio,
@@ -137,20 +138,20 @@ export const StoryWithFlow = ({
           montes, nascetur ridiculus mus.
         </p>
         <p className="k-u-weight-400 k-u-margin-none">
-          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-          risus varius blandit sit amet non magna. Maecenas sed diam eget risus
-          varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed
-          consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-          venenatis vestibulum.
+          Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+          eget risus varius blandit sit amet non magna. Maecenas sed diam eget
+          risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla
+          sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia
+          quam venenatis vestibulum.
         </p>
         <p className="k-u-weight-400 k-u-margin-none">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo
           quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
           Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna
           mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-          condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis,
-          est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
-          sem nec elit.
+          condimentum nibh, ut fermentum massa justo sit amet risus. Duis
+          mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit.
         </p>
       </div>
     </DashboardLayout.Flow.Content>

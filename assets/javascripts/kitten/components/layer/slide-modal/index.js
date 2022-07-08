@@ -7,7 +7,6 @@ import { CloseButton } from '../../action/close-button'
 import { Title } from '../../typography/title'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 import { GlobalStyle } from './styles'
-import { Button } from '../../action/button'
 
 const ModalTitle = ({ className, ...props }) => (
   <Title
@@ -94,7 +93,10 @@ const InnerModal = ({
         closeTimeoutMS={500}
         role="dialog"
         className={{
-          base: classNames('k-SlideModal__wrapper', `k-SlideModal__wrapper--${size}`),
+          base: classNames(
+            'k-SlideModal__wrapper',
+            `k-SlideModal__wrapper--${size}`,
+          ),
           afterOpen: 'k-SlideModal__wrapper--afterOpen',
           beforeClose: 'k-SlideModal__wrapper--beforeClose',
         }}

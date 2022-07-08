@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
-var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className"];
+var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className", "center"];
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -27,6 +27,7 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
         link = _this$props.link,
         tooltipLabel = _this$props.tooltipLabel,
         className = _this$props.className,
+        center = _this$props.center,
         others = _objectWithoutPropertiesLoose(_this$props, _excluded);
 
     return /*#__PURE__*/React.createElement("div", _extends({
@@ -34,7 +35,10 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
     }, others), /*#__PURE__*/React.createElement(Line, {
       style: {
         lineHeight: 1
-      }
+      },
+      className: classNames({
+        'k-u-flex-justifyContent-center': center
+      })
     }, /*#__PURE__*/React.createElement(Line.Item, null, /*#__PURE__*/React.createElement(Label, labelProps, children)), tooltip && /*#__PURE__*/React.createElement(Line.Item, null, /*#__PURE__*/React.createElement(Toggletip, _extends({
       id: tooltipId,
       bubbleProps: {
@@ -50,9 +54,11 @@ FieldLabel.propTypes = {
   link: PropTypes.node,
   tooltip: PropTypes.string,
   labelProps: PropTypes.object,
-  tooltipProps: PropTypes.object
+  tooltipProps: PropTypes.object,
+  center: PropTypes.bool
 };
 FieldLabel.defaultProps = {
   tooltip: null,
-  labelProps: {}
+  labelProps: {},
+  center: false
 };
