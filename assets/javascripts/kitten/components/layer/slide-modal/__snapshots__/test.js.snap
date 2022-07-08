@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Modal /> snapshot tests is closed matches with snapshot 1`] = `
+exports[`<SlideModal /> snapshot tests is closed matches with snapshot 1`] = `
 <div
-  className="k-Modal"
+  className="k-SlideModal"
 >
   <button
     onClick={[Function]}
@@ -12,12 +12,12 @@ exports[`<Modal /> snapshot tests is closed matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
+exports[`<SlideModal /> snapshot tests is open matches with snapshot 1`] = `
 <div
-  className="k-Modal"
+  className="k-SlideModal"
 >
   <div
-    className="k-Modal__overlay"
+    className="k-SlideModal__overlay"
     onClick={[Function]}
     onMouseDown={[Function]}
     style={
@@ -32,7 +32,7 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
       aria-label="Modal"
       aria-labelledby=""
       aria-modal={true}
-      className="k-Modal__wrapper k-Modal__wrapper--medium"
+      className="k-SlideModal__wrapper k-SlideModal__wrapper--medium"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -48,7 +48,7 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
     >
       <button
         aria-label="Fermer"
-        className="sc-bdvvtL dDDqKo k-Button k-Modal__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon"
+        className="sc-bdvvtL dDDqKo k-Button k-SlideModal__closeButton k-Button--small k-Button--hydrogen k-Button--fit-icon"
         onClick={[Function]}
         style={
           Object {
@@ -73,52 +73,38 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
         </svg>
       </button>
       <div
-        className="k-Modal__main"
+        className="k-SlideModal__main"
       >
-        <div
-          className="k-Modal__header"
-        >
-          <p
-            className="sc-gsDKAQ gChKvE k-Title k-Modal__title k-u-align-center k-Title--primary k-Title--noMargin"
-            style={
-              Object {
-                "--Title-css-color": null,
-              }
+        <p
+          className="sc-gsDKAQ gChKvE k-Title k-SlideModal__title k-Title--primary k-Title--noMargin"
+          style={
+            Object {
+              "--Title-css-color": null,
             }
-          >
-            Oops… Quelque chose s’est mal passé.
-          </p>
-          <div
-            className="k-Modal__header_right"
-          >
-            Hello
-          </div>
-          <div
-            className="k-Modal__header_left"
-          >
-            World
-          </div>
-        </div>
+          }
+        >
+          Oops… Quelque chose s’est mal passé.
+        </p>
         <div
-          className="k-Modal__content k-u-align-center"
+          className="k-SlideModal__content k-SlideModal__content--gradientScroll"
         >
           <p>
             Notre équipe a été automatiquement notifiée et fait en sorte de résoudre ce problème au plus vite.
           </p>
-          <div
-            className="k-Modal__actions"
+        </div>
+        <div
+          className="k-SlideModal__actions"
+        >
+          <button
+            onClick={[Function]}
           >
-            <button
-              onClick={[Function]}
-            >
-              Retour à la page d’accueil
-            </button>
-            <button
-              onClick={[Function]}
-            >
-              Recharger la page
-            </button>
-          </div>
+            Retour à la page d’accueil
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Recharger la page
+          </button>
         </div>
       </div>
     </div>

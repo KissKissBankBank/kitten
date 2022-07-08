@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React from 'react'
 import { FieldLabel } from './components/label'
 import { FieldInput } from './components/input'
 import { FieldError } from './components/error'
@@ -9,7 +9,7 @@ import { FieldCheckbox } from './components/checkbox'
 import { FieldPassword } from './components/password'
 import { FieldAutocomplete } from './components/autocomplete'
 
-export class Field extends Component {
+export class Field extends React.Component {
   static Label = FieldLabel
   static Input = FieldInput
   static RadioSet = FieldRadioSet
@@ -20,5 +20,15 @@ export class Field extends Component {
   static Password = FieldPassword
   static Autocomplete = FieldAutocomplete
 
-  render = () => this.props.children
+  render = () => {
+    const { tag, children } = this.props
+
+    const Component = tag
+
+    if (!!tag) {
+      return <Component>{children}</Component>
+    }
+
+    return children
+  }
 }
