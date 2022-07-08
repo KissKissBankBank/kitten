@@ -338,6 +338,7 @@ export { DocumentsStatusBox } from './components/interaction/upload/documents-st
 export { Modal } from './components/layer/modal'
 export { Modal as ModalNext } from './components/layer/modal-next'
 export { Overlay } from './components/layer/overlay'
+export { SlideModal } from './components/layer/slide-modal'
 
 // Layout
 // ------

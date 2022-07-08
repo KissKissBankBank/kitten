@@ -48,7 +48,7 @@ export default {
   parameters: {
     docs: {
       page: () => (
-        <DocsPage filepath={__filename} importString="Modal as Modal" />
+        <DocsPage filepath={__filename} importString="Modal" />
       ),
     },
   },
