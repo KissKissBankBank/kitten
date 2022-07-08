@@ -490,6 +490,189 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
+exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
+<div
+  className="sc-dkzDqf kXYvPj k-Carousel k-LegacyCarousel"
+>
+  <div
+    className="sc-gsnTZi jshwWW k-Grid"
+  >
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
+    >
+      <div
+        className="k-Carousel__inner"
+        onKeyDown={[Function]}
+        onScroll={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+        >
+          <div
+            className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+          >
+            <div
+              className="k-Carousel__page__item"
+            >
+              <div
+                className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
+                title="A"
+              >
+                <div
+                  className="k-ProjectCard__image"
+                >
+                  <img
+                    alt=""
+                    className="k-ProjectCard__image__image"
+                    src=""
+                  />
+                </div>
+                <div
+                  className="k-ProjectCard__content"
+                />
+              </div>
+            </div>
+            <div
+              className="k-Carousel__page__item"
+            />
+            <div
+              className="k-Carousel__page__item"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
+<div
+  className="sc-dkzDqf kXYvPj k-Carousel k-LegacyCarousel"
+>
+  <div
+    className="sc-gsnTZi jshwWW k-Grid"
+  >
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--11-l k-Grid__col--offset-0-l"
+    >
+      <div
+        className="k-Carousel__inner"
+        onKeyDown={[Function]}
+        onScroll={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+        >
+          <div
+            className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+          >
+            <div
+              className="k-Carousel__page__item"
+            >
+              <div
+                className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
+                title="A"
+              >
+                <div
+                  className="k-ProjectCard__image"
+                >
+                  <img
+                    alt=""
+                    className="k-ProjectCard__image__image"
+                    src=""
+                  />
+                </div>
+                <div
+                  className="k-ProjectCard__content"
+                />
+              </div>
+            </div>
+            <div
+              className="k-Carousel__page__item"
+            />
+            <div
+              className="k-Carousel__page__item"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
+<div
+  className="sc-dkzDqf kXYvPj k-Carousel k-LegacyCarousel"
+>
+  <div
+    className="sc-gsnTZi jshwWW k-Grid"
+  >
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
+    >
+      <div
+        className="k-Carousel__inner"
+        onKeyDown={[Function]}
+        onScroll={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+        >
+          <div
+            className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+          >
+            <div
+              className="k-Carousel__page__item"
+            >
+              <div
+                className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
+                title="A"
+              >
+                <div
+                  className="k-ProjectCard__image"
+                >
+                  <img
+                    alt=""
+                    className="k-ProjectCard__image__image"
+                    src=""
+                  />
+                </div>
+                <div
+                  className="k-ProjectCard__content"
+                />
+              </div>
+            </div>
+            <div
+              className="k-Carousel__page__item"
+            />
+            <div
+              className="k-Carousel__page__item"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Grid__col k-Grid__col--12 k-Grid__col--1-l"
+    />
+  </div>
+</div>
+`;
+
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
   className="sc-dkzDqf khpgtW k-Carousel"
