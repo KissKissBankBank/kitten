@@ -2,7 +2,7 @@
 
 exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
 <ul
-  className="sc-gsDKAQ iGhrNi k-MessagesMenu"
+  className="sc-gsDKAQ jCYfue k-MessagesMenu"
 >
   <li
     className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
@@ -83,7 +83,7 @@ exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
 
 exports[`<MessagesMenu /> compare with snapshot with close button matches with snapshot 1`] = `
 <ul
-  className="sc-gsDKAQ iGhrNi k-MessagesMenu"
+  className="sc-gsDKAQ jCYfue k-MessagesMenu"
 >
   <li
     className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
