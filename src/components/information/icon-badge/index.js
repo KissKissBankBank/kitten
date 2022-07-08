@@ -13,6 +13,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -41,7 +43,7 @@ var IconBadge = function IconBadge(_ref) {
   return /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
     className: (0, _classnames.default)('k-IconBadge', className, "k-IconBadge--" + size, "k-IconBadge--" + status, {
       'k-IconBadge--empty': empty,
-      'k-IconBadge--hasBorderStyles': border.length > 0,
+      'k-IconBadge--hasBorderStyles': !(0, _isEmpty.default)(border),
       'k-IconBadge--hasBorder': hasBorder
     }),
     style: {

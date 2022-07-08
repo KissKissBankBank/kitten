@@ -34,6 +34,33 @@ describe('<Field />', () => {
     })
   })
 
+  describe('with <Field.Input /> and custom Field tag', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldInputExample
+            id="input"
+            label="Label"
+            tooltip="Tooltip"
+            tooltipId="tooltip"
+            tooltipProps={{ actionLabel: 'Learn more' }}
+            placeholder="Placeholder…"
+            size="medium"
+            noMargin={false}
+            tag="div"
+            help="Help message"
+            error
+            errorMessage="Very Bad! Error message"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with <Field.Input unit />', () => {
     beforeEach(() => {
       component = renderer

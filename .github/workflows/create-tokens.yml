@@ -15,15 +15,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-          cache: 'npm'
-      - run: npm ci
-      # Transform Figma Tokens JSON to something Style Dictionary can read
-      - run: npx token-transformer data/tokens.json data/output.json global
-      # Convert tokens according to Style Dictionary config
-      - run: npm run build:style-dictionary
-      # Build SCSS Tokens file
-      - run: npm run build:tokens
-      # Add files that were created during a run, e.g. created files from style dictionary or token-transformer.
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Convert tokens according to Style Dictionary config
+        run: npm run build:style-dictionary
+      - name: Build SCSS Tokens files
+        run: npm run build:tokens
+      - name: Build SCSS Utility
+        run: npm run build:utilities
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Tokens

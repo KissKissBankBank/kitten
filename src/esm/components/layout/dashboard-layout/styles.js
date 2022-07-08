@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { NUM_COLUMNS, GUTTER, CONTAINER_PADDING_THIN, CONTAINER_PADDING } from '../../../constants/grid-config';
-import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { mq } from '../../../constants/screen-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';

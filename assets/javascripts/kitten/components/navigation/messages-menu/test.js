@@ -79,7 +79,7 @@ describe('<MessagesMenu />', () => {
               }}
               closeButtonProps={{
                 onClick: () => {},
-                'aria-label': "Hello world",
+                'aria-label': 'Hello world',
               }}
             >
               <div>
@@ -107,7 +107,7 @@ describe('<MessagesMenu />', () => {
               }}
               closeButtonProps={{
                 onClick: () => {},
-                'aria-label': "Hello world",
+                'aria-label': 'Hello world',
               }}
             >
               <div>

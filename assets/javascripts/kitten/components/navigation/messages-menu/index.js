@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Button } from '../../../components/action/button'
 import { CrossIconNext } from '../../../components/graphics/icons-next/cross-icon-next'
-import { mq } from '../../../constants/screen-config'
 
 const StyledMessagesMenu = styled.ul`
   display: flex;
@@ -87,7 +86,7 @@ const StyledMessagesMenu = styled.ul`
   }
 
   .k-MessagesMenu__message__closeButton {
-    flex: 0 0  ${pxToRem(30)};
+    flex: 0 0 ${pxToRem(30)};
     transition: opacity var(--transition), margin-right var(--transition);
     margin-right: ${pxToRem(-30 - 10)};
     opacity: 0;
@@ -164,9 +163,7 @@ MessagesMenu.Message = ({
           )}
           {...closeButtonProps}
         >
-          {closeButtonProps.children || (
-            <CrossIconNext />
-          )}
+          {closeButtonProps.children || <CrossIconNext />}
         </Button>
       )}
     </li>

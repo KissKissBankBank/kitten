@@ -7,6 +7,36 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Deprecations/Change: Remove `DatePicker`.
 - Feature: `StandaloneRangeDatePicker`: Update component and dependencies.
 
+## [11.8.0] - 2022-07-08
+
+Features:
+
+- Tokens: Add `font`, `font-family` and `line-height` css tokens.
+- Utilities: Automagically generate utility classes from tokens.
+- `SlideModal`: Add new component.
+- `Field`: Add `tag` prop.
+- `Field`: Add `center` prop to `Field.Label`.
+
+Fixes:
+
+- `Button`: Fix `hydrogen` button style with `icon` fit.
+- `CloseButton`: Use `CrossIconNext` icon.
+- `TextInputWithButton`: Fix mobile styles.
+
+## [11.7.1] - 2022-07-07
+
+Fix:
+
+- `IconBadge`: Fix `hasBorderStyles`.
+
+## [11.7.0] - 2022-07-05
+
+Features:
+
+- Tokens: Add `font-weight` CSS tokens.
+- Icons: Add `GarbageIconNext` icon component.
+- `DropdownMenu`: Add `textProps` prop on Button and Link subcomponents.
+
 ## [11.6.1] - 2022-07-04
 
 Fix:

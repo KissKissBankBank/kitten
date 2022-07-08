@@ -2,7 +2,7 @@
 
 exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
 <ul
-  className="sc-gsnTZi fWwmeK k-MessagesMenu"
+  className="sc-gsnTZi iroXyK k-MessagesMenu"
 >
   <li
     className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
@@ -83,7 +83,7 @@ exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
 
 exports[`<MessagesMenu /> compare with snapshot with close button matches with snapshot 1`] = `
 <ul
-  className="sc-gsnTZi fWwmeK k-MessagesMenu"
+  className="sc-gsnTZi iroXyK k-MessagesMenu"
 >
   <li
     className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
@@ -123,7 +123,7 @@ exports[`<MessagesMenu /> compare with snapshot with close button matches with s
     </button>
     <button
       aria-label="Hello world"
-      className="sc-bczRLJ cSiVWF k-Button k-MessagesMenu__message__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
+      className="sc-bczRLJ erTPHf k-Button k-MessagesMenu__message__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
       onClick={[Function]}
       style={
         Object {
@@ -185,7 +185,7 @@ exports[`<MessagesMenu /> compare with snapshot with close button matches with s
     </button>
     <button
       aria-label="Hello world"
-      className="sc-bczRLJ cSiVWF k-Button k-MessagesMenu__message__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
+      className="sc-bczRLJ erTPHf k-Button k-MessagesMenu__message__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
       onClick={[Function]}
       style={
         Object {

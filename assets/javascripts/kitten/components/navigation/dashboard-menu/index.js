@@ -212,30 +212,32 @@ const Selector = ({ data, className, ...props }) => {
       </summary>
 
       <div className="k-DashboardMenu__selectorList">
-        {data.map(({ icon, children, isActive, onClick, ...itemProps }, index) => {
-          if (isActive) return
+        {data.map(
+          ({ icon, children, isActive, onClick, ...itemProps }, index) => {
+            if (isActive) return
 
-          return (
-            <a
-              key={children + index}
-              {...itemProps}
-              className={classNames(
-                'k-DashboardMenu__selectorButton',
-                itemProps.className,
-              )}
-              onClick={(e) => {
-                onClick(e, closeSelector)
-              }}
-            >
-              {!!icon && (
-                <span className="k-DashboardMenu__iconWrapper">{icon}</span>
-              )}
-              <span className="k-DashboardMenu__selectorButton__text">
-                {children}
-              </span>
-            </a>
-          )
-        })}
+            return (
+              <a
+                key={children + index}
+                {...itemProps}
+                className={classNames(
+                  'k-DashboardMenu__selectorButton',
+                  itemProps.className,
+                )}
+                onClick={e => {
+                  onClick(e, closeSelector)
+                }}
+              >
+                {!!icon && (
+                  <span className="k-DashboardMenu__iconWrapper">{icon}</span>
+                )}
+                <span className="k-DashboardMenu__selectorButton__text">
+                  {children}
+                </span>
+              </a>
+            )
+          },
+        )}
       </div>
     </details>
   )

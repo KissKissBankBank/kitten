@@ -81,7 +81,6 @@ const StyledFlow = styled.div`
     background-color: ${COLORS.background1};
     width: 100%;
 
-
     @media ${mq.desktop} {
       grid-column: 1 / 2;
       grid-row: 3 / span 1;

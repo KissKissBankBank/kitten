@@ -2,7 +2,7 @@
 
 exports[`<ContentCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-gsnTZi kPSUlf k-ContentCard"
+  className="sc-gsnTZi jlLvyX k-ContentCard"
 >
   <aside
     className="k-ContentCard__header"

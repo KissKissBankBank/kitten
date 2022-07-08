@@ -291,7 +291,7 @@ export const Default = args => {
                     src: item.avatar,
                   }}
                   closeButtonProps={{
-                    onClick: action('close button', item.longName)
+                    onClick: action('close button', item.longName),
                   }}
                 >
                   <div>

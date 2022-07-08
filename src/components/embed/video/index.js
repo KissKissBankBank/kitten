@@ -13,13 +13,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _typography = require("../../../helpers/utils/typography");
-
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _getReactElements = require("../../../helpers/react/get-react-elements");
-
-var _screenConfig = require("../../../constants/screen-config");
 
 var _playerIconNext = require("../../../components/graphics/icons-next/player-icon-next");
 
