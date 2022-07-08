@@ -29,7 +29,10 @@ export class FieldLabel extends Component {
         )}
         {...others}
       >
-        <Line style={{ lineHeight: 1 }} className={classNames({ 'k-u-flex-justifyContent-center': center })}>
+        <Line
+          style={{ lineHeight: 1 }}
+          className={classNames({ 'k-u-flex-justifyContent-center': center })}
+        >
           <Line.Item>
             <Label {...labelProps}>{children}</Label>
           </Line.Item>

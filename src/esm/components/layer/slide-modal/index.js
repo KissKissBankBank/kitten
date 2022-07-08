@@ -13,7 +13,6 @@ import { CloseButton } from '../../action/close-button';
 import { Title } from '../../typography/title';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 import { GlobalStyle } from './styles';
-import { Button } from '../../action/button';
 
 var ModalTitle = function ModalTitle(_ref) {
   var className = _ref.className,

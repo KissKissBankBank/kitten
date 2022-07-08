@@ -9,8 +9,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _gridConfig = require("../../../constants/grid-config");
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _screenConfig = require("../../../constants/screen-config");

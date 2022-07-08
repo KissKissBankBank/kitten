@@ -27,8 +27,6 @@ var _elementHelper = require("../../../helpers/dom/element-helper");
 
 var _styles = require("./styles");
 
-var _button = require("../../action/button");
-
 var _excluded = ["className"],
     _excluded2 = ["className", "align", "gradientScroll"],
     _excluded3 = ["className"],

@@ -3,10 +3,7 @@ import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutP
 var _excluded = ["className", "children", "ariaLabel", "autoPlay", "poster", "src"];
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { pxToRem } from '../../../helpers/utils/typography';
-import COLORS from '../../../constants/colors-config';
 import { getReactElementsByType, getReactElementsWithoutType } from '../../../helpers/react/get-react-elements';
-import { ScreenConfig } from '../../../constants/screen-config';
 import { PlayerIconNext } from '../../../components/graphics/icons-next/player-icon-next';
 import classNames from 'classnames';
 var StyledVideo = styled.div.withConfig({

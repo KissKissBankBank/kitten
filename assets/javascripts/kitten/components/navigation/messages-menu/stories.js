@@ -141,10 +141,10 @@ export const Default = () => {
             setActiveDiscussion(item)
           }}
           closeButtonProps={{
-            onClick: (event) => {
+            onClick: event => {
               action('Close clicked')({ ...item, ...event })
               setActiveDiscussion(item)
-            }
+            },
           }}
           avatarProps={{
             src: item.avatar,
@@ -162,7 +162,7 @@ export const Default = () => {
               color="grey-700"
               transform="uppercase"
             >
-              &nbsp;<span aria-hidden>•</span>{' '}Hier&nbsp;
+              &nbsp;<span aria-hidden>•</span> Hier&nbsp;
               <span className="k-u-a11y-visuallyHidden">à&nbsp;</span>19:30
             </Text>
           </div>

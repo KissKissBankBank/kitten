@@ -19,10 +19,6 @@ var _responsiveIframeContainer = require("../responsive-iframe-container");
 
 var _parser = require("../../../helpers/utils/parser");
 
-var _screenConfig = require("../../../constants/screen-config");
-
-var _typography = require("../../../helpers/utils/typography");
-
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));

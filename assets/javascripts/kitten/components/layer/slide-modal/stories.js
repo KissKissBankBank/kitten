@@ -1,7 +1,6 @@
 import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
-import styled from 'styled-components'
 import {
   SlideModal,
   Button,
@@ -47,9 +46,7 @@ export default {
   component: SlideModal,
   parameters: {
     docs: {
-      page: () => (
-        <DocsPage filepath={__filename} importString="SlideModal" />
-      ),
+      page: () => <DocsPage filepath={__filename} importString="SlideModal" />,
     },
   },
   subcomponents: {
@@ -132,11 +129,9 @@ const argTypes = {
 
 export const Default = ({ contentText, buttonSelection, ...args }) => (
   <SlideModal {...args}>
-    {({close}) => (
+    {({ close }) => (
       <>
-        <SlideModal.Title>
-          Lorem ipsum dolor sit consectetuer
-        </SlideModal.Title>
+        <SlideModal.Title>Lorem ipsum dolor sit consectetuer</SlideModal.Title>
         <SlideModal.Content>
           <Paragraph modifier="tertiary" noMargin>
             {contentText}
@@ -145,9 +140,13 @@ export const Default = ({ contentText, buttonSelection, ...args }) => (
         {buttonSelection > 0 && (
           <SlideModal.Actions>
             {buttonSelection > 1 && (
-              <Button modifier="hydrogen" onClick={close}>SlideModal.Button</Button>
+              <Button modifier="hydrogen" onClick={close}>
+                SlideModal.Button
+              </Button>
             )}
-            <Button modifier="helium" onClick={close}>SlideModal.Button</Button>
+            <Button modifier="helium" onClick={close}>
+              SlideModal.Button
+            </Button>
           </SlideModal.Actions>
         )}
       </>
@@ -219,12 +218,20 @@ export const withAction = () => (
                 },
               ]}
             />
-            <Details summaryProps={{ className: 'k-u-flex k-u-flex-gap-single k-u-flex-alignItems-center'}} summaryRender={({open}) => (
-              <>
-                <span className="k-u-font-label-medium k-u-flex-grow-single">Engagements</span>
-                <ArrowIcon aria-hidden direction={open ? 'top' : 'bottom'} />
-              </>
-            )}>
+            <Details
+              summaryProps={{
+                className:
+                  'k-u-flex k-u-flex-gap-single k-u-flex-alignItems-center',
+              }}
+              summaryRender={({ open }) => (
+                <>
+                  <span className="k-u-font-label-medium k-u-flex-grow-single">
+                    Engagements
+                  </span>
+                  <ArrowIcon aria-hidden direction={open ? 'top' : 'bottom'} />
+                </>
+              )}
+            >
               <RadioSet
                 id="engagements"
                 name="engagements"
@@ -232,100 +239,106 @@ export const withAction = () => (
                 className="k-u-margin-top-single"
                 items={[
                   {
-                    text: "Aide aux migrants",
+                    text: 'Aide aux migrants',
                     id: 'engagements-1',
                   },
                   {
-                    text: "Antiracisme",
+                    text: 'Antiracisme',
                     id: 'engagements-2',
                   },
                   {
-                    text: "Autoproduction culturelle",
+                    text: 'Autoproduction culturelle',
                     id: 'engagements-3',
                   },
                   {
-                    text: "Bien-être animal",
+                    text: 'Bien-être animal',
                     id: 'engagements-4',
                   },
                   {
-                    text: "Bio",
+                    text: 'Bio',
                     id: 'engagements-5',
                   },
                   {
-                    text: "Biodiversité",
+                    text: 'Biodiversité',
                     id: 'engagements-6',
                   },
                   {
-                    text: "Changer de vie",
+                    text: 'Changer de vie',
                     id: 'engagements-7',
                   },
                   {
-                    text: "Commerce équitable",
+                    text: 'Commerce équitable',
                     id: 'engagements-8',
                   },
                   {
-                    text: "Développement local",
+                    text: 'Développement local',
                     id: 'engagements-9',
                   },
                   {
-                    text: "Éducation",
+                    text: 'Éducation',
                     id: 'engagements-10',
                   },
                   {
-                    text: "Féminisme",
+                    text: 'Féminisme',
                     id: 'engagements-11',
                   },
                   {
-                    text: "LGBTQ+",
+                    text: 'LGBTQ+',
                     id: 'engagements-12',
                   },
                   {
-                    text: "Locavore",
+                    text: 'Locavore',
                     id: 'engagements-13',
                   },
                   {
-                    text: "Fabrication française",
+                    text: 'Fabrication française',
                     id: 'engagements-14',
                   },
                   {
-                    text: "Santé et Handicap",
+                    text: 'Santé et Handicap',
                     id: 'engagements-15',
                   },
                   {
-                    text: "Média indépendant",
+                    text: 'Média indépendant',
                     id: 'engagements-16',
                   },
                   {
-                    text: "Recyclage",
+                    text: 'Recyclage',
                     id: 'engagements-17',
                   },
                   {
-                    text: "Senior",
+                    text: 'Senior',
                     id: 'engagements-18',
                   },
                   {
-                    text: "Précommandes",
+                    text: 'Précommandes',
                     id: 'engagements-19',
                   },
                   {
-                    text: "Solidarité internationale",
+                    text: 'Solidarité internationale',
                     id: 'engagements-20',
                   },
                   {
-                    text: "Zéro déchet",
+                    text: 'Zéro déchet',
                     id: 'engagements-21',
                   },
                 ]}
               />
             </Details>
-            <Details summaryProps={{ className: 'k-u-flex k-u-flex-gap-single k-u-flex-alignItems-center'}} summaryRender={({open}) => (
-              <>
-                <span className="k-u-font-label-medium k-u-flex-grow-single">
-                  Catégories
-                </span>
-                <ArrowIcon aria-hidden direction={open ? 'top' : 'bottom'} />
-              </>
-            )}>
+            <Details
+              summaryProps={{
+                className:
+                  'k-u-flex k-u-flex-gap-single k-u-flex-alignItems-center',
+              }}
+              summaryRender={({ open }) => (
+                <>
+                  <span className="k-u-font-label-medium k-u-flex-grow-single">
+                    Catégories
+                  </span>
+                  <ArrowIcon aria-hidden direction={open ? 'top' : 'bottom'} />
+                </>
+              )}
+            >
               <RadioSet
                 id="categories"
                 name="categories"
@@ -333,77 +346,149 @@ export const withAction = () => (
                 className="k-u-margin-top-single"
                 items={[
                   {
-                    text: <><span aria-hidden>🚜</span> Agriculture</>,
-                    id: 'category-1'
+                    text: (
+                      <>
+                        <span aria-hidden>🚜</span> Agriculture
+                      </>
+                    ),
+                    id: 'category-1',
                   },
                   {
-                    text: <><span aria-hidden>🍽</span> Alimentation</>,
-                    id: 'category-2'
+                    text: (
+                      <>
+                        <span aria-hidden>🍽</span> Alimentation
+                      </>
+                    ),
+                    id: 'category-2',
                   },
                   {
-                    text: <><span aria-hidden>🎨</span> Art & photo</>,
-                    id: 'category-3'
+                    text: (
+                      <>
+                        <span aria-hidden>🎨</span> Art & photo
+                      </>
+                    ),
+                    id: 'category-3',
                   },
                   {
-                    text: <><span aria-hidden>⚒</span> Artisanat</>,
-                    id: 'category-4'
+                    text: (
+                      <>
+                        <span aria-hidden>⚒</span> Artisanat
+                      </>
+                    ),
+                    id: 'category-4',
                   },
                   {
-                    text: <><span aria-hidden>🦸🏻‍♂️</span> BD</>,
-                    id: 'category-5'
+                    text: (
+                      <>
+                        <span aria-hidden>🦸🏻‍♂️</span> BD
+                      </>
+                    ),
+                    id: 'category-5',
                   },
                   {
-                    text: <><span aria-hidden>♻️</span> Écologie</>,
-                    id: 'category-6'
+                    text: (
+                      <>
+                        <span aria-hidden>♻️</span> Écologie
+                      </>
+                    ),
+                    id: 'category-6',
                   },
                   {
-                    text: <><span aria-hidden>🎞</span> Films & vidéo</>,
-                    id: 'category-7'
+                    text: (
+                      <>
+                        <span aria-hidden>🎞</span> Films & vidéo
+                      </>
+                    ),
+                    id: 'category-7',
                   },
                   {
-                    text: <><span aria-hidden>🎲</span> Jeux</>,
-                    id: 'category-8'
+                    text: (
+                      <>
+                        <span aria-hidden>🎲</span> Jeux
+                      </>
+                    ),
+                    id: 'category-8',
                   },
                   {
-                    text: <><span aria-hidden>🗞</span> Journalisme</>,
-                    id: 'category-9'
+                    text: (
+                      <>
+                        <span aria-hidden>🗞</span> Journalisme
+                      </>
+                    ),
+                    id: 'category-9',
                   },
                   {
-                    text: <><span aria-hidden>📚</span> Livres</>,
-                    id: 'category-10'
+                    text: (
+                      <>
+                        <span aria-hidden>📚</span> Livres
+                      </>
+                    ),
+                    id: 'category-10',
                   },
                   {
-                    text: <><span aria-hidden>👗</span> Mode & design</>,
-                    id: 'category-11'
+                    text: (
+                      <>
+                        <span aria-hidden>👗</span> Mode & design
+                      </>
+                    ),
+                    id: 'category-11',
                   },
                   {
-                    text: <><span aria-hidden>🎵</span> Musique</>,
-                    id: 'category-12'
+                    text: (
+                      <>
+                        <span aria-hidden>🎵</span> Musique
+                      </>
+                    ),
+                    id: 'category-12',
                   },
                   {
-                    text: <><span aria-hidden>🏰</span> Patrimoine</>,
-                    id: 'category-13'
+                    text: (
+                      <>
+                        <span aria-hidden>🏰</span> Patrimoine
+                      </>
+                    ),
+                    id: 'category-13',
                   },
                   {
-                    text: <><span aria-hidden>🎓</span> Santé & éducation</>,
-                    id: 'category-14'
+                    text: (
+                      <>
+                        <span aria-hidden>🎓</span> Santé & éducation
+                      </>
+                    ),
+                    id: 'category-14',
                   },
                   {
-                    text: <><span aria-hidden>🎓</span> Solidarité</>,
-                    id: 'category-15'
+                    text: (
+                      <>
+                        <span aria-hidden>🎓</span> Solidarité
+                      </>
+                    ),
+                    id: 'category-15',
                   },
                   {
-                    text: <><span aria-hidden>⛹🏾‍♀️</span> Sport</>,
-                    id: 'category-16'
+                    text: (
+                      <>
+                        <span aria-hidden>⛹🏾‍♀️</span> Sport
+                      </>
+                    ),
+                    id: 'category-16',
                   },
                   {
-                    text: <><span aria-hidden>📱</span> Technologie</>,
-                    id: 'category-17'
+                    text: (
+                      <>
+                        <span aria-hidden>📱</span> Technologie
+                      </>
+                    ),
+                    id: 'category-17',
                   },
                   {
-                    text: <><span aria-hidden>🎭</span> Théâtre & danse</>,
-                    id: 'category-18'
-                  }
+                    text: (
+                      <>
+                        <span aria-hidden>🎭</span> Théâtre & danse
+                      </>
+                    ),
+                    id: 'category-18',
+                  },
                 ]}
               />
             </Details>

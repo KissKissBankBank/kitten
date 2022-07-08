@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Footer from '../../footer'
 import { KissKissBankBankHeaderNavStory } from '../../../../components/navigation/header-nav/stories/kisskissbankbank'
 
-
 import {
   mq,
   pxToRem,
@@ -21,7 +20,10 @@ const PageWrapper = styled.div`
   min-height: calc(100vh - ${pxToRem(HEADER_HEIGHT)});
   box-sizing: border-box;
   padding: ${pxToRem(75)} ${pxToRem(CONTAINER_PADDING_THIN)};
-  background: linear-gradient(var(--color-grey-000) -${pxToRem(HEADER_HEIGHT)}, var(--color-primary-300));
+  background: linear-gradient(
+    var(--color-grey-000) -${pxToRem(HEADER_HEIGHT)},
+    var(--color-primary-300)
+  );
   border: var(--border-light);
   display: flex;
   align-items: center;
@@ -117,17 +119,18 @@ const PreLaunch = () => (
           >
             Bientôt sur KissKissBankBank
           </Text>
-          <Title modifier="tertiary" className="kiss-PreLaunch__box__title">Un chaton pour la Fabrique !</Title>
+          <Title modifier="tertiary" className="kiss-PreLaunch__box__title">
+            Un chaton pour la Fabrique !
+          </Title>
           <picture className="kiss-PreLaunch__box__image">
             <img src="/kitten-0.jpg" alt="" />
           </picture>
           <Text tag="p" className="kiss-PreLaunch__box__slogan">
             Plus que quelques jours avant le lancement de notre nouvelle
-            campagne ! Nous vous avons préparé plein de surprises et notamment une
-            contrepartie exclusive pour les 100 premiers contributeurs ! Ne passez
-            pas à côté !
+            campagne ! Nous vous avons préparé plein de surprises et notamment
+            une contrepartie exclusive pour les 100 premiers contributeurs ! Ne
+            passez pas à côté !
           </Text>
-
         </div>
         <HorizontalStroke align="center" />
         <form className="kiss-PreLaunch__form">
