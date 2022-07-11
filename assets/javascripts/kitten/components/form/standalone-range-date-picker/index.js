@@ -6,7 +6,6 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import fr from 'date-fns/locale/fr'
 import enGB from 'date-fns/locale/en-GB'
-import 'react-day-picker/dist/style.css'
 
 const StyledDatePicker = styled.div`
   --rdp-cell-size: ${pxToRem(50)};
