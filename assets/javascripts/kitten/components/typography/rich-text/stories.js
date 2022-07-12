@@ -160,6 +160,7 @@ export const Default = args => (
       <p><strong>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>Sed posuere consectetur est at lobortis.</em> Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.</p>
       <p>Cum sociis natoque penatibus et <a href="https://www.kisskissbankbank.com">magnis dis parturient montes</a>, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
       <img src="/kitten-0.jpg" alt="" />
+      <p className="k-RichText--align-center"><em>Un petit chat bien mignon !</em></p>
       <h3>Maecenas faucibus mollis interdum</h3>
       <blockquote><p>Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></blockquote>
       <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
@@ -169,6 +170,24 @@ export const Default = args => (
         <li><strong>Sed posuere.</strong></li>
         <li><strong>Cras mattis.</strong></li>
       </ul>
+      <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      <ul>
+        <li>
+          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          <ul>
+            <li>Cras mattis.</li>
+            <li>Sed posuere.</li>
+          </ul>
+        </li>
+        <li>
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          <ul>
+            <li>Sed posuere.</li>
+            <li>Cras mattis.</li>
+          </ul>
+        </li>
+      </ul>
+      <hr />
       <h3>Maecenas faucibus mollis interdum</h3>
       <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       <ol>
@@ -180,6 +199,7 @@ export const Default = args => (
       <h4>Maecenas faucibus mollis interdum</h4>
       <p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue.</p>
       <p>Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p className="k-RichText--align-center">⚔️</p>
 
       <h4>Maecenas faucibus mollis interdum</h4>
       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>

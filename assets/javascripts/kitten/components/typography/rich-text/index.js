@@ -48,10 +48,6 @@ const StyledRichText = styled.div`
 
   p, ul, ol, blockquote {
     margin-block: var(--richtext-block);
-
-    &:first-child {
-      margin-block-start: 0;
-    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -60,9 +56,14 @@ const StyledRichText = styled.div`
     line-height: 1.125;
     font-weight: var(--font-weight-700);
     letter-spacing: -0.02em;
+  }
 
+  & > * {
     &:first-child {
       margin-block-start: 0;
+    }
+    &:last-child {
+      margin-block-end: 0;
     }
   }
 
@@ -97,11 +98,22 @@ const StyledRichText = styled.div`
   ul {
     margin-inline-start: var(--spacing-9);
     list-style-type: disc;
+
+    ul {
+      margin-inline-start: var(--spacing-6);
+      margin-block: var(--spacing-1) var(--spacing-2);
+      list-style-type: circle;
+    }
   }
 
   ol {
     margin-inline-start: var(--spacing-9);
     list-style-type: decimal;
+
+    ol {
+      margin-inline-start: var(--spacing-6);
+      margin-block: var(--spacing-1) var(--spacing-2);
+    }
   }
 
   blockquote {
@@ -129,6 +141,15 @@ const StyledRichText = styled.div`
     margin: 0 auto;
   }
 
+  hr {
+    margin-block: calc(2 * var(--richtext-block));
+    margin-inline: auto;
+    width: calc(2 * var(--richtext-h2));
+    height: calc(var(--richtext-font-size) / 4);
+    background-color: var(--color-grey-900);
+    display: block;
+  }
+
   a {
     font-weight: var(--font-weight-500);
     text-decoration: none;
@@ -151,6 +172,18 @@ const StyledRichText = styled.div`
 
   em, i {
     font-style: italic;
+  }
+
+  .k-RichText--align-left {
+    text-align: left;
+  }
+
+  .k-RichText--align-center {
+    text-align: center;
+  }
+
+  .k-RichText--align-right {
+    text-align: right;
   }
 `
 
