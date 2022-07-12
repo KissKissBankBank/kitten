@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RichText`: Add component.
+
 ## [11.8.0] - 2022-07-08
 
 Features:
