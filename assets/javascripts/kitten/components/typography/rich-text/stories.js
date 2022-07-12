@@ -164,10 +164,10 @@ export const Default = args => (
       <blockquote><p>Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p></blockquote>
       <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       <ul>
-        <li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</li>
-        <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-        <li>Sed posuere.</li>
-        <li>Cras mattis.</li>
+        <li><strong>Vivamus sagittis lacus vel augue</strong> laoreet rutrum faucibus dolor auctor.</li>
+        <li><strong>Cum sociis natoque penatibus</strong> et magnis dis parturient montes, nascetur ridiculus mus.</li>
+        <li><strong>Sed posuere.</strong></li>
+        <li><strong>Cras mattis.</strong></li>
       </ul>
       <h3>Maecenas faucibus mollis interdum</h3>
       <p>Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>

@@ -5,7 +5,12 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledRichText = styled.div`
-  font: var(--richtext-size) / var(--richtext-line) var(--font-family-maax);
+  ::selection, * ::selection {
+    color: var(--color-grey-000);
+    background-color: var(--color-primary-500);
+  }
+
+  font: var(--font-weight-400) var(--richtext-font-size) / var(--richtext-line-height) var(--font-family-maax);
 
   /* Reset compensation */
   h1, h2, h3, h4, h5, h6, p, blockquote, ul, li, ol {
@@ -14,8 +19,8 @@ const StyledRichText = styled.div`
   }
 
   &.k-RichText--small {
-    --richtext-size: var(--font-size-3);
-    --richtext-line: ${pxToRem(18)};
+    --richtext-font-size: var(--font-size-3);
+    --richtext-line-height: var(--line-height-2);
     --richtext-block: var(--spacing-5);
     --richtext-h1: var(--font-size-9);
     --richtext-h2: var(--font-size-7);
@@ -23,8 +28,8 @@ const StyledRichText = styled.div`
     --richtext-h4: var(--font-size-3);
   }
   &.k-RichText--medium {
-    --richtext-size: var(--font-size-4);
-    --richtext-line: ${pxToRem(20)};
+    --richtext-font-size: var(--font-size-4);
+    --richtext-line-height: var(--line-height-3);
     --richtext-block: var(--spacing-6);
     --richtext-h1: var(--font-size-10);
     --richtext-h2: var(--font-size-8);
@@ -32,12 +37,12 @@ const StyledRichText = styled.div`
     --richtext-h4: var(--font-size-4);
   }
   &.k-RichText--large {
-    --richtext-size: var(--font-size-6);
-    --richtext-line: ${pxToRem(24)};
+    --richtext-font-size: var(--font-size-6);
+    --richtext-line-height: var(--line-height-5);
     --richtext-block: var(--spacing-7);
     --richtext-h1: var(--font-size-11);
     --richtext-h2: var(--font-size-9);
-    --richtext-h3: var(--font-size-7);
+    --richtext-h3: var(--font-size-8);
     --richtext-h4: var(--font-size-6);
   }
 
@@ -64,20 +69,57 @@ const StyledRichText = styled.div`
   h1 {
     font-size: var(--richtext-h1);
   }
+
   h2 {
     font-size: var(--richtext-h2);
   }
+
   h3 {
     font-size: var(--richtext-h3);
   }
+
   h4 {
     font-size: var(--richtext-h4);
   }
+
   h5 {
     font-size: var(--richtext-h5);
   }
+
   h6 {
     font-size: var(--richtext-h6);
+  }
+
+  p {
+    font-weight: var(--font-weight-400);
+  }
+
+  ul {
+    margin-inline-start: var(--spacing-9);
+    list-style-type: disc;
+  }
+
+  ol {
+    margin-inline-start: var(--spacing-9);
+    list-style-type: decimal;
+  }
+
+  blockquote {
+    position: relative;
+    margin-inline: var(--spacing-6);
+    padding-inline-start: var(--spacing-6);
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: ${pxToRem(4)};
+      background-color: var(--color-primary-100);
+      border-radius: var(--border-radius-rounded);
+    }
   }
 
   img {
@@ -103,38 +145,12 @@ const StyledRichText = styled.div`
     }
   }
 
-  strong {
-    font-weight: var(--font-weight-700);
+  strong, b {
+    font-weight: var(--font-weight-500);
   }
-  em {
+
+  em, i {
     font-style: italic;
-  }
-
-  ul {
-    margin-inline-start: var(--spacing-9);
-    list-style-type: disc;
-  }
-  ol {
-    margin-inline-start: var(--spacing-9);
-    list-style-type: decimal;
-  }
-
-  blockquote {
-    position: relative;
-    margin-inline: var(--spacing-6);
-    padding-inline-start: var(--spacing-6);
-
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: ${pxToRem(4)};
-      background-color: var(--color-primary-300);
-      border-radius: var(--border-radius-rounded);
-    }
   }
 `
 
