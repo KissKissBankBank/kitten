@@ -9,6 +9,9 @@ const StyledRichText = styled.div`
     color: var(--color-grey-000);
     background-color: var(--color-primary-500);
   }
+  & a::selection {
+    background-color: var(--color-primary-700);
+  }
 
   font: var(--font-weight-400) var(--richtext-font-size) / var(--richtext-line-height) var(--font-family-maax);
 
