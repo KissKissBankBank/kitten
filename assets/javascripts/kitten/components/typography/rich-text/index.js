@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledRichText = styled.div`
-  ::selection, * ::selection {
+  ::selection,
+  * ::selection {
     color: var(--color-grey-000);
     background-color: var(--color-primary-500);
   }
@@ -13,10 +14,21 @@ const StyledRichText = styled.div`
     background-color: var(--color-primary-700);
   }
 
-  font: var(--font-weight-400) var(--richtext-font-size) / var(--richtext-line-height) var(--font-family-maax);
+  font: var(--font-weight-400) var(--richtext-font-size) /
+    var(--richtext-line-height) var(--font-family-maax);
 
   /* Reset compensation */
-  h1, h2, h3, h4, h5, h6, p, blockquote, ul, li, ol {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  ul,
+  li,
+  ol {
     font-family: inherit;
     font-size: inherit;
   }
@@ -49,11 +61,19 @@ const StyledRichText = styled.div`
     --richtext-h4: var(--font-size-6);
   }
 
-  p, ul, ol, blockquote {
+  p,
+  ul,
+  ol,
+  blockquote {
     margin-block: var(--richtext-block);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-block-start: 1.5em;
     margin-block-end: 1em;
     line-height: 1.125;
@@ -126,7 +146,7 @@ const StyledRichText = styled.div`
 
     &::before {
       display: block;
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -169,11 +189,13 @@ const StyledRichText = styled.div`
     }
   }
 
-  strong, b {
+  strong,
+  b {
     font-weight: var(--font-weight-500);
   }
 
-  em, i {
+  em,
+  i {
     font-style: italic;
   }
 
@@ -190,8 +212,11 @@ const StyledRichText = styled.div`
   }
 `
 
-export const RichText = ({className, size, ...props}) => (
-  <StyledRichText className={classNames('k-RichText', className, `k-RichText--${size}`)} {...props} />
+export const RichText = ({ className, size, ...props }) => (
+  <StyledRichText
+    className={classNames('k-RichText', className, `k-RichText--${size}`)}
+    {...props}
+  />
 )
 
 RichText.defaultProps = {
@@ -199,5 +224,5 @@ RichText.defaultProps = {
 }
 
 RichText.propTypes = {
-  size: PropTypes.oneOf['small', 'medium', 'large'],
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 }
