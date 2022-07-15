@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `TextInputWithIcon`
   - `TextInputWithLimit`
   - `TextInputWithUnit`
+  - `Autocomplete`
 - Breaking Change: `TextCopy`: Update component.
 - Breaking Change: `DatePicker`: Remove component.
 

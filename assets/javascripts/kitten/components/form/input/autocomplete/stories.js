@@ -2,6 +2,7 @@ import React from 'react'
 import { Autocomplete } from './index'
 import { Field, LocationIcon } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
+import { Default as TextInputStory } from '../text-input/stories.js'
 
 const items = [
   'Abyssinian',
@@ -161,6 +162,7 @@ export default {
   ],
 
   args: {
+    ...TextInputStory.args,
     name: 'autocomplete',
     label: 'name',
     disabled: false,
@@ -178,6 +180,7 @@ export default {
   },
 
   argTypes: {
+    ...TextInputStory.argTypes,
     name: {
       name: 'name',
       control: 'text',
