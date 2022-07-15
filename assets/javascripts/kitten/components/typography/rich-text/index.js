@@ -71,9 +71,7 @@ const StyledRichText = styled.div`
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
+  h4 {
     margin-block-start: 1.5em;
     margin-block-end: 1em;
     line-height: 1.125;
@@ -104,14 +102,6 @@ const StyledRichText = styled.div`
 
   h4 {
     font-size: var(--richtext-h4);
-  }
-
-  h5 {
-    font-size: var(--richtext-h5);
-  }
-
-  h6 {
-    font-size: var(--richtext-h6);
   }
 
   p {
