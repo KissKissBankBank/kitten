@@ -12,7 +12,11 @@ export default {
     },
   },
   decorators: [
-    story => <div className="story-Container story-Grid">{story()}</div>,
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
   ],
   argTypes: {},
   args: {},
@@ -24,8 +28,8 @@ export const Default = args => {
   return (
     <Discussion {...args}>
       <p className="k-u-a11y-visuallyHidden">
-        Les messages de la discussion sont dans l’ordre antéchronologique : le
-        premier message de la liste est le plus récent.
+        Les messages de la discussion sont dans l’ordre chronologique : le
+        premier message de la liste est le plus ancien.
       </p>
       <Discussion.List>
         <Discussion.Message>
@@ -34,13 +38,7 @@ export const Default = args => {
             <Text weight="500" lineHeight="1">
               Claude L.
             </Text>
-            <Text
-              weight="400"
-              lineHeight="1"
-              size="micro"
-              activeColEl
-              color="grey-700"
-            >
+            <Text weight="400" lineHeight="1" size="micro" color="grey-700">
               &nbsp;•&nbsp;Avant-Hier{' '}
               <span className="k-u-a11y-visuallyHidden">à </span>19:30
             </Text>
@@ -102,6 +100,16 @@ export const Default = args => {
           onChange: e => {
             setInputValue(e.target.value)
           },
+          onKeyPress: e => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault()
+
+              if (inputValue.trim().split('<br>').join('').length > 0) {
+                action('Enter key form submit')(e)
+                setInputValue('')
+              }
+            }
+          },
         }}
         buttonProps={{
           'aria-label': 'Envoyer',
@@ -109,7 +117,7 @@ export const Default = args => {
             action('Click envoyer')(e)
             setInputValue('')
           },
-          disabled: inputValue.length < 1,
+          disabled: inputValue.trim().split('<br>').join('').length < 1,
         }}
       />
     </Discussion>

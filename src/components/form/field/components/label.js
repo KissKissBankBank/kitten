@@ -23,7 +23,7 @@ var _toggletip = require("../../../information/toggletip");
 
 var _line = require("../../../structure/line");
 
-var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className"];
+var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className", "center"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -48,13 +48,17 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
         link = _this$props.link,
         tooltipLabel = _this$props.tooltipLabel,
         className = _this$props.className,
+        center = _this$props.center,
         others = (0, _objectWithoutPropertiesLoose2.default)(_this$props, _excluded);
     return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
       className: (0, _classnames.default)(className, 'k-Field__label', 'k-u-margin-bottom-single')
     }, others), /*#__PURE__*/_react.default.createElement(_line.Line, {
       style: {
         lineHeight: 1
-      }
+      },
+      className: (0, _classnames.default)({
+        'k-u-flex-justifyContent-center': center
+      })
     }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, labelProps, children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_toggletip.Toggletip, (0, _extends2.default)({
       id: tooltipId,
       bubbleProps: {
@@ -72,9 +76,11 @@ FieldLabel.propTypes = {
   link: _propTypes.default.node,
   tooltip: _propTypes.default.string,
   labelProps: _propTypes.default.object,
-  tooltipProps: _propTypes.default.object
+  tooltipProps: _propTypes.default.object,
+  center: _propTypes.default.bool
 };
 FieldLabel.defaultProps = {
   tooltip: null,
-  labelProps: {}
+  labelProps: {},
+  center: false
 };

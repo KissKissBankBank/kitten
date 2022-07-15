@@ -322,7 +322,9 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
       className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
       href=""
     >
-      <span>
+      <span
+        className="custom-class"
+      >
         Content
       </span>
     </a>
@@ -338,7 +340,9 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
       >
         <svg />
       </span>
-      <span>
+      <span
+        className="custom-class"
+      >
         Content
       </span>
     </button>

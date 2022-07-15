@@ -49,7 +49,7 @@ export var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
   }, /*#__PURE__*/React.createElement(Text, {
     as: "p",
     className: "k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf",
-    weight: "regular",
+    weight: "500",
     size: "small",
     lineHeight: "1"
   }, title), fileList.length > 0 && /*#__PURE__*/React.createElement("ul", {
@@ -60,18 +60,18 @@ export var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
       as: "li",
       className: "k-DocumentsStatusBox__fileName",
       size: "micro",
-      weight: "light"
+      weight: "400"
     }, file);
   })), !!message && /*#__PURE__*/React.createElement(Text, {
     as: "p",
-    weight: "regular",
+    weight: "500",
     size: "micro",
     className: "k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf",
     lineHeight: "1"
   }, message), status === 'denied' && /*#__PURE__*/React.createElement(Text, {
     as: "button",
     className: "k-DocumentsStatusBox__button k-u-reset-button k-u-align-left k-u-margin-top-single",
-    weight: "regular",
+    weight: "500",
     color: "error",
     type: "button",
     size: "micro",

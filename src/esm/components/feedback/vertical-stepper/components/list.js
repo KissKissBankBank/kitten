@@ -8,9 +8,9 @@ import COLORS from '../../../../constants/colors-config';
 var StyledList = styled.ul.withConfig({
   displayName: "list__StyledList",
   componentId: "sc-1rzzvwx-0"
-})(["margin:", " 0 ", ";padding:0;", ";font-size:", ";line-height:normal;", ""], pxToRem(5), pxToRem(10), TYPOGRAPHY.fontStyles.light, pxToRem(12), function (_ref) {
+})(["margin:", " 0 ", ";padding:0;", ";font-size:", ";line-height:normal;", ""], pxToRem(5), pxToRem(10), TYPOGRAPHY.fontStyles['400'], pxToRem(12), function (_ref) {
   var error = _ref.error;
-  return error && css(["", ";color:", ";"], TYPOGRAPHY.fontStyles.regular, COLORS.error);
+  return error && css(["", ";color:", ";"], TYPOGRAPHY.fontStyles['500'], COLORS.error);
 });
 var StyledItem = styled.li.withConfig({
   displayName: "list__StyledItem",

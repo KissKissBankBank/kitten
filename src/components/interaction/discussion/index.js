@@ -38,7 +38,7 @@ var _excluded = ["className", "children"],
 var DiscussionWrapper = _styledComponents.default.div.withConfig({
   displayName: "discussion__DiscussionWrapper",
   componentId: "sc-8cr511-0"
-})(["display:flex;flex-direction:column;gap:", ";justify-content:space-between;.k-Discussion__list{flex-grow:0;flex-shrink:1;display:flex;flex-direction:column;gap:", ";overflow:scroll;}.k-Discussion__message{display:flex;gap:0 ", ";flex-wrap:wrap;align-items:center;.k-Discussion__message__avatar{flex:0 0 auto;width:", ";height:", ";border-radius:", ";object-fit:cover;object-position:center;border:var(--border-width) solid var(--color-grey-300);}.k-Discussion__message__header{flex:1 0 auto;}.k-Discussion__message__content{box-sizing:border-box;width:100%;flex:1 0 100%;padding-left:", ";}}.k-Discussion__form{flex:0 0 auto;display:flex;align-items:flex-end;gap:", ";.k-Form-TextInput__textareaContainer{flex:1 0 auto;}.k-Discussion__form__button{flex:0 0 auto;}}.k-Discussion__list,.k-Discussion__message{@supports selector(:focus-visible){&:focus{outline-style:auto;}&:focus:not(:focus-visible){outline:transparent;}&:focus-visible{outline-style:auto;}}@supports not (selector(:focus-visible)){&:focus{outline:transparent;}}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(10));
+})(["display:flex;flex-direction:column;gap:", ";justify-content:space-between;.k-Discussion__list{flex-grow:1;flex-shrink:1;display:flex;flex-direction:column;gap:", ";overflow:scroll;}.k-Discussion__message{display:flex;gap:0 ", ";flex-wrap:wrap;align-items:center;.k-Discussion__message__avatar{flex:0 0 auto;width:", ";height:", ";border-radius:", ";object-fit:cover;object-position:center;border:var(--border-width) solid var(--color-grey-300);}.k-Discussion__message__header{flex:1 0 auto;}.k-Discussion__message__content{box-sizing:border-box;width:100%;flex:1 0 100%;padding-left:", ";}}.k-Discussion__form{flex:0 0 auto;display:flex;align-items:flex-end;gap:", ";.k-Form-TextInput__textareaContainer{flex:1 0 auto;}.k-Discussion__form__button{flex:0 0 auto;}}.k-Discussion__list,.k-Discussion__message{@supports selector(:focus-visible){&:focus{outline-style:auto;}&:focus:not(:focus-visible){outline:transparent;}&:focus-visible{outline-style:auto;}}@supports not (selector(:focus-visible)){&:focus{outline:transparent;}}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(10));
 
 var Discussion = function Discussion(_ref) {
   var className = _ref.className,
@@ -94,7 +94,7 @@ Discussion.Message.Content = function (_ref6) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     as: "div",
-    weight: "light",
+    weight: "400",
     className: (0, _classnames.default)('k-Discussion__message__content', className)
   }, props), children);
 };

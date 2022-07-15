@@ -1,8 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["button", "open", "onOpen", "onClose", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
-    _excluded2 = ["href", "className", "icon", "children"],
-    _excluded3 = ["type", "className", "icon", "children"],
+    _excluded2 = ["href", "textProps", "className", "icon", "children"],
+    _excluded3 = ["type", "textProps", "className", "icon", "children"],
     _excluded4 = ["className"];
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
@@ -16,7 +16,7 @@ var zoomInAndOpacity = keyframes(["0%{transform:translateX(calc(-1 * var(--Dropd
 var StyledDropdownMenu = styled.details.withConfig({
   displayName: "dropdown-menu__StyledDropdownMenu",
   componentId: "sc-goq24h-0"
-})(["position:relative;display:inline-block;.k-DropdownMenu__button{list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}:focus-visible{outline-offset:", ";&,& .k-DropdownMenu__button__inside{outline:auto;}}}.k-DropdownMenu__button__inside{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}&[open] > .k-DropdownMenu__button::before{content:' ';cursor:default;display:block;position:fixed;top:0;left:0;right:0;bottom:0;background:transparent;z-index:120;}.k-DropdownMenu__menu{display:flex;flex-direction:column;gap:", ";z-index:150;position:absolute;top:calc(50% + 1rem + ", " + (var(--dropdownMenu-top)));left:50%;width:max-content;max-width:", ";height:auto;padding:", " 0 ", ";transform:translateX(calc(-1 * var(--Dropdown-transform-x)));transform-origin:var(--Dropdown-transform-origin);}&[open] .k-DropdownMenu__menu{animation:var(--transition) ", ";}&.k-DropdownMenu--h-left .k-DropdownMenu__menu{--Dropdown-transform-x:calc(100% - ", ");--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}&.k-DropdownMenu--h-center .k-DropdownMenu__menu{--Dropdown-transform-x:50%;--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}&.k-DropdownMenu--h-right .k-DropdownMenu__menu{--Dropdown-transform-x:", ";--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}.k-DropdownMenu__menu__item{", " color:var(--color-grey-000);text-decoration:none;display:flex;flex-direction:row;align-items:center;gap:", ";padding:", " ", ";line-height:", ";font-size:", ";text-align:left;transition:color 0.2s ease;& svg,& svg path{fill:currentColor;}&:hover{color:var(--color-primary-100);}&:active,&:focus{color:var(--color-primary-300);}&:focus-visible{outline:auto;}.k-DropdownMenu__menu__item__iconWrapper{height:", ";width:", ";flex:0 0 ", ";svg{max-width:", ";max-height:", ";}}}.k-DropdownMenu__menu__separator{height:", ";background:var(--color-grey-700);padding:0;margin:", " ", ";}"], pxToRem(-2), pxToRem(1), pxToRem(8), pxToRem(300), pxToRem(8), pxToRem(10), zoomInAndOpacity, pxToRem(10 + 8), pxToRem(-8), pxToRem(-8), pxToRem(10 + 8), pxToRem(-8), TYPOGRAPHY.fontStyles.regular, pxToRem(10), pxToRem(7), pxToRem(15), pxToRem(16), stepToRem(-1), pxToRem(16), pxToRem(16), pxToRem(16), pxToRem(16), pxToRem(16), pxToRem(1), pxToRem(7), pxToRem(15));
+})(["position:relative;display:inline-block;.k-DropdownMenu__button{list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}:focus-visible{outline-offset:", ";&,& .k-DropdownMenu__button__inside{outline:auto;}}}.k-DropdownMenu__button__inside{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}&[open] > .k-DropdownMenu__button::before{content:' ';cursor:default;display:block;position:fixed;top:0;left:0;right:0;bottom:0;background:transparent;z-index:120;}.k-DropdownMenu__menu{display:flex;flex-direction:column;gap:", ";z-index:150;position:absolute;top:calc(50% + 1rem + ", " + (var(--dropdownMenu-top)));left:50%;width:max-content;max-width:", ";height:auto;padding:", " 0 ", ";transform:translateX(calc(-1 * var(--Dropdown-transform-x)));transform-origin:var(--Dropdown-transform-origin);}&[open] .k-DropdownMenu__menu{animation:var(--transition) ", ";}&.k-DropdownMenu--h-left .k-DropdownMenu__menu{--Dropdown-transform-x:calc(100% - ", ");--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}&.k-DropdownMenu--h-center .k-DropdownMenu__menu{--Dropdown-transform-x:50%;--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}&.k-DropdownMenu--h-right .k-DropdownMenu__menu{--Dropdown-transform-x:", ";--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}.k-DropdownMenu__menu__item{", " color:var(--color-grey-000);text-decoration:none;display:flex;flex-direction:row;align-items:center;gap:", ";padding:", " ", ";line-height:", ";font-size:", ";text-align:left;transition:color 0.2s ease;& svg,& svg path{fill:currentColor;}&:hover{color:var(--color-primary-100);}&:active,&:focus{color:var(--color-primary-300);}&:focus-visible{outline:auto;}.k-DropdownMenu__menu__item__iconWrapper{height:", ";width:", ";flex:0 0 ", ";svg{max-width:", ";max-height:", ";}}}.k-DropdownMenu__menu__separator{height:", ";background:var(--color-grey-700);padding:0;margin:", " ", ";}"], pxToRem(-2), pxToRem(1), pxToRem(8), pxToRem(300), pxToRem(8), pxToRem(10), zoomInAndOpacity, pxToRem(10 + 8), pxToRem(-8), pxToRem(-8), pxToRem(10 + 8), pxToRem(-8), TYPOGRAPHY.fontStyles['500'], pxToRem(10), pxToRem(7), pxToRem(15), pxToRem(16), stepToRem(-1), pxToRem(16), pxToRem(16), pxToRem(16), pxToRem(16), pxToRem(16), pxToRem(1), pxToRem(7), pxToRem(15));
 export var DropdownMenu = function DropdownMenu(_ref) {
   var button = _ref.button,
       open = _ref.open,
@@ -188,6 +188,8 @@ DropdownMenu.propTypes = {
 DropdownMenu.Link = function (_ref2) {
   var _ref2$href = _ref2.href,
       href = _ref2$href === void 0 ? '' : _ref2$href,
+      _ref2$textProps = _ref2.textProps,
+      textProps = _ref2$textProps === void 0 ? {} : _ref2$textProps,
       className = _ref2.className,
       icon = _ref2.icon,
       children = _ref2.children,
@@ -198,12 +200,14 @@ DropdownMenu.Link = function (_ref2) {
     className: classNames('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__link', className)
   }, rest), /*#__PURE__*/React.createElement(IconWrapper, {
     icon: icon
-  }), /*#__PURE__*/React.createElement("span", null, children));
+  }), /*#__PURE__*/React.createElement("span", textProps, children));
 };
 
 DropdownMenu.Button = function (_ref3) {
   var _ref3$type = _ref3.type,
       type = _ref3$type === void 0 ? 'button' : _ref3$type,
+      _ref3$textProps = _ref3.textProps,
+      textProps = _ref3$textProps === void 0 ? {} : _ref3$textProps,
       className = _ref3.className,
       icon = _ref3.icon,
       children = _ref3.children,
@@ -214,7 +218,7 @@ DropdownMenu.Button = function (_ref3) {
     className: classNames('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__button', 'k-u-reset-button', className)
   }, rest), /*#__PURE__*/React.createElement(IconWrapper, {
     icon: icon
-  }), /*#__PURE__*/React.createElement("span", null, children));
+  }), /*#__PURE__*/React.createElement("span", textProps, children));
 };
 
 DropdownMenu.Separator = function (_ref4) {

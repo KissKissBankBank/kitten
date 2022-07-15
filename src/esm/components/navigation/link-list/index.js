@@ -9,10 +9,11 @@ import { ScreenConfig } from '../../../constants/screen-config';
 import PropTypes from 'prop-types';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
 var StyledLinkList = styled.ul.withConfig({
   displayName: "link-list__StyledLinkList",
   componentId: "sc-yasa1m-0"
-})(["text-align:center;list-style-type:none;padding:0;@media (min-width:", "px){text-align:left;}&.k-LinkList--withoutMargin{margin-top:0;margin-bottom:0;.k-LinkList__item:last-child{margin-bottom:0;}}.k-LinkList__item{margin-bottom:", ";}.k-LinkList__item--double{margin-bottom:", ";}.k-LinkList__item--triple{margin-bottom:", ";}.k-LinkList__link{", ";font-size:", ";text-decoration:none;&:active,&.k-LinkList__link--isActive{color:", ";}&:hover{color:", ";}transition:color 0.2s;}.k-LinkList__item--regular,.k-LinkList__link--regular{", ";}.k-LinkList__item--light,.k-LinkList__link--light{", ";}.k-LinkList__link--normalLineHeight{line-height:normal;}.k-LinkList__link--light{color:", ";}.k-LinkList__link--dark{color:", ";}"], ScreenConfig.S.min, pxToRem(5), pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.primary3, COLORS.primary1, TYPOGRAPHY.fontStyles.regular, TYPOGRAPHY.fontStyles.light, COLORS.background1, COLORS.font1);
+})(["text-align:center;list-style-type:none;padding:0;@media (min-width:", "px){text-align:left;}&.k-LinkList--withoutMargin{margin-top:0;margin-bottom:0;.k-LinkList__item:last-child{margin-bottom:0;}}.k-LinkList__item{margin-bottom:", ";}.k-LinkList__item--double{margin-bottom:", ";}.k-LinkList__item--triple{margin-bottom:", ";}.k-LinkList__link{", ";font-size:", ";text-decoration:none;&:active,&.k-LinkList__link--isActive{color:", ";}&:hover{color:", ";}transition:color 0.2s;}.k-LinkList__item--regular,.k-LinkList__link--regular{", ";}.k-LinkList__item--light,.k-LinkList__link--light{", ";}.k-LinkList__link--normalLineHeight{line-height:normal;}.k-LinkList__link--light{color:", ";}.k-LinkList__link--dark{color:", ";}"], ScreenConfig.S.min, pxToRem(5), pxToRem(10), pxToRem(15), TYPOGRAPHY.fontStyles['500'], stepToRem(-1), COLORS.primary3, COLORS.primary1, TYPOGRAPHY.fontStyles['500'], TYPOGRAPHY.fontStyles['400'], COLORS.background1, COLORS.font1);
 export var LinkList = function LinkList(_ref) {
   var className = _ref.className,
       margin = _ref.margin,
@@ -24,6 +25,7 @@ export var LinkList = function LinkList(_ref) {
       href = _ref.href,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  checkDeprecatedWeights(weight);
   return /*#__PURE__*/React.createElement(StyledLinkList, _extends({}, others, {
     className: classNames('k-LinkList', others.className, {
       'k-LinkList--withoutMargin': !margin
@@ -48,7 +50,7 @@ LinkList.propTypes = {
   color: PropTypes.oneOf(['light', 'dark']),
   lineHeight: PropTypes.oneOf(['normal']),
   itemMargin: PropTypes.oneOf(['double', 'triple']),
-  weight: PropTypes.oneOf(['regular', 'light']),
+  weight: PropTypes.oneOf(['400', '500']),
   margin: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.shape({
     item: PropTypes.string.isRequired,
@@ -66,5 +68,5 @@ LinkList.defaultProps = {
   color: 'dark',
   lineHeight: null,
   itemMargin: null,
-  weight: 'regular'
+  weight: '500'
 };

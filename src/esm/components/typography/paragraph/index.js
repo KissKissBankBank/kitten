@@ -11,7 +11,7 @@ var modifierList = ['primary', 'secondary', 'tertiary', 'quaternary'];
 var StyledParagraph = styled.p.withConfig({
   displayName: "paragraph__StyledParagraph",
   componentId: "sc-1qoa9gz-0"
-})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], TYPOGRAPHY.fontStyles.light, function () {
+})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], TYPOGRAPHY.fontStyles['400'], function () {
   return modifierList.map(function (modifier) {
     return css(["&.k-Paragraph--", "{", "}"], modifier, function () {
       return modifierStyles(modifier);

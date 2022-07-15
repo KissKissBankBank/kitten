@@ -47,9 +47,7 @@ export default {
   component: Modal,
   parameters: {
     docs: {
-      page: () => (
-        <DocsPage filepath={__filename} importString="Modal as Modal" />
-      ),
+      page: () => <DocsPage filepath={__filename} importString="Modal" />,
     },
   },
   subcomponents: {

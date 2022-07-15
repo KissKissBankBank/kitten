@@ -23,7 +23,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["className", "loaderPosition", "loaderProps", "paragraphProps", "children"];
+var _excluded = ["className", "loaderPosition", "loaderProps", "loaderComponent", "paragraphProps", "children"];
 
 var StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
@@ -34,12 +34,14 @@ var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
   var className = _ref.className,
       loaderPosition = _ref.loaderPosition,
       loaderProps = _ref.loaderProps,
+      loaderComponent = _ref.loaderComponent,
       paragraphProps = _ref.paragraphProps,
       children = _ref.children,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+  var Component = loaderComponent || _loader.Loader;
   return /*#__PURE__*/_react.default.createElement(StyledLoaderWithParagraph, (0, _extends2.default)({
     className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--" + loaderPosition)
-  }, others), /*#__PURE__*/_react.default.createElement(_loader.Loader, (0, _extends2.default)({
+  }, others), /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     "aria-hidden": true
   }, loaderProps, {
     className: (0, _classnames.default)('k-LoaderWithParagraph__loader', loaderProps.className)
@@ -56,10 +58,12 @@ LoaderWithParagraph.defaultProps = {
   children: 'Loading',
   loaderPosition: 'left',
   loaderProps: {},
-  paragraphProps: {}
+  paragraphProps: {},
+  loaderComponent: null
 };
 LoaderWithParagraph.propTypes = {
   loaderPosition: _propTypes.default.oneOf(['top', 'right', 'bottom', 'left']),
   loaderProps: _propTypes.default.object,
-  paragraphProps: _propTypes.default.object
+  paragraphProps: _propTypes.default.object,
+  loaderComponent: _propTypes.default.oneOfType([_propTypes.default.func, _propTypes.default.object])
 };

@@ -6,7 +6,7 @@ export var SupTitle = function SupTitle(props) {
     size: "small",
     lineHeight: "normal",
     transform: "uppercase",
-    weight: "bold"
+    weight: "700"
   }, props));
 };
 SupTitle.defaultProps = {

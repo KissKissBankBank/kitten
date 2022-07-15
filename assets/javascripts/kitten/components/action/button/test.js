@@ -222,4 +222,14 @@ describe('<Button />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with bullet', () => {
+    beforeEach(() => {
+      component = renderer.create(<Button hasBullet>!</Button>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

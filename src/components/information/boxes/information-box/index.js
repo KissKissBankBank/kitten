@@ -30,7 +30,7 @@ var _excluded = ["title", "titleProps", "children"];
 var StyledInformationBox = _styledComponents.default.div.withConfig({
   displayName: "information-box__StyledInformationBox",
   componentId: "sc-1vnii5x-0"
-})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border);}"], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1);
+})(["&.k-InformationBox{display:inline-block;", "}.k-InformationBox__container{padding:", " ", " ", " ", ";color:", ";background-color:", ";border:var(--border);}"], _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.background1);
 
 var InformationBox = function InformationBox(_ref) {
   var title = _ref.title,

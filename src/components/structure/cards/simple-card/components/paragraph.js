@@ -22,7 +22,7 @@ var Paragraph = function Paragraph(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     lineHeight: "normal",
     size: "micro",
-    weight: "light",
+    weight: "400",
     tag: "p",
     className: "k-u-margin-bottom-singleHalf"
   }, (0, _parser.parseHtml)(paragraph)), /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {

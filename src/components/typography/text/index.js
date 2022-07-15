@@ -37,7 +37,7 @@ var Text = function Text(_ref) {
       style = _ref.style,
       letterSpacing = _ref.letterSpacing,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  (0, _deprecated.checkDeprecatedSizes)(size);
+  (0, _deprecated.checkDeprecatedWeights)(weight);
   var Tag = as || tag;
   var textClassName = (0, _classnames.default)({
     // Color.
@@ -94,14 +94,8 @@ var Text = function Text(_ref) {
     // Size.
     'k-u-size-giant': size == 'giant',
     'k-u-size-huge': size == 'huge',
-    'k-u-size-big': size == 'big',
-    // Deprecated
     'k-u-size-large': size == 'large',
-    'k-u-size-default': size == 'default',
-    // Deprecated
     'k-u-size-medium': size == 'medium',
-    'k-u-size-tiny': size == 'tiny',
-    // Deprecated
     'k-u-size-small': size == 'small',
     'k-u-size-micro': size == 'micro',
     'k-u-size-nano': size == 'nano',
@@ -111,9 +105,9 @@ var Text = function Text(_ref) {
     // Transform.
     'k-u-transform-uppercase': transform == 'uppercase',
     // Weight.
-    'k-u-weight-light': weight == 'light',
-    'k-u-weight-regular': weight == 'regular',
-    'k-u-weight-bold': weight == 'bold'
+    'k-u-weight-400': weight == '400',
+    'k-u-weight-500': weight == '500',
+    'k-u-weight-700': weight == '700'
   }, className);
   return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, others, {
     className: textClassName,
@@ -133,7 +127,7 @@ Text.propTypes = {
   size: _propTypes.default.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
   transform: _propTypes.default.oneOf(['uppercase']),
-  weight: _propTypes.default.oneOf(['light', 'regular', 'bold']),
+  weight: _propTypes.default.oneOf(['400', '500', '700']),
   letterSpacing: _propTypes.default.string
 };
 Text.defaultProps = {
@@ -147,6 +141,6 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: 'light',
+  weight: '400',
   letterSpacing: null
 };

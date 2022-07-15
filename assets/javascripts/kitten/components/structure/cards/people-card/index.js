@@ -36,6 +36,20 @@ const StyledPeopleCard = styled.article`
     flex: 1 1 auto;
   }
 
+  &.k-PeopleCard--disabled {
+    background-color: var(--color-grey-200);
+    border-color: var(--color-grey-400);
+    color: var(--color-grey-700);
+
+    .k-PeopleCard__lastCell {
+      display: none;
+    }
+
+    .k-PeopleCard__image {
+      opacity: .5;
+    }
+  }
+
   .k-PeopleCard__lastCell {
     flex: 0 0 auto;
     z-index: 2;
@@ -60,10 +74,17 @@ const StyledPeopleCard = styled.article`
   }
 `
 
-export const PeopleCard = ({ className = '', children, ...props }) => {
+export const PeopleCard = ({
+  className = '',
+  children,
+  disabled = false,
+  ...props
+}) => {
   return (
     <StyledPeopleCard
-      className={classNames('k-PeopleCard', className)}
+      className={classNames('k-PeopleCard', className, {
+        'k-PeopleCard--disabled': disabled,
+      })}
       {...props}
     >
       {children}

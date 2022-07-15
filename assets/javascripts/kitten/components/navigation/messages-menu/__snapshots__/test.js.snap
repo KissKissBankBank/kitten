@@ -2,7 +2,7 @@
 
 exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
 <ul
-  className="sc-bdvvtL NKIbJ k-MessagesMenu"
+  className="sc-gsDKAQ jCYfue k-MessagesMenu"
 >
   <li
     className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
@@ -17,7 +17,9 @@ exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
         className="k-MessagesMenu__message__avatar"
         src="/kitten-0.jpg"
       />
-      <div>
+      <div
+        className="k-MessagesMenu__message__content"
+      >
         <div>
           <span>
             Claude L.
@@ -52,7 +54,9 @@ exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
         className="k-MessagesMenu__message__avatar"
         src="/kitten-0.jpg"
       />
-      <div>
+      <div
+        className="k-MessagesMenu__message__content"
+      >
         <div>
           <span>
             Claude L.
@@ -72,6 +76,137 @@ exports[`<MessagesMenu /> compare with snapshot matches with snapshot 1`] = `
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
         </span>
       </div>
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`<MessagesMenu /> compare with snapshot with close button matches with snapshot 1`] = `
+<ul
+  className="sc-gsDKAQ jCYfue k-MessagesMenu"
+>
+  <li
+    className="k-MessagesMenu__message k-MessagesMenu__message--unread k-MessagesMenu__message--active"
+  >
+    <button
+      className="k-u-reset-button k-MessagesMenu__message__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <img
+        alt=""
+        className="k-MessagesMenu__message__avatar"
+        src="/kitten-0.jpg"
+      />
+      <div
+        className="k-MessagesMenu__message__content"
+      >
+        <div>
+          <span>
+            Claude L.
+          </span>
+          <span>
+             • Hier
+             
+            <span
+              className="k-u-a11y-visuallyHidden"
+            >
+              à 
+            </span>
+            19:30
+          </span>
+        </div>
+        <span>
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </span>
+      </div>
+    </button>
+    <button
+      aria-label="Hello world"
+      className="sc-bdvvtL dDDqKo k-Button k-MessagesMenu__message__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
+      onClick={[Function]}
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      <svg
+        fill="none"
+        height="18"
+        viewBox="0 0 17 18"
+        width="17"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+          fill="var(--color-grey-900, #222)"
+        />
+      </svg>
+    </button>
+  </li>
+  <li
+    className="k-MessagesMenu__message k-MessagesMenu__message--read"
+  >
+    <button
+      className="k-u-reset-button k-MessagesMenu__message__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <img
+        alt=""
+        className="k-MessagesMenu__message__avatar"
+        src="/kitten-0.jpg"
+      />
+      <div
+        className="k-MessagesMenu__message__content"
+      >
+        <div>
+          <span>
+            Claude L.
+          </span>
+          <span>
+             • Hier
+             
+            <span
+              className="k-u-a11y-visuallyHidden"
+            >
+              à 
+            </span>
+            19:30
+          </span>
+        </div>
+        <span>
+          Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </span>
+      </div>
+    </button>
+    <button
+      aria-label="Hello world"
+      className="sc-bdvvtL dDDqKo k-Button k-MessagesMenu__message__closeButton k-Button--micro k-Button--hydrogen k-Button--fit-icon k-Button--rounded"
+      onClick={[Function]}
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      <svg
+        fill="none"
+        height="18"
+        viewBox="0 0 17 18"
+        width="17"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+          fill="var(--color-grey-900, #222)"
+        />
+      </svg>
     </button>
   </li>
 </ul>

@@ -47,13 +47,13 @@ var StyledDatePicker = _styledComponents.default.div.withConfig({
 }, (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(22), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(32), function (_ref2) {
   var styles = _ref2.styles;
   return (0, _styledComponents.css)(["background-color ", ";color:", ";"], styles.header.backgroundColor, styles.header.color);
-}, (0, _typography.pxToRem)(23), (0, _typography.pxToRem)(63), (0, _typography.stepToRem)(1), _typographyConfig.default.fontStyles.regular, function (_ref3) {
+}, (0, _typography.pxToRem)(23), (0, _typography.pxToRem)(63), (0, _typography.stepToRem)(1), _typographyConfig.default.fontStyles['500'], function (_ref3) {
   var styles = _ref3.styles;
   return (0, _styledComponents.css)(["color:", ";"], styles.weekdaysColor);
 }, tinyCellSize, tinyCellSize, (0, _typography.stepToRem)(1), _screenConfig.ScreenConfig.S.min, cellSize, cellSize, function (_ref4) {
   var styles = _ref4.styles;
   return (0, _styledComponents.css)(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, _typographyConfig.default.fontStyles.regular, function (_ref5) {
+}, _typographyConfig.default.fontStyles['500'], function (_ref5) {
   var styles = _ref5.styles;
   return (0, _styledComponents.css)(["color:", ";"], styles.day.today.color);
 }, function (_ref6) {
@@ -65,10 +65,10 @@ var StyledDatePicker = _styledComponents.default.div.withConfig({
 }, function (_ref8) {
   var styles = _ref8.styles;
   return (0, _styledComponents.css)(["color:", ";"], styles.day.disabled.color);
-}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, _screenConfig.ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, (0, _typography.stepToRem)(1), _typographyConfig.default.fontStyles.light, function (_ref9) {
+}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, _screenConfig.ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, (0, _typography.stepToRem)(1), _typographyConfig.default.fontStyles['400'], function (_ref9) {
   var styles = _ref9.styles;
   return (0, _styledComponents.css)(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, _typographyConfig.default.fontStyles.light, function (_ref10) {
+}, _typographyConfig.default.fontStyles['400'], function (_ref10) {
   var styles = _ref10.styles;
   return (0, _styledComponents.css)(["background-color:", ";color:", ";border:double ", " ", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });

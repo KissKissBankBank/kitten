@@ -63,7 +63,7 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledText, {
       tag: "p",
       size: "small",
-      weight: "regular"
+      weight: "500"
     }, title), /*#__PURE__*/_react.default.createElement(StyledButton, {
       className: className
     }, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {

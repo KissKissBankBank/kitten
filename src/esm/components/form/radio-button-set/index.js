@@ -1,15 +1,16 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["items", "disabled", "className", "name", "error", "variant", "design", "label", "children", "size", "fontWeight", "paragraphStyle", "labelProps"],
+var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "size", "fontWeight", "weight", "paragraphStyle", "labelProps"],
     _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
-import deprecated from 'prop-types-extra/lib/deprecated';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import { RadioButton } from '../../form/radio-button';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { Label } from '../../form/label';
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
+import deprecated from 'prop-types-extra/lib/deprecated';
 var StyledRadioButtonSet = styled.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
   componentId: "sc-1bde3vb-0"
@@ -20,18 +21,19 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
       className = _ref.className,
       name = _ref.name,
       error = _ref.error,
-      variant = _ref.variant,
       design = _ref.design,
       label = _ref.label,
       children = _ref.children,
       size = _ref.size,
       fontWeight = _ref.fontWeight,
+      weight = _ref.weight,
       paragraphStyle = _ref.paragraphStyle,
       labelProps = _ref.labelProps,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
+  checkDeprecatedWeights(weight);
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
-    className: classNames('k-Form-RadioButtonSet', className, "k-Form-RadioButtonSet--" + (variant || 'orion')),
+    className: classNames('k-Form-RadioButtonSet', className),
     disabled: disabled
   }, props), label && /*#__PURE__*/React.createElement(Label, _extends({
     tag: "legend"
@@ -46,11 +48,10 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
 
     return /*#__PURE__*/React.createElement(RadioButton, _extends({
       id: id,
-      variant: variant || null,
       design: design,
       error: error,
       size: size,
-      fontWeight: fontWeight,
+      weight: fontWeight || weight,
       paragraphStyle: paragraphStyle,
       name: name,
       key: id
@@ -69,11 +70,11 @@ RadioButtonSet.propTypes = {
     defaultChecked: PropTypes.bool
   })),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  variant: deprecated(PropTypes.oneOf(['andromeda', 'orion']), 'Please use the RadioSet component instead'),
   design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
-  fontWeight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
+  weight: PropTypes.oneOf(['400', '500', '700']),
   paragraphStyle: PropTypes.bool
 };
 RadioButtonSet.defaultProps = {
@@ -85,6 +86,6 @@ RadioButtonSet.defaultProps = {
   disabled: false,
   labelProps: {},
   size: 'medium',
-  fontWeight: 'regular',
+  weight: '500',
   paragraphStyle: false
 };

@@ -59,6 +59,7 @@ WithInput.args = {
   limit: undefined,
   unit: undefined,
   noMargin: false,
+  tag: null,
 }
 WithInput.argTypes = {
   id: { control: 'text' },
@@ -95,6 +96,7 @@ WithPassword.args = {
   errorMessage: 'Error message…',
   help: 'Help message…',
   helpHiddenOnBlur: false,
+  tag: null,
 }
 WithPassword.argTypes = {
   id: { control: 'text' },
@@ -142,6 +144,7 @@ WithRadioButtons.args = {
   errorMessage: 'Error message…',
   help: 'Help message…',
   helpHiddenOnBlur: false,
+  tag: null,
 }
 WithRadioButtons.argTypes = {
   id: { control: 'text' },
@@ -188,6 +191,7 @@ WithRadio.args = {
   errorMessage: 'Error message…',
   help: 'Help message…',
   helpHiddenOnBlur: false,
+  tag: null,
 }
 WithRadio.argTypes = {
   id: { control: 'text' },
@@ -229,6 +233,7 @@ WithAutocomplete.args = {
   errorMessage: 'Error message…',
   help: 'Help message…',
   helpHiddenOnBlur: false,
+  tag: null,
 }
 WithAutocomplete.argTypes = {
   id: { control: 'text' },
@@ -246,4 +251,29 @@ WithAutocomplete.argTypes = {
   errorMessage: { control: 'text' },
   help: { control: 'text' },
   helpHiddenOnBlur: { control: 'boolean' },
+}
+
+export const WithMultipleExamples = () => {
+  return (
+    <div className="k-u-flex k-u-flex-direction-column k-u-flex-gap-double">
+      <div>
+        <FieldInputExample {...WithInput.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldPasswordExample {...WithPassword.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldAutocompleteExample {...WithAutocomplete.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldInputExample {...WithInput.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldPasswordExample {...WithPassword.args} helpHiddenOnBlur />
+      </div>
+      <div>
+        <FieldAutocompleteExample {...WithAutocomplete.args} helpHiddenOnBlur />
+      </div>
+    </div>
+  )
 }

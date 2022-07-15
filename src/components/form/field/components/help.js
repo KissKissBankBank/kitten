@@ -13,12 +13,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _text = require("../../../typography/text");
 
+var _typography = require("../../../../helpers/utils/typography");
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styledComponents = require("styled-components");
 
 var _excluded = ["children", "className", "hiddenOnBlur"];
-var FieldHelpGlobalStyles = (0, _styledComponents.createGlobalStyle)([".k-Field__control + .k-Field__help--hiddenOnBlur,.k-Field__control + .k-Field__error + .k-Field__help--hiddenOnBlur{opacity:0;transition:opacity var(--transition);}.k-Field__control:focus-within + .k-Field__help--hiddenOnBlur,.k-Field__control:focus-within + .k-Field__error + .k-Field__help--hiddenOnBlur{opacity:1;}"]);
+var FieldHelpGlobalStyles = (0, _styledComponents.createGlobalStyle)([".k-Field__control + .k-Field__help--hiddenOnBlur,.k-Field__control + .k-Field__error + .k-Field__help--hiddenOnBlur{opacity:0;max-height:0;margin-top:0;transition:opacity var(--transition),max-height var(--transition),margin-top var(--transition);}.k-Field__control:focus-within + .k-Field__help--hiddenOnBlur,.k-Field__control:focus-within + .k-Field__error + .k-Field__help--hiddenOnBlur{opacity:1;max-height:", ";margin-top:", " !important;}"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10));
 
 var FieldHelp = function FieldHelp(_ref) {
   var children = _ref.children,
@@ -30,9 +32,10 @@ var FieldHelp = function FieldHelp(_ref) {
     tag: "p",
     cssColor: "var(--color-grey-700)",
     size: "micro",
-    weight: "light",
+    weight: "400",
     lineHeight: "normal",
-    className: (0, _classnames.default)('k-Field__help', className, 'k-u-margin-none', 'k-u-margin-top-single', {
+    className: (0, _classnames.default)('k-Field__help', className, 'k-u-margin-none', {
+      'k-u-margin-top-single': !hiddenOnBlur,
       'k-Field__help--hiddenOnBlur': hiddenOnBlur
     })
   }, others), children));

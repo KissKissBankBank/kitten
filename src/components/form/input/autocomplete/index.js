@@ -5,7 +5,11 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.maxVisibleSuggestions = exports.StyledSuggestionsList = exports.Autocomplete = void 0;
 
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 
@@ -14,6 +18,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _isFunction = _interopRequireDefault(require("lodash/fp/isFunction"));
+
+var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -31,7 +37,7 @@ var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
 var _loader = require("../../../graphics/animations/loader");
 
-var _excluded = ["className", "items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"];
+var _excluded = ["className", "items", "label", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -43,12 +49,12 @@ exports.maxVisibleSuggestions = maxVisibleSuggestions;
 var Wrapper = _styledComponents.default.div.withConfig({
   displayName: "autocomplete__Wrapper",
   componentId: "sc-1bpe1y1-0"
-})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;border-radius:var(--border-radius-s);background:", ";border:var(--border-width) solid var(--color-grey-400);padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border:var(--border-danger);color:", ";:focus{border-color:var(--color-grey-500);color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__input{border:var(--color-grey-300);background-color:var(--color-grey-200);color:var(--color-grey-600);}.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.error3, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2);
+})(["display:flex;position:relative;.k-Form-Autocomplete__input{display:block;width:100%;height:", ";box-sizing:border-box;border-radius:var(--border-radius-s);background:", ";border:var(--border-width) solid var(--color-grey-400);padding:0 ", ";", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}&:focus{border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}}&.k-Form-Autocomplete--error .k-Form-Autocomplete__input{border:var(--border-danger);color:", ";:focus{border-color:var(--color-grey-500);color:", ";}}.k-Form-Autocomplete__loader{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;}.k-Form-Autocomplete__icon{display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;}&.k-Form-Autocomplete--hasIcon-left{.k-Form-Autocomplete__input{padding-left:", ";}.k-Form-Autocomplete__icon{left:0;}}&.k-Form-Autocomplete--hasIcon-right{.k-Form-Autocomplete__input{padding-right:", ";}.k-Form-Autocomplete__loader{padding-right:", ";}.k-Form-Autocomplete__icon{right:0;}}&.k-Form-Autocomplete--disabled{.k-Form-Autocomplete__input{border:var(--color-grey-300);background-color:var(--color-grey-200);color:var(--color-grey-600);}.k-Form-Autocomplete__icon{& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}}}"], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles['400'], (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.error3, _colorsConfig.default.font1, (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), (0, _typography.pxToRem)(45), _colorsConfig.default.font2, _colorsConfig.default.font2);
 
 var StyledSuggestionsList = _styledComponents.default.ul.withConfig({
   displayName: "autocomplete__StyledSuggestionsList",
   componentId: "sc-1bpe1y1-1"
-})(["box-sizing:border-box;position:absolute;top:calc(100% + ", ");left:", ";right:", ";display:flex;flex-direction:column;gap:", ";overflow-y:auto;margin:0;padding:", ";background:var(--color-grey-000);border:var(--border-width) solid var(--color-grey-400);border-radius:var(--border-radius-m);list-style:none;max-height:calc( ", " + (min(2,(var(--Autocomplete-suggestions) - 1)) * ", ") );.k-Form-Autocomplete__suggestion__item{box-sizing:border-box;height:", ";padding:", " ", ";border-radius:var(--border-radius-s);", ";font-size:", ";line-height:", ";color:var(--color-grey-900);&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color var(--transition);:hover,:focus,:active{background-color:var(--color-grey-200);}&[aria-selected='true']{background-color:var(--color-grey-300);}}}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(-1), (0, _typography.pxToRem)(-1), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(4 + 34 * maxVisibleSuggestions), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(34), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(13), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(18));
+})(["box-sizing:border-box;position:absolute;top:calc(100% + ", ");left:", ";right:", ";display:flex;flex-direction:column;gap:", ";overflow-y:auto;margin:0;padding:", ";background:var(--color-grey-000);border:var(--border-width) solid var(--color-grey-400);border-radius:var(--border-radius-m);list-style:none;max-height:calc( ", " + (min(2,(var(--Autocomplete-suggestions) - 1)) * ", ") );.k-Form-Autocomplete__suggestion__item{box-sizing:border-box;height:", ";padding:", " ", ";border-radius:var(--border-radius-s);", ";font-size:", ";line-height:", ";color:var(--color-grey-900);&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color var(--transition);:hover,:focus,:active{background-color:var(--color-grey-200);}&[aria-selected='true']{background-color:var(--color-grey-300);}}}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(-1), (0, _typography.pxToRem)(-1), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(4 + 34 * maxVisibleSuggestions), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(34), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(13), _typographyConfig.default.fontStyles['400'], (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(18));
 
 exports.StyledSuggestionsList = StyledSuggestionsList;
 
@@ -57,6 +63,7 @@ var Autocomplete = function Autocomplete(_ref) {
 
   var className = _ref.className,
       defaultItems = _ref.items,
+      label = _ref.label,
       error = _ref.error,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
@@ -94,8 +101,7 @@ var Autocomplete = function Autocomplete(_ref) {
   }) : shouldShowNoResultMessage;
   (0, _react.useEffect)(function () {
     updateSuggestions();
-    setShowSuggestions(!!value);
-  }, [value, defaultItems]);
+  }, [value]);
   (0, _react.useEffect)(function () {
     var _suggestionsEl$curren, _suggestionsEl$curren2;
 
@@ -107,15 +113,16 @@ var Autocomplete = function Autocomplete(_ref) {
   }, [selectedSuggestionIndex]);
 
   var handleChange = function handleChange(e) {
+    setShowSuggestions(!(0, _isEmpty.default)(e.target.value));
     setValue(e.target.value);
     onChange(e);
   };
 
   var handleBlur = function handleBlur(e) {
+    onBlur(e);
     setTimeout(function () {
       setShowSuggestions(false);
-    }, 100);
-    onBlur(e);
+    }, 200);
   };
 
   var handleKeyDown = function handleKeyDown(e) {
@@ -135,7 +142,8 @@ var Autocomplete = function Autocomplete(_ref) {
       if (e.key === 'Enter') {
         e.preventDefault();
         var selectedValue = items[selectedSuggestionIndex];
-        handleClickItem(selectedValue)();
+        handleClickItem(selectedValue);
+        setShowSuggestions(false);
       }
     }
 
@@ -143,27 +151,66 @@ var Autocomplete = function Autocomplete(_ref) {
   };
 
   var handleClickItem = function handleClickItem(value) {
-    return function () {
-      if (!value) return;
-      inputEl.current.value = value;
-      inputEl.current.focus();
-      setValue(value);
-      setShowSuggestions(false);
-      onSelect(value);
-    };
+    if (!value) return;
+    var selectedValue = value[label] || value;
+    inputEl.current.value = selectedValue;
+    inputEl.current.focus();
+    onSelect(value);
+    setValue(selectedValue);
+    setShowSuggestions(false);
   };
 
-  var updateSuggestions = function updateSuggestions() {
-    var search = ("" + value).toLowerCase();
-    var newItems = updateSuggestionsStrategy ? updateSuggestionsStrategy({
-      items: defaultItems,
-      value: value
-    }) : defaultItems.filter(function (item) {
-      return item.toLowerCase().includes(search) && item !== value;
-    });
-    setItems(newItems);
-    resetSelectedItem();
-  };
+  var updateSuggestions = /*#__PURE__*/function () {
+    var _ref2 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+      var search, newItems;
+      return _regenerator.default.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              search = ("" + value).toLowerCase();
+
+              if (!updateSuggestionsStrategy) {
+                _context.next = 7;
+                break;
+              }
+
+              _context.next = 4;
+              return updateSuggestionsStrategy({
+                items: items,
+                value: value
+              });
+
+            case 4:
+              _context.t0 = _context.sent;
+              _context.next = 8;
+              break;
+
+            case 7:
+              _context.t0 = defaultItems.filter(function (item) {
+                if (typeof item === 'string') {
+                  return item.toLowerCase().includes(search) && item !== value;
+                }
+
+                return item[label].toLowerCase().includes(search) && item[label] !== value;
+              });
+
+            case 8:
+              newItems = _context.t0;
+              setItems(newItems);
+              resetSelectedItem();
+
+            case 11:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function updateSuggestions() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
 
   var prevSelectedItem = function prevSelectedItem() {
     var newIndex = selectedSuggestionIndex - 1;
@@ -232,12 +279,14 @@ var Autocomplete = function Autocomplete(_ref) {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: item + index,
       id: (0, _slugify.default)(item + "-" + index),
-      onClick: handleClickItem(item),
+      onClick: function onClick() {
+        return handleClickItem(item);
+      },
       role: "option",
       "aria-selected": selectedSuggestionIndex === index,
       tabIndex: "-1",
       className: "k-Form-Autocomplete__suggestion__item"
-    }, item);
+    }, item[label] || item);
   })), /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, {
     lang: "en",
     "aria-live": "assertive"
@@ -247,7 +296,7 @@ var Autocomplete = function Autocomplete(_ref) {
 exports.Autocomplete = Autocomplete;
 Autocomplete.propTypes = {
   name: _propTypes.default.string.isRequired,
-  items: _propTypes.default.arrayOf(_propTypes.default.string).isRequired,
+  items: _propTypes.default.arrayOf(_propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object])).isRequired,
   error: _propTypes.default.bool,
   icon: _propTypes.default.object,
   iconPosition: _propTypes.default.oneOf(['left', 'right']),

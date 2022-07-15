@@ -45,7 +45,7 @@ export var EngagementCardWithImage = function EngagementCardWithImage(_ref2) {
     imageHeight: imageHeight
   }, imgProps))), /*#__PURE__*/React.createElement(StyledText, _extends({
     size: "micro",
-    weight: "regular",
+    weight: "500",
     color: "font1",
     decoration: "none",
     lineHeight: "normal"

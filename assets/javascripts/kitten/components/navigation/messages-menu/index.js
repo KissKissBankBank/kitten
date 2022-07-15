@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { Button } from '../../../components/action/button'
+import { CrossIconNext } from '../../../components/graphics/icons-next/cross-icon-next'
 
 const StyledMessagesMenu = styled.ul`
   display: flex;
@@ -17,9 +19,17 @@ const StyledMessagesMenu = styled.ul`
   padding-left: ${pxToRem(3)};
 
   .k-MessagesMenu__message {
+    overflow: hidden;
     position: relative;
+    flex: 0 0 auto;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: ${pxToRem(10)};
+    align-items: center;
+    margin-left: ${pxToRem(-3)};
+    padding-left: ${pxToRem(3)};
+    transition: width var(--transition);
   }
 
   .k-MessagesMenu__message--unread .k-MessagesMenu__message__button {
@@ -37,7 +47,7 @@ const StyledMessagesMenu = styled.ul`
 
   .k-MessagesMenu__message__button {
     display: flex;
-    width: 100%;
+    flex: 1 0 calc(100% - ${pxToRem(15 + 10 + 30 + 10)});
     gap: ${pxToRem(10)};
     align-items: center;
     height: ${pxToRem(55)};
@@ -45,7 +55,6 @@ const StyledMessagesMenu = styled.ul`
     padding-inline: ${pxToRem(15)} ${pxToRem(10)};
     transition: background-color var(--transition);
     border-radius: var(--border-radius-m);
-
     outline-offset: ${pxToRem(-2)};
   }
 
@@ -59,6 +68,10 @@ const StyledMessagesMenu = styled.ul`
     border: var(--border-width) solid var(--color-grey-300);
   }
 
+  .k-MessagesMenu__message__content {
+    flex: 1 0 calc(100% - pxToRem(15 + 30 + 2 + 10));
+  }
+
   .k-MessagesMenu__message--unread {
     &::before {
       content: '';
@@ -68,7 +81,24 @@ const StyledMessagesMenu = styled.ul`
       border-radius: var(--border-radius-rounded);
       background-color: var(--color-primary-500);
       top: calc(50% - ${pxToRem(3)});
-      left: ${pxToRem(-3)};
+      left: 0;
+    }
+  }
+
+  .k-MessagesMenu__message__closeButton {
+    flex: 0 0 ${pxToRem(30)};
+    transition: opacity var(--transition), margin-right var(--transition);
+    margin-right: ${pxToRem(-30 - 10)};
+    opacity: 0;
+  }
+
+  @media (hover: hover) {
+    .k-MessagesMenu__message:hover,
+    .k-MessagesMenu__message:focus-within {
+      .k-MessagesMenu__message__closeButton {
+        margin-right: ${pxToRem(10)};
+        opacity: 1;
+      }
     }
   }
 `
@@ -90,7 +120,8 @@ MessagesMenu.Message = ({
   status = 'read',
   active,
   onClick,
-  avatarProps,
+  avatarProps = {},
+  closeButtonProps = {},
   ...props
 }) => {
   return (
@@ -118,12 +149,29 @@ MessagesMenu.Message = ({
             avatarProps.className,
           )}
         />
-        <div>{children}</div>
+        <div className="k-MessagesMenu__message__content">{children}</div>
       </button>
+
+      {Object.keys(closeButtonProps).length > 0 && (
+        <Button
+          rounded
+          fit="icon"
+          size="micro"
+          className={classNames(
+            'k-MessagesMenu__message__closeButton',
+            avatarProps.className,
+          )}
+          {...closeButtonProps}
+        >
+          {closeButtonProps.children || <CrossIconNext />}
+        </Button>
+      )}
     </li>
   )
 }
 
 MessagesMenu.Message.propTypes = {
   status: PropTypes.oneOf(['active', 'read', 'unread']),
+  avatarProps: PropTypes.object,
+  closeButtonProps: PropTypes.object,
 }

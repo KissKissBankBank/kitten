@@ -53,7 +53,7 @@ export var CommentAvatar = /*#__PURE__*/function (_PureComponent) {
     if (!commentDate) return;
     return /*#__PURE__*/React.createElement(Text, {
       size: "micro",
-      weight: "light",
+      weight: "400",
       color: "font1"
     }, commentDate);
   };

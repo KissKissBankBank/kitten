@@ -16,7 +16,7 @@ const DiscussionWrapper = styled.div`
   justify-content: space-between;
 
   .k-Discussion__list {
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 1;
     display: flex;
     flex-direction: column;

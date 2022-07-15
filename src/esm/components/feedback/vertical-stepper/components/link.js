@@ -12,7 +12,7 @@ import { LINK_CLASSNAME } from '../index';
 var StyledParagraph = styled.span.withConfig({
   displayName: "link__StyledParagraph",
   componentId: "sc-kwm1tk-0"
-})(["margin:0;padding:0;line-height:1;.k-Steppers--VerticalStepper__link{", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;@media (min-width:", "px){font-size:", ";}:before{padding:0 ", ";content:'\u25CF';font-size:", ";color:", ";}&:hover,&:focus,&:active{color:", ";}}"], TYPOGRAPHY.fontStyles.regular, stepToRem(-2), COLORS.primary1, ScreenConfig.S.min, stepToRem(-1), pxToRem(8), pxToRem(8), COLORS.font1, COLORS.primary3);
+})(["margin:0;padding:0;line-height:1;.k-Steppers--VerticalStepper__link{", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;@media (min-width:", "px){font-size:", ";}:before{padding:0 ", ";content:'\u25CF';font-size:", ";color:", ";}&:hover,&:focus,&:active{color:", ";}}"], TYPOGRAPHY.fontStyles['500'], stepToRem(-2), COLORS.primary1, ScreenConfig.S.min, stepToRem(-1), pxToRem(8), pxToRem(8), COLORS.font1, COLORS.primary3);
 export var Link = function Link(_ref) {
   var className = _ref.className,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);

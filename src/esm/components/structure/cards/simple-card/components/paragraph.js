@@ -10,7 +10,7 @@ export var Paragraph = function Paragraph(_ref) {
   }, /*#__PURE__*/React.createElement(Text, {
     lineHeight: "normal",
     size: "micro",
-    weight: "light",
+    weight: "400",
     tag: "p",
     className: "k-u-margin-bottom-singleHalf"
   }, parseHtml(paragraph)), /*#__PURE__*/React.createElement(HorizontalStroke, {

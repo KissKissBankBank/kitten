@@ -8,7 +8,6 @@ import classNames from 'classnames';
 import { WarningCircleIcon } from '../../../graphics/icons/warning-circle-icon';
 import { CheckedCircleIcon } from '../../../graphics/icons/checked-circle-icon';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 import find from 'lodash/fp/find';
 import flow from 'lodash/fp/flow';
 import uniqBy from 'lodash/fp/uniqBy';
@@ -58,7 +57,6 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       arrowPosition = _ref.arrowPosition,
       labelProps = _ref.labelProps,
       inputProps = _ref.inputProps;
-  checkDeprecatedSizes(size);
 
   var _useState = useState([]),
       flattenedOptions = _useState[0],

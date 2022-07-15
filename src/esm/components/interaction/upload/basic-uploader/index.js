@@ -148,14 +148,14 @@ export var BasicUploader = function BasicUploader(_ref) {
     "aria-hidden": true
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Text, {
     tag: "p",
-    weight: "regular",
+    weight: "500",
     color: internalStatus === 'error' ? 'error' : 'font1',
     size: "small",
     lineHeight: "normal",
     className: "k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
   }, internalStatus === 'file-selected' ? internalFileName : errorText === '' ? fileName : errorText), /*#__PURE__*/React.createElement(Text, {
     tag: "p",
-    weight: "light",
+    weight: "400",
     color: internalStatus === 'error' ? 'error' : 'font1',
     size: "micro",
     lineHeight: "normal",

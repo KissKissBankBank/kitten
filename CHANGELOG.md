@@ -4,28 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change:
-
-  - Components: Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
-  - Deprecated: `fontWeight` by `weight` on the following components:
-    - `Radio`, `RadioSet`, `RadioButton`, `RadioButtonSet`.
-  - Typography config: Remove `regularUppercase` and `boldUppercase` styles.
-  - Typography config: Add `fontStyles['400']`, `fontStyles['500']` and `fontStyles['700']`.
-
-- Breaking change: Remove old `size` values from all components and styles.
-- Breaking change: `Helpers`: Remove `checkDeprecatedSizes` utility.
-- Breaking change: `TextInputWithButton`: Remove `value` prop.
-- Breaking change: `AvatarWithTextAndBadge`: Remove `textClassName` prop.
-- Breaking change: `Radio`: Remove `variant` prop.
-- Breaking change: `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
-- Breaking Change: `Alert`: Remove deprecated props.
-- Fix: `Checkbox` and `RadioButton`: Improve styles.
-- Feature: `HorizontalProjectCard`: Remove last line if no info is supplied.
-- Breaking Change: `Button`: Use `fit=content` as default.
-- Breaking Change: `Button`: Remove deprecated modifiers.
-- Breaking Changes: Remove `RewardCard.Info`.
-- Breaking Changes: Remove `CrowdfundingCard`.
-- Breaking Changes: Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
 - Breaking Change: `TextInput`: Update component.
 - Breaking Change: Simplifiy the following components:
   - `PasswordInput`
@@ -35,6 +13,178 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `TextInputWithUnit`
 - Breaking Change: `TextCopy`: Update component.
 - Breaking Change: `DatePicker`: Remove component.
+
+## [11.8.0] - 2022-07-08
+
+Features:
+
+- Tokens: Add `font`, `font-family` and `line-height` css tokens.
+- Utilities: Automagically generate utility classes from tokens.
+- `SlideModal`: Add new component.
+- `Field`: Add `tag` prop.
+- `Field`: Add `center` prop to `Field.Label`.
+
+Fixes:
+
+- `Button`: Fix `hydrogen` button style with `icon` fit.
+- `CloseButton`: Use `CrossIconNext` icon.
+- `TextInputWithButton`: Fix mobile styles.
+
+## [11.7.1] - 2022-07-07
+
+Fix:
+
+- `IconBadge`: Fix `hasBorderStyles`.
+
+## [11.7.0] - 2022-07-05
+
+Features:
+
+- Tokens: Add `font-weight` CSS tokens.
+- Icons: Add `GarbageIconNext` icon component.
+- `DropdownMenu`: Add `textProps` prop on Button and Link subcomponents.
+
+## [11.6.1] - 2022-07-04
+
+Fix:
+
+- `Autocomplete`: Update updateSuggestionsStrategy function.
+
+## [11.6.0] - 2022-07-01
+
+Feature:
+
+- `Autocomplete`: Can pass objects to autocomplete items.
+
+Fix:
+
+- `Button`: New `hydrogen` modifier border style.
+
+## [11.5.2] - 2022-06-28
+
+Fix:
+
+- `LoaderWithParagraph`: Fix console warning.
+- `EmbedPlayer`: Disable embed code sanitization.
+
+## [11.5.1] - 2022-06-28
+
+Fix:
+
+- `DashboardLayout`: Add position style to the main section’s wrapper.
+
+## [11.5.0] - 2022-06-28
+
+Features:
+
+- `LoaderWithParagraph`: Add `loaderComponent` prop for custom component.
+- `PlayerIconNext`: Add icon component.
+
+Fixes:
+
+- `DashboardLayout`: Add position style to `main`.
+- `EmbedPlayer`: Update style.
+- `Video`: Update style.
+
+## [11.4.1] - 2022-06-24
+
+Fixes:
+
+- `TextCopy`: Fix resize bug on webkit.
+- `RewardCard`: Fix background color.
+
+## [11.4.0] - 2022-06-24
+
+Feature:
+
+- `DashboardMenu`: Add `closeSelector()` arg as Selector item click property.
+
+## [11.3.0] - 2022-06-23
+
+Features:
+
+- `PeopleCard`: Add `disabled` prop.
+- `DashboardLayout`: Add `hasDarkBg` prop for new flow style.
+
+## [11.2.2] - 2022-06-20
+
+Fix:
+
+- `MessagesMenu`: Fix message height.
+
+## [11.2.1] - 2022-06-20
+
+Fix:
+
+- `Discussion`: Fix discussion.
+
+## [11.2.0] - 2022-06-20
+
+Feature:
+
+- `MessagesMenu`: Add `closeButtonProps` prop.
+
+Fix:
+
+- `ChatLayout`: Fix error linked to `<main>`.
+
+## [11.1.0] - 2022-06-14
+
+Feature:
+
+- Add box shadow styles on the following components:
+  - `DeskMenu`
+  - `FloatingMenu`
+  - `ManagerCard`
+  - `SummaryCard`
+
+Fix:
+
+- `RadioButton`: Better font weight styles.
+
+## [11.0.0] - 2022-06-13
+
+Breaking changes:
+
+- Remove old `size` values from all components and styles.
+- Replace value names for `weight` prop from `light, regular, normal, bold` to `400, 500, 700`.
+- Typography config: Remove `regularUppercase` and `boldUppercase` styles.
+- Typography config: Add '400', '500' and '700' styles.
+- Change prop names from `fontWeight` to `weight` on the following components:
+  - `Radio`
+  - `RadioSet`
+  - `RadioButton`
+  - `RadioButtonSet`.
+- Remove `HorizontalCrowdfundingCard` and `BackingCard` from export.
+- `Helpers`: Remove `checkDeprecatedSizes` utility.
+- `TextInputWithButton`: Remove `value` prop.
+- `AvatarWithTextAndBadge`: Remove `textClassName` prop.
+- `Radio`: Remove `variant` prop.
+- `TagButton`: Remove deprecated `selected`, `modifier` and `icon` props.
+- `Alert`: Remove deprecated props.
+- `Button`: Use `fit=content` as default.
+- `Button`: Remove deprecated modifiers.
+- `CrowdfundingCard`: Remove component.
+
+Feature:
+
+- `BackerCard`: Add `titleTag` prop.
+
+## [10.12.2] - 2022-06-10
+
+Fixes:
+
+- `Button`: Disable overflow when button displays a bullet.
+- `DropdownSelect`: Change outline style on `combobox` input.
+
+## [10.12.1] - 2022-06-10
+
+Fixes:
+
+- `Checkbox`: Improve styles.
+- `RadioButton`: Improve styles.
+- `Field`: Improve styles on `Field.Help` subcomponent.
+- `HorizontalProjectCard`: Remove last line if no info is supplied.
 
 ## [10.12.0] - 2022-05-30
 

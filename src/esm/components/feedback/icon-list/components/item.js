@@ -31,4 +31,4 @@ var StyledItem = styled.li.withConfig({
 var StyledContent = styled.div.withConfig({
   displayName: "item__StyledContent",
   componentId: "sc-1drcg7-1"
-})(["display:flex;flex-direction:column;justify-content:center;flex:1;", ";color:", ";line-height:1.6;font-size:", ";@media (min-width:", "px){font-size:", ";}"], TYPOGRAPHY.fontStyles.light, COLORS.font1, pxToRem(14), ScreenConfig.S.min, pxToRem(16));
+})(["display:flex;flex-direction:column;justify-content:center;flex:1;", ";color:", ";line-height:1.6;font-size:", ";@media (min-width:", "px){font-size:", ";}"], TYPOGRAPHY.fontStyles['400'], COLORS.font1, pxToRem(14), ScreenConfig.S.min, pxToRem(16));

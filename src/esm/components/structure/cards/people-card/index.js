@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "children"],
+var _excluded = ["className", "children", "disabled"],
     _excluded2 = ["className", "style", "peopleAvatar"],
     _excluded3 = ["className", "style"],
     _excluded4 = ["className", "style"];
@@ -14,15 +14,19 @@ import { PeopleCircleIconNext } from '../../../graphics/icons-next/people-circle
 var StyledPeopleCard = styled.article.withConfig({
   displayName: "people-card__StyledPeopleCard",
   componentId: "sc-an51ay-0"
-})(["max-width:100%;position:relative;display:block;box-sizing:border-box;text-decoration:none;background-color:var(--color-grey-000);padding:", "};border:var(--border);border-radius:var(--border-radius-s);display:flex;gap:0 ", ";height:", ";@media ", "{flex-direction:row;gap:0 ", ";}.k-PeopleCard__image{display:flex;align-items:center;}.k-PeopleCard__cell{flex:1 1 auto;}.k-PeopleCard__lastCell{flex:0 0 auto;z-index:2;display:flex;align-items:stretch;justify-content:stretch;margin:", " ", ";.k-DropdownMenu .k-DropdownMenu__button{box-sizing:border-box;display:flex;justify-content:center;align-items:center;height:100%;padding:0 ", ";&:focus-visible .k-DropdownMenu__button__inside{outline:auto;outline-offset:", ";}}}"], pxToRem(15), pxToRem(15), pxToRem(63), mq.mobile, pxToRem(10), pxToRem(-20), pxToRem(-30), pxToRem(30), pxToRem(-2));
+})(["max-width:100%;position:relative;display:block;box-sizing:border-box;text-decoration:none;background-color:var(--color-grey-000);padding:", "};border:var(--border);border-radius:var(--border-radius-s);display:flex;gap:0 ", ";height:", ";@media ", "{flex-direction:row;gap:0 ", ";}.k-PeopleCard__image{display:flex;align-items:center;}.k-PeopleCard__cell{flex:1 1 auto;}&.k-PeopleCard--disabled{background-color:var(--color-grey-200);border-color:var(--color-grey-400);color:var(--color-grey-700);.k-PeopleCard__lastCell{display:none;}.k-PeopleCard__image{opacity:.5;}}.k-PeopleCard__lastCell{flex:0 0 auto;z-index:2;display:flex;align-items:stretch;justify-content:stretch;margin:", " ", ";.k-DropdownMenu .k-DropdownMenu__button{box-sizing:border-box;display:flex;justify-content:center;align-items:center;height:100%;padding:0 ", ";&:focus-visible .k-DropdownMenu__button__inside{outline:auto;outline-offset:", ";}}}"], pxToRem(15), pxToRem(15), pxToRem(63), mq.mobile, pxToRem(10), pxToRem(-20), pxToRem(-30), pxToRem(30), pxToRem(-2));
 export var PeopleCard = function PeopleCard(_ref) {
   var _ref$className = _ref.className,
       className = _ref$className === void 0 ? '' : _ref$className,
       children = _ref.children,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
   return /*#__PURE__*/React.createElement(StyledPeopleCard, _extends({
-    className: classNames('k-PeopleCard', className)
+    className: classNames('k-PeopleCard', className, {
+      'k-PeopleCard--disabled': disabled
+    })
   }, props), children);
 };
 

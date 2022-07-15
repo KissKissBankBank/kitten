@@ -12,8 +12,9 @@ const FieldBase = ({
   help,
   helpHiddenOnBlur,
   children,
+  tag,
 }) => (
-  <Field>
+  <Field tag={tag}>
     <Field.Label
       labelProps={{ htmlFor: id }}
       tooltip={tooltip}
@@ -44,6 +45,7 @@ export const FieldInputExample = ({
   unit,
   size,
   noMargin,
+  tag,
 }) => (
   <FieldBase
     id={id}
@@ -55,6 +57,7 @@ export const FieldInputExample = ({
     errorMessage={errorMessage}
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
+    tag={tag}
   >
     <Field.Input
       id={id}
@@ -81,6 +84,7 @@ export const FieldPasswordExample = ({
   help,
   helpHiddenOnBlur,
   size,
+  tag,
 }) => (
   <FieldBase
     id={id}
@@ -92,6 +96,7 @@ export const FieldPasswordExample = ({
     errorMessage={errorMessage}
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
+    tag={tag}
   >
     <Field.Password
       id={id}
@@ -116,6 +121,7 @@ export const FieldRadioButtonSetExample = ({
   errorMessage,
   help,
   helpHiddenOnBlur,
+  tag,
 }) => (
   <FieldBase
     id={id}
@@ -127,6 +133,7 @@ export const FieldRadioButtonSetExample = ({
     errorMessage={errorMessage}
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
+    tag={tag}
   >
     <Field.RadioButtonSet name="radio" items={items} error={error} />
   </FieldBase>
@@ -143,6 +150,7 @@ export const FieldRadioSetExample = ({
   errorMessage,
   help,
   helpHiddenOnBlur,
+  tag,
 }) => (
   <FieldBase
     id={id}
@@ -154,6 +162,7 @@ export const FieldRadioSetExample = ({
     errorMessage={errorMessage}
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
+    tag={tag}
   >
     <Field.RadioSet name="radio" items={items} error={error} />
   </FieldBase>
@@ -172,6 +181,7 @@ export const FieldAutocompleteExample = ({
   helpHiddenOnBlur,
   items,
   size,
+  tag,
 }) => (
   <FieldBase
     id={id}
@@ -183,6 +193,7 @@ export const FieldAutocompleteExample = ({
     errorMessage={errorMessage}
     help={help}
     helpHiddenOnBlur={helpHiddenOnBlur}
+    tag={tag}
   >
     <Field.Autocomplete
       id={id}

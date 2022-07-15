@@ -30,10 +30,16 @@ export default {
     },
   },
   args: {
-    title: 'Backer name',
+    title: 'Backer Name',
     subtitle: 'Backer subtitle',
     imgProps: { src: `/kitten-${Math.floor(Math.random() * 10)}.jpg` },
-    description: 'This description can take a React node.',
+    description: (
+      <div>
+        Merci d'avoir fait progresser le projet de{' '}
+        <strong className="k-u-weight-500 k-u-color-primary1">55 €</strong> le{' '}
+        <strong className="k-u-weight-500">9 juin 2022</strong>
+      </div>
+    ),
   },
 }
 

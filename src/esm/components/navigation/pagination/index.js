@@ -78,7 +78,7 @@ export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
         "aria-hidden": "true"
       }, /*#__PURE__*/React.createElement(Text, {
         size: "small",
-        weight: "regular"
+        weight: "500"
       }, "\u2026"));
     }
 

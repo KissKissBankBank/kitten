@@ -14,6 +14,7 @@ export const StyledRewardCard = styled.article`
   position: relative;
   box-shadow: var(--rewardCard--box-shadow);
   border-radius: var(--rewardCard--border-radius);
+  background-color: var(--color-grey-000);
   display: flex;
   flex-direction: column;
   align-items: stretch;

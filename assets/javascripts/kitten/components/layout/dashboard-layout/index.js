@@ -34,6 +34,7 @@ export const DashboardLayout = ({
   style,
   sidebarProps = {},
   contentProps = {},
+  hasDarkBg = false,
   ...props
 }) => {
   const [isOpen, setOpen] = useState(false)
@@ -224,6 +225,7 @@ export const DashboardLayout = ({
           className={classNames(
             'k-DashboardLayout__mainWrapper',
             contentProps?.className,
+            { 'k-DashboardLayout__mainWrapper--darkBg': hasDarkBg },
           )}
         >
           {renderComponentChildrenArray(
@@ -383,6 +385,7 @@ DashboardLayout.propTypes = {
   overlayZIndex: PropTypes.number,
   sidebarProps: PropTypes.object,
   contentProps: PropTypes.object,
+  hasDarkBg: PropTypes.bool,
 }
 
 Header.propTypes = {

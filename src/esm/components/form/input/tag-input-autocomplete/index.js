@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import slugify from 'slugify';
 import { CrossIcon } from '../../../graphics/icons/cross-icon';
-import { checkDeprecatedSizes } from '../../../../helpers/utils/deprecated';
 import { TagInput, StyledTagInputWrapper } from '../tag-input';
 import { StyledSuggestionsList } from '../autocomplete';
 export var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
@@ -25,7 +24,6 @@ export var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       suggestionsNumberA11yMessage = _ref.suggestionsNumberA11yMessage,
       showSuggestionsOnFocus = _ref.showSuggestionsOnFocus,
       inputLabel = _ref.inputLabel;
-  checkDeprecatedSizes(size);
   var inputEl = useRef(null);
   var suggestionsEl = useRef(null);
 

@@ -20,7 +20,7 @@ export const modifierStyles = modifier => {
 
   switch (modifier) {
     case 'hydrogen':
-      borderColor = 'var(--color-grey-400)'
+      borderColor = 'var(--color-grey-700)'
       backgroundColor = COLORS.background1
       color = COLORS.font1
       hoverBorderColor = 'var(--color-primary-500)'

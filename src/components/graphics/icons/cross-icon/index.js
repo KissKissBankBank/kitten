@@ -17,8 +17,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _deprecated = require("../../../../helpers/utils/deprecated");
-
 var _excluded = ["color", "title", "width", "height", "size"];
 var DEFAULT_WIDTH = 8;
 var DEFAULT_HEIGHT = 8;
@@ -30,7 +28,6 @@ var CrossIcon = function CrossIcon(_ref) {
       height = _ref.height,
       size = _ref.size,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  (0, _deprecated.checkDeprecatedSizes)(size);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
@@ -38,7 +35,7 @@ var CrossIcon = function CrossIcon(_ref) {
     height: height
   });
 
-  if (size === 'large' || size === 'big') {
+  if (size === 'large') {
     return /*#__PURE__*/_react.default.createElement("svg", {
       width: "24",
       height: "24",

@@ -58,7 +58,6 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    'storybook-design-token',
   ],
   staticDirs: ['./public'],
 }

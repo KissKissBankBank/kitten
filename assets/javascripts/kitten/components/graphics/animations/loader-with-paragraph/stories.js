@@ -1,5 +1,6 @@
 import React from 'react'
 import { LoaderWithParagraph } from './index'
+import { KissKissLoadingAnimation } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -47,3 +48,7 @@ export default {
 }
 
 export const Default = args => <LoaderWithParagraph {...args} />
+
+export const WithCustomComponent = args => (
+  <LoaderWithParagraph {...args} loaderComponent={KissKissLoadingAnimation} />
+)

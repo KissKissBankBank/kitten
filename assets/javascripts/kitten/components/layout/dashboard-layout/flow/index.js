@@ -88,6 +88,10 @@ const StyledFlow = styled.div`
       position: sticky;
       z-index: 1;
 
+      width: calc(100% + ${pxToRem(30 * 2)});
+      padding-inline: ${pxToRem(30)};
+      margin-inline: ${pxToRem(-30)};
+
       &::before {
         position: absolute;
         background: linear-gradient(

@@ -232,6 +232,7 @@ export { FacebookIconNext } from './components/graphics/icons-next/facebook-icon
 export { FacebookIconCircleNext } from './components/graphics/icons-next/facebook-icon-circle-next'
 export { FlashIconNext } from './components/graphics/icons-next/flash-icon-next'
 export { FilterIconNext } from './components/graphics/icons-next/filter-icon-next'
+export { GarbageIconNext } from './components/graphics/icons-next/garbage-icon-next'
 export { GiftIcon } from './components/graphics/icons-next/gift-icon'
 export { GoogleIconNext } from './components/graphics/icons-next/google-icon-next'
 export { HeartIconNext } from './components/graphics/icons-next/heart-icon-next'
@@ -248,6 +249,7 @@ export { MicrophoneIconNext } from './components/graphics/icons-next/microphone-
 export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-icon-next'
 export { PeopleCircleIconNext } from './components/graphics/icons-next/people-circle-icon-next'
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next'
+export { PlayerIconNext } from './components/graphics/icons-next/player-icon-next'
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next'
 export { QuestionBubbleIconNext } from './components/graphics/icons-next/question-bubble-icon-next'
 export { RefundIcon } from './components/graphics/icons-next/refund-icon'
@@ -335,6 +337,7 @@ export { DocumentsStatusBox } from './components/interaction/upload/documents-st
 export { Modal } from './components/layer/modal'
 export { Modal as ModalNext } from './components/layer/modal-next'
 export { Overlay } from './components/layer/overlay'
+export { SlideModal } from './components/layer/slide-modal'
 
 // Layout
 // ------

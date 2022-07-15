@@ -6,7 +6,7 @@ export var Description = function Description(props) {
   return /*#__PURE__*/React.createElement(Text, _extends({
     tag: "p",
     color: "font1",
-    weight: "light",
+    weight: "400",
     size: "micro"
   }, props, {
     className: classNames('k-ContributionCard__description', props.className)

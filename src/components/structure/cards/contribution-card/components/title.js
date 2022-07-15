@@ -24,7 +24,7 @@ var Title = function Title(_ref) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     color: "font1",
-    weight: "bold"
+    weight: "700"
   }, props, {
     className: (0, _classnames.default)('k-ContributionCard__title', props.className, {
       'k-ContributionCard__title--large': largeTitle

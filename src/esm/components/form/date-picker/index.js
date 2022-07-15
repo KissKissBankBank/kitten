@@ -24,13 +24,13 @@ var StyledDatePicker = styled.div.withConfig({
 }, pxToRem(8), pxToRem(15), pxToRem(70), pxToRem(2), pxToRem(22), ScreenConfig.S.min, pxToRem(2), pxToRem(32), function (_ref2) {
   var styles = _ref2.styles;
   return css(["background-color ", ";color:", ";"], styles.header.backgroundColor, styles.header.color);
-}, pxToRem(23), pxToRem(63), stepToRem(1), TYPOGRAPHY.fontStyles.regular, function (_ref3) {
+}, pxToRem(23), pxToRem(63), stepToRem(1), TYPOGRAPHY.fontStyles['500'], function (_ref3) {
   var styles = _ref3.styles;
   return css(["color:", ";"], styles.weekdaysColor);
 }, tinyCellSize, tinyCellSize, stepToRem(1), ScreenConfig.S.min, cellSize, cellSize, function (_ref4) {
   var styles = _ref4.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, TYPOGRAPHY.fontStyles.regular, function (_ref5) {
+}, TYPOGRAPHY.fontStyles['500'], function (_ref5) {
   var styles = _ref5.styles;
   return css(["color:", ";"], styles.day.today.color);
 }, function (_ref6) {
@@ -42,10 +42,10 @@ var StyledDatePicker = styled.div.withConfig({
 }, function (_ref8) {
   var styles = _ref8.styles;
   return css(["color:", ";"], styles.day.disabled.color);
-}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, stepToRem(1), TYPOGRAPHY.fontStyles.light, function (_ref9) {
+}, tinyDayPickerPadding, tinyDayPickerPadding, tinyDayPickerPadding, ScreenConfig.S.min, dayPickerPadding, dayPickerPadding, dayPickerPadding, stepToRem(1), TYPOGRAPHY.fontStyles['400'], function (_ref9) {
   var styles = _ref9.styles;
   return css(["border:solid ", " ", ";"], styles.borderColor, borderSize);
-}, TYPOGRAPHY.fontStyles.light, function (_ref10) {
+}, TYPOGRAPHY.fontStyles['400'], function (_ref10) {
   var styles = _ref10.styles;
   return css(["background-color:", ";color:", ";border:double ", " ", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });

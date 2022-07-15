@@ -43,7 +43,7 @@ export var Description = function Description(_ref) {
   }, /*#__PURE__*/React.createElement("div", null, children)), displayMoreButton && /*#__PURE__*/React.createElement(Text, {
     className: "k-RewardCard__description__moreButton",
     color: "primary1",
-    weight: "regular",
+    weight: "500",
     size: "micro"
   }, moreButtonText));
 };

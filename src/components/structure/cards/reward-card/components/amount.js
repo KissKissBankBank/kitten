@@ -25,10 +25,10 @@ var Amount = function Amount(_ref) {
   return /*#__PURE__*/_react.default.createElement("p", (0, _extends2.default)({
     className: (0, _classnames.default)('k-RewardCard__drawer', 'k-RewardCard__amount__wrapper', 'k-u-align-center', className)
   }, props), /*#__PURE__*/_react.default.createElement(_text.Text, {
-    weight: "bold",
+    weight: "700",
     className: "k-RewardCard__amount k-u-block"
   }, children), suffix && /*#__PURE__*/_react.default.createElement(_text.Text, {
-    weight: "regular",
+    weight: "500",
     transform: "uppercase",
     letterSpacing: "10%",
     className: "k-RewardCard__amount__suffix k-u-block"
