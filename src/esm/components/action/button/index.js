@@ -8,10 +8,8 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import styled from 'styled-components';
 import { modifierStyles } from './helpers/modifier-styles';
-import { ScreenConfig } from '../../../constants/screen-config';
+import { mq } from '../../../constants/screen-config';
 import classNames from 'classnames';
-;
-var deprecatedModifiers = ['carbon', 'oxygen', 'calcium', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube'];
 export var buttonModifiers = ['hydrogen', 'helium', 'lithium', 'beryllium', 'copper', 'boron', 'scandium', 'neon', 'iron', 'krypton'];
 export var buttonFitOptions = ['icon', 'min-width', 'content', 'fluid'];
 export var buttonMobileFitOptions = [null].concat(buttonFitOptions);
@@ -19,10 +17,10 @@ export var buttonSizes = ['nano', 'micro', 'small', 'medium', 'large', 'huge', '
 var StyledButton = styled.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-dl59vq-0"
-})(["--Button-border-radius:var(--border-radius-s);&.k-Button--rounded{--Button-border-radius:var(--border-radius-rounded);}position:relative;box-sizing:border-box;min-height:var(--Button-dimension);padding:var(--Button-padding);display:inline-flex;justify-content:center;align-items:center;gap:", ";", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;border-radius:var(--Button-border-radius,0);min-width:0;svg{flex:0 0 auto;}&:disabled,&.k-Button--disabled{cursor:not-allowed;}&:hover{text-decoration:none;}&:focus-visible{outline:auto;}&.k-Button--nano{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:0 ", ";font-size:", ";}&.k-Button--micro{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";font-size:", ";}&.k-Button--tiny,&.k-Button--small{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";}&.k-Button--regular,&.k-Button--medium{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";}&.k-Button--big,&.k-Button--large{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media (min-width:", "){--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--huge{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media (min-width:", "){--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--giant{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media (min-width:", "){--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--fit-min-width{min-width:var(--Button-min-width);}&.k-Button--fit-icon{padding:0;overflow:hidden;width:var(--Button-dimension);height:var(--Button-dimension);}&.k-Button--fit-fluid{width:100%;}@media (max-width:", "){&[class*='k-Button--mobile-fit']{min-width:initial !important;padding:var(--Button-padding);width:initial;height:initial;width:initial;&.k-Button--mobile-fit-min-width{min-width:var(--Button-min-width) !important;}&.k-Button--mobile-fit-icon{padding:0;overflow:hidden;width:var(--Button-dimension);height:var(--Button-dimension);}&.k-Button--mobile-fit-fluid{width:100%;}}}", " &.k-Button--hasBullet{--Button-bullet-radius:", ";--Math-Cos45:0.7071;--Button-radius:var(--Button-border-radius,0);--Button-bullet-distance:calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );&::after{content:'';position:absolute;background-color:var(--Button-bullet-color,var(--color-primary-500));width:", ";height:", ";border-radius:", ";border:", " solid var(--color-grey-000);right:var(--Button-bullet-distance);top:var(--Button-bullet-distance);}&.k-Button--rounded{--Button-radius:calc(var(--Button-dimension) / 2);}}"], pxToRem(10), TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(20), pxToRem(100), pxToRem(6), stepToRem(-2), pxToRem(30), pxToRem(130), pxToRem(5), pxToRem(10), stepToRem(-2), pxToRem(40), pxToRem(160), pxToRem(7), pxToRem(20), pxToRem(50), pxToRem(200), pxToRem(10), pxToRem(30), pxToRem(50), pxToRem(200), pxToRem(10), pxToRem(30), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(70), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(70), pxToRem(200), pxToRem(10), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(80), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(70), pxToRem(200), pxToRem(10), pxToRem(10), pxToRem(ScreenConfig.S.min), pxToRem(220), pxToRem(90), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(ScreenConfig.XS.max), function (_ref) {
+})(["--Button-border-radius:var(--border-radius-s);&.k-Button--rounded{--Button-border-radius:var(--border-radius-rounded);}position:relative;box-sizing:border-box;min-height:var(--Button-dimension);padding:var(--Button-padding);display:inline-flex;justify-content:center;align-items:center;gap:", ";", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;cursor:pointer;border-radius:var(--Button-border-radius,0);min-width:0;svg{flex:0 0 auto;}&:disabled,&.k-Button--disabled{cursor:not-allowed;}&:hover{text-decoration:none;}&:focus-visible{outline:auto;}&.k-Button--nano{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:0 ", ";font-size:", ";}&.k-Button--micro{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";font-size:", ";}&.k-Button--small{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";}&.k-Button--medium{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";}&.k-Button--large{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media ", "{--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--huge{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media ", "{--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--giant{--Button-dimension:", ";--Button-min-width:", ";--Button-padding:", " ", ";@media ", "{--Button-min-width:", ";--Button-dimension:", ";--Button-padding:", " ", ";font-size:", ";}}&.k-Button--fit-min-width{min-width:var(--Button-min-width);}&.k-Button--fit-icon{padding:0;overflow:hidden;width:var(--Button-dimension);height:var(--Button-dimension);&.k-Button--hydrogen:not(:hover):not(:active):not(:focus){border-color:var(--color-grey-400);}}&.k-Button--fit-fluid{width:100%;}@media ", "{&[class*='k-Button--mobile-fit']{min-width:initial !important;padding:var(--Button-padding);width:initial;height:initial;width:initial;&.k-Button--mobile-fit-min-width{min-width:var(--Button-min-width) !important;}&.k-Button--mobile-fit-icon{padding:0;overflow:hidden;width:var(--Button-dimension);height:var(--Button-dimension);&.k-Button--hydrogen:not(:hover):not(:active):not(:focus){border-color:var(--color-grey-400);}}&.k-Button--mobile-fit-fluid{width:100%;}}}&.k-Button--hasBullet{--Button-bullet-radius:", ";--Math-Cos45:0.7071;--Button-radius:var(--Button-border-radius,0);--Button-bullet-distance:calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );&::after{content:'';position:absolute;background-color:var(--Button-bullet-color,var(--color-primary-500));width:", ";height:", ";border-radius:", ";border:", " solid var(--color-grey-000);right:var(--Button-bullet-distance);top:var(--Button-bullet-distance);}&.k-Button--fit-icon{overflow:initial;}&.k-Button--rounded{--Button-radius:calc(var(--Button-dimension) / 2);}}", ""], pxToRem(10), TYPOGRAPHY.fontStyles['500'], stepToRem(-1), COLORS.font1, pxToRem(20), pxToRem(100), pxToRem(6), stepToRem(-2), pxToRem(30), pxToRem(130), pxToRem(5), pxToRem(10), stepToRem(-2), pxToRem(40), pxToRem(160), pxToRem(7), pxToRem(20), pxToRem(50), pxToRem(200), pxToRem(10), pxToRem(30), pxToRem(50), pxToRem(200), pxToRem(10), pxToRem(30), mq.tabletAndDesktop, pxToRem(220), pxToRem(70), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(70), pxToRem(200), pxToRem(10), pxToRem(10), mq.tabletAndDesktop, pxToRem(220), pxToRem(80), pxToRem(10), pxToRem(40), stepToRem(0), pxToRem(70), pxToRem(200), pxToRem(10), pxToRem(10), mq.tabletAndDesktop, pxToRem(220), pxToRem(90), pxToRem(10), pxToRem(40), stepToRem(0), mq.mobile, pxToRem(3 + 4), pxToRem(8), pxToRem(8), pxToRem(8), pxToRem(3), function (_ref) {
   var modifier = _ref.modifier;
   return modifierStyles(modifier);
-}, pxToRem(3 + 4), pxToRem(8), pxToRem(8), pxToRem(8), pxToRem(3)); // const ForwardedButtonComponent = forwardRef((props, ref) => {
+}); // const ForwardedButtonComponent = forwardRef((props, ref) => {
 //   return <button ref={ref} {...props}/>
 // })
 
@@ -46,11 +44,6 @@ export var Button = function Button(_ref2) {
       bulletColor = _ref2.bulletColor,
       props = _objectWithoutPropertiesLoose(_ref2, _excluded);
 
-  if (deprecatedModifiers.includes(modifier)) {
-    console.warn("The modifier " + modifier + " has been deprecated. Please use one for the following: " + buttonModifiers.join(', ') + ".");
-  }
-
-  checkDeprecatedSizes(size);
   var internalModifier = active ? 'lithium' : modifier;
   var internalTag = as || tag;
   return /*#__PURE__*/React.createElement(StyledButton, _extends({
@@ -72,7 +65,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(buttonSizes),
   fit: PropTypes.oneOf(buttonFitOptions),
   mobileFit: PropTypes.oneOf(buttonMobileFitOptions),
-  modifier: PropTypes.oneOf([].concat(buttonModifiers, deprecatedModifiers)),
+  modifier: PropTypes.oneOf(buttonModifiers),
   active: PropTypes.bool,
   hasBullet: PropTypes.bool,
   bulletColor: PropTypes.string
@@ -83,7 +76,7 @@ Button.defaultProps = {
   borderRadius: null,
   size: 'medium',
   modifier: 'hydrogen',
-  fit: 'min-width',
+  fit: 'content',
   mobileFit: null,
   active: false,
   hasBullet: false

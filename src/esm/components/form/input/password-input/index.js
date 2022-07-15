@@ -2,16 +2,9 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["name", "iconLabel", "hiddenIconLabel"];
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { TextInput } from '../../../form/input/text-input';
 import { PasswordIcon } from '../../../graphics/icons/password-icon';
-import COLORS from '../../../../constants/colors-config';
-import PropTypes from 'prop-types';
-import { pxToRem } from '../../../../helpers/utils/typography';
-var StyledPasswordInput = styled.div.withConfig({
-  displayName: "password-input__StyledPasswordInput",
-  componentId: "sc-1rvdmh2-0"
-})(["position:relative;display:flex;.k-Form-PasswordInput__input{padding-right:", ";}.k-Form-PasswordInput__icon{display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;align-items:center;border-radius:var(--border-radius-s);&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}}"], pxToRem(40), pxToRem(11), COLORS.primary1);
 export var PasswordInput = function PasswordInput(_ref) {
   var name = _ref.name,
       iconLabel = _ref.iconLabel,
@@ -26,19 +19,21 @@ export var PasswordInput = function PasswordInput(_ref) {
     setIsHidden(!isHidden);
   };
 
-  return /*#__PURE__*/React.createElement(StyledPasswordInput, {
-    className: "k-Form-PasswordInput"
-  }, /*#__PURE__*/React.createElement(TextInput, _extends({}, others, {
+  return /*#__PURE__*/React.createElement(TextInput, _extends({}, others, {
     name: name,
     type: isHidden ? 'password' : 'text',
-    className: "k-Form-PasswordInput__input"
-  })), /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    "aria-label": isHidden ? iconLabel : hiddenIconLabel,
-    onClick: handleClick,
-    "aria-pressed": !isHidden,
-    className: "k-Form-PasswordInput__icon k-u-reset-button"
-  }, /*#__PURE__*/React.createElement(PasswordIcon, null)));
+    has: "button",
+    buttonIsInset: true,
+    buttonProps: {
+      'aria-label': isHidden ? iconLabel : hiddenIconLabel,
+      'aria-pressed': !isHidden,
+      onClick: handleClick,
+      className: 'k-PasswordInput__icon',
+      children: /*#__PURE__*/React.createElement(PasswordIcon, {
+        color: "var(--color-" + (isHidden ? 'grey-900' : 'primary-500') + ")"
+      })
+    }
+  }));
 };
 PasswordInput.propTypes = {
   iconLabel: PropTypes.string.isRequired,

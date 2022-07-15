@@ -2,23 +2,21 @@ import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 var _excluded = ["alt", "backgroundColor", "children", "className", "height", "size", "src", "style", "text", "textColor", "width"],
     _excluded2 = ["backgroundColor", "className", "a11yText"],
-    _excluded3 = ["textClassName", "className", "withEllipsisOverflow"],
+    _excluded3 = ["className", "withEllipsisOverflow"],
     _excluded4 = ["className", "hoverable"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import deprecated from 'prop-types-extra/lib/deprecated';
 import { Badge as BadgeComponent } from '../../information/badge';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { getReactElementsByType } from '../../../helpers/react/get-react-elements';
-;
 var StyledWrapper = styled.div.withConfig({
   displayName: "avatar-with-text-and-badge__StyledWrapper",
   componentId: "sc-1npfhe1-0"
-})(["display:flex;align-items:center;padding:0;border:none;background:none;text-decoration:none;gap:", ";.k-Avatar{position:relative;padding:0;}.k-Avatar__imageWrapper{width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;border:var(--border-width) solid var(--color-grey-300);padding:0;color:var(--k-Avatar-color);background-color:var(--k-Avatar-background-color);}.k-Avatar__image{display:block;margin:0;padding:0;border:0;width:100%;height:100%;}.k-Avatar__noImage{display:flex;width:100%;height:100%;align-items:center;justify-content:center;", " font-size:", ";line-height:1;}.k-Avatar__badge{position:absolute;top:", ";right:", ";border:var(--border-width) solid white;}.k-Avatar__text{padding:pxToRem(10);padding-right:0;text-align:left;color:", ";text-decoration:none;", " font-size:", ";line-height:1.2;}.k-Avatar__text--hasEllipsis{&,& *{max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}}.k-Avatar--small{.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--big,.k-Avatar--large{margin-right:", ";.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--customSize{width:var(--Avatar-width);height:var(--Avatar-height);}a&,button&,&.k-Avatar__wrapper--isHoverable{cursor:pointer;.k-Avatar{opacity:1;transition:opacity 0.2s;}&:hover .k-Avatar,&:focus .k-Avatar{opacity:0.8;border:var(--border-hover);}}"], pxToRem(10), pxToRem(40), pxToRem(40), TYPOGRAPHY.fontStyles.regular, stepToRem(-2), pxToRem(-4), pxToRem(-8), COLORS.font1, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(30), pxToRem(30), stepToRem(-2), stepToRem(-2), pxToRem(15), pxToRem(60), pxToRem(60), stepToRem(-1), stepToRem(0));
+})(["display:flex;align-items:center;padding:0;border:none;background:none;text-decoration:none;gap:", ";.k-Avatar{position:relative;padding:0;}.k-Avatar__imageWrapper{width:", ";height:", ";border-radius:var(--border-radius-rounded);box-sizing:border-box;display:flex;overflow:hidden;border:var(--border-width) solid var(--color-grey-300);padding:0;color:var(--k-Avatar-color);background-color:var(--k-Avatar-background-color);}.k-Avatar__image{display:block;margin:0;padding:0;border:0;width:100%;height:100%;}.k-Avatar__noImage{display:flex;width:100%;height:100%;align-items:center;justify-content:center;", " font-size:", ";line-height:1;}.k-Avatar__badge{position:absolute;top:", ";right:", ";border:var(--border-width) solid white;}.k-Avatar__text{padding:pxToRem(10);padding-right:0;text-align:left;color:", ";text-decoration:none;", " font-size:", ";line-height:1.2;}.k-Avatar__text--hasEllipsis{&,& *{max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}}.k-Avatar--small{.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--large{margin-right:", ";.k-Avatar__imageWrapper{width:", ";height:", ";}.k-Avatar__noImage{font-size:", ";}& + .k-Avatar__text{font-size:", ";}}.k-Avatar--customSize{width:var(--Avatar-width);height:var(--Avatar-height);}a&,button&,&.k-Avatar__wrapper--isHoverable{cursor:pointer;.k-Avatar{opacity:1;transition:opacity 0.2s;}&:hover .k-Avatar,&:focus .k-Avatar{opacity:0.8;border:var(--border-hover);}}"], pxToRem(10), pxToRem(40), pxToRem(40), TYPOGRAPHY.fontStyles['500'], stepToRem(-2), pxToRem(-4), pxToRem(-8), COLORS.font1, TYPOGRAPHY.fontStyles['500'], stepToRem(-1), pxToRem(30), pxToRem(30), stepToRem(-2), stepToRem(-2), pxToRem(15), pxToRem(60), pxToRem(60), stepToRem(-1), stepToRem(0));
 
 var Image = function Image(_ref) {
   var alt = _ref.alt,
@@ -34,7 +32,6 @@ var Image = function Image(_ref) {
       width = _ref.width,
       props = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  checkDeprecatedSizes(size);
   var badgeElement = getReactElementsByType({
     children: children,
     type: AvatarWithTextAndBadge.Badge
@@ -101,21 +98,19 @@ Badge.defaultProps = {
 };
 
 var Text = function Text(_ref3) {
-  var textClassName = _ref3.textClassName,
-      className = _ref3.className,
+  var className = _ref3.className,
       withEllipsisOverflow = _ref3.withEllipsisOverflow,
       props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
 
   return /*#__PURE__*/React.createElement("span", _extends({
-    className: classNames('k-Avatar__text', textClassName, className, {
+    className: classNames('k-Avatar__text', className, {
       'k-Avatar__text--hasEllipsis': withEllipsisOverflow
     })
   }, props));
 };
 
 Text.propTypes = {
-  withEllipsisOverflow: PropTypes.bool,
-  textClassName: deprecated(PropTypes.string, 'Please use standard `className` prop.')
+  withEllipsisOverflow: PropTypes.bool
 };
 Text.defaultProps = {
   withEllipsisOverflow: false

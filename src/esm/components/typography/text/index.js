@@ -4,7 +4,7 @@ var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-;
+import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
 export var allowedColorStrings = ['font1', 'font2', 'primary1', 'background1', 'error', 'valid', 'grey-000', 'grey-100', 'grey-200', 'grey-300', 'grey-400', 'grey-500', 'grey-600', 'grey-700', 'grey-800', 'grey-900', 'primary-100', 'primary-300', 'primary-500', 'primary-700', 'primary-900', 'danger-100', 'danger-300', 'danger-500', 'danger-700', 'danger-900', 'success-100', 'success-300', 'success-500', 'success-700', 'success-900', 'warning-100', 'warning-300', 'warning-500', 'warning-700', 'warning-900'];
 export var Text = function Text(_ref) {
   var className = _ref.className,
@@ -23,7 +23,7 @@ export var Text = function Text(_ref) {
       letterSpacing = _ref.letterSpacing,
       others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  checkDeprecatedSizes(size);
+  checkDeprecatedWeights(weight);
   var Tag = as || tag;
   var textClassName = classNames({
     // Color.
@@ -80,14 +80,8 @@ export var Text = function Text(_ref) {
     // Size.
     'k-u-size-giant': size == 'giant',
     'k-u-size-huge': size == 'huge',
-    'k-u-size-big': size == 'big',
-    // Deprecated
     'k-u-size-large': size == 'large',
-    'k-u-size-default': size == 'default',
-    // Deprecated
     'k-u-size-medium': size == 'medium',
-    'k-u-size-tiny': size == 'tiny',
-    // Deprecated
     'k-u-size-small': size == 'small',
     'k-u-size-micro': size == 'micro',
     'k-u-size-nano': size == 'nano',
@@ -97,9 +91,9 @@ export var Text = function Text(_ref) {
     // Transform.
     'k-u-transform-uppercase': transform == 'uppercase',
     // Weight.
-    'k-u-weight-light': weight == 'light',
-    'k-u-weight-regular': weight == 'regular',
-    'k-u-weight-bold': weight == 'bold'
+    'k-u-weight-400': weight == '400',
+    'k-u-weight-500': weight == '500',
+    'k-u-weight-700': weight == '700'
   }, className);
   return /*#__PURE__*/React.createElement(Tag, _extends({}, others, {
     className: textClassName,
@@ -117,7 +111,7 @@ Text.propTypes = {
   size: PropTypes.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
-  weight: PropTypes.oneOf(['light', 'regular', 'bold']),
+  weight: PropTypes.oneOf(['400', '500', '700']),
   letterSpacing: PropTypes.string
 };
 Text.defaultProps = {
@@ -131,6 +125,6 @@ Text.defaultProps = {
   fontStyle: null,
   tag: 'span',
   transform: null,
-  weight: 'light',
+  weight: '400',
   letterSpacing: null
 };

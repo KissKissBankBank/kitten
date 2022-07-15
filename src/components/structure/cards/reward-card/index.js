@@ -81,7 +81,6 @@ var RewardCard = function RewardCard(_ref) {
 };
 
 exports.RewardCard = RewardCard;
-RewardCard.Info = _components.Info;
 RewardCard.Form = _components.Form;
 RewardCard.Title = _components.Title;
 RewardCard.Image = _components.Image;

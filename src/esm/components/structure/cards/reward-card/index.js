@@ -5,7 +5,7 @@ import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { StyledRewardCard } from './styles';
-import { Info, Form, Title, Image, Amount, Button, TagList, HeadingTag, Description, Contents } from './components';
+import { Form, Title, Image, Amount, Button, TagList, HeadingTag, Description, Contents } from './components';
 import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../../../helpers/react/get-react-elements';
 export var RewardCard = function RewardCard(_ref) {
   var children = _ref.children,
@@ -60,7 +60,6 @@ export var RewardCard = function RewardCard(_ref) {
     disabled: disabled
   }));
 };
-RewardCard.Info = Info;
 RewardCard.Form = Form;
 RewardCard.Title = Title;
 RewardCard.Image = Image;
