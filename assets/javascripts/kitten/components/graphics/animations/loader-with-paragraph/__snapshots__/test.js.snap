@@ -6,7 +6,7 @@ exports[`<LoaderWithParagraph /> With custom component should match with snapsho
 >
   <div
     aria-hidden={true}
-    className="sc-dvQaRk htoBLI k-KissKissLoadingAnimation k-LoaderWithParagraph__loader"
+    className="sc-fWCJzd dsSTKR k-KissKissLoadingAnimation k-LoaderWithParagraph__loader"
   >
     <svg
       className="k-KissKissLoadingAnimation__svg"

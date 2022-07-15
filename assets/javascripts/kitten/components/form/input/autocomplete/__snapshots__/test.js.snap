@@ -1,308 +1,1151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Autocomplete /> by default matches with snapshot 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.c2 {
+  --text-input-padding-horizontal: 0.9375rem;
+  --text-input-border-width: var(--border-width);
+  --text-input-height: 3.125rem;
   position: relative;
 }
 
-.c0 .k-Form-Autocomplete__input {
-  display: block;
-  width: 100%;
-  height: 3.125rem;
-  box-sizing: border-box;
-  border-radius: var(--border-radius-s);
-  background: var(--color-grey-000,#fff);
-  border: var(--border-width) solid var(--color-grey-400);
-  padding: 0 0.9375rem;
+.c2.k-TextInput__wrapper--small {
+  --text-input-height: 2.5rem;
+  --text-input-textarea-padding: 0.5625rem;
+  --text-input-unit-padding: 0.625rem;
+}
+
+.c2.k-TextInput__wrapper--medium {
+  --text-input-height: 3.125rem;
+  --text-input-textarea-padding: 0.875rem;
+  --text-input-unit-padding: 0.75rem;
+}
+
+.c2.k-TextInput__wrapper--large {
+  --text-input-height: 3.75rem;
+  --text-input-textarea-padding: 1.125rem;
+  --text-input-unit-padding: 1.25rem;
+}
+
+.c2.k-TextInput__wrapper--huge {
+  --text-input-height: 4.375rem;
+  --text-input-textarea-padding: 1.3125rem;
+  --text-input-unit-padding: 1.25rem;
+}
+
+.c2.k-TextInput__wrapper--giant {
+  --text-input-height: 4.375rem;
+  --text-input-textarea-padding: 1.3125rem;
+  --text-input-unit-padding: 1.5625rem;
+}
+
+.c2 .k-TextInput {
+  font-size: 0.875rem;
+  line-height: 1em;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: var(--color-grey-900,#222);
-  -webkit-transition: border-color 0.4s;
-  transition: border-color 0.4s;
+  box-sizing: border-box;
+  border-width: var(--text-input-border-width);
+  border-style: solid;
+  border-radius: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
+  border-color: var(--color-grey-400);
+  height: var(--text-input-height);
+  min-height: var(--text-input-height);
+  padding: 0.625rem var(--text-input-padding-horizontal);
+  border-radius: var(--border-radius-s);
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
-.c0 .k-Form-Autocomplete__input::-webkit-input-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::-webkit-input-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::-moz-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input:-ms-input-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput:-ms-input-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput.k-TextInput--rounded {
+  border-radius: var(--border-radius-rounded);
 }
 
-.c0 .k-Form-Autocomplete__input:focus {
+.c2 .k-TextInput.k-TextInput--alignCenter {
+  text-align: center;
+}
+
+.c2 .k-TextInput:disabled {
+  color: var(--color-grey-600);
+  border-color: var(--color-grey-300);
+  background-color: var(--color-grey-200);
+  cursor: not-allowed;
+}
+
+.c2 .k-TextInput:disabled:hover {
+  border-color: var(--color-grey-300);
+}
+
+.c2 .k-TextInput:disabled::-webkit-input-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled::-moz-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled:-ms-input-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled::placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput.k-TextInput--valid {
+  color: var(--color-grey-900);
+  border: var(--border-success);
+}
+
+.c2 .k-TextInput.k-TextInput--error {
+  color: var(--color-grey-900);
+  border: var(--border-danger);
+}
+
+.c2 .k-TextInput:invalid {
+  box-shadow: none;
+  color: var(--color-grey-900);
+  border: var(--border-danger);
+}
+
+.c2 .k-TextInput:hover {
+  border: var(--border-hover);
+}
+
+.c2 .k-TextInput:focus {
+  color: var(--color-grey-900);
   border-color: var(--color-grey-500);
   outline: var(--outline-input);
   outline-offset: var(--outline-offset-input);
 }
 
-.c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-  border: var(--border-danger);
-  color: var(--color-danger-300,#ffb2c7);
+.c2 .k-TextInput.k-TextInput-hasDigits {
+  width: calc( var(--text-input-content-width) * 1ch + ( 2 * ( var(--text-input-padding-horizontal) + var(--text-input-border-width) ) ) );
 }
 
-.c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-500);
-  color: var(--color-grey-900,#222);
+.c2 .k-TextInput.k-TextInput-hasDigits_2 {
+  text-align: center;
 }
 
-.c0 .k-Form-Autocomplete__loader {
+.c2 .k-TextInput.k-TextInput--darkBackground {
+  background-color: var(--color-grey-800);
+  border-color: var(--color-grey-800);
+  color: var(--color-grey-000);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::-webkit-input-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::-moz-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground:-ms-input-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2.k-TextInput__isTextarea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput {
+  margin: 0;
+  height: initial;
+  resize: vertical;
+  line-height: 1.125rem;
+  padding-block: var(--text-input-textarea-padding);
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput:disabled {
+  resize: none;
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput.k-TextInput--autoResize {
+  resize: none;
+}
+
+.c2.k-TextInput__isTextarea .k-TextInput__textareaGradient {
+  position: absolute;
+  left: 0.625rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  height: 0.625rem;
+  background-image: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );
+  pointer-events: none;
+}
+
+textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textareaGradient {
+  display: none;
+}
+
+.c2.k-TextInput__isTextarea .k-TextInput:focus-visible + .k-TextInput__textareaGradient {
+  bottom: 0.1875rem;
+}
+
+.c2 .k-TextInput__button {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.c2:not(.k-TextInput__wrapper--button_inset) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.c2.k-TextInput__wrapper--button_inset {
+  position: relative;
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__input {
+  padding-right: calc(var(--text-input-height) + 0.9375rem);
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  min-width: calc(var(--text-input-height) - 0.25rem * 2);
+  border-radius: var(--border-radius-s);
+  border: none;
+  background-color: var(--color-grey-000);
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button:hover {
+  background-color: var(--color-grey-300);
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button:active {
+  background-color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput--rounded + .k-TextInput__button {
+  border-radius: var(--border-radius-rounded);
+}
+
+.c2 .k-TextInput--valid + .k-TextInput__button {
+  background-color: var(--color-success-500);
+  border-color: var(--color-success-500);
+}
+
+.c2 .k-TextInput--error + .k-TextInput__button {
+  cursor: not-allowed;
+  background-color: var(--color-danger-500);
+  border-color: var(--color-danger-500);
+}
+
+.c2 .k-TextInput__icon {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 0 1.125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1;
-  right: 0;
+  top: 0;
+  width: 3.125rem;
+  height: 100%;
 }
 
-.c0 .k-Form-Autocomplete__icon {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 0 1.125rem;
-  z-index: 1;
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg)[stroke]:not([stroke='none']),
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg) [stroke]:not([stroke='none']) {
+  stroke: var(--color-grey-500);
 }
 
-.c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
-  padding-left: 2.8125rem;
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg)[fill]:not([fill='none']),
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg) [fill]:not([fill='none']) {
+  fill: var(--color-grey-500);
 }
 
-.c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__icon {
+.c2.k-TextInput__wrapper--icon_left .k-TextInput {
+  padding-left: 3.125rem;
+}
+
+.c2.k-TextInput__wrapper--icon_left .k-TextInput__icon {
   left: 0;
 }
 
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__input {
-  padding-right: 2.8125rem;
+.c2.k-TextInput__wrapper--icon_right .k-TextInput {
+  padding-right: 3.125rem;
 }
 
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__loader {
-  padding-right: 2.8125rem;
-}
-
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__icon {
+.c2.k-TextInput__wrapper--icon_right .k-TextInput__icon {
   right: 0;
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__input {
-  border: var(--color-grey-300);
-  background-color: var(--color-grey-200);
+.c2 .k-TextInput__limitNumber {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  position: absolute;
+  bottom: 0.9375rem;
+  right: 0.9375rem;
+  color: var(--color-grey-600);
+  text-shadow: 0.125rem 0 0 var(--color-grey-000),-0.125rem 0 0 var(--color-grey-000),0 0.125rem 0 var(--color-grey-000),0 -0.125rem 0 var(--color-grey-000),0.0625rem 0.0625rem var(--color-grey-000),-0.0625rem -0.0625rem 0 var(--color-grey-000),0.0625rem -0.0625rem 0 var(--color-grey-000),-0.0625rem 0.0625rem 0 var(--color-grey-000);
+  pointer-events: none;
+}
+
+.c2 .k-TextInput__limitNumber.k-TextInput__limitNumber--disabled {
+  text-shadow: none;
+}
+
+.c2:focus + .k-TextInput__limitNumber,
+.c2:focus-within .k-TextInput__limitNumber {
   color: var(--color-grey-600);
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [stroke]:not([stroke='none']) {
-  stroke: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput + .k-TextInput__limitNumber--error {
+  color: var(--color-danger-500);
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [fill]:not([fill='none']) {
-  fill: var(--color-grey-500,#b8b8b8);
+.c2.k-TextInput__wrapper--hasUnit {
+  width: 1%;
+}
+
+.c2.k-TextInput__wrapper--hasUnit:not(.k-TextInput__wrapper--hasDigits) {
+  width: 100%;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput {
+  border-radius: var(--border-radius-s);
+  padding-right: 2.625rem;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number']::-webkit-inner-spin-button,
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput__unit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  right: 0.1875rem;
+  top: 0.1875rem;
+  bottom: 0.1875rem;
+  min-width: 2.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: var(--color-grey-900);
+  white-space: nowrap;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 1rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  background-color: var(--color-grey-000);
+  padding-inline: var(--text-input-unit-padding);
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput__unit.k-TextInput__unit--unitIsWord {
+  font-size: 0.875rem;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput--disabled + .k-TextInput__unit {
+  color: var(--color-grey-700);
+  background-color: var(--color-grey-200);
+}
+
+.c2.k-TextInput__wrapper--hasUnit:focus-within .k-Form-TextInputWithUnit__unit {
+  border-color: var(--color-grey-500);
+  color: var(--color-grey-900);
+}
+
+.c0 {
+  position: relative;
+}
+
+.c0 .k-Form-Autocomplete__input {
+  width: 100%;
+}
+
+.c0 .k-Form-Autocomplete__suggestions {
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + 0.3125rem);
+  left: -0.0625rem;
+  right: -0.0625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.0625rem;
+  background: var(--color-grey-000);
+  border: var(--border-width) solid var(--color-grey-400);
+  border-radius: var(--border-radius-m);
+  list-style: none;
+  max-height: calc( 6.625rem + (min(2,(var(--Autocomplete-suggestions) - 1)) * 0.125rem) );
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item {
+  box-sizing: border-box;
+  height: 2.125rem;
+  padding: 0.5rem 0.8125rem;
+  border-radius: var(--border-radius-s);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: var(--color-grey-900);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
+  font-style: italic;
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+  cursor: pointer;
+  -webkit-transition: background-color var(--transition);
+  transition: background-color var(--transition);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
+  background-color: var(--color-grey-200);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
+  background-color: var(--color-grey-300);
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--large {
+    --text-input-height: 4.375rem;
+    --text-input-textarea-padding: 1.3125rem;
+  }
+
+  .c2.k-TextInput__wrapper--large .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--huge {
+    --text-input-height: 5rem;
+    --text-input-textarea-padding: 1.6875rem;
+  }
+
+  .c2.k-TextInput__wrapper--huge .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--giant {
+    --text-input-height: 5.625rem;
+    --text-input-textarea-padding: 2rem;
+  }
+
+  .c2.k-TextInput__wrapper--giant .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c2 .k-TextInput {
+    font-size: 1rem;
+  }
 }
 
 <div
   className="c0 k-Form-Autocomplete"
 >
-  <input
-    aria-activedescendant=""
-    aria-autocomplete="both"
-    aria-expanded={null}
-    aria-owns="autocomplete-results"
-    autoComplete="off"
-    className="k-Form-Autocomplete__input"
-    id="autocomplete"
-    name="autocomplete"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="Search a kitten…"
-    role="combobox"
-    type="text"
-  />
+  <div
+    className="c1 c2 k-TextInput__wrapper k-TextInput__wrapper--medium"
+  >
+    <input
+      aria-activedescendant=""
+      aria-autocomplete="both"
+      aria-expanded={null}
+      aria-owns="autocomplete-results"
+      autoComplete="off"
+      className="k-TextInput k-Form-Autocomplete__input"
+      defaultValue=""
+      disabled={false}
+      id="autocomplete"
+      name="autocomplete"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Search a kitten…"
+      role="combobox"
+      type="text"
+    />
+  </div>
 </div>
 `;
 
 exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.c2 {
+  --text-input-padding-horizontal: 0.9375rem;
+  --text-input-border-width: var(--border-width);
+  --text-input-height: 3.125rem;
   position: relative;
 }
 
-.c0 .k-Form-Autocomplete__input {
-  display: block;
-  width: 100%;
-  height: 3.125rem;
-  box-sizing: border-box;
-  border-radius: var(--border-radius-s);
-  background: var(--color-grey-000,#fff);
-  border: var(--border-width) solid var(--color-grey-400);
-  padding: 0 0.9375rem;
+.c2.k-TextInput__wrapper--small {
+  --text-input-height: 2.5rem;
+  --text-input-textarea-padding: 0.5625rem;
+  --text-input-unit-padding: 0.625rem;
+}
+
+.c2.k-TextInput__wrapper--medium {
+  --text-input-height: 3.125rem;
+  --text-input-textarea-padding: 0.875rem;
+  --text-input-unit-padding: 0.75rem;
+}
+
+.c2.k-TextInput__wrapper--large {
+  --text-input-height: 3.75rem;
+  --text-input-textarea-padding: 1.125rem;
+  --text-input-unit-padding: 1.25rem;
+}
+
+.c2.k-TextInput__wrapper--huge {
+  --text-input-height: 4.375rem;
+  --text-input-textarea-padding: 1.3125rem;
+  --text-input-unit-padding: 1.25rem;
+}
+
+.c2.k-TextInput__wrapper--giant {
+  --text-input-height: 4.375rem;
+  --text-input-textarea-padding: 1.3125rem;
+  --text-input-unit-padding: 1.5625rem;
+}
+
+.c2 .k-TextInput {
+  font-size: 0.875rem;
+  line-height: 1em;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: var(--color-grey-900,#222);
-  -webkit-transition: border-color 0.4s;
-  transition: border-color 0.4s;
+  box-sizing: border-box;
+  border-width: var(--text-input-border-width);
+  border-style: solid;
+  border-radius: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
+  border-color: var(--color-grey-400);
+  height: var(--text-input-height);
+  min-height: var(--text-input-height);
+  padding: 0.625rem var(--text-input-padding-horizontal);
+  border-radius: var(--border-radius-s);
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
-.c0 .k-Form-Autocomplete__input::-webkit-input-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::-webkit-input-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::-moz-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input:-ms-input-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput:-ms-input-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput.k-TextInput--rounded {
+  border-radius: var(--border-radius-rounded);
 }
 
-.c0 .k-Form-Autocomplete__input:focus {
+.c2 .k-TextInput.k-TextInput--alignCenter {
+  text-align: center;
+}
+
+.c2 .k-TextInput:disabled {
+  color: var(--color-grey-600);
+  border-color: var(--color-grey-300);
+  background-color: var(--color-grey-200);
+  cursor: not-allowed;
+}
+
+.c2 .k-TextInput:disabled:hover {
+  border-color: var(--color-grey-300);
+}
+
+.c2 .k-TextInput:disabled::-webkit-input-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled::-moz-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled:-ms-input-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled::placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput.k-TextInput--valid {
+  color: var(--color-grey-900);
+  border: var(--border-success);
+}
+
+.c2 .k-TextInput.k-TextInput--error {
+  color: var(--color-grey-900);
+  border: var(--border-danger);
+}
+
+.c2 .k-TextInput:invalid {
+  box-shadow: none;
+  color: var(--color-grey-900);
+  border: var(--border-danger);
+}
+
+.c2 .k-TextInput:hover {
+  border: var(--border-hover);
+}
+
+.c2 .k-TextInput:focus {
+  color: var(--color-grey-900);
   border-color: var(--color-grey-500);
   outline: var(--outline-input);
   outline-offset: var(--outline-offset-input);
 }
 
-.c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-  border: var(--border-danger);
-  color: var(--color-danger-300,#ffb2c7);
+.c2 .k-TextInput.k-TextInput-hasDigits {
+  width: calc( var(--text-input-content-width) * 1ch + ( 2 * ( var(--text-input-padding-horizontal) + var(--text-input-border-width) ) ) );
 }
 
-.c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-500);
-  color: var(--color-grey-900,#222);
+.c2 .k-TextInput.k-TextInput-hasDigits_2 {
+  text-align: center;
 }
 
-.c0 .k-Form-Autocomplete__loader {
+.c2 .k-TextInput.k-TextInput--darkBackground {
+  background-color: var(--color-grey-800);
+  border-color: var(--color-grey-800);
+  color: var(--color-grey-000);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::-webkit-input-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::-moz-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground:-ms-input-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2.k-TextInput__isTextarea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput {
+  margin: 0;
+  height: initial;
+  resize: vertical;
+  line-height: 1.125rem;
+  padding-block: var(--text-input-textarea-padding);
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput:disabled {
+  resize: none;
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput.k-TextInput--autoResize {
+  resize: none;
+}
+
+.c2.k-TextInput__isTextarea .k-TextInput__textareaGradient {
+  position: absolute;
+  left: 0.625rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  height: 0.625rem;
+  background-image: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );
+  pointer-events: none;
+}
+
+textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textareaGradient {
+  display: none;
+}
+
+.c2.k-TextInput__isTextarea .k-TextInput:focus-visible + .k-TextInput__textareaGradient {
+  bottom: 0.1875rem;
+}
+
+.c2 .k-TextInput__button {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.c2:not(.k-TextInput__wrapper--button_inset) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.c2.k-TextInput__wrapper--button_inset {
+  position: relative;
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__input {
+  padding-right: calc(var(--text-input-height) + 0.9375rem);
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  min-width: calc(var(--text-input-height) - 0.25rem * 2);
+  border-radius: var(--border-radius-s);
+  border: none;
+  background-color: var(--color-grey-000);
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button:hover {
+  background-color: var(--color-grey-300);
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button:active {
+  background-color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput--rounded + .k-TextInput__button {
+  border-radius: var(--border-radius-rounded);
+}
+
+.c2 .k-TextInput--valid + .k-TextInput__button {
+  background-color: var(--color-success-500);
+  border-color: var(--color-success-500);
+}
+
+.c2 .k-TextInput--error + .k-TextInput__button {
+  cursor: not-allowed;
+  background-color: var(--color-danger-500);
+  border-color: var(--color-danger-500);
+}
+
+.c2 .k-TextInput__icon {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 0 1.125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1;
-  right: 0;
+  top: 0;
+  width: 3.125rem;
+  height: 100%;
 }
 
-.c0 .k-Form-Autocomplete__icon {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 0 1.125rem;
-  z-index: 1;
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg)[stroke]:not([stroke='none']),
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg) [stroke]:not([stroke='none']) {
+  stroke: var(--color-grey-500);
 }
 
-.c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
-  padding-left: 2.8125rem;
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg)[fill]:not([fill='none']),
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg) [fill]:not([fill='none']) {
+  fill: var(--color-grey-500);
 }
 
-.c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__icon {
+.c2.k-TextInput__wrapper--icon_left .k-TextInput {
+  padding-left: 3.125rem;
+}
+
+.c2.k-TextInput__wrapper--icon_left .k-TextInput__icon {
   left: 0;
 }
 
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__input {
-  padding-right: 2.8125rem;
+.c2.k-TextInput__wrapper--icon_right .k-TextInput {
+  padding-right: 3.125rem;
 }
 
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__loader {
-  padding-right: 2.8125rem;
-}
-
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__icon {
+.c2.k-TextInput__wrapper--icon_right .k-TextInput__icon {
   right: 0;
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__input {
-  border: var(--color-grey-300);
-  background-color: var(--color-grey-200);
+.c2 .k-TextInput__limitNumber {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  position: absolute;
+  bottom: 0.9375rem;
+  right: 0.9375rem;
+  color: var(--color-grey-600);
+  text-shadow: 0.125rem 0 0 var(--color-grey-000),-0.125rem 0 0 var(--color-grey-000),0 0.125rem 0 var(--color-grey-000),0 -0.125rem 0 var(--color-grey-000),0.0625rem 0.0625rem var(--color-grey-000),-0.0625rem -0.0625rem 0 var(--color-grey-000),0.0625rem -0.0625rem 0 var(--color-grey-000),-0.0625rem 0.0625rem 0 var(--color-grey-000);
+  pointer-events: none;
+}
+
+.c2 .k-TextInput__limitNumber.k-TextInput__limitNumber--disabled {
+  text-shadow: none;
+}
+
+.c2:focus + .k-TextInput__limitNumber,
+.c2:focus-within .k-TextInput__limitNumber {
   color: var(--color-grey-600);
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [stroke]:not([stroke='none']) {
-  stroke: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput + .k-TextInput__limitNumber--error {
+  color: var(--color-danger-500);
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [fill]:not([fill='none']) {
-  fill: var(--color-grey-500,#b8b8b8);
+.c2.k-TextInput__wrapper--hasUnit {
+  width: 1%;
+}
+
+.c2.k-TextInput__wrapper--hasUnit:not(.k-TextInput__wrapper--hasDigits) {
+  width: 100%;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput {
+  border-radius: var(--border-radius-s);
+  padding-right: 2.625rem;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number']::-webkit-inner-spin-button,
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput__unit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  right: 0.1875rem;
+  top: 0.1875rem;
+  bottom: 0.1875rem;
+  min-width: 2.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: var(--color-grey-900);
+  white-space: nowrap;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 1rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  background-color: var(--color-grey-000);
+  padding-inline: var(--text-input-unit-padding);
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput__unit.k-TextInput__unit--unitIsWord {
+  font-size: 0.875rem;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput--disabled + .k-TextInput__unit {
+  color: var(--color-grey-700);
+  background-color: var(--color-grey-200);
+}
+
+.c2.k-TextInput__wrapper--hasUnit:focus-within .k-Form-TextInputWithUnit__unit {
+  border-color: var(--color-grey-500);
+  color: var(--color-grey-900);
+}
+
+.c0 {
+  position: relative;
+}
+
+.c0 .k-Form-Autocomplete__input {
+  width: 100%;
+}
+
+.c0 .k-Form-Autocomplete__suggestions {
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + 0.3125rem);
+  left: -0.0625rem;
+  right: -0.0625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.0625rem;
+  background: var(--color-grey-000);
+  border: var(--border-width) solid var(--color-grey-400);
+  border-radius: var(--border-radius-m);
+  list-style: none;
+  max-height: calc( 6.625rem + (min(2,(var(--Autocomplete-suggestions) - 1)) * 0.125rem) );
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item {
+  box-sizing: border-box;
+  height: 2.125rem;
+  padding: 0.5rem 0.8125rem;
+  border-radius: var(--border-radius-s);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: var(--color-grey-900);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
+  font-style: italic;
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+  cursor: pointer;
+  -webkit-transition: background-color var(--transition);
+  transition: background-color var(--transition);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
+  background-color: var(--color-grey-200);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
+  background-color: var(--color-grey-300);
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--large {
+    --text-input-height: 4.375rem;
+    --text-input-textarea-padding: 1.3125rem;
+  }
+
+  .c2.k-TextInput__wrapper--large .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--huge {
+    --text-input-height: 5rem;
+    --text-input-textarea-padding: 1.6875rem;
+  }
+
+  .c2.k-TextInput__wrapper--huge .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--giant {
+    --text-input-height: 5.625rem;
+    --text-input-textarea-padding: 2rem;
+  }
+
+  .c2.k-TextInput__wrapper--giant .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c2 .k-TextInput {
+    font-size: 1rem;
+  }
 }
 
 <div
-  className="c0 k-Form-Autocomplete k-Form-Autocomplete--hasIcon-left"
+  className="c0 k-Form-Autocomplete"
 >
-  <input
-    aria-activedescendant=""
-    aria-autocomplete="both"
-    aria-expanded={null}
-    aria-owns="autocomplete-results"
-    autoComplete="off"
-    className="k-Form-Autocomplete__input"
-    id="autocomplete"
-    name="autocomplete"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="Search a kitten…"
-    role="combobox"
-    type="text"
-  />
-  <span
-    aria-hidden="true"
-    className="k-Form-Autocomplete__icon"
+  <div
+    className="c1 c2 k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
   >
-    <svg
-      height={15}
-      width={15}
+    <input
+      aria-activedescendant=""
+      aria-autocomplete="both"
+      aria-expanded={null}
+      aria-owns="autocomplete-results"
+      autoComplete="off"
+      className="k-TextInput k-Form-Autocomplete__input k-TextInput--hasIcon"
+      defaultValue=""
+      disabled={false}
+      id="autocomplete"
+      name="autocomplete"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Search a kitten…"
+      role="combobox"
+      type="text"
     />
-  </span>
+    <span
+      aria-hidden="true"
+      className="k-TextInput__icon"
+    >
+      <span
+        aria-hidden="true"
+        className="k-Form-Autocomplete__icon"
+      >
+        <svg
+          height={15}
+          width={15}
+        />
+      </span>
+    </span>
+  </div>
 </div>
 `;
 
 exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -312,7 +1155,7 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   gap: 0.125rem;
 }
 
-.c1 .k-Loader__circle {
+.c3 .k-Loader__circle {
   width: 0.3125rem;
   height: 0.3125rem;
   border-radius: var(--border-radius-rounded);
@@ -322,208 +1165,632 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
   animation-fill-mode: both;
 }
 
-.c1 .k-Loader__circle:nth-child(1) {
+.c3 .k-Loader__circle:nth-child(1) {
   -webkit-animation-delay: calc(-1.75s / 3);
   animation-delay: calc(-1.75s / 3);
 }
 
-.c1 .k-Loader__circle:nth-child(2) {
+.c3 .k-Loader__circle:nth-child(2) {
   -webkit-animation-delay: calc(-1.75s / 3 / 2);
   animation-delay: calc(-1.75s / 3 / 2);
 }
 
-.c1 .k-Loader__circle:nth-child(3) {
+.c3 .k-Loader__circle:nth-child(3) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.c2 {
+  --text-input-padding-horizontal: 0.9375rem;
+  --text-input-border-width: var(--border-width);
+  --text-input-height: 3.125rem;
   position: relative;
 }
 
-.c0 .k-Form-Autocomplete__input {
-  display: block;
-  width: 100%;
-  height: 3.125rem;
-  box-sizing: border-box;
-  border-radius: var(--border-radius-s);
-  background: var(--color-grey-000,#fff);
-  border: var(--border-width) solid var(--color-grey-400);
-  padding: 0 0.9375rem;
+.c2.k-TextInput__wrapper--small {
+  --text-input-height: 2.5rem;
+  --text-input-textarea-padding: 0.5625rem;
+  --text-input-unit-padding: 0.625rem;
+}
+
+.c2.k-TextInput__wrapper--medium {
+  --text-input-height: 3.125rem;
+  --text-input-textarea-padding: 0.875rem;
+  --text-input-unit-padding: 0.75rem;
+}
+
+.c2.k-TextInput__wrapper--large {
+  --text-input-height: 3.75rem;
+  --text-input-textarea-padding: 1.125rem;
+  --text-input-unit-padding: 1.25rem;
+}
+
+.c2.k-TextInput__wrapper--huge {
+  --text-input-height: 4.375rem;
+  --text-input-textarea-padding: 1.3125rem;
+  --text-input-unit-padding: 1.25rem;
+}
+
+.c2.k-TextInput__wrapper--giant {
+  --text-input-height: 4.375rem;
+  --text-input-textarea-padding: 1.3125rem;
+  --text-input-unit-padding: 1.5625rem;
+}
+
+.c2 .k-TextInput {
+  font-size: 0.875rem;
+  line-height: 1em;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  color: var(--color-grey-900,#222);
-  -webkit-transition: border-color 0.4s;
-  transition: border-color 0.4s;
+  box-sizing: border-box;
+  border-width: var(--text-input-border-width);
+  border-style: solid;
+  border-radius: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
+  border-color: var(--color-grey-400);
+  height: var(--text-input-height);
+  min-height: var(--text-input-height);
+  padding: 0.625rem var(--text-input-padding-horizontal);
+  border-radius: var(--border-radius-s);
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
-.c0 .k-Form-Autocomplete__input::-webkit-input-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::-webkit-input-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::-moz-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input:-ms-input-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput:-ms-input-placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput::placeholder {
+  color: var(--color-grey-700);
 }
 
-.c0 .k-Form-Autocomplete__input::-moz-placeholder {
-  color: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput.k-TextInput--rounded {
+  border-radius: var(--border-radius-rounded);
 }
 
-.c0 .k-Form-Autocomplete__input:focus {
+.c2 .k-TextInput.k-TextInput--alignCenter {
+  text-align: center;
+}
+
+.c2 .k-TextInput:disabled {
+  color: var(--color-grey-600);
+  border-color: var(--color-grey-300);
+  background-color: var(--color-grey-200);
+  cursor: not-allowed;
+}
+
+.c2 .k-TextInput:disabled:hover {
+  border-color: var(--color-grey-300);
+}
+
+.c2 .k-TextInput:disabled::-webkit-input-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled::-moz-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled:-ms-input-placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput:disabled::placeholder {
+  color: var(--color-grey-600);
+}
+
+.c2 .k-TextInput.k-TextInput--valid {
+  color: var(--color-grey-900);
+  border: var(--border-success);
+}
+
+.c2 .k-TextInput.k-TextInput--error {
+  color: var(--color-grey-900);
+  border: var(--border-danger);
+}
+
+.c2 .k-TextInput:invalid {
+  box-shadow: none;
+  color: var(--color-grey-900);
+  border: var(--border-danger);
+}
+
+.c2 .k-TextInput:hover {
+  border: var(--border-hover);
+}
+
+.c2 .k-TextInput:focus {
+  color: var(--color-grey-900);
   border-color: var(--color-grey-500);
   outline: var(--outline-input);
   outline-offset: var(--outline-offset-input);
 }
 
-.c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-  border: var(--border-danger);
-  color: var(--color-danger-300,#ffb2c7);
+.c2 .k-TextInput.k-TextInput-hasDigits {
+  width: calc( var(--text-input-content-width) * 1ch + ( 2 * ( var(--text-input-padding-horizontal) + var(--text-input-border-width) ) ) );
 }
 
-.c0.k-Form-Autocomplete--error .k-Form-Autocomplete__input:focus {
-  border-color: var(--color-grey-500);
-  color: var(--color-grey-900,#222);
+.c2 .k-TextInput.k-TextInput-hasDigits_2 {
+  text-align: center;
 }
 
-.c0 .k-Form-Autocomplete__loader {
+.c2 .k-TextInput.k-TextInput--darkBackground {
+  background-color: var(--color-grey-800);
+  border-color: var(--color-grey-800);
+  color: var(--color-grey-000);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::-webkit-input-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::-moz-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground:-ms-input-placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput.k-TextInput--darkBackground::placeholder {
+  color: var(--color-grey-400);
+}
+
+.c2.k-TextInput__isTextarea {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput {
+  margin: 0;
+  height: initial;
+  resize: vertical;
+  line-height: 1.125rem;
+  padding-block: var(--text-input-textarea-padding);
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput:disabled {
+  resize: none;
+}
+
+.c2.k-TextInput__isTextarea textarea.k-TextInput.k-TextInput--autoResize {
+  resize: none;
+}
+
+.c2.k-TextInput__isTextarea .k-TextInput__textareaGradient {
+  position: absolute;
+  left: 0.625rem;
+  right: 0.125rem;
+  bottom: 0.125rem;
+  height: 0.625rem;
+  background-image: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );
+  pointer-events: none;
+}
+
+textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textareaGradient {
+  display: none;
+}
+
+.c2.k-TextInput__isTextarea .k-TextInput:focus-visible + .k-TextInput__textareaGradient {
+  bottom: 0.1875rem;
+}
+
+.c2 .k-TextInput__button {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.c2:not(.k-TextInput__wrapper--button_inset) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.c2.k-TextInput__wrapper--button_inset {
+  position: relative;
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__input {
+  padding-right: calc(var(--text-input-height) + 0.9375rem);
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  min-width: calc(var(--text-input-height) - 0.25rem * 2);
+  border-radius: var(--border-radius-s);
+  border: none;
+  background-color: var(--color-grey-000);
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button:hover {
+  background-color: var(--color-grey-300);
+}
+
+.c2.k-TextInput__wrapper--button_inset .k-TextInput__button:active {
+  background-color: var(--color-grey-400);
+}
+
+.c2 .k-TextInput--rounded + .k-TextInput__button {
+  border-radius: var(--border-radius-rounded);
+}
+
+.c2 .k-TextInput--valid + .k-TextInput__button {
+  background-color: var(--color-success-500);
+  border-color: var(--color-success-500);
+}
+
+.c2 .k-TextInput--error + .k-TextInput__button {
+  cursor: not-allowed;
+  background-color: var(--color-danger-500);
+  border-color: var(--color-danger-500);
+}
+
+.c2 .k-TextInput__icon {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 0 1.125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   z-index: 1;
-  right: 0;
+  top: 0;
+  width: 3.125rem;
+  height: 100%;
 }
 
-.c0 .k-Form-Autocomplete__icon {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  padding: 0 1.125rem;
-  z-index: 1;
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg)[stroke]:not([stroke='none']),
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg) [stroke]:not([stroke='none']) {
+  stroke: var(--color-grey-500);
 }
 
-.c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__input {
-  padding-left: 2.8125rem;
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg)[fill]:not([fill='none']),
+.c2 .k-TextInput__icon.k-TextInput__icon--disabled > svg:not(.k-ColorSvg) [fill]:not([fill='none']) {
+  fill: var(--color-grey-500);
 }
 
-.c0.k-Form-Autocomplete--hasIcon-left .k-Form-Autocomplete__icon {
+.c2.k-TextInput__wrapper--icon_left .k-TextInput {
+  padding-left: 3.125rem;
+}
+
+.c2.k-TextInput__wrapper--icon_left .k-TextInput__icon {
   left: 0;
 }
 
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__input {
-  padding-right: 2.8125rem;
+.c2.k-TextInput__wrapper--icon_right .k-TextInput {
+  padding-right: 3.125rem;
 }
 
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__loader {
-  padding-right: 2.8125rem;
-}
-
-.c0.k-Form-Autocomplete--hasIcon-right .k-Form-Autocomplete__icon {
+.c2.k-TextInput__wrapper--icon_right .k-TextInput__icon {
   right: 0;
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__input {
-  border: var(--color-grey-300);
-  background-color: var(--color-grey-200);
+.c2 .k-TextInput__limitNumber {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  position: absolute;
+  bottom: 0.9375rem;
+  right: 0.9375rem;
+  color: var(--color-grey-600);
+  text-shadow: 0.125rem 0 0 var(--color-grey-000),-0.125rem 0 0 var(--color-grey-000),0 0.125rem 0 var(--color-grey-000),0 -0.125rem 0 var(--color-grey-000),0.0625rem 0.0625rem var(--color-grey-000),-0.0625rem -0.0625rem 0 var(--color-grey-000),0.0625rem -0.0625rem 0 var(--color-grey-000),-0.0625rem 0.0625rem 0 var(--color-grey-000);
+  pointer-events: none;
+}
+
+.c2 .k-TextInput__limitNumber.k-TextInput__limitNumber--disabled {
+  text-shadow: none;
+}
+
+.c2:focus + .k-TextInput__limitNumber,
+.c2:focus-within .k-TextInput__limitNumber {
   color: var(--color-grey-600);
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [stroke]:not([stroke='none']) {
-  stroke: var(--color-grey-500,#b8b8b8);
+.c2 .k-TextInput + .k-TextInput__limitNumber--error {
+  color: var(--color-danger-500);
 }
 
-.c0.k-Form-Autocomplete--disabled .k-Form-Autocomplete__icon > svg [fill]:not([fill='none']) {
-  fill: var(--color-grey-500,#b8b8b8);
+.c2.k-TextInput__wrapper--hasUnit {
+  width: 1%;
+}
+
+.c2.k-TextInput__wrapper--hasUnit:not(.k-TextInput__wrapper--hasDigits) {
+  width: 100%;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput {
+  border-radius: var(--border-radius-s);
+  padding-right: 2.625rem;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number']::-webkit-inner-spin-button,
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput__unit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  right: 0.1875rem;
+  top: 0.1875rem;
+  bottom: 0.1875rem;
+  min-width: 2.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: var(--color-grey-900);
+  white-space: nowrap;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 1rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  background-color: var(--color-grey-000);
+  padding-inline: var(--text-input-unit-padding);
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput__unit.k-TextInput__unit--unitIsWord {
+  font-size: 0.875rem;
+}
+
+.c2.k-TextInput__wrapper--hasUnit .k-TextInput--disabled + .k-TextInput__unit {
+  color: var(--color-grey-700);
+  background-color: var(--color-grey-200);
+}
+
+.c2.k-TextInput__wrapper--hasUnit:focus-within .k-Form-TextInputWithUnit__unit {
+  border-color: var(--color-grey-500);
+  color: var(--color-grey-900);
+}
+
+.c0 {
+  position: relative;
+}
+
+.c0 .k-Form-Autocomplete__input {
+  width: 100%;
+}
+
+.c0 .k-Form-Autocomplete__suggestions {
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + 0.3125rem);
+  left: -0.0625rem;
+  right: -0.0625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.0625rem;
+  background: var(--color-grey-000);
+  border: var(--border-width) solid var(--color-grey-400);
+  border-radius: var(--border-radius-m);
+  list-style: none;
+  max-height: calc( 6.625rem + (min(2,(var(--Autocomplete-suggestions) - 1)) * 0.125rem) );
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item {
+  box-sizing: border-box;
+  height: 2.125rem;
+  padding: 0.5rem 0.8125rem;
+  border-radius: var(--border-radius-s);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: var(--color-grey-900);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item.k-Form-Autocomplete__suggestion__item--noresult {
+  font-style: italic;
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+  cursor: pointer;
+  -webkit-transition: background-color var(--transition);
+  transition: background-color var(--transition);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):hover,
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):focus,
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult):active {
+  background-color: var(--color-grey-200);
+}
+
+.c0 .k-Form-Autocomplete__suggestions .k-Form-Autocomplete__suggestion__item:not(.k-Form-Autocomplete__suggestion__item--noresult)[aria-selected='true'] {
+  background-color: var(--color-grey-300);
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--large {
+    --text-input-height: 4.375rem;
+    --text-input-textarea-padding: 1.3125rem;
+  }
+
+  .c2.k-TextInput__wrapper--large .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--huge {
+    --text-input-height: 5rem;
+    --text-input-textarea-padding: 1.6875rem;
+  }
+
+  .c2.k-TextInput__wrapper--huge .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c2.k-TextInput__wrapper--giant {
+    --text-input-height: 5.625rem;
+    --text-input-textarea-padding: 2rem;
+  }
+
+  .c2.k-TextInput__wrapper--giant .k-TextInput {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c2 .k-TextInput {
+    font-size: 1rem;
+  }
 }
 
 <div
   className="c0 k-Form-Autocomplete"
 >
-  <input
-    aria-activedescendant=""
-    aria-autocomplete="both"
-    aria-expanded={null}
-    aria-owns="autocomplete-results"
-    autoComplete="off"
-    className="k-Form-Autocomplete__input"
-    id="autocomplete"
-    name="autocomplete"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onKeyDown={[Function]}
-    placeholder="Search a kitten…"
-    role="combobox"
-    type="text"
-  />
   <div
-    className="c1 k-Loader k-Form-Autocomplete__loader"
+    className="c1 c2 k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
   >
-    <svg
-      className="k-Loader__circle"
-      fill="var(--color-grey-500, #b8b8b8)"
-      viewBox="0 0 5 5"
-      xmlns="http://www.w3.org/2000/svg"
+    <input
+      aria-activedescendant=""
+      aria-autocomplete="both"
+      aria-expanded={null}
+      aria-owns="autocomplete-results"
+      autoComplete="off"
+      className="k-TextInput k-Form-Autocomplete__input k-TextInput--hasIcon"
+      defaultValue=""
+      disabled={false}
+      id="autocomplete"
+      name="autocomplete"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Search a kitten…"
+      role="combobox"
+      type="text"
+    />
+    <span
+      aria-hidden="true"
+      className="k-TextInput__icon"
     >
-      <circle
-        cx={2.5}
-        cy={2.5}
-        r={5}
-      />
-    </svg>
-    <svg
-      className="k-Loader__circle"
-      fill="var(--color-grey-500, #b8b8b8)"
-      viewBox="0 0 5 5"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx={2.5}
-        cy={2.5}
-        r={5}
-      />
-    </svg>
-    <svg
-      className="k-Loader__circle"
-      fill="var(--color-grey-500, #b8b8b8)"
-      viewBox="0 0 5 5"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle
-        cx={2.5}
-        cy={2.5}
-        r={5}
-      />
-    </svg>
+      <div
+        className="c3 k-Loader k-Form-Autocomplete__loader"
+      >
+        <svg
+          className="k-Loader__circle"
+          fill="var(--color-grey-500, #b8b8b8)"
+          viewBox="0 0 5 5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx={2.5}
+            cy={2.5}
+            r={5}
+          />
+        </svg>
+        <svg
+          className="k-Loader__circle"
+          fill="var(--color-grey-500, #b8b8b8)"
+          viewBox="0 0 5 5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx={2.5}
+            cy={2.5}
+            r={5}
+          />
+        </svg>
+        <svg
+          className="k-Loader__circle"
+          fill="var(--color-grey-500, #b8b8b8)"
+          viewBox="0 0 5 5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx={2.5}
+            cy={2.5}
+            r={5}
+          />
+        </svg>
+      </div>
+      <span
+        className="k-u-a11y-visuallyHidden"
+        lang="en"
+      >
+        loading
+      </span>
+    </span>
   </div>
-  <span
-    className="k-u-a11y-visuallyHidden"
-    lang="en"
-  >
-    loading
-  </span>
 </div>
 `;

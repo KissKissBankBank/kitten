@@ -30,25 +30,30 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-iqseJM dtdQRf k-Form-Autocomplete"
+      className="sc-iqseJM cDETDL k-Form-Autocomplete"
     >
-      <input
-        aria-activedescendant=""
-        aria-autocomplete="both"
-        aria-expanded={null}
-        aria-owns="field-results"
-        autoComplete="off"
-        className="k-Form-Autocomplete__input"
-        id="autocomplete"
-        name="field"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        placeholder="Select…"
-        role="combobox"
-        size="medium"
-        type="text"
-      />
+      <div
+        className="sc-eCImPb cOGFRM k-TextInput__wrapper k-TextInput__wrapper--medium"
+      >
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="both"
+          aria-expanded={null}
+          aria-owns="field-results"
+          autoComplete="off"
+          className="k-TextInput k-Form-Autocomplete__input"
+          defaultValue=""
+          disabled={false}
+          id="autocomplete"
+          name="field"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Select…"
+          role="combobox"
+          type="text"
+        />
+      </div>
     </div>
   </div>,
 ]
