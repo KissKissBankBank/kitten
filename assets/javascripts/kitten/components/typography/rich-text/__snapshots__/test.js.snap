@@ -2,7 +2,7 @@
 
 exports[`<RichText /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gWChuv k-RichText k-RichText--medium"
+  className="sc-bdvvtL dMVTIE k-RichText k-RichText--medium"
 >
   Lorem ipsun
 </div>
