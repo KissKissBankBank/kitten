@@ -235,7 +235,13 @@ describe('<Button />', () => {
 
   describe('with null props', () => {
     beforeEach(() => {
-      component = renderer.create(<Button size={null} modifier={null} fit={null}>!</Button>).toJSON()
+      component = renderer
+        .create(
+          <Button size={null} modifier={null} fit={null}>
+            !
+          </Button>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
