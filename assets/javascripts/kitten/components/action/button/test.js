@@ -232,4 +232,14 @@ describe('<Button />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with null props', () => {
+    beforeEach(() => {
+      component = renderer.create(<Button size={null} modifier={null} fit={null}>!</Button>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
