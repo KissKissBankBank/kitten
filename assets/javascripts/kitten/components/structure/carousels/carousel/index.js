@@ -269,7 +269,7 @@ class CarouselBase extends Component {
             className="k-Carousel__pagination__button"
             fit="icon"
             modifier="beryllium"
-            size={smallButtons ? 'small' : null}
+            size={smallButtons ? 'small' : 'medium'}
             onClick={this.goPrevPage}
             disabled={!loop && (currentPageIndex < 1 || numberOfPages < 1)}
           >
@@ -286,7 +286,7 @@ class CarouselBase extends Component {
             className="k-Carousel__pagination__button"
             fit="icon"
             modifier="beryllium"
-            size={smallButtons ? 'small' : null}
+            size={smallButtons ? 'small' : 'medium'}
             onClick={this.goNextPage}
             disabled={!loop && currentPageIndex >= numberOfPages - 1}
           >
