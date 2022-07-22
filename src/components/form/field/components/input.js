@@ -24,29 +24,38 @@ var _textInputWithUnit = require("../../../form/input/text-input-with-unit");
 var _excluded = ["limit", "unit", "noMargin", "className"];
 
 var FieldInput = function FieldInput(_ref) {
+  var _props$wrapperProps;
+
   var limit = _ref.limit,
       unit = _ref.unit,
       noMargin = _ref.noMargin,
       className = _ref.className,
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var Input = _textInput.TextInput;
 
-  if (limit) {
-    Input = _textInputWithLimit.TextInputWithLimit;
-  }
+  var has = function () {
+    switch (true) {
+      case !!limit:
+        return 'limit';
 
-  if (unit) {
-    Input = _textInputWithUnit.TextInputWithUnit;
-  }
+      case !!unit:
+        return 'unit';
 
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: (0, _classnames.default)('k-FieldInput', 'k-Field__control', className, {
-      'k-u-margin-top-single': !noMargin
-    })
-  }, /*#__PURE__*/_react.default.createElement(Input, (0, _extends2.default)({
+      default:
+        return undefined;
+    }
+  }();
+
+  return /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
+    has: has,
     limit: limit,
     unit: unit
-  }, props)));
+  }, props, {
+    wrapperProps: (0, _extends2.default)({}, props.wrapperProps, {
+      className: (0, _classnames.default)('k-FieldInput', 'k-Field__control', className, (_props$wrapperProps = props.wrapperProps) == null ? void 0 : _props$wrapperProps.className, {
+        'k-u-margin-top-single': !noMargin
+      })
+    })
+  }));
 };
 
 exports.FieldInput = FieldInput;

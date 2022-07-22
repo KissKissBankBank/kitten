@@ -191,7 +191,7 @@ var ColorSelect = function ColorSelect(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, inputProps, {
     size: "small",
     center: true,
-    as: /*#__PURE__*/(0, _react.forwardRef)(function (props, ref // eslint-disable-line no-unused-vars
+    tag: /*#__PURE__*/(0, _react.forwardRef)(function (props, ref // eslint-disable-line no-unused-vars
     ) {
       return /*#__PURE__*/_react.default.createElement(_reactColorful.HexColorInput, props);
     }),

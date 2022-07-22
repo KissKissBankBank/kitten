@@ -2,24 +2,28 @@
 
 exports[`<PasswordInput /> should match its empty snapshot 1`] = `
 <div
-  className="sc-dkPtRN dZzwNd k-Form-PasswordInput"
+  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium"
+    className="k-TextInput k-TextInput--hasButton"
+    defaultValue=""
     disabled={false}
     id="password"
     name="password"
+    onChange={[Function]}
     type="password"
   />
   <button
     aria-label="Custom icon label"
     aria-pressed={false}
-    className="k-Form-PasswordInput__icon k-u-reset-button"
+    className="k-TextInput__button k-PasswordInput__icon"
     onClick={[Function]}
+    rounded={false}
+    size="medium"
     type="button"
   >
     <svg
-      fill="#222"
+      fill="var(--color-grey-900)"
       viewBox="0 0 18 12"
       width="18"
       xmlns="http://www.w3.org/2000/svg"

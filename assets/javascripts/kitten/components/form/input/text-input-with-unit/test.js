@@ -7,7 +7,9 @@ describe('<TextInputWithUnit />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit />).toJSON()
+      component = renderer
+        .create(<TextInputWithUnit id="TextInputWithUnit" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -17,7 +19,9 @@ describe('<TextInputWithUnit />', () => {
 
   describe('with valid prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit valid />).toJSON()
+      component = renderer
+        .create(<TextInputWithUnit id="TextInputWithUnit" valid />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -27,7 +31,9 @@ describe('<TextInputWithUnit />', () => {
 
   describe('with error prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit error />).toJSON()
+      component = renderer
+        .create(<TextInputWithUnit id="TextInputWithUnit" error />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -37,7 +43,9 @@ describe('<TextInputWithUnit />', () => {
 
   describe('with disabled prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit disabled />).toJSON()
+      component = renderer
+        .create(<TextInputWithUnit id="TextInputWithUnit" disabled />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -48,7 +56,7 @@ describe('<TextInputWithUnit />', () => {
   describe('with unit', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithUnit>€</TextInputWithUnit>)
+        .create(<TextInputWithUnit id="TextInputWithUnit">€</TextInputWithUnit>)
         .toJSON()
     })
 
@@ -59,7 +67,9 @@ describe('<TextInputWithUnit />', () => {
 
   describe('with size prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit size="large" />).toJSON()
+      component = renderer
+        .create(<TextInputWithUnit id="TextInputWithUnit" size="large" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

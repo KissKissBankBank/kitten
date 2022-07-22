@@ -1,13 +1,7 @@
 import React from 'react'
 import { TextInputWithIcon } from './index'
 import { Default as TextInputStory } from '../text-input/stories.js'
-import {
-  SearchIcon,
-  CheckedCircleIcon,
-  WarningCircleIcon,
-  Loader,
-  COLORS,
-} from 'kitten'
+import { CheckedCircleIcon, WarningCircleIcon, Loader, COLORS } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -27,30 +21,8 @@ export default {
       </div>
     ),
   ],
-
-  args: {
-    ...TextInputStory.args,
-    icon: <SearchIcon aria-label="Search icon" width="15" height="15" />,
-    iconPosition: 'left',
-    accessibilityLabel: 'Icon label',
-  },
-
-  argTypes: {
-    ...TextInputStory.argTypes,
-    icon: {
-      name: 'icon',
-      control: 'object',
-    },
-    iconPosition: {
-      name: 'iconPosition',
-      options: ['left', 'right'],
-      control: 'inline-radio',
-    },
-    accessibilityLabel: {
-      name: 'accessibilityLabel',
-      control: 'text',
-    },
-  },
+  args: TextInputStory.args,
+  argTypes: TextInputStory.argTypes,
 }
 
 export const Default = args => <TextInputWithIcon {...args} />

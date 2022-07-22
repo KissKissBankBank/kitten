@@ -4,6 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: `TextInput`: Update component.
+- Breaking Change: Simplifiy the following components:
+  - `PasswordInput`
+  - `TextInputWithButton`
+  - `TextInputWithIcon`
+  - `TextInputWithLimit`
+  - `TextInputWithUnit`
+  - `Autocomplete`
+  - `LocationInput`
+- Breaking Change: `TextCopy`: Update component.
+- Breaking Change: `DatePicker`: Remove component.
 - Fix: `Button`: Set valid default size.
 - Fix: `Carousel`: Define default navigation button size.
 
@@ -45,7 +56,7 @@ Fix:
 
 ## [11.6.0] - 2022-07-01
 
-Feature: 
+Feature:
 
 - `Autocomplete`: Can pass objects to autocomplete items.
 

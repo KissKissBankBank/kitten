@@ -134,6 +134,7 @@ export const SearchInput = ({
       onKeyDown={handleKeyDown}
     >
       <TextInputWithButton
+        id="SearchInput"
         size="small"
         rounded
         buttonValue={<SearchIcon />}

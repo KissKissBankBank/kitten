@@ -2,17 +2,18 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
+    className="k-TextInput k-TextInput--hasLimit"
     defaultValue=""
     disabled={false}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
   <div
-    className="k-Form-TextInputWithLimit__limitNumber"
+    className="k-TextInput__limitNumber"
   >
     80
   </div>
@@ -21,17 +22,18 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium k-Form-TextInput--disabled"
+    className="k-TextInput k-TextInput--hasLimit k-TextInput--disabled"
     defaultValue=""
     disabled={true}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
   <div
-    className="k-Form-TextInputWithLimit__limitNumber k-Form-TextInputWithLimit__limitNumber--disabled"
+    className="k-TextInput__limitNumber k-TextInput__limitNumber--disabled"
   >
     80
   </div>
@@ -40,17 +42,18 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium k-Form-TextInput--error"
+    className="k-TextInput k-TextInput--hasLimit k-TextInput--error"
     defaultValue=""
     disabled={false}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
   <div
-    className="k-Form-TextInputWithLimit__limitNumber"
+    className="k-TextInput__limitNumber"
   >
     80
   </div>
@@ -59,17 +62,18 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`size\` prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kuiiTw k-Form-TextInputWithLimit"
+  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--small"
 >
   <input
-    className="sc-bdvvtL ekFnRP k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--small"
+    className="k-TextInput k-TextInput--hasLimit"
     defaultValue=""
     disabled={false}
+    id="TextInputWithLimit"
     name="text"
     onChange={[Function]}
   />
   <div
-    className="k-Form-TextInputWithLimit__limitNumber"
+    className="k-TextInput__limitNumber"
   >
     80
   </div>

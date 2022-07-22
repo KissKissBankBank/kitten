@@ -8,56 +8,11 @@ import { LocationIcon } from '../../../graphics/icons/location-icon'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
+import { TextInput } from '../../../form/input/text-input'
 
 const StyledLocationInput = styled.div`
   position: relative;
   width: 100%;
-
-  .k-LocationInput__input {
-    ${TYPOGRAPHY.fontStyles['400']}
-    font-size: ${stepToRem(-1)};
-    line-height: 1.3;
-
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    padding: 0 ${pxToRem(15)} 0 ${pxToRem(35)};
-    border-radius: var(--border-radius-s);
-
-    width: 100%;
-    height: ${pxToRem(50)};
-    background: ${COLORS.background1};
-    border: var(--border);
-    color: ${COLORS.font1};
-
-    transition: color 0.2s, border-color 0.2s;
-
-    &::placeholder {
-      color: ${COLORS.font2};
-    }
-
-    &:hover {
-      border: var(--border-hover);
-    }
-
-    &:focus {
-      color: ${COLORS.font1};
-      outline: var(--outline-input);
-      outline-offset: var(--outline-offset-input);
-    }
-
-    &:disabled {
-      border: var(--color-grey-300);
-      background-color: var(--color-grey-200);
-      color: var(--color-grey-600);
-
-      cursor: not-allowed;
-
-      &::placeholder {
-        opacity: 1;
-      }
-    }
-  }
 
   .k-LocationInput__autocomplete {
     box-sizing: border-box;
@@ -106,13 +61,6 @@ const StyledLocationInput = styled.div`
     padding-left: ${pxToRem(20)};
     color: ${COLORS.font2};
   }
-
-  .k-LocationInput__icon {
-    position: absolute;
-    z-index: 1;
-    top: ${pxToRem(15)};
-    left: ${pxToRem(15)};
-  }
 `
 
 // Make sure you include a script to the Google Maps places API.
@@ -156,10 +104,7 @@ export const LocationInput = ({
     >
       {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
         <StyledLocationInput className="k-LocationInput">
-          <div className="k-LocationInput__icon">
-            <LocationIcon />
-          </div>
-          <input
+          <TextInput
             {...getInputProps({
               ...inputProps,
               className: classNames(
@@ -167,6 +112,8 @@ export const LocationInput = ({
                 inputProps?.className,
               ),
             })}
+            has="icon"
+            icon={<LocationIcon />}
           />
           <div className="k-LocationInput__autocomplete">
             {loading && (

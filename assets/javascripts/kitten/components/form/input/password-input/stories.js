@@ -24,6 +24,7 @@ export default {
     iconLabel: 'Show password',
     hiddenIconLabel: 'Hide password',
     name: 'Password',
+    id: 'Password',
   },
 
   argTypes: {
