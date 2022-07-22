@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dcYnMY k-RewardCard k-RewardCard--hasBorder"
+  className="sc-bczRLJ bNwAcL k-RewardCard k-RewardCard--hasBorder"
 >
   <div
     className="k-RewardCard__gridWrapper"
@@ -38,7 +38,7 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dcYnMY k-RewardCard k-RewardCard--hasBorder"
+  className="sc-bczRLJ bNwAcL k-RewardCard k-RewardCard--hasBorder"
 >
   <div
     className="k-RewardCard__gridWrapper"
@@ -74,7 +74,7 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bdvvtL dcYnMY k-RewardCard k-RewardCard--disabled"
+  className="sc-bczRLJ bNwAcL k-RewardCard k-RewardCard--disabled"
 >
   <div
     className="k-RewardCard__imageWrapper"
@@ -88,7 +88,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     className="k-RewardCard__gridWrapper"
   >
     <span
-      className="sc-dkPtRN gruJKQ k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
+      className="sc-dkzDqf fUJfqT k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
     >
       <svg
         height="13"
@@ -169,7 +169,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__tagList k-RewardCard__drawer"
     >
       <li
-        className="sc-dkPtRN gruJKQ k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+        className="sc-dkzDqf fUJfqT k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-500"
@@ -179,7 +179,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
          contributeurs
       </li>
       <li
-        className="sc-dkPtRN gruJKQ k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+        className="sc-dkzDqf fUJfqT k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-500"
@@ -191,7 +191,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-gsDKAQ iTLtsg k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+    className="sc-gsnTZi bGunfA k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {

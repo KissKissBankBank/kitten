@@ -1,6 +1,5 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
 import { ExpandBoard } from './index'
 
 describe('<ExpandBoard />', () => {
@@ -36,30 +35,6 @@ describe('<ExpandBoard />', () => {
           .toJSON()
 
         expect(component).toMatchSnapshot()
-      })
-    })
-
-    describe('onClick', () => {
-      it('expands the content', () => {
-        const component = shallow(
-          <ExpandBoard aria-id="ExpandBoard">
-            <ExpandBoard.Button>Alice</ExpandBoard.Button>
-            <ExpandBoard.Content>
-              <div>Curioser and curioser</div>
-            </ExpandBoard.Content>
-          </ExpandBoard>,
-        )
-
-        const button = component.find(ExpandBoard.Button)
-        const content = component.find(ExpandBoard.Content)
-
-        expect(content.exists()).toBe(false)
-
-        button.simulate('click')
-
-        const updatedContent = component.update().find(ExpandBoard.Content)
-
-        expect(updatedContent.exists()).toBe(true)
       })
     })
   })

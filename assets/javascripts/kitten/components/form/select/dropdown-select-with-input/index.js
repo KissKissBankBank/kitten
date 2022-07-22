@@ -456,7 +456,7 @@ export const DropdownSelectWithInput = ({
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }
 
-  const inputEl = useRef(inputEl)
+  const inputEl = useRef(null)
 
   const itemToString = item => (item ? String(item.label) : '')
 
@@ -464,13 +464,13 @@ export const DropdownSelectWithInput = ({
     onChange(changes.selectedItem)
     onInputChange({
       selectValue: changes.selectedItem,
-      inputValue: inputEl.value,
+      inputValue: inputEl?.value,
     })
   }
 
   const onIsOpenChange = changes => {
     if (!changes.isOpen) {
-      inputEl && inputEl.current && inputEl.current.focus()
+      inputEl?.current?.focus()
     }
   }
 

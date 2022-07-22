@@ -161,23 +161,3 @@ exports[`<Marger /> with top prop with object with \`fromXxs\` prop is overrided
   className="c0"
 />
 `;
-
-exports[`<Marger /> with top prop with string prop has margin-top CSS rule 1`] = `
-.c0 {
-  margin-top: 0.9375rem;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`<Marger /> with top prop with string prop works with .5 value 1`] = `
-.c0 {
-  margin-top: 0.3125rem;
-}
-
-<div
-  className="c0"
-/>
-`;

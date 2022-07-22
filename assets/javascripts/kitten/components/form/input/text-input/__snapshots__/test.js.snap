@@ -2,7 +2,7 @@
 
 exports[`<TextInput /> with \`autoresize\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__isTextarea"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__isTextarea"
 >
   <textarea
     className="k-TextInput"
@@ -26,7 +26,7 @@ exports[`<TextInput /> with \`autoresize\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--alignCenter"
@@ -41,7 +41,7 @@ exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`darkBackground\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--darkBackground"
@@ -56,7 +56,7 @@ exports[`<TextInput /> with \`darkBackground\` prop matches with snapshot 1`] = 
 
 exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasDigits"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasDigits"
 >
   <input
     className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_12"
@@ -76,7 +76,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--disabled"
@@ -91,7 +91,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--error"
@@ -106,7 +106,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`has=button buttonIsInset\` props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -129,7 +129,7 @@ exports[`<TextInput /> with \`has=button buttonIsInset\` props matches with snap
 
 exports[`<TextInput /> with \`has=button\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -140,7 +140,7 @@ exports[`<TextInput /> with \`has=button\` prop matches with snapshot 1`] = `
     onChange={[Function]}
   />
   <button
-    className="sc-gsDKAQ dtCgZ k-Button k-TextInput__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+    className="sc-gsnTZi dSJjql k-Button k-TextInput__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
     style={
       Object {
         "--Button-border-radius": null,
@@ -156,7 +156,7 @@ exports[`<TextInput /> with \`has=button\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`has=icon iconPosition=right\` props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_right"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_right"
 >
   <input
     className="k-TextInput k-TextInput--hasIcon"
@@ -177,7 +177,7 @@ exports[`<TextInput /> with \`has=icon iconPosition=right\` props matches with s
 
 exports[`<TextInput /> with \`has=icon\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
   <input
     className="k-TextInput k-TextInput--hasIcon"
@@ -198,7 +198,7 @@ exports[`<TextInput /> with \`has=icon\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`has=limit\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasLimit"
@@ -218,7 +218,7 @@ exports[`<TextInput /> with \`has=limit\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`has=unit unitIsWord\` props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit"
@@ -238,7 +238,7 @@ exports[`<TextInput /> with \`has=unit unitIsWord\` props matches with snapshot 
 
 exports[`<TextInput /> with \`has=unit\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit"
@@ -258,7 +258,7 @@ exports[`<TextInput /> with \`has=unit\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput"
@@ -273,7 +273,7 @@ exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`size\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput"
@@ -288,7 +288,7 @@ exports[`<TextInput /> with \`size\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput"
@@ -303,7 +303,7 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__isTextarea"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__isTextarea"
 >
   <textarea
     className="k-TextInput"
@@ -321,7 +321,7 @@ exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--valid"

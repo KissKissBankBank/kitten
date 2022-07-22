@@ -1,6 +1,6 @@
 module.exports = {
   "extends": ["plugin:prettier/recommended", "plugin:storybook/recommended"],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "plugins": ["react"],
   "parserOptions": {
     "ecmaVersion": 9,

@@ -2,15 +2,15 @@
 
 exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-jRQBWg cbkKjv"
+  className="sc-jSMfEi iwROZU"
 >
   <img
     alt=""
-    className="sc-eCImPb ffDGxs"
+    className="sc-eCYdqJ eA-dPzK"
     src="#image"
   />
   <h1
-    className="sc-gsDKAQ gChKvE k-Title k-Title--senary k-Title--noMargin"
+    className="sc-gsnTZi mZbdM k-Title k-Title--senary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,
@@ -25,15 +25,15 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-jRQBWg cbkKjv"
+  className="sc-jSMfEi iwROZU"
 >
   <img
     alt="Image alt"
-    className="sc-eCImPb ffDGxs"
+    className="sc-eCYdqJ eA-dPzK"
     src="#image"
   />
   <h1
-    className="sc-gsDKAQ gChKvE k-Title k-Title--senary k-Title--noMargin"
+    className="sc-gsnTZi mZbdM k-Title k-Title--senary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,
@@ -43,10 +43,10 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     Custom title
   </h1>
   <div
-    className="sc-bdvvtL fKQuJZ"
+    className="sc-bczRLJ jqcFKy"
   >
     <p
-      className="sc-dkPtRN dIVqOu k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
+      className="sc-dkzDqf eptyER k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
     >
       Custom text
     </p>

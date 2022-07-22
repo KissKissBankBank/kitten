@@ -2,7 +2,7 @@
 
 exports[`<GridTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <section
-  className="sc-bdvvtL iaRfCg k-GridTable__wrapper CustomGridTable"
+  className="sc-bczRLJ inCukj k-GridTable__wrapper CustomGridTable"
   id="TestGridTable"
 >
   <div

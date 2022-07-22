@@ -2,7 +2,7 @@
 
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-dkPtRN fIyQYQ k-Form-ColorSelect"
+  className="sc-dkzDqf fpxlvr k-Form-ColorSelect"
   name="test-color-select"
 >
   <div
@@ -106,7 +106,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
       }
     />
     <div
-      className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--small"
+      className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--small"
     >
       <input
         aria-label="Code hexadécimal de la couleur"
@@ -131,7 +131,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 
 exports[`<ColorSelect /> should match its snapshot with props and children 1`] = `
 <div
-  className="sc-dkPtRN fIyQYQ k-Form-ColorSelect"
+  className="sc-dkzDqf fpxlvr k-Form-ColorSelect"
   name="test-color-select"
 >
   <div
@@ -235,7 +235,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
       }
     />
     <div
-      className="sc-bdvvtL gBhpAK k-TextInput__wrapper k-TextInput__wrapper--small"
+      className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--small"
     >
       <input
         aria-label="Code hexadécimal de la couleur"
@@ -272,7 +272,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
           Rendu :
         </span>
         <button
-          className="sc-gsDKAQ iTLtsg k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
+          className="sc-gsnTZi bGunfA k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
           style={
             Object {
               "--Button-border-radius": null,

@@ -224,21 +224,22 @@ export const Autocomplete = ({
             : ''
         }
         className="k-Form-Autocomplete__input"
-        has={isLoading || !!icon ? "icon" : null}
-        icon={isLoading ? (
-          <>
-            <Loader
-              className="k-Form-Autocomplete__loader"
-              color={COLORS.font2}
-            />
-            <VisuallyHidden lang="en">loading</VisuallyHidden>
-          </>
-
+        has={isLoading || !!icon ? 'icon' : null}
+        icon={
+          isLoading ? (
+            <>
+              <Loader
+                className="k-Form-Autocomplete__loader"
+                color={COLORS.font2}
+              />
+              <VisuallyHidden lang="en">loading</VisuallyHidden>
+            </>
           ) : !!icon ? (
             <span className="k-Form-Autocomplete__icon" aria-hidden="true">
               {React.cloneElement(icon, { width: 15, height: 15 })}
             </span>
-          ) : null}
+          ) : null
+        }
       />
 
       {showSuggestions &&

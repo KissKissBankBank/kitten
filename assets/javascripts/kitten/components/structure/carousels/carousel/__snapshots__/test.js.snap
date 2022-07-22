@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gmacoJ k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -29,7 +29,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -50,7 +50,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -107,7 +107,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -134,7 +134,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -155,7 +155,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -212,7 +212,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -239,7 +239,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -260,7 +260,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -317,7 +317,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -352,7 +352,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -373,7 +373,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -430,7 +430,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -457,7 +457,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -478,7 +478,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -535,7 +535,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -562,7 +562,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -583,7 +583,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -640,7 +640,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -679,7 +679,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
       className="k-Carousel__pagination__buttonContainer"
     >
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
         disabled={true}
         onClick={[Function]}
         style={
@@ -716,7 +716,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
         </svg>
       </button>
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
         disabled={false}
         onClick={[Function]}
         style={
@@ -759,7 +759,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gmacoJ k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -786,7 +786,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -807,7 +807,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -864,7 +864,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -891,7 +891,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -912,7 +912,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -969,7 +969,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -996,7 +996,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -1017,7 +1017,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1074,7 +1074,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1109,7 +1109,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -1130,7 +1130,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1187,7 +1187,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1214,7 +1214,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -1235,7 +1235,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1292,7 +1292,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1319,7 +1319,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -1340,7 +1340,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1397,7 +1397,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1454,10 +1454,10 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kgrJRU k-Carousel k-LegacyCarousel"
+  className="sc-dkzDqf kXYvPj k-Carousel k-LegacyCarousel"
 >
   <div
-    className="sc-gsDKAQ hebEnC k-Grid"
+    className="sc-gsnTZi jshwWW k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
@@ -1479,7 +1479,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+                className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
                 title="A"
               >
                 <div
@@ -1515,10 +1515,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kgrJRU k-Carousel k-LegacyCarousel"
+  className="sc-dkzDqf kXYvPj k-Carousel k-LegacyCarousel"
 >
   <div
-    className="sc-gsDKAQ hebEnC k-Grid"
+    className="sc-gsnTZi jshwWW k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--11-l k-Grid__col--offset-0-l"
@@ -1540,7 +1540,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+                className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
                 title="A"
               >
                 <div
@@ -1576,10 +1576,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN kgrJRU k-Carousel k-LegacyCarousel"
+  className="sc-dkzDqf kXYvPj k-Carousel k-LegacyCarousel"
 >
   <div
-    className="sc-gsDKAQ hebEnC k-Grid"
+    className="sc-gsnTZi jshwWW k-Grid"
   >
     <div
       className="k-Grid__col k-Grid__col--12 k-Grid__col--10-l k-Grid__col--offset-1-l"
@@ -1601,7 +1601,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+                className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
                 title="A"
               >
                 <div
@@ -1637,7 +1637,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gmacoJ k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -1664,7 +1664,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -1685,7 +1685,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1742,7 +1742,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1769,7 +1769,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -1790,7 +1790,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1847,7 +1847,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1874,7 +1874,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -1895,7 +1895,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1952,7 +1952,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -1987,7 +1987,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -2008,7 +2008,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2065,7 +2065,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2092,7 +2092,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -2113,7 +2113,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2170,7 +2170,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2197,7 +2197,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -2218,7 +2218,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2275,7 +2275,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2314,7 +2314,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
       className="k-Carousel__pagination__buttonContainer"
     >
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
         disabled={true}
         onClick={[Function]}
         style={
@@ -2351,7 +2351,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
         </svg>
       </button>
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
         disabled={false}
         onClick={[Function]}
         style={
@@ -2394,7 +2394,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gmacoJ k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -2421,7 +2421,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -2442,7 +2442,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2499,7 +2499,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2526,7 +2526,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -2547,7 +2547,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2604,7 +2604,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2631,7 +2631,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -2652,7 +2652,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2709,7 +2709,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2736,7 +2736,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -2757,7 +2757,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2814,7 +2814,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2841,7 +2841,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -2862,7 +2862,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2919,7 +2919,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -2954,7 +2954,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -2975,7 +2975,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3032,7 +3032,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3083,7 +3083,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
       className="k-Carousel__pagination__buttonContainer"
     >
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
         disabled={true}
         onClick={[Function]}
         style={
@@ -3120,7 +3120,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
         </svg>
       </button>
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
         disabled={false}
         onClick={[Function]}
         style={
@@ -3163,7 +3163,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gmacoJ k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -3190,7 +3190,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -3211,7 +3211,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3268,7 +3268,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3295,7 +3295,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -3316,7 +3316,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3373,7 +3373,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3400,7 +3400,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -3421,7 +3421,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3478,7 +3478,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3513,7 +3513,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -3534,7 +3534,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3591,7 +3591,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3618,7 +3618,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -3639,7 +3639,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3696,7 +3696,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3723,7 +3723,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -3744,7 +3744,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3801,7 +3801,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -3840,7 +3840,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
       className="k-Carousel__pagination__buttonContainer"
     >
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
         disabled={false}
         onClick={[Function]}
         style={
@@ -3877,7 +3877,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
         </svg>
       </button>
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
         disabled={false}
         onClick={[Function]}
         style={
@@ -3920,7 +3920,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN gmacoJ k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -3947,7 +3947,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -3968,7 +3968,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4025,7 +4025,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -4052,7 +4052,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -4073,7 +4073,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4130,7 +4130,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -4157,7 +4157,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -4178,7 +4178,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4235,7 +4235,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -4270,7 +4270,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -4291,7 +4291,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4348,7 +4348,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -4375,7 +4375,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--normal"
             onFocus={[Function]}
           >
             <div
@@ -4396,7 +4396,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4453,7 +4453,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -4480,7 +4480,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            className="sc-hKMtZM diMmjK k-ProjectCard k-ProjectCard--success"
             onFocus={[Function]}
           >
             <div
@@ -4501,7 +4501,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4558,7 +4558,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   aria-valuemax={100}
                   aria-valuemin={0}
                   aria-valuenow={55}
-                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  className="sc-jSMfEi giySqZ k-Meters-Progress"
                   role="progressbar"
                   style={
                     Object {
@@ -4597,7 +4597,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
       className="k-Carousel__pagination__buttonContainer"
     >
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--small k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--small k-Button--beryllium k-Button--fit-icon k-Button--disabled"
         disabled={true}
         onClick={[Function]}
         style={
@@ -4634,7 +4634,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
         </svg>
       </button>
       <button
-        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+        className="sc-bczRLJ rWxDk k-Button k-Carousel__pagination__button k-Button--small k-Button--beryllium k-Button--fit-icon"
         disabled={false}
         onClick={[Function]}
         style={

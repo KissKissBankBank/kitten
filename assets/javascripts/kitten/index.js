@@ -400,7 +400,6 @@ export { VerticalCardWithAction } from './components/structure/cards/vertical-ca
 
 // Structure/Carousels
 export { Carousel } from './components/structure/carousels/carousel'
-export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel'
 export { SimpleCarousel } from './components/structure/carousels/simple-carousel'
 
 export { Accordeon } from './components/structure/expand/accordeon'

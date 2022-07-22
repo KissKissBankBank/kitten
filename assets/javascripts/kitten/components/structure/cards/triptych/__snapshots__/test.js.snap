@@ -2,7 +2,7 @@
 
 exports[`<Triptych /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL hQkjqL k-Grid sc-dkPtRN jzKdTe k-Triptych k-u-align-center"
+  className="sc-bczRLJ kjvHUA k-Grid sc-dkzDqf gYFZup k-Triptych k-u-align-center"
 >
   <div
     className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--offset-0-m k-Grid__col--10-l k-Grid__col--offset-1-l"
@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-hKwDye ebMCQD k-Title k-Title--secondary k-Title--noMargin"
+          className="sc-hKMtZM esnKuY k-Title k-Title--secondary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -23,7 +23,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         </h2>
       </div>
       <span
-        className="k-VerticalStroke k-VerticalStroke--huge sc-gsDKAQ KDkSq k-Triptych__verticalStroke k-u-margin-bottom-double"
+        className="k-VerticalStroke k-VerticalStroke--huge sc-gsnTZi dzYjrm k-Triptych__verticalStroke k-u-margin-bottom-double"
       />
     </div>
   </div>
@@ -32,7 +32,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
   >
     <div>
       <div
-        className="sc-gKclnd iEBnoT"
+        className="sc-gKXOVf iZmJkz"
       >
         <div
           className="k-u-margin-bottom-triple"
@@ -47,7 +47,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-hKwDye ebMCQD k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+            className="sc-hKMtZM esnKuY k-Title k-u-align-center k-Title--senary k-Title--noMargin"
             style={
               Object {
                 "--Title-css-color": null,
@@ -62,7 +62,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="sc-jRQBWg bqsTCo k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
+            className="sc-jSMfEi kFXrPP k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
             href={null}
             onClick={null}
             style={
@@ -83,7 +83,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn"
   >
     <div
-      className="sc-gKclnd iEBnoT"
+      className="sc-gKXOVf iZmJkz"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -98,7 +98,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-hKwDye ebMCQD k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
+          className="sc-hKMtZM esnKuY k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -108,7 +108,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Donsectetur adipiscing elit
         </h1>
         <p
-          className="sc-eCImPb jNqQiZ k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
+          className="sc-eCYdqJ gbjdTX k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
         >
           Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
@@ -117,7 +117,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-jRQBWg bqsTCo k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
+          className="sc-jSMfEi kFXrPP k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
           href={null}
           onClick={null}
           style={
@@ -137,7 +137,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col k-Grid__col--12 k-Grid__col--6-m k-Grid__col--4-l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div
-      className="sc-gKclnd iEBnoT"
+      className="sc-gKXOVf iZmJkz"
     >
       <div
         className="k-u-margin-bottom-triple"
@@ -152,7 +152,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-hKwDye ebMCQD k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+          className="sc-hKMtZM esnKuY k-Title k-u-align-center k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -167,7 +167,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-jRQBWg bqsTCo k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
+          className="sc-jSMfEi kFXrPP k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
           href={null}
           onClick={null}
           style={
