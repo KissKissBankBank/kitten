@@ -7,6 +7,7 @@ describe('<PasswordInput />', () => {
     const tree = renderer
       .create(
         <PasswordInput
+          id="password"
           iconLabel="Custom icon label"
           hiddenIconLabel="Custom hidden icon label"
           id="password"

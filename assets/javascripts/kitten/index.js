@@ -70,7 +70,6 @@ export { CheckboxButtonSet } from './components/form/checkbox-button-set'
 export { CheckboxSet } from './components/form/checkbox-set'
 export { CreditCardForm } from './components/form/credit-card-form'
 export { ColorSelect } from './components/form/color-select'
-export { DatePicker } from './components/form/date-picker'
 export { Field } from './components/form/field'
 export { FormActions } from './components/form/form-actions'
 export { Label } from './components/form/label'
@@ -401,7 +400,6 @@ export { VerticalCardWithAction } from './components/structure/cards/vertical-ca
 
 // Structure/Carousels
 export { Carousel } from './components/structure/carousels/carousel'
-export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel'
 export { SimpleCarousel } from './components/structure/carousels/simple-carousel'
 
 export { Accordeon } from './components/structure/expand/accordeon'

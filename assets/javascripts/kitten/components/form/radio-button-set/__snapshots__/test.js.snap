@@ -2,11 +2,11 @@
 
 exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
+  className="sc-dkzDqf gXJVLv k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend
-    className="sc-gsDKAQ gDfswp k-Label k-Form-RadioButtonSet__label k-Label--small"
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-RadioButtonSet__label k-Label--small"
     onClick={[Function]}
   >
     Label
@@ -15,7 +15,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
     className="k-Form-RadioButtonSet__radioContainer"
   >
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -37,7 +37,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -58,7 +58,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -84,11 +84,11 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
 
 exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
+  className="sc-dkzDqf gXJVLv k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend
-    className="sc-gsDKAQ gDfswp k-Label k-Form-RadioButtonSet__label customClass k-Label--small"
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-RadioButtonSet__label customClass k-Label--small"
     data-test={true}
     onClick={[Function]}
   >
@@ -98,7 +98,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
     className="k-Form-RadioButtonSet__radioContainer"
   >
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -120,7 +120,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       </label>
     </div>
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -141,7 +141,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       </label>
     </div>
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -167,7 +167,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
 
 exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
 <fieldset
-  className="sc-dkPtRN bZTlQg k-Form-RadioButtonSet"
+  className="sc-dkzDqf gXJVLv k-Form-RadioButtonSet"
   disabled={false}
 >
   <legend>
@@ -179,7 +179,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
     className="k-Form-RadioButtonSet__radioContainer"
   >
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -201,7 +201,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"
@@ -222,7 +222,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       </label>
     </div>
     <div
-      className="sc-bdvvtL emqnjv k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+      className="sc-bczRLJ fslHfA k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
     >
       <input
         className="k-Form-RadioButton__input"

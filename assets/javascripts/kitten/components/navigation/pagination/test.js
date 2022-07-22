@@ -1,5 +1,4 @@
 import React from 'react'
-import sinon from 'sinon'
 import { pages, Pagination } from './index'
 import renderer from 'react-test-renderer'
 
@@ -23,34 +22,10 @@ describe('<Pagination />', () => {
   describe('by default', () => {
     it('should match its empty snapshot', () => {
       const tree = renderer
-        .create(
-          <>
-            <Pagination currentPage={10} totalPages={42} />
-          </>,
-        )
+        .create(<Pagination currentPage={10} totalPages={42} />)
         .toJSON()
 
       expect(tree).toMatchSnapshot()
-    })
-  })
-
-  describe('onPageClick', () => {
-    it('calls the given function when clicking on links', () => {
-      const sandbox = sinon.createSandbox()
-      const onClickSpy = sandbox.spy()
-      const pagination = mount(
-        <>
-          <Pagination onPageClick={onClickSpy} totalPages={5} />
-        </>,
-      )
-      const event = {
-        foo: 'bar',
-      }
-
-      pagination.find('a').last().simulate('click', event)
-
-      expect(onClickSpy.called).toBe(true)
-      expect(onClickSpy.calledWithMatch(2, event)).toBe(true)
     })
   })
 })

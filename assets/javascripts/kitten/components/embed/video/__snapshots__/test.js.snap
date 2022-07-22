@@ -2,7 +2,7 @@
 
 exports[`<Video /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL iaWZMl k-Video k-Video--objectFitCover"
+  className="sc-bczRLJ dDuoJi k-Video k-Video--objectFitCover"
 >
   <button
     className="k-u-reset-button k-Video__button"
@@ -39,13 +39,13 @@ exports[`<Video /> by default matches with snapshot 1`] = `
 
 exports[`<Video /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL iaWZMl k-Video k-Video--objectFitCover"
+  className="sc-bczRLJ dDuoJi k-Video k-Video--objectFitCover"
 >
   <div
-    className="sc-gsDKAQ izHNoE"
+    className="sc-gsnTZi blSMxk"
   >
     <div
-      className="sc-dkPtRN dJgvKX k-Loader"
+      className="sc-dkzDqf jQXZYo k-Loader"
     >
       <svg
         className="k-Loader__circle"

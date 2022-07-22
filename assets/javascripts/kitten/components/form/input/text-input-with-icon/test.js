@@ -9,7 +9,9 @@ describe('<TextInputWithIcon />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithIcon icon={<SearchIcon />} />)
+        .create(
+          <TextInputWithIcon id="TextInputWithButton" icon={<SearchIcon />} />,
+        )
         .toJSON()
     })
 
@@ -23,6 +25,7 @@ describe('<TextInputWithIcon />', () => {
       component = renderer
         .create(
           <TextInputWithIcon
+            id="TextInputWithButton"
             icon={<SearchIcon />}
             placeholder="Les props sont transmises"
           />,
@@ -38,7 +41,13 @@ describe('<TextInputWithIcon />', () => {
   describe('with disabled prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithIcon disabled icon={<SearchIcon />} />)
+        .create(
+          <TextInputWithIcon
+            id="TextInputWithButton"
+            disabled
+            icon={<SearchIcon />}
+          />,
+        )
         .toJSON()
     })
 
@@ -52,6 +61,7 @@ describe('<TextInputWithIcon />', () => {
       component = renderer
         .create(
           <TextInputWithIcon
+            id="TextInputWithButton"
             valid
             icon={<SearchIcon />}
             iconPosition="right"

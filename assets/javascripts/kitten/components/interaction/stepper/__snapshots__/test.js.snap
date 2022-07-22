@@ -2,20 +2,20 @@
 
 exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb lbcvSl"
+      className="sc-eCYdqJ jSYNWn"
     >
       <span
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
         tabIndex="0"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -34,22 +34,22 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb lbcvSl"
+      className="sc-eCYdqJ jSYNWn"
     >
       <a
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -68,22 +68,22 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb lbcvSl"
+      className="sc-eCYdqJ jSYNWn"
     >
       <a
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -102,23 +102,23 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb lbcvSl"
+      className="sc-eCYdqJ jSYNWn"
     >
       <a
         aria-current="page"
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-font1"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -137,20 +137,20 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb bOoqEJ"
+      className="sc-eCYdqJ hcPFRH"
     >
       <span
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
         tabIndex="0"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info k-IconBadge--empty"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -169,20 +169,20 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb gydIeX"
+      className="sc-eCYdqJ gODAXd"
     >
       <span
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
         tabIndex="0"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -220,22 +220,22 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb gydIeX"
+      className="sc-eCYdqJ gODAXd"
     >
       <a
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn k-u-link k-u-link-primary1"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-primary1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--info"
           style={
             Object {
               "--iconBadge-background-color": null,
@@ -273,20 +273,20 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
 <div
-  className="sc-dkPtRN eLuarp"
+  className="sc-dkzDqf hstgcm"
 >
   <ul
-    className="sc-hKwDye dfxAVe"
+    className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCImPb lbcvSl"
+      className="sc-eCYdqJ jSYNWn"
     >
       <span
-        className="k-u-size-small k-u-weight-500 sc-jRQBWg jdfuVn"
+        className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
         tabIndex="0"
       >
         <span
-          className="sc-bdvvtL gIJdRE k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--success"
+          className="sc-bczRLJ fdLbIf k-IconBadge k-Stepper__icon k-IconBadge--small k-IconBadge--success"
           style={
             Object {
               "--iconBadge-background-color": null,

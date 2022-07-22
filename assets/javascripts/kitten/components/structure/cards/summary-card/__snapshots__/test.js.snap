@@ -2,7 +2,7 @@
 
 exports[`<SummaryCard /> default matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL egSjrO k-SummaryCard k-SummaryCard-Wrapper--large k-SummaryCard--hasAction"
+  className="sc-bczRLJ jziXlp k-SummaryCard k-SummaryCard-Wrapper--large k-SummaryCard--hasAction"
 >
   <a
     aria-label="Click to show item"

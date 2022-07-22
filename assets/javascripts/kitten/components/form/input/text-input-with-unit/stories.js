@@ -23,26 +23,12 @@ export default {
 
   args: {
     ...TextInputStory.args,
-    unit: '€',
-    unitWord: '',
-    wrapper: {},
+    unitWord: false,
   },
 
   argTypes: {
     ...TextInputStory.argTypes,
-    unit: {
-      name: 'unit',
-      control: 'text',
-    },
-    unitWord: {
-      name: 'unitWord',
-      control: 'text',
-    },
-    wrapperProps: {
-      name: 'wrapperProps',
-      description: 'props object passed to the wrapper',
-      control: 'object',
-    },
+    unitWord: 'boolean',
   },
 }
 

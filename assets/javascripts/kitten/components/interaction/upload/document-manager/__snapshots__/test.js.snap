@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot with active state props 1`] = `
 <div
-  className="sc-jRQBWg egcpYu k-DocumentManager__display k-DocumentManager__display--valid"
+  className="sc-jSMfEi fJmNLB k-DocumentManager__display k-DocumentManager__display--valid"
   id="DocumentManager"
 >
   <div
@@ -12,10 +12,10 @@ exports[`<DocumentManager /> should match snapshot with active state props 1`] =
       className="k-DocumentManager__display__documentIcon"
     >
       <div
-        className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--valid"
+        className="sc-gKXOVf kUYvrq k-DocumentManager__iconContainer k-DocumentManager__iconContainer--valid"
       >
         <svg
-          className="sc-dkPtRN duawKr k-ColorSvg"
+          className="sc-dkzDqf cIyAVk k-ColorSvg"
           height="33"
           viewBox="0 0 25 33"
           width="25"
@@ -99,7 +99,7 @@ exports[`<DocumentManager /> should match snapshot with active state props 1`] =
 
 exports[`<DocumentManager /> should match snapshot with error state props and content 1`] = `
 <div
-  className="sc-jRQBWg egcpYu k-DocumentManager__display k-DocumentManager__display--error"
+  className="sc-jSMfEi fJmNLB k-DocumentManager__display k-DocumentManager__display--error"
   id="DocumentManager"
 >
   <div
@@ -109,10 +109,10 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
       className="k-DocumentManager__display__documentIcon"
     >
       <div
-        className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--error"
+        className="sc-gKXOVf kUYvrq k-DocumentManager__iconContainer k-DocumentManager__iconContainer--error"
       >
         <svg
-          className="sc-dkPtRN duawKr k-ColorSvg"
+          className="sc-dkzDqf cIyAVk k-ColorSvg"
           height="33"
           viewBox="0 0 25 33"
           width="25"
@@ -214,7 +214,7 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
 
 exports[`<DocumentManager /> should match snapshot with ready state props 1`] = `
 <div
-  className="sc-hKwDye gmgewQ k-DocumentManager__uploader"
+  className="sc-hKMtZM cybZkT k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -224,7 +224,7 @@ exports[`<DocumentManager /> should match snapshot with ready state props 1`] = 
     type="file"
   />
   <label
-    className="sc-bdvvtL dDDqKo k-Button k-DocumentManager__uploader__button k-Button--large k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bczRLJ erTPHf k-Button k-DocumentManager__uploader__button k-Button--large k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="DocumentManager"
     style={
@@ -242,10 +242,10 @@ exports[`<DocumentManager /> should match snapshot with ready state props 1`] = 
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-gKclnd ckpgoy k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-gKXOVf kUYvrq k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
-            className="sc-dkPtRN duawKr k-ColorSvg"
+            className="sc-dkzDqf cIyAVk k-ColorSvg"
             height="33"
             viewBox="0 0 25 33"
             width="25"

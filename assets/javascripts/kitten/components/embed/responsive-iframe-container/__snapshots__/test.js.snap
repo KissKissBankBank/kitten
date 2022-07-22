@@ -2,7 +2,7 @@
 
 exports[`<ResponsiveIframeContainer /> with custom props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL kfIuna k-ResponsiveIframeContainer"
+  className="sc-bczRLJ loUUGZ k-ResponsiveIframeContainer"
   style={
     Object {
       "--ResponsiveImageContainer-ratio": "56.25%",
@@ -15,7 +15,7 @@ exports[`<ResponsiveIframeContainer /> with custom props matches with snapshot 1
 
 exports[`<ResponsiveIframeContainer /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL kfIuna k-ResponsiveIframeContainer"
+  className="sc-bczRLJ loUUGZ k-ResponsiveIframeContainer"
   style={
     Object {
       "--ResponsiveImageContainer-ratio": "67.5%",

@@ -8,12 +8,15 @@ describe('<ColorSelect />', () => {
     const tree = renderer
       .create(
         <ColorSelect
-          name="test-slider-input"
+          name="test-color-select"
           onChange={() => {}}
           value="#556954"
           contrastColor="#555"
           contrastRatio={3}
-          inputProps={{ 'aria-label': 'Code hexadécimal de la couleur' }}
+          inputProps={{
+            id: 'test-color-select',
+            'aria-label': 'Code hexadécimal de la couleur',
+          }}
         />,
       )
       .toJSON()
@@ -24,12 +27,15 @@ describe('<ColorSelect />', () => {
     const tree = renderer
       .create(
         <ColorSelect
-          name="test-slider-input"
+          name="test-color-select"
           onChange={() => {}}
           value="#556954"
           contrastColor="#555"
           contrastRatio={3}
-          inputProps={{ 'aria-label': 'Code hexadécimal de la couleur' }}
+          inputProps={{
+            id: 'test-color-select',
+            'aria-label': 'Code hexadécimal de la couleur',
+          }}
         >
           <div
             className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-end k-u-flex-gap-single"

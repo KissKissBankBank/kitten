@@ -6,7 +6,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -30,25 +30,30 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-bqiRlB jUdxlI k-Form-Autocomplete"
+      className="sc-iqcoie gBQtdI k-Form-Autocomplete"
     >
-      <input
-        aria-activedescendant=""
-        aria-autocomplete="both"
-        aria-expanded={null}
-        aria-owns="field-results"
-        autoComplete="off"
-        className="k-Form-Autocomplete__input"
-        id="autocomplete"
-        name="field"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        placeholder="Select…"
-        role="combobox"
-        size="medium"
-        type="text"
-      />
+      <div
+        className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium"
+      >
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="both"
+          aria-expanded={null}
+          aria-owns="field-results"
+          autoComplete="off"
+          className="k-TextInput k-Form-Autocomplete__input"
+          defaultValue=""
+          disabled={false}
+          id="autocomplete"
+          name="field"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Select…"
+          role="combobox"
+          type="text"
+        />
+      </div>
     </div>
   </div>,
 ]
@@ -60,7 +65,7 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -71,7 +76,7 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -82,7 +87,7 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -107,7 +112,7 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -149,13 +154,15 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
     </div>
   </div>
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
+      className="k-TextInput k-TextInput--error"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>
@@ -183,7 +190,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -194,7 +201,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -205,7 +212,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -230,7 +237,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -272,13 +279,15 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
+      className="k-TextInput k-TextInput--error"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>,
@@ -296,7 +305,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -307,7 +316,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -318,7 +327,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -343,7 +352,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -385,13 +394,15 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium"
+      className="k-TextInput"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>,
@@ -414,7 +425,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -425,7 +436,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -436,7 +447,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -461,7 +472,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -503,13 +514,15 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInput--medium"
+      className="k-TextInput"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>,
@@ -522,7 +535,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -533,7 +546,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -544,7 +557,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -569,7 +582,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -611,25 +624,21 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
+    <input
+      className="k-TextInput k-TextInput--hasLimit"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
     <div
-      className="sc-gKclnd iZxmye k-Form-TextInputWithLimit"
+      className="k-TextInput__limitNumber"
     >
-      <input
-        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-      <div
-        className="k-Form-TextInputWithLimit__limitNumber"
-      >
-        80
-      </div>
+      80
     </div>
   </div>,
 ]
@@ -641,7 +650,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -652,7 +661,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -663,7 +672,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -688,7 +697,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -730,25 +739,22 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasUnit"
   >
-    <div
-      className="sc-iCfMLu dsUhOH k-Form-TextInputWithUnit"
+    <input
+      className="k-TextInput k-TextInput--hasUnit"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
+    <span
+      className="k-TextInput__unit"
     >
-      <input
-        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--medium"
-        disabled={false}
-        id="input"
-        name="field"
-        placeholder="Placeholder…"
-        type="number"
-      />
-      <span
-        className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--medium"
-      >
-        €
-      </span>
-    </div>
+      €
+    </span>
   </div>,
 ]
 `;
@@ -759,7 +765,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -770,7 +776,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -781,7 +787,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -806,7 +812,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -851,25 +857,29 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-crHmcD lfvliB k-Form-PasswordInput"
+      className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
     >
       <input
-        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
+        className="k-TextInput k-TextInput--hasButton k-TextInput--error"
+        defaultValue=""
         disabled={false}
         id="input"
         name="field"
+        onChange={[Function]}
         placeholder="Placeholder…"
         type="password"
       />
       <button
         aria-label="Show password"
         aria-pressed={false}
-        className="k-Form-PasswordInput__icon k-u-reset-button"
+        className="k-TextInput__button k-PasswordInput__icon"
         onClick={[Function]}
+        rounded={false}
+        size="medium"
         type="button"
       >
         <svg
-          fill="#222"
+          fill="var(--color-grey-900)"
           viewBox="0 0 18 12"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -901,7 +911,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -912,7 +922,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -923,7 +933,7 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkPtRN ymLMO k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -948,7 +958,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsDKAQ gGaUCp k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
+              className="sc-gsnTZi gyAcxJ k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": null,
@@ -993,25 +1003,29 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-crHmcD lfvliB k-Form-PasswordInput"
+      className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
     >
       <input
-        className="sc-eCImPb elHtIJ k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium"
+        className="k-TextInput k-TextInput--hasButton"
+        defaultValue=""
         disabled={false}
         id="input"
         name="field"
+        onChange={[Function]}
         placeholder="Placeholder…"
         type="password"
       />
       <button
         aria-label="Show password"
         aria-pressed={false}
-        className="k-Form-PasswordInput__icon k-u-reset-button"
+        className="k-TextInput__button k-PasswordInput__icon"
         onClick={[Function]}
+        rounded={false}
+        size="medium"
         type="button"
       >
         <svg
-          fill="#222"
+          fill="var(--color-grey-900)"
           viewBox="0 0 18 12"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -1038,7 +1052,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -1049,7 +1063,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -1062,14 +1076,14 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-kDTinF cpxjqd k-Form-RadioButtonSet"
+      className="sc-papXJ iJntvi k-Form-RadioButtonSet"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jrQzAO dWNjLM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+          className="sc-ftvSup bKGhut k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1091,7 +1105,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO dWNjLM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+          className="sc-ftvSup bKGhut k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1112,7 +1126,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jrQzAO dWNjLM k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+          className="sc-ftvSup bKGhut k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1144,7 +1158,7 @@ Array [
     className="k-Field__label k-u-margin-bottom-single"
   >
     <div
-      className="sc-hKwDye kYrfwi k-Line"
+      className="sc-hKMtZM iSZeOx k-Line"
       style={
         Object {
           "lineHeight": 1,
@@ -1155,7 +1169,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="sc-bdvvtL ikmzYA k-Label k-Label--small"
+          className="sc-bczRLJ dplUdj k-Label k-Label--small"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -1168,14 +1182,14 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-pVTFL jPxVOQ k-Form-RadioSet"
+      className="sc-iBkjds fSxEIX k-Form-RadioSet"
       disabled={false}
     >
       <div
         className="k-Form-RadioSet__radioContainer"
       >
         <div
-          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-gKXOVf jjxmrr k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1197,7 +1211,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-gKXOVf jjxmrr k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1218,7 +1232,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-furwcr kPhKDR k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-gKXOVf jjxmrr k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"

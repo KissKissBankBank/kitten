@@ -11,28 +11,17 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _textInput = require("../../../form/input/text-input");
 
 var _passwordIcon = require("../../../graphics/icons/password-icon");
-
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _typography = require("../../../../helpers/utils/typography");
 
 var _excluded = ["name", "iconLabel", "hiddenIconLabel"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var StyledPasswordInput = _styledComponents.default.div.withConfig({
-  displayName: "password-input__StyledPasswordInput",
-  componentId: "sc-1rvdmh2-0"
-})(["position:relative;display:flex;.k-Form-PasswordInput__input{padding-right:", ";}.k-Form-PasswordInput__icon{display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;align-items:center;border-radius:var(--border-radius-s);&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(11), _colorsConfig.default.primary1);
 
 var PasswordInput = function PasswordInput(_ref) {
   var name = _ref.name,
@@ -48,19 +37,21 @@ var PasswordInput = function PasswordInput(_ref) {
     setIsHidden(!isHidden);
   };
 
-  return /*#__PURE__*/_react.default.createElement(StyledPasswordInput, {
-    className: "k-Form-PasswordInput"
-  }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, others, {
+  return /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, others, {
     name: name,
     type: isHidden ? 'password' : 'text',
-    className: "k-Form-PasswordInput__input"
-  })), /*#__PURE__*/_react.default.createElement("button", {
-    type: "button",
-    "aria-label": isHidden ? iconLabel : hiddenIconLabel,
-    onClick: handleClick,
-    "aria-pressed": !isHidden,
-    className: "k-Form-PasswordInput__icon k-u-reset-button"
-  }, /*#__PURE__*/_react.default.createElement(_passwordIcon.PasswordIcon, null)));
+    has: "button",
+    buttonIsInset: true,
+    buttonProps: {
+      'aria-label': isHidden ? iconLabel : hiddenIconLabel,
+      'aria-pressed': !isHidden,
+      onClick: handleClick,
+      className: 'k-PasswordInput__icon',
+      children: /*#__PURE__*/_react.default.createElement(_passwordIcon.PasswordIcon, {
+        color: "var(--color-" + (isHidden ? 'grey-900' : 'primary-500') + ")"
+      })
+    }
+  }));
 };
 
 exports.PasswordInput = PasswordInput;

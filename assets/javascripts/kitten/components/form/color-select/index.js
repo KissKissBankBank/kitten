@@ -195,7 +195,7 @@ export const ColorSelect = ({
           {...inputProps}
           size="small"
           center
-          as={forwardRef((
+          tag={forwardRef((
             props,
             ref, // eslint-disable-line no-unused-vars
           ) => (

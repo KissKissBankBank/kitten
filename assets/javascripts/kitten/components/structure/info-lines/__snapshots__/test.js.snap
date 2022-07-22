@@ -2,7 +2,7 @@
 
 exports[`<InfoLines /> should match its empty snapshot 1`] = `
 <dl
-  className="sc-bdvvtL buCNCP k-Infolines"
+  className="sc-bczRLJ fRCumo k-Infolines"
   style={
     Object {
       "--InfoLines-borderColor": "var(--color-grey-400)",
@@ -42,7 +42,7 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
 
 exports[`<InfoLines /> should match its propped snapshot 1`] = `
 <div
-  className="sc-bdvvtL buCNCP k-Infolines k-InfoLines--withBorderRadius k-InfoLines--withLeftRightBorder k-InfoLines--withoutTopBottomBorder k-InfoLines--withoutResponsive"
+  className="sc-bczRLJ fRCumo k-Infolines k-InfoLines--withBorderRadius k-InfoLines--withLeftRightBorder k-InfoLines--withoutTopBottomBorder k-InfoLines--withoutResponsive"
   style={
     Object {
       "--InfoLines-borderColor": "#f8f",

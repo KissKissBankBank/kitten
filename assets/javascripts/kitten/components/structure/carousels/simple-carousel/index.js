@@ -1,114 +1,101 @@
-import React, { Component, createRef } from 'react'
+import React, { Children, useRef, useState } from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
+import { mq } from '../../../../constants/screen-config'
 import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 
-const StyledContainer = styled.div`
-  ${({ addBottomMargin }) =>
-    addBottomMargin &&
-    css`
-      margin-bottom: ${pxToRem(40)};
-    `}
-  display: grid;
-  gap: 0;
-
-  > div {
-    grid-column: 1;
-    grid-row: 1;
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.8s ease-in-out;
-
-    &[aria-hidden='true'] {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
-`
-const StyledPagination = styled.div`
-  justify-content: ${({ paginationAlign }) => paginationAlign};
-  margin: ${pxToRem(40)} 0;
-  padding: 0;
+const StyledWrapper = styled.div`
   display: flex;
-  li {
-    list-style-type: none;
-    line-height: ${pxToRem(6)};
-  }
-`
+  flex-direction: column;
+  gap: ${pxToRem(40)};
 
-const StyledPaginationButton = styled.button`
-  margin-right: ${pxToRem(5)};
-  width: ${pxToRem(6)};
-  height: ${pxToRem(6)};
-  border: 0;
-  padding: 0;
-  border-radius: 0;
-  appearance: none;
-  cursor: pointer;
-  transition: background 0.4s ease-in-out;
-  background: ${({ paginationColor }) => paginationColor};
-  vertical-align: top;
-
-  &[aria-selected='true'] {
-    background: ${({ activePaginationColor }) => activePaginationColor};
-  }
-`
-
-export class SimpleCarousel extends Component {
-  static propTypes = {
-    id: PropTypes.string,
-    containerStyle: PropTypes.object,
-    activePaginationColor: PropTypes.string,
-    paginationColor: PropTypes.string,
-    paginationAlign: PropTypes.oneOf([
-      'start',
-      'center',
-      'space-between',
-      'space-around',
-    ]),
-    paginationStyle: PropTypes.object,
-    bulletStyle: PropTypes.object,
+  @media ${mq.tabletAndDesktop} {
+    gap: ${pxToRem(20)};
   }
 
-  static defaultProps = {
-    id: '',
-    containerStyle: {},
-    activePaginationColor: COLORS.primary1,
-    paginationColor: COLORS.background1,
-    paginationAlign: 'center',
-    paginationStyle: {},
-    bulletStyle: {},
-  }
+  .k-SimpleCarousel__container {
+    display: grid;
+    gap: 0;
 
-  constructor(props) {
-    super(props)
+    > div {
+      grid-column: 1;
+      grid-row: 1;
+      visibility: visible;
+      opacity: 1;
+      transition: all calc(var(--transition-timing) * 3)
+        var(--transition-timing-function);
 
-    this.paginationRef = createRef()
-
-    this.state = {
-      currentPageNumber: 0,
-      totalPagesCount: React.Children.toArray(props.children).length,
+      &[aria-hidden] {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
     }
   }
 
-  showPagination = () => this.state.totalPagesCount > 1
+  .k-SimpleCarousel__pagination {
+    display: flex;
+    justify-content: var(--simple-carousel-paginationAlign);
+    gap: ${pxToRem(8)};
 
-  updateCurrentPageNumber = pageNumber => {
-    this.setState({ currentPageNumber: pageNumber })
+    li {
+      list-style-type: none;
+    }
   }
 
-  handlePageClick = numPage => () => {
-    this.updateCurrentPageNumber(numPage)
+  .k-SimpleCarousel__button {
+    position: relative;
+    display: block;
+    width: ${pxToRem(8)};
+    height: ${pxToRem(8)};
+    border-radius: var(--border-radius-rounded);
+    transition: background var(--transition);
+    background: var(--simple-carousel-paginationColor);
+    outline-offset: ${pxToRem(2)};
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: ${pxToRem(-4)};
+      left: ${pxToRem(-4)};
+      right: ${pxToRem(-4)};
+      bottom: ${pxToRem(-4)};
+    }
+
+    &:hover,
+    &[aria-selected='true'] {
+      background: var(--simple-carousel-activePaginationColor);
+    }
+  }
+`
+
+export const SimpleCarousel = ({
+  className,
+  children,
+  containerStyle,
+  activePaginationColor,
+  paginationColor,
+  paginationAlign,
+  paginationStyle,
+  bulletStyle,
+  id,
+  ...props
+}) => {
+  const paginationRef = useRef(null)
+  const [currentPageNumber, setCurrentPageNumber] = useState(0)
+  const [totalPagesCount] = useState(Children.toArray(children).length)
+
+  const handlePageClick = numPage => () => {
+    setCurrentPageNumber(numPage)
   }
 
-  handleKeyDown = event => {
+  const handleKeyDown = event => {
     if (['ArrowLeft', 'ArrowRight'].includes(event.key)) {
-      const { currentPageNumber, totalPagesCount } = this.state
-      const tabs = this.paginationRef.current.querySelectorAll('button')
+      const tabs = paginationRef.current.querySelectorAll('button')
       tabs[currentPageNumber].setAttribute('tabindex', -1)
 
       // default: ArrowLeft
@@ -125,79 +112,92 @@ export class SimpleCarousel extends Component {
         }
       }
 
-      this.updateCurrentPageNumber(pageNumber)
+      setCurrentPageNumber(pageNumber)
       tabs[pageNumber].setAttribute('tabindex', 0)
       tabs[pageNumber].focus()
     }
   }
 
-  render() {
-    const {
-      children,
-      containerStyle,
-      activePaginationColor,
-      paginationColor,
-      paginationAlign,
-      paginationStyle,
-      bulletStyle,
-      ...others
-    } = this.props
+  const rangePage = createRangeFromZeroTo(totalPagesCount)
 
-    const { totalPagesCount, currentPageNumber } = this.state
-    const rangePage = createRangeFromZeroTo(totalPagesCount)
-    const id = this.props.id ? this.props.id + '_' : ''
+  return (
+    <StyledWrapper
+      className={classNames('k-SimpleCarousel', className)}
+      style={{
+        '--simple-carousel-paginationAlign': paginationAlign,
+        '--simple-carousel-paginationColor': paginationColor,
+        '--simple-carousel-activePaginationColor': activePaginationColor,
+      }}
+      {...props}
+    >
+      <div style={containerStyle} className="k-SimpleCarousel__container">
+        {Children.map(children, (item, index) => {
+          return (
+            <div
+              key={item.key}
+              aria-hidden={index !== currentPageNumber || null}
+              id={`${id}_carouselItem_${index}`}
+              aria-labelledby={`${id}_carouselTab_${index}`}
+              role="tabpanel"
+            >
+              {item}
+            </div>
+          )
+        })}
+      </div>
 
-    return (
-      <>
-        <StyledContainer
-          style={containerStyle}
-          addBottomMargin={this.showPagination()}
-          {...others}
+      {totalPagesCount > 1 && (
+        <div
+          className="k-SimpleCarousel__pagination"
+          style={paginationStyle}
+          role="tablist"
+          onKeyDown={handleKeyDown}
+          ref={paginationRef}
         >
-          {React.Children.map(children, (item, index) => {
+          {rangePage.map(numPage => {
             return (
-              <div
-                key={item.key}
-                aria-hidden={index !== currentPageNumber}
-                id={`${id}carouselItem_${index}`}
-                aria-labelledby={`${id}carouselTab_${index}`}
-                role="tabpanel"
+              <button
+                key={numPage}
+                className="k-SimpleCarousel__button k-u-reset-button"
+                id={`${id}_carouselTab_${numPage}`}
+                type="button"
+                aria-controls={`${id}_carouselItem_${numPage}`}
+                role="tab"
+                aria-selected={numPage === currentPageNumber}
+                style={bulletStyle}
+                onClick={handlePageClick(numPage)}
               >
-                {item}
-              </div>
+                <VisuallyHidden>{`Page ${numPage + 1}`}</VisuallyHidden>
+              </button>
             )
           })}
-        </StyledContainer>
+        </div>
+      )}
+    </StyledWrapper>
+  )
+}
 
-        {this.showPagination() && (
-          <StyledPagination
-            style={paginationStyle}
-            paginationAlign={paginationAlign}
-            role="tablist"
-            onKeyDown={this.handleKeyDown}
-            ref={this.paginationRef}
-          >
-            {rangePage.map(numPage => {
-              return (
-                <StyledPaginationButton
-                  key={numPage}
-                  id={`${id}carouselTab_${numPage}`}
-                  type="button"
-                  aria-controls={`${id}carouselItem_${numPage}`}
-                  role="tab"
-                  aria-selected={numPage === currentPageNumber}
-                  paginationColor={paginationColor}
-                  activePaginationColor={activePaginationColor}
-                  style={bulletStyle}
-                  onClick={this.handlePageClick(numPage)}
-                >
-                  <VisuallyHidden>{`Page ${numPage + 1}`}</VisuallyHidden>
-                </StyledPaginationButton>
-              )
-            })}
-          </StyledPagination>
-        )}
-      </>
-    )
-  }
+SimpleCarousel.propTypes = {
+  id: PropTypes.string.isRequired,
+  containerStyle: PropTypes.object,
+  activePaginationColor: PropTypes.string,
+  paginationColor: PropTypes.string,
+  paginationAlign: PropTypes.oneOf([
+    'start',
+    'center',
+    'end',
+    'space-between',
+    'space-around',
+  ]),
+  paginationStyle: PropTypes.object,
+  bulletStyle: PropTypes.object,
+}
+
+SimpleCarousel.defaultProps = {
+  containerStyle: {},
+  activePaginationColor: COLORS.font1,
+  paginationColor: COLORS.line2,
+  paginationAlign: 'start',
+  paginationStyle: {},
+  bulletStyle: {},
 }

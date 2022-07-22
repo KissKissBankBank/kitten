@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { List } from './index'
-import { shallow } from 'enzyme'
 
 describe('<List>', () => {
   describe('by default', () => {
@@ -67,26 +66,6 @@ describe('<List>', () => {
 
         expect(component).toMatchSnapshot()
       })
-
-      it('trigger the onClick prop', () => {
-        const handleClick = jest.fn()
-        const component = shallow(
-          <List>
-            <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
-            <List.ButtonItem onClick={handleClick}>
-              Cheshire Cat
-            </List.ButtonItem>
-            <List.ButtonItem>Mad Hatter</List.ButtonItem>
-          </List>,
-        )
-
-        const button = component.find(List.ButtonItem).at(1).dive()
-
-        button.simulate('click')
-
-        expect(handleClick).toHaveBeenCalled()
-        handleClick.mockRestore()
-      })
     })
 
     describe('with a disabled button', () => {
@@ -102,25 +81,6 @@ describe('<List>', () => {
           .toJSON()
 
         expect(component).toMatchSnapshot()
-      })
-
-      it('does not trigger the onClick prop', () => {
-        const handleClick = jest.fn()
-        const component = shallow(
-          <List>
-            <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
-            <List.ButtonItem disabled onClick={handleClick}>
-              Cheshire Cat
-            </List.ButtonItem>
-            <List.ButtonItem>Mad Hatter</List.ButtonItem>
-          </List>,
-        )
-
-        const button = component.find(List.ButtonItem).at(1).dive()
-
-        button.simulate('click')
-
-        expect(handleClick).not.toHaveBeenCalled()
       })
     })
   })

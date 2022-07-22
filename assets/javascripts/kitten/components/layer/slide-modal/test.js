@@ -4,28 +4,6 @@ import renderer from 'react-test-renderer'
 import { SlideModal } from './index'
 
 describe('<SlideModal />', () => {
-  describe('with trigger', () => {
-    const component = mount(
-      <SlideModal trigger={<span className="trigger-example" />} />,
-    )
-
-    it('contains the trigger', () => {
-      expect(component.find('.trigger-example').exists()).toBe(true)
-    })
-  })
-
-  describe('with content prop', () => {
-    const component = mount(
-      <SlideModal className="content-example" as="strong" />,
-    )
-
-    it('contains the content', () => {
-      expect(component.render().hasClass('content-example')).toBe(true)
-      expect(component.render().hasClass('k-SlideModal')).toBe(true)
-      expect(component.render().is('strong')).toBe(true)
-    })
-  })
-
   let component
 
   describe('snapshot tests', () => {

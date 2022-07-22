@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-gsDKAQ btknGz k-Form-Dropdown k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--medium k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
+  className="sc-gsnTZi jFgPiP k-Form-Dropdown k-Form-Dropdown--hydrogen k-Form-Dropdown--down k-Form-Dropdown--medium k-Form-Dropdown--arrowPosition-left k-Form-Dropdown--isOpen"
   style={
     Object {
       "--menu-z-index": 1000,
@@ -10,7 +10,7 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
   }
 >
   <label
-    className="sc-bdvvtL ikmzYA k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-u-weight-400 k-Label--small"
+    className="sc-bczRLJ dplUdj k-Label k-Form-Dropdown__label k-u-margin-bottom-single k-u-weight-400 k-Label--small"
     data-custom-label="Hello World"
     htmlFor="dropdown-select-test-a"
     id="dropdown-select-test-a_element-label"

@@ -2,13 +2,13 @@
 
 exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ RrZil k-EmbedPlayer"
+  className="sc-gsnTZi gTrkmB k-EmbedPlayer"
 >
   <div
     className="k-EmbedPlayer__playerPreview"
   >
     <div
-      className="sc-bdvvtL kfIuna k-ResponsiveIframeContainer"
+      className="sc-bczRLJ loUUGZ k-ResponsiveIframeContainer"
       style={
         Object {
           "--ResponsiveImageContainer-ratio": "50%",
@@ -27,7 +27,7 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 
 exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-gsDKAQ RrZil k-EmbedPlayer k-EmbedPlayer--cursorPointer"
+  className="sc-gsnTZi gTrkmB k-EmbedPlayer k-EmbedPlayer--cursorPointer"
 >
   <div
     className="k-EmbedPlayer__playerPreview"
@@ -60,7 +60,7 @@ exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
       </svg>
     </button>
     <div
-      className="sc-bdvvtL kfIuna k-ResponsiveIframeContainer"
+      className="sc-bczRLJ loUUGZ k-ResponsiveIframeContainer"
       style={
         Object {
           "--ResponsiveImageContainer-ratio": "60%",

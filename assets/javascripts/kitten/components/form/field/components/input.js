@@ -2,28 +2,38 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { TextInput } from '../../../form/input/text-input'
-import { TextInputWithLimit } from '../../../form/input/text-input-with-limit'
-import { TextInputWithUnit } from '../../../form/input/text-input-with-unit'
 
 export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
-  let Input = TextInput
-
-  if (limit) {
-    Input = TextInputWithLimit
-  }
-
-  if (unit) {
-    Input = TextInputWithUnit
-  }
+  const has = (() => {
+    switch (true) {
+      case !!limit:
+        return 'limit'
+      case !!unit:
+        return 'unit'
+      default:
+        return undefined
+    }
+  })()
 
   return (
-    <div
-      className={classNames('k-FieldInput', 'k-Field__control', className, {
-        'k-u-margin-top-single': !noMargin,
-      })}
-    >
-      <Input limit={limit} unit={unit} {...props} />
-    </div>
+    <TextInput
+      has={has}
+      limit={limit}
+      unit={unit}
+      {...props}
+      wrapperProps={{
+        ...props.wrapperProps,
+        className: classNames(
+          'k-FieldInput',
+          'k-Field__control',
+          className,
+          props.wrapperProps?.className,
+          {
+            'k-u-margin-top-single': !noMargin,
+          },
+        ),
+      }}
+    />
   )
 }
 

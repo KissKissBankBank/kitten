@@ -164,7 +164,7 @@ export var ColorSelect = function ColorSelect(_ref) {
   }), /*#__PURE__*/React.createElement(TextInput, _extends({}, inputProps, {
     size: "small",
     center: true,
-    as: /*#__PURE__*/forwardRef(function (props, ref // eslint-disable-line no-unused-vars
+    tag: /*#__PURE__*/forwardRef(function (props, ref // eslint-disable-line no-unused-vars
     ) {
       return /*#__PURE__*/React.createElement(HexColorInput, props);
     }),

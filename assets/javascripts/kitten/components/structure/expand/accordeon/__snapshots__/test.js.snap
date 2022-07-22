@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL eJcUGe k-Accordeon k-Accordeon--isAnimated"
+  className="sc-bczRLJ iQoZkB k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -129,7 +129,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL eJcUGe k-Accordeon custom1 k-Accordeon--isAnimated"
+  className="sc-bczRLJ iQoZkB k-Accordeon custom1 k-Accordeon--isAnimated"
   data-test={true}
 >
   <div
@@ -259,204 +259,135 @@ exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 `;
 
 exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapshot 1`] = `
-<Accordeon
-  closeOnClick={false}
-  id="accordeon"
-  isAnimated={false}
-  multiple={false}
-  onChange={[Function]}
-  selectedItem={null}
+<div
+  className="sc-bczRLJ iQoZkB k-Accordeon"
 >
-  <styled.div
-    className="k-Accordeon"
+  <div
+    className="k-Accordeon__item"
   >
-    <div
-      className="sc-bdvvtL eJcUGe k-Accordeon"
+    <button
+      aria-controls="accordeon-accordeon-0_content"
+      aria-disabled={false}
+      aria-expanded={false}
+      className="k-Accordeon__header"
+      id="accordeon-accordeon-0_header"
+      onClick={[Function]}
+      role="button"
     >
-      <Item
-        id="accordeon-0"
-        index={0}
-        key="accordeon-0"
+      <span
+        className="k-Accordeon__header__content"
       >
-        <div
-          className="k-Accordeon__item"
-        >
-          <Header
-            id="accordeon-0"
-            index={0}
-            key=".0"
-          >
-            <button
-              aria-controls="accordeon-accordeon-0_content"
-              aria-disabled={false}
-              aria-expanded={false}
-              className="k-Accordeon__header"
-              id="accordeon-accordeon-0_header"
-              onClick={[Function]}
-              role="button"
-            >
-              <span
-                className="k-Accordeon__header__content"
-              >
-                Header
-              </span>
-              <span
-                className="k-Accordeon__header__arrow"
-              >
-                <ArrowIcon
-                  aria-hidden={true}
-                  className=""
-                  color="var(--color-grey-900, #222)"
-                  direction="bottom"
-                  disabled={false}
-                  height="5.64"
-                  title=""
-                  width="8.48"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className=""
-                    fill="var(--color-grey-900, #222)"
-                    height="5.64"
-                    style={
-                      Object {
-                        "transform": "rotate(180deg)",
-                      }
-                    }
-                    viewBox="0 0 8.48 5.64"
-                    width="8.48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-                    />
-                  </svg>
-                </ArrowIcon>
-              </span>
-            </button>
-          </Header>
-          <Content
-            id="accordeon-0"
-            index={0}
-            key=".1"
-          >
-            <div
-              aria-hidden={true}
-              aria-labelledby="accordeon-accordeon-0_header"
-              className="k-Accordeon__content"
-              id="accordeon-accordeon-0_content"
-              style={
-                Object {
-                  "--accordeon-content-max-height": 0,
-                }
-              }
-            >
-              <div
-                className="k-Accordeon__content_marger"
-              >
-                Content
-              </div>
-              <div />
-            </div>
-          </Content>
-        </div>
-      </Item>
-      <Item
-        id="accordeon-1"
-        index={1}
-        key="accordeon-1"
+        Header
+      </span>
+      <span
+        className="k-Accordeon__header__arrow"
       >
-        <div
-          className="k-Accordeon__item"
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(180deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <Header
-            id="accordeon-1"
-            index={1}
-            key=".0"
-          >
-            <button
-              aria-controls="accordeon-accordeon-1_content"
-              aria-disabled={false}
-              aria-expanded={false}
-              className="k-Accordeon__header"
-              id="accordeon-accordeon-1_header"
-              onClick={[Function]}
-              role="button"
-            >
-              <span
-                className="k-Accordeon__header__content"
-              >
-                Header
-              </span>
-              <span
-                className="k-Accordeon__header__arrow"
-              >
-                <ArrowIcon
-                  aria-hidden={true}
-                  className=""
-                  color="var(--color-grey-900, #222)"
-                  direction="bottom"
-                  disabled={false}
-                  height="5.64"
-                  title=""
-                  width="8.48"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className=""
-                    fill="var(--color-grey-900, #222)"
-                    height="5.64"
-                    style={
-                      Object {
-                        "transform": "rotate(180deg)",
-                      }
-                    }
-                    viewBox="0 0 8.48 5.64"
-                    width="8.48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-                    />
-                  </svg>
-                </ArrowIcon>
-              </span>
-            </button>
-          </Header>
-          <Content
-            id="accordeon-1"
-            index={1}
-            key=".1"
-          >
-            <div
-              aria-hidden={true}
-              aria-labelledby="accordeon-accordeon-1_header"
-              className="k-Accordeon__content"
-              id="accordeon-accordeon-1_content"
-              style={
-                Object {
-                  "--accordeon-content-max-height": 0,
-                }
-              }
-            >
-              <div
-                className="k-Accordeon__content_marger"
-              >
-                Content
-              </div>
-              <div />
-            </div>
-          </Content>
-        </div>
-      </Item>
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden={true}
+      aria-labelledby="accordeon-accordeon-0_header"
+      className="k-Accordeon__content"
+      id="accordeon-accordeon-0_content"
+      style={
+        Object {
+          "--accordeon-content-max-height": 0,
+        }
+      }
+    >
+      <div
+        className="k-Accordeon__content_marger"
+      >
+        Content
+      </div>
+      <div />
     </div>
-  </styled.div>
-</Accordeon>
+  </div>
+  <div
+    className="k-Accordeon__item"
+  >
+    <button
+      aria-controls="accordeon-accordeon-1_content"
+      aria-disabled={false}
+      aria-expanded={false}
+      className="k-Accordeon__header"
+      id="accordeon-accordeon-1_header"
+      onClick={[Function]}
+      role="button"
+    >
+      <span
+        className="k-Accordeon__header__content"
+      >
+        Header
+      </span>
+      <span
+        className="k-Accordeon__header__arrow"
+      >
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(180deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      aria-hidden={true}
+      aria-labelledby="accordeon-accordeon-1_header"
+      className="k-Accordeon__content"
+      id="accordeon-accordeon-1_content"
+      style={
+        Object {
+          "--accordeon-content-max-height": 0,
+        }
+      }
+    >
+      <div
+        className="k-Accordeon__content_marger"
+      >
+        Content
+      </div>
+      <div />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL eJcUGe k-Accordeon k-Accordeon--isAnimated"
+  className="sc-bczRLJ iQoZkB k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -521,401 +452,9 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = `
-<Accordeon
-  closeOnClick={false}
-  id="accordeon"
-  isAnimated={true}
-  multiple={false}
-  onChange={[Function]}
-  selectedItem={0}
->
-  <styled.div
-    className="k-Accordeon k-Accordeon--isAnimated"
-  >
-    <div
-      className="sc-bdvvtL eJcUGe k-Accordeon k-Accordeon--isAnimated"
-    >
-      <Item
-        id="accordeon-0"
-        index={0}
-        key="accordeon-0"
-      >
-        <div
-          className="k-Accordeon__item k-Accordeon__item--expanded"
-        >
-          <Header
-            id="accordeon-0"
-            index={0}
-            key=".0"
-          >
-            <button
-              aria-controls="accordeon-accordeon-0_content"
-              aria-disabled={true}
-              aria-expanded={true}
-              className="k-Accordeon__header"
-              id="accordeon-accordeon-0_header"
-              onClick={[Function]}
-              role="button"
-            >
-              <span
-                className="k-Accordeon__header__content"
-              >
-                Header
-              </span>
-              <span
-                className="k-Accordeon__header__arrow"
-              >
-                <ArrowIcon
-                  aria-hidden={true}
-                  className=""
-                  color="var(--color-grey-900, #222)"
-                  direction="top"
-                  disabled={false}
-                  height="5.64"
-                  title=""
-                  width="8.48"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className=""
-                    fill="var(--color-grey-900, #222)"
-                    height="5.64"
-                    style={
-                      Object {
-                        "transform": null,
-                      }
-                    }
-                    viewBox="0 0 8.48 5.64"
-                    width="8.48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-                    />
-                  </svg>
-                </ArrowIcon>
-              </span>
-            </button>
-          </Header>
-          <Content
-            id="accordeon-0"
-            index={0}
-            key=".1"
-          >
-            <div
-              aria-hidden={false}
-              aria-labelledby="accordeon-accordeon-0_header"
-              className="k-Accordeon__content"
-              id="accordeon-accordeon-0_content"
-              style={
-                Object {
-                  "--accordeon-content-max-height": 0,
-                }
-              }
-            >
-              <div
-                className="k-Accordeon__content_marger"
-              >
-                Content
-              </div>
-              <div />
-            </div>
-          </Content>
-        </div>
-      </Item>
-      <Item
-        id="accordeon-1"
-        index={1}
-        key="accordeon-1"
-      >
-        <div
-          className="k-Accordeon__item"
-        >
-          <Header
-            id="accordeon-1"
-            index={1}
-            key=".0"
-          >
-            <button
-              aria-controls="accordeon-accordeon-1_content"
-              aria-disabled={false}
-              aria-expanded={false}
-              className="k-Accordeon__header"
-              id="accordeon-accordeon-1_header"
-              onClick={[Function]}
-              role="button"
-            >
-              <span
-                className="k-Accordeon__header__content"
-              >
-                Header
-              </span>
-              <span
-                className="k-Accordeon__header__arrow"
-              >
-                <ArrowIcon
-                  aria-hidden={true}
-                  className=""
-                  color="var(--color-grey-900, #222)"
-                  direction="bottom"
-                  disabled={false}
-                  height="5.64"
-                  title=""
-                  width="8.48"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className=""
-                    fill="var(--color-grey-900, #222)"
-                    height="5.64"
-                    style={
-                      Object {
-                        "transform": "rotate(180deg)",
-                      }
-                    }
-                    viewBox="0 0 8.48 5.64"
-                    width="8.48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-                    />
-                  </svg>
-                </ArrowIcon>
-              </span>
-            </button>
-          </Header>
-          <Content
-            id="accordeon-1"
-            index={1}
-            key=".1"
-          >
-            <div
-              aria-hidden={true}
-              aria-labelledby="accordeon-accordeon-1_header"
-              className="k-Accordeon__content"
-              id="accordeon-accordeon-1_content"
-              style={
-                Object {
-                  "--accordeon-content-max-height": 0,
-                }
-              }
-            >
-              <div
-                className="k-Accordeon__content_marger"
-              >
-                Content
-              </div>
-              <div />
-            </div>
-          </Content>
-        </div>
-      </Item>
-    </div>
-  </styled.div>
-</Accordeon>
-`;
-
-exports[`<Accordeon /> with the second selected item after click simulate matches with snapshot 1`] = `
-<Accordeon
-  closeOnClick={false}
-  id="accordeon"
-  isAnimated={true}
-  multiple={false}
-  onChange={[Function]}
-  selectedItem={null}
->
-  <styled.div
-    className="k-Accordeon k-Accordeon--isAnimated"
-  >
-    <div
-      className="sc-bdvvtL eJcUGe k-Accordeon k-Accordeon--isAnimated"
-    >
-      <Item
-        id="accordeon-0"
-        index={0}
-        key="accordeon-0"
-      >
-        <div
-          className="k-Accordeon__item"
-        >
-          <Header
-            id="accordeon-0"
-            index={0}
-            key=".0"
-          >
-            <button
-              aria-controls="accordeon-accordeon-0_content"
-              aria-disabled={false}
-              aria-expanded={false}
-              className="k-Accordeon__header"
-              id="accordeon-accordeon-0_header"
-              onClick={[Function]}
-              role="button"
-            >
-              <span
-                className="k-Accordeon__header__content"
-              >
-                Header #1
-              </span>
-              <span
-                className="k-Accordeon__header__arrow"
-              >
-                <ArrowIcon
-                  aria-hidden={true}
-                  className=""
-                  color="var(--color-grey-900, #222)"
-                  direction="bottom"
-                  disabled={false}
-                  height="5.64"
-                  title=""
-                  width="8.48"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className=""
-                    fill="var(--color-grey-900, #222)"
-                    height="5.64"
-                    style={
-                      Object {
-                        "transform": "rotate(180deg)",
-                      }
-                    }
-                    viewBox="0 0 8.48 5.64"
-                    width="8.48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-                    />
-                  </svg>
-                </ArrowIcon>
-              </span>
-            </button>
-          </Header>
-          <Content
-            id="accordeon-0"
-            index={0}
-            key=".1"
-          >
-            <div
-              aria-hidden={true}
-              aria-labelledby="accordeon-accordeon-0_header"
-              className="k-Accordeon__content"
-              id="accordeon-accordeon-0_content"
-              style={
-                Object {
-                  "--accordeon-content-max-height": 0,
-                }
-              }
-            >
-              <div
-                className="k-Accordeon__content_marger"
-              >
-                Content
-              </div>
-              <div />
-            </div>
-          </Content>
-        </div>
-      </Item>
-      <Item
-        id="accordeon-1"
-        index={1}
-        key="accordeon-1"
-      >
-        <div
-          className="k-Accordeon__item k-Accordeon__item--expanded"
-        >
-          <Header
-            id="accordeon-1"
-            index={1}
-            key=".0"
-          >
-            <button
-              aria-controls="accordeon-accordeon-1_content"
-              aria-disabled={true}
-              aria-expanded={true}
-              className="k-Accordeon__header"
-              id="accordeon-accordeon-1_header"
-              onClick={[Function]}
-              role="button"
-            >
-              <span
-                className="k-Accordeon__header__content"
-              >
-                Header #2
-              </span>
-              <span
-                className="k-Accordeon__header__arrow"
-              >
-                <ArrowIcon
-                  aria-hidden={true}
-                  className=""
-                  color="var(--color-grey-900, #222)"
-                  direction="top"
-                  disabled={false}
-                  height="5.64"
-                  title=""
-                  width="8.48"
-                >
-                  <svg
-                    aria-hidden={true}
-                    className=""
-                    fill="var(--color-grey-900, #222)"
-                    height="5.64"
-                    style={
-                      Object {
-                        "transform": null,
-                      }
-                    }
-                    viewBox="0 0 8.48 5.64"
-                    width="8.48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-                    />
-                  </svg>
-                </ArrowIcon>
-              </span>
-            </button>
-          </Header>
-          <Content
-            id="accordeon-1"
-            index={1}
-            key=".1"
-          >
-            <div
-              aria-hidden={false}
-              aria-labelledby="accordeon-accordeon-1_header"
-              className="k-Accordeon__content"
-              id="accordeon-accordeon-1_content"
-              style={
-                Object {
-                  "--accordeon-content-max-height": 0,
-                }
-              }
-            >
-              <div
-                className="k-Accordeon__content_marger"
-              >
-                Content
-              </div>
-              <div />
-            </div>
-          </Content>
-        </div>
-      </Item>
-    </div>
-  </styled.div>
-</Accordeon>
-`;
-
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bdvvtL eJcUGe k-Accordeon k-Accordeon--isAnimated"
+  className="sc-bczRLJ iQoZkB k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"

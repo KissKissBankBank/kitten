@@ -20,19 +20,8 @@ export default {
       </div>
     ),
   ],
-
-  args: {
-    ...TextInputStory.args,
-    limit: 80,
-  },
-
-  argTypes: {
-    ...TextInputStory.argTypes,
-    limit: {
-      name: 'limit',
-      control: 'number',
-    },
-  },
+  args: TextInputStory.args,
+  argTypes: TextInputStory.argTypes,
 }
 
 export const Default = args => <TextInputWithLimit {...args} />

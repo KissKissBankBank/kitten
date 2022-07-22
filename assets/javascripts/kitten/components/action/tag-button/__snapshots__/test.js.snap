@@ -45,7 +45,7 @@ exports[`<TagButton /> with \`active\` prop matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c0 >:nth-child(n) {
+.c0 > :nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -156,7 +156,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c0 >:nth-child(n) {
+.c0 > :nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
@@ -267,7 +267,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.c0 >:nth-child(n) {
+.c0 > :nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
