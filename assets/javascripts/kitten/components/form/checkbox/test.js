@@ -1,6 +1,5 @@
 import React from 'react'
 import { Checkbox } from '../../form/checkbox'
-import { Text } from '../../typography/text'
 import renderer from 'react-test-renderer'
 
 describe('<Checkbox />', () => {

@@ -45,8 +45,8 @@ describe('<StandaloneRangeDatePicker />', () => {
             weekDays={weekDays}
             months={months}
             title="Sélectionnez la période souhaitée"
-            previousMonth={() => "Mois précédent"}
-            nextMonth={() => "Mois suivant"}
+            previousMonth={() => 'Mois précédent'}
+            nextMonth={() => 'Mois suivant'}
             initialMonth={new Date('2019-01-01T03:24:00')}
           />,
         )

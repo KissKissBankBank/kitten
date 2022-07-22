@@ -57,8 +57,9 @@ export default {
     weekDays: weekDays,
     months: months,
     title: 'Sélectionnez la période souhaitée',
-    previousMonth: (month) => `Mois précédent : ${fr.localize.month(getMonth(month))}`,
-    nextMonth: (month) => `Mois suivant : ${fr.localize.month(getMonth(month))}`,
+    previousMonth: month =>
+      `Mois précédent : ${fr.localize.month(getMonth(month))}`,
+    nextMonth: month => `Mois suivant : ${fr.localize.month(getMonth(month))}`,
     firstDayOfWeek: 1,
     initialMonth: today,
     numberOfMonths: 2,

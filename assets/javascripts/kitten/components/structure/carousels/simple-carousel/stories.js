@@ -1,12 +1,6 @@
 import React from 'react'
 import { SimpleCarousel } from './index'
-import {
-  Title,
-  Paragraph,
-  HorizontalStroke,
-  Button,
-  FlexWrapper,
-} from 'kitten'
+import { Title, Paragraph, HorizontalStroke, Button, FlexWrapper } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {

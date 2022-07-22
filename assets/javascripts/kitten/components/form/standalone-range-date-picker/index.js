@@ -34,7 +34,8 @@ const StyledDatePicker = styled.div`
   }
 
   .rdp-button {
-    transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+    transition: color var(--transition), background-color var(--transition),
+      border-color var(--transition);
   }
 
   .rdp-day_range_start,
@@ -46,7 +47,6 @@ const StyledDatePicker = styled.div`
     background-color: var(--color-primary-100);
     color: var(--color-primary-700);
   }
-
 `
 
 export const StandaloneRangeDatePicker = ({

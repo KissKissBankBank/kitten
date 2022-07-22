@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { SimpleCard } from './index'
-import { Title, Text } from 'kitten'
 
 describe('<SimpleCard />', () => {
   let component

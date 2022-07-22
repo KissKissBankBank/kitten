@@ -22,9 +22,7 @@ describe('<Pagination />', () => {
   describe('by default', () => {
     it('should match its empty snapshot', () => {
       const tree = renderer
-        .create(
-          <Pagination currentPage={10} totalPages={42} />,
-        )
+        .create(<Pagination currentPage={10} totalPages={42} />)
         .toJSON()
 
       expect(tree).toMatchSnapshot()

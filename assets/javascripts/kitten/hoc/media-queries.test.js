@@ -35,7 +35,6 @@ describe('mediaQueries()', () => {
   const originalMatchMedia = window.matchMedia
   let SimpleComponentWithMediaQueries
   let component
-  let componentSnapshot
 
   beforeEach(() => {
     window.matchMedia = createMockMediaMatcher(false)
@@ -53,9 +52,7 @@ describe('mediaQueries()', () => {
         viewportIsMOrLess: true,
         viewportIsLOrLess: true,
       })
-      component = renderer
-        .create(<SimpleComponentWithMediaQueries />)
-        .toJSON()
+      component = renderer.create(<SimpleComponentWithMediaQueries />).toJSON()
     })
 
     it('renders the wrapped component', () => {

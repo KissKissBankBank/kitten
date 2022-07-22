@@ -4,7 +4,6 @@ import { Accordeon } from './index'
 
 describe('<Accordeon />', () => {
   let component
-  let handleChange
 
   describe('with one item', () => {
     beforeEach(() => {
@@ -51,19 +50,21 @@ describe('<Accordeon />', () => {
 
   describe('with isAnimated prop set to `false`', () => {
     beforeEach(() => {
-      component = renderer.create(
-        <Accordeon isAnimated={false}>
-          <Accordeon.Item>
-            <Accordeon.Header>Header</Accordeon.Header>
-            <Accordeon.Content>Content</Accordeon.Content>
-          </Accordeon.Item>
+      component = renderer
+        .create(
+          <Accordeon isAnimated={false}>
+            <Accordeon.Item>
+              <Accordeon.Header>Header</Accordeon.Header>
+              <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
 
-          <Accordeon.Item>
-            <Accordeon.Header>Header</Accordeon.Header>
-            <Accordeon.Content>Content</Accordeon.Content>
-          </Accordeon.Item>
-        </Accordeon>,
-      ).toJSON()
+            <Accordeon.Item>
+              <Accordeon.Header>Header</Accordeon.Header>
+              <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
+          </Accordeon>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
