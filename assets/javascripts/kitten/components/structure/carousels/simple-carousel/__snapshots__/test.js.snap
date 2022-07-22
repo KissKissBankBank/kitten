@@ -1,16 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
-Array [
+<div
+  className="sc-bczRLJ tuxZN k-SimpleCarousel"
+  style={
+    Object {
+      "--simple-carousel-activePaginationColor": "var(--color-grey-900, #222)",
+      "--simple-carousel-paginationAlign": "start",
+      "--simple-carousel-paginationColor": "var(--color-grey-400, #d8d8d8)",
+    }
+  }
+>
   <div
-    className="sc-bczRLJ hizsrt"
-    id=""
+    className="k-SimpleCarousel__container"
     style={Object {}}
   >
     <div
-      aria-hidden={false}
-      aria-labelledby="carouselTab_0"
-      id="carouselItem_0"
+      aria-hidden={null}
+      aria-labelledby="undefined_carouselTab_0"
+      id="undefined_carouselItem_0"
       role="tabpanel"
     >
       <p>
@@ -19,26 +27,26 @@ Array [
     </div>
     <div
       aria-hidden={true}
-      aria-labelledby="carouselTab_1"
-      id="carouselItem_1"
+      aria-labelledby="undefined_carouselTab_1"
+      id="undefined_carouselItem_1"
       role="tabpanel"
     >
       <p>
         Bar
       </p>
     </div>
-  </div>,
+  </div>
   <div
-    className="sc-gsnTZi jPZha"
+    className="k-SimpleCarousel__pagination"
     onKeyDown={[Function]}
     role="tablist"
     style={Object {}}
   >
     <button
-      aria-controls="carouselItem_0"
+      aria-controls="undefined_carouselItem_0"
       aria-selected={true}
-      className="sc-dkzDqf NFxua"
-      id="carouselTab_0"
+      className="k-SimpleCarousel__button k-u-reset-button"
+      id="undefined_carouselTab_0"
       onClick={[Function]}
       role="tab"
       style={Object {}}
@@ -51,10 +59,10 @@ Array [
       </span>
     </button>
     <button
-      aria-controls="carouselItem_1"
+      aria-controls="undefined_carouselItem_1"
       aria-selected={false}
-      className="sc-dkzDqf NFxua"
-      id="carouselTab_1"
+      className="k-SimpleCarousel__button k-u-reset-button"
+      id="undefined_carouselTab_1"
       onClick={[Function]}
       role="tab"
       style={Object {}}
@@ -66,47 +74,67 @@ Array [
         Page 2
       </span>
     </button>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ hkrJpn"
-  id=""
-  style={Object {}}
+  className="sc-bczRLJ tuxZN k-SimpleCarousel"
+  style={
+    Object {
+      "--simple-carousel-activePaginationColor": "var(--color-grey-900, #222)",
+      "--simple-carousel-paginationAlign": "start",
+      "--simple-carousel-paginationColor": "var(--color-grey-400, #d8d8d8)",
+    }
+  }
 >
   <div
-    aria-hidden={false}
-    aria-labelledby="carouselTab_0"
-    id="carouselItem_0"
-    role="tabpanel"
+    className="k-SimpleCarousel__container"
+    style={Object {}}
   >
-    <p>
-      Foo
-    </p>
+    <div
+      aria-hidden={null}
+      aria-labelledby="undefined_carouselTab_0"
+      id="undefined_carouselItem_0"
+      role="tabpanel"
+    >
+      <p>
+        Foo
+      </p>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ hkrJpn"
-  id="simpleCarousel"
-  style={Object {}}
+  className="sc-bczRLJ tuxZN k-SimpleCarousel"
+  style={
+    Object {
+      "--simple-carousel-activePaginationColor": "var(--color-grey-900, #222)",
+      "--simple-carousel-paginationAlign": "center",
+      "--simple-carousel-paginationColor": "var(--color-grey-400, #d8d8d8)",
+    }
+  }
 >
   <div
-    aria-hidden={false}
-    aria-labelledby="simpleCarousel_carouselTab_0"
-    id="simpleCarousel_carouselItem_0"
-    role="tabpanel"
+    className="k-SimpleCarousel__container"
+    style={Object {}}
   >
-    <p
-      activePaginationColor="Custom active pagination color"
-      paginationColor="Custom pagination color"
+    <div
+      aria-hidden={null}
+      aria-labelledby="simpleCarousel_carouselTab_0"
+      id="simpleCarousel_carouselItem_0"
+      role="tabpanel"
     >
-      Foo
-    </p>
+      <p
+        activePaginationColor="Custom active pagination color"
+        paginationColor="Custom pagination color"
+      >
+        Foo
+      </p>
+    </div>
   </div>
 </div>
 `;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { SimpleCarousel } from './index'
-import { Marger, Title, Paragraph, HorizontalStroke, Button } from 'kitten'
+import { Marger, Title, Paragraph, HorizontalStroke, Button, FlexWrapper } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
 
 export default {
@@ -13,48 +13,37 @@ export default {
       ),
     },
   },
+  decorators: [story => <div className="story-Container story-Grid">{story()}</div>,],
+
 }
 
 const Item = ({ numItem }) => (
-  <>
-    <Marger bottom="3">
+  <FlexWrapper gap={30}>
       <img
         src={`/kitten-${numItem}.jpg`}
         alt=""
         style={{ display: 'block', width: '100%' }}
       />
-    </Marger>
 
-    <Marger top="3" bottom="3" style={{ padding: '0 40px' }}>
-      <Marger bottom="2">
-        <Title modifier="senary" noMargin style={{ color: '#FFF' }}>
-          Title {numItem}
-        </Title>
-      </Marger>
+      <Title modifier="senary" noMargin>
+        Title {numItem}
+      </Title>
 
-      <Marger top="2" bottom="3">
-        <HorizontalStroke size="large" style={{ background: '#FFF' }} />
-      </Marger>
+      <HorizontalStroke size="large" className="k-u-m-t-n4" />
 
-      <Marger top="3" bottom="3">
-        <Paragraph modifier="secondary" noMargin style={{ color: '#FFF' }}>
-          Parapraph {numItem}
-        </Paragraph>
-      </Marger>
+      <Paragraph modifier="secondary" noMargin>
+        Parapraph {numItem}
+      </Paragraph>
 
-      <Marger top="3">
+      <div>
         <Button>Button {numItem}</Button>
-      </Marger>
-    </Marger>
-  </>
+      </div>
+  </FlexWrapper>
 )
 
 export const Default = () => (
   <div
     style={{
-      paddingLeft: 75,
-      background: '#222',
-      overflow: 'auto',
       minWidth: '300px',
       maxWidth: '33vw',
     }}

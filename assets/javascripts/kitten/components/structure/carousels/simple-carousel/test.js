@@ -3,16 +3,7 @@ import renderer from 'react-test-renderer'
 import { SimpleCarousel } from './index'
 
 describe('<SimpleCarousel />', () => {
-  const initialWindow = global.window
   let component
-
-  beforeEach(() => {
-    global.window.HTMLCanvasElement.prototype.getContext = () => {}
-  })
-
-  afterEach(() => {
-    global.window = initialWindow
-  })
 
   describe('by default', () => {
     beforeEach(() => {
