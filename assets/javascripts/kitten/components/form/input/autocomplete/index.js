@@ -20,59 +20,59 @@ const Wrapper = styled.div`
   .k-Form-Autocomplete__input {
     width: 100%;
   }
+`
 
-  .k-Form-Autocomplete__suggestions {
+export const StyledAutocompleteSuggestions = styled.ul`
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(100% + ${pxToRem(5)});
+  left: ${pxToRem(-1)};
+  right: ${pxToRem(-1)};
+  display: flex;
+  flex-direction: column;
+  gap: ${pxToRem(2)};
+  overflow-y: auto;
+  margin: 0;
+  padding: ${pxToRem(1)};
+
+  background: var(--color-grey-000);
+  border: var(--border-width) solid var(--color-grey-400);
+  border-radius: var(--border-radius-m);
+
+  list-style: none;
+
+  max-height: calc(
+    ${pxToRem(4 + 34 * maxVisibleSuggestions)} +
+      (min(2, (var(--Autocomplete-suggestions) - 1)) * ${pxToRem(2)})
+  );
+
+  .k-Form-Autocomplete__suggestion__item {
     box-sizing: border-box;
-    position: absolute;
-    top: calc(100% + ${pxToRem(5)});
-    left: ${pxToRem(-1)};
-    right: ${pxToRem(-1)};
-    display: flex;
-    flex-direction: column;
-    gap: ${pxToRem(2)};
-    overflow-y: auto;
-    margin: 0;
-    padding: ${pxToRem(1)};
+    height: ${pxToRem(34)};
+    padding: ${pxToRem(8)} ${pxToRem(13)};
+    border-radius: var(--border-radius-s);
 
-    background: var(--color-grey-000);
-    border: var(--border-width) solid var(--color-grey-400);
-    border-radius: var(--border-radius-m);
+    ${TYPOGRAPHY.fontStyles['400']};
+    font-size: ${stepToRem(-1)};
 
-    list-style: none;
+    line-height: ${pxToRem(18)};
+    color: var(--color-grey-900);
 
-    max-height: calc(
-      ${pxToRem(4 + 34 * maxVisibleSuggestions)} +
-        (min(2, (var(--Autocomplete-suggestions) - 1)) * ${pxToRem(2)})
-    );
+    &.k-Form-Autocomplete__suggestion__item--noresult {
+      font-style: italic;
+    }
+    &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+      cursor: pointer;
+      transition: background-color var(--transition);
 
-    .k-Form-Autocomplete__suggestion__item {
-      box-sizing: border-box;
-      height: ${pxToRem(34)};
-      padding: ${pxToRem(8)} ${pxToRem(13)};
-      border-radius: var(--border-radius-s);
-
-      ${TYPOGRAPHY.fontStyles['400']};
-      font-size: ${stepToRem(-1)};
-
-      line-height: ${pxToRem(18)};
-      color: var(--color-grey-900);
-
-      &.k-Form-Autocomplete__suggestion__item--noresult {
-        font-style: italic;
+      :hover,
+      :focus,
+      :active {
+        background-color: var(--color-grey-200);
       }
-      &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
-        cursor: pointer;
-        transition: background-color var(--transition);
 
-        :hover,
-        :focus,
-        :active {
-          background-color: var(--color-grey-200);
-        }
-
-        &[aria-selected='true'] {
-          background-color: var(--color-grey-300);
-        }
+      &[aria-selected='true'] {
+        background-color: var(--color-grey-300);
       }
     }
   }
@@ -246,7 +246,7 @@ export const Autocomplete = ({
         items.length === 0 &&
         noResultMessage &&
         showNoResultMessage && (
-          <ul
+          <StyledAutocompleteSuggestions
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
@@ -261,7 +261,7 @@ export const Autocomplete = ({
             >
               {noResultMessage}
             </li>
-          </ul>
+          </StyledAutocompleteSuggestions>
         )}
 
       {showSuggestions && items.length > 0 && (

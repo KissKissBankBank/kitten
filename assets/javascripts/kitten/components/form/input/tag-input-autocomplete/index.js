@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import slugify from 'slugify'
 import { CrossIcon } from '../../../graphics/icons/cross-icon'
 import { TagInput, StyledTagInputWrapper } from '../tag-input'
-import { StyledSuggestionsList } from '../autocomplete'
+import { StyledAutocompleteSuggestions } from '../autocomplete'
 
 export const TagInputAutocomplete = ({
   placeholder,
@@ -309,7 +309,7 @@ export const TagInputAutocomplete = ({
 
       {showSuggestions && suggestionsList.length > 0 && (
         <>
-          <StyledSuggestionsList
+          <StyledAutocompleteSuggestions
             ref={suggestionsEl}
             id={`${id}-results`}
             role="listbox"
@@ -334,7 +334,7 @@ export const TagInputAutocomplete = ({
                 </li>
               )
             })}
-          </StyledSuggestionsList>
+          </StyledAutocompleteSuggestions>
 
           <div
             className="k-u-a11y-visuallyHidden"
