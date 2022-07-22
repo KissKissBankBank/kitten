@@ -266,7 +266,7 @@ export const Autocomplete = ({
 
       {showSuggestions && items.length > 0 && (
         <>
-          <ul
+          <StyledAutocompleteSuggestions
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
@@ -287,7 +287,7 @@ export const Autocomplete = ({
                 {item[label] || item}
               </li>
             ))}
-          </ul>
+          </StyledAutocompleteSuggestions>
 
           <VisuallyHidden lang="en" aria-live="assertive">
             {items.length} results are available.

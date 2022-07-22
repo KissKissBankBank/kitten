@@ -212,7 +212,7 @@ const Autocomplete = _ref => {
     className: "k-Form-Autocomplete__suggestion__item k-Form-Autocomplete__suggestion__item--noresult",
     role: "option",
     tabIndex: "-1"
-  }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("ul", {
+  }, noResultMessage)), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledAutocompleteSuggestions, {
     ref: suggestionsEl,
     id: props.name + "-results",
     role: "listbox",
