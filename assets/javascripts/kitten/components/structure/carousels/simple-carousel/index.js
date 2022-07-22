@@ -1,7 +1,7 @@
 import React, { Children, useRef, useState } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { mq } from '../../../../constants/screen-config'
 import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
@@ -26,7 +26,8 @@ const StyledWrapper = styled.div`
       grid-row: 1;
       visibility: visible;
       opacity: 1;
-      transition: all calc(var(--transition-timing) * 3) var(--transition-timing-function);
+      transition: all calc(var(--transition-timing) * 3)
+        var(--transition-timing-function);
 
       &[aria-hidden] {
         visibility: hidden;
@@ -39,7 +40,7 @@ const StyledWrapper = styled.div`
   .k-SimpleCarousel__pagination {
     display: flex;
     justify-content: var(--simple-carousel-paginationAlign);
-    gap:${pxToRem(8)};
+    gap: ${pxToRem(8)};
 
     li {
       list-style-type: none;
@@ -70,7 +71,6 @@ const StyledWrapper = styled.div`
       background: var(--simple-carousel-activePaginationColor);
     }
   }
-
 `
 
 export const SimpleCarousel = ({
@@ -87,7 +87,7 @@ export const SimpleCarousel = ({
 }) => {
   const paginationRef = useRef(null)
   const [currentPageNumber, setCurrentPageNumber] = useState(0)
-  const [totalPagesCount,] = useState(Children.toArray(children).length)
+  const [totalPagesCount] = useState(Children.toArray(children).length)
 
   const handlePageClick = numPage => () => {
     setCurrentPageNumber(numPage)
@@ -130,10 +130,7 @@ export const SimpleCarousel = ({
       }}
       {...props}
     >
-      <div
-        style={containerStyle}
-        className="k-SimpleCarousel__container"
-      >
+      <div style={containerStyle} className="k-SimpleCarousel__container">
         {Children.map(children, (item, index) => {
           return (
             <div
@@ -204,4 +201,3 @@ SimpleCarousel.defaultProps = {
   paginationStyle: {},
   bulletStyle: {},
 }
-
