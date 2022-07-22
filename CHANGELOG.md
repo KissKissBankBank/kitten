@@ -15,6 +15,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `LocationInput`
 - Breaking Change: `TextCopy`: Update component.
 - Breaking Change: `DatePicker`: Remove component.
+- Fix: `Button`: Set valid default size.
+- Fix: `Carousel`: Define default navigation button size.
 
 ## [11.8.0] - 2022-07-08
 

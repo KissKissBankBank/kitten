@@ -7,7 +7,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
       "--carousel-numberOfItemsPerPage": 3,
-      "--carousel-numberOfPages": 1,
+      "--carousel-numberOfPages": 2,
       "--carousel-shadowSize": "1.25rem",
     }
   }
@@ -237,8 +237,521 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
         </div>
         <div
           className="k-Carousel__page__item"
-        />
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div
+      className="k-Carousel__inner__pageContainer"
+    >
+      <div
+        className="k-Carousel__page"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Page 2"
+        className="k-u-reset-button k-Carousel__inner__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Carousel__pagination"
+  >
+    <div
+      className="k-Carousel__pagination__buttonContainer"
+    >
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Previous items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Next items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -251,7 +764,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
       "--carousel-numberOfItemsPerPage": 3,
-      "--carousel-numberOfPages": 1,
+      "--carousel-numberOfPages": 2,
       "--carousel-shadowSize": null,
     }
   }
@@ -481,9 +994,458 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
         </div>
         <div
           className="k-Carousel__page__item"
-        />
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div
+      className="k-Carousel__inner__pageContainer custom-class"
+    >
+      <div
+        className="k-Carousel__page"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Page 2"
+        className="k-u-reset-button k-Carousel__inner__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Carousel__pageControl"
+  >
+    <div
+      className="k-Carousel__pageControl__pageDot k-Carousel__pageControl__pageDot--isVisible"
+    />
+    <div
+      className="k-Carousel__pageControl__pageDot"
+    />
+    <div
+      className="k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--prev"
+      onClick={[Function]}
+    />
+    <div
+      className="k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--next"
+      onClick={[Function]}
+    />
   </div>
 </div>
 `;
@@ -680,7 +1642,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
       "--carousel-numberOfItemsPerPage": 3,
-      "--carousel-numberOfPages": 1,
+      "--carousel-numberOfPages": 2,
       "--carousel-shadowSize": null,
     }
   }
@@ -910,8 +1872,521 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
         </div>
         <div
           className="k-Carousel__page__item"
-        />
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div
+      className="k-Carousel__inner__pageContainer"
+    >
+      <div
+        className="k-Carousel__page"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Page 2"
+        className="k-u-reset-button k-Carousel__inner__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Carousel__pagination"
+  >
+    <div
+      className="k-Carousel__pagination__buttonContainer"
+    >
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Previous items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Next items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -924,7 +2399,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
       "--carousel-numberOfItemsPerPage": 5,
-      "--carousel-numberOfPages": 1,
+      "--carousel-numberOfPages": 2,
       "--carousel-shadowSize": null,
     }
   }
@@ -1154,6 +2629,437 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
         </div>
         <div
           className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Carousel__inner__pageContainer"
+    >
+      <div
+        className="k-Carousel__page"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+        <div
+          className="k-Carousel__page__item"
         />
         <div
           className="k-Carousel__page__item"
@@ -1162,6 +3068,94 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         />
       </div>
+      <button
+        aria-label="Page 2"
+        className="k-u-reset-button k-Carousel__inner__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Carousel__pagination"
+  >
+    <div
+      className="k-Carousel__pagination__buttonContainer"
+    >
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Previous items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Next items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
@@ -1174,7 +3168,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
       "--carousel-numberOfItemsPerPage": 3,
-      "--carousel-numberOfPages": 1,
+      "--carousel-numberOfPages": 2,
       "--carousel-shadowSize": null,
     }
   }
@@ -1404,8 +3398,1278 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
         </div>
         <div
           className="k-Carousel__page__item"
-        />
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div
+      className="k-Carousel__inner__pageContainer"
+    >
+      <div
+        className="k-Carousel__page"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Page 2"
+        className="k-u-reset-button k-Carousel__inner__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Carousel__pagination"
+  >
+    <div
+      className="k-Carousel__pagination__buttonContainer"
+    >
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Last items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--medium k-Button--beryllium k-Button--fit-icon"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Next items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
+<div
+  className="sc-dkPtRN gmacoJ k-Carousel"
+  style={
+    Object {
+      "--carousel-baseItemMarginBetween": "2.5rem",
+      "--carousel-numberOfItemsPerPage": 3,
+      "--carousel-numberOfPages": 2,
+      "--carousel-shadowSize": null,
+    }
+  }
+>
+  <div
+    className="k-Carousel__inner"
+    onKeyDown={[Function]}
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="k-Carousel__inner__pageContainer"
+    >
+      <div
+        className="k-Carousel__page"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--normal"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                The Office, la série culte décortiquée par S!CK
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="sc-hKwDye leBvUx k-ProjectCard k-ProjectCard--success"
+            onFocus={[Function]}
+          >
+            <div
+              className="k-ProjectCard__image"
+            >
+              <img
+                alt="image alt"
+                className="k-ProjectCard__image__image"
+                src="kitten-1.jpg"
+              />
+            </div>
+            <div
+              className="k-ProjectCard__content"
+            >
+              <div
+                className="k-ProjectCard__sticker k-u-ellipsis k-u-hidden@xs-down"
+              >
+                Prolongation
+              </div>
+              <h1
+                className="sc-eCImPb dlZEOz k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                style={
+                  Object {
+                    "--Title-css-color": null,
+                  }
+                }
+              >
+                Pellentesque ornare sem lacinia quam venenatis vestibulum.
+              </h1>
+              <div
+                className="k-ProjectCard__line"
+              >
+                <span>
+                  par 
+                  <strong>
+                    Bidules
+                  </strong>
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  134
+                </span>
+                <span>
+                  contributeurs
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  7 jours
+                </span>
+                <span>
+                  restants
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__item"
+              >
+                <span>
+                  9 930 €
+                </span>
+                <span>
+                  sur 12 000 €
+                </span>
+              </div>
+              <div
+                className="k-ProjectCard__progress"
+              >
+                <div
+                  aria-label="Progrès de la campagne"
+                  aria-valuemax={100}
+                  aria-valuemin={0}
+                  aria-valuenow={55}
+                  className="sc-jRQBWg eMzrbS k-Meters-Progress"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-value": "55%",
+                    }
+                  }
+                >
+                  <div
+                    className="k-Meters-Progress__ramp"
+                  />
+                </div>
+                <span
+                  className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                >
+                  55
+                   %
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Page 2"
+        className="k-u-reset-button k-Carousel__inner__button"
+        onClick={[Function]}
+        type="button"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Carousel__pagination"
+  >
+    <div
+      className="k-Carousel__pagination__buttonContainer"
+    >
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--small k-Button--beryllium k-Button--fit-icon k-Button--disabled"
+        disabled={true}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Previous items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
+      <button
+        className="sc-bdvvtL dRNUHv k-Button k-Carousel__pagination__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+        disabled={false}
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": null,
+            "--Button-bullet-color": null,
+          }
+        }
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Next items
+        </span>
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-900, #222)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
