@@ -30,11 +30,12 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput k-Field__control sc-bczRLJ iqiWVe k-u-margin-top-single"
+      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control sc-bczRLJ iqiWVe k-u-margin-top-single"
     >
       <input
         autoComplete="cc-number"
-        className="sc-jSMfEi fDkaOt k-Form-TextInput k-Form-TextInput--medium"
+        className="k-TextInput"
+        defaultValue=""
         disabled={false}
         id="frmCCNum"
         inputMode="numeric"
@@ -46,7 +47,6 @@ Array [
         onMouseUp={[Function]}
         placeholder="#### #### #### #######"
         type="text"
-        value=""
       />
     </div>
   </div>,
@@ -78,11 +78,12 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput k-Field__control k-u-margin-top-single"
+      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasDigits"
     >
       <input
         autoComplete="cc-exp"
-        className="sc-jSMfEi fDkaOt k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--medium"
+        className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
+        defaultValue=""
         disabled={false}
         id="frmCCExp"
         inputMode="numeric"
@@ -99,7 +100,6 @@ Array [
           }
         }
         type="text"
-        value=""
       />
     </div>
   </div>,
@@ -131,11 +131,12 @@ Array [
       </div>
     </div>
     <div
-      className="k-FieldInput k-Field__control k-u-margin-top-single"
+      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasDigits"
     >
       <input
         autoComplete="cc-csc"
-        className="sc-jSMfEi fDkaOt k-Form-TextInput k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_6 k-Form-TextInput--medium"
+        className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
+        defaultValue=""
         disabled={false}
         id="frmCCCVC"
         inputMode="numeric"
@@ -152,7 +153,6 @@ Array [
           }
         }
         type="text"
-        value=""
       />
     </div>
   </div>,

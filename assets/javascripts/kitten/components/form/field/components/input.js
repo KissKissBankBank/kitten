@@ -2,8 +2,6 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { TextInput } from '../../../form/input/text-input'
-import { TextInputWithLimit } from '../../../form/input/text-input-with-limit'
-import { TextInputWithUnit } from '../../../form/input/text-input-with-unit'
 
 export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
   const has = (() => {
@@ -26,13 +24,14 @@ export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
       wrapperProps={{
         ...props.wrapperProps,
         className: classNames(
-        'k-FieldInput',
-        'k-Field__control',
-        className,
-        props.wrapperProps?.className,
-        {
-          'k-u-margin-top-single': !noMargin,
-        })
+          'k-FieldInput',
+          'k-Field__control',
+          className,
+          props.wrapperProps?.className,
+          {
+            'k-u-margin-top-single': !noMargin,
+          },
+        ),
       }}
     />
   )

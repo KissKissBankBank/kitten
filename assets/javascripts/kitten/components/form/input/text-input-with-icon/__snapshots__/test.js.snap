@@ -2,18 +2,19 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
-  
   <input
-    aria-labelledby={null}
-    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium"
+    className="k-TextInput k-TextInput--hasIcon"
+    defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
+    onChange={[Function]}
   />
   <span
     aria-hidden="true"
-    className="k-Form-TextInputWithIcon__icon"
+    className="k-TextInput__icon"
   >
     <svg
       aria-label={null}
@@ -38,18 +39,19 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
-  
   <input
-    aria-labelledby={null}
-    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium k-Form-TextInput--disabled"
+    className="k-TextInput k-TextInput--hasIcon k-TextInput--disabled"
+    defaultValue=""
     disabled={true}
+    id="TextInputWithButton"
     name="text"
+    onChange={[Function]}
   />
   <span
     aria-hidden="true"
-    className="k-Form-TextInputWithIcon__icon k-Form-TextInputWithIcon__icon--disabled"
+    className="k-TextInput__icon k-TextInput__icon--disabled"
   >
     <svg
       aria-label={null}
@@ -74,18 +76,19 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 <div
-  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_right"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_right"
 >
-  
   <input
-    aria-labelledby={null}
-    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium k-Form-TextInput--valid"
+    className="k-TextInput k-TextInput--hasIcon k-TextInput--valid"
+    defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
+    onChange={[Function]}
   />
   <span
     aria-hidden="true"
-    className="k-Form-TextInputWithIcon__icon"
+    className="k-TextInput__icon"
   >
     <svg
       aria-label={null}
@@ -110,19 +113,20 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf dEKVPr k-Form-TextInputWithIcon k-Form-TextInputWithIcon--icon_left"
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
-  
   <input
-    aria-labelledby={null}
-    className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--medium"
+    className="k-TextInput k-TextInput--hasIcon"
+    defaultValue=""
     disabled={false}
+    id="TextInputWithButton"
     name="text"
+    onChange={[Function]}
     placeholder="Les props sont transmises"
   />
   <span
     aria-hidden="true"
-    className="k-Form-TextInputWithIcon__icon"
+    className="k-TextInput__icon"
   >
     <svg
       aria-label={null}

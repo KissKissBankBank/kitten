@@ -3,7 +3,7 @@
 exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 <div
   className="sc-dkzDqf fpxlvr k-Form-ColorSelect"
-  name="test-slider-input"
+  name="test-color-select"
 >
   <div
     className="k-Form-ColorSelect__picker"
@@ -105,17 +105,23 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
         }
       }
     />
-    <input
-      aria-label="Code hexadécimal de la couleur"
-      className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInput--small k-Form-TextInput--alignCenter"
-      disabled={false}
-      name="text"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyUp={[Function]}
-      spellCheck="false"
-      value="#556954"
-    />
+    <div
+      className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--small"
+    >
+      <input
+        aria-label="Code hexadécimal de la couleur"
+        className="k-TextInput k-TextInput--alignCenter"
+        defaultValue=""
+        disabled={false}
+        id="test-color-select"
+        name="text"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        spellCheck="false"
+        value="#556954"
+      />
+    </div>
     <div
       className="k-Form-ColorSelect__witness"
     />
@@ -126,7 +132,7 @@ exports[`<ColorSelect /> should match its snapshot with props 1`] = `
 exports[`<ColorSelect /> should match its snapshot with props and children 1`] = `
 <div
   className="sc-dkzDqf fpxlvr k-Form-ColorSelect"
-  name="test-slider-input"
+  name="test-color-select"
 >
   <div
     className="k-Form-ColorSelect__picker"
@@ -228,17 +234,23 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
         }
       }
     />
-    <input
-      aria-label="Code hexadécimal de la couleur"
-      className="sc-bczRLJ etIXKI k-Form-TextInput k-Form-TextInput--small k-Form-TextInput--alignCenter"
-      disabled={false}
-      name="text"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onKeyUp={[Function]}
-      spellCheck="false"
-      value="#556954"
-    />
+    <div
+      className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--small"
+    >
+      <input
+        aria-label="Code hexadécimal de la couleur"
+        className="k-TextInput k-TextInput--alignCenter"
+        defaultValue=""
+        disabled={false}
+        id="test-color-select"
+        name="text"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        spellCheck="false"
+        value="#556954"
+      />
+    </div>
     <div
       className="k-Form-ColorSelect__witness"
     >
@@ -260,7 +272,7 @@ exports[`<ColorSelect /> should match its snapshot with props and children 1`] =
           Rendu :
         </span>
         <button
-          className="sc-hKMtZM iQRCsw k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
+          className="sc-gsnTZi bGunfA k-Button k-Button--small k-Button--helium k-Button--fit-content k-Button--rounded"
           style={
             Object {
               "--Button-border-radius": null,

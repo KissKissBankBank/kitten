@@ -30,25 +30,30 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-breuTD iacUnA k-Form-Autocomplete"
+      className="sc-iqcoie gBQtdI k-Form-Autocomplete"
     >
-      <input
-        aria-activedescendant=""
-        aria-autocomplete="both"
-        aria-expanded={null}
-        aria-owns="field-results"
-        autoComplete="off"
-        className="k-Form-Autocomplete__input"
-        id="autocomplete"
-        name="field"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onKeyDown={[Function]}
-        placeholder="Select…"
-        role="combobox"
-        size="medium"
-        type="text"
-      />
+      <div
+        className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium"
+      >
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="both"
+          aria-expanded={null}
+          aria-owns="field-results"
+          autoComplete="off"
+          className="k-TextInput k-Form-Autocomplete__input"
+          defaultValue=""
+          disabled={false}
+          id="autocomplete"
+          name="field"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Select…"
+          role="combobox"
+          type="text"
+        />
+      </div>
     </div>
   </div>,
 ]
@@ -149,13 +154,15 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
     </div>
   </div>
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
+      className="k-TextInput k-TextInput--error"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>
@@ -272,13 +279,15 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-TextInput--medium k-Form-TextInput--error"
+      className="k-TextInput k-TextInput--error"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>,
@@ -385,13 +394,15 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-TextInput--medium"
+      className="k-TextInput"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>,
@@ -503,13 +514,15 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
-      className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-TextInput--medium"
+      className="k-TextInput"
+      defaultValue=""
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
     />
   </div>,
@@ -611,25 +624,21 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
+    <input
+      className="k-TextInput k-TextInput--hasLimit"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
     <div
-      className="sc-gKXOVf dEAmbS k-Form-TextInputWithLimit"
+      className="k-TextInput__limitNumber"
     >
-      <input
-        className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--medium"
-        defaultValue=""
-        disabled={false}
-        id="input"
-        name="field"
-        onChange={[Function]}
-        placeholder="Placeholder…"
-      />
-      <div
-        className="k-Form-TextInputWithLimit__limitNumber"
-      >
-        80
-      </div>
+      80
     </div>
   </div>,
 ]
@@ -730,25 +739,22 @@ Array [
     </div>
   </div>,
   <div
-    className="k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasUnit"
   >
-    <div
-      className="sc-iBkjds cpVbmY k-Form-TextInputWithUnit"
+    <input
+      className="k-TextInput k-TextInput--hasUnit"
+      defaultValue=""
+      disabled={false}
+      id="input"
+      name="field"
+      onChange={[Function]}
+      placeholder="Placeholder…"
+    />
+    <span
+      className="k-TextInput__unit"
     >
-      <input
-        className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--medium"
-        disabled={false}
-        id="input"
-        name="field"
-        placeholder="Placeholder…"
-        type="number"
-      />
-      <span
-        className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--medium"
-      >
-        €
-      </span>
-    </div>
+      €
+    </span>
   </div>,
 ]
 `;
@@ -851,25 +857,29 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-crXcEl evTRIL k-Form-PasswordInput"
+      className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
     >
       <input
-        className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium k-Form-TextInput--error"
+        className="k-TextInput k-TextInput--hasButton k-TextInput--error"
+        defaultValue=""
         disabled={false}
         id="input"
         name="field"
+        onChange={[Function]}
         placeholder="Placeholder…"
         type="password"
       />
       <button
         aria-label="Show password"
         aria-pressed={false}
-        className="k-Form-PasswordInput__icon k-u-reset-button"
+        className="k-TextInput__button k-PasswordInput__icon"
         onClick={[Function]}
+        rounded={false}
+        size="medium"
         type="button"
       >
         <svg
-          fill="#222"
+          fill="var(--color-grey-900)"
           viewBox="0 0 18 12"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -993,25 +1003,29 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-crXcEl evTRIL k-Form-PasswordInput"
+      className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
     >
       <input
-        className="sc-eCYdqJ kAvoRX k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--medium"
+        className="k-TextInput k-TextInput--hasButton"
+        defaultValue=""
         disabled={false}
         id="input"
         name="field"
+        onChange={[Function]}
         placeholder="Placeholder…"
         type="password"
       />
       <button
         aria-label="Show password"
         aria-pressed={false}
-        className="k-Form-PasswordInput__icon k-u-reset-button"
+        className="k-TextInput__button k-PasswordInput__icon"
         onClick={[Function]}
+        rounded={false}
+        size="medium"
         type="button"
       >
         <svg
-          fill="#222"
+          fill="var(--color-grey-900)"
           viewBox="0 0 18 12"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
@@ -1062,14 +1076,14 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-kDDrLX edsoMk k-Form-RadioButtonSet"
+      className="sc-papXJ iJntvi k-Form-RadioButtonSet"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-jqUVSM fkDuHt k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+          className="sc-ftvSup bKGhut k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1091,7 +1105,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jqUVSM fkDuHt k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+          className="sc-ftvSup bKGhut k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1112,7 +1126,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-jqUVSM fkDuHt k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
+          className="sc-ftvSup bKGhut k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--disc k-Form-RadioButton--medium k-Form-RadioButton--weight-500"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -1168,14 +1182,14 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <fieldset
-      className="sc-papXJ ddTvUp k-Form-RadioSet"
+      className="sc-iBkjds fSxEIX k-Form-RadioSet"
       disabled={false}
     >
       <div
         className="k-Form-RadioSet__radioContainer"
       >
         <div
-          className="sc-ftvSup hbrpxa k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-gKXOVf jjxmrr k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1197,7 +1211,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-ftvSup hbrpxa k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-gKXOVf jjxmrr k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"
@@ -1218,7 +1232,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-ftvSup hbrpxa k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+          className="sc-gKXOVf jjxmrr k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
         >
           <input
             className="k-Form-Radio__input"

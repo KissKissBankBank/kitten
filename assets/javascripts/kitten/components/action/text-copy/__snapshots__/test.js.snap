@@ -2,49 +2,58 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <button
-  className="sc-eCYdqJ cFkwUR k-TextCopy k-u-reset-button"
+  className="sc-hKMtZM cXuMrl k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
   <div
-    className="sc-dkzDqf imEUnh k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
-    disabled={false}
-    name="text"
+    className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
   >
-    <span>
-      Text To Copy
+    <div
+      className="k-TextInput k-TextCopy__text k-u-reset-button k-TextInput--hasButton"
+      defaultValue=""
+      disabled={false}
+      id="TextCopy"
+      name="text"
+      onChange={[Function]}
+    >
+      <span
+        className=""
+      >
+        Text To Copy
+      </span>
+    </div>
+    <span
+      className="sc-dkzDqf crtchu k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+      disabled={null}
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      <svg
+        height="22"
+        viewBox="0 0 22 22"
+        width="22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z"
+          fill="#000"
+        />
+      </svg>
     </span>
   </div>
-  <span
-    className="sc-gsnTZi dSJjql k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
-    disabled={null}
-    style={
-      Object {
-        "--Button-border-radius": null,
-        "--Button-bullet-color": null,
-      }
-    }
-    type={null}
-  >
-    <svg
-      height="22"
-      viewBox="0 0 22 22"
-      width="22"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      
-      <path
-        d="M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z"
-        fill="#000"
-      />
-    </svg>
-  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with button text 1`] = `
 <button
-  className="sc-eCYdqJ cFkwUR k-TextCopy k-u-reset-button"
+  className="sc-hKMtZM cXuMrl k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
@@ -54,33 +63,42 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <div
-    className="sc-dkzDqf imEUnh k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
-    disabled={false}
-    name="text"
+    className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
   >
-    <span>
-      Text To Copy
+    <div
+      className="k-TextInput k-TextCopy__text k-u-reset-button k-TextInput--hasButton"
+      defaultValue=""
+      disabled={false}
+      id="TextCopy"
+      name="text"
+      onChange={[Function]}
+    >
+      <span
+        className=""
+      >
+        Text To Copy
+      </span>
+    </div>
+    <span
+      className="sc-dkzDqf fZaKfX k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--helium k-Button--fit-content"
+      disabled={null}
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      Button text
     </span>
   </div>
-  <span
-    className="sc-gsnTZi bGunfA k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--helium k-Button--fit-content"
-    disabled={null}
-    style={
-      Object {
-        "--Button-border-radius": null,
-        "--Button-bullet-color": null,
-      }
-    }
-    type={null}
-  >
-    Button text
-  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <button
-  className="sc-eCYdqJ cFkwUR k-TextCopy k-u-reset-button"
+  className="sc-hKMtZM cXuMrl k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
@@ -90,44 +108,53 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <div
-    className="sc-dkzDqf imEUnh k-Form-TextInput k-TextCopy__text k-u-reset-button k-Form-TextInput--medium"
-    disabled={false}
-    name="text"
+    className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
   >
-    <span>
-      Text To Copy
+    <div
+      className="k-TextInput k-TextCopy__text k-u-reset-button k-TextInput--hasButton"
+      defaultValue=""
+      disabled={false}
+      id="TextCopy"
+      name="text"
+      onChange={[Function]}
+    >
+      <span
+        className=""
+      >
+        Text To Copy
+      </span>
+    </div>
+    <span
+      className="sc-dkzDqf crtchu k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+      disabled={null}
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      <svg
+        height="22"
+        viewBox="0 0 22 22"
+        width="22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z"
+          fill="#000"
+        />
+      </svg>
     </span>
   </div>
-  <span
-    className="sc-gsnTZi dSJjql k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
-    disabled={null}
-    style={
-      Object {
-        "--Button-border-radius": null,
-        "--Button-bullet-color": null,
-      }
-    }
-    type={null}
-  >
-    <svg
-      height="22"
-      viewBox="0 0 22 22"
-      width="22"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      
-      <path
-        d="M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z"
-        fill="#000"
-      />
-    </svg>
-  </span>
 </button>
 `;
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <button
-  className="sc-eCYdqJ cFkwUR k-TextCopy k-u-reset-button"
+  className="sc-hKMtZM cXuMrl k-TextCopy k-u-reset-button"
   onClick={[Function]}
   type="button"
 >
@@ -137,37 +164,46 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <div
-    className="sc-dkzDqf imEUnh k-Form-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-Form-TextInput--medium"
-    disabled={false}
-    name="text"
+    className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
   >
-    <span>
-      Text To Copy
+    <div
+      className="k-TextInput k-TextCopy__text k-u-reset-button k-TextCopy__text--forceOneLine k-TextInput--hasButton"
+      defaultValue=""
+      disabled={false}
+      id="TextCopy"
+      name="text"
+      onChange={[Function]}
+    >
+      <span
+        className="k-u-clamp-1"
+      >
+        Text To Copy
+      </span>
+    </div>
+    <span
+      className="sc-dkzDqf crtchu k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+      disabled={null}
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      <svg
+        height="22"
+        viewBox="0 0 22 22"
+        width="22"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z"
+          fill="#000"
+        />
+      </svg>
     </span>
   </div>
-  <span
-    className="sc-gsnTZi dSJjql k-Button k-TextCopy__buttonTextButton k-Button--medium k-Button--hydrogen k-Button--fit-icon"
-    disabled={null}
-    style={
-      Object {
-        "--Button-border-radius": null,
-        "--Button-bullet-color": null,
-      }
-    }
-    type={null}
-  >
-    <svg
-      height="22"
-      viewBox="0 0 22 22"
-      width="22"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      
-      <path
-        d="M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z"
-        fill="#000"
-      />
-    </svg>
-  </span>
 </button>
 `;
