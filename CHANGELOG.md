@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RichText`: Add component.
 - Breaking Change: Remove `NavTabCarousel`.
 - Breaking Change: Remove `DatePicker`.
 - Deprecations/Change: Tests: Remove tests not based on snapshots.
