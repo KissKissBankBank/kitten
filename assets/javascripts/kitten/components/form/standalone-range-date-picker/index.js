@@ -18,32 +18,32 @@ const StyledDatePicker = styled.div`
 
   ${TYPOGRAPHY.fontStyles[400]}
 
-  .rdp-caption_label {
+  .rdp-caption_label.rdp-caption_label {
     ${TYPOGRAPHY.fontStyles[500]}
     font-size: ${pxToRem(14)};
   }
 
-  .rdp-head_cell {
+  .rdp-head_cell.rdp-head_cell {
     ${TYPOGRAPHY.fontStyles[500]}
     font-size: ${pxToRem(12)};
     text-transform: capitalize;
   }
 
-  .rdp-cell {
+  .rdp-cell.rdp-cell {
     font-size: ${pxToRem(12)};
   }
 
-  .rdp-button {
+  .rdp-button.rdp-button {
     transition: color var(--transition), background-color var(--transition),
       border-color var(--transition);
   }
 
-  .rdp-day_range_start,
-  .rdp-day_range_end {
+  .rdp-day_range_start.rdp-day_range_start,
+  .rdp-day_range_end.rdp-day_range_end {
     ${TYPOGRAPHY.fontStyles[700]}
   }
 
-  .rdp-day_range_middle {
+  .rdp-day_range_middle.rdp-day_range_middle {
     background-color: var(--color-primary-100);
     color: var(--color-primary-700);
   }

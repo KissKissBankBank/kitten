@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `StandaloneRangeDatePicker`: Add specificity to custom styles.
+- Fix: `Autocomplete`: Fix Suggestions subcomponent styles export.
+
 ## [12.0.0-beta] - 2022-07-22
 
 Breaking Changes:
