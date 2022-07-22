@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Deprecations/Change: Remove `DatePicker`.
+- Breaking Change: Remove `NavTabCarousel`.
+- Breaking Change: Remove `DatePicker`.
 - Deprecations/Change: Tests: Remove tests not based on snapshots.
 - Feature: `StandaloneRangeDatePicker`: Update component and dependencies.
 
