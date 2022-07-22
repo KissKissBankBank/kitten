@@ -1,9 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["id", "value", "defaultCountry", "locale", "placeholder", "onChange", "flagsUrl", "assumeCountry", "inputProps", "normalizer"];
-
-var _this = this;
-
 import memoize from 'lodash/memoize';
 import reduce from 'lodash/reduce';
 import startsWith from 'lodash/startsWith';
@@ -15,17 +10,19 @@ import { DropdownSelectWithInput } from '../dropdown-select-with-input';
 import CountryData from './data/CountryData.js';
 import locale_fr from './data/lang/fr';
 
-var removeCountryCodeFromFormat = function removeCountryCodeFromFormat(format) {
+const removeCountryCodeFromFormat = format => {
   return format.replace(/\+[.]+\s/gi, '');
 };
 
-var processCountries = function processCountries(_ref) {
-  var countries = _ref.countries,
-      prefix = _ref.prefix,
-      locale = _ref.locale,
-      flagsUrl = _ref.flagsUrl;
-  return countries.map(function (country) {
-    var localizedName = locale === 'fr' ? locale_fr[country.iso2] : country.name;
+const processCountries = _ref => {
+  let {
+    countries,
+    prefix,
+    locale,
+    flagsUrl
+  } = _ref;
+  return countries.map(country => {
+    const localizedName = locale === 'fr' ? locale_fr[country.iso2] : country.name;
     return {
       value: country.iso2,
       label: localizedName,
@@ -42,14 +39,16 @@ var processCountries = function processCountries(_ref) {
   });
 };
 
-var formatNumber = function formatNumber(text, country, normalizer) {
+const formatNumber = (text, country, normalizer) => {
   var _text;
 
   if (!country) return text;
-  var format = country.format;
+  const {
+    format
+  } = country;
   if (!format) return text;
   text = normalizer(text, country);
-  var pattern = removeCountryCodeFromFormat(format);
+  const pattern = removeCountryCodeFromFormat(format);
 
   if (!text || text.length === 0) {
     return '';
@@ -59,7 +58,7 @@ var formatNumber = function formatNumber(text, country, normalizer) {
     return text;
   }
 
-  var formattedObject = reduce(pattern, function (acc, character) {
+  const formattedObject = reduce(pattern, (acc, character) => {
     if (acc.remainingText.length === 0) {
       return acc;
     }
@@ -71,10 +70,7 @@ var formatNumber = function formatNumber(text, country, normalizer) {
       };
     }
 
-    var _acc$remainingText = acc.remainingText,
-        head = _acc$remainingText[0],
-        tail = _acc$remainingText.slice(1);
-
+    const [head, ...tail] = acc.remainingText;
     return {
       formattedText: acc.formattedText + head,
       remainingText: tail
@@ -86,20 +82,22 @@ var formatNumber = function formatNumber(text, country, normalizer) {
   return formattedObject.formattedText;
 };
 
-var getOptions = function getOptions(_ref2) {
-  var onlyCountries = _ref2.onlyCountries,
-      preferredCountries = _ref2.preferredCountries,
-      prefix = _ref2.prefix,
-      locale = _ref2.locale,
-      flagsUrl = _ref2.flagsUrl;
-  var options = [];
+const getOptions = _ref2 => {
+  let {
+    onlyCountries,
+    preferredCountries,
+    prefix,
+    locale,
+    flagsUrl
+  } = _ref2;
+  const options = [];
 
   if (preferredCountries) {
-    options.push.apply(options, processCountries({
+    options.push(...processCountries({
       countries: preferredCountries,
-      prefix: prefix,
-      locale: locale,
-      flagsUrl: flagsUrl
+      prefix,
+      locale,
+      flagsUrl
     }));
     options.push({
       separator: true,
@@ -107,21 +105,19 @@ var getOptions = function getOptions(_ref2) {
     });
   }
 
-  onlyCountries && options.push.apply(options, processCountries({
+  onlyCountries && options.push(...processCountries({
     countries: onlyCountries,
-    prefix: prefix,
-    locale: locale,
-    flagsUrl: flagsUrl
+    prefix,
+    locale,
+    flagsUrl
   }));
   return options;
 };
 
-var guessSelectedCountry = memoize(function (inputNumber, country, onlyCountries) {
-  var secondBestGuess = onlyCountries.find(function (o) {
-    return o.iso2 === country;
-  });
+const guessSelectedCountry = memoize((inputNumber, country, onlyCountries) => {
+  const secondBestGuess = onlyCountries.find(o => o.iso2 === country);
   if (inputNumber.trim() === '') return secondBestGuess;
-  var bestGuess = onlyCountries.reduce(function (selectedCountry, country) {
+  const bestGuess = onlyCountries.reduce((selectedCountry, country) => {
     if (startsWith(inputNumber, country.dialCode)) {
       if (country.dialCode.length > selectedCountry.dialCode.length) {
         return country;
@@ -136,103 +132,85 @@ var guessSelectedCountry = memoize(function (inputNumber, country, onlyCountries
   }, {
     dialCode: '',
     priority: 10001
-  }, _this);
+  }, this);
   if (!bestGuess.name) return secondBestGuess;
   return bestGuess;
 });
 
-var getCountryObjectFromIso = function getCountryObjectFromIso(country, onlyCountries) {
-  var newSelectedCountry;
+const getCountryObjectFromIso = (country, onlyCountries) => {
+  let newSelectedCountry;
 
   if (country.indexOf(0) >= '0' && country.indexOf(0) <= '9') {
     // "country" is a digit
-    newSelectedCountry = onlyCountries.find(function (o) {
-      return o.dialCode === +country;
-    });
+    newSelectedCountry = onlyCountries.find(o => o.dialCode === +country);
   } else {
     // "country" is an iso string
-    newSelectedCountry = onlyCountries.find(function (o) {
-      return o.iso2 === country;
-    });
+    newSelectedCountry = onlyCountries.find(o => o.iso2 === country);
   }
 
   return newSelectedCountry;
 };
 
-export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
-  var id = _ref3.id,
-      value = _ref3.value,
-      defaultCountry = _ref3.defaultCountry,
-      locale = _ref3.locale,
-      placeholder = _ref3.placeholder,
-      onChange = _ref3.onChange,
-      flagsUrl = _ref3.flagsUrl,
-      assumeCountry = _ref3.assumeCountry,
-      inputProps = _ref3.inputProps,
-      normalizer = _ref3.normalizer,
-      props = _objectWithoutPropertiesLoose(_ref3, _excluded);
-
+export const DropdownPhoneSelect = _ref3 => {
+  let {
+    id,
+    value,
+    defaultCountry,
+    locale,
+    placeholder,
+    onChange,
+    flagsUrl,
+    assumeCountry,
+    inputProps,
+    normalizer,
+    ...props
+  } = _ref3;
   // Consts
-  var _useState = useState(null),
-      getCountry = _useState[0],
-      setCountry = _useState[1];
-
-  var _useState2 = useState(''),
-      getFormattedNumber = _useState2[0],
-      setFormattedNumber = _useState2[1];
-
-  var _useState3 = useState(0),
-      getCaretPosition = _useState3[0],
-      setCaretPosition = _useState3[1];
-
-  var _useState4 = useState(placeholder),
-      getInputPlaceholder = _useState4[0],
-      setInputPlaceholder = _useState4[1];
-
-  var _useState5 = useState(null),
-      getDefaultSelectedValue = _useState5[0],
-      setDefaultSelectedValue = _useState5[1];
-
-  var _useState6 = useState(''),
-      getInputNumber = _useState6[0],
-      setInputNumber = _useState6[1];
-
-  var getPreviousFormattedNumber = usePrevious(getFormattedNumber);
-
-  var phoneProps = _extends({}, DropdownPhoneSelect.defaultProps.phoneProps, props.phoneProps);
-
-  var localization = locale === 'fr' ? locale_fr : [];
-
-  var _CountryData = new CountryData(phoneProps.enableAreaCodes, phoneProps.enableTerritories, phoneProps.regions, phoneProps.onlyCountries, phoneProps.preferredCountries, phoneProps.excludeCountries, phoneProps.preserveOrder, phoneProps.masks, phoneProps.priority, phoneProps.areaCodes, localization, phoneProps.prefix, phoneProps.defaultMask, phoneProps.alwaysDefaultMask),
-      onlyCountries = _CountryData.onlyCountries,
-      preferredCountries = _CountryData.preferredCountries;
-
-  var options = getOptions({
-    onlyCountries: onlyCountries,
-    preferredCountries: preferredCountries,
+  const [getCountry, setCountry] = useState(null);
+  const [getFormattedNumber, setFormattedNumber] = useState('');
+  const [getCaretPosition, setCaretPosition] = useState(0);
+  const [getInputPlaceholder, setInputPlaceholder] = useState(placeholder);
+  const [getDefaultSelectedValue, setDefaultSelectedValue] = useState(null);
+  const [getInputNumber, setInputNumber] = useState('');
+  const getPreviousFormattedNumber = usePrevious(getFormattedNumber);
+  const phoneProps = { ...DropdownPhoneSelect.defaultProps.phoneProps,
+    ...props.phoneProps
+  };
+  const localization = locale === 'fr' ? locale_fr : [];
+  const {
+    onlyCountries,
+    preferredCountries
+  } = new CountryData(phoneProps.enableAreaCodes, phoneProps.enableTerritories, phoneProps.regions, phoneProps.onlyCountries, phoneProps.preferredCountries, phoneProps.excludeCountries, phoneProps.preserveOrder, phoneProps.masks, phoneProps.priority, phoneProps.areaCodes, localization, phoneProps.prefix, phoneProps.defaultMask, phoneProps.alwaysDefaultMask);
+  const options = getOptions({
+    onlyCountries,
+    preferredCountries,
     prefix: phoneProps.prefix,
-    locale: locale,
-    flagsUrl: flagsUrl
+    locale,
+    flagsUrl
   }); // Handlers
 
-  var handleInput = function handleInput(event) {
-    var currentCountry = getCountryObjectFromIso(getCountry, onlyCountries);
-    var value = event.target.value;
-    var innerValue = value.replace(/\D/g, '');
+  const handleInput = event => {
+    const currentCountry = getCountryObjectFromIso(getCountry, onlyCountries);
+    const {
+      value
+    } = event.target;
+    const innerValue = value.replace(/\D/g, '');
     setInputNumber(innerValue);
     if (innerValue.length > 15) return;
     if (innerValue === getFormattedNumber) return;
-    var innerFormattedNumber = '';
+    let innerFormattedNumber = '';
 
     if (innerValue.length > 0) {
       innerFormattedNumber = formatNumber(innerValue, currentCountry, normalizer);
     }
 
-    var caretPosition = event.target.selectionStart;
-    var format = currentCountry.format,
-        countryCode = currentCountry.countryCode;
-    var pattern = removeCountryCodeFromFormat(format);
-    var limit = pattern.length > 0 ? pattern.length : 15;
+    const caretPosition = event.target.selectionStart;
+    const {
+      format,
+      countryCode
+    } = currentCountry;
+    const pattern = removeCountryCodeFromFormat(format);
+    const limit = pattern.length > 0 ? pattern.length : 15;
 
     if (getFormattedNumber.length === limit && innerFormattedNumber.length >= getFormattedNumber.length) {
       return;
@@ -241,18 +219,18 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
     setCaretPosition(caretPosition);
     setFormattedNumber(innerFormattedNumber);
     if (!onChange) return;
-    var numberToExport = "" + phoneProps.prefix + countryCode + " " + innerFormattedNumber;
+    const numberToExport = "" + phoneProps.prefix + countryCode + " " + innerFormattedNumber;
     onChange(numberToExport.replace(/[^0-9]+/g, ''), currentCountry, event, numberToExport);
   };
 
-  var handleSelect = function handleSelect(country) {
+  const handleSelect = country => {
     if (!country) {
       return setCountry(null);
     }
 
-    var newCountry = getCountryObjectFromIso(country.value, onlyCountries);
+    const newCountry = getCountryObjectFromIso(country.value, onlyCountries);
     setCountry(newCountry.iso2);
-    var placeholderFormat = removeCountryCodeFromFormat(newCountry.format);
+    const placeholderFormat = removeCountryCodeFromFormat(newCountry.format);
 
     if (placeholderFormat === '') {
       setInputPlaceholder(placeholder);
@@ -262,10 +240,10 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
   }; // Effects
 
 
-  useEffect(function () {
+  useEffect(() => {
     // Populate form on new props
-    var inputNumber = value ? value.replace(/\D/g, '') : '';
-    var countryGuess;
+    let inputNumber = value ? value.replace(/\D/g, '') : '';
+    let countryGuess;
 
     if (inputNumber.length > 1) {
       if (startsWith(inputNumber, '0') && !startsWith(inputNumber, '00')) {
@@ -282,9 +260,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       }
     } else if (defaultCountry !== '') {
       // Default country
-      countryGuess = onlyCountries.find(function (o) {
-        return o.iso2 === defaultCountry;
-      }) || 0;
+      countryGuess = onlyCountries.find(o => o.iso2 === defaultCountry) || 0;
     } else {
       // Empty params
       countryGuess = 0;
@@ -296,7 +272,7 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       setInputNumber(inputNumber);
     }
   }, [value, defaultCountry]);
-  useEffect(function () {
+  useEffect(() => {
     // Adjust input number on country change
     if (getCountry) {
       handleInput({
@@ -306,11 +282,11 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       });
     }
   }, [getCountry, getInputNumber]);
-  useEffect(function () {
+  useEffect(() => {
     // Adjust caret position depending on the edit
     if (!getFormattedNumber || !getPreviousFormattedNumber) return;
-    var inputElement = document.getElementById(id + "_element-input");
-    var diff = getFormattedNumber.length - getPreviousFormattedNumber.length;
+    const inputElement = document.getElementById(id + "_element-input");
+    const diff = getFormattedNumber.length - getPreviousFormattedNumber.length;
 
     if (diff < 0 || getCaretPosition < getFormattedNumber.length - 1) {
       inputElement.setSelectionRange(getCaretPosition, getCaretPosition);
@@ -325,11 +301,12 @@ export var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
     inputPlaceholder: getInputPlaceholder,
     onChange: handleSelect,
     defaultSelectedValue: getDefaultSelectedValue,
-    inputProps: _extends({
+    inputProps: {
       onChange: handleInput,
       value: getFormattedNumber,
-      type: 'tel'
-    }, inputProps)
+      type: 'tel',
+      ...inputProps
+    }
   }));
 };
 DropdownPhoneSelect.defaultProps = {
@@ -357,10 +334,8 @@ DropdownPhoneSelect.defaultProps = {
   placeholder: 'Telephone',
   flagsUrl: './flags.png',
   assumeCountry: 'fr',
-  onChange: function onChange() {},
-  normalizer: function normalizer(value) {
-    return value;
-  }
+  onChange: () => {},
+  normalizer: value => value
 };
 DropdownPhoneSelect.propTypes = {
   phoneProps: PropTypes.shape({

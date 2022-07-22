@@ -1,24 +1,20 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 exports.__esModule = true;
 exports.areImageDimensionsValid = void 0;
 
-var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
-
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
-
 // https://stackoverflow.com/a/47786555
-var getImageSize = function getImageSize(url) {
-  var image = new Image();
-  var promise = new Promise(function (resolve) {
-    image.onload = function () {
-      var naturalWidth = image.naturalWidth,
-          naturalHeight = image.naturalHeight;
+const getImageSize = url => {
+  const image = new Image();
+  const promise = new Promise(resolve => {
+    image.onload = () => {
+      const {
+        naturalWidth,
+        naturalHeight
+      } = image;
       resolve({
-        naturalWidth: naturalWidth,
-        naturalHeight: naturalHeight
+        naturalWidth,
+        naturalHeight
       });
     };
   });
@@ -26,10 +22,10 @@ var getImageSize = function getImageSize(url) {
   return promise;
 };
 
-var getImageDataURL = function getImageDataURL(file) {
-  var reader = new FileReader();
-  var promise = new Promise(function (resolve) {
-    reader.onload = function (readerLoadEvent) {
+const getImageDataURL = file => {
+  const reader = new FileReader();
+  const promise = new Promise(resolve => {
+    reader.onload = readerLoadEvent => {
       resolve(readerLoadEvent.target.result);
     };
   });
@@ -37,53 +33,12 @@ var getImageDataURL = function getImageDataURL(file) {
   return promise;
 };
 
-var areImageDimensionsValid = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(file, acceptedDimensions) {
-    var imageDataUrl, imageSize;
-    return _regenerator.default.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return getImageDataURL(file);
-
-          case 2:
-            imageDataUrl = _context.sent;
-            _context.next = 5;
-            return getImageSize(imageDataUrl);
-
-          case 5:
-            imageSize = _context.sent;
-
-            if (!(imageSize.naturalHeight > acceptedDimensions.height)) {
-              _context.next = 8;
-              break;
-            }
-
-            return _context.abrupt("return", false);
-
-          case 8:
-            if (!(imageSize.naturalWidth > acceptedDimensions.width)) {
-              _context.next = 10;
-              break;
-            }
-
-            return _context.abrupt("return", false);
-
-          case 10:
-            return _context.abrupt("return", true);
-
-          case 11:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function areImageDimensionsValid(_x, _x2) {
-    return _ref.apply(this, arguments);
-  };
-}();
+const areImageDimensionsValid = async (file, acceptedDimensions) => {
+  const imageDataUrl = await getImageDataURL(file);
+  const imageSize = await getImageSize(imageDataUrl);
+  if (imageSize.naturalHeight > acceptedDimensions.height) return false;
+  if (imageSize.naturalWidth > acceptedDimensions.width) return false;
+  return true;
+};
 
 exports.areImageDimensionsValid = areImageDimensionsValid;

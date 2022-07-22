@@ -1,7 +1,7 @@
 import React from 'react';
-export var Context = /*#__PURE__*/React.createContext({
+export const Context = /*#__PURE__*/React.createContext({
   id: 'kkbbAndCoHeaderNav',
   isLogged: false,
-  callOnToggle: function callOnToggle() {},
+  callOnToggle: () => {},
   expandBy: null
 });

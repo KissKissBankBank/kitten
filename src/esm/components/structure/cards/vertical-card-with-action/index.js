@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -9,21 +7,22 @@ import { Paragraph } from '../../../typography/paragraph/next';
 import { Button } from '../../../action/button';
 import COLORS from '../../../../constants/colors-config';
 import classNames from 'classnames';
-var StyledVerticalCardWithAction = styled.div.withConfig({
+const StyledVerticalCardWithAction = styled.div.withConfig({
   displayName: "vertical-card-with-action__StyledVerticalCardWithAction",
   componentId: "sc-1py59cr-0"
 })([".k-VerticalCardWithAction__image{width:100%;height:auto;display:block;}.k-VerticalCardWithAction__text{color:", ";}"], COLORS.font1);
-export var VerticalCardWithAction = function VerticalCardWithAction(_ref) {
-  var imageProps = _ref.imageProps,
-      title = _ref.title,
-      titleTag = _ref.titleTag,
-      description = _ref.description,
-      descriptionTag = _ref.descriptionTag,
-      button = _ref.button,
-      buttonModifier = _ref.buttonModifier,
-      buttonProps = _ref.buttonProps,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const VerticalCardWithAction = _ref => {
+  let {
+    imageProps,
+    title,
+    titleTag,
+    description,
+    descriptionTag,
+    button,
+    buttonModifier,
+    buttonProps,
+    ...others
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledVerticalCardWithAction, others, /*#__PURE__*/React.createElement("div", {
     className: "k-u-margin-bottom-triple"
   }, /*#__PURE__*/React.createElement("img", _extends({}, imageProps, {

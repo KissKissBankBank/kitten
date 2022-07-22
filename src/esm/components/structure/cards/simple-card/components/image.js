@@ -5,24 +5,26 @@ import classNames from 'classnames';
 import { Text } from '../../../../typography/text';
 import { pxToRem } from '../../../../../helpers/utils/typography';
 import COLORS from '../../../../../constants/colors-config';
-export var Image = function Image(_ref) {
-  var imageProps = _ref.imageProps,
-      withPlayerButtonOnImage = _ref.withPlayerButtonOnImage,
-      arrowColor = _ref.arrowColor,
-      ariaLabel = _ref.ariaLabel,
-      imageContainerBackground = _ref.imageContainerBackground,
-      imageContainerRatio = _ref.imageContainerRatio,
-      className = _ref.className,
-      playerButtonSize = _ref.playerButtonSize,
-      style = _ref.style;
+export const Image = _ref => {
+  let {
+    imageProps,
+    withPlayerButtonOnImage,
+    arrowColor,
+    ariaLabel,
+    imageContainerBackground,
+    imageContainerRatio,
+    className,
+    playerButtonSize,
+    style
+  } = _ref;
   return /*#__PURE__*/React.createElement("div", {
     className: classNames('k-SimpleCard__imageContainer', className, {
       'k-SimpleCard__imageContainer--ratio': !!imageContainerRatio
     }),
-    style: _extends({}, style, {
+    style: { ...style,
       '--SimpleCard-image-container-background': imageContainerBackground,
       '--SimpleCard-image-container-ratio': imageContainerRatio
-    })
+    }
   }, withPlayerButtonOnImage && /*#__PURE__*/React.createElement("div", {
     className: "k-SimpleCard__playerButton",
     style: {

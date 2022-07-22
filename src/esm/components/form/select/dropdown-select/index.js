@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["combobox"];
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelect } from 'downshift';
@@ -13,51 +11,54 @@ import find from 'lodash/fp/find';
 import { DropdownCombobox } from './combobox';
 import { StyledDropdown } from './styles';
 import COLORS from '../../../../constants/colors-config';
-export var DropdownSelect = function DropdownSelect(_ref) {
-  var combobox = _ref.combobox,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const DropdownSelect = _ref => {
+  let {
+    combobox,
+    ...props
+  } = _ref;
   if (combobox) return /*#__PURE__*/React.createElement(DropdownCombobox, props);
-  var labelText = props.labelText,
-      options = props.options,
-      placeholder = props.placeholder,
-      labelPropsGetter = props.labelPropsGetter,
-      error = props.error,
-      valid = props.valid,
-      disabled = props.disabled,
-      hideLabel = props.hideLabel,
-      id = props.id,
-      size = props.size,
-      a11yStatusError = props.a11yStatusError,
-      a11yStatusValid = props.a11yStatusValid,
-      a11ySelectionMessageDisplayer = props.a11ySelectionMessageDisplayer,
-      defaultSelectedValue = props.defaultSelectedValue,
-      onChange = props.onChange,
-      onBlur = props.onBlur,
-      onInputChange = props.onInputChange,
-      onMenuClose = props.onMenuClose,
-      onMenuOpen = props.onMenuOpen,
-      openOnLoad = props.openOnLoad,
-      menuZIndex = props.menuZIndex,
-      className = props.className,
-      value = props.value,
-      controlled = props.controlled,
-      modifier = props.modifier,
-      direction = props.direction,
-      arrowPosition = props.arrowPosition,
-      labelProps = props.labelProps;
+  const {
+    labelText,
+    options,
+    placeholder,
+    labelPropsGetter,
+    error,
+    valid,
+    disabled,
+    hideLabel,
+    id,
+    size,
+    a11yStatusError,
+    a11yStatusValid,
+    a11ySelectionMessageDisplayer,
+    defaultSelectedValue,
+    onChange,
+    onBlur,
+    onInputChange,
+    onMenuClose,
+    onMenuOpen,
+    openOnLoad,
+    menuZIndex,
+    className,
+    value,
+    controlled,
+    modifier,
+    direction,
+    arrowPosition,
+    labelProps
+  } = props;
 
-  var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
-    var itemToString = _ref2.itemToString,
-        selectedItem = _ref2.selectedItem;
+  const getA11ySelectionMessage = _ref2 => {
+    let {
+      itemToString,
+      selectedItem
+    } = _ref2;
     return a11ySelectionMessageDisplayer(itemToString(selectedItem));
   };
 
-  var itemToString = function itemToString(item) {
-    return item ? String(item.label) : '';
-  };
+  const itemToString = item => item ? String(item.label) : '';
 
-  var onSelectedItemChange = function onSelectedItemChange(changes) {
+  const onSelectedItemChange = changes => {
     onChange(changes.selectedItem);
     onInputChange({
       value: changes.selectedItem
@@ -66,13 +67,13 @@ export var DropdownSelect = function DropdownSelect(_ref) {
   // of options with a `level` of 1, 2 or null.
 
 
-  var flattenedOptions = function () {
-    var flatOptions = [];
-    options.map(function (option) {
+  const flattenedOptions = function () {
+    const flatOptions = [];
+    options.map(option => {
       if (option.children) {
         option.level = 1;
         flatOptions.push(option);
-        option.children.map(function (opt) {
+        option.children.map(opt => {
           opt.level = 2;
           flatOptions.push(opt);
         });
@@ -83,43 +84,42 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     return flatOptions;
   }();
 
-  var initialSelectedItem = find(['value', defaultSelectedValue])(flattenedOptions);
-  var selectedItemByValue = find(['value', value])(flattenedOptions) || null;
+  const initialSelectedItem = find(['value', defaultSelectedValue])(flattenedOptions);
+  const selectedItemByValue = find(['value', value])(flattenedOptions) || null;
 
-  var onIsOpenChange = function onIsOpenChange(changes) {
+  const onIsOpenChange = changes => {
     if (changes.isOpen) return onMenuOpen({
-      changes: changes
+      changes
     });
-    setTimeout(function () {
-      return onBlur(changes.selectedItem);
-    }, 0);
+    setTimeout(() => onBlur(changes.selectedItem), 0);
     return onMenuClose({
-      changes: changes
+      changes
     });
   };
 
-  var _useSelect = useSelect(_extends({
+  const {
+    isOpen,
+    selectedItem,
+    getToggleButtonProps,
+    getLabelProps,
+    getMenuProps,
+    highlightedIndex,
+    getItemProps
+  } = useSelect({
     id: id + "_element",
     toggleButtonId: id,
     items: flattenedOptions,
-    getA11ySelectionMessage: getA11ySelectionMessage,
-    itemToString: itemToString,
-    initialSelectedItem: initialSelectedItem,
-    onSelectedItemChange: onSelectedItemChange,
-    onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad
-  }, controlled && {
-    selectedItem: selectedItemByValue
-  })),
-      isOpen = _useSelect.isOpen,
-      selectedItem = _useSelect.selectedItem,
-      getToggleButtonProps = _useSelect.getToggleButtonProps,
-      getLabelProps = _useSelect.getLabelProps,
-      getMenuProps = _useSelect.getMenuProps,
-      highlightedIndex = _useSelect.highlightedIndex,
-      getItemProps = _useSelect.getItemProps;
-
-  useEffect(function () {
+    getA11ySelectionMessage,
+    itemToString,
+    initialSelectedItem,
+    onSelectedItemChange,
+    onIsOpenChange,
+    initialIsOpen: openOnLoad,
+    ...(controlled && {
+      selectedItem: selectedItemByValue
+    })
+  });
+  useEffect(() => {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
   return /*#__PURE__*/React.createElement(StyledDropdown, {
@@ -165,19 +165,17 @@ export var DropdownSelect = function DropdownSelect(_ref) {
     className: "k-Form-Dropdown__list"
   }, getMenuProps(), {
     role: isOpen ? 'listbox' : null
-  }), isOpen && flattenedOptions.map(function (item, index) {
-    return /*#__PURE__*/React.createElement("li", _extends({
-      className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
-        'k-Form-Dropdown__item--higlighted': highlightedIndex === index
-      }),
-      key: "" + item.value + index,
-      disabled: item.disabled
-    }, getItemProps({
-      item: item,
-      index: index,
-      disabled: item.disabled
-    })), item.label);
-  })));
+  }), isOpen && flattenedOptions.map((item, index) => /*#__PURE__*/React.createElement("li", _extends({
+    className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
+      'k-Form-Dropdown__item--higlighted': highlightedIndex === index
+    }),
+    key: "" + item.value + index,
+    disabled: item.disabled
+  }, getItemProps({
+    item,
+    index,
+    disabled: item.disabled
+  })), item.label))));
 };
 DropdownSelect.defaultProps = {
   combobox: false,
@@ -185,18 +183,16 @@ DropdownSelect.defaultProps = {
   controlled: false,
   options: [],
   placeholder: 'Select',
-  labelPropsGetter: function labelPropsGetter() {},
+  labelPropsGetter: () => {},
   size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
-  a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
-    return item + " is now selected.";
-  },
-  onChange: function onChange() {},
-  onBlur: function onBlur() {},
-  onInputChange: function onInputChange() {},
-  onMenuClose: function onMenuClose() {},
-  onMenuOpen: function onMenuOpen() {},
+  a11ySelectionMessageDisplayer: item => item + " is now selected.",
+  onChange: () => {},
+  onBlur: () => {},
+  onInputChange: () => {},
+  onMenuClose: () => {},
+  onMenuOpen: () => {},
   openOnLoad: false,
   uniqLabelOnSearch: false,
   menuZIndex: 1000,

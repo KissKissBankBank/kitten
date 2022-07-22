@@ -7,8 +7,6 @@ exports.Separator = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -21,12 +19,13 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["darker", "className"];
-var Separator = (0, _styledComponents.default)(function (_ref) {
-  var darker = _ref.darker,
-      className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var separatorClassName = (0, _classnames.default)('k-Separator', {
+const Separator = (0, _styledComponents.default)(_ref => {
+  let {
+    darker,
+    className,
+    ...props
+  } = _ref;
+  const separatorClassName = (0, _classnames.default)('k-Separator', {
     'k-Separator--darker': darker
   }, className);
   return /*#__PURE__*/_react.default.createElement("hr", (0, _extends2.default)({

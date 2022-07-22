@@ -1,16 +1,15 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["direction", "color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
-export var LargeArrowIconNext = function LargeArrowIconNext(_ref) {
-  var direction = _ref.direction,
-      color = _ref.color,
-      title = _ref.title,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var transform = {
+export const LargeArrowIconNext = _ref => {
+  let {
+    direction,
+    color,
+    title,
+    ...others
+  } = _ref;
+  const transform = {
     right: 'rotate(90deg)',
     left: 'rotate(-90deg)',
     down: 'rotate(180deg)',

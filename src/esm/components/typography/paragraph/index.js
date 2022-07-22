@@ -1,32 +1,25 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["tag", "modifier", "noMargin", "normalLineHeight", "italic", "className"];
 import React from 'react';
 import styled, { css } from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { modifierStyles } from './helpers/modifier-styles';
-var modifierList = ['primary', 'secondary', 'tertiary', 'quaternary'];
-var StyledParagraph = styled.p.withConfig({
+const modifierList = ['primary', 'secondary', 'tertiary', 'quaternary'];
+const StyledParagraph = styled.p.withConfig({
   displayName: "paragraph__StyledParagraph",
   componentId: "sc-1qoa9gz-0"
-})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], TYPOGRAPHY.fontStyles['400'], function () {
-  return modifierList.map(function (modifier) {
-    return css(["&.k-Paragraph--", "{", "}"], modifier, function () {
-      return modifierStyles(modifier);
-    });
-  });
-});
-export var Paragraph = function Paragraph(_ref) {
-  var tag = _ref.tag,
-      modifier = _ref.modifier,
-      noMargin = _ref.noMargin,
-      normalLineHeight = _ref.normalLineHeight,
-      italic = _ref.italic,
-      className = _ref.className,
-      other = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+})(["", ";&.k-Paragraph--noMargin{margin-top:0;margin-bottom:0;}&.k-Paragraph--normalLineHeight{line-height:normal;}&.k-Paragraph--italic{font-style:italic;}", ""], TYPOGRAPHY.fontStyles['400'], () => modifierList.map(modifier => css(["&.k-Paragraph--", "{", "}"], modifier, () => modifierStyles(modifier))));
+export const Paragraph = _ref => {
+  let {
+    tag,
+    modifier,
+    noMargin,
+    normalLineHeight,
+    italic,
+    className,
+    ...other
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledParagraph, _extends({
     as: tag,
     modifier: modifier,

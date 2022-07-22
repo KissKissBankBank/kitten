@@ -1,18 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["iconTitle", "title", "color", "circleProps", "pathProps", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var SearchIcon = function SearchIcon(_ref) {
-  var iconTitle = _ref.iconTitle,
-      title = _ref.title,
-      color = _ref.color,
-      circleProps = _ref.circleProps,
-      pathProps = _ref.pathProps,
-      width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const SearchIcon = _ref => {
+  let {
+    iconTitle,
+    title,
+    color,
+    circleProps,
+    pathProps,
+    width,
+    height,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     "aria-label": title,
     width: width,

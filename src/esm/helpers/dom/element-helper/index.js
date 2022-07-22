@@ -1,11 +1,11 @@
-export var domElementHelper = {
+export const domElementHelper = {
   /**
    * Return element computed height with or without borders included.
    *
    * @param {HTMLElement} element
    * @param {boolean} withBorder
    */
-  getComputedHeight: function getComputedHeight(element, withBorder) {
+  getComputedHeight(element, withBorder) {
     if (withBorder) {
       return element.getBoundingClientRect().height;
     }
@@ -18,7 +18,7 @@ export var domElementHelper = {
    *
    * @param {HTMLElement} element
    */
-  getComputedWidth: function getComputedWidth(element) {
+  getComputedWidth(element) {
     if (!element) return;
     return element.getBoundingClientRect().width;
   },
@@ -28,7 +28,7 @@ export var domElementHelper = {
    *
    * @param {HTMLElement} element
    */
-  getComputedLeft: function getComputedLeft(element) {
+  getComputedLeft(element) {
     if (!element) return;
     return element.getBoundingClientRect().left;
   },
@@ -39,16 +39,17 @@ export var domElementHelper = {
    * @param {HTMLElement} element
    * @param {string} property
    */
-  getComputedStyle: function getComputedStyle(element, property) {
+  getComputedStyle(element, property) {
     if (!element) return;
-    var styles = window.getComputedStyle(element);
+    const styles = window.getComputedStyle(element);
     return styles.getPropertyValue(property);
   },
 
   /**
    * Return if DOM API can be used.
    */
-  canUseDom: function canUseDom() {
+  canUseDom() {
     return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
   }
+
 };

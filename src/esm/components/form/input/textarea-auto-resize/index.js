@@ -1,34 +1,28 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["minRows", "maxRows", "rows", "onChange", "value", "lineHeight", "style"];
 import React, { useState, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../../helpers/utils/typography';
-export var TextareaAutoResize = /*#__PURE__*/forwardRef(function (_ref, ref) {
-  var minRows = _ref.minRows,
-      maxRows = _ref.maxRows,
-      rows = _ref.rows,
-      onChange = _ref.onChange,
-      value = _ref.value,
-      lineHeight = _ref.lineHeight,
-      style = _ref.style,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const TextareaAutoResize = /*#__PURE__*/forwardRef((_ref, ref) => {
+  let {
+    minRows,
+    maxRows,
+    rows,
+    onChange,
+    value,
+    lineHeight,
+    style,
+    ...others
+  } = _ref;
+  const [innerRows, setInnerRows] = useState(rows);
+  const [innerValue, setInnerValue] = useState(value);
 
-  var _useState = useState(rows),
-      innerRows = _useState[0],
-      setInnerRows = _useState[1];
-
-  var _useState2 = useState(value),
-      innerValue = _useState2[0],
-      setInnerValue = _useState2[1];
-
-  var handleChange = function handleChange(event) {
-    var elementStyles = getComputedStyle(event.target);
-    var verticalPadding = parseInt(elementStyles.paddingTop) + parseInt(elementStyles.paddingBottom);
-    var previousRows = event.target.rows;
+  const handleChange = event => {
+    const elementStyles = getComputedStyle(event.target);
+    const verticalPadding = parseInt(elementStyles.paddingTop) + parseInt(elementStyles.paddingBottom);
+    const previousRows = event.target.rows;
     event.target.rows = minRows; // `~~` ? http://rocha.la/JavaScript-bitwise-operators-in-practice
 
-    var currentRows = ~~((event.target.scrollHeight - verticalPadding) / lineHeight);
+    const currentRows = ~~((event.target.scrollHeight - verticalPadding) / lineHeight);
 
     if (currentRows === previousRows) {
       event.target.rows = currentRows;
@@ -49,16 +43,16 @@ export var TextareaAutoResize = /*#__PURE__*/forwardRef(function (_ref, ref) {
     rows: innerRows,
     value: innerValue,
     onChange: handleChange,
-    style: _extends({}, style, {
+    style: { ...style,
       lineHeight: pxToRem(lineHeight)
-    })
+    }
   }, others));
 });
 TextareaAutoResize.defaultProps = {
   minRows: 1,
   maxRows: 5,
   rows: 1,
-  onChange: function onChange() {},
+  onChange: () => {},
   lineHeight: 18
 };
 TextareaAutoResize.propTypes = {

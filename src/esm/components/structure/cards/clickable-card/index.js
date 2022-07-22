@@ -1,39 +1,44 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["backgroundColor", "borderColor", "children", "disabled", "fluid", "size"],
-    _excluded2 = ["children", "fit", "shape"],
-    _excluded3 = ["children"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import classNames from 'classnames';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
-var StyledClickableCard = styled.button.withConfig({
+const StyledClickableCard = styled.button.withConfig({
   displayName: "clickable-card__StyledClickableCard",
   componentId: "sc-1g013xo-0"
-})(["box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;opacity:1;transition:opacity 0.15s ease;&.k-ClickableCard--fluid{width:100%;}", " .k-ClickableCard__image{display:block;margin-bottom:", ";position:relative;width:100%;padding-top:100%;overflow:hidden;transition:box-shadow 0.15s ease;& > *{position:absolute;top:0;left:0;height:100%;width:100%;object-position:center;object-fit:none;z-index:-1;", "}}.k-ClickableCard__image--contain > *{object-fit:contain;}.k-ClickableCard__image--cover > *{object-fit:cover;}.k-ClickableCard__image--circle{border-radius:var(--border-radius-rounded);}.k-ClickableCard__content{display:block;& *{transition:color 0.15s ease;}}&:hover,&:focus{", "}&[aria-checked='true']{", "}&:disabled{opacity:0.5;pointer-events:none;}"], function (_ref) {
-  var size = _ref.size;
+})(["box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;opacity:1;transition:opacity 0.15s ease;&.k-ClickableCard--fluid{width:100%;}", " .k-ClickableCard__image{display:block;margin-bottom:", ";position:relative;width:100%;padding-top:100%;overflow:hidden;transition:box-shadow 0.15s ease;& > *{position:absolute;top:0;left:0;height:100%;width:100%;object-position:center;object-fit:none;z-index:-1;", "}}.k-ClickableCard__image--contain > *{object-fit:contain;}.k-ClickableCard__image--cover > *{object-fit:cover;}.k-ClickableCard__image--circle{border-radius:var(--border-radius-rounded);}.k-ClickableCard__content{display:block;& *{transition:color 0.15s ease;}}&:hover,&:focus{", "}&[aria-checked='true']{", "}&:disabled{opacity:0.5;pointer-events:none;}"], _ref => {
+  let {
+    size
+  } = _ref;
   return size && css(["width:", ";"], pxToRem(size));
-}, pxToRem(20), function (_ref2) {
-  var backgroundColor = _ref2.backgroundColor;
+}, pxToRem(20), _ref2 => {
+  let {
+    backgroundColor
+  } = _ref2;
   return css(["background-color:", ";"], backgroundColor);
-}, function (_ref3) {
-  var borderColor = _ref3.borderColor;
+}, _ref3 => {
+  let {
+    borderColor
+  } = _ref3;
   return css([".k-ClickableCard__image{box-shadow:inset 0 0 0 ", " ", ";}"], pxToRem(2), borderColor);
-}, function (_ref4) {
-  var borderColor = _ref4.borderColor;
+}, _ref4 => {
+  let {
+    borderColor
+  } = _ref4;
   return css([".k-ClickableCard__image{box-shadow:inset 0 0 0 ", " ", ",inset 0 0 0 ", " ", ";}.k-ClickableCard__content *{color:", ";}"], pxToRem(2), borderColor, pxToRem(10), COLORS.background1, borderColor);
 });
-export var ClickableCard = function ClickableCard(_ref5) {
-  var backgroundColor = _ref5.backgroundColor,
-      borderColor = _ref5.borderColor,
-      children = _ref5.children,
-      disabled = _ref5.disabled,
-      fluid = _ref5.fluid,
-      size = _ref5.size,
-      props = _objectWithoutPropertiesLoose(_ref5, _excluded);
-
+export const ClickableCard = _ref5 => {
+  let {
+    backgroundColor,
+    borderColor,
+    children,
+    disabled,
+    fluid,
+    size,
+    ...props
+  } = _ref5;
   return /*#__PURE__*/React.createElement(StyledClickableCard, _extends({}, props, {
     className: classNames('k-ClickableCard', 'k-u-reset-button', props.className, {
       'k-ClickableCard--fluid': fluid
@@ -45,21 +50,23 @@ export var ClickableCard = function ClickableCard(_ref5) {
   }), children);
 };
 
-var ClickableCardImage = function ClickableCardImage(_ref6) {
-  var children = _ref6.children,
-      fit = _ref6.fit,
-      shape = _ref6.shape,
-      props = _objectWithoutPropertiesLoose(_ref6, _excluded2);
-
+const ClickableCardImage = _ref6 => {
+  let {
+    children,
+    fit,
+    shape,
+    ...props
+  } = _ref6;
   return /*#__PURE__*/React.createElement("span", _extends({}, props, {
     className: classNames('k-ClickableCard__image', props.className, "k-ClickableCard__image--" + shape, "k-ClickableCard__image--" + fit)
   }), children);
 };
 
-var ClickableCardContent = function ClickableCardContent(_ref7) {
-  var children = _ref7.children,
-      props = _objectWithoutPropertiesLoose(_ref7, _excluded3);
-
+const ClickableCardContent = _ref7 => {
+  let {
+    children,
+    ...props
+  } = _ref7;
   return /*#__PURE__*/React.createElement("span", _extends({}, props, {
     className: classNames('k-ClickableCard__content', props.className)
   }), children);

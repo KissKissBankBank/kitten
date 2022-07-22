@@ -9,10 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _radioSet = require("../../../form/radio-set");
 
-var FieldRadioSet = function FieldRadioSet(props) {
-  return /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-u-margin-top-single k-Field__control"
-  }, /*#__PURE__*/_react.default.createElement(_radioSet.RadioSet, props));
-};
+const FieldRadioSet = props => /*#__PURE__*/_react.default.createElement("div", {
+  className: "k-u-margin-top-single k-Field__control"
+}, /*#__PURE__*/_react.default.createElement(_radioSet.RadioSet, props));
 
 exports.FieldRadioSet = FieldRadioSet;

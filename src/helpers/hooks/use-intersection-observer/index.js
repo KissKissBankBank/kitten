@@ -7,28 +7,22 @@ var _react = require("react");
 
 var _intersectionObserver = require("../../utils/intersection-observer");
 
-var useIntersectionObserver = function useIntersectionObserver(_ref) {
-  var observedComponentRef = _ref.observedComponentRef,
-      options = _ref.options;
-  var Observer = new _intersectionObserver.IntersectionObserverClass(options);
-
-  var _useState = (0, _react.useState)(false),
-      withIntersectionObserver = _useState[0],
-      setIntersectionObserver = _useState[1];
-
-  (0, _react.useEffect)(function () {
+const useIntersectionObserver = _ref => {
+  let {
+    observedComponentRef,
+    options
+  } = _ref;
+  const Observer = new _intersectionObserver.IntersectionObserverClass(options);
+  const [withIntersectionObserver, setIntersectionObserver] = (0, _react.useState)(false);
+  (0, _react.useEffect)(() => {
     if (!observedComponentRef || observedComponentRef && !observedComponentRef.current) {
       console.warn('observedComponentRef.current does not exist, useIntersectionObserver will return true');
       setIntersectionObserver(true);
       return;
     }
 
-    Observer.observe(observedComponentRef.current, function () {
-      return setIntersectionObserver(true);
-    });
-    return function () {
-      return Observer.unobserve(observedComponentRef.current);
-    };
+    Observer.observe(observedComponentRef.current, () => setIntersectionObserver(true));
+    return () => Observer.unobserve(observedComponentRef.current);
   }, []);
   return withIntersectionObserver;
 };

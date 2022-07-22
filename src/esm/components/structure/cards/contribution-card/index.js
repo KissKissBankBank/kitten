@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "closeButtonLabel", "children", "show", "style", "borderRadius", "borderColor", "borderStyle", "onClose", "largeInput", "largeTitle"];
 import React, { useState, cloneElement } from 'react';
 import { CloseButton } from '../../../action/close-button';
 import { StyledContributionCard } from './styles';
@@ -10,41 +8,38 @@ import { pxToRem } from '../../../../helpers/utils/typography';
 import { Image, Title, Description, PillNumber, Amount, Input, Action } from './components';
 import { Context } from './context';
 import { getReactElementsByType, getReactElementsWithoutType } from '../../../../helpers/react/get-react-elements';
-export var ContributionCard = function ContributionCard(_ref) {
-  var className = _ref.className,
-      closeButtonLabel = _ref.closeButtonLabel,
-      children = _ref.children,
-      show = _ref.show,
-      style = _ref.style,
-      borderRadius = _ref.borderRadius,
-      borderColor = _ref.borderColor,
-      borderStyle = _ref.borderStyle,
-      onClose = _ref.onClose,
-      largeInput = _ref.largeInput,
-      largeTitle = _ref.largeTitle,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var imageChild = getReactElementsByType({
-    children: children,
+export const ContributionCard = _ref => {
+  let {
+    className,
+    closeButtonLabel,
+    children,
+    show,
+    style,
+    borderRadius,
+    borderColor,
+    borderStyle,
+    onClose,
+    largeInput,
+    largeTitle,
+    ...props
+  } = _ref;
+  const imageChild = getReactElementsByType({
+    children,
     type: ContributionCard.Image
   })[0];
-  var wrappedChildren = getReactElementsWithoutType({
-    children: children,
+  const wrappedChildren = getReactElementsWithoutType({
+    children,
     type: ContributionCard.Image
   });
-
-  var _useState = useState(true),
-      isInputEmpty = _useState[0],
-      setEmptyInput = _useState[1];
-
+  const [isInputEmpty, setEmptyInput] = useState(true);
   if (!show) return null;
   return /*#__PURE__*/React.createElement(StyledContributionCard, _extends({
     className: classNames('k-ContributionCard', className),
-    style: _extends({}, style, {
+    style: { ...style,
       '--contributionCard--border-radius': pxToRem(borderRadius),
       '--contributionCard--border-color': borderColor,
       '--contributionCard--border-style': borderStyle
-    })
+    }
   }, props), onClose && /*#__PURE__*/React.createElement(CloseButton, {
     className: "k-ContributionCard__close",
     size: "micro",
@@ -56,14 +51,12 @@ export var ContributionCard = function ContributionCard(_ref) {
     })
   }, /*#__PURE__*/React.createElement(Context.Provider, {
     value: {
-      isInputEmpty: isInputEmpty,
-      setEmptyInput: setEmptyInput
+      isInputEmpty,
+      setEmptyInput
     }
-  }, wrappedChildren.map(function (item, index) {
-    return /*#__PURE__*/cloneElement(item, {
-      key: "ContributionCard-" + index
-    });
-  }))));
+  }, wrappedChildren.map((item, index) => /*#__PURE__*/cloneElement(item, {
+    key: "ContributionCard-" + index
+  })))));
 };
 ContributionCard.Image = Image;
 ContributionCard.Title = Title;

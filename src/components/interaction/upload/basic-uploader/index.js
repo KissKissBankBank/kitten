@@ -7,8 +7,6 @@ exports.BasicUploader = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -41,87 +39,60 @@ var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
 var _loader = require("../../../graphics/animations/loader");
 
-var _excluded = ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledBasicUploader = _styledComponents.default.div.withConfig({
+const StyledBasicUploader = _styledComponents.default.div.withConfig({
   displayName: "basic-uploader__StyledBasicUploader",
   componentId: "sc-5ptyqe-0"
 })(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}input[type='file']:focus-visible + label{outline:auto;}&:not(.k-BasicUploader--loading){input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}}.k-BasicUploader__statusBlock{margin-top:", ";display:flex;& > * + *{margin-left:", ";}}.k-BasicUploader__cancelButton{width:", ";height:", ";cursor:pointer;padding:0;display:flex;justify-content:center;align-items:center;", "}"], _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _modifierStyles.modifierStyles)('beryllium'));
 
-var statusesWithIcons = ['error', 'valid', 'wait'];
+const statusesWithIcons = ['error', 'valid', 'wait'];
 
-var BasicUploader = function BasicUploader(_ref) {
-  var id = _ref.id,
-      _ref$buttonProps = _ref.buttonProps,
-      buttonProps = _ref$buttonProps === void 0 ? {} : _ref$buttonProps,
-      _ref$buttonText = _ref.buttonText,
-      buttonText = _ref$buttonText === void 0 ? 'Document' : _ref$buttonText,
-      _ref$canCancel = _ref.canCancel,
-      canCancel = _ref$canCancel === void 0 ? false : _ref$canCancel,
-      _ref$cancelButtonText = _ref.cancelButtonText,
-      cancelButtonText = _ref$cancelButtonText === void 0 ? 'Cancel and reupload' : _ref$cancelButtonText,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$errorText = _ref.errorText,
-      errorText = _ref$errorText === void 0 ? '' : _ref$errorText,
-      _ref$fileInputProps = _ref.fileInputProps,
-      fileInputProps = _ref$fileInputProps === void 0 ? {} : _ref$fileInputProps,
-      _ref$fileName = _ref.fileName,
-      fileName = _ref$fileName === void 0 ? '' : _ref$fileName,
-      _ref$loaderAnimation = _ref.loaderAnimation,
-      loaderAnimation = _ref$loaderAnimation === void 0 ? /*#__PURE__*/_react.default.createElement(_loader.Loader, null) : _ref$loaderAnimation,
-      _ref$onCancel = _ref.onCancel,
-      onCancel = _ref$onCancel === void 0 ? function () {} : _ref$onCancel,
-      _ref$onUpload = _ref.onUpload,
-      onUpload = _ref$onUpload === void 0 ? function () {} : _ref$onUpload,
-      _ref$status = _ref.status,
-      status = _ref$status === void 0 ? 'ready' : _ref$status,
-      _ref$statusText = _ref.statusText,
-      statusText = _ref$statusText === void 0 ? '' : _ref$statusText,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-
-  var _useState = (0, _react.useState)(status),
-      internalStatus = _useState[0],
-      setInternalStatus = _useState[1];
-
-  (0, _react.useEffect)(function () {
+const BasicUploader = _ref => {
+  let {
+    id,
+    //required
+    buttonProps = {},
+    buttonText = 'Document',
+    canCancel = false,
+    cancelButtonText = 'Cancel and reupload',
+    disabled = false,
+    errorText = '',
+    fileInputProps = {},
+    fileName = '',
+    loaderAnimation = /*#__PURE__*/_react.default.createElement(_loader.Loader, null),
+    onCancel = () => {},
+    onUpload = () => {},
+    status = 'ready',
+    statusText = '',
+    ...props
+  } = _ref;
+  const [internalStatus, setInternalStatus] = (0, _react.useState)(status);
+  (0, _react.useEffect)(() => {
     setInternalStatus(status);
   }, [status]);
-
-  var _useState2 = (0, _react.useState)(disabled),
-      internalDisabled = _useState2[0],
-      setInternalDisabled = _useState2[1];
-
-  (0, _react.useEffect)(function () {
+  const [internalDisabled, setInternalDisabled] = (0, _react.useState)(disabled);
+  (0, _react.useEffect)(() => {
     setInternalDisabled(disabled);
   }, [disabled]);
-
-  var _useState3 = (0, _react.useState)(''),
-      internalFileName = _useState3[0],
-      setInternalFileName = _useState3[1];
-
-  var _useState4 = (0, _react.useState)(canCancel),
-      internalCanCancel = _useState4[0],
-      setInternalCanCancel = _useState4[1];
-
-  (0, _react.useEffect)(function () {
+  const [internalFileName, setInternalFileName] = (0, _react.useState)('');
+  const [internalCanCancel, setInternalCanCancel] = (0, _react.useState)(canCancel);
+  (0, _react.useEffect)(() => {
     setInternalCanCancel(canCancel);
   }, [canCancel]);
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     if (errorText !== '') {
       setInternalStatus('error');
     }
   }, [errorText]);
 
-  var onFileInputChange = function onFileInputChange(event) {
-    var files = event.currentTarget.files;
+  const onFileInputChange = event => {
+    const files = event.currentTarget.files;
     if (files.length < 1) return;
-    var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
+    const tempFileName = files[0].name;
+    const tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalCanCancel(true);
     setInternalFileName(tempText);
@@ -129,7 +100,7 @@ var BasicUploader = function BasicUploader(_ref) {
     onUpload(event);
   };
 
-  var onCancelButtonClick = function onCancelButtonClick(event) {
+  const onCancelButtonClick = event => {
     setInternalStatus('ready');
     setInternalCanCancel(false);
     setInternalDisabled(false);

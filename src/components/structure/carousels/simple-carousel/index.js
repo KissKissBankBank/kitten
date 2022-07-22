@@ -7,17 +7,17 @@ exports.SimpleCarousel = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
-var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
+
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
+
+var _screenConfig = require("../../../../constants/screen-config");
 
 var _range = require("../../../../helpers/utils/range");
 
@@ -25,174 +25,117 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
-var _excluded = ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledContainer = _styledComponents.default.div.withConfig({
-  displayName: "simple-carousel__StyledContainer",
+const StyledWrapper = _styledComponents.default.div.withConfig({
+  displayName: "simple-carousel__StyledWrapper",
   componentId: "sc-wg0blv-0"
-})(["", " display:grid;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all 0.8s ease-in-out;&[aria-hidden='true']{visibility:hidden;opacity:0;pointer-events:none;}}"], function (_ref) {
-  var addBottomMargin = _ref.addBottomMargin;
-  return addBottomMargin && (0, _styledComponents.css)(["margin-bottom:", ";"], (0, _typography.pxToRem)(40));
-});
+})(["display:flex;flex-direction:column;gap:", ";@media ", "{gap:", ";}.k-SimpleCarousel__container{display:grid;gap:0;> div{grid-column:1;grid-row:1;visibility:visible;opacity:1;transition:all calc(var(--transition-timing) * 3) var(--transition-timing-function);&[aria-hidden]{visibility:hidden;opacity:0;pointer-events:none;}}}.k-SimpleCarousel__pagination{display:flex;justify-content:var(--simple-carousel-paginationAlign);gap:", ";li{list-style-type:none;}}.k-SimpleCarousel__button{position:relative;display:block;width:", ";height:", ";border-radius:var(--border-radius-rounded);transition:background var(--transition);background:var(--simple-carousel-paginationColor);outline-offset:", ";&::after{content:'';position:absolute;top:", ";left:", ";right:", ";bottom:", ";}&:hover,&[aria-selected='true']{background:var(--simple-carousel-activePaginationColor);}}"], (0, _typography.pxToRem)(40), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(-4), (0, _typography.pxToRem)(-4), (0, _typography.pxToRem)(-4), (0, _typography.pxToRem)(-4));
 
-var StyledPagination = _styledComponents.default.div.withConfig({
-  displayName: "simple-carousel__StyledPagination",
-  componentId: "sc-wg0blv-1"
-})(["justify-content:", ";margin:", " 0;padding:0;display:flex;li{list-style-type:none;line-height:", ";}"], function (_ref2) {
-  var paginationAlign = _ref2.paginationAlign;
-  return paginationAlign;
-}, (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(6));
+const SimpleCarousel = _ref => {
+  let {
+    className,
+    children,
+    containerStyle,
+    activePaginationColor,
+    paginationColor,
+    paginationAlign,
+    paginationStyle,
+    bulletStyle,
+    id,
+    ...props
+  } = _ref;
+  const paginationRef = (0, _react.useRef)(null);
+  const [currentPageNumber, setCurrentPageNumber] = (0, _react.useState)(0);
+  const [totalPagesCount] = (0, _react.useState)(_react.Children.toArray(children).length);
 
-var StyledPaginationButton = _styledComponents.default.button.withConfig({
-  displayName: "simple-carousel__StyledPaginationButton",
-  componentId: "sc-wg0blv-2"
-})(["margin-right:", ";width:", ";height:", ";border:0;padding:0;border-radius:0;appearance:none;cursor:pointer;transition:background 0.4s ease-in-out;background:", ";vertical-align:top;&[aria-selected='true']{background:", ";}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), function (_ref3) {
-  var paginationColor = _ref3.paginationColor;
-  return paginationColor;
-}, function (_ref4) {
-  var activePaginationColor = _ref4.activePaginationColor;
-  return activePaginationColor;
-});
-
-var SimpleCarousel = /*#__PURE__*/function (_Component) {
-  (0, _inheritsLoose2.default)(SimpleCarousel, _Component);
-
-  function SimpleCarousel(props) {
-    var _this;
-
-    _this = _Component.call(this, props) || this;
-
-    _this.showPagination = function () {
-      return _this.state.totalPagesCount > 1;
-    };
-
-    _this.updateCurrentPageNumber = function (pageNumber) {
-      _this.setState({
-        currentPageNumber: pageNumber
-      });
-    };
-
-    _this.handlePageClick = function (numPage) {
-      return function () {
-        _this.updateCurrentPageNumber(numPage);
-      };
-    };
-
-    _this.handleKeyDown = function (event) {
-      if (['ArrowLeft', 'ArrowRight'].includes(event.key)) {
-        var _this$state = _this.state,
-            currentPageNumber = _this$state.currentPageNumber,
-            totalPagesCount = _this$state.totalPagesCount;
-
-        var tabs = _this.paginationRef.current.querySelectorAll('button');
-
-        tabs[currentPageNumber].setAttribute('tabindex', -1); // default: ArrowLeft
-
-        var pageNumber = currentPageNumber - 1;
-
-        if (pageNumber < 0) {
-          pageNumber = totalPagesCount - 1;
-        } // change in case of ArrowRight
-
-
-        if (event.key === 'ArrowRight') {
-          pageNumber = currentPageNumber + 1;
-
-          if (pageNumber >= totalPagesCount) {
-            pageNumber = 0;
-          }
-        }
-
-        _this.updateCurrentPageNumber(pageNumber);
-
-        tabs[pageNumber].setAttribute('tabindex', 0);
-        tabs[pageNumber].focus();
-      }
-    };
-
-    _this.paginationRef = /*#__PURE__*/(0, _react.createRef)();
-    _this.state = {
-      currentPageNumber: 0,
-      totalPagesCount: _react.default.Children.toArray(props.children).length
-    };
-    return _this;
-  }
-
-  var _proto = SimpleCarousel.prototype;
-
-  _proto.render = function render() {
-    var _this2 = this;
-
-    var _this$props = this.props,
-        children = _this$props.children,
-        containerStyle = _this$props.containerStyle,
-        activePaginationColor = _this$props.activePaginationColor,
-        paginationColor = _this$props.paginationColor,
-        paginationAlign = _this$props.paginationAlign,
-        paginationStyle = _this$props.paginationStyle,
-        bulletStyle = _this$props.bulletStyle,
-        others = (0, _objectWithoutPropertiesLoose2.default)(_this$props, _excluded);
-    var _this$state2 = this.state,
-        totalPagesCount = _this$state2.totalPagesCount,
-        currentPageNumber = _this$state2.currentPageNumber;
-    var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
-    var id = this.props.id ? this.props.id + '_' : '';
-    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({
-      style: containerStyle,
-      addBottomMargin: this.showPagination()
-    }, others), _react.default.Children.map(children, function (item, index) {
-      return /*#__PURE__*/_react.default.createElement("div", {
-        key: item.key,
-        "aria-hidden": index !== currentPageNumber,
-        id: id + "carouselItem_" + index,
-        "aria-labelledby": id + "carouselTab_" + index,
-        role: "tabpanel"
-      }, item);
-    })), this.showPagination() && /*#__PURE__*/_react.default.createElement(StyledPagination, {
-      style: paginationStyle,
-      paginationAlign: paginationAlign,
-      role: "tablist",
-      onKeyDown: this.handleKeyDown,
-      ref: this.paginationRef
-    }, rangePage.map(function (numPage) {
-      return /*#__PURE__*/_react.default.createElement(StyledPaginationButton, {
-        key: numPage,
-        id: id + "carouselTab_" + numPage,
-        type: "button",
-        "aria-controls": id + "carouselItem_" + numPage,
-        role: "tab",
-        "aria-selected": numPage === currentPageNumber,
-        paginationColor: paginationColor,
-        activePaginationColor: activePaginationColor,
-        style: bulletStyle,
-        onClick: _this2.handlePageClick(numPage)
-      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, "Page " + (numPage + 1)));
-    })));
+  const handlePageClick = numPage => () => {
+    setCurrentPageNumber(numPage);
   };
 
-  return SimpleCarousel;
-}(_react.Component);
+  const handleKeyDown = event => {
+    if (['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+      const tabs = paginationRef.current.querySelectorAll('button');
+      tabs[currentPageNumber].setAttribute('tabindex', -1); // default: ArrowLeft
+
+      let pageNumber = currentPageNumber - 1;
+
+      if (pageNumber < 0) {
+        pageNumber = totalPagesCount - 1;
+      } // change in case of ArrowRight
+
+
+      if (event.key === 'ArrowRight') {
+        pageNumber = currentPageNumber + 1;
+
+        if (pageNumber >= totalPagesCount) {
+          pageNumber = 0;
+        }
+      }
+
+      setCurrentPageNumber(pageNumber);
+      tabs[pageNumber].setAttribute('tabindex', 0);
+      tabs[pageNumber].focus();
+    }
+  };
+
+  const rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
+  return /*#__PURE__*/_react.default.createElement(StyledWrapper, (0, _extends2.default)({
+    className: (0, _classnames.default)('k-SimpleCarousel', className),
+    style: {
+      '--simple-carousel-paginationAlign': paginationAlign,
+      '--simple-carousel-paginationColor': paginationColor,
+      '--simple-carousel-activePaginationColor': activePaginationColor
+    }
+  }, props), /*#__PURE__*/_react.default.createElement("div", {
+    style: containerStyle,
+    className: "k-SimpleCarousel__container"
+  }, _react.Children.map(children, (item, index) => {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: item.key,
+      "aria-hidden": index !== currentPageNumber || null,
+      id: id + "_carouselItem_" + index,
+      "aria-labelledby": id + "_carouselTab_" + index,
+      role: "tabpanel"
+    }, item);
+  })), totalPagesCount > 1 && /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-SimpleCarousel__pagination",
+    style: paginationStyle,
+    role: "tablist",
+    onKeyDown: handleKeyDown,
+    ref: paginationRef
+  }, rangePage.map(numPage => {
+    return /*#__PURE__*/_react.default.createElement("button", {
+      key: numPage,
+      className: "k-SimpleCarousel__button k-u-reset-button",
+      id: id + "_carouselTab_" + numPage,
+      type: "button",
+      "aria-controls": id + "_carouselItem_" + numPage,
+      role: "tab",
+      "aria-selected": numPage === currentPageNumber,
+      style: bulletStyle,
+      onClick: handlePageClick(numPage)
+    }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, "Page " + (numPage + 1)));
+  })));
+};
 
 exports.SimpleCarousel = SimpleCarousel;
 SimpleCarousel.propTypes = {
-  id: _propTypes.default.string,
+  id: _propTypes.default.string.isRequired,
   containerStyle: _propTypes.default.object,
   activePaginationColor: _propTypes.default.string,
   paginationColor: _propTypes.default.string,
-  paginationAlign: _propTypes.default.oneOf(['start', 'center', 'space-between', 'space-around']),
+  paginationAlign: _propTypes.default.oneOf(['start', 'center', 'end', 'space-between', 'space-around']),
   paginationStyle: _propTypes.default.object,
   bulletStyle: _propTypes.default.object
 };
 SimpleCarousel.defaultProps = {
-  id: '',
   containerStyle: {},
-  activePaginationColor: _colorsConfig.default.primary1,
-  paginationColor: _colorsConfig.default.background1,
-  paginationAlign: 'center',
+  activePaginationColor: _colorsConfig.default.font1,
+  paginationColor: _colorsConfig.default.line2,
+  paginationAlign: 'start',
   paginationStyle: {},
   bulletStyle: {}
 };

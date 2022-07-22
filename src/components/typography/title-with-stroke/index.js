@@ -7,8 +7,6 @@ exports.TitleWithStroke = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -25,23 +23,23 @@ var _titleModifierStyles = require("../common/title-modifier-styles");
 
 var _strokeModifierStyles = require("../../typography/horizontal-stroke/common/stroke-modifier-styles");
 
-var _excluded = ["modifier", "tag", "align", "italic", "className", "children", "cssColor"];
-
-var StyledTitleWithStroke = _styledComponents.default.div.withConfig({
+const StyledTitleWithStroke = _styledComponents.default.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "sc-10vl00i-0"
 })(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles['700'], (0, _titleModifierStyles.titleModifierStyles)('.k-TitleWithStroke__title'), (0, _strokeModifierStyles.strokeModifierStyles)('.k-TitleWithStroke__stroke'));
 
-var TitleWithStroke = function TitleWithStroke(_ref) {
-  var modifier = _ref.modifier,
-      tag = _ref.tag,
-      align = _ref.align,
-      italic = _ref.italic,
-      className = _ref.className,
-      children = _ref.children,
-      cssColor = _ref.cssColor,
-      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var TitleComponent = tag;
+const TitleWithStroke = _ref => {
+  let {
+    modifier,
+    tag,
+    align,
+    italic,
+    className,
+    children,
+    cssColor,
+    ...other
+  } = _ref;
+  const TitleComponent = tag;
   return /*#__PURE__*/_react.default.createElement(StyledTitleWithStroke, (0, _extends2.default)({
     className: (0, _classnames.default)('k-TitleWithStroke', className, "k-TitleWithStroke--" + modifier, "k-TitleWithStroke--align-" + align, {
       'k-TitleWithStroke--italic': italic

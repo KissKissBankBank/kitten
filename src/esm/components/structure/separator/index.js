@@ -1,18 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["darker", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-export var Separator = styled(function (_ref) {
-  var darker = _ref.darker,
-      className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var separatorClassName = classNames('k-Separator', {
+export const Separator = styled(_ref => {
+  let {
+    darker,
+    className,
+    ...props
+  } = _ref;
+  const separatorClassName = classNames('k-Separator', {
     'k-Separator--darker': darker
   }, className);
   return /*#__PURE__*/React.createElement("hr", _extends({

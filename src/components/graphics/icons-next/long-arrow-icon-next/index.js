@@ -7,21 +7,19 @@ exports.LongArrowIconNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _excluded = ["direction", "color"];
-
-var LongArrowIconNext = function LongArrowIconNext(_ref) {
-  var direction = _ref.direction,
-      color = _ref.color,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var transform = {
+const LongArrowIconNext = _ref => {
+  let {
+    direction,
+    color,
+    ...others
+  } = _ref;
+  const transform = {
     right: 'rotate(-90deg)',
     left: 'rotate(90deg)',
     down: null,

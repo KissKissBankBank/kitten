@@ -1,13 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className"],
-    _excluded2 = ["className", "subList", "hideable"],
-    _excluded3 = ["className", "icon", "endIcon", "isActive", "children", "size"],
-    _excluded4 = ["className", "children", "icon", "title", "size"],
-    _excluded5 = ["className", "children"],
-    _excluded6 = ["data", "className"],
-    _excluded7 = ["children", "icon", "isActive"],
-    _excluded8 = ["icon", "children", "isActive", "onClick"];
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -16,21 +7,23 @@ import { ArrowIcon } from '../../graphics/icons/arrow-icon';
 import { DoubleArrowIcon } from '../../graphics/icons/double-arrow-icon';
 import { FlexWrapper } from '../../layout/flex-wrapper';
 import { StyledDashboardMenu } from './styles';
-export var DashboardMenu = function DashboardMenu(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const DashboardMenu = _ref => {
+  let {
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledDashboardMenu, _extends({
     className: classNames('k-DashboardMenu', className)
   }, props));
 };
 
-var List = function List(_ref2) {
-  var className = _ref2.className,
-      subList = _ref2.subList,
-      hideable = _ref2.hideable,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+const List = _ref2 => {
+  let {
+    className,
+    subList,
+    hideable,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/React.createElement("ul", _extends({
     className: classNames('k-DashboardMenu__list', className, {
       'k-DashboardMenu__list--subList': !!subList,
@@ -39,16 +32,16 @@ var List = function List(_ref2) {
   }, props));
 };
 
-var Item = function Item(_ref3) {
-  var className = _ref3.className,
-      icon = _ref3.icon,
-      endIcon = _ref3.endIcon,
-      isActive = _ref3.isActive,
-      children = _ref3.children,
-      _ref3$size = _ref3.size,
-      size = _ref3$size === void 0 ? 'default' : _ref3$size,
-      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
-
+const Item = _ref3 => {
+  let {
+    className,
+    icon,
+    endIcon,
+    isActive,
+    children,
+    size = 'default',
+    ...props
+  } = _ref3;
   return /*#__PURE__*/React.createElement("li", {
     className: "k-DashboardMenu__itemWrapper"
   }, /*#__PURE__*/React.createElement("a", _extends({
@@ -63,15 +56,15 @@ var Item = function Item(_ref3) {
   }, endIcon)));
 };
 
-var Expandable = function Expandable(_ref4) {
-  var className = _ref4.className,
-      children = _ref4.children,
-      icon = _ref4.icon,
-      title = _ref4.title,
-      _ref4$size = _ref4.size,
-      size = _ref4$size === void 0 ? 'default' : _ref4$size,
-      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
-
+const Expandable = _ref4 => {
+  let {
+    className,
+    children,
+    icon,
+    title,
+    size = 'default',
+    ...props
+  } = _ref4;
   return /*#__PURE__*/React.createElement("li", {
     className: "k-DashboardMenu__expandableWrapper"
   }, /*#__PURE__*/React.createElement("details", _extends({
@@ -91,39 +84,41 @@ var Expandable = function Expandable(_ref4) {
   }, children)));
 };
 
-var Separator = function Separator(_ref5) {
-  var className = _ref5.className,
-      children = _ref5.children,
-      props = _objectWithoutPropertiesLoose(_ref5, _excluded5);
-
+const Separator = _ref5 => {
+  let {
+    className,
+    children,
+    ...props
+  } = _ref5;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-DashboardMenu__separator', className)
   }, props), /*#__PURE__*/React.createElement("hr", null), children);
 };
 
-var Selector = function Selector(_ref6) {
-  var data = _ref6.data,
-      className = _ref6.className,
-      props = _objectWithoutPropertiesLoose(_ref6, _excluded6);
-
-  var detailsElement = useRef(null);
-  useEffect(function () {
+const Selector = _ref6 => {
+  let {
+    data,
+    className,
+    ...props
+  } = _ref6;
+  const detailsElement = useRef(null);
+  useEffect(() => {
     if (!!detailsElement.current) {
       detailsElement.current.addEventListener('toggle', handleDetails);
     }
 
-    return function () {
+    return () => {
       if (!!detailsElement.current) {
         detailsElement.current.removeEventListener('toggle', handleDetails);
       }
     };
   }, [detailsElement]);
 
-  var closeSelector = function closeSelector() {
+  const closeSelector = () => {
     detailsElement.current.open = false;
   };
 
-  var handleDetails = function handleDetails(event) {
+  const handleDetails = event => {
     if (event.target.open) {
       window.addEventListener('keydown', handleEsc);
       window.addEventListener('click', handleClickOutside);
@@ -134,25 +129,25 @@ var Selector = function Selector(_ref6) {
     }
   };
 
-  var handleEsc = function handleEsc(event) {
+  const handleEsc = event => {
     if (event.key === 'Escape' && detailsElement != null && detailsElement.current) {
       closeSelector();
     }
   };
 
-  var handleClickOutside = function handleClickOutside(event) {
+  const handleClickOutside = event => {
     if (detailsElement != null && detailsElement.current && !detailsElement.current.contains(event.target)) {
       closeSelector();
     }
   };
 
   if (data.length === 1) {
-    var _data$ = data[0],
-        children = _data$.children,
-        icon = _data$.icon,
-        isActive = _data$.isActive,
-        dataProps = _objectWithoutPropertiesLoose(_data$, _excluded7);
-
+    const {
+      children,
+      icon,
+      isActive,
+      ...dataProps
+    } = data[0];
     return /*#__PURE__*/React.createElement("div", _extends({}, dataProps, {
       className: classNames('k-DashboardMenu__selectorButton', 'k-u-margin-top-single', 'k-u-margin-bottom-noneHalf', dataProps.className, className)
     }), !!icon && /*#__PURE__*/React.createElement("span", {
@@ -162,15 +157,12 @@ var Selector = function Selector(_ref6) {
     }, children));
   }
 
-  var activeItem = find(function (item) {
-    return item.isActive;
-  })(data);
-
-  var _ref7 = activeItem || {},
-      activeClassName = _ref7.className,
-      activeIcon = _ref7.icon,
-      activeChildren = _ref7.children;
-
+  const activeItem = find(item => item.isActive)(data);
+  const {
+    className: activeClassName,
+    icon: activeIcon,
+    children: activeChildren
+  } = activeItem || {};
   return /*#__PURE__*/React.createElement("details", _extends({
     ref: detailsElement,
     className: classNames('k-DashboardMenu__selectorWrapper', className)
@@ -190,20 +182,21 @@ var Selector = function Selector(_ref6) {
     color: "currentColor"
   })))), /*#__PURE__*/React.createElement("div", {
     className: "k-DashboardMenu__selectorList"
-  }, data.map(function (_ref8, index) {
-    var icon = _ref8.icon,
-        children = _ref8.children,
-        isActive = _ref8.isActive,
-        _onClick = _ref8.onClick,
-        itemProps = _objectWithoutPropertiesLoose(_ref8, _excluded8);
-
+  }, data.map((_ref7, index) => {
+    let {
+      icon,
+      children,
+      isActive,
+      onClick,
+      ...itemProps
+    } = _ref7;
     if (isActive) return;
     return /*#__PURE__*/React.createElement("a", _extends({
       key: children + index
     }, itemProps, {
       className: classNames('k-DashboardMenu__selectorButton', itemProps.className),
-      onClick: function onClick(e) {
-        _onClick(e, closeSelector);
+      onClick: e => {
+        onClick(e, closeSelector);
       }
     }), !!icon && /*#__PURE__*/React.createElement("span", {
       className: "k-DashboardMenu__iconWrapper"

@@ -7,8 +7,6 @@ exports.TitleTag = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,15 +19,15 @@ var _lockIcon = require("../../../../graphics/icons/lock-icon");
 
 var _starIcon = require("../../../../graphics/icons/star-icon");
 
-var _excluded = ["text", "icon", "className"];
+const TitleTag = _ref => {
+  let {
+    text,
+    icon,
+    className,
+    ...props
+  } = _ref;
 
-var TitleTag = function TitleTag(_ref) {
-  var text = _ref.text,
-      icon = _ref.icon,
-      className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-
-  var iconDisplay = function () {
+  const iconDisplay = (() => {
     switch (icon) {
       case 'lock':
         return /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {
@@ -44,7 +42,7 @@ var TitleTag = function TitleTag(_ref) {
           height: "13"
         });
     }
-  }();
+  })();
 
   return /*#__PURE__*/_react.default.createElement(_tag.Tag, (0, _extends2.default)({
     className: (0, _classnames.default)('k-SummaryCard__titleTag', className, 'k-u-margin-top-single')

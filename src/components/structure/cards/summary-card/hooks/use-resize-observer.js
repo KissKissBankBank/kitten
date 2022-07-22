@@ -8,18 +8,17 @@ var _react = require("react");
 var _elementHelper = require("../../../../../helpers/dom/element-helper");
 
 // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
-var useResizeObserver = function useResizeObserver() {
+const useResizeObserver = () => {
   if (!_elementHelper.domElementHelper.canUseDom() || !('ResizeObserver' in window)) {
     return {};
   }
 
-  var _useState = (0, _react.useState)('large'),
-      size = _useState[0],
-      setSize = _useState[1];
-
-  var resizeObserver = (0, _react.useRef)(null);
-  var onResize = (0, _react.useCallback)(function (entries) {
-    var width = entries[0].contentRect.width;
+  const [size, setSize] = (0, _react.useState)('large');
+  const resizeObserver = (0, _react.useRef)(null);
+  const onResize = (0, _react.useCallback)(entries => {
+    const {
+      width
+    } = entries[0].contentRect;
 
     if (width >= 1000) {
       setSize('huge');
@@ -35,7 +34,7 @@ var useResizeObserver = function useResizeObserver() {
       setSize('mobile');
     }
   }, []);
-  var ref = (0, _react.useCallback)(function (node) {
+  const ref = (0, _react.useCallback)(node => {
     if (node !== null) {
       if (resizeObserver != null && resizeObserver.current) {
         resizeObserver.current.disconnect();
@@ -45,16 +44,14 @@ var useResizeObserver = function useResizeObserver() {
       resizeObserver.current.observe(node);
     }
   }, [onResize]);
-  (0, _react.useEffect)(function () {
-    return function () {
-      if (resizeObserver != null && resizeObserver.current) {
-        resizeObserver.current.disconnect();
-      }
-    };
+  (0, _react.useEffect)(() => () => {
+    if (resizeObserver != null && resizeObserver.current) {
+      resizeObserver.current.disconnect();
+    }
   }, []);
   return {
-    ref: ref,
-    size: size
+    ref,
+    size
   };
 };
 

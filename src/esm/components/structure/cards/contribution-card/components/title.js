@@ -1,14 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["largeTitle"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../typography/text';
-export var Title = function Title(_ref) {
-  var largeTitle = _ref.largeTitle,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const Title = _ref => {
+  let {
+    largeTitle,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(Text, _extends({
     color: "font1",
     weight: "700"

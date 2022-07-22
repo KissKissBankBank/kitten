@@ -19,24 +19,26 @@ var _typography = require("../../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../../constants/colors-config"));
 
-var Image = function Image(_ref) {
-  var imageProps = _ref.imageProps,
-      withPlayerButtonOnImage = _ref.withPlayerButtonOnImage,
-      arrowColor = _ref.arrowColor,
-      ariaLabel = _ref.ariaLabel,
-      imageContainerBackground = _ref.imageContainerBackground,
-      imageContainerRatio = _ref.imageContainerRatio,
-      className = _ref.className,
-      playerButtonSize = _ref.playerButtonSize,
-      style = _ref.style;
+const Image = _ref => {
+  let {
+    imageProps,
+    withPlayerButtonOnImage,
+    arrowColor,
+    ariaLabel,
+    imageContainerBackground,
+    imageContainerRatio,
+    className,
+    playerButtonSize,
+    style
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-SimpleCard__imageContainer', className, {
       'k-SimpleCard__imageContainer--ratio': !!imageContainerRatio
     }),
-    style: (0, _extends2.default)({}, style, {
+    style: { ...style,
       '--SimpleCard-image-container-background': imageContainerBackground,
       '--SimpleCard-image-container-ratio': imageContainerRatio
-    })
+    }
   }, withPlayerButtonOnImage && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SimpleCard__playerButton",
     style: {

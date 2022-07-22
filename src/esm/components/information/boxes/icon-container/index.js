@@ -4,36 +4,48 @@ import styled, { css } from 'styled-components';
 import { Container } from '../../../layout/container';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { VisuallyHidden } from '../../../accessibility/visually-hidden';
-var StyledContainer = styled(Container).withConfig({
+const StyledContainer = styled(Container).withConfig({
   displayName: "icon-container__StyledContainer",
   componentId: "sc-dkec80-0"
-})(["position:relative;padding:", ";background-color:", ";margin-left:", ";margin-right:", ";margin-top:", ";margin-bottom:", ";"], pxToRem(20), function (_ref) {
-  var color = _ref.color;
+})(["position:relative;padding:", ";background-color:", ";margin-left:", ";margin-right:", ";margin-top:", ";margin-bottom:", ";"], pxToRem(20), _ref => {
+  let {
+    color
+  } = _ref;
   return color;
-}, function (_ref2) {
-  var position = _ref2.position,
-      halfWidth = _ref2.halfWidth;
+}, _ref2 => {
+  let {
+    position,
+    halfWidth
+  } = _ref2;
   return position === 'left' ? pxToRem(halfWidth) : 'auto';
-}, function (_ref3) {
-  var position = _ref3.position,
-      halfWidth = _ref3.halfWidth;
+}, _ref3 => {
+  let {
+    position,
+    halfWidth
+  } = _ref3;
   return position === 'right' ? pxToRem(halfWidth) : 'auto';
-}, function (_ref4) {
-  var position = _ref4.position,
-      halfHeight = _ref4.halfHeight;
+}, _ref4 => {
+  let {
+    position,
+    halfHeight
+  } = _ref4;
   return position === 'top' ? pxToRem(halfHeight) : 'auto';
-}, function (_ref5) {
-  var position = _ref5.position,
-      halfHeight = _ref5.halfHeight;
+}, _ref5 => {
+  let {
+    position,
+    halfHeight
+  } = _ref5;
   return position === 'bottom' ? pxToRem(halfHeight) : 'auto';
 });
-var IconWrapper = styled.div.withConfig({
+const IconWrapper = styled.div.withConfig({
   displayName: "icon-container__IconWrapper",
   componentId: "sc-dkec80-1"
-})(["position:absolute;", ""], function (_ref6) {
-  var position = _ref6.position,
-      marginHeight = _ref6.marginHeight,
-      marginWidth = _ref6.marginWidth;
+})(["position:absolute;", ""], _ref6 => {
+  let {
+    position,
+    marginHeight,
+    marginWidth
+  } = _ref6;
 
   if (position === 'top') {
     return css(["left:50%;margin-left:", ";top:", ";"], pxToRem(-marginWidth), pxToRem(-marginHeight));
@@ -51,18 +63,18 @@ var IconWrapper = styled.div.withConfig({
     return css(["top:50%;margin-top:", ";right:", ";"], pxToRem(-marginHeight), pxToRem(-marginWidth));
   }
 });
-export var IconContainer = function IconContainer(_ref7) {
-  var _React$cloneElement;
-
-  var icon = _ref7.icon,
-      children = _ref7.children,
-      color = _ref7.color,
-      iconWidth = _ref7.iconWidth,
-      iconHeight = _ref7.iconHeight,
-      position = _ref7.position,
-      className = _ref7.className,
-      iconDescription = _ref7.iconDescription;
-  var height = iconHeight || iconWidth;
+export const IconContainer = _ref7 => {
+  let {
+    icon,
+    children,
+    color,
+    iconWidth,
+    iconHeight,
+    position,
+    className,
+    iconDescription
+  } = _ref7;
+  const height = iconHeight || iconWidth;
   return /*#__PURE__*/React.createElement(StyledContainer, {
     className: className,
     color: color,
@@ -73,10 +85,11 @@ export var IconContainer = function IconContainer(_ref7) {
     marginHeight: height / 2,
     marginWidth: iconWidth / 2,
     position: position
-  }, /*#__PURE__*/React.cloneElement(icon, (_React$cloneElement = {
+  }, /*#__PURE__*/React.cloneElement(icon, {
     width: iconWidth,
-    height: height
-  }, _React$cloneElement['aria-hidden'] = true, _React$cloneElement))));
+    height,
+    ['aria-hidden']: true
+  })));
 };
 IconContainer.propTypes = {
   icon: PropTypes.node.isRequired,

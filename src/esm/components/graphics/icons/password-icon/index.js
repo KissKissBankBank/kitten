@@ -1,12 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title"];
 import React from 'react';
-export var PasswordIcon = function PasswordIcon(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const PasswordIcon = _ref => {
+  let {
+    color,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 12",

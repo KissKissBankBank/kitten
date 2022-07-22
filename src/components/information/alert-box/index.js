@@ -7,8 +7,6 @@ exports.AlertBox = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -25,33 +23,33 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className", "children", "icon", "status", "displayIcon", "iconPosition", "size", "fit", "iconHasBorder"];
-
-var AlertBoxWrapper = _styledComponents.default.div.withConfig({
+const AlertBoxWrapper = _styledComponents.default.div.withConfig({
   displayName: "alert-box__AlertBoxWrapper",
   componentId: "sc-225a7x-0"
 })(["", ";border-radius:var(--border-radius-s,", ");overflow:hidden;background-color:var(--color-primary-100);color:var(--color-grey-900);gap:var(--alertBox-gap);padding:", " var(--alertBox-gap);&.k-AlertBox--content{display:inline-flex;}&.k-AlertBox--fluid{display:flex;}&.k-AlertBox--icon-start{align-items:flex-start;}&.k-AlertBox--icon-center{align-items:center;}.k-AlertBox__icon{flex:0 0 auto;border-radius:var(--border-radius-rounded,", ");}.k-AlertBox__text{flex:1 1 auto;font-size:", ";line-height:", ";}&.k-AlertBox--medium{gap:", ";padding:", ";.k-AlertBox__icon{width:", ";height:", ";flex-basis:", ";}}&.k-AlertBox--large{gap:", ";padding:", ";.k-AlertBox__icon{width:", ";height:", ";flex-basis:", ";}}&.k-AlertBox--small{gap:", ";padding:", ";.k-AlertBox__text{font-size:", ";line-height:", ";}.k-AlertBox__icon{width:", ";height:", ";flex-basis:", ";}}.k-u-link,a{", ";text-decoration:none;}&.k-AlertBox--info{background-color:var(--color-primary-100);.k-u-link,a{color:var(--color-primary-500);}}&.k-AlertBox--success{background-color:var(--color-success-100);.k-u-link,a{color:var(--color-success-500);}}&.k-AlertBox--danger{background-color:var(--color-danger-100);.k-u-link,a{color:var(--color-danger-500);}}&.k-AlertBox--warning{background-color:var(--color-warning-100);.k-u-link,a{color:var(--color-warning-500);}}&.k-AlertBox--pending{background-color:var(--color-grey-300);.k-u-link,a{color:var(--color-primary-500);}}&.k-AlertBox--disabled{background-color:var(--color-grey-200);.k-u-link,a{color:var(--color-grey-600);}}"], _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(9999), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(18), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16), _typographyConfig.default.fontStyles['700']);
 
-var AlertBox = function AlertBox(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      icon = _ref.icon,
-      status = _ref.status,
-      displayIcon = _ref.displayIcon,
-      iconPosition = _ref.iconPosition,
-      size = _ref.size,
-      fit = _ref.fit,
-      iconHasBorder = _ref.iconHasBorder,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const AlertBox = _ref => {
+  let {
+    className,
+    children,
+    icon,
+    status,
+    displayIcon,
+    iconPosition,
+    size,
+    fit,
+    iconHasBorder,
+    ...others
+  } = _ref;
 
-  var internalIcon = function () {
+  const internalIcon = (() => {
     if (icon) return icon;
     return /*#__PURE__*/_react.default.createElement(_statusIconNext.StatusIconNext, {
       status: status
     });
-  }();
+  })();
 
-  var role = function () {
+  const role = (() => {
     switch (status) {
       case 'danger':
         return 'alert';
@@ -63,9 +61,9 @@ var AlertBox = function AlertBox(_ref) {
       default:
         return null;
     }
-  }();
+  })();
 
-  var iconSize = function () {
+  const iconSize = (() => {
     switch (size) {
       case 'large':
         return 'medium';
@@ -76,7 +74,7 @@ var AlertBox = function AlertBox(_ref) {
       case 'small':
         return 'micro';
     }
-  }();
+  })();
 
   return /*#__PURE__*/_react.default.createElement(AlertBoxWrapper, (0, _extends2.default)({
     role: role,

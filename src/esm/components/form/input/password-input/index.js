@@ -1,21 +1,18 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["name", "iconLabel", "hiddenIconLabel"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { TextInput } from '../../../form/input/text-input';
 import { PasswordIcon } from '../../../graphics/icons/password-icon';
-export var PasswordInput = function PasswordInput(_ref) {
-  var name = _ref.name,
-      iconLabel = _ref.iconLabel,
-      hiddenIconLabel = _ref.hiddenIconLabel,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const PasswordInput = _ref => {
+  let {
+    name,
+    iconLabel,
+    hiddenIconLabel,
+    ...others
+  } = _ref;
+  const [isHidden, setIsHidden] = useState(true);
 
-  var _useState = useState(true),
-      isHidden = _useState[0],
-      setIsHidden = _useState[1];
-
-  var handleClick = function handleClick() {
+  const handleClick = () => {
     setIsHidden(!isHidden);
   };
 

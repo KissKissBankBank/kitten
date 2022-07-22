@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.Number = void 0;
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,48 +19,54 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _helpers = require("./helpers");
 
-var _excluded = ["iconSvg"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledNumberFormat = (0, _styledComponents.default)(function (_ref) {
-  var iconSvg = _ref.iconSvg,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const StyledNumberFormat = (0, _styledComponents.default)(_ref => {
+  let {
+    iconSvg,
+    ...others
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_reactNumberFormat.default, others);
 }).withConfig({
   displayName: "number__StyledNumberFormat",
   componentId: "sc-1a38wzf-0"
-})(["padding-right:", ";", ""], (0, _typography.pxToRem)(45), function (_ref2) {
-  var iconSvg = _ref2.iconSvg;
+})(["padding-right:", ";", ""], (0, _typography.pxToRem)(45), _ref2 => {
+  let {
+    iconSvg
+  } = _ref2;
   return iconSvg && (0, _styledComponents.css)(["background:transparent no-repeat;background-image:url('data:image/svg+xml,", "');background-position:calc(100% - ", ") center;"], iconSvg, (0, _typography.pxToRem)(5));
 });
 
-var Number = function Number(_ref3) {
-  var label = _ref3.label,
-      Field = _ref3.fieldComponent,
-      Label = _ref3.labelComponent,
-      Input = _ref3.inputComponent,
-      Error = _ref3.errorComponent;
+const Number = _ref3 => {
+  let {
+    label,
+    fieldComponent: Field,
+    labelComponent: Label,
+    inputComponent: Input,
+    errorComponent: Error
+  } = _ref3;
+  const {
+    values: {
+      number
+    },
+    setInputValues
+  } = (0, _.useFormContext)();
+  const ccType = (0, _helpers.getCreditCardType)(number);
+  const ccFormat = (0, _helpers.getCreditCardFormat)(ccType);
+  const ccIconSvg = (0, _helpers.getIconSvgStringByType)(ccType.type);
 
-  var _useFormContext = (0, _.useFormContext)(),
-      number = _useFormContext.values.number,
-      setInputValues = _useFormContext.setInputValues;
-
-  var ccType = (0, _helpers.getCreditCardType)(number);
-  var ccFormat = (0, _helpers.getCreditCardFormat)(ccType);
-  var ccIconSvg = (0, _helpers.getIconSvgStringByType)(ccType.type);
-
-  var handleChange = function handleChange(_ref4) {
-    var value = _ref4.value;
-
-    var _getCreditCardType = (0, _helpers.getCreditCardType)(value),
-        type = _getCreditCardType.type;
-
+  const handleChange = _ref4 => {
+    let {
+      value
+    } = _ref4;
+    const {
+      type
+    } = (0, _helpers.getCreditCardType)(value);
     setInputValues({
       number: value,
-      type: type
+      type
     });
   };
 
@@ -92,16 +96,8 @@ Number.propTypes = {
 };
 Number.defaultProps = {
   label: 'Card Number',
-  fieldComponent: function fieldComponent(props) {
-    return /*#__PURE__*/_react.default.createElement("div", props);
-  },
-  labelComponent: function labelComponent(props) {
-    return /*#__PURE__*/_react.default.createElement("label", props);
-  },
-  inputComponent: function inputComponent(props) {
-    return /*#__PURE__*/_react.default.createElement("input", props);
-  },
-  errorComponent: function errorComponent() {
-    return null;
-  }
+  fieldComponent: props => /*#__PURE__*/_react.default.createElement("div", props),
+  labelComponent: props => /*#__PURE__*/_react.default.createElement("label", props),
+  inputComponent: props => /*#__PURE__*/_react.default.createElement("input", props),
+  errorComponent: () => null
 };

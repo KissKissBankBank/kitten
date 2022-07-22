@@ -13,8 +13,10 @@ var _text = require("../../../../typography/text");
 
 var _parser = require("../../../../../helpers/utils/parser");
 
-var Subtitle = function Subtitle(_ref) {
-  var subtitle = _ref.subtitle;
+const Subtitle = _ref => {
+  let {
+    subtitle
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
     weight: "500",

@@ -7,17 +7,15 @@ exports.IdealIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className"];
-
-var IdealIcon = function IdealIcon(_ref) {
-  var className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const IdealIcon = _ref => {
+  let {
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "33",
     height: "28",

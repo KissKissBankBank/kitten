@@ -1,6 +1,6 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
-export var RocketIllustration = function RocketIllustration(props) {
+export const RocketIllustration = props => {
   return /*#__PURE__*/React.createElement("svg", _extends({
     viewBox: "0 0 800 800",
     width: 800,

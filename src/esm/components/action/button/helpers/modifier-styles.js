@@ -1,20 +1,20 @@
 import { css } from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
-export var modifierStyles = function modifierStyles(modifier) {
-  var borderColor;
-  var borderStyle = 'solid';
-  var borderSize = 'var(--border-width)';
-  var backgroundColor;
-  var color;
-  var hoverBorderColor = COLORS.primary2;
-  var hoverBgColor = COLORS.primary2;
-  var hoverColor = COLORS.background1;
-  var activeBorderColor = COLORS.primary3;
-  var activeBgColor = COLORS.primary3;
-  var activeColor = COLORS.background1;
-  var disabledBorderColor = 'var(--color-grey-200)';
-  var disabledBgColor = 'var(--color-grey-200)';
-  var disabledColor = 'var(--color-grey-600)';
+export const modifierStyles = modifier => {
+  let borderColor;
+  let borderStyle = 'solid';
+  let borderSize = 'var(--border-width)';
+  let backgroundColor;
+  let color;
+  let hoverBorderColor = COLORS.primary2;
+  let hoverBgColor = COLORS.primary2;
+  let hoverColor = COLORS.background1;
+  let activeBorderColor = COLORS.primary3;
+  let activeBgColor = COLORS.primary3;
+  let activeColor = COLORS.background1;
+  let disabledBorderColor = 'var(--color-grey-200)';
+  let disabledBgColor = 'var(--color-grey-200)';
+  let disabledColor = 'var(--color-grey-600)';
 
   switch (modifier) {
     case 'hydrogen':

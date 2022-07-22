@@ -7,8 +7,6 @@ exports.Button = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -19,33 +17,33 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
-var _excluded = ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as", "style", "className", "smallPadding"];
-
-var Button = function Button(_ref) {
-  var a11yText = _ref.a11yText,
-      icon = _ref.icon,
-      backgroundColor = _ref.backgroundColor,
-      backgroundColorHover = _ref.backgroundColorHover,
-      color = _ref.color,
-      colorHover = _ref.colorHover,
-      text = _ref.text,
-      href = _ref.href,
-      type = _ref.type,
-      _ref$hiddenText = _ref.hiddenText;
-  _ref$hiddenText = _ref$hiddenText === void 0 ? {} : _ref$hiddenText;
-  var min = _ref$hiddenText.min,
-      max = _ref$hiddenText.max,
-      as = _ref.as,
-      style = _ref.style,
-      className = _ref.className,
-      smallPadding = _ref.smallPadding,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var hiddenMin = min ? "k-u-hidden@" + min + "-up" : '';
-  var hiddenMax = max ? "k-u-hidden@" + max + "-down" : '';
-  var textClassName = ("k-HeaderNav__Button__text " + hiddenMin + " " + hiddenMax).trim();
-  var ButtonComponent = 'a';
-  var buttonProps = {
-    href: href
+const Button = _ref => {
+  let {
+    a11yText,
+    icon,
+    backgroundColor,
+    backgroundColorHover,
+    color,
+    colorHover,
+    text,
+    href,
+    type,
+    hiddenText: {
+      min,
+      max
+    } = {},
+    as,
+    style,
+    className,
+    smallPadding,
+    ...props
+  } = _ref;
+  const hiddenMin = min ? "k-u-hidden@" + min + "-up" : '';
+  const hiddenMax = max ? "k-u-hidden@" + max + "-down" : '';
+  const textClassName = ("k-HeaderNav__Button__text " + hiddenMin + " " + hiddenMax).trim();
+  let ButtonComponent = 'a';
+  let buttonProps = {
+    href
   };
 
   if (!!as) {
@@ -61,7 +59,7 @@ var Button = function Button(_ref) {
   } else if (type === 'button') {
     ButtonComponent = 'button';
     buttonProps = {
-      type: type
+      type
     };
   }
 
@@ -71,12 +69,13 @@ var Button = function Button(_ref) {
       'k-HeaderNav__Button--hasText': !!text,
       'k-HeaderNav__Button--smallPadding': smallPadding
     }),
-    style: (0, _extends2.default)({
+    style: {
       '--HeaderMenu-Button-backgroundColor': backgroundColor,
       '--HeaderMenu-Button-backgroundColorHover': backgroundColorHover,
       '--HeaderMenu-Button-color': color,
-      '--HeaderMenu-Button-colorHover': colorHover
-    }, style)
+      '--HeaderMenu-Button-colorHover': colorHover,
+      ...style
+    }
   }), text && /*#__PURE__*/_react.default.createElement("span", {
     className: textClassName
   }), icon && /*#__PURE__*/_react.default.cloneElement(icon, {

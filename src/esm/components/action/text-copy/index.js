@@ -10,57 +10,49 @@ import { ArrowContainer } from '../../information/boxes/arrow-container';
 import { Text } from '../../typography/text';
 import { VisuallyHidden } from '../../accessibility/visually-hidden';
 import { TextInput } from '../../form/input/text-input';
-var fadeInAndOut = keyframes(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
-var Wrapper = styled.button.withConfig({
+const fadeInAndOut = keyframes(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
+const Wrapper = styled.button.withConfig({
   displayName: "text-copy__Wrapper",
   componentId: "sc-1d5z8sz-0"
 })(["position:relative;width:100%;.k-TextInput__wrapper{.k-TextInput{--text-input-height:auto;line-height:1.15;display:flex;align-items:center;}@media ", "{flex-direction:column;}}.k-TextCopy__tooltip{position:absolute;left:50%;transform:translateX(-50%);bottom:-", ";animation:3s ", " ease-out;}&:hover{.k-TextInput{border:var(--border-hover);}.k-Button{border-color:var(--color-primary-700);background-color:var(--color-primary-700);}}&:active{.k-TextInput{border:var(--border-active);}.k-Button{border-color:var(--color-primary-900);background-color:var(--color-primary-900);}}"], mq.mobile, pxToRem(50), fadeInAndOut);
-export var TextCopy = function TextCopy(_ref) {
-  var id = _ref.id,
-      children = _ref.children,
-      textToCopy = _ref.textToCopy,
-      alertMessage = _ref.alertMessage,
-      description = _ref.description,
-      forceOneLine = _ref.forceOneLine,
-      buttonText = _ref.buttonText,
-      buttonModifier = _ref.buttonModifier,
-      size = _ref.size,
-      className = _ref.className;
-
-  var _useState = useState(false),
-      isMessageVisible = _useState[0],
-      setMessageVisibility = _useState[1];
-
-  var textElement = useRef(null);
-  useEffect(function () {
-    var hideTimeout;
+export const TextCopy = _ref => {
+  let {
+    id,
+    children,
+    textToCopy,
+    alertMessage,
+    description,
+    forceOneLine,
+    buttonText,
+    buttonModifier,
+    size,
+    className
+  } = _ref;
+  const [isMessageVisible, setMessageVisibility] = useState(false);
+  const textElement = useRef(null);
+  useEffect(() => {
+    let hideTimeout;
 
     if (isMessageVisible) {
-      hideTimeout = setTimeout(function () {
-        return setMessageVisibility(false);
-      }, 3000);
+      hideTimeout = setTimeout(() => setMessageVisibility(false), 3000);
     }
 
-    return function () {
-      return clearTimeout(hideTimeout);
-    };
+    return () => clearTimeout(hideTimeout);
   }, [isMessageVisible]);
 
-  var copyToClipboard = function copyToClipboard(text) {
+  const copyToClipboard = text => {
     return navigator.clipboard.writeText(text);
   };
 
-  var copyText = useCallback(function () {
+  const copyText = useCallback(() => {
     var _textElement$current;
 
     setMessageVisibility(false);
-    var copyableText = textToCopy || (textElement == null ? void 0 : (_textElement$current = textElement.current) == null ? void 0 : _textElement$current.innerText) || '';
-    copyToClipboard(copyableText).then(function () {
-      setTimeout(function () {
-        return setMessageVisibility(true);
-      }, 1);
+    const copyableText = textToCopy || (textElement == null ? void 0 : (_textElement$current = textElement.current) == null ? void 0 : _textElement$current.innerText) || '';
+    copyToClipboard(copyableText).then(() => {
+      setTimeout(() => setMessageVisibility(true), 1);
     });
-    var range = document.createRange();
+    const range = document.createRange();
     range.selectNode(textElement.current);
     window.getSelection().addRange(range);
   });

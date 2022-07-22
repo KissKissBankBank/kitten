@@ -1,14 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title", "bgColor"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var StarIconNext = function StarIconNext(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      bgColor = _ref.bgColor,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const StarIconNext = _ref => {
+  let {
+    color,
+    title,
+    bgColor,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "20",
     height: "18",

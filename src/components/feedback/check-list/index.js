@@ -7,8 +7,6 @@ exports.CheckList = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -23,34 +21,35 @@ var _typography = require("./../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _excluded = ["children"],
-    _excluded2 = ["done", "children", "a11yText", "className"];
-
-var List = _styledComponents.default.ul.withConfig({
+const List = _styledComponents.default.ul.withConfig({
   displayName: "check-list__List",
   componentId: "sc-1i76wsf-0"
 })(["display:inline-flex;flex-direction:column;padding:0;margin:0;.k-CheckList__item{", ";list-style-type:none;display:flex;align-items:stretch;margin-bottom:", ";color:", ";font-size:", ";line-height:1.2;.strike{text-decoration:line-through;}&:before{content:'\u25CF';color:", ";padding-right:", ";}&:last-child{margin-bottom:0;}}.k-CheckList__item--done{&:before{color:", ";}}"], _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(10), _colorsConfig.default.font1, (0, _typography.stepToRem)(-1), _colorsConfig.default.line2, (0, _typography.pxToRem)(10), _colorsConfig.default.valid);
 
-var a11yProps = function a11yProps(a11yText, done) {
+const a11yProps = (a11yText, done) => {
   return {
     'aria-label': done ? a11yText.done : a11yText.default
   };
 };
 
-var CheckList = function CheckList(_ref) {
-  var children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const CheckList = _ref => {
+  let {
+    children,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(List, props, children);
 };
 
 exports.CheckList = CheckList;
 
-CheckList.Item = function (_ref2) {
-  var done = _ref2.done,
-      children = _ref2.children,
-      a11yText = _ref2.a11yText,
-      className = _ref2.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+CheckList.Item = _ref2 => {
+  let {
+    done,
+    children,
+    a11yText,
+    className,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
     className: (0, _classnames.default)('k-CheckList__item', className, {
       'k-CheckList__item--done': done

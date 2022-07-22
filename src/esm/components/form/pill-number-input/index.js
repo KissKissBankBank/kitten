@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className", "disableInput", "disabled"];
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -10,44 +8,30 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter';
 import { createEvent } from '../../../helpers/dom/create-event';
-var StyledPillNumberInput = styled.div.withConfig({
+const StyledPillNumberInput = styled.div.withConfig({
   displayName: "pill-number-input__StyledPillNumberInput",
   componentId: "sc-ujaaef-0"
 })(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:var(--border);border-radius:var(--border-radius-rounded);transition:border-color 0.2s ease;&:hover{border-color:var(--color-grey-500);}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:disabled{background-color:", ";color:", ";}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill 0.2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}&.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled{background-color:", ";color:", ";}"], pxToRem(40), pxToRem(85), pxToRem(10), TYPOGRAPHY.fontStyles['500'], stepToRem(-1), COLORS.background1, COLORS.font2, pxToRem(5), COLORS.primary1, COLORS.primary2, COLORS.line2, COLORS.background1, COLORS.font1);
-export var PillNumberInput = function PillNumberInput(_ref) {
-  var _ref$onChange = _ref.onChange,
-      onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
-      _ref$value = _ref.value,
-      value = _ref$value === void 0 ? 1 : _ref$value,
-      _ref$step = _ref.step,
-      step = _ref$step === void 0 ? 1 : _ref$step,
-      _ref$min = _ref.min,
-      min = _ref$min === void 0 ? 0 : _ref$min,
-      _ref$max = _ref.max,
-      max = _ref$max === void 0 ? 99 : _ref$max,
-      _ref$inputProps = _ref.inputProps,
-      inputProps = _ref$inputProps === void 0 ? {} : _ref$inputProps,
-      _ref$minusButtonProps = _ref.minusButtonProps,
-      minusButtonProps = _ref$minusButtonProps === void 0 ? {} : _ref$minusButtonProps,
-      _ref$plusButtonProps = _ref.plusButtonProps,
-      plusButtonProps = _ref$plusButtonProps === void 0 ? {} : _ref$plusButtonProps,
-      _ref$className = _ref.className,
-      className = _ref$className === void 0 ? null : _ref$className,
-      _ref$disableInput = _ref.disableInput,
-      disableInput = _ref$disableInput === void 0 ? false : _ref$disableInput,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const PillNumberInput = _ref => {
+  let {
+    onChange = () => {},
+    value = 1,
+    step = 1,
+    min = 0,
+    max = 99,
+    inputProps = {},
+    minusButtonProps = {},
+    plusButtonProps = {},
+    className = null,
+    disableInput = false,
+    disabled = false,
+    ...props
+  } = _ref;
+  const inputRef = useRef(null);
+  const [currentValue, setCurrentValue] = useState(value);
+  const changeEvent = createEvent('change');
 
-  var inputRef = useRef(null);
-
-  var _useState = useState(value),
-      currentValue = _useState[0],
-      setCurrentValue = _useState[1];
-
-  var changeEvent = createEvent('change');
-
-  var handleKeyDown = function handleKeyDown(keyDownEvent) {
+  const handleKeyDown = keyDownEvent => {
     if (keyDownEvent.key === 'ArrowUp' && inputRef.current.value < max) {
       plusOne();
     }
@@ -57,15 +41,11 @@ export var PillNumberInput = function PillNumberInput(_ref) {
     }
   };
 
-  var plusOne = function plusOne() {
-    return setResult(parseInt(inputRef.current.value, 10) + step);
-  };
+  const plusOne = () => setResult(parseInt(inputRef.current.value, 10) + step);
 
-  var minusOne = function minusOne() {
-    return setResult(parseInt(inputRef.current.value, 10) - step);
-  };
+  const minusOne = () => setResult(parseInt(inputRef.current.value, 10) - step);
 
-  var setResult = function setResult(result) {
+  const setResult = result => {
     if (result !== NaN) {
       setCurrentValue(result);
     } else {
@@ -73,8 +53,8 @@ export var PillNumberInput = function PillNumberInput(_ref) {
     }
   };
 
-  var handleChange = function handleChange(changeEvent) {
-    var inputValue = changeEvent.target.value;
+  const handleChange = changeEvent => {
+    const inputValue = changeEvent.target.value;
 
     if (!inputValue) {
       changeEvent.target.value = 0;
@@ -95,7 +75,7 @@ export var PillNumberInput = function PillNumberInput(_ref) {
     onChange(changeEvent);
   };
 
-  useEffect(function () {
+  useEffect(() => {
     nativeInputValueSetter && nativeInputValueSetter.call(inputRef.current, currentValue);
     inputRef.current.dispatchEvent(changeEvent);
   }, [currentValue]);

@@ -1,22 +1,21 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "className", "disabled", "hasBorder", "stretch"];
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { StyledRewardCard } from './styles';
 import { Form, Title, Image, Amount, Button, TagList, HeadingTag, Description, Contents } from './components';
 import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../../../helpers/react/get-react-elements';
-export var RewardCard = function RewardCard(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      disabled = _ref.disabled,
-      hasBorder = _ref.hasBorder,
-      stretch = _ref.stretch,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var contentsChild = getReactElementsByType({
-    children: children,
+export const RewardCard = _ref => {
+  let {
+    children,
+    className,
+    disabled,
+    hasBorder,
+    stretch,
+    ...props
+  } = _ref;
+  const contentsChild = getReactElementsByType({
+    children,
     type: RewardCard.Contents
   })[0];
 
@@ -32,16 +31,16 @@ export var RewardCard = function RewardCard(_ref) {
 
 
   console.warn('This use of the RewardCard is deprecated. Please wrap contents with `RewardCard.Contents`.');
-  var imageChild = getReactElementsByType({
-    children: children,
+  const imageChild = getReactElementsByType({
+    children,
     type: RewardCard.Image
   })[0];
-  var buttonChild = getReactElementsByType({
-    children: children,
+  const buttonChild = getReactElementsByType({
+    children,
     type: RewardCard.Button
   })[0];
-  var wrappedChildren = getReactElementsWithoutTypeArray({
-    children: children,
+  const wrappedChildren = getReactElementsWithoutTypeArray({
+    children,
     typeArray: [RewardCard.Button, RewardCard.Image]
   });
   return /*#__PURE__*/React.createElement(StyledRewardCard, _extends({}, props, {
@@ -52,12 +51,10 @@ export var RewardCard = function RewardCard(_ref) {
     })
   }), imageChild && /*#__PURE__*/cloneElement(imageChild), /*#__PURE__*/React.createElement("div", {
     className: "k-RewardCard__gridWrapper"
-  }, wrappedChildren && wrappedChildren.map(function (item, index) {
-    return /*#__PURE__*/cloneElement(item, {
-      key: "RewardCard-" + index
-    });
-  })), buttonChild && /*#__PURE__*/cloneElement(buttonChild, {
-    disabled: disabled
+  }, wrappedChildren && wrappedChildren.map((item, index) => /*#__PURE__*/cloneElement(item, {
+    key: "RewardCard-" + index
+  }))), buttonChild && /*#__PURE__*/cloneElement(buttonChild, {
+    disabled
   }));
 };
 RewardCard.Form = Form;

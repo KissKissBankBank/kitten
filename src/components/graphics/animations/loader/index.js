@@ -7,8 +7,6 @@ exports.Loader = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,18 +19,18 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["color"],
-    _excluded2 = ["tag", "className", "color"];
-var BULLET_SIZE = 5;
+const BULLET_SIZE = 5;
 
-var StyledLoader = _styledComponents.default.div.withConfig({
+const StyledLoader = _styledComponents.default.div.withConfig({
   displayName: "loader__StyledLoader",
   componentId: "sc-kkatuq-0"
 })(["display:flex;height:", ";line-height:1;gap:", ";.k-Loader__circle{width:", ";height:", ";border-radius:var(--border-radius-rounded);animation:k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);animation-fill-mode:both;&:nth-child(1){animation-delay:calc(-1.75s / 3);}&:nth-child(2){animation-delay:calc(-1.75s / 3 / 2);}&:nth-child(3){animation-delay:0s;}}@keyframes k-Loader-animation-scale{0%{transform:scale(1);}45%{transform:scale(0.1);fill:transparent;}80%{transform:scale(1);}}"], (0, _typography.pxToRem)(BULLET_SIZE), (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(BULLET_SIZE), (0, _typography.pxToRem)(BULLET_SIZE));
 
-var Circle = function Circle(_ref) {
-  var color = _ref.color,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const Circle = _ref => {
+  let {
+    color,
+    ...others
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 " + BULLET_SIZE + " " + BULLET_SIZE,
@@ -44,11 +42,13 @@ var Circle = function Circle(_ref) {
   }));
 };
 
-var Loader = function Loader(_ref2) {
-  var tag = _ref2.tag,
-      className = _ref2.className,
-      color = _ref2.color,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+const Loader = _ref2 => {
+  let {
+    tag,
+    className,
+    color,
+    ...others
+  } = _ref2;
   return /*#__PURE__*/_react.default.createElement(StyledLoader, (0, _extends2.default)({
     as: tag,
     className: (0, _classnames.default)('k-Loader', className)

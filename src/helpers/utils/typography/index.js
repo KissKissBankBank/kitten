@@ -7,14 +7,14 @@ exports.stepToRem = exports.pxToRem = void 0;
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var pxToRem = function pxToRem(sizeInPx) {
+const pxToRem = sizeInPx => {
   if (sizeInPx === 0) return 0;
-  var sizeInRem = sizeInPx / _typographyConfig.default.root;
+  const sizeInRem = sizeInPx / _typographyConfig.default.root;
   return parseFloat(sizeInRem) + "rem";
 };
 
 exports.pxToRem = pxToRem;
-var fontSizeScale = {
+const fontSizeScale = {
   '-4': 10,
   '-3': 11,
   '-2': 12,
@@ -38,7 +38,7 @@ var fontSizeScale = {
   16: 105
 };
 
-var stepToRem = function stepToRem(step) {
+const stepToRem = step => {
   return pxToRem(fontSizeScale[step.toString()]);
 };
 

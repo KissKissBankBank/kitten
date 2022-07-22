@@ -1,30 +1,29 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["bgColor", "color", "circleColor", "flashColor", "width", "height", "title", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
-var DEFAULT_WIDTH = 20;
-var DEFAULT_HEIGHT = 20;
-export var FlashCircleIcon = function FlashCircleIcon(_ref) {
-  var bgColor = _ref.bgColor,
-      color = _ref.color,
-      circleColor = _ref.circleColor,
-      flashColor = _ref.flashColor,
-      width = _ref.width,
-      height = _ref.height,
-      title = _ref.title,
-      className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var computed = computeFromRatio({
+const DEFAULT_WIDTH = 20;
+const DEFAULT_HEIGHT = 20;
+export const FlashCircleIcon = _ref => {
+  let {
+    bgColor,
+    color,
+    circleColor,
+    flashColor,
+    width,
+    height,
+    title,
+    className,
+    ...props
+  } = _ref;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",

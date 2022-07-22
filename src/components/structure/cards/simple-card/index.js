@@ -7,8 +7,6 @@ exports.SimpleCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -29,28 +27,28 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _excluded = ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground", "className", "playerButtonSize"];
-
-var ContainerStyle = _styledComponents.default.a.withConfig({
+const ContainerStyle = _styledComponents.default.a.withConfig({
   displayName: "simple-card__ContainerStyle",
   componentId: "sc-1qvl0ig-0"
 })(["display:block;overflow:auto;text-decoration:inherit;color:inherit;line-height:1;position:relative;.k-SimpleCard__imageContainer{max-width:100%;position:relative;margin-bottom:", ";transition:opacity ease 600ms;z-index:1;background-color:var(--SimpleCard-image-container-background);overflow:hidden;}.k-SimpleCard__imageContainer--ratio{padding-top:calc(100% / (var(--SimpleCard-image-container-ratio)));& > .k-SimpleCard__image{position:absolute;top:0;left:0;width:100%;height:100%;object-position:center;object-fit:cover;}}.k-SimpleCard__playerButton{width:var(--SimpleCard-player-button-size);height:var(--SimpleCard-player-button-size);background:", ";position:absolute;top:calc(50% - var(--SimpleCard-player-button-size) / 2);left:calc(50% - var(--SimpleCard-player-button-size) / 2);display:flex;align-items:center;justify-content:center;z-index:2;}.k-SimpleCard__image{width:100%;display:block;transition:transform 0.4s ease-in-out;}.k-SimpleCard__title{transition:color 0.4s ease-in-out;}&[href]:hover,&[href]:focus{.k-SimpleCard__image{transform:scale(1.07);}.k-SimpleCard__title{color:", ";}}"], (0, _typography.pxToRem)(20), _colorsConfig.default.font1, _colorsConfig.default.primary1);
 
-var SimpleCard = function SimpleCard(_ref) {
-  var imageProps = _ref.imageProps,
-      withPlayerButtonOnImage = _ref.withPlayerButtonOnImage,
-      arrowColor = _ref.arrowColor,
-      ariaLabel = _ref.ariaLabel,
-      href = _ref.href,
-      title = _ref.title,
-      titleProps = _ref.titleProps,
-      subtitle = _ref.subtitle,
-      paragraph = _ref.paragraph,
-      imageContainerRatio = _ref.imageContainerRatio,
-      imageContainerBackground = _ref.imageContainerBackground,
-      className = _ref.className,
-      playerButtonSize = _ref.playerButtonSize,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const SimpleCard = _ref => {
+  let {
+    imageProps,
+    withPlayerButtonOnImage,
+    arrowColor,
+    ariaLabel,
+    href,
+    title,
+    titleProps,
+    subtitle,
+    paragraph,
+    imageContainerRatio,
+    imageContainerBackground,
+    className,
+    playerButtonSize,
+    ...others
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(ContainerStyle, (0, _extends2.default)({
     as: href ? 'a' : 'div'
   }, others, {

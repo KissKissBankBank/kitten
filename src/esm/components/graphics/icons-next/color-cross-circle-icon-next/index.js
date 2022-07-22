@@ -1,14 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "secondaryColor", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var ColorCrossCircleIconNext = function ColorCrossCircleIconNext(_ref) {
-  var color = _ref.color,
-      secondaryColor = _ref.secondaryColor,
-      title = _ref.title,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const ColorCrossCircleIconNext = _ref => {
+  let {
+    color,
+    secondaryColor,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "28",
     height: "28",

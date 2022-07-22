@@ -11,14 +11,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _text = require("../../typography/text");
 
-var SupTitle = function SupTitle(props) {
-  return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
-    size: "small",
-    lineHeight: "normal",
-    transform: "uppercase",
-    weight: "700"
-  }, props));
-};
+const SupTitle = props => /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
+  size: "small",
+  lineHeight: "normal",
+  transform: "uppercase",
+  weight: "700"
+}, props));
 
 exports.SupTitle = SupTitle;
 SupTitle.defaultProps = {

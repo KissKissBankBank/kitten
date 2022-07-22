@@ -7,30 +7,28 @@ exports.GoodeedLogo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _excluded = ["color", "width", "height"];
-
-var GoodeedLogo = function GoodeedLogo(_ref) {
-  var color = _ref.color,
-      width = _ref.width,
-      height = _ref.height,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var DEFAULT_WIDTH = 122;
-  var DEFAULT_HEIGHT = 22;
-  var computed = (0, _ratio.computeFromRatio)({
+const GoodeedLogo = _ref => {
+  let {
+    color,
+    width,
+    height,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 122;
+  const DEFAULT_HEIGHT = 22;
+  const computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

@@ -1,25 +1,24 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
 import { Button, buttonModifiers } from '../../../action/button';
-export var Item = function Item(_ref) {
-  var children = _ref.children,
-      external = _ref.external,
-      liProps = _ref.liProps,
-      modifier = _ref.modifier,
-      button = _ref.button,
-      size = _ref.size,
-      isSelected = _ref.isSelected,
-      as = _ref.as,
-      tag = _ref.tag,
-      other = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var Component = as || tag;
+export const Item = _ref => {
+  let {
+    children,
+    external,
+    liProps,
+    modifier,
+    button,
+    size,
+    isSelected,
+    as,
+    tag,
+    ...other
+  } = _ref;
+  const Component = as || tag;
   return /*#__PURE__*/React.createElement("li", _extends({}, liProps, {
     className: classNames('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
       'k-HeaderMenu__item--external': external,
@@ -47,7 +46,7 @@ Item.propTypes = {
   href: PropTypes.string,
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
-  modifier: PropTypes.oneOf([null, undefined, 'light', 'default'].concat(buttonModifiers)),
+  modifier: PropTypes.oneOf([null, undefined, 'light', 'default', ...buttonModifiers]),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   as: deprecated(PropTypes.string, 'Please use `tag` instead.'),
   tag: PropTypes.string

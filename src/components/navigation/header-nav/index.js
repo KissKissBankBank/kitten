@@ -45,45 +45,36 @@ var _usePrevious = require("../../../helpers/hooks/use-previous");
 
 var _styles = require("./styles");
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var HeaderNav = function HeaderNav(_ref) {
-  var children = _ref.children,
-      id = _ref.id,
-      isFixed = _ref.isFixed,
-      isLogged = _ref.isLogged,
-      quickAccessProps = _ref.quickAccessProps,
-      stickyProps = _ref.stickyProps,
-      zIndexConfig = _ref.zIndexConfig,
-      className = _ref.className,
-      navProps = _ref.navProps,
-      headerProps = _ref.headerProps;
+const HeaderNav = _ref => {
+  let {
+    children,
+    id,
+    isFixed,
+    isLogged,
+    quickAccessProps,
+    stickyProps,
+    zIndexConfig,
+    className,
+    navProps,
+    headerProps
+  } = _ref;
+  const [isMenuExpanded, setMenuExpanded] = (0, _react.useState)(false);
+  const [menuExpandBy, setMenuExpandBy] = (0, _react.useState)(null);
+  const [stickyState, setStickyState] = (0, _react.useState)(null);
+  const [stuckState, setStuckState] = (0, _react.useState)(false);
+  const stickyContainerRef = (0, _react.useRef)(null);
+  const headerRef = (0, _react.useRef)(null);
+  const previousStickyState = (0, _usePrevious.usePrevious)(stickyState);
 
-  var _useState = (0, _react.useState)(false),
-      isMenuExpanded = _useState[0],
-      setMenuExpanded = _useState[1];
-
-  var _useState2 = (0, _react.useState)(null),
-      menuExpandBy = _useState2[0],
-      setMenuExpandBy = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(null),
-      stickyState = _useState3[0],
-      setStickyState = _useState3[1];
-
-  var _useState4 = (0, _react.useState)(false),
-      stuckState = _useState4[0],
-      setStuckState = _useState4[1];
-
-  var stickyContainerRef = (0, _react.useRef)(null);
-  var headerRef = (0, _react.useRef)(null);
-  var previousStickyState = (0, _usePrevious.usePrevious)(stickyState);
-
-  var callOnToggle = function callOnToggle(_ref2) {
-    var isExpanded = _ref2.isExpanded,
-        expandBy = _ref2.expandBy;
+  const callOnToggle = _ref2 => {
+    let {
+      isExpanded,
+      expandBy
+    } = _ref2;
 
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky();
@@ -93,27 +84,30 @@ var HeaderNav = function HeaderNav(_ref) {
     setMenuExpandBy(expandBy);
   };
 
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp');
   }, [isFixed, isMenuExpanded]);
 
-  var handleStickyChange = function handleStickyChange(_ref3) {
-    var isStuck = _ref3.isStuck;
+  const handleStickyChange = _ref3 => {
+    let {
+      isStuck
+    } = _ref3;
     return setStuckState(isStuck);
   };
 
   return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
-      isLogged: isLogged,
-      id: id,
+      isLogged,
+      id,
       expandBy: menuExpandBy,
-      callOnToggle: callOnToggle
+      callOnToggle
     }
   }, /*#__PURE__*/_react.default.createElement(_styles.StyledHeader, (0, _extends2.default)({}, headerProps, {
-    style: (0, _extends2.default)({
+    style: {
       '--HeaderNav-zIndex': zIndexConfig.header,
-      '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
-    }, headerProps == null ? void 0 : headerProps.style),
+      '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
+      ...(headerProps == null ? void 0 : headerProps.style)
+    },
     zIndex: zIndexConfig,
     className: (0, _classnames.default)('k-HeaderNav__wrapper', headerProps == null ? void 0 : headerProps.className, {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded,

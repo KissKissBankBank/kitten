@@ -7,8 +7,6 @@ exports.HeaderMenu = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,18 +19,18 @@ var _badge = require("./components/badge");
 
 var _styles = require("./styles");
 
-var _excluded = ["backgroundColors", "borderSide", "borderSideOnHover", "largeItem", "noBorder", "className", "position", "style"];
-
-var HeaderMenu = function HeaderMenu(_ref) {
-  var backgroundColors = _ref.backgroundColors,
-      borderSide = _ref.borderSide,
-      borderSideOnHover = _ref.borderSideOnHover,
-      largeItem = _ref.largeItem,
-      noBorder = _ref.noBorder,
-      className = _ref.className,
-      position = _ref.position,
-      style = _ref.style,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const HeaderMenu = _ref => {
+  let {
+    backgroundColors,
+    borderSide,
+    borderSideOnHover,
+    largeItem,
+    noBorder,
+    className,
+    position,
+    style,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledList, (0, _extends2.default)({
     className: (0, _classnames.default)('k-HeaderMenu', className, "k-HeaderMenu--" + position, {
       'k-HeaderMenu--hasBorders': !noBorder,
@@ -42,9 +40,9 @@ var HeaderMenu = function HeaderMenu(_ref) {
       'k-HeaderMenu--hasBorderOnSideOnHover': borderSideOnHover,
       'k-HeaderMenu--hasBigItems': largeItem
     }),
-    style: (0, _extends2.default)({}, style, {
+    style: { ...style,
       '--headerMenu-background-colors-hover': backgroundColors == null ? void 0 : backgroundColors.hover
-    })
+    }
   }, props));
 };
 

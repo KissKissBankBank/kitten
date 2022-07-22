@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from '../../../../typography/text';
 import { Marger } from '../../../../layout/marger';
-export var TeamCardTitle = function TeamCardTitle(_ref) {
-  var children = _ref.children,
-      subTitle = _ref.subTitle;
+export const TeamCardTitle = _ref => {
+  let {
+    children,
+    subTitle
+  } = _ref;
   return /*#__PURE__*/React.createElement(Marger, {
     top: "2"
   }, /*#__PURE__*/React.createElement(Text, {

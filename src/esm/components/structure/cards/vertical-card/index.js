@@ -1,7 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "withTitleStroke", "textAlign"],
-    _excluded2 = ["style"];
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -11,26 +8,30 @@ import { Paragraph } from '../../../typography/paragraph/next';
 import { HorizontalStroke } from '../../../typography/horizontal-stroke';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
-var Img = styled.img.withConfig({
+const Img = styled.img.withConfig({
   displayName: "vertical-card__Img",
   componentId: "sc-1myvu7f-0"
-})(["width:100%;display:block;margin-bottom:", ";", ""], pxToRem(30), function (_ref) {
-  var styles = _ref.styles;
+})(["width:100%;display:block;margin-bottom:", ";", ""], pxToRem(30), _ref => {
+  let {
+    styles
+  } = _ref;
   return styles && css(["", ""], styles);
 });
-var Card = styled.div.withConfig({
+const Card = styled.div.withConfig({
   displayName: "vertical-card__Card",
   componentId: "sc-1myvu7f-1"
-})(["color:", ";", ""], COLORS.font1, function (_ref2) {
-  var textAlign = _ref2.textAlign;
+})(["color:", ";", ""], COLORS.font1, _ref2 => {
+  let {
+    textAlign
+  } = _ref2;
   return textAlign && css(["text-align:", ";"], textAlign);
 });
-var StyledHorizontalStroke = styled(HorizontalStroke).withConfig({
+const StyledHorizontalStroke = styled(HorizontalStroke).withConfig({
   displayName: "vertical-card__StyledHorizontalStroke",
   componentId: "sc-1myvu7f-2"
 })(["margin-top:", ";margin-bottom:", ";width:", ";"], pxToRem(20), pxToRem(30), pxToRem(30));
 
-var justifyContent = function justifyContent(align) {
+const justifyContent = align => {
   switch (align) {
     case 'left':
       return 'flex-start';
@@ -43,26 +44,30 @@ var justifyContent = function justifyContent(align) {
   }
 };
 
-var StrokePosition = styled.div.withConfig({
+const StrokePosition = styled.div.withConfig({
   displayName: "vertical-card__StrokePosition",
   componentId: "sc-1myvu7f-3"
-})(["", ""], function (_ref3) {
-  var selfAlign = _ref3.selfAlign;
+})(["", ""], _ref3 => {
+  let {
+    selfAlign
+  } = _ref3;
   return selfAlign && css(["display:flex;justify-content:", ";"], justifyContent(selfAlign));
 });
-export var VerticalCard = function VerticalCard(_ref4) {
-  var imageProps = _ref4.imageProps,
-      title = _ref4.title,
-      titleTag = _ref4.titleTag,
-      description = _ref4.description,
-      descriptionTag = _ref4.descriptionTag,
-      withTitleStroke = _ref4.withTitleStroke,
-      textAlign = _ref4.textAlign,
-      others = _objectWithoutPropertiesLoose(_ref4, _excluded);
-
-  var style = imageProps.style,
-      imgProps = _objectWithoutPropertiesLoose(imageProps, _excluded2);
-
+export const VerticalCard = _ref4 => {
+  let {
+    imageProps,
+    title,
+    titleTag,
+    description,
+    descriptionTag,
+    withTitleStroke,
+    textAlign,
+    ...others
+  } = _ref4;
+  const {
+    style,
+    ...imgProps
+  } = imageProps;
   return /*#__PURE__*/React.createElement(Card, _extends({
     textAlign: textAlign
   }, others), /*#__PURE__*/React.createElement(Img, _extends({}, imgProps, {

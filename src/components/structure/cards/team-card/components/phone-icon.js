@@ -7,8 +7,6 @@ exports.TeamCardPhoneIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -23,14 +21,14 @@ var _colorsConfig = _interopRequireDefault(require("../../../../../constants/col
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["phoneNumber", "tooltipColor", "className", "buttonLabel"];
-
-var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
-  var phoneNumber = _ref.phoneNumber,
-      tooltipColor = _ref.tooltipColor,
-      className = _ref.className,
-      buttonLabel = _ref.buttonLabel,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const TeamCardPhoneIcon = _ref => {
+  let {
+    phoneNumber,
+    tooltipColor,
+    className,
+    buttonLabel,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_button.Button, {
     tag: "a",
     fit: "icon",

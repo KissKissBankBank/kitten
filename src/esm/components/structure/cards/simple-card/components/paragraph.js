@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { Text } from '../../../../typography/text';
 import { HorizontalStroke } from '../../../../typography/horizontal-stroke';
 import { parseHtml } from '../../../../../helpers/utils/parser';
-export var Paragraph = function Paragraph(_ref) {
-  var paragraph = _ref.paragraph;
+export const Paragraph = _ref => {
+  let {
+    paragraph
+  } = _ref;
   return /*#__PURE__*/React.createElement("div", {
     className: "k-SimpleCard__paragraph"
   }, /*#__PURE__*/React.createElement(Text, {

@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "summaryRender", "summaryProps", "open", "onToggle"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -10,23 +8,22 @@ if (domElementHelper.canUseDom() && typeof document !== 'undefined') {
   require('details-element-polyfill');
 }
 
-var Summary = styled.summary.withConfig({
+const Summary = styled.summary.withConfig({
   displayName: "details__Summary",
   componentId: "sc-1xvt6sl-0"
 })(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}:focus-visible{outline:auto;}"]);
-export var Details = function Details(_ref) {
-  var children = _ref.children,
-      summaryRender = _ref.summaryRender,
-      summaryProps = _ref.summaryProps,
-      openDefault = _ref.open,
-      onToggle = _ref.onToggle,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const Details = _ref => {
+  let {
+    children,
+    summaryRender,
+    summaryProps,
+    open: openDefault,
+    onToggle,
+    ...props
+  } = _ref;
+  const [open, setOpen] = useState(false);
 
-  var _useState = useState(false),
-      open = _useState[0],
-      setOpen = _useState[1];
-
-  var handleToggle = function handleToggle(event) {
+  const handleToggle = event => {
     setOpen(!open);
     onToggle(event);
   };
@@ -35,7 +32,7 @@ export var Details = function Details(_ref) {
     onToggle: handleToggle,
     open: openDefault
   }, props), /*#__PURE__*/React.createElement(Summary, summaryProps, summaryRender({
-    open: open
+    open
   })), children);
 };
 Details.propTypes = {
@@ -46,6 +43,6 @@ Details.propTypes = {
 };
 Details.defaultProps = {
   summaryProps: {},
-  onToggle: function onToggle() {},
+  onToggle: () => {},
   open: false
 };

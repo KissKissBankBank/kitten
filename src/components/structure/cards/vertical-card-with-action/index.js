@@ -7,8 +7,6 @@ exports.VerticalCardWithAction = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -25,23 +23,23 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"];
-
-var StyledVerticalCardWithAction = _styledComponents.default.div.withConfig({
+const StyledVerticalCardWithAction = _styledComponents.default.div.withConfig({
   displayName: "vertical-card-with-action__StyledVerticalCardWithAction",
   componentId: "sc-1py59cr-0"
 })([".k-VerticalCardWithAction__image{width:100%;height:auto;display:block;}.k-VerticalCardWithAction__text{color:", ";}"], _colorsConfig.default.font1);
 
-var VerticalCardWithAction = function VerticalCardWithAction(_ref) {
-  var imageProps = _ref.imageProps,
-      title = _ref.title,
-      titleTag = _ref.titleTag,
-      description = _ref.description,
-      descriptionTag = _ref.descriptionTag,
-      button = _ref.button,
-      buttonModifier = _ref.buttonModifier,
-      buttonProps = _ref.buttonProps,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const VerticalCardWithAction = _ref => {
+  let {
+    imageProps,
+    title,
+    titleTag,
+    description,
+    descriptionTag,
+    button,
+    buttonModifier,
+    buttonProps,
+    ...others
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledVerticalCardWithAction, others, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-u-margin-bottom-triple"
   }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {

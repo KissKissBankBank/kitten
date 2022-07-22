@@ -5,9 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.withMediaQueries = exports.mediaQueries = void 0;
 
-var _extends3 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
-var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -15,11 +13,11 @@ var _mediaQueries = require("../helpers/utils/media-queries");
 
 var _screenConfig = require("../constants/screen-config");
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var viewPortTable = {
+const viewPortTable = {
   viewportIsMobile: _screenConfig.SCREEN_SIZE_XS,
   viewportIsTabletOrLess: _screenConfig.SCREEN_SIZE_M,
   viewportIsXXS: _screenConfig.SCREEN_SIZE_XXS,
@@ -29,53 +27,42 @@ var viewPortTable = {
   viewportIsLOrLess: _screenConfig.SCREEN_SIZE_L
 };
 
-var withMediaQueries = function withMediaQueries(hocProps) {
-  return function (WrapperComponent) {
-    return mediaQueries(WrapperComponent, hocProps);
-  };
-};
+const withMediaQueries = hocProps => WrapperComponent => mediaQueries(WrapperComponent, hocProps);
 
 exports.withMediaQueries = withMediaQueries;
 
-var mediaQueries = function mediaQueries(WrappedComponent, hocProps) {
+const mediaQueries = function (WrappedComponent, hocProps) {
   if (hocProps === void 0) {
     hocProps = {};
   }
 
-  return /*#__PURE__*/function (_Component) {
-    (0, _inheritsLoose2.default)(_class2, _Component);
+  return class extends _react.Component {
+    constructor(props) {
+      super(props);
 
-    function _class2(props) {
-      var _this;
-
-      _this = _Component.call(this, props) || this;
-
-      _this.setExposedMethods = function (wrappedComponentInstance) {
+      this.setExposedMethods = wrappedComponentInstance => {
         if (!wrappedComponentInstance) return;
         if (!hocProps.exposedMethods) return;
-        hocProps.exposedMethods.forEach(function (method) {
-          _this[method] = wrappedComponentInstance[method];
+        hocProps.exposedMethods.forEach(method => {
+          this[method] = wrappedComponentInstance[method];
         });
       };
 
-      _this.viewports = {};
-      _this.state = Object.keys(hocProps).reduce(function (result, prop) {
-        var _extends2;
-
-        return _this.isInvalidProp(prop) ? result : (0, _extends3.default)({}, result, (_extends2 = {}, _extends2[prop] = false, _extends2));
+      this.viewports = {};
+      this.state = Object.keys(hocProps).reduce((result, prop) => {
+        return this.isInvalidProp(prop) ? result : { ...result,
+          [prop]: false
+        };
       }, {});
-      return _this;
     }
 
-    var _proto = _class2.prototype;
-
-    _proto.isInvalidProp = function isInvalidProp(prop) {
+    isInvalidProp(prop) {
       return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes(typeof hocProps[prop]);
-    };
+    }
 
-    _proto.warnIfHocPropIsDeprecated = function warnIfHocPropIsDeprecated(prop) {
+    warnIfHocPropIsDeprecated(prop) {
       if (process.env.NODE_ENV === 'development') {
-        var deprecatedPropsToNewProps = {
+        const deprecatedPropsToNewProps = {
           viewportIsMobile: 'viewportIsXSOrLess',
           viewportIsTabletOrLess: 'viewportIsMOrLess'
         };
@@ -84,56 +71,39 @@ var mediaQueries = function mediaQueries(WrappedComponent, hocProps) {
           console.warn(prop + " is deprecated. Please use " + deprecatedPropsToNewProps[prop] + " instead now.");
         }
       }
-    };
+    }
 
-    _proto.componentDidMount = function componentDidMount() {
-      var _this2 = this;
+    componentDidMount() {
+      for (let prop in hocProps) {
+        const propValue = hocProps[prop];
 
-      var _loop = function _loop(prop) {
-        var propValue = hocProps[prop];
-
-        if (_this2.isInvalidProp(prop)) {
-          return "break";
+        if (this.isInvalidProp(prop)) {
+          break;
         }
 
-        _this2.warnIfHocPropIsDeprecated(prop);
+        this.warnIfHocPropIsDeprecated(prop);
+        this.viewports[prop] = typeof propValue === 'boolean' ? (0, _mediaQueries.createMatchMediaMax)(viewPortTable[prop]) : (0, _mediaQueries.createMatchMedia)(propValue);
 
-        _this2.viewports[prop] = typeof propValue === 'boolean' ? (0, _mediaQueries.createMatchMediaMax)(viewPortTable[prop]) : (0, _mediaQueries.createMatchMedia)(propValue);
+        this.viewports[prop].cb = event => this.setState({
+          [prop]: event.matches
+        });
 
-        _this2.viewports[prop].cb = function (event) {
-          var _this2$setState;
-
-          return _this2.setState((_this2$setState = {}, _this2$setState[prop] = event.matches, _this2$setState));
-        };
-
-        _this2.viewports[prop].addListener(_this2.viewports[prop].cb);
-
-        _this2.viewports[prop].cb(_this2.viewports[prop]);
-      };
-
-      for (var prop in hocProps) {
-        var _ret = _loop(prop);
-
-        if (_ret === "break") break;
+        this.viewports[prop].addListener(this.viewports[prop].cb);
+        this.viewports[prop].cb(this.viewports[prop]);
       }
-    };
+    }
 
-    _proto.componentWillUnmount = function componentWillUnmount() {
-      var _this3 = this;
+    componentWillUnmount() {
+      Object.keys(this.viewports).forEach(prop => this.viewports[prop].removeListener(this.viewports[prop].cb));
+    }
 
-      Object.keys(this.viewports).forEach(function (prop) {
-        return _this3.viewports[prop].removeListener(_this3.viewports[prop].cb);
-      });
-    };
-
-    _proto.render = function render() {
-      return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends3.default)({
+    render() {
+      return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({
         ref: this.setExposedMethods
       }, this.props, this.state));
-    };
+    }
 
-    return _class2;
-  }(_react.Component);
+  };
 };
 
 exports.mediaQueries = mediaQueries;

@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.StepperIconValidated = exports.StepperIconInProgress = exports.StepperIconDefault = exports.StepperIcon = void 0;
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _react = _interopRequireDefault(require("react"));
@@ -19,35 +17,29 @@ var _checkedIcon = require("../../graphics/icons/checked-icon");
 
 var _iconBadge = require("../../information/icon-badge");
 
-var _excluded = ["state"];
-
-var StepperIconDefault = function StepperIconDefault(props) {
-  return /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
-    state: "default"
-  }));
-};
+const StepperIconDefault = props => /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
+  state: "default"
+}));
 
 exports.StepperIconDefault = StepperIconDefault;
 
-var StepperIconInProgress = function StepperIconInProgress(props) {
-  return /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
-    state: "inProgress"
-  }));
-};
+const StepperIconInProgress = props => /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
+  state: "inProgress"
+}));
 
 exports.StepperIconInProgress = StepperIconInProgress;
 
-var StepperIconValidated = function StepperIconValidated(props) {
-  return /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
-    state: "validated"
-  }));
-};
+const StepperIconValidated = props => /*#__PURE__*/_react.default.createElement(StepperIcon, (0, _extends2.default)({}, props, {
+  state: "validated"
+}));
 
 exports.StepperIconValidated = StepperIconValidated;
 
-var StepperIcon = function StepperIcon(_ref) {
-  var state = _ref.state,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const StepperIcon = _ref => {
+  let {
+    state,
+    ...props
+  } = _ref;
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, (0, _extends2.default)({

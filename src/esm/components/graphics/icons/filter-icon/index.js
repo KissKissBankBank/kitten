@@ -1,19 +1,18 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "duration", "type", "name", "begin", "animated", "title"];
 import React from 'react';
 import COLORS from '../../../../constants/colors-config';
-export var FilterIcon = function FilterIcon(_ref) {
-  var color = _ref.color,
-      duration = _ref.duration,
-      type = _ref.type,
-      name = _ref.name,
-      begin = _ref.begin,
-      animated = _ref.animated,
-      title = _ref.title,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var animationDuration = animated ? duration : null;
+export const FilterIcon = _ref => {
+  let {
+    color,
+    duration,
+    type,
+    name,
+    begin,
+    animated,
+    title,
+    ...others
+  } = _ref;
+  const animationDuration = animated ? duration : null;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",

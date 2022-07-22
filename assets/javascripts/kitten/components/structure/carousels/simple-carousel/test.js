@@ -9,7 +9,7 @@ describe('<SimpleCarousel />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SimpleCarousel>
+          <SimpleCarousel id="test">
             <p key="1">Foo</p>
             <p key="2">Bar</p>
           </SimpleCarousel>,
@@ -26,7 +26,7 @@ describe('<SimpleCarousel />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SimpleCarousel>
+          <SimpleCarousel id="test">
             <p key="1">Foo</p>
           </SimpleCarousel>,
         )

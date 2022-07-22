@@ -1,13 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var CheckedIcon = function CheckedIcon(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      other = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const CheckedIcon = _ref => {
+  let {
+    color,
+    title,
+    ...other
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 11 8",

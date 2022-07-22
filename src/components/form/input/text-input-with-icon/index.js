@@ -11,10 +11,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _textInput = require("../../../form/input/text-input");
 
-var TextInputWithIcon = function TextInputWithIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, props, {
-    has: "icon"
-  }));
-};
+const TextInputWithIcon = props => /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, props, {
+  has: "icon"
+}));
 
 exports.TextInputWithIcon = TextInputWithIcon;

@@ -7,8 +7,6 @@ exports.VerticalProgress = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -25,18 +23,18 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _excluded = ["children", "withoutBorder", "className"];
-
-var StyledContainer = _styledComponents.default.div.withConfig({
+const StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "vertical-progress__StyledContainer",
   componentId: "sc-1i211v2-0"
 })(["&:not(.k-VerticalProgress__wrapper--withoutBorder){border:var(--border);padding:", ";border-radius:var(--border-radius-l);@media (min-width:", "px){padding:", ";}}.k-VerticalProgress{position:relative;padding:0;}.k-VerticalProgress__list{margin:0;padding:0;list-style:none;:before{position:absolute;top:0;bottom:0;left:", ";content:'';border-left:", " dotted ", ";}}"], (0, _typography.pxToRem)(15), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
 
-var VerticalProgress = function VerticalProgress(_ref) {
-  var children = _ref.children,
-      withoutBorder = _ref.withoutBorder,
-      className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const VerticalProgress = _ref => {
+  let {
+    children,
+    withoutBorder,
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledContainer, {
     className: (0, _classnames.default)('k-VerticalProgress__wrapper', className, {
       'k-VerticalProgress__wrapper--withoutBorder': withoutBorder

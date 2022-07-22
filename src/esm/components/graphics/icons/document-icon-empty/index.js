@@ -1,20 +1,19 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "children", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classNames from 'classnames';
-var StyledDocumentIcon = styled.svg.withConfig({
+const StyledDocumentIcon = styled.svg.withConfig({
   displayName: "document-icon-empty__StyledDocumentIcon",
   componentId: "sc-1wxnwfw-0"
 })(["path.kiss-DocumentIcon__shadow{fill:#000 !important;opacity:0.05;}path.kiss-DocumentIcon__bg{fill:#fff !important;}path.kiss-DocumentIcon__fold{fill:#000 !important;opacity:0.1;}path.kiss-DocumentIcon__icon{fill:#000 !important;}"]);
-export var DocumentIconEmpty = function DocumentIconEmpty(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      title = _ref.title,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const DocumentIconEmpty = _ref => {
+  let {
+    className,
+    children,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledDocumentIcon, _extends({
     width: "25",
     height: "33",

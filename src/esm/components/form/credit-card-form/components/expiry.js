@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NumberFormat from 'react-number-format';
 import { useFormContext } from '../';
 
-var limit = function limit(val, max) {
+const limit = (val, max) => {
   if (val.length === 1 && val[0] > max[0]) {
     val = '0' + val;
   }
@@ -19,29 +19,35 @@ var limit = function limit(val, max) {
   return val;
 };
 
-var cardExpiry = function cardExpiry(val) {
-  var month = limit(val.substring(0, 2), '12');
-  var fullYear = val.substring(2, 6);
-  var year = fullYear.length === 4 ? fullYear.substring(2, 4) : fullYear.substring(0, 2);
+const cardExpiry = val => {
+  const month = limit(val.substring(0, 2), '12');
+  const fullYear = val.substring(2, 6);
+  const year = fullYear.length === 4 ? fullYear.substring(2, 4) : fullYear.substring(0, 2);
   return val ? month + '/' + year : '';
 };
 
-export var Expiry = function Expiry(_ref) {
-  var label = _ref.label,
-      Field = _ref.fieldComponent,
-      Label = _ref.labelComponent,
-      Input = _ref.inputComponent,
-      Error = _ref.errorComponent;
+export const Expiry = _ref => {
+  let {
+    label,
+    fieldComponent: Field,
+    labelComponent: Label,
+    inputComponent: Input,
+    errorComponent: Error
+  } = _ref;
+  const {
+    values: {
+      expiry
+    },
+    setInputValues
+  } = useFormContext();
 
-  var _useFormContext = useFormContext(),
-      expiry = _useFormContext.values.expiry,
-      setInputValues = _useFormContext.setInputValues;
-
-  var handleChange = function handleChange(_ref2) {
-    var value = _ref2.value;
-    var month = value.substring(0, 2);
-    var year = value.substring(2, 4);
-    var formattedValue = value ? month + '/' + year : '';
+  const handleChange = _ref2 => {
+    let {
+      value
+    } = _ref2;
+    const month = value.substring(0, 2);
+    const year = value.substring(2, 4);
+    const formattedValue = value ? month + '/' + year : '';
     setInputValues({
       expiry: formattedValue
     });
@@ -70,16 +76,8 @@ Expiry.propTypes = {
 };
 Expiry.defaultProps = {
   label: 'Card Number',
-  fieldComponent: function fieldComponent(props) {
-    return /*#__PURE__*/React.createElement("div", props);
-  },
-  labelComponent: function labelComponent(props) {
-    return /*#__PURE__*/React.createElement("label", props);
-  },
-  inputComponent: function inputComponent(props) {
-    return /*#__PURE__*/React.createElement("input", props);
-  },
-  errorComponent: function errorComponent() {
-    return null;
-  }
+  fieldComponent: props => /*#__PURE__*/React.createElement("div", props),
+  labelComponent: props => /*#__PURE__*/React.createElement("label", props),
+  inputComponent: props => /*#__PURE__*/React.createElement("input", props),
+  errorComponent: () => null
 };

@@ -1,4 +1,3 @@
-import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import isEmpty from 'lodash/fp/isEmpty';
 import max from 'lodash/fp/max';
@@ -17,17 +16,15 @@ creditCardType.addCard({
   lengths: [16],
   code: null
 });
-
-var creditCardTypes = _extends({}, types, {
+const creditCardTypes = { ...types,
   BANCONTACT: 'bcmc'
-});
-
-export var getCreditCardType = function getCreditCardType(number) {
-  var types = creditCardType(number);
+};
+export const getCreditCardType = number => {
+  const types = creditCardType(number);
   return isEmpty(types) ? {} : types[0];
 };
-export var getIconSvgStringByType = function getIconSvgStringByType(type) {
-  var svg;
+export const getIconSvgStringByType = type => {
+  let svg;
 
   switch (type) {
     case creditCardTypes.VISA:
@@ -63,18 +60,16 @@ export var getIconSvgStringByType = function getIconSvgStringByType(type) {
 
   return encodeURIComponent(renderToStaticMarkup(svg));
 };
-export var getCreditCardFormat = function getCreditCardFormat(type) {
-  var maxLength = max(type.lengths) || 0;
+export const getCreditCardFormat = type => {
+  const maxLength = max(type.lengths) || 0;
   if (!maxLength) return '#### #### #### ####';
-  return Array(maxLength).fill('#').map(function (v, i) {
-    return type.gaps.includes(i + 1) ? v + " " : v;
-  }).join('');
+  return Array(maxLength).fill('#').map((v, i) => type.gaps.includes(i + 1) ? v + " " : v).join('');
 };
-export var withCode = function withCode(number) {
-  var type = getCreditCardType(number);
+export const withCode = number => {
+  const type = getCreditCardType(number);
   return number ? !isEmpty(type.code) : true;
 };
-export var getCodeFormat = function getCodeFormat(number) {
-  var type = getCreditCardType(number);
+export const getCodeFormat = number => {
+  const type = getCreditCardType(number);
   return number ? Array(type.code.size).fill('#').join('') : '###';
 };

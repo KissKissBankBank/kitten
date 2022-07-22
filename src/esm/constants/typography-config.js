@@ -1,4 +1,4 @@
-var TYPOGRAPHY = {
+const TYPOGRAPHY = {
   root: 16,
   // px
   fontSize: 1,

@@ -342,7 +342,6 @@ export { VerticalCard } from './components/structure/cards/vertical-card';
 export { VerticalCardWithAction } from './components/structure/cards/vertical-card-with-action'; // Structure/Carousels
 
 export { Carousel } from './components/structure/carousels/carousel';
-export { NavTabCarousel } from './components/structure/carousels/nav-tab-carousel';
 export { SimpleCarousel } from './components/structure/carousels/simple-carousel';
 export { Accordeon } from './components/structure/expand/accordeon';
 export { Details } from './components/structure/expand/details';

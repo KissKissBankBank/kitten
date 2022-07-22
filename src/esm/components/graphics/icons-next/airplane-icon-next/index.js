@@ -1,14 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title", "direction"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var AirplaneIconNext = function AirplaneIconNext(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      direction = _ref.direction,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const AirplaneIconNext = _ref => {
+  let {
+    color,
+    title,
+    direction,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "19",
     height: "18",

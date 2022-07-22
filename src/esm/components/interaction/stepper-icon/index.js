@@ -1,29 +1,23 @@
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
 import _extends from "@babel/runtime/helpers/extends";
-var _excluded = ["state"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ArrowIcon } from '../../graphics/icons/arrow-icon';
 import { CheckedIcon } from '../../graphics/icons/checked-icon';
 import { IconBadge } from '../../information/icon-badge';
-export var StepperIconDefault = function StepperIconDefault(props) {
-  return /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {
-    state: "default"
-  }));
-};
-export var StepperIconInProgress = function StepperIconInProgress(props) {
-  return /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {
-    state: "inProgress"
-  }));
-};
-export var StepperIconValidated = function StepperIconValidated(props) {
-  return /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {
-    state: "validated"
-  }));
-};
-export var StepperIcon = function StepperIcon(_ref) {
-  var state = _ref.state,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const StepperIconDefault = props => /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {
+  state: "default"
+}));
+export const StepperIconInProgress = props => /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {
+  state: "inProgress"
+}));
+export const StepperIconValidated = props => /*#__PURE__*/React.createElement(StepperIcon, _extends({}, props, {
+  state: "validated"
+}));
+export const StepperIcon = _ref => {
+  let {
+    state,
+    ...props
+  } = _ref;
 
   if (state === 'inProgress' || state === 'progress') {
     return /*#__PURE__*/React.createElement(IconBadge, _extends({

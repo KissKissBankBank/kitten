@@ -7,22 +7,20 @@ exports.ClockIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className", "color", "bgColor", "title"];
-
-var ClockIcon = function ClockIcon(_ref) {
-  var className = _ref.className,
-      color = _ref.color,
-      bgColor = _ref.bgColor,
-      title = _ref.title,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const ClockIcon = _ref => {
+  let {
+    className,
+    color,
+    bgColor,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 11 11",

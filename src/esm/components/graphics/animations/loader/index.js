@@ -1,23 +1,21 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color"],
-    _excluded2 = ["tag", "className", "color"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
-var BULLET_SIZE = 5;
-var StyledLoader = styled.div.withConfig({
+const BULLET_SIZE = 5;
+const StyledLoader = styled.div.withConfig({
   displayName: "loader__StyledLoader",
   componentId: "sc-kkatuq-0"
 })(["display:flex;height:", ";line-height:1;gap:", ";.k-Loader__circle{width:", ";height:", ";border-radius:var(--border-radius-rounded);animation:k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);animation-fill-mode:both;&:nth-child(1){animation-delay:calc(-1.75s / 3);}&:nth-child(2){animation-delay:calc(-1.75s / 3 / 2);}&:nth-child(3){animation-delay:0s;}}@keyframes k-Loader-animation-scale{0%{transform:scale(1);}45%{transform:scale(0.1);fill:transparent;}80%{transform:scale(1);}}"], pxToRem(BULLET_SIZE), pxToRem(2), pxToRem(BULLET_SIZE), pxToRem(BULLET_SIZE));
 
-var Circle = function Circle(_ref) {
-  var color = _ref.color,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+const Circle = _ref => {
+  let {
+    color,
+    ...others
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 " + BULLET_SIZE + " " + BULLET_SIZE,
@@ -29,12 +27,13 @@ var Circle = function Circle(_ref) {
   }));
 };
 
-export var Loader = function Loader(_ref2) {
-  var tag = _ref2.tag,
-      className = _ref2.className,
-      color = _ref2.color,
-      others = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+export const Loader = _ref2 => {
+  let {
+    tag,
+    className,
+    color,
+    ...others
+  } = _ref2;
   return /*#__PURE__*/React.createElement(StyledLoader, _extends({
     as: tag,
     className: classNames('k-Loader', className)

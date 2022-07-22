@@ -3,17 +3,17 @@ import React from 'react';
 import classNames from 'classnames';
 import styled from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
-var StyledLine = styled.div.withConfig({
+const StyledLine = styled.div.withConfig({
   displayName: "line__StyledLine",
   componentId: "sc-1fspt0o-0"
 })(["display:flex;align-items:center;gap:", ";"], pxToRem(10));
-export var Line = function Line(props) {
+export const Line = props => {
   return /*#__PURE__*/React.createElement(StyledLine, _extends({}, props, {
     className: classNames('k-Line', props.className)
   }));
 };
 
-Line.Item = function (props) {
+Line.Item = props => {
   return /*#__PURE__*/React.createElement("div", _extends({}, props, {
     className: classNames('k-Line__item', props.className)
   }));

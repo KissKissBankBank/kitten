@@ -19,51 +19,41 @@ var _instagramIcon = require("../../graphics/icons/instagram-icon");
 
 var _youtubeIcon = require("../../graphics/icons/youtube-icon");
 
-var FacebookButtonIcon = function FacebookButtonIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
-    width: "14",
-    height: "14"
-  }));
-};
+const FacebookButtonIcon = props => /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
+  width: "14",
+  height: "14"
+}));
 
 exports.FacebookButtonIcon = FacebookButtonIcon;
 
-var TwitterButtonIcon = function TwitterButtonIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
-    width: "15",
-    height: "15"
-  }));
-};
+const TwitterButtonIcon = props => /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
+  width: "15",
+  height: "15"
+}));
 
 exports.TwitterButtonIcon = TwitterButtonIcon;
 
-var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
-    width: "12",
-    height: "12"
-  }));
-};
+const LinkedinButtonIcon = props => /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
+  width: "12",
+  height: "12"
+}));
 
 exports.LinkedinButtonIcon = LinkedinButtonIcon;
 
-var InstagramButtonIcon = function InstagramButtonIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_instagramIcon.InstagramIcon, {
-    width: "16",
-    height: "16"
-  }));
-};
+const InstagramButtonIcon = props => /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_instagramIcon.InstagramIcon, {
+  width: "16",
+  height: "16"
+}));
 
 exports.InstagramButtonIcon = InstagramButtonIcon;
 
-var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_youtubeIcon.YoutubeIcon, {
-    width: "16",
-    height: "16"
-  }));
-};
+const YoutubeButtonIcon = props => /*#__PURE__*/_react.default.createElement(_button.Button, props, /*#__PURE__*/_react.default.createElement(_youtubeIcon.YoutubeIcon, {
+  width: "16",
+  height: "16"
+}));
 
 exports.YoutubeButtonIcon = YoutubeButtonIcon;
-var defaultProps = {
+const defaultProps = {
   modifier: 'beryllium',
   fit: 'icon'
 };

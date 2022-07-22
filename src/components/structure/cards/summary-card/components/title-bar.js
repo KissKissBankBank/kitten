@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.TitleBar = void 0;
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -17,16 +15,18 @@ var _text = require("../../../../typography/text");
 
 var _styles = require("../styles");
 
-var _excluded = ["image"];
-
-var TitleBar = function TitleBar(_ref) {
-  var className = _ref.className,
-      values = _ref.values,
-      size = _ref.size,
-      id = _ref.id,
-      type = _ref.type;
-  var image = values.image,
-      valuesRest = (0, _objectWithoutPropertiesLoose2.default)(values, _excluded);
+const TitleBar = _ref => {
+  let {
+    className,
+    values,
+    size,
+    id,
+    type
+  } = _ref;
+  const {
+    image,
+    ...valuesRest
+  } = values;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledSummaryTitles, {
     className: (0, _classnames.default)('k-SummaryCard-TitleBar', className, "k-SummaryCard-Wrapper--" + size),
     type: type
@@ -40,19 +40,17 @@ var TitleBar = function TitleBar(_ref) {
     id: id + "-image"
   }, image)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SummaryCard-Wrapper__gridWrapper"
-  }, Object.keys(valuesRest).map(function (item) {
-    return /*#__PURE__*/_react.default.createElement(_text.Text, {
-      key: id + "-" + item,
-      id: id + "-" + item,
-      size: "micro",
-      weight: "500",
-      cssColor: "var(--color-grey-700)",
-      className: "k-SummaryCard-TitleBar__" + item,
-      style: {
-        '--summaryCardCell-name': item
-      }
-    }, valuesRest[item]);
-  })));
+  }, Object.keys(valuesRest).map(item => /*#__PURE__*/_react.default.createElement(_text.Text, {
+    key: id + "-" + item,
+    id: id + "-" + item,
+    size: "micro",
+    weight: "500",
+    cssColor: "var(--color-grey-700)",
+    className: "k-SummaryCard-TitleBar__" + item,
+    style: {
+      '--summaryCardCell-name': item
+    }
+  }, valuesRest[item]))));
 };
 
 exports.TitleBar = TitleBar;

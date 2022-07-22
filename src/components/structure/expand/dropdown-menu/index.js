@@ -7,8 +7,6 @@ exports.DropdownMenu = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -25,55 +23,48 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _useFocusTrap = require("../../../../helpers/hooks/use-focus-trap");
 
-var _excluded = ["button", "open", "onOpen", "onClose", "onToggle", "menuProps", "menuPosition", "positionedButton", "children", "className", "top", "style"],
-    _excluded2 = ["href", "textProps", "className", "icon", "children"],
-    _excluded3 = ["type", "textProps", "className", "icon", "children"],
-    _excluded4 = ["className"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var zoomInAndOpacity = (0, _styledComponents.keyframes)(["0%{transform:translateX(calc(-1 * var(--Dropdown-transform-x))) scale(.66);opacity:0;}to{transform:translateX(calc(-1 * var(--Dropdown-transform-x))) scale(1);opacity:1;}"]);
+const zoomInAndOpacity = (0, _styledComponents.keyframes)(["0%{transform:translateX(calc(-1 * var(--Dropdown-transform-x))) scale(.66);opacity:0;}to{transform:translateX(calc(-1 * var(--Dropdown-transform-x))) scale(1);opacity:1;}"]);
 
-var StyledDropdownMenu = _styledComponents.default.details.withConfig({
+const StyledDropdownMenu = _styledComponents.default.details.withConfig({
   displayName: "dropdown-menu__StyledDropdownMenu",
   componentId: "sc-goq24h-0"
 })(["position:relative;display:inline-block;.k-DropdownMenu__button{list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}:focus-visible{outline-offset:", ";&,& .k-DropdownMenu__button__inside{outline:auto;}}}.k-DropdownMenu__button__inside{position:absolute;left:0;top:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}&[open] > .k-DropdownMenu__button::before{content:' ';cursor:default;display:block;position:fixed;top:0;left:0;right:0;bottom:0;background:transparent;z-index:120;}.k-DropdownMenu__menu{display:flex;flex-direction:column;gap:", ";z-index:150;position:absolute;top:calc(50% + 1rem + ", " + (var(--dropdownMenu-top)));left:50%;width:max-content;max-width:", ";height:auto;padding:", " 0 ", ";transform:translateX(calc(-1 * var(--Dropdown-transform-x)));transform-origin:var(--Dropdown-transform-origin);}&[open] .k-DropdownMenu__menu{animation:var(--transition) ", ";}&.k-DropdownMenu--h-left .k-DropdownMenu__menu{--Dropdown-transform-x:calc(100% - ", ");--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}&.k-DropdownMenu--h-center .k-DropdownMenu__menu{--Dropdown-transform-x:50%;--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}&.k-DropdownMenu--h-right .k-DropdownMenu__menu{--Dropdown-transform-x:", ";--Dropdown-transform-origin:var(--Dropdown-transform-x) ", ";}.k-DropdownMenu__menu__item{", " color:var(--color-grey-000);text-decoration:none;display:flex;flex-direction:row;align-items:center;gap:", ";padding:", " ", ";line-height:", ";font-size:", ";text-align:left;transition:color 0.2s ease;& svg,& svg path{fill:currentColor;}&:hover{color:var(--color-primary-100);}&:active,&:focus{color:var(--color-primary-300);}&:focus-visible{outline:auto;}.k-DropdownMenu__menu__item__iconWrapper{height:", ";width:", ";flex:0 0 ", ";svg{max-width:", ";max-height:", ";}}}.k-DropdownMenu__menu__separator{height:", ";background:var(--color-grey-700);padding:0;margin:", " ", ";}"], (0, _typography.pxToRem)(-2), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(300), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(10), zoomInAndOpacity, (0, _typography.pxToRem)(10 + 8), (0, _typography.pxToRem)(-8), (0, _typography.pxToRem)(-8), (0, _typography.pxToRem)(10 + 8), (0, _typography.pxToRem)(-8), _typographyConfig.default.fontStyles['500'], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(16), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(15));
 
-var DropdownMenu = function DropdownMenu(_ref) {
-  var button = _ref.button,
-      open = _ref.open,
-      onOpen = _ref.onOpen,
-      onClose = _ref.onClose,
-      onToggle = _ref.onToggle,
-      menuProps = _ref.menuProps,
-      menuPosition = _ref.menuPosition,
-      positionedButton = _ref.positionedButton,
-      children = _ref.children,
-      className = _ref.className,
-      top = _ref.top,
-      style = _ref.style,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-
-  var _useState = (0, _react.useState)(open),
-      isOpen = _useState[0],
-      setIsOpen = _useState[1];
-
-  var detailsElement = (0, _useFocusTrap.useFocusTrap)({
+const DropdownMenu = _ref => {
+  let {
+    button,
+    open,
+    onOpen,
+    onClose,
+    onToggle,
+    menuProps,
+    menuPosition,
+    positionedButton,
+    children,
+    className,
+    top,
+    style,
+    ...rest
+  } = _ref;
+  const [isOpen, setIsOpen] = (0, _react.useState)(open);
+  const detailsElement = (0, _useFocusTrap.useFocusTrap)({
     shouldTrapFocus: isOpen
   });
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     setIsOpen(open);
   }, [open]);
 
-  var onLinkClicked = function onLinkClicked() {
+  const onLinkClicked = () => {
     setIsOpen(false);
   };
 
-  var handleToggle = function handleToggle(event) {
+  const handleToggle = event => {
     onToggle(event);
-    var hasBeenOpened = event.target.open;
+    const hasBeenOpened = event.target.open;
 
     if (hasBeenOpened) {
       event.target.firstChild.focus();
@@ -85,7 +76,7 @@ var DropdownMenu = function DropdownMenu(_ref) {
     setIsOpen(hasBeenOpened);
   };
 
-  var arrowDistanceProps = function () {
+  const arrowDistanceProps = (() => {
     switch (menuPosition) {
       case 'left':
         return {
@@ -104,20 +95,20 @@ var DropdownMenu = function DropdownMenu(_ref) {
           distance: 10
         };
     }
-  }();
+  })();
 
-  var getSibling = function getSibling(direction) {
-    var options = [].concat(detailsElement.current.querySelectorAll('a:not([hidden]):not([disabled]):not([aria-disabled="true"]), button:not([hidden]):not([disabled]):not([aria-disabled="true"])'));
-    var index = document.activeElement instanceof HTMLElement ? options.indexOf(document.activeElement) : -1;
-    var sibling = direction === 'next' ? options[index + 1] : options[index - 1];
-    var opposite = direction === 'next' ? options[0] : options[options.length - 1];
+  const getSibling = direction => {
+    const options = [...detailsElement.current.querySelectorAll('a:not([hidden]):not([disabled]):not([aria-disabled="true"]), button:not([hidden]):not([disabled]):not([aria-disabled="true"])')];
+    const index = document.activeElement instanceof HTMLElement ? options.indexOf(document.activeElement) : -1;
+    const sibling = direction === 'next' ? options[index + 1] : options[index - 1];
+    const opposite = direction === 'next' ? options[0] : options[options.length - 1];
     return sibling || opposite;
   };
 
-  var handleKeyDown = function handleKeyDown(event) {
+  const handleKeyDown = event => {
     var _detailsElement$curre, _detailsElement$curre2, _getSibling, _getSibling2;
 
-    var isSummaryFocused = event.target instanceof Element && event.target.tagName === 'SUMMARY';
+    const isSummaryFocused = event.target instanceof Element && event.target.tagName === 'SUMMARY';
 
     switch (event.key) {
       case 'Escape':
@@ -147,7 +138,7 @@ var DropdownMenu = function DropdownMenu(_ref) {
       case ' ':
       case 'Enter':
         {
-          var activeElement = document.activeElement;
+          const activeElement = document.activeElement;
           if (!activeElement instanceof HTMLElement) return;
           if (!['A', 'BUTTON'].includes(activeElement.tagName)) return;
           if (activeElement.closest('details') !== detailsElement.current) return;
@@ -164,9 +155,9 @@ var DropdownMenu = function DropdownMenu(_ref) {
     open: isOpen,
     className: (0, _classnames.default)('k-DropdownMenu', className, "k-DropdownMenu--h-" + menuPosition),
     onKeyDown: handleKeyDown,
-    style: (0, _extends2.default)({}, style, {
+    style: { ...style,
       '--dropdownMenu-top': top
-    })
+    }
   }, rest), /*#__PURE__*/_react.default.createElement("summary", {
     className: "k-DropdownMenu__button"
   }, positionedButton ? /*#__PURE__*/_react.default.createElement("span", {
@@ -189,11 +180,11 @@ var DropdownMenu = function DropdownMenu(_ref) {
 
 exports.DropdownMenu = DropdownMenu;
 DropdownMenu.defaultProps = {
-  button: function button() {},
+  button: () => {},
   open: false,
-  onOpen: function onOpen() {},
-  onClose: function onClose() {},
-  onToggle: function onToggle() {},
+  onOpen: () => {},
+  onClose: () => {},
+  onToggle: () => {},
   menuProps: {},
   menuPosition: 'left',
   positionedButton: false,
@@ -211,15 +202,15 @@ DropdownMenu.propTypes = {
   top: _propTypes.default.string
 };
 
-DropdownMenu.Link = function (_ref2) {
-  var _ref2$href = _ref2.href,
-      href = _ref2$href === void 0 ? '' : _ref2$href,
-      _ref2$textProps = _ref2.textProps,
-      textProps = _ref2$textProps === void 0 ? {} : _ref2$textProps,
-      className = _ref2.className,
-      icon = _ref2.icon,
-      children = _ref2.children,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+DropdownMenu.Link = _ref2 => {
+  let {
+    href = '',
+    textProps = {},
+    className,
+    icon,
+    children,
+    ...rest
+  } = _ref2;
   return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
     href: href,
     className: (0, _classnames.default)('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__link', className)
@@ -228,15 +219,15 @@ DropdownMenu.Link = function (_ref2) {
   }), /*#__PURE__*/_react.default.createElement("span", textProps, children));
 };
 
-DropdownMenu.Button = function (_ref3) {
-  var _ref3$type = _ref3.type,
-      type = _ref3$type === void 0 ? 'button' : _ref3$type,
-      _ref3$textProps = _ref3.textProps,
-      textProps = _ref3$textProps === void 0 ? {} : _ref3$textProps,
-      className = _ref3.className,
-      icon = _ref3.icon,
-      children = _ref3.children,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
+DropdownMenu.Button = _ref3 => {
+  let {
+    type = 'button',
+    textProps = {},
+    className,
+    icon,
+    children,
+    ...rest
+  } = _ref3;
   return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     type: type,
     className: (0, _classnames.default)('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__button', 'k-u-reset-button', className)
@@ -245,16 +236,20 @@ DropdownMenu.Button = function (_ref3) {
   }), /*#__PURE__*/_react.default.createElement("span", textProps, children));
 };
 
-DropdownMenu.Separator = function (_ref4) {
-  var className = _ref4.className,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded4);
+DropdownMenu.Separator = _ref4 => {
+  let {
+    className,
+    ...rest
+  } = _ref4;
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DropdownMenu__menu__item', 'k-DropdownMenu__menu__separator', className)
   }, rest));
 };
 
-var IconWrapper = function IconWrapper(_ref5) {
-  var icon = _ref5.icon;
+const IconWrapper = _ref5 => {
+  let {
+    icon
+  } = _ref5;
   if (!icon) return null;
   return /*#__PURE__*/_react.default.createElement("span", {
     className: "k-DropdownMenu__menu__item__iconWrapper"

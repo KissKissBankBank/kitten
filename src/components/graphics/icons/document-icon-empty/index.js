@@ -7,8 +7,6 @@ exports.DocumentIconEmpty = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -17,18 +15,18 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className", "children", "title"];
-
-var StyledDocumentIcon = _styledComponents.default.svg.withConfig({
+const StyledDocumentIcon = _styledComponents.default.svg.withConfig({
   displayName: "document-icon-empty__StyledDocumentIcon",
   componentId: "sc-1wxnwfw-0"
 })(["path.kiss-DocumentIcon__shadow{fill:#000 !important;opacity:0.05;}path.kiss-DocumentIcon__bg{fill:#fff !important;}path.kiss-DocumentIcon__fold{fill:#000 !important;opacity:0.1;}path.kiss-DocumentIcon__icon{fill:#000 !important;}"]);
 
-var DocumentIconEmpty = function DocumentIconEmpty(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      title = _ref.title,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const DocumentIconEmpty = _ref => {
+  let {
+    className,
+    children,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledDocumentIcon, (0, _extends2.default)({
     width: "25",
     height: "33",

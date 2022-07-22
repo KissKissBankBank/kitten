@@ -11,16 +11,12 @@ import { parseHtml } from '../../../helpers/utils/parser';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { useMedia } from '../../../helpers/hooks/use-media-query';
 import { getMinQuery } from '../../../helpers/utils/media-queries';
-var StyledNav = styled.nav.withConfig({
+const StyledNav = styled.nav.withConfig({
   displayName: "pagination__StyledNav",
   componentId: "sc-19bydjm-0"
 })([".k-Pagination__List{padding:0;display:flex;gap:", ";}.k-Pagination__ListItem{list-style:none;flex-shrink:0;}.k-Pagination__ListItem__Ellipsis{text-align:center;align-self:center;width:", ";}.k-Pagination__ListItem__Arrow:first-child{margin-right:", ";}.k-Pagination__ListItem__Arrow:last-child{margin-left:", ";}&.k-Pagination--noMargin .k-Pagination__List{margin:0;}&.k-Pagination--left .k-Pagination__List{justify-content:flex-start;}&.k-Pagination--center .k-Pagination__List{justify-content:center;}&.k-Pagination--right .k-Pagination__List{justify-content:flex-end;}"], pxToRem(5), pxToRem(40), pxToRem(5), pxToRem(5)); // Returns an array with the given bounds
 
-var range = function range(start, end) {
-  return Array(end - start + 1).fill().map(function (_, index) {
-    return start + index;
-  });
-}; // Returns an array of size `availableSlots` with page number integers
+const range = (start, end) => Array(end - start + 1).fill().map((_, index) => start + index); // Returns an array of size `availableSlots` with page number integers
 // and breaks "…" (represented as nulls).
 
 
@@ -32,45 +28,43 @@ export function pages(min, max, currentPage, availableSlots) {
 
 
   if (currentPage - min + 1 < availableSlots - 2) {
-    return [].concat(range(min, min - 1 + availableSlots - 2), [null, max]);
+    return [...range(min, min - 1 + availableSlots - 2), null, max];
   } // 1, …, 40, 41, 42
 
 
   if (max - currentPage < availableSlots - 2) {
-    return [min, null].concat(range(max + 1 - (availableSlots - 2), max));
+    return [min, null, ...range(max + 1 - (availableSlots - 2), max)];
   } // 1, …, 21, …, 42
 
 
-  var sides = Math.floor((availableSlots - 4) / 2);
-  return [min, null].concat(range(currentPage - sides, currentPage + sides), [null, max]);
+  const sides = Math.floor((availableSlots - 4) / 2);
+  return [min, null, ...range(currentPage - sides, currentPage + sides), null, max];
 }
-export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
-  var prevButtonLabel = _ref2.prevButtonLabel,
-      nextButtonLabel = _ref2.nextButtonLabel,
-      goToPageLabel = _ref2.goToPageLabel,
-      goToPageHref = _ref2.goToPageHref,
-      onPageClick = _ref2.onPageClick,
-      currentPageLabel = _ref2.currentPageLabel,
-      currentPage = _ref2.currentPage,
-      totalPages = _ref2.totalPages,
-      ariaLabelProp = _ref2['aria-label'],
-      margin = _ref2.margin,
-      align = _ref2.align,
-      className = _ref2.className;
-  var size = useMedia({
+export const Pagination = /*#__PURE__*/forwardRef((_ref2, _ref) => {
+  let {
+    prevButtonLabel,
+    nextButtonLabel,
+    goToPageLabel,
+    goToPageHref,
+    onPageClick,
+    currentPageLabel,
+    currentPage,
+    totalPages,
+    'aria-label': ariaLabelProp,
+    margin,
+    align,
+    className
+  } = _ref2;
+  const size = useMedia({
     queries: [getMinQuery(ScreenConfig.L.min)],
     values: [7],
     defaultValue: 5
   });
-  var pageNumbers = pages(1, totalPages, currentPage, size);
+  const pageNumbers = pages(1, totalPages, currentPage, size);
 
-  var pageClickHandler = function pageClickHandler(number) {
-    return function (event) {
-      return onPageClick(number, event);
-    };
-  };
+  const pageClickHandler = number => event => onPageClick(number, event);
 
-  var renderPage = function renderPage(number, index) {
+  const renderPage = (number, index) => {
     if (!number) {
       return /*#__PURE__*/React.createElement("li", {
         key: "ellipsis-" + index,
@@ -82,7 +76,7 @@ export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
       }, "\u2026"));
     }
 
-    var buttonProps = {
+    let buttonProps = {
       modifier: 'hydrogen',
       tag: 'a',
       href: goToPageHref(number),
@@ -111,11 +105,13 @@ export var Pagination = /*#__PURE__*/forwardRef(function (_ref2, _ref) {
     }, buttonProps), number));
   };
 
-  var ArrowButton = function ArrowButton(_ref3) {
-    var direction = _ref3.direction;
-    var buttonLabel = direction == 'left' ? parseHtml(prevButtonLabel) : parseHtml(nextButtonLabel);
-    var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
-    var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
+  const ArrowButton = _ref3 => {
+    let {
+      direction
+    } = _ref3;
+    const buttonLabel = direction == 'left' ? parseHtml(prevButtonLabel) : parseHtml(nextButtonLabel);
+    const isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
+    const number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
     return /*#__PURE__*/React.createElement("li", {
       className: classNames('k-Pagination__ListItem', 'k-Pagination__ListItem__Arrow')
     }, /*#__PURE__*/React.createElement(Button, {
@@ -168,16 +164,10 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   prevButtonLabel: 'Page précédente',
   nextButtonLabel: 'Page suivante',
-  goToPageLabel: function goToPageLabel(n) {
-    return "Aller \xE0 la page " + n;
-  },
-  goToPageHref: function goToPageHref(n) {
-    return "#" + n;
-  },
-  onPageClick: function onPageClick() {},
-  currentPageLabel: function currentPageLabel(n) {
-    return "Page " + n + ", il s\u2019agit de la page actuelle";
-  },
+  goToPageLabel: n => "Aller \xE0 la page " + n,
+  goToPageHref: n => "#" + n,
+  onPageClick: () => {},
+  currentPageLabel: n => "Page " + n + ", il s\u2019agit de la page actuelle",
   currentPage: 1,
   totalPages: 1,
   'aria-label': 'Navigation dans la pagination',

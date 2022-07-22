@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "bgColor", "circleColor", "circleWidth", "circleWidthMobile", "rocketWidth", "rocketWidthMobile", "rocketHeight", "rocketHeightMobile", "rocketColor", "rocketTitle", "className"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -10,52 +8,71 @@ import COLORS from '../../../../constants/colors-config';
 import { ScreenConfig } from '../../../../constants/screen-config';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import classNames from 'classnames';
-var StyledRocketCircle = styled.div.withConfig({
+const StyledRocketCircle = styled.div.withConfig({
   displayName: "rocket-circle-icon__StyledRocketCircle",
   componentId: "sc-hjcjwz-0"
-})(["display:flex;justify-content:center;align-items:center;width:", ";height:", ";border-radius:var(border-radius-rounded);background-color:", ";@media (min-width:", "){width:", ";height:", ";}.k-RocketCircleIcon__rocketIcon{padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}"], function (_ref) {
-  var circleWidthMobile = _ref.circleWidthMobile;
+})(["display:flex;justify-content:center;align-items:center;width:", ";height:", ";border-radius:var(border-radius-rounded);background-color:", ";@media (min-width:", "){width:", ";height:", ";}.k-RocketCircleIcon__rocketIcon{padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}}"], _ref => {
+  let {
+    circleWidthMobile
+  } = _ref;
   return pxToRem(circleWidthMobile);
-}, function (_ref2) {
-  var circleWidthMobile = _ref2.circleWidthMobile;
+}, _ref2 => {
+  let {
+    circleWidthMobile
+  } = _ref2;
   return pxToRem(circleWidthMobile);
-}, function (_ref3) {
-  var bgColor = _ref3.bgColor;
+}, _ref3 => {
+  let {
+    bgColor
+  } = _ref3;
   return bgColor;
-}, pxToRem(ScreenConfig.S.min), function (_ref4) {
-  var circleWidth = _ref4.circleWidth;
+}, pxToRem(ScreenConfig.S.min), _ref4 => {
+  let {
+    circleWidth
+  } = _ref4;
   return pxToRem(circleWidth);
-}, function (_ref5) {
-  var circleWidth = _ref5.circleWidth;
+}, _ref5 => {
+  let {
+    circleWidth
+  } = _ref5;
   return pxToRem(circleWidth);
-}, pxToRem(2), pxToRem(1), function (_ref6) {
-  var rocketWidthMobile = _ref6.rocketWidthMobile;
+}, pxToRem(2), pxToRem(1), _ref6 => {
+  let {
+    rocketWidthMobile
+  } = _ref6;
   return pxToRem(rocketWidthMobile);
-}, function (_ref7) {
-  var rocketHeightMobile = _ref7.rocketHeightMobile;
+}, _ref7 => {
+  let {
+    rocketHeightMobile
+  } = _ref7;
   return pxToRem(rocketHeightMobile);
-}, pxToRem(ScreenConfig.S.min), function (_ref8) {
-  var rocketWidth = _ref8.rocketWidth;
+}, pxToRem(ScreenConfig.S.min), _ref8 => {
+  let {
+    rocketWidth
+  } = _ref8;
   return pxToRem(rocketWidth);
-}, function (_ref9) {
-  var rocketHeight = _ref9.rocketHeight;
+}, _ref9 => {
+  let {
+    rocketHeight
+  } = _ref9;
   return pxToRem(rocketHeight);
 });
-export var RocketCircleIcon = function RocketCircleIcon(_ref10) {
-  var color = _ref10.color,
-      bgColor = _ref10.bgColor,
-      circleColor = _ref10.circleColor,
-      circleWidth = _ref10.circleWidth,
-      circleWidthMobile = _ref10.circleWidthMobile,
-      rocketWidth = _ref10.rocketWidth,
-      rocketWidthMobile = _ref10.rocketWidthMobile,
-      rocketHeight = _ref10.rocketHeight,
-      rocketHeightMobile = _ref10.rocketHeightMobile,
-      rocketColor = _ref10.rocketColor,
-      rocketTitle = _ref10.rocketTitle,
-      className = _ref10.className,
-      others = _objectWithoutPropertiesLoose(_ref10, _excluded);
-
+export const RocketCircleIcon = _ref10 => {
+  let {
+    color,
+    bgColor,
+    circleColor,
+    circleWidth,
+    circleWidthMobile,
+    rocketWidth,
+    rocketWidthMobile,
+    rocketHeight,
+    rocketHeightMobile,
+    rocketColor,
+    rocketTitle,
+    className,
+    ...others
+  } = _ref10;
   return /*#__PURE__*/React.createElement(StyledRocketCircle, _extends({
     circleWidth: circleWidth,
     circleWidthMobile: circleWidthMobile,

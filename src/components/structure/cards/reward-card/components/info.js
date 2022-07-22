@@ -7,23 +7,20 @@ exports.Info = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _text = require("../../../../typography/text");
 
-var _excluded = ["className", "legend", "value", "fullWidth"];
-
-var Info = function Info(_ref) {
-  var className = _ref.className,
-      legend = _ref.legend,
-      value = _ref.value,
-      _ref$fullWidth = _ref.fullWidth,
-      fullWidth = _ref$fullWidth === void 0 ? false : _ref$fullWidth,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const Info = _ref => {
+  let {
+    className,
+    legend,
+    value,
+    fullWidth = false,
+    ...props
+  } = _ref;
   console.warn('This subcomponent is deprecated. Please use another one.');
   return /*#__PURE__*/_react.default.createElement("p", (0, _extends2.default)({
     className: (0, _classnames.default)('k-RewardCard__info', 'k-u-size-small', 'k-u-line-height-normal', className, {

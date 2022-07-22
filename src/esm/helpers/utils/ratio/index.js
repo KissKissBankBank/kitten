@@ -1,11 +1,13 @@
-export var computeFromRatio = function computeFromRatio(_ref) {
-  var defaultWidth = _ref.defaultWidth,
-      defaultHeight = _ref.defaultHeight,
-      width = _ref.width,
-      height = _ref.height;
-  var ratio = defaultHeight / defaultWidth;
-  var computedWidth = null;
-  var computedHeight = null;
+export const computeFromRatio = _ref => {
+  let {
+    defaultWidth,
+    defaultHeight,
+    width,
+    height
+  } = _ref;
+  const ratio = defaultHeight / defaultWidth;
+  let computedWidth = null;
+  let computedHeight = null;
 
   if (!width) {
     if (height) {

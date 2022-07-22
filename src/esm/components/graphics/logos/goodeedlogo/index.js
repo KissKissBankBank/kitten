@@ -1,24 +1,23 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-export var GoodeedLogo = function GoodeedLogo(_ref) {
-  var color = _ref.color,
-      width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var DEFAULT_WIDTH = 122;
-  var DEFAULT_HEIGHT = 22;
-  var computed = computeFromRatio({
+export const GoodeedLogo = _ref => {
+  let {
+    color,
+    width,
+    height,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 122;
+  const DEFAULT_HEIGHT = 22;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

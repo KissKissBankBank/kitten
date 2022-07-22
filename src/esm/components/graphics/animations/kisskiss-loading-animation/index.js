@@ -1,24 +1,23 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "svgProps"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import classNames from 'classnames';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
-var animation = '1.6s ease-in-out 0s infinite';
-var heartAnim = keyframes(["0%{transform:translateX(0);}20%,30%{transform:translateX(", ");}50%,100%{transform:translateX(0);}"], pxToRem(7));
-var circleAnim = keyframes(["0%,5%{transform:rotate(0deg);}46%,100%{transform:rotate(360deg);}"]);
-var StyledLoadingAnimation = styled.div.withConfig({
+const animation = '1.6s ease-in-out 0s infinite';
+const heartAnim = keyframes(["0%{transform:translateX(0);}20%,30%{transform:translateX(", ");}50%,100%{transform:translateX(0);}"], pxToRem(7));
+const circleAnim = keyframes(["0%,5%{transform:rotate(0deg);}46%,100%{transform:rotate(360deg);}"]);
+const StyledLoadingAnimation = styled.div.withConfig({
   displayName: "kisskiss-loading-animation__StyledLoadingAnimation",
   componentId: "sc-l474rs-0"
 })([".k-KissKissLoadingAnimation__svg{overflow:visible;width:", ";height:", ";}.k-KissKissLoadingAnimation__path-heart{animation:", " ", ";backface-visibility:hidden;}.k-KissKissLoadingAnimation__path-circle{animation:", " ", ";transform-origin:", " ", ";backface-visibility:hidden;}"], pxToRem(21), pxToRem(16), animation, heartAnim, animation, circleAnim, pxToRem(8), pxToRem(8));
-export var KissKissLoadingAnimation = function KissKissLoadingAnimation(_ref) {
-  var color = _ref.color,
-      svgProps = _ref.svgProps,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const KissKissLoadingAnimation = _ref => {
+  let {
+    color,
+    svgProps,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledLoadingAnimation, _extends({
     "aria-hidden": true
   }, props, {

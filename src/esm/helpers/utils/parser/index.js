@@ -2,7 +2,7 @@ import HtmlToReact from 'html-to-react';
 import DOMPurify from 'dompurify';
 import { domElementHelper } from '../../dom/element-helper'; // We add a span to make parseHtml works with strings.
 
-export var parseHtml = function parseHtml(value, options) {
+export const parseHtml = function (value, options) {
   if (options === void 0) {
     options = {
       sanitize: true
@@ -11,7 +11,7 @@ export var parseHtml = function parseHtml(value, options) {
 
   if (!value) return; // We need to escape "<3" common emoji
 
-  var clean = typeof value === 'string' ? value.replace('<3', '&lt;3') : value;
+  let clean = typeof value === 'string' ? value.replace('<3', '&lt;3') : value;
 
   if (options.sanitize) {
     clean = domElementHelper.canUseDom() ? DOMPurify.sanitize(clean) : '';

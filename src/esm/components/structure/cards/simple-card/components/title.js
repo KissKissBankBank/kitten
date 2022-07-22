@@ -5,9 +5,11 @@ import classNames from 'classnames';
 import { parseHtml } from '../../../../../helpers/utils/parser';
 import { Title as TitleComponent } from '../../../../typography/title';
 import { Marger } from '../../../../layout/marger';
-export var Title = function Title(_ref) {
-  var title = _ref.title,
-      titleProps = _ref.titleProps;
+export const Title = _ref => {
+  let {
+    title,
+    titleProps
+  } = _ref;
   return /*#__PURE__*/React.createElement(Marger, {
     top: "2",
     bottom: ".3"

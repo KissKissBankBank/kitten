@@ -7,8 +7,6 @@ exports.EmbedPlayer = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -25,36 +23,33 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _playerIconNext = require("../../../components/graphics/icons-next/player-icon-next");
 
-var _excluded = ["ratio", "previewProps", "iframeHtml", "playButtonLabel", "className"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledEmbedPlayer = _styledComponents.default.div.withConfig({
+const StyledEmbedPlayer = _styledComponents.default.div.withConfig({
   displayName: "embed-player__StyledEmbedPlayer",
   componentId: "sc-15ix1ty-0"
 })(["position:relative;display:block;width:100%;background-color:", ";.k-EmbedPlayer__thumbnail{display:block;width:100%;object-fit:cover;object-position:center;}.k-EmbedPlayer__embededPlayer{position:absolute;top:0;width:100%;height:100%;}&:focus-visible{outline:auto;}.k-EmbedPlayer__button{cursor:pointer;top:0;left:0;right:0;bottom:0;width:100%;height:100%;position:absolute;transition:opacity var(--transition),z-index var(--transition);transition-delay:0s,var(--transition-timing);opacity:1;z-index:1;display:flex;align-items:center;justify-content:center;}.k-EmbedPlayer__playerPreview{position:relative;transition:opacity var(--transition),z-index var(--transition);transition-delay:0s,var(--transition-timing);z-index:1;opacity:1;}&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__button,&.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__playerPreview{opacity:0;z-index:0;}"], _colorsConfig.default.font1);
 
-var EmbedPlayer = function EmbedPlayer(_ref) {
-  var ratio = _ref.ratio,
-      _ref$previewProps = _ref.previewProps,
-      thumbnail = _ref$previewProps.thumbnail,
-      badgeComponent = _ref$previewProps.badgeComponent,
-      iframeHtml = _ref.iframeHtml,
-      playButtonLabel = _ref.playButtonLabel,
-      className = _ref.className,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const EmbedPlayer = _ref => {
+  let {
+    ratio,
+    previewProps: {
+      thumbnail,
+      badgeComponent
+    },
+    iframeHtml,
+    playButtonLabel,
+    className,
+    ...others
+  } = _ref;
+  const [isPlayerVisible, setPlayerVisibility] = (0, _react.useState)(false);
+  const previewVideo = (0, _react.useRef)(null);
+  const validRatio = parseInt(ratio, 10);
+  const hasIframeHtml = !!iframeHtml;
 
-  var _useState = (0, _react.useState)(false),
-      isPlayerVisible = _useState[0],
-      setPlayerVisibility = _useState[1];
-
-  var previewVideo = (0, _react.useRef)(null);
-  var validRatio = parseInt(ratio, 10);
-  var hasIframeHtml = !!iframeHtml;
-
-  var handleClick = function handleClick() {
+  const handleClick = () => {
     setPlayerVisibility(true);
     previewVideo.current.blur();
   };

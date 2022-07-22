@@ -75,6 +75,7 @@ export const LocationInput = ({
   name,
   loadingText,
   customInputValue,
+  id,
   ...others
 }) => {
   const [address, updateAddress] = useState(defaultValue)
@@ -112,6 +113,7 @@ export const LocationInput = ({
                 inputProps?.className,
               ),
             })}
+            id={id}
             has="icon"
             icon={<LocationIcon />}
           />

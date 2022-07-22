@@ -7,8 +7,6 @@ exports.StickyContainer = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -21,21 +19,21 @@ var _throttle = _interopRequireDefault(require("lodash/throttle"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["children", "className", "top", "bottom", "isSticky", "onChange"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledStickyContainer = _styledComponents.default.div.withConfig({
+const StyledStickyContainer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledStickyContainer",
   componentId: "sc-5q91xd-0"
-})(["will-change:transform;transition-duration:var(--transition-timing);transition-timing-function:var(--transition-timing-function);&.k-StickyContainer--alwaysSticky{position:fixed;}", ""], function (_ref) {
-  var stickyContainerStyleProps = _ref.stickyContainerStyleProps;
+})(["will-change:transform;transition-duration:var(--transition-timing);transition-timing-function:var(--transition-timing-function);&.k-StickyContainer--alwaysSticky{position:fixed;}", ""], _ref => {
+  let {
+    stickyContainerStyleProps
+  } = _ref;
   return stickyContainerStyleProps;
 });
 
-var StyledSpacer = _styledComponents.default.div.withConfig({
+const StyledSpacer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledSpacer",
   componentId: "sc-5q91xd-1"
 })(["height:var(--StickyContainer-height,0);flex:0 0 auto;"]);
@@ -49,73 +47,55 @@ function useScrollDirection() {
   //
   // See also https://www.iwakoscott.com/blog/useRef
   // save the new scroll position in state
-  var _useState = (0, _react.useState)(0),
-      scrollPos = _useState[0],
-      setScrollPos = _useState[1]; // useRef Hook to save the old scroll state.
+  const [scrollPos, setScrollPos] = (0, _react.useState)(0); // useRef Hook to save the old scroll state.
 
-
-  var oldScrollPos = (0, _react.useRef)(0);
-  (0, _react.useEffect)(function () {
-    var onScroll = function onScroll() {
+  const oldScrollPos = (0, _react.useRef)(0);
+  (0, _react.useEffect)(() => {
+    const onScroll = () => {
       setScrollPos(window.pageYOffset); // save the old scroll position in the ref
 
       oldScrollPos.current = window.pageYOffset;
     };
 
-    var scrollThrottle = (0, _throttle.default)(onScroll, 200);
+    const scrollThrottle = (0, _throttle.default)(onScroll, 200);
     window.addEventListener('scroll', scrollThrottle);
-    return function () {
-      return window.removeEventListener('scroll', scrollThrottle);
-    };
+    return () => window.removeEventListener('scroll', scrollThrottle);
   }, []); // current scroll position minus the old scroll position saved in state.
 
-  var difference = scrollPos - oldScrollPos.current;
+  const difference = scrollPos - oldScrollPos.current;
   return [difference > 0, difference < 0];
 }
 
-var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
-  var children = _ref2.children,
-      className = _ref2.className,
-      top = _ref2.top,
-      bottom = _ref2.bottom,
-      isSticky = _ref2.isSticky,
-      onChange = _ref2.onChange,
-      other = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
-  var currentStickyContainer = (0, _react.useRef)(null);
-
-  var _useState2 = (0, _react.useState)(false),
-      stuck = _useState2[0],
-      setStuckState = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(0),
-      containerHeight = _useState3[0],
-      setContainerHeight = _useState3[1];
-
-  var _useState4 = (0, _react.useState)(false),
-      currentlyUnsticking = _useState4[0],
-      setCurrentlyUnstickingState = _useState4[1];
-
-  var _useScrollDirection = useScrollDirection(),
-      scrollDirectionDown = _useScrollDirection[0],
-      scrollDirectionUp = _useScrollDirection[1];
-
-  (0, _react.useImperativeHandle)(ref, function () {
-    return {
-      setSticky: setSticky,
-      setUnsticky: setUnsticky
-    };
-  });
-  (0, _react.useEffect)(function () {
-    var currentContainerHeight = currentStickyContainer.current ? currentStickyContainer.current.clientHeight : 0;
+const StickyContainerBase = (_ref2, ref) => {
+  let {
+    children,
+    className,
+    top,
+    bottom,
+    isSticky,
+    onChange,
+    ...other
+  } = _ref2;
+  const currentStickyContainer = (0, _react.useRef)(null);
+  const [stuck, setStuckState] = (0, _react.useState)(false);
+  const [containerHeight, setContainerHeight] = (0, _react.useState)(0);
+  const [currentlyUnsticking, setCurrentlyUnstickingState] = (0, _react.useState)(false);
+  const [scrollDirectionDown, scrollDirectionUp] = useScrollDirection();
+  (0, _react.useImperativeHandle)(ref, () => ({
+    setSticky,
+    setUnsticky
+  }));
+  (0, _react.useEffect)(() => {
+    const currentContainerHeight = currentStickyContainer.current ? currentStickyContainer.current.clientHeight : 0;
     setContainerHeight(currentContainerHeight);
   }, []); // [] makes that Effect fire on Component mount only
 
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     onChange({
       isStuck: stuck || isSticky === 'always'
     });
   }, [stuck, isSticky]);
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     if (['always', 'never'].includes(isSticky)) return;
 
     if (shouldUnstickContainer()) {
@@ -127,19 +107,19 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
     }
   }, [scrollDirectionDown, scrollDirectionUp]);
 
-  var setSticky = function setSticky() {
+  const setSticky = () => {
     setStuckState(true);
   };
 
-  var setUnstickyWithTransition = function setUnstickyWithTransition() {
+  const setUnstickyWithTransition = () => {
     setCurrentlyUnstickingState(true);
-    setTimeout(function () {
+    setTimeout(() => {
       setStuckState(false);
       setCurrentlyUnstickingState(false);
     }, 220);
   };
 
-  var setUnsticky = function setUnsticky() {
+  const setUnsticky = () => {
     setStuckState(false);
   };
 
@@ -147,51 +127,50 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children);
   }
 
-  var isOriginalContainerOutOfViewport = function isOriginalContainerOutOfViewport() {
+  const isOriginalContainerOutOfViewport = () => {
     if (isSticky === 'topOnScrollUp') {
-      var distanceToBorder = top || 0;
+      const distanceToBorder = top || 0;
       return window.pageYOffset > containerHeight + distanceToBorder;
     }
 
     if (isSticky === 'bottomOnScrollDown') {
-      var _distanceToBorder = bottom || 0;
-
-      return window.pageYOffset + window.innerHeight < document.body.clientHeight - (containerHeight + _distanceToBorder);
+      const distanceToBorder = bottom || 0;
+      return window.pageYOffset + window.innerHeight < document.body.clientHeight - (containerHeight + distanceToBorder);
     }
   };
 
-  var shouldStickContainerOnTop = function shouldStickContainerOnTop() {
+  const shouldStickContainerOnTop = () => {
     return scrollDirectionUp && isSticky === 'topOnScrollUp' && isOriginalContainerOutOfViewport();
   };
 
-  var shouldStickContainerOnBottom = function shouldStickContainerOnBottom() {
+  const shouldStickContainerOnBottom = () => {
     return scrollDirectionDown && isSticky === 'bottomOnScrollDown' && isOriginalContainerOutOfViewport();
   };
 
-  var shouldStickContainer = function shouldStickContainer() {
+  const shouldStickContainer = () => {
     return shouldStickContainerOnTop() || shouldStickContainerOnBottom();
   };
 
-  var shouldUnstickContainer = function shouldUnstickContainer() {
+  const shouldUnstickContainer = () => {
     return !isOriginalContainerOutOfViewport();
   };
 
-  var shouldUnstickContainerWithTransition = function shouldUnstickContainerWithTransition() {
+  const shouldUnstickContainerWithTransition = () => {
     return scrollDirectionDown && isSticky === 'topOnScrollUp' || scrollDirectionUp && isSticky === 'bottomOnScrollDown';
   };
 
-  var stickyContainerStyleProps = function stickyContainerStyleProps() {
-    var position = stuck ? 'fixed' : 'static';
+  const stickyContainerStyleProps = () => {
+    const position = stuck ? 'fixed' : 'static';
 
     if (isSticky === 'always') {
-      var alwaysStickyStyle = top ? (0, _styledComponents.css)(["top:", ";"], (0, _typography.pxToRem)(top)) : bottom ? (0, _styledComponents.css)(["bottom:", ";"], (0, _typography.pxToRem)(bottom)) : (0, _styledComponents.css)(["top:0;"]);
+      const alwaysStickyStyle = top ? (0, _styledComponents.css)(["top:", ";"], (0, _typography.pxToRem)(top)) : bottom ? (0, _styledComponents.css)(["bottom:", ";"], (0, _typography.pxToRem)(bottom)) : (0, _styledComponents.css)(["top:0;"]);
       return alwaysStickyStyle;
     }
 
-    var distance = currentlyUnsticking || !stuck ? containerHeight : 0;
-    var directionToAnimate = isSticky === 'topOnScrollUp' ? 'top' : 'bottom';
-    var basis = directionToAnimate === 'top' ? top || 0 : bottom || 0;
-    var directionDistance = (0, _typography.pxToRem)(basis - distance);
+    const distance = currentlyUnsticking || !stuck ? containerHeight : 0;
+    const directionToAnimate = isSticky === 'topOnScrollUp' ? 'top' : 'bottom';
+    const basis = directionToAnimate === 'top' ? top || 0 : bottom || 0;
+    const directionDistance = (0, _typography.pxToRem)(basis - distance);
     return (0, _styledComponents.css)(["position:", ";", ":", ";transition-property:", ";"], position, directionToAnimate, directionDistance, directionToAnimate);
   };
 
@@ -210,10 +189,10 @@ var StickyContainerBase = function StickyContainerBase(_ref2, ref) {
   }, other), children));
 };
 
-var StickyContainer = /*#__PURE__*/(0, _react.forwardRef)(StickyContainerBase);
+const StickyContainer = /*#__PURE__*/(0, _react.forwardRef)(StickyContainerBase);
 exports.StickyContainer = StickyContainer;
 StickyContainer.defaultProps = {
-  onChange: function onChange() {}
+  onChange: () => {}
 };
 StickyContainer.propTypes = {
   top: _propTypes.default.number,

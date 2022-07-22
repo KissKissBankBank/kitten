@@ -1,85 +1,76 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["src", "onChange", "className", "initialCrop", "disabled"];
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useDrag } from '../hooks/use-drag';
 import { usePrevious } from '../../../../../helpers/hooks/use-previous';
-export var ImageCropper = function ImageCropper(_ref) {
-  var src = _ref.src,
-      onChange = _ref.onChange,
-      className = _ref.className,
-      initialCrop = _ref.initialCrop,
-      disabled = _ref.disabled,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var _useState = useState(null),
-      imageDimensions = _useState[0],
-      setImageDimensions = _useState[1];
-
-  var _useState2 = useState(null),
-      scaledInitialCrop = _useState2[0],
-      setScaledInitialCrop = _useState2[1];
-
-  useEffect(function () {
+export const ImageCropper = _ref => {
+  let {
+    src,
+    onChange,
+    className,
+    initialCrop,
+    disabled,
+    ...props
+  } = _ref;
+  const [imageDimensions, setImageDimensions] = useState(null);
+  const [scaledInitialCrop, setScaledInitialCrop] = useState(null);
+  useEffect(() => {
     if (!initialCrop || !imageDimensions) return;
     setScaledInitialCrop({
       x: -1 * Math.round(initialCrop.x / imageDimensions.scaleRatio),
       y: -1 * Math.round(initialCrop.y / imageDimensions.scaleRatio)
     });
   }, [imageDimensions, initialCrop]);
-
-  var _useDrag = useDrag({
+  const {
+    cropZoneProps,
+    imagePosition,
+    liveImagePosition,
+    isDragging
+  } = useDrag({
     startingPosition: scaledInitialCrop,
-    imageDimensions: imageDimensions,
-    disabled: disabled
-  }),
-      cropZoneProps = _useDrag.cropZoneProps,
-      imagePosition = _useDrag.imagePosition,
-      liveImagePosition = _useDrag.liveImagePosition,
-      isDragging = _useDrag.isDragging;
-
-  var previousImagePosition = usePrevious(imagePosition);
-  useEffect(function () {
+    imageDimensions,
+    disabled
+  });
+  const previousImagePosition = usePrevious(imagePosition);
+  useEffect(() => {
     if (!imageDimensions) return;
     if ((previousImagePosition == null ? void 0 : previousImagePosition.x) === imagePosition.x && (previousImagePosition == null ? void 0 : previousImagePosition.y) === imagePosition.y) return;
-    var cropValue = {
+    const cropValue = {
       x: Math.round(Math.abs(imagePosition.x * imageDimensions.scaleRatio)),
       y: Math.round(Math.abs(imagePosition.y * imageDimensions.scaleRatio)),
       width: Math.round(imageDimensions.containedSize.width * imageDimensions.scaleRatio),
       height: Math.round(imageDimensions.containedSize.height * imageDimensions.scaleRatio)
     };
-    var cropPercent = {
+    const cropPercent = {
       x: Math.abs(imagePosition.x) * 100 / Math.abs(imageDimensions.containedSize.width - imageDimensions.scaledSize.width || 1),
       y: Math.abs(imagePosition.y) * 100 / Math.abs(imageDimensions.containedSize.height - imageDimensions.scaledSize.height || 1)
     };
     onChange({
-      cropValue: cropValue,
-      imagePosition: imagePosition,
-      cropPercent: cropPercent
+      cropValue,
+      imagePosition,
+      cropPercent
     });
   }, [imagePosition]);
 
-  var getRatio = function getRatio(size) {
-    return size.height / size.width;
-  };
+  const getRatio = size => size.height / size.width;
 
-  var handleImageLoad = function handleImageLoad(e) {
-    var naturalSize = {
+  const handleImageLoad = e => {
+    const naturalSize = {
       width: e.target.naturalWidth,
       height: e.target.naturalHeight
     };
-    var containedSize = {
+    const containedSize = {
       width: e.target.width,
       height: e.target.height
     };
-    var scaledSize = {
+    let scaledSize = {
       width: 0,
       height: 0
     };
 
     if (getRatio(naturalSize) === getRatio(containedSize)) {
-      scaledSize = _extends({}, containedSize);
+      scaledSize = { ...containedSize
+      };
     } else if (getRatio(naturalSize) > getRatio(containedSize)) {
       scaledSize = {
         width: e.target.width,
@@ -92,12 +83,12 @@ export var ImageCropper = function ImageCropper(_ref) {
       };
     }
 
-    var scaleRatio = naturalSize.width / scaledSize.width;
+    const scaleRatio = naturalSize.width / scaledSize.width;
     setImageDimensions({
-      naturalSize: naturalSize,
-      containedSize: containedSize,
-      scaledSize: scaledSize,
-      scaleRatio: scaleRatio
+      naturalSize,
+      containedSize,
+      scaledSize,
+      scaleRatio
     });
   };
 

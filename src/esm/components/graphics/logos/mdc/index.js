@@ -1,23 +1,22 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-export var MaisonDeCrowdfundingLogo = function MaisonDeCrowdfundingLogo(_ref) {
-  var width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var DEFAULT_WIDTH = 203.3;
-  var DEFAULT_HEIGHT = 46.4;
-  var computed = computeFromRatio({
+export const MaisonDeCrowdfundingLogo = _ref => {
+  let {
+    width,
+    height,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 203.3;
+  const DEFAULT_HEIGHT = 46.4;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

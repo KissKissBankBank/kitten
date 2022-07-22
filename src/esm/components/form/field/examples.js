@@ -1,18 +1,20 @@
 import React from 'react';
 import { Field } from '.';
 
-var FieldBase = function FieldBase(_ref) {
-  var tooltip = _ref.tooltip,
-      tooltipId = _ref.tooltipId,
-      tooltipProps = _ref.tooltipProps,
-      label = _ref.label,
-      id = _ref.id,
-      error = _ref.error,
-      errorMessage = _ref.errorMessage,
-      help = _ref.help,
-      helpHiddenOnBlur = _ref.helpHiddenOnBlur,
-      children = _ref.children,
-      tag = _ref.tag;
+const FieldBase = _ref => {
+  let {
+    tooltip,
+    tooltipId,
+    tooltipProps,
+    label,
+    id,
+    error,
+    errorMessage,
+    help,
+    helpHiddenOnBlur,
+    children,
+    tag
+  } = _ref;
   return /*#__PURE__*/React.createElement(Field, {
     tag: tag
   }, /*#__PURE__*/React.createElement(Field.Label, {
@@ -27,22 +29,24 @@ var FieldBase = function FieldBase(_ref) {
   }, help));
 };
 
-export var FieldInputExample = function FieldInputExample(_ref2) {
-  var id = _ref2.id,
-      label = _ref2.label,
-      tooltip = _ref2.tooltip,
-      tooltipId = _ref2.tooltipId,
-      tooltipProps = _ref2.tooltipProps,
-      placeholder = _ref2.placeholder,
-      error = _ref2.error,
-      errorMessage = _ref2.errorMessage,
-      help = _ref2.help,
-      helpHiddenOnBlur = _ref2.helpHiddenOnBlur,
-      limit = _ref2.limit,
-      unit = _ref2.unit,
-      size = _ref2.size,
-      noMargin = _ref2.noMargin,
-      tag = _ref2.tag;
+export const FieldInputExample = _ref2 => {
+  let {
+    id,
+    label,
+    tooltip,
+    tooltipId,
+    tooltipProps,
+    placeholder,
+    error,
+    errorMessage,
+    help,
+    helpHiddenOnBlur,
+    limit,
+    unit,
+    size,
+    noMargin,
+    tag
+  } = _ref2;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -65,19 +69,21 @@ export var FieldInputExample = function FieldInputExample(_ref2) {
     noMargin: noMargin
   }));
 };
-export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
-  var id = _ref3.id,
-      label = _ref3.label,
-      tooltip = _ref3.tooltip,
-      tooltipId = _ref3.tooltipId,
-      tooltipProps = _ref3.tooltipProps,
-      placeholder = _ref3.placeholder,
-      error = _ref3.error,
-      errorMessage = _ref3.errorMessage,
-      help = _ref3.help,
-      helpHiddenOnBlur = _ref3.helpHiddenOnBlur,
-      size = _ref3.size,
-      tag = _ref3.tag;
+export const FieldPasswordExample = _ref3 => {
+  let {
+    id,
+    label,
+    tooltip,
+    tooltipId,
+    tooltipProps,
+    placeholder,
+    error,
+    errorMessage,
+    help,
+    helpHiddenOnBlur,
+    size,
+    tag
+  } = _ref3;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -99,18 +105,20 @@ export var FieldPasswordExample = function FieldPasswordExample(_ref3) {
     error: error
   }));
 };
-export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
-  var id = _ref4.id,
-      label = _ref4.label,
-      tooltip = _ref4.tooltip,
-      tooltipId = _ref4.tooltipId,
-      tooltipProps = _ref4.tooltipProps,
-      items = _ref4.items,
-      error = _ref4.error,
-      errorMessage = _ref4.errorMessage,
-      help = _ref4.help,
-      helpHiddenOnBlur = _ref4.helpHiddenOnBlur,
-      tag = _ref4.tag;
+export const FieldRadioButtonSetExample = _ref4 => {
+  let {
+    id,
+    label,
+    tooltip,
+    tooltipId,
+    tooltipProps,
+    items,
+    error,
+    errorMessage,
+    help,
+    helpHiddenOnBlur,
+    tag
+  } = _ref4;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -128,18 +136,20 @@ export var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref
     error: error
   }));
 };
-export var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
-  var id = _ref5.id,
-      label = _ref5.label,
-      tooltip = _ref5.tooltip,
-      tooltipId = _ref5.tooltipId,
-      tooltipProps = _ref5.tooltipProps,
-      items = _ref5.items,
-      error = _ref5.error,
-      errorMessage = _ref5.errorMessage,
-      help = _ref5.help,
-      helpHiddenOnBlur = _ref5.helpHiddenOnBlur,
-      tag = _ref5.tag;
+export const FieldRadioSetExample = _ref5 => {
+  let {
+    id,
+    label,
+    tooltip,
+    tooltipId,
+    tooltipProps,
+    items,
+    error,
+    errorMessage,
+    help,
+    helpHiddenOnBlur,
+    tag
+  } = _ref5;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,
@@ -157,20 +167,22 @@ export var FieldRadioSetExample = function FieldRadioSetExample(_ref5) {
     error: error
   }));
 };
-export var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
-  var id = _ref6.id,
-      label = _ref6.label,
-      tooltip = _ref6.tooltip,
-      tooltipId = _ref6.tooltipId,
-      tooltipProps = _ref6.tooltipProps,
-      placeholder = _ref6.placeholder,
-      error = _ref6.error,
-      errorMessage = _ref6.errorMessage,
-      help = _ref6.help,
-      helpHiddenOnBlur = _ref6.helpHiddenOnBlur,
-      items = _ref6.items,
-      size = _ref6.size,
-      tag = _ref6.tag;
+export const FieldAutocompleteExample = _ref6 => {
+  let {
+    id,
+    label,
+    tooltip,
+    tooltipId,
+    tooltipProps,
+    placeholder,
+    error,
+    errorMessage,
+    help,
+    helpHiddenOnBlur,
+    items,
+    size,
+    tag
+  } = _ref6;
   return /*#__PURE__*/React.createElement(FieldBase, {
     id: id,
     label: label,

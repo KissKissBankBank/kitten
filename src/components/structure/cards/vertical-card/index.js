@@ -7,8 +7,6 @@ exports.VerticalCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -27,35 +25,36 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["imageProps", "title", "titleTag", "description", "descriptionTag", "withTitleStroke", "textAlign"],
-    _excluded2 = ["style"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var Img = _styledComponents.default.img.withConfig({
+const Img = _styledComponents.default.img.withConfig({
   displayName: "vertical-card__Img",
   componentId: "sc-1myvu7f-0"
-})(["width:100%;display:block;margin-bottom:", ";", ""], (0, _typography.pxToRem)(30), function (_ref) {
-  var styles = _ref.styles;
+})(["width:100%;display:block;margin-bottom:", ";", ""], (0, _typography.pxToRem)(30), _ref => {
+  let {
+    styles
+  } = _ref;
   return styles && (0, _styledComponents.css)(["", ""], styles);
 });
 
-var Card = _styledComponents.default.div.withConfig({
+const Card = _styledComponents.default.div.withConfig({
   displayName: "vertical-card__Card",
   componentId: "sc-1myvu7f-1"
-})(["color:", ";", ""], _colorsConfig.default.font1, function (_ref2) {
-  var textAlign = _ref2.textAlign;
+})(["color:", ";", ""], _colorsConfig.default.font1, _ref2 => {
+  let {
+    textAlign
+  } = _ref2;
   return textAlign && (0, _styledComponents.css)(["text-align:", ";"], textAlign);
 });
 
-var StyledHorizontalStroke = (0, _styledComponents.default)(_horizontalStroke.HorizontalStroke).withConfig({
+const StyledHorizontalStroke = (0, _styledComponents.default)(_horizontalStroke.HorizontalStroke).withConfig({
   displayName: "vertical-card__StyledHorizontalStroke",
   componentId: "sc-1myvu7f-2"
 })(["margin-top:", ";margin-bottom:", ";width:", ";"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30));
 
-var justifyContent = function justifyContent(align) {
+const justifyContent = align => {
   switch (align) {
     case 'left':
       return 'flex-start';
@@ -68,25 +67,31 @@ var justifyContent = function justifyContent(align) {
   }
 };
 
-var StrokePosition = _styledComponents.default.div.withConfig({
+const StrokePosition = _styledComponents.default.div.withConfig({
   displayName: "vertical-card__StrokePosition",
   componentId: "sc-1myvu7f-3"
-})(["", ""], function (_ref3) {
-  var selfAlign = _ref3.selfAlign;
+})(["", ""], _ref3 => {
+  let {
+    selfAlign
+  } = _ref3;
   return selfAlign && (0, _styledComponents.css)(["display:flex;justify-content:", ";"], justifyContent(selfAlign));
 });
 
-var VerticalCard = function VerticalCard(_ref4) {
-  var imageProps = _ref4.imageProps,
-      title = _ref4.title,
-      titleTag = _ref4.titleTag,
-      description = _ref4.description,
-      descriptionTag = _ref4.descriptionTag,
-      withTitleStroke = _ref4.withTitleStroke,
-      textAlign = _ref4.textAlign,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded);
-  var style = imageProps.style,
-      imgProps = (0, _objectWithoutPropertiesLoose2.default)(imageProps, _excluded2);
+const VerticalCard = _ref4 => {
+  let {
+    imageProps,
+    title,
+    titleTag,
+    description,
+    descriptionTag,
+    withTitleStroke,
+    textAlign,
+    ...others
+  } = _ref4;
+  const {
+    style,
+    ...imgProps
+  } = imageProps;
   return /*#__PURE__*/_react.default.createElement(Card, (0, _extends2.default)({
     textAlign: textAlign
   }, others), /*#__PURE__*/_react.default.createElement(Img, (0, _extends2.default)({}, imgProps, {

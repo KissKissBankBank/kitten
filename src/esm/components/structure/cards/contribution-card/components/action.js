@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["isInputValid", "title", "className"];
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -8,15 +6,16 @@ import { Button } from '../../../../action/button';
 import { CheckedCircleIcon } from '../../../../graphics/icons/checked-circle-icon';
 import COLORS from '../../../../../constants/colors-config';
 import { Context } from '../context';
-export var Action = function Action(_ref) {
-  var isInputValid = _ref.isInputValid,
-      title = _ref.title,
-      className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var _useContext = useContext(Context),
-      isInputEmpty = _useContext.isInputEmpty;
-
+export const Action = _ref => {
+  let {
+    isInputValid,
+    title,
+    className,
+    ...props
+  } = _ref;
+  const {
+    isInputEmpty
+  } = useContext(Context);
   return /*#__PURE__*/React.createElement(React.Fragment, null, isInputValid ? /*#__PURE__*/React.createElement(CheckedCircleIcon, {
     bgColor: COLORS.valid,
     color: COLORS.background1,

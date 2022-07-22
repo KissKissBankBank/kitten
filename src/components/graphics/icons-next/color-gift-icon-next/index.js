@@ -7,19 +7,17 @@ exports.ColorGiftIconNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _excluded = ["color", "secondaryColor", "title"];
-
-var ColorGiftIconNext = function ColorGiftIconNext(_ref) {
-  var color = _ref.color,
-      secondaryColor = _ref.secondaryColor,
-      title = _ref.title,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const ColorGiftIconNext = _ref => {
+  let {
+    color,
+    secondaryColor,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "30",
     height: "30",

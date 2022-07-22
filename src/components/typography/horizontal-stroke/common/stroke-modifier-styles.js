@@ -9,7 +9,7 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var strokeModifiers = [{
+const strokeModifiers = [{
   name: 'primary',
   mobile: {
     width: 40,
@@ -151,26 +151,22 @@ var strokeModifiers = [{
   }
 }];
 
-var strokeModifierStyles = function strokeModifierStyles(prefix) {
-  return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height), (0, _typography.pxToRem)(key.mobile.top), (0, _typography.pxToRem)(key.mobile.bottom));
-  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height), (0, _typography.pxToRem)(key.tablet.top), (0, _typography.pxToRem)(key.tablet.bottom));
-  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height), (0, _typography.pxToRem)(key.desktop.top), (0, _typography.pxToRem)(key.desktop.bottom));
-  }));
-};
+const strokeModifierStyles = prefix => (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], strokeModifiers.map(key => {
+  return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height), (0, _typography.pxToRem)(key.mobile.top), (0, _typography.pxToRem)(key.mobile.bottom));
+}), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), strokeModifiers.map(key => {
+  return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height), (0, _typography.pxToRem)(key.tablet.top), (0, _typography.pxToRem)(key.tablet.bottom));
+}), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), strokeModifiers.map(key => {
+  return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height), (0, _typography.pxToRem)(key.desktop.top), (0, _typography.pxToRem)(key.desktop.bottom));
+}));
 
 exports.strokeModifierStyles = strokeModifierStyles;
 
-var strokeModifierStylesWithoutMargin = function strokeModifierStylesWithoutMargin(prefix) {
-  return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height));
-  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height));
-  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height));
-  }));
-};
+const strokeModifierStylesWithoutMargin = prefix => (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], strokeModifiers.map(key => {
+  return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height));
+}), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), strokeModifiers.map(key => {
+  return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height));
+}), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), strokeModifiers.map(key => {
+  return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], prefix + "--" + key.name, (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height));
+}));
 
 exports.strokeModifierStylesWithoutMargin = strokeModifierStylesWithoutMargin;

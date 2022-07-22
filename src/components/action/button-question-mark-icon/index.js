@@ -13,17 +13,15 @@ var _button = require("../../action/button");
 
 var _questionMarkIcon = require("../../graphics/icons/question-mark-icon");
 
-var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
-    modifier: "helium",
-    size: "nano",
-    rounded: true,
-    fit: "icon",
-    type: "button"
-  }, props), /*#__PURE__*/_react.default.createElement(_questionMarkIcon.QuestionMarkIcon, {
-    width: "10",
-    height: "10"
-  }));
-};
+const ButtonQuestionMarkIcon = props => /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
+  modifier: "helium",
+  size: "nano",
+  rounded: true,
+  fit: "icon",
+  type: "button"
+}, props), /*#__PURE__*/_react.default.createElement(_questionMarkIcon.QuestionMarkIcon, {
+  width: "10",
+  height: "10"
+}));
 
 exports.ButtonQuestionMarkIcon = ButtonQuestionMarkIcon;

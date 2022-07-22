@@ -9,10 +9,10 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var modifierStyles = function modifierStyles(modifier) {
-  var fontStepOnMobile;
-  var fontStepOnTablet;
-  var fontStepOnDesktop;
+const modifierStyles = modifier => {
+  let fontStepOnMobile;
+  let fontStepOnTablet;
+  let fontStepOnDesktop;
 
   switch (modifier) {
     case 'primary':

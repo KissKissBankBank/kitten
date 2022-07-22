@@ -6,7 +6,7 @@ exports.domEvents = exports.dispatchEvent = exports.default = exports.TOGGLE_DRO
 /**
  * @module '../../helpers/dom/events'
  */
-var domEvents = {
+const domEvents = {
   /**
    * Object for mapping keyboard keys to browser's keyCode
    */
@@ -23,46 +23,44 @@ var domEvents = {
     esc: 27,
     space: 32,
     enter: 13,
-    shiftTab: function shiftTab(event) {
+    shiftTab: event => {
       return event.keyCode === domEvents.keyboard.tab && event.shiftKey;
     }
   }
 }; // Accessibility events
 
 exports.domEvents = domEvents;
-var A11Y_EVENT = 'accessibility';
+const A11Y_EVENT = 'accessibility';
 exports.A11Y_EVENT = A11Y_EVENT;
-var FOCUS_EVENT = 'focus';
+const FOCUS_EVENT = 'focus';
 exports.FOCUS_EVENT = FOCUS_EVENT;
-var A11Y_FIRST_FOCUS_REACHED_EVENT = A11Y_EVENT + ":" + FOCUS_EVENT + ":firstElementReached";
+const A11Y_FIRST_FOCUS_REACHED_EVENT = A11Y_EVENT + ":" + FOCUS_EVENT + ":firstElementReached";
 exports.A11Y_FIRST_FOCUS_REACHED_EVENT = A11Y_FIRST_FOCUS_REACHED_EVENT;
-var A11Y_LAST_FOCUS_REACHED_EVENT = A11Y_EVENT + ":" + FOCUS_EVENT + ":lastElementReached"; // Dropdown events
+const A11Y_LAST_FOCUS_REACHED_EVENT = A11Y_EVENT + ":" + FOCUS_EVENT + ":lastElementReached"; // Dropdown events
 
 exports.A11Y_LAST_FOCUS_REACHED_EVENT = A11Y_LAST_FOCUS_REACHED_EVENT;
-var DROPDOWN_EVENT = 'dropdown';
+const DROPDOWN_EVENT = 'dropdown';
 exports.DROPDOWN_EVENT = DROPDOWN_EVENT;
-var TOGGLE_DROPDOWN_EVENT = DROPDOWN_EVENT + ":toggle:trigger";
+const TOGGLE_DROPDOWN_EVENT = DROPDOWN_EVENT + ":toggle:trigger";
 exports.TOGGLE_DROPDOWN_EVENT = TOGGLE_DROPDOWN_EVENT;
-var DROPDOWN_FIRST_FOCUS_REACHED_EVENT = DROPDOWN_EVENT + ":" + FOCUS_EVENT + ":firstElementReached";
+const DROPDOWN_FIRST_FOCUS_REACHED_EVENT = DROPDOWN_EVENT + ":" + FOCUS_EVENT + ":firstElementReached";
 exports.DROPDOWN_FIRST_FOCUS_REACHED_EVENT = DROPDOWN_FIRST_FOCUS_REACHED_EVENT;
-var DROPDOWN_LAST_FOCUS_REACHED_EVENT = DROPDOWN_EVENT + ":" + FOCUS_EVENT + ":lastElementReached"; // DashboardLayout events
+const DROPDOWN_LAST_FOCUS_REACHED_EVENT = DROPDOWN_EVENT + ":" + FOCUS_EVENT + ":lastElementReached"; // DashboardLayout events
 
 exports.DROPDOWN_LAST_FOCUS_REACHED_EVENT = DROPDOWN_LAST_FOCUS_REACHED_EVENT;
-var DASHBOARD_HIDE_CONTENT_EVENT = 'dashboard:content:hide';
+const DASHBOARD_HIDE_CONTENT_EVENT = 'dashboard:content:hide';
 exports.DASHBOARD_HIDE_CONTENT_EVENT = DASHBOARD_HIDE_CONTENT_EVENT;
-var DASHBOARD_SHOW_CONTENT_EVENT = 'dashboard:content:show';
+const DASHBOARD_SHOW_CONTENT_EVENT = 'dashboard:content:show';
 exports.DASHBOARD_SHOW_CONTENT_EVENT = DASHBOARD_SHOW_CONTENT_EVENT;
 
-var dispatchEvent = function dispatchEvent(eventName, detail) {
-  return function (root) {
-    if (root === void 0) {
-      root = window;
-    }
+const dispatchEvent = (eventName, detail) => function (root) {
+  if (root === void 0) {
+    root = window;
+  }
 
-    return detail ? root.dispatchEvent(new CustomEvent(eventName, {
-      detail: detail
-    })) : root.dispatchEvent(new Event(eventName));
-  };
+  return detail ? root.dispatchEvent(new CustomEvent(eventName, {
+    detail
+  })) : root.dispatchEvent(new Event(eventName));
 }; // DEPRECATED: do not use default export.
 
 

@@ -1,15 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["title", "color", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var LoginIcon = function LoginIcon(_ref) {
-  var title = _ref.title,
-      color = _ref.color,
-      width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const LoginIcon = _ref => {
+  let {
+    title,
+    color,
+    width,
+    height,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     role: "img",
     "aria-label": title,

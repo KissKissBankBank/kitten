@@ -1,12 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["title"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var GoogleIconNext = function GoogleIconNext(_ref) {
-  var title = _ref.title,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const GoogleIconNext = _ref => {
+  let {
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "24",
     height: "24",

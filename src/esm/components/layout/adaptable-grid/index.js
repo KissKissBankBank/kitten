@@ -1,24 +1,23 @@
-import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "col", "offset", "as", "className"];
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { NUM_COLUMNS, GUTTER } from '../../../constants/grid-config';
 import { ScreenConfig } from '../../../constants/screen-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-var GridProperties = /*#__PURE__*/createContext({});
-export var AdaptableGrid = function AdaptableGrid(_ref) {
-  var children = _ref.children,
-      gutter = _ref.gutter,
-      colNumber = _ref.colNumber,
-      colAlign = _ref.colAlign,
-      as = _ref.as,
-      className = _ref.className;
-  var gridProperties = {
-    colAlign: colAlign,
-    colNumber: colNumber,
-    gutter: gutter
+const GridProperties = /*#__PURE__*/createContext({});
+export const AdaptableGrid = _ref => {
+  let {
+    children,
+    gutter,
+    colNumber,
+    colAlign,
+    as,
+    className
+  } = _ref;
+  const gridProperties = {
+    colAlign,
+    colNumber,
+    gutter
   };
   return /*#__PURE__*/React.createElement(StyledGrid, {
     gutter: gutter,
@@ -29,31 +28,29 @@ export var AdaptableGrid = function AdaptableGrid(_ref) {
     value: gridProperties
   }, children));
 };
-export var AdaptableGridCol = function AdaptableGridCol(_ref2) {
-  var children = _ref2.children,
-      col = _ref2.col,
-      offset = _ref2.offset,
-      as = _ref2.as,
-      className = _ref2.className,
-      other = _objectWithoutPropertiesLoose(_ref2, _excluded);
-
-  var _useState = useState(null),
-      styles = _useState[0],
-      setStyles = _useState[1];
-
-  var _useContext = useContext(GridProperties),
-      colAlign = _useContext.colAlign,
-      colNumber = _useContext.colNumber,
-      gutter = _useContext.gutter;
-
-  var marginDirection = colAlign === 'right' ? 'right' : 'left';
-  useEffect(function () {
-    var props = _extends({}, other);
-
-    var stylesByMediaQuery = Object.keys(ScreenConfig).map(function (size) {
-      var mediaQuery = size.toLowerCase();
-      var col = props["col-" + mediaQuery];
-      var offset = props["offset-" + mediaQuery];
+export const AdaptableGridCol = _ref2 => {
+  let {
+    children,
+    col,
+    offset,
+    as,
+    className,
+    ...other
+  } = _ref2;
+  const [styles, setStyles] = useState(null);
+  const {
+    colAlign,
+    colNumber,
+    gutter
+  } = useContext(GridProperties);
+  const marginDirection = colAlign === 'right' ? 'right' : 'left';
+  useEffect(() => {
+    const props = { ...other
+    };
+    const stylesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+      const mediaQuery = size.toLowerCase();
+      const col = props["col-" + mediaQuery];
+      const offset = props["offset-" + mediaQuery];
 
       if (!col && !offset) {
         return false;
@@ -70,7 +67,8 @@ export var AdaptableGridCol = function AdaptableGridCol(_ref2) {
     colNumber: colNumber,
     colAlign: colAlign,
     marginDirection: marginDirection,
-    props: _extends({}, other),
+    props: { ...other
+    },
     stylesByMediaQuery: styles,
     as: as,
     className: className
@@ -86,39 +84,55 @@ AdaptableGrid.defaultProps = {
   colNumber: NUM_COLUMNS,
   colAlign: 'left'
 };
-var StyledGrid = styled.div.withConfig({
+const StyledGrid = styled.div.withConfig({
   displayName: "adaptable-grid__StyledGrid",
   componentId: "sc-1x0ouju-0"
-})(["box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:", ";margin-left:", ";margin-right:", ";"], function (_ref3) {
-  var colAlign = _ref3.colAlign;
+})(["box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:", ";margin-left:", ";margin-right:", ";"], _ref3 => {
+  let {
+    colAlign
+  } = _ref3;
   return colAlign;
-}, function (_ref4) {
-  var gutter = _ref4.gutter;
+}, _ref4 => {
+  let {
+    gutter
+  } = _ref4;
   return pxToRem(-gutter / 2);
-}, function (_ref5) {
-  var gutter = _ref5.gutter;
+}, _ref5 => {
+  let {
+    gutter
+  } = _ref5;
   return pxToRem(-gutter / 2);
 });
-var StyledGridCol = styled.div.withConfig({
+const StyledGridCol = styled.div.withConfig({
   displayName: "adaptable-grid__StyledGridCol",
   componentId: "sc-1x0ouju-1"
-})(["display:block;box-sizing:border-box;padding-left:", ";padding-right:", ";flex:0 0 auto;width:", "%;", " ", ""], function (_ref6) {
-  var gutter = _ref6.gutter;
+})(["display:block;box-sizing:border-box;padding-left:", ";padding-right:", ";flex:0 0 auto;width:", "%;", " ", ""], _ref6 => {
+  let {
+    gutter
+  } = _ref6;
   return pxToRem(gutter / 2);
-}, function (_ref7) {
-  var gutter = _ref7.gutter;
+}, _ref7 => {
+  let {
+    gutter
+  } = _ref7;
   return pxToRem(gutter / 2);
-}, function (_ref8) {
-  var col = _ref8.col,
-      colNumber = _ref8.colNumber;
+}, _ref8 => {
+  let {
+    col,
+    colNumber
+  } = _ref8;
   return col * 100 / colNumber;
-}, function (_ref9) {
-  var offset = _ref9.offset,
-      colNumber = _ref9.colNumber,
-      marginDirection = _ref9.marginDirection;
+}, _ref9 => {
+  let {
+    offset,
+    colNumber,
+    marginDirection
+  } = _ref9;
   if (!offset) return;
   return css(["margin-", ":", "%;"], marginDirection, offset * 100 / colNumber);
-}, function (_ref10) {
-  var stylesByMediaQuery = _ref10.stylesByMediaQuery;
+}, _ref10 => {
+  let {
+    stylesByMediaQuery
+  } = _ref10;
   return stylesByMediaQuery;
 });
