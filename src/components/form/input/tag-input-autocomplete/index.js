@@ -276,7 +276,7 @@ const TagInputAutocomplete = _ref => {
     }, "Retirer ", itemValue, " de la liste."), /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
       color: "currentColor"
     })));
-  })), showSuggestions && suggestionsList.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_autocomplete.StyledSuggestionsList, {
+  })), showSuggestions && suggestionsList.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_autocomplete.StyledAutocompleteSuggestions, {
     ref: suggestionsEl,
     id: id + "-results",
     role: "listbox",
