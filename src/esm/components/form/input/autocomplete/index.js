@@ -16,7 +16,11 @@ export const maxVisibleSuggestions = 3;
 const Wrapper = styled.div.withConfig({
   displayName: "autocomplete__Wrapper",
   componentId: "sc-1bpe1y1-0"
-})(["position:relative;.k-Form-Autocomplete__input{width:100%;}.k-Form-Autocomplete__suggestions{box-sizing:border-box;position:absolute;top:calc(100% + ", ");left:", ";right:", ";display:flex;flex-direction:column;gap:", ";overflow-y:auto;margin:0;padding:", ";background:var(--color-grey-000);border:var(--border-width) solid var(--color-grey-400);border-radius:var(--border-radius-m);list-style:none;max-height:calc( ", " + (min(2,(var(--Autocomplete-suggestions) - 1)) * ", ") );.k-Form-Autocomplete__suggestion__item{box-sizing:border-box;height:", ";padding:", " ", ";border-radius:var(--border-radius-s);", ";font-size:", ";line-height:", ";color:var(--color-grey-900);&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color var(--transition);:hover,:focus,:active{background-color:var(--color-grey-200);}&[aria-selected='true']{background-color:var(--color-grey-300);}}}}"], pxToRem(5), pxToRem(-1), pxToRem(-1), pxToRem(2), pxToRem(1), pxToRem(4 + 34 * maxVisibleSuggestions), pxToRem(2), pxToRem(34), pxToRem(8), pxToRem(13), TYPOGRAPHY.fontStyles['400'], stepToRem(-1), pxToRem(18));
+})(["position:relative;.k-Form-Autocomplete__input{width:100%;}"]);
+export const StyledAutocompleteSuggestions = styled.ul.withConfig({
+  displayName: "autocomplete__StyledAutocompleteSuggestions",
+  componentId: "sc-1bpe1y1-1"
+})(["box-sizing:border-box;position:absolute;top:calc(100% + ", ");left:", ";right:", ";display:flex;flex-direction:column;gap:", ";overflow-y:auto;margin:0;padding:", ";background:var(--color-grey-000);border:var(--border-width) solid var(--color-grey-400);border-radius:var(--border-radius-m);list-style:none;max-height:calc( ", " + (min(2,(var(--Autocomplete-suggestions) - 1)) * ", ") );.k-Form-Autocomplete__suggestion__item{box-sizing:border-box;height:", ";padding:", " ", ";border-radius:var(--border-radius-s);", ";font-size:", ";line-height:", ";color:var(--color-grey-900);&.k-Form-Autocomplete__suggestion__item--noresult{font-style:italic;}&:not(.k-Form-Autocomplete__suggestion__item--noresult){cursor:pointer;transition:background-color var(--transition);:hover,:focus,:active{background-color:var(--color-grey-200);}&[aria-selected='true']{background-color:var(--color-grey-300);}}}"], pxToRem(5), pxToRem(-1), pxToRem(-1), pxToRem(2), pxToRem(1), pxToRem(4 + 34 * maxVisibleSuggestions), pxToRem(2), pxToRem(34), pxToRem(8), pxToRem(13), TYPOGRAPHY.fontStyles['400'], stepToRem(-1), pxToRem(18));
 export const Autocomplete = _ref => {
   let {
     className,
@@ -164,7 +168,7 @@ export const Autocomplete = _ref => {
       width: 15,
       height: 15
     })) : null
-  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/React.createElement("ul", {
+  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/React.createElement(StyledAutocompleteSuggestions, {
     ref: suggestionsEl,
     id: props.name + "-results",
     role: "listbox",

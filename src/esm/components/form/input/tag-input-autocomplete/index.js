@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import slugify from 'slugify';
 import { CrossIcon } from '../../../graphics/icons/cross-icon';
 import { TagInput, StyledTagInputWrapper } from '../tag-input';
-import { StyledSuggestionsList } from '../autocomplete';
+import { StyledAutocompleteSuggestions } from '../autocomplete';
 export const TagInputAutocomplete = _ref => {
   let {
     placeholder,
@@ -258,7 +258,7 @@ export const TagInputAutocomplete = _ref => {
     }, "Retirer ", itemValue, " de la liste."), /*#__PURE__*/React.createElement(CrossIcon, {
       color: "currentColor"
     })));
-  })), showSuggestions && suggestionsList.length > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledSuggestionsList, {
+  })), showSuggestions && suggestionsList.length > 0 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(StyledAutocompleteSuggestions, {
     ref: suggestionsEl,
     id: id + "-results",
     role: "listbox",
