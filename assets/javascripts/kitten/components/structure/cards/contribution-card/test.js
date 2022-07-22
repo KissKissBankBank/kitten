@@ -44,7 +44,7 @@ describe('<ContributionCard />', () => {
               </ContributionCard.Description>
             </ContributionCard.Title>
 
-            <ContributionCard.Input unit="€" />
+            <ContributionCard.Input id="Input" unit="€" />
             <ContributionCard.Action>Ajouter</ContributionCard.Action>
           </ContributionCard>,
         )

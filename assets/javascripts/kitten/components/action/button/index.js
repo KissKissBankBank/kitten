@@ -268,7 +268,7 @@ export const Button = ({
       className={classNames(
         'k-Button',
         className,
-        `k-Button--${size || 'regular'}`,
+        `k-Button--${size || 'medium'}`,
         `k-Button--${internalModifier || 'hydrogen'}`,
         `k-Button--fit-${fit || 'min-width'}`,
         {

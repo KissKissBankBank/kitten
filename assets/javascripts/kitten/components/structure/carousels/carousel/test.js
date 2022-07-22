@@ -97,6 +97,158 @@ describe('<Carousel />', () => {
         </>
       ),
     },
+    {
+      status: 'normal',
+      imageProps: {
+        src: 'kitten.jpg',
+        alt: 'image alt',
+      },
+      children: (
+        <>
+          <ProjectCard.Sticker className="k-u-hidden@xs-down">
+            Prolongation
+          </ProjectCard.Sticker>
+          <ProjectCard.Title>
+            The Office, la série culte décortiquée par S!CK
+          </ProjectCard.Title>
+          <ProjectCard.Line>
+            <span>
+              par <strong>Bidules</strong>
+            </span>
+          </ProjectCard.Line>
+          <ProjectCard.Item>
+            <span>134</span>
+            <span>contributeurs</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>7 jours</span>
+            <span>restants</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>9 930 €</span>
+            <span>sur 12 000 €</span>
+          </ProjectCard.Item>
+          <ProjectCard.Progress
+            aria-label="Progrès de la campagne"
+            value={55}
+          />
+        </>
+      ),
+    },
+    {
+      status: 'success',
+      imageProps: {
+        src: 'kitten-1.jpg',
+        alt: 'image alt',
+      },
+      children: (
+        <>
+          <ProjectCard.Sticker className="k-u-hidden@xs-down">
+            Prolongation
+          </ProjectCard.Sticker>
+          <ProjectCard.Title className="custom className">
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </ProjectCard.Title>
+          <ProjectCard.Line>
+            <span>
+              par <strong>Bidules</strong>
+            </span>
+          </ProjectCard.Line>
+          <ProjectCard.Item>
+            <span>134</span>
+            <span>contributeurs</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>7 jours</span>
+            <span>restants</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>9 930 €</span>
+            <span>sur 12 000 €</span>
+          </ProjectCard.Item>
+          <ProjectCard.Progress
+            aria-label="Progrès de la campagne"
+            value={55}
+          />
+        </>
+      ),
+    },
+    {
+      status: 'normal',
+      imageProps: {
+        src: 'kitten.jpg',
+        alt: 'image alt',
+      },
+      children: (
+        <>
+          <ProjectCard.Sticker className="k-u-hidden@xs-down">
+            Prolongation
+          </ProjectCard.Sticker>
+          <ProjectCard.Title>
+            The Office, la série culte décortiquée par S!CK
+          </ProjectCard.Title>
+          <ProjectCard.Line>
+            <span>
+              par <strong>Bidules</strong>
+            </span>
+          </ProjectCard.Line>
+          <ProjectCard.Item>
+            <span>134</span>
+            <span>contributeurs</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>7 jours</span>
+            <span>restants</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>9 930 €</span>
+            <span>sur 12 000 €</span>
+          </ProjectCard.Item>
+          <ProjectCard.Progress
+            aria-label="Progrès de la campagne"
+            value={55}
+          />
+        </>
+      ),
+    },
+    {
+      status: 'success',
+      imageProps: {
+        src: 'kitten-1.jpg',
+        alt: 'image alt',
+      },
+      children: (
+        <>
+          <ProjectCard.Sticker className="k-u-hidden@xs-down">
+            Prolongation
+          </ProjectCard.Sticker>
+          <ProjectCard.Title className="custom className">
+            Pellentesque ornare sem lacinia quam venenatis vestibulum.
+          </ProjectCard.Title>
+          <ProjectCard.Line>
+            <span>
+              par <strong>Bidules</strong>
+            </span>
+          </ProjectCard.Line>
+          <ProjectCard.Item>
+            <span>134</span>
+            <span>contributeurs</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>7 jours</span>
+            <span>restants</span>
+          </ProjectCard.Item>
+          <ProjectCard.Item>
+            <span>9 930 €</span>
+            <span>sur 12 000 €</span>
+          </ProjectCard.Item>
+          <ProjectCard.Progress
+            aria-label="Progrès de la campagne"
+            value={55}
+          />
+        </>
+      ),
+    },
   ]
 
   beforeEach(() => {
@@ -116,6 +268,27 @@ describe('<Carousel />', () => {
           baseItemMarginBetween={projectCardMarginBetween}
           smallButtons={false}
           shadowSize={20}
+        >
+          {data.map((item, index) => (
+            <ProjectCard {...item} key={index} />
+          ))}
+        </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('with small buttons', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
+          smallButtons
         >
           {data.map((item, index) => (
             <ProjectCard {...item} key={index} />

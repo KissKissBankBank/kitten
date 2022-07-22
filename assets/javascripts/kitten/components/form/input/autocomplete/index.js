@@ -10,164 +10,69 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 import { Loader } from '../../../graphics/animations/loader'
+import { TextInput } from '../../../form/input/text-input'
 
 export const maxVisibleSuggestions = 3
 
 const Wrapper = styled.div`
-  display: flex;
   position: relative;
 
   .k-Form-Autocomplete__input {
-    display: block;
     width: 100%;
-    height: ${pxToRem(50)};
-    box-sizing: border-box;
-    border-radius: var(--border-radius-s);
+  }
 
-    background: ${COLORS.background1};
+  .k-Form-Autocomplete__suggestions {
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(100% + ${pxToRem(5)});
+    left: ${pxToRem(-1)};
+    right: ${pxToRem(-1)};
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(2)};
+    overflow-y: auto;
+    margin: 0;
+    padding: ${pxToRem(1)};
+
+    background: var(--color-grey-000);
     border: var(--border-width) solid var(--color-grey-400);
-    padding: 0 ${pxToRem(15)};
+    border-radius: var(--border-radius-m);
 
-    ${TYPOGRAPHY.fontStyles['400']};
-    font-size: ${stepToRem(-1)};
-    line-height: 1.3;
-    color: ${COLORS.font1};
+    list-style: none;
 
-    transition: border-color 0.4s;
+    max-height: calc(
+      ${pxToRem(4 + 34 * maxVisibleSuggestions)} +
+        (min(2, (var(--Autocomplete-suggestions) - 1)) * ${pxToRem(2)})
+    );
 
-    ::placeholder {
-      color: ${COLORS.font2};
-    }
+    .k-Form-Autocomplete__suggestion__item {
+      box-sizing: border-box;
+      height: ${pxToRem(34)};
+      padding: ${pxToRem(8)} ${pxToRem(13)};
+      border-radius: var(--border-radius-s);
 
-    ::-moz-placeholder {
-      color: ${COLORS.font2};
-    }
+      ${TYPOGRAPHY.fontStyles['400']};
+      font-size: ${stepToRem(-1)};
 
-    &:focus {
-      border-color: var(--color-grey-500);
-      outline: var(--outline-input);
-      outline-offset: var(--outline-offset-input);
-    }
-  }
-  &.k-Form-Autocomplete--error .k-Form-Autocomplete__input {
-    border: var(--border-danger);
-    color: ${COLORS.error3};
+      line-height: ${pxToRem(18)};
+      color: var(--color-grey-900);
 
-    :focus {
-      border-color: var(--color-grey-500);
-      color: ${COLORS.font1};
-    }
-  }
-
-  .k-Form-Autocomplete__loader {
-    display: flex;
-    position: absolute;
-    align-self: center;
-    padding: 0 ${pxToRem(18)};
-    z-index: 1;
-    right: 0;
-  }
-
-  .k-Form-Autocomplete__icon {
-    display: flex;
-    position: absolute;
-    align-self: center;
-    padding: 0 ${pxToRem(18)};
-    z-index: 1;
-  }
-
-  /* STATES */
-
-  &.k-Form-Autocomplete--hasIcon-left {
-    .k-Form-Autocomplete__input {
-      padding-left: ${pxToRem(45)};
-    }
-    .k-Form-Autocomplete__icon {
-      left: 0;
-    }
-  }
-
-  &.k-Form-Autocomplete--hasIcon-right {
-    .k-Form-Autocomplete__input {
-      padding-right: ${pxToRem(45)};
-    }
-    .k-Form-Autocomplete__loader {
-      padding-right: ${pxToRem(45)};
-    }
-    .k-Form-Autocomplete__icon {
-      right: 0;
-    }
-  }
-
-  &.k-Form-Autocomplete--disabled {
-    .k-Form-Autocomplete__input {
-      border: var(--color-grey-300);
-      background-color: var(--color-grey-200);
-      color: var(--color-grey-600);
-    }
-
-    .k-Form-Autocomplete__icon {
-      & > svg [stroke]:not([stroke='none']) {
-        stroke: ${COLORS.font2};
+      &.k-Form-Autocomplete__suggestion__item--noresult {
+        font-style: italic;
       }
-      & > svg [fill]:not([fill='none']) {
-        fill: ${COLORS.font2};
-      }
-    }
-  }
-`
+      &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
+        cursor: pointer;
+        transition: background-color var(--transition);
 
-export const StyledSuggestionsList = styled.ul`
-  box-sizing: border-box;
-  position: absolute;
-  top: calc(100% + ${pxToRem(5)});
-  left: ${pxToRem(-1)};
-  right: ${pxToRem(-1)};
-  display: flex;
-  flex-direction: column;
-  gap: ${pxToRem(2)};
-  overflow-y: auto;
-  margin: 0;
-  padding: ${pxToRem(1)};
+        :hover,
+        :focus,
+        :active {
+          background-color: var(--color-grey-200);
+        }
 
-  background: var(--color-grey-000);
-  border: var(--border-width) solid var(--color-grey-400);
-  border-radius: var(--border-radius-m);
-
-  list-style: none;
-
-  max-height: calc(
-    ${pxToRem(4 + 34 * maxVisibleSuggestions)} +
-      (min(2, (var(--Autocomplete-suggestions) - 1)) * ${pxToRem(2)})
-  );
-
-  .k-Form-Autocomplete__suggestion__item {
-    box-sizing: border-box;
-    height: ${pxToRem(34)};
-    padding: ${pxToRem(8)} ${pxToRem(13)};
-    border-radius: var(--border-radius-s);
-
-    ${TYPOGRAPHY.fontStyles['400']};
-    font-size: ${stepToRem(-1)};
-
-    line-height: ${pxToRem(18)};
-    color: var(--color-grey-900);
-
-    &.k-Form-Autocomplete__suggestion__item--noresult {
-      font-style: italic;
-    }
-    &:not(.k-Form-Autocomplete__suggestion__item--noresult) {
-      cursor: pointer;
-      transition: background-color var(--transition);
-
-      :hover,
-      :focus,
-      :active {
-        background-color: var(--color-grey-200);
-      }
-
-      &[aria-selected='true'] {
-        background-color: var(--color-grey-300);
+        &[aria-selected='true'] {
+          background-color: var(--color-grey-300);
+        }
       }
     }
   }
@@ -177,13 +82,11 @@ export const Autocomplete = ({
   className,
   items: defaultItems,
   label,
-  error,
   onChange,
   onBlur,
   onKeyDown,
   onSelect,
   icon,
-  iconPosition,
   updateSuggestionsStrategy,
   isLoading,
   noResultMessage,
@@ -297,12 +200,11 @@ export const Autocomplete = ({
   return (
     <Wrapper
       className={classNames('k-Form-Autocomplete', className, {
-        [`k-Form-Autocomplete--hasIcon-${iconPosition}`]: !!icon,
         'k-Form-Autocomplete--disabled': props.disabled,
-        'k-Form-Autocomplete--error': error,
+        'k-Form-Autocomplete--error': props.error,
       })}
     >
-      <input
+      <TextInput
         {...props}
         ref={inputEl}
         type="text"
@@ -322,27 +224,28 @@ export const Autocomplete = ({
             : ''
         }
         className="k-Form-Autocomplete__input"
+        has={isLoading || !!icon ? "icon" : null}
+        icon={isLoading ? (
+          <>
+            <Loader
+              className="k-Form-Autocomplete__loader"
+              color={COLORS.font2}
+            />
+            <VisuallyHidden lang="en">loading</VisuallyHidden>
+          </>
+
+          ) : !!icon ? (
+            <span className="k-Form-Autocomplete__icon" aria-hidden="true">
+              {React.cloneElement(icon, { width: 15, height: 15 })}
+            </span>
+          ) : null}
       />
-      {isLoading && (
-        <>
-          <Loader
-            className="k-Form-Autocomplete__loader"
-            color={COLORS.font2}
-          />
-          <VisuallyHidden lang="en">loading</VisuallyHidden>
-        </>
-      )}
-      {icon && (
-        <span className="k-Form-Autocomplete__icon" aria-hidden="true">
-          {React.cloneElement(icon, { width: 15, height: 15 })}
-        </span>
-      )}
 
       {showSuggestions &&
         items.length === 0 &&
         noResultMessage &&
         showNoResultMessage && (
-          <StyledSuggestionsList
+          <ul
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
@@ -357,12 +260,12 @@ export const Autocomplete = ({
             >
               {noResultMessage}
             </li>
-          </StyledSuggestionsList>
+          </ul>
         )}
 
       {showSuggestions && items.length > 0 && (
         <>
-          <StyledSuggestionsList
+          <ul
             ref={suggestionsEl}
             id={`${props.name}-results`}
             role="listbox"
@@ -383,7 +286,7 @@ export const Autocomplete = ({
                 {item[label] || item}
               </li>
             ))}
-          </StyledSuggestionsList>
+          </ul>
 
           <VisuallyHidden lang="en" aria-live="assertive">
             {items.length} results are available.

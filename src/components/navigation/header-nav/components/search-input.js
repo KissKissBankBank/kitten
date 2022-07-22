@@ -163,6 +163,7 @@ var SearchInput = function SearchInput(_ref) {
     }),
     onKeyDown: handleKeyDown
   }), /*#__PURE__*/_react.default.createElement(_textInputWithButton.TextInputWithButton, (0, _extends2.default)({
+    id: "SearchInput",
     size: "small",
     rounded: true,
     buttonValue: /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, null),

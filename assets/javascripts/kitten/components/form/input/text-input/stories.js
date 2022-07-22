@@ -1,6 +1,8 @@
 import React from 'react'
 import { TextInput } from './index'
+import { SearchIcon } from 'kitten'
 import { DocsPage } from 'storybook/docs-page'
+import { action } from '@storybook/addon-actions'
 
 export default {
   title: 'Form/Input/TextInput',
@@ -22,6 +24,7 @@ export default {
 export const Default = args => <TextInput {...args} />
 
 Default.args = {
+  id: 'InputId',
   tag: 'input',
   valid: false,
   error: false,
@@ -32,9 +35,26 @@ Default.args = {
   placeholder: 'Les props sont transmises',
   name: 'text-input',
   darkBackground: false,
+  buttonProps: {
+    modifier: 'helium',
+    children: 'Hello world',
+    onClick: action('button onClick'),
+  },
+  buttonIsInset: false,
+  icon: <SearchIcon color="var(--color-grey-900)" />,
+  iconPosition: 'left',
+  iconAccessibilityLabel: 'Icon accessibility Label',
+  onChange: action('input onChange'),
+  limit: 100,
+  unit: '€',
+  unitIsWord: false,
 }
 
 Default.argTypes = {
+  id: {
+    name: 'id',
+    control: 'text',
+  },
   tag: {
     name: 'tag',
     options: ['input', 'textarea', 'autoresize'],
@@ -81,6 +101,23 @@ Default.argTypes = {
     name: 'darkBackground',
     control: 'boolean',
   },
+  has: {
+    name: 'has',
+    options: [null, 'button', 'icon', 'limit', 'unit'],
+    control: 'select',
+  },
+  icon: {
+    name: 'icon',
+    control: 'node',
+  },
+  buttonProps: 'object',
+  buttonIsInset: 'boolean',
+  iconPosition: { control: 'inline-radio', options: ['left', 'right'] },
+  iconAccessibilityLabel: 'text',
+  onChange: 'function',
+  limit: 'number',
+  unit: 'string',
+  unitIsWord: 'boolean',
 }
 
 export const AsTextarea = args => <TextInput {...args} />
@@ -90,7 +127,7 @@ AsTextarea.args = {
   tag: 'textarea',
 }
 
-AsTextarea.argTypes = Default.args
+AsTextarea.argTypes = Default.argTypes
 
 export const AsTextareaAutoResize = args => <TextInput {...args} />
 
@@ -99,4 +136,4 @@ AsTextareaAutoResize.args = {
   tag: 'autoresize',
 }
 
-AsTextareaAutoResize.argTypes = Default.args
+AsTextareaAutoResize.argTypes = Default.argTypes

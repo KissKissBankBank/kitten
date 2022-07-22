@@ -51,6 +51,7 @@ describe('<Discussion />', () => {
             <Discussion.Form
               onSubmit={() => {}}
               inputProps={{
+                id: 'TextInput',
                 'aria-label': 'Texte à envoyer',
                 placeholder: 'Envoyer un message',
                 onChange: () => {},

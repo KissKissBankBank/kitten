@@ -7,7 +7,7 @@ describe('<TextInput />', () => {
 
   describe('with `valid` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput valid />).toJSON()
+      component = renderer.create(<TextInput id="TextInput" valid />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -17,7 +17,7 @@ describe('<TextInput />', () => {
 
   describe('with `error` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput error />).toJSON()
+      component = renderer.create(<TextInput id="TextInput" error />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -27,7 +27,9 @@ describe('<TextInput />', () => {
 
   describe('with `disabled` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput disabled />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" disabled />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -37,7 +39,9 @@ describe('<TextInput />', () => {
 
   describe('with `size` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput size="medium" />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" size="medium" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -47,7 +51,7 @@ describe('<TextInput />', () => {
 
   describe('with `center` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput center />).toJSON()
+      component = renderer.create(<TextInput id="TextInput" center />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -57,7 +61,9 @@ describe('<TextInput />', () => {
 
   describe('with `name` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput name="foobar" />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" name="foobar" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -67,7 +73,9 @@ describe('<TextInput />', () => {
 
   describe('with `tag` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput tag="input" />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" tag="input" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -77,7 +85,9 @@ describe('<TextInput />', () => {
 
   describe('with `digits` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput digits={12} />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" digits={12} />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -88,7 +98,7 @@ describe('<TextInput />', () => {
   describe('with `textarea` tag', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInput tag="textarea" name="message" />)
+        .create(<TextInput id="TextInput" tag="textarea" name="message" />)
         .toJSON()
     })
 
@@ -99,7 +109,9 @@ describe('<TextInput />', () => {
 
   describe('with `darkBackground` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput darkBackground />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" darkBackground />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -109,7 +121,113 @@ describe('<TextInput />', () => {
 
   describe('with `autoresize` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInput tag="autoresize" />).toJSON()
+      component = renderer
+        .create(<TextInput id="TextInput" tag="autoresize" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=button` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInput
+            id="TextInput"
+            has="button"
+            buttonProps={{ children: 'Hello world' }}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=button buttonIsInset` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInput
+            id="TextInput"
+            has="button"
+            buttonIsInset
+            buttonProps={{ children: 'Hello world' }}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=icon` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput id="TextInput" has="icon" icon={<svg />} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=icon iconPosition=right` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInput
+            id="TextInput"
+            has="icon"
+            icon={<svg />}
+            iconPosition="right"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=limit` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput id="TextInput" has="limit" limit={90} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=unit` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput id="TextInput" has="unit" unit="€" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `has=unit unitIsWord` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput id="TextInput" has="unit" unit="grand" unitIsWord />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

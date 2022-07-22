@@ -1,289 +1,14 @@
-import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize'
 import classNames from 'classnames'
+import { StyledInputWrapper } from './styles'
+import { Button } from '../../../action/button'
 
-export const StyledInput = styled.input`
-  --input-padding-horizontal: ${pxToRem(15)};
-  --input-border-width: var(--border-width);
-  --input-height: ${pxToRem(50)};
-
-  font-size: ${stepToRem(-1)};
-  line-height: 1em;
-  ${TYPOGRAPHY.fontStyles['400']};
-  box-sizing: border-box;
-  border-width: var(--input-border-width);
-  border-style: solid;
-  border-radius: 0;
-  width: 100%;
-  appearance: none;
-  background-color: var(--color-grey-000);
-  color: var(--color-grey-900);
-  border-color: var(--color-grey-400);
-  height: var(--input-height);
-  min-height: var(--input-height);
-
-  transition: border-color 0.2s ease;
-
-  ::placeholder {
-    color: var(--color-grey-700);
-  }
-
-  // SIZES
-
-  &.k-Form-TextInput--small {
-    --input-height: ${pxToRem(40)};
-  }
-
-  &.k-Form-TextInput--medium {
-    --input-height: ${pxToRem(50)};
-  }
-
-  &.k-Form-TextInput--large {
-    --input-height: ${pxToRem(60)};
-
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      --input-height: ${pxToRem(70)};
-      font-size: ${stepToRem(0)};
-    }
-  }
-
-  &.k-Form-TextInput--huge {
-    --input-height: ${pxToRem(70)};
-
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      --input-height: ${pxToRem(80)};
-      font-size: ${stepToRem(0)};
-    }
-  }
-
-  &.k-Form-TextInput--giant {
-    --input-height: ${pxToRem(70)};
-
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      --input-height: ${pxToRem(90)};
-      font-size: ${stepToRem(0)};
-    }
-  }
-
-  padding: ${pxToRem(10)} var(--input-padding-horizontal);
-  border-radius: var(--border-radius-s);
-
-  &.k-Form-TextInput--rounded {
-    border-radius: var(--border-radius-rounded);
-  }
-
-  // TEXT
-
-  &.k-Form-TextInput--alignCenter {
-    text-align: center;
-  }
-
-  // STATES
-
-  :disabled {
-    color: var(--color-grey-600);
-    border-color: var(--color-grey-300);
-    background-color: var(--color-grey-200);
-    cursor: not-allowed;
-
-    &:hover {
-      border-color: var(--color-grey-300);
-    }
-    ::placeholder {
-      color: var(--color-grey-600);
-    }
-  }
-
-  &.k-Form-TextInput--valid {
-    color: var(--color-grey-900);
-    border: var(--border-success);
-  }
-
-  &.k-Form-TextInput--error {
-    color: var(--color-grey-900);
-    border: var(--border-danger);
-  }
-
-  &:invalid {
-    box-shadow: none;
-    color: var(--color-grey-900);
-    border: var(--border-danger);
-  }
-
-  &:hover {
-    border: var(--border-hover);
-  }
-
-  &:focus {
-    color: var(--color-grey-900);
-    border-color: var(--color-grey-500);
-    outline: var(--outline-input);
-    outline-offset: var(--outline-offset-input);
-  }
-
-  // DIGITS
-
-  &.k-Form-TextInput-hasDigits {
-    width: calc(
-      var(--input-content-width) * 1ch +
-        (2 * (var(--input-padding-horizontal) + var(--input-border-width)))
-    );
-  }
-
-  &.k-Form-TextInput-hasDigits_2 {
-    text-align: center;
-  }
-
-  /* Prevents zooming on  */
-  @media (max-width: ${ScreenConfig.XS.max}px) {
-    font-size: ${stepToRem(0)};
-  }
-
-  // DARK BACKGROUND
-  &.k-Form-TextInput--darkBackground {
-    background-color: var(--color-grey-800);
-    border-color: var(--color-grey-800);
-    color: var(--color-grey-000);
-
-    ::placeholder {
-      color: var(--color-grey-400);
-    }
-  }
-`
-
-const StyledTextareaContainer = styled.div`
-  position: relative;
-  display: flex;
-
-  textarea.k-Form-TextInput {
-    height: initial;
-    resize: vertical;
-    line-height: ${pxToRem(18)};
-    margin: 0;
-
-    &:disabled {
-      resize: none;
-    }
-
-    padding-bottom: 0;
-
-    &.k-Form-TextInput--autoResize {
-      resize: none;
-    }
-
-    &.k-Form-TextInput--small {
-      padding-top: ${pxToRem(9)};
-      padding-bottom: ${pxToRem(9)};
-    }
-
-    &.k-Form-TextInput--medium {
-      padding-top: ${pxToRem(14)};
-      padding-bottom: ${pxToRem(14)};
-    }
-
-    &.k-Form-TextInput--large {
-      padding-top: ${pxToRem(18)};
-      padding-bottom: ${pxToRem(18)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        padding-top: ${pxToRem(21)};
-        padding-bottom: ${pxToRem(21)};
-      }
-    }
-
-    &.k-Form-TextInput--huge {
-      padding-top: ${pxToRem(21)};
-      padding-bottom: ${pxToRem(21)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        padding-top: ${pxToRem(27)};
-        padding-bottom: ${pxToRem(27)};
-      }
-    }
-
-    &.k-Form-TextInput--giant {
-      padding-top: ${pxToRem(21)};
-      padding-bottom: ${pxToRem(21)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        padding-top: ${pxToRem(32)};
-        padding-bottom: ${pxToRem(32)};
-      }
-    }
-  }
-
-  &.k-Form-TextInput--rounded {
-    border-radius: var(--border-radius-rounded);
-  }
-
-  &.k-Form-TextInput--darkBackground {
-    background-color: var(--color-grey-800);
-    border-color: var(--color-grey-800);
-    color: var(--color-grey-000);
-
-    ::placeholder {
-      color: var(--color-grey-400);
-    }
-  }
-
-  .k-Form-TextInput__textareaGradient {
-    position: absolute;
-    left: ${pxToRem(10)};
-    right: ${pxToRem(2)};
-    bottom: ${pxToRem(2)};
-    height: ${pxToRem(10)};
-
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.9)
-    );
-
-    pointer-events: none;
-
-    textarea.k-Form-TextInput:disabled + & {
-      display: none;
-    }
-  }
-  .k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient {
-    bottom: ${pxToRem(3)};
-  }
-`
-
-export class TextInput extends PureComponent {
-  static propTypes = {
-    tag: PropTypes.oneOf(['input', 'textarea', 'autoresize']),
-    valid: PropTypes.bool,
-    error: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
-    center: PropTypes.bool,
-    disabled: PropTypes.bool,
-    name: PropTypes.string,
-    digits: PropTypes.number,
-    rounded: PropTypes.bool,
-    darkBackground: PropTypes.bool,
-  }
-
-  static defaultProps = {
-    tag: 'input',
-    valid: false,
-    error: false,
-    size: 'medium',
-    center: false,
-    disabled: false,
-    name: 'text',
-    digits: null,
-    rounded: false,
-    darkBackground: false,
-  }
-
-  render() {
-    const {
+export const TextInput = React.forwardRef(
+  (
+    {
+      id,
       valid,
       error,
       disabled,
@@ -296,73 +21,206 @@ export class TextInput extends PureComponent {
       style,
       rounded,
       darkBackground,
+      has,
+      buttonProps,
+      buttonIsInset,
+      icon,
+      iconPosition,
+      iconAccessibilityLabel,
+      ['aria-describedby']: ariaDescribedBy,
+      value,
+      defaultValue,
+      onChange,
+      limit,
+      unit,
+      unitIsWord,
+      wrapperProps,
       ...others
-    } = this.props
+    },
+    ref,
+  ) => {
+    const [textValue] = useState(value || defaultValue || '')
+    const [length, setLength] = useState(textValue.length)
 
     const digitsClass = !!digits
-      ? `k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_${digits}`
+      ? `k-TextInput-hasDigits k-TextInput-hasDigits_${digits}`
+      : null
+    const hasClass = !!has
+      ? `k-TextInput--has${has[0].toUpperCase()}${has.slice(1)}`
       : null
 
-    if (['textarea', 'autoresize'].includes(tag)) {
-      return (
-        <StyledTextareaContainer
-          className={classNames('k-Form-TextInput__textareaContainer')}
-        >
-          <StyledInput
-            ref={input => (this.input = input)}
-            as={tag === 'textarea' ? tag : TextareaAutoResize}
-            disabled={disabled}
-            name={name}
-            className={classNames(
-              'k-Form-TextInput',
-              className,
-              digitsClass,
-              `k-Form-TextInput--${tag}`,
-              `k-Form-TextInput--${size}`,
-              {
-                'k-Form-TextInput--valid': valid,
-                'k-Form-TextInput--error': error,
-                'k-Form-TextInput--disabled': disabled,
-                'k-Form-TextInput--alignCenter': center,
-                'k-Form-TextInput--rounded': rounded,
-                'k-Form-TextInput--darkBackground': darkBackground,
-                'k-Form-TextInput--autoResize': tag === 'autoresize',
-              },
-            )}
-            style={
-              !!digits ? { '--input-content-width': digits, ...style } : style
-            }
-            {...others}
-          />
-          <div className="k-Form-TextInput__textareaGradient" />
-        </StyledTextareaContainer>
-      )
-    } else {
-      return (
-        <StyledInput
-          ref={input => (this.input = input)}
+    const describedBy =
+      has === 'icon' && iconAccessibilityLabel
+        ? `${ariaDescribedBy} ${id}__iconLabel`
+        : ariaDescribedBy
+
+    const InputComponent = (() => {
+      switch (tag) {
+        case 'autoresize':
+          return TextareaAutoResize
+        default:
+          return tag
+      }
+    })()
+    const ButtonComponent = buttonIsInset ? 'button' : Button
+
+    return (
+      <StyledInputWrapper
+        {...wrapperProps}
+        className={classNames(
+          'k-TextInput__wrapper',
+          `k-TextInput__wrapper--${size}`,
+          wrapperProps?.className,
+          {
+            'k-TextInput__isTextarea': ['textarea', 'autoresize'].includes(tag),
+            [`k-TextInput__wrapper--icon_${iconPosition}`]: has === 'icon',
+            'k-TextInput__wrapper--hasUnit': has === 'unit',
+            'k-TextInput__wrapper--hasDigits': !!digits,
+            'k-TextInput__wrapper--button_inset': !!buttonIsInset,
+          },
+        )}
+      >
+        {has === 'icon' && iconAccessibilityLabel && (
+          <span id={`${id}__iconLabel`} className="k-u-a11y-visuallyHidden">
+            {iconAccessibilityLabel}
+          </span>
+        )}
+        <InputComponent
+          ref={ref || null}
+          id={id}
+          aria-describedby={describedBy}
           disabled={disabled}
           name={name}
           className={classNames(
-            'k-Form-TextInput',
+            'k-TextInput',
             className,
             digitsClass,
-            `k-Form-TextInput--${size}`,
+            hasClass,
             {
-              'k-Form-TextInput--valid': valid,
-              'k-Form-TextInput--error': error,
-              'k-Form-TextInput--disabled': disabled,
-              'k-Form-TextInput--alignCenter': center,
-              'k-Form-TextInput--rounded': rounded,
-              'k-Form-TextInput--darkBackground': darkBackground,
+              'k-TextInput--valid': valid,
+              'k-TextInput--error': error,
+              'k-TextInput--disabled': disabled,
+              'k-TextInput--alignCenter': center,
+              'k-TextInput--rounded': rounded,
+              'k-TextInput--darkBackground': darkBackground,
             },
           )}
           style={
             !!digits ? { '--input-content-width': digits, ...style } : style
           }
+          defaultValue={textValue}
+          onChange={e => {
+            setLength(e?.target?.value?.length || 0)
+            onChange(e)
+          }}
           {...others}
         />
-      )
-    }
-  }
+
+        {['textarea', 'autoresize'].includes(tag) && (
+          <div className="k-TextInput__textareaGradient" />
+        )}
+
+        {has === 'button' && (
+          <ButtonComponent
+            type="button"
+            rounded={rounded}
+            {...buttonProps}
+            className={classNames(
+              'k-TextInput__button',
+              buttonProps?.className,
+            )}
+            disabled={disabled || buttonProps?.disabled}
+            size={size}
+          />
+        )}
+
+        {has === 'icon' && (
+          <span
+            aria-hidden="true"
+            className={classNames('k-TextInput__icon', {
+              'k-TextInput__icon--disabled': disabled,
+            })}
+          >
+            {icon}
+          </span>
+        )}
+
+        {has === 'limit' && (
+          <div
+            className={classNames('k-TextInput__limitNumber', {
+              'k-TextInput__limitNumber--disabled': disabled,
+              'k-TextInput__limitNumber--error': length > limit,
+            })}
+          >
+            {limit - length}
+          </div>
+        )}
+
+        {has === 'unit' && (
+          <span
+            className={classNames('k-TextInput__unit', {
+              'k-TextInput__unit--unitIsWord': unitIsWord,
+            })}
+          >
+            {unit}
+          </span>
+        )}
+      </StyledInputWrapper>
+    )
+  },
+)
+
+TextInput.propTypes = {
+  id: PropTypes.string.isRequired,
+  tag: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.oneOf(['input', 'textarea', 'autoresize']),
+  ]),
+  valid: PropTypes.bool,
+  error: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
+  center: PropTypes.bool,
+  disabled: PropTypes.bool,
+  name: PropTypes.string,
+  digits: PropTypes.number,
+  rounded: PropTypes.bool,
+  darkBackground: PropTypes.bool,
+
+  has: PropTypes.oneOf([null, 'button', 'icon', 'limit', 'unit']),
+  buttonProps: PropTypes.object,
+  buttonIsInset: PropTypes.bool,
+  icon: PropTypes.node,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
+  iconAccessibilityLabel: PropTypes.string,
+  ['aria-describedby']: PropTypes.string,
+  onChange: PropTypes.func,
+  limit: PropTypes.number,
+  unit: PropTypes.node,
+  unitIsWord: PropTypes.bool,
+  wrapperProps: PropTypes.object,
+}
+
+TextInput.defaultProps = {
+  tag: 'input',
+  valid: false,
+  error: false,
+  size: 'medium',
+  center: false,
+  disabled: false,
+  name: 'text',
+  digits: null,
+  rounded: false,
+  darkBackground: false,
+
+  has: null,
+  buttonProps: {},
+  buttonIsInset: false,
+  icon: null,
+  iconPosition: 'left',
+  onChange: () => {},
+  limit: 80,
+  unit: 'ƒ',
+  unitIsWord: false,
+  wrapperProps: {},
 }

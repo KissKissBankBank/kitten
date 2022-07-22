@@ -8,7 +8,9 @@ describe('<TextInputWithButton />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithButton />).toJSON()
+      component = renderer
+        .create(<TextInputWithButton id="TextInputWithButton" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -21,6 +23,7 @@ describe('<TextInputWithButton />', () => {
       component = renderer
         .create(
           <TextInputWithButton
+            id="TextInputWithButton"
             buttonValue="Button"
             inputValue="foobar"
             placeholder="Les props sont transmises"
@@ -39,6 +42,7 @@ describe('<TextInputWithButton />', () => {
       component = renderer
         .create(
           <TextInputWithButton
+            id="TextInputWithButton"
             buttonValue={<Loader />}
             placeholder="Les props sont transmises"
           />,
@@ -53,7 +57,9 @@ describe('<TextInputWithButton />', () => {
 
   describe('with valid prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithButton valid />).toJSON()
+      component = renderer
+        .create(<TextInputWithButton id="TextInputWithButton" valid />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -63,7 +69,9 @@ describe('<TextInputWithButton />', () => {
 
   describe('with error prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithButton error />).toJSON()
+      component = renderer
+        .create(<TextInputWithButton id="TextInputWithButton" error />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -73,7 +81,9 @@ describe('<TextInputWithButton />', () => {
 
   describe('with disabled prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithButton disabled />).toJSON()
+      component = renderer
+        .create(<TextInputWithButton id="TextInputWithButton" disabled />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -83,7 +93,9 @@ describe('<TextInputWithButton />', () => {
 
   describe('with size prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithButton size="small" />).toJSON()
+      component = renderer
+        .create(<TextInputWithButton id="TextInputWithButton" size="small" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -94,7 +106,12 @@ describe('<TextInputWithButton />', () => {
   describe('with buttonProps prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithButton buttonProps={{ onClick: () => {} }} />)
+        .create(
+          <TextInputWithButton
+            id="TextInputWithButton"
+            buttonProps={{ onClick: () => {} }}
+          />,
+        )
         .toJSON()
     })
 

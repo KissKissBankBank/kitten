@@ -455,7 +455,7 @@ export const StyledHeader = styled.header`
       flex: 1 1 auto;
     }
 
-    .k-Form-TextInput {
+    .k-TextInput {
       text-overflow: ellipsis;
       overflow: hidden;
       ${TYPOGRAPHY.fontStyles['400']};
@@ -465,7 +465,7 @@ export const StyledHeader = styled.header`
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       flex: 0 0 auto;
 
-      &.k-HeaderNav__searchInput--mobileInvisible .k-Form-TextInputWithButton {
+      &.k-HeaderNav__searchInput--mobileInvisible .k-TextInput__wrapper {
         display: none;
       }
       .k-HeaderNav__searchInput__mobileFold {

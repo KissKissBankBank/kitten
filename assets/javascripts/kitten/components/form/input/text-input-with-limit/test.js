@@ -7,7 +7,9 @@ describe('<TextInputWithLimit />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithLimit />).toJSON()
+      component = renderer
+        .create(<TextInputWithLimit id="TextInputWithLimit" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -17,7 +19,9 @@ describe('<TextInputWithLimit />', () => {
 
   describe('with `error` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithLimit error />).toJSON()
+      component = renderer
+        .create(<TextInputWithLimit id="TextInputWithLimit" error />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -27,7 +31,9 @@ describe('<TextInputWithLimit />', () => {
 
   describe('with `disabled` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithLimit disabled />).toJSON()
+      component = renderer
+        .create(<TextInputWithLimit id="TextInputWithLimit" disabled />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -37,7 +43,9 @@ describe('<TextInputWithLimit />', () => {
 
   describe('with `size` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithLimit size="small" />).toJSON()
+      component = renderer
+        .create(<TextInputWithLimit id="TextInputWithLimit" size="small" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

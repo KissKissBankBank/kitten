@@ -1,103 +1,129 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
-var _excluded = ["valid", "error", "disabled", "name", "digits", "size", "center", "tag", "className", "style", "rounded", "darkBackground"];
-import React, { PureComponent } from 'react';
-import styled from 'styled-components';
+
+var _TextInput$propTypes;
+
+var _excluded = ["id", "valid", "error", "disabled", "name", "digits", "size", "center", "tag", "className", "style", "rounded", "darkBackground", "has", "buttonProps", "buttonIsInset", "icon", "iconPosition", "iconAccessibilityLabel", "aria-describedby", "value", "defaultValue", "onChange", "limit", "unit", "unitIsWord", "wrapperProps"];
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
-import TYPOGRAPHY from '../../../../constants/typography-config';
-import { ScreenConfig } from '../../../../constants/screen-config';
 import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize';
 import classNames from 'classnames';
-export var StyledInput = styled.input.withConfig({
-  displayName: "text-input__StyledInput",
-  componentId: "sc-itv1lf-0"
-})(["--input-padding-horizontal:", ";--input-border-width:var(--border-width);--input-height:", ";font-size:", ";line-height:1em;", ";box-sizing:border-box;border-width:var(--input-border-width);border-style:solid;border-radius:0;width:100%;appearance:none;background-color:var(--color-grey-000);color:var(--color-grey-900);border-color:var(--color-grey-400);height:var(--input-height);min-height:var(--input-height);transition:border-color 0.2s ease;::placeholder{color:var(--color-grey-700);}&.k-Form-TextInput--small{--input-height:", ";}&.k-Form-TextInput--medium{--input-height:", ";}&.k-Form-TextInput--large{--input-height:", ";@media (min-width:", "px){--input-height:", ";font-size:", ";}}&.k-Form-TextInput--huge{--input-height:", ";@media (min-width:", "px){--input-height:", ";font-size:", ";}}&.k-Form-TextInput--giant{--input-height:", ";@media (min-width:", "px){--input-height:", ";font-size:", ";}}padding:", " var(--input-padding-horizontal);border-radius:var(--border-radius-s);&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--alignCenter{text-align:center;}:disabled{color:var(--color-grey-600);border-color:var(--color-grey-300);background-color:var(--color-grey-200);cursor:not-allowed;&:hover{border-color:var(--color-grey-300);}::placeholder{color:var(--color-grey-600);}}&.k-Form-TextInput--valid{color:var(--color-grey-900);border:var(--border-success);}&.k-Form-TextInput--error{color:var(--color-grey-900);border:var(--border-danger);}&:invalid{box-shadow:none;color:var(--color-grey-900);border:var(--border-danger);}&:hover{border:var(--border-hover);}&:focus{color:var(--color-grey-900);border-color:var(--color-grey-500);outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&.k-Form-TextInput-hasDigits{width:calc( var(--input-content-width) * 1ch + (2 * (var(--input-padding-horizontal) + var(--input-border-width))) );}&.k-Form-TextInput-hasDigits_2{text-align:center;}@media (max-width:", "px){font-size:", ";}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}"], pxToRem(15), pxToRem(50), stepToRem(-1), TYPOGRAPHY.fontStyles['400'], pxToRem(40), pxToRem(50), pxToRem(60), ScreenConfig.M.min, pxToRem(70), stepToRem(0), pxToRem(70), ScreenConfig.M.min, pxToRem(80), stepToRem(0), pxToRem(70), ScreenConfig.M.min, pxToRem(90), stepToRem(0), pxToRem(10), ScreenConfig.XS.max, stepToRem(0));
-var StyledTextareaContainer = styled.div.withConfig({
-  displayName: "text-input__StyledTextareaContainer",
-  componentId: "sc-itv1lf-1"
-})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:", ";margin:0;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--autoResize{resize:none;}&.k-Form-TextInput--small{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--medium{padding-top:", ";padding-bottom:", ";}&.k-Form-TextInput--large{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--huge{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}&.k-Form-TextInput--giant{padding-top:", ";padding-bottom:", ";@media (min-width:", "px){padding-top:", ";padding-bottom:", ";}}}&.k-Form-TextInput--rounded{border-radius:var(--border-radius-rounded);}&.k-Form-TextInput--darkBackground{background-color:var(--color-grey-800);border-color:var(--color-grey-800);color:var(--color-grey-000);::placeholder{color:var(--color-grey-400);}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,0.9) );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}.k-Form-TextInput:focus-visible + .k-Form-TextInput__textareaGradient{bottom:", ";}"], pxToRem(18), pxToRem(9), pxToRem(9), pxToRem(14), pxToRem(14), pxToRem(18), pxToRem(18), ScreenConfig.M.min, pxToRem(21), pxToRem(21), pxToRem(21), pxToRem(21), ScreenConfig.M.min, pxToRem(27), pxToRem(27), pxToRem(21), pxToRem(21), ScreenConfig.M.min, pxToRem(32), pxToRem(32), pxToRem(10), pxToRem(2), pxToRem(2), pxToRem(10), pxToRem(3));
-export var TextInput = /*#__PURE__*/function (_PureComponent) {
-  _inheritsLoose(TextInput, _PureComponent);
+import { StyledInputWrapper } from './styles';
+import { Button } from '../../../action/button';
+export var TextInput = /*#__PURE__*/React.forwardRef(function (_ref, ref) {
+  var _classNames;
 
-  function TextInput() {
-    return _PureComponent.apply(this, arguments) || this;
-  }
+  var id = _ref.id,
+      valid = _ref.valid,
+      error = _ref.error,
+      disabled = _ref.disabled,
+      name = _ref.name,
+      digits = _ref.digits,
+      size = _ref.size,
+      center = _ref.center,
+      tag = _ref.tag,
+      className = _ref.className,
+      style = _ref.style,
+      rounded = _ref.rounded,
+      darkBackground = _ref.darkBackground,
+      has = _ref.has,
+      buttonProps = _ref.buttonProps,
+      buttonIsInset = _ref.buttonIsInset,
+      icon = _ref.icon,
+      iconPosition = _ref.iconPosition,
+      iconAccessibilityLabel = _ref.iconAccessibilityLabel,
+      ariaDescribedBy = _ref['aria-describedby'],
+      value = _ref.value,
+      defaultValue = _ref.defaultValue,
+      _onChange = _ref.onChange,
+      limit = _ref.limit,
+      unit = _ref.unit,
+      unitIsWord = _ref.unitIsWord,
+      wrapperProps = _ref.wrapperProps,
+      others = _objectWithoutPropertiesLoose(_ref, _excluded);
 
-  var _proto = TextInput.prototype;
+  var _useState = useState(value || defaultValue || ''),
+      textValue = _useState[0];
 
-  _proto.render = function render() {
-    var _this = this;
+  var _useState2 = useState(textValue.length),
+      length = _useState2[0],
+      setLength = _useState2[1];
 
-    var _this$props = this.props,
-        valid = _this$props.valid,
-        error = _this$props.error,
-        disabled = _this$props.disabled,
-        name = _this$props.name,
-        digits = _this$props.digits,
-        size = _this$props.size,
-        center = _this$props.center,
-        tag = _this$props.tag,
-        className = _this$props.className,
-        style = _this$props.style,
-        rounded = _this$props.rounded,
-        darkBackground = _this$props.darkBackground,
-        others = _objectWithoutPropertiesLoose(_this$props, _excluded);
+  var digitsClass = !!digits ? "k-TextInput-hasDigits k-TextInput-hasDigits_" + digits : null;
+  var hasClass = !!has ? "k-TextInput--has" + has[0].toUpperCase() + has.slice(1) : null;
+  var describedBy = has === 'icon' && iconAccessibilityLabel ? ariaDescribedBy + " " + id + "__iconLabel" : ariaDescribedBy;
 
-    var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_" + digits : null;
+  var InputComponent = function () {
+    switch (tag) {
+      case 'autoresize':
+        return TextareaAutoResize;
 
-    if (['textarea', 'autoresize'].includes(tag)) {
-      return /*#__PURE__*/React.createElement(StyledTextareaContainer, {
-        className: classNames('k-Form-TextInput__textareaContainer')
-      }, /*#__PURE__*/React.createElement(StyledInput, _extends({
-        ref: function ref(input) {
-          return _this.input = input;
-        },
-        as: tag === 'textarea' ? tag : TextareaAutoResize,
-        disabled: disabled,
-        name: name,
-        className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + tag, "k-Form-TextInput--" + size, {
-          'k-Form-TextInput--valid': valid,
-          'k-Form-TextInput--error': error,
-          'k-Form-TextInput--disabled': disabled,
-          'k-Form-TextInput--alignCenter': center,
-          'k-Form-TextInput--rounded': rounded,
-          'k-Form-TextInput--darkBackground': darkBackground,
-          'k-Form-TextInput--autoResize': tag === 'autoresize'
-        }),
-        style: !!digits ? _extends({
-          '--input-content-width': digits
-        }, style) : style
-      }, others)), /*#__PURE__*/React.createElement("div", {
-        className: "k-Form-TextInput__textareaGradient"
-      }));
-    } else {
-      return /*#__PURE__*/React.createElement(StyledInput, _extends({
-        ref: function ref(input) {
-          return _this.input = input;
-        },
-        disabled: disabled,
-        name: name,
-        className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--" + size, {
-          'k-Form-TextInput--valid': valid,
-          'k-Form-TextInput--error': error,
-          'k-Form-TextInput--disabled': disabled,
-          'k-Form-TextInput--alignCenter': center,
-          'k-Form-TextInput--rounded': rounded,
-          'k-Form-TextInput--darkBackground': darkBackground
-        }),
-        style: !!digits ? _extends({
-          '--input-content-width': digits
-        }, style) : style
-      }, others));
+      default:
+        return tag;
     }
-  };
+  }();
 
-  return TextInput;
-}(PureComponent);
-TextInput.propTypes = {
-  tag: PropTypes.oneOf(['input', 'textarea', 'autoresize']),
+  var ButtonComponent = buttonIsInset ? 'button' : Button;
+  return /*#__PURE__*/React.createElement(StyledInputWrapper, _extends({}, wrapperProps, {
+    className: classNames('k-TextInput__wrapper', "k-TextInput__wrapper--" + size, wrapperProps == null ? void 0 : wrapperProps.className, (_classNames = {
+      'k-TextInput__isTextarea': ['textarea', 'autoresize'].includes(tag)
+    }, _classNames["k-TextInput__wrapper--icon_" + iconPosition] = has === 'icon', _classNames['k-TextInput__wrapper--hasUnit'] = has === 'unit', _classNames['k-TextInput__wrapper--hasDigits'] = !!digits, _classNames['k-TextInput__wrapper--button_inset'] = !!buttonIsInset, _classNames))
+  }), has === 'icon' && iconAccessibilityLabel && /*#__PURE__*/React.createElement("span", {
+    id: id + "__iconLabel",
+    className: "k-u-a11y-visuallyHidden"
+  }, iconAccessibilityLabel), /*#__PURE__*/React.createElement(InputComponent, _extends({
+    ref: ref || null,
+    id: id,
+    "aria-describedby": describedBy,
+    disabled: disabled,
+    name: name,
+    className: classNames('k-TextInput', className, digitsClass, hasClass, {
+      'k-TextInput--valid': valid,
+      'k-TextInput--error': error,
+      'k-TextInput--disabled': disabled,
+      'k-TextInput--alignCenter': center,
+      'k-TextInput--rounded': rounded,
+      'k-TextInput--darkBackground': darkBackground
+    }),
+    style: !!digits ? _extends({
+      '--input-content-width': digits
+    }, style) : style,
+    defaultValue: textValue,
+    onChange: function onChange(e) {
+      var _e$target, _e$target$value;
+
+      setLength((e == null ? void 0 : (_e$target = e.target) == null ? void 0 : (_e$target$value = _e$target.value) == null ? void 0 : _e$target$value.length) || 0);
+
+      _onChange(e);
+    }
+  }, others)), ['textarea', 'autoresize'].includes(tag) && /*#__PURE__*/React.createElement("div", {
+    className: "k-TextInput__textareaGradient"
+  }), has === 'button' && /*#__PURE__*/React.createElement(ButtonComponent, _extends({
+    type: "button",
+    rounded: rounded
+  }, buttonProps, {
+    className: classNames('k-TextInput__button', buttonProps == null ? void 0 : buttonProps.className),
+    disabled: disabled || (buttonProps == null ? void 0 : buttonProps.disabled),
+    size: size
+  })), has === 'icon' && /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    className: classNames('k-TextInput__icon', {
+      'k-TextInput__icon--disabled': disabled
+    })
+  }, icon), has === 'limit' && /*#__PURE__*/React.createElement("div", {
+    className: classNames('k-TextInput__limitNumber', {
+      'k-TextInput__limitNumber--disabled': disabled,
+      'k-TextInput__limitNumber--error': length > limit
+    })
+  }, limit - length), has === 'unit' && /*#__PURE__*/React.createElement("span", {
+    className: classNames('k-TextInput__unit', {
+      'k-TextInput__unit--unitIsWord': unitIsWord
+    })
+  }, unit));
+});
+TextInput.propTypes = (_TextInput$propTypes = {
+  id: PropTypes.string.isRequired,
+  tag: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.oneOf(['input', 'textarea', 'autoresize'])]),
   valid: PropTypes.bool,
   error: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
@@ -106,8 +132,14 @@ TextInput.propTypes = {
   name: PropTypes.string,
   digits: PropTypes.number,
   rounded: PropTypes.bool,
-  darkBackground: PropTypes.bool
-};
+  darkBackground: PropTypes.bool,
+  has: PropTypes.oneOf([null, 'button', 'icon', 'limit', 'unit']),
+  buttonProps: PropTypes.object,
+  buttonIsInset: PropTypes.bool,
+  icon: PropTypes.node,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
+  iconAccessibilityLabel: PropTypes.string
+}, _TextInput$propTypes['aria-describedby'] = PropTypes.string, _TextInput$propTypes.onChange = PropTypes.func, _TextInput$propTypes.limit = PropTypes.number, _TextInput$propTypes.unit = PropTypes.node, _TextInput$propTypes.unitIsWord = PropTypes.bool, _TextInput$propTypes.wrapperProps = PropTypes.object, _TextInput$propTypes);
 TextInput.defaultProps = {
   tag: 'input',
   valid: false,
@@ -118,5 +150,15 @@ TextInput.defaultProps = {
   name: 'text',
   digits: null,
   rounded: false,
-  darkBackground: false
+  darkBackground: false,
+  has: null,
+  buttonProps: {},
+  buttonIsInset: false,
+  icon: null,
+  iconPosition: 'left',
+  onChange: function onChange() {},
+  limit: 80,
+  unit: 'ƒ',
+  unitIsWord: false,
+  wrapperProps: {}
 };

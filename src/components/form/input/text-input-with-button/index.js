@@ -11,94 +11,45 @@ var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runt
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
 var _textInput = require("../../../form/input/text-input");
 
-var _typography = require("../../../../helpers/utils/typography");
-
-var _button = require("../../../action/button");
-
-var _screenConfig = require("../../../../constants/screen-config");
-
-var _excluded = ["valid", "error", "disabled", "size", "rounded", "buttonValue", "modifier", "buttonProps", "inputValue", "className", "inset"];
-
-var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
-  displayName: "text-input-with-button__StyledTextInputWithButton",
-  componentId: "sc-10tfa5q-0"
-})([".k-Form-TextInputWithButton__button{", ";font-size:", ";line-height:1.3;flex:1 0 auto;appearance:none;cursor:pointer;}&:not(.k-Form-TextInputWithButton--insetButton){display:grid;gap:", ";@media ", "{grid-template-rows:repeat(2,1fr);}@media ", "{grid-template-columns:1fr auto;}}&.k-Form-TextInputWithButton--insetButton{position:relative;.k-Form-TextInputWithButton__input{padding-right:calc(var(--text-input-size) + ", ");}.k-Form-TextInputWithButton__button{display:flex;align-items:center;justify-content:center;position:absolute;top:", ";bottom:", ";right:", ";min-width:calc(var(--text-input-size) - ", " * 2);border-radius:var(--text-input-button-radius);--text-input-button-radius:var(--border-radius-s);border:none;background-color:var(--color-grey-000);transition:background-color 0.2s ease;&:hover{background-color:var(--color-grey-300);}&:active{background-color:var(--color-grey-400);}}&.k-Form-TextInputWithButton--roudedButton .k-Form-TextInputWithButton__button{--text-input-button-radius:var(--border-radius-rounded);}}&.k-Form-TextInputWithButton--small{--text-input-size:", ";}&.k-Form-TextInputWithButton--medium{--text-input-size:", ";}&.k-Form-TextInputWithButton--large{--text-input-size:", ";@media ", "{--text-input-size:", ";}}&.k-Form-TextInputWithButton--huge{--text-input-size:", ";@media ", "{--text-input-size:", ";}}&.k-Form-TextInputWithButton--giant{--text-input-size:", ";@media ", "{--text-input-size:", ";}}&.k-Form-TextInputWithButton__button--valid{background-color:var(--color-success-500);border-color:var(--color-success-500);}&.k-Form-TextInputWithButton__button--error{cursor:not-allowed;background-color:var(--color-danger-500);border-color:var(--color-danger-500);}"], _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(10), _screenConfig.mq.mobile, _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(60), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(70), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(90));
+var _excluded = ["buttonValue", "modifier", "buttonProps", "inputValue", "inset"];
 
 var TextInputWithButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var valid = _ref.valid,
-      error = _ref.error,
-      disabled = _ref.disabled,
-      size = _ref.size,
-      rounded = _ref.rounded,
-      buttonValue = _ref.buttonValue,
+  var buttonValue = _ref.buttonValue,
       modifier = _ref.modifier,
       buttonProps = _ref.buttonProps,
       inputValue = _ref.inputValue,
-      className = _ref.className,
       inset = _ref.inset,
       others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var ButtonComponent = inset ? 'button' : _button.Button;
-  return /*#__PURE__*/_react.default.createElement(StyledTextInputWithButton, {
-    className: (0, _classnames.default)('k-Form-TextInputWithButton', "k-Form-TextInputWithButton--" + size, {
-      'k-Form-TextInputWithButton--insetButton': inset,
-      'k-Form-TextInputWithButton--roudedButton': rounded
-    })
-  }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
     ref: ref || null
   }, others, {
-    className: (0, _classnames.default)('k-Form-TextInputWithButton__input', className),
-    valid: valid,
-    error: error,
-    disabled: disabled,
-    size: size,
-    rounded: rounded,
-    value: inputValue
-  })), /*#__PURE__*/_react.default.createElement(ButtonComponent, (0, _extends2.default)({
-    type: "button"
-  }, buttonProps, {
-    className: (0, _classnames.default)('k-Form-TextInputWithButton__button', buttonProps == null ? void 0 : buttonProps.className, {
-      'k-Form-TextInputWithButton__button--valid': valid,
-      'k-Form-TextInputWithButton__button--error': error,
-      'k-Form-TextInputWithButton__button--disabled': disabled || buttonProps.disabled
-    }),
-    disabled: disabled || buttonProps.disabled,
-    modifier: modifier,
-    size: size
-  }), buttonValue));
+    value: inputValue,
+    has: "button",
+    buttonIsInset: inset,
+    buttonProps: (0, _extends2.default)({
+      modifier: modifier,
+      children: buttonValue
+    }, buttonProps)
+  }));
 });
 
 exports.TextInputWithButton = TextInputWithButton;
 TextInputWithButton.propTypes = {
-  valid: _propTypes.default.bool,
-  error: _propTypes.default.bool,
-  disabled: _propTypes.default.bool,
-  size: _propTypes.default.oneOf(['small', 'medium', 'large', 'huge', 'giant']),
-  rounded: _propTypes.default.bool,
   inset: _propTypes.default.bool,
   modifier: _propTypes.default.string,
-  inputValue: _propTypes.default.string,
-  buttonValue: _propTypes.default.node
+  buttonValue: _propTypes.default.node,
+  buttonProps: _propTypes.default.object,
+  inputValue: _propTypes.default.string
 };
 TextInputWithButton.defaultProps = {
-  valid: false,
-  error: false,
-  disabled: false,
-  size: 'medium',
   buttonValue: 'Button',
   buttonProps: {
     disabled: false
   },
   modifier: 'beryllium',
-  rounded: false,
   inset: false
 };

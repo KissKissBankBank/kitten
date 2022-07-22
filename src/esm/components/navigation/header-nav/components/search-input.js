@@ -139,6 +139,7 @@ export var SearchInput = function SearchInput(_ref) {
     }),
     onKeyDown: handleKeyDown
   }), /*#__PURE__*/React.createElement(TextInputWithButton, _extends({
+    id: "SearchInput",
     size: "small",
     rounded: true,
     buttonValue: /*#__PURE__*/React.createElement(SearchIcon, null),
