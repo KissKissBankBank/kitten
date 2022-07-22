@@ -9,21 +9,21 @@ var _styledComponents = require("styled-components");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var modifierStyles = function modifierStyles(modifier) {
-  var borderColor;
-  var borderStyle = 'solid';
-  var borderSize = 'var(--border-width)';
-  var backgroundColor;
-  var color;
-  var hoverBorderColor = _colorsConfig.default.primary2;
-  var hoverBgColor = _colorsConfig.default.primary2;
-  var hoverColor = _colorsConfig.default.background1;
-  var activeBorderColor = _colorsConfig.default.primary3;
-  var activeBgColor = _colorsConfig.default.primary3;
-  var activeColor = _colorsConfig.default.background1;
-  var disabledBorderColor = 'var(--color-grey-200)';
-  var disabledBgColor = 'var(--color-grey-200)';
-  var disabledColor = 'var(--color-grey-600)';
+const modifierStyles = modifier => {
+  let borderColor;
+  let borderStyle = 'solid';
+  let borderSize = 'var(--border-width)';
+  let backgroundColor;
+  let color;
+  let hoverBorderColor = _colorsConfig.default.primary2;
+  let hoverBgColor = _colorsConfig.default.primary2;
+  let hoverColor = _colorsConfig.default.background1;
+  let activeBorderColor = _colorsConfig.default.primary3;
+  let activeBgColor = _colorsConfig.default.primary3;
+  let activeColor = _colorsConfig.default.background1;
+  let disabledBorderColor = 'var(--color-grey-200)';
+  let disabledBgColor = 'var(--color-grey-200)';
+  let disabledColor = 'var(--color-grey-600)';
 
   switch (modifier) {
     case 'hydrogen':

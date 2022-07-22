@@ -1,19 +1,18 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "bgColor", "circleColor", "clockColor", "title", "className"];
 import React from 'react';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-export var ClockCircleIcon = function ClockCircleIcon(_ref) {
-  var color = _ref.color,
-      bgColor = _ref.bgColor,
-      circleColor = _ref.circleColor,
-      clockColor = _ref.clockColor,
-      title = _ref.title,
-      className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const ClockCircleIcon = _ref => {
+  let {
+    color,
+    bgColor,
+    circleColor,
+    clockColor,
+    title,
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     className: classNames('k-ColorSvg', className),
     xmlns: "http://www.w3.org/2000/svg",

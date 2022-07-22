@@ -23,40 +23,38 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var Container = _styledComponents.default.div.withConfig({
+const Container = _styledComponents.default.div.withConfig({
   displayName: "counter-block__Container",
   componentId: "sc-1eax8nd-0"
 })(["text-align:center;.styledText{line-height:0.7;white-space:nowrap;display:flex;padding-bottom:", ";margin:0;flex-grow:1;font-size:", ";justify-content:center;@media (min-width:", "px){font-size:", ";}@media (min-width:", "px){font-size:", ";padding-bottom:", ";}@media (min-width:", "px){font-size:", ";padding-bottom:", ";}@media (min-width:", "px){font-size:", ";padding-bottom:", ";}}.styledSubTitle{margin:0;}"], (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(50), _screenConfig.ScreenConfig.XS.min, (0, _typography.pxToRem)(66), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(96), (0, _typography.pxToRem)(6), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(116), (0, _typography.pxToRem)(7), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(158), (0, _typography.pxToRem)(10));
 
-var FlexContainer = _styledComponents.default.div.withConfig({
+const FlexContainer = _styledComponents.default.div.withConfig({
   displayName: "counter-block__FlexContainer",
   componentId: "sc-1eax8nd-1"
 })(["display:flex;justify-content:center;align-items:center;"]);
 
-var StrokeContainer = _styledComponents.default.div.withConfig({
+const StrokeContainer = _styledComponents.default.div.withConfig({
   displayName: "counter-block__StrokeContainer",
   componentId: "sc-1eax8nd-2"
 })(["flex-grow:2;.styledStroke{width:100%;height:", ";}"], (0, _typography.pxToRem)(6));
 
-var Unit = _styledComponents.default.span.withConfig({
+const Unit = _styledComponents.default.span.withConfig({
   displayName: "counter-block__Unit",
   componentId: "sc-1eax8nd-3"
 })(["display:inline-flex;align-self:center;font-size:0.5em;"]);
 
-var isString = function isString(val) {
-  return typeof val === 'string';
-};
+const isString = val => typeof val === 'string';
 
-var CounterBlock = function CounterBlock(_ref) {
-  var _React$createElement;
-
-  var title = _ref.title,
-      titleTag = _ref.titleTag,
-      subTitle = _ref.subTitle,
-      subTitleTag = _ref.subTitleTag,
-      counter = _ref.counter,
-      unit = _ref.unit;
-  var margin = {
+const CounterBlock = _ref => {
+  let {
+    title,
+    titleTag,
+    subTitle,
+    subTitleTag,
+    counter,
+    unit
+  } = _ref;
+  const margin = {
     default: 2,
     fromS: 4
   };
@@ -83,11 +81,14 @@ var CounterBlock = function CounterBlock(_ref) {
     size: "large"
   }))), isString(subTitle) ? /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: margin
-  }, /*#__PURE__*/_react.default.createElement(_text.Text, (_React$createElement = {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "styledSubTitle",
     size: "huge",
-    tag: subTitleTag
-  }, _React$createElement["tag"] = "p", _React$createElement.fontStyle = "italic", _React$createElement.weight = "400", _React$createElement), subTitle)) : subTitle);
+    tag: subTitleTag,
+    tag: "p",
+    fontStyle: "italic",
+    weight: "400"
+  }, subTitle)) : subTitle);
 };
 
 exports.CounterBlock = CounterBlock;

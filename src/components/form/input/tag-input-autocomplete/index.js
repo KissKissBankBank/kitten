@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.TagInputAutocomplete = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,112 +19,92 @@ var _tagInput = require("../tag-input");
 
 var _autocomplete = require("../autocomplete");
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
-  var placeholder = _ref.placeholder,
-      onChange = _ref.onChange,
-      className = _ref.className,
-      id = _ref.id,
-      addEventKeys = _ref.addEventKeys,
-      removeEventKeys = _ref.removeEventKeys,
-      itemsListFromProps = _ref.itemsList,
-      initialItemsList = _ref.initialItemsList,
-      helpMessage = _ref.helpMessage,
-      disabled = _ref.disabled,
-      size = _ref.size,
-      suggestions = _ref.suggestions,
-      onKeyDown = _ref.onKeyDown,
-      onBlur = _ref.onBlur,
-      suggestionsNumberA11yMessage = _ref.suggestionsNumberA11yMessage,
-      showSuggestionsOnFocus = _ref.showSuggestionsOnFocus,
-      inputLabel = _ref.inputLabel;
-  var inputEl = (0, _react.useRef)(null);
-  var suggestionsEl = (0, _react.useRef)(null);
+const TagInputAutocomplete = _ref => {
+  let {
+    placeholder,
+    onChange,
+    className,
+    id,
+    addEventKeys,
+    removeEventKeys,
+    itemsList: itemsListFromProps,
+    initialItemsList,
+    helpMessage,
+    disabled,
+    size,
+    suggestions,
+    onKeyDown,
+    onBlur,
+    suggestionsNumberA11yMessage,
+    showSuggestionsOnFocus,
+    inputLabel
+  } = _ref;
+  const inputEl = (0, _react.useRef)(null);
+  const suggestionsEl = (0, _react.useRef)(null);
+  const [itemsList, setItemsList] = (0, _react.useState)(Array.from(itemsListFromProps || initialItemsList));
+  const [lastRemoved, setLastRemoved] = (0, _react.useState)(null);
+  const [inputValue, setInputValue] = (0, _react.useState)('');
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = (0, _react.useState)(-1);
+  const [showSuggestions, setShowSuggestions] = (0, _react.useState)(false);
+  const [suggestionsList, setSuggestionsList] = (0, _react.useState)(suggestions);
 
-  var _useState = (0, _react.useState)(Array.from(itemsListFromProps || initialItemsList)),
-      itemsList = _useState[0],
-      setItemsList = _useState[1];
+  const getSuggestionText = suggestion => suggestion.searchableString || suggestion;
 
-  var _useState2 = (0, _react.useState)(null),
-      lastRemoved = _useState2[0],
-      setLastRemoved = _useState2[1];
-
-  var _useState3 = (0, _react.useState)(''),
-      inputValue = _useState3[0],
-      setInputValue = _useState3[1];
-
-  var _useState4 = (0, _react.useState)(-1),
-      selectedSuggestionIndex = _useState4[0],
-      setSelectedSuggestionIndex = _useState4[1];
-
-  var _useState5 = (0, _react.useState)(false),
-      showSuggestions = _useState5[0],
-      setShowSuggestions = _useState5[1];
-
-  var _useState6 = (0, _react.useState)(suggestions),
-      suggestionsList = _useState6[0],
-      setSuggestionsList = _useState6[1];
-
-  var getSuggestionText = function getSuggestionText(suggestion) {
-    return suggestion.searchableString || suggestion;
-  };
-
-  var focusInputEl = function focusInputEl() {
+  const focusInputEl = () => {
     var _inputEl$current;
 
     return !disabled && (inputEl == null ? void 0 : (_inputEl$current = inputEl.current) == null ? void 0 : _inputEl$current.focus());
   };
 
-  var addValueToList = function addValueToList(value) {
-    var newList = [].concat(itemsList, [value]);
+  const addValueToList = value => {
+    const newList = [...itemsList, value];
     itemsListFromProps ? onChange(newList) : setItemsList(newList);
   };
 
-  var removeLastValueFromList = function removeLastValueFromList() {
-    var lastItem = itemsList[itemsList.length - 1];
+  const removeLastValueFromList = () => {
+    const lastItem = itemsList[itemsList.length - 1];
     if (!lastItem) return;
     if (lastItem.disabled) return;
     setLastRemoved(lastItem);
-    var newList = Array.from(itemsList.slice(0, -1));
+    const newList = Array.from(itemsList.slice(0, -1));
     itemsListFromProps ? onChange(newList) : setItemsList(newList);
   };
 
-  var removeValueFromList = function removeValueFromList(item) {
-    var valueToRemove = (item == null ? void 0 : item.value) || item;
+  const removeValueFromList = item => {
+    const valueToRemove = (item == null ? void 0 : item.value) || item;
     setLastRemoved(valueToRemove);
-    var newList = itemsList.filter(function (item) {
-      var itemValue = (item == null ? void 0 : item.value) || item;
+    const newList = itemsList.filter(item => {
+      const itemValue = (item == null ? void 0 : item.value) || item;
       return itemValue !== valueToRemove;
     });
     itemsListFromProps ? onChange(Array.from(newList)) : setItemsList(newList);
   };
 
-  var undoRemove = function undoRemove() {
+  const undoRemove = () => {
     lastRemoved && addValueToList(lastRemoved);
     setLastRemoved(null);
   };
 
-  var handleInputKeydown = function handleInputKeydown(event) {
+  const handleInputKeydown = event => {
     // Suggestions key events
     if (showSuggestions) {
       if (event.key === 'Escape') setShowSuggestions(false);
 
       if (event.key === 'ArrowUp') {
         event.preventDefault();
-        var newIndex = selectedSuggestionIndex - 1;
+        const newIndex = selectedSuggestionIndex - 1;
         setSelectedSuggestionIndex(newIndex < 0 ? 0 : newIndex);
       }
 
       if (event.key === 'ArrowDown') {
         event.preventDefault();
-
-        var _newIndex = selectedSuggestionIndex + 1;
-
-        var itemsLength = suggestionsList.length - 1;
-        setSelectedSuggestionIndex(_newIndex >= itemsLength ? itemsLength : _newIndex);
+        const newIndex = selectedSuggestionIndex + 1;
+        const itemsLength = suggestionsList.length - 1;
+        setSelectedSuggestionIndex(newIndex >= itemsLength ? itemsLength : newIndex);
       }
     } // Add value to list
 
@@ -137,11 +115,11 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       event.preventDefault(); // If a suggestion is selected through keyboard nav
 
       if (selectedSuggestionIndex > -1) {
-        var selectedValue = suggestionsList[selectedSuggestionIndex];
+        const selectedValue = suggestionsList[selectedSuggestionIndex];
         return handleSelectSuggestion(selectedValue)();
       }
 
-      var value = inputEl == null ? void 0 : (_inputEl$current2 = inputEl.current) == null ? void 0 : _inputEl$current2.innerText.trim();
+      const value = inputEl == null ? void 0 : (_inputEl$current2 = inputEl.current) == null ? void 0 : _inputEl$current2.innerText.trim();
       if (value.length === 0) return;
       if (itemsList.includes(value)) return;
       return handleAddItem(value);
@@ -166,57 +144,55 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
     onKeyDown(event);
   };
 
-  var handleAddItem = function handleAddItem(value) {
+  const handleAddItem = value => {
     addValueToList(value);
     focusInputEl();
     inputEl.current.innerText = '';
     setInputValue('');
   };
 
-  var updateSuggestions = function updateSuggestions() {
-    var search = ("" + inputValue).toLowerCase();
-    var newSuggestions = suggestions.filter(function (item) {
-      var suggestionText = getSuggestionText(item);
+  const updateSuggestions = () => {
+    const search = ("" + inputValue).toLowerCase();
+    const newSuggestions = suggestions.filter(item => {
+      const suggestionText = getSuggestionText(item);
       return suggestionText.toLowerCase().startsWith(search) && suggestionText !== inputValue && !itemsList.includes(suggestionText);
     });
     setSuggestionsList(newSuggestions);
     resetSelectedSuggestion();
   };
 
-  var handleInputChange = function handleInputChange(event) {
+  const handleInputChange = event => {
     var _event$target;
 
     setInputValue(((_event$target = event.target) == null ? void 0 : _event$target.innerText) || '');
   };
 
-  var handleInputFocus = function handleInputFocus() {
+  const handleInputFocus = () => {
     if (!showSuggestionsOnFocus) return;
     setShowSuggestions(true);
   };
 
-  var handleInputBlur = function handleInputBlur(e) {
+  const handleInputBlur = e => {
     // check if focus stays in the component
-    var ancestor = e.target.closest('.k-Form-TagInput');
+    const ancestor = e.target.closest('.k-Form-TagInput');
     if (ancestor.matches(':focus-within')) return;
-    setTimeout(function () {
+    setTimeout(() => {
       setShowSuggestions(false);
     }, 50);
     onBlur(e);
   };
 
-  var handleSelectSuggestion = function handleSelectSuggestion(value) {
-    return function () {
-      if (!value) return;
-      var suggestionText = getSuggestionText(value);
-      handleAddItem(suggestionText);
+  const handleSelectSuggestion = value => () => {
+    if (!value) return;
+    const suggestionText = getSuggestionText(value);
+    handleAddItem(suggestionText);
 
-      if (!showSuggestionsOnFocus) {
-        setShowSuggestions(false);
-      }
-    };
+    if (!showSuggestionsOnFocus) {
+      setShowSuggestions(false);
+    }
   };
 
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     if (!showSuggestionsOnFocus) {
       setShowSuggestions(false);
     }
@@ -225,19 +201,19 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       onChange(itemsList);
     }
   }, [itemsList]);
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     if (itemsListFromProps) {
       setItemsList(itemsListFromProps);
     }
   }, [itemsListFromProps]);
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     updateSuggestions();
 
     if (!showSuggestionsOnFocus) {
       setShowSuggestions(inputValue !== '');
     }
   }, [inputValue]);
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     var _suggestionsEl$curren, _suggestionsEl$curren2;
 
     suggestionsEl == null ? void 0 : (_suggestionsEl$curren = suggestionsEl.current) == null ? void 0 : (_suggestionsEl$curren2 = _suggestionsEl$curren.children[selectedSuggestionIndex]) == null ? void 0 : _suggestionsEl$curren2.scrollIntoView({
@@ -247,9 +223,7 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
     });
   }, [selectedSuggestionIndex]);
 
-  var resetSelectedSuggestion = function resetSelectedSuggestion() {
-    return setSelectedSuggestionIndex(-1);
-  };
+  const resetSelectedSuggestion = () => setSelectedSuggestionIndex(-1);
 
   return /*#__PURE__*/_react.default.createElement(_tagInput.StyledTagInputWrapper, {
     className: (0, _classnames.default)('k-Form-TagInput', className, "k-Form-TagInput--" + size, {
@@ -280,9 +254,9 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
     "aria-expanded": showSuggestions ? suggestionsList.length > 0 : null,
     "aria-autocomplete": "both",
     "aria-activedescendant": suggestions[selectedSuggestionIndex] ? (0, _slugify.default)(suggestionsList[selectedSuggestionIndex] + "-" + selectedSuggestionIndex) : ''
-  })), itemsList.map(function (item, index) {
-    var itemValue = (item == null ? void 0 : item.value) || item;
-    var itemDisabled = (item == null ? void 0 : item.disabled) || false;
+  })), itemsList.map((item, index) => {
+    const itemValue = (item == null ? void 0 : item.value) || item;
+    const itemDisabled = (item == null ? void 0 : item.disabled) || false;
     return /*#__PURE__*/_react.default.createElement("li", {
       key: itemValue + index,
       className: (0, _classnames.default)('k-Form-TagInput__item k-Form-TagInput__tagItem', {
@@ -296,9 +270,7 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       className: "k-Form-TagInput__button",
       type: "button",
       disabled: itemDisabled || disabled,
-      onClick: function onClick() {
-        return removeValueFromList(item);
-      }
+      onClick: () => removeValueFromList(item)
     }, /*#__PURE__*/_react.default.createElement("span", {
       className: "k-u-a11y-visuallyHidden"
     }, "Retirer ", itemValue, " de la liste."), /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
@@ -313,8 +285,8 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
       '--Autocomplete-suggestions': suggestionsList.length
     },
     className: "k-Form-Autocomplete__suggestions"
-  }, suggestionsList.map(function (suggestion, index) {
-    var suggestionText = getSuggestionText(suggestion);
+  }, suggestionsList.map((suggestion, index) => {
+    const suggestionText = getSuggestionText(suggestion);
     return /*#__PURE__*/_react.default.createElement("li", {
       key: suggestionText + index,
       id: (0, _slugify.default)(suggestionText + "-" + index),
@@ -333,8 +305,8 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
     "aria-live": "polite",
     "aria-atomic": "true",
     "aria-relevant": "additions removals"
-  }, itemsList.map(function (item, index) {
-    var itemValue = (item == null ? void 0 : item.value) || item;
+  }, itemsList.map((item, index) => {
+    const itemValue = (item == null ? void 0 : item.value) || item;
     return /*#__PURE__*/_react.default.createElement("li", {
       key: "visuallyHidden-" + (itemValue + index)
     }, itemValue);
@@ -342,20 +314,20 @@ var TagInputAutocomplete = function TagInputAutocomplete(_ref) {
 };
 
 exports.TagInputAutocomplete = TagInputAutocomplete;
-TagInputAutocomplete.defaultProps = (0, _extends2.default)({}, _tagInput.TagInput.defaultProps, {
+TagInputAutocomplete.defaultProps = { ..._tagInput.TagInput.defaultProps,
   suggestions: [],
-  onKeyDown: function onKeyDown() {},
-  onBlur: function onBlur() {},
-  suggestionsNumberA11yMessage: function suggestionsNumberA11yMessage(number) {
+  onKeyDown: () => {},
+  onBlur: () => {},
+  suggestionsNumberA11yMessage: number => {
     return number + " suggestions.";
   },
   showSuggestionsOnFocus: true
-});
-TagInputAutocomplete.propTypes = (0, _extends2.default)({}, _tagInput.TagInput.propTypes, {
+};
+TagInputAutocomplete.propTypes = { ..._tagInput.TagInput.propTypes,
   suggestions: _propTypes.default.array,
   onKeyDown: _propTypes.default.func,
   onBlur: _propTypes.default.func,
   suggestionsNumberA11yMessage: _propTypes.default.func,
   showSuggestionsOnFocus: _propTypes.default.bool,
   inputLabel: _propTypes.default.string
-});
+};

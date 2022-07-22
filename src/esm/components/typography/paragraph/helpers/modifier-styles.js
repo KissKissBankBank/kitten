@@ -1,10 +1,10 @@
 import { css } from 'styled-components';
 import { stepToRem, pxToRem } from '../../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../../constants/screen-config';
-export var modifierStyles = function modifierStyles(modifier) {
-  var fontStepOnMobile;
-  var fontStepOnTablet;
-  var fontStepOnDesktop;
+export const modifierStyles = modifier => {
+  let fontStepOnMobile;
+  let fontStepOnTablet;
+  let fontStepOnDesktop;
 
   switch (modifier) {
     case 'primary':

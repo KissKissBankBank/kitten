@@ -9,8 +9,10 @@ var _image = require("./components/image");
 
 var _icons = require("./components/icons");
 
-var TeamCard = function TeamCard(_ref) {
-  var children = _ref.children;
+const TeamCard = _ref => {
+  let {
+    children
+  } = _ref;
   return children;
 };
 

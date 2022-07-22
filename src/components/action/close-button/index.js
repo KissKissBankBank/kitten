@@ -7,20 +7,18 @@ exports.CloseButton = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _button = require("../../action/button");
 
 var _crossIconNext = require("../../graphics/icons-next/cross-icon-next");
 
-var _excluded = ["closeButtonLabel", "buttonModifier"];
-
-var CloseButton = function CloseButton(_ref) {
-  var closeButtonLabel = _ref.closeButtonLabel,
-      buttonModifier = _ref.buttonModifier,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const CloseButton = _ref => {
+  let {
+    closeButtonLabel,
+    buttonModifier,
+    ...others
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     fit: "icon",
     type: "button",

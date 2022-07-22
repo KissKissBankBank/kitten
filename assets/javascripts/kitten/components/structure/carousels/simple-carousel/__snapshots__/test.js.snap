@@ -17,8 +17,8 @@ exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
   >
     <div
       aria-hidden={null}
-      aria-labelledby="undefined_carouselTab_0"
-      id="undefined_carouselItem_0"
+      aria-labelledby="test_carouselTab_0"
+      id="test_carouselItem_0"
       role="tabpanel"
     >
       <p>
@@ -27,8 +27,8 @@ exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
     </div>
     <div
       aria-hidden={true}
-      aria-labelledby="undefined_carouselTab_1"
-      id="undefined_carouselItem_1"
+      aria-labelledby="test_carouselTab_1"
+      id="test_carouselItem_1"
       role="tabpanel"
     >
       <p>
@@ -43,10 +43,10 @@ exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
     style={Object {}}
   >
     <button
-      aria-controls="undefined_carouselItem_0"
+      aria-controls="test_carouselItem_0"
       aria-selected={true}
       className="k-SimpleCarousel__button k-u-reset-button"
-      id="undefined_carouselTab_0"
+      id="test_carouselTab_0"
       onClick={[Function]}
       role="tab"
       style={Object {}}
@@ -59,10 +59,10 @@ exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
       </span>
     </button>
     <button
-      aria-controls="undefined_carouselItem_1"
+      aria-controls="test_carouselItem_1"
       aria-selected={false}
       className="k-SimpleCarousel__button k-u-reset-button"
-      id="undefined_carouselTab_1"
+      id="test_carouselTab_1"
       onClick={[Function]}
       role="tab"
       style={Object {}}
@@ -95,8 +95,8 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
   >
     <div
       aria-hidden={null}
-      aria-labelledby="undefined_carouselTab_0"
-      id="undefined_carouselItem_0"
+      aria-labelledby="test_carouselTab_0"
+      id="test_carouselItem_0"
       role="tabpanel"
     >
       <p>

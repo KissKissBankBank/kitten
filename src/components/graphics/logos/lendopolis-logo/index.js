@@ -7,32 +7,30 @@ exports.LendopolisLogo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _excluded = ["primaryColor", "secondaryColor", "width", "height", "small"];
-
-var LendopolisLogo = function LendopolisLogo(_ref) {
-  var primaryColor = _ref.primaryColor,
-      secondaryColor = _ref.secondaryColor,
-      width = _ref.width,
-      height = _ref.height,
-      small = _ref.small,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var DEFAULT_WIDTH = 150;
-  var DEFAULT_HEIGHT = 28;
-  var computed = (0, _ratio.computeFromRatio)({
+const LendopolisLogo = _ref => {
+  let {
+    primaryColor,
+    secondaryColor,
+    width,
+    height,
+    small,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 150;
+  const DEFAULT_HEIGHT = 28;
+  const computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: small ? DEFAULT_HEIGHT : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

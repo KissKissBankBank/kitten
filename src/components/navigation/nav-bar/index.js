@@ -7,8 +7,6 @@ exports.NavBar = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -29,38 +27,49 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _config = require("../../navigation/header-nav/config");
 
-var _excluded = ["active", "children", "className", "linkProps"],
-    _excluded2 = ["children", "className", "navProps", "listProps", "colors", "modifier"];
-
-var StyledNavBar = _styledComponents.default.div.withConfig({
+const StyledNavBar = _styledComponents.default.div.withConfig({
   displayName: "nav-bar__StyledNavBar",
   componentId: "sc-1bcathh-0"
-})(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--small .k-NavBar__link{height:", ";}&.k-NavBar--big,&.k-NavBar--large{.k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), function (_ref) {
-  var colors = _ref.colors;
+})(["width:auto;flex-grow:1;.k-NavBar__nav{width:auto;margin:0;padding:0 ", ";background:", ";display:flex;justify-content:center;@media (min-width:", "){padding:0 ", ";}&::before,&::after{content:'';flex-grow:1;}}.k-NavBar__list{list-style-type:none;display:flex;align-items:center;margin:0;padding:0;}.k-NavBar__listItem + .k-NavBar__listItem{margin-left:", ";@media (min-width:", "){margin-left:", ";}}.k-NavBar__link{height:", ";box-sizing:border-box;", " font-size:", ";text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:row;position:relative;color:", ";border-bottom:", " solid ", ";transition:color 0.2s,border-color 0.2s;cursor:pointer;&:hover{color:", ";text-decoration:none;}&:focus,&[aria-current='page']{border-color:", ";color:", ";border-width:", ";}@media (min-width:", "){height:", ";}}&.k-NavBar--small .k-NavBar__link{height:", ";}&.k-NavBar--big,&.k-NavBar--large{.k-NavBar__link{height:", ";@media (min-width:", "){height:", ";}}}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), _ref => {
+  let {
+    colors
+  } = _ref;
   return colors.background || _colorsConfig.default.primary6;
-}, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(65), _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-1), function (_ref2) {
-  var colors = _ref2.colors;
+}, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(65), _typographyConfig.default.fontStyles['500'], (0, _typography.stepToRem)(-1), _ref2 => {
+  let {
+    colors
+  } = _ref2;
   return colors.link || _colorsConfig.default.font1;
-}, (0, _typography.pxToRem)(4), function (_ref3) {
-  var colors = _ref3.colors;
+}, (0, _typography.pxToRem)(4), _ref3 => {
+  let {
+    colors
+  } = _ref3;
   return colors.border || 'transparent';
-}, function (_ref4) {
-  var colors = _ref4.colors;
+}, _ref4 => {
+  let {
+    colors
+  } = _ref4;
   return colors.activeLink || _colorsConfig.default.primary1;
-}, function (_ref5) {
-  var colors = _ref5.colors;
+}, _ref5 => {
+  let {
+    colors
+  } = _ref5;
   return colors.activeBorder || _colorsConfig.default.primary1;
-}, function (_ref6) {
-  var colors = _ref6.colors;
+}, _ref6 => {
+  let {
+    colors
+  } = _ref6;
   return colors.activeLink || _colorsConfig.default.primary1;
 }, (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_config.HEADER_HEIGHT), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(100));
 
-var NavBarItem = function NavBarItem(_ref7) {
-  var active = _ref7.active,
-      children = _ref7.children,
-      className = _ref7.className,
-      linkProps = _ref7.linkProps,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded);
+const NavBarItem = _ref7 => {
+  let {
+    active,
+    children,
+    className,
+    linkProps,
+    ...props
+  } = _ref7;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-NavBar__listItem', className)
   }), /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
@@ -70,14 +79,16 @@ var NavBarItem = function NavBarItem(_ref7) {
   }), children));
 };
 
-var NavBar = function NavBar(_ref8) {
-  var children = _ref8.children,
-      className = _ref8.className,
-      navProps = _ref8.navProps,
-      listProps = _ref8.listProps,
-      colors = _ref8.colors,
-      modifier = _ref8.modifier,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref8, _excluded2);
+const NavBar = _ref8 => {
+  let {
+    children,
+    className,
+    navProps,
+    listProps,
+    colors,
+    modifier,
+    ...props
+  } = _ref8;
   return /*#__PURE__*/_react.default.createElement(StyledNavBar, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-NavBar', "k-NavBar--" + modifier, className),
     colors: colors

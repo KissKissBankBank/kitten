@@ -7,8 +7,6 @@ exports.RadioButtonSet = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -27,29 +25,29 @@ var _deprecated = require("../../../helpers/utils/deprecated");
 
 var _deprecated2 = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "size", "fontWeight", "weight", "paragraphStyle", "labelProps"],
-    _excluded2 = ["id", "className"];
-
-var StyledRadioButtonSet = _styledComponents.default.fieldset.withConfig({
+const StyledRadioButtonSet = _styledComponents.default.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
   componentId: "sc-1bde3vb-0"
 })(["margin:0;padding:0;border:0;line-height:1.3rem;& > legend{padding:0;}.k-Form-RadioButtonSet__label{margin-bottom:", ";}.k-Form-RadioButtonSet__radioContainer{display:flex;flex-direction:column;gap:", " 0;.k-Form-RadioButtonSet__radioButton.k-Form-RadioButton{margin:0;}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5));
 
-var RadioButtonSet = function RadioButtonSet(_ref) {
-  var items = _ref.items,
-      disabled = _ref.disabled,
-      className = _ref.className,
-      name = _ref.name,
-      error = _ref.error,
-      design = _ref.design,
-      label = _ref.label,
-      children = _ref.children,
-      size = _ref.size,
-      fontWeight = _ref.fontWeight,
-      weight = _ref.weight,
-      paragraphStyle = _ref.paragraphStyle,
-      labelProps = _ref.labelProps,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const RadioButtonSet = _ref => {
+  let {
+    items,
+    disabled,
+    className,
+    name,
+    error,
+    design,
+    label,
+    children,
+    size,
+    fontWeight,
+    // Deprecated
+    weight,
+    paragraphStyle,
+    labelProps,
+    ...props
+  } = _ref;
   (0, _deprecated.checkDeprecatedWeights)(weight);
   return /*#__PURE__*/_react.default.createElement(StyledRadioButtonSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-RadioButtonSet', className),
@@ -60,10 +58,12 @@ var RadioButtonSet = function RadioButtonSet(_ref) {
     className: (0, _classnames.default)('k-Form-RadioButtonSet__label', labelProps.className)
   }), label), children && !label && /*#__PURE__*/_react.default.createElement("legend", null, children), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Form-RadioButtonSet__radioContainer"
-  }, items.map(function (_ref2) {
-    var id = _ref2.id,
-        className = _ref2.className,
-        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+  }, items.map(_ref2 => {
+    let {
+      id,
+      className,
+      ...itemProps
+    } = _ref2;
     return /*#__PURE__*/_react.default.createElement(_radioButton.RadioButton, (0, _extends2.default)({
       id: id,
       design: design,

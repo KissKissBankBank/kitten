@@ -1,14 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import { Text } from '../../../typography/text';
-export var FieldError = function FieldError(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const FieldError = _ref => {
+  let {
+    children,
+    className,
+    ...others
+  } = _ref;
   return /*#__PURE__*/React.createElement(Text, _extends({
     tag: "p",
     color: "error",

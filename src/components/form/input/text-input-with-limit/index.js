@@ -11,10 +11,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _textInput = require("../../../form/input/text-input");
 
-var TextInputWithLimit = function TextInputWithLimit(props) {
-  return /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, props, {
-    has: "limit"
-  }));
-};
+const TextInputWithLimit = props => /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, props, {
+  has: "limit"
+}));
 
 exports.TextInputWithLimit = TextInputWithLimit;

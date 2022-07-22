@@ -7,8 +7,6 @@ exports.Status = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -31,22 +29,23 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _excluded = ["statusType", "progressTitle", "titleProps", "children"];
-var STATUS_SIZE = 30;
+const STATUS_SIZE = 30;
 
-var StyledWrapper = _styledComponents.default.div.withConfig({
+const StyledWrapper = _styledComponents.default.div.withConfig({
   displayName: "status__StyledWrapper",
   componentId: "sc-1uvui41-0"
 })(["display:flex;flex:1;z-index:0;&.k-VerticalProgress__status--actions{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--waiting{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--publish{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--valid{.k-VerticalProgress__icon{background-color:", ";border-color:", ";}.k-VerticalProgress__title{color:", ";}}&.k-VerticalProgress__status--disabled{.k-VerticalProgress__icon{border-color:", ";background-color:", ";}.k-VerticalProgress__title{color:", ";}}.k-VerticalProgress__icon{flex-shrink:0;display:flex;align-items:center;justify-content:center;width:", ";height:", ";border-radius:var(--border-radius-rounded);border:var(--border-width) solid ", ";box-sizing:border-box;margin-right:", ";background-color:", ";}.k-VerticalProgress__title{margin:0;", ";font-size:", ";align-self:center;@media (min-width:", "px){font-size:", ";}}"], _colorsConfig.default.orange, _colorsConfig.default.orange, _colorsConfig.default.orange, _colorsConfig.default.font3, _colorsConfig.default.font3, _colorsConfig.default.font3, _colorsConfig.default.line3, _colorsConfig.default.line3, _colorsConfig.default.line3, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.line1, _colorsConfig.default.background1, _colorsConfig.default.font2, (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(STATUS_SIZE), _colorsConfig.default.background1, (0, _typography.pxToRem)(20), _colorsConfig.default.background1, _typographyConfig.default.fontStyles['700'], (0, _typography.stepToRem)(0), _screenConfig.ScreenConfig.S.min, (0, _typography.stepToRem)(1));
 
-var Status = function Status(_ref) {
-  var statusType = _ref.statusType,
-      progressTitle = _ref.progressTitle,
-      titleProps = _ref.titleProps,
-      children = _ref.children,
-      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const Status = _ref => {
+  let {
+    statusType,
+    progressTitle,
+    titleProps,
+    children,
+    ...other
+  } = _ref;
 
-  var iconByStatus = function () {
+  const iconByStatus = (() => {
     switch (statusType) {
       case 'actions':
         return /*#__PURE__*/_react.default.createElement(_longArrowIcon.LongArrowIcon, {
@@ -80,7 +79,7 @@ var Status = function Status(_ref) {
       default:
         return null;
     }
-  }();
+  })();
 
   return /*#__PURE__*/_react.default.createElement(StyledWrapper, {
     className: (0, _classnames.default)('k-VerticalProgress__status', "k-VerticalProgress__status--" + statusType)

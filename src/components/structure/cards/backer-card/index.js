@@ -7,8 +7,6 @@ exports.BackerCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -23,21 +21,21 @@ var _text = require("../../../typography/text");
 
 var _buttonImage = require("../../../action/button-image");
 
-var _excluded = ["className", "title", "titleTag", "subtitle", "imgProps", "description"];
-
-var StyledCard = _styledComponents.default.div.withConfig({
+const StyledCard = _styledComponents.default.div.withConfig({
   displayName: "backer-card__StyledCard",
   componentId: "sc-8cf6gi-0"
 })(["padding:", " ", ";border-radius:var(--border-radius-s);box-shadow:var(--box-shadow-s);text-align:center;word-break:break-word;display:flex;align-items:center;flex-direction:column;gap:", ";"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10));
 
-var BackerCard = function BackerCard(_ref) {
-  var className = _ref.className,
-      title = _ref.title,
-      titleTag = _ref.titleTag,
-      subtitle = _ref.subtitle,
-      imgProps = _ref.imgProps,
-      description = _ref.description,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const BackerCard = _ref => {
+  let {
+    className,
+    title,
+    titleTag,
+    subtitle,
+    imgProps,
+    description,
+    ...others
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({
     className: (0, _classnames.default)('k-BackerCard', className)
   }, others), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_text.Text, {

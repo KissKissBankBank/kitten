@@ -3,7 +3,7 @@
 exports.__esModule = true;
 exports.pauseEvent = void 0;
 
-var pauseEvent = function pauseEvent(e) {
+const pauseEvent = e => {
   if (e.stopPropagation) e.stopPropagation();
   if (e.preventDefault) e.preventDefault();
   e.cancelBubble = true;

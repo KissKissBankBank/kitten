@@ -1,25 +1,24 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title", "width", "height", "size"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-var DEFAULT_WIDTH = 8;
-var DEFAULT_HEIGHT = 8;
-export var CrossIcon = function CrossIcon(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      width = _ref.width,
-      height = _ref.height,
-      size = _ref.size,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var computed = computeFromRatio({
+const DEFAULT_WIDTH = 8;
+const DEFAULT_HEIGHT = 8;
+export const CrossIcon = _ref => {
+  let {
+    color,
+    title,
+    width,
+    height,
+    size,
+    ...props
+  } = _ref;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
 
   if (size === 'large') {

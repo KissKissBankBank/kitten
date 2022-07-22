@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "dropdownContentWidth", "className"];
 import React, { useContext } from 'react';
 import { BurgerIcon } from '../../../graphics/icons/burger-icon';
 import { VisuallyHidden } from '../../../accessibility/visually-hidden';
@@ -9,31 +7,32 @@ import { Context } from './context';
 import classNames from 'classnames';
 import { useDropdown } from '../hooks/use-dropdown';
 import { DropdownButton } from './dropdown-button';
-var namespace = 'kkbbAndCo';
-var CLOSE_EVENT = namespace + ":platformMenu:close";
-export var BurgerMenu = function BurgerMenu(_ref) {
-  var children = _ref.children,
-      dropdownContentWidth = _ref.dropdownContentWidth,
-      className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var _useContext = useContext(Context),
-      id = _useContext.id,
-      callOnToggle = _useContext.callOnToggle;
-
-  var _useDropdown = useDropdown({
-    dropdownContentWidth: dropdownContentWidth,
-    callOnToggle: callOnToggle,
+const namespace = 'kkbbAndCo';
+const CLOSE_EVENT = namespace + ":platformMenu:close";
+export const BurgerMenu = _ref => {
+  let {
+    children,
+    dropdownContentWidth,
+    className,
+    ...props
+  } = _ref;
+  const {
+    id,
+    callOnToggle
+  } = useContext(Context);
+  const {
+    dropdownProps,
+    buttonProps,
+    menuProps,
+    isDropdownExpanded
+  } = useDropdown({
+    dropdownContentWidth,
+    callOnToggle,
     dropdownAnchorSide: 'left',
     closeEvents: [CLOSE_EVENT],
     buttonId: id + "PlateformMenu",
     menuId: id + "PlateformMenu__content"
-  }),
-      dropdownProps = _useDropdown.dropdownProps,
-      buttonProps = _useDropdown.buttonProps,
-      menuProps = _useDropdown.menuProps,
-      isDropdownExpanded = _useDropdown.isDropdownExpanded;
-
+  });
   return /*#__PURE__*/React.createElement("div", _extends({}, dropdownProps, props, {
     className: classNames(className, dropdownProps.className)
   }), /*#__PURE__*/React.createElement(DropdownButton, _extends({}, buttonProps, {

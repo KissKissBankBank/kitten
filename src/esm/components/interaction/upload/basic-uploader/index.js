@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["id", "buttonProps", "buttonText", "canCancel", "cancelButtonText", "disabled", "errorText", "fileInputProps", "fileName", "loaderAnimation", "onCancel", "onUpload", "status", "statusText"];
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -17,79 +15,54 @@ import { ClockCircleIcon } from '../../../graphics/icons/clock-circle-icon';
 import { CrossIcon } from '../../../graphics/icons/cross-icon';
 import { VisuallyHidden } from '../../../accessibility/visually-hidden';
 import { Loader } from '../../../graphics/animations/loader';
-var StyledBasicUploader = styled.div.withConfig({
+const StyledBasicUploader = styled.div.withConfig({
   displayName: "basic-uploader__StyledBasicUploader",
   componentId: "sc-5ptyqe-0"
 })(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}input[type='file']:focus-visible + label{outline:auto;}&:not(.k-BasicUploader--loading){input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}}.k-BasicUploader__statusBlock{margin-top:", ";display:flex;& > * + *{margin-left:", ";}}.k-BasicUploader__cancelButton{width:", ";height:", ";cursor:pointer;padding:0;display:flex;justify-content:center;align-items:center;", "}"], COLORS.primary2, COLORS.primary2, COLORS.background1, COLORS.background1, COLORS.line2, COLORS.line2, COLORS.background1, COLORS.background1, pxToRem(15), pxToRem(10), pxToRem(20), pxToRem(20), modifierStyles('beryllium'));
-var statusesWithIcons = ['error', 'valid', 'wait'];
-export var BasicUploader = function BasicUploader(_ref) {
-  var id = _ref.id,
-      _ref$buttonProps = _ref.buttonProps,
-      buttonProps = _ref$buttonProps === void 0 ? {} : _ref$buttonProps,
-      _ref$buttonText = _ref.buttonText,
-      buttonText = _ref$buttonText === void 0 ? 'Document' : _ref$buttonText,
-      _ref$canCancel = _ref.canCancel,
-      canCancel = _ref$canCancel === void 0 ? false : _ref$canCancel,
-      _ref$cancelButtonText = _ref.cancelButtonText,
-      cancelButtonText = _ref$cancelButtonText === void 0 ? 'Cancel and reupload' : _ref$cancelButtonText,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$errorText = _ref.errorText,
-      errorText = _ref$errorText === void 0 ? '' : _ref$errorText,
-      _ref$fileInputProps = _ref.fileInputProps,
-      fileInputProps = _ref$fileInputProps === void 0 ? {} : _ref$fileInputProps,
-      _ref$fileName = _ref.fileName,
-      fileName = _ref$fileName === void 0 ? '' : _ref$fileName,
-      _ref$loaderAnimation = _ref.loaderAnimation,
-      loaderAnimation = _ref$loaderAnimation === void 0 ? /*#__PURE__*/React.createElement(Loader, null) : _ref$loaderAnimation,
-      _ref$onCancel = _ref.onCancel,
-      onCancel = _ref$onCancel === void 0 ? function () {} : _ref$onCancel,
-      _ref$onUpload = _ref.onUpload,
-      onUpload = _ref$onUpload === void 0 ? function () {} : _ref$onUpload,
-      _ref$status = _ref.status,
-      status = _ref$status === void 0 ? 'ready' : _ref$status,
-      _ref$statusText = _ref.statusText,
-      statusText = _ref$statusText === void 0 ? '' : _ref$statusText,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var _useState = useState(status),
-      internalStatus = _useState[0],
-      setInternalStatus = _useState[1];
-
-  useEffect(function () {
+const statusesWithIcons = ['error', 'valid', 'wait'];
+export const BasicUploader = _ref => {
+  let {
+    id,
+    //required
+    buttonProps = {},
+    buttonText = 'Document',
+    canCancel = false,
+    cancelButtonText = 'Cancel and reupload',
+    disabled = false,
+    errorText = '',
+    fileInputProps = {},
+    fileName = '',
+    loaderAnimation = /*#__PURE__*/React.createElement(Loader, null),
+    onCancel = () => {},
+    onUpload = () => {},
+    status = 'ready',
+    statusText = '',
+    ...props
+  } = _ref;
+  const [internalStatus, setInternalStatus] = useState(status);
+  useEffect(() => {
     setInternalStatus(status);
   }, [status]);
-
-  var _useState2 = useState(disabled),
-      internalDisabled = _useState2[0],
-      setInternalDisabled = _useState2[1];
-
-  useEffect(function () {
+  const [internalDisabled, setInternalDisabled] = useState(disabled);
+  useEffect(() => {
     setInternalDisabled(disabled);
   }, [disabled]);
-
-  var _useState3 = useState(''),
-      internalFileName = _useState3[0],
-      setInternalFileName = _useState3[1];
-
-  var _useState4 = useState(canCancel),
-      internalCanCancel = _useState4[0],
-      setInternalCanCancel = _useState4[1];
-
-  useEffect(function () {
+  const [internalFileName, setInternalFileName] = useState('');
+  const [internalCanCancel, setInternalCanCancel] = useState(canCancel);
+  useEffect(() => {
     setInternalCanCancel(canCancel);
   }, [canCancel]);
-  useEffect(function () {
+  useEffect(() => {
     if (errorText !== '') {
       setInternalStatus('error');
     }
   }, [errorText]);
 
-  var onFileInputChange = function onFileInputChange(event) {
-    var files = event.currentTarget.files;
+  const onFileInputChange = event => {
+    const files = event.currentTarget.files;
     if (files.length < 1) return;
-    var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
+    const tempFileName = files[0].name;
+    const tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalCanCancel(true);
     setInternalFileName(tempText);
@@ -97,7 +70,7 @@ export var BasicUploader = function BasicUploader(_ref) {
     onUpload(event);
   };
 
-  var onCancelButtonClick = function onCancelButtonClick(event) {
+  const onCancelButtonClick = event => {
     setInternalStatus('ready');
     setInternalCanCancel(false);
     setInternalDisabled(false);

@@ -1,7 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "show", "className", "actionProps", "size", "type"],
-    _excluded2 = ["className", "as"];
 import React, { cloneElement } from 'react';
 import { StyledSummaryCard } from './styles';
 import classNames from 'classnames';
@@ -9,32 +6,32 @@ import PropTypes from 'prop-types';
 import { Image, TitleTag, TitleBar, Cell } from './components';
 import { getReactElementsByType, getReactElementsWithoutType } from '../../../../helpers/react/get-react-elements';
 import { NoImageIcon } from '../../../graphics/icons/no-image-icon';
-export var SummaryCard = function SummaryCard(_ref) {
+export const SummaryCard = _ref => {
   var _imageChild$props;
 
-  var children = _ref.children,
-      show = _ref.show,
-      className = _ref.className,
-      actionProps = _ref.actionProps,
-      size = _ref.size,
-      type = _ref.type,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var imageChild = getReactElementsByType({
-    children: children,
+  let {
+    children,
+    show,
+    className,
+    actionProps,
+    size,
+    type,
+    ...props
+  } = _ref;
+  const imageChild = getReactElementsByType({
+    children,
     type: SummaryCard.Image
   })[0];
-  var wrappedChildren = getReactElementsWithoutType({
-    children: children,
+  const wrappedChildren = getReactElementsWithoutType({
+    children,
     type: SummaryCard.Image
   });
-
-  var actionClassName = actionProps.className,
-      _actionProps$as = actionProps.as,
-      actionAs = _actionProps$as === void 0 ? 'a' : _actionProps$as,
-      action = _objectWithoutPropertiesLoose(actionProps, _excluded2);
-
-  var ActionElement = actionAs;
+  const {
+    className: actionClassName,
+    as: actionAs = 'a',
+    ...action
+  } = actionProps;
+  const ActionElement = actionAs;
   if (!show) return null;
   return /*#__PURE__*/React.createElement(StyledSummaryCard, _extends({
     className: classNames('k-SummaryCard', className, "k-SummaryCard-Wrapper--" + size, {
@@ -49,11 +46,9 @@ export var SummaryCard = function SummaryCard(_ref) {
     })
   }, !!imageChild ? /*#__PURE__*/cloneElement(imageChild) : /*#__PURE__*/React.createElement(NoImageIcon, null)), /*#__PURE__*/React.createElement("div", {
     className: "k-SummaryCard__gridWrapper k-SummaryCard-Wrapper__gridWrapper"
-  }, wrappedChildren.map(function (item, index) {
-    return /*#__PURE__*/cloneElement(item, {
-      key: "SummaryCard-" + index
-    });
-  })));
+  }, wrappedChildren.map((item, index) => /*#__PURE__*/cloneElement(item, {
+    key: "SummaryCard-" + index
+  }))));
 };
 export { useResizeObserver as useSummaryCardResizeObserver } from './hooks/use-resize-observer';
 SummaryCard.Image = Image;

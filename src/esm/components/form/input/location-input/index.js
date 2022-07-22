@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["onChange", "onSelect", "defaultValue", "inputProps", "name", "loadingText", "customInputValue"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -10,28 +8,29 @@ import { LocationIcon } from '../../../graphics/icons/location-icon';
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import COLORS from '../../../../constants/colors-config';
 import TYPOGRAPHY from '../../../../constants/typography-config';
-var StyledLocationInput = styled.div.withConfig({
+import { TextInput } from '../../../form/input/text-input';
+const StyledLocationInput = styled.div.withConfig({
   displayName: "location-input__StyledLocationInput",
   componentId: "sc-d3bomz-0"
-})(["position:relative;width:100%;.k-LocationInput__input{", " font-size:", ";line-height:1.3;position:relative;display:block;box-sizing:border-box;padding:0 ", " 0 ", ";border-radius:var(--border-radius-s);width:100%;height:", ";background:", ";border:var(--border);color:", ";transition:color 0.2s,border-color 0.2s;&::placeholder{color:", ";}&:hover{border:var(--border-hover);}&:focus{color:", ";outline:var(--outline-input);outline-offset:var(--outline-offset-input);}&:disabled{border:var(--color-grey-300);background-color:var(--color-grey-200);color:var(--color-grey-600);cursor:not-allowed;&::placeholder{opacity:1;}}}.k-LocationInput__autocomplete{box-sizing:border-box;background-color:", ";border:var(--border-active);border-top:0;position:absolute;z-index:1000;z-index:var(--menu-z-index,1000);width:100%;overflow-y:scroll;&:empty{border:0;}}.k-LocationInput__autocompleteItem,.k-LocationInput__autocompleteItem--active{padding:0 ", ";height:", ";display:flex;align-items:center;font-size:", ";cursor:pointer;color:", ";}.k-LocationInput__autocompleteItem--active{background-color:", ";}.k-LocationInput__autocompleteItem__mainText{", " margin-left:", ";color:", ";}.k-LocationInput__autocompleteItem__secondaryText{", " margin-left:1ch;}.k-LocationInput__loading{padding-left:", ";color:", ";}.k-LocationInput__icon{position:absolute;z-index:1;top:", ";left:", ";}"], TYPOGRAPHY.fontStyles['400'], stepToRem(-1), pxToRem(15), pxToRem(35), pxToRem(50), COLORS.background1, COLORS.font1, COLORS.font2, COLORS.font1, COLORS.background1, pxToRem(12), pxToRem(50), stepToRem(-1), COLORS.font1, COLORS.background3, TYPOGRAPHY.fontStyles['400'], pxToRem(20), COLORS.font1, TYPOGRAPHY.fontStyles['400'], pxToRem(20), COLORS.font2, pxToRem(15), pxToRem(15)); // Make sure you include a script to the Google Maps places API.
+})(["position:relative;width:100%;.k-LocationInput__autocomplete{box-sizing:border-box;background-color:", ";border:var(--border-active);border-top:0;position:absolute;z-index:1000;z-index:var(--menu-z-index,1000);width:100%;overflow-y:scroll;&:empty{border:0;}}.k-LocationInput__autocompleteItem,.k-LocationInput__autocompleteItem--active{padding:0 ", ";height:", ";display:flex;align-items:center;font-size:", ";cursor:pointer;color:", ";}.k-LocationInput__autocompleteItem--active{background-color:", ";}.k-LocationInput__autocompleteItem__mainText{", " margin-left:", ";color:", ";}.k-LocationInput__autocompleteItem__secondaryText{", " margin-left:1ch;}.k-LocationInput__loading{padding-left:", ";color:", ";}"], COLORS.background1, pxToRem(12), pxToRem(50), stepToRem(-1), COLORS.font1, COLORS.background3, TYPOGRAPHY.fontStyles['400'], pxToRem(20), COLORS.font1, TYPOGRAPHY.fontStyles['400'], pxToRem(20), COLORS.font2); // Make sure you include a script to the Google Maps places API.
 // For example:
 //   <script src="https://maps.googleapis.com/maps/api/js?key=…&libraries=places"></script>
 
-export var LocationInput = function LocationInput(_ref) {
-  var onChange = _ref.onChange,
-      onSelect = _ref.onSelect,
-      defaultValue = _ref.defaultValue,
-      inputProps = _ref.inputProps,
-      name = _ref.name,
-      loadingText = _ref.loadingText,
-      customInputValue = _ref.customInputValue,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const LocationInput = _ref => {
+  let {
+    onChange,
+    onSelect,
+    defaultValue,
+    inputProps,
+    name,
+    loadingText,
+    customInputValue,
+    id,
+    ...others
+  } = _ref;
+  const [address, updateAddress] = useState(defaultValue);
 
-  var _useState = useState(defaultValue),
-      address = _useState[0],
-      updateAddress = _useState[1];
-
-  var handleChange = function handleChange(returnedAddress) {
+  const handleChange = returnedAddress => {
     updateAddress(returnedAddress);
     onChange({
       value: returnedAddress,
@@ -39,16 +38,16 @@ export var LocationInput = function LocationInput(_ref) {
     });
   };
 
-  var handleSelect = function handleSelect(returnedAddress, placeId) {
-    geocodeByPlaceId(placeId).then(function (results) {
-      var place = results[0];
+  const handleSelect = (returnedAddress, placeId) => {
+    geocodeByPlaceId(placeId).then(results => {
+      const place = results[0];
 
       if (place) {
         updateAddress(returnedAddress);
         onSelect({
           value: returnedAddress,
-          placeId: placeId,
-          place: place
+          placeId,
+          place
         });
       }
     });
@@ -58,27 +57,31 @@ export var LocationInput = function LocationInput(_ref) {
     value: customInputValue || address,
     onSelect: handleSelect,
     onChange: handleChange
-  }, others), function (_ref2) {
-    var getInputProps = _ref2.getInputProps,
-        suggestions = _ref2.suggestions,
-        getSuggestionItemProps = _ref2.getSuggestionItemProps,
-        loading = _ref2.loading;
+  }, others), _ref2 => {
+    let {
+      getInputProps,
+      suggestions,
+      getSuggestionItemProps,
+      loading
+    } = _ref2;
     return /*#__PURE__*/React.createElement(StyledLocationInput, {
       className: "k-LocationInput"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "k-LocationInput__icon"
-    }, /*#__PURE__*/React.createElement(LocationIcon, null)), /*#__PURE__*/React.createElement("input", getInputProps(_extends({}, inputProps, {
+    }, /*#__PURE__*/React.createElement(TextInput, _extends({}, getInputProps({ ...inputProps,
       className: classNames('k-LocationInput__input', inputProps == null ? void 0 : inputProps.className)
-    }))), /*#__PURE__*/React.createElement("div", {
+    }), {
+      id: id,
+      has: "icon",
+      icon: /*#__PURE__*/React.createElement(LocationIcon, null)
+    })), /*#__PURE__*/React.createElement("div", {
       className: "k-LocationInput__autocomplete"
     }, loading && /*#__PURE__*/React.createElement("div", {
       className: "k-LocationInput__loading k-LocationInput__autocompleteItem"
-    }, loadingText), suggestions.map(function (suggestion) {
-      var className = suggestion.active ? 'k-LocationInput__autocompleteItem--active' : 'k-LocationInput__autocompleteItem';
+    }, loadingText), suggestions.map(suggestion => {
+      const className = suggestion.active ? 'k-LocationInput__autocompleteItem--active' : 'k-LocationInput__autocompleteItem';
       return /*#__PURE__*/React.createElement("div", _extends({
         key: suggestion.formattedSuggestion.mainText
       }, getSuggestionItemProps(suggestion, {
-        className: className
+        className
       })), /*#__PURE__*/React.createElement("span", {
         className: "k-LocationInput__autocompleteItem__mainText"
       }, suggestion.formattedSuggestion.mainText), ', ', /*#__PURE__*/React.createElement("span", {
@@ -88,8 +91,8 @@ export var LocationInput = function LocationInput(_ref) {
   });
 };
 LocationInput.defaultProps = {
-  onChange: function onChange() {},
-  onSelect: function onSelect() {},
+  onChange: () => {},
+  onSelect: () => {},
   defaultValue: '',
   inputProps: {},
   name: 'location-input',

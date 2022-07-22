@@ -1,26 +1,25 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "width", "height", "small"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-export var KissKissBankBankLogo = function KissKissBankBankLogo(_ref) {
-  var color = _ref.color,
-      width = _ref.width,
-      height = _ref.height,
-      small = _ref.small,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var DEFAULT_WIDTH = 134;
-  var DEFAULT_HEIGHT = 30;
-  var SMALL_WIDTH = 32;
-  var computed = computeFromRatio({
+export const KissKissBankBankLogo = _ref => {
+  let {
+    color,
+    width,
+    height,
+    small,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 134;
+  const DEFAULT_HEIGHT = 30;
+  const SMALL_WIDTH = 32;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: small ? SMALL_WIDTH : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

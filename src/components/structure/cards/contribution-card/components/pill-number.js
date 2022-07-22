@@ -13,7 +13,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _pillNumberInput = require("../../../../form/pill-number-input");
 
-var PillNumber = function PillNumber(props) {
+const PillNumber = props => {
   return /*#__PURE__*/_react.default.createElement(_pillNumberInput.PillNumberInput, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ContributionCard__pillNumber', props.className)
   }));

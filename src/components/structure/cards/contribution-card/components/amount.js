@@ -13,7 +13,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _text = require("../../../../typography/text");
 
-var Amount = function Amount(props) {
+const Amount = props => {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     color: "font1",
     weight: "700",

@@ -1,4 +1,3 @@
-import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React from 'react';
 import { FieldLabel } from './components/label';
 import { FieldInput } from './components/input';
@@ -9,23 +8,16 @@ import { FieldRadioButtonSet } from './components/radio-button-set';
 import { FieldCheckbox } from './components/checkbox';
 import { FieldPassword } from './components/password';
 import { FieldAutocomplete } from './components/autocomplete';
-export var Field = /*#__PURE__*/function (_React$Component) {
-  _inheritsLoose(Field, _React$Component);
+export class Field extends React.Component {
+  constructor() {
+    super(...arguments);
 
-  function Field() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-
-    _this.render = function () {
-      var _this$props = _this.props,
-          tag = _this$props.tag,
-          children = _this$props.children;
-      var Component = tag;
+    this.render = () => {
+      const {
+        tag,
+        children
+      } = this.props;
+      const Component = tag;
 
       if (!!tag) {
         return /*#__PURE__*/React.createElement(Component, null, children);
@@ -33,12 +25,9 @@ export var Field = /*#__PURE__*/function (_React$Component) {
 
       return children;
     };
-
-    return _this;
   }
 
-  return Field;
-}(React.Component);
+}
 Field.Label = FieldLabel;
 Field.Input = FieldInput;
 Field.RadioSet = FieldRadioSet;

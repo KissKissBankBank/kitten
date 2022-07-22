@@ -1,5 +1,7 @@
 import React from 'react';
-export var Image = function Image(_ref) {
-  var children = _ref.children;
+export const Image = _ref => {
+  let {
+    children
+  } = _ref;
   return /*#__PURE__*/React.createElement(React.Fragment, null, children);
 };

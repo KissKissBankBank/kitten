@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
-export var titleModifiersNames = ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary'];
-export var titleModifiers = [{
+export const titleModifiersNames = ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary'];
+export const titleModifiers = [{
   name: 'primary',
   fontStepOnMobile: 7,
   fontStepOnTablet: 9,
@@ -39,31 +39,25 @@ export var titleModifiers = [{
   fontStepOnDesktop: 2
 }];
 
-var getLetterSpacingFromStep = function getLetterSpacingFromStep(step) {
+const getLetterSpacingFromStep = step => {
   if (step > 5) return '-0.02em';
   if (step > 3) return '-0.015em';
   return '-0.01em';
 };
 
-var getLineHeightFromStep = function getLineHeightFromStep(step) {
+const getLineHeightFromStep = step => {
   if (step > 8) return '1em';
   if (step > 4) return "calc(1em + " + pxToRem(4) + ")";
   return "calc(1em + " + pxToRem(2) + ")";
 };
 
-var getStyleFromStep = function getStyleFromStep(step) {
-  return css(["font-size:", ";letter-spacing:", ";line-height:", ";"], stepToRem(step), getLetterSpacingFromStep(step), getLineHeightFromStep(step));
-};
+const getStyleFromStep = step => css(["font-size:", ";letter-spacing:", ";line-height:", ";"], stepToRem(step), getLetterSpacingFromStep(step), getLineHeightFromStep(step));
 
-export var titleModifierStyles = function titleModifierStyles(prefix) {
-  return css(["", ""], titleModifiers.map(function (key, index) {
-    return css(["", "{", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}}"], prefix + "--" + titleModifiersNames[index], getStyleFromStep(key.fontStepOnMobile), pxToRem(ScreenConfig.S.min), getStyleFromStep(key.fontStepOnTablet), pxToRem(ScreenConfig.L.min), getStyleFromStep(key.fontStepOnDesktop));
-  }));
-};
-export var titleHelperModifierStyles = function titleHelperModifierStyles(modifier) {
-  var modifierIndex = findIndex(function (item) {
-    return modifier === item;
-  })(titleModifiersNames);
-  var modifierDefinitions = titleModifiersNames[modifierIndex];
+export const titleModifierStyles = prefix => css(["", ""], titleModifiers.map((key, index) => {
+  return css(["", "{", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}}"], prefix + "--" + titleModifiersNames[index], getStyleFromStep(key.fontStepOnMobile), pxToRem(ScreenConfig.S.min), getStyleFromStep(key.fontStepOnTablet), pxToRem(ScreenConfig.L.min), getStyleFromStep(key.fontStepOnDesktop));
+}));
+export const titleHelperModifierStyles = modifier => {
+  const modifierIndex = findIndex(item => modifier === item)(titleModifiersNames);
+  const modifierDefinitions = titleModifiersNames[modifierIndex];
   return css(["", ";@media (min-width:", "){", ";}@media (min-width:", "){", ";}"], getStyleFromStep(modifierDefinitions.fontStepOnMobile), pxToRem(ScreenConfig.S.min), getStyleFromStep(modifierDefinitions.fontStepOnTablet), pxToRem(ScreenConfig.L.min), getStyleFromStep(modifierDefinitions.fontStepOnDesktop));
 };

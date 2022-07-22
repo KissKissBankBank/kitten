@@ -1,10 +1,10 @@
 import TYPOGRAPHY from '../../../constants/typography-config';
-export var pxToRem = function pxToRem(sizeInPx) {
+export const pxToRem = sizeInPx => {
   if (sizeInPx === 0) return 0;
-  var sizeInRem = sizeInPx / TYPOGRAPHY.root;
+  const sizeInRem = sizeInPx / TYPOGRAPHY.root;
   return parseFloat(sizeInRem) + "rem";
 };
-var fontSizeScale = {
+const fontSizeScale = {
   '-4': 10,
   '-3': 11,
   '-2': 12,
@@ -27,6 +27,6 @@ var fontSizeScale = {
   15: 94,
   16: 105
 };
-export var stepToRem = function stepToRem(step) {
+export const stepToRem = step => {
   return pxToRem(fontSizeScale[step.toString()]);
 };

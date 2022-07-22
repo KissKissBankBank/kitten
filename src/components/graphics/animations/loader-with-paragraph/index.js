@@ -7,8 +7,6 @@ exports.LoaderWithParagraph = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -23,22 +21,22 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["className", "loaderPosition", "loaderProps", "loaderComponent", "paragraphProps", "children"];
-
-var StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
+const StyledLoaderWithParagraph = _styledComponents.default.div.withConfig({
   displayName: "loader-with-paragraph__StyledLoaderWithParagraph",
   componentId: "sc-1h8nejh-0"
 })(["display:flex;align-items:center;gap:", ";&.k-LoaderWithParagraph--top{flex-direction:column;}&.k-LoaderWithParagraph--bottom{flex-direction:column-reverse;}&.k-LoaderWithParagraph--left{flex-direction:row;}&.k-LoaderWithParagraph--right{flex-direction:row-reverse;}"], (0, _typography.pxToRem)(10));
 
-var LoaderWithParagraph = function LoaderWithParagraph(_ref) {
-  var className = _ref.className,
-      loaderPosition = _ref.loaderPosition,
-      loaderProps = _ref.loaderProps,
-      loaderComponent = _ref.loaderComponent,
-      paragraphProps = _ref.paragraphProps,
-      children = _ref.children,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var Component = loaderComponent || _loader.Loader;
+const LoaderWithParagraph = _ref => {
+  let {
+    className,
+    loaderPosition,
+    loaderProps,
+    loaderComponent,
+    paragraphProps,
+    children,
+    ...others
+  } = _ref;
+  const Component = loaderComponent || _loader.Loader;
   return /*#__PURE__*/_react.default.createElement(StyledLoaderWithParagraph, (0, _extends2.default)({
     className: (0, _classnames.default)('k-LoaderWithParagraph', className, "k-LoaderWithParagraph--" + loaderPosition)
   }, others), /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({

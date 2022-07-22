@@ -1,9 +1,8 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { Component } from 'react';
 import { createMatchMediaMax, createMatchMedia } from '../helpers/utils/media-queries';
 import { SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L } from '../constants/screen-config';
-var viewPortTable = {
+const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,
   viewportIsTabletOrLess: SCREEN_SIZE_M,
   viewportIsXXS: SCREEN_SIZE_XXS,
@@ -12,50 +11,39 @@ var viewPortTable = {
   viewportIsMOrLess: SCREEN_SIZE_M,
   viewportIsLOrLess: SCREEN_SIZE_L
 };
-export var withMediaQueries = function withMediaQueries(hocProps) {
-  return function (WrapperComponent) {
-    return mediaQueries(WrapperComponent, hocProps);
-  };
-};
-export var mediaQueries = function mediaQueries(WrappedComponent, hocProps) {
+export const withMediaQueries = hocProps => WrapperComponent => mediaQueries(WrapperComponent, hocProps);
+export const mediaQueries = function (WrappedComponent, hocProps) {
   if (hocProps === void 0) {
     hocProps = {};
   }
 
-  return /*#__PURE__*/function (_Component) {
-    _inheritsLoose(_class2, _Component);
+  return class extends Component {
+    constructor(props) {
+      super(props);
 
-    function _class2(props) {
-      var _this;
-
-      _this = _Component.call(this, props) || this;
-
-      _this.setExposedMethods = function (wrappedComponentInstance) {
+      this.setExposedMethods = wrappedComponentInstance => {
         if (!wrappedComponentInstance) return;
         if (!hocProps.exposedMethods) return;
-        hocProps.exposedMethods.forEach(function (method) {
-          _this[method] = wrappedComponentInstance[method];
+        hocProps.exposedMethods.forEach(method => {
+          this[method] = wrappedComponentInstance[method];
         });
       };
 
-      _this.viewports = {};
-      _this.state = Object.keys(hocProps).reduce(function (result, prop) {
-        var _extends2;
-
-        return _this.isInvalidProp(prop) ? result : _extends({}, result, (_extends2 = {}, _extends2[prop] = false, _extends2));
+      this.viewports = {};
+      this.state = Object.keys(hocProps).reduce((result, prop) => {
+        return this.isInvalidProp(prop) ? result : { ...result,
+          [prop]: false
+        };
       }, {});
-      return _this;
     }
 
-    var _proto = _class2.prototype;
-
-    _proto.isInvalidProp = function isInvalidProp(prop) {
+    isInvalidProp(prop) {
       return typeof hocProps[prop] === 'boolean' && !viewPortTable[prop] || !['boolean', 'string'].includes(typeof hocProps[prop]);
-    };
+    }
 
-    _proto.warnIfHocPropIsDeprecated = function warnIfHocPropIsDeprecated(prop) {
+    warnIfHocPropIsDeprecated(prop) {
       if (process.env.NODE_ENV === 'development') {
-        var deprecatedPropsToNewProps = {
+        const deprecatedPropsToNewProps = {
           viewportIsMobile: 'viewportIsXSOrLess',
           viewportIsTabletOrLess: 'viewportIsMOrLess'
         };
@@ -64,54 +52,37 @@ export var mediaQueries = function mediaQueries(WrappedComponent, hocProps) {
           console.warn(prop + " is deprecated. Please use " + deprecatedPropsToNewProps[prop] + " instead now.");
         }
       }
-    };
+    }
 
-    _proto.componentDidMount = function componentDidMount() {
-      var _this2 = this;
+    componentDidMount() {
+      for (let prop in hocProps) {
+        const propValue = hocProps[prop];
 
-      var _loop = function _loop(prop) {
-        var propValue = hocProps[prop];
-
-        if (_this2.isInvalidProp(prop)) {
-          return "break";
+        if (this.isInvalidProp(prop)) {
+          break;
         }
 
-        _this2.warnIfHocPropIsDeprecated(prop);
+        this.warnIfHocPropIsDeprecated(prop);
+        this.viewports[prop] = typeof propValue === 'boolean' ? createMatchMediaMax(viewPortTable[prop]) : createMatchMedia(propValue);
 
-        _this2.viewports[prop] = typeof propValue === 'boolean' ? createMatchMediaMax(viewPortTable[prop]) : createMatchMedia(propValue);
+        this.viewports[prop].cb = event => this.setState({
+          [prop]: event.matches
+        });
 
-        _this2.viewports[prop].cb = function (event) {
-          var _this2$setState;
-
-          return _this2.setState((_this2$setState = {}, _this2$setState[prop] = event.matches, _this2$setState));
-        };
-
-        _this2.viewports[prop].addListener(_this2.viewports[prop].cb);
-
-        _this2.viewports[prop].cb(_this2.viewports[prop]);
-      };
-
-      for (var prop in hocProps) {
-        var _ret = _loop(prop);
-
-        if (_ret === "break") break;
+        this.viewports[prop].addListener(this.viewports[prop].cb);
+        this.viewports[prop].cb(this.viewports[prop]);
       }
-    };
+    }
 
-    _proto.componentWillUnmount = function componentWillUnmount() {
-      var _this3 = this;
+    componentWillUnmount() {
+      Object.keys(this.viewports).forEach(prop => this.viewports[prop].removeListener(this.viewports[prop].cb));
+    }
 
-      Object.keys(this.viewports).forEach(function (prop) {
-        return _this3.viewports[prop].removeListener(_this3.viewports[prop].cb);
-      });
-    };
-
-    _proto.render = function render() {
+    render() {
       return /*#__PURE__*/React.createElement(WrappedComponent, _extends({
         ref: this.setExposedMethods
       }, this.props, this.state));
-    };
+    }
 
-    return _class2;
-  }(Component);
+  };
 };

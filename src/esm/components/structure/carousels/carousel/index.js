@@ -1,5 +1,3 @@
-import _extends from "@babel/runtime/helpers/extends";
-import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
 import React, { Component, Fragment } from 'react';
 import deprecated from 'prop-types-extra/lib/deprecated';
 import PropTypes from 'prop-types';
@@ -15,212 +13,210 @@ import { Grid, GridCol } from '../../../layout/grid';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { StyledCarouselContainer, OUTLINE_PLUS_OFFSET } from './styles';
 
-var getDataLength = function getDataLength(_ref) {
-  var data = _ref.data,
-      children = _ref.children;
+const getDataLength = _ref => {
+  let {
+    data,
+    children
+  } = _ref;
   if (!!data) return data.length;
   return React.Children.count(children);
 };
 
-export var getNumberOfItemsPerPageForWidth = function getNumberOfItemsPerPageForWidth(width, itemMinWidth, itemMarginBetween, itemsPerPage) {
+export const getNumberOfItemsPerPageForWidth = (width, itemMinWidth, itemMarginBetween, itemsPerPage) => {
   if (!!itemsPerPage && itemMinWidth === 0) return itemsPerPage;
   if (width === 0 || itemMinWidth === 0) return 0;
-  var remainingWidthWithOneCard = width - itemMinWidth;
-  var itemWidthAndMargin = itemMinWidth + itemMarginBetween;
-  var numberOfItemsPerPage = Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1;
+  const remainingWidthWithOneCard = width - itemMinWidth;
+  const itemWidthAndMargin = itemMinWidth + itemMarginBetween;
+  const numberOfItemsPerPage = Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1;
   return numberOfItemsPerPage;
 };
-export var getNumberOfPagesForColumnsAndDataLength = function getNumberOfPagesForColumnsAndDataLength(dataLength, numberOfItemsPerPage) {
+export const getNumberOfPagesForColumnsAndDataLength = (dataLength, numberOfItemsPerPage) => {
   if (dataLength === 0 || numberOfItemsPerPage === 0) return 0;
-  var numberOfPages = Math.ceil(dataLength / numberOfItemsPerPage);
+  const numberOfPages = Math.ceil(dataLength / numberOfItemsPerPage);
   return numberOfPages;
 };
-export var checkPage = function checkPage(numberOfPages, newPage) {
+export const checkPage = (numberOfPages, newPage) => {
   if (numberOfPages < 1) return 0;
   if (newPage < 0) return 0;
   if (newPage >= numberOfPages) return numberOfPages - 1;
   return newPage;
 };
-export var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
+export const checkPageLoop = (numberOfPages, newPage) => {
   if (numberOfPages < 1) return 0;
   if (newPage < 0) return numberOfPages - 1;
   if (newPage >= numberOfPages) return 0;
   return newPage;
 };
 
-var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
+const getMarginBetweenAccordingToViewport = (baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) => {
   if (viewportIsXSOrLess) return CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2;
   if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2;
   return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2;
 };
 
-var CarouselBase = /*#__PURE__*/function (_Component) {
-  _inheritsLoose(CarouselBase, _Component);
-
-  function CarouselBase() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _Component.call.apply(_Component, [this].concat(args)) || this;
-    _this.state = {
+class CarouselBase extends Component {
+  constructor() {
+    super(...arguments);
+    this.state = {
       currentPageIndex: 0,
-      numberOfItemsPerPage: _this.props.itemsPerPage > 0 ? _this.props.itemsPerPage : 3,
+      numberOfItemsPerPage: this.props.itemsPerPage > 0 ? this.props.itemsPerPage : 3,
       numberOfPages: getNumberOfPagesForColumnsAndDataLength(getDataLength({
-        data: _this.props.data,
-        children: _this.props.children
-      }), _this.props.itemsPerPage > 0 ? _this.props.itemsPerPage : 3)
+        data: this.props.data,
+        children: this.props.children
+      }), this.props.itemsPerPage > 0 ? this.props.itemsPerPage : 3)
     };
-    _this.viewedPages = new Set();
+    this.viewedPages = new Set();
 
-    _this.onResizeInner = function (innerWidth) {
-      var _this$props = _this.props,
-          data = _this$props.data,
-          children = _this$props.children,
-          itemMinWidth = _this$props.itemMinWidth,
-          itemsPerPage = _this$props.itemsPerPage,
-          baseItemMarginBetween = _this$props.baseItemMarginBetween,
-          viewportIsXSOrLess = _this$props.viewportIsXSOrLess,
-          viewportIsMOrLess = _this$props.viewportIsMOrLess;
-      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      var numberOfItemsPerPage = getNumberOfItemsPerPageForWidth(innerWidth, itemMinWidth, itemMarginBetween, itemsPerPage);
-      var numberOfPages = getNumberOfPagesForColumnsAndDataLength(getDataLength({
-        data: data,
-        children: children
+    this.onResizeInner = innerWidth => {
+      const {
+        data,
+        children,
+        itemMinWidth,
+        itemsPerPage,
+        baseItemMarginBetween,
+        viewportIsXSOrLess,
+        viewportIsMOrLess
+      } = this.props;
+      const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
+      const numberOfItemsPerPage = getNumberOfItemsPerPageForWidth(innerWidth, itemMinWidth, itemMarginBetween, itemsPerPage);
+      const numberOfPages = getNumberOfPagesForColumnsAndDataLength(getDataLength({
+        data,
+        children
       }), numberOfItemsPerPage);
 
-      if (_this.state.numberOfItemsPerPage !== numberOfItemsPerPage || _this.state.numberOfPages !== numberOfPages) {
-        var currentPageIndex = _this.state.currentPageIndex > numberOfPages - 1 ? numberOfPages - 1 : _this.state.currentPageIndex;
-
-        _this.setState({
-          numberOfItemsPerPage: numberOfItemsPerPage,
-          numberOfPages: numberOfPages,
-          currentPageIndex: currentPageIndex
+      if (this.state.numberOfItemsPerPage !== numberOfItemsPerPage || this.state.numberOfPages !== numberOfPages) {
+        const currentPageIndex = this.state.currentPageIndex > numberOfPages - 1 ? numberOfPages - 1 : this.state.currentPageIndex;
+        this.setState({
+          numberOfItemsPerPage,
+          numberOfPages,
+          currentPageIndex
         });
       }
     };
 
-    _this.goNextPage = function () {
-      var loop = _this.props.loop;
-      var _this$state = _this.state,
-          numberOfPages = _this$state.numberOfPages,
-          currentPageIndex = _this$state.currentPageIndex;
-      var newPage = loop ? checkPageLoop(numberOfPages, currentPageIndex + 1) : checkPage(numberOfPages, currentPageIndex + 1);
-
-      _this.viewedPages.add(newPage);
-
-      _this.setState({
+    this.goNextPage = () => {
+      const {
+        loop
+      } = this.props;
+      const {
+        numberOfPages,
+        currentPageIndex
+      } = this.state;
+      const newPage = loop ? checkPageLoop(numberOfPages, currentPageIndex + 1) : checkPage(numberOfPages, currentPageIndex + 1);
+      this.viewedPages.add(newPage);
+      this.setState({
         currentPageIndex: newPage
       });
     };
 
-    _this.goPrevPage = function () {
-      var loop = _this.props.loop;
-      var _this$state2 = _this.state,
-          numberOfPages = _this$state2.numberOfPages,
-          currentPageIndex = _this$state2.currentPageIndex;
-      var newPage = loop ? checkPageLoop(numberOfPages, currentPageIndex - 1) : checkPage(numberOfPages, currentPageIndex - 1);
-
-      _this.viewedPages.add(newPage);
-
-      _this.setState({
+    this.goPrevPage = () => {
+      const {
+        loop
+      } = this.props;
+      const {
+        numberOfPages,
+        currentPageIndex
+      } = this.state;
+      const newPage = loop ? checkPageLoop(numberOfPages, currentPageIndex - 1) : checkPage(numberOfPages, currentPageIndex - 1);
+      this.viewedPages.add(newPage);
+      this.setState({
         currentPageIndex: newPage
       });
     };
 
-    _this.goToPage = function (indexPageToGo) {
-      var loop = _this.props.loop;
-      var numberOfPages = _this.state.numberOfPages;
-      var newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
-
-      _this.viewedPages.add(newPage);
-
-      _this.setState({
+    this.goToPage = indexPageToGo => {
+      const {
+        loop
+      } = this.props;
+      const {
+        numberOfPages
+      } = this.state;
+      const newPage = loop ? checkPageLoop(numberOfPages, indexPageToGo) : checkPage(numberOfPages, indexPageToGo);
+      this.viewedPages.add(newPage);
+      this.setState({
         currentPageIndex: newPage
       });
     };
 
-    _this.renderCarouselInner = function () {
-      var _this$props2 = _this.props,
-          data = _this$props2.data,
-          renderItem = _this$props2.renderItem,
-          children = _this$props2.children,
-          baseItemMarginBetween = _this$props2.baseItemMarginBetween,
-          viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
-          viewportIsMOrLess = _this$props2.viewportIsMOrLess,
-          pagesClassName = _this$props2.pagesClassName,
-          exportVisibilityProps = _this$props2.exportVisibilityProps,
-          pageClickText = _this$props2.pageClickText;
-      var _this$state3 = _this.state,
-          currentPageIndex = _this$state3.currentPageIndex,
-          numberOfItemsPerPage = _this$state3.numberOfItemsPerPage,
-          numberOfPages = _this$state3.numberOfPages;
-      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      var items = children; // legacy mode
+    this.renderCarouselInner = () => {
+      const {
+        data,
+        renderItem,
+        children,
+        baseItemMarginBetween,
+        viewportIsXSOrLess,
+        viewportIsMOrLess,
+        pagesClassName,
+        exportVisibilityProps,
+        pageClickText
+      } = this.props;
+      const {
+        currentPageIndex,
+        numberOfItemsPerPage,
+        numberOfPages
+      } = this.state;
+      const itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
+      let items = children; // legacy mode
 
       if (!!data && !!renderItem) {
-        items = [].concat(data).map(function (item, index) {
-          return /*#__PURE__*/React.createElement(Fragment, {
-            key: item
-          }, renderItem({
-            item: data[index]
-          }));
-        });
+        items = [...data].map((item, index) => /*#__PURE__*/React.createElement(Fragment, {
+          key: item
+        }, renderItem({
+          item: data[index]
+        })));
       }
 
       return /*#__PURE__*/React.createElement(CarouselInner, {
         currentPageIndex: currentPageIndex,
         exportVisibilityProps: exportVisibilityProps,
-        goToPage: _this.goToPage,
+        goToPage: this.goToPage,
         itemMarginBetween: itemMarginBetween,
         items: items,
         numberOfItemsPerPage: numberOfItemsPerPage,
         numberOfPages: numberOfPages,
-        onResizeInner: _this.onResizeInner,
+        onResizeInner: this.onResizeInner,
         pagesClassName: pagesClassName,
-        viewedPages: _this.viewedPages,
+        viewedPages: this.viewedPages,
         pageClickText: pageClickText
       });
     };
 
-    _this.renderPagination = function () {
-      var _this$props3 = _this.props,
-          viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
-          hidePagination = _this$props3.hidePagination,
-          hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
-          prevButtonText = _this$props3.prevButtonText,
-          nextButtonText = _this$props3.nextButtonText,
-          smallButtons = _this$props3.smallButtons,
-          firstButtonText = _this$props3.firstButtonText,
-          lastButtonText = _this$props3.lastButtonText,
-          showPageSquares = _this$props3.showPageSquares,
-          preferCompletePaginationOnMobile = _this$props3.preferCompletePaginationOnMobile,
-          loop = _this$props3.loop;
-      var _this$state4 = _this.state,
-          currentPageIndex = _this$state4.currentPageIndex,
-          numberOfPages = _this$state4.numberOfPages;
+    this.renderPagination = () => {
+      const {
+        viewportIsXSOrLess,
+        hidePagination,
+        hidePaginationOnMobile,
+        prevButtonText,
+        nextButtonText,
+        smallButtons,
+        firstButtonText,
+        lastButtonText,
+        showPageSquares,
+        preferCompletePaginationOnMobile,
+        loop
+      } = this.props;
+      const {
+        currentPageIndex,
+        numberOfPages
+      } = this.state;
       if (hidePagination) return;
       if (viewportIsXSOrLess && hidePaginationOnMobile) return;
       if (numberOfPages <= 1) return;
 
       if (viewportIsXSOrLess && !preferCompletePaginationOnMobile) {
-        var rangePage = createRangeFromZeroTo(numberOfPages);
+        const rangePage = createRangeFromZeroTo(numberOfPages);
         return /*#__PURE__*/React.createElement("div", {
           className: "k-Carousel__pageControl"
-        }, rangePage.map(function (index) {
-          return /*#__PURE__*/React.createElement("div", {
-            className: classNames('k-Carousel__pageControl__pageDot', {
-              'k-Carousel__pageControl__pageDot--isVisible': currentPageIndex === index
-            }),
-            key: "pageDotIndex_" + index
-          });
-        }), /*#__PURE__*/React.createElement("div", {
-          onClick: _this.goPrevPage,
+        }, rangePage.map(index => /*#__PURE__*/React.createElement("div", {
+          className: classNames('k-Carousel__pageControl__pageDot', {
+            'k-Carousel__pageControl__pageDot--isVisible': currentPageIndex === index
+          }),
+          key: "pageDotIndex_" + index
+        })), /*#__PURE__*/React.createElement("div", {
+          onClick: this.goPrevPage,
           className: "k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--prev"
         }), /*#__PURE__*/React.createElement("div", {
-          onClick: _this.goNextPage,
+          onClick: this.goNextPage,
           className: "k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--next"
         }));
       }
@@ -234,8 +230,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className: "k-Carousel__pagination__button",
         fit: "icon",
         modifier: "beryllium",
-        size: smallButtons ? 'small' : null,
-        onClick: _this.goPrevPage,
+        size: smallButtons ? 'small' : 'medium',
+        onClick: this.goPrevPage,
         disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
         direction: "left",
@@ -245,49 +241,44 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         className: "k-Carousel__pagination__button",
         fit: "icon",
         modifier: "beryllium",
-        size: smallButtons ? 'small' : null,
-        onClick: _this.goNextPage,
+        size: smallButtons ? 'small' : 'medium',
+        onClick: this.goNextPage,
         disabled: !loop && currentPageIndex >= numberOfPages - 1
       }, /*#__PURE__*/React.createElement(VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/React.createElement(ArrowIcon, {
         direction: "right",
         "aria-hidden": true
       }))), showPageSquares && /*#__PURE__*/React.createElement("div", {
         className: "k-Carousel__pagination__squaresContainer"
-      }, createRangeFromZeroTo(numberOfPages).map(function (index) {
-        return /*#__PURE__*/React.createElement("div", {
-          key: index,
-          className: classNames('k-Carousel__pagination__square', {
-            'k-Carousel__pagination__square--isActive': index === currentPageIndex
-          })
-        });
-      })));
+      }, createRangeFromZeroTo(numberOfPages).map(index => /*#__PURE__*/React.createElement("div", {
+        key: index,
+        className: classNames('k-Carousel__pagination__square', {
+          'k-Carousel__pagination__square--isActive': index === currentPageIndex
+        })
+      }))));
     };
-
-    return _this;
   }
 
-  var _proto = CarouselBase.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
+  componentDidMount() {
     this.viewedPages.add(0);
-  };
+  }
 
-  _proto.render = function render() {
-    var _this$props4 = this.props,
-        data = _this$props4.data,
-        renderItem = _this$props4.renderItem,
-        withoutLeftOffset = _this$props4.withoutLeftOffset,
-        baseItemMarginBetween = _this$props4.baseItemMarginBetween,
-        children = _this$props4.children,
-        className = _this$props4.className,
-        paginationPosition = _this$props4.paginationPosition,
-        showOtherPages = _this$props4.showOtherPages,
-        itemMinWidth = _this$props4.itemMinWidth,
-        style = _this$props4.style,
-        shadowSize = _this$props4.shadowSize;
+  render() {
+    const {
+      data,
+      renderItem,
+      withoutLeftOffset,
+      baseItemMarginBetween,
+      children,
+      className,
+      paginationPosition,
+      showOtherPages,
+      itemMinWidth,
+      style,
+      shadowSize
+    } = this.props;
     if (getDataLength({
-      data: data,
-      children: children
+      data,
+      children
     }) === 0) return null; // legacy mode
 
     if (!!data && !!renderItem) {
@@ -308,23 +299,22 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     }
 
     return /*#__PURE__*/React.createElement(StyledCarouselContainer, {
-      style: _extends({}, style, {
+      style: { ...style,
         '--carousel-shadowSize': pxToRem(shadowSize) || null,
         '--carousel-baseItemMarginBetween': pxToRem(baseItemMarginBetween),
         '--carousel-numberOfItemsPerPage': this.state.numberOfItemsPerPage,
         '--carousel-numberOfPages': this.state.numberOfPages
-      }),
+      },
       paginationPosition: paginationPosition,
       className: classNames('k-Carousel', className, {
         'k-Carousel--showOtherPages': showOtherPages
       })
     }, this.renderCarouselInner(), this.renderPagination());
-  };
+  }
 
-  return CarouselBase;
-}(Component);
+}
 
-var positionsPropTypes = PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
+const positionsPropTypes = PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
 CarouselBase.defaultProps = {
   itemsPerPage: 0,
   hidePaginationOnMobile: false,
@@ -338,7 +328,7 @@ CarouselBase.defaultProps = {
   },
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
-  pageClickText: function pageClickText(page) {
+  pageClickText: page => {
     return "Page " + page;
   },
   firstButtonText: 'First items',
@@ -384,7 +374,7 @@ CarouselBase.propTypes = {
   renderItem: deprecated(PropTypes.func, 'Provide `Carousel` with children instead of data/renderItem'),
   withoutLeftOffset: deprecated(PropTypes.bool, 'Provide `Carousel` with children instead of data/renderItem')
 };
-export var Carousel = withMediaQueries({
+export const Carousel = withMediaQueries({
   viewportIsXSOrLess: true,
   viewportIsMOrLess: true,
   exposedMethods: ['goToPage']

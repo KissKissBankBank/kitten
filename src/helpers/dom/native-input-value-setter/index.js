@@ -5,10 +5,10 @@ exports.nativeInputValueSetter = void 0;
 
 var _elementHelper = require("../element-helper");
 
-var nativeInputValueSetter = function () {
+const nativeInputValueSetter = (() => {
   if (!_elementHelper.domElementHelper.canUseDom()) return false;
-  var valueDescriptor = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value');
+  const valueDescriptor = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value');
   return valueDescriptor.set;
-}();
+})();
 
 exports.nativeInputValueSetter = nativeInputValueSetter;

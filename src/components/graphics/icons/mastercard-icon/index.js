@@ -7,17 +7,15 @@ exports.MasterCardIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _excluded = ["className"];
-
-var MasterCardIcon = function MasterCardIcon(_ref) {
-  var className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const MasterCardIcon = _ref => {
+  let {
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 340.53 264.89",

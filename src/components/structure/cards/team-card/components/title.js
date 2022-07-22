@@ -13,9 +13,11 @@ var _text = require("../../../../typography/text");
 
 var _marger = require("../../../../layout/marger");
 
-var TeamCardTitle = function TeamCardTitle(_ref) {
-  var children = _ref.children,
-      subTitle = _ref.subTitle;
+const TeamCardTitle = _ref => {
+  let {
+    children,
+    subTitle
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "2"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {

@@ -11,10 +11,12 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var Right = function Right(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      padded = _ref.padded;
+const Right = _ref => {
+  let {
+    children,
+    className,
+    padded
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-HeaderNav__right', className, {
       'k-HeaderNav__right--padded': padded

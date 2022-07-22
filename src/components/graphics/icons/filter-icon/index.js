@@ -7,24 +7,22 @@ exports.FilterIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var _excluded = ["color", "duration", "type", "name", "begin", "animated", "title"];
-
-var FilterIcon = function FilterIcon(_ref) {
-  var color = _ref.color,
-      duration = _ref.duration,
-      type = _ref.type,
-      name = _ref.name,
-      begin = _ref.begin,
-      animated = _ref.animated,
-      title = _ref.title,
-      others = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var animationDuration = animated ? duration : null;
+const FilterIcon = _ref => {
+  let {
+    color,
+    duration,
+    type,
+    name,
+    begin,
+    animated,
+    title,
+    ...others
+  } = _ref;
+  const animationDuration = animated ? duration : null;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",

@@ -1,12 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className"];
 import React from 'react';
 import classNames from 'classnames';
-export var GiropayIcon = function GiropayIcon(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const GiropayIcon = _ref => {
+  let {
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     width: "47",
     height: "20",

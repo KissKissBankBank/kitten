@@ -1,23 +1,22 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-export var KkbbCoLogo = function KkbbCoLogo(_ref) {
-  var width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var DEFAULT_WIDTH = 399;
-  var DEFAULT_HEIGHT = 65;
-  var computed = computeFromRatio({
+export const KkbbCoLogo = _ref => {
+  let {
+    width,
+    height,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 399;
+  const DEFAULT_HEIGHT = 65;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

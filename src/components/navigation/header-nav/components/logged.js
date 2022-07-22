@@ -7,12 +7,13 @@ var _react = require("react");
 
 var _context = require("./context");
 
-var Logged = function Logged(_ref) {
-  var children = _ref.children;
-
-  var _useContext = (0, _react.useContext)(_context.Context),
-      isLogged = _useContext.isLogged;
-
+const Logged = _ref => {
+  let {
+    children
+  } = _ref;
+  const {
+    isLogged
+  } = (0, _react.useContext)(_context.Context);
   if (!isLogged) return null;
   return children;
 };

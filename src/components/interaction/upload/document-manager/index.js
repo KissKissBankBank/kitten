@@ -7,8 +7,6 @@ exports.DocumentManager = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -41,37 +39,37 @@ var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
 var _screenConfig = require("../../../../constants/screen-config");
 
-var _excluded = ["id", "buttonProps", "buttonSubtitle", "buttonTitle", "canCancel", "cancelButtonText", "canReplace", "disabled", "displayContent", "displaySubtitle", "displayTitle", "documentIcon", "fileInputProps", "loaderAnimation", "loaderText", "onCancel", "onUpload", "replaceButtonText", "status"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledDocumentUploader = _styledComponents.default.div.withConfig({
+const StyledDocumentUploader = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentUploader",
   componentId: "sc-mfphy2-0"
 })(["input[type='file']{border:0;clip-path:inset(100%);height:1px;overflow:hidden;padding:0;position:absolute !important;white-space:nowrap;width:1px;}input[type='file']:focus + label{border:", " solid ", ";}input[type='file']:focus-visible + label{outline:auto;}input[type='file']:focus,input[type='file']:hover{& + label{background-color:", ";border-color:var(--color-grey-400);color:", ";svg,path{fill:", ";}}}input[type='file']:active{& + label{background-color:", ";border-color:", ";color:", ";svg,path{fill:", ";}}}input[type='file']:disabled + label{border-color:", ";background-color:", ";color:", ";pointer-events:none;svg,path{fill:", ";}}.k-DocumentManager__uploader__button{padding:", ";}.k-DocumentManager__uploader__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__uploader__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;@media (max-width:", "){display:none;}}.k-DocumentManager__uploader__content{flex:1 1 auto;}.k-DocumentManager__uploader__uploadIcon{margin-left:", ";flex:0 0 auto;}"], (0, _typography.pxToRem)(1), _colorsConfig.default.primary4, _colorsConfig.default.background2, _colorsConfig.default.font1, _colorsConfig.default.font1, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(20));
 
-var StyledDocumentLoading = _styledComponents.default.div.withConfig({
+const StyledDocumentLoading = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentLoading",
   componentId: "sc-mfphy2-1"
 })([".k-DocumentManager__loading__button{min-height:", ";}"], (0, _typography.pxToRem)(100));
 
-var StyledDocumentDisplay = _styledComponents.default.div.withConfig({
+const StyledDocumentDisplay = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentDisplay",
   componentId: "sc-mfphy2-2"
 })([".k-DocumentManager__display__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__display__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;}.k-DocumentManager__display__content{flex:1 1 auto;}.k-DocumentManager__actionButton{margin-top:", ";cursor:pointer;transition:color 0.2s;color:", ";&:hover,&:focus{color:", ";}&:focus-visible{outline:auto;}&:active{color:", ";transition:none;}}&.k-DocumentManager__display--error .k-DocumentManager__actionButton{color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.primary1, _colorsConfig.default.primary3, _colorsConfig.default.primary1, _colorsConfig.default.error);
 
-var StyledIconContainer = _styledComponents.default.div.withConfig({
+const StyledIconContainer = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledIconContainer",
   componentId: "sc-mfphy2-3"
 })(["position:relative;box-sizing:border-box;width:", ";height:", ";border-radius:var(--border-radius-rounded);background-color:#caf4fe;padding-top:", ";padding-left:", ";&.k-DocumentManager__iconContainer--error{background-color:", ";}&.k-DocumentManager__iconContainer--valid{background-color:", ";}.k-DocumentManager__iconContainer__statusIcon{position:absolute;right:", ";top:", ";border:var(--border-width) solid ", ";width:", ";height:", ";border-radius:var(--border-radius-rounded);}"], (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(19), _colorsConfig.default.error3, _colorsConfig.default.tertiary2, (0, _typography.pxToRem)(-12), (0, _typography.pxToRem)(-4), _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20));
 
-var statusesWithIcons = ['error', 'valid', 'wait'];
+const statusesWithIcons = ['error', 'valid', 'wait'];
 
-var IconContainer = function IconContainer(_ref) {
-  var status = _ref.status,
-      children = _ref.children;
+const IconContainer = _ref => {
+  let {
+    status,
+    children
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledIconContainer, {
     className: (0, _classnames.default)('k-DocumentManager__iconContainer', "k-DocumentManager__iconContainer--" + status)
   }, children, statusesWithIcons.includes(status) && /*#__PURE__*/_react.default.createElement("div", {
@@ -94,81 +92,55 @@ var IconContainer = function IconContainer(_ref) {
   })));
 };
 
-var DocumentManager = function DocumentManager(_ref2) {
-  var id = _ref2.id,
-      _ref2$buttonProps = _ref2.buttonProps,
-      buttonProps = _ref2$buttonProps === void 0 ? {} : _ref2$buttonProps,
-      _ref2$buttonSubtitle = _ref2.buttonSubtitle,
-      buttonSubtitle = _ref2$buttonSubtitle === void 0 ? '' : _ref2$buttonSubtitle,
-      _ref2$buttonTitle = _ref2.buttonTitle,
-      buttonTitle = _ref2$buttonTitle === void 0 ? '' : _ref2$buttonTitle,
-      _ref2$canCancel = _ref2.canCancel,
-      canCancel = _ref2$canCancel === void 0 ? false : _ref2$canCancel,
-      _ref2$cancelButtonTex = _ref2.cancelButtonText,
-      cancelButtonText = _ref2$cancelButtonTex === void 0 ? 'Upload another document' : _ref2$cancelButtonTex,
-      _ref2$canReplace = _ref2.canReplace,
-      canReplace = _ref2$canReplace === void 0 ? false : _ref2$canReplace,
-      _ref2$disabled = _ref2.disabled,
-      disabled = _ref2$disabled === void 0 ? false : _ref2$disabled,
-      _ref2$displayContent = _ref2.displayContent,
-      displayContent = _ref2$displayContent === void 0 ? null : _ref2$displayContent,
-      _ref2$displaySubtitle = _ref2.displaySubtitle,
-      displaySubtitle = _ref2$displaySubtitle === void 0 ? '' : _ref2$displaySubtitle,
-      _ref2$displayTitle = _ref2.displayTitle,
-      displayTitle = _ref2$displayTitle === void 0 ? '' : _ref2$displayTitle,
-      _ref2$documentIcon = _ref2.documentIcon,
-      documentIcon = _ref2$documentIcon === void 0 ? /*#__PURE__*/_react.default.createElement(_documentIconEmpty.DocumentIconEmpty, null) : _ref2$documentIcon,
-      _ref2$fileInputProps = _ref2.fileInputProps,
-      fileInputProps = _ref2$fileInputProps === void 0 ? {} : _ref2$fileInputProps,
-      _ref2$loaderAnimation = _ref2.loaderAnimation,
-      loaderAnimation = _ref2$loaderAnimation === void 0 ? /*#__PURE__*/_react.default.createElement(_loader.Loader, null) : _ref2$loaderAnimation,
-      _ref2$loaderText = _ref2.loaderText,
-      loaderText = _ref2$loaderText === void 0 ? '' : _ref2$loaderText,
-      _ref2$onCancel = _ref2.onCancel,
-      onCancel = _ref2$onCancel === void 0 ? function () {} : _ref2$onCancel,
-      _ref2$onUpload = _ref2.onUpload,
-      onUpload = _ref2$onUpload === void 0 ? function () {} : _ref2$onUpload,
-      _ref2$replaceButtonTe = _ref2.replaceButtonText,
-      replaceButtonText = _ref2$replaceButtonTe === void 0 ? 'Replace current' : _ref2$replaceButtonTe,
-      _ref2$status = _ref2.status,
-      status = _ref2$status === void 0 ? 'ready' : _ref2$status,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
-
-  var _useState = (0, _react.useState)(''),
-      internalFileName = _useState[0],
-      setInternalFileName = _useState[1];
-
-  var _useState2 = (0, _react.useState)(status),
-      internalStatus = _useState2[0],
-      setInternalStatus = _useState2[1];
-
-  (0, _react.useEffect)(function () {
+const DocumentManager = _ref2 => {
+  let {
+    id,
+    //required
+    buttonProps = {},
+    buttonSubtitle = '',
+    buttonTitle = '',
+    canCancel = false,
+    cancelButtonText = 'Upload another document',
+    canReplace = false,
+    disabled = false,
+    displayContent = null,
+    displaySubtitle = '',
+    displayTitle = '',
+    documentIcon = /*#__PURE__*/_react.default.createElement(_documentIconEmpty.DocumentIconEmpty, null),
+    fileInputProps = {},
+    loaderAnimation = /*#__PURE__*/_react.default.createElement(_loader.Loader, null),
+    loaderText = '',
+    onCancel = () => {},
+    onUpload = () => {},
+    replaceButtonText = 'Replace current',
+    status = 'ready',
+    ...props
+  } = _ref2;
+  const [internalFileName, setInternalFileName] = (0, _react.useState)('');
+  const [internalStatus, setInternalStatus] = (0, _react.useState)(status);
+  (0, _react.useEffect)(() => {
     setInternalStatus(status);
   }, [status]);
-
-  var _useState3 = (0, _react.useState)(disabled),
-      internalDisabled = _useState3[0],
-      setInternalDisabled = _useState3[1];
-
-  (0, _react.useEffect)(function () {
+  const [internalDisabled, setInternalDisabled] = (0, _react.useState)(disabled);
+  (0, _react.useEffect)(() => {
     setInternalDisabled(disabled);
   }, [disabled]);
 
-  var onFileInputChange = function onFileInputChange(event) {
-    var files = event.currentTarget.files;
+  const onFileInputChange = event => {
+    const files = event.currentTarget.files;
     if (files.length < 1) return;
-    var tempFileName = files[0].name;
-    var tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
+    const tempFileName = files[0].name;
+    const tempText = files.length > 1 ? tempFileName + " + " + (files.length - 1) : tempFileName;
     setInternalStatus('file-selected');
     setInternalFileName(tempText);
     onUpload(event);
   };
 
-  var handleReplaceClick = function handleReplaceClick() {
+  const handleReplaceClick = () => {
     setInternalStatus('ready');
   };
 
-  var handleCancelClick = function handleCancelClick() {
+  const handleCancelClick = () => {
     onCancel();
   };
 

@@ -1,7 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["items", "disabled", "className", "name", "error", "design", "label", "children", "size", "fontWeight", "weight", "paragraphStyle", "labelProps"],
-    _excluded2 = ["id", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -11,26 +8,28 @@ import { pxToRem } from '../../../helpers/utils/typography';
 import { Label } from '../../form/label';
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
 import deprecated from 'prop-types-extra/lib/deprecated';
-var StyledRadioButtonSet = styled.fieldset.withConfig({
+const StyledRadioButtonSet = styled.fieldset.withConfig({
   displayName: "radio-button-set__StyledRadioButtonSet",
   componentId: "sc-1bde3vb-0"
 })(["margin:0;padding:0;border:0;line-height:1.3rem;& > legend{padding:0;}.k-Form-RadioButtonSet__label{margin-bottom:", ";}.k-Form-RadioButtonSet__radioContainer{display:flex;flex-direction:column;gap:", " 0;.k-Form-RadioButtonSet__radioButton.k-Form-RadioButton{margin:0;}}"], pxToRem(10), pxToRem(5));
-export var RadioButtonSet = function RadioButtonSet(_ref) {
-  var items = _ref.items,
-      disabled = _ref.disabled,
-      className = _ref.className,
-      name = _ref.name,
-      error = _ref.error,
-      design = _ref.design,
-      label = _ref.label,
-      children = _ref.children,
-      size = _ref.size,
-      fontWeight = _ref.fontWeight,
-      weight = _ref.weight,
-      paragraphStyle = _ref.paragraphStyle,
-      labelProps = _ref.labelProps,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const RadioButtonSet = _ref => {
+  let {
+    items,
+    disabled,
+    className,
+    name,
+    error,
+    design,
+    label,
+    children,
+    size,
+    fontWeight,
+    // Deprecated
+    weight,
+    paragraphStyle,
+    labelProps,
+    ...props
+  } = _ref;
   checkDeprecatedWeights(weight);
   return /*#__PURE__*/React.createElement(StyledRadioButtonSet, _extends({
     className: classNames('k-Form-RadioButtonSet', className),
@@ -41,11 +40,12 @@ export var RadioButtonSet = function RadioButtonSet(_ref) {
     className: classNames('k-Form-RadioButtonSet__label', labelProps.className)
   }), label), children && !label && /*#__PURE__*/React.createElement("legend", null, children), /*#__PURE__*/React.createElement("div", {
     className: "k-Form-RadioButtonSet__radioContainer"
-  }, items.map(function (_ref2) {
-    var id = _ref2.id,
-        className = _ref2.className,
-        itemProps = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+  }, items.map(_ref2 => {
+    let {
+      id,
+      className,
+      ...itemProps
+    } = _ref2;
     return /*#__PURE__*/React.createElement(RadioButton, _extends({
       id: id,
       design: design,

@@ -1,27 +1,25 @@
 import { useState, useEffect } from 'react';
 import { useFocusTrap } from '../../hooks/use-focus-trap';
 import { usePrevious } from '../../hooks/use-previous';
-export var useModal = function useModal(_ref) {
-  var id = _ref.id,
-      modalCloseText = _ref.modalCloseText,
-      modalOpenText = _ref.modalOpenText;
-
-  var _useState = useState(false),
-      show = _useState[0],
-      setShow = _useState[1];
-
-  var modalRef = useFocusTrap({
+export const useModal = _ref => {
+  let {
+    id,
+    modalCloseText,
+    modalOpenText
+  } = _ref;
+  const [show, setShow] = useState(false);
+  const modalRef = useFocusTrap({
     shouldTrapFocus: show
   });
-  var previousShowValue = usePrevious(show);
+  const previousShowValue = usePrevious(show);
 
-  var keyDownHandler = function keyDownHandler(event) {
+  const keyDownHandler = event => {
     if (event.key === 'Escape') {
       setShow(false);
     }
   };
 
-  useEffect(function () {
+  useEffect(() => {
     if (show || previousShowValue) {
       document.getElementById(id + "__button").focus();
     } // Prevent scrolling when Modal is open
@@ -34,7 +32,7 @@ export var useModal = function useModal(_ref) {
       document.body.style.position = 'fixed';
     } else {
       document.removeEventListener('keydown', keyDownHandler);
-      var scrollY = document.body.style.top;
+      const scrollY = document.body.style.top;
       document.body.style.position = '';
       document.body.style.top = '';
       window.scrollTo(0, parseInt(scrollY || '0') * -1);
@@ -47,9 +45,7 @@ export var useModal = function useModal(_ref) {
       'aria-label': show ? modalCloseText : modalOpenText,
       'aria-controls': id + "__modal",
       'aria-expanded': show ? 'true' : null,
-      onClick: function onClick() {
-        return setShow(!show);
-      }
+      onClick: () => setShow(!show)
     },
     modalProps: {
       id: id + "__modal",
@@ -58,11 +54,7 @@ export var useModal = function useModal(_ref) {
     wrapperProps: {
       ref: modalRef
     },
-    closeAction: function closeAction() {
-      return setShow(false);
-    },
-    openAction: function openAction() {
-      return setShow(true);
-    }
+    closeAction: () => setShow(false),
+    openAction: () => setShow(true)
   };
 };

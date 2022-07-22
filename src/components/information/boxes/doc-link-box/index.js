@@ -7,8 +7,6 @@ exports.DocLinkBox = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _linkBox = require("./../link-box");
@@ -17,14 +15,14 @@ var _linkBoxIllustration = require("../../../graphics/illustrations/link-box-ill
 
 var _text = require("../../../typography/text");
 
-var _excluded = ["isExternal", "href", "title", "text"];
-
-var DocLinkBox = function DocLinkBox(_ref) {
-  var isExternal = _ref.isExternal,
-      href = _ref.href,
-      title = _ref.title,
-      text = _ref.text,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const DocLinkBox = _ref => {
+  let {
+    isExternal,
+    href,
+    title,
+    text,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_linkBox.LinkBox, (0, _extends2.default)({
     href: href,
     isExternal: isExternal

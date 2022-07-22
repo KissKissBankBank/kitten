@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "disabled", "style", "withTopBorder", "onClick", "onKeyPress", "onFocus", "onBlur", "onMouseEnter", "onMouseLeave", "className", "hasArrow", "active"];
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -8,36 +6,37 @@ import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
 import classNames from 'classnames';
-var Item = styled.div.withConfig({
+const Item = styled.div.withConfig({
   displayName: "button-item__Item",
   componentId: "sc-c6wx4k-0"
-})(["display:flex;position:relative;border:var(--border);border-top:none;cursor:pointer;padding-left:", ";padding-right:", ";background-color:", ";transition:background-color 0.2s ease;:hover{background-color:", ";}&:focus{z-index:1;}&.k-List__button--withTopBorder{border-top:var(--border);}&[aria-disabled='true']{color:", ";cursor:not-allowed;:hover{background-color:", ";}.k-List__button__arrowIcon{fill:", ";}}&.k-List__button--isActive:not([aria-disabled='true']){color:", ";background-color:", ";border-color:", ";:hover{background-color:", ";}.k-List__button__arrowIcon{fill:", ";}}&.k-List__button--isFocused:not([aria-disabled='true']){.k-List__button__arrowIcon{left:", ";}}", " .k-List__button__content{flex-grow:1;}.k-List__button__arrow{display:flex;align-items:center;}.k-List__button__arrowIcon{position:relative;left:0;transition:left 0.2s;}"], pxToRem(20), pxToRem(20), COLORS.background1, COLORS.background2, COLORS.line2, COLORS.background1, COLORS.line2, COLORS.background1, COLORS.primary1, COLORS.primary1, COLORS.primary2, COLORS.background1, pxToRem(5), function (_ref) {
-  var styles = _ref.styles;
+})(["display:flex;position:relative;border:var(--border);border-top:none;cursor:pointer;padding-left:", ";padding-right:", ";background-color:", ";transition:background-color 0.2s ease;:hover{background-color:", ";}&:focus{z-index:1;}&.k-List__button--withTopBorder{border-top:var(--border);}&[aria-disabled='true']{color:", ";cursor:not-allowed;:hover{background-color:", ";}.k-List__button__arrowIcon{fill:", ";}}&.k-List__button--isActive:not([aria-disabled='true']){color:", ";background-color:", ";border-color:", ";:hover{background-color:", ";}.k-List__button__arrowIcon{fill:", ";}}&.k-List__button--isFocused:not([aria-disabled='true']){.k-List__button__arrowIcon{left:", ";}}", " .k-List__button__content{flex-grow:1;}.k-List__button__arrow{display:flex;align-items:center;}.k-List__button__arrowIcon{position:relative;left:0;transition:left 0.2s;}"], pxToRem(20), pxToRem(20), COLORS.background1, COLORS.background2, COLORS.line2, COLORS.background1, COLORS.line2, COLORS.background1, COLORS.primary1, COLORS.primary1, COLORS.primary2, COLORS.background1, pxToRem(5), _ref => {
+  let {
+    styles
+  } = _ref;
   return styles;
 });
-export var ButtonItem = function ButtonItem(_ref2) {
-  var children = _ref2.children,
-      disabled = _ref2.disabled,
-      style = _ref2.style,
-      withTopBorder = _ref2.withTopBorder,
-      onClick = _ref2.onClick,
-      onKeyPress = _ref2.onKeyPress,
-      onFocus = _ref2.onFocus,
-      onBlur = _ref2.onBlur,
-      onMouseEnter = _ref2.onMouseEnter,
-      onMouseLeave = _ref2.onMouseLeave,
-      className = _ref2.className,
-      hasArrow = _ref2.hasArrow,
-      active = _ref2.active,
-      others = _objectWithoutPropertiesLoose(_ref2, _excluded);
+export const ButtonItem = _ref2 => {
+  let {
+    children,
+    disabled,
+    style,
+    withTopBorder,
+    onClick,
+    onKeyPress,
+    onFocus,
+    onBlur,
+    onMouseEnter,
+    onMouseLeave,
+    className,
+    hasArrow,
+    active,
+    ...others
+  } = _ref2;
+  const [focus, setFocus] = useState(false);
 
-  var _useState = useState(false),
-      focus = _useState[0],
-      setFocus = _useState[1];
-
-  var handleKeyPress = function handleKeyPress(event) {
-    var enterKey = 13;
-    var spaceKey = 32;
+  const handleKeyPress = event => {
+    const enterKey = 13;
+    const spaceKey = 32;
 
     switch (event.which) {
       case enterKey:
@@ -49,22 +48,22 @@ export var ButtonItem = function ButtonItem(_ref2) {
     }
   };
 
-  var handleFocus = function handleFocus() {
+  const handleFocus = () => {
     setFocus(true);
     onFocus();
   };
 
-  var handleBlur = function handleBlur() {
+  const handleBlur = () => {
     setFocus(false);
     onBlur();
   };
 
-  var handleMouseEnter = function handleMouseEnter() {
+  const handleMouseEnter = () => {
     setFocus(true);
     onMouseEnter();
   };
 
-  var handleMouseLeave = function handleMouseLeave() {
+  const handleMouseLeave = () => {
     setFocus(false);
     onMouseLeave();
   };
@@ -112,12 +111,12 @@ ButtonItem.defaultProps = {
   style: {},
   disabled: false,
   withTopBorder: false,
-  onClick: function onClick() {},
-  onFocus: function onFocus() {},
-  onBlur: function onBlur() {},
-  onMouseEnter: function onMouseEnter() {},
-  onMouseLeave: function onMouseLeave() {},
-  onKeyPress: function onKeyPress() {},
+  onClick: () => {},
+  onFocus: () => {},
+  onBlur: () => {},
+  onMouseEnter: () => {},
+  onMouseLeave: () => {},
+  onKeyPress: () => {},
   hasArrow: true,
   active: false
 };

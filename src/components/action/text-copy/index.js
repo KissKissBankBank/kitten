@@ -29,63 +29,55 @@ var _visuallyHidden = require("../../accessibility/visually-hidden");
 
 var _textInput = require("../../form/input/text-input");
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var fadeInAndOut = (0, _styledComponents.keyframes)(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
+const fadeInAndOut = (0, _styledComponents.keyframes)(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
 
-var Wrapper = _styledComponents.default.button.withConfig({
+const Wrapper = _styledComponents.default.button.withConfig({
   displayName: "text-copy__Wrapper",
   componentId: "sc-1d5z8sz-0"
 })(["position:relative;width:100%;.k-TextInput__wrapper{.k-TextInput{--text-input-height:auto;line-height:1.15;display:flex;align-items:center;}@media ", "{flex-direction:column;}}.k-TextCopy__tooltip{position:absolute;left:50%;transform:translateX(-50%);bottom:-", ";animation:3s ", " ease-out;}&:hover{.k-TextInput{border:var(--border-hover);}.k-Button{border-color:var(--color-primary-700);background-color:var(--color-primary-700);}}&:active{.k-TextInput{border:var(--border-active);}.k-Button{border-color:var(--color-primary-900);background-color:var(--color-primary-900);}}"], _screenConfig.mq.mobile, (0, _typography.pxToRem)(50), fadeInAndOut);
 
-var TextCopy = function TextCopy(_ref) {
-  var id = _ref.id,
-      children = _ref.children,
-      textToCopy = _ref.textToCopy,
-      alertMessage = _ref.alertMessage,
-      description = _ref.description,
-      forceOneLine = _ref.forceOneLine,
-      buttonText = _ref.buttonText,
-      buttonModifier = _ref.buttonModifier,
-      size = _ref.size,
-      className = _ref.className;
-
-  var _useState = (0, _react.useState)(false),
-      isMessageVisible = _useState[0],
-      setMessageVisibility = _useState[1];
-
-  var textElement = (0, _react.useRef)(null);
-  (0, _react.useEffect)(function () {
-    var hideTimeout;
+const TextCopy = _ref => {
+  let {
+    id,
+    children,
+    textToCopy,
+    alertMessage,
+    description,
+    forceOneLine,
+    buttonText,
+    buttonModifier,
+    size,
+    className
+  } = _ref;
+  const [isMessageVisible, setMessageVisibility] = (0, _react.useState)(false);
+  const textElement = (0, _react.useRef)(null);
+  (0, _react.useEffect)(() => {
+    let hideTimeout;
 
     if (isMessageVisible) {
-      hideTimeout = setTimeout(function () {
-        return setMessageVisibility(false);
-      }, 3000);
+      hideTimeout = setTimeout(() => setMessageVisibility(false), 3000);
     }
 
-    return function () {
-      return clearTimeout(hideTimeout);
-    };
+    return () => clearTimeout(hideTimeout);
   }, [isMessageVisible]);
 
-  var copyToClipboard = function copyToClipboard(text) {
+  const copyToClipboard = text => {
     return navigator.clipboard.writeText(text);
   };
 
-  var copyText = (0, _react.useCallback)(function () {
+  const copyText = (0, _react.useCallback)(() => {
     var _textElement$current;
 
     setMessageVisibility(false);
-    var copyableText = textToCopy || (textElement == null ? void 0 : (_textElement$current = textElement.current) == null ? void 0 : _textElement$current.innerText) || '';
-    copyToClipboard(copyableText).then(function () {
-      setTimeout(function () {
-        return setMessageVisibility(true);
-      }, 1);
+    const copyableText = textToCopy || (textElement == null ? void 0 : (_textElement$current = textElement.current) == null ? void 0 : _textElement$current.innerText) || '';
+    copyToClipboard(copyableText).then(() => {
+      setTimeout(() => setMessageVisibility(true), 1);
     });
-    var range = document.createRange();
+    const range = document.createRange();
     range.selectNode(textElement.current);
     window.getSelection().addRange(range);
   });

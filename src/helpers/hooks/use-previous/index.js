@@ -7,12 +7,12 @@ var _react = require("react");
 
 // https://usehooks.com/usePrevious/
 // Hook
-var usePrevious = function usePrevious(value) {
+const usePrevious = value => {
   // The ref object is a generic container whose current property is mutable ...
   // ... and can hold any value, similar to an instance property on a class
-  var ref = (0, _react.useRef)(); // Store current value in ref
+  const ref = (0, _react.useRef)(); // Store current value in ref
 
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     ref.current = value;
   }, [value]); // Only re-run if value changes
   // Return previous value (happens before update in useEffect above)

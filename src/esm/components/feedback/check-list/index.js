@@ -1,7 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children"],
-    _excluded2 = ["done", "children", "a11yText", "className"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -9,31 +6,33 @@ import COLORS from './../../../constants/colors-config';
 import classNames from 'classnames';
 import { pxToRem, stepToRem } from './../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
-var List = styled.ul.withConfig({
+const List = styled.ul.withConfig({
   displayName: "check-list__List",
   componentId: "sc-1i76wsf-0"
 })(["display:inline-flex;flex-direction:column;padding:0;margin:0;.k-CheckList__item{", ";list-style-type:none;display:flex;align-items:stretch;margin-bottom:", ";color:", ";font-size:", ";line-height:1.2;.strike{text-decoration:line-through;}&:before{content:'\u25CF';color:", ";padding-right:", ";}&:last-child{margin-bottom:0;}}.k-CheckList__item--done{&:before{color:", ";}}"], TYPOGRAPHY.fontStyles['400'], pxToRem(10), COLORS.font1, stepToRem(-1), COLORS.line2, pxToRem(10), COLORS.valid);
 
-var a11yProps = function a11yProps(a11yText, done) {
+const a11yProps = (a11yText, done) => {
   return {
     'aria-label': done ? a11yText.done : a11yText.default
   };
 };
 
-export var CheckList = function CheckList(_ref) {
-  var children = _ref.children,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const CheckList = _ref => {
+  let {
+    children,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(List, props, children);
 };
 
-CheckList.Item = function (_ref2) {
-  var done = _ref2.done,
-      children = _ref2.children,
-      a11yText = _ref2.a11yText,
-      className = _ref2.className,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+CheckList.Item = _ref2 => {
+  let {
+    done,
+    children,
+    a11yText,
+    className,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/React.createElement("li", _extends({
     className: classNames('k-CheckList__item', className, {
       'k-CheckList__item--done': done

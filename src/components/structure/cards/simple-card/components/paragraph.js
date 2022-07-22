@@ -15,8 +15,10 @@ var _horizontalStroke = require("../../../../typography/horizontal-stroke");
 
 var _parser = require("../../../../../helpers/utils/parser");
 
-var Paragraph = function Paragraph(_ref) {
-  var paragraph = _ref.paragraph;
+const Paragraph = _ref => {
+  let {
+    paragraph
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SimpleCard__paragraph"
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {

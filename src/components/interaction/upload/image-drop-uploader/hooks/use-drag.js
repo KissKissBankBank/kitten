@@ -7,44 +7,33 @@ var _react = require("react");
 
 var _pauseEvent = require("../utils/pause-event");
 
-var useDrag = function useDrag(_ref) {
-  var startingPosition = _ref.startingPosition,
-      imageDimensions = _ref.imageDimensions,
-      disabled = _ref.disabled;
-
-  var _useState = (0, _react.useState)(false),
-      isDragging = _useState[0],
-      setDragging = _useState[1];
-
-  var _useState2 = (0, _react.useState)({
+const useDrag = _ref => {
+  let {
+    startingPosition,
+    imageDimensions,
+    disabled
+  } = _ref;
+  const [isDragging, setDragging] = (0, _react.useState)(false);
+  const [origin, setOrigin] = (0, _react.useState)({
     x: 0,
     y: 0
-  }),
-      origin = _useState2[0],
-      setOrigin = _useState2[1];
-
-  var _useState3 = (0, _react.useState)({
+  });
+  const [translation, setTranslation] = (0, _react.useState)({
     x: 0,
     y: 0
-  }),
-      translation = _useState3[0],
-      setTranslation = _useState3[1];
-
-  var _useState4 = (0, _react.useState)({
+  });
+  const [lastTranslation, setLastTranslation] = (0, _react.useState)({
     x: 0,
     y: 0
-  }),
-      lastTranslation = _useState4[0],
-      setLastTranslation = _useState4[1];
-
-  (0, _react.useEffect)(function () {
+  });
+  (0, _react.useEffect)(() => {
     if (!imageDimensions) return;
 
     if (startingPosition) {
       setTranslation(getDestination(startingPosition));
       setLastTranslation(getDestination(startingPosition));
     } else {
-      var destination = getDestination({
+      const destination = getDestination({
         x: Math.round((imageDimensions.containedSize.width - imageDimensions.scaledSize.width) / 2),
         y: Math.round((imageDimensions.containedSize.height - imageDimensions.scaledSize.height) / 2)
       });
@@ -53,14 +42,16 @@ var useDrag = function useDrag(_ref) {
     }
   }, [startingPosition, imageDimensions]);
 
-  var handleMouseDown = function handleMouseDown(e) {
+  const handleMouseDown = e => {
     (0, _pauseEvent.pauseEvent)(e);
-    var clientX = e.clientX,
-        clientY = e.clientY,
-        target = e.target;
+    const {
+      clientX,
+      clientY,
+      target
+    } = e;
 
     if (!isDragging) {
-      var rect = target.getBoundingClientRect();
+      const rect = target.getBoundingClientRect();
       setDragging(true);
       setOrigin({
         x: clientX - rect.left - lastTranslation.x,
@@ -69,14 +60,16 @@ var useDrag = function useDrag(_ref) {
     }
   };
 
-  var handleMouseMove = function handleMouseMove(e) {
+  const handleMouseMove = e => {
     (0, _pauseEvent.pauseEvent)(e);
-    var clientX = e.clientX,
-        clientY = e.clientY,
-        target = e.target;
+    const {
+      clientX,
+      clientY,
+      target
+    } = e;
 
     if (isDragging) {
-      var rect = target.getBoundingClientRect();
+      const rect = target.getBoundingClientRect();
 
       if (clientX - rect.left < 0 || clientX - rect.left > rect.width || clientY - rect.top < 0 || clientY - rect.top > rect.height) {
         setDragging(false);
@@ -87,7 +80,7 @@ var useDrag = function useDrag(_ref) {
         return;
       }
 
-      var destination = getDestination({
+      const destination = getDestination({
         x: clientX - rect.left - origin.x,
         y: clientY - rect.top - origin.y
       });
@@ -98,7 +91,7 @@ var useDrag = function useDrag(_ref) {
     }
   };
 
-  var handleMouseUp = function handleMouseUp() {
+  const handleMouseUp = () => {
     if (isDragging) {
       setDragging(false);
       setLastTranslation({
@@ -108,8 +101,8 @@ var useDrag = function useDrag(_ref) {
     }
   };
 
-  var handleKeyUp = function handleKeyUp(event) {
-    var direction = {
+  const handleKeyUp = event => {
+    let direction = {
       x: 0,
       y: 0
     };
@@ -139,7 +132,7 @@ var useDrag = function useDrag(_ref) {
       };
     }
 
-    var destination = getDestination({
+    const destination = getDestination({
       x: lastTranslation.x + direction.x,
       y: lastTranslation.y + direction.y
     });
@@ -147,11 +140,13 @@ var useDrag = function useDrag(_ref) {
     setLastTranslation(destination);
   };
 
-  var getDestination = function getDestination(_ref2) {
-    var x = _ref2.x,
-        y = _ref2.y;
-    var destinationX = x;
-    var destinationY = y;
+  const getDestination = _ref2 => {
+    let {
+      x,
+      y
+    } = _ref2;
+    let destinationX = x;
+    let destinationY = y;
 
     if (x > 0) {
       destinationX = 0;
@@ -191,7 +186,7 @@ var useDrag = function useDrag(_ref) {
   }
 
   return {
-    isDragging: isDragging,
+    isDragging,
     liveImagePosition: {
       x: translation.x,
       y: translation.y

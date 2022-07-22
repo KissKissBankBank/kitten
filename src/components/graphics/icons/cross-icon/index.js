@@ -7,8 +7,6 @@ exports.CrossIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -17,22 +15,23 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _excluded = ["color", "title", "width", "height", "size"];
-var DEFAULT_WIDTH = 8;
-var DEFAULT_HEIGHT = 8;
+const DEFAULT_WIDTH = 8;
+const DEFAULT_HEIGHT = 8;
 
-var CrossIcon = function CrossIcon(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      width = _ref.width,
-      height = _ref.height,
-      size = _ref.size,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var computed = (0, _ratio.computeFromRatio)({
+const CrossIcon = _ref => {
+  let {
+    color,
+    title,
+    width,
+    height,
+    size,
+    ...props
+  } = _ref;
+  const computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
 
   if (size === 'large') {

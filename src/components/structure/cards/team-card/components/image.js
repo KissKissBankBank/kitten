@@ -7,8 +7,6 @@ exports.TeamCardImage = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -19,32 +17,38 @@ var _colorsConfig = _interopRequireDefault(require("../../../../../constants/col
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _excluded = ["styled", "backgroundSource"],
-    _excluded2 = ["src", "title", "style", "className"];
-var imageHeight = 378;
-var imageWidth = 252;
-var StyledTeamCardImage = (0, _styledComponents.default)(function (_ref) {
-  var styled = _ref.styled,
-      backgroundSource = _ref.backgroundSource,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const imageHeight = 378;
+const imageWidth = 252;
+const StyledTeamCardImage = (0, _styledComponents.default)(_ref => {
+  let {
+    styled,
+    backgroundSource,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", props);
 }).withConfig({
   displayName: "image__StyledTeamCardImage",
   componentId: "sc-hbs7qa-0"
-})(["background-image:url(", ");background-color:", ";background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;padding-bottom:", ";", ""], function (_ref2) {
-  var backgroundSource = _ref2.backgroundSource;
+})(["background-image:url(", ");background-color:", ";background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;padding-bottom:", ";", ""], _ref2 => {
+  let {
+    backgroundSource
+  } = _ref2;
   return backgroundSource;
-}, _colorsConfig.default.background1, imageHeight / imageWidth * 100 + '%', function (_ref3) {
-  var style = _ref3.style;
+}, _colorsConfig.default.background1, imageHeight / imageWidth * 100 + '%', _ref3 => {
+  let {
+    style
+  } = _ref3;
   return style;
 });
 
-var TeamCardImage = function TeamCardImage(_ref4) {
-  var src = _ref4.src,
-      title = _ref4.title,
-      style = _ref4.style,
-      className = _ref4.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded2);
+const TeamCardImage = _ref4 => {
+  let {
+    src,
+    title,
+    style,
+    className,
+    ...props
+  } = _ref4;
   return /*#__PURE__*/_react.default.createElement(StyledTeamCardImage, (0, _extends2.default)({}, props, {
     backgroundSource: src,
     title: title,

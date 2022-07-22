@@ -7,8 +7,8 @@ exports.getScssPaths = void 0;
 
 var _path = _interopRequireDefault(require("path"));
 
-var getScssPaths = function getScssPaths() {
-  var kittenStylesheetsPath = _path.default.join(__dirname, '../../assets/stylesheets');
+const getScssPaths = () => {
+  const kittenStylesheetsPath = _path.default.join(__dirname, '../../assets/stylesheets');
 
   return [kittenStylesheetsPath];
 };

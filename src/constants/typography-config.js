@@ -2,7 +2,7 @@
 
 exports.__esModule = true;
 exports.default = void 0;
-var TYPOGRAPHY = {
+const TYPOGRAPHY = {
   root: 16,
   // px
   fontSize: 1,

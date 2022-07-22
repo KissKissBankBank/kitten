@@ -13,7 +13,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _text = require("../../../../typography/text");
 
-var Description = function Description(props) {
+const Description = props => {
   return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     tag: "p",
     color: "font1",

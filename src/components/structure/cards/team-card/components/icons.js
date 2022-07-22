@@ -7,8 +7,6 @@ exports.TeamCardIcons = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -29,21 +27,21 @@ var _phoneIcon = require("./phone-icon");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _excluded = ["email", "phoneNumber", "links", "socialLink"];
-
-var StyledTeamCardIcons = _styledComponents.default.div.withConfig({
+const StyledTeamCardIcons = _styledComponents.default.div.withConfig({
   displayName: "icons__StyledTeamCardIcons",
   componentId: "sc-gnlerh-0"
 })(["margin-top:", ";display:flex;> *{flex-shrink:0;}gap:", ";"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(15));
 
-var TeamCardIcons = function TeamCardIcons(_ref) {
-  var email = _ref.email,
-      phoneNumber = _ref.phoneNumber,
-      links = _ref.links,
-      socialLink = _ref.socialLink,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const TeamCardIcons = _ref => {
+  let {
+    email,
+    phoneNumber,
+    links,
+    socialLink,
+    ...props
+  } = _ref;
 
-  var getSocialLinks = function getSocialLinks() {
+  const getSocialLinks = () => {
     if (links.length > 0) return links; // handle deprecated `socialLink` prop
 
     if (socialLink) return [{
@@ -70,10 +68,11 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
 
 exports.TeamCardIcons = TeamCardIcons;
 
-var SocialLinks = function SocialLinks(_ref2) {
-  var _ref2$links = _ref2.links,
-      links = _ref2$links === void 0 ? [] : _ref2$links;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, links.map(function (link) {
+const SocialLinks = _ref2 => {
+  let {
+    links = []
+  } = _ref2;
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, links.map(link => {
     if (!link.href) return;
     return /*#__PURE__*/_react.default.createElement(_button.Button, {
       tag: "a",

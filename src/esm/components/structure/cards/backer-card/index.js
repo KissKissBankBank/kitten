@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "title", "titleTag", "subtitle", "imgProps", "description"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -8,19 +6,20 @@ import styled from 'styled-components';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { Text } from '../../../typography/text';
 import { ButtonImage } from '../../../action/button-image';
-var StyledCard = styled.div.withConfig({
+const StyledCard = styled.div.withConfig({
   displayName: "backer-card__StyledCard",
   componentId: "sc-8cf6gi-0"
 })(["padding:", " ", ";border-radius:var(--border-radius-s);box-shadow:var(--box-shadow-s);text-align:center;word-break:break-word;display:flex;align-items:center;flex-direction:column;gap:", ";"], pxToRem(40), pxToRem(20), pxToRem(10));
-export var BackerCard = function BackerCard(_ref) {
-  var className = _ref.className,
-      title = _ref.title,
-      titleTag = _ref.titleTag,
-      subtitle = _ref.subtitle,
-      imgProps = _ref.imgProps,
-      description = _ref.description,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const BackerCard = _ref => {
+  let {
+    className,
+    title,
+    titleTag,
+    subtitle,
+    imgProps,
+    description,
+    ...others
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     className: classNames('k-BackerCard', className)
   }, others), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Text, {

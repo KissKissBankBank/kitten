@@ -1,29 +1,28 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["mainColor", "hoverColor", "isActive", "iconTitle", "title", "width", "height", "isAnimatedOnHover", "style", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import deprecated from 'prop-types-extra/lib/deprecated';
-var StyledItem = styled.svg.withConfig({
+const StyledItem = styled.svg.withConfig({
   displayName: "burger-icon__StyledItem",
   componentId: "sc-122wqdc-0"
 })(["overflow:visible;fill:var(--burgerIcon-mainColor,", ");:hover,button:hover &{fill:var(--burgerIcon-hoverColor,", ");}rect{transition:transform 0.2s ease-out,fill 0.15s;}&.k-BurgerIcon--isActive{.k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}}&.k-BurgerIcon--isAnimatedOnHover{&:hover,button:hover &,&:focus,button:focus &{.k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}}}"], COLORS.font1, COLORS.primary1);
-export var BurgerIcon = function BurgerIcon(_ref) {
-  var mainColor = _ref.mainColor,
-      hoverColor = _ref.hoverColor,
-      isActive = _ref.isActive,
-      iconTitle = _ref.iconTitle,
-      title = _ref.title,
-      width = _ref.width,
-      height = _ref.height,
-      isAnimatedOnHover = _ref.isAnimatedOnHover,
-      style = _ref.style,
-      className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const BurgerIcon = _ref => {
+  let {
+    mainColor,
+    hoverColor,
+    isActive,
+    iconTitle,
+    title,
+    width,
+    height,
+    isAnimatedOnHover,
+    style,
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledItem, _extends({
     role: "img",
     "aria-label": iconTitle || title,
@@ -31,10 +30,10 @@ export var BurgerIcon = function BurgerIcon(_ref) {
     viewBox: "0 0 12 10",
     width: width,
     height: height,
-    style: _extends({}, style, {
+    style: { ...style,
       '--burgerIcon-mainColor': mainColor,
       '--burgerIcon-hoverColor': hoverColor
-    }),
+    },
     className: classNames('k-BurgerIcon', className, {
       'k-BurgerIcon--isActive': isActive,
       'k-BurgerIcon--isAnimatedOnHover': isAnimatedOnHover

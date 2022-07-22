@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["phoneNumber", "tooltipColor", "className", "buttonLabel"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../../../../action/button';
@@ -8,13 +6,14 @@ import { PhoneIcon } from '../../../../graphics/icons/phone-icon';
 import { TeamCardButtonWithTooltip } from './button-with-tooltip';
 import COLORS from '../../../../../constants/colors-config';
 import classNames from 'classnames';
-export var TeamCardPhoneIcon = function TeamCardPhoneIcon(_ref) {
-  var phoneNumber = _ref.phoneNumber,
-      tooltipColor = _ref.tooltipColor,
-      className = _ref.className,
-      buttonLabel = _ref.buttonLabel,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const TeamCardPhoneIcon = _ref => {
+  let {
+    phoneNumber,
+    tooltipColor,
+    className,
+    buttonLabel,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Button, {
     tag: "a",
     fit: "icon",

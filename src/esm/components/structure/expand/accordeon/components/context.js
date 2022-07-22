@@ -1,7 +1,7 @@
 import { createContext } from 'react';
-export var Context = /*#__PURE__*/createContext({
+export const Context = /*#__PURE__*/createContext({
   selectedItem: null,
-  updateSelectedItem: function updateSelectedItem() {},
+  updateSelectedItem: () => {},
   componentId: 'accordeon',
   closeOnClick: false
 });

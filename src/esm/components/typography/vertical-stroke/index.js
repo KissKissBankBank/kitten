@@ -1,18 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "size"];
 import React from 'react';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem } from '../../../helpers/utils/typography';
-export var VerticalStroke = styled(function (_ref) {
-  var className = _ref.className,
-      size = _ref.size,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var verticalStrokeClassName = classNames('k-VerticalStroke', {
+export const VerticalStroke = styled(_ref => {
+  let {
+    className,
+    size,
+    ...others
+  } = _ref;
+  const verticalStrokeClassName = classNames('k-VerticalStroke', {
     'k-VerticalStroke--small': size === 'small',
     'k-VerticalStroke--medium': size === 'medium',
     'k-VerticalStroke--large': size === 'large',

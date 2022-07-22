@@ -1,18 +1,17 @@
 import { useRef, useCallback, useEffect, useState } from 'react';
 import { domElementHelper } from '../../../../../helpers/dom/element-helper'; // https://gist.github.com/DominicTobias/c8579667e8a8bd7817c1b4d5b274eb4c
 
-export var useResizeObserver = function useResizeObserver() {
+export const useResizeObserver = () => {
   if (!domElementHelper.canUseDom() || !('ResizeObserver' in window)) {
     return {};
   }
 
-  var _useState = useState('large'),
-      size = _useState[0],
-      setSize = _useState[1];
-
-  var resizeObserver = useRef(null);
-  var onResize = useCallback(function (entries) {
-    var width = entries[0].contentRect.width;
+  const [size, setSize] = useState('large');
+  const resizeObserver = useRef(null);
+  const onResize = useCallback(entries => {
+    const {
+      width
+    } = entries[0].contentRect;
 
     if (width >= 1000) {
       setSize('huge');
@@ -28,7 +27,7 @@ export var useResizeObserver = function useResizeObserver() {
       setSize('mobile');
     }
   }, []);
-  var ref = useCallback(function (node) {
+  const ref = useCallback(node => {
     if (node !== null) {
       if (resizeObserver != null && resizeObserver.current) {
         resizeObserver.current.disconnect();
@@ -38,15 +37,13 @@ export var useResizeObserver = function useResizeObserver() {
       resizeObserver.current.observe(node);
     }
   }, [onResize]);
-  useEffect(function () {
-    return function () {
-      if (resizeObserver != null && resizeObserver.current) {
-        resizeObserver.current.disconnect();
-      }
-    };
+  useEffect(() => () => {
+    if (resizeObserver != null && resizeObserver.current) {
+      resizeObserver.current.disconnect();
+    }
   }, []);
   return {
-    ref: ref,
-    size: size
+    ref,
+    size
   };
 };

@@ -1,37 +1,40 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["styled", "backgroundSource"],
-    _excluded2 = ["src", "title", "style", "className"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../../constants/colors-config';
 import styled from 'styled-components';
-var imageHeight = 378;
-var imageWidth = 252;
-var StyledTeamCardImage = styled(function (_ref) {
-  var styled = _ref.styled,
-      backgroundSource = _ref.backgroundSource,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+const imageHeight = 378;
+const imageWidth = 252;
+const StyledTeamCardImage = styled(_ref => {
+  let {
+    styled,
+    backgroundSource,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("div", props);
 }).withConfig({
   displayName: "image__StyledTeamCardImage",
   componentId: "sc-hbs7qa-0"
-})(["background-image:url(", ");background-color:", ";background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;padding-bottom:", ";", ""], function (_ref2) {
-  var backgroundSource = _ref2.backgroundSource;
+})(["background-image:url(", ");background-color:", ";background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;padding-bottom:", ";", ""], _ref2 => {
+  let {
+    backgroundSource
+  } = _ref2;
   return backgroundSource;
-}, COLORS.background1, imageHeight / imageWidth * 100 + '%', function (_ref3) {
-  var style = _ref3.style;
+}, COLORS.background1, imageHeight / imageWidth * 100 + '%', _ref3 => {
+  let {
+    style
+  } = _ref3;
   return style;
 });
-export var TeamCardImage = function TeamCardImage(_ref4) {
-  var src = _ref4.src,
-      title = _ref4.title,
-      style = _ref4.style,
-      className = _ref4.className,
-      props = _objectWithoutPropertiesLoose(_ref4, _excluded2);
-
+export const TeamCardImage = _ref4 => {
+  let {
+    src,
+    title,
+    style,
+    className,
+    ...props
+  } = _ref4;
   return /*#__PURE__*/React.createElement(StyledTeamCardImage, _extends({}, props, {
     backgroundSource: src,
     title: title,

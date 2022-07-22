@@ -9,27 +9,25 @@ var _useFocusTrap = require("../../hooks/use-focus-trap");
 
 var _usePrevious = require("../../hooks/use-previous");
 
-var useModal = function useModal(_ref) {
-  var id = _ref.id,
-      modalCloseText = _ref.modalCloseText,
-      modalOpenText = _ref.modalOpenText;
-
-  var _useState = (0, _react.useState)(false),
-      show = _useState[0],
-      setShow = _useState[1];
-
-  var modalRef = (0, _useFocusTrap.useFocusTrap)({
+const useModal = _ref => {
+  let {
+    id,
+    modalCloseText,
+    modalOpenText
+  } = _ref;
+  const [show, setShow] = (0, _react.useState)(false);
+  const modalRef = (0, _useFocusTrap.useFocusTrap)({
     shouldTrapFocus: show
   });
-  var previousShowValue = (0, _usePrevious.usePrevious)(show);
+  const previousShowValue = (0, _usePrevious.usePrevious)(show);
 
-  var keyDownHandler = function keyDownHandler(event) {
+  const keyDownHandler = event => {
     if (event.key === 'Escape') {
       setShow(false);
     }
   };
 
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     if (show || previousShowValue) {
       document.getElementById(id + "__button").focus();
     } // Prevent scrolling when Modal is open
@@ -42,7 +40,7 @@ var useModal = function useModal(_ref) {
       document.body.style.position = 'fixed';
     } else {
       document.removeEventListener('keydown', keyDownHandler);
-      var scrollY = document.body.style.top;
+      const scrollY = document.body.style.top;
       document.body.style.position = '';
       document.body.style.top = '';
       window.scrollTo(0, parseInt(scrollY || '0') * -1);
@@ -55,9 +53,7 @@ var useModal = function useModal(_ref) {
       'aria-label': show ? modalCloseText : modalOpenText,
       'aria-controls': id + "__modal",
       'aria-expanded': show ? 'true' : null,
-      onClick: function onClick() {
-        return setShow(!show);
-      }
+      onClick: () => setShow(!show)
     },
     modalProps: {
       id: id + "__modal",
@@ -66,12 +62,8 @@ var useModal = function useModal(_ref) {
     wrapperProps: {
       ref: modalRef
     },
-    closeAction: function closeAction() {
-      return setShow(false);
-    },
-    openAction: function openAction() {
-      return setShow(true);
-    }
+    closeAction: () => setShow(false),
+    openAction: () => setShow(true)
   };
 };
 

@@ -2,16 +2,17 @@
 
 exports.__esModule = true;
 exports.upcaseFirst = exports.stringUtils = void 0;
-var stringUtils = {
+const stringUtils = {
   /**
    * Converts the first character to uppercase.
    */
-  upcaseFirst: function upcaseFirst(str) {
+  upcaseFirst(str) {
     if (!str || typeof str !== 'string') return str;
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
 }; // Prefer specific export
 
 exports.stringUtils = stringUtils;
-var upcaseFirst = stringUtils.upcaseFirst;
+const upcaseFirst = stringUtils.upcaseFirst;
 exports.upcaseFirst = upcaseFirst;

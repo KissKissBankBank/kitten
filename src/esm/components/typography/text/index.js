@@ -1,31 +1,30 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "as", "transform", "weight", "style", "letterSpacing"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
-export var allowedColorStrings = ['font1', 'font2', 'primary1', 'background1', 'error', 'valid', 'grey-000', 'grey-100', 'grey-200', 'grey-300', 'grey-400', 'grey-500', 'grey-600', 'grey-700', 'grey-800', 'grey-900', 'primary-100', 'primary-300', 'primary-500', 'primary-700', 'primary-900', 'danger-100', 'danger-300', 'danger-500', 'danger-700', 'danger-900', 'success-100', 'success-300', 'success-500', 'success-700', 'success-900', 'warning-100', 'warning-300', 'warning-500', 'warning-700', 'warning-900'];
-export var Text = function Text(_ref) {
-  var className = _ref.className,
-      color = _ref.color,
-      cssColor = _ref.cssColor,
-      decoration = _ref.decoration,
-      lineHeight = _ref.lineHeight,
-      setting = _ref.setting,
-      size = _ref.size,
-      fontStyle = _ref.fontStyle,
-      tag = _ref.tag,
-      as = _ref.as,
-      transform = _ref.transform,
-      weight = _ref.weight,
-      style = _ref.style,
-      letterSpacing = _ref.letterSpacing,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const allowedColorStrings = ['font1', 'font2', 'primary1', 'background1', 'error', 'valid', 'grey-000', 'grey-100', 'grey-200', 'grey-300', 'grey-400', 'grey-500', 'grey-600', 'grey-700', 'grey-800', 'grey-900', 'primary-100', 'primary-300', 'primary-500', 'primary-700', 'primary-900', 'danger-100', 'danger-300', 'danger-500', 'danger-700', 'danger-900', 'success-100', 'success-300', 'success-500', 'success-700', 'success-900', 'warning-100', 'warning-300', 'warning-500', 'warning-700', 'warning-900'];
+export const Text = _ref => {
+  let {
+    className,
+    color,
+    cssColor,
+    decoration,
+    lineHeight,
+    setting,
+    size,
+    fontStyle,
+    tag,
+    as,
+    transform,
+    weight,
+    style,
+    letterSpacing,
+    ...others
+  } = _ref;
   checkDeprecatedWeights(weight);
-  var Tag = as || tag;
-  var textClassName = classNames({
+  const Tag = as || tag;
+  const textClassName = classNames({
     // Color.
     'k-u-color-font1': color === 'font1',
     'k-u-color-font2': color === 'font2',
@@ -97,9 +96,10 @@ export var Text = function Text(_ref) {
   }, className);
   return /*#__PURE__*/React.createElement(Tag, _extends({}, others, {
     className: textClassName,
-    style: cssColor ? _extends({
-      color: cssColor
-    }, style) : style
+    style: cssColor ? {
+      color: cssColor,
+      ...style
+    } : style
   }));
 };
 Text.propTypes = {

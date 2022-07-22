@@ -1,35 +1,24 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-import _inheritsLoose from "@babel/runtime/helpers/inheritsLoose";
-var _excluded = ["children", "tooltip", "tooltipId", "tooltipProps", "labelProps", "link", "tooltipLabel", "className", "center"];
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Label } from '../../../form/label';
 import { Toggletip } from '../../../information/toggletip';
 import { Line } from '../../../structure/line';
-export var FieldLabel = /*#__PURE__*/function (_Component) {
-  _inheritsLoose(FieldLabel, _Component);
-
-  function FieldLabel() {
-    return _Component.apply(this, arguments) || this;
-  }
-
-  var _proto = FieldLabel.prototype;
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        children = _this$props.children,
-        tooltip = _this$props.tooltip,
-        tooltipId = _this$props.tooltipId,
-        tooltipProps = _this$props.tooltipProps,
-        labelProps = _this$props.labelProps,
-        link = _this$props.link,
-        tooltipLabel = _this$props.tooltipLabel,
-        className = _this$props.className,
-        center = _this$props.center,
-        others = _objectWithoutPropertiesLoose(_this$props, _excluded);
-
+export class FieldLabel extends Component {
+  render() {
+    const {
+      children,
+      tooltip,
+      tooltipId,
+      tooltipProps,
+      labelProps,
+      link,
+      tooltipLabel,
+      className,
+      center,
+      ...others
+    } = this.props;
     return /*#__PURE__*/React.createElement("div", _extends({
       className: classNames(className, 'k-Field__label', 'k-u-margin-bottom-single')
     }, others), /*#__PURE__*/React.createElement(Line, {
@@ -46,10 +35,9 @@ export var FieldLabel = /*#__PURE__*/function (_Component) {
       },
       actionLabel: "Help"
     }, tooltipProps), tooltip)), link && /*#__PURE__*/React.createElement(Line.Item, null, link)));
-  };
+  }
 
-  return FieldLabel;
-}(Component);
+}
 FieldLabel.propTypes = {
   link: PropTypes.node,
   tooltip: PropTypes.string,

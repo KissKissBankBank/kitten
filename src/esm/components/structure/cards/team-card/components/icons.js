@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["email", "phoneNumber", "links", "socialLink"];
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -11,18 +9,20 @@ import { TwitterIcon } from '../../../../graphics/icons/twitter-icon';
 import { EmailIcon } from '../../../../graphics/icons/email-icon';
 import { TeamCardPhoneIcon } from './phone-icon';
 import deprecated from 'prop-types-extra/lib/deprecated';
-var StyledTeamCardIcons = styled.div.withConfig({
+const StyledTeamCardIcons = styled.div.withConfig({
   displayName: "icons__StyledTeamCardIcons",
   componentId: "sc-gnlerh-0"
 })(["margin-top:", ";display:flex;> *{flex-shrink:0;}gap:", ";"], pxToRem(15), pxToRem(15));
-export var TeamCardIcons = function TeamCardIcons(_ref) {
-  var email = _ref.email,
-      phoneNumber = _ref.phoneNumber,
-      links = _ref.links,
-      socialLink = _ref.socialLink,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+export const TeamCardIcons = _ref => {
+  let {
+    email,
+    phoneNumber,
+    links,
+    socialLink,
+    ...props
+  } = _ref;
 
-  var getSocialLinks = function getSocialLinks() {
+  const getSocialLinks = () => {
     if (links.length > 0) return links; // handle deprecated `socialLink` prop
 
     if (socialLink) return [{
@@ -47,10 +47,11 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
   }));
 };
 
-var SocialLinks = function SocialLinks(_ref2) {
-  var _ref2$links = _ref2.links,
-      links = _ref2$links === void 0 ? [] : _ref2$links;
-  return /*#__PURE__*/React.createElement(React.Fragment, null, links.map(function (link) {
+const SocialLinks = _ref2 => {
+  let {
+    links = []
+  } = _ref2;
+  return /*#__PURE__*/React.createElement(React.Fragment, null, links.map(link => {
     if (!link.href) return;
     return /*#__PURE__*/React.createElement(Button, {
       tag: "a",

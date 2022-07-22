@@ -1,13 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var FacebookIconWithBackground = function FacebookIconWithBackground(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const FacebookIconWithBackground = _ref => {
+  let {
+    color,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 25 25",

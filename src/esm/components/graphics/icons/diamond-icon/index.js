@@ -1,14 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["title", "color"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
-export var DiamondIcon = function DiamondIcon(_ref) {
-  var title = _ref.title,
-      color = _ref.color,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const DiamondIcon = _ref => {
+  let {
+    title,
+    color,
+    ...others
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     width: "19",

@@ -7,8 +7,6 @@ exports.Title = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -23,21 +21,21 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _titleModifierStyles = require("../common/title-modifier-styles");
 
-var _excluded = ["modifier", "tag", "noMargin", "italic", "cssColor", "className"];
-
-var StyledTitle = _styledComponents.default.span.withConfig({
+const StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
 })(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles['700'], (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
 
-var Title = function Title(_ref) {
-  var modifier = _ref.modifier,
-      tag = _ref.tag,
-      noMargin = _ref.noMargin,
-      italic = _ref.italic,
-      cssColor = _ref.cssColor,
-      className = _ref.className,
-      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const Title = _ref => {
+  let {
+    modifier,
+    tag,
+    noMargin,
+    italic,
+    cssColor,
+    className,
+    ...other
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
     as: tag,
     modifier: modifier,

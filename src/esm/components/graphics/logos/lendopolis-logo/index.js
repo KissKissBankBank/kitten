@@ -1,26 +1,25 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["primaryColor", "secondaryColor", "width", "height", "small"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-export var LendopolisLogo = function LendopolisLogo(_ref) {
-  var primaryColor = _ref.primaryColor,
-      secondaryColor = _ref.secondaryColor,
-      width = _ref.width,
-      height = _ref.height,
-      small = _ref.small,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var DEFAULT_WIDTH = 150;
-  var DEFAULT_HEIGHT = 28;
-  var computed = computeFromRatio({
+export const LendopolisLogo = _ref => {
+  let {
+    primaryColor,
+    secondaryColor,
+    width,
+    height,
+    small,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 150;
+  const DEFAULT_HEIGHT = 28;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: small ? DEFAULT_HEIGHT : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

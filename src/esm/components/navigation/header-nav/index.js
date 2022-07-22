@@ -19,41 +19,32 @@ import { SearchInput } from './components/search-input';
 import { usePrevious } from '../../../helpers/hooks/use-previous';
 import { StyledHeader } from './styles';
 
-var HeaderNav = function HeaderNav(_ref) {
-  var children = _ref.children,
-      id = _ref.id,
-      isFixed = _ref.isFixed,
-      isLogged = _ref.isLogged,
-      quickAccessProps = _ref.quickAccessProps,
-      stickyProps = _ref.stickyProps,
-      zIndexConfig = _ref.zIndexConfig,
-      className = _ref.className,
-      navProps = _ref.navProps,
-      headerProps = _ref.headerProps;
+const HeaderNav = _ref => {
+  let {
+    children,
+    id,
+    isFixed,
+    isLogged,
+    quickAccessProps,
+    stickyProps,
+    zIndexConfig,
+    className,
+    navProps,
+    headerProps
+  } = _ref;
+  const [isMenuExpanded, setMenuExpanded] = useState(false);
+  const [menuExpandBy, setMenuExpandBy] = useState(null);
+  const [stickyState, setStickyState] = useState(null);
+  const [stuckState, setStuckState] = useState(false);
+  const stickyContainerRef = useRef(null);
+  const headerRef = useRef(null);
+  const previousStickyState = usePrevious(stickyState);
 
-  var _useState = useState(false),
-      isMenuExpanded = _useState[0],
-      setMenuExpanded = _useState[1];
-
-  var _useState2 = useState(null),
-      menuExpandBy = _useState2[0],
-      setMenuExpandBy = _useState2[1];
-
-  var _useState3 = useState(null),
-      stickyState = _useState3[0],
-      setStickyState = _useState3[1];
-
-  var _useState4 = useState(false),
-      stuckState = _useState4[0],
-      setStuckState = _useState4[1];
-
-  var stickyContainerRef = useRef(null);
-  var headerRef = useRef(null);
-  var previousStickyState = usePrevious(stickyState);
-
-  var callOnToggle = function callOnToggle(_ref2) {
-    var isExpanded = _ref2.isExpanded,
-        expandBy = _ref2.expandBy;
+  const callOnToggle = _ref2 => {
+    let {
+      isExpanded,
+      expandBy
+    } = _ref2;
 
     if (!isExpanded && previousStickyState === 'always') {
       stickyContainerRef.current.setSticky();
@@ -63,27 +54,30 @@ var HeaderNav = function HeaderNav(_ref) {
     setMenuExpandBy(expandBy);
   };
 
-  useEffect(function () {
+  useEffect(() => {
     setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp');
   }, [isFixed, isMenuExpanded]);
 
-  var handleStickyChange = function handleStickyChange(_ref3) {
-    var isStuck = _ref3.isStuck;
+  const handleStickyChange = _ref3 => {
+    let {
+      isStuck
+    } = _ref3;
     return setStuckState(isStuck);
   };
 
   return /*#__PURE__*/React.createElement(Context.Provider, {
     value: {
-      isLogged: isLogged,
-      id: id,
+      isLogged,
+      id,
       expandBy: menuExpandBy,
-      callOnToggle: callOnToggle
+      callOnToggle
     }
   }, /*#__PURE__*/React.createElement(StyledHeader, _extends({}, headerProps, {
-    style: _extends({
+    style: {
       '--HeaderNav-zIndex': zIndexConfig.header,
-      '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu
-    }, headerProps == null ? void 0 : headerProps.style),
+      '--HeaderNav-zIndex-openMenu': zIndexConfig.headerWithOpenMenu,
+      ...(headerProps == null ? void 0 : headerProps.style)
+    },
     zIndex: zIndexConfig,
     className: classNames('k-HeaderNav__wrapper', headerProps == null ? void 0 : headerProps.className, {
       'k-HeaderNav--menuIsExpanded': isMenuExpanded,

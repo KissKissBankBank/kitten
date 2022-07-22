@@ -7,8 +7,6 @@ exports.ClickableCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,39 +19,45 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _excluded = ["backgroundColor", "borderColor", "children", "disabled", "fluid", "size"],
-    _excluded2 = ["children", "fit", "shape"],
-    _excluded3 = ["children"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledClickableCard = _styledComponents.default.button.withConfig({
+const StyledClickableCard = _styledComponents.default.button.withConfig({
   displayName: "clickable-card__StyledClickableCard",
   componentId: "sc-1g013xo-0"
-})(["box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;opacity:1;transition:opacity 0.15s ease;&.k-ClickableCard--fluid{width:100%;}", " .k-ClickableCard__image{display:block;margin-bottom:", ";position:relative;width:100%;padding-top:100%;overflow:hidden;transition:box-shadow 0.15s ease;& > *{position:absolute;top:0;left:0;height:100%;width:100%;object-position:center;object-fit:none;z-index:-1;", "}}.k-ClickableCard__image--contain > *{object-fit:contain;}.k-ClickableCard__image--cover > *{object-fit:cover;}.k-ClickableCard__image--circle{border-radius:var(--border-radius-rounded);}.k-ClickableCard__content{display:block;& *{transition:color 0.15s ease;}}&:hover,&:focus{", "}&[aria-checked='true']{", "}&:disabled{opacity:0.5;pointer-events:none;}"], function (_ref) {
-  var size = _ref.size;
+})(["box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;opacity:1;transition:opacity 0.15s ease;&.k-ClickableCard--fluid{width:100%;}", " .k-ClickableCard__image{display:block;margin-bottom:", ";position:relative;width:100%;padding-top:100%;overflow:hidden;transition:box-shadow 0.15s ease;& > *{position:absolute;top:0;left:0;height:100%;width:100%;object-position:center;object-fit:none;z-index:-1;", "}}.k-ClickableCard__image--contain > *{object-fit:contain;}.k-ClickableCard__image--cover > *{object-fit:cover;}.k-ClickableCard__image--circle{border-radius:var(--border-radius-rounded);}.k-ClickableCard__content{display:block;& *{transition:color 0.15s ease;}}&:hover,&:focus{", "}&[aria-checked='true']{", "}&:disabled{opacity:0.5;pointer-events:none;}"], _ref => {
+  let {
+    size
+  } = _ref;
   return size && (0, _styledComponents.css)(["width:", ";"], (0, _typography.pxToRem)(size));
-}, (0, _typography.pxToRem)(20), function (_ref2) {
-  var backgroundColor = _ref2.backgroundColor;
+}, (0, _typography.pxToRem)(20), _ref2 => {
+  let {
+    backgroundColor
+  } = _ref2;
   return (0, _styledComponents.css)(["background-color:", ";"], backgroundColor);
-}, function (_ref3) {
-  var borderColor = _ref3.borderColor;
+}, _ref3 => {
+  let {
+    borderColor
+  } = _ref3;
   return (0, _styledComponents.css)([".k-ClickableCard__image{box-shadow:inset 0 0 0 ", " ", ";}"], (0, _typography.pxToRem)(2), borderColor);
-}, function (_ref4) {
-  var borderColor = _ref4.borderColor;
+}, _ref4 => {
+  let {
+    borderColor
+  } = _ref4;
   return (0, _styledComponents.css)([".k-ClickableCard__image{box-shadow:inset 0 0 0 ", " ", ",inset 0 0 0 ", " ", ";}.k-ClickableCard__content *{color:", ";}"], (0, _typography.pxToRem)(2), borderColor, (0, _typography.pxToRem)(10), _colorsConfig.default.background1, borderColor);
 });
 
-var ClickableCard = function ClickableCard(_ref5) {
-  var backgroundColor = _ref5.backgroundColor,
-      borderColor = _ref5.borderColor,
-      children = _ref5.children,
-      disabled = _ref5.disabled,
-      fluid = _ref5.fluid,
-      size = _ref5.size,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref5, _excluded);
+const ClickableCard = _ref5 => {
+  let {
+    backgroundColor,
+    borderColor,
+    children,
+    disabled,
+    fluid,
+    size,
+    ...props
+  } = _ref5;
   return /*#__PURE__*/_react.default.createElement(StyledClickableCard, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ClickableCard', 'k-u-reset-button', props.className, {
       'k-ClickableCard--fluid': fluid
@@ -67,19 +71,23 @@ var ClickableCard = function ClickableCard(_ref5) {
 
 exports.ClickableCard = ClickableCard;
 
-var ClickableCardImage = function ClickableCardImage(_ref6) {
-  var children = _ref6.children,
-      fit = _ref6.fit,
-      shape = _ref6.shape,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded2);
+const ClickableCardImage = _ref6 => {
+  let {
+    children,
+    fit,
+    shape,
+    ...props
+  } = _ref6;
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ClickableCard__image', props.className, "k-ClickableCard__image--" + shape, "k-ClickableCard__image--" + fit)
   }), children);
 };
 
-var ClickableCardContent = function ClickableCardContent(_ref7) {
-  var children = _ref7.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref7, _excluded3);
+const ClickableCardContent = _ref7 => {
+  let {
+    children,
+    ...props
+  } = _ref7;
   return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-ClickableCard__content', props.className)
   }), children);

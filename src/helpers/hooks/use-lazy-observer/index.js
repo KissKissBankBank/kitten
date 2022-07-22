@@ -7,13 +7,10 @@ var _react = require("react");
 
 var _observer = require("../../utils/lazy/observer");
 
-var useLazyObserver = function useLazyObserver(lazyComponentRef) {
-  var _useState = (0, _react.useState)(false),
-      withLazyObserver = _useState[0],
-      setLazyObserver = _useState[1];
-
-  (0, _react.useEffect)(function () {
-    var hasNoRef = !(lazyComponentRef != null && lazyComponentRef.current);
+const useLazyObserver = lazyComponentRef => {
+  const [withLazyObserver, setLazyObserver] = (0, _react.useState)(false);
+  (0, _react.useEffect)(() => {
+    const hasNoRef = !(lazyComponentRef != null && lazyComponentRef.current);
 
     if (hasNoRef) {
       console.warn('lazyComponentRef.current does not exist, useLazyObserver will return true');
@@ -21,11 +18,9 @@ var useLazyObserver = function useLazyObserver(lazyComponentRef) {
       return;
     }
 
-    _observer.LazyObserver.observe(lazyComponentRef.current, function () {
-      return setLazyObserver(true);
-    });
+    _observer.LazyObserver.observe(lazyComponentRef.current, () => setLazyObserver(true));
 
-    return function () {
+    return () => {
       if (hasNoRef) return;
 
       _observer.LazyObserver.unobserve(lazyComponentRef.current);

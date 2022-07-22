@@ -7,8 +7,6 @@ exports.CheckboxSet = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -23,33 +21,34 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _label = require("../../form/label");
 
-var _excluded = ["items", "disabled", "className", "name", "error", "label", "children"],
-    _excluded2 = ["id", "className"];
-
-var StyledCheckboxSet = _styledComponents.default.fieldset.withConfig({
+const StyledCheckboxSet = _styledComponents.default.fieldset.withConfig({
   displayName: "checkbox-set__StyledCheckboxSet",
   componentId: "sc-1x5pmus-0"
 })(["margin:0;padding:0;border:0;display:flex;flex-direction:column;line-height:1.3rem;& > legend{padding:0;}.k-Form-CheckboxSet__label{margin-bottom:", ";}.k-Form-CheckboxSet__checkbox{margin:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5));
 
-var CheckboxSet = function CheckboxSet(_ref) {
-  var items = _ref.items,
-      disabled = _ref.disabled,
-      className = _ref.className,
-      name = _ref.name,
-      error = _ref.error,
-      label = _ref.label,
-      children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const CheckboxSet = _ref => {
+  let {
+    items,
+    disabled,
+    className,
+    name,
+    error,
+    label,
+    children,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledCheckboxSet, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-CheckboxSet', className),
     disabled: disabled
   }, props), label && /*#__PURE__*/_react.default.createElement(_label.Label, {
     tag: "legend",
     className: "k-Form-CheckboxSet__label"
-  }, label), children && !label && /*#__PURE__*/_react.default.createElement("legend", null, children), items.map(function (_ref2) {
-    var id = _ref2.id,
-        className = _ref2.className,
-        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+  }, label), children && !label && /*#__PURE__*/_react.default.createElement("legend", null, children), items.map(_ref2 => {
+    let {
+      id,
+      className,
+      ...itemProps
+    } = _ref2;
     return /*#__PURE__*/_react.default.createElement(_checkbox.Checkbox, (0, _extends2.default)({
       id: id,
       error: error,

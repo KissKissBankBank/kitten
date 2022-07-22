@@ -7,35 +7,31 @@ exports.LaBanquePostaleLogo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ratio = require("../../../../helpers/utils/ratio");
 
-var _excluded = ["variant", "width", "height"],
-    _excluded2 = ["color"],
-    _excluded3 = ["colors"];
-
-var LaBanquePostaleLogo = function LaBanquePostaleLogo(_ref) {
-  var variant = _ref.variant,
-      width = _ref.width,
-      height = _ref.height,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var DEFAULT_WIDTH = 96;
-  var DEFAULT_HEIGHT = 83;
-  var computed = (0, _ratio.computeFromRatio)({
+const LaBanquePostaleLogo = _ref => {
+  let {
+    variant,
+    width,
+    height,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 96;
+  const DEFAULT_HEIGHT = 83;
+  const computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var monoVariants = ['mono-blue', 'mono-black', 'mono-white'];
+  const monoVariants = ['mono-blue', 'mono-black', 'mono-white'];
 
   if (monoVariants.includes(variant)) {
-    var color;
+    let color;
 
     switch (variant) {
       case 'mono-blue':
@@ -59,7 +55,7 @@ var LaBanquePostaleLogo = function LaBanquePostaleLogo(_ref) {
     }));
   }
 
-  var colors;
+  let colors;
 
   switch (variant) {
     case 'on-dark':
@@ -97,9 +93,11 @@ LaBanquePostaleLogo.propTypes = {
   height: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
 
-var LBPMonoLogo = function LBPMonoLogo(_ref2) {
-  var color = _ref2.color,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+const LBPMonoLogo = _ref2 => {
+  let {
+    color,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 384 332"
@@ -109,9 +107,11 @@ var LBPMonoLogo = function LBPMonoLogo(_ref2) {
   }));
 };
 
-var LBPFullLogo = function LBPFullLogo(_ref3) {
-  var colors = _ref3.colors,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
+const LBPFullLogo = _ref3 => {
+  let {
+    colors,
+    ...props
+  } = _ref3;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 384 332"

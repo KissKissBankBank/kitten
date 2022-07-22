@@ -1,22 +1,21 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "className", "menu", "menuProps", "fullWidth", "contentProps", "loading", "loaderComponent"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { StyledLayout } from './styles';
 import { Loader } from '../../graphics/animations/loader';
-export var DeskLayout = function DeskLayout(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      menu = _ref.menu,
-      menuProps = _ref.menuProps,
-      fullWidth = _ref.fullWidth,
-      contentProps = _ref.contentProps,
-      loading = _ref.loading,
-      loaderComponent = _ref.loaderComponent,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const DeskLayout = _ref => {
+  let {
+    children,
+    className,
+    menu,
+    menuProps,
+    fullWidth,
+    contentProps,
+    loading,
+    loaderComponent,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledLayout, _extends({
     className: classNames('k-DeskLayout__wrapper', className)
   }, props), /*#__PURE__*/React.createElement("div", {

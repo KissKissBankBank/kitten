@@ -1,14 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["backgroundColor", "alt", "imageClassName"],
-    _excluded2 = ["children", "className", "href", "imageProps", "status", "sticker", "videoSources", "videoProps", "stretch", "loading", "topLine", "topLineAlign", "overlayText", "hoverableTitle"],
-    _excluded3 = ["className", "style"],
-    _excluded4 = ["className", "lastLine"],
-    _excluded5 = ["className", "noMargin"],
-    _excluded6 = ["className"],
-    _excluded7 = ["className"],
-    _excluded8 = ["className", "imageProps"],
-    _excluded9 = ["className", "value"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -18,27 +8,29 @@ import { Text } from '../../../typography/text';
 import { Title } from '../../../typography/title';
 import { Progress } from '../../../feedback/progress';
 import { GifVideo } from '../../../embed/gif-video';
-export var ProjectCard = function ProjectCard(_ref) {
-  var children = _ref.children,
-      className = _ref.className,
-      href = _ref.href,
-      _ref$imageProps = _ref.imageProps,
-      backgroundColor = _ref$imageProps.backgroundColor,
-      alt = _ref$imageProps.alt,
-      imageClassName = _ref$imageProps.imageClassName,
-      otherImageProps = _objectWithoutPropertiesLoose(_ref$imageProps, _excluded),
-      status = _ref.status,
-      sticker = _ref.sticker,
-      videoSources = _ref.videoSources,
-      videoProps = _ref.videoProps,
-      stretch = _ref.stretch,
-      loading = _ref.loading,
-      topLine = _ref.topLine,
-      topLineAlign = _ref.topLineAlign,
-      overlayText = _ref.overlayText,
-      hoverableTitle = _ref.hoverableTitle,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded2);
-
+export const ProjectCard = _ref => {
+  let {
+    children,
+    className,
+    href,
+    imageProps: {
+      backgroundColor,
+      alt,
+      imageClassName,
+      ...otherImageProps
+    },
+    status,
+    sticker,
+    videoSources,
+    videoProps,
+    stretch,
+    loading,
+    topLine,
+    topLineAlign,
+    overlayText,
+    hoverableTitle,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     as: href ? 'a' : 'div',
     className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status, {
@@ -56,11 +48,9 @@ export var ProjectCard = function ProjectCard(_ref) {
     poster: otherImageProps.src
   }, videoProps, {
     className: classNames('k-ProjectCard__image__image', videoProps.className)
-  }), videoSources.map(function (sourceProps) {
-    return /*#__PURE__*/React.createElement("source", _extends({
-      key: "video_source_" + sourceProps.src
-    }, sourceProps));
-  })), !!overlayText && /*#__PURE__*/React.createElement("div", {
+  }), videoSources.map(sourceProps => /*#__PURE__*/React.createElement("source", _extends({
+    key: "video_source_" + sourceProps.src
+  }, sourceProps)))), !!overlayText && /*#__PURE__*/React.createElement("div", {
     className: "k-ProjectCard__image__overlay"
   }, overlayText)), topLine && /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ProjectCard__topLine', "k-ProjectCard__topLine--" + topLineAlign)
@@ -99,11 +89,12 @@ ProjectCard.propTypes = {
   hoverableTitle: PropTypes.bool
 };
 
-ProjectCard.Title = function (_ref2) {
-  var className = _ref2.className,
-      style = _ref2.style,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded3);
-
+ProjectCard.Title = _ref2 => {
+  let {
+    className,
+    style,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/React.createElement(Title, _extends({
     modifier: "septenary",
     noMargin: true,
@@ -111,11 +102,12 @@ ProjectCard.Title = function (_ref2) {
   }, props));
 };
 
-ProjectCard.Line = function (_ref3) {
-  var className = _ref3.className,
-      lastLine = _ref3.lastLine,
-      props = _objectWithoutPropertiesLoose(_ref3, _excluded4);
-
+ProjectCard.Line = _ref3 => {
+  let {
+    className,
+    lastLine,
+    ...props
+  } = _ref3;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ProjectCard__line', className, {
       'k-ProjectCard__line--lastLine': lastLine
@@ -123,12 +115,12 @@ ProjectCard.Line = function (_ref3) {
   }, props));
 };
 
-ProjectCard.ItemsLine = function (_ref4) {
-  var className = _ref4.className,
-      _ref4$noMargin = _ref4.noMargin,
-      noMargin = _ref4$noMargin === void 0 ? false : _ref4$noMargin,
-      props = _objectWithoutPropertiesLoose(_ref4, _excluded5);
-
+ProjectCard.ItemsLine = _ref4 => {
+  let {
+    className,
+    noMargin = false,
+    ...props
+  } = _ref4;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ProjectCard__itemsLine', className, {
       'k-ProjectCard__itemsLine--noMargin': noMargin
@@ -136,29 +128,32 @@ ProjectCard.ItemsLine = function (_ref4) {
   }, props));
 };
 
-ProjectCard.Item = function (_ref5) {
-  var className = _ref5.className,
-      props = _objectWithoutPropertiesLoose(_ref5, _excluded6);
-
+ProjectCard.Item = _ref5 => {
+  let {
+    className,
+    ...props
+  } = _ref5;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ProjectCard__item', className)
   }, props));
 };
 
-ProjectCard.Sticker = function (_ref6) {
-  var className = _ref6.className,
-      props = _objectWithoutPropertiesLoose(_ref6, _excluded7);
-
+ProjectCard.Sticker = _ref6 => {
+  let {
+    className,
+    ...props
+  } = _ref6;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ProjectCard__sticker k-u-ellipsis', className)
   }, props));
 };
 
-ProjectCard.Avatar = function (_ref7) {
-  var className = _ref7.className,
-      imageProps = _ref7.imageProps,
-      props = _objectWithoutPropertiesLoose(_ref7, _excluded8);
-
+ProjectCard.Avatar = _ref7 => {
+  let {
+    className,
+    imageProps,
+    ...props
+  } = _ref7;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-ProjectCard__avatar', className)
   }, props), /*#__PURE__*/React.createElement("img", _extends({
@@ -166,11 +161,12 @@ ProjectCard.Avatar = function (_ref7) {
   }, imageProps)));
 };
 
-ProjectCard.Progress = function (_ref8) {
-  var className = _ref8.className,
-      value = _ref8.value,
-      props = _objectWithoutPropertiesLoose(_ref8, _excluded9);
-
+ProjectCard.Progress = _ref8 => {
+  let {
+    className,
+    value,
+    ...props
+  } = _ref8;
   return /*#__PURE__*/React.createElement("div", {
     className: classNames('k-ProjectCard__progress', className)
   }, /*#__PURE__*/React.createElement(Progress, _extends({

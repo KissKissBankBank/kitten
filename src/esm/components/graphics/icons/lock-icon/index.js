@@ -1,24 +1,23 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import COLORS from '../../../../constants/colors-config';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-var DEFAULT_WIDTH = 14;
-var DEFAULT_HEIGHT = 18;
-export var LockIcon = function LockIcon(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var computed = computeFromRatio({
+const DEFAULT_WIDTH = 14;
+const DEFAULT_HEIGHT = 18;
+export const LockIcon = _ref => {
+  let {
+    color,
+    title,
+    width,
+    height,
+    ...props
+  } = _ref;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",

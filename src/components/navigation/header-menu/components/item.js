@@ -7,8 +7,6 @@ exports.Item = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -21,20 +19,20 @@ var _arrowIcon = require("../../../graphics/icons/arrow-icon");
 
 var _button = require("../../../action/button");
 
-var _excluded = ["children", "external", "liProps", "modifier", "button", "size", "isSelected", "as", "tag"];
-
-var Item = function Item(_ref) {
-  var children = _ref.children,
-      external = _ref.external,
-      liProps = _ref.liProps,
-      modifier = _ref.modifier,
-      button = _ref.button,
-      size = _ref.size,
-      isSelected = _ref.isSelected,
-      as = _ref.as,
-      tag = _ref.tag,
-      other = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-  var Component = as || tag;
+const Item = _ref => {
+  let {
+    children,
+    external,
+    liProps,
+    modifier,
+    button,
+    size,
+    isSelected,
+    as,
+    tag,
+    ...other
+  } = _ref;
+  const Component = as || tag;
   return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({}, liProps, {
     className: (0, _classnames.default)('k-HeaderMenu__item', liProps.className, "k-HeaderMenu__item--" + size, {
       'k-HeaderMenu__item--external': external,
@@ -64,7 +62,7 @@ Item.propTypes = {
   href: _propTypes.default.string,
   isSelected: _propTypes.default.bool,
   liProps: _propTypes.default.object,
-  modifier: _propTypes.default.oneOf([null, undefined, 'light', 'default'].concat(_button.buttonModifiers)),
+  modifier: _propTypes.default.oneOf([null, undefined, 'light', 'default', ..._button.buttonModifiers]),
   size: _propTypes.default.oneOf(['small', 'medium', 'large']),
   as: (0, _deprecated.default)(_propTypes.default.string, 'Please use `tag` instead.'),
   tag: _propTypes.default.string

@@ -7,8 +7,6 @@ exports.Marger = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
@@ -23,20 +21,18 @@ var _isStringANumber = _interopRequireDefault(require("is-string-a-number"));
 
 var _string = require("../../../helpers/utils/string");
 
-var _excluded = ["top", "bottom", "style"];
+const Marger = props => {
+  const {
+    top,
+    bottom,
+    style,
+    ...others
+  } = props;
+  const gutter = 10 / _typographyConfig.default.root;
 
-var Marger = function Marger(props) {
-  var top = props.top,
-      bottom = props.bottom,
-      style = props.style,
-      others = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
-  var gutter = 10 / _typographyConfig.default.root;
+  const marginSize = value => value * gutter + "rem";
 
-  var marginSize = function marginSize(value) {
-    return value * gutter + "rem";
-  };
-
-  var valueIsNumber = function valueIsNumber(value) {
+  const valueIsNumber = value => {
     // Retro-compatibility: this handles the case when the user enters `.5` as a
     // value for a margin.
     if (typeof value === 'string' && value.match(/^-?\.\d+$/)) {
@@ -46,65 +42,49 @@ var Marger = function Marger(props) {
     return (0, _isStringANumber.default)(String(value));
   };
 
-  var propIsNumber = function propIsNumber(propName) {
-    return valueIsNumber(props[propName]);
-  };
+  const propIsNumber = propName => valueIsNumber(props[propName]);
 
-  var isSetValue = function isSetValue(value) {
-    return value || value === 0;
-  };
+  const isSetValue = value => value || value === 0;
 
-  var isPropWithViewportRange = function isPropWithViewportRange(propName, viewportRange) {
-    return props[propName] && props[propName]["from" + (0, _string.upcaseFirst)(viewportRange)];
-  };
+  const isPropWithViewportRange = (propName, viewportRange) => props[propName] && props[propName]["from" + (0, _string.upcaseFirst)(viewportRange)];
 
-  var viewportRangeCssRule = function viewportRangeCssRule(viewportRange) {
-    return "@media (min-width: " + _screenConfig.ScreenConfig[viewportRange.toUpperCase()].min + "px)";
-  };
+  const viewportRangeCssRule = viewportRange => "@media (min-width: " + _screenConfig.ScreenConfig[viewportRange.toUpperCase()].min + "px)";
 
-  var propCssDeclarationForViewportRange = function propCssDeclarationForViewportRange(propName, viewportRange) {
-    var size = props[propName]["from" + (0, _string.upcaseFirst)(viewportRange)];
+  const propCssDeclarationForViewportRange = (propName, viewportRange) => {
+    const size = props[propName]["from" + (0, _string.upcaseFirst)(viewportRange)];
     if (!isSetValue(size)) return;
     return "margin-" + propName + ": " + marginSize(size) + ";";
   };
 
-  var viewportRangeStyleCondition = function viewportRangeStyleCondition(propName, viewportRange) {
-    var hasValue = isPropWithViewportRange(propName, viewportRange);
+  const viewportRangeStyleCondition = (propName, viewportRange) => {
+    const hasValue = isPropWithViewportRange(propName, viewportRange);
     if (!isSetValue(hasValue)) return;
-    var returnedViewportRangeCssRule = viewportRangeCssRule(viewportRange);
-    var viewportRangeCssValue = propCssDeclarationForViewportRange(propName, viewportRange);
+    const returnedViewportRangeCssRule = viewportRangeCssRule(viewportRange);
+    const viewportRangeCssValue = propCssDeclarationForViewportRange(propName, viewportRange);
     if (!viewportRangeCssValue) return;
     return returnedViewportRangeCssRule + " { " + viewportRangeCssValue + " }";
   };
 
-  var hasDefaultProp = function hasDefaultProp(propName) {
-    return props[propName] && props[propName].default;
-  };
+  const hasDefaultProp = propName => props[propName] && props[propName].default;
 
-  var hasXxsProp = function hasXxsProp(propName) {
-    return props[propName] && props[propName].fromXxs;
-  };
+  const hasXxsProp = propName => props[propName] && props[propName].fromXxs;
 
-  var defaultValue = function defaultValue(propName) {
+  const defaultValue = propName => {
     if (propIsNumber(propName)) return marginSize(props[propName]);
     if (hasDefaultProp(propName)) return marginSize(props[propName].default);
     if (hasXxsProp(propName)) return marginSize(props[propName].fromXxs);
   };
 
-  var stylesForName = function stylesForName(propName) {
-    var value = defaultValue(propName);
+  const stylesForName = propName => {
+    const value = defaultValue(propName);
     if (value) return "margin-" + propName + ": " + defaultValue(propName) + ";";
   };
 
-  var viewportRanges = Object.keys(_screenConfig.ScreenConfig).map(function (size) {
-    return size.toLowerCase();
-  }).filter(function (size) {
-    return size !== 'xxs';
-  });
-  var viewportRangesStyles = viewportRanges.reduce(function (acc, viewportRange) {
-    return [].concat(acc, [viewportRangeStyleCondition('top', viewportRange), viewportRangeStyleCondition('bottom', viewportRange)]);
+  const viewportRanges = Object.keys(_screenConfig.ScreenConfig).map(size => size.toLowerCase()).filter(size => size !== 'xxs');
+  const viewportRangesStyles = viewportRanges.reduce((acc, viewportRange) => {
+    return [...acc, viewportRangeStyleCondition('top', viewportRange), viewportRangeStyleCondition('bottom', viewportRange)];
   }, []);
-  var styles = [stylesForName('top'), stylesForName('bottom'), viewportRangesStyles, style];
+  const styles = [stylesForName('top'), stylesForName('bottom'), viewportRangesStyles, style];
   return /*#__PURE__*/_react.default.createElement(StyledMarger, (0, _extends2.default)({
     styles: styles
   }, others));
@@ -112,12 +92,10 @@ var Marger = function Marger(props) {
 
 exports.Marger = Marger;
 
-var StyledMarger = _styledComponents.default.div.withConfig({
+const StyledMarger = _styledComponents.default.div.withConfig({
   displayName: "marger__StyledMarger",
   componentId: "sc-1qqifp5-0"
-})(["", ""], function (props) {
-  return props.styles;
-});
+})(["", ""], props => props.styles);
 
 Marger.defaultProps = {
   top: null,

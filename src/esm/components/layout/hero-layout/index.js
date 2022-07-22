@@ -1,16 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className", "children"],
-    _excluded2 = ["className", "children"],
-    _excluded3 = ["className"],
-    _excluded4 = ["children", "className"],
-    _excluded5 = ["className"],
-    _excluded6 = ["className", "hasTopMenu", "children"],
-    _excluded7 = ["className"],
-    _excluded8 = ["children", "className", "sticky"],
-    _excluded9 = ["children", "className", "sticky"],
-    _excluded10 = ["children", "className", "bgProps"],
-    _excluded11 = ["children", "loading", "loaderComponent", "contentProps"];
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -18,26 +6,28 @@ import { StyledLayout } from './styles';
 import { Loader } from '../../graphics/animations/loader';
 import { Grid, GridCol } from '../../layout/grid';
 import { getReactElementsByType, getReactElementsWithoutType } from '../../../helpers/react/get-react-elements';
-export var HeroLayout = function HeroLayout(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const HeroLayout = _ref => {
+  let {
+    className,
+    children,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledLayout, _extends({
     className: classNames('k-HeroLayout', className)
   }, props), children);
 };
 
-var Hero = function Hero(_ref2) {
-  var className = _ref2.className,
-      children = _ref2.children,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
-  var imageElement = getReactElementsByType({
+const Hero = _ref2 => {
+  let {
+    className,
+    children,
+    ...props
+  } = _ref2;
+  const imageElement = getReactElementsByType({
     children: children,
     type: HeroImage
   })[0];
-  var otherChildren = getReactElementsWithoutType({
+  const otherChildren = getReactElementsWithoutType({
     children: children,
     type: HeroImage
   });
@@ -48,20 +38,22 @@ var Hero = function Hero(_ref2) {
   }, otherChildren));
 };
 
-var HeroImage = function HeroImage(_ref3) {
-  var className = _ref3.className,
-      props = _objectWithoutPropertiesLoose(_ref3, _excluded3);
-
+const HeroImage = _ref3 => {
+  let {
+    className,
+    ...props
+  } = _ref3;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-HeroLayout__hero__background', className)
   }, props));
 };
 
-var HeroBlock = function HeroBlock(_ref4) {
-  var children = _ref4.children,
-      className = _ref4.className,
-      props = _objectWithoutPropertiesLoose(_ref4, _excluded4);
-
+const HeroBlock = _ref4 => {
+  let {
+    children,
+    className,
+    ...props
+  } = _ref4;
   return /*#__PURE__*/React.createElement(GridCol, _extends({
     className: classNames('k-HeroLayout__hero__block', className),
     col: "12",
@@ -72,23 +64,24 @@ var HeroBlock = function HeroBlock(_ref4) {
   }, props), children);
 };
 
-HeroLayout.Promo = function (_ref5) {
-  var className = _ref5.className,
-      props = _objectWithoutPropertiesLoose(_ref5, _excluded5);
-
+HeroLayout.Promo = _ref5 => {
+  let {
+    className,
+    ...props
+  } = _ref5;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-HeroLayout__promo', className)
   }, props));
 };
 
-HeroLayout.Main = function (_ref6) {
-  var className = _ref6.className,
-      _ref6$hasTopMenu = _ref6.hasTopMenu,
-      hasTopMenu = _ref6$hasTopMenu === void 0 ? false : _ref6$hasTopMenu,
-      children = _ref6.children,
-      props = _objectWithoutPropertiesLoose(_ref6, _excluded6);
-
-  var TopMenuElement = getReactElementsByType({
+HeroLayout.Main = _ref6 => {
+  let {
+    className,
+    hasTopMenu = false,
+    children,
+    ...props
+  } = _ref6;
+  const TopMenuElement = getReactElementsByType({
     children: children,
     type: MainTopMenu
   })[0];
@@ -106,25 +99,27 @@ HeroLayout.Main.propTypes = {
   hasTopMenu: PropTypes.bool
 };
 
-HeroLayout.Main.Image = function (_ref7) {
-  var className = _ref7.className,
-      props = _objectWithoutPropertiesLoose(_ref7, _excluded7);
-
+HeroLayout.Main.Image = _ref7 => {
+  let {
+    className,
+    ...props
+  } = _ref7;
   return /*#__PURE__*/React.createElement("div", _extends({
     className: classNames('k-HeroLayout__page__background', className)
   }, props));
 };
 
-HeroLayout.Main.FirstAside = function (_ref8) {
-  var _classNames;
-
-  var children = _ref8.children,
-      className = _ref8.className,
-      sticky = _ref8.sticky,
-      props = _objectWithoutPropertiesLoose(_ref8, _excluded8);
-
+HeroLayout.Main.FirstAside = _ref8 => {
+  let {
+    children,
+    className,
+    sticky,
+    ...props
+  } = _ref8;
   return /*#__PURE__*/React.createElement("div", _extends({
-    className: classNames('k-HeroLayout__firstAside', className, (_classNames = {}, _classNames["k-HeroLayout__sticky--" + sticky] = !!sticky && sticky != 'none', _classNames))
+    className: classNames('k-HeroLayout__firstAside', className, {
+      ["k-HeroLayout__sticky--" + sticky]: !!sticky && sticky != 'none'
+    })
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "k-HeroLayout__sticky__inside"
   }, children));
@@ -132,16 +127,17 @@ HeroLayout.Main.FirstAside = function (_ref8) {
 
 HeroLayout.Main.Menu = HeroLayout.Main.FirstAside;
 
-HeroLayout.Main.LastAside = function (_ref9) {
-  var _classNames2;
-
-  var children = _ref9.children,
-      className = _ref9.className,
-      sticky = _ref9.sticky,
-      props = _objectWithoutPropertiesLoose(_ref9, _excluded9);
-
+HeroLayout.Main.LastAside = _ref9 => {
+  let {
+    children,
+    className,
+    sticky,
+    ...props
+  } = _ref9;
   return /*#__PURE__*/React.createElement("div", _extends({
-    className: classNames('k-HeroLayout__lastAside', className, (_classNames2 = {}, _classNames2["k-HeroLayout__sticky--" + sticky] = !!sticky && sticky != 'none', _classNames2))
+    className: classNames('k-HeroLayout__lastAside', className, {
+      ["k-HeroLayout__sticky--" + sticky]: !!sticky && sticky != 'none'
+    })
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "k-HeroLayout__sticky__inside"
   }, children));
@@ -149,12 +145,13 @@ HeroLayout.Main.LastAside = function (_ref9) {
 
 HeroLayout.Main.Aside = HeroLayout.Main.LastAside;
 
-var MainTopMenu = function MainTopMenu(_ref10) {
-  var children = _ref10.children,
-      className = _ref10.className,
-      bgProps = _ref10.bgProps,
-      props = _objectWithoutPropertiesLoose(_ref10, _excluded10);
-
+const MainTopMenu = _ref10 => {
+  let {
+    children,
+    className,
+    bgProps,
+    ...props
+  } = _ref10;
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", _extends({}, bgProps, {
     className: classNames('k-HeroLayout__topMenuBg k-HeroLayout__sticky--both', bgProps == null ? void 0 : bgProps.className)
   }), /*#__PURE__*/React.createElement("div", {
@@ -173,13 +170,14 @@ MainTopMenu.propTypes = {
   bgProps: PropTypes.object
 };
 
-HeroLayout.Main.Content = function (_ref11) {
-  var children = _ref11.children,
-      loading = _ref11.loading,
-      loaderComponent = _ref11.loaderComponent,
-      contentProps = _ref11.contentProps,
-      props = _objectWithoutPropertiesLoose(_ref11, _excluded11);
-
+HeroLayout.Main.Content = _ref11 => {
+  let {
+    children,
+    loading,
+    loaderComponent,
+    contentProps,
+    ...props
+  } = _ref11;
   return /*#__PURE__*/React.createElement(React.Fragment, null, loading && /*#__PURE__*/React.createElement("div", _extends({}, props, {
     className: "k-HeroLayout__loading"
   }), loaderComponent), !loading && /*#__PURE__*/React.createElement("div", _extends({}, props, contentProps, {

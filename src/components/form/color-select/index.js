@@ -7,8 +7,6 @@ exports.ColorSelect = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -31,56 +29,52 @@ var _textInput = require("../input/text-input");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _excluded = ["onChange", "value", "contrastRatio", "valid", "error", "disabled", "className", "inputProps", "children"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 (0, _colord.extend)([_a11y.default]);
-var SVG_COLS_COUNT = 10;
-var CONTRAST_COLOR = '#ffffff';
+const SVG_COLS_COUNT = 10;
+const CONTRAST_COLOR = '#ffffff';
 
-var StyledColorSelect = _styledComponents.default.div.withConfig({
+const StyledColorSelect = _styledComponents.default.div.withConfig({
   displayName: "color-select__StyledColorSelect",
   componentId: "sc-nceujv-0"
 })([".k-Form-ColorSelect__picker{position:relative;svg{position:absolute;top:0;left:0;width:100%;height:", ";pointer-events:none;path{opacity:0.5;}}}.k-Form-ColorSelect__grid{margin-top:", ";display:grid;grid-template-columns:repeat(auto-fit,minmax(", ",1fr));gap:", ";}.k-Form-ColorSelect__swatch{border-radius:var(--border-radius-s);}.k-Form-ColorSelect__witness{grid-column:span 2;}.react-colorful{width:100%;}.react-colorful__interactive:focus-visible .react-colorful__pointer{outline-style:auto;}.react-colorful__saturation{border-radius:var(--border-radius-s) var(--border-radius-s) 0 0;}.react-colorful__last-control{border-radius:0 0 var(--border-radius-s) var(--border-radius-s);}"], (0, _typography.pxToRem)(164), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(95), (0, _typography.pxToRem)(10));
 
-var ColorSelect = function ColorSelect(_ref) {
-  var onChange = _ref.onChange,
-      value = _ref.value,
-      contrastRatio = _ref.contrastRatio,
-      valid = _ref.valid,
-      error = _ref.error,
-      disabled = _ref.disabled,
-      className = _ref.className,
-      inputProps = _ref.inputProps,
-      children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
-
-  var _useState = (0, _react.useState)(value),
-      color = _useState[0],
-      setColor = _useState[1];
-
-  (0, _react.useEffect)(function () {
+const ColorSelect = _ref => {
+  let {
+    onChange,
+    value,
+    contrastRatio,
+    valid,
+    error,
+    disabled,
+    className,
+    inputProps,
+    children,
+    ...props
+  } = _ref;
+  const [color, setColor] = (0, _react.useState)(value);
+  (0, _react.useEffect)(() => {
     onChange(color);
   }, [color]);
-  (0, _react.useEffect)(function () {
+  (0, _react.useEffect)(() => {
     handleChange(value);
   }, [value]);
 
-  var handleChange = function handleChange(changedColor) {
+  const handleChange = changedColor => {
     if (contrastRatio === 0) {
       setColor(changedColor);
     }
 
-    var isContrastValid = (0, _colord.colord)(changedColor).contrast(CONTRAST_COLOR) > contrastRatio;
+    const isContrastValid = (0, _colord.colord)(changedColor).contrast(CONTRAST_COLOR) > contrastRatio;
 
     if (!isContrastValid) {
-      var newColor = getClosestContrast({
+      const newColor = getClosestContrast({
         color: changedColor,
-        CONTRAST_COLOR: CONTRAST_COLOR,
-        contrastRatio: contrastRatio
+        CONTRAST_COLOR,
+        contrastRatio
       });
       setColor(newColor);
     } else {
@@ -88,7 +82,7 @@ var ColorSelect = function ColorSelect(_ref) {
     }
   };
 
-  var handleInputKey = function handleInputKey(event) {
+  const handleInputKey = event => {
     if (event.key === 'Enter') {
       handleChange(event.target.value);
     }
@@ -98,40 +92,41 @@ var ColorSelect = function ColorSelect(_ref) {
     }
   };
 
-  var getClosestContrast = function getClosestContrast(_ref2) {
-    var color = _ref2.color;
-
-    var _colord$toHsv = (0, _colord.colord)(color).toHsv(),
-        h = _colord$toHsv.h,
-        s = _colord$toHsv.s,
-        v = _colord$toHsv.v;
-
-    var vRange = (0, _range.default)(0)(Math.round(v));
-    var newV = findClosestValidColor({
-      h: h,
-      s: s,
-      vRange: vRange
+  const getClosestContrast = _ref2 => {
+    let {
+      color
+    } = _ref2;
+    const {
+      h,
+      s,
+      v
+    } = (0, _colord.colord)(color).toHsv();
+    let vRange = (0, _range.default)(0)(Math.round(v));
+    const newV = findClosestValidColor({
+      h,
+      s,
+      vRange
     });
     return (0, _colord.colord)({
-      h: h,
-      s: s,
+      h,
+      s,
       v: newV
     }).toHex();
   };
 
-  var getCoordinatesList = function getCoordinatesList(color) {
-    var _colord$toHsv2 = (0, _colord.colord)(color).toHsv(),
-        h = _colord$toHsv2.h;
+  const getCoordinatesList = color => {
+    const {
+      h
+    } = (0, _colord.colord)(color).toHsv();
+    const coords = [];
 
-    var coords = [];
-
-    for (var i = 0; i <= SVG_COLS_COUNT; i++) {
-      var vRange = (0, _range.default)(0)(100);
-      var s = i * (100 / SVG_COLS_COUNT);
-      var v = findClosestValidColor({
-        h: h,
-        s: s,
-        vRange: vRange
+    for (let i = 0; i <= SVG_COLS_COUNT; i++) {
+      let vRange = (0, _range.default)(0)(100);
+      const s = i * (100 / SVG_COLS_COUNT);
+      const v = findClosestValidColor({
+        h,
+        s,
+        vRange
       });
       coords.push("L" + i + " " + (100 - v));
     }
@@ -139,21 +134,23 @@ var ColorSelect = function ColorSelect(_ref) {
     return coords.join(' ');
   };
 
-  var findClosestValidColor = function findClosestValidColor(_ref3) {
-    var h = _ref3.h,
-        s = _ref3.s,
-        vRange = _ref3.vRange;
-    var whileCount = 0; // Binary search
+  const findClosestValidColor = _ref3 => {
+    let {
+      h,
+      s,
+      vRange
+    } = _ref3;
+    let whileCount = 0; // Binary search
 
     while (vRange.length > 1 && whileCount < 100) {
       whileCount += 1;
-      var midPoint = Math.floor(vRange.length / 2);
-      var midPointColor = (0, _colord.colord)({
-        h: h,
-        s: s,
+      const midPoint = Math.floor(vRange.length / 2);
+      const midPointColor = (0, _colord.colord)({
+        h,
+        s,
         v: vRange[midPoint]
       }).toHex();
-      var isMidPointColorValid = (0, _colord.colord)(midPointColor).contrast(CONTRAST_COLOR) > contrastRatio;
+      const isMidPointColorValid = (0, _colord.colord)(midPointColor).contrast(CONTRAST_COLOR) > contrastRatio;
 
       if (!isMidPointColorValid) {
         vRange.splice(midPoint, vRange.length);
@@ -191,10 +188,8 @@ var ColorSelect = function ColorSelect(_ref) {
   }), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, inputProps, {
     size: "small",
     center: true,
-    tag: /*#__PURE__*/(0, _react.forwardRef)(function (props, ref // eslint-disable-line no-unused-vars
-    ) {
-      return /*#__PURE__*/_react.default.createElement(_reactColorful.HexColorInput, props);
-    }),
+    tag: /*#__PURE__*/(0, _react.forwardRef)((props, ref // eslint-disable-line no-unused-vars
+    ) => /*#__PURE__*/_react.default.createElement(_reactColorful.HexColorInput, props)),
     color: color,
     onKeyUp: handleInputKey,
     prefixed: true
@@ -211,7 +206,7 @@ ColorSelect.propTypes = {
   inputProps: _propTypes.default.object
 };
 ColorSelect.defaultProps = {
-  onChange: function onChange() {},
+  onChange: () => {},
   value: '#006cff',
   contrastRatio: 4.5,
   inputProps: {}

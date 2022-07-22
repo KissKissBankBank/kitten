@@ -1,5 +1,3 @@
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["iconSvg"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -7,42 +5,49 @@ import NumberFormat from 'react-number-format';
 import { useFormContext } from '../';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import { getCreditCardType, getCreditCardFormat, getIconSvgStringByType } from './helpers';
-var StyledNumberFormat = styled(function (_ref) {
-  var iconSvg = _ref.iconSvg,
-      others = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+const StyledNumberFormat = styled(_ref => {
+  let {
+    iconSvg,
+    ...others
+  } = _ref;
   return /*#__PURE__*/React.createElement(NumberFormat, others);
 }).withConfig({
   displayName: "number__StyledNumberFormat",
   componentId: "sc-1a38wzf-0"
-})(["padding-right:", ";", ""], pxToRem(45), function (_ref2) {
-  var iconSvg = _ref2.iconSvg;
+})(["padding-right:", ";", ""], pxToRem(45), _ref2 => {
+  let {
+    iconSvg
+  } = _ref2;
   return iconSvg && css(["background:transparent no-repeat;background-image:url('data:image/svg+xml,", "');background-position:calc(100% - ", ") center;"], iconSvg, pxToRem(5));
 });
-export var Number = function Number(_ref3) {
-  var label = _ref3.label,
-      Field = _ref3.fieldComponent,
-      Label = _ref3.labelComponent,
-      Input = _ref3.inputComponent,
-      Error = _ref3.errorComponent;
+export const Number = _ref3 => {
+  let {
+    label,
+    fieldComponent: Field,
+    labelComponent: Label,
+    inputComponent: Input,
+    errorComponent: Error
+  } = _ref3;
+  const {
+    values: {
+      number
+    },
+    setInputValues
+  } = useFormContext();
+  const ccType = getCreditCardType(number);
+  const ccFormat = getCreditCardFormat(ccType);
+  const ccIconSvg = getIconSvgStringByType(ccType.type);
 
-  var _useFormContext = useFormContext(),
-      number = _useFormContext.values.number,
-      setInputValues = _useFormContext.setInputValues;
-
-  var ccType = getCreditCardType(number);
-  var ccFormat = getCreditCardFormat(ccType);
-  var ccIconSvg = getIconSvgStringByType(ccType.type);
-
-  var handleChange = function handleChange(_ref4) {
-    var value = _ref4.value;
-
-    var _getCreditCardType = getCreditCardType(value),
-        type = _getCreditCardType.type;
-
+  const handleChange = _ref4 => {
+    let {
+      value
+    } = _ref4;
+    const {
+      type
+    } = getCreditCardType(value);
     setInputValues({
       number: value,
-      type: type
+      type
     });
   };
 
@@ -70,16 +75,8 @@ Number.propTypes = {
 };
 Number.defaultProps = {
   label: 'Card Number',
-  fieldComponent: function fieldComponent(props) {
-    return /*#__PURE__*/React.createElement("div", props);
-  },
-  labelComponent: function labelComponent(props) {
-    return /*#__PURE__*/React.createElement("label", props);
-  },
-  inputComponent: function inputComponent(props) {
-    return /*#__PURE__*/React.createElement("input", props);
-  },
-  errorComponent: function errorComponent() {
-    return null;
-  }
+  fieldComponent: props => /*#__PURE__*/React.createElement("div", props),
+  labelComponent: props => /*#__PURE__*/React.createElement("label", props),
+  inputComponent: props => /*#__PURE__*/React.createElement("input", props),
+  errorComponent: () => null
 };

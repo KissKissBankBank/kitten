@@ -3,29 +3,33 @@ import PropTypes from 'prop-types';
 import NumberFormat from 'react-number-format';
 import { useFormContext } from '../';
 import { withCode, getCodeFormat } from './helpers';
-export var Cvc = function Cvc(_ref) {
-  var label = _ref.label,
-      Field = _ref.fieldComponent,
-      Label = _ref.labelComponent,
-      Input = _ref.inputComponent,
-      Error = _ref.errorComponent;
+export const Cvc = _ref => {
+  let {
+    label,
+    fieldComponent: Field,
+    labelComponent: Label,
+    inputComponent: Input,
+    errorComponent: Error
+  } = _ref;
+  const {
+    values: {
+      number,
+      cvc
+    },
+    setInputValues
+  } = useFormContext();
+  const withCvc = withCode(number);
 
-  var _useFormContext = useFormContext(),
-      _useFormContext$value = _useFormContext.values,
-      number = _useFormContext$value.number,
-      cvc = _useFormContext$value.cvc,
-      setInputValues = _useFormContext.setInputValues;
-
-  var withCvc = withCode(number);
-
-  var handleChange = function handleChange(_ref2) {
-    var value = _ref2.value;
+  const handleChange = _ref2 => {
+    let {
+      value
+    } = _ref2;
     setInputValues({
       cvc: value
     });
   };
 
-  useEffect(function () {
+  useEffect(() => {
     if (withCvc) return;
     setInputValues({
       cvc: ''
@@ -55,16 +59,8 @@ Cvc.propTypes = {
 };
 Cvc.defaultProps = {
   label: 'Card Number',
-  fieldComponent: function fieldComponent(props) {
-    return /*#__PURE__*/React.createElement("div", props);
-  },
-  labelComponent: function labelComponent(props) {
-    return /*#__PURE__*/React.createElement("label", props);
-  },
-  inputComponent: function inputComponent(props) {
-    return /*#__PURE__*/React.createElement("input", props);
-  },
-  errorComponent: function errorComponent() {
-    return null;
-  }
+  fieldComponent: props => /*#__PURE__*/React.createElement("div", props),
+  labelComponent: props => /*#__PURE__*/React.createElement("label", props),
+  inputComponent: props => /*#__PURE__*/React.createElement("input", props),
+  errorComponent: () => null
 };

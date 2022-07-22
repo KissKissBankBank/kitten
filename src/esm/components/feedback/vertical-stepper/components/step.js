@@ -1,6 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "bridge", "onClick"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
@@ -9,19 +7,20 @@ import COLORS from '../../../../constants/colors-config';
 import { Status } from './status';
 import classNames from 'classnames';
 import { STEP_CLASSNAME, LINK_CLASSNAME } from '../index';
-export var Step = function Step(_ref) {
-  var success = _ref.success,
-      valid = _ref.valid,
-      error = _ref.error,
-      waiting = _ref.waiting,
-      disabled = _ref.disabled,
-      statusProps = _ref.statusProps,
-      children = _ref.children,
-      className = _ref.className,
-      bridge = _ref.bridge,
-      onClick = _ref.onClick,
-      other = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const Step = _ref => {
+  let {
+    success,
+    valid,
+    error,
+    waiting,
+    disabled,
+    statusProps,
+    children,
+    className,
+    bridge,
+    onClick,
+    ...other
+  } = _ref;
   return /*#__PURE__*/React.createElement(StyledItem, {
     className: classNames('k-Steppers--VerticalStepper__item', {
       'k-Steppers--VerticalStepper__item--hasActiveLine': success,
@@ -43,16 +42,18 @@ export var Step = function Step(_ref) {
     }, className)
   }, children)));
 };
-var StyledItem = styled.li.withConfig({
+const StyledItem = styled.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-10gkb1o-0"
 })(["padding:", " 0;&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}& li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], pxToRem(15), pxToRem(8));
-var StyledLink = styled.a.withConfig({
+const StyledLink = styled.a.withConfig({
   displayName: "step__StyledLink",
   componentId: "sc-10gkb1o-1"
-})(["display:inline-flex;align-items:center;padding-right:", ";", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], pxToRem(10), function (_ref2) {
-  var as = _ref2.as,
-      onClick = _ref2.onClick;
+})(["display:inline-flex;align-items:center;padding-right:", ";", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], pxToRem(10), _ref2 => {
+  let {
+    as,
+    onClick
+  } = _ref2;
   return (as === 'a' || onClick) && css(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], STEP_CLASSNAME, LINK_CLASSNAME, STEP_CLASSNAME, pxToRem(5), LINK_CLASSNAME, COLORS.primary3);
 }, COLORS.font1, COLORS.font2);
 Step.propTypes = {

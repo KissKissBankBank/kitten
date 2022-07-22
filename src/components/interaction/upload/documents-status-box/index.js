@@ -25,24 +25,21 @@ var _checkedCircleIcon = require("../../../graphics/icons/checked-circle-icon");
 
 var _crossCircleIcon = require("../../../graphics/icons/cross-circle-icon");
 
-var StyledDocumentsStatusBox = _styledComponents.default.div.withConfig({
+const StyledDocumentsStatusBox = _styledComponents.default.div.withConfig({
   displayName: "documents-status-box__StyledDocumentsStatusBox",
   componentId: "sc-q7c9jp-0"
 })(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, _colorsConfig.default.valid1, _colorsConfig.default.error2);
 
-var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
-  var className = _ref.className,
-      _ref$fileList = _ref.fileList,
-      fileList = _ref$fileList === void 0 ? [] : _ref$fileList,
-      _ref$title = _ref.title,
-      title = _ref$title === void 0 ? '' : _ref$title,
-      _ref$status = _ref.status,
-      status = _ref$status === void 0 ? 'wait' : _ref$status,
-      message = _ref.message,
-      _ref$retryActionMessa = _ref.retryActionMessage,
-      retryActionMessage = _ref$retryActionMessa === void 0 ? '' : _ref$retryActionMessa,
-      _ref$retryAction = _ref.retryAction,
-      retryAction = _ref$retryAction === void 0 ? function () {} : _ref$retryAction;
+const DocumentsStatusBox = _ref => {
+  let {
+    className,
+    fileList = [],
+    title = '',
+    status = 'wait',
+    message,
+    retryActionMessage = '',
+    retryAction = () => {}
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledDocumentsStatusBox, {
     className: (0, _classnames.default)('k-DocumentsStatusBox', className, "k-DocumentsStatusBox--" + status)
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -72,15 +69,13 @@ var DocumentsStatusBox = function DocumentsStatusBox(_ref) {
     lineHeight: "1"
   }, title), fileList.length > 0 && /*#__PURE__*/_react.default.createElement("ul", {
     className: "k-DocumentsStatusBox__fileList"
-  }, fileList.map(function (file, index) {
-    return /*#__PURE__*/_react.default.createElement(_text.Text, {
-      key: file + index,
-      as: "li",
-      className: "k-DocumentsStatusBox__fileName",
-      size: "micro",
-      weight: "400"
-    }, file);
-  })), !!message && /*#__PURE__*/_react.default.createElement(_text.Text, {
+  }, fileList.map((file, index) => /*#__PURE__*/_react.default.createElement(_text.Text, {
+    key: file + index,
+    as: "li",
+    className: "k-DocumentsStatusBox__fileName",
+    size: "micro",
+    weight: "400"
+  }, file))), !!message && /*#__PURE__*/_react.default.createElement(_text.Text, {
     as: "p",
     weight: "500",
     size: "micro",

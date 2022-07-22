@@ -1,8 +1,4 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["children", "state"],
-    _excluded2 = ["children", "state", "href", "external", "linkProps"],
-    _excluded3 = ["children", "items"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import deprecated from 'prop-types-extra/lib/deprecated';
@@ -14,31 +10,28 @@ import { ScreenConfig } from '../../../constants/screen-config';
 import { Text } from '../../typography/text';
 import { StepperIcon } from '../../interaction/stepper-icon';
 import { Stepper as DeprecatedStepper } from './deprecated';
-var Wrapper = styled.div.withConfig({
+const Wrapper = styled.div.withConfig({
   displayName: "stepper__Wrapper",
   componentId: "sc-lfba75-0"
 })(["display:block;width:100%;overflow-x:scroll;scrollbar-width:thin;"]);
-var List = styled.ul.withConfig({
+const List = styled.ul.withConfig({
   displayName: "stepper__List",
   componentId: "sc-lfba75-1"
 })(["display:flex;align-items:center;justify-content:center;height:", ";flex-wrap:nowrap;box-sizing:border-box;min-width:min-content;padding-right:40px;background-color:", ";margin:0;gap:", ";@media (min-width:", "){height:", ";gap:", ";}"], pxToRem(65), COLORS.primary6, pxToRem(25), pxToRem(ScreenConfig.M.min), pxToRem(80), pxToRem(50));
-var ItemWrapper = styled.li.withConfig({
+const ItemWrapper = styled.li.withConfig({
   displayName: "stepper__ItemWrapper",
   componentId: "sc-lfba75-2"
-})(["display:flex;align-items:center;.k-Stepper__icon{margin-right:", ";}", " ", ""], pxToRem(10), function (props) {
-  return props.state === 'progress' && css(["color:", ";"], COLORS.primary1);
-}, function (props) {
-  return props.pointer && css(["cursor:pointer;"]);
-});
-var StepperText = styled(Text).withConfig({
+})(["display:flex;align-items:center;.k-Stepper__icon{margin-right:", ";}", " ", ""], pxToRem(10), props => props.state === 'progress' && css(["color:", ";"], COLORS.primary1), props => props.pointer && css(["cursor:pointer;"]));
+const StepperText = styled(Text).withConfig({
   displayName: "stepper__StepperText",
   componentId: "sc-lfba75-3"
 })(["display:flex;align-items:center;white-space:nowrap;transition:color 0.2s ease;border-radius:var(--border-radius-s);"]);
-export var StepperItem = function StepperItem(_ref) {
-  var children = _ref.children,
-      state = _ref.state,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const StepperItem = _ref => {
+  let {
+    children,
+    state,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
   }, props), /*#__PURE__*/React.createElement(StepperText, {
@@ -58,14 +51,15 @@ StepperItem.defaultProps = {
   state: 'default',
   pointer: false
 };
-export var StepperLink = function StepperLink(_ref2) {
-  var children = _ref2.children,
-      state = _ref2.state,
-      href = _ref2.href,
-      external = _ref2.external,
-      linkProps = _ref2.linkProps,
-      props = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-
+export const StepperLink = _ref2 => {
+  let {
+    children,
+    state,
+    href,
+    external,
+    linkProps,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/React.createElement(ItemWrapper, _extends({
     state: state
   }, props), /*#__PURE__*/React.createElement(StepperText, _extends({
@@ -95,10 +89,12 @@ StepperLink.defaultProps = {
   external: false,
   linkProps: {}
 };
-export var Stepper = function Stepper(_ref3) {
-  var children = _ref3.children,
-      items = _ref3.items,
-      others = _objectWithoutPropertiesLoose(_ref3, _excluded3);
+export const Stepper = _ref3 => {
+  let {
+    children,
+    items,
+    ...others
+  } = _ref3;
 
   if (!!items) {
     return /*#__PURE__*/React.createElement(DeprecatedStepper, _extends({

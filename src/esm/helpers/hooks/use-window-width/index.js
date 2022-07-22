@@ -1,28 +1,23 @@
 import { useEffect, useState } from 'react';
 import { domElementHelper } from '../../dom/element-helper';
 
-var getWidth = function getWidth() {
+const getWidth = () => {
   if (!domElementHelper.canUseDom()) return 0;
   return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 };
 
-export var useWindowWidth = function useWindowWidth() {
-  var _useState = useState(getWidth()),
-      width = _useState[0],
-      setWidth = _useState[1];
+export const useWindowWidth = () => {
+  const [width, setWidth] = useState(getWidth());
+  useEffect(() => {
+    let timeoutId = null;
 
-  useEffect(function () {
-    var timeoutId = null;
-
-    var handleResize = function handleResize() {
+    const handleResize = () => {
       clearTimeout(timeoutId);
-      timeoutId = setTimeout(function () {
-        return setWidth(getWidth());
-      }, 150);
+      timeoutId = setTimeout(() => setWidth(getWidth()), 150);
     };
 
     domElementHelper.canUseDom() && window.addEventListener('resize', handleResize);
-    return function () {
+    return () => {
       domElementHelper.canUseDom() && window.removeEventListener('resize', handleResize);
     };
   }, []);

@@ -19,9 +19,11 @@ var _title = require("../../../../typography/title");
 
 var _marger = require("../../../../layout/marger");
 
-var Title = function Title(_ref) {
-  var title = _ref.title,
-      titleProps = _ref.titleProps;
+const Title = _ref => {
+  let {
+    title,
+    titleProps
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "2",
     bottom: ".3"

@@ -9,7 +9,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _react = _interopRequireDefault(require("react"));
 
-var RocketIllustration = function RocketIllustration(props) {
+const RocketIllustration = props => {
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     viewBox: "0 0 800 800",
     width: 800,

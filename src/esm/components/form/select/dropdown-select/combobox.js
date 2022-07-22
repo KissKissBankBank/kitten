@@ -16,7 +16,7 @@ import isEmpty from 'lodash/isEmpty';
 import isObject from 'lodash/fp/isObject';
 import { StyledDropdown } from './styles';
 
-var getLabelToFilter = function getLabelToFilter(item) {
+const getLabelToFilter = item => {
   if (item.searchableLabel || isObject(item.label)) {
     return item.searchableLabel || '';
   }
@@ -24,137 +24,132 @@ var getLabelToFilter = function getLabelToFilter(item) {
   return item.label || '';
 };
 
-export var DropdownCombobox = function DropdownCombobox(_ref) {
-  var labelText = _ref.labelText,
-      comboboxButtonLabelText = _ref.comboboxButtonLabelText,
-      noResultText = _ref.noResultText,
-      options = _ref.options,
-      placeholder = _ref.placeholder,
-      labelPropsGetter = _ref.labelPropsGetter,
-      error = _ref.error,
-      valid = _ref.valid,
-      disabled = _ref.disabled,
-      hideLabel = _ref.hideLabel,
-      id = _ref.id,
-      size = _ref.size,
-      a11yStatusError = _ref.a11yStatusError,
-      a11yStatusValid = _ref.a11yStatusValid,
-      a11ySelectionMessageDisplayer = _ref.a11ySelectionMessageDisplayer,
-      defaultSelectedValue = _ref.defaultSelectedValue,
-      onChange = _ref.onChange,
-      onInputChange = _ref.onInputChange,
-      onMenuClose = _ref.onMenuClose,
-      onMenuOpen = _ref.onMenuOpen,
-      openOnLoad = _ref.openOnLoad,
-      uniqLabelOnSearch = _ref.uniqLabelOnSearch,
-      menuZIndex = _ref.menuZIndex,
-      className = _ref.className,
-      value = _ref.value,
-      _onBlur = _ref.onBlur,
-      controlled = _ref.controlled,
-      modifier = _ref.modifier,
-      direction = _ref.direction,
-      arrowPosition = _ref.arrowPosition,
-      labelProps = _ref.labelProps,
-      inputProps = _ref.inputProps;
+export const DropdownCombobox = _ref => {
+  let {
+    labelText,
+    comboboxButtonLabelText,
+    noResultText,
+    options,
+    placeholder,
+    labelPropsGetter,
+    error,
+    valid,
+    disabled,
+    hideLabel,
+    id,
+    size,
+    a11yStatusError,
+    a11yStatusValid,
+    a11ySelectionMessageDisplayer,
+    defaultSelectedValue,
+    onChange,
+    onInputChange,
+    onMenuClose,
+    onMenuOpen,
+    openOnLoad,
+    uniqLabelOnSearch,
+    menuZIndex,
+    className,
+    value,
+    onBlur,
+    controlled,
+    modifier,
+    direction,
+    arrowPosition,
+    labelProps,
+    inputProps
+  } = _ref;
+  const [flattenedOptions, setFlattenedOptions] = useState([]);
+  const [filteredOptions, setFilteredOptions] = useState([]);
 
-  var _useState = useState([]),
-      flattenedOptions = _useState[0],
-      setFlattenedOptions = _useState[1];
-
-  var _useState2 = useState([]),
-      filteredOptions = _useState2[0],
-      setFilteredOptions = _useState2[1];
-
-  var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
-    var itemToString = _ref2.itemToString,
-        selectedItem = _ref2.selectedItem;
+  const getA11ySelectionMessage = _ref2 => {
+    let {
+      itemToString,
+      selectedItem
+    } = _ref2;
     return a11ySelectionMessageDisplayer(itemToString(selectedItem));
   };
 
-  var itemToString = function itemToString(item) {
-    return item ? String(item.label) : '';
-  };
+  const itemToString = item => item ? String(item.label) : '';
 
-  var initialSelectedItem = find(['value', defaultSelectedValue])(options);
-  var selectedItemByValue = find(['value', value])(flattenedOptions) || null;
+  const initialSelectedItem = find(['value', defaultSelectedValue])(options);
+  const selectedItemByValue = find(['value', value])(flattenedOptions) || null;
 
-  var onSelectedItemChange = function onSelectedItemChange(changes) {
+  const onSelectedItemChange = changes => {
     onChange(changes.selectedItem);
     onInputChange({
       value: changes.selectedItem,
-      changes: changes
+      changes
     });
   };
 
-  var onInputValueChange = function onInputValueChange(changes) {
-    var newItemsList = flow(filter(function (item) {
-      var label = getLabelToFilter(item);
+  const onInputValueChange = changes => {
+    const newItemsList = flow(filter(item => {
+      const label = getLabelToFilter(item);
       return label.toLowerCase().startsWith(changes.inputValue.toLowerCase());
-    }), !isEmpty(changes.inputValue) && uniqLabelOnSearch ? uniqBy('label') : function (item) {
-      return item;
-    })(flattenedOptions);
+    }), !isEmpty(changes.inputValue) && uniqLabelOnSearch ? uniqBy('label') : item => item)(flattenedOptions);
     setFilteredOptions(newItemsList);
     onInputChange({
       value: changes.inputValue,
-      changes: changes
+      changes
     });
   };
 
-  var onIsOpenChange = function onIsOpenChange(changes) {
+  const onIsOpenChange = changes => {
     if (changes.isOpen) {
       flattenedOptions && setFilteredOptions(flattenedOptions);
       return onMenuOpen({
-        changes: changes
+        changes
       });
     }
 
     return onMenuClose({
-      changes: changes,
+      changes,
       hasNoResult: filteredOptions.length === 0
     });
   };
 
-  var _useCombobox = useCombobox(_extends({
+  const {
+    isOpen,
+    getToggleButtonProps,
+    getLabelProps,
+    getComboboxProps,
+    getInputProps,
+    getMenuProps,
+    highlightedIndex,
+    getItemProps,
+    openMenu,
+    inputValue
+  } = useCombobox({
     id: id + "_element",
     inputId: id,
     items: filteredOptions,
-    getA11ySelectionMessage: getA11ySelectionMessage,
-    itemToString: itemToString,
-    initialSelectedItem: initialSelectedItem,
-    onSelectedItemChange: onSelectedItemChange,
-    onInputValueChange: onInputValueChange,
-    onIsOpenChange: onIsOpenChange,
-    initialIsOpen: openOnLoad
-  }, controlled && {
-    selectedItem: selectedItemByValue
-  })),
-      isOpen = _useCombobox.isOpen,
-      getToggleButtonProps = _useCombobox.getToggleButtonProps,
-      getLabelProps = _useCombobox.getLabelProps,
-      getComboboxProps = _useCombobox.getComboboxProps,
-      getInputProps = _useCombobox.getInputProps,
-      getMenuProps = _useCombobox.getMenuProps,
-      highlightedIndex = _useCombobox.highlightedIndex,
-      getItemProps = _useCombobox.getItemProps,
-      openMenu = _useCombobox.openMenu,
-      inputValue = _useCombobox.inputValue;
-
-  useEffect(function () {
+    getA11ySelectionMessage,
+    itemToString,
+    initialSelectedItem,
+    onSelectedItemChange,
+    onInputValueChange,
+    onIsOpenChange,
+    initialIsOpen: openOnLoad,
+    ...(controlled && {
+      selectedItem: selectedItemByValue
+    })
+  });
+  useEffect(() => {
     getLabelProps && labelPropsGetter(getLabelProps);
   }, [getLabelProps]);
-  useEffect(function () {
+  useEffect(() => {
     flattenedOptions && setFilteredOptions(flattenedOptions);
   }, [flattenedOptions]);
-  useEffect(function () {
+  useEffect(() => {
     // Turns a hierarchy of options with `children` into a flat array
     // of options with a `level` of 1, 2 or null.
-    var flatOptions = [];
-    options.map(function (option) {
+    const flatOptions = [];
+    options.map(option => {
       if (option.children) {
         option.level = 1;
         flatOptions.push(option);
-        option.children.map(function (opt) {
+        option.children.map(opt => {
           opt.level = 2;
           flatOptions.push(opt);
         });
@@ -184,15 +179,11 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     placeholder: placeholder,
     disabled: disabled
   }, inputProps, {
-    onFocus: function onFocus() {
-      return !isOpen && openMenu();
-    },
-    onClick: function onClick() {
-      return !isOpen && openMenu();
-    }
+    onFocus: () => !isOpen && openMenu(),
+    onClick: () => !isOpen && openMenu()
   }, getInputProps({
-    onBlur: function onBlur() {
-      _onBlur(find(['label', inputValue])(flattenedOptions) || null);
+    onBlur: () => {
+      onBlur(find(['label', inputValue])(flattenedOptions) || null);
     }
   }), {
     className: classNames('k-Form-DropdownCombobox__input', inputProps.className)
@@ -220,19 +211,17 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
     className: "k-Form-Dropdown__list"
   }, getMenuProps(), {
     role: isOpen ? 'listbox' : null
-  }), isOpen && (filteredOptions.length > 0 ? filteredOptions.map(function (item, index) {
-    return /*#__PURE__*/React.createElement("li", _extends({
-      className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
-        'k-Form-Dropdown__item--higlighted': highlightedIndex === index
-      }),
-      key: "" + item.value + index,
-      disabled: item.disabled
-    }, getItemProps({
-      item: item,
-      index: index,
-      disabled: item.disabled
-    })), item.label);
-  }) : /*#__PURE__*/React.createElement("li", {
+  }), isOpen && (filteredOptions.length > 0 ? filteredOptions.map((item, index) => /*#__PURE__*/React.createElement("li", _extends({
+    className: classNames('k-Form-Dropdown__item', "k-Form-Dropdown__item--level_" + (item.level || 1), {
+      'k-Form-Dropdown__item--higlighted': highlightedIndex === index
+    }),
+    key: "" + item.value + index,
+    disabled: item.disabled
+  }, getItemProps({
+    item,
+    index,
+    disabled: item.disabled
+  })), item.label)) : /*#__PURE__*/React.createElement("li", {
     className: "k-Form-Dropdown__item",
     disabled: true
   }, noResultText || 'No result'))));
@@ -242,18 +231,16 @@ DropdownCombobox.defaultProps = {
   controlled: false,
   options: [],
   placeholder: 'Select',
-  labelPropsGetter: function labelPropsGetter() {},
+  labelPropsGetter: () => {},
   size: 'medium',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
-  a11ySelectionMessageDisplayer: function a11ySelectionMessageDisplayer(item) {
-    return item + " is now selected.";
-  },
-  onChange: function onChange() {},
-  onBlur: function onBlur() {},
-  onInputChange: function onInputChange() {},
-  onMenuClose: function onMenuClose() {},
-  onMenuOpen: function onMenuOpen() {},
+  a11ySelectionMessageDisplayer: item => item + " is now selected.",
+  onChange: () => {},
+  onBlur: () => {},
+  onInputChange: () => {},
+  onMenuClose: () => {},
+  onMenuOpen: () => {},
   openOnLoad: false,
   menuZIndex: 1000,
   modifier: 'hydrogen',

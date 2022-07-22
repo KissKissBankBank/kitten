@@ -7,19 +7,17 @@ exports.PlayerIconNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _excluded = ["color", "title", "direction"];
-
-var PlayerIconNext = function PlayerIconNext(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      direction = _ref.direction,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const PlayerIconNext = _ref => {
+  let {
+    color,
+    title,
+    direction,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "90",
     height: "90",

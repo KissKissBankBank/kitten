@@ -12,7 +12,7 @@ var _dompurify = _interopRequireDefault(require("dompurify"));
 var _elementHelper = require("../../dom/element-helper");
 
 // We add a span to make parseHtml works with strings.
-var parseHtml = function parseHtml(value, options) {
+const parseHtml = function (value, options) {
   if (options === void 0) {
     options = {
       sanitize: true
@@ -21,7 +21,7 @@ var parseHtml = function parseHtml(value, options) {
 
   if (!value) return; // We need to escape "<3" common emoji
 
-  var clean = typeof value === 'string' ? value.replace('<3', '&lt;3') : value;
+  let clean = typeof value === 'string' ? value.replace('<3', '&lt;3') : value;
 
   if (options.sanitize) {
     clean = _elementHelper.domElementHelper.canUseDom() ? _dompurify.default.sanitize(clean) : '';

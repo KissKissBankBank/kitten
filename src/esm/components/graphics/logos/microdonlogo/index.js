@@ -1,25 +1,24 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color1", "color2", "width", "height"];
 import React from 'react';
 import PropTypes from 'prop-types';
 import { computeFromRatio } from '../../../../helpers/utils/ratio';
-export var MicrodonLogo = function MicrodonLogo(_ref) {
-  var color1 = _ref.color1,
-      color2 = _ref.color2,
-      width = _ref.width,
-      height = _ref.height,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  var DEFAULT_WIDTH = 339.18;
-  var DEFAULT_HEIGHT = 64.02;
-  var computed = computeFromRatio({
+export const MicrodonLogo = _ref => {
+  let {
+    color1,
+    color2,
+    width,
+    height,
+    ...props
+  } = _ref;
+  const DEFAULT_WIDTH = 339.18;
+  const DEFAULT_HEIGHT = 64.02;
+  const computed = computeFromRatio({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
-    width: width,
-    height: height
+    width,
+    height
   });
-  var viewBox = {
+  const viewBox = {
     x: DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT
   };

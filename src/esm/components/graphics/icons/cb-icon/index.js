@@ -1,12 +1,11 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["className"];
 import React from 'react';
 import classNames from 'classnames';
-export var CbIcon = function CbIcon(_ref) {
-  var className = _ref.className,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const CbIcon = _ref => {
+  let {
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 2051.48 845.02",

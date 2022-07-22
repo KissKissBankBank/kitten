@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.Field = void 0;
 
-var _inheritsLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/inheritsLoose"));
-
 var _react = _interopRequireDefault(require("react"));
 
 var _label = require("./components/label");
@@ -27,23 +25,16 @@ var _password = require("./components/password");
 
 var _autocomplete = require("./components/autocomplete");
 
-var Field = /*#__PURE__*/function (_React$Component) {
-  (0, _inheritsLoose2.default)(Field, _React$Component);
+class Field extends _react.default.Component {
+  constructor() {
+    super(...arguments);
 
-  function Field() {
-    var _this;
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-
-    _this.render = function () {
-      var _this$props = _this.props,
-          tag = _this$props.tag,
-          children = _this$props.children;
-      var Component = tag;
+    this.render = () => {
+      const {
+        tag,
+        children
+      } = this.props;
+      const Component = tag;
 
       if (!!tag) {
         return /*#__PURE__*/_react.default.createElement(Component, null, children);
@@ -51,12 +42,9 @@ var Field = /*#__PURE__*/function (_React$Component) {
 
       return children;
     };
-
-    return _this;
   }
 
-  return Field;
-}(_react.default.Component);
+}
 
 exports.Field = Field;
 Field.Label = _label.FieldLabel;

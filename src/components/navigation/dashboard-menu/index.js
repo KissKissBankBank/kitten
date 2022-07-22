@@ -7,8 +7,6 @@ exports.DashboardMenu = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -25,22 +23,15 @@ var _flexWrapper = require("../../layout/flex-wrapper");
 
 var _styles = require("./styles");
 
-var _excluded = ["className"],
-    _excluded2 = ["className", "subList", "hideable"],
-    _excluded3 = ["className", "icon", "endIcon", "isActive", "children", "size"],
-    _excluded4 = ["className", "children", "icon", "title", "size"],
-    _excluded5 = ["className", "children"],
-    _excluded6 = ["data", "className"],
-    _excluded7 = ["children", "icon", "isActive"],
-    _excluded8 = ["icon", "children", "isActive", "onClick"];
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var DashboardMenu = function DashboardMenu(_ref) {
-  var className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
+const DashboardMenu = _ref => {
+  let {
+    className,
+    ...props
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement(_styles.StyledDashboardMenu, (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardMenu', className)
   }, props));
@@ -48,11 +39,13 @@ var DashboardMenu = function DashboardMenu(_ref) {
 
 exports.DashboardMenu = DashboardMenu;
 
-var List = function List(_ref2) {
-  var className = _ref2.className,
-      subList = _ref2.subList,
-      hideable = _ref2.hideable,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
+const List = _ref2 => {
+  let {
+    className,
+    subList,
+    hideable,
+    ...props
+  } = _ref2;
   return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardMenu__list', className, {
       'k-DashboardMenu__list--subList': !!subList,
@@ -61,15 +54,16 @@ var List = function List(_ref2) {
   }, props));
 };
 
-var Item = function Item(_ref3) {
-  var className = _ref3.className,
-      icon = _ref3.icon,
-      endIcon = _ref3.endIcon,
-      isActive = _ref3.isActive,
-      children = _ref3.children,
-      _ref3$size = _ref3.size,
-      size = _ref3$size === void 0 ? 'default' : _ref3$size,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref3, _excluded3);
+const Item = _ref3 => {
+  let {
+    className,
+    icon,
+    endIcon,
+    isActive,
+    children,
+    size = 'default',
+    ...props
+  } = _ref3;
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "k-DashboardMenu__itemWrapper"
   }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
@@ -84,14 +78,15 @@ var Item = function Item(_ref3) {
   }, endIcon)));
 };
 
-var Expandable = function Expandable(_ref4) {
-  var className = _ref4.className,
-      children = _ref4.children,
-      icon = _ref4.icon,
-      title = _ref4.title,
-      _ref4$size = _ref4.size,
-      size = _ref4$size === void 0 ? 'default' : _ref4$size,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref4, _excluded4);
+const Expandable = _ref4 => {
+  let {
+    className,
+    children,
+    icon,
+    title,
+    size = 'default',
+    ...props
+  } = _ref4;
   return /*#__PURE__*/_react.default.createElement("li", {
     className: "k-DashboardMenu__expandableWrapper"
   }, /*#__PURE__*/_react.default.createElement("details", (0, _extends2.default)({
@@ -111,37 +106,41 @@ var Expandable = function Expandable(_ref4) {
   }, children)));
 };
 
-var Separator = function Separator(_ref5) {
-  var className = _ref5.className,
-      children = _ref5.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref5, _excluded5);
+const Separator = _ref5 => {
+  let {
+    className,
+    children,
+    ...props
+  } = _ref5;
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: (0, _classnames.default)('k-DashboardMenu__separator', className)
   }, props), /*#__PURE__*/_react.default.createElement("hr", null), children);
 };
 
-var Selector = function Selector(_ref6) {
-  var data = _ref6.data,
-      className = _ref6.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref6, _excluded6);
-  var detailsElement = (0, _react.useRef)(null);
-  (0, _react.useEffect)(function () {
+const Selector = _ref6 => {
+  let {
+    data,
+    className,
+    ...props
+  } = _ref6;
+  const detailsElement = (0, _react.useRef)(null);
+  (0, _react.useEffect)(() => {
     if (!!detailsElement.current) {
       detailsElement.current.addEventListener('toggle', handleDetails);
     }
 
-    return function () {
+    return () => {
       if (!!detailsElement.current) {
         detailsElement.current.removeEventListener('toggle', handleDetails);
       }
     };
   }, [detailsElement]);
 
-  var closeSelector = function closeSelector() {
+  const closeSelector = () => {
     detailsElement.current.open = false;
   };
 
-  var handleDetails = function handleDetails(event) {
+  const handleDetails = event => {
     if (event.target.open) {
       window.addEventListener('keydown', handleEsc);
       window.addEventListener('click', handleClickOutside);
@@ -152,24 +151,25 @@ var Selector = function Selector(_ref6) {
     }
   };
 
-  var handleEsc = function handleEsc(event) {
+  const handleEsc = event => {
     if (event.key === 'Escape' && detailsElement != null && detailsElement.current) {
       closeSelector();
     }
   };
 
-  var handleClickOutside = function handleClickOutside(event) {
+  const handleClickOutside = event => {
     if (detailsElement != null && detailsElement.current && !detailsElement.current.contains(event.target)) {
       closeSelector();
     }
   };
 
   if (data.length === 1) {
-    var _data$ = data[0],
-        children = _data$.children,
-        icon = _data$.icon,
-        isActive = _data$.isActive,
-        dataProps = (0, _objectWithoutPropertiesLoose2.default)(_data$, _excluded7);
+    const {
+      children,
+      icon,
+      isActive,
+      ...dataProps
+    } = data[0];
     return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, dataProps, {
       className: (0, _classnames.default)('k-DashboardMenu__selectorButton', 'k-u-margin-top-single', 'k-u-margin-bottom-noneHalf', dataProps.className, className)
     }), !!icon && /*#__PURE__*/_react.default.createElement("span", {
@@ -179,15 +179,12 @@ var Selector = function Selector(_ref6) {
     }, children));
   }
 
-  var activeItem = (0, _find.default)(function (item) {
-    return item.isActive;
-  })(data);
-
-  var _ref7 = activeItem || {},
-      activeClassName = _ref7.className,
-      activeIcon = _ref7.icon,
-      activeChildren = _ref7.children;
-
+  const activeItem = (0, _find.default)(item => item.isActive)(data);
+  const {
+    className: activeClassName,
+    icon: activeIcon,
+    children: activeChildren
+  } = activeItem || {};
   return /*#__PURE__*/_react.default.createElement("details", (0, _extends2.default)({
     ref: detailsElement,
     className: (0, _classnames.default)('k-DashboardMenu__selectorWrapper', className)
@@ -207,19 +204,21 @@ var Selector = function Selector(_ref6) {
     color: "currentColor"
   })))), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DashboardMenu__selectorList"
-  }, data.map(function (_ref8, index) {
-    var icon = _ref8.icon,
-        children = _ref8.children,
-        isActive = _ref8.isActive,
-        _onClick = _ref8.onClick,
-        itemProps = (0, _objectWithoutPropertiesLoose2.default)(_ref8, _excluded8);
+  }, data.map((_ref7, index) => {
+    let {
+      icon,
+      children,
+      isActive,
+      onClick,
+      ...itemProps
+    } = _ref7;
     if (isActive) return;
     return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
       key: children + index
     }, itemProps, {
       className: (0, _classnames.default)('k-DashboardMenu__selectorButton', itemProps.className),
-      onClick: function onClick(e) {
-        _onClick(e, closeSelector);
+      onClick: e => {
+        onClick(e, closeSelector);
       }
     }), !!icon && /*#__PURE__*/_react.default.createElement("span", {
       className: "k-DashboardMenu__iconWrapper"

@@ -17,41 +17,53 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
+const StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
   displayName: "icon-container__StyledContainer",
   componentId: "sc-dkec80-0"
-})(["position:relative;padding:", ";background-color:", ";margin-left:", ";margin-right:", ";margin-top:", ";margin-bottom:", ";"], (0, _typography.pxToRem)(20), function (_ref) {
-  var color = _ref.color;
+})(["position:relative;padding:", ";background-color:", ";margin-left:", ";margin-right:", ";margin-top:", ";margin-bottom:", ";"], (0, _typography.pxToRem)(20), _ref => {
+  let {
+    color
+  } = _ref;
   return color;
-}, function (_ref2) {
-  var position = _ref2.position,
-      halfWidth = _ref2.halfWidth;
+}, _ref2 => {
+  let {
+    position,
+    halfWidth
+  } = _ref2;
   return position === 'left' ? (0, _typography.pxToRem)(halfWidth) : 'auto';
-}, function (_ref3) {
-  var position = _ref3.position,
-      halfWidth = _ref3.halfWidth;
+}, _ref3 => {
+  let {
+    position,
+    halfWidth
+  } = _ref3;
   return position === 'right' ? (0, _typography.pxToRem)(halfWidth) : 'auto';
-}, function (_ref4) {
-  var position = _ref4.position,
-      halfHeight = _ref4.halfHeight;
+}, _ref4 => {
+  let {
+    position,
+    halfHeight
+  } = _ref4;
   return position === 'top' ? (0, _typography.pxToRem)(halfHeight) : 'auto';
-}, function (_ref5) {
-  var position = _ref5.position,
-      halfHeight = _ref5.halfHeight;
+}, _ref5 => {
+  let {
+    position,
+    halfHeight
+  } = _ref5;
   return position === 'bottom' ? (0, _typography.pxToRem)(halfHeight) : 'auto';
 });
 
-var IconWrapper = _styledComponents.default.div.withConfig({
+const IconWrapper = _styledComponents.default.div.withConfig({
   displayName: "icon-container__IconWrapper",
   componentId: "sc-dkec80-1"
-})(["position:absolute;", ""], function (_ref6) {
-  var position = _ref6.position,
-      marginHeight = _ref6.marginHeight,
-      marginWidth = _ref6.marginWidth;
+})(["position:absolute;", ""], _ref6 => {
+  let {
+    position,
+    marginHeight,
+    marginWidth
+  } = _ref6;
 
   if (position === 'top') {
     return (0, _styledComponents.css)(["left:50%;margin-left:", ";top:", ";"], (0, _typography.pxToRem)(-marginWidth), (0, _typography.pxToRem)(-marginHeight));
@@ -70,18 +82,18 @@ var IconWrapper = _styledComponents.default.div.withConfig({
   }
 });
 
-var IconContainer = function IconContainer(_ref7) {
-  var _React$cloneElement;
-
-  var icon = _ref7.icon,
-      children = _ref7.children,
-      color = _ref7.color,
-      iconWidth = _ref7.iconWidth,
-      iconHeight = _ref7.iconHeight,
-      position = _ref7.position,
-      className = _ref7.className,
-      iconDescription = _ref7.iconDescription;
-  var height = iconHeight || iconWidth;
+const IconContainer = _ref7 => {
+  let {
+    icon,
+    children,
+    color,
+    iconWidth,
+    iconHeight,
+    position,
+    className,
+    iconDescription
+  } = _ref7;
+  const height = iconHeight || iconWidth;
   return /*#__PURE__*/_react.default.createElement(StyledContainer, {
     className: className,
     color: color,
@@ -92,10 +104,11 @@ var IconContainer = function IconContainer(_ref7) {
     marginHeight: height / 2,
     marginWidth: iconWidth / 2,
     position: position
-  }, /*#__PURE__*/_react.default.cloneElement(icon, (_React$cloneElement = {
+  }, /*#__PURE__*/_react.default.cloneElement(icon, {
     width: iconWidth,
-    height: height
-  }, _React$cloneElement['aria-hidden'] = true, _React$cloneElement))));
+    height,
+    ['aria-hidden']: true
+  })));
 };
 
 exports.IconContainer = IconContainer;

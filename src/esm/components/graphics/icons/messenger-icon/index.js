@@ -1,13 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
-import _objectWithoutPropertiesLoose from "@babel/runtime/helpers/objectWithoutPropertiesLoose";
-var _excluded = ["color", "title"];
 import React from 'react';
 import PropTypes from 'prop-types';
-export var MessengerIcon = function MessengerIcon(_ref) {
-  var color = _ref.color,
-      title = _ref.title,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
+export const MessengerIcon = _ref => {
+  let {
+    color,
+    title,
+    ...props
+  } = _ref;
   return /*#__PURE__*/React.createElement("svg", _extends({
     viewBox: "0 0 20 21",
     fill: color
