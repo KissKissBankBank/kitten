@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `RewardCard`: Fix `Info` subcomponent import.
+
 ## [12.0.0] - 2022-07-25
 
 Breaking Changes:
