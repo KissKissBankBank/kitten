@@ -3,7 +3,7 @@ import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { StyledRewardCard } from './styles';
-import { Form, Title, Image, Amount, Button, TagList, HeadingTag, Description, Contents } from './components';
+import { Info, Form, Title, Image, Amount, Button, TagList, HeadingTag, Description, Contents } from './components';
 import { getReactElementsByType, getReactElementsWithoutTypeArray } from '../../../../helpers/react/get-react-elements';
 export const RewardCard = _ref => {
   let {
@@ -57,6 +57,7 @@ export const RewardCard = _ref => {
     disabled
   }));
 };
+RewardCard.Info = Info;
 RewardCard.Form = Form;
 RewardCard.Title = Title;
 RewardCard.Image = Image;
