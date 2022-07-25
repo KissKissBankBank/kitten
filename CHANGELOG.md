@@ -4,6 +4,41 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [12.0.0] - 2022-07-25
+
+Breaking Changes:
+
+- `DatePicker`: Remove component.
+- `NavTabCarousel`: Remove component.
+- `TextInput`: Update component.
+- `TextCopy`: Update component.
+- Simplifiy the following components:
+  - `PasswordInput`
+  - `TextInputWithButton`
+  - `TextInputWithIcon`
+  - `TextInputWithLimit`
+  - `TextInputWithUnit`
+  - `Autocomplete`
+  - `LocationInput`
+
+Deprecations/Change:
+
+- Tests: Remove tests not based on snapshots.
+
+Features:
+
+- `RichText`: Add component.
+- `StandaloneRangeDatePicker`: Update component and dependencies.
+- `SimpleCarousel`: Update component.
+
+Fixes:
+
+- `Button`: Set valid default size.
+- `Carousel`: Define default navigation button size.
+- `StandaloneRangeDatePicker`: Add specificity to custom styles.
+- `Autocomplete`: Fix Suggestions subcomponent styles export.
+- `RichText`: Add component to ESM export.
+
 ## [12.0.0-beta2] - 2022-07-22
 
 Fixes:
