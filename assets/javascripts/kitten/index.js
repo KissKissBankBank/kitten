@@ -423,6 +423,7 @@ export { SingleEntryTable } from './components/structure/tables/single-entry-tab
 // ----------
 
 export { Paragraph } from './components/typography/paragraph'
+export { RichText } from './components/typography/rich-text'
 export { SupTitle } from './components/typography/sup-title'
 export { Text } from './components/typography/text'
 export { Title } from './components/typography/title'
