@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `RewardCard`: Un-deprecate Info subcomponent.
 - Fix: `RewardCard`: Refix `Info` subcomponent import.
 
 ## [12.0.1] - 2022-07-25

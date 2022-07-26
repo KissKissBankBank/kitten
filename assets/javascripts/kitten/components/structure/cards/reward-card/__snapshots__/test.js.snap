@@ -165,6 +165,23 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
     </div>
+    <p
+      className="k-RewardCard__info k-u-size-small k-u-line-height-normal k-RewardCard__halfDrawer"
+    >
+      <span
+        className="k-u-line-height-normal k-u-size-small k-u-weight-500 k-RewardCard__info__legend"
+      >
+        Lorem
+      </span>
+       
+      <span
+        className="k-u-line-height-normal k-u-size-small k-u-weight-400 k-RewardCard__info__value"
+      >
+        <span>
+          ipsum
+        </span>
+      </span>
+    </p>
     <ul
       className="k-RewardCard__tagList k-RewardCard__drawer"
     >
