@@ -1,3 +1,4 @@
+export { Info } from './info'
 export { Form } from './form'
 export { Title } from './title'
 export { Image } from './image'
