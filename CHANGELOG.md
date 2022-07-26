@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Utilities: Add `gap` values.
+
 ## [12.1.0] - 2022-07-26
 
 Feature:
