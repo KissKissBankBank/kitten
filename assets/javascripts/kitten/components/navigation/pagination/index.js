@@ -1,145 +1,54 @@
 import React, { forwardRef } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Text } from '../../../components/typography/text'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import classNames from 'classnames'
+import { Text } from '../../typography/text'
+import { Button } from '../../action/button'
+import { ArrowIcon } from '../../graphics/icons/arrow-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
 import { parseHtml } from '../../../helpers/utils/parser'
-import { mediaQueries } from '../../../hoc/media-queries'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { useMedia } from '../../../helpers/hooks/use-media-query'
+import { getMinQuery } from '../../../helpers/utils/media-queries'
 
-const StyledGroup = styled.ul`
-  display: inline-flex;
-  padding: 0;
-`
-
-const StyledList = styled.li`
-  list-style: none;
-  margin-right: 0;
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    margin: ${pxToRem(0)} ${pxToRem(8)};
-  }
-`
-
-const StyledArrowIconDirection = styled(({ direction, ...others }) => (
-  <li {...others} />
-))`
-  list-style: none;
-
-  ${({ direction }) =>
-    direction === 'left' &&
-    css`
-      margin-right: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-right: ${pxToRem(22)};
-      }
-    `}
-
-  ${({ direction }) =>
-    direction === 'right' &&
-    css`
-      margin-left: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(22)};
-      }
-    `}
-`
-
-const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
-  <Text {...others} />
-))`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  cursor: pointer;
-  width: ${pxToRem(40)};
-  height: ${pxToRem(40)};
-  border-radius: 0;
-  border-width: 0;
-  border-style: solid;
-  outline: none;
-  color: ${COLORS.font1};
-  border-color: ${COLORS.line1};
-  background-color: ${COLORS.background1};
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    width: ${pxToRem(50)};
-    height: ${pxToRem(50)};
-    border-width: ${pxToRem(2)};
+const StyledNav = styled.nav`
+  .k-Pagination__List {
+    padding: 0;
+    display: flex;
+    gap: ${pxToRem(5)};
   }
 
-  &:hover,
-  &:focus {
-    color: ${COLORS.primary1};
-    border-color: ${COLORS.primary1};
-    background-color: ${COLORS.background1};
-    text-decoration: none;
+  .k-Pagination__ListItem {
+    list-style: none;
+    flex-shrink: 0;
   }
 
-  &:active {
-    color: ${COLORS.background1};
-    border-color: ${COLORS.primary1};
-    background-color: ${COLORS.primary1};
-    text-decoration: none;
+  .k-Pagination__ListItem__Ellipsis {
+    text-align: center;
+    align-self: center;
+    width: ${pxToRem(40)};
   }
 
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      cursor: auto;
-      color: ${COLORS.background1};
-      border-color: ${COLORS.primary1};
-      background-color: ${COLORS.primary1};
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: ${COLORS.background1};
-        border-color: ${COLORS.primary1};
-        background-color: ${COLORS.primary1};
-      }
-    `}
-
-  &[aria-disabled="true"] {
-    color: ${COLORS.background1};
-    border-color: ${COLORS.line2};
-    background-color: ${COLORS.line2};
-    cursor: not-allowed;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: ${COLORS.background1};
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-    }
+  .k-Pagination__ListItem__Arrow:first-child {
+    margin-right: ${pxToRem(5)};
   }
-`
 
-const StyledSvg = styled(ArrowIcon)`
-  align-self: center;
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
-  color: inherit;
-  fill: currentColor;
-`
+  .k-Pagination__ListItem__Arrow:last-child {
+    margin-left: ${pxToRem(5)};
+  }
 
-const StyledPoints = styled.li`
-  list-style: none;
-  text-decoration: none;
-  text-align: center;
-  align-self: center;
-  width: ${pxToRem(40)};
+  &.k-Pagination--noMargin .k-Pagination__List {
+    margin: 0;
+  }
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    margin: ${pxToRem(0)} ${pxToRem(8)};
-    width: ${pxToRem(50)};
+  &.k-Pagination--left .k-Pagination__List {
+    justify-content: flex-start;
+  }
+  &.k-Pagination--center .k-Pagination__List {
+    justify-content: center;
+  }
+  &.k-Pagination--right .k-Pagination__List {
+    justify-content: flex-end;
   }
 `
 
@@ -178,7 +87,7 @@ export function pages(min, max, currentPage, availableSlots) {
   ]
 }
 
-const PaginationBase = forwardRef(
+export const Pagination = forwardRef(
   (
     {
       prevButtonLabel,
@@ -190,54 +99,73 @@ const PaginationBase = forwardRef(
       currentPage,
       totalPages,
       'aria-label': ariaLabelProp,
-      viewportIsMOrLess,
+      margin,
+      align,
+      className,
     },
     _ref,
   ) => {
-    const size = viewportIsMOrLess ? 5 : 7
+    const size = useMedia({
+      queries: [getMinQuery(ScreenConfig.L.min)],
+      values: [7],
+      defaultValue: 5,
+    })
     const pageNumbers = pages(1, totalPages, currentPage, size)
-    const preventClickDefault = e => e.preventDefault()
 
     const pageClickHandler = number => event => onPageClick(number, event)
 
     const renderPage = (number, index) => {
-      if (!number) return renderSpacer(index)
+      if (!number) {
+        return (
+          <li
+            key={`ellipsis-${index}`}
+            className="k-Pagination__ListItem k-Pagination__ListItem__Ellipsis"
+            aria-hidden="true"
+          >
+            <Text size="small" weight="500">
+              …
+            </Text>
+          </li>
+        )
+      }
 
-      const isActive = number === currentPage
-      const tag = isActive ? 'span' : 'a'
-      const href = isActive ? null : goToPageHref(number)
+      let buttonProps = {
+        modifier: 'hydrogen',
+        tag: 'a',
+        href: goToPageHref(number),
+        'aria-label': goToPageLabel(number),
+        onClick: pageClickHandler(number),
+      }
 
-      const ariaLabel = isActive
-        ? currentPageLabel(number)
-        : goToPageLabel(number)
+      if (number === currentPage) {
+        buttonProps = {
+          modifier: 'lithium',
+          tag: 'span',
+          title: currentPageLabel(number),
+          'aria-current': 'page',
+        }
+      }
 
       return (
-        <StyledList key={`page-${number}`}>
-          <StyledButtonIcon
-            tag={tag}
-            href={href}
+        <li
+          className="k-Pagination__ListItem k-Pagination__ListItem__Link"
+          key={`page-${number}`}
+        >
+          <Button
             key={`link-${number}`}
-            weight="regular"
-            decoration="none"
-            size="tiny"
-            isActive={isActive}
-            aria-current={isActive && 'page'}
-            aria-label={ariaLabel}
-            onClick={isActive ? null : pageClickHandler(number)}
+            className="k-Pagination__Link"
+            tabIndex="0"
+            size="small"
+            fit="icon"
+            {...buttonProps}
           >
             {number}
-          </StyledButtonIcon>
-        </StyledList>
+          </Button>
+        </li>
       )
     }
 
-    const renderSpacer = index => (
-      <StyledPoints key={`spacer-${index}`} aria-hidden="true">
-        {'…'}
-      </StyledPoints>
-    )
-
-    const renderArrowButton = direction => {
+    const ArrowButton = ({ direction }) => {
       const buttonLabel =
         direction == 'left'
           ? parseHtml(prevButtonLabel)
@@ -256,44 +184,60 @@ const PaginationBase = forwardRef(
           : currentPage + 1
 
       return (
-        <StyledArrowIconDirection direction={direction}>
-          <StyledButtonIcon
-            tag="a"
-            href={goToPageHref(number)}
+        <li
+          className={classNames(
+            'k-Pagination__ListItem',
+            'k-Pagination__ListItem__Arrow',
+          )}
+        >
+          <Button
             key={`link-${direction}`}
-            aria-label={buttonLabel}
-            aria-disabled={isDisabled}
+            className="k-Pagination__Link"
+            tag={isDisabled ? 'span' : 'a'}
+            href={goToPageHref(number)}
             title={buttonLabel}
-            isDisabled={isDisabled}
-            tabIndex={isDisabled ? -1 : null}
-            onClick={
-              isDisabled ? preventClickDefault : pageClickHandler(number)
-            }
+            aria-disabled={isDisabled || null}
+            tabIndex={0}
+            onClick={isDisabled ? null : pageClickHandler(number)}
+            disabled={isDisabled}
+            size="small"
+            fit="icon"
           >
-            <StyledSvg
+            <ArrowIcon
+              className="k-Pagination__ArrowIcon"
               direction={direction}
               disabled={isDisabled}
               aria-hidden="true"
-              version="solid"
             />
-          </StyledButtonIcon>
-        </StyledArrowIconDirection>
+          </Button>
+        </li>
       )
     }
 
     return (
-      <nav role="navigation" aria-label={ariaLabelProp}>
-        <StyledGroup>
-          {renderArrowButton('left')}
+      <StyledNav
+        role="navigation"
+        aria-label={ariaLabelProp}
+        className={classNames(
+          'k-Pagination',
+          className,
+          `k-Pagination--${align}`,
+          {
+            'k-Pagination--noMargin': !margin,
+          },
+        )}
+      >
+        <ul className="k-Pagination__List">
+          <ArrowButton direction="left" />
           {pageNumbers.map(renderPage)}
-          {renderArrowButton('right')}
-        </StyledGroup>
-      </nav>
+          <ArrowButton direction="right" />
+        </ul>
+      </StyledNav>
     )
   },
 )
 
-PaginationBase.propTypes = {
+Pagination.propTypes = {
   prevButtonLabel: PropTypes.string,
   nextButtonLabel: PropTypes.string,
   goToPageLabel: PropTypes.func,
@@ -303,20 +247,20 @@ PaginationBase.propTypes = {
   currentPage: PropTypes.number,
   currentPageLabel: PropTypes.func,
   'aria-label': PropTypes.string,
+  margin: PropTypes.bool,
+  align: PropTypes.oneOf([null, 'left', 'center', 'right']),
 }
 
-PaginationBase.defaultProps = {
-  prevButtonLabel: 'Previous page',
-  nextButtonLabel: 'Next page',
-  goToPageLabel: n => `Go to page ${n}`,
+Pagination.defaultProps = {
+  prevButtonLabel: 'Page précédente',
+  nextButtonLabel: 'Page suivante',
+  goToPageLabel: n => `Aller à la page ${n}`,
   goToPageHref: n => `#${n}`,
   onPageClick: () => {},
-  currentPageLabel: n => `Page ${n}, this is the current page`,
+  currentPageLabel: n => `Page ${n}, il s’agit de la page actuelle`,
   currentPage: 1,
   totalPages: 1,
-  'aria-label': 'Pagination navigation',
+  'aria-label': 'Navigation dans la pagination',
+  margin: true,
+  align: 'center',
 }
-
-export const Pagination = mediaQueries(PaginationBase, {
-  viewportIsMOrLess: true,
-})

@@ -1,14 +1,12 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, TYPOGRAPHY, ScreenConfig } from 'kitten'
 import { containerStyles, titleStyles } from './styles'
-import TYPOGRAPHY from '../../../../constants/typography-config'
 import {
   AdaptableGrid as Grid,
   AdaptableGridCol as GridCol,
-} from '../../../../components/grid/adaptable-grid'
-import { ScreenConfig } from '../../../../constants/screen-config'
+} from '../../../../components/layout/adaptable-grid'
 
 const StyledContainer = styled.article`
   ${containerStyles}
@@ -19,7 +17,7 @@ const Title = styled.h2`
 
 const StyledCardDescription = styled.h3`
   margin: 0;
-  ${TYPOGRAPHY.fontStyles.light}
+  ${TYPOGRAPHY.fontStyles['400']}
   font-size: 1.125em;
 `
 

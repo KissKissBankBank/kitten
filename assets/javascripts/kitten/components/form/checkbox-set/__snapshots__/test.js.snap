@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxSet /> default matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf nPkdG k-Form-CheckboxSet"
+  disabled={false}
+>
+  <legend
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxSet__label k-Label--small"
+    onClick={[Function]}
+  >
+    Label
+  </legend>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-a"
+      onClick={[Function]}
+    >
+      Option A
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      disabled={false}
+      id="option-b"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-b"
+      onClick={[Function]}
+    >
+      Option B
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      disabled={false}
+      id="option-c"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-c"
+      onClick={[Function]}
+    >
+      Option C
+    </label>
+  </div>
+</fieldset>
+`;
+
+exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf nPkdG k-Form-CheckboxSet"
+  disabled={false}
+>
+  <legend
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxSet__label k-Label--small"
+    onClick={[Function]}
+  >
+    Label test
+  </legend>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-a"
+      onClick={[Function]}
+    >
+      Option A
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      disabled={false}
+      id="option-b"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-b"
+      onClick={[Function]}
+    >
+      Option B
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      disabled={false}
+      id="option-c"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-c"
+      onClick={[Function]}
+    >
+      Option C
+    </label>
+  </div>
+</fieldset>
+`;
+
+exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf nPkdG k-Form-CheckboxSet"
+  disabled={false}
+>
+  <legend>
+    <h1>
+      Legend test
+    </h1>
+  </legend>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-a"
+      onClick={[Function]}
+    >
+      Option A
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      disabled={false}
+      id="option-b"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-b"
+      onClick={[Function]}
+    >
+      Option B
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ hyJmNO k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+  >
+    <input
+      className="k-Form-Checkbox__input"
+      disabled={false}
+      id="option-c"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-400 k-Form-Checkbox__label"
+      htmlFor="option-c"
+      onClick={[Function]}
+    >
+      Option C
+    </label>
+  </div>
+</fieldset>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconBadge /> by default matches with snapshot 1`] = `
+<span
+  className="sc-bczRLJ fdLbIf k-IconBadge k-IconBadge--large k-IconBadge--success"
+  style={
+    Object {
+      "--iconBadge-background-color": null,
+      "--iconBadge-border-color": null,
+      "--iconBadge-border-style": null,
+      "--iconBadge-border-width": null,
+    }
+  }
+>
+  <svg />
+</span>
+`;
+
+exports[`<IconBadge /> with border style matches with snapshot 1`] = `
+<span
+  className="sc-bczRLJ fdLbIf k-IconBadge k-IconBadge--small k-IconBadge--info k-IconBadge--hasBorderStyles"
+  style={
+    Object {
+      "--iconBadge-background-color": null,
+      "--iconBadge-border-color": "#e8f7fe",
+      "--iconBadge-border-style": "solid",
+      "--iconBadge-border-width": "0.125rem",
+    }
+  }
+>
+  <svg />
+</span>
+`;

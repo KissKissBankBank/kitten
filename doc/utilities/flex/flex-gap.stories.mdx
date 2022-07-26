@@ -1,0 +1,64 @@
+import { Meta, Canvas } from '@storybook/addon-docs'
+
+<Meta title="Documentation/CSS Utilities/Flex/Flex gap" />
+
+# Gap
+
+Gap utility to be used with a flexbox container, like `k-u-flex` or `k-u-flex-inline`. It can also be used on CSS Grid elements.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/flex/_gap.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/flex/_gap.scss)
+
+## Usage
+
+Utilities to set items gap according to media-queries.
+
+The class name has the form `k-u-flex-gap-{value}`
+
+Accepts values:
+
+- `none` (0px)
+- `noneHalf` (5px)
+- `single` (10px)
+- `singleHalf` (15px)
+- `double` (20px)
+- `doubleHalf` (25px)
+- `triple` (30px)
+- `tripleHalf` (35px)
+- `quadruple` (40px)
+- `quadrupleHalf` (45px)
+- `quintuple` (50px)
+
+## Examples
+
+`k-u-flex-gap-single`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex k-u-flex-gap-single">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-gap-double k-u-flex-gap-triple@m-up k-u-flex-gap-none@l-up`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex k-u-flex-gap-double k-u-flex-gap-triple@m-up k-u-flex-gap-none@l-up">
+  <p>
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+

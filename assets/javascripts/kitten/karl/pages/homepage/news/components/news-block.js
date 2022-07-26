@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
-import COLORS from '../../../../../constants/colors-config'
-import TYPOGRAPHY from '../../../../../constants/typography-config'
-import { ScreenConfig } from '../../../../../constants/screen-config'
 import {
+  pxToRem,
+  stepToRem,
+  COLORS,
+  TYPOGRAPHY,
+  ScreenConfig,
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
-} from '../../../../../constants/grid-config'
+} from 'kitten'
 
 const gridGapThin = pxToRem(10)
 const gridGapMedium = pxToRem(20)
@@ -84,14 +85,14 @@ const StyledNewsBlock = styled.div`
       font-size: ${stepToRem(0)};
       line-height: normal;
       line-height: 1.2;
-      ${TYPOGRAPHY.fontStyles.bold}
+      ${TYPOGRAPHY.fontStyles['700']}
       transition: color .4s ease;
     }
     .NewsBlock__newsCard__excerpt {
       margin: ${pxToRem(10)} 0 0;
       font-size: ${stepToRem(-2)};
       line-height: ${stepToRem(2)};
-      ${TYPOGRAPHY.fontStyles.light}
+      ${TYPOGRAPHY.fontStyles['400']}
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {

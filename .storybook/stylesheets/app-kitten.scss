@@ -1,16 +1,52 @@
-// Kitten library
-@import 'kitten';
+// Import all tokens
+@import '../../assets/stylesheets/tokens';
 
-// Configuration
-@import 'kitten/config';
+// Import all utilities
+@import '../../assets/stylesheets/utilities';
 
-// Components instanciation
-@import 'kitten/components';
-@import 'kitten/utilities';
+@import '~react-day-picker/dist/style';
 
-@import '~react-day-picker/lib/style';
+// Custom styles for stories
+
+@import 'custom/flex';
+@import 'custom/story-helpers';
+@import 'custom/background';
 
 // Custom styles for StoryBook iFrame.
-body {
-  margin: 0;
+body, body.sb-show-main.sb-main-padded {
+  padding: 0;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+details.docs-page-details {
+  margin: 28px 0;
+
+  summary {
+    display: block;
+    position: relative;
+
+    h2 {
+      cursor: pointer;
+
+      &::before {
+        display: inline-block;
+        content: "+";
+        width: 20px;
+      }
+
+      a {
+        position: absolute;
+        padding-right: 0;
+        margin-left: 0;
+        left: -20px;
+      }
+    }
+  }
+
+  &[open] summary h2::before {
+    content: "–";
+  }
 }

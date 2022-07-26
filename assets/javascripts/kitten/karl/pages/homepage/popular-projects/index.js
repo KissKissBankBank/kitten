@@ -1,20 +1,22 @@
 import React from 'react'
-import { CrowdfundingCard } from '../../../../components/cards/crowdfunding-card'
-import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { Container } from '../../../../components/grid/container'
-import { mediaQueries } from '../../../../hoc/media-queries'
-import { Text } from '../../../../components/typography/text'
+import {
+  CrowdfundingCard,
+  Carousel,
+  Container,
+  mediaQueries,
+  Text,
+} from 'kitten'
 
 const InfoComponent = () => (
   <>
     <span className="k-u-hidden@s-up">
-      <Text weight="light">J -</Text>{' '}
-      <Text tag="strong" weight="bold">
+      <Text weight="400">J -</Text>{' '}
+      <Text tag="strong" weight="700">
         7
       </Text>
     </span>
     <span className="k-u-hidden@xs-down">
-      <Text tag="strong" weight="bold">
+      <Text tag="strong" weight="700">
         7 jours
       </Text>
       <br />
@@ -84,7 +86,7 @@ const PopularProjectsBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
         showOtherPages={viewportIsMOrLess ? true : false}
         showPageSquares={viewportIsMOrLess ? false : true}
         loop
-        tinyButtons
+        smallButtons
       >
         {data.map(item => (
           <CrowdfundingCard

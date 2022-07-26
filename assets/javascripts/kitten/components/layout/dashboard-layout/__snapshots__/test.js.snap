@@ -1,0 +1,2046 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardLayout /> <DefaultLayout.Flow /> matches with snapshot 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+  gap: 0.125rem;
+}
+
+.c1 .k-Loader__circle {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: var(--border-radius-rounded);
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c1 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+}
+
+.c1 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c1 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.c2 {
+  background-color: var(--color-primary-100,#e8f7fe);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c2 .k-DashboardLayout__flow__sideCard__title {
+  margin-bottom: 1.25rem;
+}
+
+.c2 .k-DashboardLayout__flow__sideCard__list {
+  list-style: disc;
+  margin-left: 0.9375rem;
+  padding: 0;
+}
+
+.c2 .k-DashboardLayout__flow__sideCard__list li {
+  margin-bottom: 0.625rem;
+  line-height: 1.375rem;
+  font-size: 0.75rem;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
+  gap: 1.25rem;
+}
+
+.c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
+  display: none;
+}
+
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__content {
+  display: none;
+}
+
+.c0 .k-DashboardLayout__flow__loading,
+.c0 .k-DashboardLayout__flow__content {
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0 .k-DashboardLayout__flow__nav {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  background-color: var(--color-grey-000,#fff);
+  width: 100%;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+  min-width: 0 !important;
+  max-width: 11.25rem;
+  width: 100%;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:last-child {
+  justify-self: end;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:first-child:last-child {
+  grid-column: 1 / span 2;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(5rem + var(--dashboardLayout-siteHeaderHeight,0));
+  padding-bottom: 2.5rem;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content svg {
+  margin-bottom: 1.25rem;
+}
+
+.c0 .k-DashboardLayout__flow__loading {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (min-width:67.5rem) {
+  .c2 {
+    padding: 1.875rem;
+    border-radius: var(--border-radius-m);
+    margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c2 .k-DashboardLayout__flow__sideCard__list li {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width:1079px) {
+  .c0 {
+    margin-top: 3.125rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 {
+    min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 35vw 20vw;
+    gap: 1.875rem 5vw;
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 1;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__title {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .c0 .k-DashboardLayout__flow__titleAside {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: end;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__nav {
+    grid-column: 1 / 2;
+    grid-row: 3 / span 1;
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    width: calc(100% + 3.75rem);
+    padding-inline: 1.875rem;
+    margin-inline: -1.875rem;
+  }
+
+  .c0 .k-DashboardLayout__flow__nav::before {
+    position: absolute;
+    background: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,1) );
+    content: '';
+    top: -1.25rem;
+    left: 0;
+    right: 0;
+    height: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer {
+    gap: 2.5rem;
+    margin: 1.25rem 0 1.875rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c0 .k-DashboardLayout__flow__nav:not(.k-DashboardLayout__flow__nav--twoButtons) .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+    grid-column: 1 / span 2;
+    justify-self: stretch;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__aside {
+    grid-column: 2 / 3;
+    grid-row: 2 / span 1;
+  }
+}
+
+@media (max-width:1079px) {
+  .c0 .k-DashboardLayout__flow__aside__content {
+    display: none;
+  }
+}
+
+<div
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
+>
+  <div
+    className="k-DashboardLayout__flow__loading"
+  >
+    <div
+      className="c1 k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+    </div>
+  </div>
+  <section
+    className="k-DashboardLayout__flow__content"
+  >
+    Main flow content
+  </section>
+  <aside
+    className="k-DashboardLayout__flow__aside"
+  >
+    <div
+      className="k-DashboardLayout__flow__aside__content"
+    >
+      <svg
+        height={70}
+        viewBox="0 0 62 70"
+        width={62}
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M31 9c12.15 0 22 9.85 22 22 0 8.973-5.372 16.691-13.075 20.114L38 54H24l-1.924-2.885C14.372 47.692 9 39.973 9 31 9 18.85 18.85 9 31 9zM7.983 43.134l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm46.034 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zM62 30v2h-5v-2h5zM5 30v2H0v-2h5zm52.347-15.366l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm-52.694 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zm40.981-10.98l1.732 1-2.5 4.33-1.732-1 2.5-4.33zm-29.268 0l2.5 4.33-1.732 1-2.5-4.33 1.732-1zM32 0v5h-2V0h2z"
+            fill="#FFEBDE"
+          />
+          <path
+            d="M31 16.5a1.5 1.5 0 010 3c-6.351 0-11.5 5.149-11.5 11.5a1.5 1.5 0 01-3 0c0-8.008 6.492-14.5 14.5-14.5z"
+            fill="#FFF"
+            fillRule="nonzero"
+          />
+          <path
+            d="M25.613 38.21l.094.083L30 42.586V50a1 1 0 01-1.993.117L28 50v-6.585l-3.707-3.708a1 1 0 01-.083-1.32l.083-.094a1 1 0 011.32-.083zm12.094.083a1 1 0 01.083 1.32l-.083.094L34 43.414V50a1 1 0 01-.883.993L33 51a1 1 0 01-.993-.883L32 50v-7.414l4.293-4.293a1 1 0 011.414 0z"
+            fill="#222"
+            fillRule="nonzero"
+          />
+          <path
+            d="M26 66a2 2 0 01-2-2v-1h14v1a2 2 0 01-2 2h-2v1a3 3 0 01-6 0v-1h-2zm12-7v2H24v-2h14zm0-5v3H24v-3h14z"
+            fill="#00B3FD"
+          />
+          <path
+            d="M24 57h14v2H24zM24 61h14v2H24z"
+            fill="#FFF"
+          />
+        </g>
+      </svg>
+      <div
+        className="c2 k-DashboardLayout__flow__sideCard"
+      >
+        Side content in a card
+      </div>
+    </div>
+  </aside>
+  <nav
+    className="k-DashboardLayout__flow__nav"
+  >
+    <div
+      className="k-DashboardLayout__flow__nav__actionsContainer"
+    >
+      <button>
+        Back
+      </button>
+      <button>
+        Save
+      </button>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`<DashboardLayout /> <DefaultLayout.Flow loading /> matches with snapshot 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 0.3125rem;
+  line-height: 1;
+  gap: 0.125rem;
+}
+
+.c1 .k-Loader__circle {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: var(--border-radius-rounded);
+  -webkit-animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  animation: k-Loader-animation-scale 1.75s 0s infinite cubic-bezier(0.2,0.68,0.18,1.08);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.c1 .k-Loader__circle:nth-child(1) {
+  -webkit-animation-delay: calc(-1.75s / 3);
+  animation-delay: calc(-1.75s / 3);
+}
+
+.c1 .k-Loader__circle:nth-child(2) {
+  -webkit-animation-delay: calc(-1.75s / 3 / 2);
+  animation-delay: calc(-1.75s / 3 / 2);
+}
+
+.c1 .k-Loader__circle:nth-child(3) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.c2 {
+  background-color: var(--color-primary-100,#e8f7fe);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c2 .k-DashboardLayout__flow__sideCard__title {
+  margin-bottom: 1.25rem;
+}
+
+.c2 .k-DashboardLayout__flow__sideCard__list {
+  list-style: disc;
+  margin-left: 0.9375rem;
+  padding: 0;
+}
+
+.c2 .k-DashboardLayout__flow__sideCard__list li {
+  margin-bottom: 0.625rem;
+  line-height: 1.375rem;
+  font-size: 0.75rem;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 100%;
+  gap: 1.25rem;
+}
+
+.c0:not(.k-DashboardLayout__flow--isLoading) .k-DashboardLayout__flow__loading {
+  display: none;
+}
+
+.c0.k-DashboardLayout__flow--isLoading .k-DashboardLayout__flow__content {
+  display: none;
+}
+
+.c0 .k-DashboardLayout__flow__loading,
+.c0 .k-DashboardLayout__flow__content {
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0 .k-DashboardLayout__flow__nav {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  background-color: var(--color-grey-000,#fff);
+  width: 100%;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+  min-width: 0 !important;
+  max-width: 11.25rem;
+  width: 100%;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:last-child {
+  justify-self: end;
+}
+
+.c0 .k-DashboardLayout__flow__nav__actionsContainer > .k-Button:first-child:last-child {
+  grid-column: 1 / span 2;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(5rem + var(--dashboardLayout-siteHeaderHeight,0));
+  padding-bottom: 2.5rem;
+}
+
+.c0 .k-DashboardLayout__flow__aside__content svg {
+  margin-bottom: 1.25rem;
+}
+
+.c0 .k-DashboardLayout__flow__loading {
+  -webkit-flex: 1 0 100%;
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (min-width:67.5rem) {
+  .c2 {
+    padding: 1.875rem;
+    border-radius: var(--border-radius-m);
+    margin-bottom: 0.9375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c2 .k-DashboardLayout__flow__sideCard__list li {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width:1079px) {
+  .c0 {
+    margin-top: 3.125rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 {
+    min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 35vw 20vw;
+    gap: 1.875rem 5vw;
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__loading,
+  .c0 .k-DashboardLayout__flow__content {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 1;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__title {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .c0 .k-DashboardLayout__flow__titleAside {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    justify-self: end;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__nav {
+    grid-column: 1 / 2;
+    grid-row: 3 / span 1;
+    bottom: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    width: calc(100% + 3.75rem);
+    padding-inline: 1.875rem;
+    margin-inline: -1.875rem;
+  }
+
+  .c0 .k-DashboardLayout__flow__nav::before {
+    position: absolute;
+    background: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,1) );
+    content: '';
+    top: -1.25rem;
+    left: 0;
+    right: 0;
+    height: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__nav__actionsContainer {
+    gap: 2.5rem;
+    margin: 1.25rem 0 1.875rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c0 .k-DashboardLayout__flow__nav:not(.k-DashboardLayout__flow__nav--twoButtons) .k-DashboardLayout__flow__nav__actionsContainer > .k-Button {
+    grid-column: 1 / span 2;
+    justify-self: stretch;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__flow__aside {
+    grid-column: 2 / 3;
+    grid-row: 2 / span 1;
+  }
+}
+
+@media (max-width:1079px) {
+  .c0 .k-DashboardLayout__flow__aside__content {
+    display: none;
+  }
+}
+
+<div
+  className="c0 k-DashboardLayout__flow k-DashboardLayout__fullHeight"
+>
+  <div
+    className="k-DashboardLayout__flow__loading"
+  >
+    <div
+      className="c1 k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+    </div>
+  </div>
+  <section
+    className="k-DashboardLayout__flow__content"
+  >
+    Main flow content
+  </section>
+  <aside
+    className="k-DashboardLayout__flow__aside"
+  >
+    <div
+      className="k-DashboardLayout__flow__aside__content"
+    >
+      <svg
+        height={70}
+        viewBox="0 0 62 70"
+        width={62}
+      >
+        <g
+          fill="none"
+          fillRule="evenodd"
+        >
+          <path
+            d="M31 9c12.15 0 22 9.85 22 22 0 8.973-5.372 16.691-13.075 20.114L38 54H24l-1.924-2.885C14.372 47.692 9 39.973 9 31 9 18.85 18.85 9 31 9zM7.983 43.134l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm46.034 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zM62 30v2h-5v-2h5zM5 30v2H0v-2h5zm52.347-15.366l1 1.732-4.33 2.5-1-1.732 4.33-2.5zm-52.694 0l4.33 2.5-1 1.732-4.33-2.5 1-1.732zm40.981-10.98l1.732 1-2.5 4.33-1.732-1 2.5-4.33zm-29.268 0l2.5 4.33-1.732 1-2.5-4.33 1.732-1zM32 0v5h-2V0h2z"
+            fill="#FFEBDE"
+          />
+          <path
+            d="M31 16.5a1.5 1.5 0 010 3c-6.351 0-11.5 5.149-11.5 11.5a1.5 1.5 0 01-3 0c0-8.008 6.492-14.5 14.5-14.5z"
+            fill="#FFF"
+            fillRule="nonzero"
+          />
+          <path
+            d="M25.613 38.21l.094.083L30 42.586V50a1 1 0 01-1.993.117L28 50v-6.585l-3.707-3.708a1 1 0 01-.083-1.32l.083-.094a1 1 0 011.32-.083zm12.094.083a1 1 0 01.083 1.32l-.083.094L34 43.414V50a1 1 0 01-.883.993L33 51a1 1 0 01-.993-.883L32 50v-7.414l4.293-4.293a1 1 0 011.414 0z"
+            fill="#222"
+            fillRule="nonzero"
+          />
+          <path
+            d="M26 66a2 2 0 01-2-2v-1h14v1a2 2 0 01-2 2h-2v1a3 3 0 01-6 0v-1h-2zm12-7v2H24v-2h14zm0-5v3H24v-3h14z"
+            fill="#00B3FD"
+          />
+          <path
+            d="M24 57h14v2H24zM24 61h14v2H24z"
+            fill="#FFF"
+          />
+        </g>
+      </svg>
+      <div
+        className="c2 k-DashboardLayout__flow__sideCard"
+      >
+        Side content in a card
+      </div>
+    </div>
+  </aside>
+  <nav
+    className="k-DashboardLayout__flow__nav"
+  >
+    <div
+      className="k-DashboardLayout__flow__nav__actionsContainer"
+    >
+      <button>
+        Back
+      </button>
+      <button>
+        Save
+      </button>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`<DashboardLayout /> with Header, Toaster and Alert matches with snapshot 1`] = `
+.c1 {
+  overflow: visible;
+  fill: var(--burgerIcon-mainColor,var(--color-grey-900,#222));
+}
+
+.c1:hover,
+button:hover .c1 {
+  fill: var(--burgerIcon-hoverColor,var(--color-primary-500,#19b4fa));
+}
+
+.c1 rect {
+  -webkit-transition: -webkit-transform 0.2s ease-out,fill 0.15s;
+  -webkit-transition: transform 0.2s ease-out,fill 0.15s;
+  transition: transform 0.2s ease-out,fill 0.15s;
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__bun,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__bun,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__patty,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__patty,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c0 {
+  --dashboardLayout-siteHeaderHeight: 0px;
+  position: relative;
+  overscroll-behavior: none;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 .k-DashboardLayout__siteHeader,
+.c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout__quickAccessLink {
+  display: none;
+}
+
+.c0 .k-DashboardLayout__mainWrapper:focus-visible {
+  outline: 1px dotted;
+}
+
+.c0 .k-DashboardLayout {
+  min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+  min-height: -webkit-fill-available;
+  display: grid;
+  background-color: var(--color-grey-000);
+}
+
+.c0 .k-DashboardLayout > * {
+  min-width: 0;
+}
+
+.c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+  background-color: var(--color-grey-900);
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -7.5rem;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background: var(--color-grey-000);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper + .k-DashboardLayout__toaster__spacer {
+  max-height: 0;
+  height: 6.25rem;
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen {
+  bottom: -1.25rem;
+  opacity: 1;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen + .k-DashboardLayout__toaster__spacer {
+  max-height: 6.25rem;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -1.25rem;
+  height: 1.25rem;
+  background: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,1) );
+}
+
+.c0 .k-DashboardLayout__quickAccessLink {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 110;
+  padding: 1.25rem 1.875rem;
+  color: var(--color-grey-000);
+  background-color: var(--color-grey-900);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.125rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: opacity 0.2s ease,left 0.2s ease;
+  transition: opacity 0.2s ease,left 0.2s ease;
+  -webkit-transition-delay: 0,0;
+  transition-delay: 0,0;
+  opacity: 0;
+}
+
+.c0 .k-DashboardLayout__quickAccessLink:focus-visible,
+.c0 .k-DashboardLayout__quickAccessLink:active {
+  left: 0;
+  opacity: 1;
+  -webkit-transition-delay: 0,0.2s;
+  transition-delay: 0,0.2s;
+  border: 0.125rem solid var(--color-primary-300);
+}
+
+.c0 .k-DashboardLayout__backLink {
+  -webkit-flex: 0 0 2.5rem;
+  -ms-flex: 0 0 2.5rem;
+  flex: 0 0 2.5rem;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  gap: 0.9375rem;
+  height: 2.5rem;
+  padding: 0 0.9375rem;
+  background-color: var(--color-grey-800);
+  border-radius: var(--border-radius-s);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-grey-000);
+  -webkit-transition: color 0.2s ease,background-color 0.2s ease;
+  transition: color 0.2s ease,background-color 0.2s ease;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 .k-DashboardLayout__backLink svg {
+  fill: currentColor;
+}
+
+.c0 .k-DashboardLayout__backLink:hover {
+  color: var(--color-primary-500);
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__siteHeader,
+  .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout {
+    --dashboardLayout-siteHeaderHeight: 4.0625rem;
+  }
+
+  .c0 .k-DashboardLayout__siteHeader {
+    display: block;
+    height: var(--dashboardLayout-siteHeaderHeight);
+    background: var(--color-grey-000);
+  }
+
+  .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout .k-DashboardLayout__backLink {
+    display: none;
+  }
+}
+
+@media (max-width:1079px) {
+  .c0 {
+    position: relative;
+  }
+
+  .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: calc( ((100vw - 18.75rem) / 12) + 3.75rem );
+    --DashboardLayout-side-width: calc(((100vw - 18.75rem) / 2 + 8.75rem));
+    width: calc(((100vw - 18.75rem) / 2 + 8.75rem) + 100vw);
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
+    position: absolute;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__heading__button__text {
+    -webkit-clip: rect(0 0 0 0);
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 0.0625rem;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 0.0625rem;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen {
+    position: fixed;
+    left: 0;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before,
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts::before {
+    opacity: 0.8;
+    background-color: var(--color-grey-900);
+    pointer-events: all;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+    height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    overflow-y: scroll;
+    padding: 1.25rem 1.875rem 1.875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
+    display: none;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__navigation {
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__footer {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: var(--color-grey-000);
+    width: calc(100vw + 0.125rem);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 4.0625rem;
+    -webkit-flex: 0 0 4.0625rem;
+    -ms-flex: 0 0 4.0625rem;
+    flex: 0 0 4.0625rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--color-grey-900);
+    border-left: 0.125rem solid var(--color-grey-800);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading > * {
+    -webkit-align-self: initial;
+    -ms-flex-item-align: initial;
+    align-self: initial;
+    min-width: 0;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading__buttonWrapper {
+    -webkit-flex: 0 0 2.25rem;
+    -ms-flex: 0 0 2.25rem;
+    flex: 0 0 2.25rem;
+    margin-left: -0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading__button {
+    padding: 0.75rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+    position: relative;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts::before,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -0.125rem;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-grey-000);
+    opacity: 0;
+    pointer-events: none;
+    z-index: var(--DashboardLayout-overlay-zindex,100);
+    -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+    margin-left: 0.125rem;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
+    margin-left: var(--DashboardLayout-main-margin);
+    margin-right: var(--DashboardLayout-main-margin);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__toaster__wrapper {
+    right: -0.125rem;
+    width: 100vw;
+  }
+}
+
+@media (max-width:639px) {
+  .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: 1.25rem;
+    --DashboardLayout-side-width: calc(100vw - 3.125rem);
+    width: calc(200vw - 3.25rem);
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-100vw + 3rem);
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(100vw - 3rem);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+    padding: 0.625rem 1.25rem 1.25rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardLayout__toaster {
+    background-color: var(--color-grey-900);
+    color: var(--color-grey-000);
+    border-radius: var(--border-radius-s);
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: 7.5vw;
+    --DashboardLayout-side-width: min(22.4375rem,25vw);
+    grid-template-columns: var(--DashboardLayout-side-width) 1fr;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--dashboardLayout-siteHeaderHeight);
+    overflow: scroll;
+    padding: 1.25rem 1.875rem 1.875rem;
+    gap: 0.625rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__navigation {
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__footer {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    position: relative;
+    background-color: var(--color-grey-000);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__content {
+    background-color: var(--color-grey-100);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav::before {
+    background: linear-gradient( to bottom,rgba(251,251,251,0),rgba(251,251,251,1) );
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
+    display: none;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
+    margin-left: var(--DashboardLayout-main-margin);
+    margin-right: var(--DashboardLayout-main-margin);
+  }
+
+  .c0 .k-DashboardLayout__toaster__wrapper {
+    width: calc(100% - var(--DashboardLayout-side-width));
+    left: initial;
+  }
+}
+
+<div
+  className="c0 k-DashboardLayout__wrapper"
+>
+  <div
+    className="k-DashboardLayout__siteHeader"
+  >
+    Header content
+  </div>
+  <a
+    className="k-DashboardLayout__quickAccessLink"
+    href="#main"
+  >
+    Custom quick access link text
+  </a>
+  <section
+    className="k-DashboardLayout"
+    style={
+      Object {
+        "--DashboardLayout-overlay-zindex": 100,
+      }
+    }
+  >
+    <div
+      aria-hidden={true}
+      className="k-DashboardLayout__sideWrapper"
+      tabIndex={-1}
+    >
+      <a
+        className="k-DashboardLayout__backLink"
+        href="#"
+      >
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-000, #fff)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+        <span
+          className="k-DashboardLayout__backLink__text"
+        >
+          Custom backLink text
+        </span>
+      </a>
+      <header
+        className="k-DashboardLayout__heading"
+      >
+        Header content
+      </header>
+      <section
+        className="k-DashboardLayout__navigation"
+      >
+        Side content
+      </section>
+      <footer
+        className="k-DashboardLayout__footer"
+      >
+        Side footer
+      </footer>
+    </div>
+    <div
+      className="k-DashboardLayout__mainWrapper"
+      tabIndex={-1}
+    >
+      <header
+        className="k-DashboardLayout__heading"
+      >
+        <div
+          className="k-DashboardLayout__heading__buttonWrapper"
+        >
+          <button
+            aria-expanded={null}
+            className="k-DashboardLayout__heading__button k-u-reset-button"
+            onClick={[Function]}
+          >
+            <svg
+              aria-label={null}
+              className="c1 k-BurgerIcon"
+              height={10}
+              role="img"
+              style={
+                Object {
+                  "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+                  "--burgerIcon-mainColor": "var(--color-grey-000, #fff)",
+                }
+              }
+              viewBox="0 0 12 10"
+              width={12}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                className="k-BurgerIcon__bun"
+                height="2"
+                width="12"
+                y="0"
+              />
+              <rect
+                className="k-BurgerIcon__patty"
+                height="2"
+                width="12"
+                y="4"
+              />
+              <rect
+                className="k-BurgerIcon__bun"
+                height="2"
+                width="12"
+                y="8"
+              />
+            </svg>
+            <span
+              className="k-DashboardLayout__heading__button__text"
+            >
+              Custom open label
+            </span>
+          </button>
+        </div>
+        Header content
+      </header>
+      <section
+        className="k-DashboardLayout__alerts k-DashboardLayout__fullWidth"
+      >
+        Alert!
+      </section>
+      <main
+        className="k-DashboardLayout__main"
+        id="main"
+      >
+        <p>
+          Main content
+        </p>
+        <section
+          aria-live="polite"
+          className="k-DashboardLayout__toaster__wrapper k-DashboardLayout__fullWidth"
+        >
+          <div
+            className="k-DashboardLayout__toaster"
+          >
+            Toaster
+          </div>
+        </section>
+        <div
+          className="k-DashboardLayout__toaster__spacer"
+        />
+      </main>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`<DashboardLayout /> with default props matches with snapshot 1`] = `
+.c1 {
+  overflow: visible;
+  fill: var(--burgerIcon-mainColor,var(--color-grey-900,#222));
+}
+
+.c1:hover,
+button:hover .c1 {
+  fill: var(--burgerIcon-hoverColor,var(--color-primary-500,#19b4fa));
+}
+
+.c1 rect {
+  -webkit-transition: -webkit-transform 0.2s ease-out,fill 0.15s;
+  -webkit-transition: transform 0.2s ease-out,fill 0.15s;
+  transition: transform 0.2s ease-out,fill 0.15s;
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isActive .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__bun,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__bun,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__bun {
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
+}
+
+.c1.k-BurgerIcon--isAnimatedOnHover:hover .k-BurgerIcon__patty,
+button:hover .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty,
+.c1.k-BurgerIcon--isAnimatedOnHover:focus .k-BurgerIcon__patty,
+button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+}
+
+.c0 {
+  --dashboardLayout-siteHeaderHeight: 0px;
+  position: relative;
+  overscroll-behavior: none;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 .k-DashboardLayout__siteHeader,
+.c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout__quickAccessLink {
+  display: none;
+}
+
+.c0 .k-DashboardLayout__mainWrapper:focus-visible {
+  outline: 1px dotted;
+}
+
+.c0 .k-DashboardLayout {
+  min-height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+  min-height: -webkit-fill-available;
+  display: grid;
+  background-color: var(--color-grey-000);
+}
+
+.c0 .k-DashboardLayout > * {
+  min-width: 0;
+}
+
+.c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+  background-color: var(--color-grey-900);
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -7.5rem;
+  padding: 1.25rem 1.25rem 2.5rem;
+  background: var(--color-grey-000);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+  transition: opacity 0.4s cubic-bezier(0.34,1.56,0.64,1),bottom 0.4s cubic-bezier(0.34,1.56,0.64,1),left 0.3s ease-in-out;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper + .k-DashboardLayout__toaster__spacer {
+  max-height: 0;
+  height: 6.25rem;
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen {
+  bottom: -1.25rem;
+  opacity: 1;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper.k-DashboardLayout__toaster--isOpen + .k-DashboardLayout__toaster__spacer {
+  max-height: 6.25rem;
+}
+
+.c0 .k-DashboardLayout__toaster__wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -1.25rem;
+  height: 1.25rem;
+  background: linear-gradient( to bottom,rgba(255,255,255,0),rgba(255,255,255,1) );
+}
+
+.c0 .k-DashboardLayout__quickAccessLink {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 110;
+  padding: 1.25rem 1.875rem;
+  color: var(--color-grey-000);
+  background-color: var(--color-grey-900);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.125rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: opacity 0.2s ease,left 0.2s ease;
+  transition: opacity 0.2s ease,left 0.2s ease;
+  -webkit-transition-delay: 0,0;
+  transition-delay: 0,0;
+  opacity: 0;
+}
+
+.c0 .k-DashboardLayout__quickAccessLink:focus-visible,
+.c0 .k-DashboardLayout__quickAccessLink:active {
+  left: 0;
+  opacity: 1;
+  -webkit-transition-delay: 0,0.2s;
+  transition-delay: 0,0.2s;
+  border: 0.125rem solid var(--color-primary-300);
+}
+
+.c0 .k-DashboardLayout__backLink {
+  -webkit-flex: 0 0 2.5rem;
+  -ms-flex: 0 0 2.5rem;
+  flex: 0 0 2.5rem;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  gap: 0.9375rem;
+  height: 2.5rem;
+  padding: 0 0.9375rem;
+  background-color: var(--color-grey-800);
+  border-radius: var(--border-radius-s);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-grey-000);
+  -webkit-transition: color 0.2s ease,background-color 0.2s ease;
+  transition: color 0.2s ease,background-color 0.2s ease;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 .k-DashboardLayout__backLink svg {
+  fill: currentColor;
+}
+
+.c0 .k-DashboardLayout__backLink:hover {
+  color: var(--color-primary-500);
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout__siteHeader,
+  .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout {
+    --dashboardLayout-siteHeaderHeight: 4.0625rem;
+  }
+
+  .c0 .k-DashboardLayout__siteHeader {
+    display: block;
+    height: var(--dashboardLayout-siteHeaderHeight);
+    background: var(--color-grey-000);
+  }
+
+  .c0 .k-DashboardLayout__siteHeader ~ .k-DashboardLayout .k-DashboardLayout__backLink {
+    display: none;
+  }
+}
+
+@media (max-width:1079px) {
+  .c0 {
+    position: relative;
+  }
+
+  .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: calc( ((100vw - 18.75rem) / 12) + 3.75rem );
+    --DashboardLayout-side-width: calc(((100vw - 18.75rem) / 2 + 8.75rem));
+    width: calc(((100vw - 18.75rem) / 2 + 8.75rem) + 100vw);
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-1 * ((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
+    position: absolute;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__heading__button__text {
+    -webkit-clip: rect(0 0 0 0);
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 0.0625rem;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 0.0625rem;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen {
+    position: fixed;
+    left: 0;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before,
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts::before {
+    opacity: 0.8;
+    background-color: var(--color-grey-900);
+    pointer-events: all;
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(((100vw - 18.75rem) / 2 + 8.75rem) - 0.125rem);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+    height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    overflow-y: scroll;
+    padding: 1.25rem 1.875rem 1.875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
+    display: none;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__navigation {
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__footer {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    background-color: var(--color-grey-000);
+    width: calc(100vw + 0.125rem);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 4.0625rem;
+    -webkit-flex: 0 0 4.0625rem;
+    -ms-flex: 0 0 4.0625rem;
+    flex: 0 0 4.0625rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: var(--color-grey-900);
+    border-left: 0.125rem solid var(--color-grey-800);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading > * {
+    -webkit-align-self: initial;
+    -ms-flex-item-align: initial;
+    align-self: initial;
+    min-width: 0;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading__buttonWrapper {
+    -webkit-flex: 0 0 2.25rem;
+    -ms-flex: 0 0 2.25rem;
+    flex: 0 0 2.25rem;
+    margin-left: -0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading__button {
+    padding: 0.75rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+    position: relative;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__alerts::before,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -0.125rem;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-grey-000);
+    opacity: 0;
+    pointer-events: none;
+    z-index: var(--DashboardLayout-overlay-zindex,100);
+    -webkit-transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out,opacity 0.2s ease-in-out;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main {
+    margin-left: 0.125rem;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
+    margin-left: var(--DashboardLayout-main-margin);
+    margin-right: var(--DashboardLayout-main-margin);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__toaster__wrapper {
+    right: -0.125rem;
+    width: 100vw;
+  }
+}
+
+@media (max-width:639px) {
+  .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: 1.25rem;
+    --DashboardLayout-side-width: calc(100vw - 3.125rem);
+    width: calc(200vw - 3.25rem);
+    grid-template-columns: var(--DashboardLayout-side-width) calc( 100vw + 0.125rem );
+    left: calc(-100vw + 3rem);
+  }
+
+  .c0 .k-DashboardLayout.k-DashboardLayout--isOpen .k-DashboardLayout__toaster__wrapper {
+    left: calc(100vw - 3rem);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+    padding: 0.625rem 1.25rem 1.25rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardLayout__toaster {
+    background-color: var(--color-grey-900);
+    color: var(--color-grey-000);
+    border-radius: var(--border-radius-s);
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width:1080px) {
+  .c0 .k-DashboardLayout {
+    --DashboardLayout-main-margin: 7.5vw;
+    --DashboardLayout-side-width: min(22.4375rem,25vw);
+    grid-template-columns: var(--DashboardLayout-side-width) 1fr;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: calc(100vh - var(--dashboardLayout-siteHeaderHeight));
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--dashboardLayout-siteHeaderHeight);
+    overflow: scroll;
+    padding: 1.25rem 1.875rem 1.875rem;
+    gap: 0.625rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__heading {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__navigation {
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__sideWrapper .k-DashboardLayout__footer {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper {
+    position: relative;
+    background-color: var(--color-grey-000);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav,
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__content {
+    background-color: var(--color-grey-100);
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper.k-DashboardLayout__mainWrapper--darkBg .k-DashboardLayout__flow__nav::before {
+    background: linear-gradient( to bottom,rgba(251,251,251,0),rgba(251,251,251,1) );
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__heading {
+    display: none;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main:not(.k-DashboardLayout__main--fullHeight) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .c0 .k-DashboardLayout .k-DashboardLayout__mainWrapper .k-DashboardLayout__main > *:not(.k-DashboardLayout__fullWidth) {
+    margin-left: var(--DashboardLayout-main-margin);
+    margin-right: var(--DashboardLayout-main-margin);
+  }
+
+  .c0 .k-DashboardLayout__toaster__wrapper {
+    width: calc(100% - var(--DashboardLayout-side-width));
+    left: initial;
+  }
+}
+
+<div
+  className="c0 k-DashboardLayout__wrapper"
+>
+  <a
+    className="k-DashboardLayout__quickAccessLink"
+    href="#main"
+  >
+    Custom quick access link text
+  </a>
+  <section
+    className="k-DashboardLayout"
+    style={
+      Object {
+        "--DashboardLayout-overlay-zindex": 133,
+      }
+    }
+  >
+    <div
+      aria-hidden={true}
+      className="k-DashboardLayout__sideWrapper"
+      tabIndex={-1}
+    >
+      <a
+        className="k-DashboardLayout__backLink"
+        href="#"
+      >
+        <svg
+          aria-hidden={true}
+          className=""
+          fill="var(--color-grey-000, #fff)"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+          />
+        </svg>
+        <span
+          className="k-DashboardLayout__backLink__text"
+        >
+          Custom backLink text
+        </span>
+      </a>
+      <header
+        className="k-DashboardLayout__heading"
+      >
+        Header content
+      </header>
+      <section
+        className="k-DashboardLayout__navigation"
+      >
+        Side content
+      </section>
+      <footer
+        className="k-DashboardLayout__footer"
+      >
+        Side footer
+      </footer>
+    </div>
+    <div
+      className="k-DashboardLayout__mainWrapper"
+      tabIndex={-1}
+    >
+      <header
+        className="k-DashboardLayout__heading"
+      >
+        <div
+          className="k-DashboardLayout__heading__buttonWrapper"
+        >
+          <button
+            aria-expanded={null}
+            className="k-DashboardLayout__heading__button k-u-reset-button"
+            onClick={[Function]}
+          >
+            <svg
+              aria-label={null}
+              className="c1 k-BurgerIcon"
+              height={10}
+              role="img"
+              style={
+                Object {
+                  "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+                  "--burgerIcon-mainColor": "var(--color-grey-000, #fff)",
+                }
+              }
+              viewBox="0 0 12 10"
+              width={12}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                className="k-BurgerIcon__bun"
+                height="2"
+                width="12"
+                y="0"
+              />
+              <rect
+                className="k-BurgerIcon__patty"
+                height="2"
+                width="12"
+                y="4"
+              />
+              <rect
+                className="k-BurgerIcon__bun"
+                height="2"
+                width="12"
+                y="8"
+              />
+            </svg>
+            <span
+              className="k-DashboardLayout__heading__button__text"
+            >
+              Custom open label
+            </span>
+          </button>
+        </div>
+        Header content
+      </header>
+      <main
+        className="k-DashboardLayout__main"
+        id="main"
+      >
+        <p>
+          Main content
+        </p>
+      </main>
+    </div>
+  </section>
+</div>
+`;

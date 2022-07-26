@@ -4,8 +4,8 @@ import classNames from 'classnames'
 
 export const Centered = ({ children, className, display, ...props }) => {
   const classNameProps = classNames(
-    'k-HeaderNav--centered',
-    { 'k-HeaderNav--column': display === 'column' },
+    'k-HeaderNav__centered',
+    { 'k-HeaderNav__column': display === 'column' },
     className,
   )
 
@@ -17,7 +17,7 @@ export const Centered = ({ children, className, display, ...props }) => {
 }
 
 Centered.propTypes = {
-  display: PropTypes.oneOf['column'],
+  display: PropTypes.oneOf(['column']),
 }
 
 Centered.defaultProps = {

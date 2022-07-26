@@ -1,18 +1,19 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { Paragraph } from '../../../../components/typography/paragraph'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import {
+  TitleWithStroke,
+  Paragraph,
+  pxToRem,
+  stepToRem,
+  ScreenConfig,
+  Button,
+  cssPropertyDistributor,
+  domElementHelper,
   CONTAINER_MAX_WIDTH,
   GUTTER,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
-} from '../../../../constants/grid-config'
-import { Button } from '../../../../components/buttons/button/button'
-import { cssPropertyDistributor } from '../../../../helpers/dom/css-property-distributor'
-import domElementHelper from '../../../../helpers/dom/element-helper'
+} from 'kitten'
 
 const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 const oneGridCol = `calc((100vw - ${pxToRem(paddingPlusGutters)}) / 12)`
@@ -151,7 +152,7 @@ export const DialogWithPictureBorder = () => {
               className="DialogWithPictureBorder__buttonWidthSetter"
               ref={button_1}
             >
-              <Button modifier="hydrogen" big fluid>
+              <Button modifier="hydrogen" size="large" fit="fluid">
                 Lancez votre projet
               </Button>
             </span>
@@ -159,7 +160,7 @@ export const DialogWithPictureBorder = () => {
               className="DialogWithPictureBorder__buttonWidthSetter"
               ref={button_2}
             >
-              <Button modifier="helium" big fluid>
+              <Button modifier="helium" size="large" fit="fluid">
                 Découvrez nos valeurs
               </Button>
             </span>

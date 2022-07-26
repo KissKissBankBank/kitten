@@ -1,13 +1,8 @@
-import React, { Component } from 'react'
-import { Marger } from '../../../layout/marger'
+import React from 'react'
 import { RadioButtonSet } from '../../../form/radio-button-set'
 
-export class FieldRadioButtonSet extends Component {
-  render() {
-    return (
-      <Marger top="1">
-        <RadioButtonSet {...this.props} />
-      </Marger>
-    )
-  }
-}
+export const FieldRadioButtonSet = props => (
+  <div className="k-u-margin-top-single k-Field__control">
+    <RadioButtonSet {...props} />
+  </div>
+)

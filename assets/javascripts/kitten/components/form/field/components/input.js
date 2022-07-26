@@ -1,34 +1,50 @@
 import React from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../layout/marger'
-import { TextInput } from '../../../form/text-input'
-import { TextInputWithLimit } from '../../../form/text-input-with-limit'
-import { TextInputWithUnit } from '../../../form/text-input-with-unit'
+import { TextInput } from '../../../form/input/text-input'
 
-export const FieldInput = props => {
-  let Input = TextInput
-
-  if (props.limit) {
-    Input = TextInputWithLimit
-  }
-
-  if (props.unit) {
-    Input = TextInputWithUnit
-  }
+export const FieldInput = ({ limit, unit, noMargin, className, ...props }) => {
+  const has = (() => {
+    switch (true) {
+      case !!limit:
+        return 'limit'
+      case !!unit:
+        return 'unit'
+      default:
+        return undefined
+    }
+  })()
 
   return (
-    <Marger top="1">
-      <Input {...props} />
-    </Marger>
+    <TextInput
+      has={has}
+      limit={limit}
+      unit={unit}
+      {...props}
+      wrapperProps={{
+        ...props.wrapperProps,
+        className: classNames(
+          'k-FieldInput',
+          'k-Field__control',
+          className,
+          props.wrapperProps?.className,
+          {
+            'k-u-margin-top-single': !noMargin,
+          },
+        ),
+      }}
+    />
   )
 }
 
 FieldInput.propTypes = {
   limit: PropTypes.number,
   unit: PropTypes.string,
+  noMargin: PropTypes.bool,
 }
 
 FieldInput.defaultProps = {
   limit: undefined,
   unit: undefined,
+  noMargin: false,
 }

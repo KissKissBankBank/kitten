@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoaderWithParagraph /> With custom component should match with snapshot 1`] = `
+<div
+  className="sc-dkzDqf dTZBGZ k-LoaderWithParagraph k-LoaderWithParagraph--left"
+>
+  <div
+    aria-hidden={true}
+    className="sc-fbPSWO erbeQm k-KissKissLoadingAnimation k-LoaderWithParagraph__loader"
+  >
+    <svg
+      className="k-KissKissLoadingAnimation__svg"
+      viewBox="0 0 21 16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        className="k-KissKissLoadingAnimation__path k-KissKissLoadingAnimation__path-heart"
+        d="M18.81 8a2.59 2.59 0 002.18-2.6c0-1.45-1.25-2.7-2.7-2.7-.73 0-1.35.31-1.87.73L11.85 8l4.47 4.47c.52.52 1.24.83 1.97.83 1.45 0 2.7-1.25 2.7-2.7.1-1.15-.83-2.4-2.18-2.6z"
+        fill="var(--color-grey-900, #222)"
+      />
+      <path
+        className="k-KissKissLoadingAnimation__path k-KissKissLoadingAnimation__path-circle"
+        d="M13.82 2.5A7.91 7.91 0 008 0C3.53 0 0 3.53 0 8c0 4.47 3.53 8 8 8a8 8 0 005.71-2.39L8 8l5.82-5.5z"
+        fill="var(--color-grey-900, #222)"
+      />
+    </svg>
+  </div>
+  <p
+    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+  >
+    Loading
+  </p>
+</div>
+`;
+
+exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`] = `
+<div
+  className="sc-dkzDqf dTZBGZ k-LoaderWithParagraph customClassName k-LoaderWithParagraph--bottom"
+>
+  <button
+    aria-hidden={true}
+    className="sc-bczRLJ kOGTcx k-Loader k-LoaderWithParagraph__loader customClassName"
+  >
+    <svg
+      className="k-Loader__circle"
+      fill="red"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="red"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="red"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+  </button>
+  <p
+    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+  >
+    A custom loading massage
+  </p>
+</div>
+`;
+
+exports[`<LoaderWithParagraph /> With default props should match with snapshot 1`] = `
+<div
+  className="sc-dkzDqf dTZBGZ k-LoaderWithParagraph k-LoaderWithParagraph--left"
+>
+  <div
+    aria-hidden={true}
+    className="sc-bczRLJ kOGTcx k-Loader k-LoaderWithParagraph__loader"
+  >
+    <svg
+      className="k-Loader__circle"
+      fill="var(--color-grey-900, #222)"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="var(--color-grey-900, #222)"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+    <svg
+      className="k-Loader__circle"
+      fill="var(--color-grey-900, #222)"
+      viewBox="0 0 5 5"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx={2.5}
+        cy={2.5}
+        r={5}
+      />
+    </svg>
+  </div>
+  <p
+    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+  >
+    Loading
+  </p>
+</div>
+`;

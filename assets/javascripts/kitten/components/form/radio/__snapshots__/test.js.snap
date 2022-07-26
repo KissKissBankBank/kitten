@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> default matches with snapshot 1`] = `
+.c1 .k-Form-Radio__label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  cursor: pointer;
+  -webkit-transition: color var(--transition);
+  transition: color var(--transition);
+}
+
+.c1 .k-Form-Radio__label::before {
+  box-sizing: border-box;
+  display: block;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem 0.625rem 0 0;
+  content: '';
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-grey-000);
+  border: var(--border);
+  border-radius: var(--border-radius-rounded);
+  -webkit-transition: border var(--transition),background var(--transition);
+  transition: border var(--transition),background var(--transition);
+}
+
+.c1 .k-Form-Radio__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c1 .k-Form-Radio__input:focus + .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+  outline-style: auto;
+}
+
+.c1 .k-Form-Radio__input:focus:not(:focus-visible) + .k-Form-Radio__label::before {
+  outline-color: transparent;
+}
+
+.c1 .k-Form-Radio__input:focus-visible + .k-Form-Radio__label::before {
+  outline-style: auto;
+}
+
+.c1 .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
+  border: 0.3125rem solid var(--color-primary-500);
+}
+
+.c1 .k-Form-Radio__labelText {
+  -webkit-flex: 1 0 calc(100% - 1.625rem);
+  -ms-flex: 1 0 calc(100% - 1.625rem);
+  flex: 1 0 calc(100% - 1.625rem);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--normal,
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--500 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+.c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--light .c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--400 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--bold,
+.c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--700 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  -webkit-letter-spacing: .01rem;
+  -moz-letter-spacing: .01rem;
+  -ms-letter-spacing: .01rem;
+  letter-spacing: .01rem;
+  font-weight: 700;
+}
+
+.c1 .k-Form-Radio__input:active + .k-Form-Radio__labelText {
+  color: var(--color-primary-500);
+}
+
+.c1 .k-Form-Radio__labelText--withContents {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+.c1 .k-Form-Radio__labelContents {
+  margin-top: 0.25rem;
+  margin-left: 1.625rem;
+  -webkit-flex: 1 0 calc(100% - 2.25rem);
+  -ms-flex: 1 0 calc(100% - 2.25rem);
+  flex: 1 0 calc(100% - 2.25rem);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+}
+
+.c1 .k-Form-Radio__labelContents:empty {
+  display: none;
+}
+
+.c1.k-Form-Radio--check .k-Form-Radio__input:checked + .k-Form-Radio__label::before {
+  border-width: 0.125rem;
+  background-color: var(--color-primary-500);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8' width='11' height='8' fill='%23fff' %3E%3Cpath d='M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z' /%3E%3C/svg%3E");
+}
+
+.c1.k-Form-Radio--check.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  background-color: var(--color-danger-500);
+}
+
+.c1.k-Form-Radio--check .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
+  background-color: var(--color-grey-500);
+}
+
+.c1:hover .k-Form-Radio__label::before {
+  border-color: var(--color-primary-300);
+}
+
+.c1:hover .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+}
+
+.c1:active .k-Form-Radio__label::before,
+.c1:focus .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+}
+
+.c1:active .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before,
+.c1:focus .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  border-color: var(--color-primary-500);
+}
+
+.c1.k-Form-Radio--error .k-Form-Radio__label::before {
+  border-color: var(--color-danger-300);
+}
+
+.c1.k-Form-Radio--error .k-Form-Radio__input:checked:not(:disabled) + .k-Form-Radio__label::before {
+  border-color: var(--color-danger-500);
+}
+
+.c1 .k-Form-Radio__input:disabled {
+  cursor: not-allowed;
+}
+
+.c1 .k-Form-Radio__input:disabled + .k-Form-Radio__label {
+  color: var(--color-grey-600);
+  cursor: not-allowed;
+}
+
+.c1 .k-Form-Radio__input:disabled + .k-Form-Radio__label::before {
+  background-color: var(--color-grey-000);
+  border-color: var(--color-grey-400);
+}
+
+.c1 .k-Form-Radio__input:disabled:checked + .k-Form-Radio__label::before {
+  background-color: var(--color-grey-000);
+  border-color: var(--color-grey-500);
+}
+
+@media (min-width:640px) {
+  .c1 .k-Form-Radio__labelContents {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+<div
+  className="c0 c1 k-Form-Radio k-Form-Radio--disc"
+>
+  <input
+    className="k-Form-Radio__input"
+    disabled={false}
+    id="test_1"
+    name="test"
+    type="radio"
+  />
+  <label
+    className="k-Form-Radio__label"
+    htmlFor="test_1"
+  >
+    <span
+      className="k-Form-Radio__labelText k-Form-Radio__labelText--500 k-Form-Radio__labelText--withContents"
+    >
+      Radio Label
+    </span>
+    <div
+      className="k-Form-Radio__labelContents"
+    >
+      Children
+    </div>
+  </label>
+</div>
+`;

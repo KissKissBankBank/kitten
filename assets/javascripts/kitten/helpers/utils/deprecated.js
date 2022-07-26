@@ -1,22 +1,17 @@
-import React, { Component } from 'react'
-
-export class Deprecated extends Component {
-  UNSAFE_componentWillMount() {
-    if (process.env.NODE_ENV === 'development') {
-      const owner = React.Children.only(this.props.children)._owner
-
-      if (!owner) return
-
-      const componentName = owner.type.name
-
-      console.warn(
-        `Warning: ${componentName} is deprecated.`,
-        this.props.warningMessage,
-      )
-    }
+export const checkDeprecatedSizes = size => {
+  const deprecatedSizes = ['tiny', 'regular', 'default', 'normal', 'big']
+  if (deprecatedSizes.includes(size)) {
+    console.warn(
+      `The value ${size} for prop size is deprecated. Please use 'small', 'medium' or 'large' instead.`,
+    )
   }
+}
 
-  render() {
-    return this.props.children
+export const checkDeprecatedWeights = weight => {
+  const deprecatedWeights = ['light', 'regular', 'bold']
+  if (deprecatedWeights.includes(weight)) {
+    console.warn(
+      `The value ${weight} for prop weight is deprecated. Please use '400', '500' or '700' instead.`,
+    )
   }
 }

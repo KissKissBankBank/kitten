@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> by default matches with snapshot 1`] = `
+<span
+  className="k-u-weight-400"
+/>
+`;
+
+exports[`<Text /> with as prop matches with snapshot 1`] = `
+<div
+  className="k-u-weight-400"
+/>
+`;
+
+exports[`<Text /> with cssColor and custom style matches with snapshot 1`] = `
+<span
+  className="k-u-weight-400"
+  style={
+    Object {
+      "color": "#F00",
+      "fontWeight": "700",
+    }
+  }
+/>
+`;
+
+exports[`<Text /> with tag prop matches with snapshot 1`] = `
+<div
+  className="k-u-weight-400"
+/>
+`;

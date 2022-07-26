@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
-import { Title } from '../../../../../components/typography/title'
-import { Text } from '../../../../../components/typography/text'
-import { ScreenConfig } from '../../../../../constants/screen-config'
-import { GridCol } from '../../../../../components/grid/grid'
-import { ProgressRing } from '../../../../../components/meters/progress-ring'
-import COLORS from '../../../../../constants/colors-config'
-import { CheckedIcon } from '../../../../../components/icons/checked-icon'
-import { RocketCircleIcon } from '../../../../../components/icons/rocket-circle-icon'
-import { mediaQueries } from '../../../../../hoc/media-queries'
+import {
+  pxToRem,
+  stepToRem,
+  Title,
+  Text,
+  ScreenConfig,
+  GridCol,
+  ProgressRing,
+  COLORS,
+  CheckedIcon,
+  RocketCircleIcon,
+  mediaQueries,
+} from 'kitten'
 import classNames from 'classnames'
 
 const StyledCard = styled.div`
@@ -235,7 +238,7 @@ const CardBase = ({
               className="k-u-align-center k-u-margin-left-single"
               size="micro"
               color="font1"
-              weight="regular"
+              weight="500"
             >
               Financé à 135 %
             </Text>
@@ -249,7 +252,7 @@ const CardBase = ({
               className="k-u-align-center k-u-margin-left-single"
               size="micro"
               color="font1"
-              weight="regular"
+              weight="500"
             >
               Projet réussi !
             </Text>
@@ -269,7 +272,7 @@ const CardBase = ({
               className="k-u-align-center k-u-margin-left-single"
               size="micro"
               color="font1"
-              weight="regular"
+              weight="500"
             >
               Financé à 50%
             </Text>

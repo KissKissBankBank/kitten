@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
+<div
+  className="sc-gsnTZi gTrkmB k-EmbedPlayer"
+>
+  <div
+    className="k-EmbedPlayer__playerPreview"
+  >
+    <div
+      className="sc-bczRLJ loUUGZ k-ResponsiveIframeContainer"
+      style={
+        Object {
+          "--ResponsiveImageContainer-ratio": "50%",
+        }
+      }
+    >
+      <img
+        alt="An image"
+        className="k-EmbedPlayer__thumbnail "
+        src="https://placekitten.com/620/376"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-gsnTZi gTrkmB k-EmbedPlayer k-EmbedPlayer--cursorPointer"
+>
+  <div
+    className="k-EmbedPlayer__playerPreview"
+  >
+    <button
+      aria-label="Play"
+      className="k-u-reset-button k-EmbedPlayer__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        height="90"
+        viewBox="0 0 90 90"
+        width="90"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="45"
+          cy="45"
+          fill="var(--color-grey-900)"
+          opacity="var(--player-icon-opacity, 0.8)"
+          r="44.5"
+          stroke="var(--color-grey-000)"
+          strokeWidth="1"
+        />
+        <path
+          d="M60 43.27a2 2 0 0 1 0 3.46L39 58.86a2 2 0 0 1-3-1.74V32.88a2 2 0 0 1 3-1.74l21 12.13Z"
+          fill="var(--color-grey-000)"
+        />
+      </svg>
+    </button>
+    <div
+      className="sc-bczRLJ loUUGZ k-ResponsiveIframeContainer"
+      style={
+        Object {
+          "--ResponsiveImageContainer-ratio": "60%",
+        }
+      }
+    >
+      <img
+        alt="An image"
+        className="k-EmbedPlayer__thumbnail "
+        src="https://placekitten.com/620/376"
+      />
+    </div>
+  </div>
+</div>
+`;

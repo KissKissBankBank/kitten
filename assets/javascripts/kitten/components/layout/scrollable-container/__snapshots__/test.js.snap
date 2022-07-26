@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ jNxmHP sc-gsnTZi ikFwJj k-ScrollableContainer__wrapper"
+>
+  <div
+    className="k-ScrollableContainer"
+    style={
+      Object {
+        "--scrollableContainer-gradient": "var(--color-grey-000, #fff)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ jNxmHP sc-gsnTZi ikFwJj k-ScrollableContainer__wrapper"
+>
+  <div
+    className="k-ScrollableContainer"
+    style={
+      Object {
+        "--scrollableContainer-gradient": "var(--color-grey-000, #fff)",
+      }
+    }
+  >
+    <nav>
+      <ul>
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
+<div
+  aria-hidden={true}
+  className="sc-bczRLJ jNxmHP sc-gsnTZi ikFwJj k-ScrollableContainer__wrapper custom__class"
+>
+  <div
+    className="k-ScrollableContainer k-ScrollableContainer--hasRightGradient"
+    style={
+      Object {
+        "--scrollableContainer-gradient": "#567890",
+        "color": "red",
+      }
+    }
+  />
+</div>
+`;

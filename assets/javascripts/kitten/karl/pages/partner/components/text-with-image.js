@@ -1,19 +1,22 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title } from '../../../../components/typography/title'
-import { Paragraph } from '../../../../components/typography/paragraph'
-import { Text } from '../../../../components/typography/text'
 import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Paragraph,
+  Text,
   Button,
+  pxToRem,
+  ScreenConfig,
+} from 'kitten'
+import {
   FLUID,
-  DEFAULT,
-  BIG,
-} from '../../../../components/buttons/button/button'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+  MEDIUM,
+  LARGE,
+} from '../../../../components/action/button/standalone-styles'
 
 const StyledGrid = styled(Grid)`
   align-items: center;
@@ -60,11 +63,11 @@ const StyledText = styled(Text)`
 `
 
 const StyledButton = styled(Button)`
-  ${BIG}
+  ${LARGE}
 
   @media (max-width: ${ScreenConfig.XS.max}px) {
     ${FLUID}
-    ${DEFAULT}
+    ${MEDIUM}
   }
 `
 
@@ -103,9 +106,9 @@ const TextWithImage = ({ imagePosition }) => (
 
               <Text
                 tag="p"
-                weight="regular"
+                weight="500"
                 fontStyle="italic"
-                size="tiny"
+                size="small"
                 lineHeight="normal"
                 style={{ margin: '0 0 0 15px' }}
               >
@@ -115,7 +118,7 @@ const TextWithImage = ({ imagePosition }) => (
             </TextWithIcon>
           </Marger>
 
-          <StyledButton big>En savoir plus</StyledButton>
+          <StyledButton size="large">En savoir plus</StyledButton>
         </ContentGrid>
 
         <GridCol col-xs="10" offset-xs="1" col-l="5">

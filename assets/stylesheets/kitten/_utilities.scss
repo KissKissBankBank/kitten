@@ -1,5 +1,8 @@
 // Align
-@import './utilities/align/align';
+@import './utilities/a11y/visually-hidden';
+
+// Align
+@import './utilities/align-self/align-self';
 
 // Background
 @import './utilities/background/background-color';
@@ -11,10 +14,23 @@
 @import './utilities/cursor/cursor';
 
 // Display
-@import './utilities/display/hidden';
+@import './utilities/display/display';
+
+@import './utilities/display/block'; // Deprecated
+@import './utilities/display/inline-block'; // Deprecated
+@import './utilities/display/hidden'; // Deprecated
 
 // Event
 @import './utilities/event/pointer-event';
+
+// Flex
+@import './utilities/flex/display-flex'; // Deprecated
+@import './utilities/flex/justify-content';
+@import './utilities/flex/align-items';
+@import './utilities/flex/flex-direction';
+@import './utilities/flex/flex-wrap';
+@import './utilities/flex/gap';
+@import './utilities/flex/flexbox-element';
 
 // Image
 @import './utilities/image/responsive';
@@ -22,8 +38,14 @@
 // Link
 @import './utilities/link/link';
 
+// Reset
+@import './utilities/reset/button';
+
 // Spacing
+@import './utilities/spacing/m';
 @import './utilities/spacing/margin';
+@import './utilities/spacing/p';
+@import './utilities/spacing/padding';
 
 // Text
 @import './utilities/text/active';
@@ -33,8 +55,13 @@
 @import './utilities/text/decoration';
 @import './utilities/text/font-feature-settings';
 @import './utilities/text/inactive';
+@import './utilities/text/letter-spacing';
 @import './utilities/text/line-height';
+@import './utilities/text/line';
 @import './utilities/text/size';
 @import './utilities/text/style';
 @import './utilities/text/transform';
 @import './utilities/text/weight';
+
+// Token
+@import './utilities/token'

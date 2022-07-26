@@ -1,0 +1,73 @@
+/// Self alignment utilities, to be used with Flexbox and CSS Grid.
+///
+/// @group align
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-alignSelf;
+///
+/// @example html
+///
+///   <div class="k-u-alignSelf-center@xxs-down">…</div>
+///   <div class="k-u-alignSelf-center@xs-down">…</div>
+///   <div class="k-u-alignSelf-center@s-down">…</div>
+///   <div class="k-u-alignSelf-center@m-down">…</div>
+///   <div class="k-u-alignSelf-center@l-down">…</div>
+///
+///   <div class="k-u-alignSelf-center@xs-up">…</div>
+///   <div class="k-u-alignSelf-center@s-up">…</div>
+///   <div class="k-u-alignSelf-center@m-up">…</div>
+///   <div class="k-u-alignSelf-center@l-up">…</div>
+///   <div class="k-u-alignSelf-center@xl-up">…</div>
+///
+///   <div class="k-u-alignSelf-normal">…</div>
+///   <div class="k-u-alignSelf-stretch">…</div>
+///   <div class="k-u-alignSelf-center">…</div>
+///   <div class="k-u-alignSelf-start">…</div>
+///   <div class="k-u-alignSelf-end">…</div>
+///
+@mixin k-u-alignSelf($position, $align) {
+  $value: $align;
+
+  .k-u-alignSelf-#{$position} {
+    align-self: $value !important;
+  }
+}
+
+@mixin k-utilities-align-self {
+  $k-variants: (
+    center: center,
+    end: flex-end,
+    normal: normal,
+    start: flex-start,
+    stretch: stretch,
+  );
+
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-alignSelf($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-alignSelf($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-alignSelf($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+}

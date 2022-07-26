@@ -1,25 +1,23 @@
-import React, { Component } from 'react'
-import { Marger } from '../../../layout/marger'
+import React from 'react'
+import classNames from 'classnames'
 import { Text } from '../../../typography/text'
 
-export class FieldError extends Component {
-  render() {
-    const { children, ...others } = this.props
-
-    return (
-      <Marger top="1">
-        <Text
-          tag="p"
-          color="error"
-          size="micro"
-          weight="regular"
-          lineHeight="normal"
-          style={{ margin: 0 }}
-          {...others}
-        >
-          {children}
-        </Text>
-      </Marger>
-    )
-  }
+export const FieldError = ({ children, className, ...others }) => {
+  return (
+    <Text
+      tag="p"
+      color="error"
+      size="micro"
+      weight="500"
+      lineHeight="normal"
+      className={classNames(
+        className,
+        'k-Field__error',
+        'k-u-margin-none k-u-margin-top-single',
+      )}
+      {...others}
+    >
+      {children}
+    </Text>
+  )
 }

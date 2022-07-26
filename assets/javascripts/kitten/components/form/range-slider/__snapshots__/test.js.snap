@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RangeSlider /> should match its disabled snapshot with disabled props 1`] = `
+<div
+  className="sc-bczRLJ fYqWQi k-RangeSlider k-RangeSlider--disabled"
+  style={
+    Object {
+      "--range-input-ratio": 0,
+    }
+  }
+>
+  <input
+    disabled={true}
+    max={42}
+    min={2}
+    name="test-slider-input"
+    onChange={[Function]}
+    step={2}
+    type="range"
+  />
+</div>
+`;
+
+exports[`<RangeSlider /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bczRLJ fYqWQi k-RangeSlider"
+  style={
+    Object {
+      "--range-input-ratio": 0,
+    }
+  }
+>
+  <input
+    disabled={false}
+    max={42}
+    min={2}
+    name="test-slider-input"
+    onChange={[Function]}
+    step={2}
+    type="range"
+  />
+</div>
+`;
+
+exports[`<RangeSlider /> should set unbounded values when contolled with value 1`] = `
+<div
+  className="sc-bczRLJ fYqWQi k-RangeSlider"
+  style={
+    Object {
+      "--range-input-ratio": 0,
+    }
+  }
+>
+  <input
+    disabled={false}
+    max={10}
+    min={1}
+    name="test-slider-input"
+    onChange={[Function]}
+    step={1}
+    type="range"
+    value={20}
+  />
+</div>
+`;

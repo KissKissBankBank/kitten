@@ -1,10 +1,8 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.default = void 0;
-var TYPOGRAPHY = {
+const TYPOGRAPHY = {
   root: 16,
   // px
   fontSize: 1,
@@ -12,7 +10,6 @@ var TYPOGRAPHY = {
   fontWeight: 400,
   lineHeight: 1.5,
   // rem
-  scaleMultiplier: 1.125,
   fontStyles: {
     light: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
@@ -25,18 +22,20 @@ var TYPOGRAPHY = {
     bold: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
       letterSpacing: '.01rem',
-      fontWeight: 600
+      fontWeight: 700
     },
-    regularUppercase: {
+    400: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontWeight: 500,
-      textTransform: 'uppercase'
+      fontWeight: 400
     },
-    boldUppercase: {
+    500: {
       fontFamily: 'Maax, Helvetica, Arial, sans-serif',
-      fontWeight: 600,
-      letterSpacing: '.1rem',
-      textTransform: 'uppercase'
+      fontWeight: 500
+    },
+    700: {
+      fontFamily: 'Maax, Helvetica, Arial, sans-serif',
+      letterSpacing: '.01rem',
+      fontWeight: 700
     }
   }
 };

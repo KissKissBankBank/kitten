@@ -1,74 +1,56 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { withKnobs } from '@storybook/addon-knobs'
 import { Pagination } from './index'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
-const info = {
-  text: `
-    #Pagination
-    &nbsp;
-
-    ## Import
-    ~~~js
-    import { Pagination } from '@kisskissbankbank/kitten/src/components/navigation/pagination'
-    ~~~
-
-    ## Usage
-    &nbsp;
-
-    #### Default
-    ~~~js
-    <Pagination />
-    ~~~
-
-    ### With total pages
-    ~~~js
-    <Pagination
-      totalPages={…}
-    />
-    ~~~
-
-    ### With current page
-    ~~~js
-    <Pagination
-      currentPage={…}
-    />
-    ~~~
-  `,
-  header: false,
-  propTables: false,
+export default {
+  title: 'Navigation/Pagination',
+  component: Pagination,
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Pagination" />,
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+  args: {
+    margin: true,
+    align: 'left',
+    onPageClick: action('PageClick'),
+    prevButtonLabel: 'Previous page',
+    nextButtonLabel: 'Next page',
+  },
+  argTypes: {
+    prevButtonLabel: { control: 'string' },
+    nextButtonLabel: { control: 'string' },
+    goToPageLabel: { control: null },
+    goToPageHref: { control: null },
+    onPageClick: { control: null },
+    totalPages: { control: 'number' },
+    currentPage: { control: 'number' },
+    currentPageLabel: { control: null },
+    margin: { control: 'bool' },
+    align: { control: 'select', options: [null, 'left', 'center', 'right'] },
+  },
 }
 
-storiesOf('Navigation/Pagination', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withInfo)
-  .add(
-    'Pagination',
-    () => {
-      return (
-        <Grid style={{ marginTop: '5em' }}>
-          <GridCol offset="1" col="8">
-            <Pagination totalPages={1} currentPage={1} />
-            <Pagination totalPages={2} currentPage={1} />
-            <Pagination totalPages={2} currentPage={2} />
-            <Pagination totalPages={7} currentPage={1} />
-            <Pagination totalPages={42} currentPage={1} />
-            <Pagination totalPages={42} currentPage={2} />
-            <Pagination totalPages={42} currentPage={3} />
-            <Pagination totalPages={42} currentPage={4} />
-            <Pagination totalPages={42} currentPage={5} />
-            <Pagination totalPages={42} currentPage={6} />
-            <Pagination totalPages={42} currentPage={38} />
-            <Pagination totalPages={42} currentPage={39} />
-            <Pagination totalPages={42} currentPage={40} />
-            <Pagination totalPages={42} currentPage={41} />
-            <Pagination totalPages={42} currentPage={42} />
-            <Pagination totalPages={9999} currentPage={9042} />
-          </GridCol>
-        </Grid>
-      )
-    },
-    { info },
-  )
+export const Default = args => (
+  <>
+    <Pagination totalPages={1} currentPage={1} {...args} />
+    <Pagination totalPages={2} currentPage={1} {...args} />
+    <Pagination totalPages={2} currentPage={2} {...args} />
+    <Pagination totalPages={5} currentPage={1} {...args} />
+    <Pagination totalPages={7} currentPage={1} {...args} />
+    <Pagination totalPages={42} currentPage={1} {...args} />
+    <Pagination totalPages={42} currentPage={2} {...args} />
+    <Pagination totalPages={42} currentPage={3} {...args} />
+    <Pagination totalPages={42} currentPage={4} {...args} />
+    <Pagination totalPages={42} currentPage={5} {...args} />
+    <Pagination totalPages={42} currentPage={6} {...args} />
+    <Pagination totalPages={42} currentPage={38} {...args} />
+    <Pagination totalPages={42} currentPage={39} {...args} />
+    <Pagination totalPages={42} currentPage={40} {...args} />
+    <Pagination totalPages={42} currentPage={41} {...args} />
+    <Pagination totalPages={42} currentPage={42} {...args} />
+    <Pagination totalPages={9999} currentPage={9042} {...args} />
+  </>
+)

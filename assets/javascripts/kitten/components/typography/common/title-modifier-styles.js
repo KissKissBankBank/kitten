@@ -2,7 +2,17 @@ import { css } from 'styled-components'
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-const titleModifiers = [
+export const titleModifiersNames = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'quaternary',
+  'quinary',
+  'senary',
+  'septenary',
+]
+
+export const titleModifiers = [
   {
     name: 'primary',
     fontStepOnMobile: 7,
@@ -53,21 +63,55 @@ const titleModifiers = [
   },
 ]
 
-export const titleModifierStyles = prefix => {
-  return titleModifiers.map(key => {
+const getLetterSpacingFromStep = step => {
+  if (step > 5) return '-0.02em'
+  if (step > 3) return '-0.015em'
+  return '-0.01em'
+}
+const getLineHeightFromStep = step => {
+  if (step > 8) return '1em'
+  if (step > 4) return `calc(1em + ${pxToRem(4)})`
+  return `calc(1em + ${pxToRem(2)})`
+}
+
+const getStyleFromStep = step => css`
+  font-size: ${stepToRem(step)};
+  letter-spacing: ${getLetterSpacingFromStep(step)};
+  line-height: ${getLineHeightFromStep(step)};
+`
+
+export const titleModifierStyles = prefix => css`
+  ${titleModifiers.map((key, index) => {
     return css`
-      ${`.${prefix}--${key.name}`} {
-        font-size: ${stepToRem(key.fontStepOnMobile)};
-        line-height: 1.2;
+      ${`${prefix}--${titleModifiersNames[index]}`} {
+        ${getStyleFromStep(key.fontStepOnMobile)};
 
         @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          font-size: ${stepToRem(key.fontStepOnTablet)};
+          ${getStyleFromStep(key.fontStepOnTablet)};
         }
-
         @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-          font-size: ${stepToRem(key.fontStepOnDesktop)};
+          ${getStyleFromStep(key.fontStepOnDesktop)};
         }
       }
     `
-  })
+  })}
+`
+
+export const titleHelperModifierStyles = modifier => {
+  const modifierIndex = findIndex(item => modifier === item)(
+    titleModifiersNames,
+  )
+  const modifierDefinitions = titleModifiersNames[modifierIndex]
+
+  return css`
+    ${getStyleFromStep(modifierDefinitions.fontStepOnMobile)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      ${getStyleFromStep(modifierDefinitions.fontStepOnTablet)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      ${getStyleFromStep(modifierDefinitions.fontStepOnDesktop)};
+    }
+  `
 }

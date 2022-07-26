@@ -1,48 +1,68 @@
 import React from 'react'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 import { Title } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Text } from '../../typography/text'
+import { Marger, Text } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
-const modifierOptions = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Quaternary: 'quaternary',
-  Quinary: 'quinary',
-  Senary: 'senary',
-  Septenary: 'septenary',
-}
-
-export default {
-  component: Title,
-  title: 'Typography/Title',
-  decorators: [withKnobs],
-  parameters: {
-    component: Title,
-    componentSubtitle: 'List of Title',
+const argTypes = {
+  tag: {
+    name: 'tag',
+    description: 'Changes the title’s element type.',
+    control: 'text',
+  },
+  modifier: {
+    name: 'modifier',
+    description:
+      'Title has seven modifiers, they define different sizes depending on the device (desktop, tablet and mobile)',
+    options: [
+      'primary',
+      'secondary',
+      'tertiary',
+      'quaternary',
+      'quinary',
+      'senary',
+      'septenary',
+    ],
+    control: 'select',
+  },
+  noMargin: {
+    name: 'noMargin',
+    description: 'Removes the default margins the element.',
+    control: 'boolean',
+  },
+  cssColor: {
+    name: 'cssColor',
+    description: 'Sets a color from a CSS color string.',
+    control: 'color',
+  },
+  italic: {
+    name: 'italic',
+    description: 'Adds an underline style.',
+    control: 'boolean',
+  },
+  children: {
+    name: 'children',
+    control: 'text',
   },
 }
 
-export const DefaultProps = () => (
-  <Container>
-    <Marger top="4">
-      <Title
-        modifier={select('Modifier', modifierOptions, 'primary')}
-        italic={boolean('Italic', false)}
-        margin={boolean('Margin', false)}
-      >
-        {text('Title', 'Lorem ipsum dolor sit amet')}
-      </Title>
-    </Marger>
-  </Container>
-)
+const args = {
+  tag: 'h1',
+  modifier: 'primary',
+  noMargin: false,
+  italic: false,
+  cssColor: null,
+  children: 'Lorem ipsum dolor sit amet',
+}
 
-export const Modifier = () => (
+export const Default = props => <Title {...props} />
+
+Default.args = args
+Default.argTypes = argTypes
+
+export const ModifierMetrics = () => (
   <>
     <Marger>
-      <Text weight="bold">Primary</Text>
+      <Text weight="700">Primary</Text>
       <br />
       <Text size="micro">• Desktop version - 64px</Text>
       <br />
@@ -60,7 +80,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Secondary</Text>
+      <Text weight="700">Secondary</Text>
       <br />
       <Text size="micro">• Desktop version - 48px</Text>
       <br />
@@ -76,9 +96,8 @@ export const Modifier = () => (
         <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
       </Marger>
     </Marger>
-
     <Marger top="7">
-      <Text weight="bold">Tertiary</Text>
+      <Text weight="700">Tertiary</Text>
       <br />
       <Text size="micro">• Desktop version - 36px</Text>
       <br />
@@ -94,9 +113,8 @@ export const Modifier = () => (
         <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
       </Marger>
     </Marger>
-
     <Marger top="7">
-      <Text weight="bold">Quaternary</Text>
+      <Text weight="700">Quaternary</Text>
       <br />
       <Text size="micro">• Desktop version - 32px</Text>
       <br />
@@ -114,7 +132,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Quinary</Text>
+      <Text weight="700">Quinary</Text>
       <br />
       <Text size="micro">• Desktop version - 28px</Text>
       <br />
@@ -132,7 +150,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Senary</Text>
+      <Text weight="700">Senary</Text>
       <br />
       <Text size="micro">• Desktop version - 24px</Text>
       <br />
@@ -145,14 +163,13 @@ export const Modifier = () => (
       <Marger top="1">
         <Text size="micro">• Mobile version - 18px</Text>
         <br />
-        <Text size="big" weight="bold">
+        <Text size="large" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
     </Marger>
-
     <Marger top="7">
-      <Text weight="bold">Septenary</Text>
+      <Text weight="700">Septenary</Text>
       <br />
       <Text size="micro">• Desktop version - 20px</Text>
       <br />
@@ -160,14 +177,14 @@ export const Modifier = () => (
       <Marger top="1">
         <Text size="micro">• Tablet version - 18px</Text>
         <br />
-        <Text size="big" weight="bold">
+        <Text size="large" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
       <Marger top="1">
         <Text size="micro">• Mobile version - 16px</Text>
         <br />
-        <Text size="default" weight="bold">
+        <Text size="medium" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
@@ -175,14 +192,19 @@ export const Modifier = () => (
   </>
 )
 
-export const WithoutMargin = () => (
-  <Title modifier="primary" margin={false}>
-    Lorem ipsum dolor sit amet…
-  </Title>
-)
-
-export const Italic = () => (
-  <Title modifier="primary" italic>
-    Lorem ipsum dolor sit amet…
-  </Title>
-)
+export default {
+  component: Title,
+  title: 'Typography/Title',
+  parameters: {
+    docs: {
+      page: () => <DocsPage filepath={__filename} importString="Title" />,
+    },
+  },
+  decorators: [
+    story => (
+      <div className="story-Container k-u-flex k-u-flex-direction-column">
+        {story()}
+      </div>
+    ),
+  ],
+}

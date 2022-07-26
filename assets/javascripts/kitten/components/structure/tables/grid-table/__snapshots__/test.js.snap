@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridTable /> with a complete structure and custom classes matches with snapshot 1`] = `
+<section
+  className="sc-bczRLJ inCukj k-GridTable__wrapper CustomGridTable"
+  id="TestGridTable"
+>
+  <div
+    className="k-GridTable"
+  >
+    <header
+      className="k-GridTable__Header customHeaderClass"
+    >
+      <ul
+        className="k-GridTable__HeaderList customListClass"
+      >
+        <li
+          className="k-GridTable__Col"
+          id="TestGridTable-col-0"
+        >
+          Header 1
+        </li>
+        <li
+          className="k-GridTable__Col"
+          id="TestGridTable-col-1"
+        >
+          Header 2
+        </li>
+        <li
+          className="k-GridTable__Col"
+          id="TestGridTable-col-2"
+        >
+          Header 3
+        </li>
+      </ul>
+    </header>
+    <ul
+      className="k-GridTable__Body"
+    >
+      <li
+        className="k-GridTable__Row k-GridTable__Row--is_highlighted"
+      >
+        <ul
+          className="k-GridTable__RowList"
+        >
+          <li
+            aria-labelledby="TestGridTable-col-0"
+            className="k-GridTable__Col"
+          >
+            Content 1
+          </li>
+          <li
+            aria-labelledby="TestGridTable-col-1"
+            className="k-GridTable__Col"
+          >
+            Content 2
+          </li>
+          <li
+            aria-labelledby="TestGridTable-col-2"
+            className="k-GridTable__Col"
+          >
+            Content 3
+          </li>
+        </ul>
+      </li>
+      <li
+        className="k-GridTable__Row customRowClass"
+      >
+        <ul
+          className="k-GridTable__RowList customListClass"
+        >
+          <li
+            aria-labelledby="TestGridTable-col-0"
+            className="k-GridTable__Col"
+          >
+            Content 1
+          </li>
+          <li
+            aria-labelledby="TestGridTable-col-1"
+            className="k-GridTable__Col"
+          >
+            Content 2
+          </li>
+          <li
+            aria-labelledby="TestGridTable-col-2"
+            className="k-GridTable__Col"
+          >
+            Content 3
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+`;

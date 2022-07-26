@@ -1,36 +1,63 @@
-const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin')
+const path = require('path')
+const kittenPaths = require('../src/config/paths')
 
 module.exports = {
-  stories: [
-    '../assets/javascripts/kitten/**/stories.(js|mdx)',
-    '../assets/javascripts/kitten/**/*.stories.(js|mdx)',
-    '../doc/**/*.stories.(js|mdx)',
-  ],
-  addons: [
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-actions/register',
-    '@storybook/addon-a11y/register',
-    '@storybook/addon-viewport/register',
-    '@storybook/addon-docs/register',
-  ],
+  core: {
+    disableTelemetry: true, // Piss off, Storybook https://storybook.js.org/docs/react/configure/telemetry
+    builder: 'webpack5',
+  },
   webpackFinal: async config => {
-    config.module.rules.push({
-      test: /stories.mdx$/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: {
-            plugins: ['@babel/plugin-transform-react-jsx'],
-          },
+    let alteredConfig = {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        modules: ['node_modules'],
+        alias: {
+          ...config.resolve.alias,
+          storybook: path.join(__dirname, './includes'),
+          kitten: path.join(__dirname, '../assets/javascripts/kitten'),
+          icons: path.join(__dirname, '../assets/images/icons'),
         },
+        fallback: {
+          crypto: require.resolve('crypto-browserify'),
+          stream: require.resolve('stream-browserify'),
+        },
+      },
+      context: __dirname,
+      node: {
+        __filename: true,
+      },
+    }
+    alteredConfig.module.rules.push({
+      test: /\.scss$/,
+      resolve: {
+        extensions: ['.scss', '.sass'],
+      },
+      use: [
+        'style-loader',
+        'css-loader',
         {
-          loader: '@mdx-js/loader',
+          loader: 'sass-loader',
           options: {
-            compilers: [createCompiler({})],
+            sassOptions: {
+              includePaths: kittenPaths.getScssPaths(),
+            },
           },
         },
       ],
+      sideEffects: true,
     })
-    return config
+    return alteredConfig
   },
+  stories: [
+    '../assets/javascripts/kitten/**/stories.@(js|mdx)',
+    '../assets/javascripts/kitten/**/*.stories.@(js|mdx)',
+    '../doc/**/*.stories.@(js|mdx)',
+  ],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    '@storybook/addon-a11y',
+  ],
+  staticDirs: ['./public'],
 }

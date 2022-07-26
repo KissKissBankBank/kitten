@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SlideModal /> snapshot tests is closed matches with snapshot 1`] = `
+<div
+  className="k-SlideModal"
+>
+  <button
+    onClick={[Function]}
+  >
+    Open
+  </button>
+</div>
+`;
+
+exports[`<SlideModal /> snapshot tests is open matches with snapshot 1`] = `
+<div
+  className="k-SlideModal"
+>
+  <div
+    className="k-SlideModal__overlay"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "--modal-zIndex": 110,
+        "background": "#fff",
+      }
+    }
+  >
+    <div
+      aria-describedby=""
+      aria-label="Modal"
+      aria-labelledby=""
+      aria-modal={true}
+      className="k-SlideModal__wrapper k-SlideModal__wrapper--medium"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onMouseUp={[Function]}
+      role="dialog"
+      style={
+        Object {
+          "lineHeight": 20,
+          "wordSpacing": 10,
+        }
+      }
+      tabIndex="-1"
+    >
+      <button
+        aria-label="Fermer"
+        className="sc-bczRLJ erTPHf k-Button k-SlideModal__closeButton k-Button--small k-Button--hydrogen k-Button--fit-icon"
+        onClick={[Function]}
+        style={
+          Object {
+            "--Button-border-radius": 0,
+            "--Button-bullet-color": null,
+          }
+        }
+        title="Fermer"
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="20"
+          viewBox="0 0 17 18"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+            fill="var(--color-grey-900, #222)"
+          />
+        </svg>
+      </button>
+      <div
+        className="k-SlideModal__main"
+      >
+        <p
+          className="sc-gsnTZi mZbdM k-Title k-SlideModal__title k-Title--primary k-Title--noMargin"
+          style={
+            Object {
+              "--Title-css-color": null,
+            }
+          }
+        >
+          Oops… Quelque chose s’est mal passé.
+        </p>
+        <div
+          className="k-SlideModal__content k-SlideModal__content--gradientScroll"
+        >
+          <p>
+            Notre équipe a été automatiquement notifiée et fait en sorte de résoudre ce problème au plus vite.
+          </p>
+        </div>
+        <div
+          className="k-SlideModal__actions"
+        >
+          <button
+            onClick={[Function]}
+          >
+            Retour à la page d’accueil
+          </button>
+          <button
+            onClick={[Function]}
+          >
+            Recharger la page
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

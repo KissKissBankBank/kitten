@@ -1,24 +1,27 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title as KittenTitle } from '../../../../components/typography/title'
+import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title as KittenTitle,
+  ScreenConfig,
+  pxToRem,
+} from 'kitten'
 import {
   HorizontalStroke,
-  DEFAULT,
-  BIG,
-} from '../../../../components/layout/horizontal-stroke'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
+  MEDIUM,
+  LARGE,
+} from '../../../../components/typography/horizontal-stroke'
 
 const StyledHorizontalStroke = styled(HorizontalStroke)`
-  ${DEFAULT}
+  ${MEDIUM}
   width: ${pxToRem(40)};
   margin: 0 auto;
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    ${BIG}
+    ${LARGE}
     height: ${pxToRem(6)};
     margin: 0;
   }

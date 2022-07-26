@@ -1,0 +1,72 @@
+/// Block alignment utilities, with FlexBox.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-align-items;
+///
+/// @example html
+///
+///   <div class="k-u-flex-alignItems-center@xxs-down">…</div>
+///   <div class="k-u-flex-alignItems-center@xs-down">…</div>
+///   <div class="k-u-flex-alignItems-center@s-down">…</div>
+///   <div class="k-u-flex-alignItems-center@m-down">…</div>
+///   <div class="k-u-flex-alignItems-center@l-down">…</div>
+///
+///   <div class="k-u-flex-alignItems-center@xs-up">…</div>
+///   <div class="k-u-flex-alignItems-center@s-up">…</div>
+///   <div class="k-u-flex-alignItems-center@m-up">…</div>
+///   <div class="k-u-flex-alignItems-center@l-up">…</div>
+///   <div class="k-u-flex-alignItems-center@xl-up">…</div>
+///
+///   <div class="k-u-flex-alignItems-center">…</div>
+///   <div class="k-u-flex-alignItems-start">…</div>
+///   <div class="k-u-flex-alignItems-end">…</div>
+
+@mixin k-u-flex-alignItems($position, $align) {
+  $value: $align;
+
+  .k-u-flex-alignItems-#{$position} {
+    align-items: $value !important;
+  }
+}
+
+@mixin k-utilities-align-items {
+  $k-variants: (
+    normal: normal,
+    stretch: stretch,
+    center: center,
+    start: flex-start,
+    end: flex-end,
+    baseline: baseline,
+  );
+
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-flex-alignItems($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-alignItems($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-alignItems($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+}

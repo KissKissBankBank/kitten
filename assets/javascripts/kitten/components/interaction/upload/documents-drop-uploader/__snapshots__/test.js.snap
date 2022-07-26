@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocumentsDropUploader /> should match snapshot 1`] = `
+<div
+  className="sc-gsnTZi etiXaS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <div
+    className="k-DrocumentDropUploader__icon"
+  >
+    <svg
+      fill="currentColor"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="k-DocumentsDropUploader__content"
+    id="DocumentsDropUploader-cropper-description"
+  >
+    <div
+      className="k-DocumentsDropUploader__title"
+    >
+      
+    </div>
+    <div
+      className="k-DocumentsDropUploader__text"
+    >
+      
+    </div>
+    <div
+      className="k-DocumentsDropUploader__info"
+    >
+      
+    </div>
+    <input
+      accept=""
+      aria-describedby={null}
+      disabled={false}
+      id="DocumentsDropUploader"
+      multiple={true}
+      onChange={[Function]}
+      type="file"
+    />
+    <label
+      className="k-DocumentsDropUploader__button"
+      htmlFor="DocumentsDropUploader"
+    >
+      
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<DocumentsDropUploader /> should match snapshot disabled 1`] = `
+<div
+  className="sc-gsnTZi etiXaS k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <div
+    className="k-DrocumentDropUploader__icon"
+  >
+    <svg
+      fill="currentColor"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="k-DocumentsDropUploader__content"
+    id="DocumentsDropUploader-cropper-description"
+  >
+    <div
+      className="k-DocumentsDropUploader__title"
+    >
+      Upload your ID documents
+    </div>
+    <div
+      className="k-DocumentsDropUploader__text"
+    >
+      Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    </div>
+    <div
+      className="k-DocumentsDropUploader__info"
+    >
+      
+    </div>
+    <input
+      accept=""
+      aria-describedby={null}
+      disabled={true}
+      id="DocumentsDropUploader"
+      multiple={true}
+      onChange={[Function]}
+      type="file"
+    />
+    <label
+      className="k-DocumentsDropUploader__button"
+      htmlFor="DocumentsDropUploader"
+    >
+      Add a document
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<DocumentsDropUploader /> should match snapshot disabled 2`] = `
+<div
+  className="sc-gsnTZi etiXaS k-DocumentsDropUploader k-DocumentsDropUploader--ready k-DocumentsDropUploader--disabled"
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <div
+    className="k-DrocumentDropUploader__icon"
+  >
+    <svg
+      fill="currentColor"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="k-DocumentsDropUploader__content"
+    id="DocumentsDropUploader-cropper-description"
+  >
+    <div
+      className="k-DocumentsDropUploader__title"
+    >
+      Upload your ID documents
+    </div>
+    <ul
+      className="k-DocumentsDropUploader__fileList"
+    >
+      <li
+        className="sc-bczRLJ jLwBHq k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--medium k-Tag--status"
+      >
+        <span
+          className="k-DocumentsDropUploader__file__text"
+        >
+          kitten.jpg
+        </span>
+      </li>
+    </ul>
+    <input
+      accept=""
+      aria-describedby={null}
+      disabled={true}
+      id="DocumentsDropUploader"
+      multiple={true}
+      onChange={[Function]}
+      type="file"
+    />
+    <label
+      className="k-DocumentsDropUploader__button"
+      htmlFor="DocumentsDropUploader"
+    >
+      Add a document
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<DocumentsDropUploader /> should match snapshot with error 1`] = `
+Array [
+  <div
+    className="sc-gsnTZi etiXaS k-DocumentsDropUploader k-DocumentsDropUploader--error"
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+  >
+    <div
+      className="k-DrocumentDropUploader__icon"
+    >
+      <svg
+        fill="currentColor"
+        height="13"
+        viewBox="0 0 12 13"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+        />
+      </svg>
+    </div>
+    <div
+      className="k-DocumentsDropUploader__content"
+      id="DocumentsDropUploader-cropper-description"
+    >
+      <div
+        className="k-DocumentsDropUploader__title"
+      >
+        Upload your ID documents
+      </div>
+      <ul
+        className="k-DocumentsDropUploader__fileList"
+      >
+        <li
+          className="sc-bczRLJ jLwBHq k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--medium k-Tag--status"
+        >
+          <span
+            className="k-DocumentsDropUploader__file__text"
+          >
+            kitten.jpg
+          </span>
+          <button
+            className="k-DocumentsDropUploader__file__button k-u-reset-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="k-u-a11y-visuallyHidden"
+            >
+              Remove kitten.jpg from the list
+            </span>
+            <svg
+              fill="currentColor"
+              height={8}
+              viewBox="0 0 8 8"
+              width={8}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+              />
+              <path
+                d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <input
+        accept=""
+        aria-describedby="DocumentsDropUploader-error-description"
+        disabled={false}
+        id="DocumentsDropUploader"
+        multiple={true}
+        onChange={[Function]}
+        type="file"
+      />
+      <label
+        className="k-u-size-small k-u-weight-500 k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
+        htmlFor="DocumentsDropUploader"
+      >
+        <span
+          aria-hidden={true}
+        >
+          + 
+        </span>
+        Add a document
+      </label>
+    </div>
+  </div>,
+  <ul
+    className="sc-dkzDqf ienDuv k-DocumentsDropUploader__errorList"
+    id="DocumentsDropUploader-error-description"
+  >
+    <li
+      className="k-u-color-error k-u-size-micro k-u-weight-700"
+    />
+  </ul>,
+]
+`;
+
+exports[`<DocumentsDropUploader /> should match snapshot with many props 1`] = `
+<div
+  className="sc-gsnTZi etiXaS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <div
+    className="k-DrocumentDropUploader__icon"
+  >
+    <svg
+      fill="currentColor"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="k-DocumentsDropUploader__content"
+    id="DocumentsDropUploader-cropper-description"
+  >
+    <div
+      className="k-DocumentsDropUploader__title"
+    >
+      Upload your ID documents
+    </div>
+    <ul
+      className="k-DocumentsDropUploader__fileList"
+    >
+      <li
+        className="sc-bczRLJ jLwBHq k-Tag k-DocumentsDropUploader__file k-Tag--info k-Tag--medium k-Tag--status"
+      >
+        <span
+          className="k-DocumentsDropUploader__file__text"
+        >
+          kitten.jpg
+        </span>
+        <button
+          className="k-DocumentsDropUploader__file__button k-u-reset-button"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="k-u-a11y-visuallyHidden"
+          >
+            Remove kitten.jpg from the list
+          </span>
+          <svg
+            fill="currentColor"
+            height={8}
+            viewBox="0 0 8 8"
+            width={8}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+            />
+            <path
+              d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+            />
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <input
+      accept=""
+      aria-describedby={null}
+      disabled={false}
+      id="DocumentsDropUploader"
+      multiple={true}
+      onChange={[Function]}
+      type="file"
+    />
+    <label
+      className="k-u-size-small k-u-weight-500 k-DocumentsDropUploader__label k-u-link k-u-link-primary1 k-u-cursor-pointer"
+      htmlFor="DocumentsDropUploader"
+    >
+      <span
+        aria-hidden={true}
+      >
+        + 
+      </span>
+      Add a document
+    </label>
+  </div>
+</div>
+`;
+
+exports[`<DocumentsDropUploader /> should match snapshot without props 1`] = `
+<div
+  className="sc-gsnTZi etiXaS k-DocumentsDropUploader k-DocumentsDropUploader--ready"
+  onDragEnter={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <div
+    className="k-DrocumentDropUploader__icon"
+  >
+    <svg
+      fill="currentColor"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="k-DocumentsDropUploader__content"
+    id="DocumentsDropUploader-cropper-description"
+  >
+    <div
+      className="k-DocumentsDropUploader__title"
+    >
+      
+    </div>
+    <div
+      className="k-DocumentsDropUploader__text"
+    >
+      
+    </div>
+    <div
+      className="k-DocumentsDropUploader__info"
+    >
+      
+    </div>
+    <input
+      accept=""
+      aria-describedby={null}
+      disabled={false}
+      id="DocumentsDropUploader"
+      multiple={true}
+      onChange={[Function]}
+      type="file"
+    />
+    <label
+      className="k-DocumentsDropUploader__button"
+      htmlFor="DocumentsDropUploader"
+    >
+      
+    </label>
+  </div>
+</div>
+`;

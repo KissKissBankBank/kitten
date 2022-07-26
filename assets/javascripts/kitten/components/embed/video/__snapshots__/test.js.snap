@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Video /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ dDuoJi k-Video k-Video--objectFitCover"
+>
+  <button
+    className="k-u-reset-button k-Video__button"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      height="90"
+      viewBox="0 0 90 90"
+      width="90"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="45"
+        cy="45"
+        fill="var(--color-grey-900)"
+        opacity="var(--player-icon-opacity, 0.8)"
+        r="44.5"
+        stroke="var(--color-grey-000)"
+        strokeWidth="1"
+      />
+      <path
+        d="M60 43.27a2 2 0 0 1 0 3.46L39 58.86a2 2 0 0 1-3-1.74V32.88a2 2 0 0 1 3-1.74l21 12.13Z"
+        fill="var(--color-grey-000)"
+      />
+    </svg>
+  </button>
+  <video
+    className="k-Video__videoElement"
+    controls={false}
+  />
+</div>
+`;
+
+exports[`<Video /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ dDuoJi k-Video k-Video--objectFitCover"
+>
+  <div
+    className="sc-gsnTZi blSMxk"
+  >
+    <div
+      className="sc-dkzDqf jQXZYo k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        fill="var(--color-grey-900, #222)"
+        viewBox="0 0 5 5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={2.5}
+          cy={2.5}
+          r={5}
+        />
+      </svg>
+    </div>
+  </div>
+  <button
+    className="k-u-reset-button k-Video__button"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      height="90"
+      viewBox="0 0 90 90"
+      width="90"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="45"
+        cy="45"
+        fill="var(--color-grey-900)"
+        opacity="var(--player-icon-opacity, 0.8)"
+        r="44.5"
+        stroke="var(--color-grey-000)"
+        strokeWidth="1"
+      />
+      <path
+        d="M60 43.27a2 2 0 0 1 0 3.46L39 58.86a2 2 0 0 1-3-1.74V32.88a2 2 0 0 1 3-1.74l21 12.13Z"
+        fill="var(--color-grey-000)"
+      />
+    </svg>
+  </button>
+  <video
+    autoPlay={false}
+    className="k-Video__videoElement"
+    controls={false}
+    loop={true}
+    muted={true}
+    playsInline={true}
+    poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg"
+    src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
+  />
+</div>
+`;

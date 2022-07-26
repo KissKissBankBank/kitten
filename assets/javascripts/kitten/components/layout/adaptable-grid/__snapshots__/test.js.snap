@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ duDwfE"
+>
+  <div
+    className="sc-gsnTZi hRHrqa"
+  >
+    Test
+  </div>
+  <div
+    className="sc-gsnTZi VPiCx"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ duDwfE my_classname"
+>
+  <div
+    className="sc-gsnTZi bHlCej my_second_classname"
+  >
+    Test
+  </div>
+  <div
+    className="sc-gsnTZi bHlCej my_third_classname"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
+<dl
+  className="sc-bczRLJ duDwfE"
+>
+  <dd
+    className="sc-gsnTZi hRHrqa"
+  >
+    Test
+  </dd>
+  <dt
+    className="sc-gsnTZi VPiCx"
+  >
+    Test
+  </dt>
+</dl>
+`;
+
+exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ exFquc"
+>
+  <div
+    className="sc-gsnTZi jSFEMl"
+    offset={3}
+  >
+    Test
+  </div>
+  <div
+    className="sc-gsnTZi jvZfCH"
+  >
+    Test
+  </div>
+</div>
+`;

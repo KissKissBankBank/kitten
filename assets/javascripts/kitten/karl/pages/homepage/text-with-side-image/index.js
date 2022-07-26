@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { CONTAINER_PADDING } from '../../../../constants/grid-config'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import COLORS from '../../../../constants/colors-config'
+import {
+  TitleWithStroke,
+  pxToRem,
+  stepToRem,
+  ScreenConfig,
+  Grid,
+  GridCol,
+  CONTAINER_PADDING,
+  TYPOGRAPHY,
+  COLORS,
+} from 'kitten'
 
 const portraitImageRatio = 50 / 67
 const bulletSize = 4
@@ -57,21 +61,21 @@ const StyledTextWithSideImage = styled(Grid)`
 
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       width: ${pxToRem(bulletSize)};
       height: ${pxToRem(bulletSize)};
       border-radius: 100%;
-      top: calc(.8 * ${stepToRem(0)});
+      top: calc(0.8 * ${stepToRem(0)});
       left: ${pxToRem(-5 - bulletSize)};
       background-color: ${COLORS.font1};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        top: calc(.8 * ${stepToRem(1)});
+        top: calc(0.8 * ${stepToRem(1)});
         left: ${pxToRem(-10 - bulletSize)};
       }
       @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        top: calc(.8 * ${stepToRem(2)});
+        top: calc(0.8 * ${stepToRem(2)});
       }
     }
 
@@ -112,7 +116,7 @@ const StyledTextWithSideImage = styled(Grid)`
   }
 
   .TextWithSideImage__itemTitle {
-    ${TYPOGRAPHY.fontStyles.bold}
+    ${TYPOGRAPHY.fontStyles['700']}
     font-size: ${stepToRem(0)};
     margin: 0 0 ${pxToRem(5)};
 

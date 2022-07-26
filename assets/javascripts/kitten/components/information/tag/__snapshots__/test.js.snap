@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should match its empty snapshot 1`] = `
+<span
+  className="sc-bczRLJ jLwBHq k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+/>
+`;
+
+exports[`<Tag /> should match its snapshot with props 1`] = `
+<span
+  className="sc-bczRLJ jLwBHq k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+>
+  <strong>
+    5
+  </strong>
+   kittens
+</span>
+`;

@@ -1,0 +1,442 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
+.c2 {
+  --arrowContainer-borderSize: calc( var(--arrowContainer-borderDistance) + var(--arrowContainer-arrowSize) );
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: var(--arrowContainer-padding);
+  background-color: var(--arrowContainer-color);
+  border-radius: var(--arrowContainer-borderRadius);
+  border: var(--arrowContainer-borderWidth) solid var(--arrowContainer-borderColor);
+  --arrowContainer-arrowMainPosition: calc( var(--arrowContainer-arrowSize) * -2 );
+  --arrowContainer-arrowBorderMainPosition: calc( (var(--arrowContainer-borderSize) + var(--arrowContainer-borderDistance)) * -1 );
+}
+
+.c2.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c2 .k-ArrowContainer__arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: var(--arrowContainer-arrowSize) solid transparent;
+}
+
+.c2.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.c2.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: var(--arrowContainer-arrowMainPosition);
+  left: var(--arrowContainer-arrowDistance);
+  border-bottom-color: var(--arrowContainer-color);
+}
+
+.c2.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: var(--arrowContainer-arrowBorderMainPosition);
+  left: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--arrowContainer-borderColor);
+}
+
+.c2.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: var(--arrowContainer-arrowMainPosition);
+  left: var(--arrowContainer-arrowDistance);
+  border-top-color: var(--arrowContainer-color);
+}
+
+.c2.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: var(--arrowContainer-arrowBorderMainPosition);
+  left: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-top-color: var(--arrowContainer-borderColor);
+}
+
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--arrowContainer-arrowDistance);
+}
+
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--arrowContainer-borderSize) * -1);
+}
+
+.c2.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: var(--arrowContainer-arrowMainPosition);
+  top: var(--arrowContainer-arrowDistance);
+  border-left-color: var(--arrowContainer-color);
+}
+
+.c2.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: var(--arrowContainer-arrowBorderMainPosition);
+  top: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-left-color: var(--arrowContainer-borderColor);
+}
+
+.c2.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: var(--arrowContainer-arrowMainPosition);
+  top: var(--arrowContainer-arrowDistance);
+  border-right-color: var(--arrowContainer-color);
+}
+
+.c2.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--arrowContainer-borderSize) * -1);
+  left: var(--arrowContainer-arrowBorderMainPosition);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-right-color: var(--arrowContainer-borderColor);
+}
+
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--arrowContainer-arrowDistance);
+}
+
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c2.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--arrowContainer-borderSize) * -1);
+}
+
+.c1 {
+  --Button-border-radius: var(--border-radius-s);
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-grey-900,#222);
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
+  border: var(--border-width) solid var(--color-grey-700);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c1.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c1 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1:disabled,
+.c1.k-Button--disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:focus-visible {
+  outline: auto;
+}
+
+.c1.k-Button--nano {
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
+}
+
+.c1.k-Button--micro {
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.c1.k-Button--small {
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c1.k-Button--medium {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c1.k-Button--large {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c1.k-Button--huge {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c1.k-Button--giant {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c1.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c1.k-Button--fit-icon {
+  padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
+}
+
+.c1.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
+.c1.k-Button--fit-fluid {
+  width: 100%;
+}
+
+.c1.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c1.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c1.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
+.c1.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
+.c1 svg:not(.k-ColorSvg),
+.c1 svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
+}
+
+.c1:hover {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
+.c1:focus {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
+.c1:active {
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-000,#fff);
+  color: var(--color-grey-900,#222);
+}
+
+.c1:disabled,
+.c1.k-Button--disabled {
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-600);
+}
+
+.c0 {
+  --ButtonWithTooltip-translate: -50%;
+  --ButtonWithTooltip-origin: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.c0 .k-ButtonWithTooltip__tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);
+  -ms-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);
+  transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0) scale(0.66);
+  -webkit-transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  -ms-transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  transform-origin: var(--ButtonWithTooltip-origin) 0.4375rem;
+  opacity: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 15.625rem;
+  display: block;
+}
+
+.c0 .k-ButtonWithTooltip__button:hover + .k-ButtonWithTooltip__tooltip,
+.c0 .k-ButtonWithTooltip__button:focus + .k-ButtonWithTooltip__tooltip {
+  -webkit-animation: 0.16s ease bTakcF;
+  animation: 0.16s ease bTakcF;
+  -webkit-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
+  -ms-transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
+  transform: translateX(var(--ButtonWithTooltip-translate)) translateY(0.4375rem) scale(1);
+  opacity: 1;
+}
+
+.c0.k-ButtonWithTooltip--left {
+  --ButtonWithTooltip-translate: calc( -100% + 1.0625rem );
+  --ButtonWithTooltip-origin: calc( 100% - 1.0625rem );
+}
+
+.c0.k-ButtonWithTooltip--right {
+  --ButtonWithTooltip-translate: calc( 0% - 1.0625rem );
+  --ButtonWithTooltip-origin: 1.0625rem;
+}
+
+@media (min-width:640px) {
+  .c1.k-Button--large {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c1.k-Button--huge {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c1.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c1[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
+  }
+}
+
+<div
+  className="c0 k-ButtonWithTooltip k-ButtonWithTooltip--center"
+>
+  <button
+    aria-label="Text of the tooltip"
+    className="c1 k-Button k-ButtonWithTooltip__button k-Button--medium k-Button--hydrogen k-Button--fit-content"
+    style={
+      Object {
+        "--Button-border-radius": null,
+        "--Button-bullet-color": null,
+      }
+    }
+    type="button"
+  >
+    MyButtonWithTooltip
+  </button>
+  <div
+    aria-hidden={true}
+    className="c2 k-ArrowContainer k-ButtonWithTooltip__tooltip k-ArrowContainer--top"
+    style={
+      Object {
+        "--arrowContainer-arrowDistance": "calc(50% - 0.4375rem)",
+        "--arrowContainer-arrowSize": "0.4375rem",
+        "--arrowContainer-borderColor": "var(--color-grey-300, #eee)",
+        "--arrowContainer-borderDistance": 0,
+        "--arrowContainer-borderRadius": "0.25rem",
+        "--arrowContainer-borderWidth": 0,
+        "--arrowContainer-color": "var(--color-grey-300, #eee)",
+        "--arrowContainer-padding": "0.5rem",
+      }
+    }
+  >
+    <span
+      className="k-u-color-font1 k-u-size-small k-u-weight-500"
+    >
+      Text of the tooltip
+    </span>
+    <span
+      className="k-ArrowContainer__arrow"
+    />
+  </div>
+</div>
+`;

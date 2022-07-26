@@ -1,0 +1,71 @@
+/// Flex direction utilities, with FlexBox.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-flex-direction;
+///
+/// @example html
+///
+///   <div class="k-u-flex-direction-row@xxs-down">…</div>
+///   <div class="k-u-flex-direction-row@xs-down">…</div>
+///   <div class="k-u-flex-direction-row@s-down">…</div>
+///   <div class="k-u-flex-direction-row@m-down">…</div>
+///   <div class="k-u-flex-direction-row@l-down">…</div>
+///
+///   <div class="k-u-flex-direction-row@xs-up">…</div>
+///   <div class="k-u-flex-direction-row@s-up">…</div>
+///   <div class="k-u-flex-direction-row@m-up">…</div>
+///   <div class="k-u-flex-direction-row@l-up">…</div>
+///   <div class="k-u-flex-direction-row@xl-up">…</div>
+///
+///   <div class="k-u-flex-direction-row">…</div>
+///   <div class="k-u-flex-direction-rowReverse">…</div>
+///   <div class="k-u-flex-direction-column">…</div>
+///   <div class="k-u-flex-direction-columnReverse">…</div>
+
+@mixin k-u-flex-direction($position, $align) {
+  $value: $align;
+
+  .k-u-flex-direction-#{$position} {
+    flex-direction: $value !important;
+  }
+}
+
+@mixin k-utilities-flex-direction {
+  $k-variants: (
+    row: row,
+    rowReverse: row-reverse,
+    column: column,
+    columnReverse: column-reverse,
+  );
+
+  @each $variant_name, $attribute in $k-variants {
+    @include k-u-flex-direction($variant_name, $attribute);
+  }
+
+  @each $mq_name, $query in reverse($k-media-queries) {
+    $addendum: \@#{$mq_name}-down;
+
+    @if $mq_name != "xl" {
+      @include k-media-max($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-direction($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @each $variant_name, $attribute in $k-variants {
+          @include k-u-flex-direction($variant_name + $addendum, $attribute);
+        }
+      }
+    }
+  }
+}

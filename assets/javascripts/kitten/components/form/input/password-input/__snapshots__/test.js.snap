@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PasswordInput /> should match its empty snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
+>
+  <input
+    className="k-TextInput k-TextInput--hasButton"
+    defaultValue=""
+    disabled={false}
+    id="password"
+    name="password"
+    onChange={[Function]}
+    type="password"
+  />
+  <button
+    aria-label="Custom icon label"
+    aria-pressed={false}
+    className="k-TextInput__button k-PasswordInput__icon"
+    onClick={[Function]}
+    rounded={false}
+    size="medium"
+    type="button"
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      viewBox="0 0 18 12"
+      width="18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+      />
+      <circle
+        cx="9"
+        cy="6"
+        r="2"
+      />
+    </svg>
+  </button>
+</div>
+`;

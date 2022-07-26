@@ -1,12 +1,6 @@
 import React from 'react'
 import HorizontalCard from './components/horizontal-card'
-
-import { Container } from '../../../components/grid/container'
-import { Title } from '../../../components/typography/title'
-import { Text } from '../../../components/typography/text'
-import { ToggleSwitch } from '../../../components/form/toggle-switch'
-import COLORS from '../../../constants/colors-config'
-
+import { Container, Title, Text, ToggleSwitch, COLORS } from 'kitten'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
@@ -35,7 +29,7 @@ const EmailPreferences = () => (
           ornare sem lacinia quam venenatis vestibulum.
         </Text>
         <br />
-        <Text weight="bold" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -62,7 +56,7 @@ const EmailPreferences = () => (
           elit.
         </Text>
         <br />
-        <Text weight="bold" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -87,7 +81,7 @@ const EmailPreferences = () => (
           ornare sem lacinia quam venenatis vestibulum.
         </Text>
         <br />
-        <Text weight="bold" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -114,7 +108,7 @@ const EmailPreferences = () => (
           elit.
         </Text>
         <br />
-        <Text weight="bold" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>
@@ -139,7 +133,7 @@ const EmailPreferences = () => (
           ornare sem lacinia quam venenatis vestibulum.
         </Text>
         <br />
-        <Text weight="bold" size="micro">
+        <Text weight="700" size="micro">
           Une fois par semaine
         </Text>
       </HorizontalCard.Text>

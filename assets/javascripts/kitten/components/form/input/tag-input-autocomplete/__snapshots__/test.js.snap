@@ -1,0 +1,547 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagInputAutocomplete /> should match its disabled snapshot with disabled props 1`] = `
+<div
+  className="sc-bczRLJ bWDIhH k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
+  onClick={[Function]}
+>
+  <p
+    className="k-u-a11y-visuallyHidden"
+    id="test-slider-input-legend"
+  >
+    This list input is disabled.
+  </p>
+  <ul
+    className="k-Form-TagInput__list"
+  >
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Black
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Black
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Blue
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Blue
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Green and magenta
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Green and magenta
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <ul
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions removals"
+    className="k-u-a11y-visuallyHidden"
+  >
+    <li>
+      Black
+    </li>
+    <li>
+      Blue
+    </li>
+    <li>
+      Green and magenta
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<TagInputAutocomplete /> should match its disabled snapshot with objects on initialItemsList 1`] = `
+<div
+  className="sc-bczRLJ bWDIhH k-Form-TagInput k-Form-TagInput--medium k-Form-TagInput--disabled"
+  onClick={[Function]}
+>
+  <p
+    className="k-u-a11y-visuallyHidden"
+    id="test-slider-input-legend"
+  >
+    This list input is disabled.
+  </p>
+  <ul
+    className="k-Form-TagInput__list"
+  >
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem k-Form-TagInput__tagItem--disabled"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Black
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Élément désactivé.
+        </span>
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Black
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Blue
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Blue
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Green and magenta
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Green and magenta
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Green and magenta
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Green and magenta
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <ul
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions removals"
+    className="k-u-a11y-visuallyHidden"
+  >
+    <li>
+      Black
+    </li>
+    <li>
+      Blue
+    </li>
+    <li>
+      Green and magenta
+    </li>
+    <li>
+      Green and magenta
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<TagInputAutocomplete /> should match its snapshot 1`] = `
+<div
+  className="sc-bczRLJ bWDIhH k-Form-TagInput k-Form-TagInput--medium"
+  onClick={[Function]}
+>
+  <p
+    className="k-u-a11y-visuallyHidden"
+    id="test-slider-input-legend"
+  >
+    Press Enter or Comma to add an item.
+  </p>
+  <ul
+    className="k-Form-TagInput__list"
+  >
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__inputItem"
+    >
+      <span
+        aria-activedescendant=""
+        aria-autocomplete="both"
+        aria-describedby="test-slider-input-legend"
+        aria-expanded={null}
+        aria-label="Tag input"
+        aria-owns={null}
+        aria-placeholder=""
+        className="k-Form-TagInput__input"
+        contentEditable={true}
+        id="test-slider-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onInput={[Function]}
+        onKeyDown={[Function]}
+        role="textbox"
+      />
+    </li>
+  </ul>
+  <ul
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions removals"
+    className="k-u-a11y-visuallyHidden"
+  />
+</div>
+`;
+
+exports[`<TagInputAutocomplete /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bczRLJ bWDIhH k-Form-TagInput k-Form-TagInput--huge"
+  onClick={[Function]}
+>
+  <p
+    className="k-u-a11y-visuallyHidden"
+    id="test-slider-input-legend"
+  >
+    Press Enter or Comma to add an item.
+  </p>
+  <ul
+    className="k-Form-TagInput__list"
+  >
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__inputItem"
+    >
+      <span
+        aria-activedescendant=""
+        aria-autocomplete="both"
+        aria-describedby="test-slider-input-legend"
+        aria-expanded={null}
+        aria-label="Tag input"
+        aria-owns={null}
+        aria-placeholder="OK"
+        className="k-Form-TagInput__input"
+        contentEditable={true}
+        id="test-slider-input"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onInput={[Function]}
+        onKeyDown={[Function]}
+        role="textbox"
+      />
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Black
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Black
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Blue
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Blue
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li
+      className="k-Form-TagInput__item k-Form-TagInput__tagItem"
+    >
+      <span
+        className="k-Form-TagInput__tag"
+      >
+        Green and magenta
+      </span>
+      <button
+        className="k-Form-TagInput__button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="k-u-a11y-visuallyHidden"
+        >
+          Retirer 
+          Green and magenta
+           de la liste.
+        </span>
+        <svg
+          fill="currentColor"
+          height={8}
+          viewBox="0 0 8 8"
+          width={8}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+          />
+          <path
+            d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <ul
+    aria-atomic="true"
+    aria-live="polite"
+    aria-relevant="additions removals"
+    className="k-u-a11y-visuallyHidden"
+  >
+    <li>
+      Black
+    </li>
+    <li>
+      Blue
+    </li>
+    <li>
+      Green and magenta
+    </li>
+  </ul>
+</div>
+`;

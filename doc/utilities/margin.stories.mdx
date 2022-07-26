@@ -1,0 +1,94 @@
+import { Meta, Canvas } from '@storybook/addon-docs'
+
+<Meta title="Documentation/CSS Utilities/Margin" />
+
+# Margin
+
+Margin utilities.
+
+These CSS utilities are complemented with the [`margin()` JS helper](?path=/story/helpers-margin--page)
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/spacing/_margin.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/spacing/_margin.scss)
+
+## Usage
+
+The reset margin utility is `k-u-margin-none`.
+
+The basic structure of a margin utility class is
+`k-u-margin-(direction)-(value)[@(media query)]`.
+Here are some examples:
+
+```
+<div class="k-u-margin-top-single">…</div>
+<div class="k-u-margin-bottom-double">…</div>
+<div class="k-u-margin-left-tripleHalf">…</div>
+<div class="k-u-margin-horizontal-sextuple">…</div>
+<div class="k-u-margin-vertical-noneHalf@l-up">…</div>
+<div class="k-u-margin-vertical-negativeSingle@l-up">…</div>
+<div class="k-u-margin-horizontal-quintupleHalf@xxs-down">…</div>
+```
+
+### `direction`
+
+`direction` can have one of these six values
+
+- `top`
+- `bottom`
+- `left`
+- `right`
+- `horizontal` (applies to both `top` and `bottom`)
+- `vertical` (applies to both `left` and `right`)
+
+### `value`
+
+`value` can be one of these 42 values
+
+- `none` will be equivalent to `0`
+- `noneHalf` will be equivalent to `5px`
+- `single` will be equivalent to `10px`
+- `singleHalf` will be equivalent to `15px`
+- `double` will be equivalent to `20px`
+- `doubleHalf` will be equivalent to `25px`
+- `triple` will be equivalent to `30px`
+- `tripleHalf` will be equivalent to `35px`
+- `quadruple` will be equivalent to `40px`
+- `quadrupleHalf` will be equivalent to `45px`
+- `quintuple` will be equivalent to `50px`
+- `quintupleHalf` will be equivalent to `55px`
+- `sextuple` will be equivalent to `60px`
+- `sextupleHalf` will be equivalent to `65px`
+- `septuble` will be equivalent to `70px`
+- `septubleHalf` will be equivalent to `75px`
+- `octuple` will be equivalent to `80px`
+- `octupleHalf` will be equivalent to `85px`
+- `nonuple` will be equivalent to `90px`
+- `nonupleHalf` will be equivalent to `95px`
+- `decuple` will be equivalent to `100px`
+- `negativeNoneHalf` will be equivalent to `-5px`
+- `negativeSingle` will be equivalent to `-10px`
+- `negativeSingleHalf` will be equivalent to `-15px`
+- `negativeDouble` will be equivalent to `-20px`
+- `negativeDoubleHalf` will be equivalent to `-25px`
+- `negativeTriple` will be equivalent to `-30px`
+- `negativeTripleHalf` will be equivalent to `-35px`
+- `negativeQuadruple` will be equivalent to `-40px`
+- `negativeQuadrupleHalf` will be equivalent to `-45px`
+- `negativeQuintuple` will be equivalent to `-50px`
+- `negativeQuintupleHalf` will be equivalent to `-55px`
+- `negativeSextuple` will be equivalent to `-60px`
+- `negativeSextupleHalf` will be equivalent to `-65px`
+- `negativeSeptuble` will be equivalent to `-70px`
+- `negativeSeptubleHalf` will be equivalent to `-75px`
+- `negativeOctuple` will be equivalent to `-80px`
+- `negativeOctupleHalf` will be equivalent to `-85px`
+- `negativeNonuple` will be equivalent to `-90px`
+- `negativeNonupleHalf` will be equivalent to `-95px`
+- `negativeDecuple` will be equivalent to `-100px`
+- `auto` will be equivalent to `auto`
+
+### `media query`
+
+`media query` is optional and follows the general scheme described in
+[Using Utilities: Media Queries](?path=/story/documentation-usage-using-utilities--page#media-queries)

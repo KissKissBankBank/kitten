@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxButton /> default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium"
+>
+  <input
+    className="k-Form-CheckboxButton__input"
+    disabled={false}
+    id="test-checkbox"
+    type="checkbox"
+  />
+  <label
+    className="k-u-weight-500 k-Form-CheckboxButton__label"
+    htmlFor="test-checkbox"
+    onClick={[Function]}
+  >
+    <span
+      className="k-Form-CheckboxButton__labelText"
+    >
+      Label
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<CheckboxButton /> whith label and children props matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium"
+>
+  <input
+    className="k-Form-CheckboxButton__input"
+    disabled={false}
+    id="test-checkbox"
+    type="checkbox"
+  />
+  <label
+    className="k-Form-CheckboxButton__label"
+    htmlFor="test-checkbox"
+    onClick={[Function]}
+  >
+    <span
+      className="k-u-weight-500 k-Form-CheckboxButton__labelText custom-label-className"
+    >
+      Main label
+    </span>
+    <span
+      className="k-u-weight-400 k-Form-CheckboxButton__content custom-text-className"
+    >
+      Secondary content
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<CheckboxButton /> with label prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium"
+>
+  <input
+    className="k-Form-CheckboxButton__input"
+    disabled={false}
+    id="test-checkbox"
+    type="checkbox"
+  />
+  <label
+    className="k-u-weight-500 k-Form-CheckboxButton__label custom-label-className"
+    htmlFor="test-checkbox"
+    onClick={[Function]}
+  >
+    <span
+      className="k-Form-CheckboxButton__labelText"
+    >
+      Test label
+    </span>
+  </label>
+</div>
+`;

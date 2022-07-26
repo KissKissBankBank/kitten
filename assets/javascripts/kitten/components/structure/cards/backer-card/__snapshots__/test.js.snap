@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackerCard /> by default matches with snapshot 1`] = `
+<div
+  className="sc-gsnTZi dEigMK k-BackerCard"
+>
+  <div>
+    <div
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-500"
+    >
+      Backer name
+    </div>
+  </div>
+  <span
+    className="sc-bczRLJ iLPwMw k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents"
+  >
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="#custom-src"
+    />
+  </span>
+  <p
+    className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-400 k-u-margin-none"
+  >
+    Description
+  </p>
+</div>
+`;
+
+exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
+<div
+  className="sc-gsnTZi dEigMK k-BackerCard"
+>
+  <div>
+    <div
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-500"
+    >
+      Backer name
+    </div>
+    <div
+      className="k-u-color-font1 k-u-size-micro k-u-weight-400"
+    >
+      Subtitle
+    </div>
+  </div>
+  <span
+    className="sc-bczRLJ iLPwMw k-ButtonImage k-ButtonImage--medium k-ButtonImage--withoutPointerEvents"
+  >
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="#custom-src"
+    />
+  </span>
+  <p
+    className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-400 k-u-margin-none"
+  >
+    Description
+  </p>
+</div>
+`;

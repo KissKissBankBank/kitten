@@ -1,5 +1,9 @@
 Closes #.
 
+Vercel link:
+
+- https://kitten-git-…
+
 Screenshot:
 
 
@@ -9,4 +13,4 @@ TODO:
 - [ ] Changelog
 - [ ] A11Y
 - [ ] Stories / Docs
-- [ ] BrowserStack
+- [ ] New component added to `assets/javascripts/kitten/index.js`

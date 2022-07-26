@@ -1,86 +1,66 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import { ToggleSwitch } from './index'
+import { action } from '@storybook/addon-actions'
+import { DocsPage } from 'storybook/docs-page'
 
-const info = {
-  text: `
-    # ToggleSwitch
-    &nbsp;
-
-    ## Import
-    ~~~js
-    import { ToggleSwitch } from '@kisskissbankbank/kitten/src/components/form/switch'
-    ~~~
-
-    ## Usage
-    &nbsp;
-
-    #### Default
-    ~~~js
-    <ToggleSwitch id="toggle-switch" />
-    ~~~
-
-    #### Big label text
-    ~~~js
-    <ToggleSwitch id="toggle-switch" big />
-    ~~~
-
-    #### Disabled
-    ~~~js
-    <ToggleSwitch id="toggle-switch" disabled />
-    ~~~
-
-    #### Change label text
-    ~~~js
-    <ToggleSwitch id="toggle-switch" label="custom label text" />
-    ~~~
-
-    #### Change visibility of label
-    ~~~js
-    <ToggleSwitch id="toggle-switch" isLabelVisible={ false } />
-    ~~~
-
-    #### Reverse order of label & switch
-    ~~~js
-    <ToggleSwitch id="toggle-switch" reverseOrder />
-    ~~~
-
-    #### Have component switched on load
-    ~~~js
-    <ToggleSwitch id="toggle-switch" isChecked />
-    ~~~
-
-    #### Change colors
-    ~~~js
-    <ToggleSwitch id="toggle-switch" checkedColor="#000" defaultColor="#000" disabledColor="#ccc" activeColor="#333" />
-    ~~~
-
-  `,
+export default {
+  component: ToggleSwitch,
+  title: 'Form/ToggleSwitch',
+  decorators: [
+    story => (
+      <div className="story-Container story-Grid story-Grid--large">
+        {story()}
+      </div>
+    ),
+  ],
+  args: {
+    id: 'toggle-switch',
+    disabled: false,
+    label: 'ToggleSwitch label',
+    isLabelVisible: true,
+    reverseOrder: false,
+    locked: false,
+    onChange: action('onChange'),
+  },
+  argTypes: {
+    id: {
+      name: 'id',
+      control: 'text',
+    },
+    disabled: {
+      name: 'disabled',
+      control: 'boolean',
+    },
+    label: {
+      name: 'label',
+      control: 'text',
+    },
+    isLabelVisible: {
+      name: 'isLabelVisible',
+      control: 'boolean',
+    },
+    reverseOrder: {
+      name: 'reverseOrder',
+      control: 'boolean',
+    },
+    locked: {
+      name: 'locked',
+      control: 'boolean',
+    },
+    onChange: {
+      name: 'onChange',
+      control: null,
+    },
+  },
+  parameters: {
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="ToggleSwitch" />
+      ),
+    },
+  },
 }
 
-storiesOf('Form/ToggleSwitch', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withInfo)
-  .add(
-    'ToggleSwitch',
-    () => {
-      return (
-        <Grid style={{ marginTop: '5em' }}>
-          <GridCol offset="1" col="6">
-            <ToggleSwitch
-              id="toggle-switch"
-              disabled={boolean('Disabled', false)}
-              big={boolean('Big', false)}
-              label={text('Label', 'Le label')}
-              isLabelVisible={boolean('isLabelVisible', true)}
-              reverseOrder={boolean('reverseOrder', false)}
-            />
-          </GridCol>
-        </Grid>
-      )
-    },
-    { info },
-  )
+export const Default = args => {
+  return <ToggleSwitch {...args} />
+}

@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match with snapshot 1`] = `
+<div
+  className="sc-gsnTZi gSdDNb k-Avatar__wrapper"
+>
+  <div
+    className="k-Avatar k-Avatar--large"
+    style={
+      Object {
+        "--Avatar-height": undefined,
+        "--Avatar-width": undefined,
+        "--k-Avatar-background-color": "rgba(0,0,0,.8)",
+        "--k-Avatar-color": "white",
+      }
+    }
+  >
+    <span
+      className="k-Avatar__imageWrapper"
+    >
+      <img
+        alt="Alt text"
+        className="k-Avatar__image"
+        src="/kitten.jg"
+      />
+    </span>
+    <span
+      className="sc-bczRLJ jGJKXM k-Badge k-Avatar__badge"
+      style={
+        Object {
+          "--Badge-background-color": "var(--color-primary-500, #19b4fa)",
+        }
+      }
+      title="2 notifications"
+    >
+      2
+    </span>
+  </div>
+  <span
+    className="k-Avatar__text k-u-hidden@xxs-down k-Avatar__text--hasEllipsis"
+  >
+    Long Text
+    <br />
+    <span>
+      <span
+        className="k-u-hidden@xs-down"
+      >
+        Solde :
+      </span>
+       
+      24 093,39 €
+    </span>
+  </span>
+</div>
+`;
+
+exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match with snapshot 1`] = `
+<div
+  className="sc-gsnTZi gSdDNb k-Avatar__wrapper"
+>
+  <div
+    className="k-Avatar k-Avatar--medium"
+    style={
+      Object {
+        "--Avatar-height": undefined,
+        "--Avatar-width": undefined,
+        "--k-Avatar-background-color": "var(--color-primary-900, #0496cc)",
+        "--k-Avatar-color": "var(--color-grey-000, #fff)",
+      }
+    }
+  >
+    <span
+      className="k-Avatar__imageWrapper"
+    >
+      <img
+        alt="Alt text"
+        className="k-Avatar__image"
+        src="/kitten.jpg"
+        srcSet="/kitten.jpg, /kitten@2x.jpg 2x, /kitten@3x.jpg 3x"
+      />
+    </span>
+  </div>
+  <span
+    className="k-Avatar__text"
+  >
+    Simple Text
+  </span>
+</div>
+`;
+
+exports[`<AvatarWithTextAndBadge /> with simple props and no avatar image should match with snapshot 1`] = `
+<div
+  className="sc-gsnTZi gSdDNb k-Avatar__wrapper"
+>
+  <div
+    className="k-Avatar k-Avatar--medium"
+    style={
+      Object {
+        "--Avatar-height": undefined,
+        "--Avatar-width": undefined,
+        "--k-Avatar-background-color": "rgba(0,0,0,.8)",
+        "--k-Avatar-color": "white",
+      }
+    }
+  >
+    <span
+      className="k-Avatar__imageWrapper"
+    >
+      <span
+        className="k-Avatar__noImage"
+      >
+        ST
+      </span>
+    </span>
+  </div>
+  <span
+    className="k-Avatar__text"
+  >
+    Simple Text
+  </span>
+</div>
+`;

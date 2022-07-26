@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from '../../../../components/grid/container'
-import { EngagementCardWithImage } from '../../../../components/cards/engagement-card/withImage'
-import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { GUTTER } from '../../../../constants/grid-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { mediaQueries } from '../../../../hoc/media-queries'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import {
+  Container,
+  EngagementCardWithImage,
+  Carousel,
+  GUTTER,
+  pxToRem,
+  mediaQueries,
+  ScreenConfig,
+} from 'kitten'
 
 const engagementsData = [
   {
@@ -120,7 +122,7 @@ const EngagementsCarouselBase = ({ viewportIsXSOrLess }) => (
       paginationPosition={{ default: 'right' }}
       showOtherPages={viewportIsXSOrLess}
       loop
-      tinyButtons
+      smallButtons
     >
       {engagementsData.map(({ bgImage, children }) => {
         return (

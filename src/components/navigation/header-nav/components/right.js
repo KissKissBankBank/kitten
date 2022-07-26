@@ -2,18 +2,32 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.Right = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var Right = function Right(_ref) {
-  var children = _ref.children;
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+const Right = _ref => {
+  let {
+    children,
+    className,
+    padded
+  } = _ref;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-HeaderNav--right"
+    className: (0, _classnames.default)('k-HeaderNav__right', className, {
+      'k-HeaderNav__right--padded': padded
+    })
   }, children);
 };
 
 exports.Right = Right;
+Right.propTypes = {
+  padded: _propTypes.default.bool
+};
+Right.defaultProps = {
+  padded: false
+};

@@ -1,0 +1,707 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
+.c1 {
+  --arrowContainer-borderSize: calc( var(--arrowContainer-borderDistance) + var(--arrowContainer-arrowSize) );
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: var(--arrowContainer-padding);
+  background-color: var(--arrowContainer-color);
+  border-radius: var(--arrowContainer-borderRadius);
+  border: var(--arrowContainer-borderWidth) solid var(--arrowContainer-borderColor);
+  --arrowContainer-arrowMainPosition: calc( var(--arrowContainer-arrowSize) * -2 );
+  --arrowContainer-arrowBorderMainPosition: calc( (var(--arrowContainer-borderSize) + var(--arrowContainer-borderDistance)) * -1 );
+}
+
+.c1.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c1 .k-ArrowContainer__arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: var(--arrowContainer-arrowSize) solid transparent;
+}
+
+.c1.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: var(--arrowContainer-arrowMainPosition);
+  left: var(--arrowContainer-arrowDistance);
+  border-bottom-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: var(--arrowContainer-arrowBorderMainPosition);
+  left: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: var(--arrowContainer-arrowMainPosition);
+  left: var(--arrowContainer-arrowDistance);
+  border-top-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: var(--arrowContainer-arrowBorderMainPosition);
+  left: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-top-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--arrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--arrowContainer-borderSize) * -1);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: var(--arrowContainer-arrowMainPosition);
+  top: var(--arrowContainer-arrowDistance);
+  border-left-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: var(--arrowContainer-arrowBorderMainPosition);
+  top: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-left-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: var(--arrowContainer-arrowMainPosition);
+  top: var(--arrowContainer-arrowDistance);
+  border-right-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--arrowContainer-borderSize) * -1);
+  left: var(--arrowContainer-arrowBorderMainPosition);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-right-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--arrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--arrowContainer-borderSize) * -1);
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c0 .k-DropdownMenu__button {
+  list-style: none;
+  touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c0 .k-DropdownMenu__button::-webkit-details-marker,
+.c0 .k-DropdownMenu__button::before {
+  display: none;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible {
+  outline-offset: -0.125rem;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible,
+.c0 .k-DropdownMenu__button:focus-visible .k-DropdownMenu__button__inside {
+  outline: auto;
+}
+
+.c0 .k-DropdownMenu__button__inside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0[open] > .k-DropdownMenu__button::before {
+  content: ' ';
+  cursor: default;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 120;
+}
+
+.c0 .k-DropdownMenu__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.0625rem;
+  z-index: 150;
+  position: absolute;
+  top: calc(50% + 1rem + 0.5rem + (var(--dropdownMenu-top)));
+  left: 50%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 18.75rem;
+  height: auto;
+  padding: 0.5rem 0 0.625rem;
+  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  -webkit-transform-origin: var(--Dropdown-transform-origin);
+  -ms-transform-origin: var(--Dropdown-transform-origin);
+  transform-origin: var(--Dropdown-transform-origin);
+}
+
+.c0[open] .k-DropdownMenu__menu {
+  -webkit-animation: var(--transition) iNIDnb;
+  animation: var(--transition) iNIDnb;
+}
+
+.c0.k-DropdownMenu--h-left .k-DropdownMenu__menu {
+  --Dropdown-transform-x: calc(100% - 1.125rem);
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
+}
+
+.c0.k-DropdownMenu--h-center .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 50%;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
+}
+
+.c0.k-DropdownMenu--h-right .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 1.125rem;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
+}
+
+.c0 .k-DropdownMenu__menu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-000);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.4375rem 0.9375rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  text-align: left;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.c0 .k-DropdownMenu__menu__item svg,
+.c0 .k-DropdownMenu__menu__item svg path {
+  fill: currentColor;
+}
+
+.c0 .k-DropdownMenu__menu__item:hover {
+  color: var(--color-primary-100);
+}
+
+.c0 .k-DropdownMenu__menu__item:active,
+.c0 .k-DropdownMenu__menu__item:focus {
+  color: var(--color-primary-300);
+}
+
+.c0 .k-DropdownMenu__menu__item:focus-visible {
+  outline: auto;
+}
+
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper {
+  height: 1rem;
+  width: 1rem;
+  -webkit-flex: 0 0 1rem;
+  -ms-flex: 0 0 1rem;
+  flex: 0 0 1rem;
+}
+
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
+  max-width: 1rem;
+  max-height: 1rem;
+}
+
+.c0 .k-DropdownMenu__menu__separator {
+  height: 0.0625rem;
+  background: var(--color-grey-700);
+  padding: 0;
+  margin: 0.4375rem 0.9375rem;
+}
+
+<details
+  className="c0 k-DropdownMenu k-DropdownMenu--h-left"
+  onKeyDown={[Function]}
+  onToggle={[Function]}
+  open={false}
+  style={
+    Object {
+      "--dropdownMenu-top": "0px",
+    }
+  }
+>
+  <summary
+    className="k-DropdownMenu__button"
+  >
+    <span>
+      Open me!
+    </span>
+  </summary>
+  <div
+    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top k-ArrowContainer--reverseDistance"
+    onClick={[Function]}
+    style={
+      Object {
+        "--arrowContainer-arrowDistance": "0.625rem",
+        "--arrowContainer-arrowSize": "0.5rem",
+        "--arrowContainer-borderColor": "var(--color-grey-300, #eee)",
+        "--arrowContainer-borderDistance": 0,
+        "--arrowContainer-borderRadius": "0.5rem",
+        "--arrowContainer-borderWidth": 0,
+        "--arrowContainer-color": "var(--color-grey-900)",
+        "--arrowContainer-padding": 0,
+      }
+    }
+  >
+    <a
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+      href=""
+    >
+      <span
+        className="custom-class"
+      >
+        Content
+      </span>
+    </a>
+    <div
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__separator"
+    />
+    <button
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
+      type="button"
+    >
+      <span
+        className="k-DropdownMenu__menu__item__iconWrapper"
+      >
+        <svg />
+      </span>
+      <span
+        className="custom-class"
+      >
+        Content
+      </span>
+    </button>
+    <span
+      className="k-ArrowContainer__arrow"
+    />
+  </div>
+</details>
+`;
+
+exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
+.c1 {
+  --arrowContainer-borderSize: calc( var(--arrowContainer-borderDistance) + var(--arrowContainer-arrowSize) );
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: var(--arrowContainer-padding);
+  background-color: var(--arrowContainer-color);
+  border-radius: var(--arrowContainer-borderRadius);
+  border: var(--arrowContainer-borderWidth) solid var(--arrowContainer-borderColor);
+  --arrowContainer-arrowMainPosition: calc( var(--arrowContainer-arrowSize) * -2 );
+  --arrowContainer-arrowBorderMainPosition: calc( (var(--arrowContainer-borderSize) + var(--arrowContainer-borderDistance)) * -1 );
+}
+
+.c1.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c1 .k-ArrowContainer__arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: var(--arrowContainer-arrowSize) solid transparent;
+}
+
+.c1.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: var(--arrowContainer-arrowMainPosition);
+  left: var(--arrowContainer-arrowDistance);
+  border-bottom-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: var(--arrowContainer-arrowBorderMainPosition);
+  left: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: var(--arrowContainer-arrowMainPosition);
+  left: var(--arrowContainer-arrowDistance);
+  border-top-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: var(--arrowContainer-arrowBorderMainPosition);
+  left: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-top-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  left: initial;
+  right: var(--arrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--top .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  left: initial;
+  right: calc(var(--arrowContainer-borderSize) * -1);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: var(--arrowContainer-arrowMainPosition);
+  top: var(--arrowContainer-arrowDistance);
+  border-left-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: var(--arrowContainer-arrowBorderMainPosition);
+  top: calc(var(--arrowContainer-borderSize) * -1);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-left-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: var(--arrowContainer-arrowMainPosition);
+  top: var(--arrowContainer-arrowDistance);
+  border-right-color: var(--arrowContainer-color);
+}
+
+.c1.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--arrowContainer-borderSize) * -1);
+  left: var(--arrowContainer-arrowBorderMainPosition);
+  border: var(--arrowContainer-borderSize) solid transparent;
+  border-right-color: var(--arrowContainer-borderColor);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  top: initial;
+  bottom: var(--arrowContainer-arrowDistance);
+}
+
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--right .k-ArrowContainer__arrow::before,
+.c1.k-ArrowContainer--reverseDistance.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: initial;
+  bottom: calc(var(--arrowContainer-borderSize) * -1);
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+}
+
+.c0 .k-DropdownMenu__button {
+  list-style: none;
+  touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c0 .k-DropdownMenu__button::-webkit-details-marker,
+.c0 .k-DropdownMenu__button::before {
+  display: none;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible {
+  outline-offset: -0.125rem;
+}
+
+.c0 .k-DropdownMenu__button:focus-visible,
+.c0 .k-DropdownMenu__button:focus-visible .k-DropdownMenu__button__inside {
+  outline: auto;
+}
+
+.c0 .k-DropdownMenu__button__inside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0[open] > .k-DropdownMenu__button::before {
+  content: ' ';
+  cursor: default;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 120;
+}
+
+.c0 .k-DropdownMenu__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.0625rem;
+  z-index: 150;
+  position: absolute;
+  top: calc(50% + 1rem + 0.5rem + (var(--dropdownMenu-top)));
+  left: 50%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 18.75rem;
+  height: auto;
+  padding: 0.5rem 0 0.625rem;
+  -webkit-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  -ms-transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  transform: translateX(calc(-1 * var(--Dropdown-transform-x)));
+  -webkit-transform-origin: var(--Dropdown-transform-origin);
+  -ms-transform-origin: var(--Dropdown-transform-origin);
+  transform-origin: var(--Dropdown-transform-origin);
+}
+
+.c0[open] .k-DropdownMenu__menu {
+  -webkit-animation: var(--transition) iNIDnb;
+  animation: var(--transition) iNIDnb;
+}
+
+.c0.k-DropdownMenu--h-left .k-DropdownMenu__menu {
+  --Dropdown-transform-x: calc(100% - 1.125rem);
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
+}
+
+.c0.k-DropdownMenu--h-center .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 50%;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
+}
+
+.c0.k-DropdownMenu--h-right .k-DropdownMenu__menu {
+  --Dropdown-transform-x: 1.125rem;
+  --Dropdown-transform-origin: var(--Dropdown-transform-x) -0.5rem;
+}
+
+.c0 .k-DropdownMenu__menu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-000);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.4375rem 0.9375rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  text-align: left;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.c0 .k-DropdownMenu__menu__item svg,
+.c0 .k-DropdownMenu__menu__item svg path {
+  fill: currentColor;
+}
+
+.c0 .k-DropdownMenu__menu__item:hover {
+  color: var(--color-primary-100);
+}
+
+.c0 .k-DropdownMenu__menu__item:active,
+.c0 .k-DropdownMenu__menu__item:focus {
+  color: var(--color-primary-300);
+}
+
+.c0 .k-DropdownMenu__menu__item:focus-visible {
+  outline: auto;
+}
+
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper {
+  height: 1rem;
+  width: 1rem;
+  -webkit-flex: 0 0 1rem;
+  -ms-flex: 0 0 1rem;
+  flex: 0 0 1rem;
+}
+
+.c0 .k-DropdownMenu__menu__item .k-DropdownMenu__menu__item__iconWrapper svg {
+  max-width: 1rem;
+  max-height: 1rem;
+}
+
+.c0 .k-DropdownMenu__menu__separator {
+  height: 0.0625rem;
+  background: var(--color-grey-700);
+  padding: 0;
+  margin: 0.4375rem 0.9375rem;
+}
+
+<details
+  className="c0 k-DropdownMenu k-DropdownMenu--h-right"
+  onKeyDown={[Function]}
+  onToggle={[Function]}
+  open={false}
+  style={
+    Object {
+      "--dropdownMenu-top": "0px",
+    }
+  }
+>
+  <summary
+    className="k-DropdownMenu__button"
+  >
+    <span
+      className="k-DropdownMenu__button__inside"
+    >
+      <span>
+        Open me!
+      </span>
+    </span>
+  </summary>
+  <div
+    className="c1 k-ArrowContainer k-DropdownMenu__menu k-ArrowContainer--top"
+    onClick={[Function]}
+    style={
+      Object {
+        "--arrowContainer-arrowDistance": "0.625rem",
+        "--arrowContainer-arrowSize": "0.5rem",
+        "--arrowContainer-borderColor": "var(--color-grey-300, #eee)",
+        "--arrowContainer-borderDistance": 0,
+        "--arrowContainer-borderRadius": "0.5rem",
+        "--arrowContainer-borderWidth": 0,
+        "--arrowContainer-color": "var(--color-grey-900)",
+        "--arrowContainer-padding": 0,
+      }
+    }
+  >
+    <a
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__link"
+      href=""
+    >
+      <span
+        className="k-DropdownMenu__menu__item__iconWrapper"
+      >
+        <svg />
+      </span>
+      <span>
+        Content
+      </span>
+    </a>
+    <div
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__separator"
+    />
+    <button
+      className="k-DropdownMenu__menu__item k-DropdownMenu__menu__button k-u-reset-button"
+      type="button"
+    >
+      <span>
+        Content
+      </span>
+    </button>
+    <span
+      className="k-ArrowContainer__arrow"
+    />
+  </div>
+</details>
+`;

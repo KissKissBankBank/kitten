@@ -10,11 +10,13 @@
 ///   k-px-to-rem(20px);
 ///   // 1.25rem
 
+@use "sass:math";
+
 @function k-px-to-rem($px) {
-  @if $px == 0 {
-    @return 0
+  @if $px == 0 or $px == 'auto' {
+    @return $px
   }
 
   $root-font-size: map-get($k-typography, 'root');
-  @return ($px / $root-font-size) * 1rem;
+  @return math.div($px, $root-font-size) * 1rem;
 }

@@ -1,16 +1,19 @@
 import React from 'react'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
-import { Marger } from '../../../../components/layout/marger'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { Field } from '../../../../components/form/field'
-import { Checkbox } from '../../../../components/form/checkbox'
-import { Button } from '../../../../components/buttons/button/button'
-import COLORS from '../../../../constants/colors-config'
 import styled from 'styled-components'
+import {
+  Container,
+  Grid,
+  GridCol,
+  ScreenConfig,
+  Title,
+  Text,
+  Marger,
+  HorizontalStroke,
+  Field,
+  Checkbox,
+  Button,
+  COLORS,
+} from 'kitten'
 
 const StyledBackground = styled.div`
   min-height: 100vh;
@@ -75,7 +78,7 @@ const Login = props => (
             </Title>
           </Marger>
           <Marger top="1.5" bottom="3">
-            <HorizontalStroke size="big" />
+            <HorizontalStroke size="large" />
           </Marger>
           <Marger top="3" bottom="4">
             <Field>
@@ -93,7 +96,7 @@ const Login = props => (
             <Field>
               <StyledLabel
                 link={
-                  <StyledLink tag="a" href="#" weight="regular" size="tiny">
+                  <StyledLink tag="a" href="#" weight="500" size="small">
                     Mot de passe oublié ?
                   </StyledLink>
                 }
@@ -115,16 +118,16 @@ const Login = props => (
             <Checkbox id="remember-me">Se souvenir de moi</Checkbox>
           </Marger>
           <Marger top="4" bottom="2">
-            <Button big fluid modifier="helium">
+            <Button size="large" fit="fluid" modifier="helium">
               Se connecter
             </Button>
           </Marger>
           <Marger top="2" bottom="2">
-            <Text tag="p" size="tiny" className="k-u-align-center">
+            <Text tag="p" size="small" className="k-u-align-center">
               Créez votre compte en quelques minutes seulement et commencez à
               investir.
               <br />
-              <StyledLink tag="a" href="#" weight="regular" size="tiny">
+              <StyledLink tag="a" href="#" weight="500" size="small">
                 Inscrivez-vous
               </StyledLink>
             </Text>

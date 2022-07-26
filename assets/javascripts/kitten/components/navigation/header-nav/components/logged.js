@@ -1,8 +1,10 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Context } from './context'
 
-export const Logged = ({ children }) => (
-  <Context.Consumer>
-    {({ isLogged }) => (isLogged ? <>{children}</> : null)}
-  </Context.Consumer>
-)
+export const Logged = ({ children }) => {
+  const { isLogged } = useContext(Context)
+
+  if (!isLogged) return null
+
+  return children
+}

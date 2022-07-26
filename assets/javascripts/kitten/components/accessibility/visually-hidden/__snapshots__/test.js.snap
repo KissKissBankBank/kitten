@@ -1,20 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VisuallyHidden /> with text matches with snapshot 1`] = `
-.c0:not(:focus):not(:active) {
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 <span
-  className="c0"
+  className="k-u-a11y-visuallyHidden"
 >
   visually hidden content
 </span>

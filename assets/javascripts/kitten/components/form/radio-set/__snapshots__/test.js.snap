@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioSet /> default matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf buifkQ k-Form-RadioSet"
+  disabled={false}
+>
+  <legend
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-RadioSet__legend k-Label--small"
+    onClick={[Function]}
+  >
+    Label
+  </legend>
+  <div
+    className="k-Form-RadioSet__radioContainer"
+  >
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        defaultChecked={true}
+        disabled={false}
+        id="option-a"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-a"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option A
+        </span>
+      </label>
+    </div>
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        disabled={false}
+        id="option-b"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-b"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option B
+        </span>
+      </label>
+    </div>
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        disabled={false}
+        id="option-c"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-c"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option C
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<RadioSet /> with children and label matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf buifkQ k-Form-RadioSet"
+  disabled={false}
+>
+  <legend
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-RadioSet__legend customClass k-Label--small"
+    data-test={true}
+    onClick={[Function]}
+  >
+    Label test
+  </legend>
+  <div
+    className="k-Form-RadioSet__radioContainer"
+  >
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        defaultChecked={true}
+        disabled={false}
+        id="option-a"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-a"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option A
+        </span>
+      </label>
+    </div>
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        disabled={false}
+        id="option-b"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-b"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option B
+        </span>
+      </label>
+    </div>
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        disabled={false}
+        id="option-c"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-c"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option C
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`<RadioSet /> with children matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf buifkQ k-Form-RadioSet"
+  disabled={false}
+>
+  <legend>
+    <h1>
+      Legend test
+    </h1>
+  </legend>
+  <div
+    className="k-Form-RadioSet__radioContainer"
+  >
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        defaultChecked={true}
+        disabled={false}
+        id="option-a"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-a"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option A
+        </span>
+      </label>
+    </div>
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        disabled={false}
+        id="option-b"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-b"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option B
+        </span>
+      </label>
+    </div>
+    <div
+      className="sc-bczRLJ eYHcgP k-Form-Radio k-Form-RadioSet__radio k-Form-Radio--disc"
+    >
+      <input
+        className="k-Form-Radio__input"
+        disabled={false}
+        id="option-c"
+        name="test-radio-set"
+        type="radio"
+      />
+      <label
+        className="k-Form-Radio__label"
+        htmlFor="option-c"
+      >
+        <span
+          className="k-Form-Radio__labelText k-Form-Radio__labelText--500"
+        >
+          Option C
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;

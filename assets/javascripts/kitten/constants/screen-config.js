@@ -17,11 +17,11 @@ export const ORDERED_SCREEN_SIZES = [
 export const ScreenConfig = {
   [SCREEN_SIZE_XXS]: {
     min: null,
-    max: 479,
+    max: 399,
   },
 
   [SCREEN_SIZE_XS]: {
-    min: 480,
+    min: 400,
     max: 639,
   },
 
@@ -44,4 +44,12 @@ export const ScreenConfig = {
     min: 1440,
     max: null,
   },
+}
+
+export const mq = {
+  mobile: `(max-width: ${ScreenConfig.XS.max}px)`,
+  mobileAndTablet: `(max-width: ${ScreenConfig.M.max}px)`,
+  tablet: `(min-width: ${ScreenConfig.S.min}px) and (max-width: ${ScreenConfig.M.max}px)`,
+  tabletAndDesktop: `(min-width: ${ScreenConfig.S.min}px)`,
+  desktop: `(min-width: ${ScreenConfig.L.min}px)`,
 }

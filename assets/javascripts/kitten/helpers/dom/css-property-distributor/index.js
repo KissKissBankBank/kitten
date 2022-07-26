@@ -1,4 +1,4 @@
-import domElementHelper from '../element-helper'
+import { domElementHelper } from '../element-helper'
 import max from 'lodash/fp/max'
 import min from 'lodash/fp/min'
 import { pxToRem } from '../../utils/typography'
@@ -9,6 +9,8 @@ export const cssPropertyDistributor = ({
   direction = 'max',
 }) => {
   if (!domElementHelper.canUseDom()) return null
+  if (property === '') return
+  if (!!elements) return
 
   const directionGetter = {
     min: min,

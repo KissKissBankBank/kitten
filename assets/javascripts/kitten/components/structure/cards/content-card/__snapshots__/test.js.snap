@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContentCard /> default matches with snapshot 1`] = `
+<article
+  className="sc-gsnTZi jlLvyX k-ContentCard"
+>
+  <aside
+    className="k-ContentCard__header"
+  >
+    15 novembre 2021
+  </aside>
+  <header
+    className="sc-bczRLJ FHsaG k-Title k-ContentCard__title k-Title--quaternary k-Title--noMargin"
+    style={
+      Object {
+        "--Title-css-color": null,
+      }
+    }
+  >
+    Aenean lacinia bibendum nulla sed !
+  </header>
+  <div
+    className="k-ContentCard__content"
+  >
+    <p>
+      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+    </p>
+    <img
+      alt=""
+      src="img.jpg"
+    />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+    </p>
+  </div>
+  <footer
+    className="k-ContentCard__footer"
+  >
+    Footer content
+  </footer>
+</article>
+`;

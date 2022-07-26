@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EditorialCard /> by default matches with snapshot 1`] = `
+<div
+  className="sc-gsnTZi krlibY k-EditorialCard k-EditorialCard--info k-EditorialCard--hasArrow k-EditorialCard--isRecto"
+  style={
+    Object {
+      "--editorialCard-customColor": null,
+    }
+  }
+>
+  <div
+    className="k-EditorialCard__grid"
+  >
+    <div
+      className="k-EditorialCard__recto"
+    >
+      <h1
+        className="sc-bczRLJ FHsaG k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
+        style={
+          Object {
+            "--Title-css-color": "inherit",
+          }
+        }
+      >
+        Les collectes à venir
+        <br />
+        <span
+          aria-hidden={true}
+        >
+          -
+        </span>
+      </h1>
+      <div
+        className="k-EditorialCard__content"
+      >
+        Découvrez nos futurs projets et inscrivez-vous pour être informé dès l'ouverture des collectes.
+      </div>
+      <svg
+        className="k-EditorialCard__arrow"
+        fill="var(--color-grey-000)"
+        height="33"
+        style={
+          Object {
+            "transform": "rotate(-90deg)",
+          }
+        }
+        viewBox="0 0 23 33"
+        width="23"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z"
+        />
+      </svg>
+    </div>
+  </div>
+  <a
+    aria-label="Voir tous les projets"
+    className="k-EditorialCard__action"
+  />
+</div>
+`;
+
+exports[`<EditorialCard /> with custom linkProps, color and verso matches with snapshot 1`] = `
+<div
+  className="sc-gsnTZi krlibY k-EditorialCard k-EditorialCard--custom k-EditorialCard--hasArrow k-EditorialCard--hasVerso k-EditorialCard--isRecto"
+  style={
+    Object {
+      "--editorialCard-customColor": "var(--color-grey-900)",
+    }
+  }
+>
+  <div
+    className="k-EditorialCard__grid"
+  >
+    <div
+      className="k-EditorialCard__recto"
+    >
+      <h1
+        className="sc-bczRLJ FHsaG k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
+        style={
+          Object {
+            "--Title-css-color": "inherit",
+          }
+        }
+      >
+        Les collectes réservées
+        <br />
+        <span
+          aria-hidden={true}
+        >
+          -
+        </span>
+      </h1>
+      <div
+        className="k-EditorialCard__content"
+      >
+        Pourquoi ces collectes sont reservées à certains départements?
+      </div>
+      <svg
+        className="k-EditorialCard__arrow"
+        fill="var(--color-grey-000)"
+        height="33"
+        style={
+          Object {
+            "transform": "rotate(-90deg)",
+          }
+        }
+        viewBox="0 0 23 33"
+        width="23"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m22.56 23.01-9.55 9.55a1.5 1.5 0 0 1-2.12 0l-9.54-9.55a1.5 1.5 0 1 1 2.12-2.12l6.98 6.99V1.5a1.5 1.5 0 1 1 3 0v26.38l6.99-6.99a1.5 1.5 0 0 1 2.12 2.12Z"
+        />
+      </svg>
+    </div>
+    <div
+      className="k-EditorialCard__verso"
+    >
+      <div
+        className="k-EditorialCard__content"
+      >
+        <p>
+          Le projet financé est lauréat d’un appel d'offres mené par la Commission de Régulation de l’Énergie (CRE) qui encadre le développement des énergies renouvelables en France.
+        </p>
+        <p>
+          Pour investir dans ces projets, il faut pouvoir justifier d’une résidence dans le département d’implantation du projet ou un département limitrophe.
+        </p>
+      </div>
+      <span
+        className="k-u-weight-700 k-EditorialCard__actionText k-u-m-t-8"
+      >
+        Aller plus loin
+      </span>
+    </div>
+  </div>
+  <button
+    aria-label="Plus de précisions"
+    className="k-EditorialCard__action k-u-reset-button"
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;

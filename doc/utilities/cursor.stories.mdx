@@ -1,0 +1,54 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs'
+
+<Meta title="Documentation/CSS Utilities/Cursor" />
+
+# Cursor
+
+Cursor utilities.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/cursor/_cursor.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/cursor/_cursor.scss)
+
+## Usage
+
+Utilities to style the cursor.
+
+The class name has the form `k-u-cursor-{value}`.
+
+Allowed values:
+
+- `default`
+- `pointer`
+- `not-allowed`
+- `crosshair`
+
+## Examples
+
+`k-u-cursor-default`
+<Canvas>
+<p className="k-u-cursor-default">
+  Hello text cursor default!
+</p>
+</Canvas>
+
+`k-u-cursor-pointer`
+<Canvas>
+<p className="k-u-cursor-pointer">
+  Hello cursor pointer!
+</p>
+</Canvas>
+
+`k-u-cursor-not-allowed`
+<Canvas>
+<p className="k-u-cursor-not-allowed">
+  Hello text! I'm on the not allowed.
+</p>
+</Canvas>
+
+`k-u-cursor-crosshair`
+<Canvas>
+<p className="k-u-cursor-crosshair">
+  Hello text! I'm on the crosshair.
+</p>
+</Canvas>

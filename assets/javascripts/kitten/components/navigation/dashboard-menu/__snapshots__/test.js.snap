@@ -1,0 +1,524 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
+.c0 {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-DashboardMenu__expandable__title,
+.c0 .k-DashboardMenu__item,
+.c0 .k-DashboardMenu__expandable__title:visited,
+.c0 .k-DashboardMenu__item:visited,
+.c0 .k-DashboardMenu__expandable__title:link,
+.c0 .k-DashboardMenu__item:link {
+  color: var(--color-grey-500,#b8b8b8);
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease,background-color 0.2s ease;
+  transition: color 0.2s ease,background-color 0.2s ease;
+}
+
+.c0 .k-DashboardMenu__expandable__title:focus,
+.c0 .k-DashboardMenu__item:focus,
+.c0 .k-DashboardMenu__expandable__title:hover,
+.c0 .k-DashboardMenu__item:hover {
+  background-color: var(--color-grey-800,#2d2d2d) !important;
+}
+
+.c0 .k-DashboardMenu__expandable__title:focus,
+.c0 .k-DashboardMenu__item:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c0 .k-DashboardMenu__expandable__title:focus-visible,
+.c0 .k-DashboardMenu__item:focus-visible {
+  outline: auto;
+}
+
+.c0 summary.k-DashboardMenu__selectorSummary,
+.c0 a.k-DashboardMenu__selectorButton,
+.c0 summary.k-DashboardMenu__selectorSummary:visited,
+.c0 a.k-DashboardMenu__selectorButton:visited,
+.c0 summary.k-DashboardMenu__selectorSummary:link,
+.c0 a.k-DashboardMenu__selectorButton:link {
+  color: var(--color-grey-000,#fff);
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease,background-color 0.2s ease;
+  transition: color 0.2s ease,background-color 0.2s ease;
+}
+
+.c0 summary.k-DashboardMenu__selectorSummary[aria-current='page'],
+.c0 a.k-DashboardMenu__selectorButton[aria-current='page'],
+.c0 summary.k-DashboardMenu__selectorSummary:hover,
+.c0 a.k-DashboardMenu__selectorButton:hover {
+  background-color: var(--color-grey-800,#2d2d2d) !important;
+}
+
+.c0 summary.k-DashboardMenu__selectorSummary:focus,
+.c0 a.k-DashboardMenu__selectorButton:focus {
+  z-index: 1;
+  position: relative;
+}
+
+.c0 summary.k-DashboardMenu__selectorSummary:focus-visible,
+.c0 a.k-DashboardMenu__selectorButton:focus-visible {
+  outline: auto;
+}
+
+.c0 .k-DashboardMenu__list,
+.c0 .k-DashboardMenu__expandable__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.c0 .k-DashboardMenu__list--subList {
+  margin-left: 1.5625rem;
+}
+
+.c0 .k-DashboardMenu__expandable summary {
+  list-style: none;
+}
+
+.c0 .k-DashboardMenu__expandable summary:focus-visible {
+  outline: auto;
+}
+
+.c0 .k-DashboardMenu__expandable summary::-webkit-details-marker {
+  display: none;
+}
+
+.c0 .k-DashboardMenu__selectorButton__text,
+.c0 .k-DashboardMenu__item .k-DashboardMenu__item__text,
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text {
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  line-height: 1.4;
+}
+
+.c0 .k-DashboardMenu__selectorButton__text,
+.c0 .k-DashboardMenu__item .k-DashboardMenu__item__text,
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text,
+.c0 .k-DashboardMenu__selectorButton__text *,
+.c0 .k-DashboardMenu__item .k-DashboardMenu__item__text *,
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title__text * {
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: visible;
+  text-overflow: ellipsis;
+}
+
+.c0 .k-DashboardMenu__expandable {
+  border-radius: var(--border-radius-s);
+  background-color: var(--color-grey-800,#2d2d2d);
+}
+
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__list {
+  padding: 0 0.625rem 1.25rem 3.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.c0 .k-DashboardMenu__expandable.k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__list {
+  padding: 0 0.625rem 1.25rem 3.125rem;
+}
+
+.c0 .k-DashboardMenu__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item,
+.c0 .k-DashboardMenu__selectorButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.9375rem;
+  padding: 0 0.9375rem;
+  border-radius: var(--border-radius-xs);
+}
+
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__expandable--small .k-DashboardMenu__expandable__title,
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item--small {
+  height: 2.5rem;
+}
+
+.c0 .k-DashboardMenu__selectorButton {
+  height: 4.375rem;
+  -webkit-flex: 0 0 4.375rem;
+  -ms-flex: 0 0 4.375rem;
+  flex: 0 0 4.375rem;
+}
+
+.c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  background-color: var(--color-grey-900,#222);
+  cursor: pointer;
+}
+
+.c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title,
+.c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item[aria-current='page'] {
+  color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-800,#2d2d2d);
+}
+
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  line-height: 1.125rem;
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:hover,
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:focus,
+.c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current='page'] {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-000,#fff);
+}
+
+.c0 .k-DashboardMenu__selectorSummary .k-DashboardMenu__selectorButton__arrow {
+  color: var(--color-grey-500,#b8b8b8);
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.c0 .k-DashboardMenu__selectorSummary:hover .k-DashboardMenu__selectorButton__arrow,
+.c0 .k-DashboardMenu__selectorSummary:focus .k-DashboardMenu__selectorButton__arrow {
+  color: var(--color-grey-000,#fff);
+}
+
+.c0 .k-DashboardMenu__iconWrapper {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex: 0 0 1.25rem;
+  -ms-flex: 0 0 1.25rem;
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c0 .k-DashboardMenu__iconWrapper svg {
+  max-width: 1.25rem;
+  max-height: 1.25rem;
+}
+
+.c0 .k-DashboardMenu__iconWrapper svg[fill],
+.c0 .k-DashboardMenu__iconWrapper svg d[fill] {
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
+}
+
+.c0 .k-DashboardMenu__expandable__title__arrow {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding: 0.3125rem;
+}
+
+.c0 .k-DashboardMenu__expandable__title__arrow svg {
+  display: block;
+  fill: currentColor;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c0 .k-DashboardMenu__expandable[open] .k-DashboardMenu__expandable__title__arrow svg {
+  -webkit-transform: rotate(360deg) !important;
+  -ms-transform: rotate(360deg) !important;
+  transform: rotate(360deg) !important;
+}
+
+.c0 .k-DashboardMenu__separator {
+  margin-top: 0.625rem;
+  margin-bottom: 0.3125rem;
+}
+
+.c0 .k-DashboardMenu__separator hr {
+  border: 0;
+  border-top: 0.0625rem solid rgba(151,151,151,0.2);
+  margin-bottom: 0.9375rem;
+}
+
+.c0 .k-DashboardMenu__selectorWrapper {
+  position: relative;
+  margin: 0.625rem 0 0.3125rem;
+}
+
+.c0 .k-DashboardMenu__selectorWrapper[open] .k-DashboardMenu__selectorList {
+  -webkit-animation: 0.16s ease-out fGnrqT;
+  animation: 0.16s ease-out fGnrqT;
+}
+
+.c0 .k-DashboardMenu__selectorWrapper::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -0.3125rem;
+  left: -0.3125rem;
+  right: -0.3125rem;
+  bottom: -0.3125rem;
+  border-top-left-radius: var(--border-radius-m);
+  border-top-right-radius: var(--border-radius-m);
+  border: 0.125rem solid var(--color-grey-700,#636363);
+  border-bottom: 0;
+  opacity: 0;
+}
+
+.c0 .k-DashboardMenu__selectorWrapper[open]::before {
+  -webkit-animation: 0.16s ease-out hLOrmQ;
+  animation: 0.16s ease-out hLOrmQ;
+  opacity: 1;
+}
+
+.c0 .k-DashboardMenu__selectorWrapper[open] + .k-DashboardMenu__list--hideable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.c0 .k-DashboardMenu__selectorSummary {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  padding: 0 0.9375rem;
+  height: 4.375rem;
+  border-radius: var(--border-radius-xs);
+}
+
+.c0 .k-DashboardMenu__selectorSummary::-webkit-details-marker {
+  display: none;
+}
+
+.c0 .k-DashboardMenu__selectorSummary .k-DashboardMenu__selectorSummary__flex {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .k-DashboardMenu__selectorList {
+  position: absolute;
+  z-index: 5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.125rem;
+  top: 4.5rem;
+  left: -0.3125rem;
+  right: -0.3125rem;
+  max-height: 18.1875rem;
+  padding: 0 0.1875rem 0.1875rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+  background: var(--color-grey-900,#222);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  border-bottom-left-radius: var(--border-radius-m);
+  border-bottom-right-radius: var(--border-radius-m);
+  border: 0.125rem solid var(--color-grey-700,#636363);
+  border-top: 0;
+}
+
+@media (min-width:640px) {
+  .c0 .k-DashboardMenu__list--subList {
+    margin-left: 2.1875rem;
+    margin-right: 2.5rem;
+  }
+}
+
+<nav
+  className="c0 k-DashboardMenu"
+>
+  <ul
+    className="k-DashboardMenu__list"
+  >
+    <li
+      className="k-DashboardMenu__itemWrapper"
+    >
+      <a
+        aria-current={null}
+        className="k-DashboardMenu__item k-DashboardMenu__item--default"
+        href="#"
+      >
+        <span
+          className="k-DashboardMenu__iconWrapper"
+        >
+          <svg>
+            <d />
+          </svg>
+        </span>
+        <span
+          className="k-DashboardMenu__item__text"
+        >
+          First item
+        </span>
+      </a>
+    </li>
+    <li
+      className="k-DashboardMenu__itemWrapper"
+    >
+      <a
+        aria-current="page"
+        className="k-DashboardMenu__item k-DashboardMenu__item--default"
+        href="#"
+      >
+        <span
+          className="k-DashboardMenu__iconWrapper"
+        >
+          <svg>
+            <d />
+          </svg>
+        </span>
+        <span
+          className="k-DashboardMenu__item__text"
+        >
+          Second item
+        </span>
+      </a>
+    </li>
+    <li
+      className="k-DashboardMenu__expandableWrapper"
+    >
+      <details
+        className="k-DashboardMenu__expandable k-DashboardMenu__expandable--default"
+      >
+        <summary>
+          <div
+            className="k-DashboardMenu__expandable__title"
+          >
+            <span
+              className="k-DashboardMenu__iconWrapper"
+            >
+              <svg>
+                <d />
+              </svg>
+            </span>
+            <span
+              className="k-DashboardMenu__expandable__title__text"
+            >
+              Expandable item
+            </span>
+            <span
+              className="k-DashboardMenu__expandable__title__arrow"
+            >
+              <svg
+                className=""
+                fill="var(--color-grey-900, #222)"
+                height="5.64"
+                style={
+                  Object {
+                    "transform": "rotate(180deg)",
+                  }
+                }
+                viewBox="0 0 8.48 5.64"
+                width="8.48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+                <path
+                  d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+                />
+              </svg>
+            </span>
+          </div>
+        </summary>
+        <ul
+          className="k-DashboardMenu__expandable__list"
+        >
+          <li
+            className="k-DashboardMenu__itemWrapper"
+          >
+            <a
+              aria-current={null}
+              className="k-DashboardMenu__item k-DashboardMenu__item--default"
+              href="#"
+            >
+              <span
+                className="k-DashboardMenu__item__text"
+              >
+                First subitem
+              </span>
+            </a>
+          </li>
+          <li
+            className="k-DashboardMenu__itemWrapper"
+          >
+            <a
+              aria-current="page"
+              className="k-DashboardMenu__item k-DashboardMenu__item--default"
+              href="#"
+            >
+              <span
+                className="k-DashboardMenu__item__text"
+              >
+                second subitem
+              </span>
+            </a>
+          </li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</nav>
+`;

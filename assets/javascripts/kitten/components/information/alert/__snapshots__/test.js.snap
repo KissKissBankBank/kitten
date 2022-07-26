@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should matches with closeButton snapshot 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasCloseButton k-Alert--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      height="14"
+      viewBox="0 0 4 14"
+      width="4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="2"
+        cy="1.25"
+        r="1.25"
+        transform="rotate(-180 2 1.25)"
+      />
+      <rect
+        height="9"
+        rx="1.25"
+        transform="rotate(-180 3.25 13.5)"
+        width="2.5"
+        x="3.25"
+        y="13.5"
+      />
+    </svg>
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+  <button
+    aria-label="Close"
+    className="k-Alert__closeButton k-u-reset-button"
+    onClick={[Function]}
+    title="Close"
+  >
+    <svg
+      fill="none"
+      height="18"
+      viewBox="0 0 17 18"
+      width="17"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.693 4.707a1 1 0 0 0-1.415 0L8.485 7.5 5.692 4.707a1 1 0 1 0-1.414 1.414l2.793 2.793-2.864 2.864a1 1 0 1 0 1.414 1.414l2.864-2.864 2.864 2.864a1 1 0 0 0 1.415-1.414L9.9 8.914l2.793-2.793a1 1 0 0 0 0-1.414Z"
+        fill="var(--color-grey-900, #222)"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Alert /> should matches with default snapshot 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      height="14"
+      viewBox="0 0 4 14"
+      width="4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="2"
+        cy="1.25"
+        r="1.25"
+        transform="rotate(-180 2 1.25)"
+      />
+      <rect
+        height="9"
+        rx="1.25"
+        transform="rotate(-180 3.25 13.5)"
+        width="2.5"
+        x="3.25"
+        y="13.5"
+      />
+    </svg>
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with snapshot with custom icon 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg />
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with snapshot with danger status prop 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--danger k-Alert--hasIcon"
+  role="alert"
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--danger k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      height="10"
+      viewBox="0 0 10 10"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.005 3.23 2.529.755A1.25 1.25 0 1 0 .762 2.523l2.475 2.475L.762 7.472A1.25 1.25 0 0 0 2.53 9.24l2.475-2.475L7.479 9.24a1.25 1.25 0 0 0 1.768-1.768L6.772 4.998l2.475-2.475A1.25 1.25 0 0 0 7.48.755L5.005 3.23Z"
+      />
+    </svg>
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with snapshot with icon border 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasIcon"
+  role={null}
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--info k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      height="14"
+      viewBox="0 0 4 14"
+      width="4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="2"
+        cy="1.25"
+        r="1.25"
+        transform="rotate(-180 2 1.25)"
+      />
+      <rect
+        height="9"
+        rx="1.25"
+        transform="rotate(-180 3.25 13.5)"
+        width="2.5"
+        x="3.25"
+        y="13.5"
+      />
+    </svg>
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with snapshot with success status prop 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--success k-Alert--hasIcon"
+  role="status"
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--success k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      height="9"
+      style={
+        Object {
+          "marginTop": 1,
+        }
+      }
+      viewBox="0 0 11 9"
+      width="11"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m2.134 6.553 1.767 1.768L5.67 6.553l4.42-4.419A1.25 1.25 0 0 0 8.321.366l-4.42 4.42-1.767-1.768A1.25 1.25 0 0 0 .366 4.785l1.768 1.768Z"
+      />
+    </svg>
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with snapshot with warning status prop 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--warning k-Alert--hasIcon"
+  role="status"
+>
+  <span
+    className="sc-bczRLJ fdLbIf k-IconBadge k-Alert__iconBadge k-IconBadge--medium k-IconBadge--warning k-IconBadge--hasBorder"
+    style={
+      Object {
+        "--iconBadge-background-color": null,
+        "--iconBadge-border-color": null,
+        "--iconBadge-border-style": null,
+        "--iconBadge-border-width": null,
+      }
+    }
+  >
+    <svg
+      fill="var(--color-grey-900)"
+      height="14"
+      viewBox="0 0 4 14"
+      width="4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="2"
+        cy="12.25"
+        r="1.25"
+      />
+      <rect
+        height="9"
+        rx="1.25"
+        width="2.5"
+        x=".75"
+      />
+    </svg>
+  </span>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;
+
+exports[`<Alert /> should matches with snapshot without icon 1`] = `
+<div
+  className="sc-gsnTZi fZewtI k-Alert k-Alert--info"
+  role={null}
+>
+  <div
+    className="k-Alert__text"
+  >
+    Alert !
+  </div>
+</div>
+`;

@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Overlay /> overlay with \`isActive\` prop and custom class matches with snapshot 1`] = `
+.c0 {
+  left: 0;
+  top: 0;
+  right: 100%;
+  bottom: 100%;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.4);
+  -webkit-transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
+  transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
+  -webkit-transition-delay: 0.2s,0s,0.2s,0.2s;
+  transition-delay: 0.2s,0s,0.2s,0.2s;
+}
+
+.c0.k-Overlay--absolute {
+  position: absolute;
+}
+
+.c0.k-Overlay--fixed {
+  position: fixed;
+}
+
+.c0.k-Overlay--isActive {
+  right: 0;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0s,0s,0s,0s;
+  transition-delay: 0s,0s,0s,0s;
+}
+
+<div
+  className="c0 fooBarTest k-Overlay k-Overlay--absolute k-Overlay--isActive"
+/>
+`;
+
+exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = `
+.c0 {
+  left: 0;
+  top: 0;
+  right: 100%;
+  bottom: 100%;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.4);
+  -webkit-transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
+  transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
+  -webkit-transition-delay: 0.2s,0s,0.2s,0.2s;
+  transition-delay: 0.2s,0s,0.2s,0.2s;
+}
+
+.c0.k-Overlay--absolute {
+  position: absolute;
+}
+
+.c0.k-Overlay--fixed {
+  position: fixed;
+}
+
+.c0.k-Overlay--isActive {
+  right: 0;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0s,0s,0s,0s;
+  transition-delay: 0s,0s,0s,0s;
+}
+
+<div
+  className="c0 k-Overlay k-Overlay--absolute k-Overlay--isActive"
+/>
+`;
+
+exports[`<Overlay /> simple overlay with zIndex set to 105 matches with snapshot 1`] = `
+.c0 {
+  left: 0;
+  top: 0;
+  right: 100%;
+  bottom: 100%;
+  z-index: 105;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.4);
+  -webkit-transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
+  transition: visibility 0s ease,opacity 0.2s ease,bottom 0s,right 0s;
+  -webkit-transition-delay: 0.2s,0s,0.2s,0.2s;
+  transition-delay: 0.2s,0s,0.2s,0.2s;
+}
+
+.c0.k-Overlay--absolute {
+  position: absolute;
+}
+
+.c0.k-Overlay--fixed {
+  position: fixed;
+}
+
+.c0.k-Overlay--isActive {
+  right: 0;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0s,0s,0s,0s;
+  transition-delay: 0s,0s,0s,0s;
+}
+
+<div
+  className="c0 k-Overlay k-Overlay--absolute"
+/>
+`;

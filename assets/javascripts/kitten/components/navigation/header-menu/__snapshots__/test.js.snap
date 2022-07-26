@@ -1,0 +1,1786 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
+.c0 {
+  --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: var(--color-grey-000,#fff);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-900,#222);
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  z-index: 1;
+  position: relative;
+  outline: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-grey-200,#f6f6f6);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: var(--color-grey-900,#222);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
+}
+
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid var(--color-grey-300,#eee);
+  border-right: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-right k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 3
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
+.c1 {
+  --Button-border-radius: var(--border-radius-s);
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--Button-dimension);
+  padding: var(--Button-padding);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-grey-900,#222);
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: var(--Button-border-radius,0);
+  min-width: 0;
+  border: var(--border-width) solid;
+  -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+  transition: background-color var(--transition),color var(--transition),border-color var(--transition);
+}
+
+.c1.k-Button--rounded {
+  --Button-border-radius: var(--border-radius-rounded);
+}
+
+.c1 svg {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1:disabled,
+.c1.k-Button--disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:focus-visible {
+  outline: auto;
+}
+
+.c1.k-Button--nano {
+  --Button-dimension: 1.25rem;
+  --Button-min-width: 6.25rem;
+  --Button-padding: 0 0.375rem;
+  font-size: 0.75rem;
+}
+
+.c1.k-Button--micro {
+  --Button-dimension: 1.875rem;
+  --Button-min-width: 8.125rem;
+  --Button-padding: 0.3125rem 0.625rem;
+  font-size: 0.75rem;
+}
+
+.c1.k-Button--small {
+  --Button-dimension: 2.5rem;
+  --Button-min-width: 10rem;
+  --Button-padding: 0.4375rem 1.25rem;
+}
+
+.c1.k-Button--medium {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c1.k-Button--large {
+  --Button-dimension: 3.125rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 1.875rem;
+}
+
+.c1.k-Button--huge {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c1.k-Button--giant {
+  --Button-dimension: 4.375rem;
+  --Button-min-width: 12.5rem;
+  --Button-padding: 0.625rem 0.625rem;
+}
+
+.c1.k-Button--fit-min-width {
+  min-width: var(--Button-min-width);
+}
+
+.c1.k-Button--fit-icon {
+  padding: 0;
+  overflow: hidden;
+  width: var(--Button-dimension);
+  height: var(--Button-dimension);
+}
+
+.c1.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+  border-color: var(--color-grey-400);
+}
+
+.c1.k-Button--fit-fluid {
+  width: 100%;
+}
+
+.c1.k-Button--hasBullet {
+  --Button-bullet-radius: 0.4375rem;
+  --Math-Cos45: 0.7071;
+  --Button-radius: var(--Button-border-radius,0);
+  --Button-bullet-distance: calc( var(--Button-radius) - (var(--Button-radius) * var(--Math-Cos45)) - var(--Button-bullet-radius) );
+}
+
+.c1.k-Button--hasBullet::after {
+  content: '';
+  position: absolute;
+  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.1875rem solid var(--color-grey-000);
+  right: var(--Button-bullet-distance);
+  top: var(--Button-bullet-distance);
+}
+
+.c1.k-Button--hasBullet.k-Button--fit-icon {
+  overflow: initial;
+}
+
+.c1.k-Button--hasBullet.k-Button--rounded {
+  --Button-radius: calc(var(--Button-dimension) / 2);
+}
+
+.c1 svg:not(.k-ColorSvg),
+.c1 svg:not(.k-ColorSvg) path {
+  fill: currentColor;
+  -webkit-transition: fill var(--transition);
+  transition: fill var(--transition);
+}
+
+.c1:hover {
+  border-color: var(--color-primary-700,#05a8e6);
+  background-color: var(--color-primary-700,#05a8e6);
+  color: var(--color-grey-000,#fff);
+}
+
+.c1:focus {
+  border-color: var(--color-primary-700,#05a8e6);
+}
+
+.c1:active {
+  border-color: var(--color-primary-900,#0496cc);
+  background-color: var(--color-primary-900,#0496cc);
+  color: var(--color-grey-000,#fff);
+}
+
+.c1:disabled,
+.c1.k-Button--disabled {
+  border: var(--border-width) solid var(--color-grey-200);
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-600);
+}
+
+.c0 {
+  --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: var(--color-grey-000,#fff);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-900,#222);
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  z-index: 1;
+  position: relative;
+  outline: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-grey-200,#f6f6f6);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: var(--color-grey-900,#222);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
+}
+
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid var(--color-grey-300,#eee);
+  border-right: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+@media (min-width:640px) {
+  .c1.k-Button--large {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 4.375rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c1.k-Button--huge {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c1.k-Button--giant {
+    --Button-min-width: 13.75rem;
+    --Button-dimension: 5.625rem;
+    --Button-padding: 0.625rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:639px) {
+  .c1[class*='k-Button--mobile-fit'] {
+    min-width: initial !important;
+    padding: var(--Button-padding);
+    width: initial;
+    height: initial;
+    width: initial;
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-min-width {
+    min-width: var(--Button-min-width) !important;
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon {
+    padding: 0;
+    overflow: hidden;
+    width: var(--Button-dimension);
+    height: var(--Button-dimension);
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
+    border-color: var(--color-grey-400);
+  }
+
+  .c1[class*='k-Button--mobile-fit'].k-Button--mobile-fit-fluid {
+    width: 100%;
+  }
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-right k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <button
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href={null}
+      onClick={[Function]}
+      type="button"
+    >
+      Button item
+    </button>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--hasButton"
+  >
+    <button
+      className="c1 k-Button k-HeaderMenu__item__button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
+      href="#"
+      style={
+        Object {
+          "--Button-border-radius": null,
+          "--Button-bullet-color": null,
+        }
+      }
+      type="button"
+    >
+      Item 3
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
+.c0 {
+  --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: var(--color-grey-000,#fff);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-900,#222);
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  z-index: 1;
+  position: relative;
+  outline: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-grey-200,#f6f6f6);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: var(--color-grey-900,#222);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
+}
+
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid var(--color-grey-300,#eee);
+  border-right: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--external"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      <a
+        href="#custom-component"
+      >
+        Custom component
+      </a>
+      <svg
+        className="k-HeaderMenu__item__arrow headerMenuArrowIcon"
+        fill="var(--color-grey-900, #222)"
+        height="5.64"
+        style={
+          Object {
+            "transform": "rotate(90deg)",
+          }
+        }
+        viewBox="0 0 8.48 5.64"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
+.c0 {
+  --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: var(--color-grey-000,#fff);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-900,#222);
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  z-index: 1;
+  position: relative;
+  outline: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-grey-200,#f6f6f6);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: var(--color-grey-900,#222);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
+}
+
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid var(--color-grey-300,#eee);
+  border-right: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--isSelected"
+  >
+    <a
+      aria-current="page"
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 3
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
+.c0 {
+  --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: var(--color-grey-000,#fff);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-900,#222);
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  z-index: 1;
+  position: relative;
+  outline: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-grey-200,#f6f6f6);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: var(--color-grey-900,#222);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
+}
+
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid var(--color-grey-300,#eee);
+  border-right: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--right k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 3
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
+.c0 {
+  --headerMenu-background-colors-hover: var(--color-grey-000,#fff);
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+}
+
+.c0.k-HeaderMenu--left .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: left;
+}
+
+.c0.k-HeaderMenu--right .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  text-align: right;
+}
+
+.c0 .k-HeaderMenu__item__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: none;
+  height: 3.125rem;
+  box-sizing: border-box;
+  padding: 1.125rem 1.25rem 1.125rem;
+  background-color: var(--color-grey-000,#fff);
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  color: var(--color-grey-900,#222);
+  line-height: 1;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s,background-color 0.4s;
+  transition: color 0.2s,background-color 0.4s;
+}
+
+.c0 .k-HeaderMenu__item__link:hover,
+.c0 .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+  background-color: var(--headerMenu-background-colors-hover);
+}
+
+.c0 .k-HeaderMenu__item__link:focus-visible {
+  z-index: 1;
+  position: relative;
+  outline: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: var(--color-grey-200,#f6f6f6);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link .k-HeaderMenu__item__arrow {
+  margin-left: 1.25rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.5rem;
+  width: auto;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover {
+  color: var(--color-grey-900,#222);
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:focus .k-HeaderMenu__item__arrow,
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link:hover .k-HeaderMenu__item__arrow {
+  left: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--external .k-HeaderMenu__item__link::before {
+  display: none;
+}
+
+.c0 .k-HeaderMenu__item--hasButton {
+  padding: 1.25rem;
+  background-color: var(--color-grey-000,#fff);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link::before {
+  content: '';
+  position: absolute;
+  top: -0.0625rem;
+  bottom: 0;
+  width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item__link:focus::before {
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-left .k-HeaderMenu__item__link::before {
+  left: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide-right .k-HeaderMenu__item__link::before {
+  right: -0.0625rem;
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:hover::before,
+.c0.k-HeaderMenu--hasBorderOnSideOnHover .k-HeaderMenu__item__link:focus::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0.k-HeaderMenu--hasBigItems .k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0.625rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+
+.c0 .k-HeaderMenu__item--small + .k-HeaderMenu__item--small .k-HeaderMenu__item__link {
+  padding-top: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 2.5rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link svg,
+.c0 .k-HeaderMenu__item--small.k-HeaderMenu__item--external .k-HeaderMenu__item__link img {
+  max-height: 1.25rem;
+  max-width: 5.625rem;
+}
+
+.c0 .k-HeaderMenu__item--large .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.75rem 1.3125rem 1.75rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--large.k-HeaderMenu__item--external .k-HeaderMenu__item__link {
+  height: 4.375rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 2.5rem;
+}
+
+.c0 .k-HeaderMenu__item--light {
+  color: var(--color-grey-500,#b8b8b8);
+}
+
+.c0 .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link {
+  color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorderOnSide .k-HeaderMenu__item--isSelected .k-HeaderMenu__item__link::before {
+  width: 0.25rem;
+  background-color: var(--color-primary-500,#19b4fa);
+}
+
+.c0.k-HeaderMenu--hasBorders {
+  border-left: 0.0625rem solid var(--color-grey-300,#eee);
+  border-right: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+.c0.k-HeaderMenu--hasBorders .k-HeaderMenu__item {
+  border-bottom: 0.0625rem solid var(--color-grey-300,#eee);
+}
+
+<ul
+  className="c0 k-HeaderMenu k-HeaderMenu--left k-HeaderMenu--hasBorders k-HeaderMenu--hasBorderOnSide k-HeaderMenu--hasBorderOnSide-left k-HeaderMenu--hasBorderOnSideOnHover"
+  style={
+    Object {
+      "--headerMenu-background-colors-hover": undefined,
+    }
+  }
+>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 1
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item k-HeaderMenu__item--medium k-HeaderMenu__item--light"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 2
+    </a>
+  </li>
+  <li
+    className="k-HeaderMenu__item customLiClass k-HeaderMenu__item--medium"
+  >
+    <a
+      aria-current={null}
+      className="k-HeaderMenu__item__link"
+      href="#"
+    >
+      Item 3
+    </a>
+  </li>
+</ul>
+`;

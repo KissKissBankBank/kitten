@@ -1,35 +1,51 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import classNames from 'classnames'
+import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { modifierStyles } from './helpers/modifier-styles'
+import {
+  titleModifierStyles,
+  titleModifiersNames,
+} from '../common/title-modifier-styles'
 
 const StyledTitle = styled.span`
-  ${TYPOGRAPHY.fontStyles.bold};
-  ${({ modifier }) => modifierStyles(modifier)}
+  --Title-css-color: ${COLORS.font1};
 
-  ${({ margin }) =>
-    !margin &&
-    css`
-      margin-top: 0;
-      margin-bottom: 0;
-    `}
+  ${TYPOGRAPHY.fontStyles['700']};
+  color: var(--Title-css-color);
 
-  ${({ italic }) =>
-    italic &&
-    css`
-      font-style: italic;
-    `}
+  &.k-Title--noMargin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &.k-Title--italic {
+    font-style: italic;
+  }
+
+  ${titleModifierStyles('&.k-Title')}
 `
 
-export const Title = ({ modifier, tag, margin, italic, ...other }) => {
+export const Title = ({
+  modifier,
+  tag,
+  noMargin,
+  italic,
+  cssColor,
+  className,
+  ...other
+}) => {
   return (
     <StyledTitle
       as={tag}
-      {...other}
       modifier={modifier}
-      margin={margin}
-      italic={italic}
+      className={classNames('k-Title', className, `k-Title--${modifier}`, {
+        'k-Title--noMargin': noMargin,
+        'k-Title--italic': italic,
+      })}
+      style={{ '--Title-css-color': cssColor }}
+      {...other}
     />
   )
 }
@@ -37,30 +53,15 @@ export const Title = ({ modifier, tag, margin, italic, ...other }) => {
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  margin: true,
+  noMargin: false,
   italic: false,
+  cssColor: null,
 }
 
 Title.propTypes = {
   tag: PropTypes.string,
-  /**
-    Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
-  */
-  modifier: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-    'quinary',
-    'senary',
-    'septenary',
-  ]),
-  /**
-    Remove default margins of `title` attribut.
-  */
-  margin: PropTypes.bool,
-  /**
-    Use `font-style: italic`.
-  */
+  modifier: PropTypes.oneOf(titleModifiersNames),
+  noMargin: PropTypes.bool,
+  cssColor: PropTypes.string,
   italic: PropTypes.bool,
 }

@@ -1,0 +1,22 @@
+/// Font letter-spacing utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-letter-spacing;
+///
+/// @example html
+///
+///     <p class="k-u-letter-spacing-normal">…</p>
+///     <p class="k-u-letter-spacing-italic">…</p>
+
+@mixin k-utilities-letter-spacing {
+  .k-u-letter-spacing-normal {
+    letter-spacing: 0 !important;
+  }
+
+  .k-u-letter-spacing-10 {
+    letter-spacing: 0.1em !important;
+  }
+}

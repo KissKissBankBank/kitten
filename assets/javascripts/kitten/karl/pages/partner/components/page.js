@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Header } from '../../../../components/headers/header'
+import { HeaderNav, KissKissBankBankLogo } from 'kitten'
 import TextWithVideo from './text-with-video'
 import TextWithIconsList from './text-with-icon-list'
 import TextWithImages from './text-with-images'
@@ -10,7 +10,11 @@ import FormWithImage from './form-with-image'
 
 const PartnerPage = () => (
   <Fragment>
-    <Header />
+    <HeaderNav>
+      <HeaderNav.Logo href="#">
+        <KissKissBankBankLogo />
+      </HeaderNav.Logo>
+    </HeaderNav>
     <TextWithVideo />
     <TextWithIconsList />
     <TextWithImages />

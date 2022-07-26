@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/addon-docs'
+import { TitleWithStroke, Paragraph, Hero } from '../../assets/javascripts/kitten'
+import packageInfo from '../../package.json'
+
+<Meta title="Documentation/Introduction" />
+
+<TitleWithStroke>
+  Kitten, by
+  {' '}
+  <img
+    src="/logo-kisskissandco.svg"
+    alt="KissKissBankBank & Co."
+    style={{ maxHeight: '.8em', verticalAlign: 'middle', }}
+  />
+</TitleWithStroke>
+
+<Hero
+  direction="right"
+  imageSrc={`/kitten-${Math.floor(Math.random() * 10)}.jpg`}
+>
+  <Paragraph modifier="primary">
+    Kitten is the design system used on <a className="k-u-link k-u-link-background1 k-u-weight-regular" href="https://www.kisskissbankbank.com">KissKissBankBank</a> and <a className="k-u-link k-u-link-background1 k-u-weight-regular" href="https://www.lendopolis.com">Lendopolis.com</a>.
+  </Paragraph>
+
+  <Paragraph modifier="tertiary">
+    It is a components library based on React, along with Sass utility classes.
+  </Paragraph>
+
+  <Paragraph modifier="tertiary">
+    Latest version: <strong className="k-u-weight-bold">{packageInfo.version}</strong>
+    <br/>
+    Homepage: <a className="k-u-link k-u-link-primary1 k-u-weight-bold" href={packageInfo.homepage}>GitHub: kitten</a>
+  </Paragraph>
+</Hero>

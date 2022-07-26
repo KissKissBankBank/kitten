@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
+>
+  <input
+    className="k-TextInput k-TextInput--hasLimit"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithLimit"
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="k-TextInput__limitNumber"
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
+>
+  <input
+    className="k-TextInput k-TextInput--hasLimit k-TextInput--disabled"
+    defaultValue=""
+    disabled={true}
+    id="TextInputWithLimit"
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="k-TextInput__limitNumber k-TextInput__limitNumber--disabled"
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium"
+>
+  <input
+    className="k-TextInput k-TextInput--hasLimit k-TextInput--error"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithLimit"
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="k-TextInput__limitNumber"
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`size\` prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--small"
+>
+  <input
+    className="k-TextInput k-TextInput--hasLimit"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithLimit"
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="k-TextInput__limitNumber"
+  >
+    80
+  </div>
+</div>
+`;

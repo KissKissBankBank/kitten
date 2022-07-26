@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SupTitle /> by default matches with snapshot 1`] = `
+<span
+  className="k-u-line-height-normal k-u-size-small k-u-transform-uppercase k-u-weight-700"
+>
+  Lorem ipsun
+</span>
+`;

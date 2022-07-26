@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ tuxZN k-SimpleCarousel"
+  style={
+    Object {
+      "--simple-carousel-activePaginationColor": "var(--color-grey-900, #222)",
+      "--simple-carousel-paginationAlign": "start",
+      "--simple-carousel-paginationColor": "var(--color-grey-400, #d8d8d8)",
+    }
+  }
+>
+  <div
+    className="k-SimpleCarousel__container"
+    style={Object {}}
+  >
+    <div
+      aria-hidden={null}
+      aria-labelledby="test_carouselTab_0"
+      id="test_carouselItem_0"
+      role="tabpanel"
+    >
+      <p>
+        Foo
+      </p>
+    </div>
+    <div
+      aria-hidden={true}
+      aria-labelledby="test_carouselTab_1"
+      id="test_carouselItem_1"
+      role="tabpanel"
+    >
+      <p>
+        Bar
+      </p>
+    </div>
+  </div>
+  <div
+    className="k-SimpleCarousel__pagination"
+    onKeyDown={[Function]}
+    role="tablist"
+    style={Object {}}
+  >
+    <button
+      aria-controls="test_carouselItem_0"
+      aria-selected={true}
+      className="k-SimpleCarousel__button k-u-reset-button"
+      id="test_carouselTab_0"
+      onClick={[Function]}
+      role="tab"
+      style={Object {}}
+      type="button"
+    >
+      <span
+        className="k-u-a11y-visuallyHidden"
+      >
+        Page 1
+      </span>
+    </button>
+    <button
+      aria-controls="test_carouselItem_1"
+      aria-selected={false}
+      className="k-SimpleCarousel__button k-u-reset-button"
+      id="test_carouselTab_1"
+      onClick={[Function]}
+      role="tab"
+      style={Object {}}
+      type="button"
+    >
+      <span
+        className="k-u-a11y-visuallyHidden"
+      >
+        Page 2
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ tuxZN k-SimpleCarousel"
+  style={
+    Object {
+      "--simple-carousel-activePaginationColor": "var(--color-grey-900, #222)",
+      "--simple-carousel-paginationAlign": "start",
+      "--simple-carousel-paginationColor": "var(--color-grey-400, #d8d8d8)",
+    }
+  }
+>
+  <div
+    className="k-SimpleCarousel__container"
+    style={Object {}}
+  >
+    <div
+      aria-hidden={null}
+      aria-labelledby="test_carouselTab_0"
+      id="test_carouselItem_0"
+      role="tabpanel"
+    >
+      <p>
+        Foo
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ tuxZN k-SimpleCarousel"
+  style={
+    Object {
+      "--simple-carousel-activePaginationColor": "var(--color-grey-900, #222)",
+      "--simple-carousel-paginationAlign": "center",
+      "--simple-carousel-paginationColor": "var(--color-grey-400, #d8d8d8)",
+    }
+  }
+>
+  <div
+    className="k-SimpleCarousel__container"
+    style={Object {}}
+  >
+    <div
+      aria-hidden={null}
+      aria-labelledby="simpleCarousel_carouselTab_0"
+      id="simpleCarousel_carouselItem_0"
+      role="tabpanel"
+    >
+      <p
+        activePaginationColor="Custom active pagination color"
+        paginationColor="Custom pagination color"
+      >
+        Foo
+      </p>
+    </div>
+  </div>
+</div>
+`;

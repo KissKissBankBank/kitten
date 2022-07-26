@@ -1,0 +1,29 @@
+name: Build Figma Tokens to CSS
+on:
+  push:
+    paths:
+      - 'data/tokens.json'
+      - 'sd.config.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm ci
+      - name: Convert tokens according to Style Dictionary config
+        run: npm run build:style-dictionary
+      - name: Build SCSS Tokens files
+        run: npm run build:tokens
+      - name: Build SCSS Utility
+        run: npm run build:utilities
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Tokens

@@ -11,15 +11,18 @@ import {
   Button,
   Video,
   Loader,
-} from '../../../../index'
-import { DEFAULT, BIG } from '../../../../components/layout/horizontal-stroke'
-import { FLUID } from '../../../../components/buttons/button/button'
+  pxToRem,
+  ScreenConfig,
+} from 'kitten'
+import {
+  MEDIUM,
+  LARGE,
+} from '../../../../components/typography/horizontal-stroke'
+import { FLUID } from '../../../../components/action/button/standalone-styles'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
 } from '../../../../constants/grid-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledGrid = styled(Grid)`
   align-items: center;
@@ -44,11 +47,11 @@ const StyledVideo = styled.div`
 `
 
 const StyledHorizontalStroke = styled(HorizontalStroke)`
-  ${DEFAULT}
+  ${MEDIUM}
   width: ${pxToRem(40)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    ${BIG}
+    ${LARGE}
     height: ${pxToRem(6)};
   }
 `
@@ -70,7 +73,7 @@ const TextWithVideo = () => (
               playsInline
               loop
               muted
-              src="https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4"
+              src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
             >
               <Video.Loader>
                 <Loader />
@@ -99,7 +102,7 @@ const TextWithVideo = () => (
           </Marger>
 
           <Marger top="4">
-            <StyledButton href="#" modifier="helium" big>
+            <StyledButton href="#" modifier="helium" size="large">
               Devenir partenaire
             </StyledButton>
           </Marger>

@@ -1,54 +1,79 @@
 import React from 'react'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Text } from '../../typography/text'
-
-const modifierOptions = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Quaternary: 'quaternary',
-  Quinary: 'quinary',
-  Senary: 'senary',
-  Septenary: 'septenary',
-}
-
-const alignOptions = {
-  Left: 'left',
-  Center: 'center',
-  Right: 'right',
-}
+import { COLORS, Marger, Text } from 'kitten'
+import { DocsPage } from 'storybook/docs-page'
 
 export default {
   component: TitleWithStroke,
   title: 'Typography/TitleWithStroke',
-  decorators: [withKnobs],
   parameters: {
-    component: TitleWithStroke,
-    componentSubtitle: 'List of TitleWithStroke',
+    docs: {
+      page: () => (
+        <DocsPage filepath={__filename} importString="TitleWithStroke" />
+      ),
+    },
+  },
+  decorators: [story => <div className="story-Container">{story()}</div>],
+}
+
+export const Default = args => <TitleWithStroke {...args} />
+
+Default.args = {
+  modifier: 'primary',
+  italic: false,
+  align: 'left',
+  cssColor: COLORS.font1,
+  tag: 'h1',
+  children: 'Lorem ipsum dolor sit amet',
+}
+
+Default.argTypes = {
+  modifier: {
+    name: 'modifier',
+    description:
+      'Title has seven modifiers, they define different sizes depending on the device (desktop, tablet and mobile)',
+    options: [
+      'primary',
+      'secondary',
+      'tertiary',
+      'quaternary',
+      'quinary',
+      'senary',
+      'septenary',
+    ],
+    control: 'select',
+  },
+  italic: {
+    name: 'italic',
+    description: 'Adds an italic style.',
+    control: 'boolean',
+  },
+  align: {
+    name: 'align',
+    description: 'Sets the horizontal alignment.',
+    options: ['left', 'center', 'right'],
+    control: 'inline-radio',
+  },
+  cssColor: {
+    name: 'cssColor',
+    description: 'Sets a color from a CSS color string.',
+    control: 'color',
+  },
+  tag: {
+    name: 'tag',
+    description: 'Changes the title’s element type.',
+    control: 'text',
+  },
+  children: {
+    name: 'children',
+    control: 'text',
   },
 }
 
-export const DefaultProps = () => (
-  <Container>
-    <Marger top="4">
-      <TitleWithStroke
-        modifier={select('Modifier', modifierOptions, 'primary')}
-        italic={boolean('Italic', false)}
-        align={select('Align', alignOptions, 'left')}
-      >
-        {text('Title', 'Lorem ipsum dolor sit amet')}
-      </TitleWithStroke>
-    </Marger>
-  </Container>
-)
-
-export const Modifier = () => (
+export const ModifierMetrics = () => (
   <>
     <Marger>
-      <Text weight="bold">Primary</Text>
+      <Text weight="700">Primary</Text>
       <br />
       <Text size="micro">• Desktop version - 64px</Text>
       <br />
@@ -72,7 +97,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Secondary</Text>
+      <Text weight="700">Secondary</Text>
       <br />
       <Text size="micro">• Desktop version - 48px</Text>
       <br />
@@ -96,7 +121,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Tertiary</Text>
+      <Text weight="700">Tertiary</Text>
       <br />
       <Text size="micro">• Desktop version - 36px</Text>
       <br />
@@ -120,7 +145,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Quaternary</Text>
+      <Text weight="700">Quaternary</Text>
       <br />
       <Text size="micro">• Desktop version - 32px</Text>
       <br />
@@ -144,7 +169,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Quinary</Text>
+      <Text weight="700">Quinary</Text>
       <br />
       <Text size="micro">• Desktop version - 28px</Text>
       <br />
@@ -168,7 +193,7 @@ export const Modifier = () => (
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Senary</Text>
+      <Text weight="700">Senary</Text>
       <br />
       <Text size="micro">• Desktop version - 24px</Text>
       <br />
@@ -185,14 +210,14 @@ export const Modifier = () => (
       <Marger top="1">
         <Text size="micro">• Mobile version - 18px</Text>
         <br />
-        <Text size="big" weight="bold">
+        <Text size="large" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
     </Marger>
 
     <Marger top="7">
-      <Text weight="bold">Septenary</Text>
+      <Text weight="700">Septenary</Text>
       <br />
       <Text size="micro">• Desktop version - 20px</Text>
       <br />
@@ -202,35 +227,17 @@ export const Modifier = () => (
       <Marger top="1">
         <Text size="micro">• Tablet version - 18px</Text>
         <br />
-        <Text size="big" weight="bold">
+        <Text size="large" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
       <Marger top="1">
         <Text size="micro">• Mobile version - 16px</Text>
         <br />
-        <Text size="default" weight="bold">
+        <Text size="medium" weight="700">
           Lorem ipsum dolor sit amet…
         </Text>
       </Marger>
     </Marger>
   </>
-)
-
-export const AlignCenter = () => (
-  <TitleWithStroke modifier="primary" align="center">
-    Lorem ipsum dolor sit amet
-  </TitleWithStroke>
-)
-
-export const AlignRight = () => (
-  <TitleWithStroke modifier="primary" align="right">
-    Lorem ipsum dolor sit amet
-  </TitleWithStroke>
-)
-
-export const Italic = () => (
-  <TitleWithStroke modifier="primary" italic>
-    Lorem ipsum dolor sit amet…
-  </TitleWithStroke>
 )

@@ -1,0 +1,76 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Documentation/Design/Screen Sizes" />
+
+# Screen Sizes
+
+Pour définir les media queries en CSS-in-JS, Kitten propose deux constantes, `ScreenConfig` et `mq`.
+
+Les deux peuvent être utilisés sans préférence. `mq` propose des media queries complètes et nommées d’après le device cible, `ScreenConfig` est une bibliothèque de formats de fenêtre, pour composer plus finement les media queries.
+
+Source : [assets/javascripts/kitten/constants/screen-config.js](https://github.com/KissKissBankBank/kitten/blob/master/assets/javascripts/kitten/constants/screen-config.js)
+
+
+## `ScreenConfig`
+
+L’objet `ScreenConfig` contient six zones définies par une largeur minimum
+et une largeur maximum, ayant les clés `min` et `max`.
+
+
+- `XXS` : de 0 à 399px
+- `XS` : de 400px à 639px
+- `S` : de 640px à 767px
+- `M` : de 768px à 1079px
+- `L` : de 1080px à 1439px
+- `XL` : de 1440px à l’infini
+
+### Exemple
+
+```css
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    /* Media query de 768px à l’infini */
+  }
+  @media (max-width: ${ScreenConfig.XS.max}px) {
+    /* Media query de 0 à 639px */
+  }
+  @media (min-width: ${ScreenConfig.M.min}px) and (max-width: ${ScreenConfig.L.max}px) {
+    /* Media query de 768px à 1439px */
+  }
+```
+
+
+## `mq`
+
+L’objet `mq` contient 5 déclarations de Media Queries :
+les trois types de devices, et deux media queries qui rassemblent deux largeurs.
+
+Valeurs possibles :
+
+- `mobile` : de 0 à 639px (`XXS` + `XS`)
+- `mobileAndTablet` : de 0 à 1079px (`XXS` + `XS` + `S` + `M`)
+- `tablet` : de 640px à 1079px (`S` + `M`)
+- `tabletAndDesktop` : de 640px à l’infini (`S` + `M` + `L` + `XL`)
+- `desktop` : de 1080px à l’infini (`L` + `XL`)
+
+### Exemple
+
+```css
+  @media ${mq.mobile} {
+    /* Media query pour mobile seul */
+  }
+  @media ${mq.mobileAndTablet} {
+    /* Media query pour mobile et tablet */
+  }
+  @media ${mq.tablet} {
+    /* Media query pour tablet seul */
+  }
+  @media ${mq.tabletAndDesktop} {
+    /* Media query pour tablet et desktop */
+  }
+  @media ${mq.desktop} {
+    /* Media query pour desktop seul */
+  }
+  @media ${mq.mobile} and ${mq.desktop} {
+    /* Media query qui exclut la largeur tablet */
+  }
+```

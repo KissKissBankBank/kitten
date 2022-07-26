@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
-import { Title } from '../../../../components/typography/title'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { mediaQueries } from '../../../../hoc/media-queries'
+import {
+  Title,
+  Grid,
+  GridCol,
+  Carousel,
+  pxToRem,
+  ScreenConfig,
+  mediaQueries,
+} from 'kitten'
 
 const StyledFeaturedProjects = styled(Grid)`
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
@@ -108,7 +111,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess }) => (
         itemMinWidth={viewportIsXSOrLess ? 250 : 490}
         baseItemMarginBetween={10}
         paginationPosition={{ default: 'bottom' }}
-        tinyButtons
+        smallButtons
         showPageSquares
         preferCompletePaginationOnMobile
         loop

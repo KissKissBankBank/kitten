@@ -5,8 +5,7 @@ create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
 You can check out Kitten's components on
-[KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/)
-and on [Storybook](https://kisskissbankbank.github.io/kitten/).
+[Storybook](https://kisskissbankbank.github.io/kitten/).
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
@@ -34,20 +33,17 @@ $ npm install @kisskissbankbank/kitten
 
 ## Usage
 
-### CSS components
+### CSS utilities
 
-Import `kitten` and the components your want to use in your application:
+CSS Utilities are classe that can be used for very basic styling. These utility classes *are used by React Components*. Kitten will not work properly without these utility classes.
 
 ```scss
-@import 'kitten';
-
-@include k-Button;
+@import '@kisskissbankbank/kitten/src/stylesheets/utilities';
 ```
 
-You can define your own font families, typography settings and colors by overriding the
-the `$k-fonts`, `$k-typography` and `$k-colors` options. Check out the
-[default config](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/_default-config.scss)
-for an example.
+[Look at the doc to know if/when to use it.](https://kitten.vercel.app/?path=/story/documentation-usage-using-utilities--page)
+
+It is recommended that you use an utility like `Purge CSS` at build time, to remove all the unused CSS utilities (be sure to include the path of your Kitten dependency so it's taken into account).
 
 ### React components
 
@@ -57,7 +53,7 @@ You can render React components directly in your js bundle:
 import { SimpleCard } from '@kisskissbankbank/kitten'
 
 ReactDOM.render(
-  <SimpleCard ...props/>,
+  <SimpleCard {...props} />,
   document.getElementById('main')
 )
 ```
@@ -91,35 +87,7 @@ To launch storybook locally:
 npm run storybook
 ```
 
-Then visit http://localhost:6006
-
-To release `Storybook` simply run this command:
-
-```sh
-npm run deploy-storybook
-```
-
-### Styleguide
-
-To launch the styleguide using webpack:
-
-```sh
-$ npm run styleguide:start
-```
-
-Then visit http://localhost:3000
-
-#### Production settings
-
-To share the styleguide with production settings (to share via ngrok for
-example), you can compile the assets:
-
-```sh
-$ npm run styleguide:build
-```
-
-It will create a `build` folder with static files. You can serve it as you wish
-
+The page http://localhost:6006 will be opened automatically.
 
 ### Component testing
 
@@ -181,15 +149,9 @@ $ npm login
   * Update the version with the version of the library.
 - Update the `package-lock.json` file:
   * Update the version with the version of the library.
-- Run this command:
-
-```sh
-bin/release NEW_VERSION
-```
-
+- Run the command `bin/release NEW_VERSION`
+  (replace `NEW_VERSION` with your version number)
 - Follow the link to create the pull request on Github.
-- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
-  related CHANGELOG.
 
 ### Release!
 
@@ -197,12 +159,6 @@ Once the pull request is accepted:
 
 - Merge the pull request into master.
 - Delete the release branch.
-- Run this command:
-
-```sh
-bin/publish
-```
-
-- Update
-  [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
-  move cards that are released from `done` column to `released` column.
+- Run this command: `bin/publish with-storybook`
+- Announce the release on KissKissBankBank's #kit-ui Slack channel 
+  with the related CHANGELOG when the new release is ready to be used.

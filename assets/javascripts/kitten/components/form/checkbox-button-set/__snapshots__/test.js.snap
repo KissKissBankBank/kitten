@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxButtonSet /> default matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf dbYqxW k-Form-CheckboxButtonSet"
+  disabled={false}
+>
+  <legend
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxButtonSet__label k-Label--small"
+    onClick={[Function]}
+  >
+    Label
+  </legend>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-a"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option A
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      disabled={false}
+      id="option-b"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-b"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option B
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      disabled={false}
+      id="option-c"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-c"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option C
+      </span>
+    </label>
+  </div>
+</fieldset>
+`;
+
+exports[`<CheckboxButtonSet /> with children and label matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf dbYqxW k-Form-CheckboxButtonSet"
+  disabled={false}
+>
+  <legend
+    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxButtonSet__label k-Label--small"
+    onClick={[Function]}
+  >
+    Label test
+  </legend>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-a"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option A
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      disabled={false}
+      id="option-b"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-b"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option B
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      disabled={false}
+      id="option-c"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-c"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option C
+      </span>
+    </label>
+  </div>
+</fieldset>
+`;
+
+exports[`<CheckboxButtonSet /> with children matches with snapshot 1`] = `
+<fieldset
+  className="sc-dkzDqf dbYqxW k-Form-CheckboxButtonSet"
+  disabled={false}
+>
+  <legend>
+    <h1>
+      Legend test
+    </h1>
+  </legend>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-a"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option A
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      disabled={false}
+      id="option-b"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-b"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option B
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bczRLJ fkLOSx k-Form-CheckboxButton k-Form-CheckboxButton--medium k-Form-CheckboxButtonSet__checkbox"
+  >
+    <input
+      className="k-Form-CheckboxButton__input"
+      disabled={false}
+      id="option-c"
+      name="test-checkbox-set"
+      type="checkbox"
+    />
+    <label
+      className="k-u-weight-500 k-Form-CheckboxButton__label"
+      htmlFor="option-c"
+      onClick={[Function]}
+    >
+      <span
+        className="k-Form-CheckboxButton__labelText"
+      >
+        Option C
+      </span>
+    </label>
+  </div>
+</fieldset>
+`;

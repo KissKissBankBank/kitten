@@ -1,17 +1,19 @@
 import React from 'react'
 import NewsCard from './news-card'
 import styled, { css } from 'styled-components'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
-import { Title } from '../../../components/typography/title'
-import { Paragraph } from '../../../components/typography/paragraph'
-import { Text } from '../../../components/typography/text'
-import { Container } from '../../../components/grid/container'
-import { Button } from '../../../components/buttons/button/button'
-import { InstrumentTagIcon } from '../../../components/icons/instrument-tag-icon'
-import { pxToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
+import {
+  ArrowIcon,
+  ScreenConfig,
+  HorizontalStroke,
+  Title,
+  Paragraph,
+  Text,
+  Container,
+  Button,
+  InstrumentTagIcon,
+  pxToRem,
+  COLORS,
+} from 'kitten'
 
 const Head = styled.div`
   background-color: ${COLORS.primary5};
@@ -32,7 +34,7 @@ const AnchorLink = styled(Text)`
     css`
       color: ${COLORS.background1};
       background-color: ${COLORS.primary1};
-      border-radius: ${pxToRem(4)};
+      border-radius: var(--border-radius-xs);
     `}
 `
 
@@ -66,13 +68,13 @@ const NewsList = () => {
     <>
       <Head className="k-u-hidden@s-down">
         <HeadContainer>
-          <BackLink weight="bold" size="tiny" color="primary1" tag="a" href="#">
+          <BackLink weight="700" size="small" color="primary1" tag="a" href="#">
             <LeftArrowIcon direction="left" /> Retour au projet
           </BackLink>
           <div>
             <AnchorLink
-              weight="bold"
-              size="tiny"
+              weight="700"
+              size="small"
               color="font1"
               tag="a"
               href="#"
@@ -81,8 +83,8 @@ const NewsList = () => {
               Brouillons
             </AnchorLink>
             <AnchorLink
-              weight="bold"
-              size="tiny"
+              weight="700"
+              size="small"
               color="font1"
               tag="a"
               href="#"
@@ -90,8 +92,8 @@ const NewsList = () => {
               Programmées
             </AnchorLink>
             <AnchorLink
-              weight="bold"
-              size="tiny"
+              weight="700"
+              size="small"
               color="font1"
               tag="a"
               href="#"
@@ -107,7 +109,7 @@ const NewsList = () => {
       </Head>
       <Container>
         <NewsContainer>
-          <Button big fluid modifier="oxygen">
+          <Button size="large" fit="fluid" modifier="helium">
             <InstrumentTagIcon width="14" />
             <span>Créer une nouvelle actu</span>
           </Button>
@@ -115,7 +117,7 @@ const NewsList = () => {
             Mes Brouillons
           </BlockTitle>
           <HorizontalStroke
-            size="big"
+            size="large"
             className="k-u-margin-top-double k-u-margin-bottom-quadruple"
           />
           <Paragraph modifier="secondary">
@@ -137,7 +139,7 @@ const NewsList = () => {
             Programmées
           </BlockTitle>
           <HorizontalStroke
-            size="big"
+            size="large"
             className="k-u-margin-top-double k-u-margin-bottom-quadruple"
           />
           <Paragraph modifier="secondary">

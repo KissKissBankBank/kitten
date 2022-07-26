@@ -1,15 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { COLORS, pxToRem, TYPOGRAPHY, ScreenConfig } from 'kitten'
 import { containerStyles, titleStyles } from './styles'
 import {
   AdaptableGrid as Grid,
   AdaptableGridCol as GridCol,
-} from '../../../../components/grid/adaptable-grid'
-import TYPOGRAPHY from '../../../../constants/typography-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
+} from '../../../../components/layout/adaptable-grid'
 
 const StyledTitle = styled.h2`
   ${titleStyles}
@@ -19,11 +16,11 @@ const StyledContainer = styled.div`
 `
 
 const StyledLastName = styled.span`
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   text-transform: uppercase;
 `
 const StyledLink = styled.a`
-  ${TYPOGRAPHY.fontStyles.regular}
+  ${TYPOGRAPHY.fontStyles['500']}
   display: inline-block;
   text-decoration: none;
   color: ${COLORS.primary1};

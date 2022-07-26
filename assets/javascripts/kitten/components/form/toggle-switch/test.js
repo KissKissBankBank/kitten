@@ -39,10 +39,10 @@ describe('<ToggleSwitch />', () => {
     })
   })
 
-  describe('with `big` prop', () => {
+  describe('with `disabled` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ToggleSwitch id="toggle-switch" big />)
+        .create(<ToggleSwitch id="toggle-switch" disabled />)
         .toJSON()
     })
 
@@ -51,10 +51,10 @@ describe('<ToggleSwitch />', () => {
     })
   })
 
-  describe('with `disabled` prop', () => {
+  describe('with `locked` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ToggleSwitch id="toggle-switch" disabled />)
+        .create(<ToggleSwitch id="toggle-switch" locked />)
         .toJSON()
     })
 

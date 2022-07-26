@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+>
+  <input
+    className="k-TextInput k-TextInput--hasUnit"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithUnit"
+    name="text"
+    onChange={[Function]}
+  />
+  <span
+    className="k-TextInput__unit"
+  >
+    ƒ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+>
+  <input
+    className="k-TextInput k-TextInput--hasUnit k-TextInput--disabled"
+    defaultValue=""
+    disabled={true}
+    id="TextInputWithUnit"
+    name="text"
+    onChange={[Function]}
+  />
+  <span
+    className="k-TextInput__unit"
+  >
+    ƒ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+>
+  <input
+    className="k-TextInput k-TextInput--hasUnit k-TextInput--error"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithUnit"
+    name="text"
+    onChange={[Function]}
+  />
+  <span
+    className="k-TextInput__unit"
+  >
+    ƒ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with size prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--large k-TextInput__wrapper--hasUnit"
+>
+  <input
+    className="k-TextInput k-TextInput--hasUnit"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithUnit"
+    name="text"
+    onChange={[Function]}
+  />
+  <span
+    className="k-TextInput__unit"
+  >
+    ƒ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+>
+  <input
+    className="k-TextInput k-TextInput--hasUnit"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithUnit"
+    name="text"
+    onChange={[Function]}
+  >
+    €
+  </input>
+  <span
+    className="k-TextInput__unit"
+  >
+    ƒ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+>
+  <input
+    className="k-TextInput k-TextInput--hasUnit k-TextInput--valid"
+    defaultValue=""
+    disabled={false}
+    id="TextInputWithUnit"
+    name="text"
+    onChange={[Function]}
+  />
+  <span
+    className="k-TextInput__unit"
+  >
+    ƒ
+  </span>
+</div>
+`;

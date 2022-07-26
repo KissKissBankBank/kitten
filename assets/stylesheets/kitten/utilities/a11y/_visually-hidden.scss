@@ -1,0 +1,23 @@
+/// Accessibility helper: Visually Hidden
+///
+/// @group align
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-visually-hidden
+///
+/// @example html
+///
+///   <span class="k-u-a11y-visuallyHidden">…</span>
+
+@mixin k-utilities-visually-hidden {
+  .k-u-a11y-visuallyHidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}

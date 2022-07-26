@@ -1,58 +1,59 @@
-import React, { useRef } from 'react'
-import { BurgerIcon } from '../../../../components/icons/burger-icon'
-import { Dropdown } from '../../../../components/dropdowns/v2/dropdown'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+import React, { useContext } from 'react'
+import { BurgerIcon } from '../../../graphics/icons/burger-icon'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 import COLORS from '../../../../constants/colors-config'
 import { Context } from './context'
 import classNames from 'classnames'
+import { useDropdown } from '../hooks/use-dropdown'
+import { DropdownButton } from './dropdown-button'
 
 const namespace = 'kkbbAndCo'
-const DROPDOWN_CLASS = `${namespace}-PlatformMenu`
 const CLOSE_EVENT = `${namespace}:platformMenu:close`
 
-const ButtonIcon = props => (
-  <>
-    <BurgerIcon
-      {...props}
-      hoverColor={COLORS.font1}
-      className="k-ButtonIcon__svg"
-      aria-hidden="true"
-    />
-    <VisuallyHidden>Menu</VisuallyHidden>
-  </>
-)
+export const BurgerMenu = ({
+  children,
+  dropdownContentWidth,
+  className,
+  ...props
+}) => {
+  const { id, callOnToggle } = useContext(Context)
 
-const buttonClassNames = classNames(
-  'k-Dropdown__button',
-  'k-ButtonIcon',
-  'k-ButtonIcon--tiny',
-)
-
-export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
-  const dropdownComponent = useRef(null)
-  const getElementById = id => () => document.getElementById(id)
+  const {
+    dropdownProps,
+    buttonProps,
+    menuProps,
+    isDropdownExpanded,
+  } = useDropdown({
+    dropdownContentWidth,
+    callOnToggle,
+    dropdownAnchorSide: 'left',
+    closeEvents: [CLOSE_EVENT],
+    buttonId: `${id}PlateformMenu`,
+    menuId: `${id}PlateformMenu__content`,
+  })
 
   return (
-    <Context.Consumer>
-      {({ id, callOnToggle }) => (
-        <Dropdown
-          {...props}
-          buttonClassName={buttonClassNames}
-          buttonContentOnCollapsed={<ButtonIcon isAnimatedOnHover={true} />}
-          buttonContentOnExpanded={<ButtonIcon isActive />}
-          buttonId={`${id}PlateformMenu`}
-          className={DROPDOWN_CLASS}
-          closeEvents={[CLOSE_EVENT]}
-          closeOnOuterClick={true}
-          dropdownContent={children}
-          dropdownContentWidth={dropdownContentWidth}
-          onToggle={callOnToggle}
-          positionedVerticallyWith={getElementById(id)}
-          positionedWithBorder
-          ref={dropdownComponent}
-          refreshEvents={['resize']}
+    <div
+      {...dropdownProps}
+      {...props}
+      className={classNames(className, dropdownProps.className)}
+    >
+      <DropdownButton
+        {...buttonProps}
+        className={classNames(
+          buttonProps.className,
+          'k-HeaderNav__BurgerMenu__button',
+        )}
+      >
+        <BurgerIcon
+          isActive={isDropdownExpanded}
+          hoverColor={COLORS.font1}
+          aria-hidden="true"
         />
-      )}
-    </Context.Consumer>
+        <VisuallyHidden>Menu</VisuallyHidden>
+      </DropdownButton>
+
+      <div {...menuProps}>{children}</div>
+    </div>
   )
 }

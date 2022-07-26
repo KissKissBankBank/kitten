@@ -9,38 +9,56 @@
 /// @example html
 ///
 ///   <div class="k-u-border-left-line1">…</div>
-///   <div class="k-u-border-left-line1--important">…</div>
 
 @mixin k-utilities-border {
-  .k-u-border-top-line1 {
-    border-top: 1px solid map-get($k-colors, 'line-1');
+  .k-u-border-none {
+    border: none !important;
+  }
 
-    &--important {
-      border-top: 1px solid map-get($k-colors, 'line-1') !important;
-    }
+  .k-u-border {
+    border: var(--border) !important;
+  }
+
+  .k-u-border--clickable:hover {
+    border: var(--border-hover) !important;
+  }
+  .k-u-border--clickable:active {
+    border: var(--border-active) !important;
+  }
+
+  .k-u-border-primary--clickable:hover {
+    border: var(--border-hover-primary) !important;
+  }
+  .k-u-border-primary--clickable:active {
+    border: var(--border-active-primary) !important;
+  }
+
+  .k-u-border-light {
+    border: var(--border-light) !important;
+  }
+  .k-u-border-danger {
+    border: var(--border-danger) !important;
+  }
+  .k-u-border-success {
+    border: var(--border-success) !important;
+  }
+  .k-u-border-warning {
+    border: var(--border-warning) !important;
+  }
+
+  .k-u-border-top-line1 {
+    border-top: var(--border-light) !important;
   }
 
   .k-u-border-right-line1 {
-    border-right: 1px solid map-get($k-colors, 'line-1');
-
-    &--important {
-      border-right: 1px solid map-get($k-colors, 'line-1') !important;
-    }
+    border-right: var(--border-light) !important;
   }
 
   .k-u-border-bottom-line1 {
-    border-bottom: 1px solid map-get($k-colors, 'line-1');
-
-    &--important {
-      border-bottom: 1px solid map-get($k-colors, 'line-1') !important;
-    }
+    border-bottom: var(--border-light) !important;
   }
 
   .k-u-border-left-line1 {
-    border-left: 1px solid map-get($k-colors, 'line-1');
-
-    &--important {
-      border-left: 1px solid map-get($k-colors, 'line-1') !important;
-    }
+    border-left: var(--border-light) !important;
   }
 }

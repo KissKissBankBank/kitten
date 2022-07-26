@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StickyContainer /> already sticky matches with snapshot 1`] = `
+Array [
+  <div
+    className="sc-gsnTZi jgCpXV k-Spacer"
+    style={
+      Object {
+        "--StickyContainer-height": 0,
+      }
+    }
+  />,
+  <div
+    className="sc-bczRLJ cJMZpD k-StickyContainer k-StickyContainer--alwaysSticky"
+  />,
+]
+`;
+
+exports[`<StickyContainer /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bczRLJ geMkpQ k-StickyContainer"
+/>
+`;
+
+exports[`<StickyContainer /> never sticky matches with snapshot 1`] = `"test"`;
+
+exports[`<StickyContainer /> with some props matches with snapshot 1`] = `
+<div
+  aria-hidden={true}
+  className="sc-bczRLJ klUjle k-StickyContainer custom__class"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+/>
+`;

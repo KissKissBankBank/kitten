@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BurgerIcon /> default matches the snapshot 1`] = `
+<svg
+  aria-label={null}
+  className="sc-bczRLJ LLsju k-BurgerIcon"
+  height="10"
+  role="img"
+  style={
+    Object {
+      "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+      "--burgerIcon-mainColor": "var(--color-grey-900, #222)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    className="k-BurgerIcon__bun"
+    height="2"
+    width="12"
+    y="0"
+  />
+  <rect
+    className="k-BurgerIcon__patty"
+    height="2"
+    width="12"
+    y="4"
+  />
+  <rect
+    className="k-BurgerIcon__bun"
+    height="2"
+    width="12"
+    y="8"
+  />
+</svg>
+`;
+
+exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches the snapshot 1`] = `
+<svg
+  aria-label={null}
+  className="sc-bczRLJ LLsju k-BurgerIcon"
+  height="10"
+  role="img"
+  style={
+    Object {
+      "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+      "--burgerIcon-mainColor": "var(--color-grey-900, #222)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    className="k-BurgerIcon__bun"
+    height="2"
+    width="12"
+    y="0"
+  />
+  <rect
+    className="k-BurgerIcon__patty"
+    height="2"
+    width="12"
+    y="4"
+  />
+  <rect
+    className="k-BurgerIcon__bun"
+    height="2"
+    width="12"
+    y="8"
+  />
+</svg>
+`;
+
+exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
+<svg
+  aria-label={null}
+  className="sc-bczRLJ LLsju k-BurgerIcon k-BurgerIcon--isActive"
+  height="10"
+  role="img"
+  style={
+    Object {
+      "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+      "--burgerIcon-mainColor": "var(--color-grey-900, #222)",
+    }
+  }
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    className="k-BurgerIcon__bun"
+    height="2"
+    width="12"
+    y="0"
+  />
+  <rect
+    className="k-BurgerIcon__patty"
+    height="2"
+    width="12"
+    y="4"
+  />
+  <rect
+    className="k-BurgerIcon__bun"
+    height="2"
+    width="12"
+    y="8"
+  />
+</svg>
+`;

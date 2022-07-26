@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
-import { GarbageIcon } from '../../../../components/icons/garbage-icon'
-import { EditIcon } from '../../../../components/icons/edit-icon'
-import { ButtonIcon } from '../../../../components/buttons/button-icon'
-import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
-import { Button } from '../../../../components/buttons/button/button'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import {
+  pxToRem,
+  COLORS,
+  GarbageIcon,
+  EditIcon,
+  Title,
+  Text,
+  Button,
+  ScreenConfig,
+} from 'kitten'
 
 const borderWidth = 2
 const wrapperPadding = 30
@@ -20,7 +21,7 @@ const Wrapper = styled.div`
   padding: ${pxToRem(wrapperPadding)};
 `
 
-const GarbageButton = styled(ButtonIcon)`
+const GarbageButton = styled(Button)`
   position: absolute;
   top: -${pxToRem(borderWidth)};
   right: -${pxToRem(borderWidth)};
@@ -55,16 +56,17 @@ const NewsCard = ({ title, children, publishedAt }) => {
     <Wrapper>
       <GarbageButton
         type="button"
+        fit="icon"
         title="Garbage Button"
         aria-label="Supprimer cet item"
         modifier="beryllium"
-        size="tiny"
+        size="small"
       >
-        <GarbageIcon className="k-ButtonIcon__svg" />
+        <GarbageIcon />
       </GarbageButton>
       {publishedAt && (
         <Publication>
-          <Text weight="light" color="font1">
+          <Text weight="400" color="font1">
             Programmé pour le{' '}
           </Text>
           <strong className="k-u-strong">{publishedAt}</strong>
@@ -76,21 +78,21 @@ const NewsCard = ({ title, children, publishedAt }) => {
       <Splitter>
         <div>
           <Text
-            weight="light"
-            size="default"
+            weight="400"
+            size="medium"
             tag="div"
             className="k-u-margin-top-single k-u-margin-right-double"
           >
             {children}
           </Text>
-          <ShowMoreLink weight="bold" color="primary1" tag="a" href="#">
+          <ShowMoreLink weight="700" color="primary1" tag="a" href="#">
             Voir tout
           </ShowMoreLink>
         </div>
         <Actions>
-          <ButtonIcon modifier="hydrogen">
-            <EditIcon className="k-ButtonIcon__svg" aria-label="Éditer" />
-          </ButtonIcon>
+          <Button fit="icon" modifier="hydrogen">
+            <EditIcon aria-label="Éditer" />
+          </Button>
           <Button modifier="helium" className="k-u-margin-left-double">
             Publier
           </Button>

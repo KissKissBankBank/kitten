@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title } from '../../../components/typography/title'
-import { TitleWithStroke } from '../../../components/typography/title-with-stroke'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { Container } from '../../../components/grid/container'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
+import {
+  Title,
+  TitleWithStroke,
+  ArrowIcon,
+  pxToRem,
+  stepToRem,
+  Container,
+  Grid,
+  GridCol,
+  ScreenConfig,
+  TYPOGRAPHY,
+  COLORS,
+} from 'kitten'
 import { EngagementsCarousel } from './engagements-carousel'
 import { FeaturedProjects } from './featured-projects'
 import { PopularProjects } from './popular-projects'
@@ -16,6 +20,7 @@ import { NewsBlock } from './news/components/news-block'
 import { TextWithSideImage } from './text-with-side-image'
 import { Video } from './video'
 import { DialogWithPictureBorder } from './dialog-with-picture-border'
+import { Partners } from './partners'
 
 const StyledHomePage = styled.div`
   .Homepage__section {
@@ -52,9 +57,9 @@ const StyledHomePage = styled.div`
     display: block;
     text-align: right;
     text-decoration: none;
-    ${TYPOGRAPHY.fontStyles.regular}
+    ${TYPOGRAPHY.fontStyles['500']}
     color: ${COLORS.font1};
-    transition: color .4s ease;
+    transition: color 0.4s ease;
 
     span {
       font-size: ${stepToRem(-2)};
@@ -69,13 +74,13 @@ const StyledHomePage = styled.div`
     &:hover,
     &:focus,
     &:active {
-      color: ${COLORS.primary2}
+      color: ${COLORS.primary2};
     }
 
     svg {
       vertical-align: center;
       fill: currentColor;
-      transition: fill .4s ease;
+      transition: fill 0.4s ease;
     }
   }
 `
@@ -184,6 +189,10 @@ const HomePage = () => (
 
     <Container as="section" className="Homepage__section">
       <TextWithSideImage />
+    </Container>
+
+    <Container as="section" className="Homepage__section">
+      <Partners />
     </Container>
 
     <Container as="section" className="Homepage__section">

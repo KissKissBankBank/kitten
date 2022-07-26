@@ -1,0 +1,6 @@
+:root {
+  --transition-timing: 0.2s;
+  --transition-timing-function: ease;
+
+  --transition: var(--transition-timing) var(--transition-timing-function);
+}

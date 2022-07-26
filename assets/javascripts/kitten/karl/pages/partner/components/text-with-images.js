@@ -1,13 +1,16 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
-import { Button } from '../../../../components/buttons/button/button'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Text,
+  Button,
+  pxToRem,
+  ScreenConfig,
+} from 'kitten'
 
 const StyledGrid = styled.div`
   display: grid;
@@ -61,7 +64,7 @@ const TextWithImages = () => (
               </StyledTitle>
 
               <Marger top="4" className="k-u-hidden@xs-down">
-                <Button as="a" href="#" modifier="helium" big>
+                <Button as="a" href="#" modifier="helium" size="large">
                   Rejoignez-nous
                 </Button>
               </Marger>
@@ -78,7 +81,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Marque ou entreprise
                 </Text>
               </Marger>
@@ -95,7 +98,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Collectivité territoriale ou réseau
                 </Text>
               </Marger>
@@ -112,7 +115,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Média ou agence
                 </Text>
               </Marger>
@@ -129,7 +132,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   Marque ou Association ou fondation
                 </Text>
               </Marger>
@@ -146,7 +149,7 @@ const TextWithImages = () => (
               </StyledImagesGrid>
 
               <Marger top={2} className="k-u-align-center">
-                <Text size="tiny" weight="regular" color="font1">
+                <Text size="small" weight="500" color="font1">
                   École ou incubateur
                 </Text>
               </Marger>
@@ -154,7 +157,7 @@ const TextWithImages = () => (
           </StyledGrid>
 
           <Marger top="4" className="k-u-hidden@s-up">
-            <Button as="a" href="#" modifier="helium" big fluid>
+            <Button as="a" href="#" modifier="helium" size="large" fit="fluid">
               Vous aussi, rejoignez-nous
             </Button>
           </Marger>

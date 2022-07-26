@@ -1,9 +1,8 @@
 import React from 'react'
-import { Marger } from '../../../layout/marger'
-import { PasswordInput } from '../../password-input'
+import { PasswordInput } from '../../../form/input/password-input'
 
 export const FieldPassword = props => (
-  <Marger top="1">
+  <div className="k-u-margin-top-single k-Field__control">
     <PasswordInput {...props} />
-  </Marger>
+  </div>
 )

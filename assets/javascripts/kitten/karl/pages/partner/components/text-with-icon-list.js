@@ -1,14 +1,18 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { Button, FLUID } from '../../../../components/buttons/button/button'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { IconList } from '../../../../components/lists/icon-list'
+import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Text,
+  HorizontalStroke,
+  Button,
+  FLUID,
+  ScreenConfig,
+  IconList,
+} from 'kitten'
 
 const StyledGrid = styled(Grid)`
   align-items: center;
@@ -40,7 +44,7 @@ const TextWithIconList = () => (
           </Marger>
 
           <Marger bottom="4" className="k-u-hidden@m-down">
-            <HorizontalStroke size="big" customSize={{ height: 6 }} />
+            <HorizontalStroke size="large" customSize={{ height: 6 }} />
           </Marger>
 
           <Marger top="4" className="k-u-hidden@m-down">
@@ -57,9 +61,9 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text color="font1" weight="light">
-                Donnez <Text weight="regular">de la visibilité et du sens</Text>{' '}
-                à votre marque, entreprise, collectivité, association,
+              <Text color="font1" weight="400">
+                Donnez <Text weight="500">de la visibilité et du sens</Text> à
+                votre marque, entreprise, collectivité, association,
                 fondation...
               </Text>
             </IconList.Item>
@@ -68,8 +72,8 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#CAF4FE', borderColor: '#CAF4FE' },
               }}
             >
-              <Text color="font1" weight="light">
-                <Text weight="regular">Fédérez votre communauté</Text> ou vos
+              <Text color="font1" weight="400">
+                <Text weight="500">Fédérez votre communauté</Text> ou vos
                 collaborateurs en donnant naissance à des projets impactants
               </Text>
             </IconList.Item>
@@ -78,8 +82,8 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text color="font1" weight="light">
-                Touchez de <Text weight="regular">nouveaux publics</Text>
+              <Text color="font1" weight="400">
+                Touchez de <Text weight="500">nouveaux publics</Text>
               </Text>
             </IconList.Item>
             <IconList.Item
@@ -87,10 +91,10 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#CAF4FE', borderColor: '#CAF4FE' },
               }}
             >
-              <Text color="font1" weight="light">
+              <Text color="font1" weight="400">
                 Repérez, accompagnez et{' '}
-                <Text weight="regular">révélez les talents</Text> de demain dans
-                les domaines qui vous tiennent à coeur
+                <Text weight="500">révélez les talents</Text> de demain dans les
+                domaines qui vous tiennent à coeur
               </Text>
             </IconList.Item>
             <IconList.Item
@@ -98,9 +102,9 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
               }}
             >
-              <Text color="font1" weight="light">
+              <Text color="font1" weight="400">
                 Enrichissez votre image grâce aux{' '}
-                <Text weight="regular">
+                <Text weight="500">
                   valeurs citoyennes, positives et collaboratives
                 </Text>{' '}
                 du crowdfunding
@@ -111,9 +115,9 @@ const TextWithIconList = () => (
                 style: { backgroundColor: '#CAF4FE', borderColor: '#CAF4FE' },
               }}
             >
-              <Text color="font1" weight="light">
+              <Text color="font1" weight="400">
                 Dynamisez l’économie locale en soutenant{' '}
-                <Text weight="regular">
+                <Text weight="500">
                   les créateurs et entrepreneurs de votre territoire
                 </Text>
               </Text>
