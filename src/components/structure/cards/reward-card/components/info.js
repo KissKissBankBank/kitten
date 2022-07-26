@@ -21,7 +21,6 @@ const Info = _ref => {
     fullWidth = false,
     ...props
   } = _ref;
-  console.warn('This subcomponent is deprecated. Please use another one.');
   return /*#__PURE__*/_react.default.createElement("p", (0, _extends2.default)({
     className: (0, _classnames.default)('k-RewardCard__info', 'k-u-size-small', 'k-u-line-height-normal', className, {
       'k-RewardCard__halfDrawer': !fullWidth,
