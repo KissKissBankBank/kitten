@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [12.2.0] - 2022-07-28
+## [12.2.0] - 2022-07-28 🔮
 
 Feature:
 
@@ -14,7 +14,7 @@ Fix:
 
 - `TextInput`: Is controlled with `value` prop and becoming uncontrolled with `defaultValue` prop.
 
-## [12.1.0] - 2022-07-26
+## [12.1.0] - 2022-07-26 💥🤦
 
 Feature:
 
@@ -24,11 +24,11 @@ Fix:
 
 - `RewardCard`: Refix `Info` subcomponent import.
 
-## [12.0.1] - 2022-07-25
+## [12.0.1] - 2022-07-25 💥😞
 
 - `RewardCard`: Fix `Info` subcomponent import.
 
-## [12.0.0] - 2022-07-25
+## [12.0.0] - 2022-07-25 🐵
 
 Breaking Changes:
 
@@ -63,14 +63,14 @@ Fixes:
 - `Autocomplete`: Fix Suggestions subcomponent styles export.
 - `RichText`: Add component to ESM export.
 
-## [12.0.0-beta2] - 2022-07-22
+## [12.0.0-beta2] - 2022-07-22 👾👾
 
 Fixes:
 
 - `StandaloneRangeDatePicker`: Add specificity to custom styles.
 - `Autocomplete`: Fix Suggestions subcomponent styles export.
 
-## [12.0.0-beta] - 2022-07-22
+## [12.0.0-beta] - 2022-07-22 👾
 
 Breaking Changes:
 
@@ -102,7 +102,7 @@ Fixes:
 - `Button`: Set valid default size.
 - `Carousel`: Define default navigation button size.
 
-## [11.8.0] - 2022-07-08
+## [11.8.0] - 2022-07-08 🍾
 
 Features:
 
@@ -118,13 +118,13 @@ Fixes:
 - `CloseButton`: Use `CrossIconNext` icon.
 - `TextInputWithButton`: Fix mobile styles.
 
-## [11.7.1] - 2022-07-07
+## [11.7.1] - 2022-07-07 🚰
 
 Fix:
 
 - `IconBadge`: Fix `hasBorderStyles`.
 
-## [11.7.0] - 2022-07-05
+## [11.7.0] - 2022-07-05 💋
 
 Features:
 
@@ -132,13 +132,13 @@ Features:
 - Icons: Add `GarbageIconNext` icon component.
 - `DropdownMenu`: Add `textProps` prop on Button and Link subcomponents.
 
-## [11.6.1] - 2022-07-04
+## [11.6.1] - 2022-07-04 (comme un lundi)
 
 Fix:
 
 - `Autocomplete`: Update updateSuggestionsStrategy function.
 
-## [11.6.0] - 2022-07-01
+## [11.6.0] - 2022-07-01 🌴
 
 Feature:
 
@@ -148,20 +148,20 @@ Fix:
 
 - `Button`: New `hydrogen` modifier border style.
 
-## [11.5.2] - 2022-06-28
+## [11.5.2] - 2022-06-28 🧑‍🚀
 
 Fix:
 
 - `LoaderWithParagraph`: Fix console warning.
 - `EmbedPlayer`: Disable embed code sanitization.
 
-## [11.5.1] - 2022-06-28
+## [11.5.1] - 2022-06-28 👨‍🎨
 
 Fix:
 
 - `DashboardLayout`: Add position style to the main section’s wrapper.
 
-## [11.5.0] - 2022-06-28
+## [11.5.0] - 2022-06-28 🧑‍🏫
 
 Features:
 
@@ -174,39 +174,39 @@ Fixes:
 - `EmbedPlayer`: Update style.
 - `Video`: Update style.
 
-## [11.4.1] - 2022-06-24
+## [11.4.1] - 2022-06-24 🏛
 
 Fixes:
 
 - `TextCopy`: Fix resize bug on webkit.
 - `RewardCard`: Fix background color.
 
-## [11.4.0] - 2022-06-24
+## [11.4.0] - 2022-06-24 🔲
 
 Feature:
 
 - `DashboardMenu`: Add `closeSelector()` arg as Selector item click property.
 
-## [11.3.0] - 2022-06-23
+## [11.3.0] - 2022-06-23 🌡
 
 Features:
 
 - `PeopleCard`: Add `disabled` prop.
 - `DashboardLayout`: Add `hasDarkBg` prop for new flow style.
 
-## [11.2.2] - 2022-06-20
+## [11.2.2] - 2022-06-20 🤦🏻‍♂️
 
 Fix:
 
 - `MessagesMenu`: Fix message height.
 
-## [11.2.1] - 2022-06-20
+## [11.2.1] - 2022-06-20 🫧
 
 Fix:
 
 - `Discussion`: Fix discussion.
 
-## [11.2.0] - 2022-06-20
+## [11.2.0] - 2022-06-20 💬
 
 Feature:
 
@@ -216,7 +216,7 @@ Fix:
 
 - `ChatLayout`: Fix error linked to `<main>`.
 
-## [11.1.0] - 2022-06-14
+## [11.1.0] - 2022-06-14 🤌
 
 Feature:
 
@@ -230,7 +230,7 @@ Fix:
 
 - `RadioButton`: Better font weight styles.
 
-## [11.0.0] - 2022-06-13
+## [11.0.0] - 2022-06-13 ❣️
 
 Breaking changes:
 
@@ -258,14 +258,14 @@ Feature:
 
 - `BackerCard`: Add `titleTag` prop.
 
-## [10.12.2] - 2022-06-10
+## [10.12.2] - 2022-06-10 ⏰
 
 Fixes:
 
 - `Button`: Disable overflow when button displays a bullet.
 - `DropdownSelect`: Change outline style on `combobox` input.
 
-## [10.12.1] - 2022-06-10
+## [10.12.1] - 2022-06-10 🔑
 
 Fixes:
 
@@ -290,7 +290,7 @@ Fixes:
 - `CheckableButton`: Handle ARIA role.
 - `DragAndDropList`: Add useEffect to listen children collection changes.
 
-## [10.11.0] - 2022-05-23
+## [10.11.0] - 2022-05-23 🫶
 
 Features:
 
@@ -302,7 +302,7 @@ Fixes:
 - `AlertBox`: Improve `IconBadge` style.
 - `MessagesMenu`: Set width on items.
 
-## [10.10.0] - 2022-05-19
+## [10.10.0] - 2022-05-19 🏖
 
 Features:
 
@@ -317,7 +317,7 @@ Fixes:
 - `ContentCard`: Improve style.
 - `HeroLayout`: Fix automated assignment of hasTopMenu.
 
-## [10.9.0] - 2022-05-17
+## [10.9.0] - 2022-05-17 🔇
 
 Features:
 
@@ -331,13 +331,13 @@ Fixes:
 - `FloatingMenu`: Style updates.
 - `ProfileCard`: Remove border style.
 
-## [10.8.0] - 2022-05-10
+## [10.8.0] - 2022-05-10 🧖
 
 Feature:
 
 - `Carousel`: Add `shadowSize` prop to handle cards with shadows.
 
-## [10.7.0] - 2022-05-09
+## [10.7.0] - 2022-05-09 🆘
 
 Deprecations/Changes:
 
@@ -355,7 +355,7 @@ Fix:
 
 - Tokens: Update Box Shadow tokens values.
 
-## [10.6.0] - 2022-05-03
+## [10.6.0] - 2022-05-03 🫦
 
 Features:
 
@@ -366,7 +366,7 @@ Fix:
 
 - `ManagerCard`: Fix multiline content.
 
-## [10.5.0] - 2022-05-02
+## [10.5.0] - 2022-05-02 🍗
 
 Features:
 
@@ -379,14 +379,14 @@ Fixes:
 - `HeaderNav`: Fix `BurgerButton` icon position.
 - `AvatarWithTextAndBadge`: Better prop propagation on `Image` subcomponent.
 
-## [10.4.1] - 2022-04-28
+## [10.4.1] - 2022-04-28 🦸‍♀️
 
 Fixes:
 
 - `HeroLayout`: Fix Hero z-index.
 - `HeroLayout`: Fix Background image position in simple mode.
 
-## [10.4.0] - 2022-04-26
+## [10.4.0] - 2022-04-26 🍈
 
 Deprecations/Changes:
 
@@ -414,7 +414,7 @@ Fix:
   - `CheckboxButton`
   - `CheckboxButtonSet`
 
-## [10.3.0] - 2022-04-25
+## [10.3.0] - 2022-04-25 🐌
 
 Features:
 
@@ -427,7 +427,7 @@ Fix:
 
 - `ImageDropUploader`: Fix async function.
 
-## [10.2.0] - 2022-04-15
+## [10.2.0] - 2022-04-15 🏖
 
 Change :
 
@@ -444,7 +444,7 @@ Fixes:
 - `ImageDropUploader`: Fix async on `useEffect`.
 - `Autocomplete`: Improve styles.
 
-## [10.1.0] - 2022-04-08
+## [10.1.0] - 2022-04-08 😺
 
 Deprecations/Changes:
 
@@ -476,13 +476,13 @@ Fixes:
 - `TextCopy`: Improve tooltip styles.
 - `TextInput`: Better gradient on Safari.
 
-## [10.0.1] - 2022-04-05
+## [10.0.1] - 2022-04-05 💄
 
 Fix:
 
 - `Text`: Use full utility class name to avoid purge.
 
-## [10.0.0] - 2022-04-05
+## [10.0.0] - 2022-04-05 🔟
 
 Breaking Changes:
 
@@ -507,7 +507,7 @@ Fix:
 
 - `DashboardLayout`: Fix `Flow` grid lines.
 
-## [9.6.0] - 2022-04-04
+## [9.6.0] - 2022-04-04 🌻
 
 Features:
 
@@ -521,7 +521,7 @@ Fixes:
 - `LightbulbIllustration`: Fix colors.
 - `TextCopy`: Enhance className propagation.
 
-## [9.5.0] - 2022-04-01
+## [9.5.0] - 2022-04-01 🪔
 
 Deprecation/Change:
 
@@ -547,7 +547,7 @@ Fixes:
 - `IconBadge`: Remove `disabled`, `valid`, `big` and `huge` deprecated props.
 - `*EntryTable`: Fix column value for attribute `scope`.
 
-## [9.4.0] - 2022-03-30
+## [9.4.0] - 2022-03-30 🗺
 
 Feature:
 
@@ -564,7 +564,7 @@ Fix:
 
 - Revert: Accessibility: Fix a11y warning related to roles on components.
 
-## [9.3.0] - 2022-03-29
+## [9.3.0] - 2022-03-29 🍞
 
 Feature:
 
@@ -579,19 +579,19 @@ Fixes:
 - `HeaderMenu`: Fix accessibility error on menu item.
 - `Badge`: Fix accessibility warning related to ARIA attributes.
 
-## [9.2.2] - 2022-03-28
+## [9.2.2] - 2022-03-28 🤦🏻‍♂️🤦🏻‍♂️
 
 Fix:
 
 - `RadioButton`: Hardcode default variant value.
 
-## [9.2.1] - 2022-03-28
+## [9.2.1] - 2022-03-28 🤦🏻‍♂️
 
 Fix:
 
 - `Field`: Fix `Field.RadioSet` import error.
 
-## [9.2.0] - 2022-03-28
+## [9.2.0] - 2022-03-28 🖖
 
 Deprecations/Changes:
 
@@ -619,7 +619,7 @@ Fixes:
   - `ProjectCard`
 - `HeaderNav`: Fix overflow bug with `ButtonWithTooltip`.
 
-## [9.1.0] - 2022-03-25
+## [9.1.0] - 2022-03-25 🌺
 
 Features:
 
@@ -641,7 +641,7 @@ Fixes:
 - `Button`: Force default values for props.
 - `DashboardLayout`: Fix alerts fade on mobile menu open.
 
-## [9.0.0] - 2022-03-21
+## [9.0.0] - 2022-03-21 🍭
 
 Breaking Changes:
 
@@ -658,14 +658,14 @@ Fixes:
 - `HeaderNav`: Fix horizontal scroll.
 - `SummaryCard`: Improve `contributorSubscription` columns.
 
-## [8.9.1] - 2022-03-16
+## [8.9.1] - 2022-03-16 ⛷
 
 Fixes:
 
 - `CheckableButton`: Improve style.
 - `ContentCard`: Update padding for mobile view.
 
-## [8.9.0] - 2022-03-09
+## [8.9.0] - 2022-03-09 🏖
 
 Features:
 
@@ -675,7 +675,7 @@ Features:
 - `ProjectCard`: Add `Avatar` subcomponent, accepts `imageProps` prop.
 - `ProjectCard`: Add `noMargin` prop to `ItemsLine` subcomponent.
 
-## [8.8.0] - 2022-03-08
+## [8.8.0] - 2022-03-08 💐🤷‍♀️
 
 Deprecation/Change:
 
@@ -693,7 +693,7 @@ Fixes:
 - `TextInputWithLimit`: Improve styles.
 - `Button`: Remove old size props.
 
-## [8.7.0] - 2022-03-01
+## [8.7.0] - 2022-03-01 🏕
 
 Features:
 
@@ -710,7 +710,7 @@ Fixes:
 - `Pagination`: Remove non-valid aria attributes.
 - `Autocomplete`: Remove non-valid attributes.
 
-## [8.6.0] - 2022-02-25
+## [8.6.0] - 2022-02-25 🎀
 
 Features:
 
@@ -729,7 +729,7 @@ Fixes:
 - `AlertBox`: Improve styles.
 - `DashboardMenu`: Fix `DashboardMenu.Expandable` open state by removing useless code.
 
-## [8.5.0] - 2022-02-15
+## [8.5.0] - 2022-02-15 🐯
 
 Features:
 
@@ -741,7 +741,7 @@ Fix:
 
 - `TextInputWithButton`: Fix `disabled` prop priority.
 
-## [8.4.0] - 2022-02-14
+## [8.4.0] - 2022-02-14 💘
 
 Features:
 
@@ -755,13 +755,13 @@ Fixes:
 - `DashboardMenu`: Fix `Expandable` active item.
 - `DropdownMenu`: Fix button argument.
 
-## [8.3.1] - 2022-02-10
+## [8.3.1] - 2022-02-10 🙄
 
 Fix:
 
 - `BackingCard`: Fix `BackingCard.Title` untruncated style.
 
-## [8.3.0] - 2022-02-10
+## [8.3.0] - 2022-02-10 🗻
 
 Feature:
 
@@ -777,19 +777,19 @@ Fixes:
 - `DocumentsManager`: Fix markup.
 - `TextButton`: Improve styles.
 
-## [8.2.0] - 2022-02-09
+## [8.2.0] - 2022-02-09 🧑🏻‍🦼
 
 Feature:
 
 - `DropdownPhoneSelect`: Add `normalizer` prop to modify value.
 
-## [8.1.1] - 2022-02-08
+## [8.1.1] - 2022-02-08 😅
 
 Fix:
 
 - `BackingCard`: Fix truncation gradient display.
 
-## [8.1.0] - 2022-02-08
+## [8.1.0] - 2022-02-08 🧆
 
 Features:
 
@@ -802,7 +802,7 @@ Fixes:
 - `BackingCard`: Better margin when no image.
 - `BackingCard`: New styles for `disabled` state.
 
-## [8.0.0] - 2022-02-07
+## [8.0.0] - 2022-02-07 🍭
 
 Breaking changes:
 
@@ -840,7 +840,7 @@ Fixes:
 - `HeroLayout`: Fix Hero sizing on large screens.
 - `HeroLayout`: Fix sticky columns position on desktop.
 
-## [7.2.0] - 2022-01-28
+## [7.2.0] - 2022-01-28 🏩
 
 Deprecation/Change:
 
@@ -854,14 +854,14 @@ Fix:
 
 - `LocationInput`: Improve styles.
 
-## [7.1.0] - 2022-01-20
+## [7.1.0] - 2022-01-20 🍩
 
 Features:
 
 - `HorizontalCrowdfundingCard`: Add `noProgress` prop, defaults to `false`.
 - `TextCopy`: Add `size` prop, default to `regular`.
 
-## [7.0.0] - 2022-01-18
+## [7.0.0] - 2022-01-18 🍸
 
 Breaking Changes:
 
@@ -907,7 +907,7 @@ Fixes:
 - `Accordeon`: New style for active state.
 - `ProjectCard`: Safari-related fixes on image proportions and sticker alignment.
 
-## [6.19.0] - 2022-01-14
+## [6.19.0] - 2022-01-14 🦹‍♀️
 
 Features:
 
@@ -921,7 +921,7 @@ Fixes:
 - `HeroLayout`: Improve style.
 - `TagButton`: Fix test to remove deprecation warning.
 
-## [6.18.0] - 2022-01-11
+## [6.18.0] - 2022-01-11 🪄
 
 Feature:
 
@@ -932,7 +932,7 @@ Fixes:
 - `TextInput`: Improve placeholder style.
 - `createEvent`: Prevent SSR issue.
 
-## [6.17.0] - 2022-01-10
+## [6.17.0] - 2022-01-10 🛢
 
 Features:
 
@@ -948,7 +948,7 @@ Fixes:
 - `ImageDropUploader`: Add background color.
 - Graphics: Remove SVG errors.
 
-## [6.16.0] - 2022-01-05
+## [6.16.0] - 2022-01-05 🪄
 
 Features:
 
@@ -961,7 +961,7 @@ Fix:
 
 - `ProjectCard`: Style fixes.
 
-## [6.15.0] - 2022-01-04
+## [6.15.0] - 2022-01-04 ⛹️‍♀️
 
 Features:
 
@@ -981,7 +981,7 @@ Fixes:
 - `TextInputWithButton`: Fix orion styles.
 - `AvatarWithTextAndBadge` and `DeskMenu`: Add `border` on the avatar image.
 
-## [6.14.0] - 2022-01-03
+## [6.14.0] - 2022-01-03 🦖
 
 Features:
 
@@ -1005,13 +1005,13 @@ Features:
   - `social_instagram`,
   - `social_youtube`.
 
-## [6.13.1] - 2021-12-31
+## [6.13.1] - 2021-12-31 🏵
 
 Fix:
 
 - `ProjectCard`: Fix display.
 
-## [6.13.0] - 2021-12-28
+## [6.13.0] - 2021-12-28 🚁
 
 Feature:
 
@@ -1021,7 +1021,7 @@ Fix:
 
 - `ProjectCard`: Fix link props.
 
-## [6.12.0] - 2021-12-28
+## [6.12.0] - 2021-12-28 🧣
 
 Features:
 
@@ -1048,34 +1048,34 @@ Fix:
 
 - `DocumentsDropUploader`: Fix upload files.
 
-## [6.11.0] - 2021-12-20
+## [6.11.0] - 2021-12-20 ☃️
 
 Features:
 
 - `SummaryCard`: Add component.
 - `RewardSummaryCard`: Deprecate component.
 
-## [6.10.0] - 2021-12-16
+## [6.10.0] - 2021-12-16 🪄
 
 Features:
 
 - `CommentForm`: Add close button, add `onClose` and `closeButtonText` props
 - `Accordeon`: Add `multiple` prop to let more than one item opened.
 
-## [6.9.1] - 2021-12-15
+## [6.9.1] - 2021-12-15 💅
 
 Fix:
 
 - Logos: Improve `MaisonDeCrowdfundingLogoOnDark` logo.
 
-## [6.9.0] - 2021-12-15
+## [6.9.0] - 2021-12-15 🥜
 
 Features:
 
 - `StickyContainer`: Add `onChange` event prop.
 - `HeaderNav`: Add `k-HeaderNav--isStuck` classname when stuck.
 
-## [6.8.0] - 2021-12-14
+## [6.8.0] - 2021-12-14 🎢
 
 Features:
 
@@ -1092,7 +1092,7 @@ Fixes:
 - `HeaderNav`: Fix border bottom on active nav link.
 - `TextInput`: Fix `textarea` gradient styles.
 
-## [6.7.0] - 2021-12-08
+## [6.7.0] - 2021-12-08 ☀️
 
 Features:
 
@@ -1103,7 +1103,7 @@ Features:
 - `AirplaneIconNext`: Add component.
 - `BubbleIconNext`: Add component.
 
-## [6.6.0] - 2021-12-02
+## [6.6.0] - 2021-12-02 💬
 
 Features
 
@@ -1139,13 +1139,13 @@ Fixes
 - Remove console errors on `DownloadIcon` and `LinkedinIconNext`.
 - `TagInput`: Fix focus styles.
 
-## [6.5.1] - 2021-11-30
+## [6.5.1] - 2021-11-30 🤦🏻‍♂️
 
 Fix:
 
 - `AlertBox`: Fix ESM export.
 
-## [6.5.0] - 2021-11-29
+## [6.5.0] - 2021-11-29 🧰
 
 Features:
 
@@ -1172,7 +1172,7 @@ Fixes:
 - `LendoLoadingAnimation`: Fix console errors.
 - `LendoLoadingAnimation`: Fix style bug.
 
-## [6.4.0] - 2021-11-23
+## [6.4.0] - 2021-11-23 🏦
 
 Features:
 
@@ -1181,7 +1181,7 @@ Features:
 - Tokens: Update `--color-yellow-700` value.
 - `LendoLoadingAnimation`: Add component.
 
-## [6.3.0] - 2021-11-22
+## [6.3.0] - 2021-11-22 🕹
 
 Features:
 
@@ -1196,7 +1196,7 @@ Fixes:
 - `DashboardMenu`: Style fixes.
 - `ToggleSwitch`: Fix controlled switch.
 
-## [6.2.0] - 2021-11-19
+## [6.2.0] - 2021-11-19 🪔
 
 Features:
 
@@ -1211,7 +1211,7 @@ Fixes:
 - `ContributionCard`: Remove buggy `borderWidth` prop.
 - `ToggleSwitch`: Modernize components styles.
 
-## [6.1.0] - 2021-11-15
+## [6.1.0] - 2021-11-15 🍷
 
 Features:
 
@@ -1220,7 +1220,7 @@ Features:
 - Design: use browser default styles for focus outlines.
 - `DragAndDropList`: Add component.
 
-## [6.0.0] - 2021-11-09
+## [6.0.0] - 2021-11-09 👶
 
 Breaking Changes:
 
@@ -1238,13 +1238,13 @@ Fix:
 
 - `Button`: Fix `rounded` style.
 
-## [5.7.1] - 2021-11-04
+## [5.7.1] - 2021-11-04 📳
 
 Fix:
 
 - `useResizeObserver`: Fix use condition for older browsers.
 
-## [5.7.0] - 2021-11-02
+## [5.7.0] - 2021-11-02 💅
 
 Features:
 
@@ -1264,7 +1264,7 @@ Fix:
 
 - `HeaderNav`: Fix user menu warning in console.
 
-## [5.6.0] - 2021-10-28
+## [5.6.0] - 2021-10-28 ⁉️
 
 Feature:
 
@@ -1275,7 +1275,7 @@ Fixes
 - `Alert`: Fix flex regressions.
 - `Label`: Fix display.
 
-## [5.5.0] - 2021-10-26
+## [5.5.0] - 2021-10-26 🎒
 
 Feature:
 
@@ -1287,13 +1287,13 @@ Fixes:
 - `DropdownMenu`: Fix Safari display.
 - `DropdownSelect`: Fix combobox input width calculation.
 
-## [5.4.1] - 2021-10-22
+## [5.4.1] - 2021-10-22 🔧
 
 Fix:
 
 - `DashboardMenu`: Style fixes.
 
-## [5.4.0] - 2021-10-20
+## [5.4.0] - 2021-10-20 🇳🇴
 
 Features:
 
@@ -1320,7 +1320,7 @@ Fixes:
 - `ButtonWithTooltip`: Prevent unwanted animation on load.
 - `Alert`: Fix responsive styles.
 
-## [5.3.0] - 2021-10-19
+## [5.3.0] - 2021-10-19 💅
 
 Feature:
 
@@ -1332,7 +1332,7 @@ Fixes:
 - `cssPropertyDistributor`: Fix bug when `elements` is null.
 - `Label`: Fix styles.
 
-## [5.2.0] - 2021-10-18
+## [5.2.0] - 2021-10-18 🧑‍🔧
 
 Features:
 
@@ -1355,20 +1355,20 @@ Fix:
 
 - `Button`: Fix min width constraints.
 
-## [5.0.2] - 2021-10-13
+## [5.0.2] - 2021-10-13 🫢
 
 Fix:
 
 - `BackingCard`: Rollback Fix button fit.
 
-## [5.0.1] - 2021-10-12
+## [5.0.1] - 2021-10-12 🥸
 
 Fixes:
 
 - `BackingCard`: Fix button fit.
 - `Button`: Fix mobile dimensions on bigger sizes.
 
-## [5.0.0] - 2021-10-12
+## [5.0.0] - 2021-10-12 🖐
 
 Breaking Changes:
 
@@ -1398,19 +1398,19 @@ Fixes:
 - `TagInput`: Remove console warning.
 - `TagInput`: Add accessible information for disabled items.
 
-## [4.14.1] - 2021-10-08
+## [4.14.1] - 2021-10-08 🙉
 
 Fix:
 
 - `TagInput`: I can delete an `object` item.
 
-## [4.14.0] - 2021-10-07
+## [4.14.0] - 2021-10-07 🎬
 
 Feature:
 
 - `TagInput`: `initialItemsList` can accept object like `{value: 'hello': disabled: true}` to disable an option.
 
-## [4.13.0] - 2021-10-06
+## [4.13.0] - 2021-10-06 🌵
 
 Features:
 
@@ -1423,7 +1423,7 @@ Fix:
 
 - `DownloadIcon`: Update icon.
 
-## [4.12.0] - 2021-09-30
+## [4.12.0] - 2021-09-30 👨🏻
 
 Feature:
 
@@ -1438,7 +1438,7 @@ Fixes:
 - `HeaderMenu.item`: Fix `margin-right` style.
 - `HeaderNav.UserMenuNext.Button`: Fix `min-width` style.
 
-## [4.11.0] - 2021-09-29
+## [4.11.0] - 2021-09-29 👩‍🎤
 
 Feature:
 
@@ -1448,7 +1448,7 @@ Fix:
 
 - `HeaderNav`: Various fixes.
 
-## [4.10.1] - 2021-09-28
+## [4.10.1] - 2021-09-28 🧑‍🚀
 
 Fixes:
 
@@ -1457,7 +1457,7 @@ Fixes:
 - `HeaderNav`: Fix `BurgerMenuNext` button state.
 - `BurgerIcon`: Modernize styles.
 
-## [4.10.0] - 2021-09-27
+## [4.10.0] - 2021-09-27 🤾‍♀️
 
 Features:
 
@@ -1468,7 +1468,7 @@ Fix:
 
 - `HeaderNav`: Various fixes.
 
-## [4.9.0] - 2021-09-24
+## [4.9.0] - 2021-09-24 🍺
 
 Features:
 
@@ -1480,7 +1480,7 @@ Fixes:
 - `DashboardLayout`: Fix header elements dimensions.
 - `HeaderNav.Button`: Add `cursor` to `onClick`.
 
-## [4.8.0] - 2021-09-22
+## [4.8.0] - 2021-09-22 🧑‍🚀
 
 Features:
 
@@ -1488,7 +1488,7 @@ Features:
 - `HeaderNav.Button`: Add `smallPadding` prop, defaults to `false`.
 - `EnvelopeIcon`: Add new component.
 
-## [4.7.0] - 2021-09-21
+## [4.7.0] - 2021-09-21 📭
 
 Features:
 
@@ -1506,19 +1506,19 @@ Fix:
 
 - `LocationInput`: Add comma between city and country.
 
-## [4.6.2] - 2021-09-16
+## [4.6.2] - 2021-09-16 💿
 
 Fix:
 
 - `ImageDropUploader`: Fix issue with smaller screens and wrong crop.
 
-## [4.6.1] - 2021-09-13
+## [4.6.1] - 2021-09-13 🤟
 
 Fix:
 
 - `DropDownMenu`: Close menu on click.
 
-## [4.6.0] - 2021-09-09
+## [4.6.0] - 2021-09-09 🎢
 
 Tech:
 
@@ -1530,14 +1530,14 @@ Fix:
 
 - `RewardSummaryCard`: Responsive fixes.
 
-## [4.5.1] - 2021-09-08
+## [4.5.1] - 2021-09-08 🤾‍♀️
 
 Fixes:
 
 - `RewardSummaryCard`: Various fixes.
 - `RangeSlider`: Turn to be controlled when `value` prop is passed.
 
-## [4.5.0] - 2021-09-02
+## [4.5.0] - 2021-09-02 🏄‍♀️
 
 Features:
 
@@ -1554,7 +1554,7 @@ Fixes:
 - `ContributionCard`: Remove useless prop `imageBorderRadius`.
 - `HorizontalCrowdfundingCard`: Fix hover styles.
 
-## [4.4.0] - 2021-08-30
+## [4.4.0] - 2021-08-30 🛒
 
 Feature:
 
@@ -1564,7 +1564,7 @@ Fix:
 
 - `TextInput`: Update color styles to enhance accessibility.
 
-## [4.3.0] - 2021-08-27
+## [4.3.0] - 2021-08-27 🎢
 
 Features:
 
@@ -1577,13 +1577,13 @@ Fixes:
 - `TagInput`: Keep delete button when disabled.
 - `DropdownSelect`: Can be controlled.
 
-## [4.2.1] - 2021-08-19
+## [4.2.1] - 2021-08-19 🎲
 
 Fix:
 
 - `DashboardLayout.Flow.Nav`: Fix styles when only a button is displayed.
 
-## [4.2.0] - 2021-08-06
+## [4.2.0] - 2021-08-06 🍁
 
 Features:
 
@@ -1607,7 +1607,7 @@ Fixes:
 - `DocumentsStatusBox`: Fix style.
 - `HorizontalCrowdfundingCard`: Fix mobile style for `progress`.
 
-## [4.1.0] - 2021-08-02
+## [4.1.0] - 2021-08-02 ✖️
 
 Features:
 
@@ -1627,7 +1627,7 @@ Fixes:
 - `RadioButtonSet`: Fix dimensions.
 - `DocumentsDropUploader`: Fix onChange and onError event.
 
-## [4.0.1] - 2021-07-23
+## [4.0.1] - 2021-07-23 🩹
 
 Fixes:
 
@@ -1639,7 +1639,7 @@ Fixes:
 - `ToggleTip`: Remove console warning in tests.
 - `Modal`: Remove deprecation `console.warn` in tests and test add for deprecation message.
 
-## [4.0.0] - 2021-07-22
+## [4.0.0] - 2021-07-22 🕯🕯🕯🕯
 
 Breaking Changes:
 
@@ -1665,7 +1665,7 @@ Fixes:
 - `Title`: Style fixes (line-height and letter-spacing).
 - `getReactElements` utils: Add child existence verification.
 
-## [3.26.0] - 2021-07-12
+## [3.26.0] - 2021-07-12 🎒
 
 Feature:
 
@@ -1679,7 +1679,7 @@ Fixes:
 - `ImageDropUploader`: Vertically center description text.
 - `TagButton`: Update styles.
 
-## [3.25.2] - 2021-07-09
+## [3.25.2] - 2021-07-09 🧟‍♂️
 
 Fix:
 
@@ -1691,13 +1691,13 @@ Fix:
 
 - `VerticalProgress`: Remove `max-width` on `k-VerticalProgress__wrapper`.
 
-## [3.25.0] - 2021-07-08
+## [3.25.0] - 2021-07-08 🍺🍺🍺
 
 Feature:
 
 - `parseHtml`: We sanitize by default the markup with an option `parseHtml(value, { sanitize: false })` to disable it.
 
-## [3.24.0] - 2021-07-08
+## [3.24.0] - 2021-07-08 🍺
 
 Feature:
 
@@ -1716,7 +1716,7 @@ Fix:
 
 - `ContributionCard`: Update styles.
 
-## [3.23.0] - 2021-07-06
+## [3.23.0] - 2021-07-06 🗼
 
 Features:
 
@@ -1730,13 +1730,13 @@ Features:
 - `RadioButton`: Modify `focus`, `active`, `hover` and `checked` states.
 - `VerticalProgress`: Add `withoutBorder` prop.
 
-## [3.22.1] - 2021-07-01
+## [3.22.1] - 2021-07-01 🦄
 
 Fix:
 
 - `StickyContainer`: Fix spacer height definition.
 
-## [3.22.0] - 2021-07-01
+## [3.22.0] - 2021-07-01 🤧
 
 Features:
 
@@ -1744,7 +1744,7 @@ Features:
 - `HeaderMenu`: Improve accessibility.
 - `HeaderNav.UserMenuNext`: Add `mobilePadding` prop.
 
-## [3.21.0] - 2021-06-21
+## [3.21.0] - 2021-06-21 🌀
 
 Feature:
 
@@ -1757,7 +1757,7 @@ Fixes:
 - `CrowdfundingCard`: Fix `progress` PropTypes, allowing boolean values.
 - `Carousel`: Fix `Button` tiny size prop.
 
-## [3.20.0] - 2021-06-17
+## [3.20.0] - 2021-06-17 📯
 
 Features:
 
@@ -1771,7 +1771,7 @@ Fixes:
 - `Text`: Fix `cssColor` bug and remove Styled Component dependency.
 - `TextInputWithUnit`: Fix disabled state and `unitWord` styles.
 
-## [3.19.0] - 2021-06-11
+## [3.19.0] - 2021-06-11 🥭
 
 Features:
 
@@ -1782,13 +1782,13 @@ Fixes:
 - `DashboardLayout`: Remove horizontal scroll between 1440px and 1550px.
 - `ImageCropper`: Fix behaviour of component, breaking when uploading a file.
 
-## [3.18.1] - 2021-06-10
+## [3.18.1] - 2021-06-10 🍨
 
 Fix:
 
 - Add `TextInputWithIcon` to ESM exports.
 
-## [3.18.0] - 2021-06-10
+## [3.18.0] - 2021-06-10 🍧
 
 Features:
 
@@ -1812,19 +1812,19 @@ Fixes:
   - `WarningCircleIcon`
 - `ImageCropper`: Return cropped image source value.
 
-## [3.17.3] - 2021-06-07
+## [3.17.3] - 2021-06-07 👯‍♂️👯‍♂️👯‍♂️
 
 Fix:
 
 - `TextInputWithUnit`: Fix `variant` propagation.
 
-## [3.17.2] - 2021-06-03
+## [3.17.2] - 2021-06-03 👯‍♂️👯‍♂️
 
 Fix:
 
 - `ImageCropper`: Use default Label size.
 
-## [3.17.1] - 2021-06-03
+## [3.17.1] - 2021-06-03 👯‍♂️
 
 Fixes:
 
@@ -1832,7 +1832,7 @@ Fixes:
 - `Label`: Update mobile styles.
 - `DashboardMenu`: Fix expandable list padding.
 
-## [3.17.0] - 2021-05-31
+## [3.17.0] - 2021-05-31 👾
 
 Feature:
 
@@ -1843,7 +1843,7 @@ Fix:
 - `ButtonIcon`: Fix `tag` transmission.
 - `TeamCard`: Fix buttons sizes.
 
-## [3.16.0] - 2021-05-28
+## [3.16.0] - 2021-05-28 😴
 
 Features:
 
@@ -1857,7 +1857,7 @@ Fixes:
 - `RadioButton`: Update `disabled` status style.
 - Fix badly formatted SASS colors.
 
-## [3.15.0] - 2021-05-28
+## [3.15.0] - 2021-05-28 🍤
 
 Features:
 
@@ -1878,7 +1878,7 @@ Fixes:
 - `Separator`: Reduce specificity of the styles.
 - `HeaderNav`: Fix accessibility error.
 
-## [3.14.0] - 2021-05-25
+## [3.14.0] - 2021-05-25 ☔️
 
 Features:
 
@@ -1889,14 +1889,14 @@ Fix:
 
 - `VerticalProgress`: Fix `z-index` value.
 
-## [3.13.1] - 2021-05-20
+## [3.13.1] - 2021-05-20 🤡
 
 Fixes:
 
 - `VerticalProgress` : Export component.
 - `DashboardLayout`: Specify size for `DashboardLayout.Flow` content column.
 
-## [3.13.0] - 2021-05-20
+## [3.13.0] - 2021-05-20 🎡
 
 Features:
 
@@ -1910,7 +1910,7 @@ Fixes:
 - `Modal/Next`: Fix `Modal.Button` style when alone inside a `fullSize` Action.
 - `Dropdown`: Add default value for `onBlur` prop (`() => {}`).
 
-## [3.12.0] - 2021-05-18
+## [3.12.0] - 2021-05-18 🥤
 
 Features:
 
@@ -1935,7 +1935,7 @@ Fix:
 
 - `HeaderMenu`: Fix focus styles.
 
-## [3.10.0] - 2021-05-11
+## [3.10.0] - 2021-05-11 ⛳️
 
 Features:
 
@@ -1956,7 +1956,7 @@ Fixes:
 - `TextInput`: Set the placeholder color to disabled.
 - `DropdownSelectWithInput`: Fix input padding.
 
-## [3.9.0] - 2021-05-06
+## [3.9.0] - 2021-05-06 🤽‍♀️
 
 Feature:
 
@@ -1969,7 +1969,7 @@ Fixes:
 - `Modal/Next`: Fix `customContentCols` class condition.
 - `DashboardLayout`: Fix `DashboardLayout` background color.
 
-## [3.8.0] - 2021-05-04
+## [3.8.0] - 2021-05-04 🚥
 
 Feature:
 
@@ -1979,7 +1979,7 @@ Fix:
 
 - `Modal/Next`: Fix negative margin calculation for `Modal.Block` at `XL`.
 
-## [3.7.0] - 2021-04-30
+## [3.7.0] - 2021-04-30 🍟
 
 Feature:
 
@@ -1991,7 +1991,7 @@ Fixes:
 - `HeaderNav`: Fix burger menu button dimensions and improve affordance.
 - Replace occurences of `CONTAINER_PADDING_MOBILE` with `CONTAINER_PADDING_THIN`.
 
-## [3.6.0] - 2021-04-27
+## [3.6.0] - 2021-04-27 🧰
 
 Features:
 
@@ -2004,7 +2004,7 @@ Fixes:
 - `DashboardLayout`: Fix columns widths.
 - `HeaderNav`: Fix default dropdown button styles.
 
-## [3.5.0] - 2021-04-23
+## [3.5.0] - 2021-04-23 🪧
 
 Features:
 
@@ -2013,7 +2013,7 @@ Features:
 - `Modal/Next`: Add `headerActions` and `headerTitle` props.
 - `Modal/Next`: Add `giant` size value.
 
-## [3.4.0] - 2021-04-20
+## [3.4.0] - 2021-04-20 🧠
 
 Feature :
 
@@ -2026,7 +2026,7 @@ Fix:
 - `CheckableButton`: Add specific styles to `variant=orion`.
 - `Field.Input`: Recover missing style.
 
-## [3.3.0] - 2021-04-15
+## [3.3.0] - 2021-04-15 ⛳️
 
 Features:
 
@@ -2042,7 +2042,7 @@ Fixes:
 - `ToggleTip`: fix props propagation in bubble.
 - `ToggleTip`: fix first coordinates update.
 
-## [3.2.1] - 2021-04-12
+## [3.2.1] - 2021-04-12 🏒
 
 Fixes:
 
@@ -2051,7 +2051,7 @@ Fixes:
 - Propagate `className` on `DropdownSelect` and `DropdownSelect combobox`.
 - Recover missing props on `Field.Input`.
 
-## [3.2.0] - 2021-04-12
+## [3.2.0] - 2021-04-12 🏏
 
 Features:
 
@@ -2063,7 +2063,7 @@ Fixes:
 - Enable `size` prop on `Button` with Orion variant.
 - Set default value for `Dropdown` options on level 2.
 
-## [3.1.0] - 2021-04-08
+## [3.1.0] - 2021-04-08 🏖
 
 Features:
 
@@ -2076,7 +2076,7 @@ Fixes:
 - Fix `TagButton` style.
 - Fix styles on `DropdownSelect`.
 
-## [3.0.0] - 2021-03-26
+## [3.0.0] - 2021-03-26 3️⃣⏺0️⃣⏺0️⃣
 
 Breaking changes:
 
@@ -2281,19 +2281,19 @@ Fixes:
 - Fix `HorizontalTimeline` `className` property name.
 - Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
 
-## [3.0.0-beta.25] - 2021-03-26
+## [3.0.0-beta.25] - 2021-03-26 🚢
 
 Fix:
 
 - Fix item classes transmission on `BulletList`.
 
-## [3.0.0-beta.24] - 2021-03-25
+## [3.0.0-beta.24] - 2021-03-25 🙄
 
 Fix:
 
 - Fix SCSS imports
 
-## [3.0.0-beta.23] - 2021-03-25
+## [3.0.0-beta.23] - 2021-03-25 🤞🏻🤞🏻
 
 Breaking change:
 
@@ -2314,7 +2314,7 @@ Rollback:
 
 - Version: `"react-cropper": "2.1.1"`
 
-## [3.0.0-beta.21] - 2021-03-25
+## [3.0.0-beta.21] - 2021-03-25 😣
 
 Breaking Change:
 
@@ -2328,7 +2328,7 @@ Revert:
 
 - Fix: Replace `ResizeObserver` with `window.resize` on `Carousel`. (beta.20)
 
-## [3.0.0-beta.20] - 2021-03-23
+## [3.0.0-beta.20] - 2021-03-23 🎇
 
 Breaking Change:
 
@@ -2381,7 +2381,7 @@ Fixes:
 - Replace `ResizeObserver` with `window.resize` on `Carousel`.
 - Use `CustomEvent` instead of `event-emitter` on `Dropdown`.
 
-## [3.0.0-beta.19] - 2021-03-19
+## [3.0.0-beta.19] - 2021-03-19 🎆
 
 Breaking changes:
 
@@ -2404,13 +2404,13 @@ Features:
   - `KkbbCoLogo`
 - Add missing exports to ESM exports.
 
-## [3.0.0-beta.18] - 2021-03-18
+## [3.0.0-beta.18] - 2021-03-18 🤦🏻‍♂️
 
 Fix:
 
 - Fix bug caused by adding `getScssPaths` in ESM export.
 
-## [3.0.0-beta.17] - 2021-03-18
+## [3.0.0-beta.17] - 2021-03-18 🎏
 
 Breaking changes:
 
@@ -2445,7 +2445,7 @@ Features:
 - Add `playerButtonSize` prop to `SimpleCard`.
 - Add missing exports to ESM exports.
 
-## [3.0.0-beta.16] - 2021-03-15
+## [3.0.0-beta.16] - 2021-03-15 🧲
 
 Breaking changes:
 
@@ -2469,7 +2469,7 @@ Fixes:
 - Fix alignment on `HeaderNav` `UserMenuButton`.
 - Fix `GridCol` offset class for `0` value.
 
-## [3.0.0-beta.15] - 2021-03-12
+## [3.0.0-beta.15] - 2021-03-12 🧐
 
 Fix:
 
@@ -2477,7 +2477,7 @@ Fix:
 
 (Release `2.124.0`)
 
-## [3.0.0-beta.14] - 2021-03-12
+## [3.0.0-beta.14] - 2021-03-12 ㊙️
 
 Breaking changes:
 
@@ -2503,16 +2503,16 @@ Fix:
 
 - Remove warnings when using `ToggleTip` and `Field.Label` with tooltip.
 
-## [3.0.0-beta.13] - 2021-03-11
+## [3.0.0-beta.13] - 2021-03-11 📼⏩
 
 - Revert back to `beta.11` changes, keep fix.
 
-## [3.0.0-beta.12] - 2021-03-11
+## [3.0.0-beta.12] - 2021-03-11 📼⏮
 
 - Revert all `beta.11` changes, except:
   - Delete buggy `useFlexGapCheck`.
 
-## [3.0.0-beta.11] - 2021-03-11
+## [3.0.0-beta.11] - 2021-03-11 🚶‍♀️
 
 Breaking changes:
 
@@ -2552,7 +2552,7 @@ Fix:
 
 (Release `2.123.2`)
 
-## [3.0.0-beta.8] - 2021-03-01
+## [3.0.0-beta.8] - 2021-03-01 🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️
 
 Breaking changes:
 
@@ -2572,7 +2572,7 @@ Fix:
 
 - Add DOM check to `useFlexGapCheck`.
 
-## [3.0.0-beta.7] - 2021-03-01
+## [3.0.0-beta.7] - 2021-03-01 🤦🏻‍♂️🤦🏻‍♂️
 
 Feature:
 
@@ -2584,7 +2584,7 @@ Fixes:
 - Add width to `StickyContainer` in `HeaderNav`.
 - Use wrapper and relative positioning for a `Badge` with `Icon` prop.
 
-## [3.0.0-beta.6] - 2021-03-01
+## [3.0.0-beta.6] - 2021-03-01 📅
 
 Breaking changes:
 
@@ -2627,7 +2627,7 @@ Fixes:
   - `Loader`
   - `LoaderWithParagraph`
 
-## [3.0.0-beta.5] - 2021-02-25
+## [3.0.0-beta.5] - 2021-02-25 🌡
 
 Breaking changes:
 
@@ -2651,7 +2651,7 @@ Features:
 - Breaking change: convert `LocationInput` to CSS-in-JS.
 - Breaking change: remove `k-LocationInput` mixin.
 
-## [3.0.0-beta.4] - 2021-02-22
+## [3.0.0-beta.4] - 2021-02-22 💢
 
 Breaking changes:
 
@@ -2694,7 +2694,7 @@ Features:
   - `VerticalStroke`
 - Add `onChange` to `ToggleSwitch` API.
 
-## [3.0.0-beta.3] - 2021-02-19
+## [3.0.0-beta.3] - 2021-02-19 🧮
 
 Breaking changes:
 
@@ -2731,7 +2731,7 @@ Features:
 - Update `Text` component.
 - Add `parseHtml` helper to ESM build.
 
-## [3.0.0-beta.2] - 2021-02-15
+## [3.0.0-beta.2] - 2021-02-15 😸
 
 Breaking changes:
 
@@ -2777,13 +2777,13 @@ Breaking changes:
   - `RewardCardLegacy`
   - `SimilarProjectsCard`
 
-## [2.125.0] - 2021-03-15
+## [2.125.0] - 2021-03-15 ⏳
 
 Feature:
 
 - Add `HorizontalTimeline` component.
 
-## [2.124.0] - 2021-03-12
+## [2.124.0] - 2021-03-12 🎓
 
 Features:
 
@@ -2807,13 +2807,13 @@ Fix:
 
 - Perf problem with `Carousel` on mobile devices.
 
-## [2.123.1] - 2021-03-01
+## [2.123.1] - 2021-03-01 🤦🏻‍♂️
 
 Fix:
 
 - Allow for `null` value on `HeaderNav` `stickyProps` prop.
 
-## [2.123.0] - 2021-03-01
+## [2.123.0] - 2021-03-01 📆
 
 Feature:
 
@@ -2824,7 +2824,7 @@ Fixes:
 - Remove `unique "key" prop` error on `DashboardLayout`.
 - Fix `StickyContainer` width on `HeaderNav`.
 
-## [2.122.0] - 2021-02-25
+## [2.122.0] - 2021-02-25 👨🏻‍🦲
 
 Features:
 
@@ -2838,7 +2838,7 @@ Fixes:
 - Fix display on `DashboardLayout` for Chrome.
 - Fix details display on `DashboardMenu`.
 
-## [2.121.0] - 2021-02-22
+## [2.121.0] - 2021-02-22 📭
 
 Features:
 
@@ -2852,38 +2852,38 @@ Features:
   - `LoudspeakerIcon`
   - `ShieldIcon`.
 
-## [2.120.1] - 2021-02-19
+## [2.120.1] - 2021-02-19 🧐
 
 Fix:
 
 - Fix init and resize coords calculation on `Toggletip`.
 
-## [2.120.0] - 2021-02-12
+## [2.120.0] - 2021-02-12 🪞
 
 Feature:
 
 - Add `Toggletip` component.
 
-## [2.119.0] - 2021-02-10
+## [2.119.0] - 2021-02-10 ❄️
 
 Feature:
 
 - Add `regular` (default) and `big` props on all variants of `DropdownSelect`.
 
-## [2.118.0] - 2021-02-09
+## [2.118.0] - 2021-02-09 😿 𝓛𝓪𝓼𝓽 𝓸𝓯 𝓽𝓱𝓮 𝟚
 
 Features:
 
 - Add `size` prop to `RadioButton`, defaults to `regular`.
 - Add `hover` styles for `BackingCard`.
 
-## [2.117.0] - 2021-02-08
+## [2.117.0] - 2021-02-08 🍣
 
 Feature:
 
 - Add `size` prop to `HeaderMenu.Item` & refactoring.
 
-## [2.116.0] - 2021-02-08
+## [2.116.0] - 2021-02-08 🚣🏾‍♂️
 
 Features:
 
@@ -2897,7 +2897,7 @@ Fix:
 
 - Fix mixup between `k-u-margin-vertical` and `k-u-margin-horizontal`.
 
-## [2.115.0] - 2021-02-02
+## [2.115.0] - 2021-02-02 🫕
 
 Feature:
 
@@ -2907,7 +2907,7 @@ Fix:
 
 - Fix `Carousel` margin and padding calculations.
 
-## [2.114.0] - 2021-01-29
+## [2.114.0] - 2021-01-29 🤹‍♀️
 
 Features:
 
@@ -2920,7 +2920,7 @@ Fix:
 
 - `VerticalStepper` mobile style fixes.
 
-## [2.113.0] - 2021-01-21
+## [2.113.0] - 2021-01-21 ☔️
 
 Features:
 
@@ -2934,7 +2934,7 @@ Fixes:
 - Stop applying focus styles on `VerticalStepper` when `disabled`.
 - `Combobox` filter on `label` (instead of `value`).
 
-## [2.112.0] - 2021-01-18
+## [2.112.0] - 2021-01-18 🥤
 
 Feature:
 
@@ -2968,14 +2968,14 @@ Fix:
 
 - Fix overflow style on `ScrollableContainer`.
 
-## [2.109.0] - 2021-01-12
+## [2.109.0] - 2021-01-12 ⛄️
 
 Features:
 
 - Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
 - Add `className` prop propagation to `RewardCard`.
 
-## [2.108.0] - 2021-01-11
+## [2.108.0] - 2021-01-11 ☃️
 
 Features:
 
@@ -2989,7 +2989,7 @@ Fixes:
 - Define default color for `DropdownSelect` items.
 - Refactor `k-u-blockAlign` to `k-u-alignSelf-*` and docs.
 
-## [2.107.0] - 2020-12-24
+## [2.107.0] - 2020-12-24 🎁🤶🎄
 
 Features:
 
@@ -3004,13 +3004,13 @@ Fixes:
 - Propagate `name` argument when `TextInput` is a textarea.
 - `VerticalStepper` styles.
 
-## [2.106.1] - 2020-12-18
+## [2.106.1] - 2020-12-18 🔘
 
 Fix:
 
 - `RadioButton`: Allow `PropTypes.node` on `text` prop.
 
-## [2.106.0] - 2020-12-18
+## [2.106.0] - 2020-12-18 🏓
 
 Features:
 
@@ -3022,7 +3022,7 @@ Fixes:
 - Open menu on focus `DropdownSelect` combobox.
 - Add `type="button"` to button on `PasswordInput`.
 
-## [2.105.0] - 2020-12-16
+## [2.105.0] - 2020-12-16 🤶
 
 Feature:
 
@@ -3035,13 +3035,13 @@ Fixes:
 - Fix `DropdownSelect` item line height and alignment.
 - `ProgressBar` wasn’t passing class names.
 
-## [2.104.1] - 2020-12-14
+## [2.104.1] - 2020-12-14 🎡
 
 Rollback:
 
 - Back to `styled-components` because bug in className.
 
-## [2.104.0] - 2020-12-08
+## [2.104.0] - 2020-12-08 🧜‍♀️
 
 Feature:
 
@@ -3052,7 +3052,7 @@ Fixes:
 - `PasswordInput` styles.
 - `CheckList` styles.
 
-## [2.103.0] - 2020-12-07
+## [2.103.0] - 2020-12-07 🎅🏽
 
 Features :
 
@@ -3085,7 +3085,7 @@ Fixes:
 - Fix `VerticalStepper` styles.
 - Update `error` props on `VerticalStepper` with `variant`.
 
-## [2.101.0] - 2020-11-30
+## [2.101.0] - 2020-11-30 🎒
 
 Features:
 
@@ -3098,13 +3098,13 @@ Fix:
 
 - `DropdownPhoneSelect` when phone number is empty.
 
-## [2.100.1] - 2020-11-26
+## [2.100.1] - 2020-11-26 🍠
 
 Fix:
 
 - Fix `RadioButton` styles.
 
-## [2.100.0] - 2020-11-26
+## [2.100.0] - 2020-11-26 💯
 
 Features:
 
@@ -3118,7 +3118,7 @@ Fixes:
 - Fix `RadioButton` styles.
 - Fix `Accordeon` height update frequency.
 
-## [2.99.0] - 2020-11-24
+## [2.99.0] - 2020-11-24 🧠
 
 Features:
 
@@ -3142,7 +3142,7 @@ Fix:
 
 - Refactor `Checkbox` and `CheckboxSet` components.
 
-## [2.98.0] - 2020-11-23
+## [2.98.0] - 2020-11-23 🏂
 
 Features:
 
@@ -3159,7 +3159,7 @@ Feature:
 
 - Add `CreditCardForm` component.
 
-## [2.96.0] - 2020-11-12
+## [2.96.0] - 2020-11-12 🎩
 
 Feature:
 
@@ -3171,19 +3171,19 @@ Fix:
 
 - Content reference on `<Dropdown />`
 
-## [2.95.2] - 2020-10-22
+## [2.95.2] - 2020-10-22 🎋
 
 Fix:
 
 - File reference on `<ImageCropper />`.
 
-## [2.95.1] - 2020-10-22
+## [2.95.1] - 2020-10-22 🤡
 
 Fix:
 
 - Delay `PillNumberInput` component call to `window` after `canUseDom()`.
 
-## [2.95.0] - 2020-10-21
+## [2.95.0] - 2020-10-21 👩‍🎨
 
 Features:
 
@@ -3191,7 +3191,7 @@ Features:
 - Add `micro` size for `<Button icon>`.
 - Add original `file <File>` on `onChange` callback for `<ImageCropper />`
 
-## [2.94.0] - 2020-10-13
+## [2.94.0] - 2020-10-13 🏓
 
 Feature:
 
@@ -3201,7 +3201,7 @@ Fix:
 
 - Fix `ArrowIcon` display bug in Safari.
 
-## [2.93.0] - 2020-09-30
+## [2.93.0] - 2020-09-30 🛢
 
 Features:
 
@@ -3243,7 +3243,7 @@ Fixes:
 - Fix `ArrowIcon` props.
 - Fix `Alert` display with long texts
 
-## [2.92.1] - 2020-09-22
+## [2.92.1] - 2020-09-22 🅱️
 
 Fixes:
 
@@ -3256,13 +3256,13 @@ Feature:
 
 - Add `DownloadIcon` component.
 
-## [2.91.1] - 2020-09-10
+## [2.91.1] - 2020-09-10 🚣🏼‍♀️
 
 Fix:
 
 - Fix controls issue on `GifVideo`.
 
-## [2.91.0] - 2020-09-07
+## [2.91.0] - 2020-09-07 🎎
 
 Feature:
 
@@ -3272,7 +3272,7 @@ Fix:
 
 - Fix `ClickableCard` image dimensions in Safari.
 
-## [2.90.0] - 2020-09-01
+## [2.90.0] - 2020-09-01 🧶
 
 Features:
 
@@ -3295,7 +3295,7 @@ Features:
 - Add `GifVideo` component that waits until sources fail then loads `poster`.
 - Create `CheckList` component.
 
-## [2.88.2] - 2020-08-27
+## [2.88.2] - 2020-08-27 🦀
 
 Fix :
 
@@ -3308,7 +3308,7 @@ Fix:
 - Fix `parseHtml` returning encoded error when using `replace()` on a
   non `string` component.
 
-## [2.88.0] - 2020-08-27
+## [2.88.0] - 2020-08-27 🦑
 
 Features:
 
@@ -3325,7 +3325,7 @@ Fix:
 
 - Fix deprecated warning on DocLinkBox component.
 
-## [2.87.0] - 2020-08-18
+## [2.87.0] - 2020-08-18 🧧
 
 Feature:
 
@@ -3336,7 +3336,7 @@ Fixes:
 - Add `key` to `CrowdfundingCard` video sources.
 - Remove console error from `Header` component `Centered`.
 
-## [2.86.0] - 2020-08-17
+## [2.86.0] - 2020-08-17 📼
 
 Feature:
 
@@ -3346,7 +3346,7 @@ Fix:
 
 - Fix mobile display of `Alert` notification.
 
-## [2.85.1] - 2020-08-14
+## [2.85.1] - 2020-08-14 👤
 
 Fix:
 
@@ -3366,7 +3366,7 @@ Fixes:
 - Move `.k-u-reset-button` into `k-utilities-reset-button` mixin.
 - Fix `UserMenuButton` min-width from `HeaderNav` in xs screen size.
 
-## [2.84.0] - 2020-08-07
+## [2.84.0] - 2020-08-07 🌇
 
 Features:
 
@@ -3390,7 +3390,7 @@ Fix:
 
 - Fix `Paragraph` modifiers.
 
-## [2.82.0] - 2020-07-30
+## [2.82.0] - 2020-07-30 🐔
 
 Features:
 
@@ -3406,19 +3406,19 @@ Fixes:
 - Adjust box shadow on Dropdown.
 - Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
 
-## [2.81.2] - 2020-07-21
+## [2.81.2] - 2020-07-21 ✌️
 
 Fix:
 
 - Fix `HeaderNav.UserMenu` `min-width`.
 
-## [2.81.1] - 2020-07-21
+## [2.81.1] - 2020-07-21 ❣️
 
 Fix:
 
 - Fix shadow on unscrolled `HeaderNav`.
 
-## [2.81.0] - 2020-07-20
+## [2.81.0] - 2020-07-20 🕹
 
 Features:
 
@@ -3432,7 +3432,7 @@ Fixes:
 - Pass `isMenuExpanded` prop to styled component.
 - Fix `Dropdown` position if content is wider than the window.
 
-## [2.80.0] - 2020-07-13
+## [2.80.0] - 2020-07-13 📑
 
 Feature:
 
@@ -3456,7 +3456,7 @@ Fixes:
 - Escape `<3` with `parseHtml`.
 - Add color transitions to `svg` elements that are inside buttons.
 
-## [2.78.0] - 2020-07-06
+## [2.78.0] - 2020-07-06 🌺
 
 Feature:
 
@@ -3495,7 +3495,7 @@ Fix:
 - Fix `LinkBox` by using direct props instead of `linkProps`.
   `linkProps` is now deprecated
 
-## [2.75.0] - 2020-06-15
+## [2.75.0] - 2020-06-15 🛷
 
 Features:
 
@@ -3508,7 +3508,7 @@ Fixes:
 - Update mobile image size on `EngagementCardWithImage`.
 - Update pseudo-class of the `EmbedPlayer` btn.
 
-## [2.74.0] - 2020-06-04
+## [2.74.0] - 2020-06-04 🔥
 
 Features:
 
@@ -3585,7 +3585,7 @@ Fixes:
 - Remove `classNames` bug from `HorizontalStroke`.
 - Remove warning in `Pagination`.
 
-## [2.69.0] - 2020-05-12
+## [2.69.0] - 2020-05-12 🕶
 
 Features:
 
@@ -3621,7 +3621,7 @@ Fixes:
 - Fix `HeaderNav` layout.
 - Update `path` fill on `Button`.
 
-## [2.66.0] - 2020-04-24
+## [2.66.0] - 2020-04-24 🏮
 
 Features:
 
@@ -3650,7 +3650,7 @@ Fix:
 
 - Fit `CrowdfundingCard` image to new 16/10 ratio.
 
-## [2.65.0] - 2020-04-21
+## [2.65.0] - 2020-04-21 🎡
 
 Doc:
 
@@ -3677,7 +3677,7 @@ Fixes:
 - Modernize `Video` component.
 - Use `styled-components` instead of `Radium` for `EmbedPlayer` component.
 
-## [2.64.0] - 2020-04-07
+## [2.64.0] - 2020-04-07 🏎
 
 Feature:
 
@@ -3687,7 +3687,7 @@ Fix:
 
 - Fix arrow size on new `Carousel` buttons.
 
-## [2.63.0] - 2020-04-07
+## [2.63.0] - 2020-04-07 🚗
 
 Features:
 
@@ -3733,7 +3733,7 @@ Fixes:
 - Fix a memory leak to unmounted `StickyContainer`.
 - Fix `Alert` error when `onAfterClose` is not defined.
 
-## [2.61.0] - 2020-04-02
+## [2.61.0] - 2020-04-02 🚠
 
 Feature:
 
@@ -3749,7 +3749,7 @@ Fix:
 
 - Fix warning in `SelectWithState` component.
 
-## [2.60.2] - 2020-03-26
+## [2.60.2] - 2020-03-26 ☄️
 
 Fix:
 
@@ -3761,7 +3761,7 @@ Fix:
 
 - Update `CopyIcon`.
 
-## [2.60.0] - 2020-03-19
+## [2.60.0] - 2020-03-19 👩‍🎨
 
 Features:
 
@@ -3775,7 +3775,7 @@ Fixes:
 - `ArrowIcon` component size.
 - Fix warning in `Pagination` component.
 
-## [2.59.0] - 2020-03-13
+## [2.59.0] - 2020-03-13 😷
 
 Feature:
 
@@ -3795,7 +3795,7 @@ Fix:
 
 - Remove `isActive` styles to `EngagementCard`.
 
-## [2.57.0] - 2020-03-06
+## [2.57.0] - 2020-03-06 👩‍🎨
 
 Feature:
 
@@ -3805,7 +3805,7 @@ Fix:
 
 - Update `EngagementCard` styles.
 
-## [2.56.0] - 2020-03-03
+## [2.56.0] - 2020-03-03 🐥
 
 Features:
 
@@ -3816,7 +3816,7 @@ Fix:
 
 - Remplace `imageSrc` by `icon` props on `EngagementCard`.
 
-## [2.55.0] - 2020-02-18
+## [2.55.0] - 2020-02-18 🌈
 
 Features:
 
@@ -3841,7 +3841,7 @@ Fix:
 
 - use style-components for `CounterBlock` and fix `title` and `subTitle` props.
 
-## [2.53.0] - 2020-02-03
+## [2.53.0] - 2020-02-03 🐕
 
 Feature:
 
@@ -3852,20 +3852,20 @@ Fix:
 - `value` prop from `TextInputWithButton` is now deprecated. Use
   `buttonValue` instead. Also, allow React component inside this prop.
 
-## [2.52.1] - 2020-01-28
+## [2.52.1] - 2020-01-28 🖌
 
 Fix:
 
 - Style fixes for `DoubleEntryTable` cols.
 
-## [2.52.0] - 2020-01-27
+## [2.52.0] - 2020-01-27 🪲
 
 Features:
 
 - Add `useContinuousIntersectionObserver` hook.
 - Add `ContinuousIntersectionObserver` component with Render Prop.
 
-## [2.51.0] - 2020-01-20
+## [2.51.0] - 2020-01-20 🍫
 
 Features:
 
@@ -3880,7 +3880,7 @@ Fixes:
 - Update copy text message size of `<TextCopy />` to `micro`.
 - Remove Margin on `Modal__close` button on `Modal`.
 
-## [2.50.0] - 2020-01-06
+## [2.50.0] - 2020-01-06 🧣
 
 Features:
 
@@ -3891,7 +3891,7 @@ Fix:
 
 - Fix `Modal` animation and mobile styles.
 
-## [2.49.0] - 2020-01-03
+## [2.49.0] - 2020-01-03 🎊
 
 Features:
 
@@ -3899,19 +3899,19 @@ Features:
 - Use `styled-components` instead of `Radium` to `ButtonImageWithText`.
 - Add `HEADER_HEIGHT` export to `Header` component.
 
-## [2.48.1] - 2019-12-20
+## [2.48.1] - 2019-12-20 🎠
 
 Fix:
 
 - Update margin on project Informations on `CrowdfundingCard`.
 
-## [2.48.0] - 2019-12-17
+## [2.48.0] - 2019-12-17 🤶
 
 Feature:
 
 - Add `buttonText` and `buttonModifier` props on `TextCopy` component.
 
-## [2.47.0] - 2019-12-13
+## [2.47.0] - 2019-12-13 🧶
 
 Feature:
 
@@ -3929,7 +3929,7 @@ Fix:
 - Add `badgeColor` prop to `UserMenu` component for
   `ButtonImageWithTextAndBadge`.
 
-## [2.46.0] - 2019-12-09
+## [2.46.0] - 2019-12-09 🎄
 
 Features:
 
@@ -3944,19 +3944,19 @@ Fix:
 
 - Remove console warnings related to `CrowdfundingCard` propTypes.
 
-## [2.45.0] - 2019-12-09
+## [2.45.0] - 2019-12-09 🤶
 
 Feature:
 
 - Add `garbageButton` boolean on `RewardEdition.Header` component.
 
-## [2.44.0] - 2019-12-05
+## [2.44.0] - 2019-12-05 🤶
 
 Feature:
 
 - Create `EditIcon` component.
 
-## [2.43.0] - 2019-12-04
+## [2.43.0] - 2019-12-04 🤶
 
 Features:
 
@@ -3964,7 +3964,7 @@ Features:
 - Add `warning` prop to `<Alert />`.
 - Create `warning` and `warning2` in colors-config.
 
-## [2.42.0] - 2019-11-29
+## [2.42.0] - 2019-11-29 🎡
 
 Feature:
 
@@ -3976,7 +3976,7 @@ Fixes:
 - Fix fluidity on `icon` `Buttons`.
 - Remove `Button` underline on hover.
 
-## [2.41.2] - 2019-11-26
+## [2.41.2] - 2019-11-26 🧩
 
 Fix:
 
@@ -3989,7 +3989,7 @@ Fixes:
 - Cancel emitter on UserMenu unMount.
 - Update subtitle's truncate on `CrowdfundindCardWidget` component.
 
-## [2.41.0] - 2019-11-22
+## [2.41.0] - 2019-11-22 🧧
 
 Features:
 
@@ -4003,14 +4003,14 @@ Fixes:
 - Re-render `Progress` when `value` is updated.
 - Fix `value` to `valueMin` when `value` is negative.
 
-## [2.40.1] - 2019-11-20
+## [2.40.1] - 2019-11-20 👩‍🌾
 
 Fixes:
 
 - Update `Truncate` in mobile on `CrowdfundingCard`.
 - Update `font-size` information in mobile and others fixes on `CrowdfundingCard`.
 
-## [2.40.0] - 2019-11-15
+## [2.40.0] - 2019-11-15 🧰
 
 Features:
 
@@ -4026,14 +4026,14 @@ Fixes:
 - Update styles on `CrowdfundingCardWidget` component.
 - Add incoming animation to `SimplePopover`.
 
-## [2.39.0] - 2019-11-12
+## [2.39.0] - 2019-11-12 💃
 
 Features:
 
 - Add `CrowdfundingCard` mobile version.
 - Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`.
 
-## [2.38.0] - 2019-11-08
+## [2.38.0] - 2019-11-08 ➿
 
 Features:
 
@@ -4042,19 +4042,19 @@ Features:
 - Add `important` argument to `k-typographyFontSize` definition.
 - Add `important` argument to `k-typographyFont` definition.
 
-## [2.37.2] - 2019-11-07
+## [2.37.2] - 2019-11-07 👩‍🌾
 
 Fix:
 
 - Update `dayCounter` propTypes on `CrowdfundingCard`.
 
-## [2.37.1] - 2019-11-04
+## [2.37.1] - 2019-11-04 🪲
 
 Fix:
 
 - Browser `:invalid` style handling by `TextInput`.
 
-## [2.37.0] - 2019-11-04
+## [2.37.0] - 2019-11-04 🎴
 
 Features:
 
@@ -4065,26 +4065,26 @@ Fix:
 
 - Change color for `BackerCard` title.
 
-## [2.36.0] - 2019-10-31
+## [2.36.0] - 2019-10-31 🍻
 
 Features:
 
 - Add `color` and `title` props on `CopyIcon` component.
 - Create `EmbedIcon` component.
 
-## [2.35.0] - 2019-10-29
+## [2.35.0] - 2019-10-29 🖌
 
 Feature:
 
 - Add `.k-u-background-color-primary6` utility.
 
-## [2.34.0] - 2019-10-25
+## [2.34.0] - 2019-10-25 💊
 
 Feature:
 
 - Add `ToggleSwitch` component.
 
-## [2.33.0] - 2019-10-24
+## [2.33.0] - 2019-10-24 🍉
 
 Features:
 
@@ -4106,13 +4106,13 @@ Fix:
 
 - Update `Field.Label` styles.
 
-## [2.31.0] - 2019-10-01
+## [2.31.0] - 2019-10-01 😇
 
 Feature:
 
 - Add `bulletProps` and change type of `statusMessage` in `StatusWithBullet`.
 
-## [2.30.0] - 2019-10-01
+## [2.30.0] - 2019-10-01 🤷🏻
 
 Feature:
 
@@ -4135,19 +4135,19 @@ Fix:
 
 - Remove default `font-size` on `Field.Label`.
 
-## [2.28.0] - 2019-09-24
+## [2.28.0] - 2019-09-24 👆
 
 Feature:
 
 - New `k-u-cursor-*` CSS utility.
 
-## [2.27.0] - 2019-09-23
+## [2.27.0] - 2019-09-23 📅
 
 Feature:
 
 - Add `onChange`, `from` and `to` props to `StandaloneRangeDatePicker`.
 
-## [2.26.0] - 2019-09-20
+## [2.26.0] - 2019-09-20 👗
 
 Feature:
 
@@ -4158,7 +4158,7 @@ Fixes:
 - Passing value through `Autocomplete` callbacks.
 - Fix weird `ListTable` bottom margin bug.
 
-## [2.25.0] - 2019-09-12
+## [2.25.0] - 2019-09-12 🎒
 
 Features:
 
@@ -4170,7 +4170,7 @@ Fixes:
 - Update title style on `StandaloneRange` component.
 - Remove rounding in `pxToRem` and `stepToRem`.
 
-## [2.24.0] - 2019-09-06
+## [2.24.0] - 2019-09-06 🎭
 
 Features:
 
@@ -4181,7 +4181,7 @@ Fix:
 
 - Update `active` pseudo-class to `TagButton`.
 
-## [2.23.0] - 2019-08-30
+## [2.23.0] - 2019-08-30 🏃
 
 Feature:
 
@@ -4192,14 +4192,14 @@ Fixes:
 - Remove `defaultProps` in `StandaloneRangeDatePicker` component.
 - Fix `AdaptableGrid` width.
 
-## [2.22.0] - 2019-08-28
+## [2.22.0] - 2019-08-28 🌻
 
 Feature:
 
 - Pass `className` prop to `AdaptableGrid` and `AdaptableGridCol` to
   enable styling with `styled-components`.
 
-## [2.21.0] - 2019-08-27
+## [2.21.0] - 2019-08-27 🍉
 
 Features:
 
@@ -4211,7 +4211,7 @@ Fixes:
 - Remove console Warning in `Modal` component.
 - Update `Text` component styles on `Pagination`.
 
-## [2.20.0] - 2019-08-23
+## [2.20.0] - 2019-08-23 🍷
 
 Features:
 
@@ -4236,7 +4236,7 @@ Fix:
 
 - Default `ListTable` column style to Flex.
 
-## [2.19.0] - 2019-08-19
+## [2.19.0] - 2019-08-19 💸
 
 Features:
 
@@ -4247,7 +4247,7 @@ Features:
   to `ArrowContainer` component.
 - Add `StatusWithBullet` component.
 
-## [2.18.4] - 2019-08-13
+## [2.18.4] - 2019-08-13 💌
 
 Fix:
 
@@ -4259,7 +4259,7 @@ Fix:
 
 - Fix warning error about key conflict in `InfoLines` component.
 
-## [2.18.2] - 2019-08-08
+## [2.18.2] - 2019-08-08 🛀
 
 Fix:
 
@@ -4313,7 +4313,7 @@ Features:
 - Add `title` and `color` props on `HeartIcon`.
 - Update `PasswordInput` with styled-components.
 
-## [2.15.0] - 2019-07-16
+## [2.15.0] - 2019-07-16 🍠
 
 Feature:
 
@@ -4325,7 +4325,7 @@ Fix:
 
 - Remove HTML warning from `Comment`.
 
-## [2.14.0] - 2019-07-11
+## [2.14.0] - 2019-07-11 ⛽️
 
 Feature:
 
@@ -4339,13 +4339,13 @@ Fixes:
   `TextInputWithLimit`.
 - Fix `width` error styles `TextInputWithUnit`.
 
-## [2.13.1] - 2019-07-08
+## [2.13.1] - 2019-07-08 🏓
 
 Fix:
 
 - Use `domElementHelper` to check if DOM is present, in `Details`.
 
-## [2.13.0] - 2019-07-08
+## [2.13.0] - 2019-07-08 🎀
 
 Features:
 
@@ -4417,13 +4417,13 @@ Feature:
 
 - Add `checked` `modifier` to `Button` component.
 
-## [2.8.0] - 2019-06-03
+## [2.8.0] - 2019-06-03 🧝🏻‍♀️
 
 Feature:
 
 - Expose `setSticky`/`setUnsticky` methods in StickyContainer.
 
-## [2.7.0] - 2019-05-24
+## [2.7.0] - 2019-05-24 🍕
 
 Features:
 
@@ -4441,25 +4441,25 @@ Feature:
 
 - Add `descriptionTag` prop to `CartRewardCard`.
 
-## [2.5.0] - 2019-05-13
+## [2.5.0] - 2019-05-13 🍓
 
 Feature:
 
 - Add `stepToRem` helper.
 
-## [2.4.5] - 2019-05-09
+## [2.4.5] - 2019-05-09 🚀
 
 Fix:
 
 - Remove a HTML warning on `List.ButtonItem`.
 
-## [2.4.4] - 2019-05-06
+## [2.4.4] - 2019-05-06 🚀
 
 Fix:
 
 - Add link styles when `VerticalStepper.Step` has `onClick` attribute.
 
-## [2.4.3] - 2019-05-06
+## [2.4.3] - 2019-05-06 🚀
 
 Fix:
 
@@ -4471,14 +4471,14 @@ Fix:
 
 - `ScrollableContainer` style fixes.
 
-## [2.4.1] - 2019-04-30
+## [2.4.1] - 2019-04-30 🚲🚲🚲
 
 Fixes:
 
 - Rework `ScrollableContainer` shadow display.
 - Fix `cursor` for `poster` Video attribute.
 
-## [2.4.0] - 2019-04-25
+## [2.4.0] - 2019-04-25 🎉
 
 Features:
 
@@ -4490,7 +4490,7 @@ Fixes:
 - Fix `cover` with used `controls` on Video.
 - `StickyContainer` fix for `isSticky='always'`.
 
-## [2.3.0] - 2019-04-19
+## [2.3.0] - 2019-04-19 🚀
 
 Feature:
 
@@ -4513,7 +4513,7 @@ Fixes:
 - Fix `WarningIcon` warning.
 - Fix buggy settings on `StickyContainer`.
 
-## [2.1.0] - 2019-04-11
+## [2.1.0] - 2019-04-11 🎊
 
 Features:
 
@@ -4528,7 +4528,7 @@ Fix:
 - Remove `getScssPaths` from `@kisskissbankbank/kitten`.
   Prefer use `@kisskissbankbank/kitten/src/config/paths`.
 
-## [2.0.0] - 2019-04-10
+## [2.0.0] - 2019-04-10 🚀
 
 Breaking changes:
 
@@ -4566,7 +4566,7 @@ Features:
 - Add `link` props to `Field.Label`
 - Add `Field.Password` component
 
-## [1.23.0] - 2019-03-20
+## [1.23.0] - 2019-03-20 🚀
 
 Features:
 
@@ -4674,13 +4674,13 @@ Fix:
   You don't need to include the `k-Container` mixin in your Sass stylesheet
   anymore.
 
-## [1.13.0] - 2019-02-08
+## [1.13.0] - 2019-02-08 🚀
 
 Feature:
 
 - Add a new `Button` component.
 
-## [1.12.0] - 2019-02-01
+## [1.12.0] - 2019-02-01 📑
 
 Features:
 
@@ -4717,14 +4717,14 @@ Fixes:
   Use `kitten/components/carousel/nav-tab-carousel` instead.
 - Fix `NavTabCarousel` style issue on grid layout.
 
-## [1.10.0] - 2019-01-25
+## [1.10.0] - 2019-01-25 🎪
 
 Feature:
 
 - Add `onAnimationEnd` to `HighlightHalo` that accepts a function to
   execute when animation is over.
 
-## [1.9.0] - 2019-01-23
+## [1.9.0] - 2019-01-23 🧜‍♀️
 
 Features:
 
@@ -4758,7 +4758,7 @@ Fixes:
 
 - Fix trigger `onChange` handler on `Field.Select` when autoFill is triggered.
 
-## [1.7.0] - 2019-01-22
+## [1.7.0] - 2019-01-22 ☃️
 
 Features:
 
@@ -4771,7 +4771,7 @@ Fixes:
 - Fix `Field.Select` label by using `for=` instead of `id=`.
 - Adds the ability to edit and add styles on `BulletList`.
 
-## [1.6.0] - 2019-01-17
+## [1.6.0] - 2019-01-17 🎊
 
 Features:
 
@@ -4801,7 +4801,7 @@ Fix:
 
 - `BurgerMenu` changed `hover` behaviour.
 
-## [1.4.0] - 2019-01-10
+## [1.4.0] - 2019-01-10 🚡
 
 Features:
 
@@ -4814,7 +4814,7 @@ Features:
 
 - Add prop `id` on `Accordeon.Item`. This id would be given by the callback `onChange` on `Accordon` if setted.
 
-## [1.2.0] - 2018-12-27
+## [1.2.0] - 2018-12-27 🚀
 
 Features:
 
@@ -4834,7 +4834,7 @@ Fix:
 
 - Fix `Marger` context/state.
 
-## [1.1.1] - 2018-12-12
+## [1.1.1] - 2018-12-12 🍄
 
 Fix:
 
@@ -4866,6 +4866,6 @@ Fixes:
 - Update `k-inputSet` vertical spacing.
 - Update `k-RadioButtonSet` line-height.
 
-## [1.0.0] - 2018-12-11
+## [1.0.0] - 2018-12-11 🎉
 
 - First release!
