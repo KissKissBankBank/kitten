@@ -234,4 +234,28 @@ describe('<TextInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with controlled value', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput id="TextInput" value="controlled_value" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with uncontrolled value', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput id="TextInput" defaultValue="uncontrolled_value" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
