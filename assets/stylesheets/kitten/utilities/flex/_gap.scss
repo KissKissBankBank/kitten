@@ -45,6 +45,16 @@
     quadruple: 40px,
     quadrupleHalf: 45px,
     quintuple: 50px,
+    quintupleHalf: 55px,
+    sextuple: 60px,
+    sextupleHalf: 65px,
+    septuble: 70px,
+    septubleHalf: 75px,
+    octuple: 80px,
+    octupleHalf: 85px,
+    nonuple: 90px,
+    nonupleHalf: 95px,
+    decuple: 100px,
   );
 
   @each $size_name, $size_value in $k-sizes {
