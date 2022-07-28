@@ -7,17 +7,17 @@ exports.TextInput = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _textareaAutoResize = require("../../../form/input/textarea-auto-resize");
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _styles = require("./styles");
+var _react = _interopRequireWildcard(require("react"));
 
 var _button = require("../../../action/button");
+
+var _textareaAutoResize = require("../textarea-auto-resize");
+
+var _styles = require("./styles");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -54,8 +54,7 @@ const TextInput = /*#__PURE__*/_react.default.forwardRef((_ref, ref) => {
     wrapperProps,
     ...others
   } = _ref;
-  const [textValue] = (0, _react.useState)(value || defaultValue || '');
-  const [length, setLength] = (0, _react.useState)(textValue.length);
+  const [length, setLength] = (0, _react.useState)(value || defaultValue || ''.length);
   const digitsClass = !!digits ? "k-TextInput-hasDigits k-TextInput-hasDigits_" + digits : null;
   const hasClass = !!has ? "k-TextInput--has" + has[0].toUpperCase() + has.slice(1) : null;
   const describedBy = has === 'icon' && iconAccessibilityLabel ? ariaDescribedBy + " " + id + "__iconLabel" : ariaDescribedBy;
@@ -99,8 +98,12 @@ const TextInput = /*#__PURE__*/_react.default.forwardRef((_ref, ref) => {
     style: !!digits ? {
       '--input-content-width': digits,
       ...style
-    } : style,
-    defaultValue: textValue,
+    } : style
+  }, defaultValue && {
+    defaultValue
+  }, value && {
+    value
+  }, {
     onChange: e => {
       var _e$target, _e$target$value;
 

@@ -1,10 +1,10 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize';
 import classNames from 'classnames';
-import { StyledInputWrapper } from './styles';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { Button } from '../../../action/button';
+import { TextareaAutoResize } from '../textarea-auto-resize';
+import { StyledInputWrapper } from './styles';
 export const TextInput = /*#__PURE__*/React.forwardRef((_ref, ref) => {
   let {
     id,
@@ -36,8 +36,7 @@ export const TextInput = /*#__PURE__*/React.forwardRef((_ref, ref) => {
     wrapperProps,
     ...others
   } = _ref;
-  const [textValue] = useState(value || defaultValue || '');
-  const [length, setLength] = useState(textValue.length);
+  const [length, setLength] = useState(value || defaultValue || ''.length);
   const digitsClass = !!digits ? "k-TextInput-hasDigits k-TextInput-hasDigits_" + digits : null;
   const hasClass = !!has ? "k-TextInput--has" + has[0].toUpperCase() + has.slice(1) : null;
   const describedBy = has === 'icon' && iconAccessibilityLabel ? ariaDescribedBy + " " + id + "__iconLabel" : ariaDescribedBy;
@@ -81,8 +80,12 @@ export const TextInput = /*#__PURE__*/React.forwardRef((_ref, ref) => {
     style: !!digits ? {
       '--input-content-width': digits,
       ...style
-    } : style,
-    defaultValue: textValue,
+    } : style
+  }, defaultValue && {
+    defaultValue
+  }, value && {
+    value
+  }, {
     onChange: e => {
       var _e$target, _e$target$value;
 
