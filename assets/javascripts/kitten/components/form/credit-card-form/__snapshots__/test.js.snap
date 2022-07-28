@@ -30,12 +30,11 @@ Array [
       </div>
     </div>
     <div
-      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control sc-bczRLJ iqiWVe k-u-margin-top-single"
+      className="sc-gKXOVf ScRKp k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control sc-bczRLJ iqiWVe k-u-margin-top-single"
     >
       <input
         autoComplete="cc-number"
         className="k-TextInput"
-        defaultValue=""
         disabled={false}
         id="frmCCNum"
         inputMode="numeric"
@@ -78,12 +77,11 @@ Array [
       </div>
     </div>
     <div
-      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasDigits"
+      className="sc-gKXOVf ScRKp k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasDigits"
     >
       <input
         autoComplete="cc-exp"
         className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
-        defaultValue=""
         disabled={false}
         id="frmCCExp"
         inputMode="numeric"
@@ -131,12 +129,11 @@ Array [
       </div>
     </div>
     <div
-      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasDigits"
+      className="sc-gKXOVf ScRKp k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasDigits"
     >
       <input
         autoComplete="cc-csc"
         className="k-TextInput k-TextInput-hasDigits k-TextInput-hasDigits_6"
-        defaultValue=""
         disabled={false}
         id="frmCCCVC"
         inputMode="numeric"

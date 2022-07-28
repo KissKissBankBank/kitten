@@ -2,11 +2,10 @@
 
 exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit"
-    defaultValue=""
     disabled={false}
     id="TextInputWithUnit"
     name="text"
@@ -22,11 +21,10 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit k-TextInput--disabled"
-    defaultValue=""
     disabled={true}
     id="TextInputWithUnit"
     name="text"
@@ -42,11 +40,10 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit k-TextInput--error"
-    defaultValue=""
     disabled={false}
     id="TextInputWithUnit"
     name="text"
@@ -62,11 +59,10 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--large k-TextInput__wrapper--hasUnit"
+  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--large k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit"
-    defaultValue=""
     disabled={false}
     id="TextInputWithUnit"
     name="text"
@@ -82,11 +78,10 @@ exports[`<TextInputWithUnit /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit"
-    defaultValue=""
     disabled={false}
     id="TextInputWithUnit"
     name="text"
@@ -104,11 +99,10 @@ exports[`<TextInputWithUnit /> with unit matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
+  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--hasUnit"
 >
   <input
     className="k-TextInput k-TextInput--hasUnit k-TextInput--valid"
-    defaultValue=""
     disabled={false}
     id="TextInputWithUnit"
     name="text"

@@ -76,12 +76,11 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--small k-TextInput__isTextarea"
+      className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--small k-TextInput__isTextarea"
     >
       <textarea
         aria-label="Texte à envoyer"
         className="k-TextInput k-Discussion__form__input"
-        defaultValue=""
         disabled={false}
         id="TextInput"
         name="text"
@@ -100,7 +99,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     </div>
     <button
       aria-label="Envoyer"
-      className="sc-gsnTZi deSqyS k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+      className="sc-bczRLJ rWxDk k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {

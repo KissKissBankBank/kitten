@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import { TextareaAutoResize } from '../../../form/input/textarea-auto-resize'
 import classNames from 'classnames'
-import { StyledInputWrapper } from './styles'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import { Button } from '../../../action/button'
+import { TextareaAutoResize } from '../textarea-auto-resize'
+import { StyledInputWrapper } from './styles'
 
 export const TextInput = React.forwardRef(
   (
@@ -39,8 +39,7 @@ export const TextInput = React.forwardRef(
     },
     ref,
   ) => {
-    const [textValue] = useState(value || defaultValue || '')
-    const [length, setLength] = useState(textValue.length)
+    const [length, setLength] = useState(value || defaultValue || ''.length)
 
     const digitsClass = !!digits
       ? `k-TextInput-hasDigits k-TextInput-hasDigits_${digits}`
@@ -108,7 +107,8 @@ export const TextInput = React.forwardRef(
           style={
             !!digits ? { '--input-content-width': digits, ...style } : style
           }
-          defaultValue={textValue}
+          {...(defaultValue && { defaultValue })}
+          {...(value && { value })}
           onChange={e => {
             setLength(e?.target?.value?.length || 0)
             onChange(e)
