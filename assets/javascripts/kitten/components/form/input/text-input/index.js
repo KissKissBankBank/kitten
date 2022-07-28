@@ -39,7 +39,6 @@ export const TextInput = React.forwardRef(
     },
     ref,
   ) => {
-    console.log('inner value', value)
     const [length, setLength] = useState(value || defaultValue || ''.length)
 
     const digitsClass = !!digits
