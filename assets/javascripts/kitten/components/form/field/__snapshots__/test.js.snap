@@ -33,7 +33,7 @@ Array [
       className="sc-iqcoie fOoKFn k-Form-Autocomplete"
     >
       <div
-        className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium"
+        className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium"
       >
         <input
           aria-activedescendant=""
@@ -42,7 +42,6 @@ Array [
           aria-owns="field-results"
           autoComplete="off"
           className="k-TextInput k-Form-Autocomplete__input"
-          defaultValue=""
           disabled={false}
           id="autocomplete"
           name="field"
@@ -154,11 +153,10 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
     </div>
   </div>
   <div
-    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="k-TextInput k-TextInput--error"
-      defaultValue=""
       disabled={false}
       id="input"
       name="field"
@@ -279,11 +277,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="k-TextInput k-TextInput--error"
-      defaultValue=""
       disabled={false}
       id="input"
       name="field"
@@ -394,11 +391,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="k-TextInput"
-      defaultValue=""
       disabled={false}
       id="input"
       name="field"
@@ -514,11 +510,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="k-TextInput"
-      defaultValue=""
       disabled={false}
       id="input"
       name="field"
@@ -624,11 +619,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
+    className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single"
   >
     <input
       className="k-TextInput k-TextInput--hasLimit"
-      defaultValue=""
       disabled={false}
       id="input"
       name="field"
@@ -739,11 +733,10 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasUnit"
+    className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-FieldInput k-Field__control k-u-margin-top-single k-TextInput__wrapper--hasUnit"
   >
     <input
       className="k-TextInput k-TextInput--hasUnit"
-      defaultValue=""
       disabled={false}
       id="input"
       name="field"
@@ -857,11 +850,10 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
+      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
     >
       <input
         className="k-TextInput k-TextInput--hasButton k-TextInput--error"
-        defaultValue=""
         disabled={false}
         id="input"
         name="field"
@@ -1003,11 +995,10 @@ Array [
     className="k-u-margin-top-single k-Field__control"
   >
     <div
-      className="sc-eCYdqJ iNEfee k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
+      className="sc-jSMfEi gocctE k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
     >
       <input
         className="k-TextInput k-TextInput--hasButton"
-        defaultValue=""
         disabled={false}
         id="input"
         name="field"

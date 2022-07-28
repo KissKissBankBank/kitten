@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `TextInput`: Is controlled with `value` prop and becoming uncontrolled with `defaultValue` prop.
+
 ## [12.1.0] - 2022-07-26
 
 Feature:

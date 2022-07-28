@@ -5,14 +5,13 @@ exports[`<LocationInput /> should match its snapshot with props 1`] = `
   className="sc-dkzDqf cLVSUm k-LocationInput"
 >
   <div
-    className="sc-bczRLJ wimGl k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
+    className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
   >
     <input
       aria-autocomplete="list"
       aria-expanded={false}
       autoComplete="off"
       className="k-TextInput k-LocationInput__input custom-input-class-name k-TextInput--hasIcon"
-      defaultValue="Paris, France"
       disabled={false}
       id="location-input-test"
       name="text"
@@ -21,6 +20,7 @@ exports[`<LocationInput /> should match its snapshot with props 1`] = `
       onKeyDown={[Function]}
       role="combobox"
       type="text"
+      value="Paris, France"
     />
     <span
       aria-hidden="true"

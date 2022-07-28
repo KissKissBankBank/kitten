@@ -494,7 +494,6 @@ textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textar
       aria-owns="autocomplete-results"
       autoComplete="off"
       className="k-TextInput k-Form-Autocomplete__input"
-      defaultValue=""
       disabled={false}
       id="autocomplete"
       name="autocomplete"
@@ -1003,7 +1002,6 @@ textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textar
       aria-owns="autocomplete-results"
       autoComplete="off"
       className="k-TextInput k-Form-Autocomplete__input k-TextInput--hasIcon"
-      defaultValue=""
       disabled={false}
       id="autocomplete"
       name="autocomplete"
@@ -1561,7 +1559,6 @@ textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textar
       aria-owns="autocomplete-results"
       autoComplete="off"
       className="k-TextInput k-Form-Autocomplete__input k-TextInput--hasIcon"
-      defaultValue=""
       disabled={false}
       id="autocomplete"
       name="autocomplete"
