@@ -27,6 +27,7 @@ describe('<TitleWithStroke />', () => {
             tag="h4"
             children="Lorem ipsum dolor sit amet…"
             cssColor="#444"
+            noMargin
           />,
         )
         .toJSON()
