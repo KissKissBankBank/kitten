@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: `TitleWithStroke`: Add `noMargin` prop.
+- Feature: `EditorBar`: Add component.
 
 ## [12.2.0] - 2022-07-28 🔮
 
