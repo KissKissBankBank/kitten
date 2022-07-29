@@ -26,8 +26,7 @@ const StyledTitleWithStroke = styled.div`
   }
 
   .k-TitleWithStroke__title {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-block: 0;
     ${TYPOGRAPHY.fontStyles['700']};
     color: currentColor;
   }
@@ -45,6 +44,10 @@ const StyledTitleWithStroke = styled.div`
   }
 
   ${strokeModifierStyles('.k-TitleWithStroke__stroke')}
+
+  &.k-TitleWithStroke--noMargin .k-TitleWithStroke__stroke.k-TitleWithStroke__stroke {
+    margin-bottom: 0;
+  }
 `
 
 export const TitleWithStroke = ({
@@ -55,6 +58,7 @@ export const TitleWithStroke = ({
   className,
   children,
   cssColor,
+  noMargin,
   ...other
 }) => {
   const TitleComponent = tag
@@ -68,6 +72,7 @@ export const TitleWithStroke = ({
         `k-TitleWithStroke--align-${align}`,
         {
           'k-TitleWithStroke--italic': italic,
+          'k-TitleWithStroke--noMargin': noMargin,
         },
       )}
       style={{ '--TitleWithStroke-css-color': cssColor }}
@@ -97,6 +102,7 @@ TitleWithStroke.defaultProps = {
   align: 'left',
   italic: false,
   cssColor: null,
+  noMargin: false,
 }
 
 TitleWithStroke.propTypes = {
@@ -105,4 +111,5 @@ TitleWithStroke.propTypes = {
   align: PropTypes.oneOf(['left', 'center', 'right']),
   italic: PropTypes.bool,
   cssColor: PropTypes.string,
+  noMargin: PropTypes.bool,
 }

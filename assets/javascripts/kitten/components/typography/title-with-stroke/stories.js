@@ -25,6 +25,7 @@ Default.args = {
   cssColor: COLORS.font1,
   tag: 'h1',
   children: 'Lorem ipsum dolor sit amet',
+  noMargin: false,
 }
 
 Default.argTypes = {
@@ -67,6 +68,11 @@ Default.argTypes = {
   children: {
     name: 'children',
     control: 'text',
+  },
+  noMargin: {
+    name: 'noMargin',
+    description: 'Removes Margin style.',
+    control: 'boolean',
   },
 }
 

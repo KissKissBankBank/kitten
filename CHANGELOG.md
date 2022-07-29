@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `TitleWithStroke`: Add `noMargin` prop.
+
 ## [12.2.0] - 2022-07-28 🔮
 
 Feature:
