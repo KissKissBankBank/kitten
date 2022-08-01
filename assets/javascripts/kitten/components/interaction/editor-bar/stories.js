@@ -54,7 +54,9 @@ export default {
 
 export const Default = ({ ...args }) => {
   return (
-    <ScrollableContainer shadowColor={`var(--color-grey-${args.theme === "grey" ? 2 : 0 }00)`}>
+    <ScrollableContainer
+      shadowColor={`var(--color-grey-${args.theme === 'grey' ? 2 : 0}00)`}
+    >
       <EditorBar {...args}>
         <EditorBar.List currentIcon={<Title3Icon />}>
           <EditorBar.Item onClick={action('Clicked Title1')}>
