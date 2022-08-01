@@ -54,7 +54,7 @@ const TextInput = /*#__PURE__*/_react.default.forwardRef((_ref, ref) => {
     wrapperProps,
     ...others
   } = _ref;
-  const [length, setLength] = (0, _react.useState)(value || defaultValue || ''.length);
+  const [length, setLength] = (0, _react.useState)((value || defaultValue || '').length);
   const digitsClass = !!digits ? "k-TextInput-hasDigits k-TextInput-hasDigits_" + digits : null;
   const hasClass = !!has ? "k-TextInput--has" + has[0].toUpperCase() + has.slice(1) : null;
   const describedBy = has === 'icon' && iconAccessibilityLabel ? ariaDescribedBy + " " + id + "__iconLabel" : ariaDescribedBy;

@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `TitleWithStroke`: Add `noMargin` prop.
-- Feature: `EditorBar`: Add component.
-- Fix: `TextInput`: Fix `limit` initialization.
+## [12.3.0] - 2022-07-28 🍖
+
+Features:
+
+- `EditorBar`: Add component.
+- `TitleWithStroke`: Add `noMargin` prop.
+
+Fix:
+
+- `TextInput`: Fix `limit` initialization.
 
 ## [12.2.0] - 2022-07-28 🔮
 

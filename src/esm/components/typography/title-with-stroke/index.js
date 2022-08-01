@@ -10,7 +10,7 @@ import { strokeModifierStyles } from '../../typography/horizontal-stroke/common/
 const StyledTitleWithStroke = styled.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "sc-10vl00i-0"
-})(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles['700'], titleModifierStyles('.k-TitleWithStroke__title'), strokeModifierStyles('.k-TitleWithStroke__stroke'));
+})(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-block:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", " &.k-TitleWithStroke--noMargin .k-TitleWithStroke__stroke.k-TitleWithStroke__stroke{margin-bottom:0;}"], COLORS.font1, TYPOGRAPHY.fontStyles['700'], titleModifierStyles('.k-TitleWithStroke__title'), strokeModifierStyles('.k-TitleWithStroke__stroke'));
 export const TitleWithStroke = _ref => {
   let {
     modifier,
@@ -20,12 +20,14 @@ export const TitleWithStroke = _ref => {
     className,
     children,
     cssColor,
+    noMargin,
     ...other
   } = _ref;
   const TitleComponent = tag;
   return /*#__PURE__*/React.createElement(StyledTitleWithStroke, _extends({
     className: classNames('k-TitleWithStroke', className, "k-TitleWithStroke--" + modifier, "k-TitleWithStroke--align-" + align, {
-      'k-TitleWithStroke--italic': italic
+      'k-TitleWithStroke--italic': italic,
+      'k-TitleWithStroke--noMargin': noMargin
     }),
     style: {
       '--TitleWithStroke-css-color': cssColor
@@ -41,12 +43,14 @@ TitleWithStroke.defaultProps = {
   modifier: 'primary',
   align: 'left',
   italic: false,
-  cssColor: null
+  cssColor: null,
+  noMargin: false
 };
 TitleWithStroke.propTypes = {
   tag: PropTypes.string,
   modifier: PropTypes.oneOf(titleModifiersNames),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   italic: PropTypes.bool,
-  cssColor: PropTypes.string
+  cssColor: PropTypes.string,
+  noMargin: PropTypes.bool
 };

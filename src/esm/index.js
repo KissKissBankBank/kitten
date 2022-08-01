@@ -280,6 +280,7 @@ export { Comment } from './components/interaction/comment-block/comment';
 export { Discussion } from './components/interaction/discussion';
 export { DragAndDropList } from './components/interaction/drag-and-drop-list';
 export { StepperIcon, StepperIconDefault, StepperIconInProgress, StepperIconValidated } from './components/interaction/stepper-icon';
+export { EditorBar } from './components/interaction/editor-bar';
 export { Stepper } from './components/interaction/stepper'; // Interaction/Upload
 
 export { BasicUploader } from './components/interaction/upload/basic-uploader';
