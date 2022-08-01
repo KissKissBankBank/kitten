@@ -56,7 +56,6 @@ export const Default = ({ ...args }) => {
   return (
     <ScrollableContainer
       shadowColor={`var(--color-grey-${args.theme === 'grey' ? 2 : 0}00)`}
-      className={`k-u-background`}
     >
       <EditorBar {...args} className="k-u-flex-grow-single">
         <EditorBar.List currentIcon={<Title3Icon />}>
