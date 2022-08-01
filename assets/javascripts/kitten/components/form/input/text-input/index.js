@@ -39,7 +39,7 @@ export const TextInput = React.forwardRef(
     },
     ref,
   ) => {
-    const [length, setLength] = useState(value || defaultValue || ''.length)
+    const [length, setLength] = useState((value || defaultValue || '').length)
 
     const digitsClass = !!digits
       ? `k-TextInput-hasDigits k-TextInput-hasDigits_${digits}`
