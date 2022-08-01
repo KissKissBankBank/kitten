@@ -26,7 +26,7 @@ var _strokeModifierStyles = require("../../typography/horizontal-stroke/common/s
 const StyledTitleWithStroke = _styledComponents.default.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "sc-10vl00i-0"
-})(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles['700'], (0, _titleModifierStyles.titleModifierStyles)('.k-TitleWithStroke__title'), (0, _strokeModifierStyles.strokeModifierStyles)('.k-TitleWithStroke__stroke'));
+})(["--TitleWithStroke-css-color:", ";color:var(--TitleWithStroke-css-color);&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-block:0;", ";color:currentColor;}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", " &.k-TitleWithStroke--noMargin .k-TitleWithStroke__stroke.k-TitleWithStroke__stroke{margin-bottom:0;}"], _colorsConfig.default.font1, _typographyConfig.default.fontStyles['700'], (0, _titleModifierStyles.titleModifierStyles)('.k-TitleWithStroke__title'), (0, _strokeModifierStyles.strokeModifierStyles)('.k-TitleWithStroke__stroke'));
 
 const TitleWithStroke = _ref => {
   let {
@@ -37,12 +37,14 @@ const TitleWithStroke = _ref => {
     className,
     children,
     cssColor,
+    noMargin,
     ...other
   } = _ref;
   const TitleComponent = tag;
   return /*#__PURE__*/_react.default.createElement(StyledTitleWithStroke, (0, _extends2.default)({
     className: (0, _classnames.default)('k-TitleWithStroke', className, "k-TitleWithStroke--" + modifier, "k-TitleWithStroke--align-" + align, {
-      'k-TitleWithStroke--italic': italic
+      'k-TitleWithStroke--italic': italic,
+      'k-TitleWithStroke--noMargin': noMargin
     }),
     style: {
       '--TitleWithStroke-css-color': cssColor
@@ -60,12 +62,14 @@ TitleWithStroke.defaultProps = {
   modifier: 'primary',
   align: 'left',
   italic: false,
-  cssColor: null
+  cssColor: null,
+  noMargin: false
 };
 TitleWithStroke.propTypes = {
   tag: _propTypes.default.string,
   modifier: _propTypes.default.oneOf(_titleModifierStyles.titleModifiersNames),
   align: _propTypes.default.oneOf(['left', 'center', 'right']),
   italic: _propTypes.default.bool,
-  cssColor: _propTypes.default.string
+  cssColor: _propTypes.default.string,
+  noMargin: _propTypes.default.bool
 };
