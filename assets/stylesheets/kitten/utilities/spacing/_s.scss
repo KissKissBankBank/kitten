@@ -1,0 +1,150 @@
+/// Margin utilities based on spacing tokens.
+///
+/// @group spacing
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-m;
+///
+/// @example html
+///
+///   <div class="k-u-m-0">…</div>
+///   <div class="k-u-m-r-3">…</div>
+///   <div class="k-u-m-t-auto">…</div>
+///   <div class="k-u-m-v-1@s-up">…</div>
+///   <div class="k-u-m-b-2@xs-down">…</div>
+///   <div class="k-u-m-l-n10@xl-down">…</div>
+///
+///   <div class="k-u-p-0">…</div>
+///   <div class="k-u-p-r-3">…</div>
+///   <div class="k-u-p-t-auto">…</div>
+///   <div class="k-u-p-v-1@s-up">…</div>
+///   <div class="k-u-p-b-2@xs-down">…</div>
+
+@mixin k-u-s($prop_name, $property, $position, $attribute, $slug, $size) {
+  $first-char: str-slice($slug, 1, 1);
+
+  $pos: '';
+  @if $position != 'none' {
+    $pos: $position;
+  }
+
+  .k-u-#{$prop_name}#{$pos}-#{$slug} {
+    @if $size == 'auto' {
+      #{$property}#{$attribute}: auto !important;
+    } @else if $first-char == 'n' {
+      #{$property}#{$attribute}: calc(-1 * var(--spacing-#{$size})) !important;
+    } @else {
+      #{$property}#{$attribute}: var(--spacing-#{$size}) !important;
+    }
+  }
+}
+
+@mixin k-utilities-s {
+  $k-sizes: (
+    '0': '0',
+    '1': '1',
+    '2': '2',
+    '3': '3',
+    '4': '4',
+    '5': '5',
+    '6': '6',
+    '7': '7',
+    '8': '8',
+    '9': '9',
+    '10': '10',
+    '11': '11',
+    '12': '12',
+    'n1': '1',
+    'n2': '2',
+    'n3': '3',
+    'n4': '4',
+    'n5': '5',
+    'n6': '6',
+    'n7': '7',
+    'n8': '8',
+    'n9': '9',
+    'n10': '10',
+    'n11': '11',
+    'n12': '12',
+    'auto': 'auto',
+  );
+
+  $k-variants: (
+    'none': '',
+    '-v': '-block',
+    '-h': '-inline',
+    '-t': '-top',
+    '-b': '-bottom',
+    '-l': '-left',
+    '-r': '-right',
+  );
+
+  $k-properties: (
+    m: 'margin',
+    p: 'padding',
+  );
+
+@each $prop_name, $property in $k-properties {
+    @each $variant_name, $attribute in $k-variants {
+      @each $size_name, $size in $k-sizes {
+        @if $prop-name != 'padding' or $size == 'auto' or $size >= 0 {
+          @include k-u-s(
+            $prop_name,
+            $property,
+            $variant_name,
+            $attribute,
+            $size_name,
+            $size,
+          );
+        }
+      }
+    }
+
+    @each $mq_name, $query in reverse($k-media-queries) {
+      $addendum: \@#{$mq_name}-down;
+
+      @if $mq_name != "xl" {
+        @include k-media-max($mq_name) {
+          @each $variant_name, $attribute in $k-variants {
+            @each $size_name, $size in $k-sizes {
+              @if $prop-name != 'padding' or $size == 'auto' or $size >= 0 {
+                @include k-u-s(
+                  $prop_name,
+                  $property,
+                  $variant_name,
+                  $attribute,
+                  $size_name + $addendum,
+                  $size,
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @each $mq_name, $query in $k-media-queries {
+      $addendum: \@#{$mq_name}-up;
+
+      @if $mq_name != "xxs" {
+        @include k-media-min($mq_name) {
+          @each $variant_name, $attribute in $k-variants {
+            @each $size_name, $size in $k-sizes {
+              @if $prop-name != 'padding' or $size == 'auto' or $size >= 0 {
+                @include k-u-s(
+                  $prop_name,
+                  $property,
+                  $variant_name,
+                  $attribute,
+                  $size_name + $addendum,
+                  $size,
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

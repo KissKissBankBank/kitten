@@ -8,7 +8,7 @@ Padding utilities.
 
 ## Source
 
-[`assets/stylesheets/kitten/utilities/spacing/_padding.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/spacing/_padding.scss)
+[`assets/stylesheets/kitten/utilities/spacing/_padding.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/spacing/_spacing.scss)
 
 ## Usage
 
@@ -19,9 +19,10 @@ The basic structure of a padding utility class is
 Here are some examples:
 
 ```
-<div class="k-u-padding-top-single">…</div>
-<div class="k-u-padding-bottom-double">…</div>
-<div class="k-u-padding-left-tripleHalf">…</div>
+<div class="k-u-padding-single">…</div>
+<div class="k-u-padding-top-double">…</div>
+<div class="k-u-padding-bottom-triple">…</div>
+<div class="k-u-padding-left-octupleHalf">…</div>
 <div class="k-u-padding-horizontal-sextuple">…</div>
 <div class="k-u-padding-vertical-noneHalf@l-up">…</div>
 <div class="k-u-padding-horizontal-quintupleHalf@xxs-down">…</div>
@@ -29,14 +30,15 @@ Here are some examples:
 
 ### `direction`
 
-`direction` can have one of these six values
+`direction` can have one of these nine values
 
+- (none)
 - `top`
 - `bottom`
 - `left`
 - `right`
-- `horizontal` (applies to both `top` and `bottom`)
-- `vertical` (applies to both `left` and `right`)
+- `horizontal` or `block` (applies to both `top` and `bottom`)
+- `vertical` or `inline` (applies to both `left` and `right`)
 
 ### `value`
 

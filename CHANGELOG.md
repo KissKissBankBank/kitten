@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Utilities: Refactor spacing utilities.
+
 ## [12.3.0] - 2022-07-28 🍖
 
 Features:
