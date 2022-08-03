@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Icons`: Add `RocketIconNext` icon component.
+
 ## [12.3.0] - 2022-07-28 🍖
 
 Features:

@@ -39,6 +39,7 @@ import {
   PeopleIconNext,
   PlusIconNext,
   RefundIcon,
+  RocketIconNext,
   SpeechBubbleIconNext,
   StarIconNext,
   StatsIconNext,
@@ -254,6 +255,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <GarbageIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <RocketIconNext color={colorInput} width={24} height={24} />
         </IconContainer>
       </Group>
 
