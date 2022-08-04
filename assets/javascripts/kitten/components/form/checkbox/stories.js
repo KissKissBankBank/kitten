@@ -11,9 +11,7 @@ export default {
       page: () => <DocsPage filepath={__filename} importString="Checkbox" />,
     },
   },
-  decorators: [
-    story => <div className="story-Container story-Grid">{story()}</div>,
-  ],
+  decorators: [story => <div className="story-Container">{story()}</div>],
   argTypes: {
     id: {
       name: 'id',
@@ -57,7 +55,13 @@ const args = {
   onLabelClick: () => {},
 }
 
-export const Default = args => <Checkbox {...args} />
+export const Default = args => (
+  <div>
+    <Checkbox {...args} id="checkbox_id_1" />
+    <Checkbox {...args} id="checkbox_id_2" checked />
+    <Checkbox {...args} id="checkbox_id_3" />
+  </div>
+)
 
 Default.args = {
   ...args,
@@ -66,14 +70,28 @@ Default.args = {
 }
 
 export const WithLinkInContent = args => (
-  <Checkbox {...args}>
-    This label has a <a href="#link">link</a>.
-  </Checkbox>
+  <div>
+    <Checkbox {...args} id="checkbox_id_1">
+      This label has a <a href="#link">link</a>.
+    </Checkbox>
+    <Checkbox {...args} id="checkbox_id_2" checked>
+      This label has a <a href="#link">link</a>.
+    </Checkbox>
+    <Checkbox {...args} id="checkbox_id_3">
+      This label has a <a href="#link">link</a>.
+    </Checkbox>
+  </div>
 )
 
 WithLinkInContent.args = args
 
-export const WithLabelAndChildren = args => <Checkbox {...args} />
+export const WithLabelAndChildren = args => (
+  <div>
+    <Checkbox {...args} id="checkbox_id_4" />
+    <Checkbox {...args} checked id="checkbox_id_5" />
+    <Checkbox {...args} id="checkbox_id_6" />
+  </div>
+)
 
 WithLabelAndChildren.args = {
   ...args,
@@ -81,11 +99,23 @@ WithLabelAndChildren.args = {
   children: 'Checkbox Content',
 }
 
-export const WithLabel = args => <Checkbox {...args} />
+export const WithLabel = args => (
+  <div>
+    <Checkbox {...args} id="checkbox_id_7" />
+    <Checkbox {...args} checked id="checkbox_id_8" />
+    <Checkbox {...args} id="checkbox_id_9" />
+  </div>
+)
 
 WithLabel.args = { ...args, label: 'Checkbox Label', children: null }
 
-export const WithBigContent = args => <Checkbox {...args} />
+export const WithBigContent = args => (
+  <div>
+    <Checkbox {...args} id="checkbox_id_10" />
+    <Checkbox {...args} checked id="checkbox_id_11" />
+    <Checkbox {...args} id="checkbox_id_12" />
+  </div>
+)
 
 WithBigContent.args = {
   ...args,
@@ -100,7 +130,13 @@ WithBigContent.args = {
   ),
 }
 
-export const WithLabelAndBigContent = args => <Checkbox {...args} />
+export const WithLabelAndBigContent = args => (
+  <div>
+    <Checkbox {...args} id="checkbox_id_13" />
+    <Checkbox {...args} checked id="checkbox_id_14" />
+    <Checkbox {...args} id="checkbox_id_15" />
+  </div>
+)
 
 WithLabelAndBigContent.args = {
   ...args,

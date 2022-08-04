@@ -130,7 +130,7 @@ const StyledCheckboxButton = styled.div`
   .k-Form-CheckboxButton__input:checked:disabled {
     & + .k-Form-CheckboxButton__label {
       border-color: var(--color-grey-600);
-      color: var(--color-grey-600);
+      color: var(--color-grey-700);
       background-color: var(--color-grey-200);
 
       &::before {
