@@ -23,7 +23,7 @@ export default {
 export const Default = args => (
   <div>
     <Radio name="test" {...args} id="test_1" />
-    <Radio name="test" {...args} id="test_2" />
+    <Radio name="test" {...args} id="test_2" checked />
     <Radio name="test" {...args} id="test_3" />
   </div>
 )

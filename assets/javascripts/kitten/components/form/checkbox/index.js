@@ -24,15 +24,16 @@ const StyledCheckbox = styled.div`
     color: var(--color-grey-600);
   }
 
+  &.k-Form-Checkbox--disabled input:checked,
+  &.k-Form-Checkbox--disabled input:checked + label {
+    color: var(--color-grey-700);
+  }
+
   .k-Form-Checkbox__label {
     flex-basis: calc(100% - ${pxToRem(20 + 10)});
     cursor: pointer;
     transition: color 0.2s;
     ${TYPOGRAPHY.fontStyles['400']}
-
-    &:active {
-      color: ${COLORS.primary3};
-    }
   }
 
   .k-Form-Checkbox__input {
@@ -72,14 +73,13 @@ const StyledCheckbox = styled.div`
     }
 
     &:disabled {
-      background-color: ${COLORS.line1};
+      background-color: var(--color-grey-200);
       border: var(--border-disabled);
     }
 
     &:disabled:checked {
-      border: var(--border-disabled-active);
-      background-color: ${COLORS.line2};
-      background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg' fill='%23b8b8b8'%0A%3E%3Cpath d='M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z' /%3E%3Cpath d='M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z' /%3E%3C/svg%3E%0A");
+      background-color: var(--color-grey-500);
+      border-color: var(--color-grey-500);
     }
   }
 
@@ -87,10 +87,10 @@ const StyledCheckbox = styled.div`
     border: var(--border-danger);
 
     &:checked {
-      background-color: ${COLORS.error};
+      background-color: var(--color-danger-500);
 
       &:focus {
-        box-shadow: 0 0 ${pxToRem(3)} ${COLORS.error};
+        box-shadow: 0 0 ${pxToRem(3)} var(--color-danger-500);
       }
     }
   }
