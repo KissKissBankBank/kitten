@@ -154,30 +154,27 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__input:checked:disabled {
     & + .k-Form-RadioButton__label {
       border-color: var(--color-grey-500);
-      color: var(--color-grey-600);
-      background-color: var(--color-grey-200);
+      color: var(--color-grey-700);
+      background-color: var(--color-grey-300);
     }
     & + .k-Form-RadioButton__label::before {
-      background-color: var(--color-grey-300);
-      border-color: var(--color-grey-400);
-    }
-
-    &:checked + .k-Form-RadioButton__label::before {
       background-color: var(--color-grey-000);
-      border-color: var(--color-grey-400);
+      border-color: var(--color-grey-500);
     }
   }
   .k-Form-RadioButton__input:disabled {
     & + .k-Form-RadioButton__label {
       border-color: var(--color-grey-300);
-      color: var(--color-grey-500);
+      color: var(--color-grey-600);
       cursor: not-allowed;
+
       &::before {
-        background-color: var(--color-grey-000);
+        background-color: var(--color-grey-200);
+        border-color: var(--color-grey-400);
       }
     }
     & + .k-Form-RadioButton__labelText {
-      color: var(--color-grey-500);
+      color: var(--color-grey-600);
     }
   }
   &.k-Form-RadioButton--error {

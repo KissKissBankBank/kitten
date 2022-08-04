@@ -81,7 +81,7 @@ export default {
 export const Default = args => (
   <div>
     <RadioButton name="test" {...args} id="test_1" />
-    <RadioButton name="test" {...args} id="test_2" />
+    <RadioButton name="test" {...args} id="test_2" checked />
     <RadioButton name="test" {...args} id="test_3" />
   </div>
 )
@@ -89,7 +89,7 @@ export const Default = args => (
 export const RadioButtonsWithParagraph = args => (
   <div>
     <RadioButton name="test" {...args} id="test_1" />
-    <RadioButton name="test" {...args} id="test_2" />
+    <RadioButton name="test" {...args} id="test_2" checked />
     <RadioButton name="test" {...args} id="test_3" />
   </div>
 )
