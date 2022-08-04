@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Utilities: Refactor spacing utilities.
 - Feature: `Icons`: Add `RocketIconNext` icon component.
 - Fix: Update disabled styles on the following components:
   - `Checkbox`

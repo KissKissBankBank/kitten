@@ -10,7 +10,7 @@ These CSS utilities are complemented with the [`margin()` JS helper](?path=/stor
 
 ## Source
 
-[`assets/stylesheets/kitten/utilities/spacing/_margin.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/spacing/_margin.scss)
+[`assets/stylesheets/kitten/utilities/spacing/_margin.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/spacing/_spacing.scss)
 
 ## Usage
 
@@ -21,9 +21,10 @@ The basic structure of a margin utility class is
 Here are some examples:
 
 ```
-<div class="k-u-margin-top-single">…</div>
-<div class="k-u-margin-bottom-double">…</div>
-<div class="k-u-margin-left-tripleHalf">…</div>
+<div class="k-u-margin-single">…</div>
+<div class="k-u-margin-top-double">…</div>
+<div class="k-u-margin-bottom-triple">…</div>
+<div class="k-u-margin-left-octupleHalf">…</div>
 <div class="k-u-margin-horizontal-sextuple">…</div>
 <div class="k-u-margin-vertical-noneHalf@l-up">…</div>
 <div class="k-u-margin-vertical-negativeSingle@l-up">…</div>
@@ -32,14 +33,15 @@ Here are some examples:
 
 ### `direction`
 
-`direction` can have one of these six values
+`direction` can have one of these nine values
 
+- (none)
 - `top`
 - `bottom`
 - `left`
 - `right`
-- `horizontal` (applies to both `top` and `bottom`)
-- `vertical` (applies to both `left` and `right`)
+- `horizontal` or `block` (applies to both `top` and `bottom`)
+- `vertical` or `inline` (applies to both `left` and `right`)
 
 ### `value`
 
