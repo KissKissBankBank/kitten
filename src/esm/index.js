@@ -220,9 +220,11 @@ export { OpenLockIconNext } from './components/graphics/icons-next/open-lock-ico
 export { PeopleCircleIconNext } from './components/graphics/icons-next/people-circle-icon-next';
 export { PeopleIconNext } from './components/graphics/icons-next/people-icon-next';
 export { PlayerIconNext } from './components/graphics/icons-next/player-icon-next';
+export { PlusCircleIconNext } from './components/graphics/icons-next/plus-circle-icon-next';
 export { PlusIconNext } from './components/graphics/icons-next/plus-icon-next';
 export { QuestionBubbleIconNext } from './components/graphics/icons-next/question-bubble-icon-next';
 export { RefundIcon } from './components/graphics/icons-next/refund-icon';
+export { RocketIconNext } from './components/graphics/icons-next/rocket-icon-next';
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next';
 export { StarIconNext } from './components/graphics/icons-next/star-icon-next';
 export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next';
