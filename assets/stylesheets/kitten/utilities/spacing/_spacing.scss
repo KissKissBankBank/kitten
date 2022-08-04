@@ -1,0 +1,167 @@
+/// Spacing utilities.
+///
+/// @group spacing
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-spacing;
+///
+/// @example html
+///
+/// <div class="k-u-margin-single">…</div>
+/// <div class="k-u-margin-top-double">…</div>
+/// <div class="k-u-margin-bottom-triple">…</div>
+/// <div class="k-u-margin-left-octupleHalf">…</div>
+/// <div class="k-u-margin-horizontal-sextuple">…</div>
+/// <div class="k-u-margin-vertical-noneHalf@l-up">…</div>
+/// <div class="k-u-margin-vertical-negativeSingle@l-up">…</div>
+/// <div class="k-u-margin-horizontal-quintupleHalf@xxs-down">…</div>
+///
+/// <div class="k-u-padding-single">…</div>
+/// <div class="k-u-padding-top-double">…</div>
+/// <div class="k-u-padding-bottom-triple">…</div>
+/// <div class="k-u-padding-left-octupleHalf">…</div>
+/// <div class="k-u-padding-horizontal-sextuple">…</div>
+/// <div class="k-u-padding-vertical-noneHalf@l-up">…</div>
+/// <div class="k-u-padding-vertical-negativeSingle@l-up">…</div>
+/// <div class="k-u-padding-horizontal-quintupleHalf@xxs-down">…</div>
+
+@mixin k-u-spacing($property, $position, $attr, $slug, $size) {
+  $value: k-px-to-rem($size);
+
+  $pos: '';
+  @if $position != 'none' {
+    $pos: $position;
+  }
+
+  .k-u-#{$property}#{$pos}-#{$slug} {
+    #{$property}#{$attr}: $value !important;
+  }
+}
+
+@mixin k-utilities-spacing {
+  $k-sizes: (
+    none: 0,
+    noneHalf: 5px,
+    single: 10px,
+    singleHalf: 15px,
+    double: 20px,
+    doubleHalf: 25px,
+    triple: 30px,
+    tripleHalf: 35px,
+    quadruple: 40px,
+    quadrupleHalf: 45px,
+    quintuple: 50px,
+    quintupleHalf: 55px,
+    sextuple: 60px,
+    sextupleHalf: 65px,
+    septuble: 70px,
+    septubleHalf: 75px,
+    octuple: 80px,
+    octupleHalf: 85px,
+    nonuple: 90px,
+    nonupleHalf: 95px,
+    decuple: 100px,
+    negativeNoneHalf: -5px,
+    negativeSingle: -10px,
+    negativeSingleHalf: -15px,
+    negativeDouble: -20px,
+    negativeDoubleHalf: -25px,
+    negativeTriple: -30px,
+    negativeTripleHalf: -35px,
+    negativeQuadruple: -40px,
+    negativeQuadrupleHalf: -45px,
+    negativeQuintuple: -50px,
+    negativeQuintupleHalf: -55px,
+    negativeSextuple: -60px,
+    negativeSextupleHalf: -65px,
+    negativeSeptuble: -70px,
+    negativeSeptubleHalf: -75px,
+    negativeOctuple: -80px,
+    negativeOctupleHalf: -85px,
+    negativeNonuple: -90px,
+    negativeNonupleHalf: -95px,
+    negativeDecuple: -100px,
+    auto: auto,
+  );
+
+  $k-variants: (
+    none: '',
+    '-vertical': '-block',
+    '-horizontal': '-inline',
+    '-block': '-block',
+    '-inline': '-inline',
+    '-top': '-top',
+    '-bottom': '-bottom',
+    '-left': '-left',
+    '-right': '-right',
+  );
+
+
+  $k-properties: (
+    margin: 'margin',
+    padding: 'padding',
+  );
+
+  @each $prop_name, $property in $k-properties {
+
+    @each $variant_name, $attr in $k-variants {
+      @each $size_name, $size in $k-sizes {
+        @if $prop-name != 'padding' or $size == 'auto' or $size >= 0 {
+          @include k-u-spacing(
+            $property,
+            $variant_name,
+            $attr,
+            $size_name,
+            $size,
+          );
+        }
+      }
+    }
+
+    @each $mq_name, $query in reverse($k-media-queries) {
+      $addendum: \@#{$mq_name}-down;
+
+      @if $mq_name != "xl" {
+        @include k-media-max($mq_name) {
+          @each $variant_name, $attr in $k-variants {
+            @each $size_name, $size in $k-sizes {
+              @if $prop-name != 'padding' or $size == 'auto' or $size >= 0 {
+                @include k-u-spacing(
+                  $property,
+                  $variant_name,
+                  $attr,
+                  $size_name + $addendum,
+                  $size,
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @each $mq_name, $query in $k-media-queries {
+      $addendum: \@#{$mq_name}-up;
+
+      @if $mq_name != "xxs" {
+        @include k-media-min($mq_name) {
+          @each $variant_name, $attr in $k-variants {
+            @each $size_name, $size in $k-sizes {
+              @if $prop-name != 'padding' or $size == 'auto' or $size >= 0 {
+                @include k-u-spacing(
+                  $property,
+                  $variant_name,
+                  $attr,
+                  $size_name + $addendum,
+                  $size,
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

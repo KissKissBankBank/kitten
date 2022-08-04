@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Icons: Add `RocketIconNext` icon component.
 - Feature: Icons: Add `PlusCircleIconNext` icon component.
+- Feature: Utilities: Refactor spacing utilities.
 - Fix: Update disabled styles on the following components:
   - `Checkbox`
   - `CheckboxButton`
