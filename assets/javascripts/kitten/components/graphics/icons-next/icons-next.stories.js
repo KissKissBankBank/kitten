@@ -37,6 +37,7 @@ import {
   OpenLockIconNext,
   PeopleCircleIconNext,
   PeopleIconNext,
+  PlusCircleIconNext,
   PlusIconNext,
   RefundIcon,
   RocketIconNext,
@@ -213,6 +214,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <PlusIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <PlusCircleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <RefundIcon color={colorInput} />
