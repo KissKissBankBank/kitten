@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `DownloadIcon`: Fix colour propagation.
+
 ## [12.4.0] - 2022-08-04 🌞
 
 Features:
