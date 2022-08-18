@@ -8,16 +8,27 @@ const loadingKeyframes = keyframes`
 `
 
 export const StyledCard = styled.div`
+  --projectCard-background-color: var(--color-grey-000);
+  --projectCard-text-color: var(--color-grey-900);
+  --projectCard-hover-text-color: var(--color-primary-500);
+
+  &.k-ProjectCard--colorMode-dark {
+    --projectCard-background-color: var(--color-grey-800);
+    --projectCard-text-color: var(--color-grey-000);
+    --projectCard-hover-text-color: var(--color-primary-300);
+  }
+
   position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 
   border-radius: var(--border-radius-m);
-  color: var(--color-grey-900);
+  color: var(--projectCard-text-color);
   text-decoration: none;
   transition: box-shadow var(--transition);
   box-shadow: var(--box-shadow-m);
+  background-color: var(--projectCard-background-color);
 
   &[href]:active,
   &[href]:hover {
@@ -28,7 +39,7 @@ export const StyledCard = styled.div`
     }
 
     &.k-ProjectCard--hoverableTitle .k-ProjectCard__title {
-      color: var(--color-primary-500);
+      color: var(--projectCard-hover-text-color);
     }
   }
 
@@ -127,6 +138,7 @@ export const StyledCard = styled.div`
   }
 
   .k-ProjectCard__title {
+    color: var(--projectCard-text-color);
     transition: color var(--transition);
   }
 

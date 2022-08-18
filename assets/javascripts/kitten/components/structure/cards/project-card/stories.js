@@ -25,6 +25,7 @@ const argTypes = {
     control: 'object',
   },
   overlayText: { control: 'text' },
+  hoverableTitle: { control: 'boolean' },
 }
 
 const args = {
@@ -40,6 +41,7 @@ const args = {
     value: '55',
   },
   overlayText: '',
+  colorMode: 'light',
 }
 
 export const Default = ({ progressProps, ...args }) => (
