@@ -4,7 +4,7 @@ import { Container } from 'kitten'
 
 export default {
   component: Video,
-  title: 'pages/homepage/Video',
+  title: 'pages/Homepage 2020/Video',
   parameters: {
     component: Video,
   },

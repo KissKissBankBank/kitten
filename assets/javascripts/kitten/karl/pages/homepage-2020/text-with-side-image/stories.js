@@ -4,7 +4,7 @@ import { Container } from 'kitten'
 
 export default {
   component: TextWithSideImage,
-  title: 'pages/homepage/TextWithSideImage',
+  title: 'pages/Homepage 2020/TextWithSideImage',
   parameters: {
     component: TextWithSideImage,
   },
