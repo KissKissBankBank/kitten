@@ -1,7 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const PricingWrapper = styled.section`
+  background-color: var(--color-grey-100);
+`
 
 const Pricing = () => {
-  return <p>Pricing</p>
+  return <PricingWrapper>Pricing</PricingWrapper>
 }
 
 export default Pricing

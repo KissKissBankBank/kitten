@@ -106,7 +106,10 @@ const EngagementBlock = () => {
           />
         </ProjectCard>
         <ProjectCard
+          aria-label="The Office, la série culte décortiquée par S!CK"
+          href="//www.kisskissbankbank.com"
           colorMode="dark"
+          hoverableTitle
           imageProps={{
             alt: '',
             src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
@@ -157,7 +160,10 @@ const EngagementBlock = () => {
           />
         </ProjectCard>
         <ProjectCard
+          aria-label="The Office, la série culte décortiquée par S!CK"
+          href="//www.kisskissbankbank.com"
           colorMode="dark"
+          hoverableTitle
           imageProps={{
             alt: '',
             src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
