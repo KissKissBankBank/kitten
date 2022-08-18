@@ -24,6 +24,7 @@ export const ProjectCard = ({
   topLineAlign,
   overlayText,
   hoverableTitle,
+  colorMode,
   ...props
 }) => {
   return (
@@ -33,6 +34,7 @@ export const ProjectCard = ({
         'k-ProjectCard',
         className,
         `k-ProjectCard--${status}`,
+        `k-ProjectCard--colorMode-${colorMode}`,
         {
           'k-ProjectCard--isStretched': stretch,
           'k-ProjectCard--isLoading': loading,
@@ -110,6 +112,7 @@ ProjectCard.defaultProps = {
   topLineAlign: 'right',
   overlayText: '',
   hoverableTitle: false,
+  colorMode: 'light',
 }
 
 ProjectCard.propTypes = {
@@ -133,6 +136,7 @@ ProjectCard.propTypes = {
   topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
   overlayText: PropTypes.node,
   hoverableTitle: PropTypes.bool,
+  colorMode: PropTypes.oneOf(['light', 'dark']),
 }
 
 ProjectCard.Title = ({ className, style, ...props }) => {

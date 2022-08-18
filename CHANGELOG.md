@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `DownloadIcon`: Fix colour propagation.
+- Feature: `ProjectCard`: Add dark mode.
 
 ## [12.4.0] - 2022-08-04 🌞
 
