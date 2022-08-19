@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import {
-  Carousel,
+  CarouselNext,
   getNumberOfItemsPerPageForWidth,
   getNumberOfPagesForColumnsAndDataLength,
   checkPage,
@@ -12,14 +12,7 @@ import { ProjectCard } from '../../cards/project-card'
 const projectCardMinWidth = 280
 const projectCardMarginBetween = 40
 
-const createMockMediaMatcher = matches => () => ({
-  matches,
-  addListener: () => {},
-  removeListener: () => {},
-})
-
-describe('<Carousel />', () => {
-  let originalMatchMedia
+describe('<CarouselNext />', () => {
   const data = [
     {
       status: 'normal',
@@ -251,28 +244,21 @@ describe('<Carousel />', () => {
     },
   ]
 
-  beforeEach(() => {
-    originalMatchMedia = window.matchMedia
-  })
-
-  afterEach(() => {
-    window.matchMedia = originalMatchMedia
-  })
-
   describe('by default on desktop', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
     const carousel = renderer
       .create(
-        <Carousel
+        <CarouselNext
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
           smallButtons={false}
           shadowSize={20}
+          viewportIsXSOrLess={false}
+          viewportIsMOrLess={false}
         >
           {data.map((item, index) => (
             <ProjectCard {...item} key={index} />
           ))}
-        </Carousel>,
+        </CarouselNext>,
       )
       .toJSON()
 
@@ -281,19 +267,24 @@ describe('<Carousel />', () => {
     })
   })
 
-  describe('with small buttons', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
+  describe('with navigation on desktop', () => {
     const carousel = renderer
       .create(
-        <Carousel
-          itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
-          smallButtons
-        >
-          {data.map((item, index) => (
-            <ProjectCard {...item} key={index} />
-          ))}
-        </Carousel>,
+        <>
+          <CarouselNext.Navigation />
+          <CarouselNext
+            itemMinWidth={projectCardMinWidth}
+            baseItemMarginBetween={projectCardMarginBetween}
+            smallButtons={false}
+            shadowSize={20}
+            viewportIsXSOrLess={false}
+            viewportIsMOrLess={false}
+          >
+            {data.map((item, index) => (
+              <ProjectCard {...item} key={index} />
+            ))}
+          </CarouselNext>
+        </>,
       )
       .toJSON()
 
@@ -303,18 +294,19 @@ describe('<Carousel />', () => {
   })
 
   describe('with loop prop on desktop', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
     const carousel = renderer
       .create(
-        <Carousel
+        <CarouselNext
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
           loop={true}
+          viewportIsXSOrLess={false}
+          viewportIsMOrLess={false}
         >
           {data.map((item, index) => (
             <ProjectCard {...item} key={index} />
           ))}
-        </Carousel>,
+        </CarouselNext>,
       )
       .toJSON()
 
@@ -324,18 +316,19 @@ describe('<Carousel />', () => {
   })
 
   describe('with exportVisibilityProps prop', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
     const carousel = renderer
       .create(
-        <Carousel
+        <CarouselNext
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
           exportVisibilityProps
+          viewportIsXSOrLess={false}
+          viewportIsMOrLess={false}
         >
           {data.map((item, index) => (
             <ProjectCard {...item} key={index} />
           ))}
-        </Carousel>,
+        </CarouselNext>,
       )
       .toJSON()
 
@@ -345,18 +338,19 @@ describe('<Carousel />', () => {
   })
 
   describe('with itemsPerPage prop', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
     const carousel = renderer
       .create(
-        <Carousel
+        <CarouselNext
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
           itemsPerPage={5}
+          viewportIsXSOrLess={false}
+          viewportIsMOrLess={false}
         >
           {data.map((item, index) => (
             <ProjectCard {...item} key={index} />
           ))}
-        </Carousel>,
+        </CarouselNext>,
       )
       .toJSON()
 
@@ -366,91 +360,19 @@ describe('<Carousel />', () => {
   })
 
   describe('by default on mobile', () => {
-    window.matchMedia = createMockMediaMatcher(true) // mobile
     const carousel = renderer
       .create(
-        <Carousel
+        <CarouselNext
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
           pagesClassName="custom-class"
+          viewportIsXSOrLess={true}
+          viewportIsMOrLess={true}
         >
           {data.map((item, index) => (
             <ProjectCard {...item} key={index} />
           ))}
-        </Carousel>,
-      )
-      .toJSON()
-
-    it('matches with snapshot', () => {
-      expect(carousel).toMatchSnapshot()
-    })
-  })
-
-  describe('legacy carousel on desktop', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
-
-    // Desactivate warnings.
-    jest.spyOn(global.console, 'error').mockImplementation(() => {})
-
-    const carousel = renderer
-      .create(
-        <Carousel
-          itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
-          data={[{ title: 'A' }]}
-          renderItem={({ item }) => {
-            return <ProjectCard {...item} />
-          }}
-        />,
-      )
-      .toJSON()
-
-    it('matches with snapshot', () => {
-      expect(carousel).toMatchSnapshot()
-    })
-  })
-
-  describe('legacy carousel on desktop with withoutLeftOffset={true}', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
-
-    // Desactivate warnings.
-    jest.spyOn(global.console, 'error').mockImplementation(() => {})
-
-    const carousel = renderer
-      .create(
-        <Carousel
-          itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
-          data={[{ title: 'A' }]}
-          withoutLeftOffset={true}
-          renderItem={({ item }) => {
-            return <ProjectCard {...item} />
-          }}
-        />,
-      )
-      .toJSON()
-
-    it('matches with snapshot', () => {
-      expect(carousel).toMatchSnapshot()
-    })
-  })
-
-  describe('legacy carousel on mobile', () => {
-    window.matchMedia = createMockMediaMatcher(true) // mobile
-
-    // Desactivate warnings.
-    jest.spyOn(global.console, 'error').mockImplementation(() => {})
-
-    const carousel = renderer
-      .create(
-        <Carousel
-          itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
-          data={[{ title: 'A' }]}
-          renderItem={({ item }) => {
-            return <ProjectCard {...item} />
-          }}
-        />,
+        </CarouselNext>,
       )
       .toJSON()
 
@@ -460,12 +382,13 @@ describe('<Carousel />', () => {
   })
 
   describe('empty carousel', () => {
-    window.matchMedia = createMockMediaMatcher(true) // mobile
     const carousel = renderer
       .create(
-        <Carousel
+        <CarouselNext
           itemMinWidth={projectCardMinWidth}
           baseItemMarginBetween={projectCardMarginBetween}
+          viewportIsXSOrLess={true}
+          viewportIsMOrLess={true}
         />,
       )
       .toJSON()
