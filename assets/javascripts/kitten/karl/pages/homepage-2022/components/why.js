@@ -1,5 +1,14 @@
 import React from 'react'
-import { pxToRem, Title, Paragraph, Button, AirplaneIconNext, mq } from 'kitten'
+import {
+  pxToRem,
+  Title,
+  Paragraph,
+  Button,
+  RocketIconNext,
+  SilhouetteIconNext,
+  ClickIconNext,
+  mq,
+} from 'kitten'
 import styled from 'styled-components'
 
 const WhyWrapper = styled.section`
@@ -74,7 +83,7 @@ const Why = () => {
       </Title>
       <div className="kiss-Homepage__why__cards">
         <div className="kiss-Homepage__why__card">
-          <AirplaneIconNext
+          <SilhouetteIconNext
             className="k-u-margin-bottom-double"
             width="70"
             height="70"
@@ -91,7 +100,7 @@ const Why = () => {
           </Paragraph>
         </div>
         <div className="kiss-Homepage__why__card">
-          <AirplaneIconNext
+          <RocketIconNext
             className="k-u-margin-bottom-double"
             width="70"
             height="70"
@@ -108,7 +117,7 @@ const Why = () => {
           </Paragraph>
         </div>
         <div className="kiss-Homepage__why__card">
-          <AirplaneIconNext
+          <ClickIconNext
             className="k-u-margin-bottom-double"
             width="70"
             height="70"
@@ -125,7 +134,7 @@ const Why = () => {
         </div>
       </div>
       <div className="k-u-align-center">
-        <Button modifier="beryllium">En savoir plus</Button>
+        <Button modifier="boron">En savoir plus</Button>
       </div>
     </WhyWrapper>
   )

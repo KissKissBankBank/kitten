@@ -111,7 +111,7 @@ const Partners = () => {
         >
           Vous êtes une marque ?
         </Text>
-        <Button modifier="beryllium" size="small">
+        <Button modifier="boron" size="small">
           En savoir plus
         </Button>
       </div>

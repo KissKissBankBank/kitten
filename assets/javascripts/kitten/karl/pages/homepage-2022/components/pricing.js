@@ -9,7 +9,7 @@ import {
   Tag,
   mq,
   pxToRem,
-  AirplaneIconNext,
+  StatusIconNext,
 } from 'kitten'
 
 const PricingWrapper = styled.section`
@@ -167,7 +167,8 @@ const PricingCard = ({
     <ul className="kiss-Homepage__pricing__card__list">
       {listItems.map(item => (
         <li className="kiss-Homepage__pricing__card__list__item">
-          <AirplaneIconNext
+          <StatusIconNext
+            status="success"
             width="12"
             height="12"
             color="var(--color-primary-500)"
