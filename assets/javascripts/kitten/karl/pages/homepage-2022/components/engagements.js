@@ -38,7 +38,7 @@ const EngagementBlock = () => {
       </Title>
       <div className="k-u-flex k-u-flex-justifyContent-sb k-u-margin-bottom-triple">
         <Text cssColor="inherit" size="small">
-          Il n’y a pas de monde juste si Joachim s’en va.
+          Il n’y a pas de monde juste blablabla bla bla bla.
         </Text>
         <Text
           cssColor="inherit"
