@@ -59,6 +59,8 @@ import {
   MicrophoneIconNext,
   QuestionBubbleIconNext,
   PlayerIconNext,
+  SilhouetteIconNext,
+  ClickIconNext,
 } from 'kitten'
 import { Text, Title, pxToRem } from 'kitten'
 import React from 'react'
@@ -278,6 +280,10 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <TargetIconNext color={colorInput} />
+          <SilhouetteIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <ClickIconNext color={colorInput} width={24} height={24} />
         </IconContainer>
       </Group>
 
