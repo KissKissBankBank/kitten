@@ -6,7 +6,7 @@ export const CarouselPage = ({
   hasPageBeenViewed,
   isActivePage,
   pageItems,
-  numberOfItemsPerPage,
+  itemsPerPage,
   goToCurrentPage,
 }) => {
   const handleFocus = () => {
@@ -32,7 +32,7 @@ export const CarouselPage = ({
         'k-CarouselNext__page--hasBeenViewed': hasPageBeenViewed,
       })}
     >
-      {Array(numberOfItemsPerPage)
+      {Array(itemsPerPage)
         .fill(0)
         .map((el, index) => {
           // If there's not enough items in the last page of the Carousel

@@ -58,10 +58,10 @@ const getClosest = (counts, goal) =>
     Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
   )
 
-const getDataForPage = (data, indexPage, numberOfItemsPerPage) => {
-  const startIndex = indexPage * numberOfItemsPerPage
+const getDataForPage = (data, indexPage, itemsPerPage) => {
+  const startIndex = indexPage * itemsPerPage
 
-  return data.slice(startIndex, startIndex + numberOfItemsPerPage)
+  return data.slice(startIndex, startIndex + itemsPerPage)
 }
 
 const getElementPadding = element =>
@@ -72,7 +72,7 @@ export const CarouselInner = ({
   exportVisibilityProps,
   goToPage,
   items,
-  numberOfItemsPerPage,
+  itemsPerPage,
   onResizeInner,
   pagesClassName,
   viewedPages,
@@ -233,12 +233,8 @@ export const CarouselInner = ({
                 exportVisibilityProps={exportVisibilityProps}
                 hasPageBeenViewed={hasPageBeenViewed}
                 isActivePage={isActivePage}
-                pageItems={getDataForPage(
-                  items,
-                  dataIndex,
-                  numberOfItemsPerPage,
-                )}
-                numberOfItemsPerPage={numberOfItemsPerPage}
+                pageItems={getDataForPage(items, dataIndex, itemsPerPage)}
+                itemsPerPage={itemsPerPage}
                 goToCurrentPage={() => goToPage(index)}
               />
               {!isActivePage && (

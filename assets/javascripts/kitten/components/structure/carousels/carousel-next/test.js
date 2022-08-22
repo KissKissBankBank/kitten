@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import {
   CarouselNext,
-  getNumberOfItemsPerPageForWidth,
+  getItemsPerPageCountForWidth,
   getNumberOfPagesForColumnsAndDataLength,
   checkPage,
   checkPageLoop,
@@ -398,29 +398,29 @@ describe('<CarouselNext />', () => {
     })
   })
 
-  describe('getNumberOfItemsPerPageForWidth', () => {
+  describe('getItemsPerPageCountForWidth', () => {
     it('5 columns', () => {
-      expect(getNumberOfItemsPerPageForWidth(1000, 150, 50)).toBe(5)
+      expect(getItemsPerPageCountForWidth(1000, 150, 50)).toBe(5)
     })
 
     it('1 column', () => {
-      expect(getNumberOfItemsPerPageForWidth(300, 150, 20)).toBe(1)
+      expect(getItemsPerPageCountForWidth(300, 150, 20)).toBe(1)
     })
 
     it('0 column if no width', () => {
-      expect(getNumberOfItemsPerPageForWidth(0, 100, 10)).toBe(0)
+      expect(getItemsPerPageCountForWidth(0, 100, 10)).toBe(0)
     })
 
     it('0 column if no itemWidth', () => {
-      expect(getNumberOfItemsPerPageForWidth(800, 0, 0)).toBe(0)
+      expect(getItemsPerPageCountForWidth(800, 0, 0)).toBe(0)
     })
 
     it('NaN if not number', () => {
-      expect(getNumberOfItemsPerPageForWidth('0', '0', '0')).toBeNaN()
+      expect(getItemsPerPageCountForWidth('0', '0', '0')).toBeNaN()
     })
 
     it('2 columns if no itemWidth but 2 itemsPerPage', () => {
-      expect(getNumberOfItemsPerPageForWidth(800, 0, 0, 2)).toBe(2)
+      expect(getItemsPerPageCountForWidth(800, 0, 0, 2)).toBe(2)
     })
   })
 

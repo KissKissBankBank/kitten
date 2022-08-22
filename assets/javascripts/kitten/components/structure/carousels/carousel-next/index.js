@@ -16,7 +16,7 @@ import {
   OUTLINE_PLUS_OFFSET,
 } from './styles'
 
-export const getNumberOfItemsPerPageForWidth = (
+export const getItemsPerPageCountForWidth = (
   width,
   itemMinWidth,
   itemGap,
@@ -37,11 +37,11 @@ export const getNumberOfItemsPerPageForWidth = (
 
 export const getNumberOfPagesForColumnsAndDataLength = (
   dataLength,
-  numberOfItemsPerPage,
+  itemsPerPage,
 ) => {
-  if (dataLength === 0 || numberOfItemsPerPage === 0) return 0
+  if (dataLength === 0 || itemsPerPage === 0) return 0
 
-  const pagesCount = Math.ceil(dataLength / numberOfItemsPerPage)
+  const pagesCount = Math.ceil(dataLength / itemsPerPage)
 
   return pagesCount
 }
@@ -89,17 +89,17 @@ export const CarouselNext = ({
   pageClickText,
   loop,
   cycle,
-  itemsPerPage,
+  itemsPerPage: itemsPerPageProp,
   navigationPropsGetter,
 }) => {
   const [currentPageIndex, setCurrentPageIndex] = useState(cycle ? 2 : 0)
-  const [numberOfItemsPerPage, setNumberOfItemsPerPage] = useState(
-    itemsPerPage > 0 ? itemsPerPage : 3,
+  const [itemsPerPage, setItemsPerPageCount] = useState(
+    itemsPerPageProp > 0 ? itemsPerPageProp : 3,
   )
   const [pagesCount, setPagesCount] = useState(
     getNumberOfPagesForColumnsAndDataLength(
       React.Children.count(children),
-      itemsPerPage > 0 ? itemsPerPage : 3,
+      itemsPerPageProp > 0 ? itemsPerPageProp : 3,
     ),
   )
   const [innerPagesCount, setInnerPagesCount] = useState(0)
@@ -133,7 +133,7 @@ export const CarouselNext = ({
       viewportIsMOrLess,
     )
 
-    const numberOfItemsPerPage = getNumberOfItemsPerPageForWidth(
+    const newItemsPerPage = getItemsPerPageCountForWidth(
       innerWidth,
       itemMinWidth,
       itemGap,
@@ -142,10 +142,10 @@ export const CarouselNext = ({
 
     const pagesCount = getNumberOfPagesForColumnsAndDataLength(
       React.Children.count(children),
-      numberOfItemsPerPage,
+      newItemsPerPage,
     )
 
-    setNumberOfItemsPerPage(numberOfItemsPerPage)
+    setItemsPerPageCount(newItemsPerPage)
     setPagesCount(pagesCount)
   }
 
@@ -203,7 +203,7 @@ export const CarouselNext = ({
         ...style,
         '--carousel-shadowSize': pxToRem(shadowSize) || null,
         '--carousel-gapBase': pxToRem(baseGap),
-        '--carousel-numberOfItemsPerPage': numberOfItemsPerPage,
+        '--carousel-itemsPerPage': itemsPerPage,
         '--carousel-pagesCount': innerPagesCount,
       }}
       className={classNames('k-CarouselNext', className, {
@@ -215,7 +215,7 @@ export const CarouselNext = ({
         exportVisibilityProps={exportVisibilityProps}
         goToPage={goToPage}
         items={children}
-        numberOfItemsPerPage={numberOfItemsPerPage}
+        itemsPerPage={itemsPerPage}
         pagesCount={pagesCount}
         innerPagesCount={innerPagesCount}
         onResizeInner={onResizeInner}

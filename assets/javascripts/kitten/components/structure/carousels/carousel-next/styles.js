@@ -114,7 +114,7 @@ export const StyledCarouselContainer = styled.div`
 
   .k-CarouselNext__page {
     display: grid;
-    grid-template-columns: repeat(var(--carousel-numberOfItemsPerPage), 1fr);
+    grid-template-columns: repeat(var(--carousel-itemsPerPage), 1fr);
     gap: calc(
       ${pxToRem(CONTAINER_PADDING_THIN / 2)} -
         (var(--carousel-innerSpacing) * 2)
