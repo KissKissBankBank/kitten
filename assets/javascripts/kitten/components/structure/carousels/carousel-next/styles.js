@@ -30,14 +30,16 @@ export const StyledCarouselContainer = styled.div`
     var(--carousel-shadowSize, 0px)
   );
 
+  position: relative;
   display: flex;
 
   // Carousel Inner
 
   .k-CarouselNext__inner {
+    position: relative;
     margin: calc(-1 * var(--carousel-innerSpacing));
     display: grid;
-    grid-template-columns: repeat(var(--carousel-numberOfPages), 100%);
+    grid-template-columns: repeat(var(--carousel-pagesCount), 100%);
     gap: calc(
       (${pxToRem(CONTAINER_PADDING_THIN / 2)}) -
         (var(--carousel-innerSpacing) * 2)
@@ -50,14 +52,10 @@ export const StyledCarouselContainer = styled.div`
     }
 
     @media ${mq.desktop} {
-      gap: calc(
-        var(--carousel-baseItemMarginBetween) -
-          (var(--carousel-innerSpacing) * 2)
-      );
+      gap: calc(var(--carousel-gapBase) - (var(--carousel-innerSpacing) * 2));
     }
 
     overflow-x: scroll;
-    scroll-behavior: smooth;
     /* mandatory to combine scroll with this property on iOS */
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -128,17 +126,14 @@ export const StyledCarouselContainer = styled.div`
       );
     }
     @media ${mq.desktop} {
-      gap: calc(
-        var(--carousel-baseItemMarginBetween) -
-          (var(--carousel-innerSpacing) * 2)
-      );
+      gap: calc(var(--carousel-gapBase) - (var(--carousel-innerSpacing) * 2));
     }
 
     .k-CarouselNext__page__item {
       overflow: hidden;
       padding-inline: min(
         var(--carousel-innerSpacing),
-        calc(var(--carousel-baseItemMarginBetween) / 2)
+        calc(var(--carousel-gapBase) / 2)
       );
       padding-block: var(--carousel-innerSpacing);
 

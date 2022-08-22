@@ -19,7 +19,7 @@ import {
 export const getNumberOfItemsPerPageForWidth = (
   width,
   itemMinWidth,
-  itemMarginBetween,
+  itemGap,
   itemsPerPage,
 ) => {
   if (!!itemsPerPage && itemMinWidth === 0) return itemsPerPage
@@ -27,12 +27,12 @@ export const getNumberOfItemsPerPageForWidth = (
   if (width === 0 || itemMinWidth === 0) return 0
 
   const remainingWidthWithOneCard = width - itemMinWidth
-  const itemWidthAndMargin = itemMinWidth + itemMarginBetween
+  const itemWidthAndMargin = itemMinWidth + itemGap
 
-  const numberOfItemsPerPage =
+  const newItemsPerPage =
     Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1
 
-  return numberOfItemsPerPage
+  return newItemsPerPage
 }
 
 export const getNumberOfPagesForColumnsAndDataLength = (
@@ -41,29 +41,29 @@ export const getNumberOfPagesForColumnsAndDataLength = (
 ) => {
   if (dataLength === 0 || numberOfItemsPerPage === 0) return 0
 
-  const numberOfPages = Math.ceil(dataLength / numberOfItemsPerPage)
+  const pagesCount = Math.ceil(dataLength / numberOfItemsPerPage)
 
-  return numberOfPages
+  return pagesCount
 }
 
-export const checkPage = (numberOfPages, newPage) => {
-  if (numberOfPages < 1) return 0
+export const checkPage = (pagesCount, newPage) => {
+  if (pagesCount < 1) return 0
   if (newPage < 0) return 0
-  if (newPage >= numberOfPages) return numberOfPages - 1
+  if (newPage >= pagesCount) return pagesCount - 1
 
   return newPage
 }
 
-export const checkPageLoop = (numberOfPages, newPage) => {
-  if (numberOfPages < 1) return 0
-  if (newPage < 0) return numberOfPages - 1
-  if (newPage >= numberOfPages) return 0
+export const checkPageLoop = (pagesCount, newPage) => {
+  if (pagesCount < 1) return 0
+  if (newPage < 0) return pagesCount - 1
+  if (newPage >= pagesCount) return 0
 
   return newPage
 }
 
-const getMarginBetweenAccordingToViewport = (
-  baseItemMarginBetween,
+const getGapAccordingToViewport = (
+  baseGap,
   viewportIsXSOrLess,
   viewportIsMOrLess,
 ) => {
@@ -71,11 +71,11 @@ const getMarginBetweenAccordingToViewport = (
     return CONTAINER_PADDING_THIN / 2 - OUTLINE_PLUS_OFFSET * 2
   if (viewportIsMOrLess) return CONTAINER_PADDING / 2 - OUTLINE_PLUS_OFFSET * 2
 
-  return baseItemMarginBetween - OUTLINE_PLUS_OFFSET * 2
+  return baseGap - OUTLINE_PLUS_OFFSET * 2
 }
 
 export const CarouselNext = ({
-  baseItemMarginBetween,
+  baseGap,
   children,
   className,
   showOtherPages,
@@ -88,19 +88,21 @@ export const CarouselNext = ({
   exportVisibilityProps,
   pageClickText,
   loop,
+  cycle,
   itemsPerPage,
   navigationPropsGetter,
 }) => {
-  const [currentPageIndex, setCurrentPageIndex] = useState(0)
+  const [currentPageIndex, setCurrentPageIndex] = useState(cycle ? 2 : 0)
   const [numberOfItemsPerPage, setNumberOfItemsPerPage] = useState(
     itemsPerPage > 0 ? itemsPerPage : 3,
   )
-  const [numberOfPages, setNumberOfPages] = useState(
+  const [pagesCount, setPagesCount] = useState(
     getNumberOfPagesForColumnsAndDataLength(
       React.Children.count(children),
       itemsPerPage > 0 ? itemsPerPage : 3,
     ),
   )
+  const [innerPagesCount, setInnerPagesCount] = useState(0)
   const [viewedPages, setViewedPages] = useState(new Set())
 
   if (React.Children.count(children) === 0) return null
@@ -112,9 +114,21 @@ export const CarouselNext = ({
     })
   }, [])
 
+  useEffect(() => {
+    const newInnerPagesCount = cycle ? pagesCount + 4 : pagesCount
+    setInnerPagesCount(newInnerPagesCount)
+
+    const newCurrentPageIndex =
+      currentPageIndex > newInnerPagesCount - 1
+        ? newInnerPagesCount - 1
+        : currentPageIndex
+
+    setCurrentPageIndex(newCurrentPageIndex)
+  }, [pagesCount])
+
   const onResizeInner = innerWidth => {
-    const itemMarginBetween = getMarginBetweenAccordingToViewport(
-      baseItemMarginBetween,
+    const itemGap = getGapAccordingToViewport(
+      baseGap,
       viewportIsXSOrLess,
       viewportIsMOrLess,
     )
@@ -122,80 +136,75 @@ export const CarouselNext = ({
     const numberOfItemsPerPage = getNumberOfItemsPerPageForWidth(
       innerWidth,
       itemMinWidth,
-      itemMarginBetween,
+      itemGap,
       itemsPerPage,
     )
 
-    const numberOfPages = getNumberOfPagesForColumnsAndDataLength(
+    const pagesCount = getNumberOfPagesForColumnsAndDataLength(
       React.Children.count(children),
       numberOfItemsPerPage,
     )
 
-    const newCurrentPageIndex =
-      currentPageIndex > numberOfPages - 1
-        ? numberOfPages - 1
-        : currentPageIndex
-
     setNumberOfItemsPerPage(numberOfItemsPerPage)
-    setNumberOfPages(numberOfPages)
-    setCurrentPageIndex(newCurrentPageIndex)
+    setPagesCount(pagesCount)
   }
 
   const goNextPage = () => {
     const newPage = loop
-      ? checkPageLoop(numberOfPages, currentPageIndex + 1)
-      : checkPage(numberOfPages, currentPageIndex + 1)
+      ? checkPageLoop(innerPagesCount, currentPageIndex + 1)
+      : checkPage(innerPagesCount, currentPageIndex + 1)
 
-    setViewedPages(current => {
-      current.add(newPage)
-      return current
-    })
+    viewedPagesSetter(newPage)
     setCurrentPageIndex(newPage)
   }
 
   const goPrevPage = () => {
     const newPage = loop
-      ? checkPageLoop(numberOfPages, currentPageIndex - 1)
-      : checkPage(numberOfPages, currentPageIndex - 1)
+      ? checkPageLoop(innerPagesCount, currentPageIndex - 1)
+      : checkPage(innerPagesCount, currentPageIndex - 1)
 
-    setViewedPages(current => {
-      current.add(newPage)
-      return current
-    })
+    viewedPagesSetter(newPage)
     setCurrentPageIndex(newPage)
   }
 
   const goToPage = indexPageToGo => {
     const newPage = loop
-      ? checkPageLoop(numberOfPages, indexPageToGo)
-      : checkPage(numberOfPages, indexPageToGo)
+      ? checkPageLoop(innerPagesCount, indexPageToGo)
+      : checkPage(innerPagesCount, indexPageToGo)
 
-    setViewedPages(current => {
-      current.add(newPage)
-      return current
-    })
+    viewedPagesSetter(newPage)
     setCurrentPageIndex(newPage)
   }
+
+  const viewedPagesSetter = newPage =>
+    setViewedPages(current => {
+      current.add(newPage)
+      if (cycle) {
+        newPage > 0 && current.add(newPage - 1)
+        newPage < innerPagesCount - 1 && current.add(newPage + 1)
+      }
+      return current
+    })
 
   useEffect(() => {
     navigationPropsGetter({
       currentPageIndex,
-      numberOfPages,
+      pagesCount,
       goPrevPage,
       goNextPage,
       isFirstPage: currentPageIndex === 0,
-      isLastPage: currentPageIndex === numberOfPages - 1,
+      isLastPage: currentPageIndex === innerPagesCount - 1,
     })
-  }, [currentPageIndex, numberOfPages])
+  }, [currentPageIndex, innerPagesCount])
 
   return (
     <StyledCarouselContainer
       style={{
         ...style,
         '--carousel-shadowSize': pxToRem(shadowSize) || null,
-        '--carousel-baseItemMarginBetween': pxToRem(baseItemMarginBetween),
+        '--carousel-gapBase': pxToRem(baseGap),
         '--carousel-numberOfItemsPerPage': numberOfItemsPerPage,
-        '--carousel-numberOfPages': numberOfPages,
+        '--carousel-pagesCount': innerPagesCount,
       }}
       className={classNames('k-CarouselNext', className, {
         'k-CarouselNext--showOtherPages': showOtherPages,
@@ -205,18 +214,15 @@ export const CarouselNext = ({
         currentPageIndex={currentPageIndex}
         exportVisibilityProps={exportVisibilityProps}
         goToPage={goToPage}
-        itemMarginBetween={getMarginBetweenAccordingToViewport(
-          baseItemMarginBetween,
-          viewportIsXSOrLess,
-          viewportIsMOrLess,
-        )}
         items={children}
         numberOfItemsPerPage={numberOfItemsPerPage}
-        numberOfPages={numberOfPages}
+        pagesCount={pagesCount}
+        innerPagesCount={innerPagesCount}
         onResizeInner={onResizeInner}
         pagesClassName={pagesClassName}
         viewedPages={viewedPages}
         pageClickText={pageClickText}
+        cycle={cycle}
       />
     </StyledCarouselContainer>
   )
@@ -272,6 +278,7 @@ CarouselNext.Navigation = ({
 
 CarouselNext.Navigation.defaultProps = {
   loop: false,
+  cycle: false,
   prevButtonText: 'Previous items',
   nextButtonText: 'Next items',
   firstButtonText: 'First items',
@@ -280,6 +287,7 @@ CarouselNext.Navigation.defaultProps = {
 
 CarouselNext.Navigation.propTypes = {
   loop: PropTypes.bool,
+  cycle: PropTypes.bool,
   prevButtonText: PropTypes.string,
   nextButtonText: PropTypes.string,
   firstButtonText: PropTypes.string,
@@ -294,6 +302,7 @@ CarouselNext.defaultProps = {
     return `Page ${page}`
   },
   loop: false,
+  cycle: false,
   exportVisibilityProps: false,
   shadowSize: 0,
 
@@ -303,7 +312,7 @@ CarouselNext.defaultProps = {
 CarouselNext.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
   itemsPerPage: PropTypes.number,
-  baseItemMarginBetween: PropTypes.number.isRequired,
+  baseGap: PropTypes.number.isRequired,
   children: PropTypes.node,
   viewportIsMOrLess: PropTypes.bool.isRequired,
   viewportIsXSOrLess: PropTypes.bool.isRequired,
@@ -311,6 +320,7 @@ CarouselNext.propTypes = {
   pagesClassName: PropTypes.string,
   pageClickText: PropTypes.func,
   loop: PropTypes.bool,
+  cycle: PropTypes.bool,
   exportVisibilityProps: PropTypes.bool,
   shadowSize: PropTypes.number,
 

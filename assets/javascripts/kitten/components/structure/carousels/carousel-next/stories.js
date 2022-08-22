@@ -36,7 +36,7 @@ const args = {
   smallButtons: false,
   loop: false,
   exportVisibilityProps: false,
-  baseItemMarginBetween: CONTAINER_PADDING,
+  baseGap: CONTAINER_PADDING,
   shadowSize: 30,
 }
 
@@ -62,7 +62,7 @@ export default {
   argTypes: {
     itemMinWidth: { control: 'number' },
     itemsPerPage: { control: 'number' },
-    baseItemMarginBetween: { control: 'number' },
+    baseGap: { control: 'number' },
     hidePaginationOnMobile: { control: 'boolean' },
     hidePagination: { control: 'boolean' },
     showOtherPages: { control: 'boolean' },
@@ -87,58 +87,63 @@ const data = [
   {
     title: 'Item A',
     imageSrc: '/kitten-1.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-1.jpg',
   },
   {
     title: 'Item B with a pretty long title on two lines',
     imageSrc: '/kitten-2.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-2.jpg',
   },
   {
     title: 'Item C',
     imageSrc: '/kitten-3.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-3.jpg',
   },
   {
     title: 'Item D',
     imageSrc: '/kitten-4.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-4.jpg',
   },
   {
     title:
       'Item Ewith the longest title ever in all the world, three lines for sure',
     imageSrc: '/kitten-5.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-5.jpg',
   },
   {
     title: 'Item F',
     imageSrc: '/kitten-6.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-6.jpg',
   },
   {
     title: 'Item G',
     imageSrc: '/kitten-7.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-7.jpg',
   },
   {
     title: 'Item H',
     imageSrc: '/kitten-8.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-8.jpg',
   },
   {
     title: 'Item I',
     imageSrc: '/kitten-9.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-9.jpg',
   },
   {
     title: 'Item J',
     imageSrc: '/kitten-0.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-0.jpg',
   },
   {
     title: 'Item K',
     imageSrc: '/kitten-1.jpg',
-    thumbSrc: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+    thumbSrc: '/kitten-1.jpg',
+  },
+  {
+    title: 'Item L',
+    imageSrc: '/kitten-2.jpg',
+    thumbSrc: '/kitten-2.jpg',
   },
 ]
 
@@ -157,8 +162,8 @@ export const Default = args => {
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
       >
-        {data.map(item => (
-          <CardComponent item={item} />
+        {data.map((item, index) => (
+          <CardComponent item={item} key={index} />
         ))}
       </CarouselNext>
     </>
@@ -219,8 +224,8 @@ export const ShowOtherPages = args => {
         showOtherPages
         shadowSize={windowWidth <= ScreenConfig.XS.max ? 10 : 30}
       >
-        {data.map(item => (
-          <CardComponent item={item} />
+        {data.map((item, index) => (
+          <CardComponent item={item} key={index} />
         ))}
       </CarouselNext>
     </StyledCarouselContainer>
@@ -242,8 +247,8 @@ export const WithPassedProps = args => {
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
       >
-        {data.map(item => (
-          <ViewedCardComponent item={item} key={`ProjectCard${item.title}`} />
+        {data.map((item, index) => (
+          <ViewedCardComponent item={item} key={index} />
         ))}
       </CarouselNext>
     </>

@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `DownloadIcon`: Fix colour propagation.
 - Feature: `ProjectCard`: Add dark mode.
+- Feature: `CarouselNext`: Add component, with new `cycle` prop for infinite navigation.
 
 ## [12.4.0] - 2022-08-04 🌞
 

@@ -10,7 +10,7 @@ import {
 import { ProjectCard } from '../../cards/project-card'
 
 const projectCardMinWidth = 280
-const projectCardMarginBetween = 40
+const gap = 40
 
 describe('<CarouselNext />', () => {
   const data = [
@@ -249,7 +249,7 @@ describe('<CarouselNext />', () => {
       .create(
         <CarouselNext
           itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
+          baseGap={gap}
           smallButtons={false}
           shadowSize={20}
           viewportIsXSOrLess={false}
@@ -274,7 +274,7 @@ describe('<CarouselNext />', () => {
           <CarouselNext.Navigation />
           <CarouselNext
             itemMinWidth={projectCardMinWidth}
-            baseItemMarginBetween={projectCardMarginBetween}
+            baseGap={gap}
             smallButtons={false}
             shadowSize={20}
             viewportIsXSOrLess={false}
@@ -298,7 +298,7 @@ describe('<CarouselNext />', () => {
       .create(
         <CarouselNext
           itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
+          baseGap={gap}
           loop={true}
           viewportIsXSOrLess={false}
           viewportIsMOrLess={false}
@@ -320,7 +320,7 @@ describe('<CarouselNext />', () => {
       .create(
         <CarouselNext
           itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
+          baseGap={gap}
           exportVisibilityProps
           viewportIsXSOrLess={false}
           viewportIsMOrLess={false}
@@ -342,7 +342,7 @@ describe('<CarouselNext />', () => {
       .create(
         <CarouselNext
           itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
+          baseGap={gap}
           itemsPerPage={5}
           viewportIsXSOrLess={false}
           viewportIsMOrLess={false}
@@ -364,7 +364,7 @@ describe('<CarouselNext />', () => {
       .create(
         <CarouselNext
           itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
+          baseGap={gap}
           pagesClassName="custom-class"
           viewportIsXSOrLess={true}
           viewportIsMOrLess={true}
@@ -386,7 +386,7 @@ describe('<CarouselNext />', () => {
       .create(
         <CarouselNext
           itemMinWidth={projectCardMinWidth}
-          baseItemMarginBetween={projectCardMarginBetween}
+          baseGap={gap}
           viewportIsXSOrLess={true}
           viewportIsMOrLess={true}
         />,

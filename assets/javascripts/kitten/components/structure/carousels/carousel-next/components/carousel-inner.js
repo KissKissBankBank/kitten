@@ -11,6 +11,32 @@ if (domElementHelper.canUseDom()) {
 
 let isTouched = false
 
+/**
+ * Native scrollTo with callback
+ * https://stackoverflow.com/a/55686711
+ * @param offset - offset to scroll to
+ * @param callback - callback function
+ */
+function scrollTo(container, offset = 0, callback, behavior = 'smooth') {
+  const onScroll = function () {
+    if (
+      (offset - 3).toFixed() < container.scrollLeft.toFixed() &&
+      container.scrollLeft.toFixed() < (offset + 3).toFixed()
+    ) {
+      container.removeEventListener('scroll', onScroll)
+      callback()
+    }
+  }
+
+  container.addEventListener('scroll', onScroll)
+  onScroll()
+  container.scrollTo({
+    top: 0,
+    left: offset.toFixed(),
+    behavior,
+  })
+}
+
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
   if (!callback) return
@@ -41,34 +67,22 @@ const getDataForPage = (data, indexPage, numberOfItemsPerPage) => {
 const getElementPadding = element =>
   parseInt(domElementHelper.getComputedStyle(element, 'padding-inline'))
 
-const getRangePageScrollLeft = (
-  targetClientWidth,
-  numberOfPages,
-  itemMarginBetween,
-  containerPadding,
-) =>
-  Array(numberOfPages)
-    .fill(0)
-    .map(
-      (el, page) =>
-        page * (targetClientWidth + itemMarginBetween - containerPadding * 2),
-    )
-
 export const CarouselInner = ({
   currentPageIndex,
   exportVisibilityProps,
   goToPage,
-  itemMarginBetween,
   items,
   numberOfItemsPerPage,
-  numberOfPages,
   onResizeInner,
   pagesClassName,
   viewedPages,
   pageClickText,
+  pagesCount,
+  innerPagesCount,
+  cycle,
 }) => {
-  const [scrollDestination, setScrollDestination] = useState(0)
   const carouselInner = useRef(null)
+  const [firstScrolled, setFirstScrolled] = useState(false)
   const previousIndexPageVisible = usePrevious(currentPageIndex)
 
   let resizeObserver
@@ -85,6 +99,18 @@ export const CarouselInner = ({
   }, [])
 
   useEffect(() => {
+    // Scroll to the first element of the page
+    if (!cycle) return
+    if (firstScrolled) return
+    if (!carouselInner.current) return
+    if ([...carouselInner.current.childNodes].length === 0) return
+    if (currentPageIndex === 0) return
+
+    scrollToPage(currentPageIndex, () => {}, 'auto')
+    setFirstScrolled(true)
+  })
+
+  useEffect(() => {
     carouselInner.current && resizeObserver.observe(carouselInner.current)
   }, [carouselInner])
 
@@ -97,47 +123,59 @@ export const CarouselInner = ({
   const handleInnerScroll = scrollStop(target => {
     if (isTouched) return null
 
-    const { scrollLeft, clientWidth } = target
+    const { scrollLeft, childNodes } = target
 
-    const rangePageScrollLeft = getRangePageScrollLeft(
-      clientWidth,
-      numberOfPages,
-      itemMarginBetween,
-      getElementPadding(target),
+    const padding = getElementPadding(target)
+    const rangePageScrollLeft = [...childNodes].map(
+      page => page.offsetLeft - padding,
     )
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    if (indexClosest !== currentPageIndex) return goToPage(indexClosest)
+    if (indexClosest !== currentPageIndex) {
+      if (indexClosest < 2) {
+        const newIndex = pagesCount + 2 - indexClosest
+        return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
+      }
+      if (indexClosest >= pagesCount + 2) {
+        const newIndex = indexClosest - pagesCount
+        return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
+      }
 
-    // if the user doesn't scroll enough to change page
-    // we need to scroll back to the fake snap page
-    if (closest !== scrollLeft) {
-      return target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
+      return goToPage(indexClosest)
     }
   })
 
-  const scrollToPage = indexPageToScroll => {
-    setScrollDestination(indexPageToScroll)
-
+  const scrollToPage = (
+    indexPageToScroll,
+    callback = handleAfterScroll,
+    behavior = 'smooth',
+  ) => {
     const target = carouselInner.current
-
     if (!target) return null
 
-    const { scrollLeft, clientWidth } = target
+    const { scrollLeft, childNodes } = target
+    if (childNodes.length === 0) return null
 
-    const rangePageScrollLeft = getRangePageScrollLeft(
-      clientWidth,
-      numberOfPages,
-      itemMarginBetween,
-      getElementPadding(target),
-    )
-
-    const closest = rangePageScrollLeft[indexPageToScroll]
+    const padding = getElementPadding(target)
+    const closest = childNodes[indexPageToScroll]?.offsetLeft - padding
 
     if (closest !== scrollLeft) {
-      target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
+      scrollTo(target, closest, callback, behavior)
+    }
+  }
+
+  const handleAfterScroll = () => {
+    if (!cycle) return
+
+    if (currentPageIndex < 2) {
+      const newIndex = pagesCount + 2 - currentPageIndex
+      scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
+    }
+    if (currentPageIndex >= pagesCount + 2) {
+      const newIndex = currentPageIndex - pagesCount
+      scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
   }
 
@@ -157,6 +195,12 @@ export const CarouselInner = ({
     }
   }
 
+  const getDataIndex = index => {
+    if (index <= 1) return pagesCount - 2 + index
+    if (index >= pagesCount + 2) return index - pagesCount - 2
+    return index - 2
+  }
+
   return (
     <div
       ref={carouselInner}
@@ -166,13 +210,12 @@ export const CarouselInner = ({
       onKeyDown={handleKeyDown}
       className="k-CarouselNext__inner"
     >
-      {Array(numberOfPages)
+      {Array(innerPagesCount)
         .fill(0)
         .map((el, index) => {
+          const dataIndex = cycle ? getDataIndex(index) : index
           const isActivePage = currentPageIndex === index
           const hasPageBeenViewed = viewedPages.has(index)
-          const isScrollDestination =
-            scrollDestination === index || scrollDestination === 'all'
 
           return (
             <div
@@ -183,7 +226,6 @@ export const CarouselInner = ({
                 {
                   'k-CarouselNext__inner__pageContainer--isActivePage': isActivePage,
                   'k-CarouselNext__inner__pageContainer--hasBeenViewed': hasPageBeenViewed,
-                  'k-CarouselNext__inner__pageContainer--destination': isScrollDestination,
                 },
               )}
             >
@@ -191,7 +233,11 @@ export const CarouselInner = ({
                 exportVisibilityProps={exportVisibilityProps}
                 hasPageBeenViewed={hasPageBeenViewed}
                 isActivePage={isActivePage}
-                pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
+                pageItems={getDataForPage(
+                  items,
+                  dataIndex,
+                  numberOfItemsPerPage,
+                )}
                 numberOfItemsPerPage={numberOfItemsPerPage}
                 goToCurrentPage={() => goToPage(index)}
               />
