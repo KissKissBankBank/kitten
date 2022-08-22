@@ -193,13 +193,6 @@ const StyledCarouselContainer = styled.div`
   .k-CarouselNext__page {
     height: 100% !important;
   }
-  /*   .k-CarouselNext__inner__pageContainer{
-    transition: opacity var(--transition);
-
-    &:not(.k-CarouselNext__inner__pageContainer--destination) {
-      opacity: 0.5;
-    }
-  } */
 `
 
 export const ShowOtherPages = args => {
@@ -216,6 +209,7 @@ export const ShowOtherPages = args => {
       </Container>
       <CarouselNext
         {...args}
+        cycle
         itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
         itemMinWidth={0}
         viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
