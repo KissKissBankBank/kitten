@@ -8,6 +8,43 @@ const HeroWrapper = styled.section`
   overflow: hidden;
   background-color: var(--color-grey-200);
 
+  @media ${mq.mobileAndTablet} {
+    min-height: calc(100vh - ${pxToRem(HEADER_HEIGHT)});
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+    .kiss-Homepage__hero__main {
+      box-sizing: border-box;
+      height: calc(100vh - ${pxToRem(HEADER_HEIGHT * 2)});
+      position: fixed;
+      padding: ${pxToRem(20)};
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: ${pxToRem(20)};
+      z-index: 3;
+
+      p span {
+        background-color: var(--color-grey-200);
+      }
+    }
+
+    .kiss-Homepage__hero__grid--mobile {
+      position: fixed;
+      box-sizing: border-box;
+      top: 0;
+      left: -10vw;
+      width: calc(100vw * 6 / 5);
+      height: 100vh;
+      display: grid;
+      gap: ${pxToRem(5)};
+      padding: ${pxToRem(5)};
+      grid-template-rows: repeat(3, auto) 1fr repeat(4, auto);
+      grid-template-columns: repeat(6, 1fr);
+      z-index: 2;
+    }
+  }
+
   @media ${mq.desktop} {
     min-height: calc(50vw - ${pxToRem(HEADER_HEIGHT)});
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
@@ -15,8 +52,8 @@ const HeroWrapper = styled.section`
     .kiss-Homepage__hero__main {
       box-sizing: border-box;
       width: 50vw;
-      height: 85%;
-      padding: calc(50vw * 0.125);
+      height: calc(0.85 * (50vw - ${pxToRem(HEADER_HEIGHT)}));
+      padding: 2vw calc(50vw * 0.125);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -24,22 +61,27 @@ const HeroWrapper = styled.section`
       gap: ${pxToRem(20)};
     }
 
-    .kiss-Homepage__hero__grid {
-      position: fixed;
-      box-sizing: border-box;
+    .kiss-Homepage__hero__grid--desktop {
       top: 0;
       right: 0;
       width: 50vw;
       height: 50vw;
       display: grid;
-      padding: ${pxToRem(10)};
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(5, 1fr);
+      position: fixed;
       gap: ${pxToRem(10)};
+      box-sizing: border-box;
+      padding: ${pxToRem(10)};
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .a-1 {
+      transform: translateX(-50%);
     }
   }
 
-  .kiss-Homepage__hero__grid {
+  .kiss-Homepage__hero__grid--mobile,
+  .kiss-Homepage__hero__grid--desktop {
     > div {
       grid-column-end: span 1;
       overflow: hidden;
@@ -60,6 +102,15 @@ const HeroWrapper = styled.section`
     > div[class*='e-'] {
       grid-row: 5;
     }
+    > div[class*='f-'] {
+      grid-row: 6;
+    }
+    > div[class*='g-'] {
+      grid-row: 7;
+    }
+    > div[class*='h-'] {
+      grid-row: 8;
+    }
 
     > div[class*='-1'] {
       grid-column: 1;
@@ -75,6 +126,9 @@ const HeroWrapper = styled.section`
     }
     > div[class*='-5'] {
       grid-column: 5;
+    }
+    > div[class*='-6'] {
+      grid-column: 6;
     }
 
     > div[class*='nw'] {
@@ -93,17 +147,14 @@ const HeroWrapper = styled.section`
       border-bottom-right-radius: 50%;
     }
 
-    .a-1 {
-      transform: translateX(-50%);
-    }
-
     img,
     svg {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       object-position: center;
+      display: block;
     }
   }
 `
@@ -119,14 +170,17 @@ const Hero = () => {
           par la communauté.
         </Title>
         <Paragraph noMargin className="k-u-padding-right-decuple@s-up">
-          Nous avons déjà aidé 26 526 projets de créateurs et entrepreneurs à
-          voir le jour.
-          <br />
-          Et si c’était votre tour&nbsp;?
+          <span>
+            Nous avons déjà aidé 26 526 projets de{' '}
+            <br className="k-u-hidden@l-up" />
+            créateurs et entrepreneurs à voir le jour.
+            <br />
+            Et si c’était votre tour&nbsp;?
+          </span>
         </Paragraph>
         <Button modifier="helium">Créer mon projet</Button>
       </div>
-      <div className="kiss-Homepage__hero__grid">
+      <div className="kiss-Homepage__hero__grid--desktop k-u-hidden@m-down">
         <div className="a-1 sw ne">
           <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
         </div>
@@ -197,6 +251,76 @@ const Hero = () => {
         </div>
         <div className="e-5 nw">
           <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+      </div>
+
+      <div className="kiss-Homepage__hero__grid--mobile k-u-hidden@l-up">
+        <div className="a-1">
+          <HeroPacman color="var(--color-primary-500)" rotation={90} />
+        </div>
+        <div className="a-2 sw">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="a-3 ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="a-4">
+          <HeroHeart color="var(--color-danger-500)" />
+        </div>
+        <div className="a-5 sw ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="a-6">
+          <HeroPacman color="var(--color-primary-500)" />
+        </div>
+        <div className="b-1 sw ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="b-3">
+          <HeroHeart color="var(--color-primary-500)" rotation={-90} />
+        </div>
+        <div className="b-4 sw ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="b-6 se nw">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="c-5 sw ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="c-6">
+          <HeroPacman color="var(--color-success-500)" rotation={-90} />
+        </div>
+
+        <div className="e-6 nw">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="f-5 sw">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="g-3 sw ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="g-4">
+          <HeroPacman color="var(--color-primary-500)" rotation={180} />
+        </div>
+        <div className="g-5 se nw">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="h-2 ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="h-3">
+          <HeroHeart color="var(--color-danger-500)" />
+        </div>
+        <div className="h-4 ne">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="h-5 ne sw">
+          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+        </div>
+        <div className="h-6">
+          <HeroHeart color="var(--color-success-500)" rotation={-90} />
         </div>
       </div>
     </HeroWrapper>
