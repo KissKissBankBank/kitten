@@ -134,6 +134,8 @@ export const CarouselInner = ({
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
     if (indexClosest !== currentPageIndex) {
+      if (!cycle) return goToPage(indexClosest)
+
       if (indexClosest < 2) {
         const newIndex = pagesCount + 2 - indexClosest
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
