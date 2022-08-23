@@ -49,9 +49,13 @@ const PartnersWrapper = styled.section`
 
   .kiss-Homepage__partners__cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: ${pxToRem(30)};
+    gap: ${pxToRem(10)};
+    grid-template-columns: repeat(2, 1fr);
 
+    @media ${mq.tabletAndDesktop} {
+      gap: ${pxToRem(30)};
+      grid-template-columns: repeat(4, 1fr);
+    }
     .kiss-Homepage__partners__card {
       background-color: var(--color-grey-000);
       border-radius: var(--border-radius-m);

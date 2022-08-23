@@ -45,6 +45,10 @@ const PricingWrapper = styled.section`
   }
 
   .kiss-Homepage__pricing__cards {
+    display: flex;
+    gap: ${pxToRem(20)};
+    flex-direction: column;
+
     @media ${mq.tabletAndDesktop} {
       display: grid;
       gap: 0 ${pxToRem(30)};
@@ -165,8 +169,8 @@ const PricingCard = ({
       Créer mon projet
     </Button>
     <ul className="kiss-Homepage__pricing__card__list">
-      {listItems.map(item => (
-        <li className="kiss-Homepage__pricing__card__list__item">
+      {listItems.map((item, index) => (
+        <li key={index} className="kiss-Homepage__pricing__card__list__item">
           <StatusIconNext
             status="success"
             width="12"

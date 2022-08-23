@@ -10,6 +10,7 @@ const EngagementsWrapper = styled.section`
   flex-direction: column;
   gap: ${pxToRem(20)};
   padding: 0 ${pxToRem(20)};
+  overflow: hidden;
 
   @media ${mq.tabletAndDesktop} {
     padding: ${pxToRem(200)} ${pxToRem(120)} 0;
@@ -52,8 +53,11 @@ const EngagementsWrapper = styled.section`
     z-index: 2;
     .kiss-Homepage__engagements__cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: ${pxToRem(30)};
+
+      @media ${mq.tabletAndDesktop} {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 `

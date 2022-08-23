@@ -63,9 +63,11 @@ const WhyWrapper = styled.section`
 
   .kiss-Homepage__why__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: ${pxToRem(20)};
 
+    @media ${mq.tabletAndDesktop} {
+      grid-template-columns: repeat(3, 1fr);
+    }
     .kiss-Homepage__why__card {
       color: var(--color-grey-900);
       background-color: var(--color-grey-000);
