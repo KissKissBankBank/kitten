@@ -113,11 +113,7 @@ export const Autocomplete = ({
 
   useEffect(() => {
     if (controlled) {
-      setItems(
-        defaultItems.map(item => {
-          return typeof item === 'string' ? item : item[label]
-        }),
-      )
+      setItems(defaultItems)
       resetSelectedItem()
     }
   }, [controlled, defaultItems])
