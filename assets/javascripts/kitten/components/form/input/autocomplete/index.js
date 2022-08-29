@@ -1,16 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react'
-import styled from 'styled-components'
-import isFunction from 'lodash/fp/isFunction'
-import isEmpty from 'lodash/fp/isEmpty'
-import PropTypes from 'prop-types'
-import slugify from 'slugify'
 import classNames from 'classnames'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../../constants/typography-config'
+import isEmpty from 'lodash/fp/isEmpty'
+import isFunction from 'lodash/fp/isFunction'
+import PropTypes from 'prop-types'
+import React, { useEffect, useRef, useState } from 'react'
+import slugify from 'slugify'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
+import TYPOGRAPHY from '../../../../constants/typography-config'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 import { Loader } from '../../../graphics/animations/loader'
-import { TextInput } from '../../../form/input/text-input'
+import { TextInput } from '../text-input'
 
 export const maxVisibleSuggestions = 3
 
@@ -91,6 +91,7 @@ export const Autocomplete = ({
   isLoading,
   noResultMessage,
   shouldShowNoResultMessage,
+  controlled,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -105,8 +106,17 @@ export const Autocomplete = ({
     : shouldShowNoResultMessage
 
   useEffect(() => {
-    updateSuggestions()
+    if (!controlled) {
+      updateSuggestions()
+    }
   }, [value])
+
+  useEffect(() => {
+    if (controlled) {
+      setItems(defaultItems)
+      resetSelectedItem()
+    }
+  }, [controlled, defaultItems])
 
   useEffect(() => {
     suggestionsEl?.current?.children[selectedSuggestionIndex]?.scrollIntoView({
@@ -317,6 +327,7 @@ Autocomplete.propTypes = {
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
   isLoading: PropTypes.bool,
+  controlled: PropTypes.bool,
 }
 
 Autocomplete.defaultProps = {
@@ -328,4 +339,5 @@ Autocomplete.defaultProps = {
   onKeyDown: () => {},
   onSelect: () => {},
   isLoading: false,
+  controlled: false,
 }

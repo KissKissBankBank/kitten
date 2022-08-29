@@ -1,8 +1,11 @@
-import React from 'react'
-import { Autocomplete } from './index'
 import { Field, LocationIcon } from 'kitten'
+import debounce from 'lodash/fp/debounce'
+import isEmpty from 'lodash/fp/isEmpty'
+import sampleSize from 'lodash/fp/sampleSize'
+import React, { useCallback, useState } from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { Default as TextInputStory } from '../text-input/stories.js'
+import { Autocomplete } from './index'
 
 const items = [
   'Abyssinian',
@@ -289,6 +292,40 @@ export const WithIcon = args => (
     <p>🐱 🐱 🐱 🐱 🐱</p>
   </Field>
 )
+
+export const WithControlledItems = args => {
+  const [_items, _setItems] = useState([])
+  const debouncedQuery = useCallback(
+    debounce(300)(() => {
+      const response = sampleSize(10)(items)
+      _setItems(response)
+    }),
+    [],
+  )
+
+  return (
+    <Field>
+      <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+        Choose your kitten:
+      </Field.Label>
+
+      <Autocomplete
+        controlled
+        id="autocomplete"
+        placeholder="Search a kitten…"
+        items={_items}
+        {...args}
+        onChange={async e => {
+          if (!isEmpty(e.target?.value)) {
+            debouncedQuery(e.target?.value)
+          }
+        }}
+      />
+
+      <p>🐱 🐱 🐱 🐱 🐱</p>
+    </Field>
+  )
+}
 
 WithIcon.decorators = Default.decorator
 WithIcon.argTypes = Default.argTypes
