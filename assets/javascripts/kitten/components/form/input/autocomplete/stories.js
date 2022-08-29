@@ -315,7 +315,6 @@ export const WithControlledItems = args => {
         placeholder="Search a kitten…"
         items={_items}
         {...args}
-        label="nom_entreprise"
         onChange={async e => {
           if (!isEmpty(e.target?.value)) {
             debouncedQuery(e.target?.value)
