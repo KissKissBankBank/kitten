@@ -1,6 +1,7 @@
 import { Field, LocationIcon } from 'kitten'
 import debounce from 'lodash/fp/debounce'
 import isEmpty from 'lodash/fp/isEmpty'
+import sampleSize from 'lodash/fp/sampleSize'
 import React, { useCallback, useState } from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { Default as TextInputStory } from '../text-input/stories.js'
@@ -292,15 +293,12 @@ export const WithIcon = args => (
   </Field>
 )
 
-export const WithDebounce = args => {
+export const WithControlledItems = args => {
   const [_items, _setItems] = useState([])
   const debouncedQuery = useCallback(
-    debounce(300)(async value => {
-      const response = await fetch(
-        `https://suggestions.pappers.fr/v2?q=${value}`,
-      )
-      const formattedResponse = await response.json()
-      _setItems(formattedResponse.resultats_nom_entreprise || [])
+    debounce(300)(() => {
+      const response = sampleSize(10)(items)
+      _setItems(response)
     }),
     [],
   )
