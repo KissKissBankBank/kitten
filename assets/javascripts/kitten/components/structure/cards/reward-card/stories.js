@@ -36,6 +36,7 @@ const StyledCarouselContainer = styled.div`
 const argTypes = {
   disabled: { control: 'boolean' },
   hasBorder: { control: 'boolean' },
+  hasShadow: { control: 'boolean' },
   truncateTitle: {
     name: 'RewardCard.Title: truncate Text',
     control: 'boolean',
@@ -48,6 +49,7 @@ const argTypes = {
 const args = {
   disabled: false,
   hasBorder: true,
+  hasShadow: true,
   truncateTitle: true,
   truncateText: false,
 }
