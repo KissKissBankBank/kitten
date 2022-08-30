@@ -4,10 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `DownloadIcon`: Fix colour propagation.
-- Feature: `ProjectCard`: Add dark mode.
-- Feature: `CarouselNext`: Add component, with new `cycle` prop for infinite navigation.
-- Feature: `Autocomplete`: Add `controlled` prop to control items list.
+## [12.5.0] - 2022-08-30 💼
+
+Features:
+
+- `ProjectCard`: Add dark mode.
+- `CarouselNext`: Add component, with new `cycle` prop for infinite navigation.
+- `Autocomplete`: Add `controlled` prop to control items list.
+
+Fix:
+
+- `DownloadIcon`: Fix colour propagation.
 
 ## [12.4.0] - 2022-08-04 🌞
 

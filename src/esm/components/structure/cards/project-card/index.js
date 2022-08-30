@@ -29,11 +29,12 @@ export const ProjectCard = _ref => {
     topLineAlign,
     overlayText,
     hoverableTitle,
+    colorMode,
     ...props
   } = _ref;
   return /*#__PURE__*/React.createElement(StyledCard, _extends({
     as: href ? 'a' : 'div',
-    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status, {
+    className: classNames('k-ProjectCard', className, "k-ProjectCard--" + status, "k-ProjectCard--colorMode-" + colorMode, {
       'k-ProjectCard--isStretched': stretch,
       'k-ProjectCard--isLoading': loading,
       'k-ProjectCard--hoverableTitle': hoverableTitle
@@ -73,7 +74,8 @@ ProjectCard.defaultProps = {
   topLine: null,
   topLineAlign: 'right',
   overlayText: '',
-  hoverableTitle: false
+  hoverableTitle: false,
+  colorMode: 'light'
 };
 ProjectCard.propTypes = {
   sticker: deprecated(PropTypes.node, 'Please use `ProjectCard.Sticker` instead.'),
@@ -86,7 +88,8 @@ ProjectCard.propTypes = {
   topLine: PropTypes.node,
   topLineAlign: PropTypes.oneOf(['left', 'center', 'right']),
   overlayText: PropTypes.node,
-  hoverableTitle: PropTypes.bool
+  hoverableTitle: PropTypes.bool,
+  colorMode: PropTypes.oneOf(['light', 'dark'])
 };
 
 ProjectCard.Title = _ref2 => {
