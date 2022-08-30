@@ -1,17 +1,17 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
-import isFunction from 'lodash/fp/isFunction';
-import isEmpty from 'lodash/fp/isEmpty';
-import PropTypes from 'prop-types';
-import slugify from 'slugify';
 import classNames from 'classnames';
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
-import TYPOGRAPHY from '../../../../constants/typography-config';
+import isEmpty from 'lodash/fp/isEmpty';
+import isFunction from 'lodash/fp/isFunction';
+import PropTypes from 'prop-types';
+import React, { useEffect, useRef, useState } from 'react';
+import slugify from 'slugify';
+import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
+import TYPOGRAPHY from '../../../../constants/typography-config';
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import { VisuallyHidden } from '../../../accessibility/visually-hidden';
 import { Loader } from '../../../graphics/animations/loader';
-import { TextInput } from '../../../form/input/text-input';
+import { TextInput } from '../text-input';
 export const maxVisibleSuggestions = 3;
 const Wrapper = styled.div.withConfig({
   displayName: "autocomplete__Wrapper",
@@ -35,6 +35,7 @@ export const Autocomplete = _ref => {
     isLoading,
     noResultMessage,
     shouldShowNoResultMessage,
+    controlled,
     ...props
   } = _ref;
   const [items, setItems] = useState(defaultItems);
@@ -48,8 +49,16 @@ export const Autocomplete = _ref => {
     value
   }) : shouldShowNoResultMessage;
   useEffect(() => {
-    updateSuggestions();
+    if (!controlled) {
+      updateSuggestions();
+    }
   }, [value]);
+  useEffect(() => {
+    if (controlled) {
+      setItems(defaultItems);
+      resetSelectedItem();
+    }
+  }, [controlled, defaultItems]);
   useEffect(() => {
     var _suggestionsEl$curren, _suggestionsEl$curren2;
 
@@ -216,7 +225,8 @@ Autocomplete.propTypes = {
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  controlled: PropTypes.bool
 };
 Autocomplete.defaultProps = {
   error: false,
@@ -226,5 +236,6 @@ Autocomplete.defaultProps = {
   onBlur: () => {},
   onKeyDown: () => {},
   onSelect: () => {},
-  isLoading: false
+  isLoading: false,
+  controlled: false
 };

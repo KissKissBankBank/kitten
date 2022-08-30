@@ -7,31 +7,31 @@ exports.maxVisibleSuggestions = exports.StyledAutocompleteSuggestions = exports.
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireWildcard(require("react"));
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _isFunction = _interopRequireDefault(require("lodash/fp/isFunction"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _isEmpty = _interopRequireDefault(require("lodash/fp/isEmpty"));
 
+var _isFunction = _interopRequireDefault(require("lodash/fp/isFunction"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _react = _interopRequireWildcard(require("react"));
 
 var _slugify = _interopRequireDefault(require("slugify"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _typography = require("../../../../helpers/utils/typography");
+var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
+var _typography = require("../../../../helpers/utils/typography");
 
 var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
 var _loader = require("../../../graphics/animations/loader");
 
-var _textInput = require("../../../form/input/text-input");
+var _textInput = require("../text-input");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -66,6 +66,7 @@ const Autocomplete = _ref => {
     isLoading,
     noResultMessage,
     shouldShowNoResultMessage,
+    controlled,
     ...props
   } = _ref;
   const [items, setItems] = (0, _react.useState)(defaultItems);
@@ -79,8 +80,16 @@ const Autocomplete = _ref => {
     value
   }) : shouldShowNoResultMessage;
   (0, _react.useEffect)(() => {
-    updateSuggestions();
+    if (!controlled) {
+      updateSuggestions();
+    }
   }, [value]);
+  (0, _react.useEffect)(() => {
+    if (controlled) {
+      setItems(defaultItems);
+      resetSelectedItem();
+    }
+  }, [controlled, defaultItems]);
   (0, _react.useEffect)(() => {
     var _suggestionsEl$curren, _suggestionsEl$curren2;
 
@@ -249,7 +258,8 @@ Autocomplete.propTypes = {
   onBlur: _propTypes.default.func,
   onKeyDown: _propTypes.default.func,
   onSelect: _propTypes.default.func,
-  isLoading: _propTypes.default.bool
+  isLoading: _propTypes.default.bool,
+  controlled: _propTypes.default.bool
 };
 Autocomplete.defaultProps = {
   error: false,
@@ -259,5 +269,6 @@ Autocomplete.defaultProps = {
   onBlur: () => {},
   onKeyDown: () => {},
   onSelect: () => {},
-  isLoading: false
+  isLoading: false,
+  controlled: false
 };
