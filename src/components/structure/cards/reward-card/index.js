@@ -29,6 +29,7 @@ const RewardCard = _ref => {
     className,
     disabled,
     hasBorder,
+    hasShadow,
     stretch,
     ...props
   } = _ref;
@@ -42,6 +43,7 @@ const RewardCard = _ref => {
       className: (0, _classnames.default)('k-RewardCard', className, {
         'k-RewardCard--disabled': disabled,
         'k-RewardCard--hasBorder': hasBorder,
+        'k-RewardCard--hasShadow': hasShadow,
         'k-RewardCard--isStretched': stretch
       })
     }), children);
@@ -89,11 +91,13 @@ RewardCard.Description = _components.Description;
 RewardCard.Contents = _components.Contents;
 RewardCard.defaultProps = {
   hasBorder: true,
+  hasShadow: true,
   disabled: false,
   stretch: false
 };
 RewardCard.propTypes = {
   hasBorder: _propTypes.default.bool,
+  hasShadow: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   stretch: _propTypes.default.bool
 };
