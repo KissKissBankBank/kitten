@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `RewardCard`: Add `hasShadow` prop, defaults to true.
+## [12.6.0] - 2022-08-30 🏮
+
+Feature:
+
+- `RewardCard`: Add `hasShadow` prop, defaults to true.
 
 ## [12.5.0] - 2022-08-30 💼
 
