@@ -24,6 +24,7 @@ export const RewardCard = ({
   className,
   disabled,
   hasBorder,
+  hasShadow,
   stretch,
   ...props
 }) => {
@@ -39,6 +40,7 @@ export const RewardCard = ({
         className={classNames('k-RewardCard', className, {
           'k-RewardCard--disabled': disabled,
           'k-RewardCard--hasBorder': hasBorder,
+          'k-RewardCard--hasShadow': hasShadow,
           'k-RewardCard--isStretched': stretch,
         })}
       >
@@ -102,12 +104,14 @@ RewardCard.Contents = Contents
 
 RewardCard.defaultProps = {
   hasBorder: true,
+  hasShadow: true,
   disabled: false,
   stretch: false,
 }
 
 RewardCard.propTypes = {
   hasBorder: PropTypes.bool,
+  hasShadow: PropTypes.bool,
   disabled: PropTypes.bool,
   stretch: PropTypes.bool,
 }

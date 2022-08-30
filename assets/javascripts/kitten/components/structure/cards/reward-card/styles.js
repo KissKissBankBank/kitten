@@ -7,12 +7,11 @@ export const StyledRewardCard = styled.article`
   --rewardCard--border-width: 0;
   --rewardCard--border-radius: 0;
   --rewardCard--grid-col: repeat(auto-fit, minmax(${pxToRem(120)}, 1fr));
-  --rewardCard--box-shadow: var(--box-shadow-m);
 
   /* CARD STYLE */
 
   position: relative;
-  box-shadow: var(--rewardCard--box-shadow);
+  box-shadow: var(--rewardCard--box-shadow, none);
   border-radius: var(--rewardCard--border-radius);
   background-color: var(--color-grey-000);
   display: flex;
@@ -27,6 +26,10 @@ export const StyledRewardCard = styled.article`
   &.k-RewardCard--hasBorder {
     --rewardCard--border-width: var(--border-width);
     --rewardCard--border-radius: var(--border-radius-m);
+  }
+
+  &.k-RewardCard--hasShadow {
+    --rewardCard--box-shadow: var(--box-shadow-m);
   }
 
   /* STRUCTURE */

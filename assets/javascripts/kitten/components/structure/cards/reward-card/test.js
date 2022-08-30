@@ -48,7 +48,7 @@ describe('<RewardCard />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <RewardCard disabled hasBorder={false}>
+          <RewardCard disabled hasBorder={false} hasShadow={false}>
             <RewardCard.Image>
               <img src="/kitten.jpg" alt="" />
             </RewardCard.Image>
@@ -81,10 +81,7 @@ describe('<RewardCard />', () => {
                   tell
                 </p>
               </RewardCard.Description>
-              <RewardCard.Info
-                legend="Lorem"
-                value={<span>ipsum</span>}
-              />
+              <RewardCard.Info legend="Lorem" value={<span>ipsum</span>} />
               <RewardCard.TagList>
                 <Tag as="li">
                   <strong className="k-u-weight-500">5</strong> contributeurs
