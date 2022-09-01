@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { pxToRem, mq, Title, HEADER_HEIGHT, Paragraph, Button } from 'kitten'
+import {
+  pxToRem,
+  mq,
+  Title,
+  HEADER_HEIGHT,
+  Paragraph,
+  Button,
+  domElementHelper,
+} from 'kitten'
 
 const HeroWrapper = styled.section`
   width: 100vw;
@@ -62,7 +70,7 @@ const HeroWrapper = styled.section`
     }
 
     .kiss-Homepage__hero__grid--desktop {
-      top: 0;
+      top: min(50vw, calc(var(--hero-scrollPosition, 0) / 2 * -1px));
       right: 0;
       width: 50vw;
       height: 50vw;
@@ -159,9 +167,28 @@ const HeroWrapper = styled.section`
   }
 `
 
+const useScrollPosition = () => {
+  if (!domElementHelper.canUseDom()) return
+
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  useEffect(() => {
+    const updatePosition = () => {
+      setScrollPosition(window.pageYOffset)
+    }
+    window.addEventListener('scroll', updatePosition)
+    updatePosition()
+    return () => window.removeEventListener('scroll', updatePosition)
+  }, [])
+
+  return scrollPosition
+}
+
 const Hero = () => {
+  const scrollPosition = useScrollPosition()
+
   return (
-    <HeroWrapper>
+    <HeroWrapper style={{ '--hero-scrollPosition': scrollPosition }}>
       <div className="kiss-Homepage__hero__main">
         <Title noMargin modifier="secondary">
           Donnons vie <br className="k-u-hidden@l-up" />
@@ -182,75 +209,75 @@ const Hero = () => {
       </div>
       <div className="kiss-Homepage__hero__grid--desktop k-u-hidden@m-down">
         <div className="a-1 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-1.jpg" />
         </div>
         <div className="a-2">
           <HeroPacman color="var(--color-success-500)" rotation={-90} />
         </div>
         <div className="a-3 ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-2.jpg" />
         </div>
         <div className="a-4 se nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-3.jpg" />
         </div>
         <div className="a-5">
           <HeroHeart color="var(--color-danger-500)" rotation={-90} />
         </div>
         <div className="b-1 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-4.jpg" />
         </div>
         <div className="b-2 se nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-5.jpg" />
         </div>
         <div className="b-3 sw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-6.jpg" />
         </div>
         <div className="b-4 ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-7.jpg" />
         </div>
         <div className="b-5 nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-8.jpg" />
         </div>
         <div className="c-1">
           <HeroHeart color="var(--color-danger-500)" rotation={180} />
         </div>
         <div className="c-2 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-9.jpg" />
         </div>
         <div className="c-3">
           <HeroPacman color="var(--color-primary-500)" rotation={0} />
         </div>
         <div className="c-4 sw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-0.jpg" />
         </div>
         <div className="c-5">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-1.jpg" />
         </div>
         <div className="d-1 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-2.jpg" />
         </div>
 
         <div className="d-3 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-3.jpg" />
         </div>
         <div className="d-4 se nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-4.jpg" />
         </div>
         <div className="d-5">
           <HeroHeart color="var(--color-primary-500)" rotation={0} />
         </div>
 
         <div className="e-2 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-5.jpg" />
         </div>
         <div className="e-3">
           <HeroPacman color="var(--color-success-500)" rotation={90} />
         </div>
         <div className="e-4 se nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-6.jpg" />
         </div>
         <div className="e-5 nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-7.jpg" />
         </div>
       </div>
 
@@ -259,65 +286,65 @@ const Hero = () => {
           <HeroPacman color="var(--color-primary-500)" rotation={90} />
         </div>
         <div className="a-2 sw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-8.jpg" />
         </div>
         <div className="a-3 ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-9.jpg" />
         </div>
         <div className="a-4">
           <HeroHeart color="var(--color-danger-500)" />
         </div>
         <div className="a-5 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-0.jpg" />
         </div>
         <div className="a-6">
           <HeroPacman color="var(--color-primary-500)" />
         </div>
         <div className="b-1 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-1.jpg" />
         </div>
         <div className="b-3">
           <HeroHeart color="var(--color-primary-500)" rotation={-90} />
         </div>
         <div className="b-4 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-2.jpg" />
         </div>
         <div className="b-6 se nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-3.jpg" />
         </div>
         <div className="c-5 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-4.jpg" />
         </div>
         <div className="c-6">
           <HeroPacman color="var(--color-success-500)" rotation={-90} />
         </div>
 
         <div className="e-6 nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-5.jpg" />
         </div>
         <div className="f-5 sw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-6.jpg" />
         </div>
         <div className="g-3 sw ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-7.jpg" />
         </div>
         <div className="g-4">
           <HeroPacman color="var(--color-primary-500)" rotation={180} />
         </div>
         <div className="g-5 se nw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-8.jpg" />
         </div>
         <div className="h-2 ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-9.jpg" />
         </div>
         <div className="h-3">
           <HeroHeart color="var(--color-danger-500)" />
         </div>
         <div className="h-4 ne">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-0.jpg" />
         </div>
         <div className="h-5 ne sw">
-          <img alt="" src={`/kitten-${Math.floor(Math.random() * 10)}.jpg`} />
+          <img alt="" src="/kitten-1.jpg" />
         </div>
         <div className="h-6">
           <HeroHeart color="var(--color-success-500)" rotation={-90} />
