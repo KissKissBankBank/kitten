@@ -39,4 +39,16 @@ describe('<TagButton />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `rounded` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TagButton rounded>MyButton</TagButton>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

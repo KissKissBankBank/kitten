@@ -21,11 +21,13 @@ export default {
   argTypes: {
     size: { control: 'radio', options: ['small', 'medium', 'large', 'huge'] },
     active: { control: 'boolean' },
+    rounded: { control: 'boolean' },
     children: { control: 'text' },
   },
   args: {
     size: 'medium',
     active: false,
+    rounded: false,
     children: 'My Tag',
   },
 }

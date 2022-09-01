@@ -29,6 +29,10 @@ const StyledTagButton = styled.button`
   appareance: none;
   cursor: pointer;
 
+  &.k-TagButton--rounded {
+    border-radius: var(--border-radius-rounded);
+  }
+
   &:disabled {
     cursor: not-allowed;
   }
@@ -55,21 +59,21 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font1};
   }
 
-  &.k-Buttons__tagButton--small {
+  &.k-TagButton--small {
     min-height: ${pxToRem(30)};
     min-width: ${pxToRem(60)};
     padding: 0 ${pxToRem(20)};
     font-size: ${stepToRem(-2)};
   }
 
-  &.k-Buttons__tagButton--large {
+  &.k-TagButton--large {
     min-height: ${pxToRem(50)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
     font-size: ${stepToRem(-1)};
   }
 
-  &.k-Buttons__tagButton--huge {
+  &.k-TagButton--huge {
     min-height: ${pxToRem(60)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
@@ -83,7 +87,7 @@ const StyledTagButton = styled.button`
     color: ${COLORS.font3};
   }
 
-  &.k-Buttons__tagButton--active {
+  &.k-TagButton--active {
     background-color: ${COLORS.primary5};
     border: var(--border-active-primary);
     color: ${COLORS.font1};
@@ -97,9 +101,10 @@ const StyledTagButton = styled.button`
 `
 
 export const TagButton = ({
-  children,
-  active,
   className,
+  children,
+  rounded,
+  active,
   size,
   tag,
   as,
@@ -110,14 +115,10 @@ export const TagButton = ({
   return (
     <StyledTagButton
       type={!tag && !as ? 'button' : null}
-      className={classNames(
-        'k-Buttons__tagButton',
-        className,
-        `k-Buttons__tagButton--${size}`,
-        {
-          'k-Buttons__tagButton--active': active,
-        },
-      )}
+      className={classNames('k-TagButton', className, `k-TagButton--${size}`, {
+        'k-TagButton--active': active,
+        'k-TagButton--rounded': rounded,
+      })}
       as={tag || as}
       {...others}
     >
@@ -129,10 +130,12 @@ export const TagButton = ({
 TagButton.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'huge']),
   active: PropTypes.bool,
+  rounded: PropTypes.bool,
 }
 
 TagButton.defaultProps = {
   children: 'Tag',
   size: 'medium',
   active: false,
+  rounded: false,
 }

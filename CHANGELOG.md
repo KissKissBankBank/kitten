@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `TagButton`: Add `rounded` prop, defaults to false.
+
 ## [12.6.0] - 2022-08-30 🏮
 
 Feature:
