@@ -266,9 +266,12 @@ const InnerModal = _ref10 => {
     close: () => dispatch(updateState(false))
   }) : children)))), document.body);
 
-  return /*#__PURE__*/_react.default.createElement(ModalElement, (0, _extends2.default)({
+  const modalElementProps = ModalElement === _react.Fragment ? {
+    key: others.key
+  } : { ...others,
     className: (0, _classnames.default)('k-Modal', className)
-  }, others), trigger && /*#__PURE__*/_react.default.cloneElement(trigger, {
+  };
+  return /*#__PURE__*/_react.default.createElement(ModalElement, modalElementProps, trigger && /*#__PURE__*/_react.default.cloneElement(trigger, {
     onClick: clickEvent => {
       dispatch(updateState(true));
 
@@ -295,7 +298,7 @@ Modal.propTypes = {
   zIndex: _propTypes.default.number,
   hasCloseButton: _propTypes.default.bool,
   onClose: _propTypes.default.func,
-  as: _propTypes.default.string
+  as: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.oneOf([_react.Fragment])])
 };
 Modal.defaultProps = {
   label: 'Modal',

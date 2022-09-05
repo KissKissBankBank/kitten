@@ -1,5 +1,5 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React, { useEffect, createContext, useReducer, useContext } from 'react';
+import React, { useEffect, createContext, useReducer, useContext, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactDOM from 'react-dom';
@@ -241,9 +241,12 @@ const InnerModal = _ref10 => {
     open: () => dispatch(updateState(true)),
     close: () => dispatch(updateState(false))
   }) : children)))), document.body);
-  return /*#__PURE__*/React.createElement(ModalElement, _extends({
+  const modalElementProps = ModalElement === Fragment ? {
+    key: others.key
+  } : { ...others,
     className: classNames('k-Modal', className)
-  }, others), trigger && /*#__PURE__*/React.cloneElement(trigger, {
+  };
+  return /*#__PURE__*/React.createElement(ModalElement, modalElementProps, trigger && /*#__PURE__*/React.cloneElement(trigger, {
     onClick: clickEvent => {
       dispatch(updateState(true));
 
@@ -268,7 +271,7 @@ Modal.propTypes = {
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
   onClose: PropTypes.func,
-  as: PropTypes.string
+  as: PropTypes.oneOfType([PropTypes.node, PropTypes.oneOf([Fragment])])
 };
 Modal.defaultProps = {
   label: 'Modal',
