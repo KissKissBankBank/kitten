@@ -225,9 +225,8 @@ const InnerModal = ({
 
   const modalElementProps =
     ModalElement === Fragment
-      ? { children, key: others.key }
+      ? { key: others.key }
       : {
-          children,
           ...others,
           className: classNames('k-Modal', className),
         }
