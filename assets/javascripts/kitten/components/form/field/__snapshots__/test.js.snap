@@ -37,10 +37,10 @@ Array [
       >
         <input
           aria-activedescendant=""
-          aria-autocomplete="both"
+          aria-autocomplete="kitten-prevent-autocomplete"
           aria-expanded={null}
           aria-owns="field-results"
-          autoComplete="off"
+          autoComplete="kitten-prevent-autocomplete"
           className="k-TextInput k-Form-Autocomplete__input"
           disabled={false}
           id="autocomplete"
