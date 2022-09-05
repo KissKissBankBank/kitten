@@ -100,5 +100,77 @@ describe('<Modal />', () => {
         expect(component).toMatchSnapshot()
       })
     })
+
+    describe('is wrapped in a React.Fragment', () => {
+      beforeEach(() => {
+        ReactDOM.createPortal = jest.fn(element => {
+          return element
+        })
+
+        component = renderer
+          .create(
+            <Modal
+              size="medium"
+              as={React.Fragment}
+              trigger={<button>Open</button>}
+            >
+              <Modal.Title>Oops… Quelque chose s’est mal passé.</Modal.Title>
+              <Modal.Content>
+                <p>
+                  Notre équipe a été automatiquement notifiée et fait en sorte
+                  de résoudre ce problème au plus vite.
+                </p>
+                <Modal.Actions>
+                  <button>Retour à la page d’accueil</button>
+                  <button>Recharger la page</button>
+                </Modal.Actions>
+              </Modal.Content>
+            </Modal>,
+          )
+          .toJSON()
+      })
+
+      afterEach(() => {
+        ReactDOM.createPortal.mockClear()
+      })
+
+      it('matches with snapshot', () => {
+        expect(component).toMatchSnapshot()
+      })
+    })
+
+    describe('is wrapped in a custom element', () => {
+      beforeEach(() => {
+        ReactDOM.createPortal = jest.fn(element => {
+          return element
+        })
+
+        component = renderer
+          .create(
+            <Modal size="medium" as="section" trigger={<button>Open</button>}>
+              <Modal.Title>Oops… Quelque chose s’est mal passé.</Modal.Title>
+              <Modal.Content>
+                <p>
+                  Notre équipe a été automatiquement notifiée et fait en sorte
+                  de résoudre ce problème au plus vite.
+                </p>
+                <Modal.Actions>
+                  <button>Retour à la page d’accueil</button>
+                  <button>Recharger la page</button>
+                </Modal.Actions>
+              </Modal.Content>
+            </Modal>,
+          )
+          .toJSON()
+      })
+
+      afterEach(() => {
+        ReactDOM.createPortal.mockClear()
+      })
+
+      it('matches with snapshot', () => {
+        expect(component).toMatchSnapshot()
+      })
+    })
   })
 })
