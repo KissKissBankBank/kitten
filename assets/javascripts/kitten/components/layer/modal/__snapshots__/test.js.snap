@@ -125,3 +125,23 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<Modal /> snapshot tests is wrapped in a React.Fragment matches with snapshot 1`] = `
+<button
+  onClick={[Function]}
+>
+  Open
+</button>
+`;
+
+exports[`<Modal /> snapshot tests is wrapped in a custom element matches with snapshot 1`] = `
+<section
+  className="k-Modal"
+>
+  <button
+    onClick={[Function]}
+  >
+    Open
+  </button>
+</section>
+`;

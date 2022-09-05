@@ -1,4 +1,10 @@
-import React, { useEffect, createContext, useReducer, useContext } from 'react'
+import React, {
+  useEffect,
+  createContext,
+  useReducer,
+  useContext,
+  Fragment,
+} from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactDOM from 'react-dom'
@@ -217,8 +223,16 @@ const InnerModal = ({
     document.body,
   )
 
+  const modalElementProps =
+    ModalElement === Fragment
+      ? { key: others.key }
+      : {
+          ...others,
+          className: classNames('k-Modal', className),
+        }
+
   return (
-    <ModalElement className={classNames('k-Modal', className)} {...others}>
+    <ModalElement {...modalElementProps}>
       {trigger &&
         React.cloneElement(trigger, {
           onClick: clickEvent => {
@@ -255,7 +269,7 @@ Modal.propTypes = {
   zIndex: PropTypes.number,
   hasCloseButton: PropTypes.bool,
   onClose: PropTypes.func,
-  as: PropTypes.string,
+  as: PropTypes.oneOfType([PropTypes.node, PropTypes.oneOf([Fragment])]),
 }
 
 Modal.defaultProps = {

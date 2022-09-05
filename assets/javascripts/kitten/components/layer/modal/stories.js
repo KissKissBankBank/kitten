@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { DocsPage } from 'storybook/docs-page'
 import { action } from '@storybook/addon-actions'
 import styled from 'styled-components'
@@ -163,6 +163,31 @@ Default.argTypes = {
     control: { type: 'range', min: 0, max: 2 },
   },
 }
+
+export const AsFragment = ({ contentText, ...args }) => (
+  <Modal {...args}>
+    {() => (
+      <>
+        <Modal.Title align="center">
+          Lorem ipsum dolor sit consectetuer
+        </Modal.Title>
+        <Modal.Content align="center">
+          <Paragraph modifier="tertiary" noMargin className="k-u-align-center">
+            {contentText}
+          </Paragraph>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button modifier="helium">Modal.Button</Button>
+        </Modal.Actions>
+      </>
+    )}
+  </Modal>
+)
+AsFragment.args = {
+  ...args,
+  as: Fragment,
+}
+AsFragment.argTypes = argTypes
 
 export const withForm = () => (
   <Modal {...Default.args}>
