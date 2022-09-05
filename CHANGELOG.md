@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `TagButton`: Add `rounded` prop, defaults to false.
-- Fix: `Modal`: Better typing of `as` prop, for use with `React.Fragment`.
+## [12.7.0] - 2022-09-05 👽
+
+Feature:
+
+- `TagButton`: Add `rounded` prop, defaults to false.
+
+Fix:
+
+- `Modal`: Better typing of `as` prop, for use with `React.Fragment`.
 
 ## [12.6.0] - 2022-08-30 🏮
 
