@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf eGQeRW k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -759,7 +759,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf eGQeRW k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -1637,7 +1637,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf eGQeRW k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -2394,7 +2394,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf eGQeRW k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -3163,7 +3163,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf eGQeRW k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -3920,7 +3920,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf eGQeRW k-Carousel"
+  className="sc-dkzDqf khpgtW k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
