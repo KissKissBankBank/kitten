@@ -489,10 +489,10 @@ textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textar
   >
     <input
       aria-activedescendant=""
-      aria-autocomplete="both"
+      aria-autocomplete="kitten-prevent-autocomplete"
       aria-expanded={null}
       aria-owns="autocomplete-results"
-      autoComplete="off"
+      autoComplete="kitten-prevent-autocomplete"
       className="k-TextInput k-Form-Autocomplete__input"
       disabled={false}
       id="autocomplete"
@@ -997,10 +997,10 @@ textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textar
   >
     <input
       aria-activedescendant=""
-      aria-autocomplete="both"
+      aria-autocomplete="kitten-prevent-autocomplete"
       aria-expanded={null}
       aria-owns="autocomplete-results"
-      autoComplete="off"
+      autoComplete="kitten-prevent-autocomplete"
       className="k-TextInput k-Form-Autocomplete__input k-TextInput--hasIcon"
       disabled={false}
       id="autocomplete"
@@ -1554,10 +1554,10 @@ textarea.k-TextInput:disabled + .c1.k-TextInput__isTextarea .k-TextInput__textar
   >
     <input
       aria-activedescendant=""
-      aria-autocomplete="both"
+      aria-autocomplete="kitten-prevent-autocomplete"
       aria-expanded={null}
       aria-owns="autocomplete-results"
-      autoComplete="off"
+      autoComplete="kitten-prevent-autocomplete"
       className="k-TextInput k-Form-Autocomplete__input k-TextInput--hasIcon"
       disabled={false}
       id="autocomplete"

@@ -219,13 +219,13 @@ export const Autocomplete = ({
         ref={inputEl}
         type="text"
         role="combobox"
-        autoComplete="off"
+        autoComplete="kitten-prevent-autocomplete"
         onChange={handleChange}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
         aria-owns={`${props.name}-results`}
         aria-expanded={showSuggestions ? items.length > 0 : null}
-        aria-autocomplete="both"
+        aria-autocomplete="kitten-prevent-autocomplete"
         aria-activedescendant={
           items[selectedSuggestionIndex]
             ? slugify(
