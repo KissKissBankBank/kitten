@@ -10,8 +10,8 @@
 ///
 ///   <span class="k-u-a11y-visuallyHidden">…</span>
 
-@mixin k-utilities-visually-hidden {
-  .k-u-a11y-visuallyHidden:not(:focus):not(:active) {
+@mixin k-u-visuallyHidden($addendum) {
+  .k-u-a11y-visuallyHidden#{$addendum}:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(100%);
     height: 1px;
@@ -19,5 +19,19 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+}
+
+@mixin k-utilities-visually-hidden {
+  @include k-u-visuallyHidden('');
+
+  @each $mq_name, $query in $k-media-queries {
+    $addendum: \@#{$mq_name}-up;
+
+    @if $mq_name != "xxs" {
+      @include k-media-min($mq_name) {
+        @include k-u-visuallyHidden($addendum);
+      }
+    }
   }
 }
