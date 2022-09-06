@@ -19,6 +19,7 @@ export default {
     value: '#006cff',
     contrastColor: '#ffffff',
     contrastRatio: 4.5,
+    disabled: false,
   },
   argTypes: {
     value: {
@@ -36,6 +37,7 @@ export default {
       description: 'Ratio de contraste visé pour la validation WCAG',
       control: 'number',
     },
+    disabled: { control: 'boolean' },
   },
   parameters: {
     docs: {
@@ -89,6 +91,7 @@ export const Default = ({ value, ...args }) => {
         >
           <Text size="small">Rendu&nbsp;:</Text>
           <Button
+            disabled={args.disabled}
             modifier="helium"
             rounded
             size="small"
