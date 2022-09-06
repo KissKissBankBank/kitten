@@ -66,6 +66,7 @@ const StyledColorSelect = styled.div`
     filter: grayscale(1);
     pointer-events: none;
 
+    .react-colorful__interactive,
     .react-colorful__pointer {
       display: none;
     }
