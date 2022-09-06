@@ -95,6 +95,17 @@ export const StyledWrapper = styled.div`
       flex: 1 0 auto;
       min-height: ${pxToRem(78)};
     }
+
+    .kiss-Pricing__table__col_features .kiss-Pricing__table__cell_feature {
+      display: flex;
+      gap: ${pxToRem(10)};
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .kiss-Pricing__table__col_plan .kiss-Pricing__table__cell_feature {
+      justify-self: center;
+    }
   }
 
   .kiss-Pricing__table__cell_title {
@@ -107,22 +118,6 @@ export const StyledWrapper = styled.div`
     margin: ${pxToRem(8)} ${pxToRem(0)};
   }
 
-  .kiss-Pricing__table__cell_feature {
-  }
-
-  .kiss-Pricing__table__col_features .kiss-Pricing__table__cell_feature {
-    display: flex;
-    gap: ${pxToRem(10)};
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .kiss-Pricing__table__col_plan .kiss-Pricing__table__cell_feature {
-    justify-self: center;
-  }
-
-  .kiss-Pricing__table__title {
-  }
   .kiss-Pricing__table__rate {
     font-weight: 700;
     font-size: var(--font-size-10);
