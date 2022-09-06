@@ -61,6 +61,16 @@ const StyledColorSelect = styled.div`
   .react-colorful__last-control {
     border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
   }
+
+  &.k-Form-ColorSelect--disabled {
+    filter: grayscale(1);
+    pointer-events: none;
+
+    .react-colorful__interactive,
+    .react-colorful__pointer {
+      display: none;
+    }
+  }
 `
 
 export const ColorSelect = ({
@@ -85,6 +95,8 @@ export const ColorSelect = ({
   }, [value])
 
   const handleChange = changedColor => {
+    if (disabled) return
+
     if (contrastRatio === 0) {
       setColor(changedColor)
     }
@@ -168,7 +180,9 @@ export const ColorSelect = ({
 
   return (
     <StyledColorSelect
-      className={classNames('k-Form-ColorSelect', className)}
+      className={classNames('k-Form-ColorSelect', className, {
+        'k-Form-ColorSelect--disabled': disabled,
+      })}
       {...props}
     >
       <div className="k-Form-ColorSelect__picker">
@@ -193,6 +207,7 @@ export const ColorSelect = ({
         />
         <TextInput
           {...inputProps}
+          disabled={disabled}
           size="small"
           center
           tag={forwardRef((
@@ -216,6 +231,7 @@ ColorSelect.propTypes = {
   value: PropTypes.string,
   contrastRatio: PropTypes.number,
   inputProps: PropTypes.object,
+  disabled: PropTypes.bool,
 }
 
 ColorSelect.defaultProps = {
@@ -223,4 +239,5 @@ ColorSelect.defaultProps = {
   value: '#006cff',
   contrastRatio: 4.5,
   inputProps: {},
+  disabled: false,
 }
