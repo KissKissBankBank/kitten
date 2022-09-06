@@ -112,11 +112,11 @@ const PricingTable = () => (
         style={{ '--current-row': 1 }}
       >
         <Text
-          className="k-u-letter-spacing-10"
-          className="kiss-Pricing__table__title"
+          className="k-u-letter-spacing-10 kiss-Pricing__table__title k-u-margin-none"
           transform="uppercase"
           weight="700"
           size="large"
+          tag="h3"
         >
           Starter
         </Text>
@@ -148,7 +148,7 @@ const PricingTable = () => (
           transform="uppercase"
           weight="700"
           size="small"
-          tag="h3"
+          tag="h4"
         >
           Financement Participatif
         </Text>
@@ -190,7 +190,7 @@ const PricingTable = () => (
           transform="uppercase"
           weight="700"
           size="small"
-          tag="h3"
+          tag="h4"
         >
           Accompagnement
         </Text>
@@ -239,11 +239,11 @@ const PricingTable = () => (
         style={{ '--current-row': 1 }}
       >
         <Text
-          className="k-u-letter-spacing-10"
-          className="kiss-Pricing__table__title"
+          className="k-u-letter-spacing-10 kiss-Pricing__table__title k-u-margin-none"
           transform="uppercase"
           weight="700"
           size="large"
+          tag="h3"
         >
           Pro
         </Text>
@@ -275,7 +275,7 @@ const PricingTable = () => (
           transform="uppercase"
           weight="700"
           size="small"
-          tag="h3"
+          tag="h4"
         >
           Financement Participatif
         </Text>
@@ -327,7 +327,7 @@ const PricingTable = () => (
           transform="uppercase"
           weight="700"
           size="small"
-          tag="h3"
+          tag="h4"
         >
           Accompagnement
         </Text>
@@ -386,11 +386,11 @@ const PricingTable = () => (
         style={{ '--current-row': 1 }}
       >
         <Text
-          className="k-u-letter-spacing-10"
-          className="kiss-Pricing__table__title"
+          className="k-u-letter-spacing-10 kiss-Pricing__table__title k-u-margin-none"
           transform="uppercase"
           weight="700"
           size="large"
+          tag="h3"
         >
           Expert
         </Text>
@@ -422,7 +422,7 @@ const PricingTable = () => (
           transform="uppercase"
           weight="700"
           size="small"
-          tag="h3"
+          tag="h4"
         >
           Financement Participatif
         </Text>
@@ -474,7 +474,7 @@ const PricingTable = () => (
           transform="uppercase"
           weight="700"
           size="small"
-          tag="h3"
+          tag="h4"
         >
           Accompagnement
         </Text>
