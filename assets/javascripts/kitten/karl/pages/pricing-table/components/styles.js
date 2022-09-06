@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { pxToRem, mq } from 'kitten'
 
 export const StyledWrapper = styled.div`
+  position: relative;
+
   @media ${mq.mobileAndTablet} {
     display: flex;
     flex-direction: column;

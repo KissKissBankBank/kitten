@@ -8,10 +8,20 @@ export default {
   parameters: {
     component: PricingTable,
   },
+  decorators: [
+    story => (
+      <div
+        className="has-overrides color-background"
+        style={{ '--bgcolor': 'var(--color-grey-100)' }}
+      >
+        {story()}
+      </div>
+    ),
+  ],
 }
 
 export const Default = args => (
-  <Container className="k-u-background-color-background2 k-u-padding-vertical-triple">
+  <Container className="k-u-padding-top-single k-u-padding-bottom-decuple">
     <PricingTable {...args} />
   </Container>
 )
