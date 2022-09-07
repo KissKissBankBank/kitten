@@ -4,9 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Utilities: Add media queries to VisuallyHidden utility.
-- Feature: `ColorSelect`: Add `disabled` prop.
-- Fix: `Autocomplete`: Update `autocomplete` prop.
+## [12.8.0] - 2022-09-07 🥷
+
+Features: 
+
+- Utilities: Add media queries to VisuallyHidden utility.
+- `ColorSelect`: Add `disabled` prop.
+
+
+Fix:
+
+- `Autocomplete`: Update `autocomplete` prop.
 
 ## [12.7.0] - 2022-09-05 👽
 
