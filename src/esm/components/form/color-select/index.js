@@ -16,7 +16,7 @@ const CONTRAST_COLOR = '#ffffff';
 const StyledColorSelect = styled.div.withConfig({
   displayName: "color-select__StyledColorSelect",
   componentId: "sc-nceujv-0"
-})([".k-Form-ColorSelect__picker{position:relative;svg{position:absolute;top:0;left:0;width:100%;height:", ";pointer-events:none;path{opacity:0.5;}}}.k-Form-ColorSelect__grid{margin-top:", ";display:grid;grid-template-columns:repeat(auto-fit,minmax(", ",1fr));gap:", ";}.k-Form-ColorSelect__swatch{border-radius:var(--border-radius-s);}.k-Form-ColorSelect__witness{grid-column:span 2;}.react-colorful{width:100%;}.react-colorful__interactive:focus-visible .react-colorful__pointer{outline-style:auto;}.react-colorful__saturation{border-radius:var(--border-radius-s) var(--border-radius-s) 0 0;}.react-colorful__last-control{border-radius:0 0 var(--border-radius-s) var(--border-radius-s);}"], pxToRem(164), pxToRem(10), pxToRem(95), pxToRem(10));
+})([".k-Form-ColorSelect__picker{position:relative;svg{position:absolute;top:0;left:0;width:100%;height:", ";pointer-events:none;path{opacity:0.5;}}}.k-Form-ColorSelect__grid{margin-top:", ";display:grid;grid-template-columns:repeat(auto-fit,minmax(", ",1fr));gap:", ";}.k-Form-ColorSelect__swatch{border-radius:var(--border-radius-s);}.k-Form-ColorSelect__witness{grid-column:span 2;}.react-colorful{width:100%;}.react-colorful__interactive:focus-visible .react-colorful__pointer{outline-style:auto;}.react-colorful__saturation{border-radius:var(--border-radius-s) var(--border-radius-s) 0 0;}.react-colorful__last-control{border-radius:0 0 var(--border-radius-s) var(--border-radius-s);}&.k-Form-ColorSelect--disabled{filter:grayscale(1);pointer-events:none;.react-colorful__interactive,.react-colorful__pointer{display:none;}}"], pxToRem(164), pxToRem(10), pxToRem(95), pxToRem(10));
 export const ColorSelect = _ref => {
   let {
     onChange,
@@ -39,6 +39,8 @@ export const ColorSelect = _ref => {
   }, [value]);
 
   const handleChange = changedColor => {
+    if (disabled) return;
+
     if (contrastRatio === 0) {
       setColor(changedColor);
     }
@@ -140,7 +142,9 @@ export const ColorSelect = _ref => {
   };
 
   return /*#__PURE__*/React.createElement(StyledColorSelect, _extends({
-    className: classNames('k-Form-ColorSelect', className)
+    className: classNames('k-Form-ColorSelect', className, {
+      'k-Form-ColorSelect--disabled': disabled
+    })
   }, props), /*#__PURE__*/React.createElement("div", {
     className: "k-Form-ColorSelect__picker"
   }, /*#__PURE__*/React.createElement(HexColorPicker, {
@@ -161,6 +165,7 @@ export const ColorSelect = _ref => {
       backgroundColor: color
     }
   }), /*#__PURE__*/React.createElement(TextInput, _extends({}, inputProps, {
+    disabled: disabled,
     size: "small",
     center: true,
     tag: /*#__PURE__*/forwardRef((props, ref // eslint-disable-line no-unused-vars
@@ -176,11 +181,13 @@ ColorSelect.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
   contrastRatio: PropTypes.number,
-  inputProps: PropTypes.object
+  inputProps: PropTypes.object,
+  disabled: PropTypes.bool
 };
 ColorSelect.defaultProps = {
   onChange: () => {},
   value: '#006cff',
   contrastRatio: 4.5,
-  inputProps: {}
+  inputProps: {},
+  disabled: false
 };
