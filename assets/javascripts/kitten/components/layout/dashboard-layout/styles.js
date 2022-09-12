@@ -83,6 +83,7 @@ export const StyledDashboard = styled.div`
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
       bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
+    z-index: 2;
 
     & + .k-DashboardLayout__toaster__spacer {
       max-height: 0;
@@ -303,10 +304,21 @@ export const StyledDashboard = styled.div`
 
   @media ${mq.tabletAndDesktop} {
     .k-DashboardLayout__toaster {
-      background-color: var(--color-grey-900);
-      color: var(--color-grey-000);
       border-radius: var(--border-radius-s);
       padding: ${pxToRem(20)};
+    }
+
+    .k-DashboardLayout__toaster:not(.k-DashboardLayout__toaster--fullSize) {
+      margin-inline: calc(var(--DashboardLayout-main-margin) - ${pxToRem(20)});
+    }
+
+    .k-DashboardLayout__toaster--dark {
+      background-color: var(--color-grey-900);
+      color: var(--color-grey-000);
+    }
+    .k-DashboardLayout__toaster--light {
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-900);
     }
   }
 

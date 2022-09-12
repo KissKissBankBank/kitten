@@ -50,9 +50,9 @@ export default {
       flowShowTwoButtons: false,
       flowShowUnsavedText: false,
     },
-    toasterIsOpen: false,
     multiMenu: false,
     hasDarkBg: false,
+    toasterIsOpen: false,
   },
   argTypes: {
     quickAccessLinkText: { control: 'text' },
@@ -70,7 +70,6 @@ export default {
     },
     displayHeader: { name: 'displayHeader (story prop)', control: 'boolean' },
     displayAlerts: { name: 'displayAlerts (story prop)', control: 'boolean' },
-    toasterIsOpen: { name: 'toasterIsOpen (story prop)', control: 'boolean' },
     status: {
       name: 'Project status (story prop)',
       control: 'radio',
@@ -79,6 +78,7 @@ export default {
     flowProps: { name: 'Flow Props (story prop)', control: 'object' },
     multiMenu: { name: 'MultiMenu (story prop)', control: 'boolean' },
     hasDarkBg: 'boolean',
+    toasterIsOpen: { name: 'toasterIsOpen (story prop)', control: 'boolean' },
   },
 }
 
@@ -109,7 +109,7 @@ export const WithDashboardContent = args => {
 export const WithRewardContent = args => {
   return (
     <StoryLayout {...args}>
-      <StoryWithReward />
+      <StoryWithReward toasterIsOpen={args.toasterIsOpen} />
     </StoryLayout>
   )
 }
@@ -117,7 +117,7 @@ export const WithRewardContent = args => {
 export const WithFlowContent = ({ flowProps, ...args }) => {
   return (
     <StoryLayout {...args} fullHeightContent hasDarkBg>
-      <StoryWithFlow {...flowProps} />
+      <StoryWithFlow {...flowProps} toasterIsOpen={args.toasterIsOpen} />
     </StoryLayout>
   )
 }
