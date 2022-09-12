@@ -352,13 +352,19 @@ const Alerts = ({ className, ...props }) => (
   />
 )
 
-const Toaster = ({ className, isOpen, children, ...props }) => {
+const Toaster = ({
+  className,
+  isOpen,
+  children,
+  background = 'dark',
+  fullSize = true,
+  ...props
+}) => {
   return (
     <>
       <section
         className={classNames(
           'k-DashboardLayout__toaster__wrapper',
-          'k-DashboardLayout__fullWidth',
           className,
           {
             'k-DashboardLayout__toaster--isOpen': isOpen,
@@ -367,7 +373,17 @@ const Toaster = ({ className, isOpen, children, ...props }) => {
         aria-live="polite"
         {...props}
       >
-        <div className="k-DashboardLayout__toaster">{children}</div>
+        <div
+          className={classNames(
+            'k-DashboardLayout__toaster',
+            `k-DashboardLayout__toaster--${background}`,
+            {
+              'k-DashboardLayout__toaster--fullSize': fullSize,
+            },
+          )}
+        >
+          {children}
+        </div>
       </section>
       <div className="k-DashboardLayout__toaster__spacer" />
     </>
@@ -395,6 +411,12 @@ Header.propTypes = {
   }),
   hasButton: PropTypes.bool,
   isOpen: PropTypes.bool,
+}
+
+Toaster.propTypes = {
+  isOpen: PropTypes.bool,
+  fullSize: PropTypes.bool,
+  background: PropTypes.oneOf(['dark', 'light']),
 }
 
 DashboardLayout.SiteHeader = SiteHeader

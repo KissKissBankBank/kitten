@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- `DashboardLayout`: Add `background` and `fullSize` props to `Toaster` subcomponent.
+
 ## [12.8.0] - 2022-09-07 🥷
 
 Features: 

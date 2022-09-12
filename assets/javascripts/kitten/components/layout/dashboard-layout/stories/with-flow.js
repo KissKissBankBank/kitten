@@ -12,6 +12,7 @@ import {
   InstagramIcon,
   YoutubeIcon,
   GlobeIcon,
+  FlexWrapper,
 } from 'kitten'
 
 const options = [
@@ -51,6 +52,7 @@ export const StoryWithFlow = ({
   flowLoading,
   flowShowTwoButtons,
   flowShowUnsavedText,
+  toasterIsOpen,
 }) => (
   <DashboardLayout.Flow loading={flowLoading}>
     <DashboardLayout.Flow.Title modifier="quinary">
@@ -194,5 +196,25 @@ export const StoryWithFlow = ({
         Save
       </Button>
     </DashboardLayout.Flow.Nav>
+
+    <DashboardLayout.Toaster isOpen={toasterIsOpen}>
+      <FlexWrapper
+        gap={10}
+        direction="row"
+        className="k-u-flex-alignItems-center"
+      >
+        <div style={{ flex: '1 0 auto' }} className="k-u-hidden@xs-down">
+          <Text color="background1" size="small" weight="500">
+            Text
+          </Text>
+        </div>
+        <Button modifier="boron" size="small" className="k-u-hidden@m-down">
+          Hello
+        </Button>
+        <Button modifier="helium" size="small">
+          Hello
+        </Button>
+      </FlexWrapper>
+    </DashboardLayout.Toaster>
   </DashboardLayout.Flow>
 )

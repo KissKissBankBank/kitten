@@ -83,6 +83,7 @@ export const StyledDashboard = styled.div`
     opacity: 0;
     transition: opacity 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
       bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.3s ease-in-out;
+    z-index: 2;
 
     & + .k-DashboardLayout__toaster__spacer {
       max-height: 0;
@@ -193,8 +194,7 @@ export const StyledDashboard = styled.div`
         position: relative;
 
         .k-DashboardLayout__heading {
-          padding-left: ${pxToRem(CONTAINER_PADDING)};
-          padding-right: ${pxToRem(CONTAINER_PADDING)};
+          padding-inline: ${pxToRem(CONTAINER_PADDING)};
           height: ${pxToRem(65)};
           flex: 0 0 ${pxToRem(65)};
           display: flex;
@@ -244,13 +244,11 @@ export const StyledDashboard = styled.div`
           flex: 1 0 auto;
 
           &:not(.k-DashboardLayout__main--fullHeight) {
-            padding-top: ${pxToRem(80)};
-            padding-bottom: ${pxToRem(80)};
+            padding-block: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: var(--DashboardLayout-main-margin);
-            margin-right: var(--DashboardLayout-main-margin);
+            margin-inline: var(--DashboardLayout-main-margin);
           }
         }
       }
@@ -286,13 +284,11 @@ export const StyledDashboard = styled.div`
       }
       .k-DashboardLayout__mainWrapper {
         .k-DashboardLayout__heading {
-          padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
-          padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
+          padding-inline: ${pxToRem(CONTAINER_PADDING_THIN)};
         }
         .k-DashboardLayout__main {
           &:not(.k-DashboardLayout__main--fullHeight) {
-            padding-top: ${pxToRem(50)};
-            padding-bottom: ${pxToRem(50)};
+            padding-block: ${pxToRem(50)};
           }
         }
       }
@@ -303,10 +299,21 @@ export const StyledDashboard = styled.div`
 
   @media ${mq.tabletAndDesktop} {
     .k-DashboardLayout__toaster {
-      background-color: var(--color-grey-900);
-      color: var(--color-grey-000);
       border-radius: var(--border-radius-s);
       padding: ${pxToRem(20)};
+    }
+
+    .k-DashboardLayout__toaster:not(.k-DashboardLayout__toaster--fullSize) {
+      margin-inline: calc(var(--DashboardLayout-main-margin) - ${pxToRem(20)});
+    }
+
+    .k-DashboardLayout__toaster--dark {
+      background-color: var(--color-grey-900);
+      color: var(--color-grey-000);
+    }
+    .k-DashboardLayout__toaster--light {
+      background-color: var(--color-grey-200);
+      color: var(--color-grey-900);
     }
   }
 
@@ -366,13 +373,11 @@ export const StyledDashboard = styled.div`
 
         .k-DashboardLayout__main {
           &:not(.k-DashboardLayout__main--fullHeight) {
-            padding-top: ${pxToRem(80)};
-            padding-bottom: ${pxToRem(80)};
+            padding-block: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: var(--DashboardLayout-main-margin);
-            margin-right: var(--DashboardLayout-main-margin);
+            margin-inline: var(--DashboardLayout-main-margin);
           }
         }
       }
