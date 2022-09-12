@@ -14,11 +14,14 @@ import {
   useWindowWidth,
   ScreenConfig,
   Text,
+  DashboardLayout,
+  FlexWrapper,
+  Button,
 } from 'kitten'
 
 const StyledDragAndDropList = styled(DragAndDropList)`
   @media ${mq.tabletAndDesktop} {
-    margin-left: -${DRAG_AND_DROP_LIST_BUTTON_SHIFT};
+    margin-left: -${DRAG_AND_DROP_LIST_BUTTON_SHIFT} !important;
   }
 
   @media ${mq.mobile} {
@@ -85,7 +88,7 @@ const RewardCardComponent = ({
   </SummaryCard>
 )
 
-export const StoryWithReward = () => {
+export const StoryWithReward = ({ toasterIsOpen }) => {
   const { ref, size } = useSummaryCardResizeObserver()
 
   // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
@@ -179,6 +182,27 @@ export const StoryWithReward = () => {
           simpleName="Anim enim deserunt ut mollit"
         />
       </StyledDragAndDropList>
+
+      <DashboardLayout.Toaster
+        background="light"
+        isOpen={toasterIsOpen}
+        fullSize={false}
+      >
+        <FlexWrapper
+          gap={10}
+          direction="row"
+          className="k-u-flex-alignItems-center"
+        >
+          <div className="k-u-flex-grow-single k-u-hidden@xs-down">
+            <Text size="small" weight="500">
+              Text
+            </Text>
+          </div>
+          <Button modifier="beryllium" size="small">
+            Hello
+          </Button>
+        </FlexWrapper>
+      </DashboardLayout.Toaster>
     </div>
   )
 }
