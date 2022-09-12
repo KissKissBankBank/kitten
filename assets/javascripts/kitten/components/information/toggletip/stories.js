@@ -1,6 +1,7 @@
 import React from 'react'
 import { Toggletip } from './index'
 import { DocsPage } from 'storybook/docs-page'
+import { Button } from 'kitten'
 
 export default {
   title: 'Information/Toggletip',
@@ -57,6 +58,22 @@ CustomTargetElement.args = {
   ),
 }
 CustomTargetElement.argTypes = argTypes
+
+export const ButtonTargetElement = args => (
+  <div className="k-u-align-right">
+    <Toggletip {...args} />
+  </div>
+)
+ButtonTargetElement.args = {
+  ...args,
+  modifier: 'disabled',
+  targetElement: (
+    <Button disabled as="span">
+      Target button
+    </Button>
+  ),
+}
+ButtonTargetElement.argTypes = argTypes
 
 export const MultipleToggletips = args => (
   <>
