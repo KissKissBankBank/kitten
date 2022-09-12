@@ -194,8 +194,7 @@ export const StyledDashboard = styled.div`
         position: relative;
 
         .k-DashboardLayout__heading {
-          padding-left: ${pxToRem(CONTAINER_PADDING)};
-          padding-right: ${pxToRem(CONTAINER_PADDING)};
+          padding-inline: ${pxToRem(CONTAINER_PADDING)};
           height: ${pxToRem(65)};
           flex: 0 0 ${pxToRem(65)};
           display: flex;
@@ -245,13 +244,11 @@ export const StyledDashboard = styled.div`
           flex: 1 0 auto;
 
           &:not(.k-DashboardLayout__main--fullHeight) {
-            padding-top: ${pxToRem(80)};
-            padding-bottom: ${pxToRem(80)};
+            padding-block: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: var(--DashboardLayout-main-margin);
-            margin-right: var(--DashboardLayout-main-margin);
+            margin-inline: var(--DashboardLayout-main-margin);
           }
         }
       }
@@ -287,13 +284,11 @@ export const StyledDashboard = styled.div`
       }
       .k-DashboardLayout__mainWrapper {
         .k-DashboardLayout__heading {
-          padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
-          padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
+          padding-inline: ${pxToRem(CONTAINER_PADDING_THIN)};
         }
         .k-DashboardLayout__main {
           &:not(.k-DashboardLayout__main--fullHeight) {
-            padding-top: ${pxToRem(50)};
-            padding-bottom: ${pxToRem(50)};
+            padding-block: ${pxToRem(50)};
           }
         }
       }
@@ -378,13 +373,11 @@ export const StyledDashboard = styled.div`
 
         .k-DashboardLayout__main {
           &:not(.k-DashboardLayout__main--fullHeight) {
-            padding-top: ${pxToRem(80)};
-            padding-bottom: ${pxToRem(80)};
+            padding-block: ${pxToRem(80)};
           }
 
           > *:not(.k-DashboardLayout__fullWidth) {
-            margin-left: var(--DashboardLayout-main-margin);
-            margin-right: var(--DashboardLayout-main-margin);
+            margin-inline: var(--DashboardLayout-main-margin);
           }
         }
       }
