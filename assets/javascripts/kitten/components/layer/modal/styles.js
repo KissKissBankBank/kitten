@@ -37,6 +37,10 @@ export const GlobalStyle = createGlobalStyle`
       &.k-Modal__wrapper--large {
         --modal-width: ${pxToRem(900)};
       }
+
+      &.k-Modal__wrapper--huge {
+        --modal-width: ${pxToRem(1200)};
+      }
     }
   }
 
