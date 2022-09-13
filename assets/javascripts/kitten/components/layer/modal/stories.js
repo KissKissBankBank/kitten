@@ -111,7 +111,7 @@ const argTypes = {
   },
   size: {
     name: 'size',
-    options: ['small', 'medium', 'large'],
+    options: ['small', 'medium', 'large', 'huge'],
     control: 'select',
   },
   isOpen: {
