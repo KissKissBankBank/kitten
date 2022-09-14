@@ -42,6 +42,7 @@ import {
   RefundIcon,
   RocketIconNext,
   SpeechBubbleIconNext,
+  SearchIconNext,
   StarIconNext,
   StatsIconNext,
   StatusIconNext,
@@ -220,6 +221,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <RefundIcon color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <SearchIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
           <SpeechBubbleIconNext color={colorInput} />
