@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- `IconBadge`: Add `state` prop, default to `circle`.
 - Icons: Add `SearchIconNext` icon component.
 - `DashboardLayout`: Add `background` and `fullSize` props to `Toaster` subcomponent.
 - `Modal`: Add `huge` value to `size` prop.

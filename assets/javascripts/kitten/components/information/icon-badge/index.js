@@ -17,6 +17,46 @@ const StyledBadge = styled.span`
   background-color: var(--iconBadge-background-color, var(--color-primary-500));
   border-color: var(--color-primary-300);
 
+
+  &.k-IconBadge--star {
+    background-color: var(--iconBadge-background-color, var(--color-primary-500));
+    border-radius: 0;
+    width: ${pxToRem(30)};
+    height: ${pxToRem(30)};
+    position: relative;
+    -webkit-transform: rotate(-11deg);
+    -moz-transform: rotate(-11deg);
+    -ms-transform: rotate(-11deg);
+
+    :before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: ${pxToRem(30)};
+      width: ${pxToRem(30)};
+      background-color: var(--iconBadge-background-color, var(--color-primary-500));
+      z-index:-2;
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+    }
+
+    :after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: ${pxToRem(30)};
+      width: ${pxToRem(30)};
+      background-color: var(--iconBadge-background-color, var(--color-primary-500));
+      z-index:-2;
+      -webkit-transform: rotate(60deg);
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+    }
+  }
+
   &.k-IconBadge--empty {
     border-color: var(--color-grey-300);
     background-color: var(--color-grey-000);
@@ -105,6 +145,7 @@ export const IconBadge = ({
   border,
   backgroundColor,
   status,
+  shape,
   hasBorder,
   ...others
 }) => {
@@ -115,6 +156,7 @@ export const IconBadge = ({
         className,
         `k-IconBadge--${size}`,
         `k-IconBadge--${status}`,
+        `k-IconBadge--${shape}`,
         {
           'k-IconBadge--empty': empty,
           'k-IconBadge--hasBorderStyles': !isEmpty(border),
@@ -141,6 +183,7 @@ IconBadge.defaultProps = {
   border: {},
   backgroundColor: null,
   status: 'info',
+  shape: 'circle',
   hasBorder: false,
 }
 
@@ -161,5 +204,6 @@ IconBadge.propTypes = {
     'disabled',
     'pending',
   ]),
+  shape: PropTypes.oneOf([ 'circle', "star" ]),
   hasBorder: PropTypes.bool,
 }
