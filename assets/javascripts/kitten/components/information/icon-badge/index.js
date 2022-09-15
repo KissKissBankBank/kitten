@@ -27,8 +27,8 @@ const StyledBadge = styled.span`
   &.k-IconBadge--star {
     background-color: var(--iconBadge-background-color);
     border-radius: 0;
-    width: ${pxToRem(30)};
-    height: ${pxToRem(30)};
+    min-width: ${pxToRem(30)};
+    min-height: ${pxToRem(30)};
     position: relative;
     transform: rotate(-11deg);
     transform-origin: 50% 50%;
@@ -44,8 +44,8 @@ const StyledBadge = styled.span`
       position: absolute;
       top: 0;
       left: 0;
-      height: ${pxToRem(30)};
-      width: ${pxToRem(30)};
+      min-height: ${pxToRem(30)};
+      min-width: ${pxToRem(30)};
       background-color: var(--iconBadge-background-color);
       z-index: -2;
       transform-origin: 50% 50%;
@@ -68,6 +68,12 @@ const StyledBadge = styled.span`
       max-width: ${pxToRem(12)};
       max-height: ${pxToRem(12)};
     }
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(16)};
+      min-height: ${pxToRem(16)};
+    }
   }
 
   &.k-IconBadge--small {
@@ -78,16 +84,34 @@ const StyledBadge = styled.span`
     & svg {
       max-width: ${pxToRem(14)};
     }
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(20)};
+      min-height: ${pxToRem(20)};
+    }
   }
 
   &.k-IconBadge--large {
     min-width: ${pxToRem(40)};
     min-height: ${pxToRem(40)};
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(40)};
+      min-height: ${pxToRem(40)};
+    }
   }
 
   &.k-IconBadge--huge {
     min-width: ${pxToRem(50)};
     min-height: ${pxToRem(50)};
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(50)};
+      min-height: ${pxToRem(50)};
+    }
   }
 
   svg {
