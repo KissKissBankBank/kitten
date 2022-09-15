@@ -17,51 +17,45 @@ const StyledBadge = styled.span`
   background-color: var(--iconBadge-background-color);
   border-color: var(--iconBadge-border-color);
 
+  & > span {
+    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &.k-IconBadge--star {
-    background-color: var(
-      --iconBadge-background-color,
-      var(--color-primary-500)
-    );
+    background-color: var(--iconBadge-background-color);
     border-radius: 0;
     width: ${pxToRem(30)};
     height: ${pxToRem(30)};
     position: relative;
-    -webkit-transform: rotate(-11deg);
-    -moz-transform: rotate(-11deg);
-    -ms-transform: rotate(-11deg);
+    transform: rotate(-11deg);
+    transform-origin: 50% 50%;
 
-    :before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: ${pxToRem(30)};
-      width: ${pxToRem(30)};
-      background-color: var(
-        --iconBadge-background-color,
-        var(--color-primary-500)
-      );
-      z-index: -2;
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
+    & > span {
+      transform: rotate(11deg);
+      transform-origin: inherit;
     }
 
-    :after {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       height: ${pxToRem(30)};
       width: ${pxToRem(30)};
-      background-color: var(
-        --iconBadge-background-color,
-        var(--color-primary-500)
-      );
+      background-color: var(--iconBadge-background-color);
       z-index: -2;
-      -webkit-transform: rotate(60deg);
-      -moz-transform: rotate(60deg);
-      -ms-transform: rotate(60deg);
+      transform-origin: 50% 50%;
+    }
+
+    ::before {
+      transform: rotate(30deg);
+    }
+    ::after {
+      transform: rotate(60deg);
     }
   }
 
@@ -205,7 +199,7 @@ export const IconBadge = ({
       }}
       {...others}
     >
-      {children}
+      <span>{children}</span>
     </StyledBadge>
   )
 }
