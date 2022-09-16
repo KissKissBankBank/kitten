@@ -4,11 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- `IconBadge`: Add `state` prop, default to `circle`.
+## [12.9.0] - 2022-09-16 👋
+
+Features:
+
 - Icons: Add `SearchIconNext` icon component.
+- `IconBadge`: Add `state` prop, default to `circle`.
 - `DashboardLayout`: Add `background` and `fullSize` props to `Toaster` subcomponent.
 - `Modal`: Add `huge` value to `size` prop.
-- `Button`: Add `nitrogen` modifier value.
+- `Button`: Add `nitrogen` value to `modifier` prop.
 
 ## [12.8.0] - 2022-09-07 🥷
 
@@ -16,7 +20,6 @@ Features:
 
 - Utilities: Add media queries to VisuallyHidden utility.
 - `ColorSelect`: Add `disabled` prop.
-
 
 Fix:
 

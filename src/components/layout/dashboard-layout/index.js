@@ -310,15 +310,19 @@ const Toaster = _ref7 => {
     className,
     isOpen,
     children,
+    background = 'dark',
+    fullSize = true,
     ...props
   } = _ref7;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("section", (0, _extends2.default)({
-    className: (0, _classnames.default)('k-DashboardLayout__toaster__wrapper', 'k-DashboardLayout__fullWidth', className, {
+    className: (0, _classnames.default)('k-DashboardLayout__toaster__wrapper', className, {
       'k-DashboardLayout__toaster--isOpen': isOpen
     }),
     "aria-live": "polite"
   }, props), /*#__PURE__*/_react.default.createElement("div", {
-    className: "k-DashboardLayout__toaster"
+    className: (0, _classnames.default)('k-DashboardLayout__toaster', "k-DashboardLayout__toaster--" + background, {
+      'k-DashboardLayout__toaster--fullSize': fullSize
+    })
   }, children)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-DashboardLayout__toaster__spacer"
   }));
@@ -344,6 +348,11 @@ Header.propTypes = {
   }),
   hasButton: _propTypes.default.bool,
   isOpen: _propTypes.default.bool
+};
+Toaster.propTypes = {
+  isOpen: _propTypes.default.bool,
+  fullSize: _propTypes.default.bool,
+  background: _propTypes.default.oneOf(['dark', 'light'])
 };
 DashboardLayout.SiteHeader = SiteHeader;
 DashboardLayout.Header = Header;
