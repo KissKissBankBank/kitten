@@ -34,8 +34,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -119,10 +119,6 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -163,20 +159,20 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0:hover {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:focus {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:active {
   border-color: var(--color-primary-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:disabled,
@@ -410,7 +406,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   min-width: 0;
   border: var(--border-width) solid var(--color-primary-500);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -494,10 +490,6 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -539,19 +531,19 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c0:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:focus {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:active {
   border-color: var(--color-primary-900);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:disabled,
@@ -784,7 +776,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-danger-300);
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
   color: var(--color-danger-500);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
@@ -869,10 +861,6 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -913,19 +901,19 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c0:hover {
   border-color: var(--color-danger-500);
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
   color: var(--color-danger-500);
 }
 
 .c0:focus {
   border-color: var(--color-danger-500);
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
   color: var(--color-danger-500);
 }
 
 .c0:active {
   border-color: var(--color-danger-700);
-  background-color: var(--color-grey-000,#fff);
+  background-color: var(--color-grey-000);
   color: var(--color-danger-700);
 }
 
@@ -1160,7 +1148,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   min-width: 0;
   border: var(--border-width) solid var(--color-primary-500);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -1244,10 +1232,6 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1289,19 +1273,19 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
 .c0:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:focus {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:active {
   border-color: var(--color-primary-900);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:disabled,
@@ -1535,7 +1519,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   min-width: 0;
   border: var(--border-width) solid var(--color-primary-500);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -1619,10 +1603,6 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1664,19 +1644,19 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
 .c0:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:focus {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:active {
   border-color: var(--color-primary-900);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c0:disabled,
