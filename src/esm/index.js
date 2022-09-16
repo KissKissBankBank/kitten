@@ -226,6 +226,7 @@ export { QuestionBubbleIconNext } from './components/graphics/icons-next/questio
 export { RefundIcon } from './components/graphics/icons-next/refund-icon';
 export { RocketIconNext } from './components/graphics/icons-next/rocket-icon-next';
 export { SpeechBubbleIconNext } from './components/graphics/icons-next/speech-bubble-icon-next';
+export { SearchIconNext } from './components/graphics/icons-next/search-icon-next';
 export { StarIconNext } from './components/graphics/icons-next/star-icon-next';
 export { StatsIconNext } from './components/graphics/icons-next/stats-icon-next';
 export { StatusIconNext } from './components/graphics/icons-next/status-icon-next';

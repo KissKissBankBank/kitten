@@ -293,7 +293,7 @@ Modal.propTypes = {
   labelledby: _propTypes.default.string,
   describedby: _propTypes.default.string,
   closeButtonLabel: _propTypes.default.string,
-  size: _propTypes.default.oneOf(['small', 'medium', 'large']),
+  size: _propTypes.default.oneOf(['small', 'medium', 'large', 'huge']),
   isOpen: _propTypes.default.bool,
   zIndex: _propTypes.default.number,
   hasCloseButton: _propTypes.default.bool,
