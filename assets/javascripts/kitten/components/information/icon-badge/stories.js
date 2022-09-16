@@ -39,7 +39,20 @@ export default {
     status: {
       name: 'status',
       control: 'select',
-      options: ['info', 'success', 'danger', 'warning', 'disabled', 'pending'],
+      options: [
+        'info',
+        'success',
+        'danger',
+        'warning',
+        'disabled',
+        'pending',
+        'light',
+      ],
+    },
+    shape: {
+      name: 'shape',
+      control: 'select',
+      options: ['circle', 'star'],
     },
     hasBorder: {
       name: 'hasBorder',
@@ -54,6 +67,7 @@ const args = {
   backgroundColor: null,
   children: <StarIcon color={COLORS.background1} />,
   status: 'info',
+  shape: 'circle',
   hasBorder: false,
 }
 
