@@ -258,7 +258,7 @@ export const Button = ({
 }) => {
   let internalModifier = active ? 'lithium' : modifier
 
-  if (fit === 'icon' && modifier === 'hydrogen') {
+  if (fit === 'icon' && modifier === 'hydrogen' && !active) {
     internalModifier = 'nitrogen'
   }
 
