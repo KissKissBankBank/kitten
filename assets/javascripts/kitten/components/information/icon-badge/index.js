@@ -14,38 +14,49 @@ const StyledBadge = styled.span`
   min-width: ${pxToRem(30)};
   min-height: ${pxToRem(30)};
   border-radius: var(--border-radius-rounded);
-  background-color: var(--iconBadge-background-color, var(--color-primary-500));
-  border-color: var(--color-primary-300);
+  background-color: var(--iconBadge-background-color);
+  border-color: var(--iconBadge-border-color);
 
-  &.k-IconBadge--empty {
-    border-color: var(--color-grey-300);
-    background-color: var(--color-grey-000);
+  & > span {
+    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &.k-IconBadge--success,
-  &.k-IconBadge--valid {
-    background-color: var(--color-success-500);
-    border-color: var(--color-success-300);
-  }
+  &.k-IconBadge--star {
+    background-color: var(--iconBadge-background-color);
+    border-radius: 0;
+    min-width: ${pxToRem(30)};
+    min-height: ${pxToRem(30)};
+    position: relative;
+    transform: rotate(-11deg);
+    transform-origin: 50% 50%;
 
-  &.k-IconBadge--disabled {
-    background-color: var(--color-grey-600);
-    border-color: var(--color-grey-300);
-  }
+    & > span {
+      transform: rotate(11deg);
+      transform-origin: inherit;
+    }
 
-  &.k-IconBadge--danger {
-    background-color: var(--color-danger-500);
-    border-color: var(--color-danger-300);
-  }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: ${pxToRem(30)};
+      min-width: ${pxToRem(30)};
+      background-color: var(--iconBadge-background-color);
+      z-index: -2;
+      transform-origin: 50% 50%;
+    }
 
-  &.k-IconBadge--warning {
-    background-color: var(--color-warning-500);
-    border-color: var(--color-warning-300);
-  }
-
-  &.k-IconBadge--pending {
-    background-color: var(--color-grey-900);
-    border-color: var(--color-grey-700);
+    ::before {
+      transform: rotate(30deg);
+    }
+    ::after {
+      transform: rotate(60deg);
+    }
   }
 
   &.k-IconBadge--micro {
@@ -57,6 +68,12 @@ const StyledBadge = styled.span`
       max-width: ${pxToRem(12)};
       max-height: ${pxToRem(12)};
     }
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(16)};
+      min-height: ${pxToRem(16)};
+    }
   }
 
   &.k-IconBadge--small {
@@ -67,16 +84,34 @@ const StyledBadge = styled.span`
     & svg {
       max-width: ${pxToRem(14)};
     }
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(20)};
+      min-height: ${pxToRem(20)};
+    }
   }
 
   &.k-IconBadge--large {
     min-width: ${pxToRem(40)};
     min-height: ${pxToRem(40)};
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(40)};
+      min-height: ${pxToRem(40)};
+    }
   }
 
   &.k-IconBadge--huge {
     min-width: ${pxToRem(50)};
     min-height: ${pxToRem(50)};
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(50)};
+      min-height: ${pxToRem(50)};
+    }
   }
 
   svg {
@@ -105,9 +140,66 @@ export const IconBadge = ({
   border,
   backgroundColor,
   status,
+  shape,
   hasBorder,
   ...others
 }) => {
+  const internalBackgroundColor = (() => {
+    if (!!backgroundColor) return backgroundColor
+    if (!!empty) return 'var(--color-grey-000)'
+    switch (status) {
+      case 'success':
+        return 'var(--color-success-500)'
+
+      case 'disabled':
+        return 'var(--color-grey-600)'
+
+      case 'danger':
+        return 'var(--color-danger-500)'
+
+      case 'warning':
+        return 'var(--color-warning-500)'
+
+      case 'pending':
+        return 'var(--color-grey-900)'
+
+      case 'light':
+        return 'var(--color-grey-300)'
+
+      case 'info':
+      default:
+        return 'var(--color-primary-500)'
+    }
+  })()
+
+  const internalBorderColor = (() => {
+    if (!!border && 'color' in border) return border.color
+    if (!!empty) return 'var(--color-grey-300)'
+    switch (status) {
+      case 'success':
+        return 'var(--color-success-300)'
+
+      case 'disabled':
+        return 'var(--color-grey-300)'
+
+      case 'danger':
+        return 'var(--color-danger-300)'
+
+      case 'warning':
+        return 'var(--color-warning-300)'
+
+      case 'pending':
+        return 'var(--color-grey-700)'
+
+      case 'light':
+        return 'var(--color-grey-100)'
+
+      case 'info':
+      default:
+        return 'var(--color-primary-300)'
+    }
+  })()
+
   return (
     <StyledBadge
       className={classNames(
@@ -115,6 +207,7 @@ export const IconBadge = ({
         className,
         `k-IconBadge--${size}`,
         `k-IconBadge--${status}`,
+        `k-IconBadge--${shape}`,
         {
           'k-IconBadge--empty': empty,
           'k-IconBadge--hasBorderStyles': !isEmpty(border),
@@ -122,15 +215,15 @@ export const IconBadge = ({
         },
       )}
       style={{
-        '--iconBadge-background-color': backgroundColor ?? null,
+        '--iconBadge-background-color': internalBackgroundColor ?? null,
         '--iconBadge-border-width':
           'width' in border ? pxToRem(border.width) : null,
         '--iconBadge-border-style': border?.style ?? null,
-        '--iconBadge-border-color': border?.color ?? null,
+        '--iconBadge-border-color': internalBorderColor,
       }}
       {...others}
     >
-      {children}
+      <span>{children}</span>
     </StyledBadge>
   )
 }
@@ -141,6 +234,7 @@ IconBadge.defaultProps = {
   border: {},
   backgroundColor: null,
   status: 'info',
+  shape: 'circle',
   hasBorder: false,
 }
 
@@ -160,6 +254,8 @@ IconBadge.propTypes = {
     'warning',
     'disabled',
     'pending',
+    'light',
   ]),
+  shape: PropTypes.oneOf(['circle', 'star']),
   hasBorder: PropTypes.bool,
 }

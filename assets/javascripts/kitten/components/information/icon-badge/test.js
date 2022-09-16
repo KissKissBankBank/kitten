@@ -24,6 +24,7 @@ describe('<IconBadge />', () => {
           <IconBadge
             children={<svg />}
             size="small"
+            shape="star"
             border={{
               width: 2,
               style: 'solid',
