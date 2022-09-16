@@ -33,9 +33,9 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -119,10 +119,6 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -163,20 +159,20 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 .c0:hover {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:focus {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:active {
   border-color: var(--color-primary-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:disabled,
@@ -244,7 +240,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 
 <button
   aria-label="Close"
-  className="c0 k-Button k-Button--medium k-Button--hydrogen k-Button--fit-icon"
+  className="c0 k-Button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": 0,
@@ -302,9 +298,9 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  border: var(--border-width) solid var(--color-grey-400);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -388,10 +384,6 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -432,20 +424,20 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 .c0:hover {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:focus {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:active {
   border-color: var(--color-primary-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c0:disabled,
@@ -513,7 +505,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 
 <button
   aria-label="close"
-  className="c0 k-Button k-Button--small k-Button--hydrogen k-Button--fit-icon"
+  className="c0 k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
   style={
     Object {
       "--Button-border-radius": 0,

@@ -34,8 +34,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
   border: var(--border-width) solid var(--color-grey-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -119,10 +119,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c1.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c1.k-Button--fit-fluid {
   width: 100%;
 }
@@ -163,20 +159,20 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c1:hover {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c1:focus {
   border-color: var(--color-primary-500);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c1:active {
   border-color: var(--color-primary-700);
-  background-color: var(--color-grey-000,#fff);
-  color: var(--color-grey-900,#222);
+  background-color: var(--color-grey-000);
+  color: var(--color-grey-900);
 }
 
 .c1:disabled,
@@ -220,7 +216,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   min-width: 0;
   border: var(--border-width) solid var(--color-primary-500);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -304,10 +300,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   height: var(--Button-dimension);
 }
 
-.c2.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c2.k-Button--fit-fluid {
   width: 100%;
 }
@@ -349,19 +341,19 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c2:hover {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c2:focus {
   border-color: var(--color-primary-700);
   background-color: var(--color-primary-100);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c2:active {
   border-color: var(--color-primary-900);
   background-color: var(--color-primary-300);
-  color: var(--color-grey-900,#222);
+  color: var(--color-grey-900);
 }
 
 .c2:disabled,

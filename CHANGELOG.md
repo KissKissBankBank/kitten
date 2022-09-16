@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Icons: Add `SearchIconNext` icon component.
 - `DashboardLayout`: Add `background` and `fullSize` props to `Toaster` subcomponent.
 - `Modal`: Add `huge` value to `size` prop.
+- `Button`: Add `nitrogen` modifier value.
 
 ## [12.8.0] - 2022-09-07 🥷
 

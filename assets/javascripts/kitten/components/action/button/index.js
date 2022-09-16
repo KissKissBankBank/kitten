@@ -10,6 +10,7 @@ import classNames from 'classnames'
 
 export const buttonModifiers = [
   'hydrogen',
+  'nitrogen',
   'helium',
   'lithium',
   'beryllium',
@@ -159,10 +160,6 @@ const StyledButton = styled.button`
     overflow: hidden;
     width: var(--Button-dimension);
     height: var(--Button-dimension);
-
-    &.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-      border-color: var(--color-grey-400);
-    }
   }
 
   &.k-Button--fit-fluid {
@@ -259,7 +256,11 @@ export const Button = ({
   bulletColor,
   ...props
 }) => {
-  const internalModifier = active ? 'lithium' : modifier
+  let internalModifier = active ? 'lithium' : modifier
+
+  if (fit === 'icon' && modifier === 'hydrogen') {
+    internalModifier = 'nitrogen'
+  }
 
   const internalTag = as || tag
 

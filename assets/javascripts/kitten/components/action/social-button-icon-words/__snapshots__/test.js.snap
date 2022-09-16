@@ -33,9 +33,9 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -119,10 +119,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -162,21 +158,21 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -303,9 +299,9 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -389,10 +385,6 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -432,21 +424,21 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -573,9 +565,9 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -659,10 +651,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -702,21 +690,21 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -843,9 +831,9 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -929,10 +917,6 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -972,21 +956,21 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -1113,9 +1097,9 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -1199,10 +1183,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1242,21 +1222,21 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -1383,9 +1363,9 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -1469,10 +1449,6 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1512,21 +1488,21 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -1653,9 +1629,9 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -1739,10 +1715,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -1782,21 +1754,21 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
@@ -1923,9 +1895,9 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   cursor: pointer;
   border-radius: var(--Button-border-radius,0);
   min-width: 0;
-  border: var(--border-width) solid var(--color-grey-900,#222);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border: var(--border-width) solid var(--color-grey-900);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
   -webkit-transition: background-color var(--transition),color var(--transition),border-color var(--transition);
   transition: background-color var(--transition),color var(--transition),border-color var(--transition);
 }
@@ -2009,10 +1981,6 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   height: var(--Button-dimension);
 }
 
-.c0.k-Button--fit-icon.k-Button--hydrogen:not(:hover):not(:active):not(:focus) {
-  border-color: var(--color-grey-400);
-}
-
 .c0.k-Button--fit-fluid {
   width: 100%;
 }
@@ -2052,21 +2020,21 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 }
 
 .c0:hover {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-primary-700,#05a8e6);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  color: var(--color-grey-000);
 }
 
 .c0:focus {
-  border-color: var(--color-primary-700,#05a8e6);
-  background-color: var(--color-grey-900,#222);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-700);
+  background-color: var(--color-grey-900);
+  color: var(--color-grey-000);
 }
 
 .c0:active {
-  border-color: var(--color-primary-900,#0496cc);
-  background-color: var(--color-primary-900,#0496cc);
-  color: var(--color-grey-000,#fff);
+  border-color: var(--color-primary-900);
+  background-color: var(--color-primary-900);
+  color: var(--color-grey-000);
 }
 
 .c0:disabled,
