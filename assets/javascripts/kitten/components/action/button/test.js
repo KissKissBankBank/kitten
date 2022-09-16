@@ -248,4 +248,20 @@ describe('<Button />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('active icon hydrogen props (should have lithum modifier)', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button fit="icon" modifier="hydrogen" active>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

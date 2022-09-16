@@ -167,7 +167,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
   >
     <button
       aria-pressed={true}
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-gsnTZi dgPDzE k-Button k-EditorBar__button k-Button--medium k-Button--lithium k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -243,7 +243,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
   >
     <button
       aria-pressed={true}
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-gsnTZi dgPDzE k-Button k-EditorBar__button k-Button--medium k-Button--lithium k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
