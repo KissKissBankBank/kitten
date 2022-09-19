@@ -2,12 +2,13 @@
 
 exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
 <span
-  className="sc-gsnTZi eZvSJG k-Toggletip k-Toggletip--action k-Toggletip--info"
+  className="sc-gsnTZi gxofAE k-Toggletip k-Toggletip--action k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   style={
     Object {
+      "--toggletipAction-bottom": undefined,
       "--toggletipAction-height": undefined,
       "--toggletipAction-left": undefined,
       "--toggletipAction-top": undefined,
@@ -40,12 +41,13 @@ exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
 
 exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
-  className="sc-gsnTZi eZvSJG k-Toggletip k-Toggletip--action k-Toggletip--info"
+  className="sc-gsnTZi gxofAE k-Toggletip k-Toggletip--action k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   style={
     Object {
+      "--toggletipAction-bottom": undefined,
       "--toggletipAction-height": undefined,
       "--toggletipAction-left": undefined,
       "--toggletipAction-top": undefined,
@@ -109,12 +111,13 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 
 exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
-  className="sc-gsnTZi eZvSJG k-Toggletip k-Toggletip--action k-Toggletip--warning"
+  className="sc-gsnTZi gxofAE k-Toggletip k-Toggletip--action k-Toggletip--warning"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   style={
     Object {
+      "--toggletipAction-bottom": undefined,
       "--toggletipAction-height": undefined,
       "--toggletipAction-left": undefined,
       "--toggletipAction-top": undefined,

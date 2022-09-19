@@ -69,12 +69,22 @@ const StyledWrapper = styled.span`
         );
         border-bottom-color: var(--toggletipBubble-color);
       }
+
+      &.k-Toggletip__bubble--mobileTop {
+        top: initial;
+        bottom: calc(var(--toggletipAction-height) + ${pxToRem(20)});
+        &:after {
+          top: initial;
+          bottom: var(--toggletipBubble-arrowMainPosition);
+          border-top-color: var(--toggletipBubble-color);
+          border-bottom-color: transparent;
+        }
+      }
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
       left: calc(100% + ${pxToRem(20)});
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
@@ -105,6 +115,20 @@ const StyledWrapper = styled.span`
           top: calc(
             var(--toggletipAction-top) - ${pxToRem(CONTAINER_PADDING_THIN)} -
               ${pxToRem(10)} + (var(--toggletipAction-height) / 2)
+          );
+        }
+      }
+
+      &.k-Toggletip__bubble--highBottom:not(.k-Toggletip__bubble--lowTop) {
+        top: initial;
+        bottom: calc(-1 * ${pxToRem(CONTAINER_PADDING_THIN)});
+        transform: none;
+
+        &:after {
+          top: initial;
+          bottom: calc(
+            ${pxToRem(CONTAINER_PADDING_THIN)} - ${pxToRem(10)} +
+              (var(--toggletipAction-height) / 2)
           );
         }
       }
@@ -144,6 +168,8 @@ export const Toggletip = ({
   const [actionPosition, setActionPosition] = useState({})
   const [bubbleOnLeftSide, setBubbleOnLeftSide] = useState(false)
   const [bubbleLowTop, setBubbleLowTop] = useState(false)
+  const [bubbleHighBottom, setBubbleHighBottom] = useState(false)
+  const [bubbleMobileTop, setBubbleMobileTop] = useState(false)
   const [bubbleRightLimit, setBubbleRightLimit] = useState(false)
   const actionElement = useRef(null)
 
@@ -175,10 +201,25 @@ export const Toggletip = ({
 
     const bubbleElement = actionElement.current?.nextElementSibling?.children[0]
     const bubbleElementCoords = bubbleElement?.getBoundingClientRect() || {}
+    const scrollTop = window.scrollY
+    const innerHeight = window.innerHeight
 
     const shouldDisplayBubbleLowTop =
-      actionPosition.top < bubbleElementCoords.height / 2
+      actionPosition.top - bubbleElementCoords.height / 2 < scrollTop
     setBubbleLowTop(shouldDisplayBubbleLowTop)
+
+    const shouldDisplayBubbleHighBottom =
+      actionPosition.bottom + bubbleElementCoords.height / 2 >
+      scrollTop + innerHeight
+    setBubbleHighBottom(shouldDisplayBubbleHighBottom)
+
+    const shouldDisplayBubbleMobileTop =
+      actionPosition.bottom +
+        bubbleElementCoords.height +
+        CONTAINER_PADDING_THIN >
+        scrollTop + innerHeight &&
+      actionPosition.top > bubbleElementCoords.height
+    setBubbleMobileTop(shouldDisplayBubbleMobileTop)
 
     return () => {
       document.removeEventListener('click', handleOutsideClick)
@@ -204,11 +245,7 @@ export const Toggletip = ({
 
     const actionElementCoords = actionElement.current.getBoundingClientRect()
 
-    setActionPosition({
-      top: actionElementCoords.top,
-      left: actionElementCoords.left,
-      height: actionElementCoords.height,
-    })
+    setActionPosition(actionElementCoords)
 
     const bubblePlusMargins = 220 + 20 + CONTAINER_PADDING_THIN
     const shouldDisplayOnLeftSide =
@@ -282,6 +319,9 @@ export const Toggletip = ({
         '--toggletipAction-top': actionPosition.top
           ? pxToRem(actionPosition.top)
           : undefined,
+        '--toggletipAction-bottom': actionPosition.bottom
+          ? pxToRem(actionPosition.bottom)
+          : undefined,
         '--toggletipAction-left': actionPosition.left
           ? pxToRem(actionPosition.left)
           : undefined,
@@ -328,6 +368,8 @@ export const Toggletip = ({
               {
                 'k-Toggletip__bubble--left': bubbleOnLeftSide,
                 'k-Toggletip__bubble--lowTop': bubbleLowTop,
+                'k-Toggletip__bubble--highBottom': bubbleHighBottom,
+                'k-Toggletip__bubble--mobileTop': bubbleMobileTop,
                 'k-Toggletip__bubble--rightLimit':
                   !bubbleOnLeftSide && bubbleRightLimit,
               },

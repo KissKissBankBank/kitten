@@ -86,12 +86,13 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -212,12 +213,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -328,12 +330,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -449,12 +452,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -560,12 +564,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -676,12 +681,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -792,12 +798,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
@@ -939,12 +946,13 @@ Array [
         className="k-Line__item"
       >
         <span
-          className="sc-dkzDqf cEsrCh k-Toggletip k-Toggletip--action k-Toggletip--info"
+          className="sc-dkzDqf jNLHxr k-Toggletip k-Toggletip--action k-Toggletip--info"
           id="tooltip"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
             Object {
+              "--toggletipAction-bottom": undefined,
               "--toggletipAction-height": undefined,
               "--toggletipAction-left": undefined,
               "--toggletipAction-top": undefined,
