@@ -91,7 +91,15 @@ export const MultipleToggletips = args => (
       />
     </div>
     <div className="k-u-margin-top-quadruple k-u-align-center">
-      <Toggletip {...args} modifier="disabled" id="Toggletip-bottom" />
+      <Toggletip {...args} modifier="disabled" id="Toggletip-bottom">
+        Text{' '}
+        <a className="k-u-link k-u-link-font1" href="#">
+          with a link
+        </a>
+        .<br />
+        Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </Toggletip>
     </div>
   </>
 )
