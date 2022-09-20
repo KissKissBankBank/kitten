@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `IconBadge`: Update styles.
 - Feature: `ToggleTip`: Add checks for page bottom limit.
 
 ## [12.9.0] - 2022-09-16 👋

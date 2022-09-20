@@ -59,6 +59,23 @@ const StyledBadge = styled.span`
     }
   }
 
+    &.k-IconBadge--nano {
+    min-width: ${pxToRem(12)};
+    min-height: ${pxToRem(12)};
+
+    &,
+    & svg {
+      max-width: ${pxToRem(9)};
+      max-height: ${pxToRem(9)};
+    }
+
+    &.k-IconBadge--star::after,
+    &.k-IconBadge--star::before {
+      min-width: ${pxToRem(12)};
+      min-height: ${pxToRem(12)};
+    }
+  }
+
   &.k-IconBadge--micro {
     min-width: ${pxToRem(16)};
     min-height: ${pxToRem(16)};
@@ -164,7 +181,7 @@ export const IconBadge = ({
         return 'var(--color-grey-900)'
 
       case 'light':
-        return 'var(--color-grey-300)'
+        return 'var(--color-grey-400)'
 
       case 'info':
       default:
@@ -240,7 +257,7 @@ IconBadge.defaultProps = {
 
 IconBadge.propTypes = {
   empty: PropTypes.bool,
-  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
+  size: PropTypes.oneOf(['nano', 'micro', 'small', 'medium', 'large', 'huge']),
   backgroundColor: PropTypes.string,
   border: PropTypes.shape({
     width: PropTypes.number,
