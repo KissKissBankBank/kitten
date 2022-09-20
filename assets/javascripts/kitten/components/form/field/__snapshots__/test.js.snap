@@ -112,7 +112,7 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -239,7 +239,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -356,7 +356,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -478,7 +478,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -590,7 +590,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -707,7 +707,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -824,7 +824,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
@@ -972,7 +972,7 @@ Array [
             type="button"
           >
             <span
-              className="sc-gsnTZi ljhVUu k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+              className="sc-gsnTZi eGMmqx k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
               style={
                 Object {
                   "--iconBadge-background-color": "var(--color-primary-500)",
