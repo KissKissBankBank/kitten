@@ -6,7 +6,7 @@ exports[`<AlertBox /> should matches with custom fit snapshot 1`] = `
   role={null}
 >
   <span
-    className="sc-bczRLJ hIWYio k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+    className="sc-bczRLJ lkXzED k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": "var(--color-primary-500)",
@@ -55,7 +55,7 @@ exports[`<AlertBox /> should matches with custom icon snapshot 1`] = `
   role={null}
 >
   <span
-    className="sc-bczRLJ hIWYio k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+    className="sc-bczRLJ lkXzED k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": "var(--color-primary-500)",
@@ -94,7 +94,7 @@ exports[`<AlertBox /> should matches with custom iconPosition snapshot 1`] = `
   role={null}
 >
   <span
-    className="sc-bczRLJ hIWYio k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+    className="sc-bczRLJ lkXzED k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": "var(--color-primary-500)",
@@ -143,7 +143,7 @@ exports[`<AlertBox /> should matches with custom status snapshot 1`] = `
   role="alert"
 >
   <span
-    className="sc-bczRLJ hIWYio k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--danger k-IconBadge--circle k-IconBadge--hasBorder"
+    className="sc-bczRLJ lkXzED k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--danger k-IconBadge--circle k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": "var(--color-danger-500)",
@@ -181,7 +181,7 @@ exports[`<AlertBox /> should matches with default snapshot 1`] = `
   role={null}
 >
   <span
-    className="sc-bczRLJ hIWYio k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+    className="sc-bczRLJ lkXzED k-IconBadge k-AlertBox__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
     style={
       Object {
         "--iconBadge-background-color": "var(--color-primary-500)",

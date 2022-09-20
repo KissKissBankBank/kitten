@@ -67,7 +67,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
     type="button"
   >
     <span
-      className="sc-bczRLJ hIWYio k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
+      className="sc-bczRLJ lkXzED k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--info k-IconBadge--circle k-IconBadge--hasBorder"
       style={
         Object {
           "--iconBadge-background-color": "var(--color-primary-500)",
@@ -137,7 +137,7 @@ exports[`<Toggletip /> With props matches with snapshot 1`] = `
     type="button"
   >
     <span
-      className="sc-bczRLJ hIWYio k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--warning k-IconBadge--circle k-IconBadge--hasBorder"
+      className="sc-bczRLJ lkXzED k-IconBadge k-Toggletip__icon k-IconBadge--small k-IconBadge--warning k-IconBadge--circle k-IconBadge--hasBorder"
       style={
         Object {
           "--iconBadge-background-color": "var(--color-warning-500)",
