@@ -38,7 +38,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 const StyledWrapper = _styledComponents.default.span.withConfig({
   displayName: "toggletip__StyledWrapper",
   componentId: "sc-n283j7-0"
-})(["position:relative;display:inline-block;&,&.k-Toggletip--info{--toggletipBubble-color:var(--color-primary-100);}&.k-Toggletip--warning{--toggletipBubble-color:var(--color-warning-100);}&.k-Toggletip--error,&.k-Toggletip--danger{--toggletipBubble-color:var(--color-danger-100);}&.k-Toggletip--success{--toggletipBubble-color:var(--color-success-100);}&.k-Toggletip--disabled{--toggletipBubble-color:var(--color-grey-300);}.k-Toggletip__bubble{--toggletipBubble-arrowMainPosition:", ";z-index:var(--toggletipBubble-zIndex);box-sizing:border-box;padding:", ";background-color:var(--toggletipBubble-color);text-align:left;border-radius:var(--border-radius-s);&:after{content:'';position:absolute;display:block;width:0;height:0;border:", " solid transparent;border-radius:var(--border-radius-s);}@media (max-width:", "){position:absolute;top:calc(var(--toggletipAction-height) + ", ");left:calc( -1 * var(--toggletipAction-left) + ", " );width:calc(100vw - ", ");&:after{top:var(--toggletipBubble-arrowMainPosition);left:calc( var(--toggletipAction-left) - ", " - ", " + (var(--toggletipAction-height) / 2) );border-bottom-color:var(--toggletipBubble-color);}}@media (min-width:", "){position:absolute;top:50%;transform:translateY(-50%);left:calc(100% + ", ");transform:translateY(-50%);min-width:", ";max-width:", ";width:max-content;&.k-Toggletip__bubble--rightLimit{max-width:calc( 100vw - var(--toggletipAction-left) - ", " - var(--toggletipAction-height) );}&:after{left:var(--toggletipBubble-arrowMainPosition);top:calc(50% - ", ");border-right-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--lowTop{top:calc( -1 * var(--toggletipAction-top) + ", " );transform:none;&:after{top:calc( var(--toggletipAction-top) - ", " - ", " + (var(--toggletipAction-height) / 2) );}}&.k-Toggletip__bubble--left{left:initial;right:calc(100% + ", ");&:after{left:initial;right:var(--toggletipBubble-arrowMainPosition);border-right-color:transparent;border-left-color:var(--toggletipBubble-color);}}}}"], (0, _typography.pxToRem)(-2 * 8), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN * 2), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(440), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN + 20), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
+})(["position:relative;display:inline-block;&,&.k-Toggletip--info{--toggletipBubble-color:var(--color-primary-100);}&.k-Toggletip--warning{--toggletipBubble-color:var(--color-warning-100);}&.k-Toggletip--error,&.k-Toggletip--danger{--toggletipBubble-color:var(--color-danger-100);}&.k-Toggletip--success{--toggletipBubble-color:var(--color-success-100);}&.k-Toggletip--disabled{--toggletipBubble-color:var(--color-grey-300);}.k-Toggletip__bubble{--toggletipBubble-arrowMainPosition:", ";z-index:var(--toggletipBubble-zIndex);box-sizing:border-box;padding:", ";background-color:var(--toggletipBubble-color);text-align:left;border-radius:var(--border-radius-s);&:after{content:'';position:absolute;display:block;width:0;height:0;border:", " solid transparent;border-radius:var(--border-radius-s);}@media (max-width:", "){position:absolute;top:calc(var(--toggletipAction-height) + ", ");left:calc( -1 * var(--toggletipAction-left) + ", " );width:calc(100vw - ", ");&:after{top:var(--toggletipBubble-arrowMainPosition);left:calc( var(--toggletipAction-left) - ", " - ", " + (var(--toggletipAction-height) / 2) );border-bottom-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--mobileTop{top:initial;bottom:calc(var(--toggletipAction-height) + ", ");&:after{top:initial;bottom:var(--toggletipBubble-arrowMainPosition);border-top-color:var(--toggletipBubble-color);border-bottom-color:transparent;}}}@media (min-width:", "){position:absolute;top:50%;left:calc(100% + ", ");transform:translateY(-50%);min-width:", ";max-width:", ";width:max-content;&.k-Toggletip__bubble--rightLimit{max-width:calc( 100vw - var(--toggletipAction-left) - ", " - var(--toggletipAction-height) );}&:after{left:var(--toggletipBubble-arrowMainPosition);top:calc(50% - ", ");border-right-color:var(--toggletipBubble-color);}&.k-Toggletip__bubble--lowTop{top:calc( -1 * var(--toggletipAction-top) + ", " );transform:none;&:after{top:calc( var(--toggletipAction-top) - ", " - ", " + (var(--toggletipAction-height) / 2) );}}&.k-Toggletip__bubble--highBottom:not(.k-Toggletip__bubble--lowTop){top:initial;bottom:calc(-1 * ", ");transform:none;&:after{top:initial;bottom:calc( ", " - ", " + (var(--toggletipAction-height) / 2) );}}&.k-Toggletip__bubble--left{left:initial;right:calc(100% + ", ");&:after{left:initial;right:var(--toggletipBubble-arrowMainPosition);border-right-color:transparent;border-left-color:var(--toggletipBubble-color);}}}}"], (0, _typography.pxToRem)(-2 * 8), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XS.max), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN * 2), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(440), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN + 20), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
 
 const Toggletip = _ref => {
   let {
@@ -61,6 +61,8 @@ const Toggletip = _ref => {
   const [actionPosition, setActionPosition] = (0, _react.useState)({});
   const [bubbleOnLeftSide, setBubbleOnLeftSide] = (0, _react.useState)(false);
   const [bubbleLowTop, setBubbleLowTop] = (0, _react.useState)(false);
+  const [bubbleHighBottom, setBubbleHighBottom] = (0, _react.useState)(false);
+  const [bubbleMobileTop, setBubbleMobileTop] = (0, _react.useState)(false);
   const [bubbleRightLimit, setBubbleRightLimit] = (0, _react.useState)(false);
   const actionElement = (0, _react.useRef)(null);
   const {
@@ -89,8 +91,14 @@ const Toggletip = _ref => {
     window.addEventListener('resize', throttleUpdateCoordinates);
     const bubbleElement = (_actionElement$curren = actionElement.current) == null ? void 0 : (_actionElement$curren2 = _actionElement$curren.nextElementSibling) == null ? void 0 : _actionElement$curren2.children[0];
     const bubbleElementCoords = (bubbleElement == null ? void 0 : bubbleElement.getBoundingClientRect()) || {};
-    const shouldDisplayBubbleLowTop = actionPosition.top < bubbleElementCoords.height / 2;
+    const scrollTop = window.scrollY;
+    const innerHeight = window.innerHeight;
+    const shouldDisplayBubbleLowTop = actionPosition.top - bubbleElementCoords.height / 2 < scrollTop;
     setBubbleLowTop(shouldDisplayBubbleLowTop);
+    const shouldDisplayBubbleHighBottom = actionPosition.bottom + bubbleElementCoords.height / 2 > scrollTop + innerHeight;
+    setBubbleHighBottom(shouldDisplayBubbleHighBottom);
+    const shouldDisplayBubbleMobileTop = actionPosition.bottom + bubbleElementCoords.height + _gridConfig.CONTAINER_PADDING_THIN > scrollTop + innerHeight && actionPosition.top > bubbleElementCoords.height;
+    setBubbleMobileTop(shouldDisplayBubbleMobileTop);
     return () => {
       document.removeEventListener('click', handleOutsideClick);
       document.removeEventListener('keydown', handleKeydownEscape);
@@ -109,11 +117,7 @@ const Toggletip = _ref => {
   const updateCoordinates = () => {
     if (!actionElement.current) return;
     const actionElementCoords = actionElement.current.getBoundingClientRect();
-    setActionPosition({
-      top: actionElementCoords.top,
-      left: actionElementCoords.left,
-      height: actionElementCoords.height
-    });
+    setActionPosition(actionElementCoords);
     const bubblePlusMargins = 220 + 20 + _gridConfig.CONTAINER_PADDING_THIN;
     const shouldDisplayOnLeftSide = document.body.clientWidth < actionElementCoords.right + bubblePlusMargins;
     setBubbleOnLeftSide(shouldDisplayOnLeftSide);
@@ -173,6 +177,7 @@ const Toggletip = _ref => {
     style: {
       '--toggletipAction-height': actionPosition.height ? (0, _typography.pxToRem)(actionPosition.height) : undefined,
       '--toggletipAction-top': actionPosition.top ? (0, _typography.pxToRem)(actionPosition.top) : undefined,
+      '--toggletipAction-bottom': actionPosition.bottom ? (0, _typography.pxToRem)(actionPosition.bottom) : undefined,
       '--toggletipAction-left': actionPosition.left ? (0, _typography.pxToRem)(actionPosition.left) : undefined,
       ...style
     },
@@ -201,6 +206,8 @@ const Toggletip = _ref => {
     className: (0, _classnames.default)('k-Toggletip__bubble', 'k-u-weight-400', 'k-u-size-small', 'k-u-line-height-1-3', bubbleClassName, {
       'k-Toggletip__bubble--left': bubbleOnLeftSide,
       'k-Toggletip__bubble--lowTop': bubbleLowTop,
+      'k-Toggletip__bubble--highBottom': bubbleHighBottom,
+      'k-Toggletip__bubble--mobileTop': bubbleMobileTop,
       'k-Toggletip__bubble--rightLimit': !bubbleOnLeftSide && bubbleRightLimit
     }),
     style: {

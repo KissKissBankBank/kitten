@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `IconBadge`: Add `nano` size prop.
-- Feature: `ToggleTip`: Add checks for page bottom limit.
+
+## [12.10.0] - 2022-09-20 👋
+
+Features: 
+
+  - `IconBadge`: Add `nano` size prop.
+  - `ToggleTip`: Add checks for page bottom limit.
 
 ## [12.9.0] - 2022-09-16 👋
 
