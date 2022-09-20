@@ -8,7 +8,7 @@ import { pxToRem } from '../../../helpers/utils/typography';
 const StyledBadge = styled.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-r56wro-0"
-})(["box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:var(--border-radius-rounded);background-color:var(--iconBadge-background-color);border-color:var(--iconBadge-border-color);& > span{display:block;display:inline-flex;justify-content:center;align-items:center;}&.k-IconBadge--star{background-color:var(--iconBadge-background-color);border-radius:0;min-width:", ";min-height:", ";position:relative;transform:rotate(-11deg);transform-origin:50% 50%;& > span{transform:rotate(11deg);transform-origin:inherit;}&::before,&::after{content:'';position:absolute;top:0;left:0;min-height:", ";min-width:", ";background-color:var(--iconBadge-background-color);z-index:-2;transform-origin:50% 50%;}::before{transform:rotate(30deg);}::after{transform:rotate(60deg);}}&.k-IconBadge--micro{min-width:", ";min-height:", ";&,& svg{max-width:", ";max-height:", ";}&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--small{min-width:", ";min-height:", ";&,& svg{max-width:", ";}&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--large{min-width:", ";min-height:", ";&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--huge{min-width:", ";min-height:", ";&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}svg{flex:0 0 auto;fill:var(--color-grey-000);}&.k-IconBadge--hasBorder{border-width:", ";border-style:solid;box-sizing:content-box;}&.k-IconBadge--hasBorderStyles{border-width:var(--iconBadge-border-width,0);border-color:var(--iconBadge-border-color);border-style:var(--iconBadge-border-style);}"], pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(16), pxToRem(16), pxToRem(12), pxToRem(12), pxToRem(16), pxToRem(16), pxToRem(20), pxToRem(20), pxToRem(14), pxToRem(20), pxToRem(20), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(50), pxToRem(50), pxToRem(50), pxToRem(50), pxToRem(2));
+})(["box-sizing:border-box;display:inline-flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:var(--border-radius-rounded);background-color:var(--iconBadge-background-color);border-color:var(--iconBadge-border-color);& > span{display:block;display:inline-flex;justify-content:center;align-items:center;}&.k-IconBadge--star{background-color:var(--iconBadge-background-color);border-radius:0;min-width:", ";min-height:", ";position:relative;transform:rotate(-11deg);transform-origin:50% 50%;& > span{transform:rotate(11deg);transform-origin:inherit;}&::before,&::after{content:'';position:absolute;top:0;left:0;min-height:", ";min-width:", ";background-color:var(--iconBadge-background-color);z-index:-2;transform-origin:50% 50%;}::before{transform:rotate(30deg);}::after{transform:rotate(60deg);}}&.k-IconBadge--nano{min-width:", ";min-height:", ";&,& svg{max-width:", ";max-height:", ";}&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--micro{min-width:", ";min-height:", ";&,& svg{max-width:", ";max-height:", ";}&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--small{min-width:", ";min-height:", ";&,& svg{max-width:", ";}&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--large{min-width:", ";min-height:", ";&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}&.k-IconBadge--huge{min-width:", ";min-height:", ";&.k-IconBadge--star::after,&.k-IconBadge--star::before{min-width:", ";min-height:", ";}}svg{flex:0 0 auto;fill:var(--color-grey-000);}&.k-IconBadge--hasBorder{border-width:", ";border-style:solid;box-sizing:content-box;}&.k-IconBadge--hasBorderStyles{border-width:var(--iconBadge-border-width,0);border-color:var(--iconBadge-border-color);border-style:var(--iconBadge-border-style);}"], pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(30), pxToRem(12), pxToRem(12), pxToRem(9), pxToRem(9), pxToRem(12), pxToRem(12), pxToRem(16), pxToRem(16), pxToRem(12), pxToRem(12), pxToRem(16), pxToRem(16), pxToRem(20), pxToRem(20), pxToRem(14), pxToRem(20), pxToRem(20), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(40), pxToRem(50), pxToRem(50), pxToRem(50), pxToRem(50), pxToRem(2));
 export const IconBadge = _ref => {
   var _border$style;
 
@@ -46,7 +46,7 @@ export const IconBadge = _ref => {
         return 'var(--color-grey-900)';
 
       case 'light':
-        return 'var(--color-grey-300)';
+        return 'var(--color-grey-400)';
 
       case 'info':
       default:
@@ -108,7 +108,7 @@ IconBadge.defaultProps = {
 };
 IconBadge.propTypes = {
   empty: PropTypes.bool,
-  size: PropTypes.oneOf(['micro', 'small', 'medium', 'large', 'huge']),
+  size: PropTypes.oneOf(['nano', 'micro', 'small', 'medium', 'large', 'huge']),
   backgroundColor: PropTypes.string,
   border: PropTypes.shape({
     width: PropTypes.number,
