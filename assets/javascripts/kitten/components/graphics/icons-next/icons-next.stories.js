@@ -3,6 +3,7 @@ import {
   AirplaneIconNext,
   BankCardIconNext,
   BubbleIconNext,
+  BulbIconNext,
   CheckedShieldIconNext,
   ChronoIconNext,
   CogIconNext,
@@ -33,6 +34,7 @@ import {
   LinkedinIconNext,
   LockOutlineIcon,
   LongArrowIconNext,
+  MegaphoneIconNext,
   MessengerIconNext,
   OpenLockIconNext,
   PeopleCircleIconNext,
@@ -157,6 +159,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
           <BubbleIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
+          <BulbIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
           <CheckedShieldIconNext color={colorInput} />
         </IconContainer>
         <IconContainer>
@@ -266,6 +271,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <RocketIconNext color={colorInput} width={24} height={24} />
+        </IconContainer>
+        <IconContainer>
+          <MegaphoneIconNext color={colorInput} />
         </IconContainer>
       </Group>
 
