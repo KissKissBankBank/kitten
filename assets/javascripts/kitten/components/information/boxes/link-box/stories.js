@@ -33,6 +33,10 @@ export default {
       name: 'isExternal',
       control: 'boolean',
     },
+    isSmall: {
+      name: 'isSmall',
+      control: 'boolean',
+    },
     linkProps: {
       name: 'linkProps',
       control: 'object',
@@ -99,4 +103,5 @@ WithVariant.args = {
   ...Default.args,
   variant: 'orion',
   backgroundColor: COLORS.orange1,
+  isSmall: false,
 }

@@ -13,6 +13,7 @@ export const LinkBox = ({
   backgroundColor,
   textColor,
   style,
+  isSmall,
   ...props
 }) => {
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
@@ -24,6 +25,9 @@ export const LinkBox = ({
           'k-LinkBox__link',
           className,
           `k-LinkBox__link--${variant}`,
+          {
+            'k-LinkBox__link--size-small': isSmall,
+          },
         )}
         style={{
           ...style,
@@ -60,6 +64,7 @@ LinkBox.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
+  isSmall: PropTypes.bool,
 }
 
 LinkBox.defaultProps = {
@@ -68,4 +73,5 @@ LinkBox.defaultProps = {
   variant: 'orion',
   backgroundColor: COLORS.background1,
   textColor: null,
+  isSmall: false,
 }
