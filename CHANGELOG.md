@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Icons: Add `megaphoneIconNext` and `BulbIconNext` icon components.
+## [12.11.0] - 2022-10-03 👋
+
+Feature:
+
+- Icons: Add `megaphoneIconNext` and `BulbIconNext` icon components.
 
 ## [12.10.0] - 2022-09-20 👋
 
