@@ -20,7 +20,7 @@ var _status = require("./status");
 const StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-hcrd93-0"
-})(["margin:", " 0 ", " 0;display:flex;flex-direction:column;padding-right:", ";&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}& li:not(:last-of-type){margin:0 !important;&::after{display:none;}}.k-VerticalProgress__step--content{padding-left:", ";@media (min-width:", "px){padding-left:", ";}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(50), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(82));
+})(["margin:", " 0 ", " 0;display:flex;flex-direction:column;padding-right:", ";&:first-of-type{margin-top:0;padding-top:0;}&:last-of-type{margin-bottom:0;padding-bottom:0;}& li:not(:last-of-type){margin:0 !important;&::after{display:none;}}.k-VerticalProgress__step--content{padding-left:", ";@media (min-width:", "px){padding-left:", ";}}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(50), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(82));
 
 const Step = _ref => {
   let {
