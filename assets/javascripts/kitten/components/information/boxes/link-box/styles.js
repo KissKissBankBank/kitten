@@ -75,6 +75,12 @@ export const StyledLinkBox = styled.a`
     background-color: var(--LinkBox-background-color);
     border: var(--border-width) solid var(--LinkBox-background-color);
 
+    &.k-LinkBox__link--size-small {
+      min-height: ${pxToRem(40)};
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     &:hover {
       background-color: var(--LinkBox-background-color);
       border: var(--border-width) solid var(--LinkBox-background-color);

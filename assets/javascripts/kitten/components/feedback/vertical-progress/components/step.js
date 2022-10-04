@@ -5,7 +5,7 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { Status } from './status'
 
 const StyledItem = styled.li`
-  margin: ${pxToRem(15)} 0 ${pxToRem(25)} 0;
+  margin: ${pxToRem(10)} 0 ${pxToRem(10)} 0;
   display: flex;
   flex-direction: column;
   padding-right: ${pxToRem(10)};

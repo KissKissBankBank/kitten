@@ -39,11 +39,11 @@ export const Default = () => {
           textColor="#222"
           className="k-u-margin-bottom-noneHalf"
           href="#"
+          isSmall
         >
           <LinkBox.Text>
-            <Text size="small" weight="400" lineHeight="normal">
-              <strong>Paramètres - </strong>Titre du projet, Catégorie
-              principale, Montant de l’objectif, Type d’objectif …
+            <Text size="small" weight="700" lineHeight="normal">
+              Paramètres
             </Text>
           </LinkBox.Text>
         </LinkBox>
@@ -53,18 +53,19 @@ export const Default = () => {
           textColor="#222"
           className="k-u-margin-bottom-noneHalf"
           href="#"
+          isSmall
         >
           <LinkBox.Text>
-            <Text size="small" weight="400" lineHeight="normal">
-              <strong>Page projet - </strong>Slogan de votre projet
+            <Text size="small" weight="700" lineHeight="normal">
+              Page projet
             </Text>
           </LinkBox.Text>
         </LinkBox>
 
-        <LinkBox backgroundColor="#fef1e7" textColor="#222" href="#">
+        <LinkBox backgroundColor="#fef1e7" textColor="#222" href="#" isSmall>
           <LinkBox.Text>
-            <Text size="small" weight="400" lineHeight="normal">
-              <strong>Admin - </strong>Lieu de naissance
+            <Text size="small" weight="700" lineHeight="normal">
+              Admin
             </Text>
           </LinkBox.Text>
         </LinkBox>
