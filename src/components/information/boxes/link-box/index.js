@@ -28,6 +28,7 @@ const LinkBox = _ref => {
     backgroundColor,
     textColor,
     style,
+    isSmall,
     ...props
   } = _ref;
   const target = isExternal ? {
@@ -38,7 +39,9 @@ const LinkBox = _ref => {
     href: href,
     className: className
   }), /*#__PURE__*/_react.default.createElement("span", {
-    className: (0, _classnames.default)('k-LinkBox__link', className, "k-LinkBox__link--" + variant),
+    className: (0, _classnames.default)('k-LinkBox__link', className, "k-LinkBox__link--" + variant, {
+      'k-LinkBox__link--size-small': isSmall
+    }),
     style: { ...style,
       '--LinkBox-background-color': backgroundColor,
       '--LinkBox-text-color': textColor
@@ -81,12 +84,14 @@ LinkBox.propTypes = {
   linkProps: _propTypes.default.object,
   variant: _propTypes.default.oneOf(['andromeda', 'orion']),
   backgroundColor: _propTypes.default.string,
-  textColor: _propTypes.default.string
+  textColor: _propTypes.default.string,
+  isSmall: _propTypes.default.bool
 };
 LinkBox.defaultProps = {
   href: '#',
   isExternal: false,
   variant: 'orion',
   backgroundColor: _colorsConfig.default.background1,
-  textColor: null
+  textColor: null,
+  isSmall: false
 };

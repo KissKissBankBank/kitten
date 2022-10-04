@@ -4,8 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix : Update style of `VerticalProgress` component
-- Feature: Add `isSmall` prop on `LinkBox`component
+## [12.12.0] - 2022-10-04 😶‍🌫️
+
+Feature: 
+
+- `LinkBox`: Add `isSmall` prop
+
+Fix: 
+
+- `VerticalProgress` : Update style
 
 ## [12.11.0] - 2022-10-03 👋
 
