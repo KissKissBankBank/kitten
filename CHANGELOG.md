@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Icon`: Add `TargetIconNext` component.
+
 ## [12.12.0] - 2022-10-04 😶‍🌫️
 
 Feature: 

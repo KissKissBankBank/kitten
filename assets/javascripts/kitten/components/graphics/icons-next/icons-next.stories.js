@@ -50,6 +50,7 @@ import {
   StatusIconNext,
   SunIconNext,
   TagIconNext,
+  TargetIconNext,
   ThumbUpIconNext,
   TwitterIconNext,
   UsersIconNext,
@@ -274,6 +275,9 @@ export const AllIcons = ({ colorInput, secondaryColorInput, bgColorInput }) => {
         </IconContainer>
         <IconContainer>
           <MegaphoneIconNext color={colorInput} />
+        </IconContainer>
+        <IconContainer>
+          <TargetIconNext color={colorInput} />
         </IconContainer>
       </Group>
 
