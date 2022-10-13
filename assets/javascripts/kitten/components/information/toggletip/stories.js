@@ -2,7 +2,6 @@ import React from 'react'
 import { Toggletip } from './index'
 import { DocsPage } from 'storybook/docs-page'
 import { Button } from 'kitten'
-import NumberFormat from 'react-number-format'
 
 export default {
   title: 'Information/Toggletip',
