@@ -120,7 +120,7 @@ const StyledWrapper = styled.span`
         }
       }
 
-      &.k-Toggletip__bubble--highBottom:not(.k-Toggletip__bubble--lowTop) {
+      &.k-Toggletip__bubble--highBottom :not(.k-Toggletip__bubble--lowTop) {
         top: initial;
         bottom: calc(-1 * ${pxToRem(CONTAINER_PADDING_THIN)});
         transform: none;
