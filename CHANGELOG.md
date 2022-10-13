@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+-  Feature: `Toggletip`: Add `bubbleColorText` props and update style.
+
 ## [12.13.0] - 2022-10-10  🎯
 
 Feature: 

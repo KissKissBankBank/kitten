@@ -40,6 +40,7 @@ const StyledWrapper = styled.span`
     box-sizing: border-box;
     padding: ${pxToRem(12)};
     background-color: var(--toggletipBubble-color);
+    color: var(--toggletipBubble-colorText);
     text-align: left;
     border-radius: var(--border-radius-s);
 
@@ -85,7 +86,7 @@ const StyledWrapper = styled.span`
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       position: absolute;
       top: 50%;
-      left: calc(100% + ${pxToRem(20)});
+      left: calc(100% + ${pxToRem(10)});
       transform: translateY(-50%);
       min-width: ${pxToRem(220)};
       max-width: ${pxToRem(440)};
@@ -135,7 +136,7 @@ const StyledWrapper = styled.span`
 
       &.k-Toggletip__bubble--left {
         left: initial;
-        right: calc(100% + ${pxToRem(20)});
+        right: calc(100% + ${pxToRem(10)});
 
         &:after {
           left: initial;
@@ -160,6 +161,7 @@ export const Toggletip = ({
   icon,
   displayIcon,
   iconHasBorder,
+  bubbleColorText,
   ...props
 }) => {
   const [isHover, setHoverState] = useState(false)
@@ -375,6 +377,7 @@ export const Toggletip = ({
               },
             )}
             style={{
+              '--toggletipBubble-colorText': bubbleColorText || null,
               '--toggletipBubble-zIndex': bubbleZIndex || 1,
               '--toggletipBubble-color': bubbleColor || null,
               ...bubbleStyle,
@@ -413,4 +416,5 @@ Toggletip.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
   ]),
   iconHasBorder: PropTypes.bool,
+  bubbleColorText: PropTypes.string,
 }
