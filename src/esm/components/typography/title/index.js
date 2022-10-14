@@ -1,15 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
 import COLORS from '../../../constants/colors-config';
-import TYPOGRAPHY from '../../../constants/typography-config';
-import { titleModifierStyles, titleModifiersNames } from '../common/title-modifier-styles';
+import { titleModifiersNames, titleModifierStyles } from '../common/title-modifier-styles';
 const StyledTitle = styled.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles['700'], titleModifierStyles('&.k-Title'));
+})(["--Title-css-color:", ";font-family:var(--font-family-antiqueolive);letterspacing:'.01rem';fontweight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, titleModifierStyles('&.k-Title'));
 export const Title = _ref => {
   let {
     modifier,
