@@ -20,6 +20,7 @@ const args = {
   modifier: 'info',
   children: 'The text of my Toggletip.',
   targetElement: undefined,
+  bubbleColorText: null,
 }
 
 const argTypes = {
@@ -43,6 +44,10 @@ const argTypes = {
   targetElement: {
     name: 'targetElement',
     control: 'text',
+  },
+  bubbleColorText: {
+    name: 'bubbleColorText',
+    control: 'color',
   },
 }
 

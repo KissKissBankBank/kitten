@@ -2,7 +2,7 @@
 
 exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
 <span
-  className="sc-gsnTZi gxofAE k-Toggletip k-Toggletip--action k-Toggletip--info"
+  className="sc-gsnTZi hRvdYk k-Toggletip k-Toggletip--action k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -41,7 +41,7 @@ exports[`<Toggletip /> CustomTargetElement matches with snapshot 1`] = `
 
 exports[`<Toggletip /> Default matches with snapshot 1`] = `
 <span
-  className="sc-gsnTZi gxofAE k-Toggletip k-Toggletip--action k-Toggletip--info"
+  className="sc-gsnTZi hRvdYk k-Toggletip k-Toggletip--action k-Toggletip--info"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -111,7 +111,7 @@ exports[`<Toggletip /> Default matches with snapshot 1`] = `
 
 exports[`<Toggletip /> With props matches with snapshot 1`] = `
 <span
-  className="sc-gsnTZi gxofAE k-Toggletip k-Toggletip--action k-Toggletip--warning"
+  className="sc-gsnTZi hRvdYk k-Toggletip k-Toggletip--action k-Toggletip--warning"
   id="Toggletip-demo"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
