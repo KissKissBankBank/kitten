@@ -4,9 +4,9 @@ import {
   Title,
   Paragraph,
   Button,
-  RocketIconNext,
-  SilhouetteIconNext,
-  ClickIconNext,
+  RibbonIllustration,
+  FormIllustration,
+  ComputerIllustration,
   mq,
 } from 'kitten'
 import styled from 'styled-components'
@@ -85,11 +85,10 @@ const Why = () => {
       </Title>
       <div className="kiss-Homepage__why__cards">
         <div className="kiss-Homepage__why__card">
-          <SilhouetteIconNext
+          <RibbonIllustration
             className="k-u-margin-bottom-double"
-            width="70"
-            height="70"
-            color="var(--color-danger-500)"
+            width="218"
+            height="160"
           />
           <Title tag="h2" modifier="quinary">
             Un accompagnement inspirant et adapté à vos besoins
@@ -102,11 +101,10 @@ const Why = () => {
           </Paragraph>
         </div>
         <div className="kiss-Homepage__why__card">
-          <RocketIconNext
+          <FormIllustration
             className="k-u-margin-bottom-double"
-            width="70"
-            height="70"
-            color="var(--color-danger-500)"
+            width="100"
+            height="160"
           />
           <Title tag="h2" modifier="quinary">
             Plusieurs types de financement en fonction des étapes de votre
@@ -119,11 +117,10 @@ const Why = () => {
           </Paragraph>
         </div>
         <div className="kiss-Homepage__why__card">
-          <ClickIconNext
+          <ComputerIllustration
             className="k-u-margin-bottom-double"
-            width="70"
-            height="70"
-            color="var(--color-danger-500)"
+            width="183"
+            height="160"
           />
           <Title tag="h2" modifier="quinary">
             Des fonctionnalités poussées pour engager votre communauté

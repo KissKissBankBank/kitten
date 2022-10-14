@@ -17,8 +17,8 @@ const HomePage = () => (
       modifier="secondary"
       className="k-u-align-center k-u-margin-vertical-double k-u-margin-vertical-sextuple@s-up"
     >
-      Les plus beaux projets du moment <br />
-      prennent vie sur KissKissBankBank
+      Les plus beaux projets du moment prennent vie<br />
+      sur KissKissBankBank
     </Title>
     <ProjectCarousels />
     <Why />

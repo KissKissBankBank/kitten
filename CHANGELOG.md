@@ -9,6 +9,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Add the following icon components:
     - `ClickIconNext`
     - `SilhouetteIconNext`
+    - `ClickIconNext`
+    - `SilhouetteIconNext`
+    - `HourglassIllustration`
+    - `HandIllustration`
+    - `FormIllustration`
+    - `RibbonIllustration`
+    - `ComputerIllustration`
 
 ## [12.14.0] - 2022-10-14  💅
 

@@ -281,6 +281,11 @@ export { MixIllustration } from './components/graphics/illustrations/mix-illustr
 export { PhoneIllustration } from './components/graphics/illustrations/phone-illustration'
 export { RocketIllustration } from './components/graphics/illustrations/rocket-illustration'
 export { KkbbFlashIllustration } from './components/graphics/illustrations/kkbb-flash-illustration'
+export { HourglassIllustration } from './components/graphics/illustrations/hourglass-illustration'
+export { HandIllustration } from './components/graphics/illustrations/hand-illustration'
+export { ComputerIllustration } from './components/graphics/illustrations/computer-illustration'
+export { FormIllustration } from './components/graphics/illustrations/form-illustration'
+export { RibbonIllustration } from './components/graphics/illustrations/ribbon-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'

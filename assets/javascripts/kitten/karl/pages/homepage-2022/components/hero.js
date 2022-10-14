@@ -191,10 +191,10 @@ const Hero = () => {
     <HeroWrapper style={{ '--hero-scrollPosition': scrollPosition }}>
       <div className="kiss-Homepage__hero__main">
         <Title noMargin modifier="secondary">
-          Donnons vie <br className="k-u-hidden@l-up" />
-          à votre projet <br className="k-u-hidden@l-up" />
-          grâce au financement <br className="k-u-hidden@l-up" />
-          par la communauté.
+          Financez vos projets grâce <br className="k-u-hidden@l-up" />
+          à votre communauté et <br className="k-u-hidden@l-up" />
+          nos 2,6 millions de <br className="k-u-hidden@l-up" />
+          membres.
         </Title>
         <Paragraph noMargin className="k-u-padding-right-decuple@s-up">
           <span>

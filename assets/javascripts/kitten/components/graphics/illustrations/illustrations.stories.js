@@ -9,6 +9,11 @@ import { MixIllustration } from './mix-illustration'
 import { PhoneIllustration } from './phone-illustration'
 import { RocketIllustration } from './rocket-illustration'
 import { KkbbFlashIllustration } from './kkbb-flash-illustration'
+import { HourglassIllustration } from './hourglass-illustration'
+import { HandIllustration } from './hand-illustration'
+import { FormIllustration } from './form-illustration'
+import { ComputerIllustration } from './computer-illustration'
+import { RibbonIllustration } from './ribbon-illustration'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};
@@ -25,8 +30,8 @@ const Group = styled(({ className, children, title }) => {
   )
 })`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(140)}, 1fr));
-  grid-gap: ${pxToRem(80)} ${pxToRem(40)};
+  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(300)}, 1fr));
+  grid-gap: ${pxToRem(80)} ${pxToRem(20)};
   margin-bottom: ${pxToRem(50)};
 `
 
@@ -89,6 +94,23 @@ export const AllIllustrations = () => {
         <IllustrationWrapper name="KkbbFlashIllustration">
           <KkbbFlashIllustration size="small" />
         </IllustrationWrapper>
+      </Group>
+      <Group>
+      <IllustrationWrapper name="HourglassIllustration">
+        <HourglassIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="HandIllustration">
+        <HandIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="RibbonIllustration">
+        <RibbonIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="ComputerIllustration">
+        <ComputerIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="FormIllustration">
+        <FormIllustration />
+      </IllustrationWrapper>
       </Group>
     </Wrapper>
   )
