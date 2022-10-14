@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import {
-  titleModifierStyles,
   titleModifiersNames,
+  titleModifierStyles,
 } from '../common/title-modifier-styles'
 
 const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
-
-  ${TYPOGRAPHY.fontStyles['700']};
+  font-family: var(--font-family-antiqueolive);
+  letterspacing: '.01rem';
+  fontweight: 700;
   color: var(--Title-css-color);
 
   &.k-Title--noMargin {

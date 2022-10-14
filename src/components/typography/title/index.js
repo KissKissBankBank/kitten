@@ -7,24 +7,22 @@ exports.Title = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireDefault(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _react = _interopRequireDefault(require("react"));
+
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _titleModifierStyles = require("../common/title-modifier-styles");
 
 const StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, _typographyConfig.default.fontStyles['700'], (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
+})(["--Title-css-color:", ";font-family:var(--font-family-antiqueolive);letterspacing:'.01rem';fontweight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
 
 const Title = _ref => {
   let {
