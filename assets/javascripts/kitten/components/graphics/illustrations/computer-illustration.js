@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const ComputerIllustration = props => {
+export const ComputerIllustration = ({ title, ...props }) => {
   return (
   <svg 
     xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +11,7 @@ export const ComputerIllustration = props => {
     viewBox="0 0 1289 1123"
     {...props}
   >
+    {title && <title>{title}</title>}
     <path fill="#0091FF" d="M3.234 326.584V88.389C3.234 41.6 41.156 3.675 87.94 3.675H1163.6v866.622H87.793c-46.696 0-84.544-37.852-84.544-84.553v-459.16h-.015Z"/>
     <path fill="#7BB3FF" d="M85.103 3.675H1161.35v115.069H5.498V83.289c0-43.938 35.672-79.614 79.605-79.614Z"/>
     <path fill="#D2D9D9" d="M2.602 734.163H1165.12v136.134H89.233c-47.814 0-86.631-38.822-86.631-86.64v-49.494Z"/>
@@ -35,4 +37,12 @@ export const ComputerIllustration = props => {
     <path fill="#F60044" stroke="#000" strokeMiterlimit="10" strokeWidth="5" d="m470.856 531.792-35.349 18.801a2.097 2.097 0 0 0-.499 3.322l50.473 50.479a2.101 2.101 0 0 1 0 2.954l-17.961 17.963a2.101 2.101 0 0 1-2.954 0l-50.474-50.478c-.985-.985-2.66-.735-3.322.499l-18.799 35.353c-.867 1.632-3.248 1.411-3.821-.338l-38.392-118.142c-.529-1.617 1.014-3.16 2.631-2.631l118.129 38.396c1.749.573 1.955 2.955.338 3.822Z"/>
   </svg>
   )
+}
+
+ComputerIllustration.propTypes = {
+  title: PropTypes.string,
+}
+
+ComputerIllustration.defaultProps = {
+  title: null,
 }

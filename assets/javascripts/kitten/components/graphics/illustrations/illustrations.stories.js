@@ -14,6 +14,9 @@ import { HandIllustration } from './hand-illustration'
 import { FormIllustration } from './form-illustration'
 import { ComputerIllustration } from './computer-illustration'
 import { RibbonIllustration } from './ribbon-illustration'
+import { HandAndFlowerIllustration } from './hand-and-flower-illustration'
+import { RainbowIllustration } from './rainbow-illustration'
+import { PencilIllustration } from './pencil-illustration'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};
@@ -58,8 +61,8 @@ const IllustrationWrapper = styled(({ className, children, name }) => {
   svg {
     width: auto;
     height: auto;
-    max-width: ${pxToRem(150)};
-    max-height: ${pxToRem(160)};
+    max-width: ${pxToRem(250)};
+    max-height: ${pxToRem(300)};
   }
 `
 
@@ -110,6 +113,17 @@ export const AllIllustrations = () => {
       </IllustrationWrapper>
       <IllustrationWrapper name="FormIllustration">
         <FormIllustration />
+      </IllustrationWrapper>
+      </Group>
+      <Group>
+      <IllustrationWrapper name="PencilIllustration">
+        <PencilIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="RainbowIllustration">
+        <RainbowIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="HandAndFlowerIllustration">
+        <HandAndFlowerIllustration />
       </IllustrationWrapper>
       </Group>
     </Wrapper>

@@ -286,6 +286,9 @@ export { HandIllustration } from './components/graphics/illustrations/hand-illus
 export { ComputerIllustration } from './components/graphics/illustrations/computer-illustration'
 export { FormIllustration } from './components/graphics/illustrations/form-illustration'
 export { RibbonIllustration } from './components/graphics/illustrations/ribbon-illustration'
+export { RainbowIllustration } from './components/graphics/illustrations/rainbow-illustration'
+export { PencilIllustration } from './components/graphics/illustrations/pencil-illustration'
+export { HandAndFlowerIllustration } from './components/graphics/illustrations/hand-and-flower-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'

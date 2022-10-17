@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const HandIllustration = props => {
+export const HandIllustration = ({ title, ...props }) => {
   return (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -10,6 +11,7 @@ export const HandIllustration = props => {
     viewBox="0 0 573 1012"
     {...props}
   >
+    {title && <title>{title}</title>}
     <g clip-path="url(#a)">
       <path fill="#FFB8CA" fillRule="evenodd" d="M128.35 1011.6h335.69l3.33-2.83 22.31-88.28-43.77 3.58-135.24 2.82-59.58-1.41-59.58-18.07-33.32-3.11-29.84 107.3Z" clip-rule="evenodd"/>
       <path fill="#7AB3FF" d="m364.361 824.51-26.56-.92 3.12-24.84c4.94 6.44 10.19 12.65 15.73 18.61 2.28 2.45 4.88 4.95 7.71 7.15Z"/>
@@ -135,3 +137,12 @@ export const HandIllustration = props => {
   </svg>
   )
 }
+
+HandIllustration.propTypes = {
+  title: PropTypes.string,
+}
+
+HandIllustration.defaultProps = {
+  title: null,
+}
+
