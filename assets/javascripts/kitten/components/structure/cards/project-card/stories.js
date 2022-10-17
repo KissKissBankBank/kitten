@@ -1,7 +1,14 @@
 import React from 'react'
 import { ProjectCard } from './index'
 import { DocsPage } from 'storybook/docs-page'
-import { Text, Button, Tag, FlexWrapper, LockOutlineIcon } from 'kitten'
+import {
+  GiftIcon,
+  Text,
+  Button,
+  Tag,
+  FlexWrapper,
+  LockOutlineIcon,
+} from 'kitten'
 
 export default {
   title: 'Structure/Cards/ProjectCard',
@@ -89,6 +96,39 @@ export const Default = ({ progressProps, ...args }) => (
 
 Default.args = args
 Default.argTypes = argTypes
+
+export const TeamSelection = ({ progressProps, ...args }) => (
+  <ProjectCard {...args}>
+    <ProjectCard.Line className="k-u-flex k-u-flex-alignItems-center">
+      <GiftIcon
+        noMargin
+        width="13"
+        height="13"
+        color="var(--color-primary-500)"
+        className="k-u-margin-right-single"
+      />
+      <Text size="small" color="primary1">
+        Environnement et biodiversité
+      </Text>
+    </ProjectCard.Line>
+
+    <ProjectCard.Title>
+      The Office, la série culte décortiquée par S!CK
+    </ProjectCard.Title>
+
+    <ProjectCard.Progress {...progressProps} />
+    <ProjectCard.Item>
+      <Text size="small">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh
+        neque, interdum quis nisl vitae, maximus dapibus metus. Duis ut dictum
+        elit, non porta ante.
+      </Text>
+    </ProjectCard.Item>
+  </ProjectCard>
+)
+
+TeamSelection.args = args
+TeamSelection.argTypes = argTypes
 
 export const Lendopolis = ({ progressProps, ...args }) => (
   <ProjectCard
