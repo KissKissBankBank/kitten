@@ -1,6 +1,8 @@
 import React from 'react'
 import { Title } from 'kitten'
 import Hero from './components/hero'
+import UnderHero from './components/under-hero'
+import New from './components/new'
 import ProjectCarousels from './components/project-carousels'
 import Why from './components/why'
 import Manifesto from './components/manifesto'
@@ -12,9 +14,11 @@ import Pricing from './components/pricing'
 const HomePage = () => (
   <>
     <Hero />
+    <UnderHero />
+    <New />
     <Title
       tag="h1"
-      modifier="secondary"
+      modifier="tertiary"
       className="k-u-align-center k-u-margin-vertical-double k-u-margin-vertical-sextuple@s-up"
     >
       Les plus beaux projets du moment prennent vie<br />
