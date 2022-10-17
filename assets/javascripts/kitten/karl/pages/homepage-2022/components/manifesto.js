@@ -1,5 +1,13 @@
 import React from 'react'
-import { Button, mq, pxToRem } from 'kitten'
+import {
+  Button,
+  mq,
+  pxToRem,
+  Text,
+  PencilIllustration,
+  RainbowIllustration,
+  HandAndFlowerIllustration,
+} from 'kitten'
 import styled from 'styled-components'
 
 const ManifestoWrapper = styled.section`
@@ -13,12 +21,21 @@ const ManifestoWrapper = styled.section`
   padding: var(--padding-top-mobile) ${pxToRem(20)} var(--padding-bottom-mobile);
 
   @media ${mq.tabletAndDesktop} {
-    padding: var(--padding-top-desktop) ${pxToRem(40)}
+    padding: var(--padding-top-desktop) ${pxToRem(300)}
       var(--padding-bottom-desktop);
   }
 
   .k-Title {
     margin: 0;
+  }
+
+  .kiss-Homepage__manifesto__illustrations {
+    display: flex;
+    gap: ${pxToRem(30)};
+  }
+
+  .kiss-Homepage__manifesto__illustration {
+    flew-direction: column;
   }
 `
 
@@ -34,7 +51,22 @@ const Manifesto = ({ title, className, top = [], bottom = [] }) => {
       }}
     >
       {title}
-      <Button modifier="hydrogen">lire notre manifeste</Button>
+
+      <div className="kiss-Homepage__manifesto__illustrations">
+        <div className="kiss-Homepage__manifesto__illustration">
+          <PencilIllustration />
+          <Text tag="p" size="large" cssColor="var(--color-grey-000">Défendons la culture indépendante</Text>
+        </div>
+        <div className="kiss-Homepage__manifesto__illustration">
+          <RainbowIllustration />
+          <Text tag="p" size="large" cssColor="var(--color-grey-000">Luttons contre les discriminations</Text>
+        </div>
+        <div className="kiss-Homepage__manifesto__illustration">
+          <HandAndFlowerIllustration />
+          <Text tag="p" size="large" cssColor="var(--color-grey-000">Protégeons l’environnement et la biodiversité</Text>
+        </div>
+      </div>
+      <Button modifier="hydrogen">Lire notre manifeste</Button>
     </ManifestoWrapper>
   )
 }
