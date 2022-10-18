@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {
-  Button,
   CarouselNext,
   ProjectCard,
   Text,
@@ -10,73 +9,99 @@ import {
   ScreenConfig,
   mq,
   Container,
+  GiftIcon,
 } from 'kitten'
 
 const data = [
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item A',
     imageSrc: '/kitten-1.jpg',
     thumbSrc: '/kitten-1.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item B with a pretty long title on two lines',
     imageSrc: '/kitten-2.jpg',
     thumbSrc: '/kitten-2.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item C',
     imageSrc: '/kitten-3.jpg',
     thumbSrc: '/kitten-3.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item D',
     imageSrc: '/kitten-4.jpg',
     thumbSrc: '/kitten-4.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title:
       'Item Ewith the longest title ever in all the world, three lines for sure',
     imageSrc: '/kitten-5.jpg',
     thumbSrc: '/kitten-5.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item F',
     imageSrc: '/kitten-6.jpg',
     thumbSrc: '/kitten-6.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item G',
     imageSrc: '/kitten-7.jpg',
     thumbSrc: '/kitten-7.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item H',
     imageSrc: '/kitten-8.jpg',
     thumbSrc: '/kitten-8.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item I',
     imageSrc: '/kitten-9.jpg',
     thumbSrc: '/kitten-9.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item J',
     imageSrc: '/kitten-0.jpg',
     thumbSrc: '/kitten-0.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item K',
     imageSrc: '/kitten-1.jpg',
     thumbSrc: '/kitten-1.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
+    engagement: 'Environnement et biodiversité',
     title: 'Item L',
     imageSrc: '/kitten-2.jpg',
     thumbSrc: '/kitten-2.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
 ]
 
-const CardComponent = ({ item }) => (
+
+const CampaignCardComponent = ({ item }) => (
   <ProjectCard
     key={`ProjectCard${item.title}`}
     href="#"
@@ -88,49 +113,31 @@ const CardComponent = ({ item }) => (
     }}
     stretch
   >
-    <ProjectCard.Title>{item.title}</ProjectCard.Title>
-    <ProjectCard.Line>
-      <Text>subtitle</Text>
+    <ProjectCard.Line className="k-u-flex k-u-flex-alignItems-center">
+      <GiftIcon
+        noMargin
+        width="13"
+        height="13"
+        color="var(--color-primary-500)"
+        className="k-u-margin-right-single"
+      />
+      <Text size="small" color="primary1">
+        {item.engagement}
+      </Text>
     </ProjectCard.Line>
-
-    <ProjectCard.ItemsLine>
-      <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="700" size="small">
-          134
-        </Text>
-        <Text className="k-u-ellipsis" size="micro">
-          contributeurs
-        </Text>
-      </ProjectCard.Item>
-      <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="700" size="small">
-          7 jours
-        </Text>
-        <Text className="k-u-ellipsis" size="micro">
-          restants
-        </Text>
-      </ProjectCard.Item>
-      <ProjectCard.Item>
-        <Text className="k-u-ellipsis" weight="700" size="small">
-          9 930 €
-        </Text>
-        <Text className="k-u-ellipsis" size="micro">
-          sur 12 000 €
-        </Text>
-      </ProjectCard.Item>
-    </ProjectCard.ItemsLine>
-
+    <ProjectCard.Title>{item.title}</ProjectCard.Title>
     <ProjectCard.Progress aria-label="Progrès de la campagne" value="84" />
+    <ProjectCard.Item>
+      <Text size="small">
+        {item.description}
+      </Text>
+    </ProjectCard.Item>
   </ProjectCard>
 )
 
-const ProjectCarousels = () => (
+const CampaignCarousel = () => (
   <StyledWrapper>
     <CarouselBlock title="La sélection de l'équipe" />
-    <CarouselBlock title="Les projets populaires" />
-    <Button className="k-u-alignSelf-center" tag="a" href="#">
-      Voir plus de projets
-    </Button>
   </StyledWrapper>
 )
 
@@ -171,7 +178,9 @@ const CarouselBlock = ({ title }) => {
         shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
       >
         {data.map((item, index) => (
-          <CardComponent item={item} key={index} />
+          <>
+            <CampaignCardComponent item={item} key={index} />
+          </>
         ))}
       </CarouselNext>
     </div>
@@ -183,7 +192,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(40)};
-  padding-block: ${pxToRem(60)};
+  padding: ${pxToRem(60)} 0 ${pxToRem(30)} 0;
 
   & > * {
     position: relative;
@@ -216,4 +225,4 @@ const StyledWrapper = styled.section`
   }
 `
 
-export default ProjectCarousels
+export default CampaignCarousel

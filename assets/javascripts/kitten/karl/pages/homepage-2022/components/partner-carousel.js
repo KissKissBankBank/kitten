@@ -46,52 +46,62 @@ const PartnersWrapper = styled.section`
   }
 `
 
-const Partners = () => {
+const CardComponent = ({ item }) => (
+  <PartnerCard
+    key={`ProjectCard${item.title}`}
+    href="#"
+    imageProps={{
+      src: item.imageSrc,
+      alt: 'Image alt',
+      backgroundColor: '#d8d8d8',
+      color: '#333',
+    }}
+    stretch
+  >
+    <ProjectCard.Line className="k-u-flex k-u-flex-alignItems-center">
+      <GiftIcon
+        noMargin
+        width="13"
+        height="13"
+        color="var(--color-primary-500)"
+        className="k-u-margin-right-single"
+      />
+      <Text size="small" color="primary1">
+        {item.engagement}
+      </Text>
+    </ProjectCard.Line>
+    <ProjectCard.Title>{item.title}</ProjectCard.Title>
+    <ProjectCard.Progress aria-label="Progrès de la campagne" value="84" />
+    <ProjectCard.Item>
+      <Text size="small">
+        {item.description}
+      </Text>
+    </ProjectCard.Item>
+  </PartnerCard>
+)
+
+
+const PartnerCarousel = () => {
   return (
     <PartnersWrapper>
       <Title modifier="secondary">
       Les entreprises s’engagent au service de la réussite des projets
       </Title>
-      <div className="kiss-Homepage__partners__cards">
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-        <div className="kiss-Homepage__partners__card">
-          <AirplaneIconNext />
-        </div>
-      </div>
+
       <div className="k-u-margin-top-triple@s-up">
         <Text
           size="huge"
           weight="700"
           className="k-u-block k-u-margin-horizontal-auto k-u-margin-bottom-double"
         >
-          Vous êtes une marque ?
+          Vous êtes une entreprise ?
         </Text>
         <Button modifier="boron" size="small">
-          En savoir plus
+          Devenons partenaires
         </Button>
       </div>
     </PartnersWrapper>
   )
 }
 
-export default Partners
+export default PartnerCarousel

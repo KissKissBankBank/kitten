@@ -3,11 +3,12 @@ import { Title } from 'kitten'
 import Hero from './components/hero'
 import UnderHero from './components/under-hero'
 import New from './components/new'
-import ProjectCarousels from './components/project-carousels'
+import CampaignCarousel from './components/campaign-carousel'
+import ProjectCarousel from './components/project-carousel'
 import Why from './components/why'
 import Manifesto from './components/manifesto'
 import Engagements from './components/engagements'
-import Partners from './components/partners'
+import PartnerCarousel from './components/partner-carousel'
 import Challenges from './components/challenges'
 import Pricing from './components/pricing'
 
@@ -24,7 +25,8 @@ const HomePage = () => (
       Les plus beaux projets du moment prennent vie<br />
       sur KissKissBankBank
     </Title>
-    <ProjectCarousels />
+    <CampaignCarousel />
+    <ProjectCarousel />
     <Why />
     <Manifesto
       top={[100, 160]}
@@ -51,7 +53,7 @@ const HomePage = () => (
         </Title>
       }
     />
-    <Partners />
+    <PartnerCarousel />
     <Challenges />
     <Pricing />
   </>
