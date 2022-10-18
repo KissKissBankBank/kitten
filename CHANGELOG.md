@@ -11,11 +11,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `SilhouetteIconNext`
     - `ClickIconNext`
     - `SilhouetteIconNext`
-    - `HourglassIllustration`
+    
+  - Add the following illustration components:
     - `HandIllustration`
     - `FormIllustration`
     - `RibbonIllustration`
     - `ComputerIllustration`
+    - `HourglassIllustration`
+    - `HandAndFlowerIllustration`
+    - `RainbowIllustration`
+    - `PencilIllustration`
 
 ## [12.14.0] - 2022-10-14  💅
 
