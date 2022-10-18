@@ -35,6 +35,7 @@ const HomePage = () => (
           pour un monde plus juste.
         </Title>
       }
+      illustration
     />
     <Engagements />
     <Manifesto

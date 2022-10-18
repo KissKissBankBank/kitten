@@ -12,39 +12,11 @@ const PartnersWrapper = styled.section`
   flex-direction: column;
   gap: ${pxToRem(30)};
   padding: ${pxToRem(70)} ${pxToRem(20)} ${pxToRem(70)};
+  clip-path: polygon(100% 0%, 0% 5%, 0% 100%, 100% 95%);
 
   @media ${mq.tabletAndDesktop} {
     gap: ${pxToRem(50)};
-    padding: ${pxToRem(165)} ${pxToRem(260)} ${pxToRem(100)};
-  }
-
-  &::before {
-    content: '';
-    background-color: var(--color-grey-900);
-    height: ${pxToRem(70)};
-    width: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    clip-path: polygon(0 -1px, 100% -1px, 100% 50%, 75% 75%, 75% 25%, 0 100%);
-  }
-
-  &::after {
-    content: '';
-    background-color: var(--color-grey-100);
-    height: ${pxToRem(70)};
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    clip-path: polygon(
-      0 calc(100% + 1px),
-      100% calc(100% + 1px),
-      100% 0,
-      20% 100%,
-      20% 33%,
-      0 66%
-    );
+    padding: ${pxToRem(100)} ${pxToRem(260)} ${pxToRem(100)};
   }
 
   .kiss-Homepage__partners__cards {
@@ -78,8 +50,7 @@ const Partners = () => {
   return (
     <PartnersWrapper>
       <Title modifier="secondary">
-        Les plus grandes marques s’engagent également au service de la réussite
-        des projets.
+      Les entreprises s’engagent au service de la réussite des projets
       </Title>
       <div className="kiss-Homepage__partners__cards">
         <div className="kiss-Homepage__partners__card">

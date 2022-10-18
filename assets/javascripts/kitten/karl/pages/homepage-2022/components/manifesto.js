@@ -19,6 +19,7 @@ const ManifestoWrapper = styled.section`
   color: var(--color-grey-000);
   text-align: center;
   padding: var(--padding-top-mobile) ${pxToRem(20)} var(--padding-bottom-mobile);
+  margin-top: ${pxToRem(-50)};
 
   @media ${mq.tabletAndDesktop} {
     padding: var(--padding-top-desktop) ${pxToRem(300)}
@@ -39,7 +40,7 @@ const ManifestoWrapper = styled.section`
   }
 `
 
-const Manifesto = ({ title, className, top = [], bottom = [] }) => {
+const Manifesto = ({ title, className, illustration, top = [], bottom = [] }) => {
   return (
     <ManifestoWrapper
       className={className}
@@ -52,20 +53,29 @@ const Manifesto = ({ title, className, top = [], bottom = [] }) => {
     >
       {title}
 
-      <div className="kiss-Homepage__manifesto__illustrations">
-        <div className="kiss-Homepage__manifesto__illustration">
-          <PencilIllustration />
-          <Text tag="p" size="large" cssColor="var(--color-grey-000">Défendons la culture indépendante</Text>
+      {illustration && (
+        <div className="kiss-Homepage__manifesto__illustrations">
+          <div className="kiss-Homepage__manifesto__illustration">
+            <PencilIllustration />
+            <Text tag="p" size="large" cssColor="var(--color-grey-000">
+              Défendons la culture indépendante
+            </Text>
+          </div>
+          <div className="kiss-Homepage__manifesto__illustration">
+            <RainbowIllustration />
+            <Text tag="p" size="large" cssColor="var(--color-grey-000">
+              Luttons contre les discriminations
+            </Text>
+          </div>
+          <div className="kiss-Homepage__manifesto__illustration">
+            <HandAndFlowerIllustration />
+            <Text tag="p" size="large" cssColor="var(--color-grey-000">
+              Protégeons l’environnement et la biodiversité
+            </Text>
+          </div>
         </div>
-        <div className="kiss-Homepage__manifesto__illustration">
-          <RainbowIllustration />
-          <Text tag="p" size="large" cssColor="var(--color-grey-000">Luttons contre les discriminations</Text>
-        </div>
-        <div className="kiss-Homepage__manifesto__illustration">
-          <HandAndFlowerIllustration />
-          <Text tag="p" size="large" cssColor="var(--color-grey-000">Protégeons l’environnement et la biodiversité</Text>
-        </div>
-      </div>
+      )}
+
       <Button modifier="hydrogen">Lire notre manifeste</Button>
     </ManifestoWrapper>
   )

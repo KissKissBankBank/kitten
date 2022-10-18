@@ -51,7 +51,7 @@ const UnderHero = () => {
           votre projet
       </Title>
       <div className="kiss-Homepage__underHero__blocks">
-        <div className="kiss-Homepage__underHero__block" style={{ backgroundColor:"#E5F3FF" }}>
+        <div className="kiss-Homepage__underHero__block" style={{ backgroundColor: "var(--color-primary-100)" }}>
           <HourglassIllustration width="164" height="287" />
           <Title modifier="quinary" color="var(--color-primary-700)">
             Lancer une campagne limitée dans le temps avec un objectif à atteindre.
@@ -64,7 +64,7 @@ const UnderHero = () => {
           </Button>
         </div>
 
-        <div className="kiss-Homepage__underHero__block" style={{ backgroundColor:"#FFE9EF" }}>
+        <div className="kiss-Homepage__underHero__block" style={{ backgroundColor:"var(--color-danger-100)" }}>
           <HandIllustration width="165" height="293" />
           <Title modifier="quinary" color="var(--color-danger-700)">
             Générer un revenu sur la durée grâce à des contributeurs récurrents

@@ -13,7 +13,7 @@ const EngagementsWrapper = styled.section`
   overflow: hidden;
 
   @media ${mq.tabletAndDesktop} {
-    padding: ${pxToRem(200)} ${pxToRem(120)} 0;
+    padding: 0 ${pxToRem(120)} 0;
     gap: ${pxToRem(100)};
   }
 
@@ -31,7 +31,7 @@ const EngagementsWrapper = styled.section`
     .kiss-Homepage__engagements__heart {
       width: ${pxToRem(450)};
       transform: rotate(-30deg);
-      top: -20%;
+      top: 55%;
       left: -12%;
     }
     .kiss-Homepage__engagements__bolt {
@@ -71,8 +71,7 @@ const EngagementBlock = () => {
         cssColor="inherit"
         className="k-u-margin-bottom-single"
       >
-        Luttons contre <br />
-        les discriminations
+        Luttons contre les discriminations
       </Title>
       <div className="k-u-flex k-u-flex-justifyContent-sb k-u-margin-bottom-triple">
         <Text cssColor="inherit" size="small">
@@ -105,7 +104,7 @@ const EngagementBlock = () => {
             Prolongation
           </ProjectCard.Sticker>
           <ProjectCard.Title>
-            The Office, la série culte décortiquée par S!CK
+            The Office, la série culte
           </ProjectCard.Title>
           <ProjectCard.Line>
             <Text size="micro">
@@ -159,7 +158,7 @@ const EngagementBlock = () => {
             Prolongation
           </ProjectCard.Sticker>
           <ProjectCard.Title>
-            The Office, la série culte décortiquée par S!CK
+            The Office, la série culte qui fait peur
           </ProjectCard.Title>
           <ProjectCard.Line>
             <Text size="micro">
@@ -213,7 +212,7 @@ const EngagementBlock = () => {
             Prolongation
           </ProjectCard.Sticker>
           <ProjectCard.Title>
-            The Office, la série culte décortiquée par S!CK
+            The Office,
           </ProjectCard.Title>
           <ProjectCard.Line>
             <Text size="micro">

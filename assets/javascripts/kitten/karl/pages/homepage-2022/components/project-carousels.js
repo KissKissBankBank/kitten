@@ -126,7 +126,7 @@ const CardComponent = ({ item }) => (
 
 const ProjectCarousels = () => (
   <StyledWrapper>
-    <CarouselBlock title="La sélection de la semaine" />
+    <CarouselBlock title="La sélection de l'équipe" />
     <CarouselBlock title="Les projets populaires" />
     <Button className="k-u-alignSelf-center" tag="a" href="#">
       Voir plus de projets
@@ -184,7 +184,6 @@ const StyledWrapper = styled.section`
   flex-direction: column;
   gap: ${pxToRem(40)};
   padding-block: ${pxToRem(60)};
-  background-color: var(--color-grey-100);
 
   & > * {
     position: relative;

@@ -13,52 +13,24 @@ import styled from 'styled-components'
 
 const WhyWrapper = styled.section`
   position: relative;
-  background-color: var(--color-danger-500);
-  color: var(--color-grey-000);
+  background-color: var(--color-danger-100);
+  color: var(--color-grey-900);
   text-align: center;
 
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(20)};
-  padding: ${pxToRem(70)} ${pxToRem(20)} 0;
+  padding: ${pxToRem(70)} ${pxToRem(20)};
+  clip-path: polygon(100% 0%, 0% 5%, 0% 100%, 100% 95%);
 
   @media ${mq.tabletAndDesktop} {
     gap: ${pxToRem(40)};
-    padding: ${pxToRem(165)} ${pxToRem(100)} 0;
+    padding: ${pxToRem(120)} ${pxToRem(100)};
   }
 
   > * {
     position: relative;
     z-index: 2;
-  }
-
-  &::before {
-    content: '';
-    background-color: var(--color-grey-100);
-    height: ${pxToRem(70)};
-    width: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    clip-path: polygon(0 -1px, 100% -1px, 33% 100%, 33% 33%, 0 66%);
-  }
-
-  &::after {
-    content: '';
-    background-color: var(--color-grey-900);
-    height: 40%;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    clip-path: polygon(
-      0 0,
-      50% 100px,
-      50% 50px,
-      100% 100px,
-      100% calc(100% + 1px),
-      0 calc(100% + 1px)
-    );
   }
 
   .kiss-Homepage__why__cards {
@@ -80,7 +52,7 @@ const WhyWrapper = styled.section`
 const Why = () => {
   return (
     <WhyWrapper>
-      <Title cssColor="inherit" modifier="secondary">
+      <Title cssColor="inherit" modifier="secondary" noMargin>
         Pourquoi choisir KissKissBankBank ?
       </Title>
       <div className="kiss-Homepage__why__cards">
@@ -133,7 +105,7 @@ const Why = () => {
         </div>
       </div>
       <div className="k-u-align-center">
-        <Button modifier="boron">En savoir plus</Button>
+        <Button modifier="helium">En savoir plus</Button>
       </div>
     </WhyWrapper>
   )
