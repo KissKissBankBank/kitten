@@ -29,7 +29,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
       className="sc-bczRLJ cYsqNV"
     >
       <span
-        className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-EditorBar__button--wide k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+        className="sc-gsnTZi jsXERj k-Button k-EditorBar__button k-EditorBar__button--wide k-Button--medium k-Button--nitrogen k-Button--fit-icon"
         disabled={null}
         style={
           Object {
@@ -167,7 +167,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
   >
     <button
       aria-pressed={true}
-      className="sc-gsnTZi dgPDzE k-Button k-EditorBar__button k-Button--medium k-Button--lithium k-Button--fit-icon"
+      className="sc-gsnTZi cQGNc k-Button k-EditorBar__button k-Button--medium k-Button--lithium k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -191,7 +191,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
       </svg>
     </button>
     <button
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-gsnTZi jsXERj k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -214,7 +214,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
       </svg>
     </button>
     <button
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-gsnTZi jsXERj k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -243,7 +243,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
   >
     <button
       aria-pressed={true}
-      className="sc-gsnTZi dgPDzE k-Button k-EditorBar__button k-Button--medium k-Button--lithium k-Button--fit-icon"
+      className="sc-gsnTZi cQGNc k-Button k-EditorBar__button k-Button--medium k-Button--lithium k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -266,7 +266,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
       </svg>
     </button>
     <button
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-gsnTZi jsXERj k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -293,7 +293,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
     className="k-EditorBar__group"
   >
     <button
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon k-Button--disabled"
+      className="sc-gsnTZi jsXERj k-Button k-EditorBar__button k-Button--medium k-Button--nitrogen k-Button--fit-icon k-Button--disabled"
       disabled={true}
       style={
         Object {
@@ -317,7 +317,7 @@ exports[`<EditorBar /> with mucho props matches with snapshot 1`] = `
       </svg>
     </button>
     <button
-      className="sc-gsnTZi foEKnL k-Button k-EditorBar__button k-EditorBar__button--wide k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-gsnTZi jsXERj k-Button k-EditorBar__button k-EditorBar__button--wide k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,

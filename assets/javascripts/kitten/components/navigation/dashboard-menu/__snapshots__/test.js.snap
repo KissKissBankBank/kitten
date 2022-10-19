@@ -178,7 +178,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 
 .c0 .k-DashboardMenu__expandable .k-DashboardMenu__expandable__title,
 .c0 .k-DashboardMenu__list > li > .k-DashboardMenu__item {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   background-color: var(--color-grey-900,#222);
   cursor: pointer;
@@ -191,7 +191,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.125rem;
   max-width: 100%;
@@ -204,7 +204,7 @@ exports[`<DashboardMenu /> with default props matches with snapshot 1`] = `
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:hover,
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item:focus,
 .c0 .k-DashboardMenu__expandable__list > li > .k-DashboardMenu__item[aria-current='page'] {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-000,#fff);
 }

@@ -29,7 +29,7 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
 }
 
 .c0 .k-LinkList__link {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -49,13 +49,13 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
 
 .c0 .k-LinkList__item--regular,
 .c0 .k-LinkList__link--regular {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
 .c0 .k-LinkList__item--light,
 .c0 .k-LinkList__link--light {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 

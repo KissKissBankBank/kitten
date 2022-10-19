@@ -886,7 +886,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   padding: 1.25rem 1.875rem;
   color: var(--color-grey-000);
   background-color: var(--color-grey-900);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 1.125rem;
@@ -931,7 +931,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   color: var(--color-grey-000);
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.2;
@@ -1547,7 +1547,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   padding: 1.25rem 1.875rem;
   color: var(--color-grey-000);
   background-color: var(--color-grey-900);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   line-height: 1;
   font-size: 1.125rem;
@@ -1592,7 +1592,7 @@ button:focus .c1.k-BurgerIcon--isAnimatedOnHover .k-BurgerIcon__patty {
   color: var(--color-grey-000);
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.2;

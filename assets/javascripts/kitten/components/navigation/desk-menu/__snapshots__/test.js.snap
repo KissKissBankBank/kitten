@@ -58,7 +58,7 @@ exports[`<DeskMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DeskMenu__list .k-DeskMenu__item {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -215,7 +215,7 @@ exports[`<DeskMenu /> with header matches with snapshot 1`] = `
 }
 
 .c0 .k-DeskMenu__list .k-DeskMenu__item {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;

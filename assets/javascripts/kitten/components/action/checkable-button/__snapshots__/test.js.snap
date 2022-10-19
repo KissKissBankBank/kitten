@@ -20,7 +20,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -391,7 +391,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -762,7 +762,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1133,7 +1133,7 @@ exports[`<CheckableButton /> with \`large\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1504,7 +1504,7 @@ exports[`<CheckableButton /> with \`small\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);

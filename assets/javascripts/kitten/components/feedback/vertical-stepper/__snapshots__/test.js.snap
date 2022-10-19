@@ -32,7 +32,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border: 0.1875rem solid var(--color-grey-000,#fff);
   border-radius: var(--border-radius-rounded);
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
@@ -173,7 +173,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c4 {
   margin: 0 0 0.3125rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
@@ -190,7 +190,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c5 .k-Steppers--VerticalStepper__link {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: normal;
@@ -217,7 +217,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c6 {
   margin: 0.3125rem 0 0.625rem;
   padding: 0;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: normal;

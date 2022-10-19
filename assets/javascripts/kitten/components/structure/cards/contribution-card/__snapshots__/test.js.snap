@@ -33,7 +33,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </p>
     </span>
     <div
-      className="sc-hKMtZM eLWZFn k-TextInput__wrapper k-TextInput__wrapper--medium k-ContributionCard__inputWrapper k-TextInput__wrapper--hasUnit"
+      className="sc-hKMtZM kSHfkr k-TextInput__wrapper k-TextInput__wrapper--medium k-ContributionCard__inputWrapper k-TextInput__wrapper--hasUnit"
     >
       <input
         className="k-TextInput k-ContributionCard__input k-TextInput--hasUnit"
@@ -49,7 +49,7 @@ exports[`<ContributionCard /> Petit plus matches with snapshot 1`] = `
       </span>
     </div>
     <button
-      className="sc-bczRLJ cRKbal k-Button k-ContributionCard__action k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+      className="sc-bczRLJ jxnpsF k-Button k-ContributionCard__action k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
       disabled={true}
       style={
         Object {

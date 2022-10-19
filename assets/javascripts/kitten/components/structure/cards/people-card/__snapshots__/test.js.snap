@@ -8,7 +8,7 @@ exports[`<PeopleCard /> With peopleAvatar prop matches with snapshot 1`] = `
     className="k-PeopleCard__image"
   >
     <div
-      className="sc-gsnTZi gSdDNb k-Avatar__wrapper"
+      className="sc-gsnTZi czpMbj k-Avatar__wrapper"
     >
       <div
         className="k-Avatar k-Avatar--small"
@@ -54,7 +54,7 @@ exports[`<PeopleCard /> default matches with snapshot 1`] = `
     className="k-PeopleCard__image"
   >
     <div
-      className="sc-gsnTZi gSdDNb k-Avatar__wrapper"
+      className="sc-gsnTZi czpMbj k-Avatar__wrapper"
     >
       <div
         className="k-Avatar k-Avatar--small"

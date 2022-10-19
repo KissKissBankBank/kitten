@@ -54,7 +54,7 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
 .c0 .k-NavBar__link {
   height: 4.0625rem;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -242,7 +242,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 .c0 .k-NavBar__link {
   height: 4.0625rem;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -430,7 +430,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 .c0 .k-NavBar__link {
   height: 4.0625rem;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;

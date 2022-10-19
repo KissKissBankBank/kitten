@@ -2,10 +2,10 @@
 
 exports[`<LocationInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-dkzDqf cLVSUm k-LocationInput"
+  className="sc-dkzDqf dPNBAm k-LocationInput"
 >
   <div
-    className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
+    className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
   >
     <input
       aria-autocomplete="list"

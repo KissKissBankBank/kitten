@@ -11,7 +11,7 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 .c0 .k-BulletList__item {
   margin: 0.3125rem 1rem;
   display: block;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-grey-900,#222);

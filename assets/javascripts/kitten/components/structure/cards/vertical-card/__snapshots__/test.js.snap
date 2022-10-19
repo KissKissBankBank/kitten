@@ -10,7 +10,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-gsnTZi mZbdM k-Title k-Title--senary k-Title--noMargin"
+    className="sc-gsnTZi cCXGim k-Title k-Title--senary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,
@@ -33,7 +33,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-gsnTZi mZbdM k-Title k-Title--senary k-Title--noMargin"
+    className="sc-gsnTZi cCXGim k-Title k-Title--senary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,
@@ -46,7 +46,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     className="sc-bczRLJ jqcFKy"
   >
     <p
-      className="sc-dkzDqf eptyER k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
+      className="sc-dkzDqf gykSap k-Paragraph k-Paragraph--tertiary k-Paragraph--noMargin"
     >
       Custom text
     </p>
