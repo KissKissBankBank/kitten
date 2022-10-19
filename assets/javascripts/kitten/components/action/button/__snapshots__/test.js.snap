@@ -20,7 +20,7 @@ exports[`<Button /> active icon hydrogen props (should have lithum modifier) mat
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -272,7 +272,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -526,7 +526,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 2`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -778,7 +778,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1030,7 +1030,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1282,7 +1282,7 @@ exports[`<Button /> with \`scandium\` \`modifier\` prop matches with snapshot 1`
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1534,7 +1534,7 @@ exports[`<Button /> with \`size\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1786,7 +1786,7 @@ exports[`<Button /> with \`tag\` prop matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -2040,7 +2040,7 @@ exports[`<Button /> with bullet matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -2292,7 +2292,7 @@ exports[`<Button /> with fluid matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -2544,7 +2544,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -2796,7 +2796,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -3048,7 +3048,7 @@ exports[`<Button /> with icon and large matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -3300,7 +3300,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -3552,7 +3552,7 @@ exports[`<Button /> with icon and small matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -3804,7 +3804,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -4056,7 +4056,7 @@ exports[`<Button /> with null props matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -4308,7 +4308,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -4565,7 +4565,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);

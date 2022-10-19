@@ -2,7 +2,7 @@
 
 exports[`<Badge /> default should match the snapshot 1`] = `
 <span
-  className="sc-bczRLJ jGJKXM k-Badge"
+  className="sc-bczRLJ fopmbI k-Badge"
   style={
     Object {
       "--Badge-background-color": null,
@@ -29,7 +29,7 @@ exports[`<Badge /> with icon should match the snapshot 1`] = `
     />
   </svg>
   <span
-    className="sc-bczRLJ jGJKXM k-Badge k-Badge--hasIcon"
+    className="sc-bczRLJ fopmbI k-Badge k-Badge--hasIcon"
     style={
       Object {
         "--Badge-background-color": "red",

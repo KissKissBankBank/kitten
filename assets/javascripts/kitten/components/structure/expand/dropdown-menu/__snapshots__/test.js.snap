@@ -221,7 +221,7 @@ exports[`<DropdownMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu__item {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-000);
   -webkit-text-decoration: none;
@@ -574,7 +574,7 @@ exports[`<DropdownMenu /> with positioned button matches with snapshot 1`] = `
 }
 
 .c0 .k-DropdownMenu__menu__item {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-000);
   -webkit-text-decoration: none;

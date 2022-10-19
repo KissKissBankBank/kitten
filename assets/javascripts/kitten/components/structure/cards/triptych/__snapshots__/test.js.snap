@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-hKMtZM esnKuY k-Title k-Title--secondary k-Title--noMargin"
+          className="sc-hKMtZM bzkixq k-Title k-Title--secondary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -47,7 +47,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-hKMtZM esnKuY k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+            className="sc-hKMtZM bzkixq k-Title k-u-align-center k-Title--senary k-Title--noMargin"
             style={
               Object {
                 "--Title-css-color": null,
@@ -62,7 +62,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="sc-jSMfEi cxkxIs k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
+            className="sc-jSMfEi kxtcZQ k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
             href={null}
             onClick={null}
             style={
@@ -98,7 +98,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-hKMtZM esnKuY k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
+          className="sc-hKMtZM bzkixq k-Title k-u-align-center k-u-margin-bottom-singleHalf k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -108,7 +108,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Donsectetur adipiscing elit
         </h1>
         <p
-          className="sc-eCYdqJ gbjdTX k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
+          className="sc-eCYdqJ cqezCj k-Paragraph k-u-align-center k-u-margin-top-singleHalf k-Paragraph--tertiary k-Paragraph--noMargin"
         >
           Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
@@ -117,7 +117,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-jSMfEi cxkxIs k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
+          className="sc-jSMfEi kxtcZQ k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
           href={null}
           onClick={null}
           style={
@@ -152,7 +152,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-hKMtZM esnKuY k-Title k-u-align-center k-Title--senary k-Title--noMargin"
+          className="sc-hKMtZM bzkixq k-Title k-u-align-center k-Title--senary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
@@ -167,7 +167,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="sc-jSMfEi cxkxIs k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
+          className="sc-jSMfEi kxtcZQ k-Button k-VerticalCardWithAction__button k-Button--medium k-Button--helium k-Button--fit-content"
           href={null}
           onClick={null}
           style={

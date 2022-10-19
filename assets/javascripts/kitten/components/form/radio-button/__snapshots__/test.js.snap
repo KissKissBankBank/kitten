@@ -171,7 +171,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   -webkit-flex: 1 0 calc(100% - 1.625rem);
   -ms-flex: 1 0 calc(100% - 1.625rem);
   flex: 1 0 calc(100% - 1.625rem);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -192,13 +192,13 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 }
 
 .c0.k-Form-RadioButton--largeLabel .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
 }
 
 .c0 .k-Form-RadioButton__labelText--withContents {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
@@ -208,7 +208,7 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
   -webkit-flex: 1 0 calc(100% - 2.25rem);
   -ms-flex: 1 0 calc(100% - 2.25rem);
   flex: 1 0 calc(100% - 2.25rem);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.1875rem;
@@ -224,19 +224,19 @@ exports[`<RadiButton /> default matches with snapshot 1`] = `
 
 .c0.k-Form-RadioButton--weight-500 .k-Form-RadioButton__labelText,
 .c0.k-Form-RadioButton--weight-regular .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
 .c0.k-Form-RadioButton--weight-400 .k-Form-RadioButton__labelText,
 .c0.k-Form-RadioButton--weight-light .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
 .c0.k-Form-RadioButton--weight-700 .k-Form-RadioButton__labelText,
 .c0.k-Form-RadioButton--weight-bold .k-Form-RadioButton__labelText {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;

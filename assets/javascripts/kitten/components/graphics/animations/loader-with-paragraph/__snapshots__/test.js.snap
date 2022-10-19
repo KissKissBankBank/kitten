@@ -26,7 +26,7 @@ exports[`<LoaderWithParagraph /> With custom component should match with snapsho
     </svg>
   </div>
   <p
-    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+    className="sc-gsnTZi hVytgS k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
   >
     Loading
   </p>
@@ -79,7 +79,7 @@ exports[`<LoaderWithParagraph /> With custom props should match with snapshot 1`
     </svg>
   </button>
   <p
-    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+    className="sc-gsnTZi hVytgS k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
   >
     A custom loading massage
   </p>
@@ -132,7 +132,7 @@ exports[`<LoaderWithParagraph /> With default props should match with snapshot 1
     </svg>
   </div>
   <p
-    className="sc-gsnTZi cLyuga k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
+    className="sc-gsnTZi hVytgS k-Paragraph k-LoaderWithParagraph__paragraph k-Paragraph--secondary k-Paragraph--noMargin"
   >
     Loading
   </p>
