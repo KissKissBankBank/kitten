@@ -21,7 +21,7 @@ exports[`<PartnerCard /> by default matches with snapshot 1`] = `
     >
       <img
         alt=""
-        src="/kitten-8.jpg"
+        src="/kitten-1.jpg"
       />
     </div>
     <div
