@@ -26,7 +26,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   box-sizing: border-box;
   padding: 1.125rem 1.25rem 1.125rem;
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-900,#222);
   line-height: 1;
@@ -157,7 +157,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
@@ -273,7 +273,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -460,7 +460,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   box-sizing: border-box;
   padding: 1.125rem 1.25rem 1.125rem;
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-900,#222);
   line-height: 1;
@@ -591,7 +591,7 @@ exports[`<HeaderMenu /> with button items matches with snapshot 1`] = `
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
@@ -777,7 +777,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   box-sizing: border-box;
   padding: 1.125rem 1.25rem 1.125rem;
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-900,#222);
   line-height: 1;
@@ -908,7 +908,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
@@ -1052,7 +1052,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   box-sizing: border-box;
   padding: 1.125rem 1.25rem 1.125rem;
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-900,#222);
   line-height: 1;
@@ -1183,7 +1183,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
@@ -1305,7 +1305,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   box-sizing: border-box;
   padding: 1.125rem 1.25rem 1.125rem;
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-900,#222);
   line-height: 1;
@@ -1436,7 +1436,7 @@ exports[`<HeaderMenu /> with position to right matches with snapshot 1`] = `
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
@@ -1558,7 +1558,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   box-sizing: border-box;
   padding: 1.125rem 1.25rem 1.125rem;
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: var(--color-grey-900,#222);
   line-height: 1;
@@ -1689,7 +1689,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   height: auto;
   padding-top: 0;
   padding-bottom: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 

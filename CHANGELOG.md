@@ -2,7 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [13.0.0-beta0] - 2022-10-19  🪔
+
+Feature:
+- Change typo `Maax` to `GeneralSans` and `AntiqueOlive` for titles.
 
 ## [12.14.0] - 2022-10-14  💅
 

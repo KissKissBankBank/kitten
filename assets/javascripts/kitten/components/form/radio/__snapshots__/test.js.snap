@@ -67,7 +67,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   -webkit-flex: 1 0 calc(100% - 1.625rem);
   -ms-flex: 1 0 calc(100% - 1.625rem);
   flex: 1 0 calc(100% - 1.625rem);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -75,18 +75,18 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 
 .c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--normal,
 .c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--500 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
 .c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--light .c0 .k-Form-Radio__labelText.k-Form-Radio__labelText--400 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 
 .c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--bold,
 .c1 .k-Form-Radio__labelText.k-Form-Radio__labelText--700 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
@@ -99,7 +99,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
 }
 
 .c1 .k-Form-Radio__labelText--withContents {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
@@ -109,7 +109,7 @@ exports[`<Radio /> default matches with snapshot 1`] = `
   -webkit-flex: 1 0 calc(100% - 2.25rem);
   -ms-flex: 1 0 calc(100% - 2.25rem);
   flex: 1 0 calc(100% - 2.25rem);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.1875rem;
