@@ -17,7 +17,6 @@ const HeroWrapper = styled.section`
     .kiss-Homepage__hero__main {
       box-sizing: border-box;
       height: calc(100vh - ${pxToRem(HEADER_HEIGHT * 2)});
-      position: fixed;
       padding: ${pxToRem(20)};
       display: flex;
       flex-direction: column;
@@ -26,7 +25,6 @@ const HeroWrapper = styled.section`
       gap: ${pxToRem(20)};    }
 
     .kiss-Homepage__hero__grid--mobile {
-      position: fixed;
       box-sizing: border-box;
       top: 0;
       left: -10vw;

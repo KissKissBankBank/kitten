@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { pxToRem } from 'kitten'
+import { Title, pxToRem, Container } from 'kitten'
 import Hero from './components/hero'
 import UnderHero from './components/under-hero'
 import New from './components/new'
@@ -14,12 +14,15 @@ import Challenges from './components/challenges'
 import Pricing from './components/pricing'
 
 
-const StyledWrapper = styled`
-  max-widht: ${pxToRem(1440)};
-`
+// const StyledWrapper = styled(Container)`
+//   margin-left: auto;
+//   margin-right: auto;
+//   box-sizing: border-box;
+//   max-width: ${pxToRem(1440)};
+// `
 
 const HomePage = () => (
-  <StyledWrapper>
+  <>
     <Hero />
     <UnderHero />
     <New />
@@ -62,7 +65,7 @@ const HomePage = () => (
     <PartnerCarousel />
     <Challenges />
     <Pricing />
-  </StyledWrapper>
+  </>
 )
 
 export default HomePage

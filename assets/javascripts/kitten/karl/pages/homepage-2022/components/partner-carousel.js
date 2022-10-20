@@ -1,109 +1,158 @@
-import React from 'react'
-import {
-  pxToRem,
-  Text,
-  Button,
-  PartnerCard,
-  mq,
-  CarouselNext
-} from 'kitten'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import {
+  CarouselNext,
+  PartnerCard,
+  Text,
+  Title,
+  useWindowWidth,
+  pxToRem,
+  ScreenConfig,
+  mq,
+  Button,
+  Container,
+} from 'kitten'
 
-const PartnersWrapper = styled.section`
-  position: relative;
-  background-color: var(--color-danger-100);
-  color: var(--color-grey-900);
-  text-align: center;
+const data = [
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-1.jpg',
+    thumbSrc: '/kitten-1.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-2.jpg',
+    thumbSrc: '/kitten-2.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-3.jpg',
+    thumbSrc: '/kitten-3.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-4.jpg',
+    thumbSrc: '/kitten-4.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-5.jpg',
+    thumbSrc: '/kitten-5.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-6.jpg',
+    thumbSrc: '/kitten-6.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-7.jpg',
+    thumbSrc: '/kitten-7.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-8.jpg',
+    thumbSrc: '/kitten-8.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-9.jpg',
+    thumbSrc: '/kitten-9.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-0.jpg',
+    thumbSrc: '/kitten-0.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-1.jpg',
+    thumbSrc: '/kitten-1.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    description: 'Environnement et biodiversité',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-2.jpg',
+    thumbSrc: '/kitten-2.jpg',
+    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+]
 
-  display: flex;
-  flex-direction: column;
-  gap: ${pxToRem(30)};
-  padding: ${pxToRem(70)} ${pxToRem(20)} ${pxToRem(70)};
-  clip-path: polygon(100% 0%, 0% 5%, 0% 100%, 100% 95%);
-
-  @media ${mq.tabletAndDesktop} {
-    gap: ${pxToRem(50)};
-    padding: ${pxToRem(100)} ${pxToRem(260)} ${pxToRem(100)};
-  }
-
-  .kiss-Homepage__partners__cards {
-    display: grid;
-    gap: ${pxToRem(10)};
-    grid-template-columns: repeat(2, 1fr);
-
-    @media ${mq.tabletAndDesktop} {
-      gap: ${pxToRem(30)};
-      grid-template-columns: repeat(4, 1fr);
-    }
-    .kiss-Homepage__partners__card {
-      background-color: var(--color-grey-000);
-      border-radius: var(--border-radius-m);
-      box-shadow: var(--box-shadow-m);
-      padding: ${pxToRem(10)};
-      aspect-ratio: 22 / 15;
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-      }
-    }
-  }
-`
-
-const CardComponent = ({ item }) => (
+const PartnerCardComponent = ({ item }) => (
   <PartnerCard
-    key={`ProjectCard${item.title}`}
-    href="#"
     imageProps={{
-      src: item.imageSrc,
-      alt: 'Image alt',
-      backgroundColor: '#d8d8d8',
-      color: '#333',
+      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+      alt: '',
     }}
-    stretch
   >
-    <ProjectCard.Line className="k-u-flex k-u-flex-alignItems-center">
-      <GiftIcon
-        noMargin
-        width="13"
-        height="13"
-        color="var(--color-primary-500)"
-        className="k-u-margin-right-single"
-      />
-      <Text size="small" color="primary1">
-        {item.engagement}
+    <PartnerCard.Avatar
+      imageProps={{
+        src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+        alt: '',
+      }}
+    />
+    <PartnerCard.Line>
+      <Text size="small" weight="500">
+        Les Jeunes Pousses méritent tout notre soutien : Naturalia s’engage dans le développement de votre produit bio.
       </Text>
-    </ProjectCard.Line>
-    <ProjectCard.Title>{item.title}</ProjectCard.Title>
-    <ProjectCard.Progress aria-label="Progrès de la campagne" value="84" />
-    <ProjectCard.Item>
-      <Text size="small">
-        {item.description}
+      <PartnerCard.Sticker>
+        Citoyenneté
+      </PartnerCard.Sticker>
+      <Text
+        tag="p"
+        weight="700"
+        size="small"
+        className="k-u-link-font1 k-u-cursor-pointer k-u-margin-none"
+      >
+        En savoir plus
       </Text>
-    </ProjectCard.Item>
+    </PartnerCard.Line>
   </PartnerCard>
 )
 
+const PartnerCarousel = () => (
+  <StyledWrapper>
+    <Title
+      tag="h2"
+      className="k-u-margin-none k-u-margin-vertical-double@xs-down k-u-align-center"
+      letterSpacing="10%"
+      modifier="tertiary"
+    >
+      Les entreprises s’engagent<br />
+      au service de la réussite des projets 
+    </Title>
+    <CarouselBlock />
 
-const PartnerCarousel = () => {
-  return (
-    <PartnersWrapper>
-
-    <Text weight="700" size="large">
-       Vous êtes une entreprise ?
+    <Text weight="700" size="large" className="k-u-align-center">
+      Vous êtes une entreprise ?
     </Text>
-    <Button modifier="beryllium" className="k-u-alignSelf-center" tag="a" href="#">
-      Devenons partenaires
-    </Button>
-  </PartnersWrapper>
-  )
-}
+    <Button modifier="beryllium">Devenons partenaires</Button>
+  </StyledWrapper>
+)
 
-
-const CarouselBlock = ({ title }) => {
+const CarouselBlock = () => {
   const [navProps, setNavProps] = useState({})
 
   // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
@@ -111,7 +160,7 @@ const CarouselBlock = ({ title }) => {
 
   return (
     <div>
-      <Container className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-sb k-u-flex-gap-double">
+      <Container className="k-u-flex k-u-flex-justifyContent-end">
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
@@ -131,12 +180,51 @@ const CarouselBlock = ({ title }) => {
       >
         {data.map((item, index) => (
           <>
-            <CardComponent item={item} key={index} />
+            <PartnerCardComponent item={item} key={index} />
           </>
         ))}
       </CarouselNext>
     </div>
   )
 }
+
+const StyledWrapper = styled.section`
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: ${pxToRem(40)};
+  padding: ${pxToRem(60)} 0 ${pxToRem(30)} 0;
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    z-index: 1;
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: var(--color-grey-000);
+    height: ${pxToRem(310)};
+    width: 100%;
+    left: 0;
+    top: 0;
+    clip-path: polygon(0 -1px, 100% -1px, 100% 100%, 0 50%);
+  }
+
+  .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
+    --container-padding: ${pxToRem(50 - 4)};
+
+    @media ${mq.tabletAndDesktop} {
+      --container-padding: 15vw;
+    }
+  }
+
+  .k-CarouselNext__page {
+    height: 100% !important;
+  }
+`
 
 export default PartnerCarousel

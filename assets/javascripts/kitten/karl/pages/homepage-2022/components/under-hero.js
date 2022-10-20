@@ -6,9 +6,9 @@ import {
   Title,
   Text,
   Button,
-  HEADER_HEIGHT,
   HourglassIllustration,
-  HandIllustration
+  HandIllustration,
+  PatchNewIllustration
 } from 'kitten'
 
 const UnderHeroWrapper = styled.section`
@@ -34,8 +34,14 @@ const UnderHeroWrapper = styled.section`
   .kiss-Homepage__underHero__block {
     padding: ${pxToRem(50)} ${pxToRem(100)};
   }
-`
 
+  .kiss-Homepage__underHero__patch {
+    display: inline-flex;
+    position: absolute;
+    margin-left: ${pxToRem(70)};
+    margin-top:  ${pxToRem(20)};
+  }
+`
 
 const UnderHero = () => {
   return (
@@ -66,6 +72,9 @@ const UnderHero = () => {
 
         <div className="kiss-Homepage__underHero__block" style={{ backgroundColor:"var(--color-danger-100)" }}>
           <HandIllustration width="165" height="293" />
+          <div className="kiss-Homepage__underHero__patch">
+            <PatchNewIllustration width="86" height="86" />
+          </div>
           <Title modifier="quinary" color="var(--color-danger-700)">
             Générer un revenu sur la durée grâce à des contributeurs récurrents
           </Title>
