@@ -19,8 +19,8 @@ describe('<PartnerCard />', () => {
           >
             <PartnerCard.Avatar
               imageProps={{
-                src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-                alt: '',
+                src: 'kitten.jpg',
+                alt: 'image alt',
               }}
             />
             <PartnerCard.Line>

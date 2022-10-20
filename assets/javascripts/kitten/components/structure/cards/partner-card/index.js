@@ -136,16 +136,17 @@ PartnerCard.Avatar = ({ className, imageProps, ...props }) => {
 
 PartnerCard.Sticker = ({ className, ...props }) => {
   return (
-    <Tag
-      type="disabled"
-      className={classNames(
-        'k-PartnerCard__sticker',
-        'k-u-margin-bottom-double',
-        'k-u-margin-top-double',
-        'k-u-ellipsis',
-        className
-      )}
-      {...props}
-    />
+    <div lassName={classNames('k-PartnerCard__sticker', className)} {...props}>
+      <Tag
+        type="disabled"
+        className={classNames(
+          'k-u-margin-bottom-double',
+          'k-u-margin-top-double',
+          'k-u-ellipsis',
+          className
+        )}
+        {...props}
+      />
+    </div>
   )
 }
