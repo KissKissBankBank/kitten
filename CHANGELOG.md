@@ -21,6 +21,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `HandAndFlowerIllustration`
     - `RainbowIllustration`
     - `PencilIllustration`
+    - `PatchNewIllustration`
 
 ## [12.14.0] - 2022-10-14  💅
 

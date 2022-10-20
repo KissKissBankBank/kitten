@@ -17,6 +17,7 @@ import { RibbonIllustration } from './ribbon-illustration'
 import { HandAndFlowerIllustration } from './hand-and-flower-illustration'
 import { RainbowIllustration } from './rainbow-illustration'
 import { PencilIllustration } from './pencil-illustration'
+import { PatchNewIllustration } from './patch-new'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};
@@ -125,6 +126,11 @@ export const AllIllustrations = () => {
       <IllustrationWrapper name="HandAndFlowerIllustration">
         <HandAndFlowerIllustration />
       </IllustrationWrapper>
+      </Group>
+      <Group>
+        <IllustrationWrapper name="PatchNewIllustration">
+          <PatchNewIllustration />
+        </IllustrationWrapper>
       </Group>
     </Wrapper>
   )
