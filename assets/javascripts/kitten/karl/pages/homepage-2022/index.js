@@ -1,5 +1,6 @@
 import React from 'react'
-import { Title } from 'kitten'
+import styled from 'styled-components'
+import { pxToRem } from 'kitten'
 import Hero from './components/hero'
 import UnderHero from './components/under-hero'
 import New from './components/new'
@@ -12,8 +13,13 @@ import PartnerCarousel from './components/partner-carousel'
 import Challenges from './components/challenges'
 import Pricing from './components/pricing'
 
+
+const StyledWrapper = styled`
+  max-widht: ${pxToRem(1440)};
+`
+
 const HomePage = () => (
-  <>
+  <StyledWrapper>
     <Hero />
     <UnderHero />
     <New />
@@ -56,7 +62,7 @@ const HomePage = () => (
     <PartnerCarousel />
     <Challenges />
     <Pricing />
-  </>
+  </StyledWrapper>
 )
 
 export default HomePage

@@ -59,6 +59,13 @@ const HeroWrapper = styled.section`
       max-width: 100%;
       max-height: 100%;
       display: block;
+    
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 `
@@ -85,7 +92,12 @@ const Hero = () => {
         <Button modifier="helium">Voir les offres</Button>
       </div>
       <div className="kiss-Homepage__hero__img">
-        <img alt="" src="https://source.unsplash.com/random/790x638?kitten,1" width="790" height="638" />
+        <img
+          alt=""
+          src="https://source.unsplash.com/random/790x638?kitten,1"
+          width="790"
+          height="638"
+        />
       </div>
     </HeroWrapper>
   )

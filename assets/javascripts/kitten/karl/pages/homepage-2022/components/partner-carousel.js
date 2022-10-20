@@ -1,5 +1,12 @@
 import React from 'react'
-import { pxToRem, Title, Text, Button, AirplaneIconNext, mq } from 'kitten'
+import {
+  pxToRem,
+  Text,
+  Button,
+  PartnerCard,
+  mq,
+  CarouselNext
+} from 'kitten'
 import styled from 'styled-components'
 
 const PartnersWrapper = styled.section`
@@ -84,23 +91,51 @@ const CardComponent = ({ item }) => (
 const PartnerCarousel = () => {
   return (
     <PartnersWrapper>
-      <Title modifier="secondary">
-      Les entreprises s’engagent au service de la réussite des projets
-      </Title>
 
-      <div className="k-u-margin-top-triple@s-up">
-        <Text
-          size="huge"
-          weight="700"
-          className="k-u-block k-u-margin-horizontal-auto k-u-margin-bottom-double"
-        >
-          Vous êtes une entreprise ?
-        </Text>
-        <Button modifier="boron" size="small">
-          Devenons partenaires
-        </Button>
-      </div>
-    </PartnersWrapper>
+    <Text weight="700" size="large">
+       Vous êtes une entreprise ?
+    </Text>
+    <Button modifier="beryllium" className="k-u-alignSelf-center" tag="a" href="#">
+      Devenons partenaires
+    </Button>
+  </PartnersWrapper>
+  )
+}
+
+
+const CarouselBlock = ({ title }) => {
+  const [navProps, setNavProps] = useState({})
+
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
+
+  return (
+    <div>
+      <Container className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-sb k-u-flex-gap-double">
+        <CarouselNext.Navigation
+          {...navProps}
+          buttonProps={{ size: 'small' }}
+          className="k-u-hidden@xs-down"
+        />
+      </Container>
+      <CarouselNext
+        baseGap={30}
+        cycle
+        itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
+        itemMinWidth={0}
+        viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
+        viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
+        navigationPropsGetter={setNavProps}
+        showOtherPages
+        shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
+      >
+        {data.map((item, index) => (
+          <>
+            <CardComponent item={item} key={index} />
+          </>
+        ))}
+      </CarouselNext>
+    </div>
   )
 }
 
