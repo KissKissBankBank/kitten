@@ -11,6 +11,10 @@ import {
 
 const HeroWrapper = styled.section`
   display: flex;
+  max-width: ${pxToRem(1440)};
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 
   @media ${mq.mobileAndTablet} {
 

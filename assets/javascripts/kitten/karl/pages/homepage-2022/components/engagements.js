@@ -11,7 +11,7 @@ const EngagementsWrapper = styled.section`
   gap: ${pxToRem(20)};
   padding: 0 ${pxToRem(20)};
   overflow: hidden;
-
+  
   @media ${mq.tabletAndDesktop} {
     padding: 0 ${pxToRem(120)} 0;
     gap: ${pxToRem(100)};
@@ -19,6 +19,10 @@ const EngagementsWrapper = styled.section`
 
   .kiss-Homepage__engagements__blockWrapper {
     position: relative;
+    max-width: ${pxToRem(1440)};
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 
     .kiss-Homepage__engagements__graphic {
       position: absolute;

@@ -13,6 +13,10 @@ import {
 
 const UnderHeroWrapper = styled.section`
   display: flex;
+  box-sizing: border-box;
+  max-width: ${pxToRem(1440)};
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   color: var(--color-grey-900);
   text-align: center;

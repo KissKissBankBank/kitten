@@ -40,7 +40,14 @@ const ManifestoWrapper = styled.section`
   }
 `
 
-const Manifesto = ({ title, className, illustration, top = [], bottom = [] }) => {
+const Manifesto = ({
+  title,
+  className,
+  illustration,
+  top = [],
+  bottom = [],
+  ...props 
+}) => {
   return (
     <ManifestoWrapper
       className={className}
@@ -50,6 +57,7 @@ const Manifesto = ({ title, className, illustration, top = [], bottom = [] }) =>
         '--padding-top-desktop': pxToRem(top[1]),
         '--padding-bottom-desktop': pxToRem(bottom[1]),
       }}
+      {...props}
     >
       {title}
 

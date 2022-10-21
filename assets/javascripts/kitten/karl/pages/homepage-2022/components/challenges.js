@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import {
   Title,
-  CarouselNext,
   Text,
   Container,
   useWindowWidth,
@@ -12,6 +11,10 @@ import {
 } from 'kitten'
 
 const ChallengesWrapper = styled.section`
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  max-width: ${pxToRem(1440)};
   background-color: var(--color-grey-100);
   padding: ${pxToRem(110)} 0 ${pxToRem(150)};
 
@@ -100,92 +103,23 @@ const Challenges = () => {
           >
             En ce moment&nbsp;:
           </Text>
-          <CarouselNext.Navigation
-            {...navProps}
-            buttonProps={{ size: 'small' }}
-            className="k-u-hidden@xs-down"
-          />
+          <div>
+            <a href="#" className="kiss-Homepage__challenges__challengeCard">
+              <img src="/kitten-${Math.floor(Math.random() * 10)}.jpg" alt="" />
+              <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+                Aenean lacinia bibendum nulla sed consectetur
+              </Title>
+              <Text size="small">
+                Aenean lacinia bibendum nulla sed consectetur.
+              </Text>
+            </a>
+          </div>
         </Container>
-        <CarouselNext
-          baseGap={30}
-          itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
-          itemMinWidth={0}
-          viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
-          viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
-          navigationPropsGetter={setNavProps}
-          showOtherPages
-          shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
-        >
-          {data.map((item, index) => (
-            <CardComponent item={item} key={index} />
-          ))}
-        </CarouselNext>
+          
+  
       </div>
     </ChallengesWrapper>
   )
 }
-
-const CardComponent = ({ item }) => (
-  <a href="#" className="kiss-Homepage__challenges__challengeCard">
-    <img src={item.image} alt="" />
-    <Title tag="h2" modifier="septenary" className="k-u-margin-none">
-      {item.title}
-    </Title>
-    <Text size="small">{item.text}</Text>
-  </a>
-)
-
-const data = [
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title: 'Aenean lacinia bibendum nulla sed consectetur.',
-    text:
-      'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
-    text:
-      'Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title:
-      'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-    text:
-      'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title: 'Nullam id dolor id nibh ultricies vehicula ut id elit.',
-    text:
-      'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title: 'Aenean lacinia bibendum nulla sed consectetur.',
-    text:
-      'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
-    text:
-      'Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title:
-      'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.',
-    text:
-      'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.',
-  },
-  {
-    image: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-    title: 'Nullam id dolor id nibh ultricies vehicula ut id elit.',
-    text:
-      'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
-  },
-]
 
 export default Challenges

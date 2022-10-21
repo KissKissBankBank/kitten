@@ -10,6 +10,7 @@ import {
   mq,
   Container,
   GiftIcon,
+  Title,
 } from 'kitten'
 
 const data = [
@@ -136,9 +137,19 @@ const CampaignCardComponent = ({ item }) => (
 )
 
 const CampaignCarousel = () => (
-  <StyledWrapper>
-    <CarouselBlock title="La sélection de l'équipe" />
-  </StyledWrapper>
+  <>
+    <Title
+      tag="h1"
+      modifier="tertiary"
+      className="k-u-align-center k-u-margin-vertical-double k-u-margin-vertical-sextuple@s-up"
+    >
+      Les plus beaux projets du moment prennent vie<br />
+      sur KissKissBankBank
+    </Title>
+    <StyledWrapper>
+      <CarouselBlock title="La sélection de l'équipe" />
+    </StyledWrapper>
+  </>
 )
 
 const CarouselBlock = ({ title }) => {

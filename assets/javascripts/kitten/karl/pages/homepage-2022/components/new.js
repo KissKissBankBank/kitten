@@ -8,12 +8,13 @@ import {
   Button,
   mq,
   pxToRem,
-  StatusIconNext,
 } from 'kitten'
 
 const NewWrapper = styled.section`
+  max-width: ${pxToRem(1440)};
+  box-sizing: border-box;
   position: relative;
-  margin: ${pxToRem(70)} 0 ${pxToRem(125)} 0;
+  margin: ${pxToRem(70)} auto;
 
   > * {
     position: relative;

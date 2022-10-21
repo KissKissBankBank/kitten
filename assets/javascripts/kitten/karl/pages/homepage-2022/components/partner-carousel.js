@@ -190,29 +190,32 @@ const CarouselBlock = () => {
 
 const StyledWrapper = styled.section`
   position: relative;
+  background-color: var(--color-danger-100);
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: ${pxToRem(40)};
-  padding: ${pxToRem(60)} 0 ${pxToRem(30)} 0;
+  gap: ${pxToRem(20)};
+  padding: ${pxToRem(100)} 0 ${pxToRem(60)} 0;
+  margin-top:  ${pxToRem(-50)};
+  z-index: -1;
 
   & > * {
     position: relative;
     z-index: 2;
   }
 
-  &::before {
-    z-index: 1;
-    display: block;
-    content: '';
-    position: absolute;
-    background-color: var(--color-grey-000);
-    height: ${pxToRem(310)};
-    width: 100%;
-    left: 0;
-    top: 0;
-    clip-path: polygon(0 -1px, 100% -1px, 100% 100%, 0 50%);
-  }
+  // &::before {
+  //   z-index: 1;
+  //   display: block;
+  //   content: '';
+  //   position: absolute;
+  //   background-color: var(--color-grey-000);
+  //   height: ${pxToRem(310)};
+  //   width: 100%;
+  //   left: 0;
+  //   top: 0;
+  // }
+
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
     --container-padding: ${pxToRem(50 - 4)};

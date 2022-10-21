@@ -17,7 +17,7 @@ import { RibbonIllustration } from './ribbon-illustration'
 import { HandAndFlowerIllustration } from './hand-and-flower-illustration'
 import { RainbowIllustration } from './rainbow-illustration'
 import { PencilIllustration } from './pencil-illustration'
-import { PatchNewIllustration } from './patch-new'
+import { PatchNewIllustration } from './patch-new-illustration'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};

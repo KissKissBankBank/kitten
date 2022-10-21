@@ -16,21 +16,27 @@ const WhyWrapper = styled.section`
   background-color: var(--color-danger-100);
   color: var(--color-grey-900);
   text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  gap: ${pxToRem(20)};
-  padding: ${pxToRem(70)} ${pxToRem(20)};
   clip-path: polygon(100% 0%, 0% 5%, 0% 100%, 100% 95%);
-
-  @media ${mq.tabletAndDesktop} {
-    gap: ${pxToRem(40)};
-    padding: ${pxToRem(120)} ${pxToRem(100)};
-  }
 
   > * {
     position: relative;
     z-index: 2;
+  }
+
+  .kiss-Homepage__why__container {
+    box-sizing: border-box;
+    max-width: ${pxToRem(1440)};
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(20)};
+    padding: ${pxToRem(70)} ${pxToRem(20)};
+
+    @media ${mq.tabletAndDesktop} {
+      gap: ${pxToRem(40)};
+      padding: ${pxToRem(120)} ${pxToRem(100)};
+    }
   }
 
   .kiss-Homepage__why__cards {
@@ -52,60 +58,62 @@ const WhyWrapper = styled.section`
 const Why = () => {
   return (
     <WhyWrapper>
-      <Title cssColor="inherit" modifier="secondary" noMargin>
-        Pourquoi choisir KissKissBankBank ?
-      </Title>
-      <div className="kiss-Homepage__why__cards">
-        <div className="kiss-Homepage__why__card">
-          <RibbonIllustration
-            className="k-u-margin-bottom-double"
-            width="218"
-            height="160"
-          />
-          <Title tag="h2" modifier="quinary">
-            Un accompagnement inspirant et adapté à vos besoins
-          </Title>
-          <Paragraph modifier="tertiary">
-            Ressources en libre-service, coaching personnalisé, prestations
-            sur-mesure ou accompagnement stratégique, notre expérience unique du
-            financement participatif et de la communication vous mènera au
-            succès.
-          </Paragraph>
+      <div className="kiss-Homepage__why__container">
+        <Title cssColor="inherit" modifier="secondary" noMargin>
+          Pourquoi choisir KissKissBankBank ?
+        </Title>
+        <div className="kiss-Homepage__why__cards">
+          <div className="kiss-Homepage__why__card">
+            <RibbonIllustration
+              className="k-u-margin-bottom-double"
+              width="218"
+              height="160"
+            />
+            <Title tag="h2" modifier="quinary">
+              Un accompagnement inspirant et adapté à vos besoins
+            </Title>
+            <Paragraph modifier="tertiary">
+              Ressources en libre-service, coaching personnalisé, prestations
+              sur-mesure ou accompagnement stratégique, notre expérience unique du
+              financement participatif et de la communication vous mènera au
+              succès.
+            </Paragraph>
+          </div>
+          <div className="kiss-Homepage__why__card">
+            <FormIllustration
+              className="k-u-margin-bottom-double"
+              width="100"
+              height="160"
+            />
+            <Title tag="h2" modifier="quinary">
+              Plusieurs types de financement en fonction des étapes de votre
+              projet
+            </Title>
+            <Paragraph modifier="tertiary">
+              La campagne à durée limitée pour lancer un nouveau projet en
+              collectant des dons ou des précommandes puis la collecte de dons
+              récurrents ou d’abonnements pour financer son projet sur la durée.
+            </Paragraph>
+          </div>
+          <div className="kiss-Homepage__why__card">
+            <ComputerIllustration
+              className="k-u-margin-bottom-double"
+              width="183"
+              height="160"
+            />
+            <Title tag="h2" modifier="quinary">
+              Des fonctionnalités poussées pour engager votre communauté
+            </Title>
+            <Paragraph modifier="tertiary">
+              Personnalisation de votre page projet aux couleurs de votre marque,
+              publications à vos contributeurs, options multiples sur vos
+              contreparties ou abonnements, etc.
+            </Paragraph>
+          </div>
         </div>
-        <div className="kiss-Homepage__why__card">
-          <FormIllustration
-            className="k-u-margin-bottom-double"
-            width="100"
-            height="160"
-          />
-          <Title tag="h2" modifier="quinary">
-            Plusieurs types de financement en fonction des étapes de votre
-            projet
-          </Title>
-          <Paragraph modifier="tertiary">
-            La campagne à durée limitée pour lancer un nouveau projet en
-            collectant des dons ou des précommandes puis la collecte de dons
-            récurrents ou d’abonnements pour financer son projet sur la durée.
-          </Paragraph>
+        <div className="k-u-align-center">
+          <Button modifier="helium">En savoir plus</Button>
         </div>
-        <div className="kiss-Homepage__why__card">
-          <ComputerIllustration
-            className="k-u-margin-bottom-double"
-            width="183"
-            height="160"
-          />
-          <Title tag="h2" modifier="quinary">
-            Des fonctionnalités poussées pour engager votre communauté
-          </Title>
-          <Paragraph modifier="tertiary">
-            Personnalisation de votre page projet aux couleurs de votre marque,
-            publications à vos contributeurs, options multiples sur vos
-            contreparties ou abonnements, etc.
-          </Paragraph>
-        </div>
-      </div>
-      <div className="k-u-align-center">
-        <Button modifier="helium">En savoir plus</Button>
       </div>
     </WhyWrapper>
   )
