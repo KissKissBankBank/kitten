@@ -134,21 +134,23 @@ const PartnerCardComponent = ({ item }) => (
 
 const PartnerCarousel = () => (
   <StyledWrapper>
-    <Title
-      tag="h2"
-      className="k-u-margin-none k-u-margin-vertical-double@xs-down k-u-align-center"
-      letterSpacing="10%"
-      modifier="tertiary"
-    >
-      Les entreprises s’engagent<br />
-      au service de la réussite des projets 
-    </Title>
-    <CarouselBlock />
+    <div className="kiss-Homepage__partner__container">
+      <Title
+        tag="h2"
+        className="k-u-margin-none k-u-margin-vertical-double@xs-down k-u-align-center"
+        letterSpacing="10%"
+        modifier="tertiary"
+      >
+        Les entreprises s’engagent<br />
+        au service de la réussite des projets 
+      </Title>
+      <CarouselBlock />
 
-    <Text weight="700" size="large" className="k-u-align-center">
-      Vous êtes une entreprise ?
-    </Text>
-    <Button modifier="beryllium">Devenons partenaires</Button>
+      <Text weight="700" size="large" className="k-u-align-center">
+        Vous êtes une entreprise ?
+      </Text>
+      <Button modifier="beryllium">Devenons partenaires</Button>
+    </div>
   </StyledWrapper>
 )
 
@@ -191,31 +193,22 @@ const CarouselBlock = () => {
 const StyledWrapper = styled.section`
   position: relative;
   background-color: var(--color-danger-100);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: ${pxToRem(20)};
-  padding: ${pxToRem(100)} 0 ${pxToRem(60)} 0;
   margin-top:  ${pxToRem(-50)};
-  z-index: -1;
+  clip-path: polygon(100% 5%,0% 1%,0% 95%,100% 100%);
 
   & > * {
     position: relative;
     z-index: 2;
   }
-
-  // &::before {
-  //   z-index: 1;
-  //   display: block;
-  //   content: '';
-  //   position: absolute;
-  //   background-color: var(--color-grey-000);
-  //   height: ${pxToRem(310)};
-  //   width: 100%;
-  //   left: 0;
-  //   top: 0;
-  // }
-
+  
+  .kiss-Homepage__partner__container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: ${pxToRem(20)};
+    padding: ${pxToRem(100)} 0 ${pxToRem(100)} 0;
+  }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
     --container-padding: ${pxToRem(50 - 4)};

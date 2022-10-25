@@ -14,7 +14,7 @@ const NewWrapper = styled.section`
   max-width: ${pxToRem(1440)};
   box-sizing: border-box;
   position: relative;
-  margin: ${pxToRem(70)} auto;
+  padding: 0 ${pxToRem(20)};
 
   > * {
     position: relative;
@@ -22,7 +22,7 @@ const NewWrapper = styled.section`
   }
 
   @media ${mq.tabletAndDesktop} {
-    padding: 0 ${pxToRem(120)} ${pxToRem(70)};
+    padding: ${pxToRem(70)} ${pxToRem(120)} ${pxToRem(70)};
   }
 
   .kiss-Homepage__new__cards {
@@ -30,7 +30,7 @@ const NewWrapper = styled.section`
     gap: ${pxToRem(20)};
     flex-direction: column;
 
-    @media ${mq.tabletAndDesktop} {
+    @media ${mq.desktop} {
       display: grid;
       gap: 0 ${pxToRem(30)};
       grid-template-columns: repeat(3, 1fr);
@@ -47,6 +47,7 @@ const NewWrapper = styled.section`
 
   /* CARD COMPONENT */
   .kiss-Homepage__new__card {
+    box-sizing: border-box;
     background-color: var(--color-grey-000);
     border-radius: var(--border-radius-m);
     padding: ${pxToRem(30)};
@@ -143,7 +144,6 @@ const NewCard = ({
   rateDescription,
   description,
   className,
-  actionButtonProps,
   main = false,
 }) => (
   <div
@@ -153,7 +153,7 @@ const NewCard = ({
   >
     <div>
     {sticker && (
-      <div className="kiss-Homepage__new__card__sticker k-u-ellipsis">
+      <div className="kiss-Homepage__new__card__sticker k-u-ellipsis k-u-hidden@m-down">
         {sticker}
       </div>
     )}
@@ -177,17 +177,6 @@ const NewCard = ({
     >
       {description}
     </Paragraph>
-    <Button
-      {...actionButtonProps}
-      modifier="helium"
-      fit="fluid"
-      className={classNames(
-        'kiss-Homepage__new__card__button',
-        actionButtonProps.className,
-      )}
-    >
-      Créer mon projet
-    </Button>
   </div>
 )
 
@@ -208,10 +197,6 @@ const New = () => {
           name="Starter"
           rate="Gratuit"
           description="Idéal si vous débutez et cherchez surtout à récolter des dons pour financer votre projet jusqu’à plusieurs milliers d’euros auprès de vos amis et amis d’amis."
-          actionButtonProps={{
-            as: 'a',
-            href: '#button',
-          }}
         />
 
         <NewCard
@@ -223,10 +208,6 @@ const New = () => {
           rateComplementBis="SOIT 6% TTC"
           rateDescription="du montant collecté sur KissKissBankBank"
           description="Idéal si vous avez déjà une solide communauté existante et cherchez à récolter plusieurs dizaines de milliers d’euros ou des précommandes."
-          actionButtonProps={{
-            as: 'a',
-            href: '#button',
-          }}
         />
 
         <NewCard
@@ -236,12 +217,11 @@ const New = () => {
           rateComplementBis="SOIT 6% TTC"
           rateDescription="du montant collecté sur KissKissBankBank"
           description="Idéal si vous connaissez parfaitement les mécaniques de communauté et de financement participatif et souhaitez des fonctionnalités avancées pour optimiser "
-          actionButtonProps={{
-            as: 'a',
-            href: '#button',
-          }}
         />
       </div>
+      <div className="k-u-align-center k-u-margin-triple">
+          <Button modifier="helium">En savoir plus</Button>
+        </div>
     </NewWrapper>
   )
 }

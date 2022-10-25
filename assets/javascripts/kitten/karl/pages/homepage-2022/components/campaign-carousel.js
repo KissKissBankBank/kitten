@@ -140,6 +140,7 @@ const CampaignCarousel = () => (
   <>
     <Title
       tag="h1"
+      noMargin
       modifier="tertiary"
       className="k-u-align-center k-u-margin-vertical-double k-u-margin-vertical-sextuple@s-up"
     >
@@ -167,7 +168,7 @@ const CarouselBlock = ({ title }) => {
           weight="500"
           transform="uppercase"
           letterSpacing="10%"
-          size="large"
+          size="small"
         >
           {title}
         </Text>
@@ -203,7 +204,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(40)};
-  padding: ${pxToRem(60)} 0 ${pxToRem(30)} 0;
+  padding-top: ${pxToRem(60)};
 
   & > * {
     position: relative;

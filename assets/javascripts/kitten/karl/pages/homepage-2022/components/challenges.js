@@ -1,25 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {
   Title,
   Text,
   Container,
-  useWindowWidth,
   mq,
   pxToRem,
-  ScreenConfig,
 } from 'kitten'
 
 const ChallengesWrapper = styled.section`
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  max-width: ${pxToRem(1440)};
   background-color: var(--color-grey-100);
-  padding: ${pxToRem(110)} 0 ${pxToRem(150)};
+  margin-top: ${pxToRem(-50)}; 
+  padding: ${pxToRem(120)} 0 ${pxToRem(150)};
 
   .k-Title {
-    max-width: ${pxToRem(810)};
+    max-width: ${pxToRem(790)};
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
@@ -37,19 +32,24 @@ const ChallengesWrapper = styled.section`
   .kiss-Homepage__challenges__carouselHead {
     @media ${mq.tabletAndDesktop} {
       display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: ${pxToRem(30)};
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      max-width: ${pxToRem(1440)};
 
-      & > :first-child {
-        grid-column: 2 / span 1;
-      }
-      & > :last-child {
-        grid-column: 3 / span 1;
-        justify-self: end;
-      }
+      // & > :first-child {
+      //   grid-column: 2 / span 1;
+      // }
+      // & > :last-child {
+      //   grid-column: 3 / span 1;
+      //   justify-self: end;
+      // }
     }
   }
 
-  .kiss-Homepage__challenges__challengeCard {
+  .kiss-Homepage__challenges__challengeCard__item {
     display: flex;
     box-sizing: border-box;
     background-color: var(--color-grey-000);
@@ -79,11 +79,6 @@ const ChallengesWrapper = styled.section`
 `
 
 const Challenges = () => {
-  const [navProps, setNavProps] = useState({})
-
-  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
-  const windowWidth = useWindowWidth()
-
   return (
     <ChallengesWrapper>
       <Title
@@ -93,31 +88,71 @@ const Challenges = () => {
         Choisir KissKissBankBank, c’est booster sa campagne en participant à nos
         appels à projet.
       </Title>
+      <Text
+        tag="p"
+        className="k-u-margin-bottom-triple k-u-margin-vertical-double@xs-down k-u-align-center"
+        size="large"
+      >
+        En ce moment&nbsp;:
+      </Text>
 
-      <div>
-        <Container className="kiss-Homepage__challenges__carouselHead">
-          <Text
-            tag="p"
-            className="k-u-margin-none k-u-margin-vertical-double@xs-down k-u-center"
-            size="large"
-          >
-            En ce moment&nbsp;:
+      <Container className="kiss-Homepage__challenges__carouselHead">
+        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
+          <img src="/kitten-1.jpg" alt="" />
+          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+            Aenean lacinia bibendum nulla sed consectetur
+          </Title>
+          <Text size="small">
+            Aenean lacinia bibendum nulla sed consectetur.
           </Text>
-          <div>
-            <a href="#" className="kiss-Homepage__challenges__challengeCard">
-              <img src="/kitten-${Math.floor(Math.random() * 10)}.jpg" alt="" />
-              <Title tag="h2" modifier="septenary" className="k-u-margin-none">
-                Aenean lacinia bibendum nulla sed consectetur
-              </Title>
-              <Text size="small">
-                Aenean lacinia bibendum nulla sed consectetur.
-              </Text>
-            </a>
-          </div>
-        </Container>
-          
-  
-      </div>
+        </a>
+        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
+          <img src="/kitten-2.jpg" alt="" />
+          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+            Aenean lacinia bibendum nulla sed consectetur
+          </Title>
+          <Text size="small">
+            Aenean lacinia bibendum nulla sed consectetur.
+          </Text>
+        </a>
+        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
+          <img src="/kitten-3.jpg" alt="" />
+          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+            Aenean lacinia bibendum nulla sed consectetur
+          </Title>
+          <Text size="small">
+            Aenean lacinia bibendum nulla sed consectetur.
+          </Text>
+        </a>
+
+        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
+          <img src="/kitten-4.jpg" alt="" />
+          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+            Aenean lacinia bibendum nulla sed consectetur
+          </Title>
+          <Text size="small">
+            Aenean lacinia bibendum nulla sed consectetur.
+          </Text>
+        </a>
+        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
+          <img src="/kitten-5.jpg" alt="" />
+          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+            Aenean lacinia bibendum nulla sed consectetur
+          </Title>
+          <Text size="small">
+            Aenean lacinia bibendum nulla sed consectetur.
+          </Text>
+        </a>
+        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
+          <img src="/kitten-6.jpg" alt="" />
+          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+            Aenean lacinia bibendum nulla sed consectetur
+          </Title>
+          <Text size="small">
+            Aenean lacinia bibendum nulla sed consectetur.
+          </Text>
+        </a>
+      </Container>
     </ChallengesWrapper>
   )
 }

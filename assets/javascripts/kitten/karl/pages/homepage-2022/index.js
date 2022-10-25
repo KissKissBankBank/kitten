@@ -1,6 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Title, pxToRem } from 'kitten'
+import { Title } from 'kitten'
 import Hero from './components/hero'
 import UnderHero from './components/under-hero'
 import New from './components/new'
@@ -12,13 +11,6 @@ import Engagements from './components/engagements'
 import PartnerCarousel from './components/partner-carousel'
 import Challenges from './components/challenges'
 import Pricing from './components/pricing'
-
-const StyledWrapper = styled.div`
-
-  .kiss-Homepage__manisfesto {
-    clip-path: polygon(100% 0%, 0% 0%, 0% 90%, 100% 100%);
-  }
-`
 
 const HomePage = () => (
   <StyledWrapper>
@@ -43,7 +35,6 @@ const HomePage = () => (
     <Manifesto
       top={[50, 150]}
       bottom={[50, 120]}
-      className="kiss-Homepage__manisfesto"
       title={
         <Title cssColor="inherit" modifier="tertiary">
           Chaque projet qui se lance sur KissKissBankBank{' '}

@@ -44,6 +44,12 @@ const PricingWrapper = styled.section`
     padding: 0 ${pxToRem(120)} ${pxToRem(70)};
   }
 
+  .kiss-Homepage__pricing__paragraph {
+    text-align: center;
+    margin: ${pxToRem(20)} auto ${pxToRem(50)} auto;
+    max-width: ${pxToRem(570)};
+  }
+
   .kiss-Homepage__pricing__cards {
     display: flex;
     gap: ${pxToRem(20)};
@@ -249,15 +255,14 @@ const Pricing = () => {
         noMargin
         className="k-u-align-center k-u-margin-bottom-double"
       >
-        Choisissez le forfait qui vous correspond et donnez vie à votre projet
+        Choisissez parmi nos 3 offres d’accompagnement
       </Title>
       <Paragraph
         modifier="secondary"
-        className="k-u-align-center k-u-margin-top-double k-u-margin-bottom-quintuple"
+        className="kiss-Homepage__pricing__paragraph"
       >
-        Rejoignez des milliers de créateurs et créatrices qui utilisent
-        KissKissBankBank pour financer leur projet et faire grandir leurs
-        communautés.
+        Nous sommes la seule plateforme à permettre de lancer une campagne sans commission 
+        et à proposer des offres adaptées à votre besoin.
       </Paragraph>
 
       <div className="kiss-Homepage__pricing__cards">

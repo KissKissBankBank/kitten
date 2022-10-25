@@ -4,50 +4,37 @@ import {
   pxToRem,
   mq,
   Title,
-  HEADER_HEIGHT,
   Text,
   Button,
 } from 'kitten'
 
 const HeroWrapper = styled.section`
   display: flex;
+
   max-width: ${pxToRem(1440)};
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  
+  @media ${mq.mobileAndTablet} {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   @media ${mq.mobileAndTablet} {
-
     .kiss-Homepage__hero__main {
       box-sizing: border-box;
-      height: calc(100vh - ${pxToRem(HEADER_HEIGHT * 2)});
-      padding: ${pxToRem(20)};
+      padding: ${pxToRem(30)} ${pxToRem(20)};
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: center;
-      gap: ${pxToRem(20)};    }
-
-    .kiss-Homepage__hero__grid--mobile {
-      box-sizing: border-box;
-      top: 0;
-      left: -10vw;
-      width: calc(100vw * 6 / 5);
-      height: 100vh;
-      display: grid;
-      gap: ${pxToRem(5)};
-      padding: ${pxToRem(5)};
-      grid-template-rows: repeat(3, auto) 1fr repeat(4, auto);
-      grid-template-columns: repeat(6, 1fr);
-      z-index: 2;
+      gap: ${pxToRem(20)};
     }
   }
 
   @media ${mq.desktop} {
     .kiss-Homepage__hero__main {
-      box-sizing: border-box;
       width: 50vw;
-      height: calc(0.85 * (50vw - ${pxToRem(HEADER_HEIGHT)}));
       padding: 2vw calc(50vw * 0.125);
       display: flex;
       flex-direction: column;
@@ -55,15 +42,27 @@ const HeroWrapper = styled.section`
       justify-content: center;
       gap: ${pxToRem(20)};
     }
+  }
 
-    .kiss-Homepage__hero__img {
-      object-fit: cover;
-      max-width: 100%;
-      max-height: 100%;
+  .kiss-Homepage__hero__img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  
+    img {
       display: block;
-    
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  @media ${mq.mobileAndTablet} {
+    .kiss-Homepage__hero__img {    
       img {
         display: block;
+        max-height: ${pxToRem(360)};
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -94,12 +93,7 @@ const Hero = () => {
         <Button modifier="helium">Voir les offres</Button>
       </div>
       <div className="kiss-Homepage__hero__img">
-        <img
-          alt=""
-          src="https://source.unsplash.com/random/790x638?kitten,1"
-          width="790"
-          height="638"
-        />
+        <img alt="" src="/kitten-3.jpg" />
       </div>
     </HeroWrapper>
   )

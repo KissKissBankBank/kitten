@@ -148,7 +148,7 @@ const CarouselBlock = ({ title }) => {
           weight="500"
           transform="uppercase"
           letterSpacing="10%"
-          size="large"
+          size="small"
         >
           {title}
         </Text>
@@ -167,7 +167,7 @@ const CarouselBlock = ({ title }) => {
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
         showOtherPages
-        shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
+        shadowSize={windowWidth <= ScreenConfig.XS.max ? 10 : 30}
       >
         {data.map((item, index) => (
           <>
@@ -197,7 +197,7 @@ const StyledWrapper = styled.section`
     content: '';
     position: absolute;
     background-color: var(--color-grey-000);
-    height: ${pxToRem(310)};
+    // height: ${pxToRem(310)};
     width: 100%;
     left: 0;
     top: 0;

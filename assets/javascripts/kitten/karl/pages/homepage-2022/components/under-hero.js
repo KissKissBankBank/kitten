@@ -25,18 +25,36 @@ const UnderHeroWrapper = styled.section`
     z-index: 2;
   }
 
+  @media ${mq.mobileAndTablet} {
+    display: block;
+  }
+
   .kiss-Homepage__underHero__title {
     z-index: 3;
     position: absolute;
     margin-top: ${pxToRem(124)};
+
+    @media ${mq.mobileAndTablet} {
+      margin-bottom: ${pxToRem(30)};
+      margin-top: 0;
+      position: relative;
+    }
   }
 
   .kiss-Homepage__underHero__blocks {
     display: flex;
+
+    @media ${mq.mobileAndTablet} {
+      display: block;
+    }
   }
 
   .kiss-Homepage__underHero__block {
     padding: ${pxToRem(50)} ${pxToRem(100)};
+    @media ${mq.mobileAndTablet} {
+      padding: ${pxToRem(50)} ${pxToRem(30)};
+      object-fit: cover;
+    }
   }
 
   .kiss-Homepage__underHero__patch {
@@ -54,7 +72,7 @@ const UnderHero = () => {
         tag="h2"
         modifier="tertiary"
         noMargin
-        className="kiss-Homepage__underHero__title"
+        className="kiss-Homepage__underHero__title k-u-hidden@m-down"
       >
           2 manières <br />
           de financer <br />
@@ -62,6 +80,17 @@ const UnderHero = () => {
       </Title>
       <div className="kiss-Homepage__underHero__blocks">
         <div className="kiss-Homepage__underHero__block" style={{ backgroundColor: "var(--color-primary-100)" }}>
+          
+          <Title
+            tag="h2"
+            modifier="tertiary"
+            noMargin
+            className="kiss-Homepage__underHero__title k-u-hidden@l-up"
+          >
+              2 manières <br />
+              de financer
+              votre projet
+          </Title>
           <HourglassIllustration width="164" height="287" />
           <Title modifier="quinary" color="var(--color-primary-700)">
             Lancer une campagne limitée dans le temps avec un objectif à atteindre.

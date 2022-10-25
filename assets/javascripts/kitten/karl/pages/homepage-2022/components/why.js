@@ -51,6 +51,7 @@ const WhyWrapper = styled.section`
       background-color: var(--color-grey-000);
       padding: ${pxToRem(40)} ${pxToRem(30)} ${pxToRem(30)};
       border-radius: var(--border-radius-m);
+      box-shadow: var(--box-shadow-m);
     }
   }
 `
