@@ -76,6 +76,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <span
         className="k-u-size-small k-u-weight-500"
+        style={Object {}}
       >
         …
       </span>
@@ -106,6 +107,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <span
         className="k-u-size-small k-u-weight-500"
+        style={Object {}}
       >
         …
       </span>

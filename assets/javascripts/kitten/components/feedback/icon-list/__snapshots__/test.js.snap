@@ -133,9 +133,11 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
       >
         <span
           className="k-u-weight-400"
+          style={Object {}}
         >
           <span
             className="k-u-weight-500"
+            style={Object {}}
           >
             Foo
           </span>

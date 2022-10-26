@@ -14,6 +14,7 @@ exports[`<CheckboxButton /> default matches with snapshot 1`] = `
     className="k-u-weight-500 k-Form-CheckboxButton__label"
     htmlFor="test-checkbox"
     onClick={[Function]}
+    style={Object {}}
   >
     <span
       className="k-Form-CheckboxButton__labelText"
@@ -41,11 +42,13 @@ exports[`<CheckboxButton /> whith label and children props matches with snapshot
   >
     <span
       className="k-u-weight-500 k-Form-CheckboxButton__labelText custom-label-className"
+      style={Object {}}
     >
       Main label
     </span>
     <span
       className="k-u-weight-400 k-Form-CheckboxButton__content custom-text-className"
+      style={Object {}}
     >
       Secondary content
     </span>
@@ -67,6 +70,7 @@ exports[`<CheckboxButton /> with label prop matches with snapshot 1`] = `
     className="k-u-weight-500 k-Form-CheckboxButton__label custom-label-className"
     htmlFor="test-checkbox"
     onClick={[Function]}
+    style={Object {}}
   >
     <span
       className="k-Form-CheckboxButton__labelText"

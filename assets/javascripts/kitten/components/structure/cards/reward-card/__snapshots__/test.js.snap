@@ -126,11 +126,13 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     >
       <span
         className="k-u-weight-700 k-RewardCard__amount k-u-block"
+        style={Object {}}
       >
         65 €
       </span>
       <span
         className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-500 k-RewardCard__amount__suffix k-u-block"
+        style={Object {}}
       >
         Etiam Consectetur Venenatis
       </span>
@@ -170,12 +172,14 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     >
       <span
         className="k-u-line-height-normal k-u-size-small k-u-weight-500 k-RewardCard__info__legend"
+        style={Object {}}
       >
         Lorem
       </span>
        
       <span
         className="k-u-line-height-normal k-u-size-small k-u-weight-400 k-RewardCard__info__value"
+        style={Object {}}
       >
         <span>
           ipsum

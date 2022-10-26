@@ -427,6 +427,7 @@ exports[`<ButtonWithTooltip /> basic matches with snapshot 1`] = `
   >
     <span
       className="k-u-color-font1 k-u-size-small k-u-weight-500"
+      style={Object {}}
     >
       Text of the tooltip
     </span>

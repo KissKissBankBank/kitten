@@ -10,7 +10,7 @@ exports[`<ContentCard /> default matches with snapshot 1`] = `
     15 novembre 2021
   </aside>
   <header
-    className="sc-bczRLJ fUSoHQ k-Title k-ContentCard__title k-Title--quaternary k-Title--noMargin"
+    className="sc-bczRLJ fozxQv k-Title k-ContentCard__title k-Title--quaternary k-Title--noMargin"
     style={
       Object {
         "--Title-css-color": null,

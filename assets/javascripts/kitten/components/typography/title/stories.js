@@ -1,7 +1,7 @@
-import React from 'react'
-import { Title } from './index'
 import { Marger, Text } from 'kitten'
+import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
+import { Title } from './index'
 
 const argTypes = {
   tag: {
@@ -38,6 +38,12 @@ const argTypes = {
     name: 'italic',
     description: 'Adds an underline style.',
     control: 'boolean',
+  },
+  family: {
+    name: 'family',
+    description: 'Adds font family',
+    options: ['none', 'antiqueolive'],
+    control: 'select',
   },
   children: {
     name: 'children',

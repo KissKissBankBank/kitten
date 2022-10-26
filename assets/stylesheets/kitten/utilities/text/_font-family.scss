@@ -1,0 +1,17 @@
+/// Font style utilities.
+///
+/// @group text
+///
+/// @example scss - Usage
+///
+///     @include k-utilities-font-feature-settings;
+///
+/// @example html
+///
+///     <p class="k-u-font-setting-tnum">…</p>
+
+@mixin k-utilities-font-family {
+  .k-u-font-family-antiqueolive {
+    font-family: var(--font-family-antiqueolive) !important;
+  }
+}

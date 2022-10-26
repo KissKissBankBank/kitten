@@ -30,7 +30,7 @@ exports[`<TitleWithStroke /> with more props matches with snapshot 1`] = `
   }
 >
   <h4
-    className="k-TitleWithStroke__title k-TitleWithStroke__title--tertiary"
+    className="k-TitleWithStroke__title k-TitleWithStroke__title--tertiary k-u-font-family-antiqueolive"
   >
     Lorem ipsum dolor sit amet…
   </h4>

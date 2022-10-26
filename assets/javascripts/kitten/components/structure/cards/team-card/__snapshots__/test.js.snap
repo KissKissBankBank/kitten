@@ -49,12 +49,14 @@ Array [
   >
     <span
       className="k-u-color-font1 k-u-size-medium k-u-weight-700"
+      style={Object {}}
     >
       Lorem Ipsum
     </span>
     <br />
     <span
       className="k-u-color-font1 k-u-size-micro k-u-weight-400"
+      style={Object {}}
     >
       Consectetur
     </span>

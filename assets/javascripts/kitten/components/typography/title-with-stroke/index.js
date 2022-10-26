@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 import styled from 'styled-components'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
-import {
-  titleModifierStyles,
-  titleModifiersNames,
-} from '../common/title-modifier-styles'
+import TYPOGRAPHY from '../../../constants/typography-config'
 import { strokeModifierStyles } from '../../typography/horizontal-stroke/common/stroke-modifier-styles'
+import {
+  titleModifiersNames,
+  titleModifierStyles,
+} from '../common/title-modifier-styles'
 
 const StyledTitleWithStroke = styled.div`
   --TitleWithStroke-css-color: ${COLORS.font1};
@@ -58,6 +58,7 @@ export const TitleWithStroke = ({
   className,
   children,
   cssColor,
+  family,
   noMargin,
   ...other
 }) => {
@@ -75,13 +76,16 @@ export const TitleWithStroke = ({
           'k-TitleWithStroke--noMargin': noMargin,
         },
       )}
-      style={{ '--TitleWithStroke-css-color': cssColor }}
+      style={{
+        '--TitleWithStroke-css-color': cssColor,
+      }}
       {...other}
     >
       <TitleComponent
         className={classNames(
           'k-TitleWithStroke__title',
           `k-TitleWithStroke__title--${modifier}`,
+          { 'k-u-font-family-antiqueolive': family === 'antiqueolive' },
         )}
       >
         {children}
@@ -98,6 +102,7 @@ export const TitleWithStroke = ({
 
 TitleWithStroke.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   align: 'left',
   italic: false,
@@ -107,6 +112,7 @@ TitleWithStroke.defaultProps = {
 
 TitleWithStroke.propTypes = {
   tag: PropTypes.string,
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   italic: PropTypes.bool,

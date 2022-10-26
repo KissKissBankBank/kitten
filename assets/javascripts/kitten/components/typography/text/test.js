@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text } from './index'
 import renderer from 'react-test-renderer'
+import { Text } from './index'
 
 describe('<Text />', () => {
   describe('by default', () => {
@@ -46,6 +46,18 @@ describe('<Text />', () => {
       component = renderer
         .create(<Text cssColor="#F00" style={{ fontWeight: '700' }} />)
         .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with antiqueolive font family', () => {
+    let component
+
+    beforeEach(() => {
+      component = renderer.create(<Text family="antiqueolive" />).toJSON()
     })
 
     it('matches with snapshot', () => {

@@ -50,7 +50,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -122,6 +122,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -155,7 +156,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -227,6 +228,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -260,7 +262,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -332,6 +334,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -373,7 +376,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -445,6 +448,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -478,7 +482,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -550,6 +554,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -583,7 +588,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -655,6 +660,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -807,7 +813,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -879,6 +885,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -912,7 +919,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -984,6 +991,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1017,7 +1025,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1089,6 +1097,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1130,7 +1139,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1202,6 +1211,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1235,7 +1245,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1307,6 +1317,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1340,7 +1351,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1412,6 +1423,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1685,7 +1697,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1757,6 +1769,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1790,7 +1803,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1862,6 +1875,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1895,7 +1909,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1967,6 +1981,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2008,7 +2023,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2080,6 +2095,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2113,7 +2129,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2185,6 +2201,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2218,7 +2235,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2290,6 +2307,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2442,7 +2460,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2514,6 +2532,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2547,7 +2566,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2619,6 +2638,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2652,7 +2672,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2724,6 +2744,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2757,7 +2778,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2829,6 +2850,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2862,7 +2884,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -2934,6 +2956,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -2975,7 +2998,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3047,6 +3070,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3211,7 +3235,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3283,6 +3307,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3316,7 +3341,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3388,6 +3413,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3421,7 +3447,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3493,6 +3519,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3534,7 +3561,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3606,6 +3633,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3639,7 +3667,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3711,6 +3739,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3744,7 +3773,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -3816,6 +3845,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -3968,7 +3998,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4040,6 +4070,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -4073,7 +4104,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4145,6 +4176,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -4178,7 +4210,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4250,6 +4282,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -4291,7 +4324,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4363,6 +4396,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -4396,7 +4430,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4468,6 +4502,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -4501,7 +4536,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ gNvPib k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ gUKrec k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -4573,6 +4608,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %

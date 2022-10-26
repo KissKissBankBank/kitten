@@ -70,6 +70,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
     >
       <span
         className="k-u-color-background1 k-u-size-medium k-u-weight-500"
+        style={Object {}}
       >
         ►
       </span>

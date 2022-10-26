@@ -30,6 +30,7 @@ exports[`<EngagementCard /> by default matches with snapshot 1`] = `
   </div>
   <span
     className="k-u-color-font1 k-u-size-micro k-u-weight-500 sc-gsnTZi fuUQCU"
+    style={Object {}}
   />
 </a>
 `;

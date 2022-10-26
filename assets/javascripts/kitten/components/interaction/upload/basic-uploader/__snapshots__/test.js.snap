@@ -157,11 +157,13 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     <div>
       <p
         className="k-u-color-font1 k-u-line-height-normal k-u-size-small k-u-weight-500 k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
+        style={Object {}}
       >
         document.pdf
       </p>
       <p
         className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-400 k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        style={Object {}}
       >
         The document has been validated
       </p>

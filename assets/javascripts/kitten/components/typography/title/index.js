@@ -10,7 +10,7 @@ import {
 
 const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
-  font-family: var(--font-family-antiqueolive);
+  font-family: var(--font-family-generalsans);
   letterspacing: '.01rem';
   fontweight: 700;
   color: var(--Title-css-color);
@@ -34,6 +34,7 @@ export const Title = ({
   italic,
   cssColor,
   className,
+  family,
   ...other
 }) => {
   return (
@@ -43,6 +44,7 @@ export const Title = ({
       className={classNames('k-Title', className, `k-Title--${modifier}`, {
         'k-Title--noMargin': noMargin,
         'k-Title--italic': italic,
+        'k-u-font-family-antiqueolive': family === 'antiqueolive',
       })}
       style={{ '--Title-css-color': cssColor }}
       {...other}
@@ -52,6 +54,7 @@ export const Title = ({
 
 Title.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -60,6 +63,7 @@ Title.defaultProps = {
 
 Title.propTypes = {
   tag: PropTypes.string,
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   noMargin: PropTypes.bool,
   cssColor: PropTypes.string,

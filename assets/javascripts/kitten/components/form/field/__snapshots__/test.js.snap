@@ -169,6 +169,7 @@ exports[`<Field /> with <Field.Input /> and custom Field tag matches with snapsh
   </div>
   <p
     className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
+    style={Object {}}
   >
     Very Bad! Error message
   </p>
@@ -296,6 +297,7 @@ Array [
   </div>,
   <p
     className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
+    style={Object {}}
   >
     Error!
   </p>,
@@ -912,6 +914,7 @@ Array [
   </div>,
   <p
     className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-500 k-Field__error k-u-margin-none k-u-margin-top-single"
+    style={Object {}}
   >
     Error!
   </p>,

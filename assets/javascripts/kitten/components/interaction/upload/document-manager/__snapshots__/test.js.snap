@@ -64,11 +64,13 @@ exports[`<DocumentManager /> should match snapshot with active state props 1`] =
     >
       <div
         className="k-u-size-small k-u-weight-500 k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+        style={Object {}}
       >
         document validate
       </div>
       <div
         className="k-u-size-micro k-u-weight-400 k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        style={Object {}}
       >
         document.jpg
       </div>
@@ -78,6 +80,7 @@ exports[`<DocumentManager /> should match snapshot with active state props 1`] =
       >
         <span
           className="k-u-size-small k-u-weight-500 k-DocumentManager__actionButton__text"
+          style={Object {}}
         >
           Cancel
         </span>
@@ -88,6 +91,7 @@ exports[`<DocumentManager /> should match snapshot with active state props 1`] =
       >
         <span
           className="k-u-size-small k-u-weight-500 k-DocumentManager__actionButton__text"
+          style={Object {}}
         >
           Replace document
         </span>
@@ -161,6 +165,7 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
     >
       <div
         className="k-u-size-small k-u-weight-500 k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+        style={Object {}}
       >
         document validate
       </div>
@@ -184,6 +189,7 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
       </div>
       <div
         className="k-u-size-micro k-u-weight-400 k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        style={Object {}}
       >
         document.jpg
       </div>
@@ -193,6 +199,7 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
       >
         <span
           className="k-u-size-small k-u-weight-500 k-DocumentManager__actionButton__text"
+          style={Object {}}
         >
           Cancel
         </span>
@@ -203,6 +210,7 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
       >
         <span
           className="k-u-size-small k-u-weight-500 k-DocumentManager__actionButton__text"
+          style={Object {}}
         >
           Replace document
         </span>
@@ -272,11 +280,13 @@ exports[`<DocumentManager /> should match snapshot with ready state props 1`] = 
       >
         <div
           className="k-u-line-height-normal k-u-size-small k-u-weight-500 k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+          style={Object {}}
         >
           
         </div>
         <div
           className="k-u-line-height-normal k-u-size-micro k-u-weight-400 k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+          style={Object {}}
         >
           
         </div>

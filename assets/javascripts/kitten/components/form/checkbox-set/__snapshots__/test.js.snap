@@ -26,6 +26,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-a"
       onClick={[Function]}
+      style={Object {}}
     >
       Option A
     </label>
@@ -44,6 +45,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-b"
       onClick={[Function]}
+      style={Object {}}
     >
       Option B
     </label>
@@ -62,6 +64,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-c"
       onClick={[Function]}
+      style={Object {}}
     >
       Option C
     </label>
@@ -95,6 +98,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-a"
       onClick={[Function]}
+      style={Object {}}
     >
       Option A
     </label>
@@ -113,6 +117,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-b"
       onClick={[Function]}
+      style={Object {}}
     >
       Option B
     </label>
@@ -131,6 +136,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-c"
       onClick={[Function]}
+      style={Object {}}
     >
       Option C
     </label>
@@ -163,6 +169,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-a"
       onClick={[Function]}
+      style={Object {}}
     >
       Option A
     </label>
@@ -181,6 +188,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-b"
       onClick={[Function]}
+      style={Object {}}
     >
       Option B
     </label>
@@ -199,6 +207,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-c"
       onClick={[Function]}
+      style={Object {}}
     >
       Option C
     </label>
