@@ -38,14 +38,6 @@ const ChallengesWrapper = styled.section`
       margin-right: auto;
       box-sizing: border-box;
       max-width: ${pxToRem(1440)};
-
-      // & > :first-child {
-      //   grid-column: 2 / span 1;
-      // }
-      // & > :last-child {
-      //   grid-column: 3 / span 1;
-      //   justify-self: end;
-      // }
     }
   }
 

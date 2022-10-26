@@ -19,7 +19,7 @@ const ManifestoWrapper = styled.section`
   color: var(--color-grey-000);
   text-align: center;
   padding: var(--padding-top-mobile) ${pxToRem(20)} var(--padding-bottom-mobile);
-  margin-top: ${pxToRem(-60)};
+  margin-top: ${pxToRem(-100)};
 
   @media ${mq.tabletAndDesktop} {
     padding: var(--padding-top-desktop) ${pxToRem(250)}

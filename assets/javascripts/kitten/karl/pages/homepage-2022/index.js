@@ -17,11 +17,11 @@ const HomePage = () => (
   <>
     <Hero />
     <UnderHero />
-    <Container fullWidthBelowScreenSize="XS">
+    {/* <Container fullWidthBelowScreenSize="XS"> */}
       <New />
       <CampaignCarousel />
       <ProjectCarousel />
-    </Container>
+    {/* </Container> */}
     <Why />
     <Manifesto
       top={[100, 160]}
@@ -37,7 +37,7 @@ const HomePage = () => (
     <Engagements />
     <Manifesto
       top={[50, 150]}
-      bottom={[50, 120]}
+      bottom={[70, 120]}
       title={
         <Title cssColor="inherit" modifier="tertiary">
           Chaque projet qui se lance sur KissKissBankBank{' '}

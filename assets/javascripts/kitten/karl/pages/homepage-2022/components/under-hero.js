@@ -13,10 +13,6 @@ import {
 
 const UnderHeroWrapper = styled.section`
   display: flex;
-  box-sizing: border-box;
-  max-width: ${pxToRem(1440)};
-  margin-left: auto;
-  margin-right: auto;
   justify-content: center;
   color: var(--color-grey-900);
   text-align: center;
@@ -24,8 +20,24 @@ const UnderHeroWrapper = styled.section`
   > * {
     z-index: 2;
   }
+  .kiss-Homepage-underHero__background__left {
+    width: 100vw;
+    @media ${mq.tabletAndDesktop} {
+      background-color: var(--color-primary-100);
+      width: 50vw;
+      left: 0;
+    }
+  }
+  .kiss-Homepage-underHero__background__right {
+    width: 100vw;
+    @media ${mq.tabletAndDesktop} {
+      background-color: var(--color-danger-100);
+      width: 50vw;
+      right: 0;
+    }
+  }
 
-  @media ${mq.mobileAndTablet} {
+  @media ${mq.mobile} {
     display: block;
   }
 
@@ -38,14 +50,6 @@ const UnderHeroWrapper = styled.section`
       margin-bottom: ${pxToRem(30)};
       margin-top: 0;
       position: relative;
-    }
-  }
-
-  .kiss-Homepage__underHero__blocks {
-    display: flex;
-
-    @media ${mq.mobileAndTablet} {
-      display: block;
     }
   }
 
@@ -68,19 +72,8 @@ const UnderHeroWrapper = styled.section`
 const UnderHero = () => {
   return (
     <UnderHeroWrapper>
-      <Title
-        tag="h2"
-        modifier="tertiary"
-        noMargin
-        className="kiss-Homepage__underHero__title k-u-hidden@m-down"
-      >
-          2 manières <br />
-          de financer <br />
-          votre projet
-      </Title>
-      <div className="kiss-Homepage__underHero__blocks">
+      <div className="kiss-Homepage-underHero__background__left">
         <div className="kiss-Homepage__underHero__block" style={{ backgroundColor: "var(--color-primary-100)" }}>
-          
           <Title
             tag="h2"
             modifier="tertiary"
@@ -102,8 +95,10 @@ const UnderHero = () => {
             Créer mon projet
           </Button>
         </div>
+      </div>
 
-        <div className="kiss-Homepage__underHero__block" style={{ backgroundColor:"var(--color-danger-100)" }}>
+      <div className="kiss-Homepage-underHero__background__right">
+        <div className="kiss-Homepage__underHero__block" style={{ backgroundColor: "var(--color-danger-100)" }}>
           <HandIllustration width="165" height="293" />
           <div className="kiss-Homepage__underHero__patch">
             <PatchNewIllustration width="86" height="86" />
@@ -119,6 +114,16 @@ const UnderHero = () => {
           </Button>
         </div>
       </div>
+      <Title
+        tag="h2"
+        modifier="tertiary"
+        noMargin
+        className="kiss-Homepage__underHero__title k-u-hidden@m-down"
+      >
+          2 manières <br />
+          de financer <br />
+          votre projet
+      </Title>
     </UnderHeroWrapper>
   )
 }

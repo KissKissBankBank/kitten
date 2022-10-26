@@ -40,19 +40,23 @@ const WhyWrapper = styled.section`
   }
 
   .kiss-Homepage__why__cards {
-    display: grid;
-    gap: ${pxToRem(20)};
-
     @media ${mq.tabletAndDesktop} {
+      display: grid;
+      gap: ${pxToRem(20)};  
       grid-template-columns: repeat(3, 1fr);
     }
-    .kiss-Homepage__why__card {
-      color: var(--color-grey-900);
-      background-color: var(--color-grey-000);
-      padding: ${pxToRem(40)} ${pxToRem(30)} ${pxToRem(30)};
-      border-radius: var(--border-radius-m);
-      box-shadow: var(--box-shadow-m);
-    }
+  }
+  .kiss-Homepage__why__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-grey-900);
+    background-color: var(--color-grey-000);
+    padding: ${pxToRem(40)} ${pxToRem(30)} ${pxToRem(30)};
+    border-radius: var(--border-radius-m);
+    box-shadow: var(--box-shadow-m);
+    overflow: hidden;
+    margin: ${pxToRem(20)} 0;  
   }
 `
 

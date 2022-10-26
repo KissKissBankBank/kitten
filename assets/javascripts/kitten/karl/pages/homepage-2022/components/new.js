@@ -32,7 +32,7 @@ const NewWrapper = styled.section`
     gap: ${pxToRem(20)};
     flex-direction: column;
 
-    @media ${mq.desktop} {
+    @media ${mq.tabletAndDesktop} {
       display: grid;
       gap: 0 ${pxToRem(30)};
       grid-template-columns: repeat(3, 1fr);
@@ -187,7 +187,6 @@ const New = () => {
     <NewWrapper>
       <Title
         modifier="tertiary"
-        noMargin
         tag="h2"
         className="k-u-align-center k-u-margin-bottom-tripleHalf"
       >
