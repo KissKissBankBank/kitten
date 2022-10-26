@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
 import {
   CarouselNext,
-  ProjectCard,
-  Text,
-  useWindowWidth,
-  pxToRem,
-  ScreenConfig,
-  mq,
   Container,
   GiftIcon,
+  mq,
+  ProjectCard,
+  pxToRem,
+  ScreenConfig,
+  Text,
   Title,
+  useWindowWidth,
 } from 'kitten'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const data = [
   {
@@ -19,28 +19,32 @@ const data = [
     title: 'Item A',
     imageSrc: '/kitten-1.jpg',
     thumbSrc: '/kitten-1.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item B with a pretty long title on two lines',
     imageSrc: '/kitten-2.jpg',
     thumbSrc: '/kitten-2.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item C',
     imageSrc: '/kitten-3.jpg',
     thumbSrc: '/kitten-3.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item D',
     imageSrc: '/kitten-4.jpg',
     thumbSrc: '/kitten-4.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
@@ -48,59 +52,66 @@ const data = [
       'Item Ewith the longest title ever in all the world, three lines for sure',
     imageSrc: '/kitten-5.jpg',
     thumbSrc: '/kitten-5.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item F',
     imageSrc: '/kitten-6.jpg',
     thumbSrc: '/kitten-6.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item G',
     imageSrc: '/kitten-7.jpg',
     thumbSrc: '/kitten-7.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item H',
     imageSrc: '/kitten-8.jpg',
     thumbSrc: '/kitten-8.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item I',
     imageSrc: '/kitten-9.jpg',
     thumbSrc: '/kitten-9.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item J',
     imageSrc: '/kitten-0.jpg',
     thumbSrc: '/kitten-0.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item K',
     imageSrc: '/kitten-1.jpg',
     thumbSrc: '/kitten-1.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
     engagement: 'Environnement et biodiversité',
     title: 'Item L',
     imageSrc: '/kitten-2.jpg',
     thumbSrc: '/kitten-2.jpg',
-    description: 'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
 ]
-
 
 const CampaignCardComponent = ({ item }) => (
   <ProjectCard
@@ -129,9 +140,7 @@ const CampaignCardComponent = ({ item }) => (
     <ProjectCard.Title>{item.title}</ProjectCard.Title>
     <ProjectCard.Progress aria-label="Progrès de la campagne" value="84" />
     <ProjectCard.Item>
-      <Text size="small">
-        {item.description}
-      </Text>
+      <Text size="small">{item.description}</Text>
     </ProjectCard.Item>
   </ProjectCard>
 )
@@ -144,7 +153,8 @@ const CampaignCarousel = () => (
       modifier="tertiary"
       className="k-u-align-center k-u-margin-vertical-double"
     >
-      Les plus beaux projets du moment prennent vie<br />
+      Les plus beaux projets du moment prennent vie
+      <br />
       sur KissKissBankBank
     </Title>
     <StyledWrapper>
@@ -182,7 +192,7 @@ const CarouselBlock = ({ title }) => {
         baseGap={30}
         cycle
         itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
-        itemMinWidth={0}
+        itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
         viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
@@ -225,10 +235,10 @@ const StyledWrapper = styled.section`
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
-    --container-padding: ${pxToRem(50 - 4)};
+    --container-padding: ${pxToRem(50)};
 
     @media ${mq.tabletAndDesktop} {
-      --container-padding: 15vw;
+      --container-padding: ${pxToRem(150)};
     }
   }
 

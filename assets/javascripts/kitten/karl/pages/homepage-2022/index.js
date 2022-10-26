@@ -1,24 +1,27 @@
-import React from 'react'
 import { Title } from 'kitten'
-import Hero from './components/hero'
-import UnderHero from './components/under-hero'
-import New from './components/new'
+import React from 'react'
+import { Container } from '../../../components/layout/container'
 import CampaignCarousel from './components/campaign-carousel'
-import ProjectCarousel from './components/project-carousel'
-import Why from './components/why'
-import Manifesto from './components/manifesto'
-import Engagements from './components/engagements'
-import PartnerCarousel from './components/partner-carousel'
 import Challenges from './components/challenges'
+import Engagements from './components/engagements'
+import Hero from './components/hero'
+import Manifesto from './components/manifesto'
+import New from './components/new'
+import PartnerCarousel from './components/partner-carousel'
 import Pricing from './components/pricing'
+import ProjectCarousel from './components/project-carousel'
+import UnderHero from './components/under-hero'
+import Why from './components/why'
 
 const HomePage = () => (
   <>
     <Hero />
     <UnderHero />
-    <New />
-    <CampaignCarousel />
-    <ProjectCarousel />
+    <Container>
+      <New />
+      <CampaignCarousel />
+      <ProjectCarousel />
+    </Container>
     <Why />
     <Manifesto
       top={[100, 160]}

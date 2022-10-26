@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
 } from '../../../../constants/grid-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { Button } from '../../../action/button'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
-import { pxToRem } from '../../../../helpers/utils/typography'
 
 import { CarouselInner } from './components/carousel-inner'
 import {
+  OUTLINE_PLUS_OFFSET,
   StyledCarouselContainer,
   StyledCarouselNavigation,
-  OUTLINE_PLUS_OFFSET,
 } from './styles'
 
 export const getItemsPerPageCountForWidth = (
@@ -145,7 +145,9 @@ export const CarouselNext = ({
       newItemsPerPage,
     )
 
-    setItemsPerPageCount(newItemsPerPage)
+    console.log(newItemsPerPage, pagesCount)
+
+    setItemsPerPageCount(Math.max(newItemsPerPage, 1))
     setPagesCount(pagesCount)
   }
 

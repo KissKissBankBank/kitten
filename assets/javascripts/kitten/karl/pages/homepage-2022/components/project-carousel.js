@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
 import {
   Button,
   CarouselNext,
+  Container,
+  mq,
   ProjectCard,
-  Text,
-  useWindowWidth,
   pxToRem,
   ScreenConfig,
-  mq,
-  Container,
+  Text,
+  useWindowWidth,
 } from 'kitten'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const data = [
   {
@@ -34,8 +34,7 @@ const data = [
     thumbSrc: '/kitten-4.jpg',
   },
   {
-    title:
-      'Item E',
+    title: 'Item E',
     imageSrc: '/kitten-5.jpg',
     thumbSrc: '/kitten-5.jpg',
   },
@@ -162,7 +161,7 @@ const CarouselBlock = ({ title }) => {
         baseGap={30}
         cycle
         itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
-        itemMinWidth={0}
+        itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
         viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
@@ -205,10 +204,10 @@ const StyledWrapper = styled.section`
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
-    --container-padding: ${pxToRem(50 - 4)};
+    --container-padding: ${pxToRem(50)};
 
     @media ${mq.tabletAndDesktop} {
-      --container-padding: 15vw;
+      --container-padding: ${pxToRem(150)};
     }
   }
 
