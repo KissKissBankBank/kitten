@@ -142,7 +142,7 @@ const CampaignCarousel = () => (
       tag="h1"
       noMargin
       modifier="tertiary"
-      className="k-u-align-center k-u-margin-vertical-double k-u-margin-vertical-sextuple@s-up"
+      className="k-u-align-center k-u-margin-vertical-double"
     >
       Les plus beaux projets du moment prennent vie<br />
       sur KissKissBankBank

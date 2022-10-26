@@ -13,7 +13,7 @@ import Challenges from './components/challenges'
 import Pricing from './components/pricing'
 
 const HomePage = () => (
-  <StyledWrapper>
+  <>
     <Hero />
     <UnderHero />
     <New />
@@ -48,7 +48,7 @@ const HomePage = () => (
     <PartnerCarousel />
     <Challenges />
     <Pricing />
-  </StyledWrapper>
+  </>
 )
 
 export default HomePage
