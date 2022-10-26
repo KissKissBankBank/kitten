@@ -7,11 +7,11 @@ exports.allowedColorStrings = exports.Text = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireDefault(require("react"));
-
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _react = _interopRequireDefault(require("react"));
 
 var _deprecated = require("../../../helpers/utils/deprecated");
 
@@ -33,6 +33,7 @@ const Text = _ref => {
     transform,
     weight,
     style,
+    family,
     letterSpacing,
     ...others
   } = _ref;
@@ -104,16 +105,19 @@ const Text = _ref => {
     // Transform.
     'k-u-transform-uppercase': transform == 'uppercase',
     // Weight.
-    'k-u-weight-400': weight == '400',
-    'k-u-weight-500': weight == '500',
-    'k-u-weight-700': weight == '700'
+    'k-u-weight-400': weight == '400' && family !== 'antiqueolive',
+    'k-u-weight-500': weight == '500' && family !== 'antiqueolive',
+    'k-u-weight-700': weight == '700' && family !== 'antiqueolive',
+    // Font family
+    'k-u-font-family-antiqueolive': family === 'antiqueolive'
   }, className);
   return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, others, {
     className: textClassName,
-    style: cssColor ? {
-      color: cssColor,
+    style: { ...(cssColor && {
+        color: cssColor
+      }),
       ...style
-    } : style
+    }
   }));
 };
 
@@ -125,6 +129,7 @@ Text.propTypes = {
   setting: _propTypes.default.oneOf(['tnum']),
   lineHeight: _propTypes.default.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
   size: _propTypes.default.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
+  family: _propTypes.default.oneOf(['none', 'antiqueolive']),
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
   transform: _propTypes.default.oneOf(['uppercase']),
   weight: _propTypes.default.oneOf(['400', '500', '700']),
@@ -137,6 +142,7 @@ Text.defaultProps = {
   decoration: null,
   lineHeight: null,
   setting: null,
+  family: null,
   size: null,
   fontStyle: null,
   tag: 'span',

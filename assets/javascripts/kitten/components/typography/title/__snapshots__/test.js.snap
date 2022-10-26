@@ -2,7 +2,7 @@
 
 exports[`<Title /> by default matches with snapshot 1`] = `
 <h1
-  className="sc-bczRLJ fozxQv k-Title k-Title--primary"
+  className="sc-bczRLJ kYInhe k-Title k-Title--primary"
   style={
     Object {
       "--Title-css-color": null,
@@ -13,7 +13,7 @@ exports[`<Title /> by default matches with snapshot 1`] = `
 
 exports[`<Title /> with props matches with snapshot 1`] = `
 <h3
-  className="sc-bczRLJ fozxQv k-Title k-Title--quinary k-Title--noMargin k-Title--italic k-u-font-family-antiqueolive"
+  className="sc-bczRLJ kYInhe k-Title k-Title--quinary k-Title--noMargin k-Title--italic k-u-font-family-antiqueolive"
   style={
     Object {
       "--Title-css-color": "#555",

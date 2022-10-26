@@ -22,7 +22,7 @@ var _titleModifierStyles = require("../common/title-modifier-styles");
 const StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";font-family:var(--font-family-antiqueolive);letterspacing:'.01rem';fontweight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
+})(["--Title-css-color:", ";font-family:var(--font-family-generalsans);letterspacing:'.01rem';font-weight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
 
 const Title = _ref => {
   let {
@@ -32,6 +32,7 @@ const Title = _ref => {
     italic,
     cssColor,
     className,
+    family,
     ...other
   } = _ref;
   return /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
@@ -39,7 +40,8 @@ const Title = _ref => {
     modifier: modifier,
     className: (0, _classnames.default)('k-Title', className, "k-Title--" + modifier, {
       'k-Title--noMargin': noMargin,
-      'k-Title--italic': italic
+      'k-Title--italic': italic,
+      'k-u-font-family-antiqueolive': family === 'antiqueolive'
     }),
     style: {
       '--Title-css-color': cssColor
@@ -50,6 +52,7 @@ const Title = _ref => {
 exports.Title = Title;
 Title.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -57,6 +60,7 @@ Title.defaultProps = {
 };
 Title.propTypes = {
   tag: _propTypes.default.string,
+  family: _propTypes.default.oneOf(['none', 'antiqueolive']),
   modifier: _propTypes.default.oneOf(_titleModifierStyles.titleModifiersNames),
   noMargin: _propTypes.default.bool,
   cssColor: _propTypes.default.string,
