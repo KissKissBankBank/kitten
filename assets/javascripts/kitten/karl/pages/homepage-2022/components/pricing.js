@@ -1,16 +1,17 @@
-import React from 'react'
 import classNames from 'classnames'
-import styled from 'styled-components'
 import {
-  Title,
-  Paragraph,
-  Text,
   Button,
-  Tag,
   mq,
+  Paragraph,
   pxToRem,
   StatusIconNext,
+  Tag,
+  Text,
+  Title,
 } from 'kitten'
+import React from 'react'
+import styled from 'styled-components'
+import { Container } from '../../../../components/layout/container'
 
 const PricingWrapper = styled.section`
   background-color: var(--color-grey-100);
@@ -103,14 +104,14 @@ const PricingWrapper = styled.section`
       top: ${pxToRem(-11)};
       left: 46%;
       max-width: calc(100% - ${pxToRem(2 * (10 + 15))});
-  
+
       line-height: ${pxToRem(22)};
       background-color: var(--color-primary-500);
       border-radius: var(--border-radius-rounded);
       padding: ${pxToRem(0)} ${pxToRem(10)};
-  
+
       font: var(--font-weight-500) var(--font-size-2) / 1
-      var(--font-family-maax);
+        var(--font-family-maax);
       color: var(--color-grey-000);
     }
 
@@ -188,13 +189,16 @@ const PricingCard = ({
       <p className="kiss-Homepage__pricing__card__rate">
         {rate}{' '}
         <small className="kiss-Homepage__pricing__card__rateComplement">
-          {rateComplement}{' '} 
+          {rateComplement}{' '}
           <span className="kiss-Homepage__New__card__rateComplement__bis">
             {rateComplementBis}
           </span>
         </small>
       </p>
-      <Text size="micro" className="kiss-Homepage__pricing__card-rateDescription">
+      <Text
+        size="micro"
+        className="kiss-Homepage__pricing__card-rateDescription"
+      >
         {rateDescription}
       </Text>
     </div>
@@ -261,91 +265,92 @@ const Pricing = () => {
         modifier="secondary"
         className="kiss-Homepage__pricing__paragraph"
       >
-        Nous sommes la seule plateforme à permettre de lancer une campagne sans commission 
-        et à proposer des offres adaptées à votre besoin.
+        Nous sommes la seule plateforme à permettre de lancer une campagne sans
+        commission et à proposer des offres adaptées à votre besoin.
       </Paragraph>
+      <Container>
+        <div className="kiss-Homepage__pricing__cards">
+          <PricingCard
+            name="Starter"
+            rate="Gratuit"
+            description="Idéal si vous débutez et cherchez surtout à récolter des dons pour financer votre projet jusqu’à plusieurs milliers d’euros auprès de vos amis et amis d’amis."
+            actionButtonProps={{
+              as: 'a',
+              href: '#button',
+            }}
+            listItems={[
+              'Campagne avec objectif',
+              'Centre d’aide et tutoriels en ligne',
+              '2 contreparties maximum',
+              'Personnalisation de la page projet et FAQ',
+              'Statistiques basiques',
+              'Publications publiques sur le projet',
+              'Messagerie standard',
+            ]}
+            learnMoreLinkProps={{
+              href: '#link',
+            }}
+          />
 
-      <div className="kiss-Homepage__pricing__cards">
-        <PricingCard
-          name="Starter"
-          rate="Gratuit"
-          description="Idéal si vous débutez et cherchez surtout à récolter des dons pour financer votre projet jusqu’à plusieurs milliers d’euros auprès de vos amis et amis d’amis."
-          actionButtonProps={{
-            as: 'a',
-            href: '#button',
-          }}
-          listItems={[
-            'Campagne avec objectif',
-            'Centre d’aide et tutoriels en ligne',
-            '2 contreparties maximum',
-            'Personnalisation de la page projet et FAQ',
-            'Statistiques basiques',
-            'Publications publiques sur le projet',
-            'Messagerie standard',
-          ]}
-          learnMoreLinkProps={{
-            href: '#link',
-          }}
-        />
+          <PricingCard
+            main
+            sticker="Recommandé"
+            name="Pro"
+            rate="5%"
+            rateComplement="HT"
+            rateComplementBis="SOIT 6% TTC"
+            rateDescription="du montant collecté sur KissKissBankBank"
+            description="Idéal si vous avez déjà une solide communauté existante et cherchez à récolter plusieurs dizaines de milliers d’euros ou des précommandes."
+            actionButtonProps={{
+              as: 'a',
+              href: '#button',
+            }}
+            listItems={[
+              'Coaching illimité',
+              'Paliers d’objectifs',
+              'Prolongation de campagne',
+              'Projet permanent (don récurrent)',
+              'Contreparties illimitées avec options',
+              'Personnalisation de la couleur de page projet',
+              'Statistiques avancées',
+              'Publications ciblées aux contributeurs',
+              'Compte multi-utilisateurs',
+            ]}
+            learnMoreLinkProps={{
+              href: '#link',
+            }}
+          />
 
-        <PricingCard
-          main
-          sticker="Recommandé"
-          name="Pro"
-          rate="5%"
-          rateComplement="HT"
-          rateComplementBis="SOIT 6% TTC"
-          rateDescription="du montant collecté sur KissKissBankBank"
-          description="Idéal si vous avez déjà une solide communauté existante et cherchez à récolter plusieurs dizaines de milliers d’euros ou des précommandes."
-          actionButtonProps={{
-            as: 'a',
-            href: '#button',
-          }}
-          listItems={[
-            'Coaching illimité',
-            'Paliers d’objectifs',
-            'Prolongation de campagne',
-            'Projet permanent (don récurrent)',
-            'Contreparties illimitées avec options',
-            'Personnalisation de la couleur de page projet',
-            'Statistiques avancées',
-            'Publications ciblées aux contributeurs',
-            'Compte multi-utilisateurs',
-          ]}
-          learnMoreLinkProps={{
-            href: '#link',
-          }}
-        />
-
-        <PricingCard
-          name="Expert"
-          rate="10%"
-          rateComplement="HT"
-          rateComplementBis="SOIT 6% TTC"
-          rateDescription="du montant collecté sur KissKissBankBank"
-          description="Idéal si vous connaissez parfaitement les mécaniques de communauté et de financement participatif et souhaitez des fonctionnalités avancées pour optimiser votre campagne en continu."
-          actionButtonProps={{
-            as: 'a',
-            href: '#button',
-          }}
-          listItems={[
-            'Coaching stratégique',
-            'Service client prioritaire',
-            <>
-              Page dédiée par contrepartie <Tag>Bientôt</Tag>
-            </>,
-            <>
-              Export des données statistiques <Tag>Bientôt</Tag>
-            </>,
-            <>
-              Sondages <Tag>Bientôt</Tag>
-            </>,
-          ]}
-          learnMoreLinkProps={{
-            href: '#link',
-          }}
-        />
-      </div>
+          <PricingCard
+            name="Expert"
+            rate="10%"
+            rateComplement="HT"
+            rateComplementBis="SOIT 6% TTC"
+            rateDescription="du montant collecté sur KissKissBankBank"
+            description="Idéal si vous connaissez parfaitement les mécaniques de communauté et de financement participatif et souhaitez des fonctionnalités avancées pour optimiser votre campagne en continu."
+            actionButtonProps={{
+              as: 'a',
+              href: '#button',
+            }}
+            listItems={[
+              'Coaching stratégique',
+              'Service client prioritaire',
+              <>
+                Page dédiée par contrepartie <Tag>Bientôt</Tag>
+              </>,
+              <>
+                Export des données statistiques <Tag>Bientôt</Tag>
+              </>,
+              <>
+                Sondages <Tag>Bientôt</Tag>
+              </>,
+            ]}
+            learnMoreLinkProps={{
+              href: '#link',
+            }}
+          />
+        </div>
+      </Container>
     </PricingWrapper>
   )
 }
