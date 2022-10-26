@@ -34,7 +34,7 @@ const Group = styled(({ className, children, title }) => {
   )
 })`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(300)}, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(350)}, 1fr));
   grid-gap: ${pxToRem(80)} ${pxToRem(20)};
   margin-bottom: ${pxToRem(50)};
 `
@@ -106,9 +106,7 @@ export const AllIllustrations = () => {
       <IllustrationWrapper name="HandIllustration">
         <HandIllustration />
       </IllustrationWrapper>
-      <IllustrationWrapper name="RibbonIllustration">
-        <RibbonIllustration />
-      </IllustrationWrapper>
+      
       <IllustrationWrapper name="ComputerIllustration">
         <ComputerIllustration />
       </IllustrationWrapper>
@@ -125,6 +123,9 @@ export const AllIllustrations = () => {
       </IllustrationWrapper>
       <IllustrationWrapper name="HandAndFlowerIllustration">
         <HandAndFlowerIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="RibbonIllustration">
+        <RibbonIllustration />
       </IllustrationWrapper>
       </Group>
       <Group>

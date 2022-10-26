@@ -22,7 +22,7 @@ const ManifestoWrapper = styled.section`
   margin-top: ${pxToRem(-60)};
 
   @media ${mq.tabletAndDesktop} {
-    padding: var(--padding-top-desktop) ${pxToRem(300)}
+    padding: var(--padding-top-desktop) ${pxToRem(250)}
       var(--padding-bottom-desktop);
   }
 
@@ -33,10 +33,12 @@ const ManifestoWrapper = styled.section`
   .kiss-Homepage__manifesto__illustrations {
     display: flex;
     gap: ${pxToRem(30)};
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .kiss-Homepage__manifesto__illustration {
-    flew-direction: column;
+    flex-direction: column;
   }
 `
 
@@ -65,20 +67,20 @@ const Manifesto = ({
         <div className="kiss-Homepage__manifesto__illustrations">
           <div className="kiss-Homepage__manifesto__illustration">
             <PencilIllustration />
-            <Text tag="p" size="large" cssColor="var(--color-grey-000">
-              Défendons la culture indépendante
+            <Text tag="p" size="large" cssColor="var(--color-grey-000)">
+              Défendons la culture <br />indépendante
             </Text>
           </div>
           <div className="kiss-Homepage__manifesto__illustration">
             <RainbowIllustration />
-            <Text tag="p" size="large" cssColor="var(--color-grey-000">
-              Luttons contre les discriminations
+            <Text tag="p" size="large" cssColor="var(--color-grey-000)">
+              Luttons contre les  <br />discriminations
             </Text>
           </div>
           <div className="kiss-Homepage__manifesto__illustration">
             <HandAndFlowerIllustration />
-            <Text tag="p" size="large" cssColor="var(--color-grey-000">
-              Protégeons l’environnement et la biodiversité
+            <Text tag="p" size="large" cssColor="var(--color-grey-000)">
+              Protégeons l’environnement et  <br />la biodiversité
             </Text>
           </div>
         </div>

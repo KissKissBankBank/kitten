@@ -13,6 +13,8 @@ import {
 const NewWrapper = styled.section`
   max-width: ${pxToRem(1440)};
   box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   padding: 0 ${pxToRem(20)};
 
