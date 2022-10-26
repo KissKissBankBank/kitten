@@ -17,7 +17,7 @@ const HomePage = () => (
   <>
     <Hero />
     <UnderHero />
-    <Container>
+    <Container fullWidthBelowScreenSize="XS">
       <New />
       <CampaignCarousel />
       <ProjectCarousel />

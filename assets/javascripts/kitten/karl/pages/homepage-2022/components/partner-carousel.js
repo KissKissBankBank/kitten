@@ -156,7 +156,7 @@ const PartnerCarousel = () => (
         <br />
         au service de la réussite des projets
       </Title>
-      <Container>
+      <Container fullWidthBelowScreenSize="XS">
         <CarouselBlock />
       </Container>
 
@@ -187,7 +187,7 @@ const CarouselBlock = () => {
         baseGap={30}
         cycle
         itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
-        itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
+        itemMinWidth={200}
         viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
@@ -225,7 +225,7 @@ const StyledWrapper = styled.section`
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
-    --container-padding: ${pxToRem(50)};
+    --container-padding: ${pxToRem(100)};
 
     @media ${mq.tabletAndDesktop} {
       --container-padding: ${pxToRem(150)};
