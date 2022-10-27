@@ -148,10 +148,11 @@ const CampaignCardComponent = ({ item }) => (
 const CampaignCarousel = () => (
   <>
     <Title
-      tag="h1"
+      tag="h2"
       noMargin
       modifier="tertiary"
-      className="k-u-align-center k-u-margin-vertical-double"
+      className="k-u-align-center"
+      style={{ padding: '0 20px' }}
     >
       Les plus beaux projets du moment prennent vie
       <br />
@@ -173,8 +174,8 @@ const CarouselBlock = ({ title }) => {
     <div>
       <Container className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-sb k-u-flex-gap-double">
         <Text
-          tag="h1"
-          className="k-u-margin-none k-u-margin-vertical-double@xs-down"
+          tag="h3"
+          className="k-u-margin-none"
           weight="500"
           transform="uppercase"
           letterSpacing="10%"
@@ -185,7 +186,6 @@ const CarouselBlock = ({ title }) => {
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
-          className="k-u-hidden@xs-down"
         />
       </Container>
       <CarouselNext
@@ -214,7 +214,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(40)};
-  padding-top: ${pxToRem(60)};
+  padding-top: ${pxToRem(50)};
 
   & > * {
     position: relative;

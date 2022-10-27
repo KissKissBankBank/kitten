@@ -15,7 +15,7 @@ import styled from 'styled-components'
 
 const data = [
   {
-    description: 'Environnement et biodiversité',
+    item: '1',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-1.jpg',
     thumbSrc: '/kitten-1.jpg',
@@ -23,7 +23,7 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '2',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-2.jpg',
     thumbSrc: '/kitten-2.jpg',
@@ -31,7 +31,7 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '3',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-3.jpg',
     thumbSrc: '/kitten-3.jpg',
@@ -39,7 +39,7 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '4',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-4.jpg',
     thumbSrc: '/kitten-4.jpg',
@@ -47,7 +47,7 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '5',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-5.jpg',
     thumbSrc: '/kitten-5.jpg',
@@ -55,7 +55,7 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '6',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-6.jpg',
     thumbSrc: '/kitten-6.jpg',
@@ -63,7 +63,7 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '7',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-7.jpg',
     thumbSrc: '/kitten-7.jpg',
@@ -71,42 +71,10 @@ const data = [
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
   {
-    description: 'Environnement et biodiversité',
+    item: '8',
     tag: 'Citoyenneté',
     imageSrc: '/kitten-8.jpg',
     thumbSrc: '/kitten-8.jpg',
-    description:
-      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
-  },
-  {
-    description: 'Environnement et biodiversité',
-    tag: 'Citoyenneté',
-    imageSrc: '/kitten-9.jpg',
-    thumbSrc: '/kitten-9.jpg',
-    description:
-      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
-  },
-  {
-    description: 'Environnement et biodiversité',
-    tag: 'Citoyenneté',
-    imageSrc: '/kitten-0.jpg',
-    thumbSrc: '/kitten-0.jpg',
-    description:
-      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
-  },
-  {
-    description: 'Environnement et biodiversité',
-    tag: 'Citoyenneté',
-    imageSrc: '/kitten-1.jpg',
-    thumbSrc: '/kitten-1.jpg',
-    description:
-      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
-  },
-  {
-    description: 'Environnement et biodiversité',
-    tag: 'Citoyenneté',
-    imageSrc: '/kitten-2.jpg',
-    thumbSrc: '/kitten-2.jpg',
     description:
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
@@ -114,23 +82,23 @@ const data = [
 
 const PartnerCardComponent = ({ item }) => (
   <PartnerCard
+    key={`ProjectCard${item.item}`}
     imageProps={{
-      src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+      src: item.imageSrc,
       alt: '',
     }}
   >
     <PartnerCard.Avatar
       imageProps={{
-        src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+        src: item.imageSrc,
         alt: '',
       }}
     />
     <PartnerCard.Line>
       <Text size="small" weight="500">
-        Les Jeunes Pousses méritent tout notre soutien : Naturalia s’engage dans
-        le développement de votre produit bio.
+        {item.description}
       </Text>
-      <PartnerCard.Sticker>Citoyenneté</PartnerCard.Sticker>
+      <PartnerCard.Sticker>{item.tag}</PartnerCard.Sticker>
       <Text
         tag="p"
         weight="700"
@@ -156,9 +124,9 @@ const PartnerCarousel = () => (
         <br />
         au service de la réussite des projets
       </Title>
-      <Container fullWidthBelowScreenSize="XS">
+      {/* <Container fullWidthBelowScreenSize="XS"> */}
         <CarouselBlock />
-      </Container>
+      {/* </Container> */}
 
       <Text weight="700" size="large" className="k-u-align-center">
         Vous êtes une entreprise ?
@@ -180,7 +148,6 @@ const CarouselBlock = () => {
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
-          className="k-u-hidden@xs-down"
         />
       </Container>
       <CarouselNext

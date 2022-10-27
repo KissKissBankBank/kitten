@@ -21,19 +21,22 @@ const UnderHeroWrapper = styled.section`
     z-index: 2;
   }
   .kiss-Homepage-underHero__background__left {
-    width: 100vw;
-    @media ${mq.tabletAndDesktop} {
-      background-color: var(--color-primary-100);
-      width: 50vw;
-      left: 0;
+    background-color: var(--color-primary-100);
+    width: 50vw;
+    left: 0;
+    
+    @media ${mq.mobile} {
+      width: 100vw;
     }
   }
+
   .kiss-Homepage-underHero__background__right {
-    width: 100vw;
-    @media ${mq.tabletAndDesktop} {
-      background-color: var(--color-danger-100);
-      width: 50vw;
-      right: 0;
+    background-color: var(--color-danger-100);
+    width: 50vw;
+    right: 0;
+
+    @media ${mq.mobile} {
+      width: 100vw;
     }
   }
 
@@ -42,11 +45,11 @@ const UnderHeroWrapper = styled.section`
   }
 
   .kiss-Homepage__underHero__title {
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     margin-top: ${pxToRem(124)};
 
-    @media ${mq.mobileAndTablet} {
+    @media ${mq.mobile} {
       margin-bottom: ${pxToRem(30)};
       margin-top: 0;
       position: relative;
@@ -55,7 +58,7 @@ const UnderHeroWrapper = styled.section`
 
   .kiss-Homepage__underHero__block {
     padding: ${pxToRem(50)} ${pxToRem(100)};
-    @media ${mq.mobileAndTablet} {
+    @media ${mq.mobile} {
       padding: ${pxToRem(50)} ${pxToRem(30)};
       object-fit: cover;
     }
@@ -64,8 +67,18 @@ const UnderHeroWrapper = styled.section`
   .kiss-Homepage__underHero__patch {
     display: inline-flex;
     position: absolute;
-    margin-left: ${pxToRem(70)};
-    margin-top:  ${pxToRem(20)};
+    margin-left: ${pxToRem(20)};
+    margin-top: ${pxToRem(20)};
+      
+    @media ${mq.mobile} {
+      margin-left: 0;
+    }
+
+    svg {
+      @media ${mq.mobile} {
+        width: 90%;
+      }
+    }
   }
 `
 
@@ -78,14 +91,14 @@ const UnderHero = () => {
             tag="h2"
             modifier="tertiary"
             noMargin
-            className="kiss-Homepage__underHero__title k-u-hidden@l-up"
+            className="kiss-Homepage__underHero__title k-u-hidden@m-up"
           >
               2 manières <br />
               de financer
               votre projet
           </Title>
           <HourglassIllustration width="164" height="287" />
-          <Title modifier="quinary" color="var(--color-primary-700)">
+          <Title tag="h3" modifier="quinary" color="var(--color-primary-700)">
             Lancer une campagne limitée dans le temps avec un objectif à atteindre.
           </Title>
           <Text tag="p" size="medium">
@@ -103,7 +116,7 @@ const UnderHero = () => {
           <div className="kiss-Homepage__underHero__patch">
             <PatchNewIllustration width="86" height="86" />
           </div>
-          <Title modifier="quinary" color="var(--color-danger-700)">
+          <Title tag="h3" modifier="quinary" color="var(--color-danger-700)">
             Générer un revenu sur la durée grâce à des contributeurs récurrents
           </Title>
           <Text tag="p" size="medium">
@@ -118,7 +131,7 @@ const UnderHero = () => {
         tag="h2"
         modifier="tertiary"
         noMargin
-        className="kiss-Homepage__underHero__title k-u-hidden@m-down"
+        className="kiss-Homepage__underHero__title k-u-hidden@s-down"
       >
           2 manières <br />
           de financer <br />

@@ -16,14 +16,19 @@ const NewWrapper = styled.section`
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  padding: 0 ${pxToRem(20)};
+  padding: ${pxToRem(60)} ${pxToRem(20)};
 
   > * {
     position: relative;
     z-index: 2;
   }
 
-  @media ${mq.tabletAndDesktop} {
+  @media ${mq.tablet} {
+    padding: ${pxToRem(60)} ${pxToRem(100)};
+    }
+  }
+
+  @media ${mq.desktop} {
     padding: ${pxToRem(70)} ${pxToRem(120)} ${pxToRem(70)};
   }
 
@@ -31,8 +36,9 @@ const NewWrapper = styled.section`
     display: flex;
     gap: ${pxToRem(20)};
     flex-direction: column;
+    margin: ${pxToRem(30)} 0;
 
-    @media ${mq.tabletAndDesktop} {
+    @media ${mq.desktop} {
       display: grid;
       gap: 0 ${pxToRem(30)};
       grid-template-columns: repeat(3, 1fr);
@@ -159,7 +165,7 @@ const NewCard = ({
         {sticker}
       </div>
     )}
-      <h2 className="kiss-Homepage__new__card__name">{name}</h2>
+      <h4 className="kiss-Homepage__new__card__name">{name}</h4>
       <p className="kiss-Homepage__new__card__rate">
         {rate}{' '}
         <small className="kiss-Homepage__new__card__rateComplement">
@@ -188,9 +194,10 @@ const New = () => {
       <Title
         modifier="tertiary"
         tag="h2"
+        noMargin
         className="k-u-align-center k-u-margin-bottom-tripleHalf"
       >
-        Nouveau : choisissez parmi nos <br /> 3 offres d’accompagnement
+        Nouveau : choisissez parmi nos 3 offres d’accompagnement
       </Title>
 
       <div className="kiss-Homepage__new__cards">
@@ -220,7 +227,7 @@ const New = () => {
           description="Idéal si vous connaissez parfaitement les mécaniques de communauté et de financement participatif et souhaitez des fonctionnalités avancées pour optimiser "
         />
       </div>
-      <div className="k-u-align-center k-u-margin-triple">
+      <div className="k-u-align-center">
           <Button modifier="helium">En savoir plus</Button>
         </div>
     </NewWrapper>

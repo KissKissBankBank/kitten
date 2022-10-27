@@ -1,3 +1,5 @@
+import React from 'react'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import {
   Button,
@@ -8,10 +10,8 @@ import {
   Tag,
   Text,
   Title,
+  Container,
 } from 'kitten'
-import React from 'react'
-import styled from 'styled-components'
-import { Container } from '../../../../components/layout/container'
 
 const PricingWrapper = styled.section`
   background-color: var(--color-grey-100);
@@ -41,7 +41,10 @@ const PricingWrapper = styled.section`
     );
   }
 
-  @media ${mq.tabletAndDesktop} {
+  @media ${mq.tablet} {
+    padding: 0 ${pxToRem(100)} ${pxToRem(70)};
+  }
+  @media ${mq.desktop} {
     padding: 0 ${pxToRem(120)} ${pxToRem(70)};
   }
 
@@ -52,23 +55,18 @@ const PricingWrapper = styled.section`
   }
 
   .kiss-Homepage__pricing__cards {
-    display: flex;
+    display: grid;
     gap: ${pxToRem(20)};
-    flex-direction: column;
+    grid-template-columns: 1fr;
 
-    @media ${mq.tabletAndDesktop} {
-      display: grid;
-      gap: 0 ${pxToRem(30)};
+    @media ${mq.desktop} {
+      gap: ${pxToRem(30)};
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 1fr auto 1fr;
     }
+  }
 
-    .kiss-Homepage__pricing__card {
-      grid-row: 2 / span 1;
-    }
-    .kiss-Homepage__pricing__card--main {
-      grid-row: 1 / span 3;
-    }
+  .kiss-Homepage__pricing__container {
+    padding: 0;
   }
 
   /* CARD COMPONENT */
@@ -255,6 +253,7 @@ const Pricing = () => {
   return (
     <PricingWrapper>
       <Title
+        tag="h2"
         modifier="tertiary"
         noMargin
         className="k-u-align-center k-u-margin-bottom-double"
@@ -268,7 +267,7 @@ const Pricing = () => {
         Nous sommes la seule plateforme à permettre de lancer une campagne sans
         commission et à proposer des offres adaptées à votre besoin.
       </Paragraph>
-      <Container>
+      <Container className="kiss-Homepage__pricing__container">
         <div className="kiss-Homepage__pricing__cards">
           <PricingCard
             name="Starter"

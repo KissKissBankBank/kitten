@@ -11,8 +11,13 @@ import {
 const ChallengesWrapper = styled.section`
   background-color: var(--color-grey-100);
   margin-top: ${pxToRem(-50)}; 
-  padding: ${pxToRem(120)} 0 ${pxToRem(150)};
+  padding: ${pxToRem(110)} 0 ${pxToRem(90)};
 
+  @media ${mq.mobile} {
+    padding: ${pxToRem(50)} 0 ${pxToRem(50)};
+  }
+   
+  }
   .k-Title {
     max-width: ${pxToRem(790)};
   }
@@ -74,44 +79,37 @@ const Challenges = () => {
   return (
     <ChallengesWrapper>
       <Title
+        tag="h2"
         modifier="tertiary"
-        className="k-u-margin-top-none k-u-margin-horizontal-auto k-u-margin-bottom-doubleHalf k-u-align-center"
+        className="k-u-margin-top-none k-u-margin-horizontal-auto k-u-margin-bottom-quintuple k-u-align-center"
       >
         Choisir KissKissBankBank, c’est booster sa campagne en participant à nos
         appels à projet.
       </Title>
-      <Text
-        tag="p"
-        className="k-u-margin-bottom-triple k-u-margin-vertical-double@xs-down k-u-align-center"
-        size="large"
-      >
-        En ce moment&nbsp;:
-      </Text>
-
       <Container className="kiss-Homepage__challenges__carouselHead">
         <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
           <img src="/kitten-1.jpg" alt="" />
-          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+          <Text size="large" weight="500">
             Aenean lacinia bibendum nulla sed consectetur
-          </Title>
+          </Text>
           <Text size="small">
             Aenean lacinia bibendum nulla sed consectetur.
           </Text>
         </a>
         <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
           <img src="/kitten-2.jpg" alt="" />
-          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+          <Text size="large" weight="500">
             Aenean lacinia bibendum nulla sed consectetur
-          </Title>
+          </Text>
           <Text size="small">
             Aenean lacinia bibendum nulla sed consectetur.
           </Text>
         </a>
         <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
           <img src="/kitten-3.jpg" alt="" />
-          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+          <Text size="large" weight="500">
             Aenean lacinia bibendum nulla sed consectetur
-          </Title>
+          </Text>
           <Text size="small">
             Aenean lacinia bibendum nulla sed consectetur.
           </Text>
@@ -119,27 +117,27 @@ const Challenges = () => {
 
         <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
           <img src="/kitten-4.jpg" alt="" />
-          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+          <Text size="large" weight="500">
             Aenean lacinia bibendum nulla sed consectetur
-          </Title>
+          </Text>
           <Text size="small">
             Aenean lacinia bibendum nulla sed consectetur.
           </Text>
         </a>
         <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
           <img src="/kitten-5.jpg" alt="" />
-          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+          <Text size="large" weight="500">
             Aenean lacinia bibendum nulla sed consectetur
-          </Title>
+          </Text>
           <Text size="small">
             Aenean lacinia bibendum nulla sed consectetur.
           </Text>
         </a>
         <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
           <img src="/kitten-6.jpg" alt="" />
-          <Title tag="h2" modifier="septenary" className="k-u-margin-none">
+          <Text size="large" weight="500">
             Aenean lacinia bibendum nulla sed consectetur
-          </Title>
+          </Text>
           <Text size="small">
             Aenean lacinia bibendum nulla sed consectetur.
           </Text>

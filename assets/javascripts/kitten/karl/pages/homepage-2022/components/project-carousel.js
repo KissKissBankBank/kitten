@@ -142,7 +142,7 @@ const CarouselBlock = ({ title }) => {
     <div>
       <Container className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-sb k-u-flex-gap-double">
         <Text
-          tag="h1"
+          tag="h2"
           className="k-u-margin-none k-u-margin-vertical-double@xs-down"
           weight="500"
           transform="uppercase"
@@ -154,7 +154,6 @@ const CarouselBlock = ({ title }) => {
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
-          className="k-u-hidden@xs-down"
         />
       </Container>
       <CarouselNext
@@ -183,7 +182,7 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: ${pxToRem(40)};
-  padding-bottom: ${pxToRem(60)};
+  padding-bottom: ${pxToRem(50)};
 
   & > * {
     position: relative;

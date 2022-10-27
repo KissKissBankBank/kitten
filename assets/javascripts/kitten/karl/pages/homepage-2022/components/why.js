@@ -30,22 +30,24 @@ const WhyWrapper = styled.section`
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    gap: ${pxToRem(20)};
-    padding: ${pxToRem(70)} ${pxToRem(20)};
+    padding: ${pxToRem(110)} ${pxToRem(20)};
 
     @media ${mq.tabletAndDesktop} {
-      gap: ${pxToRem(40)};
       padding: ${pxToRem(120)} ${pxToRem(100)};
     }
   }
 
   .kiss-Homepage__why__cards {
-    @media ${mq.tabletAndDesktop} {
-      display: grid;
-      gap: ${pxToRem(20)};  
+    display: grid;
+    gap: ${pxToRem(30)};
+    margin: ${pxToRem(40)} 0;
+    grid-template-columns: 1fr;
+  
+    @media ${mq.desktop} {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
   .kiss-Homepage__why__card {
     display: flex;
     flex-direction: column;
@@ -56,7 +58,6 @@ const WhyWrapper = styled.section`
     border-radius: var(--border-radius-m);
     box-shadow: var(--box-shadow-m);
     overflow: hidden;
-    margin: ${pxToRem(20)} 0;  
   }
 `
 
@@ -64,7 +65,7 @@ const Why = () => {
   return (
     <WhyWrapper>
       <div className="kiss-Homepage__why__container">
-        <Title cssColor="inherit" modifier="secondary" noMargin>
+        <Title tag="h2" cssColor="inherit" modifier="secondary" noMargin>
           Pourquoi choisir KissKissBankBank ?
         </Title>
         <div className="kiss-Homepage__why__cards">
@@ -117,7 +118,7 @@ const Why = () => {
           </div>
         </div>
         <div className="k-u-align-center">
-          <Button modifier="helium">En savoir plus</Button>
+          <Button modifier="iron">En savoir plus</Button>
         </div>
       </div>
     </WhyWrapper>
