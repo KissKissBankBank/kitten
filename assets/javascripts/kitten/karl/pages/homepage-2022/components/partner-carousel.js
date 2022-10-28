@@ -78,6 +78,22 @@ const data = [
     description:
       'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
   },
+  {
+    item: '9',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-9.jpg',
+    thumbSrc: '/kitten-9.jpg',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
+  {
+    item: '10',
+    tag: 'Citoyenneté',
+    imageSrc: '/kitten-10.jpg',
+    thumbSrc: '/kitten-10.jpg',
+    description:
+      'Soutenez la création des deux premiers numéros du trimestriel de MAJ',
+  },
 ]
 
 const PartnerCardComponent = ({ item }) => (
@@ -144,7 +160,7 @@ const CarouselBlock = () => {
 
   return (
     <div>
-      <Container className="k-u-flex k-u-flex-justifyContent-end">
+      <Container className="k-u-flex k-u-flex-alignItems-center k-u-flex-justifyContent-end k-u-flex-gap-double">
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
@@ -154,7 +170,7 @@ const CarouselBlock = () => {
         baseGap={30}
         cycle
         itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
-        itemMinWidth={200}
+        itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
         viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
         viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
         navigationPropsGetter={setNavProps}
@@ -192,7 +208,7 @@ const StyledWrapper = styled.section`
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
-    --container-padding: ${pxToRem(100)};
+    --container-padding: ${pxToRem(50)};
 
     @media ${mq.tabletAndDesktop} {
       --container-padding: ${pxToRem(150)};

@@ -144,9 +144,7 @@ export const CarouselNext = ({
       React.Children.count(children),
       newItemsPerPage,
     )
-
-    console.log(newItemsPerPage, pagesCount)
-
+  
     setItemsPerPageCount(Math.max(newItemsPerPage, 1))
     setPagesCount(pagesCount)
   }

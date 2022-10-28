@@ -3,7 +3,7 @@ import React from 'react'
 import { Container } from '../../../components/layout/container'
 import CampaignCarousel from './components/campaign-carousel'
 import Challenges from './components/challenges'
-import Engagements from './components/engagements'
+import EngagementCarousel from './components/engagement-carousel'
 import Hero from './components/hero'
 import Manifesto from './components/manifesto'
 import New from './components/new'
@@ -34,7 +34,7 @@ const HomePage = () => (
       }
       illustration
     />
-    <Engagements />
+    <EngagementCarousel />
     <Manifesto
       top={[50, 150]}
       bottom={[70, 120]}
