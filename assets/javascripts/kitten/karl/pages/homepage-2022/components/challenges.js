@@ -169,7 +169,7 @@ const Challenges = () => {
         Choisir KissKissBankBank, c’est booster sa campagne en participant à nos
         appels à projet.
       </Title>
-      <Container className="kiss-Homepage__challenges__carouselHead k-u-hidden@s-down">
+      <Container className="kiss-Homepage__challenges__carouselHead k-u-hidden@m-down">
         {data.map((item, index) => (
           <>
             <ChallengeCardComponent item={item} key={index} />
@@ -181,7 +181,7 @@ const Challenges = () => {
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
-          className="k-u-hidden@m-up k-u-flex-justifyContent-end"
+          className="k-u-hidden@l-up k-u-flex-justifyContent-end k-u-margin-bottom-double"
         />
       </Container>
 
@@ -194,7 +194,7 @@ const Challenges = () => {
         navigationPropsGetter={setNavProps}
         showOtherPages={windowWidth <= ScreenConfig.M.min ? true : false}
         shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
-        className="k-u-hidden@m-up"
+        className="k-u-hidden@l-up"
       >
         {data.map((item, index) => (
           <>

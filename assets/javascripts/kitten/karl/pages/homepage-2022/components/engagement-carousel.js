@@ -78,13 +78,19 @@ const EngagementsWrapper = styled.section`
     display: inline-flex;
     align-items: center;
 
-    @media ${mq.tablet} {
+    @media ${mq.tabletAndMobile} {
       display: flex;
     }
+  }
 
-    @media ${mq.mobile} {
-      display: none;
-    }
+  .kiss-Homepage__engagements__carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: ${pxToRem(30)};
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    max-width: ${pxToRem(1440)};
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
@@ -212,7 +218,7 @@ const EngagementBlock = () => {
       >
         Luttons contre les discriminations
       </Title>
-      <Container className="k-u-flex k-u-flex-justifyContent-sb k-u-margin-bottom-triple">
+      <Container className="k-u-flex k-u-flex-justifyContent-sb@l-up k-u-flex-direction-column@m-down k-u-margin-bottom-triple@l-up">
         <Text cssColor="inherit" size="small">
           Il n’y a pas de monde juste blablabla bla bla bla.
         </Text>
@@ -226,31 +232,42 @@ const EngagementBlock = () => {
         >
           <LongArrowIcon color="currentColor" height="16" className="k-u-margin-right-noneHalf" />
           Voir plus de projets engagés
-        </Text>
-
+        </Text>  
+      </Container>
+      
+      <div className="k-u-flex k-u-flex-justifyContent-end k-u-margin-horizontal-double">
         <CarouselNext.Navigation
           {...navProps}
           buttonProps={{ size: 'small' }}
-          className="k-u-hidden@m-up"
+          className="k-u-hidden@l-up k-u-margin-bottom-double"
         />
-      </Container>
-        <CarouselNext
-          baseGap={30}
-          itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
-          itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
-          viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
-          viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
-          navigationPropsGetter={setNavProps}
-          showOtherPages={windowWidth <= ScreenConfig.M.min ? true : false}
-          shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
-        >
-          {data.map((item, index) => (
-            <>
-              <EngagementCardComponent item={item} key={index} />
-            </>
-          ))}
-        </CarouselNext>
       </div>
+      <CarouselNext
+        baseGap={30}
+        itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
+        itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
+        viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
+        viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
+        navigationPropsGetter={setNavProps}
+        showOtherPages={windowWidth <= ScreenConfig.M.min ? true : false}
+        shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
+        className="k-u-hidden@l-up"
+      >
+        {data.map((item, index) => (
+          <>
+            <EngagementCardComponent item={item} key={index} />
+          </>
+        ))}
+      </CarouselNext>
+
+      <Container className="kiss-Homepage__engagements__carousel k-u-hidden@m-down">
+        {data.map((item, index) => (
+          <>
+            <EngagementCardComponent item={item} key={index} />
+          </>
+        ))}
+      </Container>
+    </div>
   )
 }
 
