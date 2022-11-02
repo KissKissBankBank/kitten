@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {
   Title,
@@ -6,6 +6,9 @@ import {
   Container,
   mq,
   pxToRem,
+  CarouselNext,
+  useWindowWidth,
+  ScreenConfig,
 } from 'kitten'
 
 const ChallengesWrapper = styled.section`
@@ -19,7 +22,13 @@ const ChallengesWrapper = styled.section`
    
   }
   .k-Title {
+    @media ${mq.mobile} {
+      margin: 0 ${pxToRem(20)};
+    }
+
     max-width: ${pxToRem(790)};
+    margin: 0 auto ${pxToRem(50)};
+    text-align: center;
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {
@@ -35,15 +44,13 @@ const ChallengesWrapper = styled.section`
   }
 
   .kiss-Homepage__challenges__carouselHead {
-    @media ${mq.tabletAndDesktop} {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: ${pxToRem(30)};
-      margin-left: auto;
-      margin-right: auto;
-      box-sizing: border-box;
-      max-width: ${pxToRem(1440)};
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: ${pxToRem(30)};
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    max-width: ${pxToRem(1440)};
   }
 
   .kiss-Homepage__challenges__challengeCard__item {
@@ -59,7 +66,7 @@ const ChallengesWrapper = styled.section`
     text-decoration: none;
     color: var(--color-grey-900);
     overflow: hidden;
-    height: 100%;
+    // height: 100%;
 
     &:hover,
     &:focus {
@@ -75,74 +82,126 @@ const ChallengesWrapper = styled.section`
   }
 `
 
+const data = [
+  {
+    item: '1',
+    thumbSrc: '/kitten-2.jpg',
+    imageSrc: '/kitten-2.jpg',
+    title: 'Aenean lacinia bibendum nulla sed consectetur',
+    description: 'Aenean lacinia bibendum nulla sed consectetur',
+  },
+  {
+    item: '2',
+    thumbSrc: '/kitten-2.jpg',
+    imageSrc: '/kitten-2.jpg',
+    title: 'Aenean lacinia bibendum nulla sed consectetur',
+    description: 'Aenean lacinia bibendum nulla sed consectetur',
+  },
+  {
+    item: '3',
+    thumbSrc: '/kitten-2.jpg',
+    imageSrc: '/kitten-2.jpg',
+    title: 'Aenean lacinia bibendum nulla sed consectetur',
+    description: 'Aenean lacinia bibendum nulla sed consectetur',
+  },
+  {
+    item: '4',
+    thumbSrc: '/kitten-2.jpg',
+    imageSrc: '/kitten-2.jpg',
+    title: 'Aenean lacinia bibendum nulla sed consectetur',
+    description: 'Aenean lacinia bibendum nulla sed consectetur',
+  },
+  {
+    item: '5',
+    thumbSrc: '/kitten-2.jpg',
+    imageSrc: '/kitten-2.jpg',
+    title: 'Aenean lacinia bibendum nulla sed consectetur',
+    description: 'Aenean lacinia bibendum nulla sed consectetur',
+  },
+  {
+    item: '6',
+    thumbSrc: '/kitten-2.jpg',
+    imageSrc: '/kitten-2.jpg',
+    title: 'Aenean lacinia bibendum nulla sed consectetur',
+    description: 'Aenean lacinia bibendum nulla sed consectetur',
+  }
+]
+
+const ChallengeCardComponent = ({ item }) => {
+  const [navProps, setNavProps] = useState({})
+
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
+
+  return (
+    <a 
+      key={`ChallengeCard${item.item}`}
+      href="#"
+      className="kiss-Homepage__challenges__challengeCard__item"
+    >
+      <img
+        src={item.imageSrc}
+        alt="Image alt"
+      />
+      <Text size="large" weight="500">
+        {item.title}
+      </Text>
+      <Text size="small">
+        {item.description}
+      </Text>
+    </a>
+  )
+}
+
 const Challenges = () => {
+  const [navProps, setNavProps] = useState({})
+
+  // on KissKiss, use `viewportIsSOrLess` from `useMediaQuery()`
+  const windowWidth = useWindowWidth()
+
   return (
     <ChallengesWrapper>
       <Title
         tag="h2"
         modifier="tertiary"
-        className="k-u-margin-top-none k-u-margin-horizontal-auto k-u-margin-bottom-quintuple k-u-align-center"
+        className="kiss-Homepage__challenges__title"
       >
         Choisir KissKissBankBank, c’est booster sa campagne en participant à nos
         appels à projet.
       </Title>
-      <Container className="kiss-Homepage__challenges__carouselHead">
-        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
-          <img src="/kitten-1.jpg" alt="" />
-          <Text size="large" weight="500">
-            Aenean lacinia bibendum nulla sed consectetur
-          </Text>
-          <Text size="small">
-            Aenean lacinia bibendum nulla sed consectetur.
-          </Text>
-        </a>
-        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
-          <img src="/kitten-2.jpg" alt="" />
-          <Text size="large" weight="500">
-            Aenean lacinia bibendum nulla sed consectetur
-          </Text>
-          <Text size="small">
-            Aenean lacinia bibendum nulla sed consectetur.
-          </Text>
-        </a>
-        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
-          <img src="/kitten-3.jpg" alt="" />
-          <Text size="large" weight="500">
-            Aenean lacinia bibendum nulla sed consectetur
-          </Text>
-          <Text size="small">
-            Aenean lacinia bibendum nulla sed consectetur.
-          </Text>
-        </a>
-
-        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
-          <img src="/kitten-4.jpg" alt="" />
-          <Text size="large" weight="500">
-            Aenean lacinia bibendum nulla sed consectetur
-          </Text>
-          <Text size="small">
-            Aenean lacinia bibendum nulla sed consectetur.
-          </Text>
-        </a>
-        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
-          <img src="/kitten-5.jpg" alt="" />
-          <Text size="large" weight="500">
-            Aenean lacinia bibendum nulla sed consectetur
-          </Text>
-          <Text size="small">
-            Aenean lacinia bibendum nulla sed consectetur.
-          </Text>
-        </a>
-        <a href="#" className="kiss-Homepage__challenges__challengeCard__item">
-          <img src="/kitten-6.jpg" alt="" />
-          <Text size="large" weight="500">
-            Aenean lacinia bibendum nulla sed consectetur
-          </Text>
-          <Text size="small">
-            Aenean lacinia bibendum nulla sed consectetur.
-          </Text>
-        </a>
+      <Container className="kiss-Homepage__challenges__carouselHead k-u-hidden@s-down">
+        {data.map((item, index) => (
+          <>
+            <ChallengeCardComponent item={item} key={index} />
+          </>
+        ))}
       </Container>
+      
+      <Container>
+        <CarouselNext.Navigation
+          {...navProps}
+          buttonProps={{ size: 'small' }}
+          className="k-u-hidden@m-up k-u-flex-justifyContent-end"
+        />
+      </Container>
+
+      <CarouselNext
+        baseGap={30}
+        itemsPerPage={windowWidth <= ScreenConfig.XS.max ? 1 : 3}
+        itemMinWidth={windowWidth <= ScreenConfig.XS.max ? 200 : 300}
+        viewportIsXSOrLess={windowWidth <= ScreenConfig.XS.max}
+        viewportIsMOrLess={windowWidth <= ScreenConfig.M.max}
+        navigationPropsGetter={setNavProps}
+        showOtherPages={windowWidth <= ScreenConfig.M.min ? true : false}
+        shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
+        className="k-u-hidden@m-up"
+      >
+        {data.map((item, index) => (
+          <>
+            <ChallengeCardComponent item={item} key={index} />
+          </>
+        ))}
+      </CarouselNext>
     </ChallengesWrapper>
   )
 }

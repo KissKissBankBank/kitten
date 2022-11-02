@@ -201,7 +201,7 @@ const PricingCard = ({
       </Text>
     </div>
     <Paragraph
-      modifier="quinary"
+      modifier="tertiary"
       className="kiss-Homepage__pricing__card__description"
     >
       {description}
