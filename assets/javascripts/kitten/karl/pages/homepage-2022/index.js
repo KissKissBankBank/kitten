@@ -36,7 +36,7 @@ const HomePage = () => (
     />
     <EngagementCarousel />
     <Manifesto
-      top={[50, 150]}
+      top={[50, 70]}
       bottom={[70, 120]}
       title={
         <Title cssColor="inherit" modifier="tertiary">
