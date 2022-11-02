@@ -17,11 +17,10 @@ const HomePage = () => (
   <>
     <Hero />
     <UnderHero />
-    {/* <Container fullWidthBelowScreenSize="XS"> */}
-      <New />
-      <CampaignCarousel />
-      <ProjectCarousel />
-    {/* </Container> */}
+    <New />
+    <CampaignCarousel />
+    <ProjectCarousel />
+
     <Why />
     <Manifesto
       top={[100, 160]}
