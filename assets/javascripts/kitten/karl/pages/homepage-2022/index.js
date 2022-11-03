@@ -21,17 +21,19 @@ const HomePage = () => (
     <ProjectCarousel />
 
     <Why />
-    <Manifesto
-      top={[100, 160]}
-      bottom={[50, 50]}
-      title={
-        <Title cssColor="inherit" modifier="secondary">
-          Ensemble, engageons-nous <br className="k-u-hidden@l-down" />
-          pour un monde plus juste.
-        </Title>
-      }
-      illustration
-    />
+    <div style={{marginTop: "-90px"}}>
+      <Manifesto
+        top={[140, 180]}
+        bottom={[50, 50]}
+        title={
+          <Title cssColor="inherit" modifier="secondary">
+            Ensemble, engageons-nous <br className="k-u-hidden@l-down" />
+            pour un monde plus juste.
+          </Title>
+        }
+        illustration
+      />
+    </div>
     <EngagementCarousel />
     <Manifesto
       top={[50, 70]}
