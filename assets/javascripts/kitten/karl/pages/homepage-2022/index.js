@@ -1,6 +1,5 @@
 import { Title } from 'kitten'
 import React from 'react'
-import { Container } from '../../../components/layout/container'
 import CampaignCarousel from './components/campaign-carousel'
 import Challenges from './components/challenges'
 import EngagementCarousel from './components/engagement-carousel'

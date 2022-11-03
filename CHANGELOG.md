@@ -23,6 +23,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `PencilIllustration`
     - `PatchNewIllustration`
 
+- Fix: `ProjectCard`: Update styles. 
+
 ## [12.14.0] - 2022-10-14  💅
 
 Feature:
