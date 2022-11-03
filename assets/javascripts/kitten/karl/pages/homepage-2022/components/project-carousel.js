@@ -168,9 +168,7 @@ const CarouselBlock = ({ title }) => {
         shadowSize={windowWidth <= ScreenConfig.XS.max ? 10 : 30}
       >
         {data.map((item, index) => (
-          <>
-            <CardComponent item={item} key={index} />
-          </>
+          <CardComponent item={item} key={index} />
         ))}
       </CarouselNext>
     </div>

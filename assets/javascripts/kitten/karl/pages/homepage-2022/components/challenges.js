@@ -66,7 +66,6 @@ const ChallengesWrapper = styled.section`
     text-decoration: none;
     color: var(--color-grey-900);
     overflow: hidden;
-    // height: 100%;
 
     &:hover,
     &:focus {

@@ -140,9 +140,8 @@ const PartnerCarousel = () => (
         <br />
         au service de la réussite des projets
       </Title>
-      {/* <Container fullWidthBelowScreenSize="XS"> */}
-        <CarouselBlock />
-      {/* </Container> */}
+
+      <CarouselBlock />
 
       <Text weight="700" size="large" className="k-u-align-center">
         Vous êtes une entreprise ?
@@ -178,9 +177,7 @@ const CarouselBlock = () => {
         shadowSize={windowWidth <= ScreenConfig.XS.max ? 15 : 30}
       >
         {data.map((item, index) => (
-          <>
-            <PartnerCardComponent item={item} key={index} />
-          </>
+          <PartnerCardComponent item={item} key={index} />
         ))}
       </CarouselNext>
     </div>

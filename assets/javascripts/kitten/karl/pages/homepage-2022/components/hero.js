@@ -69,7 +69,6 @@ const HeroWrapper = styled.section`
 `
 
 const Hero = () => {
-
   return (
     <HeroWrapper>
       <div className="kiss-Homepage__hero__main">

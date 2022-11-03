@@ -254,17 +254,13 @@ const EngagementBlock = () => {
         className="k-u-hidden@l-up"
       >
         {data.map((item, index) => (
-          <>
-            <EngagementCardComponent item={item} key={index} />
-          </>
+          <EngagementCardComponent item={item} key={index} />
         ))}
       </CarouselNext>
 
       <Container className="kiss-Homepage__engagements__carousel k-u-hidden@m-down">
         {data.map((item, index) => (
-          <>
-            <EngagementCardComponent item={item} key={index} />
-          </>
+          <EngagementCardComponent item={item} key={index} />
         ))}
       </Container>
     </div>
