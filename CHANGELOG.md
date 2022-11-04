@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Cards`: Add `PartnerCard` component.
-- Feature: 
+## [12.15.0] - 2022-11-04 💁‍♀️
+
+Features:
+
+  - `Cards`: Add `PartnerCard` component.
   - Add the following icon components:
     - `ClickIconNext`
     - `SilhouetteIconNext`
@@ -23,7 +26,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `PencilIllustration`
     - `PatchNewIllustration`
 
-- Fix: `ProjectCard`: Update styles. 
+Fix:
+
+  - `ProjectCard`: Update styles. 
 
 ## [12.14.0] - 2022-10-14  💅
 

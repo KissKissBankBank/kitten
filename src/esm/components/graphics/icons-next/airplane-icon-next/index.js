@@ -23,7 +23,7 @@ export const AirplaneIconNext = _ref => {
 AirplaneIconNext.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
-  direction: PropTypes.oneOf[('up-left', 'left')]
+  direction: PropTypes.oneOf(['up-left', 'left'])
 };
 AirplaneIconNext.defaultProps = {
   color: '#222',

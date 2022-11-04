@@ -1,9 +1,9 @@
+import classNames from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import { domElementHelper } from '../../../../../helpers/dom/element-helper';
-import { CarouselPage } from './carousel-page';
-import classNames from 'classnames';
 import { usePrevious } from '../../../../../helpers/hooks/use-previous';
+import { CarouselPage } from './carousel-page';
 
 if (domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill();
