@@ -23,7 +23,7 @@ const CommentWrapper = styled.div`
       margin-left: ${pxToRem(50)};
     }
 
-    .k-Comment__header__image {
+    .k-Comment__image {
       width: ${pxToRem(20)};
       height: ${pxToRem(20)};
     }
@@ -36,15 +36,15 @@ const CommentWrapper = styled.div`
     }
   }
 
-  .k-Comment__header__image {
+  .k-Comment__image {
     width: ${pxToRem(40)};
     height: ${pxToRem(40)};
     object-fit: cover;
     object-position: center center;
-    border-radius: ${pxToRem(20)};
+    border-radius: var(--border-radius-rounded);
   }
 
-  .k-Comment__block__wrapper {
+  .k-Comment__block {
     display: flex;
     gap: ${pxToRem(10)};
     padding: ${pxToRem(15)};
@@ -130,7 +130,7 @@ export const Comment = React.forwardRef(
     },
     ref,
   ) => (
-    <CommentWrapper 
+    <CommentWrapper
       ref={ref || null}
       id={id}
       className={classNames('k-Comment', className, {
@@ -142,9 +142,9 @@ export const Comment = React.forwardRef(
       <img
         alt=""
         {...avatarImgProps}
-        className="k-Comment__header__image"
+        className="k-Comment__image"
       />
-      <div className="k-Comment__block__wrapper">
+      <div className="k-Comment__block">
         <div className="k-Comment__header">
           <div className="k-Comment__header__meta">
             <Text weight="500" color="font1" size="small" className="k-u-ellipsis">
