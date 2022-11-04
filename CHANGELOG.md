@@ -4,13 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [13.0.0-beta2] - 2022-11-04  🎖
+
+Feature:
+
+- Remove `anti-aliasing` because of new typo.
+
 ## [13.0.0-beta1] - 2022-10-26  🎖
+
+Feature:
 
 - Add `family` prop to `Title`, `TitleWithStroke` and `Text` for switching with `AntiqueOlive` font.
 
 ## [13.0.0-beta0] - 2022-10-19  🪔
 
 Feature:
+
 - Change typo `Maax` to `GeneralSans` and `AntiqueOlive` for titles.
 - Feature: `Cards`: Add `PartnerCard` component.
 
