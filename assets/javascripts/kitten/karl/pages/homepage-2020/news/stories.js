@@ -3,7 +3,7 @@ import HomepageNews from './index'
 
 export default {
   component: HomepageNews,
-  title: 'pages/homepage/HomepageNews',
+  title: 'pages/Homepage 2020/HomepageNews',
   parameters: {
     component: HomepageNews,
   },

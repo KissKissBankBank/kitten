@@ -3,7 +3,7 @@ import { PopularProjects } from './index'
 
 export default {
   component: PopularProjects,
-  title: 'pages/homepage/PopularProjects',
+  title: 'pages/Homepage 2020/PopularProjects',
   parameters: {
     component: PopularProjects,
   },

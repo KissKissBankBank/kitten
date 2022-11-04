@@ -2,7 +2,7 @@
 
 exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 <a
-  className="sc-bczRLJ dIpoGj k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+  className="sc-bczRLJ kyCALo k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
   href="//hello.world"
 >
   <div
@@ -101,7 +101,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ dIpoGj k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+  className="sc-bczRLJ kyCALo k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
 >
   <div
     className="k-ProjectCard__image"
@@ -204,7 +204,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
 
 exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ dIpoGj k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+  className="sc-bczRLJ kyCALo k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
 >
   <div
     className="k-ProjectCard__image"

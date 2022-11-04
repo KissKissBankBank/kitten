@@ -3,7 +3,7 @@ import HomePage from './index'
 
 export default {
   component: HomePage,
-  title: 'pages/homepage',
+  title: 'pages/Homepage 2020',
   parameters: {
     component: HomePage,
   },

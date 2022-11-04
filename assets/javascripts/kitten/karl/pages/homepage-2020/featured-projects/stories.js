@@ -17,7 +17,7 @@ const StyledContainer = styled(Container)`
 
 export default {
   component: FeaturedProjects,
-  title: 'pages/homepage/FeaturedProjects',
+  title: 'pages/Homepage 2020/FeaturedProjects',
   parameters: {
     component: FeaturedProjects,
   },

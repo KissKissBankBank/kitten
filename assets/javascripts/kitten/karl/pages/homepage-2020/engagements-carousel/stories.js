@@ -3,7 +3,7 @@ import { EngagementsCarousel } from './index'
 
 export default {
   component: EngagementsCarousel,
-  title: 'pages/homepage/EngagementsCarousel',
+  title: 'pages/Homepage 2020/EngagementsCarousel',
   parameters: {
     component: EngagementsCarousel,
   },
