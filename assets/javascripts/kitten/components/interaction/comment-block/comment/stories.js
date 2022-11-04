@@ -105,7 +105,16 @@ export const Default = ({ showFooter, disabledButton, ...args }) => {
               className="k-u-reset-button k-u-link k-u-link-font1"
               onClick={action('comment')}
             >
-              Reply
+              Répondre
+            </Text>
+            <Text
+              as="button"
+              weight="500"
+              size="micro"
+              className="k-u-reset-button k-u-link k-u-link-font1"
+              onClick={action('edit')}
+            >
+              Modifier
             </Text>
             <Text
               as="button"
@@ -114,7 +123,7 @@ export const Default = ({ showFooter, disabledButton, ...args }) => {
               className="k-u-reset-button k-u-link k-u-link-font1"
               onClick={action('delete')}
             >
-              Delete
+              Supprimer
             </Text>
           </>
         )
