@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Comment`: Upgrade design.
 - Feature: `Cards`: Add `PartnerCard` component.
 - Feature: 
   - Add the following icon components:
