@@ -44,7 +44,7 @@ export const Legal = props => {
         </li>
       </ul>
       <Text size="small" cssColor="var(--color-grey-600)">
-        © 2021 KissKissBankBank & Co
+        © 2022 KissKissBankBank & Co
       </Text>
     </div>
   )

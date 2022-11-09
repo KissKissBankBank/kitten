@@ -29,7 +29,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -135,7 +135,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -241,7 +241,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -355,7 +355,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -461,7 +461,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -567,7 +567,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -792,7 +792,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -898,7 +898,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1004,7 +1004,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1118,7 +1118,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1224,7 +1224,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1330,7 +1330,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1491,7 +1491,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+                className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
                 title="A"
               >
                 <div
@@ -1552,7 +1552,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+                className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
                 title="A"
               >
                 <div
@@ -1613,7 +1613,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-Carousel__page__item"
             >
               <div
-                className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+                className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
                 title="A"
               >
                 <div
@@ -1676,7 +1676,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1782,7 +1782,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1888,7 +1888,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2002,7 +2002,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2108,7 +2108,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2214,7 +2214,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2439,7 +2439,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2545,7 +2545,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2651,7 +2651,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2757,7 +2757,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2863,7 +2863,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -2977,7 +2977,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3214,7 +3214,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3320,7 +3320,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3426,7 +3426,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3540,7 +3540,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3646,7 +3646,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3752,7 +3752,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -3977,7 +3977,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -4083,7 +4083,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -4189,7 +4189,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -4303,7 +4303,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -4409,7 +4409,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -4515,7 +4515,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
           className="k-Carousel__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div

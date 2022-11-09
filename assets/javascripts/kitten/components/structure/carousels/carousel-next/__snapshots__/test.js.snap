@@ -51,7 +51,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -157,7 +157,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -263,7 +263,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -377,7 +377,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -483,7 +483,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -589,7 +589,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -734,7 +734,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -840,7 +840,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -946,7 +946,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1060,7 +1060,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1166,7 +1166,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1272,7 +1272,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1534,7 +1534,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1640,7 +1640,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1746,7 +1746,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1860,7 +1860,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1966,7 +1966,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -2072,7 +2072,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM dFuHrN k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div

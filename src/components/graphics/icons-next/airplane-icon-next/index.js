@@ -35,7 +35,7 @@ exports.AirplaneIconNext = AirplaneIconNext;
 AirplaneIconNext.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string,
-  direction: _propTypes.default.oneOf[('up-left', 'left')]
+  direction: _propTypes.default.oneOf(['up-left', 'left'])
 };
 AirplaneIconNext.defaultProps = {
   color: '#222',
