@@ -5,30 +5,30 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.DocumentsStatusBox = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _react = _interopRequireDefault(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _text = require("../../../typography/text");
+var _checkedCircleIcon = require("../../../graphics/icons/checked-circle-icon");
 
 var _clockCircleIcon = require("../../../graphics/icons/clock-circle-icon");
 
-var _checkedCircleIcon = require("../../../graphics/icons/checked-circle-icon");
-
 var _crossCircleIcon = require("../../../graphics/icons/cross-circle-icon");
+
+var _text = require("../../../typography/text");
 
 const StyledDocumentsStatusBox = _styledComponents.default.div.withConfig({
   displayName: "documents-status-box__StyledDocumentsStatusBox",
   componentId: "sc-q7c9jp-0"
-})(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, _colorsConfig.default.valid1, _colorsConfig.default.error2);
+})(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:var(--color-success-100);}&.k-DocumentsStatusBox--denied{background-color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.line1, _colorsConfig.default.error2);
 
 const DocumentsStatusBox = _ref => {
   let {

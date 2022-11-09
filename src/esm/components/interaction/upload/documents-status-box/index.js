@@ -1,17 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
 import COLORS from '../../../../constants/colors-config';
 import { pxToRem } from '../../../../helpers/utils/typography';
-import { Text } from '../../../typography/text';
-import { ClockCircleIcon } from '../../../graphics/icons/clock-circle-icon';
 import { CheckedCircleIcon } from '../../../graphics/icons/checked-circle-icon';
+import { ClockCircleIcon } from '../../../graphics/icons/clock-circle-icon';
 import { CrossCircleIcon } from '../../../graphics/icons/cross-circle-icon';
+import { Text } from '../../../typography/text';
 const StyledDocumentsStatusBox = styled.div.withConfig({
   displayName: "documents-status-box__StyledDocumentsStatusBox",
   componentId: "sc-q7c9jp-0"
-})(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;position:relative;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:", ";}&.k-DocumentsStatusBox--denied{background-color:", ";}"], pxToRem(20), pxToRem(30), pxToRem(30), COLORS.line1, COLORS.valid1, COLORS.error2);
+})(["border-radius:var(--border-radius-m);padding:", " ", ";width:100%;position:relative;box-sizing:border-box;display:flex;flex-direction:row;align-items:center;gap:", ";.k-DocumentsStatusBox__fileList{margin:0;padding:0;list-style:none;display:block;line-height:1.4;}&.k-DocumentsStatusBox--wait{background-color:", ";}&.k-DocumentsStatusBox--accepted{background-color:var(--color-success-100);}&.k-DocumentsStatusBox--denied{background-color:", ";}"], pxToRem(20), pxToRem(30), pxToRem(30), COLORS.line1, COLORS.error2);
 export const DocumentsStatusBox = _ref => {
   let {
     className,
