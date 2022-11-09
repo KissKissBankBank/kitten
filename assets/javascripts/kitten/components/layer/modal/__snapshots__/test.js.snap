@@ -48,7 +48,7 @@ exports[`<Modal /> snapshot tests is open matches with snapshot 1`] = `
     >
       <button
         aria-label="Fermer"
-        className="sc-bczRLJ exUdPZ k-Button k-Modal__closeButton k-Button--micro k-Button--nitrogen k-Button--fit-icon"
+        className="sc-bczRLJ bqosxP k-Button k-Modal__closeButton k-Button--micro k-Button--nitrogen k-Button--fit-icon"
         onClick={[Function]}
         style={
           Object {
