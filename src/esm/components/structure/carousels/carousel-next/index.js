@@ -1,13 +1,13 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import { CONTAINER_PADDING, CONTAINER_PADDING_THIN } from '../../../../constants/grid-config';
+import { pxToRem } from '../../../../helpers/utils/typography';
 import { Button } from '../../../action/button';
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon';
-import { pxToRem } from '../../../../helpers/utils/typography';
 import { CarouselInner } from './components/carousel-inner';
-import { StyledCarouselContainer, StyledCarouselNavigation, OUTLINE_PLUS_OFFSET } from './styles';
+import { OUTLINE_PLUS_OFFSET, StyledCarouselContainer, StyledCarouselNavigation } from './styles';
 export const getItemsPerPageCountForWidth = (width, itemMinWidth, itemGap, itemsPerPage) => {
   if (!!itemsPerPage && itemMinWidth === 0) return itemsPerPage;
   if (width === 0 || itemMinWidth === 0) return 0;
@@ -82,7 +82,7 @@ export const CarouselNext = _ref => {
     const itemGap = getGapAccordingToViewport(baseGap, viewportIsXSOrLess, viewportIsMOrLess);
     const newItemsPerPage = getItemsPerPageCountForWidth(innerWidth, itemMinWidth, itemGap, itemsPerPage);
     const pagesCount = getNumberOfPagesForColumnsAndDataLength(React.Children.count(children), newItemsPerPage);
-    setItemsPerPageCount(newItemsPerPage);
+    setItemsPerPageCount(Math.max(newItemsPerPage, 1));
     setPagesCount(pagesCount);
   };
 

@@ -7,19 +7,19 @@ exports.getNumberOfPagesForColumnsAndDataLength = exports.getItemsPerPageCountFo
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _gridConfig = require("../../../../constants/grid-config");
+
+var _typography = require("../../../../helpers/utils/typography");
 
 var _button = require("../../../action/button");
 
 var _arrowIcon = require("../../../graphics/icons/arrow-icon");
-
-var _typography = require("../../../../helpers/utils/typography");
 
 var _carouselInner = require("./components/carousel-inner");
 
@@ -114,7 +114,7 @@ const CarouselNext = _ref => {
     const itemGap = getGapAccordingToViewport(baseGap, viewportIsXSOrLess, viewportIsMOrLess);
     const newItemsPerPage = getItemsPerPageCountForWidth(innerWidth, itemMinWidth, itemGap, itemsPerPage);
     const pagesCount = getNumberOfPagesForColumnsAndDataLength(_react.default.Children.count(children), newItemsPerPage);
-    setItemsPerPageCount(newItemsPerPage);
+    setItemsPerPageCount(Math.max(newItemsPerPage, 1));
     setPagesCount(pagesCount);
   };
 

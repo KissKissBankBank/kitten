@@ -4,11 +4,37 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [13.0.0-beta2] - 2022-11-04  🎖
+## [13.0.0-beta2] - 2022-11-09  🎖
 
 Feature:
 
 - Remove `anti-aliasing` because of new typo.
+
+## [12.15.0] - 2022-11-04 💁‍♀️
+
+Features:
+
+- `Cards`: Add `PartnerCard` component.
+- Add the following icon components:
+  - `ClickIconNext`
+  - `SilhouetteIconNext`
+  - `ClickIconNext`
+  - `SilhouetteIconNext`
+
+- Add the following illustration components:
+  - `HandIllustration`
+  - `FormIllustration`
+  - `RibbonIllustration`
+  - `ComputerIllustration`
+  - `HourglassIllustration`
+  - `HandAndFlowerIllustration`
+  - `RainbowIllustration`
+  - `PencilIllustration`
+  - `PatchNewIllustration`
+
+Fix:
+
+- `ProjectCard`: Update styles.
 
 ## [13.0.0-beta1] - 2022-10-26  🎖
 

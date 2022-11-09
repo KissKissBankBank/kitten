@@ -140,6 +140,7 @@ export const StyledCard = styled.div`
   .k-ProjectCard__title {
     color: var(--projectCard-text-color);
     transition: color var(--transition);
+    height: ${pxToRem(44)};
   }
 
   .k-ProjectCard__content {

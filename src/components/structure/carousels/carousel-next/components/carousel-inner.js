@@ -5,17 +5,17 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.CarouselInner = void 0;
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _react = _interopRequireWildcard(require("react"));
 
 var _resizeObserverPolyfill = _interopRequireDefault(require("resize-observer-polyfill"));
 
 var _elementHelper = require("../../../../../helpers/dom/element-helper");
 
-var _carouselPage = require("./carousel-page");
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _usePrevious = require("../../../../../helpers/hooks/use-previous");
+
+var _carouselPage = require("./carousel-page");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 

@@ -24,7 +24,7 @@ export const AirplaneIconNext = ({ color, title, direction, ...props }) => (
 AirplaneIconNext.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
-  direction: PropTypes.oneOf[('up-left', 'left')],
+  direction: PropTypes.oneOf(['up-left', 'left']),
 }
 
 AirplaneIconNext.defaultProps = {
