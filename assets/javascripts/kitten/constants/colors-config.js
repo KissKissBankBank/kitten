@@ -13,11 +13,11 @@ export default {
 
   grey1: 'var(--color-grey-700, #636363)', // Medium grey used for text or not
 
-  primary1: 'var(--color-primary-500, #19b4fa)', // Primary
-  primary2: 'var(--color-primary-700, #05a8e6)', // Semi Dark Primary
-  primary3: 'var(--color-primary-900, #0496cc)', // Dark Primary
-  primary4: 'var(--color-primary-300, #bae8fd)', // Light Primary
-  primary5: 'var(--color-primary-100, #e8f7fe)', // Extra Light Primary
+  primary1: 'var(--color-primary-500, #1F93FF)', // Primary
+  primary2: 'var(--color-primary-700, #0073DE)', // Semi Dark Primary
+  primary3: 'var(--color-primary-900, #004C92)', // Dark Primary
+  primary4: 'var(--color-primary-300, #68B7FF)', // Light Primary
+  primary5: 'var(--color-primary-100, #E5F3FF)', // Extra Light Primary
   primary6: 'var(--color-primary-100, #f3fbff)', // Thin Primary
 
   tertiary1: 'var(--color-success-100, #effaf1)', // Light Green

@@ -118,11 +118,11 @@ export const modifierStyles = modifier => {
       break
 
     case 'neon':
-      colors.borderColor = 'var(--color-warning-500)'
-      colors.backgroundColor = 'var(--color-warning-500)'
+      colors.borderColor = 'var(--color-warning-700)'
+      colors.backgroundColor = 'var(--color-warning-700)'
       colors.color = 'var(--color-grey-000)'
-      colors.hoverBorderColor = 'var(--color-warning-700)'
-      colors.hoverBgColor = 'var(--color-warning-700)'
+      colors.hoverBorderColor = 'var(--color-warning-900)'
+      colors.hoverBgColor = 'var(--color-warning-900)'
       colors.hoverColor = 'var(--color-grey-000)'
       colors.activeBorderColor = 'var(--color-warning-900)'
       colors.activeBgColor = 'var(--color-warning-900)'
