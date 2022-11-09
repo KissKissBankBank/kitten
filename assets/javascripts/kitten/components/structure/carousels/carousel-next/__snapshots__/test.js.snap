@@ -1436,7 +1436,7 @@ Array [
     className="sc-gsnTZi ffkcFP k-CarouselNext__navigation"
   >
     <button
-      className="sc-bczRLJ exUdPZ k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-bczRLJ bqosxP k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -1471,7 +1471,7 @@ Array [
       </svg>
     </button>
     <button
-      className="sc-bczRLJ exUdPZ k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-bczRLJ bqosxP k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,

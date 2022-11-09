@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bczRLJ ewCpYC k-Button k-BasicUploader__button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bczRLJ exQQKg k-Button k-BasicUploader__button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
@@ -54,7 +54,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bczRLJ ewCpYC k-Button k-BasicUploader__button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bczRLJ exQQKg k-Button k-BasicUploader__button k-Button--medium k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
@@ -98,7 +98,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bczRLJ ewCpYC k-Button k-BasicUploader__button k-Button--large k-Button--hydrogen k-Button--fit-fluid"
+    className="sc-bczRLJ exQQKg k-Button k-BasicUploader__button k-Button--large k-Button--hydrogen k-Button--fit-fluid"
     disabled={null}
     htmlFor="BasicUploader"
     style={
