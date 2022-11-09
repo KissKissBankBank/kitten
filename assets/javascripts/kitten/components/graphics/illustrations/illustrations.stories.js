@@ -18,6 +18,13 @@ import { HandAndFlowerIllustration } from './hand-and-flower-illustration'
 import { RainbowIllustration } from './rainbow-illustration'
 import { PencilIllustration } from './pencil-illustration'
 import { PatchNewIllustration } from './patch-new-illustration'
+import { WeirdIllustration } from './weird-illustration'
+import { HeartIllustration } from './heart-illustration'
+import { FlashIllustration } from './flash-illustration'
+import { MusicIllustration } from './music-illustration'
+import { PencilColorIllustration } from './pencil-color-illustration'
+import { HandAndFlowerColorIllustration } from './hand-and-flower-color-illustration'
+import { RainbowColorIllustration } from './rainbow-color-illustration'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};
@@ -34,7 +41,7 @@ const Group = styled(({ className, children, title }) => {
   )
 })`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(350)}, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(250)}, 1fr));
   grid-gap: ${pxToRem(80)} ${pxToRem(20)};
   margin-bottom: ${pxToRem(50)};
 `
@@ -94,11 +101,13 @@ export const AllIllustrations = () => {
           <LinkBoxIllustration />
         </IllustrationWrapper>
       </Group>
+
       <Group>
         <IllustrationWrapper name="KkbbFlashIllustration">
           <KkbbFlashIllustration size="small" />
         </IllustrationWrapper>
       </Group>
+
       <Group>
       <IllustrationWrapper name="HourglassIllustration">
         <HourglassIllustration />
@@ -106,14 +115,17 @@ export const AllIllustrations = () => {
       <IllustrationWrapper name="HandIllustration">
         <HandIllustration />
       </IllustrationWrapper>
-      
       <IllustrationWrapper name="ComputerIllustration">
         <ComputerIllustration />
       </IllustrationWrapper>
       <IllustrationWrapper name="FormIllustration">
         <FormIllustration />
       </IllustrationWrapper>
+      <IllustrationWrapper name="RibbonIllustration">
+        <RibbonIllustration />
+      </IllustrationWrapper>
       </Group>
+
       <Group>
       <IllustrationWrapper name="PencilIllustration">
         <PencilIllustration />
@@ -124,13 +136,34 @@ export const AllIllustrations = () => {
       <IllustrationWrapper name="HandAndFlowerIllustration">
         <HandAndFlowerIllustration />
       </IllustrationWrapper>
-      <IllustrationWrapper name="RibbonIllustration">
-        <RibbonIllustration />
-      </IllustrationWrapper>
       </Group>
+
       <Group>
         <IllustrationWrapper name="PatchNewIllustration">
           <PatchNewIllustration />
+        </IllustrationWrapper>
+      </Group>
+      <Group>
+        <IllustrationWrapper name="WeirdIllustration">
+          <WeirdIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="HeartIllustration">
+          <HeartIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="FlashIllustration">
+          <FlashIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="MusicIllustration">
+          <MusicIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="PencilColorIllustration">
+          <PencilColorIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="HandAndFlowerColorIllustration">
+          <HandAndFlowerColorIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="RainbowColorIllustration">
+          <RainbowColorIllustration />
         </IllustrationWrapper>
       </Group>
     </Wrapper>
