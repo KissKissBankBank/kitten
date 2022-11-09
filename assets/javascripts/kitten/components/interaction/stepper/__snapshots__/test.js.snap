@@ -190,7 +190,7 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
     className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCYdqJ gODAXd"
+      className="sc-eCYdqJ hrpqFh"
     >
       <span
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
@@ -244,7 +244,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
     className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCYdqJ gODAXd"
+      className="sc-eCYdqJ hrpqFh"
     >
       <a
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-primary1"

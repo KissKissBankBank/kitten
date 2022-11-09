@@ -25,10 +25,10 @@ exports[`<AvatarWithTextAndBadge /> with multiple lines and badge should match w
       />
     </span>
     <span
-      className="sc-bczRLJ fopmbI k-Badge k-Avatar__badge"
+      className="sc-bczRLJ hoggQQ k-Badge k-Avatar__badge"
       style={
         Object {
-          "--Badge-background-color": "var(--color-primary-500, #19b4fa)",
+          "--Badge-background-color": "var(--color-primary-500, #1F93FF)",
         }
       }
       title="2 notifications"
@@ -64,7 +64,7 @@ exports[`<AvatarWithTextAndBadge /> with simple props and avatar should match wi
       Object {
         "--Avatar-height": undefined,
         "--Avatar-width": undefined,
-        "--k-Avatar-background-color": "var(--color-primary-900, #0496cc)",
+        "--k-Avatar-background-color": "var(--color-primary-900, #004C92)",
         "--k-Avatar-color": "var(--color-grey-000, #fff)",
       }
     }

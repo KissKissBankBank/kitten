@@ -79,7 +79,7 @@ exports[`<ProjectCard /> as a link matches with snapshot 1`] = `
         role="progressbar"
         style={
           Object {
-            "--progress-color": "var(--color-primary-500, #19b4fa)",
+            "--progress-color": "var(--color-primary-500, #1F93FF)",
             "--progress-value": "0%",
           }
         }
@@ -183,7 +183,7 @@ exports[`<ProjectCard /> by default matches with snapshot 1`] = `
         role="progressbar"
         style={
           Object {
-            "--progress-color": "var(--color-primary-500, #19b4fa)",
+            "--progress-color": "var(--color-primary-500, #1F93FF)",
             "--progress-value": "0%",
           }
         }
@@ -297,7 +297,7 @@ exports[`<ProjectCard /> lendopoils matches with snapshot 1`] = `
         role="progressbar"
         style={
           Object {
-            "--progress-color": "var(--color-primary-500, #19b4fa)",
+            "--progress-color": "var(--color-primary-500, #1F93FF)",
             "--progress-value": "55%",
           }
         }
