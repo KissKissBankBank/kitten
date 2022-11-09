@@ -4,7 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [13.0.0-beta2] - 2022-11-09  🎖
+## [13.0.0-beta3] - 2022-11-09  🎖
+
+Feature:
+
+- Update `blue` color tokens.
+
+## [13.0.0-beta2] - 2022-11-04  🎖
 
 Feature:
 
