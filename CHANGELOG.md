@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [13.0.0-beta4] - 2022-11-09  🎖
+
+Fix:
+- Fixing various colors to be more a11y.
+
 ## [13.0.0-beta3] - 2022-11-09  🎖
 
 Feature:
