@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import styled from 'styled-components'
-import { modifierStyles } from './helpers/modifier-styles'
-import { mq } from '../../../constants/screen-config'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
+import COLORS from '../../../constants/colors-config'
+import { mq } from '../../../constants/screen-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { modifierStyles } from './helpers/modifier-styles'
 
 export const buttonModifiers = [
   'hydrogen',
@@ -211,7 +211,7 @@ const StyledButton = styled.button`
     &::after {
       content: '';
       position: absolute;
-      background-color: var(--Button-bullet-color, var(--color-primary-500));
+      background-color: var(--Button-bullet-color, var(--color-primary-700));
       width: ${pxToRem(8)};
       height: ${pxToRem(8)};
       border-radius: ${pxToRem(8)};
