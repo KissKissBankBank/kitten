@@ -53,7 +53,7 @@ const StyledWrapper = styled.div`
       border-color: ${COLORS.primary1};
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.primary1};
+      color: ${COLORS.primary2};
     }
   }
 

@@ -1,11 +1,11 @@
-import React from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import React from 'react'
 import styled from 'styled-components'
-import { StatusIconNext } from '../../graphics/icons-next/status-icon-next'
-import { IconBadge } from '../../information/icon-badge'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import classNames from 'classnames'
+import { StatusIconNext } from '../../graphics/icons-next/status-icon-next'
+import { IconBadge } from '../icon-badge'
 
 const AlertBoxWrapper = styled.div`
   ${TYPOGRAPHY.fontStyles['400']};
@@ -91,7 +91,7 @@ const AlertBoxWrapper = styled.div`
 
     .k-u-link,
     a {
-      color: var(--color-primary-500);
+      color: var(--color-primary-700);
     }
   }
 
@@ -127,7 +127,7 @@ const AlertBoxWrapper = styled.div`
 
     .k-u-link,
     a {
-      color: var(--color-primary-500);
+      color: var(--color-primary-700);
     }
   }
 
