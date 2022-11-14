@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+-Fix: `VerticalProgress`: delete big padding on `Step` component
+
 ## [12.15.0] - 2022-11-04 💁‍♀️
 
 Features:
