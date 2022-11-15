@@ -12,6 +12,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `PencilColorIllustration`,
     - `HandAndFlowerColorIllustration`,
     - `RainbowColorIllustration`,
+- Fix: `Illustration`: Fix `PencilIllustration` svg.
+- Fix: `Comment`: Upgrade design.
+
+## [12.15.1] - 2022-11-14  📏
+
+Fix: 
+
+  - `VerticalProgress`: Delete big padding on `Step` component
 
 ## [12.15.0] - 2022-11-04 💁‍♀️
 
