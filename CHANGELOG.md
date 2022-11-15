@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `Illustration`: Fix `PencilIllustration` svg.
 - Fix: `Comment`: Upgrade design.
 
 ## [12.15.1] - 2022-11-14  📏
