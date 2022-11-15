@@ -34,7 +34,6 @@ const HeroWrapper = styled.section`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      
       gap: ${pxToRem(20)};
     }
   }
@@ -71,11 +70,11 @@ const HeroWrapper = styled.section`
 
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
     .kiss-Manifesto__hero__illu {    
-        display: block;
-        max-height: ${pxToRem(360)};
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
+      display: block;
+      max-height: ${pxToRem(360)};
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
   

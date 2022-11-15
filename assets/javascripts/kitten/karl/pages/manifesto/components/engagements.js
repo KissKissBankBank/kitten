@@ -3,7 +3,6 @@ import {
   pxToRem,
   Title,
   Text,
-  Button,
   RainbowColorIllustration,
   HandAndFlowerColorIllustration,
   PencilColorIllustration,
@@ -39,11 +38,13 @@ const EngagementsWrapper = styled.section`
 
   .kiss-Manifesto__engagements__engagement__illustrations {
     display: flex;
-    gap: ${pxToRem(30)};
+    gap: ${pxToRem(100)};
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-end;
+    margin-top: ${pxToRem(80)};
   }
-  
+
   .kiss-Manifesto__engagements__engagement__illustration {
     flex-direction: column;
   }
@@ -77,6 +78,7 @@ const Engagements = () => (
             La lutte contre toutes <br />
             les discriminations
           </Text>
+          <Title noMargin style={{ fontSize: '96px'}}>1</Title>
         </div>
         <div className="kiss-Homepage__manifesto__illustration">
           <HandAndFlowerColorIllustration />
@@ -84,6 +86,7 @@ const Engagements = () => (
             La protection de l’environnement <br />
             et de la biodiversité
           </Text>
+          <Title noMargin style={{ fontSize: '96px'}}>2</Title>
         </div>
         <div className="kiss-Homepage__manifesto__illustration">
           <PencilColorIllustration />
@@ -91,6 +94,7 @@ const Engagements = () => (
             La défense de la culture indépendante <br />
             et la libération de la créativité
           </Text>
+          <Title noMargin style={{ fontSize: '96px'}}>3</Title>
         </div>
       </div>
     </div>
