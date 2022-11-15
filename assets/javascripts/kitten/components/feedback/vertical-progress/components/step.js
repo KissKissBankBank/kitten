@@ -29,10 +29,6 @@ const StyledItem = styled.li`
 
   .k-VerticalProgress__step--content {
     padding-left: ${pxToRem(50)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      padding-left: ${pxToRem(82)};
-    }
   }
 `
 
