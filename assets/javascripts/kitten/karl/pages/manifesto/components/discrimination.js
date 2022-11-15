@@ -10,11 +10,13 @@ import styled from 'styled-components'
 
 const DiscriminationWrapper = styled.section`
   margin-top: ${pxToRem(100)};
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   .kiss-Manifesto__discrimination__circle {
-    position: absolute;
     background: var(--color-danger-300);
-    width: ${pxToRem(871)};
+    max-width: ${pxToRem(871)};
     height: ${pxToRem(827)};
     border-top-right-radius: 100%;
     flex-shrink: 0;
@@ -36,16 +38,25 @@ const DiscriminationWrapper = styled.section`
       margin-top: ${pxToRem(20)};
     }
   }
+
+  .kiss-Manifesto__discrimination__img {
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
 `
 
 const Discrimination = () => (
   <DiscriminationWrapper>
     <div className="kiss-Manifesto__discrimination__circle">
-        <div className="kiss-Manifesto__discrimination__container">
+      <div className="kiss-Manifesto__discrimination__container">
         <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
           La lutte contre<br /> toutes les<br /> discriminations
         </Title>
-        <Text size="large" className="k-u-padding-right-decuple@sm-up">
+        <Text size="large">
           Il n’y a pas de monde juste dans un monde où certain·es sont 
           victimes <br />de discriminations.
         </Text>
@@ -61,6 +72,9 @@ const Discrimination = () => (
         </Text>
         <Button modifier="helium">Créer mon projet</Button>
       </div>
+    </div>
+    <div className="kiss-Manifesto__discrimination__img">
+      <img alt="" src="/kitten-3.jpg" />
     </div>
   </DiscriminationWrapper>
 )

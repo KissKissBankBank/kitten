@@ -20,6 +20,6 @@ export const ManifestoPage = () => (
       }}
     />
     <Manifesto />
-    {/* <Footer /> */}
+    <Footer />
   </>
 )
