@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `VerticalProgress`: Fix styles.
 - Fix: `Illustration`: Fix `PencilIllustration` svg.
 - Fix: `Comment`: Upgrade design.
 
