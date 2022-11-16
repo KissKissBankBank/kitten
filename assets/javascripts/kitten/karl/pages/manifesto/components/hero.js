@@ -122,11 +122,11 @@ const Hero = () => {
           <Text size="large">
             En mettant sa plateforme au service de créatrices,
             d’artisans, d’artistes, d’entrepreneuses, de journalistes,
-            d’associations, nous avons permis à plus de 25 000 projets,
+            d’associations, nous avons permis à plus de 26 000 projets,
             petits ou grands, de voir le jour.
           </Text>
           <Text size="large">
-            Ces projets ont tous un point commun : ils se sont financés
+            Ces projets ont tous un point commun&nbsp;: ils se sont financés
             indépendamment, grâce à leurs communautés, grâce à la
             force du financement participatif.
           </Text>

@@ -54,11 +54,10 @@ const Discrimination = () => (
     <div className="kiss-Manifesto__discrimination__circle">
       <div className="kiss-Manifesto__discrimination__container">
         <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
-          La lutte contre<br /> toutes les<br /> discriminations
+          La lutte contre<br /> les<br /> discriminations
         </Title>
         <Text size="large">
-          Il n’y a pas de monde juste dans un monde où certain·es sont 
-          victimes <br />de discriminations.
+          Pour un monde juste où personne n’est victime <br />de discrimination.
         </Text>
         <Text size="large">
           KissKissBankBank s’engage fermement contre toutes les formes de<br />

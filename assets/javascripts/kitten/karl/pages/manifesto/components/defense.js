@@ -42,7 +42,7 @@ const DefenseWrapper = styled.section`
     max-width: ${pxToRem(1440)};
     display: flex;
     gap: ${pxToRem(40)};
-    padding: ${pxToRem(120)} ${pxToRem(100)} 0 ${pxToRem(100)};
+    padding: ${pxToRem(120)} ${pxToRem(100)} ${pxToRem(200)} ${pxToRem(100)};
   }
 
   .kiss-Manifesto__defense__block {
@@ -66,24 +66,22 @@ const Defense = () => (
     <div className="kiss-Manifesto__defense__background">
       <div className="kiss-Manifesto__defense__container">
         <Title tag="h2" modifier="primary" noMargin>
-          La défense de la culture indépendante et la libération 
-          de la créativité
+          Pour un monde juste où chacun·e peut libérer sa créativité.
         </Title>
         <div className="kiss-Manifesto__defense__block">
           <Text size="large" className="k-u-padding-right-decuple@sm-up">
             Il n’y a pas de monde juste sur une planète qui meurt.
           </Text>
           <Text size="large">
-            Les alertes lancées par les rapports du GIEC nous le répètent, les COP
-            se succèdent et pourtant nous y voilà : les émissions de gaz à effet de serre
-            continuent d’augmenter et la température avec, la calotte glaciaire fond aussi
-            vite que le nombre d’espèces sur la planète.
+            Dans un monde où les majors et grands groupes de l’industrie culturelle construisent
+            des quasi-monopoles, KissKissBankBank est né pour permettre à chacun·e de créer
+            librement. En s’affranchissant des circuits de financement classiques, des médias,
+            des films, des albums, des livres, ont pu voir le jour — en toute indépendance.
           </Text>
           <Text size="large">
-            C’est indéniable&nbsp;:&nbsp;nous aussi, par nos activités, nous contribuons au 
-            réchauffement de la planète. Mais nous essayons de minimiser notre impact 
-            autant que possible et invitons tous les projets que nous accueillons à prendre 
-            en compte leur impact.
+            Parce que la création est le cœur battant de nos sociétés, parce que la culture est
+            fondamentale et qu’elle résorbe les inégalités, nous serons toujours un soutien majeur
+            de toutes celles et ceux qui créent, qui libèrent leur créativité.
           </Text>
           <Button modifier="copper">Créer mon projet</Button>
         </div>
