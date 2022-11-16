@@ -12,11 +12,11 @@ import styled from 'styled-components'
 const HeroWrapper = styled.section`
   padding-top: ${pxToRem(100)};
   box-sizing: border-box;
-
-  // @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-  //   flex-direction: column-reverse;
-  // }
-
+  
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    padding-top: ${pxToRem(50)};
+  }
+  
   .kiss-Manifesto__hero__circle {
     position: absolute;
     margin-top: ${pxToRem(70)};
@@ -25,59 +25,82 @@ const HeroWrapper = styled.section`
     height: ${pxToRem(860)};
     clip-path: circle(50% at 50% 50%);
     background-color: var(--color-primary-500);
-  }
 
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-    .kiss-Manifesto__hero__main {
-      box-sizing: border-box;
-      padding: ${pxToRem(30)} ${pxToRem(20)};
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: ${pxToRem(20)};
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      margin-top: 0;
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      width: 80%;
+      height: 80%;
+      margin-left: 0;
     }
   }
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    .kiss-Manifesto__hero__main {
-      width: 50vw;
-      padding-left: ${pxToRem(50)};
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      gap: ${pxToRem(20)};
-    }
-  }
-
 
   .kiss-Manifesto__hero__container {
     max-width: ${pxToRem(1440)};
-    padding-right: ${pxToRem(100)};
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: ${pxToRem(100)};
     display: flex;
-    margin-right: 0;
     margin-left: 0;
+    gap: ${pxToRem(50)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      margin-right: ${pxToRem(50)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      // flex-direction: column-reverse;
+      flex-wrap: wrap;
+    }
+  }
+
+  .kiss-Manifesto__hero__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      box-sizing: border-box;
+      padding: ${pxToRem(30)} ${pxToRem(20)};
+      gap: ${pxToRem(20)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      width: 50vw;
+      padding-left: ${pxToRem(50)};
+      justify-content: flex-start;
+      gap: ${pxToRem(20)};
+    }
+
+    .k-Title {
+      margin-bottom: ${pxToRem(20)};
+    }
+    .k-Button {
+      margin-top: ${pxToRem(20)};
+    }
   }
 
   .kiss-Manifesto__hero__illu {
-    position: relative;
-    margin-top: ${pxToRem(30)};
-    margin-left: ${pxToRem(70)};
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-  }
-
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-    .kiss-Manifesto__hero__illu {    
-      display: block;
-      max-height: ${pxToRem(360)};
-      width: 100%;
+    svg {
+      position: relative;
+      margin-top: ${pxToRem(30)};
+      margin-left: ${pxToRem(70)};
       object-fit: cover;
-      object-position: center;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+
+      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+        margin-top: 0;
+        max-height: ${pxToRem(360)};
+        max-width: 75%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
-  
 `
 
 const Hero = () => {
