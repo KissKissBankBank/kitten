@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import COLORS from '../../../../constants/colors-config'
 import { LongArrowIcon } from '../../../graphics/icons/long-arrow-icon'
 import { CheckedIcon } from '../../../graphics/icons/checked-icon'
 import { HourglassIcon } from '../../../graphics/icons/hourglass-icon'
@@ -19,51 +18,51 @@ const StyledWrapper = styled.div`
 
   &.k-VerticalProgress__status--actions {
     .k-VerticalProgress__icon {
-      background-color: ${COLORS.orange};
-      border-color: ${COLORS.orange};
+      background-color: var(--color-warning-500);
+      border-color: var(--color-warning-500);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.orange};
+      color: var(--color-warning-500);
     }
   }
 
   &.k-VerticalProgress__status--waiting {
     .k-VerticalProgress__icon {
-      background-color: ${COLORS.font3};
-      border-color: ${COLORS.font3};
+      background-color: var(--color-grey-600);
+      border-color: var(--color-grey-600);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.font3};
+      color: var(--color-grey-600);
     }
   }
 
   &.k-VerticalProgress__status--publish {
     .k-VerticalProgress__icon {
-      background-color: ${COLORS.line3};
-      border-color: ${COLORS.line3};
+      background-color: var(--color-grey-800);
+      border-color: var(--color-grey-800);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.line3};
+      color: var(--color-grey-800);
     }
   }
 
   &.k-VerticalProgress__status--valid {
     .k-VerticalProgress__icon {
-      background-color: ${COLORS.primary1};
-      border-color: ${COLORS.primary1};
+      background-color: var(--color-primary-500);
+      border-color: var(--color-primary-500);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.primary1};
+      color: var(--color-primary-500);
     }
   }
 
   &.k-VerticalProgress__status--disabled {
     .k-VerticalProgress__icon {
-      border-color: ${COLORS.line1};
-      background-color: ${COLORS.background1};
+      border-color: var(--color-grey-400);
+      background-color: var(--color-grey-000);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.font2};
+      color: var(--color-grey-500);
     }
   }
 
@@ -76,10 +75,10 @@ const StyledWrapper = styled.div`
     width: ${pxToRem(STATUS_SIZE)};
     height: ${pxToRem(STATUS_SIZE)};
     border-radius: var(--border-radius-rounded);
-    border: var(--border-width) solid ${COLORS.background1};
+    border: var(--border-width) solid var(--color-grey-000);
     box-sizing: border-box;
     margin-right: ${pxToRem(20)};
-    background-color: ${COLORS.background1};
+    background-color: var(--color-grey-000);
   }
 
   .k-VerticalProgress__title {
@@ -104,17 +103,17 @@ export const Status = ({
   const iconByStatus = (() => {
     switch (statusType) {
       case 'actions':
-        return <LongArrowIcon color={COLORS.background1} direction="right" />
+        return <LongArrowIcon color="var(--color-grey-000" direction="right" />
       case 'waiting':
         return (
-          <HourglassIcon color={COLORS.background1} width="10" title={null} />
+          <HourglassIcon color="var(--color-grey-000" width="10" title={null} />
         )
       case 'publish':
         return (
-          <CheckedIcon color={COLORS.background1} width="10" title={null} />
+          <CheckedIcon color="var(--color-grey-000" width="10" title={null} />
         )
       case 'valid':
-        return <LongArrowIcon color={COLORS.background1} direction="right" />
+        return <LongArrowIcon color="var(--color-grey-000" direction="right" />
       case 'disabled':
         return null
       default:
