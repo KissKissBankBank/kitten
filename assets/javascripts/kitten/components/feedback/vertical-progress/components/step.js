@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import { Status } from './status'
 
 const StyledItem = styled.li`

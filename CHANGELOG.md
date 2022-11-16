@@ -4,10 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [12.15.2] - 2022-11-16   ✏️
+## [12.15.2] - 2022-11-16 🖍
 
 Fixes: 
 
+  - `VerticalProgress`: Fix styles.
   - `Illustration`: Fix `PencilIllustration` svg.
   - `Comment`: Upgrade design.
 
