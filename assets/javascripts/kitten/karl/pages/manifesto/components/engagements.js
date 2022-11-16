@@ -28,12 +28,28 @@ const EngagementsWrapper = styled.section`
     position: absolute;
     right: 0;
     margin-right: ${pxToRem(120)};
-    margin-top: ${pxToRem(350)};
+    margin-top: ${pxToRem(250)};
+    display: flex;
+
+    & :first-child {
+      padding-right: ${pxToRem(7)};
+      margin-top: ${pxToRem(-70)};
+    }
   }
 
   .kiss-Manifesto__engagements__engagement {
     padding-top: ${pxToRem(550)};
     text-align: center;
+    max-width: ${pxToRem(1440)};
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      padding-top: ${pxToRem(650)};
+      padding-right: ${pxToRem(20)};
+      padding-left: ${pxToRem(20)};
+    }
   }
 
   .kiss-Manifesto__engagements__engagement__illustrations {
@@ -74,7 +90,7 @@ const Engagements = () => (
       <div className="kiss-Manifesto__engagements__engagement__illustrations">
       <div className="kiss-Manifesto__engagements__engagement__illustration">
         <RainbowColorIllustration />
-          <Text weight="700" tag="p" size="large" cssColor="var(--color-grey-900)">
+          <Text weight="700" tag="p" size="huge" cssColor="var(--color-grey-900)">
             La lutte contre toutes <br />
             les discriminations
           </Text>
@@ -82,7 +98,7 @@ const Engagements = () => (
         </div>
         <div className="kiss-Homepage__manifesto__illustration">
           <HandAndFlowerColorIllustration />
-          <Text weight="700" tag="p" size="large" cssColor="var(--color-grey-900)">
+          <Text weight="700" tag="p" size="huge" cssColor="var(--color-grey-900)">
             La protection de l’environnement <br />
             et de la biodiversité
           </Text>
@@ -90,7 +106,7 @@ const Engagements = () => (
         </div>
         <div className="kiss-Homepage__manifesto__illustration">
           <PencilColorIllustration />
-          <Text weight="700" tag="p" size="large" cssColor="var(--color-grey-900)">
+          <Text weight="700" tag="p" size="huge" cssColor="var(--color-grey-900)">
             La défense de la culture indépendante <br />
             et la libération de la créativité
           </Text>

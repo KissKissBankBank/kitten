@@ -65,20 +65,20 @@ const Defense = () => (
     </div>
     <div className="kiss-Manifesto__defense__background">
       <div className="kiss-Manifesto__defense__container">
-        <Title tag="h2" modifier="primary" noMargin>
+        <Title cssColor="var(--color-grey-000)" tag="h2" modifier="primary" noMargin>
           Pour un monde juste où chacun·e peut libérer sa créativité.
         </Title>
         <div className="kiss-Manifesto__defense__block">
-          <Text size="large" className="k-u-padding-right-decuple@sm-up">
+          <Text cssColor="var(--color-grey-000)" size="huge" className="k-u-padding-right-decuple@sm-up">
             Il n’y a pas de monde juste sur une planète qui meurt.
           </Text>
-          <Text size="large">
+          <Text cssColor="var(--color-grey-000)" size="huge">
             Dans un monde où les majors et grands groupes de l’industrie culturelle construisent
             des quasi-monopoles, KissKissBankBank est né pour permettre à chacun·e de créer
             librement. En s’affranchissant des circuits de financement classiques, des médias,
             des films, des albums, des livres, ont pu voir le jour — en toute indépendance.
           </Text>
-          <Text size="large">
+          <Text cssColor="var(--color-grey-000)" size="huge">
             Parce que la création est le cœur battant de nos sociétés, parce que la culture est
             fondamentale et qu’elle résorbe les inégalités, nous serons toujours un soutien majeur
             de toutes celles et ceux qui créent, qui libèrent leur créativité.

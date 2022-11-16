@@ -28,7 +28,8 @@ const DiscriminationWrapper = styled.section`
     flex-direction: column;
     gap: ${pxToRem(20)};
     align-items: flex-start;
-    margin: ${pxToRem(200)} 0 0 ${pxToRem(70)};
+    margin-top: ${pxToRem(200)};
+    margin-left: ${pxToRem(70)};
 
     .k-Title {
       margin-bottom: ${pxToRem(20)};
@@ -36,6 +37,12 @@ const DiscriminationWrapper = styled.section`
 
     .k-Button {
       margin-top: ${pxToRem(20)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      margin-top: ${pxToRem(150)};
+      margin-left: ${pxToRem(20)};
+      margin-right: ${pxToRem(100)};
     }
   }
 
@@ -56,15 +63,15 @@ const Discrimination = () => (
         <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
           La lutte contre<br /> les<br /> discriminations
         </Title>
-        <Text size="large">
+        <Text size="huge">
           Pour un monde juste où personne n’est victime <br />de discrimination.
         </Text>
-        <Text size="large">
+        <Text size="huge">
           KissKissBankBank s’engage fermement contre toutes les formes de<br />
           discriminations&nbsp;:&nbsp;racisme, sexisme, homophobie, lesbophobie,<br />
           transphobie, grossophobie, validisme, âgisme, classisme.
         </Text>
-        <Text size="large">
+        <Text size="huge">
           C’est pour nous une évidence qu’il faut pourtant souligner&nbsp;:&nbsp;un<br />
           projet qui irait à l’encontre de ces valeurs, de quelque manière que ce soit,<br />
           n’a pas sa place sur notre plateforme.

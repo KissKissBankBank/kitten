@@ -13,8 +13,12 @@ const HeroWrapper = styled.section`
   padding-top: ${pxToRem(100)};
   box-sizing: border-box;
   
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
     padding-top: ${pxToRem(50)};
+  }
+
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    padding-top: 0;
   }
   
   .kiss-Manifesto__hero__circle {
@@ -27,12 +31,14 @@ const HeroWrapper = styled.section`
     background-color: var(--color-primary-500);
 
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      margin-top: 0;
+      margin-top: ${pxToRem(-50)};
+      margin-left: ${pxToRem(-500)};
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
+      margin-top: ${pxToRem(-600)};
       margin-left: 0;
     }
   }
@@ -44,15 +50,14 @@ const HeroWrapper = styled.section`
     margin-right: ${pxToRem(100)};
     display: flex;
     margin-left: 0;
-    gap: ${pxToRem(50)};
 
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       margin-right: ${pxToRem(50)};
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      // flex-direction: column-reverse;
       flex-wrap: wrap;
+      margin-right: 0;
     }
   }
 
@@ -61,17 +66,16 @@ const HeroWrapper = styled.section`
     flex-direction: column;
     align-items: flex-start;
   
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      box-sizing: border-box;
-      padding: ${pxToRem(30)} ${pxToRem(20)};
-      gap: ${pxToRem(20)};
-    }
-
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       width: 50vw;
       padding-left: ${pxToRem(50)};
       justify-content: flex-start;
       gap: ${pxToRem(20)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      box-sizing: border-box;
+      padding: ${pxToRem(30)};
     }
 
     .k-Title {
@@ -83,19 +87,27 @@ const HeroWrapper = styled.section`
   }
 
   .kiss-Manifesto__hero__illu {
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      margin: 0 auto;
+    }
+
     svg {
       position: relative;
       margin-top: ${pxToRem(30)};
       margin-left: ${pxToRem(70)};
       object-fit: cover;
-      max-width: 100%;
-      max-height: 100%;
       display: block;
 
+      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+        width: 85%;
+        margin-top: ${pxToRem(-50)};
+        margin-left: ${pxToRem(40)};
+      }
       @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-        margin-top: 0;
+        margin-top: ${pxToRem(20)};
+        margin-left: 0;
+        width: 100%;
         max-height: ${pxToRem(360)};
-        max-width: 75%;
         object-fit: cover;
         object-position: center;
       }
@@ -115,17 +127,17 @@ const Hero = () => {
           <Title noMargin modifier="secondary">
             La force du collectif au service du bien commun
           </Title>
-          <Text size="large" className="k-u-padding-right-decuple@sm-up">
+          <Text size="huge" className="k-u-padding-right-decuple@sm-up">
             KissKissBankBank croit profondément en l’intelligence
             collective et aux possibilités qu’elle offre.
           </Text>
-          <Text size="large">
+          <Text size="huge">
             En mettant sa plateforme au service de créatrices,
             d’artisans, d’artistes, d’entrepreneuses, de journalistes,
             d’associations, nous avons permis à plus de 26 000 projets,
             petits ou grands, de voir le jour.
           </Text>
-          <Text size="large">
+          <Text size="huge">
             Ces projets ont tous un point commun&nbsp;: ils se sont financés
             indépendamment, grâce à leurs communautés, grâce à la
             force du financement participatif.
