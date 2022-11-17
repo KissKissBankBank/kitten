@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
-import TYPOGRAPHY from '../../../constants/typography-config';
 import COLORS from '../../../constants/colors-config';
-import { titleModifierStyles, titleModifiersNames } from '../common/title-modifier-styles';
+import TYPOGRAPHY from '../../../constants/typography-config';
 import { strokeModifierStyles } from '../../typography/horizontal-stroke/common/stroke-modifier-styles';
+import { titleModifiersNames, titleModifierStyles } from '../common/title-modifier-styles';
 const StyledTitleWithStroke = styled.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "sc-10vl00i-0"
@@ -20,6 +20,7 @@ export const TitleWithStroke = _ref => {
     className,
     children,
     cssColor,
+    family,
     noMargin,
     ...other
   } = _ref;
@@ -33,13 +34,16 @@ export const TitleWithStroke = _ref => {
       '--TitleWithStroke-css-color': cssColor
     }
   }, other), /*#__PURE__*/React.createElement(TitleComponent, {
-    className: classNames('k-TitleWithStroke__title', "k-TitleWithStroke__title--" + modifier)
+    className: classNames('k-TitleWithStroke__title', "k-TitleWithStroke__title--" + modifier, {
+      'k-u-font-family-antiqueolive': family === 'antiqueolive'
+    })
   }, children), /*#__PURE__*/React.createElement("span", {
     className: classNames('k-TitleWithStroke__stroke', "k-TitleWithStroke__stroke--" + modifier)
   }));
 };
 TitleWithStroke.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   align: 'left',
   italic: false,
@@ -48,6 +52,7 @@ TitleWithStroke.defaultProps = {
 };
 TitleWithStroke.propTypes = {
   tag: PropTypes.string,
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   italic: PropTypes.bool,

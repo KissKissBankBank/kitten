@@ -2,7 +2,7 @@
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <a
-  className="sc-hKMtZM gzxUFW k-SimpleCard"
+  className="sc-hKMtZM cdiGPe k-SimpleCard"
   href="#"
 >
   <div
@@ -25,7 +25,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 
 exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`] = `
 <a
-  className="sc-hKMtZM gzxUFW k-SimpleCard"
+  className="sc-hKMtZM cdiGPe k-SimpleCard"
   href="#"
 >
   <div
@@ -48,7 +48,7 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
 
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <a
-  className="sc-hKMtZM gzxUFW k-SimpleCard"
+  className="sc-hKMtZM cdiGPe k-SimpleCard"
   href="#"
 >
   <div
@@ -70,6 +70,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
     >
       <span
         className="k-u-color-background1 k-u-size-medium k-u-weight-500"
+        style={Object {}}
       >
         ►
       </span>
@@ -85,7 +86,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <a
-  className="sc-hKMtZM gzxUFW k-SimpleCard"
+  className="sc-hKMtZM cdiGPe k-SimpleCard"
   href="#"
 >
   <div

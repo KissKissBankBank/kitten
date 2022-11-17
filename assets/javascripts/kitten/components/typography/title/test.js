@@ -26,6 +26,7 @@ describe('<Title />', () => {
             italic
             children="Lorem ipsum dolor sit amet…"
             cssColor="#555"
+            family="antiqueolive"
           />,
         )
         .toJSON()

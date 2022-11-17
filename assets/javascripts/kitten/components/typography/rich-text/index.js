@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -15,7 +15,7 @@ const StyledRichText = styled.div`
   }
 
   font: var(--font-weight-400) var(--richtext-font-size) /
-    var(--richtext-line-height) var(--font-family-maax);
+    var(--richtext-line-height) var(--font-family-generalsans);
 
   /* Reset compensation */
   h1,

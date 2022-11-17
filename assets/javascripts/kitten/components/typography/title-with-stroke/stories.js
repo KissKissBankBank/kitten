@@ -1,7 +1,7 @@
-import React from 'react'
-import { TitleWithStroke } from './index'
 import { COLORS, Marger, Text } from 'kitten'
+import React from 'react'
 import { DocsPage } from 'storybook/docs-page'
+import { TitleWithStroke } from './index'
 
 export default {
   component: TitleWithStroke,
@@ -73,6 +73,12 @@ Default.argTypes = {
     name: 'noMargin',
     description: 'Removes Margin style.',
     control: 'boolean',
+  },
+  family: {
+    name: 'family',
+    description: 'Adds font family',
+    options: ['none', 'antiqueolive'],
+    control: 'select',
   },
 }
 

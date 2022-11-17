@@ -12,6 +12,7 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
     >
       <span
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
+        style={Object {}}
         tabIndex="0"
       >
         <span
@@ -48,6 +49,7 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel=""
+        style={Object {}}
         target="_self"
       >
         <span
@@ -84,6 +86,7 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
+        style={Object {}}
         target="_blank"
       >
         <span
@@ -121,6 +124,7 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
+        style={Object {}}
         target="_blank"
       >
         <span
@@ -155,6 +159,7 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
     >
       <span
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
+        style={Object {}}
         tabIndex="0"
       >
         <span
@@ -185,10 +190,11 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
     className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCYdqJ gODAXd"
+      className="sc-eCYdqJ hrpqFh"
     >
       <span
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
+        style={Object {}}
         tabIndex="0"
       >
         <span
@@ -238,12 +244,13 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
     className="sc-hKMtZM kKUtEV"
   >
     <li
-      className="sc-eCYdqJ gODAXd"
+      className="sc-eCYdqJ hrpqFh"
     >
       <a
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc k-u-link k-u-link-primary1"
         href="https://www.kisskissbankbank.com"
         rel=""
+        style={Object {}}
         target="_self"
       >
         <span
@@ -297,6 +304,7 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
     >
       <span
         className="k-u-size-small k-u-weight-500 sc-jSMfEi eZgMEc"
+        style={Object {}}
         tabIndex="0"
       >
         <span

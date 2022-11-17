@@ -4,41 +4,84 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `VerticalProgress`: Fix styles.
-- Fix: `Illustration`: Fix `PencilIllustration` svg.
-- Fix: `Comment`: Upgrade design.
+## [13.0.0] - 2022-11-17
+
+⚠️ BREAKING CHANGE ⚠️ 
+
+- Change `typo`.
+- Change `colors`.
+
+Fixes:
+- `VerticalProgress`: Fix styles.
+- `Illustration`: Fix `PencilIllustration` svg.
+- `Comment`: Upgrade design.
 
 ## [12.15.1] - 2022-11-14  📏
 
-Fix: 
+Fix:
 
-  - `VerticalProgress`: Delete big padding on `Step` component
+- `VerticalProgress`: Delete big padding on `Step` component
+
+## [13.0.0-beta5] - 2022-11-10  🎖
+
+Fix:
+- Fixing various colors to be more a11y. #2
+
+## [13.0.0-beta4] - 2022-11-09  🎖
+
+Fix:
+- Fixing various colors to be more a11y.
+
+## [13.0.0-beta3] - 2022-11-09  🎖
+
+Feature:
+
+- Update `blue` color tokens.
+
+## [13.0.0-beta2] - 2022-11-04  🎖
+
+Feature:
+
+- Remove `anti-aliasing` because of new typo.
 
 ## [12.15.0] - 2022-11-04 💁‍♀️
 
 Features:
 
-  - `Cards`: Add `PartnerCard` component.
-  - Add the following icon components:
-    - `ClickIconNext`
-    - `SilhouetteIconNext`
-    - `ClickIconNext`
-    - `SilhouetteIconNext`
-    
-  - Add the following illustration components:
-    - `HandIllustration`
-    - `FormIllustration`
-    - `RibbonIllustration`
-    - `ComputerIllustration`
-    - `HourglassIllustration`
-    - `HandAndFlowerIllustration`
-    - `RainbowIllustration`
-    - `PencilIllustration`
-    - `PatchNewIllustration`
+- `Cards`: Add `PartnerCard` component.
+- Add the following icon components:
+  - `ClickIconNext`
+  - `SilhouetteIconNext`
+  - `ClickIconNext`
+  - `SilhouetteIconNext`
+
+- Add the following illustration components:
+  - `HandIllustration`
+  - `FormIllustration`
+  - `RibbonIllustration`
+  - `ComputerIllustration`
+  - `HourglassIllustration`
+  - `HandAndFlowerIllustration`
+  - `RainbowIllustration`
+  - `PencilIllustration`
+  - `PatchNewIllustration`
 
 Fix:
 
-  - `ProjectCard`: Update styles. 
+- `ProjectCard`: Update styles.
+
+## [13.0.0-beta1] - 2022-10-26  🎖
+
+Feature:
+
+- Add `family` prop to `Title`, `TitleWithStroke` and `Text` for switching with `AntiqueOlive` font.
+
+## [13.0.0-beta0] - 2022-10-19  🪔
+
+Feature:
+
+- Change typo `Maax` to `GeneralSans` and `AntiqueOlive` for titles.
+- Feature: `Cards`: Add `PartnerCard` component.
 
 ## [12.14.0] - 2022-10-14  💅
 

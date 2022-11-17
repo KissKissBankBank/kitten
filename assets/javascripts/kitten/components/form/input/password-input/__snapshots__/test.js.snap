@@ -2,7 +2,7 @@
 
 exports[`<PasswordInput /> should match its empty snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--button_inset"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"

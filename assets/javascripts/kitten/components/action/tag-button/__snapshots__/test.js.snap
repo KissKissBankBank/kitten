@@ -25,7 +25,7 @@ exports[`<TagButton /> with \`active\` prop matches with snapshot 1`] = `
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   color: var(--color-grey-900,#222);
@@ -96,7 +96,7 @@ exports[`<TagButton /> with \`active\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#e8f7fe);
+  background-color: var(--color-primary-100,#E5F3FF);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }
@@ -140,7 +140,7 @@ exports[`<TagButton /> with \`rounded\` prop matches with snapshot 1`] = `
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   color: var(--color-grey-900,#222);
@@ -211,7 +211,7 @@ exports[`<TagButton /> with \`rounded\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#e8f7fe);
+  background-color: var(--color-primary-100,#E5F3FF);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }
@@ -255,7 +255,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   color: var(--color-grey-900,#222);
@@ -326,7 +326,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#e8f7fe);
+  background-color: var(--color-primary-100,#E5F3FF);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }
@@ -370,7 +370,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   box-sizing: border-box;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   color: var(--color-grey-900,#222);
@@ -441,7 +441,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#e8f7fe);
+  background-color: var(--color-primary-100,#E5F3FF);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }

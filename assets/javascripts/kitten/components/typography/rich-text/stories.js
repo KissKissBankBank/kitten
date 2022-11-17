@@ -1,8 +1,8 @@
+import { TitleWithStroke } from 'kitten'
 import React from 'react'
-import { RichText } from './index'
 import { DocsPage } from 'storybook/docs-page'
 import styled, { createGlobalStyle } from 'styled-components'
-import { TitleWithStroke } from 'kitten'
+import { RichText } from './index'
 
 export default {
   component: RichText,
@@ -134,7 +134,7 @@ const CssReset = createGlobalStyle`
 
   img[alt]:not([alt='']) {
     /* Only select images with a non-empty alt */
-    font-family: Maax;
+    font-family: GeneralSans;
     font-weight: lighter;
     font-size: 12px;
   }

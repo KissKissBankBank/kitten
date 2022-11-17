@@ -6,13 +6,13 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxSet__label k-Label--small"
+    className="sc-gsnTZi kFySAt k-Label k-Form-CheckboxSet__label k-Label--small"
     onClick={[Function]}
   >
     Label
   </legend>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -26,12 +26,13 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-a"
       onClick={[Function]}
+      style={Object {}}
     >
       Option A
     </label>
   </div>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -44,12 +45,13 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-b"
       onClick={[Function]}
+      style={Object {}}
     >
       Option B
     </label>
   </div>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -62,6 +64,7 @@ exports[`<CheckboxSet /> default matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-c"
       onClick={[Function]}
+      style={Object {}}
     >
       Option C
     </label>
@@ -75,13 +78,13 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
   disabled={false}
 >
   <legend
-    className="sc-gsnTZi cZxUzJ k-Label k-Form-CheckboxSet__label k-Label--small"
+    className="sc-gsnTZi kFySAt k-Label k-Form-CheckboxSet__label k-Label--small"
     onClick={[Function]}
   >
     Label test
   </legend>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -95,12 +98,13 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-a"
       onClick={[Function]}
+      style={Object {}}
     >
       Option A
     </label>
   </div>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -113,12 +117,13 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-b"
       onClick={[Function]}
+      style={Object {}}
     >
       Option B
     </label>
   </div>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -131,6 +136,7 @@ exports[`<CheckboxSet /> with children and label matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-c"
       onClick={[Function]}
+      style={Object {}}
     >
       Option C
     </label>
@@ -149,7 +155,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
     </h1>
   </legend>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -163,12 +169,13 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-a"
       onClick={[Function]}
+      style={Object {}}
     >
       Option A
     </label>
   </div>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -181,12 +188,13 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-b"
       onClick={[Function]}
+      style={Object {}}
     >
       Option B
     </label>
   </div>
   <div
-    className="sc-bczRLJ eZcOYR k-Form-Checkbox k-Form-CheckboxSet__checkbox"
+    className="sc-bczRLJ hwbvYN k-Form-Checkbox k-Form-CheckboxSet__checkbox"
   >
     <input
       className="k-Form-Checkbox__input"
@@ -199,6 +207,7 @@ exports[`<CheckboxSet /> with children matches with snapshot 1`] = `
       className="k-u-weight-400 k-Form-Checkbox__label"
       htmlFor="option-c"
       onClick={[Function]}
+      style={Object {}}
     >
       Option C
     </label>

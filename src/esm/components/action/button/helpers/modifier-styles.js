@@ -45,9 +45,11 @@ export const modifierStyles = modifier => {
       break;
 
     case 'helium':
-      colors.borderColor = 'var(--color-primary-500)';
-      colors.backgroundColor = 'var(--color-primary-500)';
+      colors.borderColor = 'var(--color-primary-700)';
+      colors.backgroundColor = 'var(--color-primary-700)';
       colors.color = 'var(--color-grey-000)';
+      colors.hoverBorderColor = 'var(--color-primary-900)';
+      colors.hoverBgColor = 'var(--color-primary-900)';
       break;
 
     case 'lithium':
@@ -69,6 +71,8 @@ export const modifierStyles = modifier => {
       colors.borderColor = 'var(--color-grey-900)';
       colors.backgroundColor = 'var(--color-grey-900)';
       colors.color = 'var(--color-grey-000)';
+      colors.hoverBorderColor = 'var(--color-primary-700)';
+      colors.hoverBgColor = 'var(--color-primary-700)';
       break;
 
     case 'copper':
@@ -110,11 +114,11 @@ export const modifierStyles = modifier => {
       break;
 
     case 'neon':
-      colors.borderColor = 'var(--color-warning-500)';
-      colors.backgroundColor = 'var(--color-warning-500)';
+      colors.borderColor = 'var(--color-warning-700)';
+      colors.backgroundColor = 'var(--color-warning-700)';
       colors.color = 'var(--color-grey-000)';
-      colors.hoverBorderColor = 'var(--color-warning-700)';
-      colors.hoverBgColor = 'var(--color-warning-700)';
+      colors.hoverBorderColor = 'var(--color-warning-900)';
+      colors.hoverBgColor = 'var(--color-warning-900)';
       colors.hoverColor = 'var(--color-grey-000)';
       colors.activeBorderColor = 'var(--color-warning-900)';
       colors.activeBgColor = 'var(--color-warning-900)';

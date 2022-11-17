@@ -2,7 +2,7 @@
 
 exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ iQoZkB k-Accordeon k-Accordeon--isAnimated"
+  className="sc-bczRLJ bNmegB k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -129,7 +129,7 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ iQoZkB k-Accordeon custom1 k-Accordeon--isAnimated"
+  className="sc-bczRLJ bNmegB k-Accordeon custom1 k-Accordeon--isAnimated"
   data-test={true}
 >
   <div
@@ -260,7 +260,7 @@ exports[`<Accordeon /> with custom classNames matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ iQoZkB k-Accordeon"
+  className="sc-bczRLJ bNmegB k-Accordeon"
 >
   <div
     className="k-Accordeon__item"
@@ -387,7 +387,7 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ iQoZkB k-Accordeon k-Accordeon--isAnimated"
+  className="sc-bczRLJ bNmegB k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"
@@ -454,7 +454,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ iQoZkB k-Accordeon k-Accordeon--isAnimated"
+  className="sc-bczRLJ bNmegB k-Accordeon k-Accordeon--isAnimated"
 >
   <div
     className="k-Accordeon__item"

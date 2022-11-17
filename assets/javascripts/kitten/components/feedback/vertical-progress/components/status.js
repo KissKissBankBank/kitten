@@ -1,13 +1,13 @@
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
-import { LongArrowIcon } from '../../../graphics/icons/long-arrow-icon'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { CheckedIcon } from '../../../graphics/icons/checked-icon'
 import { HourglassIcon } from '../../../graphics/icons/hourglass-icon'
-import classNames from 'classnames'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { LongArrowIcon } from '../../../graphics/icons/long-arrow-icon'
 
 const STATUS_SIZE = 30
 
@@ -18,11 +18,11 @@ const StyledWrapper = styled.div`
 
   &.k-VerticalProgress__status--actions {
     .k-VerticalProgress__icon {
-      background-color: var(--color-warning-500);
-      border-color: var(--color-warning-500);
+      background-color: var(--color-warning-700);
+      border-color: var(--color-warning-700);
     }
     .k-VerticalProgress__title {
-      color: var(--color-warning-500);
+      color: var(--color-warning-700);
     }
   }
 
@@ -52,7 +52,7 @@ const StyledWrapper = styled.div`
       border-color: var(--color-primary-500);
     }
     .k-VerticalProgress__title {
-      color: var(--color-primary-500);
+      color: var(--color-primary-700);
     }
   }
 

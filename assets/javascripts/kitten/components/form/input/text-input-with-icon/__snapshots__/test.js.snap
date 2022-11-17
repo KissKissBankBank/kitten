@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
   <input
     className="k-TextInput k-TextInput--hasIcon"
@@ -38,7 +38,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
   <input
     className="k-TextInput k-TextInput--hasIcon k-TextInput--disabled"
@@ -74,7 +74,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_right"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_right"
 >
   <input
     className="k-TextInput k-TextInput--hasIcon k-TextInput--valid"
@@ -110,7 +110,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 2`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium k-TextInput__wrapper--icon_left"
 >
   <input
     className="k-TextInput k-TextInput--hasIcon"

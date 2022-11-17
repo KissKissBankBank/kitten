@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text, allowedColorStrings } from './index'
 import { DocsPage } from 'storybook/docs-page'
+import { allowedColorStrings, Text } from './index'
 
 export const Default = props => <Text {...props} />
 
@@ -50,6 +50,12 @@ export default {
       name: 'fontStyle',
       description: 'Adds an italic style.',
       options: ['normal', 'italic'],
+      control: 'select',
+    },
+    family: {
+      name: 'family',
+      description: 'Adds font family',
+      options: ['none', 'antiqueolive'],
       control: 'select',
     },
     transform: {

@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> default matches with snapshot 1`] = `
 <article
-  className="sc-bczRLJ cPWvuC k-RewardCard k-RewardCard--hasBorder k-RewardCard--hasShadow"
+  className="sc-bczRLJ jTFnwu k-RewardCard k-RewardCard--hasBorder k-RewardCard--hasShadow"
 >
   <div
     className="k-RewardCard__gridWrapper"
@@ -38,7 +38,7 @@ exports[`<RewardCard /> default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 <article
-  className="sc-bczRLJ cPWvuC k-RewardCard k-RewardCard--hasBorder k-RewardCard--hasShadow"
+  className="sc-bczRLJ jTFnwu k-RewardCard k-RewardCard--hasBorder k-RewardCard--hasShadow"
 >
   <div
     className="k-RewardCard__gridWrapper"
@@ -74,7 +74,7 @@ exports[`<RewardCard /> not truncated title matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with some props matches with snapshot 1`] = `
 <article
-  className="sc-bczRLJ cPWvuC k-RewardCard k-RewardCard--disabled"
+  className="sc-bczRLJ jTFnwu k-RewardCard k-RewardCard--disabled"
 >
   <div
     className="k-RewardCard__imageWrapper"
@@ -88,7 +88,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     className="k-RewardCard__gridWrapper"
   >
     <span
-      className="sc-dkzDqf fUJfqT k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
+      className="sc-dkzDqf eEgDSr k-Tag k-RewardCard__headingTag k-Tag--info k-Tag--medium k-Tag--dark"
     >
       <svg
         height="13"
@@ -126,11 +126,13 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     >
       <span
         className="k-u-weight-700 k-RewardCard__amount k-u-block"
+        style={Object {}}
       >
         65 €
       </span>
       <span
         className="k-u-letter-spacing-10 k-u-transform-uppercase k-u-weight-500 k-RewardCard__amount__suffix k-u-block"
+        style={Object {}}
       >
         Etiam Consectetur Venenatis
       </span>
@@ -170,12 +172,14 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     >
       <span
         className="k-u-line-height-normal k-u-size-small k-u-weight-500 k-RewardCard__info__legend"
+        style={Object {}}
       >
         Lorem
       </span>
        
       <span
         className="k-u-line-height-normal k-u-size-small k-u-weight-400 k-RewardCard__info__value"
+        style={Object {}}
       >
         <span>
           ipsum
@@ -186,7 +190,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
       className="k-RewardCard__tagList k-RewardCard__drawer"
     >
       <li
-        className="sc-dkzDqf fUJfqT k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+        className="sc-dkzDqf eEgDSr k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-500"
@@ -196,7 +200,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
          contributeurs
       </li>
       <li
-        className="sc-dkzDqf fUJfqT k-Tag k-Tag--info k-Tag--medium k-Tag--status"
+        className="sc-dkzDqf eEgDSr k-Tag k-Tag--info k-Tag--medium k-Tag--status"
       >
         <strong
           className="k-u-weight-500"
@@ -208,7 +212,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-gsnTZi iZVKxD k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+    className="sc-gsnTZi eWDdml k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {

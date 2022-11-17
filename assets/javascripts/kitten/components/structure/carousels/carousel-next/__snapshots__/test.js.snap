@@ -51,7 +51,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -72,7 +72,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -133,7 +133,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -144,6 +144,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -156,7 +157,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -177,7 +178,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -238,7 +239,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -249,6 +250,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -261,7 +263,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -282,7 +284,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -343,7 +345,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -354,6 +356,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -374,7 +377,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -395,7 +398,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -456,7 +459,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -467,6 +470,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -479,7 +483,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -500,7 +504,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -561,7 +565,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -572,6 +576,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -584,7 +589,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -605,7 +610,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -666,7 +671,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -677,6 +682,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -728,7 +734,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -749,7 +755,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -810,7 +816,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -821,6 +827,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -833,7 +840,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -854,7 +861,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -915,7 +922,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -926,6 +933,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -938,7 +946,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -959,7 +967,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1020,7 +1028,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1031,6 +1039,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1051,7 +1060,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1072,7 +1081,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1133,7 +1142,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1144,6 +1153,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1156,7 +1166,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1177,7 +1187,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1238,7 +1248,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1249,6 +1259,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1261,7 +1272,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
           className="k-CarouselNext__page__item"
         >
           <div
-            className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+            className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
             onFocus={[Function]}
           >
             <div
@@ -1282,7 +1293,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1343,7 +1354,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #19b4fa)",
+                      "--progress-color": "var(--color-primary-500, #1F93FF)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1354,6 +1365,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 </div>
                 <span
                   className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                  style={Object {}}
                 >
                   55
                    %
@@ -1424,7 +1436,7 @@ Array [
     className="sc-gsnTZi ffkcFP k-CarouselNext__navigation"
   >
     <button
-      className="sc-bczRLJ elTzql k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-bczRLJ bqosxP k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -1459,7 +1471,7 @@ Array [
       </svg>
     </button>
     <button
-      className="sc-bczRLJ elTzql k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
+      className="sc-bczRLJ bqosxP k-Button k-CarouselNext__navigation__button k-Button--medium k-Button--nitrogen k-Button--fit-icon"
       style={
         Object {
           "--Button-border-radius": null,
@@ -1522,7 +1534,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1543,7 +1555,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1604,7 +1616,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #19b4fa)",
+                        "--progress-color": "var(--color-primary-500, #1F93FF)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1615,6 +1627,7 @@ Array [
                   </div>
                   <span
                     className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                    style={Object {}}
                   >
                     55
                      %
@@ -1627,7 +1640,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1648,7 +1661,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1709,7 +1722,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #19b4fa)",
+                        "--progress-color": "var(--color-primary-500, #1F93FF)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1720,6 +1733,7 @@ Array [
                   </div>
                   <span
                     className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                    style={Object {}}
                   >
                     55
                      %
@@ -1732,7 +1746,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1753,7 +1767,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1814,7 +1828,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #19b4fa)",
+                        "--progress-color": "var(--color-primary-500, #1F93FF)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1825,6 +1839,7 @@ Array [
                   </div>
                   <span
                     className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                    style={Object {}}
                   >
                     55
                      %
@@ -1845,7 +1860,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1866,7 +1881,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1927,7 +1942,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #19b4fa)",
+                        "--progress-color": "var(--color-primary-500, #1F93FF)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1938,6 +1953,7 @@ Array [
                   </div>
                   <span
                     className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                    style={Object {}}
                   >
                     55
                      %
@@ -1950,7 +1966,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--normal k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -1971,7 +1987,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -2032,7 +2048,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #19b4fa)",
+                        "--progress-color": "var(--color-primary-500, #1F93FF)",
                         "--progress-value": "55%",
                       }
                     }
@@ -2043,6 +2059,7 @@ Array [
                   </div>
                   <span
                     className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                    style={Object {}}
                   >
                     55
                      %
@@ -2055,7 +2072,7 @@ Array [
             className="k-CarouselNext__page__item"
           >
             <div
-              className="sc-hKMtZM kWjLLC k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
+              className="sc-hKMtZM ckDyfm k-ProjectCard k-ProjectCard--success k-ProjectCard--colorMode-light"
               onFocus={[Function]}
             >
               <div
@@ -2076,7 +2093,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ dXCRUN k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -2137,7 +2154,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #19b4fa)",
+                        "--progress-color": "var(--color-primary-500, #1F93FF)",
                         "--progress-value": "55%",
                       }
                     }
@@ -2148,6 +2165,7 @@ Array [
                   </div>
                   <span
                     className="k-u-line-height-1 k-u-size-small k-u-weight-700 k-u-hidden@xs-down k-ProjectCard__progress__text"
+                    style={Object {}}
                   >
                     55
                      %

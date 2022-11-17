@@ -2,7 +2,7 @@
 
 exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
 <div
-  className="sc-bczRLJ bnGJAW k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bczRLJ cmMygk k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -32,6 +32,7 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
   >
     <p
       className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      style={Object {}}
     >
       Document status: accepted
     </p>
@@ -40,11 +41,13 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
     >
       <li
         className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
+        style={Object {}}
       >
         kitten_document_1.jpg
       </li>
       <li
         className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
+        style={Object {}}
       >
         kitten_document_2.jpg
       </li>
@@ -55,7 +58,7 @@ exports[`<DocumentsStatusBox /> should match accepted snapshot 1`] = `
 
 exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
 <div
-  className="sc-bczRLJ bnGJAW k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bczRLJ cmMygk k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -85,6 +88,7 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
   >
     <p
       className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      style={Object {}}
     >
       Document status: denied
     </p>
@@ -93,17 +97,20 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
     >
       <li
         className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
+        style={Object {}}
       >
         kitten_document_1.jpg
       </li>
       <li
         className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
+        style={Object {}}
       >
         kitten_document_2.jpg
       </li>
     </ul>
     <p
       className="k-u-line-height-1 k-u-size-micro k-u-weight-500 k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
+      style={Object {}}
     >
       The document was incorrect
     </p>
@@ -113,7 +120,7 @@ exports[`<DocumentsStatusBox /> should match denied snapshot 1`] = `
 
 exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
 <div
-  className="sc-bczRLJ bnGJAW k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bczRLJ cmMygk k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -143,6 +150,7 @@ exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
   >
     <p
       className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      style={Object {}}
     >
       
     </p>
@@ -152,7 +160,7 @@ exports[`<DocumentsStatusBox /> should match empty snapshot 1`] = `
 
 exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
 <div
-  className="sc-bczRLJ bnGJAW k-DocumentsStatusBox k-DocumentsStatusBox--wait"
+  className="sc-bczRLJ cmMygk k-DocumentsStatusBox k-DocumentsStatusBox--wait"
 >
   <div
     className="k-DrocumentDropUploader__icon"
@@ -182,6 +190,7 @@ exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
   >
     <p
       className="k-u-line-height-1 k-u-size-small k-u-weight-500 k-DocumentsStatusBox__title k-u-margin-top-none k-u-margin-bottom-noneHalf"
+      style={Object {}}
     >
       Documents status: awaiting confirmation
     </p>
@@ -190,17 +199,20 @@ exports[`<DocumentsStatusBox /> should match wait snapshot 1`] = `
     >
       <li
         className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
+        style={Object {}}
       >
         kitten_document_1.jpg
       </li>
       <li
         className="k-u-size-micro k-u-weight-400 k-DocumentsStatusBox__fileName"
+        style={Object {}}
       >
         kitten_document_2.jpg
       </li>
     </ul>
     <p
       className="k-u-line-height-1 k-u-size-micro k-u-weight-500 k-DocumentsStatusBox__message k-u-margin-bottom-none k-u-margin-top-noneHalf"
+      style={Object {}}
     >
       This process can take up to two days
     </p>

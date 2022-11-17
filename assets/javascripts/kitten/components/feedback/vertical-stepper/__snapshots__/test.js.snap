@@ -32,19 +32,19 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border: 0.1875rem solid var(--color-grey-000,#fff);
   border-radius: var(--border-radius-rounded);
   background-color: var(--color-grey-000,#fff);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: var(--color-primary-500,#19b4fa);
-  border-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#1F93FF);
+  border-color: var(--color-primary-500,#1F93FF);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
   background-color: var(--color-grey-000,#fff);
-  border-color: var(--color-primary-500,#19b4fa);
+  border-color: var(--color-primary-500,#1F93FF);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
@@ -146,7 +146,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c2:hover .VerticalStepper__link,
 .c2:focus .VerticalStepper__link,
 .c2:active .VerticalStepper__link {
-  color: var(--color-primary-900,#0496cc);
+  color: var(--color-primary-900,#004C92);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content {
@@ -173,7 +173,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c4 {
   margin: 0 0 0.3125rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   -webkit-letter-spacing: .01rem;
   -moz-letter-spacing: .01rem;
   -ms-letter-spacing: .01rem;
@@ -190,11 +190,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c5 .k-Steppers--VerticalStepper__link {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: normal;
-  color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#1F93FF);
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 0.4s;
@@ -211,13 +211,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c5 .k-Steppers--VerticalStepper__link:hover,
 .c5 .k-Steppers--VerticalStepper__link:focus,
 .c5 .k-Steppers--VerticalStepper__link:active {
-  color: var(--color-primary-900,#0496cc);
+  color: var(--color-primary-900,#004C92);
 }
 
 .c6 {
   margin: 0.3125rem 0 0.625rem;
   padding: 0;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: normal;
@@ -282,7 +282,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c0 .k-Steppers--VerticalStepper li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
-  background-color: var(--color-primary-500,#19b4fa);
+  background-color: var(--color-primary-500,#1F93FF);
 }
 
 @media (min-width:640px) {
@@ -404,7 +404,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
               <circle
                 cx="3"
                 cy="3"
-                fill="var(--color-primary-500, #19b4fa)"
+                fill="var(--color-primary-500, #1F93FF)"
                 r="3"
               />
             </svg>

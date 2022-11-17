@@ -68,9 +68,11 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
     >
       <span
         className="k-u-line-height-normal k-u-size-small k-u-weight-500"
+        style={Object {}}
       />
       <span
         className="k-u-line-height-normal k-u-size-micro k-u-weight-400"
+        style={Object {}}
       />
     </div>
     <span
@@ -169,11 +171,13 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
     >
       <span
         className="k-u-line-height-normal k-u-size-small k-u-weight-500"
+        style={Object {}}
       >
         title
       </span>
       <span
         className="k-u-line-height-normal k-u-size-micro k-u-weight-400"
+        style={Object {}}
       >
         text
       </span>

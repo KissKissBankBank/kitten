@@ -49,7 +49,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   >
     <div
       aria-disabled={false}
-      className="sc-bczRLJ dYVoWy k-List__button k-List__button--withTopBorder"
+      className="sc-bczRLJ cemQYk k-List__button k-List__button--withTopBorder"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -94,7 +94,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   >
     <div
       aria-disabled={false}
-      className="sc-bczRLJ dYVoWy k-List__button k-List__button--isActive"
+      className="sc-bczRLJ cemQYk k-List__button k-List__button--isActive"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -139,7 +139,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   >
     <div
       aria-disabled={false}
-      className="sc-bczRLJ dYVoWy k-List__button"
+      className="sc-bczRLJ cemQYk k-List__button"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -174,7 +174,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   >
     <div
       aria-disabled={false}
-      className="sc-bczRLJ dYVoWy k-List__button k-List__button--withTopBorder"
+      className="sc-bczRLJ cemQYk k-List__button k-List__button--withTopBorder"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -219,7 +219,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   >
     <div
       aria-disabled={true}
-      className="sc-bczRLJ dYVoWy k-List__button"
+      className="sc-bczRLJ cemQYk k-List__button"
       onBlur={[Function]}
       onClick={null}
       onFocus={[Function]}
@@ -264,7 +264,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   >
     <div
       aria-disabled={false}
-      className="sc-bczRLJ dYVoWy k-List__button"
+      className="sc-bczRLJ cemQYk k-List__button"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

@@ -48,7 +48,7 @@ exports[`<SlideModal /> snapshot tests is open matches with snapshot 1`] = `
     >
       <button
         aria-label="Fermer"
-        className="sc-bczRLJ elTzql k-Button k-SlideModal__closeButton k-Button--small k-Button--nitrogen k-Button--fit-icon"
+        className="sc-bczRLJ bqosxP k-Button k-SlideModal__closeButton k-Button--small k-Button--nitrogen k-Button--fit-icon"
         onClick={[Function]}
         style={
           Object {
@@ -76,7 +76,7 @@ exports[`<SlideModal /> snapshot tests is open matches with snapshot 1`] = `
         className="k-SlideModal__main"
       >
         <p
-          className="sc-gsnTZi mZbdM k-Title k-SlideModal__title k-Title--primary k-Title--noMargin"
+          className="sc-gsnTZi fHDOvo k-Title k-SlideModal__title k-Title--primary k-Title--noMargin"
           style={
             Object {
               "--Title-css-color": null,
