@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import { Status } from './status'
 
 const StyledItem = styled.li`
@@ -29,10 +28,6 @@ const StyledItem = styled.li`
 
   .k-VerticalProgress__step--content {
     padding-left: ${pxToRem(50)};
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      padding-left: ${pxToRem(82)};
-    }
   }
 `
 

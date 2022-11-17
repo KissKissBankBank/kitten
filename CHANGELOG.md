@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `VerticalProgress`: Fix styles.
+- Fix: `Illustration`: Fix `PencilIllustration` svg.
+- Fix: `Comment`: Upgrade design.
+
+## [12.15.1] - 2022-11-14  📏
+
+Fix:
+
+- `VerticalProgress`: Delete big padding on `Step` component
+
 ## [13.0.0-beta5] - 2022-11-10  🎖
 
 Fix:
