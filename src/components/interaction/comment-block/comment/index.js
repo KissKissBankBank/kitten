@@ -30,7 +30,7 @@ var _heartIconNext = require("../../../graphics/icons-next/heart-icon-next");
 const CommentWrapper = _styledComponents.default.div.withConfig({
   displayName: "comment__CommentWrapper",
   componentId: "sc-1wxubm3-0"
-})(["--comment-arrow-size:", ";--comment-background-color:var(--color-grey-200);display:flex;gap:", ";padding:", ";border-radius:", ";flex-direction:column;position:relative;background-color:var(--comment-background-color);transition:background-color var(--transition);&.k-Comment--isSecondary{margin-left:", ";@media ", "{margin-left:", ";}}&.k-Comment--isHighlighted{--comment-background-color:var(--color-grey-400);.k-Comment__header__meta{color:var(--color-grey-700);}}&::before{content:'';width:0;height:0;position:absolute;left:calc(-1 * var(--comment-arrow-size));top:calc(50% - var(--comment-arrow-size));border:var(--comment-arrow-size) solid transparent;border-left:0;border-right-color:var(--comment-background-color);transition:border-right-color var(--transition);}.k-Comment__header{display:flex;gap:", ";align-items:center;justify-content:space-between;font-size:", ";}.k-Comment__header__meta{display:flex;gap:", ";align-items:center;color:var(--color-grey-600);}.k-Comment__header__image{display:block;width:", ";height:", ";overflow:hidden;object-fit:cover;object-position:center center;border-radius:", ";}.k-Comment__header__actions{display:flex;gap:", ";}.k-Comment__content{", " font-size:", ";}.k-Comment__footer{display:flex;gap:", ";}.k-Comment-LikeButton{display:flex;gap:", ";align-items:center;color:var(--color-grey-900);transition:color var(--transition);:disabled{cursor:not-allowed;opacity:0.5;}&[aria-pressed]{svg{color:var(--color-danger-500);}}svg{max-width:", ";max-height:", ";transition:inherit;}:not(:disabled):hover{color:var(--color-primary-700);}}"], (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(20), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14));
+})(["--comment-background-color:var(--color-grey-200);display:flex;gap:", ";&.k-Comment--isSecondary{margin-left:", ";@media ", "{margin-left:", ";}.k-Comment__image{width:", ";height:", ";}}&.k-Comment--isHighlighted{--comment-background-color:var(--color-grey-400);.k-Comment__header__meta{color:var(--color-grey-700);}}.k-Comment__image{width:", ";height:", ";object-fit:cover;object-position:center center;border-radius:var(--border-radius-rounded);}.k-Comment__block{display:flex;gap:", ";padding:", ";border-radius:", ";flex-direction:column;position:relative;background-color:var(--comment-background-color);transition:background-color var(--transition);}.k-Comment__header{display:flex;gap:", ";align-items:center;justify-content:space-between;font-size:", ";}.k-Comment__header__meta{display:flex;gap:", ";align-items:center;color:var(--color-grey-600);}.k-Comment__header__actions{display:flex;gap:", ";}.k-Comment__content{", " font-size:", ";}.k-Comment__footer{display:flex;gap:", ";}.k-Comment-LikeButton{display:flex;gap:", ";align-items:center;color:var(--color-grey-900);transition:color var(--transition);:disabled{cursor:not-allowed;opacity:0.5;}&[aria-pressed]{svg{color:var(--color-danger-500);}}svg{max-width:", ";max-height:", ";transition:inherit;}:not(:disabled):hover{color:var(--color-primary-700);}}"], (0, _typography.pxToRem)(7), (0, _typography.pxToRem)(20), _screenConfig.mq.tabletAndDesktop, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles['400'], (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14));
 
 const Comment = /*#__PURE__*/_react.default.forwardRef((_ref, ref) => {
   let {
@@ -54,17 +54,20 @@ const Comment = /*#__PURE__*/_react.default.forwardRef((_ref, ref) => {
       'k-Comment--isSecondary': isSecondary,
       'k-Comment--isHighlighted': isHighlighted
     })
-  }, props), /*#__PURE__*/_react.default.createElement("div", {
+  }, props), /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
+    alt: ""
+  }, avatarImgProps, {
+    className: "k-Comment__image"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-Comment__block"
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Comment__header"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Comment__header__meta"
-  }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
-    alt: ""
-  }, avatarImgProps, {
-    className: "k-Comment__header__image"
-  })), /*#__PURE__*/_react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "500",
     color: "font1",
+    size: "small",
     className: "k-u-ellipsis"
   }, ownerName), /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "micro",
@@ -82,7 +85,7 @@ const Comment = /*#__PURE__*/_react.default.forwardRef((_ref, ref) => {
     size: "small"
   }, text), children), footer && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Comment__footer"
-  }, footer));
+  }, footer)));
 });
 
 exports.Comment = Comment;
@@ -113,14 +116,10 @@ Comment.LikeButton = _ref2 => {
 
 Comment.propTypes = {
   ownerName: _propTypes.default.string,
-  ownerUrl: (0, _deprecated.default)(_propTypes.default.string, 'Not used anymore'),
   avatarImgProps: _propTypes.default.object,
   commentDate: _propTypes.default.string,
   headerActions: _propTypes.default.node,
   footer: _propTypes.default.node,
-  bottomNotes: (0, _deprecated.default)(_propTypes.default.node, 'Please use footer prop instead'),
-  text: (0, _deprecated.default)(_propTypes.default.node, 'Please use children prop instead'),
-  likeButtonProps: (0, _deprecated.default)(_propTypes.default.object, 'Please use headerActions={<Comment.LikeButton />} instead'),
   isSecondary: _propTypes.default.bool,
   isHighlighted: _propTypes.default.bool
 };
