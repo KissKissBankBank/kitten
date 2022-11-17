@@ -2,7 +2,6 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
@@ -19,11 +18,11 @@ const StyledWrapper = styled.div`
 
   &.k-VerticalProgress__status--actions {
     .k-VerticalProgress__icon {
-      background-color: ${COLORS.orange2};
-      border-color: ${COLORS.orange2};
+      background-color: var(--color-warning-700);
+      border-color: var(--color-warning-700);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.orange2};
+      color: var(--color-warning-700);
     }
   }
 
@@ -53,7 +52,7 @@ const StyledWrapper = styled.div`
       border-color: var(--color-primary-500);
     }
     .k-VerticalProgress__title {
-      color: ${COLORS.primary2};
+      color: var(--color-primary-700);
     }
   }
 
