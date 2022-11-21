@@ -10,6 +10,10 @@ import styled from 'styled-components'
 
 const DiscriminationWrapper = styled.section`
   margin-top: ${pxToRem(100)};
+  max-width: ${pxToRem(1440)};
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

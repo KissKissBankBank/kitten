@@ -10,27 +10,25 @@ import {
 import styled from 'styled-components'
 
 const DefenseWrapper = styled.section`
-  margin-top: ${pxToRem(100)};
+  margin-top: ${pxToRem(160)};
 
   svg {
     right: 0;
+    position: absolute;
+    margin-right: ${pxToRem(220)};
   }
+
   .kiss-Manifesto__defense__img {
     display: block;
     object-fit: cover;
     object-position: center;
     width: 100%;
+    padding-top: ${pxToRem(70)};
   
     img {
       display: block;
       object-fit: cover;
       object-position: center;
-    }
-
-    svg {
-      position: absolute;
-      margin-top: ${pxToRem(700)};
-      margin-left: ${pxToRem(220)};
     }
   }
 

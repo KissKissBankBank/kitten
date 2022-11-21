@@ -13,47 +13,81 @@ const ProtectWrapper = styled.section`
   box-sizing: border-box;
   margin-top: ${pxToRem(100)};
   display: flex;
-  justify-content: flex-end;
-  gap: ${pxToRem(100)};
-  max-width: ${pxToRem(1440)};
+  margin-left: auto;
   margin-right: ${pxToRem(90)};
+  max-width: ${pxToRem(1440)};
+  gap: ${pxToRem(90)};
 
-  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    margin-right: ${pxToRem(50)};
+    amrgin-top: ${pxToRem(50)};
+  }
+
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    padding-top: 0;
     flex-direction: column;
+    margin-right: 0;
   }
 
   .kiss-Manifesto__protect__img {
     display: block;
     object-fit: cover;
-    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
   
     img {
       display: block;
       object-fit: cover;
-      object-position: center;
+      width: 100%;
+
+      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+        display: block;
+        max-height: ${pxToRem(450)};
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
 
     svg {
       position: absolute;
-      margin-top: ${pxToRem(700)};
-      margin-left: ${pxToRem(220)};
+      margin-top: ${pxToRem(450)};
+      margin-left: ${pxToRem(150)};
+
+      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+        margin-top: ${pxToRem(290)};
+        margin-left: ${pxToRem(85)};
+        max-width: 90%;
+      }
+
+      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+        display: none;
+      }
     }
   }
 
   .kiss-Manifesto__protect__container {
+    width: 60vw;
     display: flex;
     flex-direction: column;
-    gap: ${pxToRem(20)};
     align-items: flex-start;
-    margin-top: ${pxToRem(100)};
+    justify-content: center;
+    gap: ${pxToRem(20)};
+    box-sizing: border-box;
 
-    .k-Title {
-      margin-bottom: ${pxToRem(20)};
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      padding-right: ${pxToRem(20)};
+      padding-left: ${pxToRem(20)};
+      width: 100vw;
     }
+  }
 
-    .k-Button {
-      margin-top: ${pxToRem(20)};
-    }
+  .k-Title {
+    margin-bottom: ${pxToRem(20)};
+  }
+
+  .k-Button {
+    margin-top: ${pxToRem(20)};
   }
 `
 
@@ -65,7 +99,7 @@ const Protect = () => (
     </div>
     <div className="kiss-Manifesto__protect__container">
       <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
-        La protection de <br />l’environnement <br/>et de la biodiversité
+        La protection de l’environnement et de la biodiversité
       </Title>
       <Text size="huge" className="k-u-padding-right-decuple@sm-up">
         Pour un monde juste où nous assurons l’avenir de la planète.

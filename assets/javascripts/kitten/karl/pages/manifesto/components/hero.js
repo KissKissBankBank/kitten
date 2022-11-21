@@ -12,6 +12,10 @@ import styled from 'styled-components'
 const HeroWrapper = styled.section`
   padding-top: ${pxToRem(100)};
   box-sizing: border-box;
+  max-width: ${pxToRem(1440)};
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
   
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
     padding-top: ${pxToRem(50)};
@@ -44,12 +48,7 @@ const HeroWrapper = styled.section`
   }
 
   .kiss-Manifesto__hero__container {
-    max-width: ${pxToRem(1440)};
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: ${pxToRem(100)};
     display: flex;
-    margin-left: 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       margin-right: ${pxToRem(50)};
@@ -75,7 +74,7 @@ const HeroWrapper = styled.section`
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       box-sizing: border-box;
-      padding: ${pxToRem(30)};
+      padding: ${pxToRem(20)};
     }
 
     .k-Title {
