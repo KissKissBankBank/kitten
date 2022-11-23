@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: 
+## [13.1.0] - 2022-11-23
+
+Feature: 
+
   - Add the following illustration components:
     - `MoneyBankIllustration`,
     - `LibraryIllustration`

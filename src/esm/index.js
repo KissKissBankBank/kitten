@@ -258,7 +258,9 @@ export { RibbonIllustration } from './components/graphics/illustrations/ribbon-i
 export { RainbowIllustration } from './components/graphics/illustrations/rainbow-illustration';
 export { PencilIllustration } from './components/graphics/illustrations/pencil-illustration';
 export { HandAndFlowerIllustration } from './components/graphics/illustrations/hand-and-flower-illustration';
-export { PatchNewIllustration } from './components/graphics/illustrations/patch-new-illustration'; // Graphics/Logos
+export { PatchNewIllustration } from './components/graphics/illustrations/patch-new-illustration';
+export { MoneyBankIllustration } from './components/graphics/illustrations/money-bank-illustration';
+export { LibraryIllustration } from './components/graphics/illustrations/library-illustration'; // Graphics/Logos
 
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo';
 export { LaBanquePostaleLogo } from './components/graphics/logos/la-banque-postale';
