@@ -62,6 +62,28 @@ export const checkPageLoop = (pagesCount, newPage) => {
   return newPage
 }
 
+export const numberOfInnerPages = (totalCount, itemsPerPage) => {
+  // Greatest Common Divisor.
+  function gcd(a, b) {
+    if (b === 0) {
+      return a
+    }
+
+    return gcd(b, a % b)
+  }
+
+  // Least Common Multiple.
+  function lcm(a, b) {
+    return (a * b) / gcd(a, b)
+  }
+
+  const result = 4 + lcm(totalCount, itemsPerPage) / itemsPerPage
+
+  console.log(`Cycle over ${result} pages`)
+
+  return result
+}
+
 const getGapAccordingToViewport = (
   baseGap,
   viewportIsXSOrLess,
@@ -96,12 +118,14 @@ export const CarouselNext = ({
   const [itemsPerPage, setItemsPerPageCount] = useState(
     itemsPerPageProp > 0 ? itemsPerPageProp : 3,
   )
+
   const [pagesCount, setPagesCount] = useState(
     getNumberOfPagesForColumnsAndDataLength(
       React.Children.count(children),
       itemsPerPageProp > 0 ? itemsPerPageProp : 3,
     ),
   )
+
   const [innerPagesCount, setInnerPagesCount] = useState(0)
   const [viewedPages, setViewedPages] = useState(new Set())
 
@@ -115,7 +139,16 @@ export const CarouselNext = ({
   }, [])
 
   useEffect(() => {
-    const newInnerPagesCount = cycle ? pagesCount + 4 : pagesCount
+    console.log(`IPP ${itemsPerPage}`)
+
+    const newInnerPagesCount = cycle
+      ? numberOfInnerPages(React.Children.count(children), itemsPerPage)
+      : pagesCount
+
+    // const newInnerPagesCount = cycle
+    //   ? pagesCount + 4
+    //   : pagesCount
+
     setInnerPagesCount(newInnerPagesCount)
 
     const newCurrentPageIndex =
@@ -124,7 +157,7 @@ export const CarouselNext = ({
         : currentPageIndex
 
     setCurrentPageIndex(newCurrentPageIndex)
-  }, [pagesCount])
+  }, [pagesCount, itemsPerPage])
 
   const onResizeInner = innerWidth => {
     const itemGap = getGapAccordingToViewport(

@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import React, { useEffect, useRef, useState } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
+import { map, range } from 'lodash'
 import { domElementHelper } from '../../../../../helpers/dom/element-helper'
 import { usePrevious } from '../../../../../helpers/hooks/use-previous'
 import { CarouselPage } from './carousel-page'
@@ -60,8 +61,10 @@ const getClosest = (counts, goal) =>
 
 const getDataForPage = (data, indexPage, itemsPerPage) => {
   const startIndex = indexPage * itemsPerPage
+  const indices = range(startIndex, startIndex + itemsPerPage)
+  const total = data.length
 
-  return data.slice(startIndex, startIndex + itemsPerPage)
+  return map(indices, index => data[((index % total) + total) % total])
 }
 
 const getElementPadding = element =>
@@ -137,11 +140,11 @@ export const CarouselInner = ({
       if (!cycle) return goToPage(indexClosest)
 
       if (indexClosest < 2) {
-        const newIndex = pagesCount + 2 - indexClosest
+        const newIndex = pagesCount + 4 - indexClosest
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
       }
-      if (indexClosest >= pagesCount + 2) {
-        const newIndex = indexClosest - pagesCount
+      if (indexClosest >= pagesCount + 4) {
+        const newIndex = indexClosest - pagesCount - 2
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
       }
 
@@ -172,11 +175,11 @@ export const CarouselInner = ({
     if (!cycle) return
 
     if (currentPageIndex < 2) {
-      const newIndex = pagesCount + 2 - currentPageIndex
+      const newIndex = pagesCount + 4 - currentPageIndex
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
-    if (currentPageIndex >= pagesCount + 2) {
-      const newIndex = currentPageIndex - pagesCount
+    if (currentPageIndex >= pagesCount + 4) {
+      const newIndex = currentPageIndex - pagesCount - 2
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
   }
@@ -198,10 +201,11 @@ export const CarouselInner = ({
   }
 
   const getDataIndex = index => {
-    if (index <= 1) return pagesCount - 2 + index
-    if (index >= pagesCount + 2) return index - pagesCount - 2
     return index - 2
   }
+
+  console.log(innerPagesCount)
+  console.log(cycle)
 
   return (
     <div
@@ -216,6 +220,7 @@ export const CarouselInner = ({
         .fill(0)
         .map((el, index) => {
           const dataIndex = cycle ? getDataIndex(index) : index
+
           const isActivePage = currentPageIndex === index
           const hasPageBeenViewed = viewedPages.has(index)
 
@@ -236,6 +241,7 @@ export const CarouselInner = ({
                 hasPageBeenViewed={hasPageBeenViewed}
                 isActivePage={isActivePage}
                 pageItems={getDataForPage(items, dataIndex, itemsPerPage)}
+                key={`${index} / ${dataIndex}`}
                 itemsPerPage={itemsPerPage}
                 goToCurrentPage={() => goToPage(index)}
               />
