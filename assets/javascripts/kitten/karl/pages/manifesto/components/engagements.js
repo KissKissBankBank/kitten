@@ -13,14 +13,10 @@ import styled from 'styled-components'
 
 const EngagementsWrapper = styled.section`
   margin-top: ${pxToRem(-150)};
-  
-
-  .kiss-Manifesto__engagements__container {
-    max-width: ${pxToRem(1440)};
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  max-width: ${pxToRem(1440)};
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
   
   .kiss-Manifesto__engagements__form {
     position: absolute;
@@ -32,13 +28,16 @@ const EngagementsWrapper = styled.section`
     z-index: -1;
   }
 
+  .kiss-Manifesto__engagements__container {
+    margin-right: ${pxToRem(100)};
+  }
+
   .kiss-Manifesto__engagements__hearts {
     padding-top: ${pxToRem(250)};
     display: flex;
     justify-content: flex-end;
 
     & :first-child {
-      padding-right: ${pxToRem(7)};
       margin-top: ${pxToRem(-70)};
     }
   }

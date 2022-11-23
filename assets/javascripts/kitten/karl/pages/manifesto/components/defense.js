@@ -16,6 +16,10 @@ const DefenseWrapper = styled.section`
     right: 0;
     position: absolute;
     margin-right: ${pxToRem(220)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      display: none;
+    }
   }
 
   .kiss-Manifesto__defense__img {
@@ -23,9 +27,18 @@ const DefenseWrapper = styled.section`
     object-fit: cover;
     object-position: center;
     width: 100%;
-    padding-top: ${pxToRem(70)};
+    padding-top: ${pxToRem(150)};
   
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      padding-top: ${pxToRem(200)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      padding-top: 0;
+    }
+
     img {
+      width: 100%;
       display: block;
       object-fit: cover;
       object-position: center;
@@ -41,6 +54,11 @@ const DefenseWrapper = styled.section`
     display: flex;
     gap: ${pxToRem(40)};
     padding: ${pxToRem(120)} ${pxToRem(100)} ${pxToRem(200)} ${pxToRem(100)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      flex-direction: column;
+      padding: ${pxToRem(100)} ${pxToRem(70)} ${pxToRem(150)} ${pxToRem(70)};
+    }
   }
 
   .kiss-Manifesto__defense__block {
@@ -59,7 +77,7 @@ const Defense = () => (
   <DefenseWrapper>
     <MusicIllustration />
     <div className="kiss-Manifesto__defense__img">
-      <img alt="" src="/kitten-3.jpg" />
+      <img alt="" src="manifeste-3.png" />
     </div>
     <div className="kiss-Manifesto__defense__background">
       <div className="kiss-Manifesto__defense__container">

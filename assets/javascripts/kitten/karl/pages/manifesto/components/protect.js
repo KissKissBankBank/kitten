@@ -14,13 +14,13 @@ const ProtectWrapper = styled.section`
   margin-top: ${pxToRem(100)};
   display: flex;
   margin-left: auto;
-  margin-right: ${pxToRem(90)};
+  margin-right: ${pxToRem(100)};
   max-width: ${pxToRem(1440)};
   gap: ${pxToRem(90)};
 
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
     margin-right: ${pxToRem(50)};
-    amrgin-top: ${pxToRem(50)};
+    margin-top: 0;
   }
 
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
@@ -41,10 +41,8 @@ const ProtectWrapper = styled.section`
       width: 100%;
 
       @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-        display: block;
         max-height: ${pxToRem(450)};
         width: 100%;
-        object-fit: cover;
         object-position: center;
       }
     }
@@ -55,8 +53,8 @@ const ProtectWrapper = styled.section`
       margin-left: ${pxToRem(150)};
 
       @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-        margin-top: ${pxToRem(290)};
-        margin-left: ${pxToRem(85)};
+        margin-top: ${pxToRem(400)};
+        margin-left: ${pxToRem(65)};
         max-width: 90%;
       }
 
@@ -95,10 +93,10 @@ const Protect = () => (
   <ProtectWrapper>
     <div className="kiss-Manifesto__protect__img">
       <FlashIllustration />
-      <img alt="" src="/kitten-3.jpg" />
+      <img alt="" src="/manifeste-2.png" />
     </div>
     <div className="kiss-Manifesto__protect__container">
-      <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
+      <Title modifier="primary" noMargin>
         La protection de l’environnement et de la biodiversité
       </Title>
       <Text size="huge" className="k-u-padding-right-decuple@sm-up">
@@ -106,7 +104,7 @@ const Protect = () => (
       </Text>
       <Text size="huge">
         Les alertes lancées par les rapports du GIEC nous le répètent, les COP se
-        succèdent et pourtant nous y voilà : les émissions de gaz à effet de serre
+        succèdent et pourtant nous y voilà&nbsp;: les émissions de gaz à effet de serre
         continuent d’augmenter et la température avec, la calotte glaciaire fond aussi
         vite que le nombre d’espèces sur la planète.
       </Text>

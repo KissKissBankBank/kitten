@@ -10,30 +10,42 @@ import styled from 'styled-components'
 
 const DiscriminationWrapper = styled.section`
   margin-top: ${pxToRem(100)};
-  max-width: ${pxToRem(1440)};
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 
   .kiss-Manifesto__discrimination__circle {
+    z-index: -1;
+    position: absolute;
     background: var(--color-danger-300);
-    max-width: ${pxToRem(871)};
-    height: ${pxToRem(827)};
+    width: 60vw;
+    height: 100%;
     border-top-right-radius: 100%;
-    flex-shrink: 0;
     margin: 0 0 auto;
+    padding-bottom: ${pxToRem(150)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
+      padding-bottom: ${pxToRem(200)};
+      width: 70vw;
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      border-top-right-radius: 0;
+    }
+  }
+
+  .kiss-Manifesto__discrimination__container {
+    max-width: ${pxToRem(1440)};
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  .kiss-Manifesto__discrimination__container {
+  .kiss-Manifesto__discrimination__content {
     display: flex;
     flex-direction: column;
     gap: ${pxToRem(20)};
     align-items: flex-start;
-    margin-top: ${pxToRem(200)};
+    margin-top: ${pxToRem(150)};
     margin-left: ${pxToRem(70)};
+    margin-right: ${pxToRem(50)};
 
     .k-Title {
       margin-bottom: ${pxToRem(20)};
@@ -41,31 +53,47 @@ const DiscriminationWrapper = styled.section`
 
     .k-Button {
       margin-top: ${pxToRem(20)};
+      margin-bottom: ${pxToRem(80)};
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       margin-top: ${pxToRem(150)};
       margin-left: ${pxToRem(20)};
-      margin-right: ${pxToRem(100)};
+      margin-right: ${pxToRem(120)};
     }
   }
 
   .kiss-Manifesto__discrimination__img {
-    right: 0;
-    position: absolute;
-    z-index: -1;
     display: block;
     object-fit: cover;
-    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
+  
+    img {
+      margin-top: ${pxToRem(55)};
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      object-position: center;
+
+      @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
+        margin-top: ${pxToRem(120)};
+      }
+
+      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+       display: none;
+      }
+    }
   }
 `
 
 const Discrimination = () => (
   <DiscriminationWrapper>
-    <div className="kiss-Manifesto__discrimination__circle">
-      <div className="kiss-Manifesto__discrimination__container">
+    <div className="kiss-Manifesto__discrimination__circle" />
+    <div className="kiss-Manifesto__discrimination__container">
+      <div className="kiss-Manifesto__discrimination__content">
         <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
-          La lutte contre<br /> les<br /> discriminations
+          La lutte<br /> contre les<br /> discriminations
         </Title>
         <Text size="huge">
           Pour un monde juste où personne n’est victime <br />de discrimination.
@@ -82,9 +110,9 @@ const Discrimination = () => (
         </Text>
         <Button modifier="helium">Créer mon projet</Button>
       </div>
-    </div>
-    <div className="kiss-Manifesto__discrimination__img">
-      <img alt="" src="/kitten-3.jpg" />
+      <div className="kiss-Manifesto__discrimination__img">
+        <img alt="" src="/manifeste-1.png" />
+      </div>
     </div>
   </DiscriminationWrapper>
 )
