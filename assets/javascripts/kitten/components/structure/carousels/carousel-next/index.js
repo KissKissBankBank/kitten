@@ -9,7 +9,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Button } from '../../../action/button'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 
-import { CarouselInner } from './components/carousel-inner'
+import { CarouselInner, FAKE_PAGES } from './components/carousel-inner'
 import {
   OUTLINE_PLUS_OFFSET,
   StyledCarouselContainer,
@@ -77,7 +77,12 @@ export const numberOfInnerPages = (totalCount, itemsPerPage) => {
     return (a * b) / gcd(a, b)
   }
 
-  const result = 4 + lcm(totalCount, itemsPerPage) / itemsPerPage
+  // Compute the optimal number of pages to have a consistent cycle given the
+  // total number of items and the page size.
+  //
+  // Add twice the amount of fake pages required for visual continuity,
+  // we need them on the left side and the right side of the carousel.
+  const result = 2 * FAKES_PAGES + lcm(totalCount, itemsPerPage) / itemsPerPage
 
   return result
 }
@@ -112,7 +117,10 @@ export const CarouselNext = ({
   itemsPerPage: itemsPerPageProp,
   navigationPropsGetter,
 }) => {
-  const [currentPageIndex, setCurrentPageIndex] = useState(cycle ? 2 : 0)
+  const [currentPageIndex, setCurrentPageIndex] = useState(
+    cycle ? FAKE_PAGES : 0,
+  )
+
   const [itemsPerPage, setItemsPerPageCount] = useState(
     itemsPerPageProp > 0 ? itemsPerPageProp : 3,
   )

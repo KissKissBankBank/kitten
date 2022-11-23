@@ -70,6 +70,8 @@ const getDataForPage = (data, indexPage, itemsPerPage) => {
 const getElementPadding = element =>
   parseInt(domElementHelper.getComputedStyle(element, 'padding-inline'))
 
+export const FAKE_PAGES = 2
+
 export const CarouselInner = ({
   currentPageIndex,
   exportVisibilityProps,
@@ -138,12 +140,12 @@ export const CarouselInner = ({
     if (indexClosest !== currentPageIndex) {
       if (!cycle) return goToPage(indexClosest)
 
-      if (indexClosest < 2) {
-        const newIndex = innerPagesCount - 2 - 1
+      if (indexClosest < FAKE_PAGES) {
+        const newIndex = innerPagesCount - FAKE_PAGES - 1
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
       }
-      if (indexClosest >= innerPagesCount - 2) {
-        const newIndex = 2
+      if (indexClosest >= innerPagesCount - FAKE_PAGES) {
+        const newIndex = FAKE_PAGES
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
       }
 
@@ -173,12 +175,12 @@ export const CarouselInner = ({
   const handleAfterScroll = () => {
     if (!cycle) return
 
-    if (currentPageIndex < 2) {
-      const newIndex = innerPagesCount - 2 - 1
+    if (currentPageIndex < FAKE_PAGES) {
+      const newIndex = innerPagesCount - FAKE_PAGES - 1
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
-    if (currentPageIndex >= innerPagesCount - 2) {
-      const newIndex = 2
+    if (currentPageIndex >= innerPagesCount - FAKE_PAGES) {
+      const newIndex = FAKE_PAGES
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
   }
@@ -200,7 +202,7 @@ export const CarouselInner = ({
   }
 
   const getDataIndex = index => {
-    return index - 2
+    return index - FAKE_PAGES
   }
 
   return (
