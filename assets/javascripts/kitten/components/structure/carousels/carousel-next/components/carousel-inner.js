@@ -80,7 +80,6 @@ export const CarouselInner = ({
   pagesClassName,
   viewedPages,
   pageClickText,
-  pagesCount,
   innerPagesCount,
   cycle,
 }) => {
@@ -217,7 +216,6 @@ export const CarouselInner = ({
         .fill(0)
         .map((el, index) => {
           const dataIndex = cycle ? getDataIndex(index) : index
-
           const isActivePage = currentPageIndex === index
           const hasPageBeenViewed = viewedPages.has(index)
 
@@ -238,7 +236,6 @@ export const CarouselInner = ({
                 hasPageBeenViewed={hasPageBeenViewed}
                 isActivePage={isActivePage}
                 pageItems={getDataForPage(items, dataIndex, itemsPerPage)}
-                key={`${index} / ${dataIndex}`}
                 itemsPerPage={itemsPerPage}
                 goToCurrentPage={() => goToPage(index)}
               />
