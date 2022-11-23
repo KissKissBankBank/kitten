@@ -140,11 +140,11 @@ export const CarouselInner = ({
       if (!cycle) return goToPage(indexClosest)
 
       if (indexClosest < 2) {
-        const newIndex = pagesCount + 4 - indexClosest
+        const newIndex = innerPagesCount - 2 - 1
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
       }
-      if (indexClosest >= pagesCount + 4) {
-        const newIndex = indexClosest - pagesCount - 2
+      if (indexClosest >= innerPagesCount - 2) {
+        const newIndex = 2
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
       }
 
@@ -175,11 +175,11 @@ export const CarouselInner = ({
     if (!cycle) return
 
     if (currentPageIndex < 2) {
-      const newIndex = pagesCount + 4 - currentPageIndex
+      const newIndex = innerPagesCount - 2 - 1
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
-    if (currentPageIndex >= pagesCount + 4) {
-      const newIndex = currentPageIndex - pagesCount - 2
+    if (currentPageIndex >= innerPagesCount - 2) {
+      const newIndex = 2
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto')
     }
   }
