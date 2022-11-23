@@ -4,10 +4,13 @@ import Engagements from './components/engagements'
 import Discrimination from './components/discrimination'
 import Protect from './components/protect'
 import Defense from './components/defense'
+import UnderHero from './components/under-hero'
+
 
 const Manifesto = () => (
   <>
     <Hero />
+    <UnderHero />
     <Engagements />
     <Discrimination />
     <Protect />

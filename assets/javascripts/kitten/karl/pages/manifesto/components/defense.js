@@ -12,14 +12,14 @@ import styled from 'styled-components'
 const DefenseWrapper = styled.section`
   margin-top: ${pxToRem(160)};
 
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    margin-top: ${pxToRem(80)};
+  }
+
   svg {
     right: 0;
     position: absolute;
     margin-right: ${pxToRem(220)};
-
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      display: none;
-    }
   }
 
   .kiss-Manifesto__defense__img {
@@ -31,10 +31,6 @@ const DefenseWrapper = styled.section`
   
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
       padding-top: ${pxToRem(200)};
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      padding-top: 0;
     }
 
     img {
@@ -57,7 +53,7 @@ const DefenseWrapper = styled.section`
 
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
       flex-direction: column;
-      padding: ${pxToRem(100)} ${pxToRem(70)} ${pxToRem(150)} ${pxToRem(70)};
+      padding: ${pxToRem(70)} ${pxToRem(40)} ${pxToRem(100)} ${pxToRem(40)};
     }
   }
 

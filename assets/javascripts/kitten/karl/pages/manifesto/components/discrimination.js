@@ -16,21 +16,25 @@ const DiscriminationWrapper = styled.section`
   margin-right: auto;
   display: flex;
 
+  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    background-color: var(--color-danger-300);
+  }
+
   .kiss-Manifesto__discrimination__circle {
     margin-top: ${pxToRem(10)};
     position: absolute;
-    background: var(--color-danger-300);
+    background-color: var(--color-danger-300);
     margin-left: ${pxToRem(-430)};
-    width: 70vw;
+    width: 90vw;
     height: 100%;
     border-top-right-radius: 100%;
 
     @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
-      width: 70vw;
+      width: 100vw;
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      border-top-right-radius: 0;
+     display: none;
     }
   }
 
@@ -41,7 +45,7 @@ const DiscriminationWrapper = styled.section`
     flex-direction: column;
     gap: ${pxToRem(20)};
     align-items: flex-start;
-    margin-top: ${pxToRem(150)};
+    margin-top: ${pxToRem(270)};
     margin-left: ${pxToRem(70)};
     margin-right: ${pxToRem(50)};
 
@@ -54,10 +58,15 @@ const DiscriminationWrapper = styled.section`
       margin-bottom: ${pxToRem(80)};
     }
 
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      margin-top: ${pxToRem(50)};
+      margin-left: ${pxToRem(100)};
+      margin-right: ${pxToRem(100)};
+    }
+
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      margin-top: ${pxToRem(150)};
-      margin-left: ${pxToRem(20)};
-      margin-right: ${pxToRem(120)};
+      margin-left: ${pxToRem(40)};
+      margin-right: ${pxToRem(40)};
     }
   }
 
@@ -71,9 +80,10 @@ const DiscriminationWrapper = styled.section`
       display: block;
       object-fit: cover;
       width: 100%;
+      margin-top: ${pxToRem(215)};
 
       @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
-        margin-top: ${pxToRem(120)};
+        margin-top: ${pxToRem(275)};
       }
 
       @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
