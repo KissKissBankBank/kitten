@@ -11,7 +11,6 @@ import styled from 'styled-components'
 
 const HeroWrapper = styled.section`
   padding-top: ${pxToRem(100)};
-  box-sizing: border-box;
   max-width: ${pxToRem(1440)};
   box-sizing: border-box;
   margin-left: auto;

@@ -10,19 +10,22 @@ import styled from 'styled-components'
 
 const DiscriminationWrapper = styled.section`
   margin-top: ${pxToRem(100)};
+  max-width: ${pxToRem(1440)};
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 
   .kiss-Manifesto__discrimination__circle {
-    z-index: -1;
+    margin-top: ${pxToRem(10)};
     position: absolute;
     background: var(--color-danger-300);
-    width: 60vw;
+    margin-left: ${pxToRem(-430)};
+    width: 70vw;
     height: 100%;
     border-top-right-radius: 100%;
-    margin: 0 0 auto;
-    padding-bottom: ${pxToRem(150)};
 
     @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
-      padding-bottom: ${pxToRem(200)};
       width: 70vw;
     }
 
@@ -32,14 +35,9 @@ const DiscriminationWrapper = styled.section`
   }
 
   .kiss-Manifesto__discrimination__container {
-    max-width: ${pxToRem(1440)};
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .kiss-Manifesto__discrimination__content {
+    z-index: 1;
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     gap: ${pxToRem(20)};
     align-items: flex-start;
@@ -70,11 +68,9 @@ const DiscriminationWrapper = styled.section`
     max-height: 100%;
   
     img {
-      margin-top: ${pxToRem(55)};
       display: block;
       object-fit: cover;
       width: 100%;
-      object-position: center;
 
       @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
         margin-top: ${pxToRem(120)};
@@ -91,28 +87,26 @@ const Discrimination = () => (
   <DiscriminationWrapper>
     <div className="kiss-Manifesto__discrimination__circle" />
     <div className="kiss-Manifesto__discrimination__container">
-      <div className="kiss-Manifesto__discrimination__content">
-        <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
-          La lutte<br /> contre les<br /> discriminations
-        </Title>
-        <Text size="huge">
-          Pour un monde juste où personne n’est victime <br />de discrimination.
-        </Text>
-        <Text size="huge">
-          KissKissBankBank s’engage fermement contre toutes les formes de<br />
-          discriminations&nbsp;:&nbsp;racisme, sexisme, homophobie, lesbophobie,<br />
-          transphobie, grossophobie, validisme, âgisme, classisme.
-        </Text>
-        <Text size="huge">
-          C’est pour nous une évidence qu’il faut pourtant souligner&nbsp;:&nbsp;un<br />
-          projet qui irait à l’encontre de ces valeurs, de quelque manière que ce soit,<br />
-          n’a pas sa place sur notre plateforme.
-        </Text>
-        <Button modifier="helium">Créer mon projet</Button>
-      </div>
-      <div className="kiss-Manifesto__discrimination__img">
-        <img alt="" src="/manifeste-1.png" />
-      </div>
+      <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
+        La lutte<br /> contre les<br /> discriminations
+      </Title>
+      <Text size="huge">
+        Pour un monde juste où personne n’est victime <br />de discrimination.
+      </Text>
+      <Text size="huge">
+        KissKissBankBank s’engage fermement contre toutes les formes de<br />
+        discriminations&nbsp;:&nbsp;racisme, sexisme, homophobie, lesbophobie,<br />
+        transphobie, grossophobie, validisme, âgisme, classisme.
+      </Text>
+      <Text size="huge">
+        C’est pour nous une évidence qu’il faut pourtant souligner&nbsp;:&nbsp;un<br />
+        projet qui irait à l’encontre de ces valeurs, de quelque manière que ce soit,<br />
+        n’a pas sa place sur notre plateforme.
+      </Text>
+      <Button modifier="helium">Créer mon projet</Button>
+    </div>
+    <div className="kiss-Manifesto__discrimination__img">
+      <img alt="" src="/manifeste-1.png" />
     </div>
   </DiscriminationWrapper>
 )
