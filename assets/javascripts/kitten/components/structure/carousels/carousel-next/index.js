@@ -82,7 +82,7 @@ export const numberOfInnerPages = (totalCount, itemsPerPage) => {
   //
   // Add twice the amount of fake pages required for visual continuity,
   // we need them on the left side and the right side of the carousel.
-  const result = 2 * FAKES_PAGES + lcm(totalCount, itemsPerPage) / itemsPerPage
+  const result = 2 * FAKE_PAGES + lcm(totalCount, itemsPerPage) / itemsPerPage
 
   return result
 }
