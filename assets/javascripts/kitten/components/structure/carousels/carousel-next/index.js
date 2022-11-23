@@ -79,8 +79,6 @@ export const numberOfInnerPages = (totalCount, itemsPerPage) => {
 
   const result = 4 + lcm(totalCount, itemsPerPage) / itemsPerPage
 
-  console.log(`Cycle over ${result} pages`)
-
   return result
 }
 
@@ -139,15 +137,9 @@ export const CarouselNext = ({
   }, [])
 
   useEffect(() => {
-    console.log(`IPP ${itemsPerPage}`)
-
     const newInnerPagesCount = cycle
       ? numberOfInnerPages(React.Children.count(children), itemsPerPage)
       : pagesCount
-
-    // const newInnerPagesCount = cycle
-    //   ? pagesCount + 4
-    //   : pagesCount
 
     setInnerPagesCount(newInnerPagesCount)
 

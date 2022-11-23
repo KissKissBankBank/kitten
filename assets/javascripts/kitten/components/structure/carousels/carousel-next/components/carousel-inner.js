@@ -204,9 +204,6 @@ export const CarouselInner = ({
     return index - 2
   }
 
-  console.log(innerPagesCount)
-  console.log(cycle)
-
   return (
     <div
       ref={carouselInner}
