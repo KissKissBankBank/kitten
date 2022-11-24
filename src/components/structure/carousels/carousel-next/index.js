@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.getNumberOfPagesForColumnsAndDataLength = exports.getItemsPerPageCountForWidth = exports.checkPageLoop = exports.checkPage = exports.CarouselNext = void 0;
+exports.numberOfInnerPages = exports.getNumberOfPagesForColumnsAndDataLength = exports.getItemsPerPageCountForWidth = exports.checkPageLoop = exports.checkPage = exports.CarouselNext = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -66,6 +66,32 @@ const checkPageLoop = (pagesCount, newPage) => {
 
 exports.checkPageLoop = checkPageLoop;
 
+const numberOfInnerPages = (totalCount, itemsPerPage) => {
+  // Greatest Common Divisor.
+  function gcd(a, b) {
+    if (b === 0) {
+      return a;
+    }
+
+    return gcd(b, a % b);
+  } // Least Common Multiple.
+
+
+  function lcm(a, b) {
+    return a * b / gcd(a, b);
+  } // Compute the optimal number of pages to have a consistent cycle given the
+  // total number of items and the page size.
+  //
+  // Add twice the amount of fake pages required for visual continuity,
+  // we need them on the left side and the right side of the carousel.
+
+
+  const result = 2 * _carouselInner.FAKE_PAGES + lcm(totalCount, itemsPerPage) / itemsPerPage;
+  return result;
+};
+
+exports.numberOfInnerPages = numberOfInnerPages;
+
 const getGapAccordingToViewport = (baseGap, viewportIsXSOrLess, viewportIsMOrLess) => {
   if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_THIN / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
   if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2 - _styles.OUTLINE_PLUS_OFFSET * 2;
@@ -91,7 +117,7 @@ const CarouselNext = _ref => {
     itemsPerPage: itemsPerPageProp,
     navigationPropsGetter
   } = _ref;
-  const [currentPageIndex, setCurrentPageIndex] = (0, _react.useState)(cycle ? 2 : 0);
+  const [currentPageIndex, setCurrentPageIndex] = (0, _react.useState)(cycle ? _carouselInner.FAKE_PAGES : 0);
   const [itemsPerPage, setItemsPerPageCount] = (0, _react.useState)(itemsPerPageProp > 0 ? itemsPerPageProp : 3);
   const [pagesCount, setPagesCount] = (0, _react.useState)(getNumberOfPagesForColumnsAndDataLength(_react.default.Children.count(children), itemsPerPageProp > 0 ? itemsPerPageProp : 3));
   const [innerPagesCount, setInnerPagesCount] = (0, _react.useState)(0);
@@ -104,11 +130,11 @@ const CarouselNext = _ref => {
     });
   }, []);
   (0, _react.useEffect)(() => {
-    const newInnerPagesCount = cycle ? pagesCount + 4 : pagesCount;
+    const newInnerPagesCount = cycle ? numberOfInnerPages(_react.default.Children.count(children), itemsPerPage) : pagesCount;
     setInnerPagesCount(newInnerPagesCount);
     const newCurrentPageIndex = currentPageIndex > newInnerPagesCount - 1 ? newInnerPagesCount - 1 : currentPageIndex;
     setCurrentPageIndex(newCurrentPageIndex);
-  }, [pagesCount]);
+  }, [pagesCount, itemsPerPage]);
 
   const onResizeInner = innerWidth => {
     const itemGap = getGapAccordingToViewport(baseGap, viewportIsXSOrLess, viewportIsMOrLess);

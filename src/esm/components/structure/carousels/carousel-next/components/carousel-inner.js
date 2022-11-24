@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useRef, useState } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
+import { map, range } from 'lodash';
 import { domElementHelper } from '../../../../../helpers/dom/element-helper';
 import { usePrevious } from '../../../../../helpers/hooks/use-previous';
 import { CarouselPage } from './carousel-page';
@@ -58,11 +59,14 @@ const getClosest = (counts, goal) => counts.reduce((prev, curr) => Math.abs(curr
 
 const getDataForPage = (data, indexPage, itemsPerPage) => {
   const startIndex = indexPage * itemsPerPage;
-  return data.slice(startIndex, startIndex + itemsPerPage);
+  const indices = range(startIndex, startIndex + itemsPerPage);
+  const total = data.length;
+  return map(indices, index => data[(index % total + total) % total]);
 };
 
 const getElementPadding = element => parseInt(domElementHelper.getComputedStyle(element, 'padding-inline'));
 
+export const FAKE_PAGES = 2;
 export const CarouselInner = _ref => {
   let {
     currentPageIndex,
@@ -74,7 +78,6 @@ export const CarouselInner = _ref => {
     pagesClassName,
     viewedPages,
     pageClickText,
-    pagesCount,
     innerPagesCount,
     cycle
   } = _ref;
@@ -125,13 +128,13 @@ export const CarouselInner = _ref => {
     if (indexClosest !== currentPageIndex) {
       if (!cycle) return goToPage(indexClosest);
 
-      if (indexClosest < 2) {
-        const newIndex = pagesCount + 2 - indexClosest;
+      if (indexClosest < FAKE_PAGES) {
+        const newIndex = innerPagesCount - FAKE_PAGES - 1;
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
       }
 
-      if (indexClosest >= pagesCount + 2) {
-        const newIndex = indexClosest - pagesCount;
+      if (indexClosest >= innerPagesCount - FAKE_PAGES) {
+        const newIndex = FAKE_PAGES;
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
       }
 
@@ -168,13 +171,13 @@ export const CarouselInner = _ref => {
   const handleAfterScroll = () => {
     if (!cycle) return;
 
-    if (currentPageIndex < 2) {
-      const newIndex = pagesCount + 2 - currentPageIndex;
+    if (currentPageIndex < FAKE_PAGES) {
+      const newIndex = innerPagesCount - FAKE_PAGES - 1;
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
     }
 
-    if (currentPageIndex >= pagesCount + 2) {
-      const newIndex = currentPageIndex - pagesCount;
+    if (currentPageIndex >= innerPagesCount - FAKE_PAGES) {
+      const newIndex = FAKE_PAGES;
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
     }
   };
@@ -195,9 +198,7 @@ export const CarouselInner = _ref => {
   };
 
   const getDataIndex = index => {
-    if (index <= 1) return pagesCount - 2 + index;
-    if (index >= pagesCount + 2) return index - pagesCount - 2;
-    return index - 2;
+    return index - FAKE_PAGES;
   };
 
   return /*#__PURE__*/React.createElement("div", {
