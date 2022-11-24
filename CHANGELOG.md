@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `CarouselNext`: Fix cycle
+## [13.1.1] - 2022-11-24
+
+Fix: 
+- `CarouselNext`: Fix cycle
 
 ## [13.1.0] - 2022-11-23
 
