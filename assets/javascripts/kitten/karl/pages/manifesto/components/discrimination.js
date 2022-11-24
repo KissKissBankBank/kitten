@@ -18,20 +18,21 @@ const DiscriminationWrapper = styled.section`
 
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
     background-color: var(--color-danger-300);
+    text-align: center;
+  }
+
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    padding-top: 0;
+    flex-direction: column;
+    margin-right: 0;
   }
 
   .kiss-Manifesto__discrimination__circle {
     margin-top: ${pxToRem(10)};
-    position: absolute;
     background-color: var(--color-danger-300);
     margin-left: ${pxToRem(-430)};
-    width: 90vw;
-    height: 100%;
     border-top-right-radius: 100%;
-
-    @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
-      width: 100vw;
-    }
+    width: 100vw;
 
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
      display: none;
@@ -39,15 +40,13 @@ const DiscriminationWrapper = styled.section`
   }
 
   .kiss-Manifesto__discrimination__container {
-    z-index: 1;
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
     gap: ${pxToRem(20)};
     align-items: flex-start;
     margin-top: ${pxToRem(270)};
-    margin-left: ${pxToRem(70)};
-    margin-right: ${pxToRem(50)};
+    margin-left: ${pxToRem(470)};
+    margin-right: ${pxToRem(100)};
 
     .k-Title {
       margin-bottom: ${pxToRem(20)};
@@ -61,7 +60,7 @@ const DiscriminationWrapper = styled.section`
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
       margin-top: ${pxToRem(50)};
       margin-left: ${pxToRem(100)};
-      margin-right: ${pxToRem(100)};
+      align-items: center;
     }
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
@@ -73,47 +72,46 @@ const DiscriminationWrapper = styled.section`
   .kiss-Manifesto__discrimination__img {
     display: block;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
   
     img {
       display: block;
       object-fit: cover;
-      width: 100%;
-      margin-top: ${pxToRem(215)};
+      // width: 100%;
 
-      @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
-        margin-top: ${pxToRem(275)};
-      }
-
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-       display: none;
-      }
+      // @media (max-width: ${pxToRem(ScreenConfig.L.max)}) {
+      //   margin-top: ${pxToRem(275)};
+      // }
     }
   }
 `
 
 const Discrimination = () => (
   <DiscriminationWrapper>
-    <div className="kiss-Manifesto__discrimination__circle" />
-    <div className="kiss-Manifesto__discrimination__container">
-      <Title modifier="primary" noMargin style={{ lineHeight: "75%" }}>
-        La lutte<br /> contre les<br /> discriminations
-      </Title>
-      <Text size="huge">
-        Pour un monde juste où personne n’est victime <br />de discrimination.
-      </Text>
-      <Text size="huge">
-        KissKissBankBank s’engage fermement contre toutes les formes de<br />
-        discriminations&nbsp;:&nbsp;racisme, sexisme, homophobie, lesbophobie,<br />
-        transphobie, grossophobie, validisme, âgisme, classisme.
-      </Text>
-      <Text size="huge">
-        C’est pour nous une évidence qu’il faut pourtant souligner&nbsp;:&nbsp;un<br />
-        projet qui irait à l’encontre de ces valeurs, de quelque manière que ce soit,<br />
-        n’a pas sa place sur notre plateforme.
-      </Text>
-      <Button modifier="helium">Créer mon projet</Button>
+    <div className="kiss-Manifesto__discrimination__circle">
+      <div className="kiss-Manifesto__discrimination__container">
+        <Title modifier="primary" noMargin>
+          La lutte<br className="k-u-hidden@m-down" /> 
+          contre les<br className="k-u-hidden@m-down" /> 
+          discriminations
+        </Title>
+        <Text size="huge">
+          Pour un monde juste où personne n’est victime <br className="k-u-hidden@m-down" />
+          de discrimination.
+        </Text>
+        <Text size="huge">
+          KissKissBankBank s’engage fermement contre toutes les formes de<br className="k-u-hidden@m-down" />
+          discriminations&nbsp;:&nbsp;racisme, sexisme, homophobie, lesbophobie,<br className="k-u-hidden@m-down" />
+          transphobie, grossophobie, validisme, âgisme, classisme.
+        </Text>
+        <Text size="huge">
+          C’est pour nous une évidence qu’il faut pourtant souligner&nbsp;:&nbsp;un<br className="k-u-hidden@m-down" />
+          projet qui irait à l’encontre de ces valeurs, de quelque manière que ce soit,<br className="k-u-hidden@m-down" />
+          n’a pas sa place sur notre plateforme.
+        </Text>
+        <Button modifier="helium">Créer mon projet</Button>
+      </div>
     </div>
     <div className="kiss-Manifesto__discrimination__img">
       <img alt="" src="/manifeste-1.png" />

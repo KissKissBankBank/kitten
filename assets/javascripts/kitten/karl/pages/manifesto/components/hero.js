@@ -74,6 +74,8 @@ const HeroWrapper = styled.section`
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       box-sizing: border-box;
       padding: ${pxToRem(20)};
+      text-align: center;
+      align-items: center;
     }
 
     .k-Title {
@@ -125,7 +127,7 @@ const Hero = () => {
           <Title noMargin modifier="secondary">
             La force du collectif au service du bien commun
           </Title>
-          <Text size="huge" className="k-u-padding-right-decuple@sm-up">
+          <Text size="huge">
             KissKissBankBank croit profondément en l’intelligence
             collective et aux possibilités qu’elle offre.
           </Text>

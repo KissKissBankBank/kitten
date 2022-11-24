@@ -57,10 +57,6 @@ const ProtectWrapper = styled.section`
         margin-left: ${pxToRem(65)};
         max-width: 90%;
       }
-
-      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-        display: none;
-      }
     }
   }
 
@@ -77,6 +73,8 @@ const ProtectWrapper = styled.section`
       padding-right: ${pxToRem(20)};
       padding-left: ${pxToRem(20)};
       width: 100vw;
+      text-align: center;
+      align-items: center;
     }
   }
 

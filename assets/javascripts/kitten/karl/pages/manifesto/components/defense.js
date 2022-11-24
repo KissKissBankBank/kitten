@@ -54,14 +54,19 @@ const DefenseWrapper = styled.section`
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
       flex-direction: column;
       padding: ${pxToRem(70)} ${pxToRem(40)} ${pxToRem(100)} ${pxToRem(40)};
+      text-align: center;
     }
   }
 
-  .kiss-Manifesto__defense__block {
+  .kiss-Manifesto__defense__content {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: ${pxToRem(20)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      align-items: center;
+    }
 
     .k-Button {
       margin-top: ${pxToRem(20)};
@@ -80,7 +85,7 @@ const Defense = () => (
         <Title cssColor="var(--color-grey-000)" tag="h2" modifier="primary" noMargin>
           Pour un monde juste où chacun·e peut libérer sa créativité.
         </Title>
-        <div className="kiss-Manifesto__defense__block">
+        <div className="kiss-Manifesto__defense__content">
           <Text cssColor="var(--color-grey-000)" size="huge" className="k-u-padding-right-decuple@sm-up">
             Il n’y a pas de monde juste sur une planète qui meurt.
           </Text>
