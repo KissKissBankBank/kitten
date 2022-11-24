@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Tokens`: Update new primary colors.
+- Feature: `Tokens`: Update `_tokens.json` file.
 
 ## [13.1.0] - 2022-11-23
 
