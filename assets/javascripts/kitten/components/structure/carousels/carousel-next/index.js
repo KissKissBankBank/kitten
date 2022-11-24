@@ -180,6 +180,10 @@ export const CarouselNext = ({
 
     setItemsPerPageCount(Math.max(newItemsPerPage, 1))
     setPagesCount(pagesCount)
+
+    if (newItemsPerPage != itemsPerPage) {
+      setCurrentPageIndex(cycle ? FAKE_PAGES : 0)
+    }
   }
 
   const goNextPage = () => {
