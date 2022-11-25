@@ -17,20 +17,12 @@ const DiscriminationWrapper = styled.section`
   display: grid;
   grid-template-columns: 2fr 1fr;
 
-
   @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: none;
-  }
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
     grid-template-rows: none;
     grid-template-columns: none;
-  }
-
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-    padding-top: 0;
     flex-direction: column;
     margin-right: 0;
+    margin-top: 0;
   }
 
   .kiss-Manifesto__discrimination__circle {
@@ -45,12 +37,7 @@ const DiscriminationWrapper = styled.section`
       margin-left: ${pxToRem(-350)};
     }
     
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      width: 178%;
-      margin-left: ${pxToRem(-30)};
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)})  {
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)})  {
       border-top-right-radius: 0;
       width: 100%;
       margin-top: 0;
@@ -68,6 +55,14 @@ const DiscriminationWrapper = styled.section`
     margin-top: ${pxToRem(270)};
     margin-left: ${pxToRem(470)};
 
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      margin-top: ${pxToRem(40)};
+      margin-left: ${pxToRem(40)};
+      margin-right: ${pxToRem(40)};
+      align-items: center;
+      text-align: center;
+    }
+    
     .k-Title {
       margin-bottom: ${pxToRem(20)};
     }
@@ -76,28 +71,13 @@ const DiscriminationWrapper = styled.section`
       margin-right: ${pxToRem(200)};
 
       @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-        margin-right: ${pxToRem(216)};
-      } 
-      
-      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
         margin-right: 0;
-      }
+      } 
     }
 
     .k-Button {
       margin-top: ${pxToRem(20)};
       margin-bottom: ${pxToRem(80)};
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      margin-top: ${pxToRem(100)};
-      margin-left: ${pxToRem(100)};
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      margin-top: ${pxToRem(40)};
-      margin-left: ${pxToRem(40)};
-      margin-right: ${pxToRem(40)};
     }
   }
 
@@ -108,36 +88,32 @@ const DiscriminationWrapper = styled.section`
     height: 100%;
     z-index: -1;
     margin-top: ${pxToRem(100)};
+    
+    img {
+      display: block;
+      object-fit: cover;
+    }
   
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      margin-top: ${pxToRem(-200)};
-    }
-
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-      margin-top: ${pxToRem(-200)};
+      margin-top: 0;
 
       img {
         width: 100%;
       }
-    }
-
-    img {
-      display: block;
-      object-fit: cover;
     }
   }
 `
 
 const Discrimination = () => (
   <DiscriminationWrapper>
-    <div className="kiss-Manifesto__discrimination__img k-u-hidden@m-up">
+    <div className="kiss-Manifesto__discrimination__img k-u-hidden@l-up">
       <img alt="" src="/manifeste-1.png" />
     </div>
     <div className="kiss-Manifesto__discrimination__circle">
       <div className="kiss-Manifesto__discrimination__container">
         <Title modifier="primary" noMargin>
           La lutte <br className="k-u-hidden@m-down" />contre les
-          <br className="k-u-hidden@s-down" /> discriminations
+          <br className="k-u-hidden@m-down" /> discriminations
         </Title>
         <Text size="huge">
           Pour un monde juste où personne n’est victime 
@@ -156,7 +132,7 @@ const Discrimination = () => (
         <Button modifier="helium">Créer mon projet</Button>
       </div>
     </div>
-    <div className="kiss-Manifesto__discrimination__img k-u-hidden@s-down">
+    <div className="kiss-Manifesto__discrimination__img k-u-hidden@m-down">
       <img alt="" src="/manifeste-1.png" />
     </div>
   </DiscriminationWrapper>
