@@ -3,13 +3,15 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.CarouselInner = void 0;
+exports.FAKE_PAGES = exports.CarouselInner = void 0;
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _resizeObserverPolyfill = _interopRequireDefault(require("resize-observer-polyfill"));
+
+var _lodash = require("lodash");
 
 var _elementHelper = require("../../../../../helpers/dom/element-helper");
 
@@ -74,10 +76,15 @@ const getClosest = (counts, goal) => counts.reduce((prev, curr) => Math.abs(curr
 
 const getDataForPage = (data, indexPage, itemsPerPage) => {
   const startIndex = indexPage * itemsPerPage;
-  return data.slice(startIndex, startIndex + itemsPerPage);
+  const indices = (0, _lodash.range)(startIndex, startIndex + itemsPerPage);
+  const total = data.length;
+  return (0, _lodash.map)(indices, index => data[(index % total + total) % total]);
 };
 
 const getElementPadding = element => parseInt(_elementHelper.domElementHelper.getComputedStyle(element, 'padding-inline'));
+
+const FAKE_PAGES = 2;
+exports.FAKE_PAGES = FAKE_PAGES;
 
 const CarouselInner = _ref => {
   let {
@@ -90,7 +97,6 @@ const CarouselInner = _ref => {
     pagesClassName,
     viewedPages,
     pageClickText,
-    pagesCount,
     innerPagesCount,
     cycle
   } = _ref;
@@ -141,13 +147,13 @@ const CarouselInner = _ref => {
     if (indexClosest !== currentPageIndex) {
       if (!cycle) return goToPage(indexClosest);
 
-      if (indexClosest < 2) {
-        const newIndex = pagesCount + 2 - indexClosest;
+      if (indexClosest < FAKE_PAGES) {
+        const newIndex = innerPagesCount - FAKE_PAGES - 1;
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
       }
 
-      if (indexClosest >= pagesCount + 2) {
-        const newIndex = indexClosest - pagesCount;
+      if (indexClosest >= innerPagesCount - FAKE_PAGES) {
+        const newIndex = FAKE_PAGES;
         return scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
       }
 
@@ -184,13 +190,13 @@ const CarouselInner = _ref => {
   const handleAfterScroll = () => {
     if (!cycle) return;
 
-    if (currentPageIndex < 2) {
-      const newIndex = pagesCount + 2 - currentPageIndex;
+    if (currentPageIndex < FAKE_PAGES) {
+      const newIndex = innerPagesCount - FAKE_PAGES - 1;
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
     }
 
-    if (currentPageIndex >= pagesCount + 2) {
-      const newIndex = currentPageIndex - pagesCount;
+    if (currentPageIndex >= innerPagesCount - FAKE_PAGES) {
+      const newIndex = FAKE_PAGES;
       scrollToPage(newIndex, () => goToPage(newIndex), 'auto');
     }
   };
@@ -211,9 +217,7 @@ const CarouselInner = _ref => {
   };
 
   const getDataIndex = index => {
-    if (index <= 1) return pagesCount - 2 + index;
-    if (index >= pagesCount + 2) return index - pagesCount - 2;
-    return index - 2;
+    return index - FAKE_PAGES;
   };
 
   return /*#__PURE__*/_react.default.createElement("div", {
