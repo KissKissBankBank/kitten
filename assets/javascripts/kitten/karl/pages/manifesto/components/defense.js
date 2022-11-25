@@ -33,6 +33,10 @@ const DefenseWrapper = styled.section`
       padding-top: ${pxToRem(200)};
     }
 
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      padding-top: ${pxToRem(250)};
+    }
+
     img {
       width: 100%;
       display: block;

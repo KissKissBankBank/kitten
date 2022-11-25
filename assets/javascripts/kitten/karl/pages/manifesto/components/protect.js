@@ -50,12 +50,17 @@ const ProtectWrapper = styled.section`
     svg {
       position: absolute;
       margin-top: ${pxToRem(450)};
-      margin-left: ${pxToRem(150)};
+      margin-left: ${pxToRem(125)};
 
       @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-        margin-top: ${pxToRem(400)};
-        margin-left: ${pxToRem(65)};
-        max-width: 90%;
+        margin-top: ${pxToRem(270)};
+        margin-left: ${pxToRem(20)};
+        width: 25%;
+      }
+
+      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+        width: 100%;
+        margin-top: ${pxToRem(350)};
       }
     }
   }
@@ -75,6 +80,7 @@ const ProtectWrapper = styled.section`
       width: 100vw;
       text-align: center;
       align-items: center;
+      margin-top: ${pxToRem(230)};
     }
   }
 
