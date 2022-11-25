@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot with active state props 1`] = `
 <div
-  className="sc-jSMfEi kQbetC k-DocumentManager__display k-DocumentManager__display--valid"
+  className="sc-jSMfEi dzqEdC k-DocumentManager__display k-DocumentManager__display--valid"
   id="DocumentManager"
 >
   <div
@@ -103,7 +103,7 @@ exports[`<DocumentManager /> should match snapshot with active state props 1`] =
 
 exports[`<DocumentManager /> should match snapshot with error state props and content 1`] = `
 <div
-  className="sc-jSMfEi kQbetC k-DocumentManager__display k-DocumentManager__display--error"
+  className="sc-jSMfEi dzqEdC k-DocumentManager__display k-DocumentManager__display--error"
   id="DocumentManager"
 >
   <div
@@ -222,7 +222,7 @@ exports[`<DocumentManager /> should match snapshot with error state props and co
 
 exports[`<DocumentManager /> should match snapshot with ready state props 1`] = `
 <div
-  className="sc-hKMtZM dnBROY k-DocumentManager__uploader"
+  className="sc-hKMtZM iwjHhM k-DocumentManager__uploader"
 >
   <input
     disabled={false}

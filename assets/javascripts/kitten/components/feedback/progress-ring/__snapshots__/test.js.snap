@@ -22,7 +22,7 @@ exports[`<ProgressRing /> by default matches with snapshot 1`] = `
     cy={25}
     fill="transparent"
     r={20}
-    stroke="var(--color-primary-500, #1F93FF)"
+    stroke="var(--color-primary-500, #1f93ff)"
     strokeWidth={5}
   />
 </svg>

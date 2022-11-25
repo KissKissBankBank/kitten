@@ -39,7 +39,7 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
   role="progressbar"
   style={
     Object {
-      "--progress-color": "var(--color-primary-500, #1F93FF)",
+      "--progress-color": "var(--color-primary-500, #1f93ff)",
       "--progress-value": "50%",
     }
   }
@@ -94,7 +94,7 @@ exports[`<Progress /> simple Progress  matches with snapshot 1`] = `
   role="progressbar"
   style={
     Object {
-      "--progress-color": "var(--color-primary-500, #1F93FF)",
+      "--progress-color": "var(--color-primary-500, #1f93ff)",
       "--progress-value": "0%",
     }
   }

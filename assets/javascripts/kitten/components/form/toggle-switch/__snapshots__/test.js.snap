@@ -2,7 +2,7 @@
 
 exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledColor\` props matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch"
   style={
     Object {
       "--toggleSwitch-activeColor": "#000",
@@ -39,11 +39,11 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
 
 exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch k-ToggleSwitch--disabled"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch k-ToggleSwitch--disabled"
   style={
     Object {
-      "--toggleSwitch-activeColor": "var(--color-primary-900, #004C92)",
-      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1F93FF)",
+      "--toggleSwitch-activeColor": "var(--color-primary-900, #004c92)",
+      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1f93ff)",
       "--toggleSwitch-defaultColor": "var(--color-grey-300, #eee)",
       "--toggleSwitch-disabledColor": "var(--color-grey-400, #d8d8d8)",
     }
@@ -76,11 +76,11 @@ exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch"
   style={
     Object {
-      "--toggleSwitch-activeColor": "var(--color-primary-900, #004C92)",
-      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1F93FF)",
+      "--toggleSwitch-activeColor": "var(--color-primary-900, #004c92)",
+      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1f93ff)",
       "--toggleSwitch-defaultColor": "var(--color-grey-300, #eee)",
       "--toggleSwitch-disabledColor": "var(--color-grey-400, #d8d8d8)",
     }
@@ -113,11 +113,11 @@ exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch"
   style={
     Object {
-      "--toggleSwitch-activeColor": "var(--color-primary-900, #004C92)",
-      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1F93FF)",
+      "--toggleSwitch-activeColor": "var(--color-primary-900, #004c92)",
+      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1f93ff)",
       "--toggleSwitch-defaultColor": "var(--color-grey-300, #eee)",
       "--toggleSwitch-disabledColor": "var(--color-grey-400, #d8d8d8)",
     }
@@ -143,11 +143,11 @@ exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`]
 
 exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch"
   style={
     Object {
-      "--toggleSwitch-activeColor": "var(--color-primary-900, #004C92)",
-      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1F93FF)",
+      "--toggleSwitch-activeColor": "var(--color-primary-900, #004c92)",
+      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1f93ff)",
       "--toggleSwitch-defaultColor": "var(--color-grey-300, #eee)",
       "--toggleSwitch-disabledColor": "var(--color-grey-400, #d8d8d8)",
     }
@@ -180,11 +180,11 @@ exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch k-ToggleSwitch--disabled k-ToggleSwitch--locked"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch k-ToggleSwitch--disabled k-ToggleSwitch--locked"
   style={
     Object {
-      "--toggleSwitch-activeColor": "var(--color-primary-900, #004C92)",
-      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1F93FF)",
+      "--toggleSwitch-activeColor": "var(--color-primary-900, #004c92)",
+      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1f93ff)",
       "--toggleSwitch-defaultColor": "var(--color-grey-300, #eee)",
       "--toggleSwitch-disabledColor": "var(--color-grey-400, #d8d8d8)",
     }
@@ -229,11 +229,11 @@ exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bczRLJ blRpXR k-ToggleSwitch"
+  className="sc-bczRLJ cKLwpJ k-ToggleSwitch"
   style={
     Object {
-      "--toggleSwitch-activeColor": "var(--color-primary-900, #004C92)",
-      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1F93FF)",
+      "--toggleSwitch-activeColor": "var(--color-primary-900, #004c92)",
+      "--toggleSwitch-checkedColor": "var(--color-primary-500, #1f93ff)",
       "--toggleSwitch-defaultColor": "var(--color-grey-300, #eee)",
       "--toggleSwitch-disabledColor": "var(--color-grey-400, #d8d8d8)",
     }

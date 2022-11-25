@@ -16,7 +16,7 @@ exports[`<PeopleCard /> With peopleAvatar prop matches with snapshot 1`] = `
           Object {
             "--Avatar-height": undefined,
             "--Avatar-width": undefined,
-            "--k-Avatar-background-color": "var(--color-primary-900, #004C92)",
+            "--k-Avatar-background-color": "var(--color-primary-900, #004c92)",
             "--k-Avatar-color": "var(--color-grey-000, #fff)",
           }
         }
@@ -62,7 +62,7 @@ exports[`<PeopleCard /> default matches with snapshot 1`] = `
           Object {
             "--Avatar-height": undefined,
             "--Avatar-width": undefined,
-            "--k-Avatar-background-color": "var(--color-primary-900, #004C92)",
+            "--k-Avatar-background-color": "var(--color-primary-900, #004c92)",
             "--k-Avatar-color": "var(--color-grey-000, #fff)",
           }
         }
