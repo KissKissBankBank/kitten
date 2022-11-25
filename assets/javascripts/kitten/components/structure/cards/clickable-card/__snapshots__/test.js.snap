@@ -2,7 +2,7 @@
 
 exports[`<ClickableCard /> by default matches with snapshot 1`] = `
 <button
-  className="sc-bczRLJ hebiMc k-ClickableCard k-u-reset-button"
+  className="sc-bczRLJ gdTyjA k-ClickableCard k-u-reset-button"
   disabled={false}
 >
   <span

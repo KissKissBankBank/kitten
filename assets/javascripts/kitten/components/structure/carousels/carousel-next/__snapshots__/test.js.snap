@@ -133,7 +133,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -239,7 +239,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -345,7 +345,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -459,7 +459,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -565,7 +565,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -671,7 +671,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -816,7 +816,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -922,7 +922,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1028,7 +1028,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1142,7 +1142,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1248,7 +1248,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1354,7 +1354,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1616,7 +1616,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #1F93FF)",
+                        "--progress-color": "var(--color-primary-500, #1f93ff)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1722,7 +1722,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #1F93FF)",
+                        "--progress-color": "var(--color-primary-500, #1f93ff)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1828,7 +1828,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #1F93FF)",
+                        "--progress-color": "var(--color-primary-500, #1f93ff)",
                         "--progress-value": "55%",
                       }
                     }
@@ -1942,7 +1942,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #1F93FF)",
+                        "--progress-color": "var(--color-primary-500, #1f93ff)",
                         "--progress-value": "55%",
                       }
                     }
@@ -2048,7 +2048,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #1F93FF)",
+                        "--progress-color": "var(--color-primary-500, #1f93ff)",
                         "--progress-value": "55%",
                       }
                     }
@@ -2154,7 +2154,7 @@ Array [
                     role="progressbar"
                     style={
                       Object {
-                        "--progress-color": "var(--color-primary-500, #1F93FF)",
+                        "--progress-color": "var(--color-primary-500, #1f93ff)",
                         "--progress-value": "55%",
                       }
                     }

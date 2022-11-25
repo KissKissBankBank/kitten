@@ -96,7 +96,7 @@ exports[`<TagButton /> with \`active\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#E5F3FF);
+  background-color: var(--color-primary-100,#e5f3ff);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }
@@ -211,7 +211,7 @@ exports[`<TagButton /> with \`rounded\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#E5F3FF);
+  background-color: var(--color-primary-100,#e5f3ff);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }
@@ -326,7 +326,7 @@ exports[`<TagButton /> with \`size="huge"\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#E5F3FF);
+  background-color: var(--color-primary-100,#e5f3ff);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }
@@ -441,7 +441,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 .c0.k-TagButton--active {
-  background-color: var(--color-primary-100,#E5F3FF);
+  background-color: var(--color-primary-100,#e5f3ff);
   border: var(--border-active-primary);
   color: var(--color-grey-900,#222);
 }

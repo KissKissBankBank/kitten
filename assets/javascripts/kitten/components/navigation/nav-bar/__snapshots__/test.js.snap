@@ -201,7 +201,7 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   width: auto;
   margin: 0;
   padding: 0 1.25rem;
-  background: var(--color-primary-100,#f3fbff);
+  background: var(--color-primary-100,#e5f3ff);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -272,15 +272,15 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:hover {
-  color: var(--color-primary-500,#1F93FF);
+  color: var(--color-primary-500,#1f93ff);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: var(--color-primary-500,#1F93FF);
-  color: var(--color-primary-500,#1F93FF);
+  border-color: var(--color-primary-500,#1f93ff);
+  color: var(--color-primary-500,#1f93ff);
   border-width: 0.25rem;
 }
 
@@ -389,7 +389,7 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   width: auto;
   margin: 0;
   padding: 0 1.25rem;
-  background: var(--color-primary-100,#f3fbff);
+  background: var(--color-primary-100,#e5f3ff);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -460,15 +460,15 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
 }
 
 .c0 .k-NavBar__link:hover {
-  color: var(--color-primary-500,#1F93FF);
+  color: var(--color-primary-500,#1f93ff);
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c0 .k-NavBar__link:focus,
 .c0 .k-NavBar__link[aria-current='page'] {
-  border-color: var(--color-primary-500,#1F93FF);
-  color: var(--color-primary-500,#1F93FF);
+  border-color: var(--color-primary-500,#1f93ff);
+  color: var(--color-primary-500,#1f93ff);
   border-width: 0.25rem;
 }
 

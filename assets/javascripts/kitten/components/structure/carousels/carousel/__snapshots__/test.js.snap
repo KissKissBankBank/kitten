@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf ebdRLs k-Carousel"
+  className="sc-dkzDqf dtGTrc k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -111,7 +111,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -217,7 +217,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -323,7 +323,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -437,7 +437,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -543,7 +543,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -649,7 +649,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -765,7 +765,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf ebdRLs k-Carousel"
+  className="sc-dkzDqf dtGTrc k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -874,7 +874,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -980,7 +980,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1086,7 +1086,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1200,7 +1200,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1306,7 +1306,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1412,7 +1412,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1466,7 +1466,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf kuTDXd k-Carousel k-LegacyCarousel"
+  className="sc-dkzDqf dHXwWN k-Carousel k-LegacyCarousel"
 >
   <div
     className="sc-gsnTZi jshwWW k-Grid"
@@ -1527,7 +1527,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf kuTDXd k-Carousel k-LegacyCarousel"
+  className="sc-dkzDqf dHXwWN k-Carousel k-LegacyCarousel"
 >
   <div
     className="sc-gsnTZi jshwWW k-Grid"
@@ -1588,7 +1588,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf kuTDXd k-Carousel k-LegacyCarousel"
+  className="sc-dkzDqf dHXwWN k-Carousel k-LegacyCarousel"
 >
   <div
     className="sc-gsnTZi jshwWW k-Grid"
@@ -1649,7 +1649,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf ebdRLs k-Carousel"
+  className="sc-dkzDqf dtGTrc k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -1758,7 +1758,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1864,7 +1864,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -1970,7 +1970,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2084,7 +2084,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2190,7 +2190,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2296,7 +2296,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2412,7 +2412,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf ebdRLs k-Carousel"
+  className="sc-dkzDqf dtGTrc k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -2521,7 +2521,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2627,7 +2627,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2733,7 +2733,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2839,7 +2839,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -2945,7 +2945,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3059,7 +3059,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3187,7 +3187,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf ebdRLs k-Carousel"
+  className="sc-dkzDqf dtGTrc k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -3296,7 +3296,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3402,7 +3402,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3508,7 +3508,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3622,7 +3622,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3728,7 +3728,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3834,7 +3834,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -3950,7 +3950,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
 <div
-  className="sc-dkzDqf ebdRLs k-Carousel"
+  className="sc-dkzDqf dtGTrc k-Carousel"
   style={
     Object {
       "--carousel-baseItemMarginBetween": "2.5rem",
@@ -4059,7 +4059,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -4165,7 +4165,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -4271,7 +4271,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -4385,7 +4385,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -4491,7 +4491,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
@@ -4597,7 +4597,7 @@ exports[`<Carousel /> with small buttons matches with snapshot 1`] = `
                   role="progressbar"
                   style={
                     Object {
-                      "--progress-color": "var(--color-primary-500, #1F93FF)",
+                      "--progress-color": "var(--color-primary-500, #1f93ff)",
                       "--progress-value": "55%",
                     }
                   }
