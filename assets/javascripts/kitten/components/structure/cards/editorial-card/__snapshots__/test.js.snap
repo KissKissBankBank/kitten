@@ -2,7 +2,7 @@
 
 exports[`<EditorialCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi krlibY k-EditorialCard k-EditorialCard--info k-EditorialCard--hasArrow k-EditorialCard--isRecto"
+  className="sc-gsnTZi fTPI k-EditorialCard k-EditorialCard--info k-EditorialCard--hasArrow k-EditorialCard--isRecto"
   style={
     Object {
       "--editorialCard-customColor": null,
@@ -16,7 +16,7 @@ exports[`<EditorialCard /> by default matches with snapshot 1`] = `
       className="k-EditorialCard__recto"
     >
       <h1
-        className="sc-bczRLJ FHsaG k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
+        className="sc-bczRLJ kYInhe k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
         style={
           Object {
             "--Title-css-color": "inherit",
@@ -64,7 +64,7 @@ exports[`<EditorialCard /> by default matches with snapshot 1`] = `
 
 exports[`<EditorialCard /> with custom linkProps, color and verso matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi krlibY k-EditorialCard k-EditorialCard--custom k-EditorialCard--hasArrow k-EditorialCard--hasVerso k-EditorialCard--isRecto"
+  className="sc-gsnTZi fTPI k-EditorialCard k-EditorialCard--custom k-EditorialCard--hasArrow k-EditorialCard--hasVerso k-EditorialCard--isRecto"
   style={
     Object {
       "--editorialCard-customColor": "var(--color-grey-900)",
@@ -78,7 +78,7 @@ exports[`<EditorialCard /> with custom linkProps, color and verso matches with s
       className="k-EditorialCard__recto"
     >
       <h1
-        className="sc-bczRLJ FHsaG k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
+        className="sc-bczRLJ kYInhe k-Title k-EditorialCard__title k-Title--tertiary k-Title--noMargin"
         style={
           Object {
             "--Title-css-color": "inherit",
@@ -131,6 +131,7 @@ exports[`<EditorialCard /> with custom linkProps, color and verso matches with s
       </div>
       <span
         className="k-u-weight-700 k-EditorialCard__actionText k-u-m-t-8"
+        style={Object {}}
       >
         Aller plus loin
       </span>

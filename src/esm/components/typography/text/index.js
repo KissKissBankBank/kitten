@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated';
 export const allowedColorStrings = ['font1', 'font2', 'primary1', 'background1', 'error', 'valid', 'grey-000', 'grey-100', 'grey-200', 'grey-300', 'grey-400', 'grey-500', 'grey-600', 'grey-700', 'grey-800', 'grey-900', 'primary-100', 'primary-300', 'primary-500', 'primary-700', 'primary-900', 'danger-100', 'danger-300', 'danger-500', 'danger-700', 'danger-900', 'success-100', 'success-300', 'success-500', 'success-700', 'success-900', 'warning-100', 'warning-300', 'warning-500', 'warning-700', 'warning-900'];
 export const Text = _ref => {
@@ -19,6 +19,7 @@ export const Text = _ref => {
     transform,
     weight,
     style,
+    family,
     letterSpacing,
     ...others
   } = _ref;
@@ -90,16 +91,19 @@ export const Text = _ref => {
     // Transform.
     'k-u-transform-uppercase': transform == 'uppercase',
     // Weight.
-    'k-u-weight-400': weight == '400',
-    'k-u-weight-500': weight == '500',
-    'k-u-weight-700': weight == '700'
+    'k-u-weight-400': weight == '400' && family !== 'antiqueolive',
+    'k-u-weight-500': weight == '500' && family !== 'antiqueolive',
+    'k-u-weight-700': weight == '700' && family !== 'antiqueolive',
+    // Font family
+    'k-u-font-family-antiqueolive': family === 'antiqueolive'
   }, className);
   return /*#__PURE__*/React.createElement(Tag, _extends({}, others, {
     className: textClassName,
-    style: cssColor ? {
-      color: cssColor,
+    style: { ...(cssColor && {
+        color: cssColor
+      }),
       ...style
-    } : style
+    }
   }));
 };
 Text.propTypes = {
@@ -109,6 +113,7 @@ Text.propTypes = {
   setting: PropTypes.oneOf(['tnum']),
   lineHeight: PropTypes.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
   size: PropTypes.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['400', '500', '700']),
@@ -121,6 +126,7 @@ Text.defaultProps = {
   decoration: null,
   lineHeight: null,
   setting: null,
+  family: null,
   size: null,
   fontStyle: null,
   tag: 'span',

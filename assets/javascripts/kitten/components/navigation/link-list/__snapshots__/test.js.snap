@@ -29,7 +29,7 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
 }
 
 .c0 .k-LinkList__link {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -40,22 +40,22 @@ exports[`<LinkList /> default matches with snapshot 1`] = `
 
 .c0 .k-LinkList__link:active,
 .c0 .k-LinkList__link.k-LinkList__link--isActive {
-  color: var(--color-primary-900,#0496cc);
+  color: var(--color-primary-900,#004c92);
 }
 
 .c0 .k-LinkList__link:hover {
-  color: var(--color-primary-500,#19b4fa);
+  color: var(--color-primary-500,#1f93ff);
 }
 
 .c0 .k-LinkList__item--regular,
 .c0 .k-LinkList__link--regular {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 
 .c0 .k-LinkList__item--light,
 .c0 .k-LinkList__link--light {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 

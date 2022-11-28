@@ -7,21 +7,21 @@ exports.TitleWithStroke = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _react = _interopRequireDefault(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
-
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _titleModifierStyles = require("../common/title-modifier-styles");
+var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _strokeModifierStyles = require("../../typography/horizontal-stroke/common/stroke-modifier-styles");
+
+var _titleModifierStyles = require("../common/title-modifier-styles");
 
 const StyledTitleWithStroke = _styledComponents.default.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
@@ -37,6 +37,7 @@ const TitleWithStroke = _ref => {
     className,
     children,
     cssColor,
+    family,
     noMargin,
     ...other
   } = _ref;
@@ -50,7 +51,9 @@ const TitleWithStroke = _ref => {
       '--TitleWithStroke-css-color': cssColor
     }
   }, other), /*#__PURE__*/_react.default.createElement(TitleComponent, {
-    className: (0, _classnames.default)('k-TitleWithStroke__title', "k-TitleWithStroke__title--" + modifier)
+    className: (0, _classnames.default)('k-TitleWithStroke__title', "k-TitleWithStroke__title--" + modifier, {
+      'k-u-font-family-antiqueolive': family === 'antiqueolive'
+    })
   }, children), /*#__PURE__*/_react.default.createElement("span", {
     className: (0, _classnames.default)('k-TitleWithStroke__stroke', "k-TitleWithStroke__stroke--" + modifier)
   }));
@@ -59,6 +62,7 @@ const TitleWithStroke = _ref => {
 exports.TitleWithStroke = TitleWithStroke;
 TitleWithStroke.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   align: 'left',
   italic: false,
@@ -67,6 +71,7 @@ TitleWithStroke.defaultProps = {
 };
 TitleWithStroke.propTypes = {
   tag: _propTypes.default.string,
+  family: _propTypes.default.oneOf(['none', 'antiqueolive']),
   modifier: _propTypes.default.oneOf(_titleModifierStyles.titleModifiersNames),
   align: _propTypes.default.oneOf(['left', 'center', 'right']),
   italic: _propTypes.default.bool,

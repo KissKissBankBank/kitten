@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Text } from '../../../typography/text'
-import { ClockCircleIcon } from '../../../graphics/icons/clock-circle-icon'
 import { CheckedCircleIcon } from '../../../graphics/icons/checked-circle-icon'
+import { ClockCircleIcon } from '../../../graphics/icons/clock-circle-icon'
 import { CrossCircleIcon } from '../../../graphics/icons/cross-circle-icon'
+import { Text } from '../../../typography/text'
 
 const StyledDocumentsStatusBox = styled.div`
   border-radius: var(--border-radius-m);
@@ -15,7 +15,6 @@ const StyledDocumentsStatusBox = styled.div`
   width: 100%;
   position: relative;
   box-sizing: border-box;
-  position: relative;
 
   display: flex;
   flex-direction: row;
@@ -35,7 +34,7 @@ const StyledDocumentsStatusBox = styled.div`
   }
 
   &.k-DocumentsStatusBox--accepted {
-    background-color: ${COLORS.valid1};
+    background-color: var(--color-success-100);
   }
 
   &.k-DocumentsStatusBox--denied {

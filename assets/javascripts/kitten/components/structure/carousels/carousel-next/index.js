@@ -9,7 +9,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Button } from '../../../action/button'
 import { ArrowIcon } from '../../../graphics/icons/arrow-icon'
 
-import { CarouselInner } from './components/carousel-inner'
+import { CarouselInner, FAKE_PAGES } from './components/carousel-inner'
 import {
   OUTLINE_PLUS_OFFSET,
   StyledCarouselContainer,
@@ -62,6 +62,31 @@ export const checkPageLoop = (pagesCount, newPage) => {
   return newPage
 }
 
+export const numberOfInnerPages = (totalCount, itemsPerPage) => {
+  // Greatest Common Divisor.
+  function gcd(a, b) {
+    if (b === 0) {
+      return a
+    }
+
+    return gcd(b, a % b)
+  }
+
+  // Least Common Multiple.
+  function lcm(a, b) {
+    return (a * b) / gcd(a, b)
+  }
+
+  // Compute the optimal number of pages to have a consistent cycle given the
+  // total number of items and the page size.
+  //
+  // Add twice the amount of fake pages required for visual continuity,
+  // we need them on the left side and the right side of the carousel.
+  const result = 2 * FAKE_PAGES + lcm(totalCount, itemsPerPage) / itemsPerPage
+
+  return result
+}
+
 const getGapAccordingToViewport = (
   baseGap,
   viewportIsXSOrLess,
@@ -92,16 +117,21 @@ export const CarouselNext = ({
   itemsPerPage: itemsPerPageProp,
   navigationPropsGetter,
 }) => {
-  const [currentPageIndex, setCurrentPageIndex] = useState(cycle ? 2 : 0)
+  const [currentPageIndex, setCurrentPageIndex] = useState(
+    cycle ? FAKE_PAGES : 0,
+  )
+
   const [itemsPerPage, setItemsPerPageCount] = useState(
     itemsPerPageProp > 0 ? itemsPerPageProp : 3,
   )
+
   const [pagesCount, setPagesCount] = useState(
     getNumberOfPagesForColumnsAndDataLength(
       React.Children.count(children),
       itemsPerPageProp > 0 ? itemsPerPageProp : 3,
     ),
   )
+
   const [innerPagesCount, setInnerPagesCount] = useState(0)
   const [viewedPages, setViewedPages] = useState(new Set())
 
@@ -115,7 +145,10 @@ export const CarouselNext = ({
   }, [])
 
   useEffect(() => {
-    const newInnerPagesCount = cycle ? pagesCount + 4 : pagesCount
+    const newInnerPagesCount = cycle
+      ? numberOfInnerPages(React.Children.count(children), itemsPerPage)
+      : pagesCount
+
     setInnerPagesCount(newInnerPagesCount)
 
     const newCurrentPageIndex =
@@ -124,7 +157,7 @@ export const CarouselNext = ({
         : currentPageIndex
 
     setCurrentPageIndex(newCurrentPageIndex)
-  }, [pagesCount])
+  }, [pagesCount, itemsPerPage])
 
   const onResizeInner = innerWidth => {
     const itemGap = getGapAccordingToViewport(

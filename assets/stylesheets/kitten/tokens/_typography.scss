@@ -1,25 +1,26 @@
 /**
  * Do not edit directly
- * Generated on Fri, 08 Jul 2022 14:43:20 GMT
+ * Generated on Thu, 24 Nov 2022 11:33:53 GMT
  */
 
 :root {
-  --font-family-maax: Maax, sans-serif;
-  --font-headline-small: var(--font-weight-700) var(--font-size-12) var(--font-family-maax);
-  --font-title-x-large: var(--font-weight-700) var(--font-size-11)/var(--line-height-8) var(--font-family-maax);
-  --font-title-large: var(--font-weight-700) var(--font-size-10)/var(--line-height-7) var(--font-family-maax);
-  --font-title-medium: var(--font-weight-700) var(--font-size-9)/var(--line-height-6) var(--font-family-maax);
-  --font-title-small: var(--font-weight-700) var(--font-size-8)/var(--line-height-5) var(--font-family-maax);
-  --font-subtitle-large: var(--font-weight-700) var(--font-size-7)/var(--line-height-5) var(--font-family-maax);
-  --font-subtitle-medium: var(--font-weight-700) var(--font-size-6)/var(--line-height-4) var(--font-family-maax);
-  --font-body-x-large: var(--font-weight-400) var(--font-size-6)/var(--line-height-5) var(--font-family-maax);
-  --font-body-large: var(--font-weight-400) var(--font-size-4)/var(--line-height-3) var(--font-family-maax);
-  --font-body-medium: var(--font-weight-400) var(--font-size-3)/var(--line-height-2) var(--font-family-maax);
-  --font-body-small: var(--font-weight-400) var(--font-size-2)/var(--line-height-1) var(--font-family-maax);
-  --font-label-large: var(--font-weight-500) var(--font-size-4)/var(--line-height-4) var(--font-family-maax);
-  --font-label-medium: var(--font-weight-500) var(--font-size-3)/var(--line-height-3) var(--font-family-maax);
-  --font-label-small: var(--font-weight-500) var(--font-size-2)/var(--line-height-2) var(--font-family-maax);
-  --font-info-small: var(--font-weight-400) var(--font-size-2)/var(--line-height-1) var(--font-family-maax);
+  --font-family-generalsans: General Sans, sans-serif;
+  --font-family-antiqueolive: Antique Olive, sans-serif;
+  --font-headline-small: var(--font-weight-700) var(--font-size-12) var(--font-family-generalsans);
+  --font-title-x-large: var(--font-weight-700) var(--font-size-11)/var(--line-height-8) var(--font-family-generalsans);
+  --font-title-large: var(--font-weight-700) var(--font-size-10)/var(--line-height-7) var(--font-family-generalsans);
+  --font-title-medium: var(--font-weight-700) var(--font-size-9)/var(--line-height-6) var(--font-family-generalsans);
+  --font-title-small: var(--font-weight-700) var(--font-size-8)/var(--line-height-5) var(--font-family-generalsans);
+  --font-subtitle-large: var(--font-weight-700) var(--font-size-7)/var(--line-height-5) var(--font-family-generalsans);
+  --font-subtitle-medium: var(--font-weight-700) var(--font-size-6)/var(--line-height-4) var(--font-family-generalsans);
+  --font-body-x-large: var(--font-weight-400) var(--font-size-6)/var(--line-height-5) var(--font-family-generalsans);
+  --font-body-large: var(--font-weight-400) var(--font-size-4)/var(--line-height-3) var(--font-family-generalsans);
+  --font-body-medium: var(--font-weight-400) var(--font-size-3)/var(--line-height-2) var(--font-family-generalsans);
+  --font-body-small: var(--font-weight-400) var(--font-size-2)/var(--line-height-1) var(--font-family-generalsans);
+  --font-label-large: var(--font-weight-500) var(--font-size-4)/var(--line-height-4) var(--font-family-generalsans);
+  --font-label-medium: var(--font-weight-500) var(--font-size-3)/var(--line-height-3) var(--font-family-generalsans);
+  --font-label-small: var(--font-weight-500) var(--font-size-2)/var(--line-height-2) var(--font-family-generalsans);
+  --font-info-small: var(--font-weight-400) var(--font-size-2)/var(--line-height-1) var(--font-family-generalsans);
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-700: 700;

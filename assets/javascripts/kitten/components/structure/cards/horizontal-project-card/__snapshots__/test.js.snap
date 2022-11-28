@@ -15,11 +15,13 @@ exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
   </div>
   <h3
     className="k-u-size-small k-u-weight-500 k-HorizontalProjectCard__title"
+    style={Object {}}
   >
     Custom title
   </h3>
   <p
     className="k-u-size-micro k-u-weight-400 k-HorizontalProjectCard__description"
+    style={Object {}}
   >
     Custom description
   </p>
@@ -58,6 +60,7 @@ exports[`<HorizontalProjectCard /> by default matches with snapshot 1`] = `
     </div>
     <span
       className="k-u-size-micro k-u-weight-400 k-HorizontalProjectCard__progress__value"
+      style={Object {}}
     >
       50
        %
@@ -81,11 +84,13 @@ exports[`<HorizontalProjectCard /> with noProgress and no info prop matches with
   </div>
   <h3
     className="k-u-size-small k-u-weight-500 k-HorizontalProjectCard__title"
+    style={Object {}}
   >
     Custom title
   </h3>
   <p
     className="k-u-size-micro k-u-weight-400 k-HorizontalProjectCard__description"
+    style={Object {}}
   >
     Custom description
   </p>
@@ -107,11 +112,13 @@ exports[`<HorizontalProjectCard /> with noProgress prop matches with snapshot 1`
   </div>
   <h3
     className="k-u-size-small k-u-weight-500 k-HorizontalProjectCard__title"
+    style={Object {}}
   >
     Custom title
   </h3>
   <p
     className="k-u-size-micro k-u-weight-400 k-HorizontalProjectCard__description"
+    style={Object {}}
   >
     Custom description
   </p>

@@ -28,6 +28,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
       </div>
       <div
         className="k-u-weight-400 k-Discussion__message__content"
+        style={Object {}}
       >
         Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis.
       </div>
@@ -47,6 +48,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
       </div>
       <div
         className="k-u-weight-400 k-Discussion__message__content"
+        style={Object {}}
       >
         Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.
       </div>
@@ -66,6 +68,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
       </div>
       <div
         className="k-u-weight-400 k-Discussion__message__content"
+        style={Object {}}
       >
         Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper.
       </div>
@@ -76,7 +79,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--small k-TextInput__isTextarea"
+      className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--small k-TextInput__isTextarea"
     >
       <textarea
         aria-label="Texte à envoyer"
@@ -99,7 +102,7 @@ exports[`<Discussion /> compare with snapshot matches with snapshot 1`] = `
     </div>
     <button
       aria-label="Envoyer"
-      className="sc-bczRLJ kPeJEk k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
+      className="sc-bczRLJ hWeYwK k-Button k-Discussion__form__button k-Button--small k-Button--beryllium k-Button--fit-icon"
       onClick={[Function]}
       style={
         Object {

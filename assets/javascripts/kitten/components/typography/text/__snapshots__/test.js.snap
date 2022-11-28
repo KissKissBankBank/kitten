@@ -3,12 +3,21 @@
 exports[`<Text /> by default matches with snapshot 1`] = `
 <span
   className="k-u-weight-400"
+  style={Object {}}
+/>
+`;
+
+exports[`<Text /> with antiqueolive font family matches with snapshot 1`] = `
+<span
+  className="k-u-font-family-antiqueolive"
+  style={Object {}}
 />
 `;
 
 exports[`<Text /> with as prop matches with snapshot 1`] = `
 <div
   className="k-u-weight-400"
+  style={Object {}}
 />
 `;
 
@@ -27,5 +36,6 @@ exports[`<Text /> with cssColor and custom style matches with snapshot 1`] = `
 exports[`<Text /> with tag prop matches with snapshot 1`] = `
 <div
   className="k-u-weight-400"
+  style={Object {}}
 />
 `;

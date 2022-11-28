@@ -1,6 +1,6 @@
-import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import React from 'react'
 import { checkDeprecatedWeights } from '../../../helpers/utils/deprecated'
 
 export const allowedColorStrings = [
@@ -56,6 +56,7 @@ export const Text = ({
   transform,
   weight,
   style,
+  family,
   letterSpacing,
   ...others
 }) => {
@@ -137,9 +138,12 @@ export const Text = ({
       'k-u-transform-uppercase': transform == 'uppercase',
 
       // Weight.
-      'k-u-weight-400': weight == '400',
-      'k-u-weight-500': weight == '500',
-      'k-u-weight-700': weight == '700',
+      'k-u-weight-400': weight == '400' && family !== 'antiqueolive',
+      'k-u-weight-500': weight == '500' && family !== 'antiqueolive',
+      'k-u-weight-700': weight == '700' && family !== 'antiqueolive',
+
+      // Font family
+      'k-u-font-family-antiqueolive': family === 'antiqueolive',
     },
     className,
   )
@@ -148,7 +152,10 @@ export const Text = ({
     <Tag
       {...others}
       className={textClassName}
-      style={cssColor ? { color: cssColor, ...style } : style}
+      style={{
+        ...(cssColor && { color: cssColor }),
+        ...style,
+      }}
     />
   )
 }
@@ -168,6 +175,7 @@ Text.propTypes = {
     'micro',
     'nano',
   ]),
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['400', '500', '700']),
@@ -181,6 +189,7 @@ Text.defaultProps = {
   decoration: null,
   lineHeight: null,
   setting: null,
+  family: null,
   size: null,
   fontStyle: null,
   tag: 'span',

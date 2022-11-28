@@ -3,12 +3,12 @@
 exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-bczRLJ LLsju k-BurgerIcon"
+  className="sc-bczRLJ jPaEyS k-BurgerIcon"
   height="10"
   role="img"
   style={
     Object {
-      "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+      "--burgerIcon-hoverColor": "var(--color-primary-500, #1f93ff)",
       "--burgerIcon-mainColor": "var(--color-grey-900, #222)",
     }
   }
@@ -40,12 +40,12 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-bczRLJ LLsju k-BurgerIcon"
+  className="sc-bczRLJ jPaEyS k-BurgerIcon"
   height="10"
   role="img"
   style={
     Object {
-      "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+      "--burgerIcon-hoverColor": "var(--color-primary-500, #1f93ff)",
       "--burgerIcon-mainColor": "var(--color-grey-900, #222)",
     }
   }
@@ -77,12 +77,12 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
 exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-bczRLJ LLsju k-BurgerIcon k-BurgerIcon--isActive"
+  className="sc-bczRLJ jPaEyS k-BurgerIcon k-BurgerIcon--isActive"
   height="10"
   role="img"
   style={
     Object {
-      "--burgerIcon-hoverColor": "var(--color-primary-500, #19b4fa)",
+      "--burgerIcon-hoverColor": "var(--color-primary-500, #1f93ff)",
       "--burgerIcon-mainColor": "var(--color-grey-900, #222)",
     }
   }

@@ -13,8 +13,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _screenConfig = require("../../../../constants/screen-config");
-
 var _status = require("./status");
 
 const StyledItem = _styledComponents.default.li.withConfig({

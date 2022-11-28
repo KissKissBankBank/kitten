@@ -49,7 +49,7 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
   align-items: center;
   line-height: 1.25rem;
   color: var(--color-grey-900);
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 1rem;
   -webkit-text-decoration: none;
@@ -63,14 +63,14 @@ exports[`<FloatingMenu /> with default props matches with snapshot 1`] = `
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item[aria-current] {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   border-color: var(--color-primary-500);
 }
 
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:hover,
 .c0 .k-FloatingMenu__list .k-FloatingMenu__item:active {
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
 }
 

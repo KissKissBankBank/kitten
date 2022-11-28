@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import {
-  titleModifierStyles,
   titleModifiersNames,
+  titleModifierStyles,
 } from '../common/title-modifier-styles'
 
 const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
-
-  ${TYPOGRAPHY.fontStyles['700']};
+  font-family: var(--font-family-generalsans);
+  letterspacing: '.01rem';
+  font-weight: 700;
   color: var(--Title-css-color);
 
   &.k-Title--noMargin {
@@ -34,6 +34,7 @@ export const Title = ({
   italic,
   cssColor,
   className,
+  family,
   ...other
 }) => {
   return (
@@ -43,6 +44,7 @@ export const Title = ({
       className={classNames('k-Title', className, `k-Title--${modifier}`, {
         'k-Title--noMargin': noMargin,
         'k-Title--italic': italic,
+        'k-u-font-family-antiqueolive': family === 'antiqueolive',
       })}
       style={{ '--Title-css-color': cssColor }}
       {...other}
@@ -52,6 +54,7 @@ export const Title = ({
 
 Title.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -60,6 +63,7 @@ Title.defaultProps = {
 
 Title.propTypes = {
   tag: PropTypes.string,
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   noMargin: PropTypes.bool,
   cssColor: PropTypes.string,

@@ -2,7 +2,7 @@
 
 exports[`<Row /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi gSpZDH k-Row"
+  className="sc-gsnTZi lbCHKH k-Row"
 >
   <div
     className="sc-bczRLJ jNxmHP k-Row__content"
@@ -12,7 +12,7 @@ exports[`<Row /> by default matches with snapshot 1`] = `
 
 exports[`<Row /> with props matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi gSpZDH k-Row k-Row--centered k-Row--dark k-Row--lightTopBorder k-Row--lightBottomBorder k-Row--padded custom-className"
+  className="sc-gsnTZi lbCHKH k-Row k-Row--centered k-Row--dark k-Row--lightTopBorder k-Row--lightBottomBorder k-Row--padded custom-className"
 >
   <div
     className="sc-bczRLJ jNxmHP k-Row__content"

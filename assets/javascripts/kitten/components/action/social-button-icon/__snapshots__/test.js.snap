@@ -20,7 +20,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -133,7 +133,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -283,7 +283,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -396,7 +396,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -546,7 +546,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -659,7 +659,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -809,7 +809,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -922,7 +922,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -1072,7 +1072,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1185,7 +1185,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -1335,7 +1335,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1448,7 +1448,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -1598,7 +1598,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1711,7 +1711,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -1861,7 +1861,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -1974,7 +1974,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -2124,7 +2124,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -2237,7 +2237,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -2387,7 +2387,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -2500,7 +2500,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;

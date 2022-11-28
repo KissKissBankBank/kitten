@@ -1,15 +1,14 @@
 import _extends from "@babel/runtime/helpers/extends";
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
 import COLORS from '../../../constants/colors-config';
-import TYPOGRAPHY from '../../../constants/typography-config';
-import { titleModifierStyles, titleModifiersNames } from '../common/title-modifier-styles';
+import { titleModifiersNames, titleModifierStyles } from '../common/title-modifier-styles';
 const StyledTitle = styled.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";", ";color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, TYPOGRAPHY.fontStyles['700'], titleModifierStyles('&.k-Title'));
+})(["--Title-css-color:", ";font-family:var(--font-family-generalsans);letterspacing:'.01rem';font-weight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, titleModifierStyles('&.k-Title'));
 export const Title = _ref => {
   let {
     modifier,
@@ -18,6 +17,7 @@ export const Title = _ref => {
     italic,
     cssColor,
     className,
+    family,
     ...other
   } = _ref;
   return /*#__PURE__*/React.createElement(StyledTitle, _extends({
@@ -25,7 +25,8 @@ export const Title = _ref => {
     modifier: modifier,
     className: classNames('k-Title', className, "k-Title--" + modifier, {
       'k-Title--noMargin': noMargin,
-      'k-Title--italic': italic
+      'k-Title--italic': italic,
+      'k-u-font-family-antiqueolive': family === 'antiqueolive'
     }),
     style: {
       '--Title-css-color': cssColor
@@ -34,6 +35,7 @@ export const Title = _ref => {
 };
 Title.defaultProps = {
   tag: 'h1',
+  family: undefined,
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -41,6 +43,7 @@ Title.defaultProps = {
 };
 Title.propTypes = {
   tag: PropTypes.string,
+  family: PropTypes.oneOf(['none', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   noMargin: PropTypes.bool,
   cssColor: PropTypes.string,

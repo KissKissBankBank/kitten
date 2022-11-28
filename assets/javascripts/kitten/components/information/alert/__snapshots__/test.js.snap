@@ -2,7 +2,7 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasCloseButton k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--info k-Alert--hasCloseButton k-Alert--hasIcon"
   role={null}
 >
   <span
@@ -70,7 +70,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--info k-Alert--hasIcon"
   role={null}
 >
   <span
@@ -119,7 +119,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with snapshot with custom icon 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--info k-Alert--hasIcon"
   role={null}
 >
   <span
@@ -147,7 +147,7 @@ exports[`<Alert /> should matches with snapshot with custom icon 1`] = `
 
 exports[`<Alert /> should matches with snapshot with danger status prop 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--danger k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--danger k-Alert--hasIcon"
   role="alert"
 >
   <span
@@ -185,7 +185,7 @@ exports[`<Alert /> should matches with snapshot with danger status prop 1`] = `
 
 exports[`<Alert /> should matches with snapshot with icon border 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--info k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--info k-Alert--hasIcon"
   role={null}
 >
   <span
@@ -234,7 +234,7 @@ exports[`<Alert /> should matches with snapshot with icon border 1`] = `
 
 exports[`<Alert /> should matches with snapshot with success status prop 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--success k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--success k-Alert--hasIcon"
   role="status"
 >
   <span
@@ -277,7 +277,7 @@ exports[`<Alert /> should matches with snapshot with success status prop 1`] = `
 
 exports[`<Alert /> should matches with snapshot with warning status prop 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--warning k-Alert--hasIcon"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--warning k-Alert--hasIcon"
   role="status"
 >
   <span
@@ -323,7 +323,7 @@ exports[`<Alert /> should matches with snapshot with warning status prop 1`] = `
 
 exports[`<Alert /> should matches with snapshot without icon 1`] = `
 <div
-  className="sc-gsnTZi fZewtI k-Alert k-Alert--info"
+  className="sc-gsnTZi ejscEM k-Alert k-Alert--info"
   role={null}
 >
   <div

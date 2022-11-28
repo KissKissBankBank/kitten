@@ -299,6 +299,8 @@ export { MusicIllustration } from './components/graphics/illustrations/music-ill
 export { PencilColorIllustration } from './components/graphics/illustrations/pencil-color-illustration'
 export { HandAndFlowerColorIllustration } from './components/graphics/illustrations/hand-and-flower-color-illustration'
 export { RainbowColorIllustration } from './components/graphics/illustrations/rainbow-color-illustration'
+export { MoneyBankIllustration } from './components/graphics/illustrations/money-bank-illustration'
+export { LibraryIllustration } from './components/graphics/illustrations/library-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'

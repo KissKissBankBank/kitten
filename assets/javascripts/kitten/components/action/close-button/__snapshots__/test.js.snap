@@ -20,7 +20,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -133,7 +133,7 @@ exports[`<CloseButton /> default matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -285,7 +285,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.625rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-family: GeneralSans,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   color: var(--color-grey-900,#222);
@@ -398,7 +398,7 @@ exports[`<CloseButton /> with props matches with snapshot 1`] = `
 .c0.k-Button--hasBullet::after {
   content: '';
   position: absolute;
-  background-color: var(--Button-bullet-color,var(--color-primary-500));
+  background-color: var(--Button-bullet-color,var(--color-primary-700));
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 0.5rem;

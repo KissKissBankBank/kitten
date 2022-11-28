@@ -5,7 +5,6 @@ import classNames from 'classnames'
 import { Step } from './components/step'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
-import COLORS from '../../../constants/colors-config'
 
 const StyledContainer = styled.div`
   &:not(.k-VerticalProgress__wrapper--withoutBorder) {
@@ -36,7 +35,7 @@ const StyledContainer = styled.div`
       left: ${pxToRem(14)};
 
       content: '';
-      border-left: ${pxToRem(2)} dotted ${COLORS.line1};
+      border-left: ${pxToRem(2)} dotted var(--color-grey-400);
     }
   }
 `

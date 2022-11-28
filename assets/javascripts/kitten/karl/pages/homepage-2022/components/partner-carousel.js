@@ -129,7 +129,7 @@ const PartnerCardComponent = ({ item }) => (
 
 const PartnerCarousel = () => (
   <StyledWrapper>
-    <div className="kiss-Homepage__partner__container">
+    <div className="kiss-Homepage__partner__top-container">
       <Title
         tag="h2"
         className="k-u-margin-none k-u-margin-vertical-double@xs-down k-u-align-center"
@@ -140,9 +140,11 @@ const PartnerCarousel = () => (
         <br />
         au service de la réussite des projets
       </Title>
+    </div>
 
-      <CarouselBlock />
+    <CarouselBlock />
 
+    <div className="kiss-Homepage__partner__bottom-container">
       <Text weight="700" size="large" className="k-u-align-center">
         Vous êtes une entreprise ?
       </Text>
@@ -195,13 +197,22 @@ const StyledWrapper = styled.section`
     z-index: 2;
   }
 
-  .kiss-Homepage__partner__container {
+  .kiss-Homepage__partner__top-container {
     box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: ${pxToRem(20)};
-    padding: ${pxToRem(100)} 0 ${pxToRem(100)} 0;
+    padding: ${pxToRem(100)} 0 ${pxToRem(20)} 0;
+  }
+
+  .kiss-Homepage__partner__bottom-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: ${pxToRem(20)};
+    padding: ${pxToRem(20)} 0 ${pxToRem(100)} 0;
   }
 
   .k-CarouselNext--showOtherPages .k-CarouselNext__inner {

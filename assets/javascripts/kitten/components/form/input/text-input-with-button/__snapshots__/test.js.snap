@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -12,7 +12,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     onChange={[Function]}
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -29,7 +29,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -39,7 +39,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     onChange={[Function]}
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     onClick={[Function]}
     style={
       Object {
@@ -56,7 +56,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -67,7 +67,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -123,7 +123,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton k-TextInput--disabled"
@@ -133,7 +133,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     onChange={[Function]}
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content k-Button--disabled"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {
@@ -150,7 +150,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton k-TextInput--error"
@@ -160,7 +160,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     onChange={[Function]}
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -177,7 +177,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -189,7 +189,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     value="foobar"
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -206,7 +206,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--small"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--small"
 >
   <input
     className="k-TextInput k-TextInput--hasButton"
@@ -216,7 +216,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
     onChange={[Function]}
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--small k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--small k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {
@@ -233,7 +233,7 @@ exports[`<TextInputWithButton /> with size prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi bSGKmP k-TextInput__wrapper k-TextInput__wrapper--medium"
+  className="sc-gsnTZi ispxbv k-TextInput__wrapper k-TextInput__wrapper--medium"
 >
   <input
     className="k-TextInput k-TextInput--hasButton k-TextInput--valid"
@@ -243,7 +243,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     onChange={[Function]}
   />
   <button
-    className="sc-bczRLJ kPeJEk k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
+    className="sc-bczRLJ hWeYwK k-Button k-TextInput__button k-Button--medium k-Button--beryllium k-Button--fit-content"
     disabled={false}
     style={
       Object {

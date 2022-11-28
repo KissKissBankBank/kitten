@@ -36,10 +36,10 @@ $k-typography: (
 @include k-utilities-spacing;
 @include k-utilities-active;
 @include k-utilities-align;
-@include k-utilities-aliasing;
 @include k-utilities-color;
 @include k-utilities-decoration;
 @include k-utilities-font-feature-settings;
+@include k-utilities-font-family;
 @include k-utilities-inactive;
 @include k-utilities-line-height;
 @include k-utilities-line;

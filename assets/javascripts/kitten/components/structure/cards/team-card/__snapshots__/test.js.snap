@@ -8,7 +8,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
   
   <a
     aria-label="linkedin"
-    className="sc-dkzDqf geIEqs k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
+    className="sc-dkzDqf ilxLPy k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
     disabled={null}
     href="https://www.linkedin.com"
     rel="noopener"
@@ -49,12 +49,14 @@ Array [
   >
     <span
       className="k-u-color-font1 k-u-size-medium k-u-weight-700"
+      style={Object {}}
     >
       Lorem Ipsum
     </span>
     <br />
     <span
       className="k-u-color-font1 k-u-size-micro k-u-weight-400"
+      style={Object {}}
     >
       Consectetur
     </span>
@@ -64,7 +66,7 @@ Array [
   >
     <a
       aria-label="E-mail"
-      className="sc-dkzDqf geIEqs k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
+      className="sc-dkzDqf ilxLPy k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
       disabled={null}
       href="mailto:example@kisskissbankbank.com"
       style={
@@ -91,7 +93,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-dkzDqf geIEqs k-Button k-u-hidden@s-up k-Button--small k-Button--nitrogen k-Button--fit-icon"
+      className="sc-dkzDqf ilxLPy k-Button k-u-hidden@s-up k-Button--small k-Button--nitrogen k-Button--fit-icon"
       disabled={null}
       href="tel:06 00 00 00 00"
       style={
@@ -118,7 +120,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-hKMtZM hOsDRZ k-u-hidden@xs-down"
+      className="sc-hKMtZM dqxKFp k-u-hidden@xs-down"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -131,7 +133,7 @@ Array [
       </span>
       <span
         aria-label="06 00 00 00 00"
-        className="sc-dkzDqf geIEqs k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
+        className="sc-dkzDqf ilxLPy k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
         disabled={null}
         style={
           Object {
@@ -157,7 +159,7 @@ Array [
     </a>
     <a
       aria-label="linkedin"
-      className="sc-dkzDqf geIEqs k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
+      className="sc-dkzDqf ilxLPy k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.linkedin.com"
       rel="noopener"
@@ -186,7 +188,7 @@ Array [
     </a>
     <a
       aria-label="twitter"
-      className="sc-dkzDqf geIEqs k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
+      className="sc-dkzDqf ilxLPy k-Button k-Button--small k-Button--nitrogen k-Button--fit-icon"
       disabled={null}
       href="https://www.twitter.com"
       rel="noopener"

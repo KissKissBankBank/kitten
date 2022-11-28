@@ -29,6 +29,7 @@ exports[`<PartnerCard /> by default matches with snapshot 1`] = `
     >
       <span
         className="k-u-size-small k-u-weight-500"
+        style={Object {}}
       >
         Les Jeunes Pousses méritent tout notre soutien : Naturalia s’engage dans le développement de votre produit bio.
       </span>
@@ -36,13 +37,14 @@ exports[`<PartnerCard /> by default matches with snapshot 1`] = `
         lassName="k-PartnerCard__sticker"
       >
         <span
-          className="sc-bczRLJ jLwBHq k-Tag k-u-margin-bottom-double k-u-margin-top-double k-u-ellipsis k-Tag--disabled k-Tag--medium k-Tag--status"
+          className="sc-bczRLJ bKqmxm k-Tag k-u-margin-bottom-double k-u-margin-top-double k-u-ellipsis k-Tag--disabled k-Tag--medium k-Tag--status"
         >
           Citoyenneté
         </span>
       </div>
       <p
         className="k-u-size-small k-u-weight-700 k-u-link-font1 k-u-cursor-pointer k-u-margin-none"
+        style={Object {}}
       >
         En savoir plus
       </p>
