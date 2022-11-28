@@ -84,7 +84,7 @@ PartnerCard.Sticker = _ref4 => {
     ...props
   } = _ref4;
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
-    lassName: (0, _classnames.default)('k-PartnerCard__sticker', className)
+    className: (0, _classnames.default)('k-PartnerCard__sticker', className)
   }, props), /*#__PURE__*/_react.default.createElement(_tag.Tag, (0, _extends2.default)({
     type: "disabled",
     className: (0, _classnames.default)('k-u-margin-bottom-double', 'k-u-margin-top-double', 'k-u-ellipsis', className)
