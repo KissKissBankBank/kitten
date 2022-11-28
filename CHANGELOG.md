@@ -4,7 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add the following illustration components:
+    - `WeirdIllustration`,
+    - `HeartIllstration`,
+    - `FlashIllustration`,
+    - `MusicIllustration`,
+    - `PencilColorIllustration`,
+    - `HandAndFlowerColorIllustration`,
+    - `RainbowColorIllustration`.
 - Feature: `Tokens`: Update `_tokens.json` file.
+
 
 ## [13.1.1] - 2022-11-24
 

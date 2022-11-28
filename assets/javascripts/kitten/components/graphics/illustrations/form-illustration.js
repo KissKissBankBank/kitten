@@ -23,22 +23,22 @@ export const FormIllustration = ({ title, ...props }) => {
         />
         <path
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M639.664 302.932v570.607c0 28.357-23.004 51.352-51.371 51.352H53.473c-28.368 0-51.371-22.995-51.371-51.352V193.035c0-28.357 23.003-51.352 51.371-51.352h415.278v161.249h170.913ZM469.609 140.885l170.914 161.173"
         />
         <path
           fill="#0091FF"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M440.643 247.908H62.486v52.906h378.157v-52.906Zm0 79.338H62.486v31.879h378.157v-31.879Zm128.53 58.319H62.486v31.878h506.687v-31.878Z"
         />
         <path
           fill="#fff"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M569.173 490.941h-389.55v31.618h389.55v-31.618Zm0 56.966h-389.55v31.617h389.55v-31.617Zm0 63.067h-389.55v31.618h389.55v-31.618Zm0 56.966h-389.55v31.618h389.55V667.94Zm0 62.933h-389.55v31.618h389.55v-31.618Zm0 56.966h-389.55v31.617h389.55v-31.617ZM150.827 491.218h-88.34v88.306h88.34v-88.306Zm0 119.899h-88.34v88.306h88.34v-88.306Zm0 119.899h-88.34v88.306h88.34v-88.306Z"
         />
         <path
@@ -47,8 +47,8 @@ export const FormIllustration = ({ title, ...props }) => {
         />
         <path
           stroke="#F60044"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="m82.178 535.367 18.228 23.508 30.722-47.015m-48.95 143.406 18.228 23.507 30.722-47.014m-48.95 143.406 18.228 23.507 30.722-47.015"
         />
         <path
@@ -58,35 +58,35 @@ export const FormIllustration = ({ title, ...props }) => {
         <path
           fill="#fff"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="m704.454 49.208-123.401 58.479c-2.01.95-4.23-.849-3.708-3.017l9.593-39.787a1.724 1.724 0 0 1 1.421-1.303l115.086-17.65c1.976-.302 2.808 2.421 1.009 3.278Z"
         />
         <path
           fill="#fff"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M626.422 128.934 561.085 27.995c-1.211-1.865.143-4.328 2.363-4.32l165.65.917c2.489.017 3.725 3.025 1.959 4.782L630.735 129.396a2.8 2.8 0 0 1-4.33-.462h.017Z"
         />
         <path
           fill="#fff"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M729.981 27.046 586.225 66.833l8.609 13.296 135.147-53.083Z"
         />
         <path
           fill="#FFB500"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M180.069 1034.2c49.578 0 89.77-40.176 89.77-89.735s-40.192-89.735-89.77-89.735c-49.579 0-89.77 40.176-89.77 89.735s40.191 89.735 89.77 89.735Z"
         />
         <path
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M180.069 1013.55c38.17 0 69.112-30.93 69.112-69.085 0-38.155-30.942-69.085-69.112-69.085-38.169 0-69.112 30.93-69.112 69.085 0 38.155 30.943 69.085 69.112 69.085Z"
         />
         <path
@@ -96,14 +96,14 @@ export const FormIllustration = ({ title, ...props }) => {
         <path
           fill="#FFB500"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M374.4 1036.38c39.209 0 70.995-31.78 70.995-70.971 0-39.194-31.786-70.968-70.995-70.968-39.21 0-70.996 31.774-70.996 70.968 0 39.191 31.786 70.971 70.996 70.971Z"
         />
         <path
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M374.401 1020.04c30.182 0 54.65-24.46 54.65-54.631s-24.468-54.629-54.65-54.629c-30.183 0-54.651 24.458-54.651 54.629s24.468 54.631 54.651 54.631Z"
         />
         <path
@@ -113,14 +113,14 @@ export const FormIllustration = ({ title, ...props }) => {
         <path
           fill="#FFB500"
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M278.911 1167.9c34.822 0 63.05-28.22 63.05-63.03 0-34.8-28.228-63.02-63.05-63.02-34.821 0-63.05 28.22-63.05 63.02 0 34.81 28.229 63.03 63.05 63.03Z"
         />
         <path
           stroke="#000"
-          stroke-miterlimit="10"
-          stroke-width="5"
+          strokeMiterlimit="10"
+          strokeWidth="5"
           d="M278.911 1153.39c26.807 0 48.538-21.72 48.538-48.52 0-26.79-21.731-48.52-48.538-48.52-26.807 0-48.538 21.73-48.538 48.52 0 26.8 21.731 48.52 48.538 48.52Z"
         />
         <path

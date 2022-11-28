@@ -93,7 +93,7 @@ StatusIconNext.Pending = ({ color, ...props }) => (
     <path
       fillRule="evenodd"
       d="M2.172.012C1.475.012.91.577.91 1.275v7.508h5.064a1.253 1.253 0 0 0 0-2.506H3.435V1.275C3.435.577 2.87.012 2.172.012Z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
   </svg>
 )
