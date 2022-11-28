@@ -11,7 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
     - `MusicIllustration`,
     - `PencilColorIllustration`,
     - `HandAndFlowerColorIllustration`,
-    - `RainbowColorIllustration`,
+    - `RainbowColorIllustration`.
 - Fix: `Illustration`: Fix `PencilIllustration` svg.
 - Fix: `Comment`: Upgrade design.
 
