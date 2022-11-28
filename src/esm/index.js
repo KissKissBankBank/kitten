@@ -1,8 +1,9 @@
 // ----------
 // COMPONENTS
 // ----------
-// Accessibility
+import { PencilColorIllustration } from './components/graphics/illustrations/pencil-color-illustration'; // Accessibility
 // -------------
+
 export { VisuallyHidden } from './components/accessibility/visually-hidden'; // Action
 // ------
 
@@ -259,6 +260,13 @@ export { RainbowIllustration } from './components/graphics/illustrations/rainbow
 export { PencilIllustration } from './components/graphics/illustrations/pencil-illustration';
 export { HandAndFlowerIllustration } from './components/graphics/illustrations/hand-and-flower-illustration';
 export { PatchNewIllustration } from './components/graphics/illustrations/patch-new-illustration';
+export { WeirdIllustration } from './components/graphics/illustrations/weird-illustration';
+export { HeartIllustration } from './components/graphics/illustrations/heart-illustration';
+export { FlashIllustration } from './components/graphics/illustrations/flash-illustration';
+export { MusicIllustration } from './components/graphics/illustrations/music-illustration';
+export { PencilColorIllustration } from './components/graphics/illustrations/pencil-color-illustration';
+export { HandAndFlowerColorIllustration } from './components/graphics/illustrations/hand-and-flower-color-illustration';
+export { RainbowColorIllustration } from './components/graphics/illustrations/rainbow-color-illustration';
 export { MoneyBankIllustration } from './components/graphics/illustrations/money-bank-illustration';
 export { LibraryIllustration } from './components/graphics/illustrations/library-illustration'; // Graphics/Logos
 

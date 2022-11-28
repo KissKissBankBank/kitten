@@ -23,17 +23,17 @@ var _default = {
   // Extra semi dark grey, not used for text
   grey1: 'var(--color-grey-700, #636363)',
   // Medium grey used for text or not
-  primary1: 'var(--color-primary-500, #1F93FF)',
+  primary1: 'var(--color-primary-500, #1f93ff)',
   // Primary
-  primary2: 'var(--color-primary-700, #0073DE)',
+  primary2: 'var(--color-primary-700, #0073de)',
   // Semi Dark Primary
-  primary3: 'var(--color-primary-900, #004C92)',
+  primary3: 'var(--color-primary-900, #004c92)',
   // Dark Primary
-  primary4: 'var(--color-primary-300, #68B7FF)',
+  primary4: 'var(--color-primary-300, #68b7ff)',
   // Light Primary
-  primary5: 'var(--color-primary-100, #E5F3FF)',
+  primary5: 'var(--color-primary-100, #e5f3ff)',
   // Extra Light Primary
-  primary6: 'var(--color-primary-100, #f3fbff)',
+  primary6: 'var(--color-primary-100, #e5f3ff)',
   // Thin Primary
   tertiary1: 'var(--color-success-100, #effaf1)',
   // Light Green

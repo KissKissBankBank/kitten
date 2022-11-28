@@ -14,9 +14,9 @@ export const RainbowIllustration = _ref => {
     fill: "none",
     viewBox: "0 0 160 120"
   }, props), title && /*#__PURE__*/React.createElement("title", null, title), /*#__PURE__*/React.createElement("g", {
-    "clip-path": "url(#a)",
-    "fill-rule": "evenodd",
-    "clip-rule": "evenodd",
+    clipPath: "url(#a)",
+    fillRule: "evenodd",
+    clipRule: "evenodd",
     fill: color
   }, /*#__PURE__*/React.createElement("path", {
     d: "M2.098 118.651h15.204c.4-34.348 28.312-62.074 62.695-62.074 34.383 0 62.297 27.726 62.698 62.074h15.204c-.402-42.763-35.124-77.306-77.898-77.306-42.775 0-77.501 34.543-77.903 77.306Zm156.558.75v.75H141.2v-.75c0-33.868-27.402-61.324-61.203-61.324-33.802 0-61.2 27.456-61.2 61.324v.75H.595v-.75c0-43.934 35.55-79.556 79.406-79.556 43.855 0 79.401 35.622 79.401 79.556h-.746Z"

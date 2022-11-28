@@ -68,7 +68,7 @@ PartnerCard.Sticker = _ref4 => {
     ...props
   } = _ref4;
   return /*#__PURE__*/React.createElement("div", _extends({
-    lassName: classNames('k-PartnerCard__sticker', className)
+    className: classNames('k-PartnerCard__sticker', className)
   }, props), /*#__PURE__*/React.createElement(Tag, _extends({
     type: "disabled",
     className: classNames('k-u-margin-bottom-double', 'k-u-margin-top-double', 'k-u-ellipsis', className)
