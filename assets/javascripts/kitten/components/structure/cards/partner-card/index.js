@@ -20,6 +20,10 @@ const StyledCard = styled.div`
   &[href]:focus-visible {
     outline: var(--outline);
   }
+  
+  &.k-PartnerCard--isStretched {
+    height: 100%;
+  }
 
   .k-PartnerCard__image {
     position: relative;
@@ -54,6 +58,10 @@ const StyledCard = styled.div`
     flex: 1 0 auto;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: ${pxToRem(10)};
+    justify-content: flex-end;
   }
 
   .k-PartnerCard__avatar {
@@ -87,6 +95,7 @@ export const PartnerCard = ({
   children,
   className,
   href,
+  stretch,
   imageProps: {alt, imageClassName, ...otherImageProps },
   ...props
 }) => {
@@ -95,6 +104,11 @@ export const PartnerCard = ({
       as={href ? 'a' : 'div'}
       href={href}
       {...props}
+      className={classNames(
+        'k-PartnerCard',
+        className,
+        {'k-PartnerCard--isStretched': stretch }
+      )}
     >
       <div className="k-PartnerCard__image">
           <img

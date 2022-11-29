@@ -12,6 +12,7 @@ describe('<PartnerCard />', () => {
         .create(
           <PartnerCard
             status="normal"
+            stretch
             imageProps={{
               src: 'kitten.jpg',
               alt: 'image alt',

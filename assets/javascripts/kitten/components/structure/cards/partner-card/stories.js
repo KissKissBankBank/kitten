@@ -26,30 +26,57 @@ const args = {
 }
 
 export const Default = args => (
-  <PartnerCard {...args}>
-    <PartnerCard.Avatar
-      imageProps={{
-        src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
-        alt: '',
-      }}
-    />
-    <PartnerCard.Line>
-      <Text size="small" weight="500">
-        Les Jeunes Pousses méritent tout notre soutien : Naturalia s’engage dans le développement de votre produit bio.
-      </Text>
-      <PartnerCard.Sticker>
-        Citoyenneté
-      </PartnerCard.Sticker>
-      <Text
-        tag="p"
-        weight="700"
-        size="small"
-        className="k-u-link-font1 k-u-cursor-pointer k-u-margin-none"
-      >
-        En savoir plus
-      </Text>
-    </PartnerCard.Line>
-  </PartnerCard>
+  <>
+    <PartnerCard {...args} stretch>
+      <PartnerCard.Avatar
+        imageProps={{
+          src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+          alt: '',
+        }}
+      />
+      <PartnerCard.Line>
+        <Text size="small" weight="500">
+          Les Jeunes Pousses méritent tout notre soutien : Naturalia s’engage dans le développement de votre produit bio.
+        </Text>
+        <PartnerCard.Sticker>
+          Citoyenneté
+        </PartnerCard.Sticker>
+        <Text
+          tag="p"
+          weight="700"
+          size="small"
+          className="k-u-link-font1 k-u-cursor-pointer k-u-margin-none"
+        >
+          En savoir plus
+        </Text>
+      </PartnerCard.Line>
+    </PartnerCard>
+
+    <PartnerCard {...args} stretch>
+      <PartnerCard.Avatar
+        imageProps={{
+          src: `/kitten-${Math.floor(Math.random() * 10)}.jpg`,
+          alt: '',
+        }}
+      />
+      <PartnerCard.Line>
+        <Text size="small" weight="500">
+          Les Jeunes Pousses méritent tout notre soutien
+        </Text>
+        <PartnerCard.Sticker>
+          Citoyenneté
+        </PartnerCard.Sticker>
+        <Text
+          tag="p"
+          weight="700"
+          size="small"
+          className="k-u-link-font1 k-u-cursor-pointer k-u-margin-none"
+        >
+          En savoir plus
+        </Text>
+      </PartnerCard.Line>
+    </PartnerCard>
+  </>
 )
 
 Default.args = args

@@ -2,7 +2,7 @@
 
 exports[`<PartnerCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gsnTZi hVAcRK"
+  className="sc-gsnTZi kfLnqN k-PartnerCard k-PartnerCard--isStretched"
 >
   <div
     className="k-PartnerCard__image"
