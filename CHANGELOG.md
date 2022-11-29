@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `PartnerCard`: Add `stretch` prop.
+## [13.3.0] - 2022-11-29
+
+- Feature: 
+
+  - `PartnerCard`: Add `stretch` prop.
 
 ## [13.2.0] - 2022-11-28
 
