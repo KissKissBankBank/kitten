@@ -4,38 +4,40 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [13.3.0] - 2022-11-29
+## [13.3.0] - 2022-11-29 🤥
 
-- Feature: 
+- Feature:
 
-  - `PartnerCard`: Add `stretch` prop.
+- `PartnerCard`: Add `stretch` prop.
 
-## [13.2.0] - 2022-11-28
+## [13.2.0] - 2022-11-28 😵‍💫
 
-Features: 
-  - Add the following illustration components:
-    - `WeirdIllustration`,
-    - `HeartIllstration`,
-    - `FlashIllustration`,
-    - `MusicIllustration`,
-    - `PencilColorIllustration`,
-    - `HandAndFlowerColorIllustration`,
-    - `RainbowColorIllustration`.
+Features:
+
+- Add the following illustration components:
+  - `WeirdIllustration`,
+  - `HeartIllstration`,
+  - `FlashIllustration`,
+  - `MusicIllustration`,
+  - `PencilColorIllustration`,
+  - `HandAndFlowerColorIllustration`,
+  - `RainbowColorIllustration`.
 - `Tokens`: Update `_tokens.json` file.
 
 
-## [13.1.1] - 2022-11-24
+## [13.1.1] - 2022-11-24 🤝
 
 Fix: 
+
 - `CarouselNext`: Fix cycle
 
-## [13.1.0] - 2022-11-23
+## [13.1.0] - 2022-11-23 🎨
 
 Feature: 
 
-  - Add the following illustration components:
-    - `MoneyBankIllustration`,
-    - `LibraryIllustration`
+- Add the following illustration components:
+  - `MoneyBankIllustration`,
+  - `LibraryIllustration`
 
 ## [13.0.0] - 2022-11-17
 
@@ -58,11 +60,13 @@ Fix:
 ## [13.0.0-beta5] - 2022-11-10  🎖
 
 Fix:
+
 - Fixing various colors to be more a11y. #2
 
 ## [13.0.0-beta4] - 2022-11-09  🎖
 
 Fix:
+
 - Fixing various colors to be more a11y.
 
 ## [13.0.0-beta3] - 2022-11-09  🎖
