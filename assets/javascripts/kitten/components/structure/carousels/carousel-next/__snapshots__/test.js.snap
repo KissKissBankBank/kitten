@@ -72,7 +72,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -178,7 +178,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -284,7 +284,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -398,7 +398,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -504,7 +504,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -610,7 +610,7 @@ exports[`<CarouselNext /> by default on mobile matches with snapshot 1`] = `
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -755,7 +755,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -861,7 +861,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -967,7 +967,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1081,7 +1081,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1187,7 +1187,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1293,7 +1293,7 @@ exports[`<CarouselNext /> with exportVisibilityProps prop matches with snapshot 
                 Prolongation
               </div>
               <h1
-                className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                 style={
                   Object {
                     "--Title-css-color": null,
@@ -1555,7 +1555,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1661,7 +1661,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1767,7 +1767,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1881,7 +1881,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -1987,7 +1987,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,
@@ -2093,7 +2093,7 @@ Array [
                   Prolongation
                 </div>
                 <h1
-                  className="sc-eCYdqJ fXbNLB k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
+                  className="sc-eCYdqJ kOYFJn k-Title k-ProjectCard__title k-u-clamp-2 custom className k-Title--septenary k-Title--noMargin"
                   style={
                     Object {
                       "--Title-css-color": null,

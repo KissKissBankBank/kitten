@@ -71,7 +71,7 @@ const NewWrapper = styled.section`
 
     .kiss-Homepage__new__card__name {
       margin: 0;
-      font: var(--font-weight-700) var(--font-size-5) / 1
+      font: var(--font-weight-600) var(--font-size-5) / 1
         var(--font-family-maax);
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -100,13 +100,13 @@ const NewWrapper = styled.section`
 
     .kiss-Homepage__new__card__rate {
       margin: ${pxToRem(10)} 0 0;
-      font: var(--font-weight-700) var(--font-size-10) / 1
+      font: var(--font-weight-600) var(--font-size-10) / 1
         var(--font-family-maax);
       color: var(--color-primary-500);
       letter-spacing: -0.02em;
     }
     .kiss-Homepage__new__card__rateComplement {
-      font: var(--font-weight-700) var(--font-size-6) / 1
+      font: var(--font-weight-600) var(--font-size-6) / 1
         var(--font-family-maax);
       letter-spacing: -0.01em;
     }

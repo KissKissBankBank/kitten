@@ -119,7 +119,7 @@ export const StyledWrapper = styled.div`
   }
 
   .kiss-Pricing__table__rate {
-    font-weight: 700;
+    font-weight: 600;
     font-size: var(--font-size-10);
     line-height: 1;
   }

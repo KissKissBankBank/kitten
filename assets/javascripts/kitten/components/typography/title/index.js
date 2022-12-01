@@ -12,7 +12,7 @@ const StyledTitle = styled.span`
   --Title-css-color: ${COLORS.font1};
   font-family: var(--font-family-generalsans);
   letterspacing: '.01rem';
-  font-weight: 700;
+  font-weight: var(--font-weight-600);
   color: var(--Title-css-color);
 
   &.k-Title--noMargin {

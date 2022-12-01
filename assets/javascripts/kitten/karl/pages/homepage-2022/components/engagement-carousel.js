@@ -165,7 +165,7 @@ const EngagementCardComponent = ({ item }) => (
     </ProjectCard.Title>
     <ProjectCard.Line>
       <Text size="micro">
-        par <strong className="k-u-weight-700">{item.name}</strong>
+        par <strong className="k-u-weight-600">{item.name}</strong>
       </Text>
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>

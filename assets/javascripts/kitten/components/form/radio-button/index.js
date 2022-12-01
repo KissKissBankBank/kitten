@@ -357,7 +357,7 @@ RadioButton.propTypes = {
   design: PropTypes.oneOf(['disc', 'check']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
-  weight: PropTypes.oneOf(['400', '500', '700']),
+  weight: PropTypes.oneOf(['400', '500', '600', '700']),
   paragraphStyle: PropTypes.bool,
 }
 

@@ -61,7 +61,7 @@ export const Default = ({ progressProps, ...args }) => (
     </ProjectCard.Title>
     <ProjectCard.Line>
       <Text size="micro">
-        par <strong className="k-u-weight-700">Bidules</strong>
+        par <strong className="k-u-weight-600">Bidules</strong>
       </Text>
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>
@@ -155,7 +155,7 @@ export const Lendopolis = ({ progressProps, ...args }) => (
     </ProjectCard.Title>
     <ProjectCard.Line>
       <Text size="micro">
-        par <strong className="k-u-weight-700">Bidules</strong>
+        par <strong className="k-u-weight-600">Bidules</strong>
       </Text>
     </ProjectCard.Line>
     <ProjectCard.Line>
@@ -207,7 +207,7 @@ export const WithButton = ({ progressProps, ...args }) => (
     </ProjectCard.Title>
     <ProjectCard.Line>
       <Text size="micro">
-        par <strong className="k-u-weight-700">Bidules</strong>
+        par <strong className="k-u-weight-600">Bidules</strong>
       </Text>
     </ProjectCard.Line>
     <ProjectCard.ItemsLine>
@@ -296,7 +296,7 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
       </ProjectCard.Line>
       <ProjectCard.Line>
         <Text size="micro">
-          par <strong className="k-u-weight-700">Bidules</strong>
+          par <strong className="k-u-weight-600">Bidules</strong>
         </Text>
       </ProjectCard.Line>
       <ProjectCard.Line className="k-u-flex k-u-flex-justifyContent-sb k-u-flex-alignItems-baseline">
@@ -322,7 +322,7 @@ export const PermanentProjects = ({ progressProps, ...args }) => (
       </ProjectCard.Line>
       <ProjectCard.Line>
         <Text size="micro">
-          par <strong className="k-u-weight-700">Bidules</strong>
+          par <strong className="k-u-weight-600">Bidules</strong>
         </Text>
       </ProjectCard.Line>
       <ProjectCard.Line

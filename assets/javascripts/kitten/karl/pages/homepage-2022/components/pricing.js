@@ -86,7 +86,7 @@ const PricingWrapper = styled.section`
 
     .kiss-Homepage__pricing__card__name {
       margin: 0;
-      font: var(--font-weight-700) var(--font-size-5) / 1
+      font: var(--font-weight-600) var(--font-size-5) / 1
         var(--font-family-maax);
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -115,7 +115,7 @@ const PricingWrapper = styled.section`
 
     .kiss-Homepage__pricing__card__rate {
       margin: ${pxToRem(10)} 0 0;
-      font: var(--font-weight-700) var(--font-size-10) / 1
+      font: var(--font-weight-600) var(--font-size-10) / 1
         var(--font-family-maax);
       color: var(--color-primary-500);
       letter-spacing: -0.02em;
