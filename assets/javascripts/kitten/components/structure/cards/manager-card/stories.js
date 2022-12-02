@@ -77,7 +77,7 @@ export const Default = ({ displayTags, ...args }) => (
           size="micro"
           className="k-u-line-height-1 k-u-margin-none"
         >
-          Publiée le <strong className="k-u-weight-700">2 février 2022</strong>
+          Publiée le <strong className="k-u-weight-600">2 février 2022</strong>
         </Text>
         <Text
           tag="p"
