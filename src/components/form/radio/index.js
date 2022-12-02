@@ -75,7 +75,7 @@ Radio.propTypes = {
   disabled: _propTypes.default.bool,
   design: _propTypes.default.oneOf(['disc', 'check']),
   fontWeight: (0, _deprecated2.default)(_propTypes.default.string, 'Prefere use `weight` prop instead'),
-  weight: _propTypes.default.oneOf(['400', '500', '700'])
+  weight: _propTypes.default.oneOf(['400', '500', '600', '700'])
 };
 Radio.defaultProps = {
   error: false,

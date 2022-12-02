@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Tokens`: Add `600` fontWeight tokens.
-- Feature : `Font-family`: Update `family` prop, default to `generalsans`.
+## [13.4.0] - 2022-12-02 🤖
+
+Features: 
+
+  - `Tokens`: Add `600` fontWeight tokens.
+  - `Font-family`: Update `family` prop, default to `generalsans`.
 
 ## [13.3.0] - 2022-11-29 🤥
 

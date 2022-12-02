@@ -22,7 +22,7 @@ var _titleModifierStyles = require("../common/title-modifier-styles");
 const StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";font-family:var(--font-family-generalsans);letterspacing:'.01rem';font-weight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
+})(["--Title-css-color:", ";font-family:var(--font-family-generalsans);letterspacing:'.01rem';font-weight:var(--font-weight-600);color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], _colorsConfig.default.font1, (0, _titleModifierStyles.titleModifierStyles)('&.k-Title'));
 
 const Title = _ref => {
   let {
@@ -52,7 +52,7 @@ const Title = _ref => {
 exports.Title = Title;
 Title.defaultProps = {
   tag: 'h1',
-  family: undefined,
+  family: 'generalsans',
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -60,7 +60,7 @@ Title.defaultProps = {
 };
 Title.propTypes = {
   tag: _propTypes.default.string,
-  family: _propTypes.default.oneOf(['none', 'antiqueolive']),
+  family: _propTypes.default.oneOf(['generalsans', 'antiqueolive']),
   modifier: _propTypes.default.oneOf(_titleModifierStyles.titleModifiersNames),
   noMargin: _propTypes.default.bool,
   cssColor: _propTypes.default.string,
