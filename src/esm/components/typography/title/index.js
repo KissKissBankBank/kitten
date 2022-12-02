@@ -8,7 +8,7 @@ import { titleModifiersNames, titleModifierStyles } from '../common/title-modifi
 const StyledTitle = styled.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["--Title-css-color:", ";font-family:var(--font-family-generalsans);letterspacing:'.01rem';font-weight:700;color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, titleModifierStyles('&.k-Title'));
+})(["--Title-css-color:", ";font-family:var(--font-family-generalsans);letterspacing:'.01rem';font-weight:var(--font-weight-600);color:var(--Title-css-color);&.k-Title--noMargin{margin-top:0;margin-bottom:0;}&.k-Title--italic{font-style:italic;}", ""], COLORS.font1, titleModifierStyles('&.k-Title'));
 export const Title = _ref => {
   let {
     modifier,
@@ -35,7 +35,7 @@ export const Title = _ref => {
 };
 Title.defaultProps = {
   tag: 'h1',
-  family: undefined,
+  family: 'generalsans',
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -43,7 +43,7 @@ Title.defaultProps = {
 };
 Title.propTypes = {
   tag: PropTypes.string,
-  family: PropTypes.oneOf(['none', 'antiqueolive']),
+  family: PropTypes.oneOf(['generalsans', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   noMargin: PropTypes.bool,
   cssColor: PropTypes.string,

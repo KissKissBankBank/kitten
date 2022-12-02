@@ -107,9 +107,11 @@ const Text = _ref => {
     // Weight.
     'k-u-weight-400': weight == '400' && family !== 'antiqueolive',
     'k-u-weight-500': weight == '500' && family !== 'antiqueolive',
+    'k-u-weight-600': weight == '600' && family !== 'antiqueolive',
     'k-u-weight-700': weight == '700' && family !== 'antiqueolive',
     // Font family
-    'k-u-font-family-antiqueolive': family === 'antiqueolive'
+    'k-u-font-family-antiqueolive': family === 'antiqueolive',
+    'k-u-font-family-generalsans': family === 'generalsans'
   }, className);
   return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, others, {
     className: textClassName,
@@ -129,10 +131,10 @@ Text.propTypes = {
   setting: _propTypes.default.oneOf(['tnum']),
   lineHeight: _propTypes.default.oneOf(['normal', '1', '1.25', '1.3', '1.4']),
   size: _propTypes.default.oneOf(['giant', 'huge', 'large', 'medium', 'small', 'micro', 'nano']),
-  family: _propTypes.default.oneOf(['none', 'antiqueolive']),
+  family: _propTypes.default.oneOf(['generalsans', 'antiqueolive']),
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
   transform: _propTypes.default.oneOf(['uppercase']),
-  weight: _propTypes.default.oneOf(['400', '500', '700']),
+  weight: _propTypes.default.oneOf(['400', '500', '600', '700']),
   letterSpacing: _propTypes.default.string
 };
 Text.defaultProps = {

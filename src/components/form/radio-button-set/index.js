@@ -94,7 +94,7 @@ RadioButtonSet.propTypes = {
   disabled: _propTypes.default.bool,
   labelProps: _propTypes.default.object,
   fontWeight: (0, _deprecated2.default)(_propTypes.default.string, 'Prefere use `weight` prop instead'),
-  weight: _propTypes.default.oneOf(['400', '500', '700']),
+  weight: _propTypes.default.oneOf(['400', '500', '600', '700']),
   paragraphStyle: _propTypes.default.bool
 };
 RadioButtonSet.defaultProps = {

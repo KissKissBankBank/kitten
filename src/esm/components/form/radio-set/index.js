@@ -69,7 +69,7 @@ RadioSet.propTypes = {
   disabled: PropTypes.bool,
   labelProps: PropTypes.object,
   fontWeight: deprecated(PropTypes.string, 'Prefere use `weight` prop instead'),
-  weight: PropTypes.oneOf(['400', '500', '700'])
+  weight: PropTypes.oneOf(['400', '500', '600', '700'])
 };
 RadioSet.defaultProps = {
   name: 'radioSet',

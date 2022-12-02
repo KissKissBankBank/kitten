@@ -28,6 +28,10 @@ const TYPOGRAPHY = {
       fontFamily: 'GeneralSans, Helvetica, Arial, sans-serif',
       fontWeight: 500
     },
+    600: {
+      fontFamily: 'GeneralSans, Helvetica, Arial, sans-serif',
+      fontWeight: 600
+    },
     700: {
       fontFamily: 'GeneralSans, Helvetica, Arial, sans-serif',
       letterSpacing: '.01rem',

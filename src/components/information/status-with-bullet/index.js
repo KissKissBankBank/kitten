@@ -56,7 +56,7 @@ StatusWithBullet.propTypes = {
   statusMessage: _propTypes.default.node,
   statusType: _propTypes.default.oneOf(['danger', 'success', 'warning', 'neutral', 'none']),
   size: _propTypes.default.oneOf(['micro', 'small', 'medium']),
-  weight: _propTypes.default.oneOf(['400', '500', '700']),
+  weight: _propTypes.default.oneOf(['400', '500', '600', '700']),
   bulletProps: _propTypes.default.object
 };
 StatusWithBullet.defaultProps = {
