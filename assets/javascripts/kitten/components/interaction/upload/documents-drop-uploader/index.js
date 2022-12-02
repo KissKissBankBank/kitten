@@ -38,7 +38,7 @@ const StyledDocumentsDropUploader = styled.div`
   }
 
   input[type='file']:focus + label.k-DocumentsDropUploader__button {
-    border: ${pxToRem(2)} solid ${COLORS.primary4};
+    border: ${pxToRem(2)} solid var(--color-primary-300);
   }
   input[type='file']:focus-visible + label.k-DocumentsDropUploader__button {
     outline: auto;
@@ -69,19 +69,19 @@ const StyledDocumentsDropUploader = styled.div`
   }
 
   &.k-DocumentsDropUploader--ready:hover:not(.k-DocumentsDropUploader--disabled) {
-    border-color: ${COLORS.primary4};
+    border-color: var(--color-primary-300);
   }
 
   &.k-DocumentsDropUploader--error {
-    border-color: ${COLORS.error3};
+    border-color: var(--color-danger-300);
   }
 
   &.k-DocumentsDropUploader--disabled {
-    border-color: ${COLORS.line2};
-    color: ${COLORS.font3};
+    border-color: var(--color-grey-400);
+    color: var(--color-grey-600);
 
     .k-DocumentsDropUploader__info {
-      color: ${COLORS.font3};
+      color: var(--color-grey-600);
     }
 
     &,
@@ -92,7 +92,7 @@ const StyledDocumentsDropUploader = styled.div`
 
   input[type='file']:active:not(:disabled) + .k-DocumentsDropUploader__button,
   &.k-DocumentsDropUploader--isDraggingOver:not(.k-DocumentsDropUploader--disabled) {
-    border-color: ${COLORS.primary1};
+    border-color: var(--color-primary-500);
   }
 
   .k-DocumentsDropUploader__content {
@@ -116,7 +116,7 @@ const StyledDocumentsDropUploader = styled.div`
     }
   }
   .k-DocumentsDropUploader__info {
-    color: ${COLORS.grey1};
+    color: var(--color-grey-700);
   }
 
   .k-DocumentsDropUploader__fileList {
@@ -131,7 +131,7 @@ const StyledDocumentsDropUploader = styled.div`
   }
 
   .k-DocumentsDropUploader__file {
-    font-weight: 500;
+    font-weight: var(--font-weight-500);
     display: flex;
     align-items: center;
     outline-offset: ${pxToRem(2)};
@@ -139,7 +139,7 @@ const StyledDocumentsDropUploader = styled.div`
     transition: color 0.2s ease, background-color 0.2s ease;
 
     &:hover {
-      background-color: ${COLORS.primary4};
+      background-color: var(--color-primary-300);
     }
   }
 

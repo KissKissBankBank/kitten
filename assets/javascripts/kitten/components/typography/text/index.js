@@ -140,6 +140,7 @@ export const Text = ({
       // Weight.
       'k-u-weight-400': weight == '400' && family !== 'antiqueolive',
       'k-u-weight-500': weight == '500' && family !== 'antiqueolive',
+      'k-u-weight-600': weight == '600' && family !== 'antiqueolive',
       'k-u-weight-700': weight == '700' && family !== 'antiqueolive',
 
       // Font family
@@ -179,7 +180,7 @@ Text.propTypes = {
   family: PropTypes.oneOf(['generalsans', 'antiqueolive']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
-  weight: PropTypes.oneOf(['400', '500', '700']),
+  weight: PropTypes.oneOf(['400', '500', '600', '700']),
   letterSpacing: PropTypes.string,
 }
 

@@ -129,7 +129,7 @@ StatusWithBullet.propTypes = {
     'none',
   ]),
   size: PropTypes.oneOf(['micro', 'small', 'medium']),
-  weight: PropTypes.oneOf(['400', '500', '700']),
+  weight: PropTypes.oneOf(['400', '500', '600', '700']),
   bulletProps: PropTypes.object,
 }
 

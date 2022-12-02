@@ -75,7 +75,7 @@ const StyledRichText = styled.div`
     margin-block-start: 1.5em;
     margin-block-end: 1em;
     line-height: 1.125;
-    font-weight: var(--font-weight-700);
+    font-weight: var(--font-weight-600);
     letter-spacing: -0.02em;
   }
 

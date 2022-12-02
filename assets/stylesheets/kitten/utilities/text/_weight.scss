@@ -10,6 +10,7 @@
 ///
 ///     <p class="k-u-weight-400">…</p>
 ///     <p class="k-u-weight-500">…</p>
+///     <p class="k-u-weight-600">…</p>
 ///     <p class="k-u-weight-700">…</p>
 
 @mixin k-utilities-weight {
@@ -27,6 +28,11 @@
 
   .k-u-strong,
   .k-u-weight-bold,
+  .k-u-weight-600 {
+    font-family: map-get(k-map-fetch($k-fonts, '600'), 'family') !important;
+    font-weight: map-get(k-map-fetch($k-fonts, '600'), 'weight') !important;
+  }
+
   .k-u-weight-700 {
     font-family: map-get(k-map-fetch($k-fonts, '700'), 'family') !important;
     font-weight: map-get(k-map-fetch($k-fonts, '700'), 'weight') !important;
