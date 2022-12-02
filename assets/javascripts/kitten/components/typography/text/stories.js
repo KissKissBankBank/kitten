@@ -26,6 +26,7 @@ export default {
     tag: 'span',
     transform: null,
     weight: '400',
+    family: 'generalsans',
     children: 'Lorem ipsum dolor sit amet…',
   },
   argTypes: {
@@ -55,7 +56,7 @@ export default {
     family: {
       name: 'family',
       description: 'Adds font family',
-      options: ['none', 'antiqueolive'],
+      options: ['generalsans', 'antiqueolive'],
       control: 'select',
     },
     transform: {

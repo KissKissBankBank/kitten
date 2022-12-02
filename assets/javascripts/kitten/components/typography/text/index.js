@@ -145,6 +145,7 @@ export const Text = ({
 
       // Font family
       'k-u-font-family-antiqueolive': family === 'antiqueolive',
+      'k-u-font-family-generalsans': family === 'generalsans',
     },
     className,
   )
@@ -176,7 +177,7 @@ Text.propTypes = {
     'micro',
     'nano',
   ]),
-  family: PropTypes.oneOf(['none', 'antiqueolive']),
+  family: PropTypes.oneOf(['generalsans', 'antiqueolive']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
   weight: PropTypes.oneOf(['400', '500', '600', '700']),

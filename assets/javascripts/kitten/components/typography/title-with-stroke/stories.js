@@ -26,6 +26,7 @@ Default.args = {
   tag: 'h1',
   children: 'Lorem ipsum dolor sit amet',
   noMargin: false,
+  family: 'generalsans',
 }
 
 Default.argTypes = {
@@ -77,7 +78,7 @@ Default.argTypes = {
   family: {
     name: 'family',
     description: 'Adds font family',
-    options: ['none', 'antiqueolive'],
+    options: ['generalsans', 'antiqueolive'],
     control: 'select',
   },
 }
