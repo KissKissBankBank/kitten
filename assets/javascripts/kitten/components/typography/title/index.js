@@ -54,7 +54,7 @@ export const Title = ({
 
 Title.defaultProps = {
   tag: 'h1',
-  family: undefined,
+  family: 'generalsans',
   modifier: 'primary',
   noMargin: false,
   italic: false,
@@ -63,7 +63,7 @@ Title.defaultProps = {
 
 Title.propTypes = {
   tag: PropTypes.string,
-  family: PropTypes.oneOf(['none', 'antiqueolive']),
+  family: PropTypes.oneOf(['generalsans', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   noMargin: PropTypes.bool,
   cssColor: PropTypes.string,

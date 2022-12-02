@@ -42,7 +42,7 @@ const argTypes = {
   family: {
     name: 'family',
     description: 'Adds font family',
-    options: ['none', 'antiqueolive'],
+    options: ['generalsans', 'antiqueolive'],
     control: 'select',
   },
   children: {
@@ -58,6 +58,7 @@ const args = {
   italic: false,
   cssColor: null,
   children: 'Lorem ipsum dolor sit amet',
+  family: 'generalsans',
 }
 
 export const Default = props => <Title {...props} />

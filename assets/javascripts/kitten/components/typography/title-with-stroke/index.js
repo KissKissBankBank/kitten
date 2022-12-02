@@ -102,7 +102,7 @@ export const TitleWithStroke = ({
 
 TitleWithStroke.defaultProps = {
   tag: 'h1',
-  family: undefined,
+  family: 'generalsans',
   modifier: 'primary',
   align: 'left',
   italic: false,
@@ -112,7 +112,7 @@ TitleWithStroke.defaultProps = {
 
 TitleWithStroke.propTypes = {
   tag: PropTypes.string,
-  family: PropTypes.oneOf(['none', 'antiqueolive']),
+  family: PropTypes.oneOf(['generalsans', 'antiqueolive']),
   modifier: PropTypes.oneOf(titleModifiersNames),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   italic: PropTypes.bool,
