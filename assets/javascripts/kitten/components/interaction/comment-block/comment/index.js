@@ -46,7 +46,6 @@ const CommentWrapper = styled.div`
 
   .k-Comment__block {
     display: flex;
-    gap: ${pxToRem(10)};
     padding: ${pxToRem(15)};
     border-radius: ${pxToRem(8)};
     flex-direction: column;
