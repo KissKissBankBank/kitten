@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `Comment`: Update styles.
+## [13.4.1] - 2022-12-07 🎼
+
+Fix:
+
+  - `Comment`: Update styles.
 
 ## [13.4.0] - 2022-12-02 🤖
 
