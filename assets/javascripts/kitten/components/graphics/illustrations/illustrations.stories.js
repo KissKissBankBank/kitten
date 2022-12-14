@@ -178,15 +178,15 @@ export const AllIllustrations = () => {
         </IllustrationWrapper>
       </Group>
       <Group>
-      <IllustrationWrapper name="DeskIllustration">
-        <DeskIllustration />
-      </IllustrationWrapper>
-      <IllustrationWrapper name="SpeakerIllustration">
-        <SpeakerIllustration />
-      </IllustrationWrapper>
-      <IllustrationWrapper name="BoxesIllustration">
-        <BoxesIllustration />
-      </IllustrationWrapper>
+        <IllustrationWrapper name="DeskIllustration">
+          <DeskIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="SpeakerIllustration">
+          <SpeakerIllustration />
+        </IllustrationWrapper>
+        <IllustrationWrapper name="BoxesIllustration">
+          <BoxesIllustration />
+        </IllustrationWrapper>
       </Group>
     </Wrapper>
   )
