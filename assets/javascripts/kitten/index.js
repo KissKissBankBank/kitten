@@ -301,6 +301,9 @@ export { HandAndFlowerColorIllustration } from './components/graphics/illustrati
 export { RainbowColorIllustration } from './components/graphics/illustrations/rainbow-color-illustration'
 export { MoneyBankIllustration } from './components/graphics/illustrations/money-bank-illustration'
 export { LibraryIllustration } from './components/graphics/illustrations/library-illustration'
+export { DeskIllustration } from './components/graphics/illustrations/desk-illustration'
+export { SpeakerIllustration } from './components/graphics/illustrations/speaker-illustration'
+export { BoxesIllustration } from './components/graphics/illustrations/boxes-illustration'
 
 // Graphics/Logos
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo'

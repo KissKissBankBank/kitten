@@ -27,6 +27,9 @@ import { HandAndFlowerColorIllustration } from './hand-and-flower-color-illustra
 import { RainbowColorIllustration } from './rainbow-color-illustration'
 import { MoneyBankIllustration } from './money-bank-illustration'
 import { LibraryIllustration } from './library-illustration'
+import { DeskIllustration } from './desk-illustration'
+import { SpeakerIllustration } from './speaker-illustration'
+import { BoxesIllustration } from './boxes-illustration'
 
 const Wrapper = styled.div`
   padding: ${pxToRem(40)};
@@ -173,6 +176,17 @@ export const AllIllustrations = () => {
         <IllustrationWrapper name="RainbowColorIllustration">
           <RainbowColorIllustration />
         </IllustrationWrapper>
+      </Group>
+      <Group>
+      <IllustrationWrapper name="DeskIllustration">
+        <DeskIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="SpeakerIllustration">
+        <SpeakerIllustration />
+      </IllustrationWrapper>
+      <IllustrationWrapper name="BoxesIllustration">
+        <BoxesIllustration />
+      </IllustrationWrapper>
       </Group>
     </Wrapper>
   )
