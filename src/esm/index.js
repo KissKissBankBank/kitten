@@ -268,7 +268,10 @@ export { PencilColorIllustration } from './components/graphics/illustrations/pen
 export { HandAndFlowerColorIllustration } from './components/graphics/illustrations/hand-and-flower-color-illustration';
 export { RainbowColorIllustration } from './components/graphics/illustrations/rainbow-color-illustration';
 export { MoneyBankIllustration } from './components/graphics/illustrations/money-bank-illustration';
-export { LibraryIllustration } from './components/graphics/illustrations/library-illustration'; // Graphics/Logos
+export { LibraryIllustration } from './components/graphics/illustrations/library-illustration';
+export { DeskIllustration } from './components/graphics/illustrations/desk-illustration';
+export { SpeakerIllustration } from './components/graphics/illustrations/speaker-illustration';
+export { BoxesIllustration } from './components/graphics/illustrations/boxes-illustration'; // Graphics/Logos
 
 export { KissKissBankBankLogo } from './components/graphics/logos/kisskissbankbanklogo';
 export { LaBanquePostaleLogo } from './components/graphics/logos/la-banque-postale';
