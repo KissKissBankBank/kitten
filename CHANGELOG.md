@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add the following illustration components:
+  - `DeskIllustration`,
+  - `SpeakerIllustration`,
+  - `BoxIllustration`
+
+Feature: `Illustrations`: Update `KkbbFlashIllustration` color.
+
 ## [13.4.1] - 2022-12-07 🎼
 
 Fix:
