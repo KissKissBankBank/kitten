@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+  - Update some images about cats
+
 ## [13.5.0] - 2022-12-15
 
 Features:
