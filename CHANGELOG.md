@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [13.5.1] - 2023-01-30
+
 Fix:
-  - Update some images about cats
+
+- Update some images about cats.
 
 ## [13.5.0] - 2022-12-15
 
@@ -25,7 +28,7 @@ Fix:
 
 ## [13.4.0] - 2022-12-02 🤖
 
-Features: 
+Features:
 
   - `Tokens`: Add `600` fontWeight tokens.
   - `Font-family`: Update `family` prop, default to `generalsans`.
@@ -53,13 +56,13 @@ Features:
 
 ## [13.1.1] - 2022-11-24 🤝
 
-Fix: 
+Fix:
 
 - `CarouselNext`: Fix cycle
 
 ## [13.1.0] - 2022-11-23 🎨
 
-Feature: 
+Feature:
 
 - Add the following illustration components:
   - `MoneyBankIllustration`,
@@ -67,7 +70,7 @@ Feature:
 
 ## [13.0.0] - 2022-11-17
 
-⚠️ BREAKING CHANGE ⚠️ 
+⚠️ BREAKING CHANGE ⚠️
 
 - Change `typo`.
 - Change `colors`.
@@ -154,17 +157,17 @@ Feature:
 
 ## [12.13.0] - 2022-10-10  🎯
 
-Feature: 
+Feature:
 
 - `Icon`: Add `TargetIconNext` component.
 
 ## [12.12.0] - 2022-10-04 😶‍🌫️
 
-Feature: 
+Feature:
 
 - `LinkBox`: Add `isSmall` prop
 
-Fix: 
+Fix:
 
 - `VerticalProgress` : Update style
 
@@ -176,7 +179,7 @@ Feature:
 
 ## [12.10.0] - 2022-09-20 👋
 
-Features: 
+Features:
 
   - `IconBadge`: Add `nano` size prop.
   - `ToggleTip`: Add checks for page bottom limit.
@@ -193,7 +196,7 @@ Features:
 
 ## [12.8.0] - 2022-09-07 🥷
 
-Features: 
+Features:
 
 - Utilities: Add media queries to VisuallyHidden utility.
 - `ColorSelect`: Add `disabled` prop.
