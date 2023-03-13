@@ -12,7 +12,10 @@ export const Partners = props => {
           className="k-Footer__partners--text"
         >
           KissKissBankBank est une plateforme de financement participatif
-          régulée par les autorités françaises. Immatriculation : 14007218
+          régulée par les autorités françaises. 
+          Numéro d'immatriculation en tant qu'Intermédiaire en Financement Participatif auprès de l'ORIAS: 14007218.
+          Adresse du siège Social : 34, Rue de Paradis 75010 PARIS.
+          Adresse mail de contact: contact@kisskissbankbank.com
         </Text>
       </div>
 
