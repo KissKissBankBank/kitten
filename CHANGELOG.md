@@ -4,13 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [13.5.2] - 2023-05-19
-
-Feature:
-
-- Documentation: Add `Colors` to `documentation/Design` stories.
-- Update `Tokens`: Update multiple color tokens.
-
 ## [13.5.1] - 2023-01-30
 
 Fix:
