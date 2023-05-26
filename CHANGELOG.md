@@ -4,13 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [14.0.0] - 2023-05-26
+
 ⚠️ BREAKING CHANGE ⚠️
 
 - Update `Tokens`: Update multiple color tokens.
 
 Feature:
 
-- Documentation: Add `Colors` to `documentation/Design` stories.
+- Documentation: Add `Colors` to `documentation/1Design` stories.
 
 ## [13.5.1] - 2023-01-30
 
