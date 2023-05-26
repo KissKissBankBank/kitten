@@ -1,0 +1,795 @@
+import { Meta, Canvas } from '@storybook/addon-docs'
+import { CheckedIcon } from '../../assets/javascripts/kitten/components/graphics/icons/checked-icon'
+import { IconBadge } from '../../assets/javascripts/kitten/components/information/icon-badge/'
+
+<Meta title="Documentation/Design/Colors" />
+
+# Colors
+
+Kitten propose un lot de couleur (iso Figma) que vous pouvez appeler dans le code de differentes manieres:
+
+### Exemples
+
+```css
+.p {
+  background: var(--color-grey-100);
+  color: var(--color-primary-500);
+}
+```
+ou 
+```html
+<p style={{ backgroundColor: 'var(--color-danger-100)' }}>...</p>`
+```
+
+- Avec className : 
+
+```html
+<p className="k-u-color-grey-100">...</p>
+```
+
+`k-u-color` étant la base sur laquelle vous allez appeler les couleurs puis `primary-100` ou `grey-100` etc etc..
+
+Source : [assets/stylesheets/kitten/tokens/_colors.scss](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/tokens/_colors.scss)
+
+## Listes des couleurs avec leur tags respectifs
+
+<div>
+  <IconBadge status="success" size="nano">
+    <CheckedIcon />
+  </IconBadge>
+  <p style={{ display: 'inline' }}> = Niveau de conformité accessibilité : Très Bon</p>
+</div>
+<div>
+  <IconBadge status="warning" size="nano">
+    <CheckedIcon />
+  </IconBadge>
+  <p style={{ display: 'inline' }}> = Niveau de conformité accessibilité : Bon</p>
+</div>
+<div>
+  <p style={{ display: 'inline' }}> Caractere non affiché = Pas bon</p>
+</div>
+
+
+`--color-danger-100`
+<Canvas style={{ backgroundColor: 'var(--color-danger-100)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <p>#ffe9ef</p>
+</Canvas>
+
+ `--color-danger-300`
+<Canvas style={{ backgroundColor: 'var(--color-danger-300)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  #ffb8cb
+</Canvas>
+
+ `--color-danger-500`
+<Canvas style={{ backgroundColor: 'var(--color-danger-500)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  #f60044
+</Canvas>
+
+ `--color-danger-700`
+<Canvas style={{ backgroundColor: 'var(--color-danger-700)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #d8043e
+</Canvas>
+
+ `--color-danger-900`
+<Canvas style={{ backgroundColor: 'var(--color-danger-900)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #a8002e
+</Canvas>
+
+ `--color-primary-100`
+<Canvas style={{ backgroundColor: 'var(--color-primary-100)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #e7f1ff
+</Canvas>
+
+ `--color-primary-300`
+<Canvas style={{ backgroundColor: 'var(--color-primary-300)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #7bb3ff
+</Canvas>
+
+ `--color-primary-500`
+<Canvas style={{ backgroundColor: 'var(--color-primary-500)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #1f93ff
+</Canvas>
+
+ `--color-primary-700`
+<Canvas style={{ backgroundColor: 'var(--color-primary-700)', textAlign: 'center' }}>
+ <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #0050BD
+</Canvas>
+
+ `--color-primary-900`
+<Canvas style={{ backgroundColor: 'var(--color-primary-900)', textAlign: 'center' }}>
+ <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #003A88
+</Canvas>
+
+ `--color-grey-000`
+<Canvas style={{ backgroundColor: 'var(--color-grey-000)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #ffffff
+</Canvas>
+
+ `--color-grey-100`
+<Canvas style={{ backgroundColor: 'var(--color-grey-100)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #fbfbfb
+</Canvas>
+
+ `--color-grey-200`
+<Canvas style={{ backgroundColor: 'var(--color-grey-200)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #f6f6f6
+</Canvas>
+
+ `--color-grey-300`
+<Canvas style={{ backgroundColor: 'var(--color-grey-300)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #eeeeee
+</Canvas>
+
+ `--color-grey-400`
+<Canvas style={{ backgroundColor: 'var(--color-grey-400)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #d8d8d8
+</Canvas>
+
+ `--color-grey-500`
+<Canvas style={{ backgroundColor: 'var(--color-grey-500)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #b8b8b8
+</Canvas>
+
+ `--color-grey-600`
+<Canvas style={{ backgroundColor: 'var(--color-grey-600)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #949494
+</Canvas>
+
+ `--color-grey-700`
+<Canvas style={{ backgroundColor: 'var(--color-grey-700)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #636363
+</Canvas>
+
+ `--color-grey-800`
+<Canvas style={{ backgroundColor: 'var(--color-grey-800)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #2d2d2d
+</Canvas>
+
+ `--color-grey-900`
+<Canvas style={{ backgroundColor: 'var(--color-grey-900)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #222222
+</Canvas>
+
+ `--color-success-100`
+<Canvas style={{ backgroundColor: 'var(--color-success-100)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #e4fbf4
+</Canvas>
+
+ `--color-success-300`
+<Canvas style={{ backgroundColor: 'var(--color-success-300)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #a4e7d3
+</Canvas>
+
+ `--color-success-500`
+<Canvas style={{ backgroundColor: 'var(--color-success-500)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano" hasBorder>
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano" hasBorder>
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano" hasBorder>
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="warning" size="nano" hasBorder>
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano" hasBorder>
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #08a777
+</Canvas>
+
+ `--color-success-700`
+<Canvas style={{ backgroundColor: 'var(--color-success-700)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #0e7758
+</Canvas>
+
+ `--color-success-900`
+<Canvas style={{ backgroundColor: 'var(--color-success-900)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #004933
+</Canvas>
+
+ `--color-warning-100`
+<Canvas style={{ backgroundColor: 'var(--color-warning-100)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #fff9e2
+</Canvas>
+
+ `--color-warning-300`
+<Canvas style={{ backgroundColor: 'var(--color-warning-300)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #ffe997
+</Canvas>
+
+ `--color-warning-500`
+<Canvas style={{ backgroundColor: 'var(--color-warning-500)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #ffb800
+</Canvas>
+
+ `--color-warning-700`
+<Canvas style={{ backgroundColor: 'var(--color-warning-700)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+   <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #af8b00
+</Canvas>
+
+ `--color-warning-900`
+<Canvas style={{ backgroundColor: 'var(--color-warning-900)', textAlign: 'center' }}>
+  <div>
+    <h1 className="k-u-margin-bottom-none" style={{ color: 'white', fontSize: '64px', fontFamily: 'var(--font-family-antiqueolive)', fontWeight: 'var(--font-weight-700)' }}>A</h1>
+    <IconBadge status="success" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h2 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-500)', position: 'relative', top: '-9px' }}>A</h2>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+  <div>
+    <h3 className="k-u-margin-bottom-none" style={{ color: 'white', fontFamily: 'var(--font-family-generalsans)', fontWeight: 'var(--font-weight-400)', position: 'relative', top: '-9px' }}>A</h3>
+    <IconBadge status="warning" size="nano">
+      <CheckedIcon />
+    </IconBadge>
+  </div>
+    #6d5700
+</Canvas>
