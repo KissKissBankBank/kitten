@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Feature:
 
-- Documentation: Add `Colors` to `documentation/1Design` stories.
+- Documentation: Add `Colors` to `documentation/Design` stories.
 
 ## [13.5.1] - 2023-01-30
 
