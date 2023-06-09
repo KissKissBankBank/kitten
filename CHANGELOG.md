@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+
+- Update `helium modifier` of Button component
+
 ## [14.0.0] - 2023-05-26
 
 ⚠️ BREAKING CHANGE ⚠️
