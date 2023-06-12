@@ -212,7 +212,7 @@ exports[`<RewardCard /> with some props matches with snapshot 1`] = `
     </ul>
   </div>
   <button
-    className="sc-gsnTZi eWDdml k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
+    className="sc-gsnTZi cEEGFB k-Button k-RewardCard__button k-RewardCard__drawer k-Button--medium k-Button--helium k-Button--fit-content k-Button--disabled"
     disabled={true}
     style={
       Object {

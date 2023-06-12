@@ -78,7 +78,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
       </span>
     </div>
     <span
-      className="sc-gsnTZi eWDdml k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--helium k-Button--fit-content"
+      className="sc-gsnTZi cEEGFB k-Button k-TextInput__button k-TextCopy__button k-Button--medium k-Button--helium k-Button--fit-content"
       disabled={null}
       style={
         Object {
