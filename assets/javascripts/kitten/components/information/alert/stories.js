@@ -53,7 +53,7 @@ export default {
     },
     status: {
       control: 'select',
-      options: ['info', 'success', 'warning', 'danger'],
+      options: ['info', 'success', 'warning', 'danger', 'news'],
     },
   },
 }

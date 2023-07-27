@@ -24,7 +24,6 @@ const AlertWrapper = styled.div`
   margin: ${pxToRem(10)};
   border-radius: var(--border-radius-m);
   overflow: hidden;
-  background-color: var(--color-primary-100);
   color: var(--color-grey-900);
 
   display: flex;
@@ -123,16 +122,35 @@ const AlertWrapper = styled.div`
     background-color: var(--color-success-100);
 
     [href] {
-      color: var(--color-success-700);
+      color: var(--color-success-500);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-success-700);
+        fill: var(--color-success-500);
 
         :hover {
-          fill: var(--color-success-900);
+          fill: var(--color-success-700);
+        }
+      }
+    }
+  }
+
+  &.k-Alert--news {
+    background-color: var(--color-news-100);
+
+    [href] {
+      color: var(--color-news-500);
+    }
+
+    .k-Alert__closeButton {
+      svg,
+      svg path {
+        fill: var(--color-news-500);
+
+        :hover {
+          fill: var(--color-news-700);
         }
       }
     }
@@ -142,16 +160,16 @@ const AlertWrapper = styled.div`
     background-color: var(--color-danger-100);
 
     [href] {
-      color: var(--color-danger-700);
+      color: var(--color-danger-500);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-danger-700);
+        fill: var(--color-danger-500);
 
         :hover {
-          fill: var(--color-danger-900);
+          fill: var(--color-danger-700);
         }
       }
     }
@@ -161,16 +179,16 @@ const AlertWrapper = styled.div`
     background-color: var(--color-warning-100);
 
     [href] {
-      color: var(--color-warning-700);
+      color: var(--color-warning-500);
     }
 
     .k-Alert__closeButton {
       svg,
       svg path {
-        fill: var(--color-warning-700);
+        fill: var(--color-warning-500);
 
         :hover {
-          fill: '#A47600';
+          fill: var(--color-warning-700);
         }
       }
     }
@@ -220,6 +238,7 @@ export const Alert = ({
       case 'danger':
         return 'alert'
       case 'warning':
+      case 'news':
       case 'success':
         return 'status'
       default:
@@ -273,7 +292,7 @@ Alert.propTypes = {
   center: PropTypes.bool,
   displayIcon: PropTypes.bool,
   iconHasBorder: PropTypes.bool,
-  status: PropTypes.oneOf(['info', 'warning', 'success', 'danger']),
+  status: PropTypes.oneOf(['info', 'warning', 'success', 'danger', 'news']),
 }
 
 Alert.defaultProps = {
