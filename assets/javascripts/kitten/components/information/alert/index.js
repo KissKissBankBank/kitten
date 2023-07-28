@@ -34,16 +34,16 @@ const AlertWrapper = styled.div`
   background-color: var(--color-primary-100);
 
   [href] {
-    color: var(--color-primary-700);
+    color: var(--color-primary-500);
   }
 
   .k-Alert__closeButton {
     svg,
     svg path {
-      fill: var(--color-primary-700);
+      fill: var(--color-primary-500);
 
       :hover {
-        fill: var(--color-primary-900);
+        fill: var(--color-primary-700);
       }
     }
   }
@@ -104,10 +104,10 @@ const AlertWrapper = styled.div`
     svg,
     svg path {
       transition: fill 0.2s ease;
-      fill: var(--color-primary-700);
+      fill: var(--color-primary-500);
 
       :hover {
-        fill: var(--color-primary-900);
+        fill: var(--color-primary-700);
       }
     }
   }
