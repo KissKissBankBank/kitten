@@ -4,6 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: 
+
+- `Colors Tokens` : Add a new set of `Colors` in `_colors.scss`
+- `Alert` Component : Add the `News` status type
+- `Alert` Stories and Tests : Update
+- `Icon-badge` Component : Add the `News` status type + icon
+
+Fix:
+
+- `Alert` Component : Update used `Colors`
+- `Icon-badgeStories` : Update card
+
 ## [14.0.1] - 2023-06-15
 
 Fix:
