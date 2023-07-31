@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [14.1.0] - 2023-07-31
+
 Feature: 
 
 - `Colors Tokens` : Add a new set of `Colors` in `_colors.scss`
