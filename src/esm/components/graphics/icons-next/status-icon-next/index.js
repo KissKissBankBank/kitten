@@ -22,6 +22,9 @@ export const StatusIconNext = _ref => {
     case 'pending':
       return /*#__PURE__*/React.createElement(StatusIconNext.Pending, props);
 
+    case 'news':
+      return /*#__PURE__*/React.createElement(StatusIconNext.Info, props);
+
     default:
       return /*#__PURE__*/React.createElement(StatusIconNext.Info, props);
   }

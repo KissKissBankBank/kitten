@@ -30,6 +30,9 @@ export const IconBadge = _ref => {
     if (!!empty) return 'var(--color-grey-000)';
 
     switch (status) {
+      case 'news':
+        return 'var(--color-news-500)';
+
       case 'success':
         return 'var(--color-success-500)';
 
@@ -64,6 +67,9 @@ export const IconBadge = _ref => {
 
       case 'disabled':
         return 'var(--color-grey-300)';
+
+      case 'news':
+        return 'var(--color-news-300)';
 
       case 'danger':
         return 'var(--color-danger-300)';
@@ -115,7 +121,7 @@ IconBadge.propTypes = {
     color: PropTypes.node,
     style: PropTypes.string
   }),
-  status: PropTypes.oneOf(['info', 'success', 'danger', 'warning', 'disabled', 'pending', 'light']),
+  status: PropTypes.oneOf(['news', 'info', 'success', 'danger', 'warning', 'disabled', 'pending', 'light']),
   shape: PropTypes.oneOf(['circle', 'star']),
   hasBorder: PropTypes.bool
 };
