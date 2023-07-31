@@ -44,6 +44,7 @@ export default {
         'success',
         'danger',
         'warning',
+        'news',
         'disabled',
         'pending',
         'light',

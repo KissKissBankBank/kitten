@@ -12,6 +12,8 @@ export const StatusIconNext = ({ status, ...props }) => {
       return <StatusIconNext.Danger {...props} />
     case 'pending':
       return <StatusIconNext.Pending {...props} />
+    case 'news':
+      return <StatusIconNext.Info {...props} />
     default:
       return <StatusIconNext.Info {...props} />
   }
