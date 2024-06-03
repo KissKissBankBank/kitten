@@ -41,6 +41,7 @@ const AlertBoxWrapper = styled.div`
     flex: 1 1 auto;
     font-size: ${pxToRem(14)};
     line-height: ${pxToRem(18)};
+    align-self: center;
   }
 
   &.k-AlertBox--medium {
@@ -88,6 +89,16 @@ const AlertBoxWrapper = styled.div`
 
   &.k-AlertBox--info {
     background-color: var(--color-primary-100);
+
+    .k-u-link,
+    a {
+      color: var(--color-primary-700);
+    }
+  }
+
+  &.k-AlertBox--dark {
+    background-color: var(--color-grey-800);
+    color: white;
 
     .k-u-link,
     a {

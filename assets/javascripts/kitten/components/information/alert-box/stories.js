@@ -43,7 +43,7 @@ Default.argTypes = {
   },
   status: {
     control: 'select',
-    options: ['info', 'success', 'danger', 'warning', 'disabled', 'pending'],
+    options: ['info', 'dark', 'success', 'danger', 'warning', 'disabled', 'pending'],
   },
   iconHasBorder: { control: 'boolean' },
   displayIcon: { control: 'boolean' },
