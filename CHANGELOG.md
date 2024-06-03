@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Feature: 
 
-- `Alert-box` Component : Add the `News` status type
+- `Alert-box` Component : Add the `Dark` status type
 - `Alert-box` Stories and Tests : Update
 
 ## [14.1.0] - 2023-07-31
