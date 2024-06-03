@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+
+
+## [14.1.1] - 2024-06-03
+
 Feature: 
 
 - `Alert-box` Component : Add the `Dark` status type
