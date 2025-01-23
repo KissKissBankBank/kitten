@@ -1,0 +1,237 @@
+[
+  {
+    "id": "graph",
+    "color": "#19b4fa",
+    "data": [
+      {
+        "x": "2020-03-01",
+        "y": 0,
+        "daily": 0,
+        "contributors": 1
+      },
+      {
+        "x": "2020-03-02",
+        "y": 5,
+        "daily": 5,
+        "contributors": 2
+      },
+      {
+        "x": "2020-03-03",
+        "y": 20,
+        "daily": 15,
+        "contributors": 3
+      },
+      {
+        "x": "2020-03-04",
+        "y": 39,
+        "daily": 19,
+        "contributors": 4
+      },
+      {
+        "x": "2020-03-05",
+        "y": 100,
+        "daily": 61,
+        "contributors": 5
+      },
+      {
+        "x": "2020-03-06",
+        "y": 187,
+        "daily": 87,
+        "contributors": 6
+      },
+      {
+        "x": "2020-03-07",
+        "y": 190,
+        "daily": 3,
+        "contributors": 7
+      },
+      {
+        "x": "2020-03-08",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-09",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-10",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-11",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-12",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-13",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-14",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-15",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-16",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-17",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-18",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-19",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-20",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-21",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-22",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-23",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-24",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-25",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-26",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-27",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-28",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-29",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-30",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-03-31",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-01",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-02",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-03",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-04",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-05",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-06",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      },
+      {
+        "x": "2020-04-07",
+        "y": null,
+        "daily": null,
+        "contributors": null
+      }
+
+    ]
+  }
+]
