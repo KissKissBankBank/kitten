@@ -7,11 +7,7 @@ describe('<GifVideo />', () => {
 
   describe('with no source', () => {
     beforeEach(() => {
-      component = renderer
-        .create(
-          <GifVideo poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg" />,
-        )
-        .toJSON()
+      component = renderer.create(<GifVideo poster="" />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -23,7 +19,7 @@ describe('<GifVideo />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <GifVideo poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg">
+          <GifVideo poster="">
             <source
               src="https://kkbb-production.s3-eu-west-1.amazonaws.com/atoms/video/kitten/kitten_video.webm"
               type="video/webm"

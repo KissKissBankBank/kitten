@@ -20,14 +20,7 @@ describe('<Video />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Video
-            autoPlay={false}
-            playsInline
-            loop
-            muted
-            src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
-            poster="https://d3v4jsc54141g1.cloudfront.net/atoms/video/maker/detailed_description_poster.jpg"
-          >
+          <Video autoPlay={false} playsInline loop muted src="" poster="">
             <Video.Loader>
               <Loader />
             </Video.Loader>

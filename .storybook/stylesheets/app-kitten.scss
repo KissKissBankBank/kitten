@@ -11,9 +11,11 @@
 @import 'custom/flex';
 @import 'custom/story-helpers';
 @import 'custom/background';
+@import 'custom/fonts';
 
 // Custom styles for StoryBook iFrame.
-body, body.sb-show-main.sb-main-padded {
+body,
+body.sb-show-main.sb-main-padded {
   padding: 0;
 }
 
@@ -33,7 +35,7 @@ details.docs-page-details {
 
       &::before {
         display: inline-block;
-        content: "+";
+        content: '+';
         width: 20px;
       }
 
@@ -47,6 +49,6 @@ details.docs-page-details {
   }
 
   &[open] summary h2::before {
-    content: "–";
+    content: '–';
   }
 }

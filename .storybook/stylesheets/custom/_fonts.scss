@@ -1,0 +1,38 @@
+/* GeneralSans-Regular */
+@font-face {
+  font-family: 'GeneralSans';
+  font-weight: 400;
+  font-display: fallback;
+  font-style: normal;
+  src: url('/public/fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('/public/fonts/GeneralSans-Regular.woff') format('woff');
+}
+
+/* GeneralSans-Medium */
+@font-face {
+  font-family: 'GeneralSans';
+  font-weight: 500;
+  font-display: fallback;
+  font-style: normal;
+  src: url('/public/fonts/GeneralSans-Medium.woff2') format('woff2'),
+    url('/public/fonts/GeneralSans-Medium.woff') format('woff');
+}
+
+/* GeneralSans-Semibold */
+@font-face {
+  font-family: 'GeneralSans';
+  font-weight: 600;
+  font-display: fallback;
+  font-style: normal;
+  src: url('/public/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+    url('/public/fonts/GeneralSans-Semibold.woff') format('woff');
+}
+
+/* AntiqueOlive-Bold */
+@font-face {
+  font-family: 'AntiqueOlive';
+  font-weight: 700;
+  font-display: fallback;
+  src: url('/public/fonts/AntiqueOlive-Bold.woff2') format('woff2'),
+    url('/public/fonts/AntiqueOlive-Bold.woff') format('woff');
+}

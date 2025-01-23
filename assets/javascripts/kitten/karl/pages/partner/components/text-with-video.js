@@ -68,13 +68,7 @@ const TextWithVideo = () => (
       <StyledGrid>
         <GridCol col-l="5">
           <StyledVideo>
-            <Video
-              autoPlay
-              playsInline
-              loop
-              muted
-              src="https://d3v4jsc54141g1.cloudfront.net/atoms/video/home/home_v2.mp4"
-            >
+            <Video autoPlay playsInline loop muted src="">
               <Video.Loader>
                 <Loader />
               </Video.Loader>
